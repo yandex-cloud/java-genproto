@@ -687,12 +687,8 @@ public final class DashboardServiceOuterClass {
 
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * The expression must specify:
-     * 1. The field name. Currently you can use filtering only on the [Dashboard.name] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-     * Example: name="abc"
+     * Text substring to find in any of dashboard fields: id, name, etc
+     * result will include dashboards that meet BOTH filter and selector (see below) criteria
      * </pre>
      *
      * <code>string filter = 21 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -701,12 +697,8 @@ public final class DashboardServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * The expression must specify:
-     * 1. The field name. Currently you can use filtering only on the [Dashboard.name] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-     * Example: name="abc"
+     * Text substring to find in any of dashboard fields: id, name, etc
+     * result will include dashboards that meet BOTH filter and selector (see below) criteria
      * </pre>
      *
      * <code>string filter = 21 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -714,6 +706,36 @@ public final class DashboardServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getFilterBytes();
+
+    /**
+     * <pre>
+     * Selector string to match dashboard fields:
+     * id, name, description, managed_by, etc, format: FIELDNAME PREDICATE VALUE, FIELDNAME PREDICATE VALUE, ...
+     * and dashboard labels, format: labels.KEY PREDICATE VALUE, labels.KEY PREDICATE VALUE, ...
+     * supports GLOB and regex expressions
+     * dashboard must meet ALL tokens in selector string
+     * example: name = "New", description = "*new*", labels.key != "bad"
+     * </pre>
+     *
+     * <code>string selectors = 22 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The selectors.
+     */
+    java.lang.String getSelectors();
+    /**
+     * <pre>
+     * Selector string to match dashboard fields:
+     * id, name, description, managed_by, etc, format: FIELDNAME PREDICATE VALUE, FIELDNAME PREDICATE VALUE, ...
+     * and dashboard labels, format: labels.KEY PREDICATE VALUE, labels.KEY PREDICATE VALUE, ...
+     * supports GLOB and regex expressions
+     * dashboard must meet ALL tokens in selector string
+     * example: name = "New", description = "*new*", labels.key != "bad"
+     * </pre>
+     *
+     * <code>string selectors = 22 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for selectors.
+     */
+    com.google.protobuf.ByteString
+        getSelectorsBytes();
 
     public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardsRequest.ContainerCase getContainerCase();
   }
@@ -732,6 +754,7 @@ public final class DashboardServiceOuterClass {
     private ListDashboardsRequest() {
       pageToken_ = "";
       filter_ = "";
+      selectors_ = "";
     }
 
     @java.lang.Override
@@ -785,6 +808,12 @@ public final class DashboardServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               filter_ = s;
+              break;
+            }
+            case 178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              selectors_ = s;
               break;
             }
             default: {
@@ -991,12 +1020,8 @@ public final class DashboardServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * The expression must specify:
-     * 1. The field name. Currently you can use filtering only on the [Dashboard.name] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-     * Example: name="abc"
+     * Text substring to find in any of dashboard fields: id, name, etc
+     * result will include dashboards that meet BOTH filter and selector (see below) criteria
      * </pre>
      *
      * <code>string filter = 21 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1017,12 +1042,8 @@ public final class DashboardServiceOuterClass {
     }
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * The expression must specify:
-     * 1. The field name. Currently you can use filtering only on the [Dashboard.name] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-     * Example: name="abc"
+     * Text substring to find in any of dashboard fields: id, name, etc
+     * result will include dashboards that meet BOTH filter and selector (see below) criteria
      * </pre>
      *
      * <code>string filter = 21 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1037,6 +1058,62 @@ public final class DashboardServiceOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELECTORS_FIELD_NUMBER = 22;
+    private volatile java.lang.Object selectors_;
+    /**
+     * <pre>
+     * Selector string to match dashboard fields:
+     * id, name, description, managed_by, etc, format: FIELDNAME PREDICATE VALUE, FIELDNAME PREDICATE VALUE, ...
+     * and dashboard labels, format: labels.KEY PREDICATE VALUE, labels.KEY PREDICATE VALUE, ...
+     * supports GLOB and regex expressions
+     * dashboard must meet ALL tokens in selector string
+     * example: name = "New", description = "*new*", labels.key != "bad"
+     * </pre>
+     *
+     * <code>string selectors = 22 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The selectors.
+     */
+    @java.lang.Override
+    public java.lang.String getSelectors() {
+      java.lang.Object ref = selectors_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        selectors_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Selector string to match dashboard fields:
+     * id, name, description, managed_by, etc, format: FIELDNAME PREDICATE VALUE, FIELDNAME PREDICATE VALUE, ...
+     * and dashboard labels, format: labels.KEY PREDICATE VALUE, labels.KEY PREDICATE VALUE, ...
+     * supports GLOB and regex expressions
+     * dashboard must meet ALL tokens in selector string
+     * example: name = "New", description = "*new*", labels.key != "bad"
+     * </pre>
+     *
+     * <code>string selectors = 22 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for selectors.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSelectorsBytes() {
+      java.lang.Object ref = selectors_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        selectors_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1069,6 +1146,9 @@ public final class DashboardServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 21, filter_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(selectors_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 22, selectors_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1091,6 +1171,9 @@ public final class DashboardServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, filter_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(selectors_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, selectors_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1112,6 +1195,8 @@ public final class DashboardServiceOuterClass {
           .equals(other.getPageToken())) return false;
       if (!getFilter()
           .equals(other.getFilter())) return false;
+      if (!getSelectors()
+          .equals(other.getSelectors())) return false;
       if (!getContainerCase().equals(other.getContainerCase())) return false;
       switch (containerCase_) {
         case 2:
@@ -1139,6 +1224,8 @@ public final class DashboardServiceOuterClass {
       hash = (53 * hash) + getPageToken().hashCode();
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
+      hash = (37 * hash) + SELECTORS_FIELD_NUMBER;
+      hash = (53 * hash) + getSelectors().hashCode();
       switch (containerCase_) {
         case 2:
           hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
@@ -1286,6 +1373,8 @@ public final class DashboardServiceOuterClass {
 
         filter_ = "";
 
+        selectors_ = "";
+
         containerCase_ = 0;
         container_ = null;
         return this;
@@ -1320,6 +1409,7 @@ public final class DashboardServiceOuterClass {
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
         result.filter_ = filter_;
+        result.selectors_ = selectors_;
         result.containerCase_ = containerCase_;
         onBuilt();
         return result;
@@ -1378,6 +1468,10 @@ public final class DashboardServiceOuterClass {
         }
         if (!other.getFilter().isEmpty()) {
           filter_ = other.filter_;
+          onChanged();
+        }
+        if (!other.getSelectors().isEmpty()) {
+          selectors_ = other.selectors_;
           onChanged();
         }
         switch (other.getContainerCase()) {
@@ -1709,12 +1803,8 @@ public final class DashboardServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * The expression must specify:
-       * 1. The field name. Currently you can use filtering only on the [Dashboard.name] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-       * Example: name="abc"
+       * Text substring to find in any of dashboard fields: id, name, etc
+       * result will include dashboards that meet BOTH filter and selector (see below) criteria
        * </pre>
        *
        * <code>string filter = 21 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1734,12 +1824,8 @@ public final class DashboardServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * The expression must specify:
-       * 1. The field name. Currently you can use filtering only on the [Dashboard.name] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-       * Example: name="abc"
+       * Text substring to find in any of dashboard fields: id, name, etc
+       * result will include dashboards that meet BOTH filter and selector (see below) criteria
        * </pre>
        *
        * <code>string filter = 21 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1760,12 +1846,8 @@ public final class DashboardServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * The expression must specify:
-       * 1. The field name. Currently you can use filtering only on the [Dashboard.name] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-       * Example: name="abc"
+       * Text substring to find in any of dashboard fields: id, name, etc
+       * result will include dashboards that meet BOTH filter and selector (see below) criteria
        * </pre>
        *
        * <code>string filter = 21 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1784,12 +1866,8 @@ public final class DashboardServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * The expression must specify:
-       * 1. The field name. Currently you can use filtering only on the [Dashboard.name] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-       * Example: name="abc"
+       * Text substring to find in any of dashboard fields: id, name, etc
+       * result will include dashboards that meet BOTH filter and selector (see below) criteria
        * </pre>
        *
        * <code>string filter = 21 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1803,12 +1881,8 @@ public final class DashboardServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * The expression must specify:
-       * 1. The field name. Currently you can use filtering only on the [Dashboard.name] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-       * Example: name="abc"
+       * Text substring to find in any of dashboard fields: id, name, etc
+       * result will include dashboards that meet BOTH filter and selector (see below) criteria
        * </pre>
        *
        * <code>string filter = 21 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1823,6 +1897,127 @@ public final class DashboardServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         filter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object selectors_ = "";
+      /**
+       * <pre>
+       * Selector string to match dashboard fields:
+       * id, name, description, managed_by, etc, format: FIELDNAME PREDICATE VALUE, FIELDNAME PREDICATE VALUE, ...
+       * and dashboard labels, format: labels.KEY PREDICATE VALUE, labels.KEY PREDICATE VALUE, ...
+       * supports GLOB and regex expressions
+       * dashboard must meet ALL tokens in selector string
+       * example: name = "New", description = "*new*", labels.key != "bad"
+       * </pre>
+       *
+       * <code>string selectors = 22 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The selectors.
+       */
+      public java.lang.String getSelectors() {
+        java.lang.Object ref = selectors_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          selectors_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Selector string to match dashboard fields:
+       * id, name, description, managed_by, etc, format: FIELDNAME PREDICATE VALUE, FIELDNAME PREDICATE VALUE, ...
+       * and dashboard labels, format: labels.KEY PREDICATE VALUE, labels.KEY PREDICATE VALUE, ...
+       * supports GLOB and regex expressions
+       * dashboard must meet ALL tokens in selector string
+       * example: name = "New", description = "*new*", labels.key != "bad"
+       * </pre>
+       *
+       * <code>string selectors = 22 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for selectors.
+       */
+      public com.google.protobuf.ByteString
+          getSelectorsBytes() {
+        java.lang.Object ref = selectors_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          selectors_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Selector string to match dashboard fields:
+       * id, name, description, managed_by, etc, format: FIELDNAME PREDICATE VALUE, FIELDNAME PREDICATE VALUE, ...
+       * and dashboard labels, format: labels.KEY PREDICATE VALUE, labels.KEY PREDICATE VALUE, ...
+       * supports GLOB and regex expressions
+       * dashboard must meet ALL tokens in selector string
+       * example: name = "New", description = "*new*", labels.key != "bad"
+       * </pre>
+       *
+       * <code>string selectors = 22 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The selectors to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelectors(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        selectors_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Selector string to match dashboard fields:
+       * id, name, description, managed_by, etc, format: FIELDNAME PREDICATE VALUE, FIELDNAME PREDICATE VALUE, ...
+       * and dashboard labels, format: labels.KEY PREDICATE VALUE, labels.KEY PREDICATE VALUE, ...
+       * supports GLOB and regex expressions
+       * dashboard must meet ALL tokens in selector string
+       * example: name = "New", description = "*new*", labels.key != "bad"
+       * </pre>
+       *
+       * <code>string selectors = 22 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSelectors() {
+        
+        selectors_ = getDefaultInstance().getSelectors();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Selector string to match dashboard fields:
+       * id, name, description, managed_by, etc, format: FIELDNAME PREDICATE VALUE, FIELDNAME PREDICATE VALUE, ...
+       * and dashboard labels, format: labels.KEY PREDICATE VALUE, labels.KEY PREDICATE VALUE, ...
+       * supports GLOB and regex expressions
+       * dashboard must meet ALL tokens in selector string
+       * example: name = "New", description = "*new*", labels.key != "bad"
+       * </pre>
+       *
+       * <code>string selectors = 22 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for selectors to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelectorsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        selectors_ = value;
         onChanged();
         return this;
       }
@@ -3237,7 +3432,7 @@ public final class DashboardServiceOuterClass {
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      * @return Whether the timeline field is set.
      */
     boolean hasTimeline();
@@ -3246,7 +3441,7 @@ public final class DashboardServiceOuterClass {
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      * @return The timeline.
      */
     yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline getTimeline();
@@ -3255,7 +3450,7 @@ public final class DashboardServiceOuterClass {
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      */
     yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder getTimelineOrBuilder();
 
@@ -3429,16 +3624,7 @@ public final class DashboardServiceOuterClass {
               managedLink_ = s;
               break;
             }
-            case 234: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                links_ = new java.util.ArrayList<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              links_.add(
-                  input.readMessage(yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.parser(), extensionRegistry));
-              break;
-            }
-            case 274: {
+            case 226: {
               yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder subBuilder = null;
               if (timeline_ != null) {
                 subBuilder = timeline_.toBuilder();
@@ -3449,6 +3635,15 @@ public final class DashboardServiceOuterClass {
                 timeline_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 234: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                links_ = new java.util.ArrayList<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              links_.add(
+                  input.readMessage(yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -4033,14 +4228,14 @@ public final class DashboardServiceOuterClass {
       }
     }
 
-    public static final int TIMELINE_FIELD_NUMBER = 34;
+    public static final int TIMELINE_FIELD_NUMBER = 28;
     private yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline timeline_;
     /**
      * <pre>
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      * @return Whether the timeline field is set.
      */
     @java.lang.Override
@@ -4052,7 +4247,7 @@ public final class DashboardServiceOuterClass {
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      * @return The timeline.
      */
     @java.lang.Override
@@ -4064,7 +4259,7 @@ public final class DashboardServiceOuterClass {
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder getTimelineOrBuilder() {
@@ -4175,11 +4370,11 @@ public final class DashboardServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 27, managedLink_);
       }
+      if (timeline_ != null) {
+        output.writeMessage(28, getTimeline());
+      }
       for (int i = 0; i < links_.size(); i++) {
         output.writeMessage(29, links_.get(i));
-      }
-      if (timeline_ != null) {
-        output.writeMessage(34, getTimeline());
       }
       unknownFields.writeTo(output);
     }
@@ -4226,13 +4421,13 @@ public final class DashboardServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, managedLink_);
       }
+      if (timeline_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, getTimeline());
+      }
       for (int i = 0; i < links_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(29, links_.get(i));
-      }
-      if (timeline_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(34, getTimeline());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6022,7 +6217,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        * @return Whether the timeline field is set.
        */
       public boolean hasTimeline() {
@@ -6033,7 +6228,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        * @return The timeline.
        */
       public yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline getTimeline() {
@@ -6048,7 +6243,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public Builder setTimeline(yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline value) {
         if (timelineBuilder_ == null) {
@@ -6068,7 +6263,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public Builder setTimeline(
           yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder builderForValue) {
@@ -6086,7 +6281,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public Builder mergeTimeline(yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline value) {
         if (timelineBuilder_ == null) {
@@ -6108,7 +6303,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public Builder clearTimeline() {
         if (timelineBuilder_ == null) {
@@ -6126,7 +6321,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder getTimelineBuilder() {
         
@@ -6138,7 +6333,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder getTimelineOrBuilder() {
         if (timelineBuilder_ != null) {
@@ -6153,7 +6348,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline, yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder, yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder> 
@@ -7420,7 +7615,7 @@ public final class DashboardServiceOuterClass {
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      * @return Whether the timeline field is set.
      */
     boolean hasTimeline();
@@ -7429,7 +7624,7 @@ public final class DashboardServiceOuterClass {
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      * @return The timeline.
      */
     yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline getTimeline();
@@ -7438,7 +7633,7 @@ public final class DashboardServiceOuterClass {
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      */
     yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder getTimelineOrBuilder();
 
@@ -7618,16 +7813,7 @@ public final class DashboardServiceOuterClass {
               managedLink_ = s;
               break;
             }
-            case 234: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                links_ = new java.util.ArrayList<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              links_.add(
-                  input.readMessage(yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.parser(), extensionRegistry));
-              break;
-            }
-            case 274: {
+            case 226: {
               yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder subBuilder = null;
               if (timeline_ != null) {
                 subBuilder = timeline_.toBuilder();
@@ -7638,6 +7824,15 @@ public final class DashboardServiceOuterClass {
                 timeline_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 234: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                links_ = new java.util.ArrayList<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              links_.add(
+                  input.readMessage(yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -8215,14 +8410,14 @@ public final class DashboardServiceOuterClass {
       }
     }
 
-    public static final int TIMELINE_FIELD_NUMBER = 34;
+    public static final int TIMELINE_FIELD_NUMBER = 28;
     private yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline timeline_;
     /**
      * <pre>
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      * @return Whether the timeline field is set.
      */
     @java.lang.Override
@@ -8234,7 +8429,7 @@ public final class DashboardServiceOuterClass {
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      * @return The timeline.
      */
     @java.lang.Override
@@ -8246,7 +8441,7 @@ public final class DashboardServiceOuterClass {
      * Refresh and time window settings
      * </pre>
      *
-     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder getTimelineOrBuilder() {
@@ -8360,11 +8555,11 @@ public final class DashboardServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 27, managedLink_);
       }
+      if (timeline_ != null) {
+        output.writeMessage(28, getTimeline());
+      }
       for (int i = 0; i < links_.size(); i++) {
         output.writeMessage(29, links_.get(i));
-      }
-      if (timeline_ != null) {
-        output.writeMessage(34, getTimeline());
       }
       unknownFields.writeTo(output);
     }
@@ -8414,13 +8609,13 @@ public final class DashboardServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, managedLink_);
       }
+      if (timeline_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, getTimeline());
+      }
       for (int i = 0; i < links_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(29, links_.get(i));
-      }
-      if (timeline_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(34, getTimeline());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10261,7 +10456,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        * @return Whether the timeline field is set.
        */
       public boolean hasTimeline() {
@@ -10272,7 +10467,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        * @return The timeline.
        */
       public yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline getTimeline() {
@@ -10287,7 +10482,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public Builder setTimeline(yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline value) {
         if (timelineBuilder_ == null) {
@@ -10307,7 +10502,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public Builder setTimeline(
           yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder builderForValue) {
@@ -10325,7 +10520,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public Builder mergeTimeline(yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline value) {
         if (timelineBuilder_ == null) {
@@ -10347,7 +10542,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public Builder clearTimeline() {
         if (timelineBuilder_ == null) {
@@ -10365,7 +10560,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder getTimelineBuilder() {
         
@@ -10377,7 +10572,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       public yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder getTimelineOrBuilder() {
         if (timelineBuilder_ != null) {
@@ -10392,7 +10587,7 @@ public final class DashboardServiceOuterClass {
        * Refresh and time window settings
        * </pre>
        *
-       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 28;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline, yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder, yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder> 
@@ -14788,6 +14983,3632 @@ public final class DashboardServiceOuterClass {
 
   }
 
+  public interface ListDashboardLabelNamesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.ListDashboardLabelNamesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string project_id = 1;</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <code>string project_id = 1;</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * Contains substring of name(aka key). All label names containing this string will be returned
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The text.
+     */
+    java.lang.String getText();
+    /**
+     * <pre>
+     * Contains substring of name(aka key). All label names containing this string will be returned
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The bytes for text.
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <pre>
+     * Filters alerts by this selectors.
+     * </pre>
+     *
+     * <code>string selectors = 3;</code>
+     * @return The selectors.
+     */
+    java.lang.String getSelectors();
+    /**
+     * <pre>
+     * Filters alerts by this selectors.
+     * </pre>
+     *
+     * <code>string selectors = 3;</code>
+     * @return The bytes for selectors.
+     */
+    com.google.protobuf.ByteString
+        getSelectorsBytes();
+
+    /**
+     * <code>int64 page_size = 4;</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.monitoring.v3.ListDashboardLabelNamesRequest}
+   */
+  public static final class ListDashboardLabelNamesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.ListDashboardLabelNamesRequest)
+      ListDashboardLabelNamesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListDashboardLabelNamesRequest.newBuilder() to construct.
+    private ListDashboardLabelNamesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListDashboardLabelNamesRequest() {
+      projectId_ = "";
+      text_ = "";
+      selectors_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDashboardLabelNamesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListDashboardLabelNamesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              selectors_ = s;
+              break;
+            }
+            case 32: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest.class, yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <code>string project_id = 1;</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string project_id = 1;</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object text_;
+    /**
+     * <pre>
+     * Contains substring of name(aka key). All label names containing this string will be returned
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Contains substring of name(aka key). All label names containing this string will be returned
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELECTORS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object selectors_;
+    /**
+     * <pre>
+     * Filters alerts by this selectors.
+     * </pre>
+     *
+     * <code>string selectors = 3;</code>
+     * @return The selectors.
+     */
+    @java.lang.Override
+    public java.lang.String getSelectors() {
+      java.lang.Object ref = selectors_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        selectors_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Filters alerts by this selectors.
+     * </pre>
+     *
+     * <code>string selectors = 3;</code>
+     * @return The bytes for selectors.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSelectorsBytes() {
+      java.lang.Object ref = selectors_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        selectors_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 4;
+    private long pageSize_;
+    /**
+     * <code>int64 page_size = 4;</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(selectors_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, selectors_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(4, pageSize_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(selectors_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, selectors_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, pageSize_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest other = (yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest) obj;
+
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!getSelectors()
+          .equals(other.getSelectors())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (37 * hash) + SELECTORS_FIELD_NUMBER;
+      hash = (53 * hash) + getSelectors().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.monitoring.v3.ListDashboardLabelNamesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.ListDashboardLabelNamesRequest)
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest.class, yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        text_ = "";
+
+        selectors_ = "";
+
+        pageSize_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest build() {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest buildPartial() {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest result = new yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest(this);
+        result.projectId_ = projectId_;
+        result.text_ = text_;
+        result.selectors_ = selectors_;
+        result.pageSize_ = pageSize_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest) {
+          return mergeFrom((yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest other) {
+        if (other == yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        if (!other.getSelectors().isEmpty()) {
+          selectors_ = other.selectors_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <code>string project_id = 1;</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string project_id = 1;</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string project_id = 1;</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string project_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string project_id = 1;</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
+       * Contains substring of name(aka key). All label names containing this string will be returned
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Contains substring of name(aka key). All label names containing this string will be returned
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Contains substring of name(aka key). All label names containing this string will be returned
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains substring of name(aka key). All label names containing this string will be returned
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains substring of name(aka key). All label names containing this string will be returned
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object selectors_ = "";
+      /**
+       * <pre>
+       * Filters alerts by this selectors.
+       * </pre>
+       *
+       * <code>string selectors = 3;</code>
+       * @return The selectors.
+       */
+      public java.lang.String getSelectors() {
+        java.lang.Object ref = selectors_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          selectors_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Filters alerts by this selectors.
+       * </pre>
+       *
+       * <code>string selectors = 3;</code>
+       * @return The bytes for selectors.
+       */
+      public com.google.protobuf.ByteString
+          getSelectorsBytes() {
+        java.lang.Object ref = selectors_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          selectors_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Filters alerts by this selectors.
+       * </pre>
+       *
+       * <code>string selectors = 3;</code>
+       * @param value The selectors to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelectors(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        selectors_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Filters alerts by this selectors.
+       * </pre>
+       *
+       * <code>string selectors = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSelectors() {
+        
+        selectors_ = getDefaultInstance().getSelectors();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Filters alerts by this selectors.
+       * </pre>
+       *
+       * <code>string selectors = 3;</code>
+       * @param value The bytes for selectors to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelectorsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        selectors_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <code>int64 page_size = 4;</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <code>int64 page_size = 4;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 page_size = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.ListDashboardLabelNamesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.ListDashboardLabelNamesRequest)
+    private static final yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest();
+    }
+
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListDashboardLabelNamesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListDashboardLabelNamesRequest>() {
+      @java.lang.Override
+      public ListDashboardLabelNamesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListDashboardLabelNamesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListDashboardLabelNamesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListDashboardLabelNamesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListDashboardLabelNamesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.ListDashboardLabelNamesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string label_names = 1;</code>
+     * @return A list containing the labelNames.
+     */
+    java.util.List<java.lang.String>
+        getLabelNamesList();
+    /**
+     * <code>repeated string label_names = 1;</code>
+     * @return The count of labelNames.
+     */
+    int getLabelNamesCount();
+    /**
+     * <code>repeated string label_names = 1;</code>
+     * @param index The index of the element to return.
+     * @return The labelNames at the given index.
+     */
+    java.lang.String getLabelNames(int index);
+    /**
+     * <code>repeated string label_names = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the labelNames at the given index.
+     */
+    com.google.protobuf.ByteString
+        getLabelNamesBytes(int index);
+
+    /**
+     * <code>bool truncated = 2;</code>
+     * @return The truncated.
+     */
+    boolean getTruncated();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.monitoring.v3.ListDashboardLabelNamesResponse}
+   */
+  public static final class ListDashboardLabelNamesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.ListDashboardLabelNamesResponse)
+      ListDashboardLabelNamesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListDashboardLabelNamesResponse.newBuilder() to construct.
+    private ListDashboardLabelNamesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListDashboardLabelNamesResponse() {
+      labelNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDashboardLabelNamesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListDashboardLabelNamesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labelNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              labelNames_.add(s);
+              break;
+            }
+            case 16: {
+
+              truncated_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          labelNames_ = labelNames_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse.class, yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse.Builder.class);
+    }
+
+    public static final int LABEL_NAMES_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList labelNames_;
+    /**
+     * <code>repeated string label_names = 1;</code>
+     * @return A list containing the labelNames.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getLabelNamesList() {
+      return labelNames_;
+    }
+    /**
+     * <code>repeated string label_names = 1;</code>
+     * @return The count of labelNames.
+     */
+    public int getLabelNamesCount() {
+      return labelNames_.size();
+    }
+    /**
+     * <code>repeated string label_names = 1;</code>
+     * @param index The index of the element to return.
+     * @return The labelNames at the given index.
+     */
+    public java.lang.String getLabelNames(int index) {
+      return labelNames_.get(index);
+    }
+    /**
+     * <code>repeated string label_names = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the labelNames at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getLabelNamesBytes(int index) {
+      return labelNames_.getByteString(index);
+    }
+
+    public static final int TRUNCATED_FIELD_NUMBER = 2;
+    private boolean truncated_;
+    /**
+     * <code>bool truncated = 2;</code>
+     * @return The truncated.
+     */
+    @java.lang.Override
+    public boolean getTruncated() {
+      return truncated_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < labelNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, labelNames_.getRaw(i));
+      }
+      if (truncated_ != false) {
+        output.writeBool(2, truncated_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < labelNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(labelNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getLabelNamesList().size();
+      }
+      if (truncated_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, truncated_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse other = (yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse) obj;
+
+      if (!getLabelNamesList()
+          .equals(other.getLabelNamesList())) return false;
+      if (getTruncated()
+          != other.getTruncated()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLabelNamesCount() > 0) {
+        hash = (37 * hash) + LABEL_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getLabelNamesList().hashCode();
+      }
+      hash = (37 * hash) + TRUNCATED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTruncated());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.monitoring.v3.ListDashboardLabelNamesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.ListDashboardLabelNamesResponse)
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse.class, yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        labelNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        truncated_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse build() {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse buildPartial() {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse result = new yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          labelNames_ = labelNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.labelNames_ = labelNames_;
+        result.truncated_ = truncated_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse) {
+          return mergeFrom((yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse other) {
+        if (other == yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse.getDefaultInstance()) return this;
+        if (!other.labelNames_.isEmpty()) {
+          if (labelNames_.isEmpty()) {
+            labelNames_ = other.labelNames_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureLabelNamesIsMutable();
+            labelNames_.addAll(other.labelNames_);
+          }
+          onChanged();
+        }
+        if (other.getTruncated() != false) {
+          setTruncated(other.getTruncated());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList labelNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureLabelNamesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          labelNames_ = new com.google.protobuf.LazyStringArrayList(labelNames_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string label_names = 1;</code>
+       * @return A list containing the labelNames.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getLabelNamesList() {
+        return labelNames_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string label_names = 1;</code>
+       * @return The count of labelNames.
+       */
+      public int getLabelNamesCount() {
+        return labelNames_.size();
+      }
+      /**
+       * <code>repeated string label_names = 1;</code>
+       * @param index The index of the element to return.
+       * @return The labelNames at the given index.
+       */
+      public java.lang.String getLabelNames(int index) {
+        return labelNames_.get(index);
+      }
+      /**
+       * <code>repeated string label_names = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the labelNames at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getLabelNamesBytes(int index) {
+        return labelNames_.getByteString(index);
+      }
+      /**
+       * <code>repeated string label_names = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The labelNames to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabelNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLabelNamesIsMutable();
+        labelNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string label_names = 1;</code>
+       * @param value The labelNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLabelNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLabelNamesIsMutable();
+        labelNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string label_names = 1;</code>
+       * @param values The labelNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLabelNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureLabelNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, labelNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string label_names = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabelNames() {
+        labelNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string label_names = 1;</code>
+       * @param value The bytes of the labelNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLabelNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureLabelNamesIsMutable();
+        labelNames_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean truncated_ ;
+      /**
+       * <code>bool truncated = 2;</code>
+       * @return The truncated.
+       */
+      @java.lang.Override
+      public boolean getTruncated() {
+        return truncated_;
+      }
+      /**
+       * <code>bool truncated = 2;</code>
+       * @param value The truncated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTruncated(boolean value) {
+        
+        truncated_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool truncated = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTruncated() {
+        
+        truncated_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.ListDashboardLabelNamesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.ListDashboardLabelNamesResponse)
+    private static final yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse();
+    }
+
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListDashboardLabelNamesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListDashboardLabelNamesResponse>() {
+      @java.lang.Override
+      public ListDashboardLabelNamesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListDashboardLabelNamesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListDashboardLabelNamesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListDashboardLabelNamesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelNamesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListDashboardLabelValuesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.ListDashboardLabelValuesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string project_id = 1;</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <code>string project_id = 1;</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * Filters alerts by this selectors.
+     * </pre>
+     *
+     * <code>string selectors = 2;</code>
+     * @return The selectors.
+     */
+    java.lang.String getSelectors();
+    /**
+     * <pre>
+     * Filters alerts by this selectors.
+     * </pre>
+     *
+     * <code>string selectors = 2;</code>
+     * @return The bytes for selectors.
+     */
+    com.google.protobuf.ByteString
+        getSelectorsBytes();
+
+    /**
+     * <pre>
+     * Contains full name (aka key), for which existing values are gathered.
+     * </pre>
+     *
+     * <code>string label_name = 3;</code>
+     * @return The labelName.
+     */
+    java.lang.String getLabelName();
+    /**
+     * <pre>
+     * Contains full name (aka key), for which existing values are gathered.
+     * </pre>
+     *
+     * <code>string label_name = 3;</code>
+     * @return The bytes for labelName.
+     */
+    com.google.protobuf.ByteString
+        getLabelNameBytes();
+
+    /**
+     * <pre>
+     * Contains substring of value. All label values containing this string will be returned
+     * </pre>
+     *
+     * <code>string text = 4;</code>
+     * @return The text.
+     */
+    java.lang.String getText();
+    /**
+     * <pre>
+     * Contains substring of value. All label values containing this string will be returned
+     * </pre>
+     *
+     * <code>string text = 4;</code>
+     * @return The bytes for text.
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <code>int64 page_size = 5;</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.monitoring.v3.ListDashboardLabelValuesRequest}
+   */
+  public static final class ListDashboardLabelValuesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.ListDashboardLabelValuesRequest)
+      ListDashboardLabelValuesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListDashboardLabelValuesRequest.newBuilder() to construct.
+    private ListDashboardLabelValuesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListDashboardLabelValuesRequest() {
+      projectId_ = "";
+      selectors_ = "";
+      labelName_ = "";
+      text_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDashboardLabelValuesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListDashboardLabelValuesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              selectors_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              labelName_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            case 40: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest.class, yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <code>string project_id = 1;</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string project_id = 1;</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELECTORS_FIELD_NUMBER = 2;
+    private volatile java.lang.Object selectors_;
+    /**
+     * <pre>
+     * Filters alerts by this selectors.
+     * </pre>
+     *
+     * <code>string selectors = 2;</code>
+     * @return The selectors.
+     */
+    @java.lang.Override
+    public java.lang.String getSelectors() {
+      java.lang.Object ref = selectors_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        selectors_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Filters alerts by this selectors.
+     * </pre>
+     *
+     * <code>string selectors = 2;</code>
+     * @return The bytes for selectors.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSelectorsBytes() {
+      java.lang.Object ref = selectors_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        selectors_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABEL_NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object labelName_;
+    /**
+     * <pre>
+     * Contains full name (aka key), for which existing values are gathered.
+     * </pre>
+     *
+     * <code>string label_name = 3;</code>
+     * @return The labelName.
+     */
+    @java.lang.Override
+    public java.lang.String getLabelName() {
+      java.lang.Object ref = labelName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        labelName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Contains full name (aka key), for which existing values are gathered.
+     * </pre>
+     *
+     * <code>string label_name = 3;</code>
+     * @return The bytes for labelName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLabelNameBytes() {
+      java.lang.Object ref = labelName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        labelName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object text_;
+    /**
+     * <pre>
+     * Contains substring of value. All label values containing this string will be returned
+     * </pre>
+     *
+     * <code>string text = 4;</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Contains substring of value. All label values containing this string will be returned
+     * </pre>
+     *
+     * <code>string text = 4;</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 5;
+    private long pageSize_;
+    /**
+     * <code>int64 page_size = 5;</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(selectors_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, selectors_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(labelName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, labelName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, text_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(5, pageSize_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(selectors_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, selectors_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(labelName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, labelName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, text_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, pageSize_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest other = (yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest) obj;
+
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (!getSelectors()
+          .equals(other.getSelectors())) return false;
+      if (!getLabelName()
+          .equals(other.getLabelName())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + SELECTORS_FIELD_NUMBER;
+      hash = (53 * hash) + getSelectors().hashCode();
+      hash = (37 * hash) + LABEL_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getLabelName().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.monitoring.v3.ListDashboardLabelValuesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.ListDashboardLabelValuesRequest)
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest.class, yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        selectors_ = "";
+
+        labelName_ = "";
+
+        text_ = "";
+
+        pageSize_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest build() {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest buildPartial() {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest result = new yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest(this);
+        result.projectId_ = projectId_;
+        result.selectors_ = selectors_;
+        result.labelName_ = labelName_;
+        result.text_ = text_;
+        result.pageSize_ = pageSize_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest) {
+          return mergeFrom((yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest other) {
+        if (other == yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (!other.getSelectors().isEmpty()) {
+          selectors_ = other.selectors_;
+          onChanged();
+        }
+        if (!other.getLabelName().isEmpty()) {
+          labelName_ = other.labelName_;
+          onChanged();
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <code>string project_id = 1;</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string project_id = 1;</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string project_id = 1;</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string project_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string project_id = 1;</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object selectors_ = "";
+      /**
+       * <pre>
+       * Filters alerts by this selectors.
+       * </pre>
+       *
+       * <code>string selectors = 2;</code>
+       * @return The selectors.
+       */
+      public java.lang.String getSelectors() {
+        java.lang.Object ref = selectors_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          selectors_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Filters alerts by this selectors.
+       * </pre>
+       *
+       * <code>string selectors = 2;</code>
+       * @return The bytes for selectors.
+       */
+      public com.google.protobuf.ByteString
+          getSelectorsBytes() {
+        java.lang.Object ref = selectors_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          selectors_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Filters alerts by this selectors.
+       * </pre>
+       *
+       * <code>string selectors = 2;</code>
+       * @param value The selectors to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelectors(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        selectors_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Filters alerts by this selectors.
+       * </pre>
+       *
+       * <code>string selectors = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSelectors() {
+        
+        selectors_ = getDefaultInstance().getSelectors();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Filters alerts by this selectors.
+       * </pre>
+       *
+       * <code>string selectors = 2;</code>
+       * @param value The bytes for selectors to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelectorsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        selectors_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object labelName_ = "";
+      /**
+       * <pre>
+       * Contains full name (aka key), for which existing values are gathered.
+       * </pre>
+       *
+       * <code>string label_name = 3;</code>
+       * @return The labelName.
+       */
+      public java.lang.String getLabelName() {
+        java.lang.Object ref = labelName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          labelName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Contains full name (aka key), for which existing values are gathered.
+       * </pre>
+       *
+       * <code>string label_name = 3;</code>
+       * @return The bytes for labelName.
+       */
+      public com.google.protobuf.ByteString
+          getLabelNameBytes() {
+        java.lang.Object ref = labelName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          labelName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Contains full name (aka key), for which existing values are gathered.
+       * </pre>
+       *
+       * <code>string label_name = 3;</code>
+       * @param value The labelName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabelName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        labelName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains full name (aka key), for which existing values are gathered.
+       * </pre>
+       *
+       * <code>string label_name = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabelName() {
+        
+        labelName_ = getDefaultInstance().getLabelName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains full name (aka key), for which existing values are gathered.
+       * </pre>
+       *
+       * <code>string label_name = 3;</code>
+       * @param value The bytes for labelName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabelNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        labelName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
+       * Contains substring of value. All label values containing this string will be returned
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Contains substring of value. All label values containing this string will be returned
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Contains substring of value. All label values containing this string will be returned
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains substring of value. All label values containing this string will be returned
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains substring of value. All label values containing this string will be returned
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <code>int64 page_size = 5;</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <code>int64 page_size = 5;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 page_size = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.ListDashboardLabelValuesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.ListDashboardLabelValuesRequest)
+    private static final yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest();
+    }
+
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListDashboardLabelValuesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListDashboardLabelValuesRequest>() {
+      @java.lang.Override
+      public ListDashboardLabelValuesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListDashboardLabelValuesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListDashboardLabelValuesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListDashboardLabelValuesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListDashboardLabelValuesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.ListDashboardLabelValuesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string label_values = 1;</code>
+     * @return A list containing the labelValues.
+     */
+    java.util.List<java.lang.String>
+        getLabelValuesList();
+    /**
+     * <code>repeated string label_values = 1;</code>
+     * @return The count of labelValues.
+     */
+    int getLabelValuesCount();
+    /**
+     * <code>repeated string label_values = 1;</code>
+     * @param index The index of the element to return.
+     * @return The labelValues at the given index.
+     */
+    java.lang.String getLabelValues(int index);
+    /**
+     * <code>repeated string label_values = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the labelValues at the given index.
+     */
+    com.google.protobuf.ByteString
+        getLabelValuesBytes(int index);
+
+    /**
+     * <code>bool truncated = 2;</code>
+     * @return The truncated.
+     */
+    boolean getTruncated();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.monitoring.v3.ListDashboardLabelValuesResponse}
+   */
+  public static final class ListDashboardLabelValuesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.ListDashboardLabelValuesResponse)
+      ListDashboardLabelValuesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListDashboardLabelValuesResponse.newBuilder() to construct.
+    private ListDashboardLabelValuesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListDashboardLabelValuesResponse() {
+      labelValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDashboardLabelValuesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListDashboardLabelValuesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labelValues_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              labelValues_.add(s);
+              break;
+            }
+            case 16: {
+
+              truncated_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          labelValues_ = labelValues_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse.class, yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse.Builder.class);
+    }
+
+    public static final int LABEL_VALUES_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList labelValues_;
+    /**
+     * <code>repeated string label_values = 1;</code>
+     * @return A list containing the labelValues.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getLabelValuesList() {
+      return labelValues_;
+    }
+    /**
+     * <code>repeated string label_values = 1;</code>
+     * @return The count of labelValues.
+     */
+    public int getLabelValuesCount() {
+      return labelValues_.size();
+    }
+    /**
+     * <code>repeated string label_values = 1;</code>
+     * @param index The index of the element to return.
+     * @return The labelValues at the given index.
+     */
+    public java.lang.String getLabelValues(int index) {
+      return labelValues_.get(index);
+    }
+    /**
+     * <code>repeated string label_values = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the labelValues at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getLabelValuesBytes(int index) {
+      return labelValues_.getByteString(index);
+    }
+
+    public static final int TRUNCATED_FIELD_NUMBER = 2;
+    private boolean truncated_;
+    /**
+     * <code>bool truncated = 2;</code>
+     * @return The truncated.
+     */
+    @java.lang.Override
+    public boolean getTruncated() {
+      return truncated_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < labelValues_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, labelValues_.getRaw(i));
+      }
+      if (truncated_ != false) {
+        output.writeBool(2, truncated_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < labelValues_.size(); i++) {
+          dataSize += computeStringSizeNoTag(labelValues_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getLabelValuesList().size();
+      }
+      if (truncated_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, truncated_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse other = (yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse) obj;
+
+      if (!getLabelValuesList()
+          .equals(other.getLabelValuesList())) return false;
+      if (getTruncated()
+          != other.getTruncated()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLabelValuesCount() > 0) {
+        hash = (37 * hash) + LABEL_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getLabelValuesList().hashCode();
+      }
+      hash = (37 * hash) + TRUNCATED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTruncated());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.monitoring.v3.ListDashboardLabelValuesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.ListDashboardLabelValuesResponse)
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse.class, yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        labelValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        truncated_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse build() {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse buildPartial() {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse result = new yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          labelValues_ = labelValues_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.labelValues_ = labelValues_;
+        result.truncated_ = truncated_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse) {
+          return mergeFrom((yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse other) {
+        if (other == yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse.getDefaultInstance()) return this;
+        if (!other.labelValues_.isEmpty()) {
+          if (labelValues_.isEmpty()) {
+            labelValues_ = other.labelValues_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureLabelValuesIsMutable();
+            labelValues_.addAll(other.labelValues_);
+          }
+          onChanged();
+        }
+        if (other.getTruncated() != false) {
+          setTruncated(other.getTruncated());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList labelValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureLabelValuesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          labelValues_ = new com.google.protobuf.LazyStringArrayList(labelValues_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string label_values = 1;</code>
+       * @return A list containing the labelValues.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getLabelValuesList() {
+        return labelValues_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string label_values = 1;</code>
+       * @return The count of labelValues.
+       */
+      public int getLabelValuesCount() {
+        return labelValues_.size();
+      }
+      /**
+       * <code>repeated string label_values = 1;</code>
+       * @param index The index of the element to return.
+       * @return The labelValues at the given index.
+       */
+      public java.lang.String getLabelValues(int index) {
+        return labelValues_.get(index);
+      }
+      /**
+       * <code>repeated string label_values = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the labelValues at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getLabelValuesBytes(int index) {
+        return labelValues_.getByteString(index);
+      }
+      /**
+       * <code>repeated string label_values = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The labelValues to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabelValues(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLabelValuesIsMutable();
+        labelValues_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string label_values = 1;</code>
+       * @param value The labelValues to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLabelValues(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLabelValuesIsMutable();
+        labelValues_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string label_values = 1;</code>
+       * @param values The labelValues to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLabelValues(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureLabelValuesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, labelValues_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string label_values = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabelValues() {
+        labelValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string label_values = 1;</code>
+       * @param value The bytes of the labelValues to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLabelValuesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureLabelValuesIsMutable();
+        labelValues_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean truncated_ ;
+      /**
+       * <code>bool truncated = 2;</code>
+       * @return The truncated.
+       */
+      @java.lang.Override
+      public boolean getTruncated() {
+        return truncated_;
+      }
+      /**
+       * <code>bool truncated = 2;</code>
+       * @param value The truncated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTruncated(boolean value) {
+        
+        truncated_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool truncated = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTruncated() {
+        
+        truncated_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.ListDashboardLabelValuesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.ListDashboardLabelValuesResponse)
+    private static final yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse();
+    }
+
+    public static yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListDashboardLabelValuesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListDashboardLabelValuesResponse>() {
+      @java.lang.Override
+      public ListDashboardLabelValuesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListDashboardLabelValuesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListDashboardLabelValuesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListDashboardLabelValuesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardLabelValuesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_monitoring_v3_GetDashboardRequest_descriptor;
   private static final 
@@ -14853,6 +18674,26 @@ public final class DashboardServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_monitoring_v3_ListDashboardOperationsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14874,89 +18715,99 @@ public final class DashboardServiceOuterClass {
       "loud/monitoring/v3/timeline.proto\032*yande" +
       "x/cloud/monitoring/v3/link_item.proto\"9\n" +
       "\023GetDashboardRequest\022\"\n\014dashboard_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\"\247\001\n\025ListDashboardsReque" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"\306\001\n\025ListDashboardsReque" +
       "st\022!\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\022\035\n" +
       "\tpage_size\030\023 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
       "en\030\024 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\025 \001(\tB\n\212\3101" +
-      "\006<=1000B\013\n\tcontainerJ\004\010\003\020\023\"l\n\026ListDashbo" +
-      "ardsResponse\0229\n\ndashboards\030\001 \003(\0132%.yande" +
-      "x.cloud.monitoring.v3.Dashboard\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"\236\005\n\026CreateDashboardRequ" +
-      "est\022!\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\0222" +
-      "\n\004name\030\023 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}" +
-      "[a-z0-9])?\022\036\n\013description\030\024 \001(\tB\t\212\3101\005<=2" +
-      "56\022\227\001\n\006labels\030\025 \003(\0132>.yandex.cloud.monit" +
-      "oring.v3.CreateDashboardRequest.LabelsEn" +
-      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
-      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005" +
-      "title\030\026 \001(\t\0223\n\007widgets\030\027 \003(\0132\".yandex.cl" +
-      "oud.monitoring.v3.Widget\022D\n\017parametrizat" +
-      "ion\030\030 \001(\0132+.yandex.cloud.monitoring.v3.P" +
-      "arametrization\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014ma" +
-      "naged_link\030\033 \001(\t\0226\n\010timeline\030\" \001(\0132$.yan" +
-      "dex.cloud.monitoring.v3.Timeline\0223\n\005link" +
-      "s\030\035 \003(\0132$.yandex.cloud.monitoring.v3.Lin" +
-      "kItem\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001B\013\n\tcontainerJ\004\010\003\020\023J\004\010\034\020\035J\004\010" +
-      "\036\020\"J\004\010\031\020\032\"/\n\027CreateDashboardMetadata\022\024\n\014" +
-      "dashboard_id\030\001 \001(\t\"\232\005\n\026UpdateDashboardRe" +
-      "quest\022\"\n\014dashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0," +
-      "61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005" +
-      "<=256\022\227\001\n\006labels\030\004 \003(\0132>.yandex.cloud.mo" +
-      "nitoring.v3.UpdateDashboardRequest.Label" +
-      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
-      "\r\n\005title\030\005 \001(\t\0223\n\007widgets\030\006 \003(\0132\".yandex" +
-      ".cloud.monitoring.v3.Widget\022D\n\017parametri" +
-      "zation\030\007 \001(\0132+.yandex.cloud.monitoring.v" +
-      "3.Parametrization\022\014\n\004etag\030\010 \001(\t\022\022\n\nmanag" +
-      "ed_by\030\032 \001(\t\022\024\n\014managed_link\030\033 \001(\t\0226\n\010tim" +
-      "eline\030\" \001(\0132$.yandex.cloud.monitoring.v3" +
-      ".Timeline\0223\n\005links\030\035 \003(\0132$.yandex.cloud." +
-      "monitoring.v3.LinkItem\032-\n\013LabelsEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\034\020\035J\004\010\036\020" +
-      "\"J\004\010\t\020\032\"/\n\027UpdateDashboardMetadata\022\024\n\014da" +
-      "shboard_id\030\001 \001(\t\"J\n\026DeleteDashboardReque" +
-      "st\022\"\n\014dashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014" +
-      "\n\004etag\030\002 \001(\t\"/\n\027DeleteDashboardMetadata\022" +
-      "\024\n\014dashboard_id\030\001 \001(\t\"\202\001\n\036ListDashboardO" +
-      "perationsRequest\022\"\n\014dashboard_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
-      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"q\n\037Li" +
-      "stDashboardOperationsResponse\0225\n\noperati" +
-      "ons\030\001 \003(\0132!.yandex.cloud.operation.Opera" +
-      "tion\022\027\n\017next_page_token\030\002 \001(\t2\267\010\n\020Dashbo" +
-      "ardService\022\217\001\n\003Get\022/.yandex.cloud.monito" +
-      "ring.v3.GetDashboardRequest\032%.yandex.clo" +
-      "ud.monitoring.v3.Dashboard\"0\202\323\344\223\002*\022(/mon" +
-      "itoring/v3/dashboards/{dashboard_id}\022\220\001\n" +
-      "\004List\0221.yandex.cloud.monitoring.v3.ListD" +
-      "ashboardsRequest\0322.yandex.cloud.monitori" +
-      "ng.v3.ListDashboardsResponse\"!\202\323\344\223\002\033\022\031/m" +
-      "onitoring/v3/dashboards\022\255\001\n\006Create\0222.yan" +
-      "dex.cloud.monitoring.v3.CreateDashboardR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"L\202\323\344\223\002\036\"\031/monitoring/v3/dashboards:\001*\262" +
-      "\322*$\n\027CreateDashboardMetadata\022\tDashboard\022" +
-      "\274\001\n\006Update\0222.yandex.cloud.monitoring.v3." +
-      "UpdateDashboardRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"[\202\323\344\223\002-2(/monitoring/v" +
-      "3/dashboards/{dashboard_id}:\001*\262\322*$\n\027Upda" +
-      "teDashboardMetadata\022\tDashboard\022\305\001\n\006Delet" +
-      "e\0222.yandex.cloud.monitoring.v3.DeleteDas" +
-      "hboardRequest\032!.yandex.cloud.operation.O" +
-      "peration\"d\202\323\344\223\002**(/monitoring/v3/dashboa" +
-      "rds/{dashboard_id}\262\322*0\n\027DeleteDashboardM" +
-      "etadata\022\025google.protobuf.Empty\022\306\001\n\016ListO" +
-      "perations\022:.yandex.cloud.monitoring.v3.L" +
-      "istDashboardOperationsRequest\032;.yandex.c" +
-      "loud.monitoring.v3.ListDashboardOperatio" +
-      "nsResponse\";\202\323\344\223\0025\0223/monitoring/v3/dashb" +
-      "oards/{dashboard_id}/operationsBk\n\036yande" +
-      "x.cloud.api.monitoring.v3ZIgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/moni" +
-      "toring/v3;monitoringb\006proto3"
+      "\006<=1000\022\035\n\tselectors\030\026 \001(\tB\n\212\3101\006<=1000B\013" +
+      "\n\tcontainerJ\004\010\003\020\023\"l\n\026ListDashboardsRespo" +
+      "nse\0229\n\ndashboards\030\001 \003(\0132%.yandex.cloud.m" +
+      "onitoring.v3.Dashboard\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\"\230\005\n\026CreateDashboardRequest\022!\n\tfo" +
+      "lder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\0222\n\004name\030\023 " +
+      "\001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
+      "?\022\036\n\013description\030\024 \001(\tB\t\212\3101\005<=256\022\227\001\n\006la" +
+      "bels\030\025 \003(\0132>.yandex.cloud.monitoring.v3." +
+      "CreateDashboardRequest.LabelsEntryBG\202\3101\004" +
+      "<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-6" +
+      "3\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005title\030\026 \001" +
+      "(\t\0223\n\007widgets\030\027 \003(\0132\".yandex.cloud.monit" +
+      "oring.v3.Widget\022D\n\017parametrization\030\030 \001(\013" +
+      "2+.yandex.cloud.monitoring.v3.Parametriz" +
+      "ation\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014managed_lin" +
+      "k\030\033 \001(\t\0226\n\010timeline\030\034 \001(\0132$.yandex.cloud" +
+      ".monitoring.v3.Timeline\0223\n\005links\030\035 \003(\0132$" +
+      ".yandex.cloud.monitoring.v3.LinkItem\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001B\013\n\tcontainerJ\004\010\003\020\023J\004\010\036\020\"J\004\010\031\020\032\"/\n\027Cr" +
+      "eateDashboardMetadata\022\024\n\014dashboard_id\030\001 " +
+      "\001(\t\"\224\005\n\026UpdateDashboardRequest\022\"\n\014dashbo" +
+      "ard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\t" +
+      "B$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036" +
+      "\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\227\001\n\006label" +
+      "s\030\004 \003(\0132>.yandex.cloud.monitoring.v3.Upd" +
+      "ateDashboardRequest.LabelsEntryBG\202\3101\004<=6" +
+      "4\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\310" +
+      "1\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005title\030\005 \001(\t\022" +
+      "3\n\007widgets\030\006 \003(\0132\".yandex.cloud.monitori" +
+      "ng.v3.Widget\022D\n\017parametrization\030\007 \001(\0132+." +
+      "yandex.cloud.monitoring.v3.Parametrizati" +
+      "on\022\014\n\004etag\030\010 \001(\t\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014" +
+      "managed_link\030\033 \001(\t\0226\n\010timeline\030\034 \001(\0132$.y" +
+      "andex.cloud.monitoring.v3.Timeline\0223\n\005li" +
+      "nks\030\035 \003(\0132$.yandex.cloud.monitoring.v3.L" +
+      "inkItem\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001J\004\010\036\020\"J\004\010\t\020\032\"/\n\027UpdateDash" +
+      "boardMetadata\022\024\n\014dashboard_id\030\001 \001(\t\"J\n\026D" +
+      "eleteDashboardRequest\022\"\n\014dashboard_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004etag\030\002 \001(\t\"/\n\027Delet" +
+      "eDashboardMetadata\022\024\n\014dashboard_id\030\001 \001(\t" +
+      "\"\202\001\n\036ListDashboardOperationsRequest\022\"\n\014d" +
+      "ashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
+      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
+      "(\tB\t\212\3101\005<=100\"q\n\037ListDashboardOperations" +
+      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
+      "oud.operation.Operation\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"h\n\036ListDashboardLabelNamesReque" +
+      "st\022\022\n\nproject_id\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\022\021\n\t" +
+      "selectors\030\003 \001(\t\022\021\n\tpage_size\030\004 \001(\003\"I\n\037Li" +
+      "stDashboardLabelNamesResponse\022\023\n\013label_n" +
+      "ames\030\001 \003(\t\022\021\n\ttruncated\030\002 \001(\010\"}\n\037ListDas" +
+      "hboardLabelValuesRequest\022\022\n\nproject_id\030\001" +
+      " \001(\t\022\021\n\tselectors\030\002 \001(\t\022\022\n\nlabel_name\030\003 " +
+      "\001(\t\022\014\n\004text\030\004 \001(\t\022\021\n\tpage_size\030\005 \001(\003\"K\n " +
+      "ListDashboardLabelValuesResponse\022\024\n\014labe" +
+      "l_values\030\001 \003(\t\022\021\n\ttruncated\030\002 \001(\0102\267\010\n\020Da" +
+      "shboardService\022\217\001\n\003Get\022/.yandex.cloud.mo" +
+      "nitoring.v3.GetDashboardRequest\032%.yandex" +
+      ".cloud.monitoring.v3.Dashboard\"0\202\323\344\223\002*\022(" +
+      "/monitoring/v3/dashboards/{dashboard_id}" +
+      "\022\220\001\n\004List\0221.yandex.cloud.monitoring.v3.L" +
+      "istDashboardsRequest\0322.yandex.cloud.moni" +
+      "toring.v3.ListDashboardsResponse\"!\202\323\344\223\002\033" +
+      "\022\031/monitoring/v3/dashboards\022\255\001\n\006Create\0222" +
+      ".yandex.cloud.monitoring.v3.CreateDashbo" +
+      "ardRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"L\202\323\344\223\002\036\"\031/monitoring/v3/dashboards" +
+      ":\001*\262\322*$\n\027CreateDashboardMetadata\022\tDashbo" +
+      "ard\022\274\001\n\006Update\0222.yandex.cloud.monitoring" +
+      ".v3.UpdateDashboardRequest\032!.yandex.clou" +
+      "d.operation.Operation\"[\202\323\344\223\002-2(/monitori" +
+      "ng/v3/dashboards/{dashboard_id}:\001*\262\322*$\n\027" +
+      "UpdateDashboardMetadata\022\tDashboard\022\305\001\n\006D" +
+      "elete\0222.yandex.cloud.monitoring.v3.Delet" +
+      "eDashboardRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"d\202\323\344\223\002**(/monitoring/v3/das" +
+      "hboards/{dashboard_id}\262\322*0\n\027DeleteDashbo" +
+      "ardMetadata\022\025google.protobuf.Empty\022\306\001\n\016L" +
+      "istOperations\022:.yandex.cloud.monitoring." +
+      "v3.ListDashboardOperationsRequest\032;.yand" +
+      "ex.cloud.monitoring.v3.ListDashboardOper" +
+      "ationsResponse\";\202\323\344\223\0025\0223/monitoring/v3/d" +
+      "ashboards/{dashboard_id}/operationsBk\n\036y" +
+      "andex.cloud.api.monitoring.v3ZIgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "monitoring/v3;monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14982,7 +18833,7 @@ public final class DashboardServiceOuterClass {
     internal_static_yandex_cloud_monitoring_v3_ListDashboardsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ListDashboardsRequest_descriptor,
-        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", "Container", });
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", "Selectors", "Container", });
     internal_static_yandex_cloud_monitoring_v3_ListDashboardsResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_monitoring_v3_ListDashboardsResponse_fieldAccessorTable = new
@@ -15049,6 +18900,30 @@ public final class DashboardServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ListDashboardOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesRequest_descriptor,
+        new java.lang.String[] { "ProjectId", "Text", "Selectors", "PageSize", });
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelNamesResponse_descriptor,
+        new java.lang.String[] { "LabelNames", "Truncated", });
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesRequest_descriptor,
+        new java.lang.String[] { "ProjectId", "Selectors", "LabelName", "Text", "PageSize", });
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_ListDashboardLabelValuesResponse_descriptor,
+        new java.lang.String[] { "LabelValues", "Truncated", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

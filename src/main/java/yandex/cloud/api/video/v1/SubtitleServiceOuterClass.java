@@ -20,7 +20,7 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle to retrieve.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,7 +29,7 @@ public final class SubtitleServiceOuterClass {
     java.lang.String getSubtitleId();
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle to retrieve.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -126,7 +126,7 @@ public final class SubtitleServiceOuterClass {
     private volatile java.lang.Object subtitleId_;
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle to retrieve.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -147,7 +147,7 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle to retrieve.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -473,7 +473,7 @@ public final class SubtitleServiceOuterClass {
       private java.lang.Object subtitleId_ = "";
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle to retrieve.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -493,7 +493,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle to retrieve.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -514,7 +514,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle to retrieve.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -533,7 +533,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle to retrieve.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -547,7 +547,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle to retrieve.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -624,8 +624,7 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of the results per page to return.
-     * Default value: 100.
+     * The maximum number of subtitles to return per page.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -635,7 +634,8 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListSubtitlesResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -644,7 +644,8 @@ public final class SubtitleServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListSubtitlesResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -655,7 +656,7 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video containing the subtitles to list.
      * </pre>
      *
      * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -664,7 +665,7 @@ public final class SubtitleServiceOuterClass {
     boolean hasVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video containing the subtitles to list.
      * </pre>
      *
      * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -673,7 +674,7 @@ public final class SubtitleServiceOuterClass {
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video containing the subtitles to list.
      * </pre>
      *
      * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -822,8 +823,7 @@ public final class SubtitleServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of the results per page to return.
-     * Default value: 100.
+     * The maximum number of subtitles to return per page.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -838,7 +838,8 @@ public final class SubtitleServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListSubtitlesResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -859,7 +860,8 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListSubtitlesResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -883,7 +885,7 @@ public final class SubtitleServiceOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 1000;
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video containing the subtitles to list.
      * </pre>
      *
      * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -894,7 +896,7 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video containing the subtitles to list.
      * </pre>
      *
      * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -919,7 +921,7 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video containing the subtitles to list.
      * </pre>
      *
      * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1322,8 +1324,7 @@ public final class SubtitleServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of subtitles to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1335,8 +1336,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of subtitles to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1351,8 +1351,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of subtitles to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1368,7 +1367,8 @@ public final class SubtitleServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListSubtitlesResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1388,7 +1388,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListSubtitlesResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1409,7 +1410,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListSubtitlesResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1428,7 +1430,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListSubtitlesResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1442,7 +1445,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListSubtitlesResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1463,7 +1467,7 @@ public final class SubtitleServiceOuterClass {
 
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video containing the subtitles to list.
        * </pre>
        *
        * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1475,7 +1479,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video containing the subtitles to list.
        * </pre>
        *
        * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1501,7 +1505,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video containing the subtitles to list.
        * </pre>
        *
        * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1528,7 +1532,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video containing the subtitles to list.
        * </pre>
        *
        * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1547,7 +1551,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video containing the subtitles to list.
        * </pre>
        *
        * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1563,7 +1567,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video containing the subtitles to list.
        * </pre>
        *
        * <code>string video_id = 1000 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1639,24 +1643,49 @@ public final class SubtitleServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of subtitles matching the request criteria.
+     * May be empty if no subtitles match the criteria or if the video has no subtitles.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
      */
     java.util.List<yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle> 
         getSubtitlesList();
     /**
+     * <pre>
+     * List of subtitles matching the request criteria.
+     * May be empty if no subtitles match the criteria or if the video has no subtitles.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
      */
     yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle getSubtitles(int index);
     /**
+     * <pre>
+     * List of subtitles matching the request criteria.
+     * May be empty if no subtitles match the criteria or if the video has no subtitles.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
      */
     int getSubtitlesCount();
     /**
+     * <pre>
+     * List of subtitles matching the request criteria.
+     * May be empty if no subtitles match the criteria or if the video has no subtitles.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.video.v1.SubtitleOuterClass.SubtitleOrBuilder> 
         getSubtitlesOrBuilderList();
     /**
+     * <pre>
+     * List of subtitles matching the request criteria.
+     * May be empty if no subtitles match the criteria or if the video has no subtitles.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
      */
     yandex.cloud.api.video.v1.SubtitleOuterClass.SubtitleOrBuilder getSubtitlesOrBuilder(
@@ -1664,7 +1693,8 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -1673,7 +1703,8 @@ public final class SubtitleServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -1783,6 +1814,11 @@ public final class SubtitleServiceOuterClass {
     public static final int SUBTITLES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle> subtitles_;
     /**
+     * <pre>
+     * List of subtitles matching the request criteria.
+     * May be empty if no subtitles match the criteria or if the video has no subtitles.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
      */
     @java.lang.Override
@@ -1790,6 +1826,11 @@ public final class SubtitleServiceOuterClass {
       return subtitles_;
     }
     /**
+     * <pre>
+     * List of subtitles matching the request criteria.
+     * May be empty if no subtitles match the criteria or if the video has no subtitles.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
      */
     @java.lang.Override
@@ -1798,6 +1839,11 @@ public final class SubtitleServiceOuterClass {
       return subtitles_;
     }
     /**
+     * <pre>
+     * List of subtitles matching the request criteria.
+     * May be empty if no subtitles match the criteria or if the video has no subtitles.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
      */
     @java.lang.Override
@@ -1805,6 +1851,11 @@ public final class SubtitleServiceOuterClass {
       return subtitles_.size();
     }
     /**
+     * <pre>
+     * List of subtitles matching the request criteria.
+     * May be empty if no subtitles match the criteria or if the video has no subtitles.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
      */
     @java.lang.Override
@@ -1812,6 +1863,11 @@ public final class SubtitleServiceOuterClass {
       return subtitles_.get(index);
     }
     /**
+     * <pre>
+     * List of subtitles matching the request criteria.
+     * May be empty if no subtitles match the criteria or if the video has no subtitles.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
      */
     @java.lang.Override
@@ -1824,7 +1880,8 @@ public final class SubtitleServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -1845,7 +1902,8 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2238,6 +2296,11 @@ public final class SubtitleServiceOuterClass {
           yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle, yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.Builder, yandex.cloud.api.video.v1.SubtitleOuterClass.SubtitleOrBuilder> subtitlesBuilder_;
 
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle> getSubtitlesList() {
@@ -2248,6 +2311,11 @@ public final class SubtitleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public int getSubtitlesCount() {
@@ -2258,6 +2326,11 @@ public final class SubtitleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle getSubtitles(int index) {
@@ -2268,6 +2341,11 @@ public final class SubtitleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public Builder setSubtitles(
@@ -2285,6 +2363,11 @@ public final class SubtitleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public Builder setSubtitles(
@@ -2299,6 +2382,11 @@ public final class SubtitleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public Builder addSubtitles(yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle value) {
@@ -2315,6 +2403,11 @@ public final class SubtitleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public Builder addSubtitles(
@@ -2332,6 +2425,11 @@ public final class SubtitleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public Builder addSubtitles(
@@ -2346,6 +2444,11 @@ public final class SubtitleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public Builder addSubtitles(
@@ -2360,6 +2463,11 @@ public final class SubtitleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public Builder addAllSubtitles(
@@ -2375,6 +2483,11 @@ public final class SubtitleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public Builder clearSubtitles() {
@@ -2388,6 +2501,11 @@ public final class SubtitleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public Builder removeSubtitles(int index) {
@@ -2401,6 +2519,11 @@ public final class SubtitleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.Builder getSubtitlesBuilder(
@@ -2408,6 +2531,11 @@ public final class SubtitleServiceOuterClass {
         return getSubtitlesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public yandex.cloud.api.video.v1.SubtitleOuterClass.SubtitleOrBuilder getSubtitlesOrBuilder(
@@ -2418,6 +2546,11 @@ public final class SubtitleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.video.v1.SubtitleOuterClass.SubtitleOrBuilder> 
@@ -2429,6 +2562,11 @@ public final class SubtitleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.Builder addSubtitlesBuilder() {
@@ -2436,6 +2574,11 @@ public final class SubtitleServiceOuterClass {
             yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.Builder addSubtitlesBuilder(
@@ -2444,6 +2587,11 @@ public final class SubtitleServiceOuterClass {
             index, yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of subtitles matching the request criteria.
+       * May be empty if no subtitles match the criteria or if the video has no subtitles.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Subtitle subtitles = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.Builder> 
@@ -2468,7 +2616,8 @@ public final class SubtitleServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2488,7 +2637,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2509,7 +2659,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2528,7 +2679,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2542,7 +2694,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2619,23 +2772,19 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * Subtitle language in any of the following formats:
-     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-     * * two-letter code according to ISO 639-1
+     * Subtitle language represented as a three-letter code according to ISO 639-2/T.
      * </pre>
      *
-     * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
+     * <code>string language = 1 [(.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
      * @return The language.
      */
     java.lang.String getLanguage();
     /**
      * <pre>
-     * Subtitle language in any of the following formats:
-     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-     * * two-letter code according to ISO 639-1
+     * Subtitle language represented as a three-letter code according to ISO 639-2/T.
      * </pre>
      *
-     * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
+     * <code>string language = 1 [(.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
      * @return The bytes for language.
      */
     com.google.protobuf.ByteString
@@ -2648,7 +2797,7 @@ public final class SubtitleServiceOuterClass {
      * If not provided, it will be auto-generated based on the specified language.
      * </pre>
      *
-     * <code>string label = 2;</code>
+     * <code>string label = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The label.
      */
     java.lang.String getLabel();
@@ -2659,7 +2808,7 @@ public final class SubtitleServiceOuterClass {
      * If not provided, it will be auto-generated based on the specified language.
      * </pre>
      *
-     * <code>string label = 2;</code>
+     * <code>string label = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for label.
      */
     com.google.protobuf.ByteString
@@ -2918,12 +3067,10 @@ public final class SubtitleServiceOuterClass {
     private volatile java.lang.Object language_;
     /**
      * <pre>
-     * Subtitle language in any of the following formats:
-     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-     * * two-letter code according to ISO 639-1
+     * Subtitle language represented as a three-letter code according to ISO 639-2/T.
      * </pre>
      *
-     * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
+     * <code>string language = 1 [(.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
      * @return The language.
      */
     @java.lang.Override
@@ -2941,12 +3088,10 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * Subtitle language in any of the following formats:
-     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-     * * two-letter code according to ISO 639-1
+     * Subtitle language represented as a three-letter code according to ISO 639-2/T.
      * </pre>
      *
-     * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
+     * <code>string language = 1 [(.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
      * @return The bytes for language.
      */
     @java.lang.Override
@@ -2973,7 +3118,7 @@ public final class SubtitleServiceOuterClass {
      * If not provided, it will be auto-generated based on the specified language.
      * </pre>
      *
-     * <code>string label = 2;</code>
+     * <code>string label = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The label.
      */
     @java.lang.Override
@@ -2996,7 +3141,7 @@ public final class SubtitleServiceOuterClass {
      * If not provided, it will be auto-generated based on the specified language.
      * </pre>
      *
-     * <code>string label = 2;</code>
+     * <code>string label = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for label.
      */
     @java.lang.Override
@@ -3556,12 +3701,10 @@ public final class SubtitleServiceOuterClass {
       private java.lang.Object language_ = "";
       /**
        * <pre>
-       * Subtitle language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-       * * two-letter code according to ISO 639-1
+       * Subtitle language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
+       * <code>string language = 1 [(.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
        * @return The language.
        */
       public java.lang.String getLanguage() {
@@ -3578,12 +3721,10 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-       * * two-letter code according to ISO 639-1
+       * Subtitle language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
+       * <code>string language = 1 [(.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
        * @return The bytes for language.
        */
       public com.google.protobuf.ByteString
@@ -3601,12 +3742,10 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-       * * two-letter code according to ISO 639-1
+       * Subtitle language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
+       * <code>string language = 1 [(.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
        * @param value The language to set.
        * @return This builder for chaining.
        */
@@ -3622,12 +3761,10 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-       * * two-letter code according to ISO 639-1
+       * Subtitle language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
+       * <code>string language = 1 [(.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLanguage() {
@@ -3638,12 +3775,10 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-       * * two-letter code according to ISO 639-1
+       * Subtitle language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
+       * <code>string language = 1 [(.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
        * @param value The bytes for language to set.
        * @return This builder for chaining.
        */
@@ -3667,7 +3802,7 @@ public final class SubtitleServiceOuterClass {
        * If not provided, it will be auto-generated based on the specified language.
        * </pre>
        *
-       * <code>string label = 2;</code>
+       * <code>string label = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The label.
        */
       public java.lang.String getLabel() {
@@ -3689,7 +3824,7 @@ public final class SubtitleServiceOuterClass {
        * If not provided, it will be auto-generated based on the specified language.
        * </pre>
        *
-       * <code>string label = 2;</code>
+       * <code>string label = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for label.
        */
       public com.google.protobuf.ByteString
@@ -3712,7 +3847,7 @@ public final class SubtitleServiceOuterClass {
        * If not provided, it will be auto-generated based on the specified language.
        * </pre>
        *
-       * <code>string label = 2;</code>
+       * <code>string label = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The label to set.
        * @return This builder for chaining.
        */
@@ -3733,7 +3868,7 @@ public final class SubtitleServiceOuterClass {
        * If not provided, it will be auto-generated based on the specified language.
        * </pre>
        *
-       * <code>string label = 2;</code>
+       * <code>string label = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLabel() {
@@ -3749,7 +3884,7 @@ public final class SubtitleServiceOuterClass {
        * If not provided, it will be auto-generated based on the specified language.
        * </pre>
        *
-       * <code>string label = 2;</code>
+       * <code>string label = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for label to set.
        * @return This builder for chaining.
        */
@@ -4120,11 +4255,19 @@ public final class SubtitleServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Original filename of the subtitle file being uploaded.
+     * </pre>
+     *
      * <code>string filename = 1 [(.yandex.cloud.required) = true];</code>
      * @return The filename.
      */
     java.lang.String getFilename();
     /**
+     * <pre>
+     * Original filename of the subtitle file being uploaded.
+     * </pre>
+     *
      * <code>string filename = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for filename.
      */
@@ -4218,6 +4361,10 @@ public final class SubtitleServiceOuterClass {
     public static final int FILENAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object filename_;
     /**
+     * <pre>
+     * Original filename of the subtitle file being uploaded.
+     * </pre>
+     *
      * <code>string filename = 1 [(.yandex.cloud.required) = true];</code>
      * @return The filename.
      */
@@ -4235,6 +4382,10 @@ public final class SubtitleServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Original filename of the subtitle file being uploaded.
+     * </pre>
+     *
      * <code>string filename = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for filename.
      */
@@ -4557,6 +4708,10 @@ public final class SubtitleServiceOuterClass {
 
       private java.lang.Object filename_ = "";
       /**
+       * <pre>
+       * Original filename of the subtitle file being uploaded.
+       * </pre>
+       *
        * <code>string filename = 1 [(.yandex.cloud.required) = true];</code>
        * @return The filename.
        */
@@ -4573,6 +4728,10 @@ public final class SubtitleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Original filename of the subtitle file being uploaded.
+       * </pre>
+       *
        * <code>string filename = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for filename.
        */
@@ -4590,6 +4749,10 @@ public final class SubtitleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Original filename of the subtitle file being uploaded.
+       * </pre>
+       *
        * <code>string filename = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The filename to set.
        * @return This builder for chaining.
@@ -4605,6 +4768,10 @@ public final class SubtitleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Original filename of the subtitle file being uploaded.
+       * </pre>
+       *
        * <code>string filename = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -4615,6 +4782,10 @@ public final class SubtitleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Original filename of the subtitle file being uploaded.
+       * </pre>
+       *
        * <code>string filename = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for filename to set.
        * @return This builder for chaining.
@@ -4689,7 +4860,7 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle being created.
      * </pre>
      *
      * <code>string subtitle_id = 1;</code>
@@ -4698,7 +4869,7 @@ public final class SubtitleServiceOuterClass {
     java.lang.String getSubtitleId();
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle being created.
      * </pre>
      *
      * <code>string subtitle_id = 1;</code>
@@ -4795,7 +4966,7 @@ public final class SubtitleServiceOuterClass {
     private volatile java.lang.Object subtitleId_;
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle being created.
      * </pre>
      *
      * <code>string subtitle_id = 1;</code>
@@ -4816,7 +4987,7 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle being created.
      * </pre>
      *
      * <code>string subtitle_id = 1;</code>
@@ -5142,7 +5313,7 @@ public final class SubtitleServiceOuterClass {
       private java.lang.Object subtitleId_ = "";
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle being created.
        * </pre>
        *
        * <code>string subtitle_id = 1;</code>
@@ -5162,7 +5333,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle being created.
        * </pre>
        *
        * <code>string subtitle_id = 1;</code>
@@ -5183,7 +5354,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle being created.
        * </pre>
        *
        * <code>string subtitle_id = 1;</code>
@@ -5202,7 +5373,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle being created.
        * </pre>
        *
        * <code>string subtitle_id = 1;</code>
@@ -5216,7 +5387,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle being created.
        * </pre>
        *
        * <code>string subtitle_id = 1;</code>
@@ -5293,7 +5464,7 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle for which to generate an upload URL.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5302,7 +5473,7 @@ public final class SubtitleServiceOuterClass {
     java.lang.String getSubtitleId();
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle for which to generate an upload URL.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5399,7 +5570,7 @@ public final class SubtitleServiceOuterClass {
     private volatile java.lang.Object subtitleId_;
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle for which to generate an upload URL.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5420,7 +5591,7 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle for which to generate an upload URL.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5746,7 +5917,7 @@ public final class SubtitleServiceOuterClass {
       private java.lang.Object subtitleId_ = "";
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle for which to generate an upload URL.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5766,7 +5937,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle for which to generate an upload URL.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5787,7 +5958,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle for which to generate an upload URL.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5806,7 +5977,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle for which to generate an upload URL.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5820,7 +5991,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle for which to generate an upload URL.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5897,7 +6068,9 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * Upload url.
+     * Pre-signed URL for uploading the subtitle file.
+     * This URL can be used with an HTTP PUT request to upload the subtitle file.
+     * The URL has a limited validity period and will expire after a certain time.
      * </pre>
      *
      * <code>string upload_url = 1;</code>
@@ -5906,7 +6079,9 @@ public final class SubtitleServiceOuterClass {
     java.lang.String getUploadUrl();
     /**
      * <pre>
-     * Upload url.
+     * Pre-signed URL for uploading the subtitle file.
+     * This URL can be used with an HTTP PUT request to upload the subtitle file.
+     * The URL has a limited validity period and will expire after a certain time.
      * </pre>
      *
      * <code>string upload_url = 1;</code>
@@ -6003,7 +6178,9 @@ public final class SubtitleServiceOuterClass {
     private volatile java.lang.Object uploadUrl_;
     /**
      * <pre>
-     * Upload url.
+     * Pre-signed URL for uploading the subtitle file.
+     * This URL can be used with an HTTP PUT request to upload the subtitle file.
+     * The URL has a limited validity period and will expire after a certain time.
      * </pre>
      *
      * <code>string upload_url = 1;</code>
@@ -6024,7 +6201,9 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * Upload url.
+     * Pre-signed URL for uploading the subtitle file.
+     * This URL can be used with an HTTP PUT request to upload the subtitle file.
+     * The URL has a limited validity period and will expire after a certain time.
      * </pre>
      *
      * <code>string upload_url = 1;</code>
@@ -6350,7 +6529,9 @@ public final class SubtitleServiceOuterClass {
       private java.lang.Object uploadUrl_ = "";
       /**
        * <pre>
-       * Upload url.
+       * Pre-signed URL for uploading the subtitle file.
+       * This URL can be used with an HTTP PUT request to upload the subtitle file.
+       * The URL has a limited validity period and will expire after a certain time.
        * </pre>
        *
        * <code>string upload_url = 1;</code>
@@ -6370,7 +6551,9 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload url.
+       * Pre-signed URL for uploading the subtitle file.
+       * This URL can be used with an HTTP PUT request to upload the subtitle file.
+       * The URL has a limited validity period and will expire after a certain time.
        * </pre>
        *
        * <code>string upload_url = 1;</code>
@@ -6391,7 +6574,9 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload url.
+       * Pre-signed URL for uploading the subtitle file.
+       * This URL can be used with an HTTP PUT request to upload the subtitle file.
+       * The URL has a limited validity period and will expire after a certain time.
        * </pre>
        *
        * <code>string upload_url = 1;</code>
@@ -6410,7 +6595,9 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload url.
+       * Pre-signed URL for uploading the subtitle file.
+       * This URL can be used with an HTTP PUT request to upload the subtitle file.
+       * The URL has a limited validity period and will expire after a certain time.
        * </pre>
        *
        * <code>string upload_url = 1;</code>
@@ -6424,7 +6611,9 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload url.
+       * Pre-signed URL for uploading the subtitle file.
+       * This URL can be used with an HTTP PUT request to upload the subtitle file.
+       * The URL has a limited validity period and will expire after a certain time.
        * </pre>
        *
        * <code>string upload_url = 1;</code>
@@ -6501,7 +6690,7 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle to delete.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6510,7 +6699,7 @@ public final class SubtitleServiceOuterClass {
     java.lang.String getSubtitleId();
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle to delete.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6607,7 +6796,7 @@ public final class SubtitleServiceOuterClass {
     private volatile java.lang.Object subtitleId_;
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle to delete.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6628,7 +6817,7 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle to delete.
      * </pre>
      *
      * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6954,7 +7143,7 @@ public final class SubtitleServiceOuterClass {
       private java.lang.Object subtitleId_ = "";
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle to delete.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6974,7 +7163,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle to delete.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6995,7 +7184,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle to delete.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7014,7 +7203,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle to delete.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7028,7 +7217,7 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle to delete.
        * </pre>
        *
        * <code>string subtitle_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7105,7 +7294,8 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle being deleted.
+     * This identifier can be used to track the subtitle deletion operation.
      * </pre>
      *
      * <code>string subtitle_id = 1;</code>
@@ -7114,7 +7304,8 @@ public final class SubtitleServiceOuterClass {
     java.lang.String getSubtitleId();
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle being deleted.
+     * This identifier can be used to track the subtitle deletion operation.
      * </pre>
      *
      * <code>string subtitle_id = 1;</code>
@@ -7211,7 +7402,8 @@ public final class SubtitleServiceOuterClass {
     private volatile java.lang.Object subtitleId_;
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle being deleted.
+     * This identifier can be used to track the subtitle deletion operation.
      * </pre>
      *
      * <code>string subtitle_id = 1;</code>
@@ -7232,7 +7424,8 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the subtitle.
+     * ID of the subtitle being deleted.
+     * This identifier can be used to track the subtitle deletion operation.
      * </pre>
      *
      * <code>string subtitle_id = 1;</code>
@@ -7558,7 +7751,8 @@ public final class SubtitleServiceOuterClass {
       private java.lang.Object subtitleId_ = "";
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle being deleted.
+       * This identifier can be used to track the subtitle deletion operation.
        * </pre>
        *
        * <code>string subtitle_id = 1;</code>
@@ -7578,7 +7772,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle being deleted.
+       * This identifier can be used to track the subtitle deletion operation.
        * </pre>
        *
        * <code>string subtitle_id = 1;</code>
@@ -7599,7 +7794,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle being deleted.
+       * This identifier can be used to track the subtitle deletion operation.
        * </pre>
        *
        * <code>string subtitle_id = 1;</code>
@@ -7618,7 +7814,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle being deleted.
+       * This identifier can be used to track the subtitle deletion operation.
        * </pre>
        *
        * <code>string subtitle_id = 1;</code>
@@ -7632,7 +7829,8 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * ID of the subtitle being deleted.
+       * This identifier can be used to track the subtitle deletion operation.
        * </pre>
        *
        * <code>string subtitle_id = 1;</code>
@@ -7775,44 +7973,46 @@ public final class SubtitleServiceOuterClass {
       "\350\007 \001(\tB\010\212\3101\004<=50H\000B\021\n\tparent_id\022\004\300\3011\001J\004\010" +
       "\001\020dJ\005\010f\020\350\007\"j\n\025ListSubtitlesResponse\0222\n\ts" +
       "ubtitles\030\001 \003(\0132\037.yandex.cloud.video.v1.S" +
-      "ubtitle\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\322" +
-      "\001\n\025CreateSubtitleRequest\022\031\n\010language\030\001 \001" +
-      "(\tB\007\212\3101\0032-3\022\r\n\005label\030\002 \001(\t\022\035\n\010video_id\030\350" +
-      "\007 \001(\tB\010\212\3101\004<=50H\000\022>\n\006upload\030\314\010 \001(\0132+.yan" +
-      "dex.cloud.video.v1.SubtitleUploadParamsH" +
-      "\001B\021\n\tparent_id\022\004\300\3011\001B\016\n\006source\022\004\300\3011\001J\005\010\003" +
-      "\020\350\007J\006\010\351\007\020\314\010\".\n\024SubtitleUploadParams\022\026\n\010f" +
-      "ilename\030\001 \001(\tB\004\350\3071\001\"-\n\026CreateSubtitleMet" +
-      "adata\022\023\n\013subtitle_id\030\001 \001(\t\"E\n GenerateSu" +
-      "btitleUploadURLRequest\022!\n\013subtitle_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"7\n!GenerateSubtitleUpl" +
-      "oadURLResponse\022\022\n\nupload_url\030\001 \001(\t\":\n\025De" +
-      "leteSubtitleRequest\022!\n\013subtitle_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteSubtitleMetadata" +
-      "\022\023\n\013subtitle_id\030\001 \001(\t2\261\006\n\017SubtitleServic" +
-      "e\022|\n\003Get\022).yandex.cloud.video.v1.GetSubt" +
-      "itleRequest\032\037.yandex.cloud.video.v1.Subt" +
-      "itle\")\202\323\344\223\002#\022!/video/v1/subtitles/{subti" +
-      "tle_id}\022~\n\004List\022+.yandex.cloud.video.v1." +
-      "ListSubtitlesRequest\032,.yandex.cloud.vide" +
-      "o.v1.ListSubtitlesResponse\"\033\202\323\344\223\002\025\022\023/vid" +
-      "eo/v1/subtitles\022\237\001\n\006Create\022,.yandex.clou" +
-      "d.video.v1.CreateSubtitleRequest\032!.yande" +
-      "x.cloud.operation.Operation\"D\202\323\344\223\002\030\"\023/vi" +
-      "deo/v1/subtitles:\001*\262\322*\"\n\026CreateSubtitleM" +
-      "etadata\022\010Subtitle\022\303\001\n\021GenerateUploadURL\022" +
-      "7.yandex.cloud.video.v1.GenerateSubtitle" +
-      "UploadURLRequest\0328.yandex.cloud.video.v1" +
-      ".GenerateSubtitleUploadURLResponse\";\202\323\344\223" +
-      "\0025\0223/video/v1/subtitles/{subtitle_id}:ge" +
-      "nerateUploadURL\022\267\001\n\006Delete\022,.yandex.clou" +
-      "d.video.v1.DeleteSubtitleRequest\032!.yande" +
-      "x.cloud.operation.Operation\"\\\202\323\344\223\002#*!/vi" +
-      "deo/v1/subtitles/{subtitle_id}\262\322*/\n\026Dele" +
-      "teSubtitleMetadata\022\025google.protobuf.Empt" +
-      "yB\\\n\031yandex.cloud.api.video.v1Z?github.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/video/v1;videob\006proto3"
+      "ubtitle\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\221" +
+      "\002\n\025CreateSubtitleRequest\022N\n\010language\030\001 \001" +
+      "(\tB<\212\3101\0013\362\30713ara|deu|eng|fra|ita|jpn|kaz" +
+      "|kor|rus|spa|tur|ukr|zho\022\027\n\005label\030\002 \001(\tB" +
+      "\010\212\3101\004<=50\022\035\n\010video_id\030\350\007 \001(\tB\010\212\3101\004<=50H\000" +
+      "\022>\n\006upload\030\314\010 \001(\0132+.yandex.cloud.video.v" +
+      "1.SubtitleUploadParamsH\001B\021\n\tparent_id\022\004\300" +
+      "\3011\001B\016\n\006source\022\004\300\3011\001J\005\010\003\020\350\007J\006\010\351\007\020\314\010\".\n\024Su" +
+      "btitleUploadParams\022\026\n\010filename\030\001 \001(\tB\004\350\307" +
+      "1\001\"-\n\026CreateSubtitleMetadata\022\023\n\013subtitle" +
+      "_id\030\001 \001(\t\"E\n GenerateSubtitleUploadURLRe" +
+      "quest\022!\n\013subtitle_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"7\n!GenerateSubtitleUploadURLResponse\022\022\n" +
+      "\nupload_url\030\001 \001(\t\":\n\025DeleteSubtitleReque" +
+      "st\022!\n\013subtitle_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n" +
+      "\026DeleteSubtitleMetadata\022\023\n\013subtitle_id\030\001" +
+      " \001(\t2\261\006\n\017SubtitleService\022|\n\003Get\022).yandex" +
+      ".cloud.video.v1.GetSubtitleRequest\032\037.yan" +
+      "dex.cloud.video.v1.Subtitle\")\202\323\344\223\002#\022!/vi" +
+      "deo/v1/subtitles/{subtitle_id}\022~\n\004List\022+" +
+      ".yandex.cloud.video.v1.ListSubtitlesRequ" +
+      "est\032,.yandex.cloud.video.v1.ListSubtitle" +
+      "sResponse\"\033\202\323\344\223\002\025\022\023/video/v1/subtitles\022\237" +
+      "\001\n\006Create\022,.yandex.cloud.video.v1.Create" +
+      "SubtitleRequest\032!.yandex.cloud.operation" +
+      ".Operation\"D\202\323\344\223\002\030\"\023/video/v1/subtitles:" +
+      "\001*\262\322*\"\n\026CreateSubtitleMetadata\022\010Subtitle" +
+      "\022\303\001\n\021GenerateUploadURL\0227.yandex.cloud.vi" +
+      "deo.v1.GenerateSubtitleUploadURLRequest\032" +
+      "8.yandex.cloud.video.v1.GenerateSubtitle" +
+      "UploadURLResponse\";\202\323\344\223\0025\0223/video/v1/sub" +
+      "titles/{subtitle_id}:generateUploadURL\022\267" +
+      "\001\n\006Delete\022,.yandex.cloud.video.v1.Delete" +
+      "SubtitleRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\\\202\323\344\223\002#*!/video/v1/subtitles/" +
+      "{subtitle_id}\262\322*/\n\026DeleteSubtitleMetadat" +
+      "a\022\025google.protobuf.EmptyB\\\n\031yandex.cloud" +
+      ".api.video.v1Z?github.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/video/v1;videob\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7889,6 +8089,7 @@ public final class SubtitleServiceOuterClass {
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor

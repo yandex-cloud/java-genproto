@@ -20,7 +20,7 @@ public final class ThumbnailOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * Unique identifier of the thumbnail.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -29,7 +29,7 @@ public final class ThumbnailOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * Unique identifier of the thumbnail.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -40,7 +40,7 @@ public final class ThumbnailOuterClass {
 
     /**
      * <pre>
-     * ID of the channel where the thumbnail was created.
+     * Identifier of the channel where the thumbnail is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -49,7 +49,7 @@ public final class ThumbnailOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel where the thumbnail was created.
+     * Identifier of the channel where the thumbnail is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -60,7 +60,65 @@ public final class ThumbnailOuterClass {
 
     /**
      * <pre>
-     * Time when thumbnail was created.
+     * ID of the episode which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003;</code>
+     * @return Whether the episodeId field is set.
+     */
+    boolean hasEpisodeId();
+    /**
+     * <pre>
+     * ID of the episode which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003;</code>
+     * @return The episodeId.
+     */
+    java.lang.String getEpisodeId();
+    /**
+     * <pre>
+     * ID of the episode which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003;</code>
+     * @return The bytes for episodeId.
+     */
+    com.google.protobuf.ByteString
+        getEpisodeIdBytes();
+
+    /**
+     * <pre>
+     * ID of the video which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string video_id = 1004;</code>
+     * @return Whether the videoId field is set.
+     */
+    boolean hasVideoId();
+    /**
+     * <pre>
+     * ID of the video which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string video_id = 1004;</code>
+     * @return The videoId.
+     */
+    java.lang.String getVideoId();
+    /**
+     * <pre>
+     * ID of the video which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string video_id = 1004;</code>
+     * @return The bytes for videoId.
+     */
+    com.google.protobuf.ByteString
+        getVideoIdBytes();
+
+    /**
+     * <pre>
+     * Timestamp when the thumbnail was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -69,7 +127,7 @@ public final class ThumbnailOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Time when thumbnail was created.
+     * Timestamp when the thumbnail was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -78,14 +136,21 @@ public final class ThumbnailOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Time when thumbnail was created.
+     * Timestamp when the thumbnail was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    public yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.ParentIdCase getParentIdCase();
   }
   /**
+   * <pre>
+   * Entity representing an image used as a visual representation for various content entities.
+   * Thumbnails provide preview images for channels, streams, episodes, videos, and stream lines.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.Thumbnail}
    */
   public static final class Thumbnail extends
@@ -157,6 +222,18 @@ public final class ThumbnailOuterClass {
 
               break;
             }
+            case 8026: {
+              java.lang.String s = input.readStringRequireUtf8();
+              parentIdCase_ = 1003;
+              parentId_ = s;
+              break;
+            }
+            case 8034: {
+              java.lang.String s = input.readStringRequireUtf8();
+              parentIdCase_ = 1004;
+              parentId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -189,11 +266,52 @@ public final class ThumbnailOuterClass {
               yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.class, yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.Builder.class);
     }
 
+    private int parentIdCase_ = 0;
+    private java.lang.Object parentId_;
+    public enum ParentIdCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      EPISODE_ID(1003),
+      VIDEO_ID(1004),
+      PARENTID_NOT_SET(0);
+      private final int value;
+      private ParentIdCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ParentIdCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ParentIdCase forNumber(int value) {
+        switch (value) {
+          case 1003: return EPISODE_ID;
+          case 1004: return VIDEO_ID;
+          case 0: return PARENTID_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ParentIdCase
+    getParentIdCase() {
+      return ParentIdCase.forNumber(
+          parentIdCase_);
+    }
+
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * Unique identifier of the thumbnail.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -214,7 +332,7 @@ public final class ThumbnailOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * Unique identifier of the thumbnail.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -239,7 +357,7 @@ public final class ThumbnailOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel where the thumbnail was created.
+     * Identifier of the channel where the thumbnail is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -260,7 +378,7 @@ public final class ThumbnailOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel where the thumbnail was created.
+     * Identifier of the channel where the thumbnail is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -281,11 +399,139 @@ public final class ThumbnailOuterClass {
       }
     }
 
+    public static final int EPISODE_ID_FIELD_NUMBER = 1003;
+    /**
+     * <pre>
+     * ID of the episode which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003;</code>
+     * @return Whether the episodeId field is set.
+     */
+    public boolean hasEpisodeId() {
+      return parentIdCase_ == 1003;
+    }
+    /**
+     * <pre>
+     * ID of the episode which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003;</code>
+     * @return The episodeId.
+     */
+    public java.lang.String getEpisodeId() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1003) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (parentIdCase_ == 1003) {
+          parentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the episode which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003;</code>
+     * @return The bytes for episodeId.
+     */
+    public com.google.protobuf.ByteString
+        getEpisodeIdBytes() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1003) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (parentIdCase_ == 1003) {
+          parentId_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VIDEO_ID_FIELD_NUMBER = 1004;
+    /**
+     * <pre>
+     * ID of the video which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string video_id = 1004;</code>
+     * @return Whether the videoId field is set.
+     */
+    public boolean hasVideoId() {
+      return parentIdCase_ == 1004;
+    }
+    /**
+     * <pre>
+     * ID of the video which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string video_id = 1004;</code>
+     * @return The videoId.
+     */
+    public java.lang.String getVideoId() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1004) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (parentIdCase_ == 1004) {
+          parentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the video which the thumbnail is associated with.
+     * </pre>
+     *
+     * <code>string video_id = 1004;</code>
+     * @return The bytes for videoId.
+     */
+    public com.google.protobuf.ByteString
+        getVideoIdBytes() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1004) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (parentIdCase_ == 1004) {
+          parentId_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int CREATED_AT_FIELD_NUMBER = 100;
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Time when thumbnail was created.
+     * Timestamp when the thumbnail was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -297,7 +543,7 @@ public final class ThumbnailOuterClass {
     }
     /**
      * <pre>
-     * Time when thumbnail was created.
+     * Timestamp when the thumbnail was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -309,7 +555,7 @@ public final class ThumbnailOuterClass {
     }
     /**
      * <pre>
-     * Time when thumbnail was created.
+     * Timestamp when the thumbnail was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -342,6 +588,12 @@ public final class ThumbnailOuterClass {
       if (createdAt_ != null) {
         output.writeMessage(100, getCreatedAt());
       }
+      if (parentIdCase_ == 1003) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1003, parentId_);
+      }
+      if (parentIdCase_ == 1004) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1004, parentId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -360,6 +612,12 @@ public final class ThumbnailOuterClass {
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(100, getCreatedAt());
+      }
+      if (parentIdCase_ == 1003) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1003, parentId_);
+      }
+      if (parentIdCase_ == 1004) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1004, parentId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -385,6 +643,19 @@ public final class ThumbnailOuterClass {
         if (!getCreatedAt()
             .equals(other.getCreatedAt())) return false;
       }
+      if (!getParentIdCase().equals(other.getParentIdCase())) return false;
+      switch (parentIdCase_) {
+        case 1003:
+          if (!getEpisodeId()
+              .equals(other.getEpisodeId())) return false;
+          break;
+        case 1004:
+          if (!getVideoId()
+              .equals(other.getVideoId())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -403,6 +674,18 @@ public final class ThumbnailOuterClass {
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      switch (parentIdCase_) {
+        case 1003:
+          hash = (37 * hash) + EPISODE_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getEpisodeId().hashCode();
+          break;
+        case 1004:
+          hash = (37 * hash) + VIDEO_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getVideoId().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -500,6 +783,11 @@ public final class ThumbnailOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Entity representing an image used as a visual representation for various content entities.
+     * Thumbnails provide preview images for channels, streams, episodes, videos, and stream lines.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.Thumbnail}
      */
     public static final class Builder extends
@@ -547,6 +835,8 @@ public final class ThumbnailOuterClass {
           createdAt_ = null;
           createdAtBuilder_ = null;
         }
+        parentIdCase_ = 0;
+        parentId_ = null;
         return this;
       }
 
@@ -575,11 +865,18 @@ public final class ThumbnailOuterClass {
         yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail result = new yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail(this);
         result.id_ = id_;
         result.channelId_ = channelId_;
+        if (parentIdCase_ == 1003) {
+          result.parentId_ = parentId_;
+        }
+        if (parentIdCase_ == 1004) {
+          result.parentId_ = parentId_;
+        }
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
         } else {
           result.createdAt_ = createdAtBuilder_.build();
         }
+        result.parentIdCase_ = parentIdCase_;
         onBuilt();
         return result;
       }
@@ -639,6 +936,23 @@ public final class ThumbnailOuterClass {
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
         }
+        switch (other.getParentIdCase()) {
+          case EPISODE_ID: {
+            parentIdCase_ = 1003;
+            parentId_ = other.parentId_;
+            onChanged();
+            break;
+          }
+          case VIDEO_ID: {
+            parentIdCase_ = 1004;
+            parentId_ = other.parentId_;
+            onChanged();
+            break;
+          }
+          case PARENTID_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -667,11 +981,26 @@ public final class ThumbnailOuterClass {
         }
         return this;
       }
+      private int parentIdCase_ = 0;
+      private java.lang.Object parentId_;
+      public ParentIdCase
+          getParentIdCase() {
+        return ParentIdCase.forNumber(
+            parentIdCase_);
+      }
+
+      public Builder clearParentId() {
+        parentIdCase_ = 0;
+        parentId_ = null;
+        onChanged();
+        return this;
+      }
+
 
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * Unique identifier of the thumbnail.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -691,7 +1020,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * Unique identifier of the thumbnail.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -712,7 +1041,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * Unique identifier of the thumbnail.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -731,7 +1060,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * Unique identifier of the thumbnail.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -745,7 +1074,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * Unique identifier of the thumbnail.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -767,7 +1096,7 @@ public final class ThumbnailOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel where the thumbnail was created.
+       * Identifier of the channel where the thumbnail is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -787,7 +1116,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the thumbnail was created.
+       * Identifier of the channel where the thumbnail is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -808,7 +1137,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the thumbnail was created.
+       * Identifier of the channel where the thumbnail is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -827,7 +1156,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the thumbnail was created.
+       * Identifier of the channel where the thumbnail is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -841,7 +1170,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the thumbnail was created.
+       * Identifier of the channel where the thumbnail is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -860,12 +1189,254 @@ public final class ThumbnailOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * ID of the episode which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003;</code>
+       * @return Whether the episodeId field is set.
+       */
+      @java.lang.Override
+      public boolean hasEpisodeId() {
+        return parentIdCase_ == 1003;
+      }
+      /**
+       * <pre>
+       * ID of the episode which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003;</code>
+       * @return The episodeId.
+       */
+      @java.lang.Override
+      public java.lang.String getEpisodeId() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1003) {
+          ref = parentId_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (parentIdCase_ == 1003) {
+            parentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the episode which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003;</code>
+       * @return The bytes for episodeId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getEpisodeIdBytes() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1003) {
+          ref = parentId_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (parentIdCase_ == 1003) {
+            parentId_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the episode which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003;</code>
+       * @param value The episodeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpisodeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  parentIdCase_ = 1003;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the episode which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpisodeId() {
+        if (parentIdCase_ == 1003) {
+          parentIdCase_ = 0;
+          parentId_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the episode which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003;</code>
+       * @param value The bytes for episodeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpisodeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        parentIdCase_ = 1003;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ID of the video which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string video_id = 1004;</code>
+       * @return Whether the videoId field is set.
+       */
+      @java.lang.Override
+      public boolean hasVideoId() {
+        return parentIdCase_ == 1004;
+      }
+      /**
+       * <pre>
+       * ID of the video which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string video_id = 1004;</code>
+       * @return The videoId.
+       */
+      @java.lang.Override
+      public java.lang.String getVideoId() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1004) {
+          ref = parentId_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (parentIdCase_ == 1004) {
+            parentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the video which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string video_id = 1004;</code>
+       * @return The bytes for videoId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getVideoIdBytes() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1004) {
+          ref = parentId_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (parentIdCase_ == 1004) {
+            parentId_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the video which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string video_id = 1004;</code>
+       * @param value The videoId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVideoId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  parentIdCase_ = 1004;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the video which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string video_id = 1004;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVideoId() {
+        if (parentIdCase_ == 1004) {
+          parentIdCase_ = 0;
+          parentId_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the video which the thumbnail is associated with.
+       * </pre>
+       *
+       * <code>string video_id = 1004;</code>
+       * @param value The bytes for videoId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVideoIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        parentIdCase_ = 1004;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Time when thumbnail was created.
+       * Timestamp when the thumbnail was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -876,7 +1447,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * Time when thumbnail was created.
+       * Timestamp when the thumbnail was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -891,7 +1462,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * Time when thumbnail was created.
+       * Timestamp when the thumbnail was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -911,7 +1482,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * Time when thumbnail was created.
+       * Timestamp when the thumbnail was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -929,7 +1500,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * Time when thumbnail was created.
+       * Timestamp when the thumbnail was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -951,7 +1522,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * Time when thumbnail was created.
+       * Timestamp when the thumbnail was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -969,7 +1540,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * Time when thumbnail was created.
+       * Timestamp when the thumbnail was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -981,7 +1552,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * Time when thumbnail was created.
+       * Timestamp when the thumbnail was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -996,7 +1567,7 @@ public final class ThumbnailOuterClass {
       }
       /**
        * <pre>
-       * Time when thumbnail was created.
+       * Timestamp when the thumbnail was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1083,12 +1654,14 @@ public final class ThumbnailOuterClass {
     java.lang.String[] descriptorData = {
       "\n%yandex/cloud/video/v1/thumbnail.proto\022" +
       "\025yandex.cloud.video.v1\032\037google/protobuf/" +
-      "timestamp.proto\"a\n\tThumbnail\022\n\n\002id\030\001 \001(\t" +
-      "\022\022\n\nchannel_id\030\002 \001(\t\022.\n\ncreated_at\030d \001(\013" +
-      "2\032.google.protobuf.TimestampJ\004\010\003\020dB\\\n\031ya" +
-      "ndex.cloud.api.video.v1Z?github.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/video/" +
-      "v1;videob\006proto3"
+      "timestamp.proto\"\241\001\n\tThumbnail\022\n\n\002id\030\001 \001(" +
+      "\t\022\022\n\nchannel_id\030\002 \001(\t\022\025\n\nepisode_id\030\353\007 \001" +
+      "(\tH\000\022\023\n\010video_id\030\354\007 \001(\tH\000\022.\n\ncreated_at\030" +
+      "d \001(\0132\032.google.protobuf.TimestampB\013\n\tpar" +
+      "ent_idJ\004\010\003\020dJ\005\010e\020\353\007B\\\n\031yandex.cloud.api." +
+      "video.v1Z?github.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/video/v1;videob\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1100,7 +1673,7 @@ public final class ThumbnailOuterClass {
     internal_static_yandex_cloud_video_v1_Thumbnail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Thumbnail_descriptor,
-        new java.lang.String[] { "Id", "ChannelId", "CreatedAt", });
+        new java.lang.String[] { "Id", "ChannelId", "EpisodeId", "VideoId", "CreatedAt", "ParentId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

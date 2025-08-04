@@ -20,7 +20,7 @@ public final class SubtitleOuterClass {
 
     /**
      * <pre>
-     * ID of the subtitle.
+     * Unique identifier of the subtitle track.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -29,7 +29,7 @@ public final class SubtitleOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the subtitle.
+     * Unique identifier of the subtitle track.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -40,9 +40,7 @@ public final class SubtitleOuterClass {
 
     /**
      * <pre>
-     * Subtitle language in any of the following formats:
-     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-     * * two-letter code according to ISO 639-1
+     * Language of the subtitle content according to ISO 639-2/T.
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -51,9 +49,7 @@ public final class SubtitleOuterClass {
     java.lang.String getLanguage();
     /**
      * <pre>
-     * Subtitle language in any of the following formats:
-     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-     * * two-letter code according to ISO 639-1
+     * Language of the subtitle content according to ISO 639-2/T.
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -64,7 +60,7 @@ public final class SubtitleOuterClass {
 
     /**
      * <pre>
-     * Subtitle caption to be displayed on screen during video playback.
+     * Display label for the subtitle track shown in the video player's subtitle selection menu.
      * </pre>
      *
      * <code>string label = 3;</code>
@@ -73,7 +69,7 @@ public final class SubtitleOuterClass {
     java.lang.String getLabel();
     /**
      * <pre>
-     * Subtitle caption to be displayed on screen during video playback.
+     * Display label for the subtitle track shown in the video player's subtitle selection menu.
      * </pre>
      *
      * <code>string label = 3;</code>
@@ -84,7 +80,7 @@ public final class SubtitleOuterClass {
 
     /**
      * <pre>
-     * Subtitle status.
+     * Current processing status of the subtitle.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Subtitle.SubtitleStatus status = 4;</code>
@@ -93,7 +89,7 @@ public final class SubtitleOuterClass {
     int getStatusValue();
     /**
      * <pre>
-     * Subtitle status.
+     * Current processing status of the subtitle.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Subtitle.SubtitleStatus status = 4;</code>
@@ -103,7 +99,7 @@ public final class SubtitleOuterClass {
 
     /**
      * <pre>
-     * Source type.
+     * Indicates how the subtitle was created or obtained.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
@@ -112,7 +108,7 @@ public final class SubtitleOuterClass {
     int getSourceTypeValue();
     /**
      * <pre>
-     * Source type.
+     * Indicates how the subtitle was created or obtained.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
@@ -122,7 +118,7 @@ public final class SubtitleOuterClass {
 
     /**
      * <pre>
-     * Subtitle filename.
+     * Original filename of the subtitle file.
      * </pre>
      *
      * <code>string filename = 5;</code>
@@ -131,7 +127,7 @@ public final class SubtitleOuterClass {
     java.lang.String getFilename();
     /**
      * <pre>
-     * Subtitle filename.
+     * Original filename of the subtitle file.
      * </pre>
      *
      * <code>string filename = 5;</code>
@@ -142,7 +138,7 @@ public final class SubtitleOuterClass {
 
     /**
      * <pre>
-     * Time when subtitle was created.
+     * Timestamp when the subtitle was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -151,7 +147,7 @@ public final class SubtitleOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Time when subtitle was created.
+     * Timestamp when the subtitle was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -160,7 +156,7 @@ public final class SubtitleOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Time when subtitle was created.
+     * Timestamp when the subtitle was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -169,7 +165,7 @@ public final class SubtitleOuterClass {
 
     /**
      * <pre>
-     * Time of last subtitle update.
+     * Timestamp of the last modification to the subtitle or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -178,7 +174,7 @@ public final class SubtitleOuterClass {
     boolean hasUpdatedAt();
     /**
      * <pre>
-     * Time of last subtitle update.
+     * Timestamp of the last modification to the subtitle or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -187,7 +183,7 @@ public final class SubtitleOuterClass {
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
      * <pre>
-     * Time of last subtitle update.
+     * Timestamp of the last modification to the subtitle or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -196,7 +192,7 @@ public final class SubtitleOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of the video this subtitle belongs to.
      * </pre>
      *
      * <code>string video_id = 1000;</code>
@@ -205,7 +201,7 @@ public final class SubtitleOuterClass {
     boolean hasVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of the video this subtitle belongs to.
      * </pre>
      *
      * <code>string video_id = 1000;</code>
@@ -214,7 +210,7 @@ public final class SubtitleOuterClass {
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of the video this subtitle belongs to.
      * </pre>
      *
      * <code>string video_id = 1000;</code>
@@ -226,6 +222,12 @@ public final class SubtitleOuterClass {
     public yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.ParentIdCase getParentIdCase();
   }
   /**
+   * <pre>
+   * Entity representing a subtitle track that can be associated with a video.
+   * Subtitles provide text versions of the audio content, enabling accessibility
+   * and multilingual support for video content.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.Subtitle}
    */
   public static final class Subtitle extends
@@ -377,13 +379,17 @@ public final class SubtitleOuterClass {
     }
 
     /**
+     * <pre>
+     * Current processing status of the subtitle.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.video.v1.Subtitle.SubtitleStatus}
      */
     public enum SubtitleStatus
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Subtitle status unspecified.
+       * The subtitle status is not specified.
        * </pre>
        *
        * <code>SUBTITLE_STATUS_UNSPECIFIED = 0;</code>
@@ -391,7 +397,7 @@ public final class SubtitleOuterClass {
       SUBTITLE_STATUS_UNSPECIFIED(0),
       /**
        * <pre>
-       * Waiting for all the bytes to be loaded.
+       * The subtitle file upload is in progress, waiting for all bytes to be received.
        * </pre>
        *
        * <code>WAIT_UPLOADING = 1;</code>
@@ -399,7 +405,7 @@ public final class SubtitleOuterClass {
       WAIT_UPLOADING(1),
       /**
        * <pre>
-       * Uploading is complete.
+       * The subtitle file has been fully uploaded and is ready for use.
        * </pre>
        *
        * <code>UPLOADED = 2;</code>
@@ -410,7 +416,7 @@ public final class SubtitleOuterClass {
 
       /**
        * <pre>
-       * Subtitle status unspecified.
+       * The subtitle status is not specified.
        * </pre>
        *
        * <code>SUBTITLE_STATUS_UNSPECIFIED = 0;</code>
@@ -418,7 +424,7 @@ public final class SubtitleOuterClass {
       public static final int SUBTITLE_STATUS_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Waiting for all the bytes to be loaded.
+       * The subtitle file upload is in progress, waiting for all bytes to be received.
        * </pre>
        *
        * <code>WAIT_UPLOADING = 1;</code>
@@ -426,7 +432,7 @@ public final class SubtitleOuterClass {
       public static final int WAIT_UPLOADING_VALUE = 1;
       /**
        * <pre>
-       * Uploading is complete.
+       * The subtitle file has been fully uploaded and is ready for use.
        * </pre>
        *
        * <code>UPLOADED = 2;</code>
@@ -518,13 +524,17 @@ public final class SubtitleOuterClass {
     }
 
     /**
+     * <pre>
+     * Source type representing how the subtitle was created or obtained.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.video.v1.Subtitle.SubtitleSourceType}
      */
     public enum SubtitleSourceType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Subtitle source type unspecified.
+       * The subtitle source type is not specified.
        * </pre>
        *
        * <code>SUBTITLE_SOURCE_TYPE_UNSPECIFIED = 0;</code>
@@ -532,7 +542,7 @@ public final class SubtitleOuterClass {
       SUBTITLE_SOURCE_TYPE_UNSPECIFIED(0),
       /**
        * <pre>
-       * Manually uploaded subtitle.
+       * The subtitle was manually created and uploaded by a user.
        * </pre>
        *
        * <code>MANUAL = 1;</code>
@@ -540,7 +550,7 @@ public final class SubtitleOuterClass {
       MANUAL(1),
       /**
        * <pre>
-       * Automatically generated subtitle.
+       * The subtitle was automatically generated through speech recognition.
        * </pre>
        *
        * <code>GENERATED = 2;</code>
@@ -551,7 +561,7 @@ public final class SubtitleOuterClass {
 
       /**
        * <pre>
-       * Subtitle source type unspecified.
+       * The subtitle source type is not specified.
        * </pre>
        *
        * <code>SUBTITLE_SOURCE_TYPE_UNSPECIFIED = 0;</code>
@@ -559,7 +569,7 @@ public final class SubtitleOuterClass {
       public static final int SUBTITLE_SOURCE_TYPE_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Manually uploaded subtitle.
+       * The subtitle was manually created and uploaded by a user.
        * </pre>
        *
        * <code>MANUAL = 1;</code>
@@ -567,7 +577,7 @@ public final class SubtitleOuterClass {
       public static final int MANUAL_VALUE = 1;
       /**
        * <pre>
-       * Automatically generated subtitle.
+       * The subtitle was automatically generated through speech recognition.
        * </pre>
        *
        * <code>GENERATED = 2;</code>
@@ -701,7 +711,7 @@ public final class SubtitleOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the subtitle.
+     * Unique identifier of the subtitle track.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -722,7 +732,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * ID of the subtitle.
+     * Unique identifier of the subtitle track.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -747,9 +757,7 @@ public final class SubtitleOuterClass {
     private volatile java.lang.Object language_;
     /**
      * <pre>
-     * Subtitle language in any of the following formats:
-     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-     * * two-letter code according to ISO 639-1
+     * Language of the subtitle content according to ISO 639-2/T.
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -770,9 +778,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * Subtitle language in any of the following formats:
-     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-     * * two-letter code according to ISO 639-1
+     * Language of the subtitle content according to ISO 639-2/T.
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -797,7 +803,7 @@ public final class SubtitleOuterClass {
     private volatile java.lang.Object label_;
     /**
      * <pre>
-     * Subtitle caption to be displayed on screen during video playback.
+     * Display label for the subtitle track shown in the video player's subtitle selection menu.
      * </pre>
      *
      * <code>string label = 3;</code>
@@ -818,7 +824,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * Subtitle caption to be displayed on screen during video playback.
+     * Display label for the subtitle track shown in the video player's subtitle selection menu.
      * </pre>
      *
      * <code>string label = 3;</code>
@@ -843,7 +849,7 @@ public final class SubtitleOuterClass {
     private int status_;
     /**
      * <pre>
-     * Subtitle status.
+     * Current processing status of the subtitle.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Subtitle.SubtitleStatus status = 4;</code>
@@ -854,7 +860,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * Subtitle status.
+     * Current processing status of the subtitle.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Subtitle.SubtitleStatus status = 4;</code>
@@ -870,7 +876,7 @@ public final class SubtitleOuterClass {
     private int sourceType_;
     /**
      * <pre>
-     * Source type.
+     * Indicates how the subtitle was created or obtained.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
@@ -881,7 +887,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * Source type.
+     * Indicates how the subtitle was created or obtained.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
@@ -897,7 +903,7 @@ public final class SubtitleOuterClass {
     private volatile java.lang.Object filename_;
     /**
      * <pre>
-     * Subtitle filename.
+     * Original filename of the subtitle file.
      * </pre>
      *
      * <code>string filename = 5;</code>
@@ -918,7 +924,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * Subtitle filename.
+     * Original filename of the subtitle file.
      * </pre>
      *
      * <code>string filename = 5;</code>
@@ -943,7 +949,7 @@ public final class SubtitleOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Time when subtitle was created.
+     * Timestamp when the subtitle was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -955,7 +961,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * Time when subtitle was created.
+     * Timestamp when the subtitle was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -967,7 +973,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * Time when subtitle was created.
+     * Timestamp when the subtitle was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -981,7 +987,7 @@ public final class SubtitleOuterClass {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <pre>
-     * Time of last subtitle update.
+     * Timestamp of the last modification to the subtitle or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -993,7 +999,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * Time of last subtitle update.
+     * Timestamp of the last modification to the subtitle or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1005,7 +1011,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * Time of last subtitle update.
+     * Timestamp of the last modification to the subtitle or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1018,7 +1024,7 @@ public final class SubtitleOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 1000;
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of the video this subtitle belongs to.
      * </pre>
      *
      * <code>string video_id = 1000;</code>
@@ -1029,7 +1035,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of the video this subtitle belongs to.
      * </pre>
      *
      * <code>string video_id = 1000;</code>
@@ -1054,7 +1060,7 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of the video this subtitle belongs to.
      * </pre>
      *
      * <code>string video_id = 1000;</code>
@@ -1339,6 +1345,12 @@ public final class SubtitleOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Entity representing a subtitle track that can be associated with a video.
+     * Subtitles provide text versions of the audio content, enabling accessibility
+     * and multilingual support for video content.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.Subtitle}
      */
     public static final class Builder extends
@@ -1582,7 +1594,7 @@ public final class SubtitleOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the subtitle.
+       * Unique identifier of the subtitle track.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1602,7 +1614,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * Unique identifier of the subtitle track.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1623,7 +1635,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * Unique identifier of the subtitle track.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1642,7 +1654,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * Unique identifier of the subtitle track.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1656,7 +1668,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * ID of the subtitle.
+       * Unique identifier of the subtitle track.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1678,9 +1690,7 @@ public final class SubtitleOuterClass {
       private java.lang.Object language_ = "";
       /**
        * <pre>
-       * Subtitle language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-       * * two-letter code according to ISO 639-1
+       * Language of the subtitle content according to ISO 639-2/T.
        * </pre>
        *
        * <code>string language = 2;</code>
@@ -1700,9 +1710,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-       * * two-letter code according to ISO 639-1
+       * Language of the subtitle content according to ISO 639-2/T.
        * </pre>
        *
        * <code>string language = 2;</code>
@@ -1723,9 +1731,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-       * * two-letter code according to ISO 639-1
+       * Language of the subtitle content according to ISO 639-2/T.
        * </pre>
        *
        * <code>string language = 2;</code>
@@ -1744,9 +1750,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-       * * two-letter code according to ISO 639-1
+       * Language of the subtitle content according to ISO 639-2/T.
        * </pre>
        *
        * <code>string language = 2;</code>
@@ -1760,9 +1764,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
-       * * two-letter code according to ISO 639-1
+       * Language of the subtitle content according to ISO 639-2/T.
        * </pre>
        *
        * <code>string language = 2;</code>
@@ -1784,7 +1786,7 @@ public final class SubtitleOuterClass {
       private java.lang.Object label_ = "";
       /**
        * <pre>
-       * Subtitle caption to be displayed on screen during video playback.
+       * Display label for the subtitle track shown in the video player's subtitle selection menu.
        * </pre>
        *
        * <code>string label = 3;</code>
@@ -1804,7 +1806,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle caption to be displayed on screen during video playback.
+       * Display label for the subtitle track shown in the video player's subtitle selection menu.
        * </pre>
        *
        * <code>string label = 3;</code>
@@ -1825,7 +1827,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle caption to be displayed on screen during video playback.
+       * Display label for the subtitle track shown in the video player's subtitle selection menu.
        * </pre>
        *
        * <code>string label = 3;</code>
@@ -1844,7 +1846,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle caption to be displayed on screen during video playback.
+       * Display label for the subtitle track shown in the video player's subtitle selection menu.
        * </pre>
        *
        * <code>string label = 3;</code>
@@ -1858,7 +1860,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle caption to be displayed on screen during video playback.
+       * Display label for the subtitle track shown in the video player's subtitle selection menu.
        * </pre>
        *
        * <code>string label = 3;</code>
@@ -1880,7 +1882,7 @@ public final class SubtitleOuterClass {
       private int status_ = 0;
       /**
        * <pre>
-       * Subtitle status.
+       * Current processing status of the subtitle.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Subtitle.SubtitleStatus status = 4;</code>
@@ -1891,7 +1893,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle status.
+       * Current processing status of the subtitle.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Subtitle.SubtitleStatus status = 4;</code>
@@ -1906,7 +1908,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle status.
+       * Current processing status of the subtitle.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Subtitle.SubtitleStatus status = 4;</code>
@@ -1920,7 +1922,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle status.
+       * Current processing status of the subtitle.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Subtitle.SubtitleStatus status = 4;</code>
@@ -1938,7 +1940,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle status.
+       * Current processing status of the subtitle.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Subtitle.SubtitleStatus status = 4;</code>
@@ -1954,7 +1956,7 @@ public final class SubtitleOuterClass {
       private int sourceType_ = 0;
       /**
        * <pre>
-       * Source type.
+       * Indicates how the subtitle was created or obtained.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
@@ -1965,7 +1967,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Source type.
+       * Indicates how the subtitle was created or obtained.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
@@ -1980,7 +1982,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Source type.
+       * Indicates how the subtitle was created or obtained.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
@@ -1994,7 +1996,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Source type.
+       * Indicates how the subtitle was created or obtained.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
@@ -2012,7 +2014,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Source type.
+       * Indicates how the subtitle was created or obtained.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
@@ -2028,7 +2030,7 @@ public final class SubtitleOuterClass {
       private java.lang.Object filename_ = "";
       /**
        * <pre>
-       * Subtitle filename.
+       * Original filename of the subtitle file.
        * </pre>
        *
        * <code>string filename = 5;</code>
@@ -2048,7 +2050,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle filename.
+       * Original filename of the subtitle file.
        * </pre>
        *
        * <code>string filename = 5;</code>
@@ -2069,7 +2071,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle filename.
+       * Original filename of the subtitle file.
        * </pre>
        *
        * <code>string filename = 5;</code>
@@ -2088,7 +2090,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle filename.
+       * Original filename of the subtitle file.
        * </pre>
        *
        * <code>string filename = 5;</code>
@@ -2102,7 +2104,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle filename.
+       * Original filename of the subtitle file.
        * </pre>
        *
        * <code>string filename = 5;</code>
@@ -2126,7 +2128,7 @@ public final class SubtitleOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Time when subtitle was created.
+       * Timestamp when the subtitle was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2137,7 +2139,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time when subtitle was created.
+       * Timestamp when the subtitle was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2152,7 +2154,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time when subtitle was created.
+       * Timestamp when the subtitle was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2172,7 +2174,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time when subtitle was created.
+       * Timestamp when the subtitle was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2190,7 +2192,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time when subtitle was created.
+       * Timestamp when the subtitle was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2212,7 +2214,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time when subtitle was created.
+       * Timestamp when the subtitle was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2230,7 +2232,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time when subtitle was created.
+       * Timestamp when the subtitle was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2242,7 +2244,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time when subtitle was created.
+       * Timestamp when the subtitle was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2257,7 +2259,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time when subtitle was created.
+       * Timestamp when the subtitle was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2281,7 +2283,7 @@ public final class SubtitleOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <pre>
-       * Time of last subtitle update.
+       * Timestamp of the last modification to the subtitle or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2292,7 +2294,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time of last subtitle update.
+       * Timestamp of the last modification to the subtitle or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2307,7 +2309,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time of last subtitle update.
+       * Timestamp of the last modification to the subtitle or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2327,7 +2329,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time of last subtitle update.
+       * Timestamp of the last modification to the subtitle or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2345,7 +2347,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time of last subtitle update.
+       * Timestamp of the last modification to the subtitle or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2367,7 +2369,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time of last subtitle update.
+       * Timestamp of the last modification to the subtitle or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2385,7 +2387,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time of last subtitle update.
+       * Timestamp of the last modification to the subtitle or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2397,7 +2399,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time of last subtitle update.
+       * Timestamp of the last modification to the subtitle or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2412,7 +2414,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Time of last subtitle update.
+       * Timestamp of the last modification to the subtitle or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2433,7 +2435,7 @@ public final class SubtitleOuterClass {
 
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of the video this subtitle belongs to.
        * </pre>
        *
        * <code>string video_id = 1000;</code>
@@ -2445,7 +2447,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of the video this subtitle belongs to.
        * </pre>
        *
        * <code>string video_id = 1000;</code>
@@ -2471,7 +2473,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of the video this subtitle belongs to.
        * </pre>
        *
        * <code>string video_id = 1000;</code>
@@ -2498,7 +2500,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of the video this subtitle belongs to.
        * </pre>
        *
        * <code>string video_id = 1000;</code>
@@ -2517,7 +2519,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of the video this subtitle belongs to.
        * </pre>
        *
        * <code>string video_id = 1000;</code>
@@ -2533,7 +2535,7 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of the video this subtitle belongs to.
        * </pre>
        *
        * <code>string video_id = 1000;</code>

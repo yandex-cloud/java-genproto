@@ -19,11 +19,19 @@ public final class GI {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Unique instance ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Unique instance ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class GI {
         getIdBytes();
 
     /**
+     * <pre>
+     * Folder ID where instance resides.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID where instance resides.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -43,41 +59,73 @@ public final class GI {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Human-readable name.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Human-readable name.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      * @return The bytes for name.
      */
@@ -85,11 +133,19 @@ public final class GI {
         getNameBytes();
 
     /**
+     * <pre>
+     * Instance description.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Instance description.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      * @return The bytes for description.
      */
@@ -97,10 +153,18 @@ public final class GI {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Resource labels as key-value pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Resource labels as key-value pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     boolean containsLabels(
@@ -112,11 +176,19 @@ public final class GI {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Resource labels as key-value pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Resource labels as key-value pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -124,6 +196,10 @@ public final class GI {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Resource labels as key-value pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -131,11 +207,19 @@ public final class GI {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Resource preset ID.
+     * </pre>
+     *
      * <code>string resource_preset_id = 8;</code>
      * @return The resourcePresetId.
      */
     java.lang.String getResourcePresetId();
     /**
+     * <pre>
+     * Resource preset ID.
+     * </pre>
+     *
      * <code>string resource_preset_id = 8;</code>
      * @return The bytes for resourcePresetId.
      */
@@ -143,28 +227,48 @@ public final class GI {
         getResourcePresetIdBytes();
 
     /**
+     * <pre>
+     * Disk size in bytes.
+     * </pre>
+     *
      * <code>int64 disk_size = 9;</code>
      * @return The diskSize.
      */
     long getDiskSize();
 
     /**
+     * <pre>
+     * Current instance status.
+     * </pre>
+     *
      * <code>.yandex.cloud.gitlab.v1.Instance.Status status = 10;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Current instance status.
+     * </pre>
+     *
      * <code>.yandex.cloud.gitlab.v1.Instance.Status status = 10;</code>
      * @return The status.
      */
     yandex.cloud.api.gitlab.v1.GI.Instance.Status getStatus();
 
     /**
+     * <pre>
+     * Admin username.
+     * </pre>
+     *
      * <code>string admin_login = 11;</code>
      * @return The adminLogin.
      */
     java.lang.String getAdminLogin();
     /**
+     * <pre>
+     * Admin username.
+     * </pre>
+     *
      * <code>string admin_login = 11;</code>
      * @return The bytes for adminLogin.
      */
@@ -172,11 +276,19 @@ public final class GI {
         getAdminLoginBytes();
 
     /**
+     * <pre>
+     * Admin email.
+     * </pre>
+     *
      * <code>string admin_email = 12;</code>
      * @return The adminEmail.
      */
     java.lang.String getAdminEmail();
     /**
+     * <pre>
+     * Admin email.
+     * </pre>
+     *
      * <code>string admin_email = 12;</code>
      * @return The bytes for adminEmail.
      */
@@ -184,11 +296,19 @@ public final class GI {
         getAdminEmailBytes();
 
     /**
+     * <pre>
+     * Instance domain.
+     * </pre>
+     *
      * <code>string domain = 13;</code>
      * @return The domain.
      */
     java.lang.String getDomain();
     /**
+     * <pre>
+     * Instance domain.
+     * </pre>
+     *
      * <code>string domain = 13;</code>
      * @return The bytes for domain.
      */
@@ -196,11 +316,19 @@ public final class GI {
         getDomainBytes();
 
     /**
+     * <pre>
+     * Subnet ID.
+     * </pre>
+     *
      * <code>string subnet_id = 14;</code>
      * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
+     * <pre>
+     * Subnet ID.
+     * </pre>
+     *
      * <code>string subnet_id = 14;</code>
      * @return The bytes for subnetId.
      */
@@ -208,44 +336,76 @@ public final class GI {
         getSubnetIdBytes();
 
     /**
+     * <pre>
+     * Planned maintenance operation.
+     * </pre>
+     *
      * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
      * @return Whether the plannedOperation field is set.
      */
     boolean hasPlannedOperation();
     /**
+     * <pre>
+     * Planned maintenance operation.
+     * </pre>
+     *
      * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
      * @return The plannedOperation.
      */
     yandex.cloud.api.gitlab.v1.GM.MaintenanceOperation getPlannedOperation();
     /**
+     * <pre>
+     * Planned maintenance operation.
+     * </pre>
+     *
      * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
      */
     yandex.cloud.api.gitlab.v1.GM.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder();
 
     /**
+     * <pre>
+     * How long to keep backups (days).
+     * </pre>
+     *
      * <code>int64 backup_retain_period_days = 17;</code>
      * @return The backupRetainPeriodDays.
      */
     long getBackupRetainPeriodDays();
 
     /**
+     * <pre>
+     * Delete untagged resources during maintenance.
+     * </pre>
+     *
      * <code>bool maintenance_delete_untagged = 19;</code>
      * @return The maintenanceDeleteUntagged.
      */
     boolean getMaintenanceDeleteUntagged();
 
     /**
+     * <pre>
+     * Protect from accidental deletion.
+     * </pre>
+     *
      * <code>bool deletion_protection = 20;</code>
      * @return The deletionProtection.
      */
     boolean getDeletionProtection();
 
     /**
+     * <pre>
+     * Approval rules ID.
+     * </pre>
+     *
      * <code>string approval_rules_id = 22 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
      * @return The approvalRulesId.
      */
     java.lang.String getApprovalRulesId();
     /**
+     * <pre>
+     * Approval rules ID.
+     * </pre>
+     *
      * <code>string approval_rules_id = 22 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
      * @return The bytes for approvalRulesId.
      */
@@ -253,42 +413,30 @@ public final class GI {
         getApprovalRulesIdBytes();
 
     /**
+     * <pre>
+     * GitLab version of the instance.
+     * </pre>
+     *
      * <code>string gitlab_version = 23;</code>
      * @return The gitlabVersion.
      */
     java.lang.String getGitlabVersion();
     /**
+     * <pre>
+     * GitLab version of the instance.
+     * </pre>
+     *
      * <code>string gitlab_version = 23;</code>
      * @return The bytes for gitlabVersion.
      */
     com.google.protobuf.ByteString
         getGitlabVersionBytes();
-
-    /**
-     * <code>string security_group = 27 [(.yandex.cloud.required) = false];</code>
-     * @return The securityGroup.
-     */
-    java.lang.String getSecurityGroup();
-    /**
-     * <code>string security_group = 27 [(.yandex.cloud.required) = false];</code>
-     * @return The bytes for securityGroup.
-     */
-    com.google.protobuf.ByteString
-        getSecurityGroupBytes();
-
-    /**
-     * <code>string disk_type_id = 32 [(.yandex.cloud.required) = false];</code>
-     * @return The diskTypeId.
-     */
-    java.lang.String getDiskTypeId();
-    /**
-     * <code>string disk_type_id = 32 [(.yandex.cloud.required) = false];</code>
-     * @return The bytes for diskTypeId.
-     */
-    com.google.protobuf.ByteString
-        getDiskTypeIdBytes();
   }
   /**
+   * <pre>
+   * Instance represents a GitLab instance with its configuration and state.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.Instance}
    */
   public static final class Instance extends
@@ -313,8 +461,6 @@ public final class GI {
       subnetId_ = "";
       approvalRulesId_ = "";
       gitlabVersion_ = "";
-      securityGroup_ = "";
-      diskTypeId_ = "";
     }
 
     @java.lang.Override
@@ -492,18 +638,6 @@ public final class GI {
               gitlabVersion_ = s;
               break;
             }
-            case 218: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              securityGroup_ = s;
-              break;
-            }
-            case 258: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              diskTypeId_ = s;
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -554,58 +688,114 @@ public final class GI {
     public enum Status
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Default state.
+       * </pre>
+       *
        * <code>STATUS_UNSPECIFIED = 0;</code>
        */
       STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Instance is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       CREATING(1),
       /**
+       * <pre>
+       * Instance is running normally.
+       * </pre>
+       *
        * <code>RUNNING = 2;</code>
        */
       RUNNING(2),
       /**
+       * <pre>
+       * Instance is being updated.
+       * </pre>
+       *
        * <code>UPDATING = 3;</code>
        */
       UPDATING(3),
       /**
+       * <pre>
+       * Instance is in error state.
+       * </pre>
+       *
        * <code>ERROR = 4;</code>
        */
       ERROR(4),
       /**
+       * <pre>
+       * Instance is being deleted.
+       * </pre>
+       *
        * <code>DELETING = 5;</code>
        */
       DELETING(5),
       /**
+       * <pre>
+       * Backup is being created.
+       * </pre>
+       *
        * <code>BACKUP_CREATING = 6;</code>
        */
       BACKUP_CREATING(6),
       /**
+       * <pre>
+       * Backup is being restored.
+       * </pre>
+       *
        * <code>BACKUP_RESTORING = 7;</code>
        */
       BACKUP_RESTORING(7),
       /**
+       * <pre>
+       * Instance is starting.
+       * </pre>
+       *
        * <code>STARTING = 8;</code>
        */
       STARTING(8),
       /**
+       * <pre>
+       * Instance is stopping.
+       * </pre>
+       *
        * <code>STOPPING = 9;</code>
        */
       STOPPING(9),
       /**
+       * <pre>
+       * Instance is stopped.
+       * </pre>
+       *
        * <code>STOPPED = 10;</code>
        */
       STOPPED(10),
       /**
+       * <pre>
+       * Background migrations in progress.
+       * </pre>
+       *
        * <code>BACKGROUND_MIGRATIONS = 11;</code>
        */
       BACKGROUND_MIGRATIONS(11),
       /**
+       * <pre>
+       * Object storage migrations in progress.
+       * </pre>
+       *
        * <code>OBJECT_STORAGE_MIGRATIONS = 12;</code>
        */
       OBJECT_STORAGE_MIGRATIONS(12),
       /**
+       * <pre>
+       * Snapshot is being restored.
+       * </pre>
+       *
        * <code>SNAPSHOT_RESTORING = 13;</code>
        */
       SNAPSHOT_RESTORING(13),
@@ -613,58 +803,114 @@ public final class GI {
       ;
 
       /**
+       * <pre>
+       * Default state.
+       * </pre>
+       *
        * <code>STATUS_UNSPECIFIED = 0;</code>
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Instance is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       public static final int CREATING_VALUE = 1;
       /**
+       * <pre>
+       * Instance is running normally.
+       * </pre>
+       *
        * <code>RUNNING = 2;</code>
        */
       public static final int RUNNING_VALUE = 2;
       /**
+       * <pre>
+       * Instance is being updated.
+       * </pre>
+       *
        * <code>UPDATING = 3;</code>
        */
       public static final int UPDATING_VALUE = 3;
       /**
+       * <pre>
+       * Instance is in error state.
+       * </pre>
+       *
        * <code>ERROR = 4;</code>
        */
       public static final int ERROR_VALUE = 4;
       /**
+       * <pre>
+       * Instance is being deleted.
+       * </pre>
+       *
        * <code>DELETING = 5;</code>
        */
       public static final int DELETING_VALUE = 5;
       /**
+       * <pre>
+       * Backup is being created.
+       * </pre>
+       *
        * <code>BACKUP_CREATING = 6;</code>
        */
       public static final int BACKUP_CREATING_VALUE = 6;
       /**
+       * <pre>
+       * Backup is being restored.
+       * </pre>
+       *
        * <code>BACKUP_RESTORING = 7;</code>
        */
       public static final int BACKUP_RESTORING_VALUE = 7;
       /**
+       * <pre>
+       * Instance is starting.
+       * </pre>
+       *
        * <code>STARTING = 8;</code>
        */
       public static final int STARTING_VALUE = 8;
       /**
+       * <pre>
+       * Instance is stopping.
+       * </pre>
+       *
        * <code>STOPPING = 9;</code>
        */
       public static final int STOPPING_VALUE = 9;
       /**
+       * <pre>
+       * Instance is stopped.
+       * </pre>
+       *
        * <code>STOPPED = 10;</code>
        */
       public static final int STOPPED_VALUE = 10;
       /**
+       * <pre>
+       * Background migrations in progress.
+       * </pre>
+       *
        * <code>BACKGROUND_MIGRATIONS = 11;</code>
        */
       public static final int BACKGROUND_MIGRATIONS_VALUE = 11;
       /**
+       * <pre>
+       * Object storage migrations in progress.
+       * </pre>
+       *
        * <code>OBJECT_STORAGE_MIGRATIONS = 12;</code>
        */
       public static final int OBJECT_STORAGE_MIGRATIONS_VALUE = 12;
       /**
+       * <pre>
+       * Snapshot is being restored.
+       * </pre>
+       *
        * <code>SNAPSHOT_RESTORING = 13;</code>
        */
       public static final int SNAPSHOT_RESTORING_VALUE = 13;
@@ -767,6 +1013,10 @@ public final class GI {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Unique instance ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -784,6 +1034,10 @@ public final class GI {
       }
     }
     /**
+     * <pre>
+     * Unique instance ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -805,6 +1059,10 @@ public final class GI {
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID where instance resides.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
@@ -822,6 +1080,10 @@ public final class GI {
       }
     }
     /**
+     * <pre>
+     * Folder ID where instance resides.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -843,6 +1105,10 @@ public final class GI {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
@@ -851,6 +1117,10 @@ public final class GI {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
@@ -859,6 +1129,10 @@ public final class GI {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.Override
@@ -869,6 +1143,10 @@ public final class GI {
     public static final int UPDATED_AT_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      * @return Whether the updatedAt field is set.
      */
@@ -877,6 +1155,10 @@ public final class GI {
       return updatedAt_ != null;
     }
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      * @return The updatedAt.
      */
@@ -885,6 +1167,10 @@ public final class GI {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      */
     @java.lang.Override
@@ -895,6 +1181,10 @@ public final class GI {
     public static final int NAME_FIELD_NUMBER = 5;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Human-readable name.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      * @return The name.
      */
@@ -912,6 +1202,10 @@ public final class GI {
       }
     }
     /**
+     * <pre>
+     * Human-readable name.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      * @return The bytes for name.
      */
@@ -933,6 +1227,10 @@ public final class GI {
     public static final int DESCRIPTION_FIELD_NUMBER = 6;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Instance description.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      * @return The description.
      */
@@ -950,6 +1248,10 @@ public final class GI {
       }
     }
     /**
+     * <pre>
+     * Instance description.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      * @return The bytes for description.
      */
@@ -995,6 +1297,10 @@ public final class GI {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Resource labels as key-value pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -1013,6 +1319,10 @@ public final class GI {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Resource labels as key-value pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     @java.lang.Override
@@ -1021,6 +1331,10 @@ public final class GI {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Resource labels as key-value pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     @java.lang.Override
@@ -1034,6 +1348,10 @@ public final class GI {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Resource labels as key-value pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     @java.lang.Override
@@ -1052,6 +1370,10 @@ public final class GI {
     public static final int RESOURCE_PRESET_ID_FIELD_NUMBER = 8;
     private volatile java.lang.Object resourcePresetId_;
     /**
+     * <pre>
+     * Resource preset ID.
+     * </pre>
+     *
      * <code>string resource_preset_id = 8;</code>
      * @return The resourcePresetId.
      */
@@ -1069,6 +1391,10 @@ public final class GI {
       }
     }
     /**
+     * <pre>
+     * Resource preset ID.
+     * </pre>
+     *
      * <code>string resource_preset_id = 8;</code>
      * @return The bytes for resourcePresetId.
      */
@@ -1090,6 +1416,10 @@ public final class GI {
     public static final int DISK_SIZE_FIELD_NUMBER = 9;
     private long diskSize_;
     /**
+     * <pre>
+     * Disk size in bytes.
+     * </pre>
+     *
      * <code>int64 disk_size = 9;</code>
      * @return The diskSize.
      */
@@ -1101,6 +1431,10 @@ public final class GI {
     public static final int STATUS_FIELD_NUMBER = 10;
     private int status_;
     /**
+     * <pre>
+     * Current instance status.
+     * </pre>
+     *
      * <code>.yandex.cloud.gitlab.v1.Instance.Status status = 10;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -1108,6 +1442,10 @@ public final class GI {
       return status_;
     }
     /**
+     * <pre>
+     * Current instance status.
+     * </pre>
+     *
      * <code>.yandex.cloud.gitlab.v1.Instance.Status status = 10;</code>
      * @return The status.
      */
@@ -1120,6 +1458,10 @@ public final class GI {
     public static final int ADMIN_LOGIN_FIELD_NUMBER = 11;
     private volatile java.lang.Object adminLogin_;
     /**
+     * <pre>
+     * Admin username.
+     * </pre>
+     *
      * <code>string admin_login = 11;</code>
      * @return The adminLogin.
      */
@@ -1137,6 +1479,10 @@ public final class GI {
       }
     }
     /**
+     * <pre>
+     * Admin username.
+     * </pre>
+     *
      * <code>string admin_login = 11;</code>
      * @return The bytes for adminLogin.
      */
@@ -1158,6 +1504,10 @@ public final class GI {
     public static final int ADMIN_EMAIL_FIELD_NUMBER = 12;
     private volatile java.lang.Object adminEmail_;
     /**
+     * <pre>
+     * Admin email.
+     * </pre>
+     *
      * <code>string admin_email = 12;</code>
      * @return The adminEmail.
      */
@@ -1175,6 +1525,10 @@ public final class GI {
       }
     }
     /**
+     * <pre>
+     * Admin email.
+     * </pre>
+     *
      * <code>string admin_email = 12;</code>
      * @return The bytes for adminEmail.
      */
@@ -1196,6 +1550,10 @@ public final class GI {
     public static final int DOMAIN_FIELD_NUMBER = 13;
     private volatile java.lang.Object domain_;
     /**
+     * <pre>
+     * Instance domain.
+     * </pre>
+     *
      * <code>string domain = 13;</code>
      * @return The domain.
      */
@@ -1213,6 +1571,10 @@ public final class GI {
       }
     }
     /**
+     * <pre>
+     * Instance domain.
+     * </pre>
+     *
      * <code>string domain = 13;</code>
      * @return The bytes for domain.
      */
@@ -1234,6 +1596,10 @@ public final class GI {
     public static final int SUBNET_ID_FIELD_NUMBER = 14;
     private volatile java.lang.Object subnetId_;
     /**
+     * <pre>
+     * Subnet ID.
+     * </pre>
+     *
      * <code>string subnet_id = 14;</code>
      * @return The subnetId.
      */
@@ -1251,6 +1617,10 @@ public final class GI {
       }
     }
     /**
+     * <pre>
+     * Subnet ID.
+     * </pre>
+     *
      * <code>string subnet_id = 14;</code>
      * @return The bytes for subnetId.
      */
@@ -1272,6 +1642,10 @@ public final class GI {
     public static final int PLANNED_OPERATION_FIELD_NUMBER = 16;
     private yandex.cloud.api.gitlab.v1.GM.MaintenanceOperation plannedOperation_;
     /**
+     * <pre>
+     * Planned maintenance operation.
+     * </pre>
+     *
      * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
      * @return Whether the plannedOperation field is set.
      */
@@ -1280,6 +1654,10 @@ public final class GI {
       return plannedOperation_ != null;
     }
     /**
+     * <pre>
+     * Planned maintenance operation.
+     * </pre>
+     *
      * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
      * @return The plannedOperation.
      */
@@ -1288,6 +1666,10 @@ public final class GI {
       return plannedOperation_ == null ? yandex.cloud.api.gitlab.v1.GM.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
     }
     /**
+     * <pre>
+     * Planned maintenance operation.
+     * </pre>
+     *
      * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
      */
     @java.lang.Override
@@ -1298,6 +1680,10 @@ public final class GI {
     public static final int BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER = 17;
     private long backupRetainPeriodDays_;
     /**
+     * <pre>
+     * How long to keep backups (days).
+     * </pre>
+     *
      * <code>int64 backup_retain_period_days = 17;</code>
      * @return The backupRetainPeriodDays.
      */
@@ -1309,6 +1695,10 @@ public final class GI {
     public static final int MAINTENANCE_DELETE_UNTAGGED_FIELD_NUMBER = 19;
     private boolean maintenanceDeleteUntagged_;
     /**
+     * <pre>
+     * Delete untagged resources during maintenance.
+     * </pre>
+     *
      * <code>bool maintenance_delete_untagged = 19;</code>
      * @return The maintenanceDeleteUntagged.
      */
@@ -1320,6 +1710,10 @@ public final class GI {
     public static final int DELETION_PROTECTION_FIELD_NUMBER = 20;
     private boolean deletionProtection_;
     /**
+     * <pre>
+     * Protect from accidental deletion.
+     * </pre>
+     *
      * <code>bool deletion_protection = 20;</code>
      * @return The deletionProtection.
      */
@@ -1331,6 +1725,10 @@ public final class GI {
     public static final int APPROVAL_RULES_ID_FIELD_NUMBER = 22;
     private volatile java.lang.Object approvalRulesId_;
     /**
+     * <pre>
+     * Approval rules ID.
+     * </pre>
+     *
      * <code>string approval_rules_id = 22 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
      * @return The approvalRulesId.
      */
@@ -1348,6 +1746,10 @@ public final class GI {
       }
     }
     /**
+     * <pre>
+     * Approval rules ID.
+     * </pre>
+     *
      * <code>string approval_rules_id = 22 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
      * @return The bytes for approvalRulesId.
      */
@@ -1369,6 +1771,10 @@ public final class GI {
     public static final int GITLAB_VERSION_FIELD_NUMBER = 23;
     private volatile java.lang.Object gitlabVersion_;
     /**
+     * <pre>
+     * GitLab version of the instance.
+     * </pre>
+     *
      * <code>string gitlab_version = 23;</code>
      * @return The gitlabVersion.
      */
@@ -1386,6 +1792,10 @@ public final class GI {
       }
     }
     /**
+     * <pre>
+     * GitLab version of the instance.
+     * </pre>
+     *
      * <code>string gitlab_version = 23;</code>
      * @return The bytes for gitlabVersion.
      */
@@ -1398,82 +1808,6 @@ public final class GI {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         gitlabVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SECURITY_GROUP_FIELD_NUMBER = 27;
-    private volatile java.lang.Object securityGroup_;
-    /**
-     * <code>string security_group = 27 [(.yandex.cloud.required) = false];</code>
-     * @return The securityGroup.
-     */
-    @java.lang.Override
-    public java.lang.String getSecurityGroup() {
-      java.lang.Object ref = securityGroup_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        securityGroup_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string security_group = 27 [(.yandex.cloud.required) = false];</code>
-     * @return The bytes for securityGroup.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSecurityGroupBytes() {
-      java.lang.Object ref = securityGroup_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        securityGroup_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DISK_TYPE_ID_FIELD_NUMBER = 32;
-    private volatile java.lang.Object diskTypeId_;
-    /**
-     * <code>string disk_type_id = 32 [(.yandex.cloud.required) = false];</code>
-     * @return The diskTypeId.
-     */
-    @java.lang.Override
-    public java.lang.String getDiskTypeId() {
-      java.lang.Object ref = diskTypeId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        diskTypeId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string disk_type_id = 32 [(.yandex.cloud.required) = false];</code>
-     * @return The bytes for diskTypeId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDiskTypeIdBytes() {
-      java.lang.Object ref = diskTypeId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        diskTypeId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1556,12 +1890,6 @@ public final class GI {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gitlabVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 23, gitlabVersion_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroup_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, securityGroup_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 32, diskTypeId_);
       }
       unknownFields.writeTo(output);
     }
@@ -1647,12 +1975,6 @@ public final class GI {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gitlabVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, gitlabVersion_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroup_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, securityGroup_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, diskTypeId_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1716,10 +2038,6 @@ public final class GI {
           .equals(other.getApprovalRulesId())) return false;
       if (!getGitlabVersion()
           .equals(other.getGitlabVersion())) return false;
-      if (!getSecurityGroup()
-          .equals(other.getSecurityGroup())) return false;
-      if (!getDiskTypeId()
-          .equals(other.getDiskTypeId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1783,10 +2101,6 @@ public final class GI {
       hash = (53 * hash) + getApprovalRulesId().hashCode();
       hash = (37 * hash) + GITLAB_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getGitlabVersion().hashCode();
-      hash = (37 * hash) + SECURITY_GROUP_FIELD_NUMBER;
-      hash = (53 * hash) + getSecurityGroup().hashCode();
-      hash = (37 * hash) + DISK_TYPE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDiskTypeId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1883,6 +2197,10 @@ public final class GI {
       return builder;
     }
     /**
+     * <pre>
+     * Instance represents a GitLab instance with its configuration and state.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.Instance}
      */
     public static final class Builder extends
@@ -1993,10 +2311,6 @@ public final class GI {
 
         gitlabVersion_ = "";
 
-        securityGroup_ = "";
-
-        diskTypeId_ = "";
-
         return this;
       }
 
@@ -2057,8 +2371,6 @@ public final class GI {
         result.deletionProtection_ = deletionProtection_;
         result.approvalRulesId_ = approvalRulesId_;
         result.gitlabVersion_ = gitlabVersion_;
-        result.securityGroup_ = securityGroup_;
-        result.diskTypeId_ = diskTypeId_;
         onBuilt();
         return result;
       }
@@ -2177,14 +2489,6 @@ public final class GI {
           gitlabVersion_ = other.gitlabVersion_;
           onChanged();
         }
-        if (!other.getSecurityGroup().isEmpty()) {
-          securityGroup_ = other.securityGroup_;
-          onChanged();
-        }
-        if (!other.getDiskTypeId().isEmpty()) {
-          diskTypeId_ = other.diskTypeId_;
-          onChanged();
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2217,6 +2521,10 @@ public final class GI {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Unique instance ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -2233,6 +2541,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Unique instance ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -2250,6 +2562,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Unique instance ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -2265,6 +2581,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Unique instance ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -2275,6 +2595,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Unique instance ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -2293,6 +2617,10 @@ public final class GI {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID where instance resides.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The folderId.
        */
@@ -2309,6 +2637,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Folder ID where instance resides.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The bytes for folderId.
        */
@@ -2326,6 +2658,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Folder ID where instance resides.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -2341,6 +2677,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID where instance resides.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -2351,6 +2691,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID where instance resides.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -2371,6 +2715,10 @@ public final class GI {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return Whether the createdAt field is set.
        */
@@ -2378,6 +2726,10 @@ public final class GI {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return The createdAt.
        */
@@ -2389,6 +2741,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2405,6 +2761,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -2419,6 +2779,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2437,6 +2801,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -2451,6 +2819,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -2459,6 +2831,10 @@ public final class GI {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2470,6 +2846,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2490,6 +2870,10 @@ public final class GI {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        * @return Whether the updatedAt field is set.
        */
@@ -2497,6 +2881,10 @@ public final class GI {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        * @return The updatedAt.
        */
@@ -2508,6 +2896,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2524,6 +2916,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public Builder setUpdatedAt(
@@ -2538,6 +2934,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2556,6 +2956,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public Builder clearUpdatedAt() {
@@ -2570,6 +2974,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
@@ -2578,6 +2986,10 @@ public final class GI {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -2589,6 +3001,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2607,6 +3023,10 @@ public final class GI {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Human-readable name.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        * @return The name.
        */
@@ -2623,6 +3043,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Human-readable name.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        * @return The bytes for name.
        */
@@ -2640,6 +3064,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Human-readable name.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -2655,6 +3083,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Human-readable name.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        * @return This builder for chaining.
        */
@@ -2665,6 +3097,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Human-readable name.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -2683,6 +3119,10 @@ public final class GI {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Instance description.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        * @return The description.
        */
@@ -2699,6 +3139,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Instance description.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        * @return The bytes for description.
        */
@@ -2716,6 +3160,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Instance description.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -2731,6 +3179,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Instance description.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        * @return This builder for chaining.
        */
@@ -2741,6 +3193,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Instance description.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -2784,6 +3240,10 @@ public final class GI {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Resource labels as key-value pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -2802,6 +3262,10 @@ public final class GI {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Resource labels as key-value pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       @java.lang.Override
@@ -2810,6 +3274,10 @@ public final class GI {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Resource labels as key-value pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       @java.lang.Override
@@ -2823,6 +3291,10 @@ public final class GI {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Resource labels as key-value pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       @java.lang.Override
@@ -2844,6 +3316,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as key-value pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -2863,6 +3339,10 @@ public final class GI {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Resource labels as key-value pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       public Builder putLabels(
@@ -2878,6 +3358,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as key-value pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -2890,6 +3374,10 @@ public final class GI {
 
       private java.lang.Object resourcePresetId_ = "";
       /**
+       * <pre>
+       * Resource preset ID.
+       * </pre>
+       *
        * <code>string resource_preset_id = 8;</code>
        * @return The resourcePresetId.
        */
@@ -2906,6 +3394,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Resource preset ID.
+       * </pre>
+       *
        * <code>string resource_preset_id = 8;</code>
        * @return The bytes for resourcePresetId.
        */
@@ -2923,6 +3415,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Resource preset ID.
+       * </pre>
+       *
        * <code>string resource_preset_id = 8;</code>
        * @param value The resourcePresetId to set.
        * @return This builder for chaining.
@@ -2938,6 +3434,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Resource preset ID.
+       * </pre>
+       *
        * <code>string resource_preset_id = 8;</code>
        * @return This builder for chaining.
        */
@@ -2948,6 +3448,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Resource preset ID.
+       * </pre>
+       *
        * <code>string resource_preset_id = 8;</code>
        * @param value The bytes for resourcePresetId to set.
        * @return This builder for chaining.
@@ -2966,6 +3470,10 @@ public final class GI {
 
       private long diskSize_ ;
       /**
+       * <pre>
+       * Disk size in bytes.
+       * </pre>
+       *
        * <code>int64 disk_size = 9;</code>
        * @return The diskSize.
        */
@@ -2974,6 +3482,10 @@ public final class GI {
         return diskSize_;
       }
       /**
+       * <pre>
+       * Disk size in bytes.
+       * </pre>
+       *
        * <code>int64 disk_size = 9;</code>
        * @param value The diskSize to set.
        * @return This builder for chaining.
@@ -2985,6 +3497,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Disk size in bytes.
+       * </pre>
+       *
        * <code>int64 disk_size = 9;</code>
        * @return This builder for chaining.
        */
@@ -2997,6 +3513,10 @@ public final class GI {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Current instance status.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.Instance.Status status = 10;</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -3004,6 +3524,10 @@ public final class GI {
         return status_;
       }
       /**
+       * <pre>
+       * Current instance status.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.Instance.Status status = 10;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
@@ -3015,6 +3539,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Current instance status.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.Instance.Status status = 10;</code>
        * @return The status.
        */
@@ -3025,6 +3553,10 @@ public final class GI {
         return result == null ? yandex.cloud.api.gitlab.v1.GI.Instance.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Current instance status.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.Instance.Status status = 10;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -3039,6 +3571,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Current instance status.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.Instance.Status status = 10;</code>
        * @return This builder for chaining.
        */
@@ -3051,6 +3587,10 @@ public final class GI {
 
       private java.lang.Object adminLogin_ = "";
       /**
+       * <pre>
+       * Admin username.
+       * </pre>
+       *
        * <code>string admin_login = 11;</code>
        * @return The adminLogin.
        */
@@ -3067,6 +3607,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Admin username.
+       * </pre>
+       *
        * <code>string admin_login = 11;</code>
        * @return The bytes for adminLogin.
        */
@@ -3084,6 +3628,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Admin username.
+       * </pre>
+       *
        * <code>string admin_login = 11;</code>
        * @param value The adminLogin to set.
        * @return This builder for chaining.
@@ -3099,6 +3647,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Admin username.
+       * </pre>
+       *
        * <code>string admin_login = 11;</code>
        * @return This builder for chaining.
        */
@@ -3109,6 +3661,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Admin username.
+       * </pre>
+       *
        * <code>string admin_login = 11;</code>
        * @param value The bytes for adminLogin to set.
        * @return This builder for chaining.
@@ -3127,6 +3683,10 @@ public final class GI {
 
       private java.lang.Object adminEmail_ = "";
       /**
+       * <pre>
+       * Admin email.
+       * </pre>
+       *
        * <code>string admin_email = 12;</code>
        * @return The adminEmail.
        */
@@ -3143,6 +3703,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Admin email.
+       * </pre>
+       *
        * <code>string admin_email = 12;</code>
        * @return The bytes for adminEmail.
        */
@@ -3160,6 +3724,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Admin email.
+       * </pre>
+       *
        * <code>string admin_email = 12;</code>
        * @param value The adminEmail to set.
        * @return This builder for chaining.
@@ -3175,6 +3743,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Admin email.
+       * </pre>
+       *
        * <code>string admin_email = 12;</code>
        * @return This builder for chaining.
        */
@@ -3185,6 +3757,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Admin email.
+       * </pre>
+       *
        * <code>string admin_email = 12;</code>
        * @param value The bytes for adminEmail to set.
        * @return This builder for chaining.
@@ -3203,6 +3779,10 @@ public final class GI {
 
       private java.lang.Object domain_ = "";
       /**
+       * <pre>
+       * Instance domain.
+       * </pre>
+       *
        * <code>string domain = 13;</code>
        * @return The domain.
        */
@@ -3219,6 +3799,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Instance domain.
+       * </pre>
+       *
        * <code>string domain = 13;</code>
        * @return The bytes for domain.
        */
@@ -3236,6 +3820,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Instance domain.
+       * </pre>
+       *
        * <code>string domain = 13;</code>
        * @param value The domain to set.
        * @return This builder for chaining.
@@ -3251,6 +3839,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Instance domain.
+       * </pre>
+       *
        * <code>string domain = 13;</code>
        * @return This builder for chaining.
        */
@@ -3261,6 +3853,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Instance domain.
+       * </pre>
+       *
        * <code>string domain = 13;</code>
        * @param value The bytes for domain to set.
        * @return This builder for chaining.
@@ -3279,6 +3875,10 @@ public final class GI {
 
       private java.lang.Object subnetId_ = "";
       /**
+       * <pre>
+       * Subnet ID.
+       * </pre>
+       *
        * <code>string subnet_id = 14;</code>
        * @return The subnetId.
        */
@@ -3295,6 +3895,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Subnet ID.
+       * </pre>
+       *
        * <code>string subnet_id = 14;</code>
        * @return The bytes for subnetId.
        */
@@ -3312,6 +3916,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Subnet ID.
+       * </pre>
+       *
        * <code>string subnet_id = 14;</code>
        * @param value The subnetId to set.
        * @return This builder for chaining.
@@ -3327,6 +3935,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Subnet ID.
+       * </pre>
+       *
        * <code>string subnet_id = 14;</code>
        * @return This builder for chaining.
        */
@@ -3337,6 +3949,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Subnet ID.
+       * </pre>
+       *
        * <code>string subnet_id = 14;</code>
        * @param value The bytes for subnetId to set.
        * @return This builder for chaining.
@@ -3357,6 +3973,10 @@ public final class GI {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.gitlab.v1.GM.MaintenanceOperation, yandex.cloud.api.gitlab.v1.GM.MaintenanceOperation.Builder, yandex.cloud.api.gitlab.v1.GM.MaintenanceOperationOrBuilder> plannedOperationBuilder_;
       /**
+       * <pre>
+       * Planned maintenance operation.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
        * @return Whether the plannedOperation field is set.
        */
@@ -3364,6 +3984,10 @@ public final class GI {
         return plannedOperationBuilder_ != null || plannedOperation_ != null;
       }
       /**
+       * <pre>
+       * Planned maintenance operation.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
        * @return The plannedOperation.
        */
@@ -3375,6 +3999,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Planned maintenance operation.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
        */
       public Builder setPlannedOperation(yandex.cloud.api.gitlab.v1.GM.MaintenanceOperation value) {
@@ -3391,6 +4019,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Planned maintenance operation.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
        */
       public Builder setPlannedOperation(
@@ -3405,6 +4037,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Planned maintenance operation.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
        */
       public Builder mergePlannedOperation(yandex.cloud.api.gitlab.v1.GM.MaintenanceOperation value) {
@@ -3423,6 +4059,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Planned maintenance operation.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
        */
       public Builder clearPlannedOperation() {
@@ -3437,6 +4077,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Planned maintenance operation.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
        */
       public yandex.cloud.api.gitlab.v1.GM.MaintenanceOperation.Builder getPlannedOperationBuilder() {
@@ -3445,6 +4089,10 @@ public final class GI {
         return getPlannedOperationFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Planned maintenance operation.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
        */
       public yandex.cloud.api.gitlab.v1.GM.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
@@ -3456,6 +4104,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Planned maintenance operation.
+       * </pre>
+       *
        * <code>.yandex.cloud.gitlab.v1.MaintenanceOperation planned_operation = 16 [(.yandex.cloud.required) = false];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3474,6 +4126,10 @@ public final class GI {
 
       private long backupRetainPeriodDays_ ;
       /**
+       * <pre>
+       * How long to keep backups (days).
+       * </pre>
+       *
        * <code>int64 backup_retain_period_days = 17;</code>
        * @return The backupRetainPeriodDays.
        */
@@ -3482,6 +4138,10 @@ public final class GI {
         return backupRetainPeriodDays_;
       }
       /**
+       * <pre>
+       * How long to keep backups (days).
+       * </pre>
+       *
        * <code>int64 backup_retain_period_days = 17;</code>
        * @param value The backupRetainPeriodDays to set.
        * @return This builder for chaining.
@@ -3493,6 +4153,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * How long to keep backups (days).
+       * </pre>
+       *
        * <code>int64 backup_retain_period_days = 17;</code>
        * @return This builder for chaining.
        */
@@ -3505,6 +4169,10 @@ public final class GI {
 
       private boolean maintenanceDeleteUntagged_ ;
       /**
+       * <pre>
+       * Delete untagged resources during maintenance.
+       * </pre>
+       *
        * <code>bool maintenance_delete_untagged = 19;</code>
        * @return The maintenanceDeleteUntagged.
        */
@@ -3513,6 +4181,10 @@ public final class GI {
         return maintenanceDeleteUntagged_;
       }
       /**
+       * <pre>
+       * Delete untagged resources during maintenance.
+       * </pre>
+       *
        * <code>bool maintenance_delete_untagged = 19;</code>
        * @param value The maintenanceDeleteUntagged to set.
        * @return This builder for chaining.
@@ -3524,6 +4196,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Delete untagged resources during maintenance.
+       * </pre>
+       *
        * <code>bool maintenance_delete_untagged = 19;</code>
        * @return This builder for chaining.
        */
@@ -3536,6 +4212,10 @@ public final class GI {
 
       private boolean deletionProtection_ ;
       /**
+       * <pre>
+       * Protect from accidental deletion.
+       * </pre>
+       *
        * <code>bool deletion_protection = 20;</code>
        * @return The deletionProtection.
        */
@@ -3544,6 +4224,10 @@ public final class GI {
         return deletionProtection_;
       }
       /**
+       * <pre>
+       * Protect from accidental deletion.
+       * </pre>
+       *
        * <code>bool deletion_protection = 20;</code>
        * @param value The deletionProtection to set.
        * @return This builder for chaining.
@@ -3555,6 +4239,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Protect from accidental deletion.
+       * </pre>
+       *
        * <code>bool deletion_protection = 20;</code>
        * @return This builder for chaining.
        */
@@ -3567,6 +4255,10 @@ public final class GI {
 
       private java.lang.Object approvalRulesId_ = "";
       /**
+       * <pre>
+       * Approval rules ID.
+       * </pre>
+       *
        * <code>string approval_rules_id = 22 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
        * @return The approvalRulesId.
        */
@@ -3583,6 +4275,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Approval rules ID.
+       * </pre>
+       *
        * <code>string approval_rules_id = 22 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
        * @return The bytes for approvalRulesId.
        */
@@ -3600,6 +4296,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * Approval rules ID.
+       * </pre>
+       *
        * <code>string approval_rules_id = 22 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
        * @param value The approvalRulesId to set.
        * @return This builder for chaining.
@@ -3615,6 +4315,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Approval rules ID.
+       * </pre>
+       *
        * <code>string approval_rules_id = 22 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
        * @return This builder for chaining.
        */
@@ -3625,6 +4329,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * Approval rules ID.
+       * </pre>
+       *
        * <code>string approval_rules_id = 22 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
        * @param value The bytes for approvalRulesId to set.
        * @return This builder for chaining.
@@ -3643,6 +4351,10 @@ public final class GI {
 
       private java.lang.Object gitlabVersion_ = "";
       /**
+       * <pre>
+       * GitLab version of the instance.
+       * </pre>
+       *
        * <code>string gitlab_version = 23;</code>
        * @return The gitlabVersion.
        */
@@ -3659,6 +4371,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * GitLab version of the instance.
+       * </pre>
+       *
        * <code>string gitlab_version = 23;</code>
        * @return The bytes for gitlabVersion.
        */
@@ -3676,6 +4392,10 @@ public final class GI {
         }
       }
       /**
+       * <pre>
+       * GitLab version of the instance.
+       * </pre>
+       *
        * <code>string gitlab_version = 23;</code>
        * @param value The gitlabVersion to set.
        * @return This builder for chaining.
@@ -3691,6 +4411,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * GitLab version of the instance.
+       * </pre>
+       *
        * <code>string gitlab_version = 23;</code>
        * @return This builder for chaining.
        */
@@ -3701,6 +4425,10 @@ public final class GI {
         return this;
       }
       /**
+       * <pre>
+       * GitLab version of the instance.
+       * </pre>
+       *
        * <code>string gitlab_version = 23;</code>
        * @param value The bytes for gitlabVersion to set.
        * @return This builder for chaining.
@@ -3713,158 +4441,6 @@ public final class GI {
   checkByteStringIsUtf8(value);
         
         gitlabVersion_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object securityGroup_ = "";
-      /**
-       * <code>string security_group = 27 [(.yandex.cloud.required) = false];</code>
-       * @return The securityGroup.
-       */
-      public java.lang.String getSecurityGroup() {
-        java.lang.Object ref = securityGroup_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          securityGroup_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string security_group = 27 [(.yandex.cloud.required) = false];</code>
-       * @return The bytes for securityGroup.
-       */
-      public com.google.protobuf.ByteString
-          getSecurityGroupBytes() {
-        java.lang.Object ref = securityGroup_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          securityGroup_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string security_group = 27 [(.yandex.cloud.required) = false];</code>
-       * @param value The securityGroup to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSecurityGroup(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        securityGroup_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string security_group = 27 [(.yandex.cloud.required) = false];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSecurityGroup() {
-        
-        securityGroup_ = getDefaultInstance().getSecurityGroup();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string security_group = 27 [(.yandex.cloud.required) = false];</code>
-       * @param value The bytes for securityGroup to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSecurityGroupBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        securityGroup_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object diskTypeId_ = "";
-      /**
-       * <code>string disk_type_id = 32 [(.yandex.cloud.required) = false];</code>
-       * @return The diskTypeId.
-       */
-      public java.lang.String getDiskTypeId() {
-        java.lang.Object ref = diskTypeId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          diskTypeId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string disk_type_id = 32 [(.yandex.cloud.required) = false];</code>
-       * @return The bytes for diskTypeId.
-       */
-      public com.google.protobuf.ByteString
-          getDiskTypeIdBytes() {
-        java.lang.Object ref = diskTypeId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          diskTypeId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string disk_type_id = 32 [(.yandex.cloud.required) = false];</code>
-       * @param value The diskTypeId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDiskTypeId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        diskTypeId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string disk_type_id = 32 [(.yandex.cloud.required) = false];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDiskTypeId() {
-        
-        diskTypeId_ = getDefaultInstance().getDiskTypeId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string disk_type_id = 32 [(.yandex.cloud.required) = false];</code>
-       * @param value The bytes for diskTypeId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDiskTypeIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        diskTypeId_ = value;
         onChanged();
         return this;
       }
@@ -3944,7 +4520,7 @@ public final class GI {
       "\026yandex.cloud.gitlab.v1\032\037google/protobuf" +
       "/timestamp.proto\032\035yandex/cloud/validatio" +
       "n.proto\032(yandex/cloud/gitlab/v1/maintena" +
-      "nce.proto\"\262\010\n\010Instance\022\n\n\002id\030\001 \001(\t\022\021\n\tfo" +
+      "nce.proto\"\340\007\n\010Instance\022\n\n\002id\030\001 \001(\t\022\021\n\tfo" +
       "lder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.goog" +
       "le.protobuf.Timestamp\022.\n\nupdated_at\030\004 \001(" +
       "\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\005 " +
@@ -3960,20 +4536,18 @@ public final class GI {
       "ain_period_days\030\021 \001(\003\022#\n\033maintenance_del" +
       "ete_untagged\030\023 \001(\010\022\033\n\023deletion_protectio" +
       "n\030\024 \001(\010\022\'\n\021approval_rules_id\030\026 \001(\tB\014\350\3071\000" +
-      "\212\3101\004<=30\022\026\n\016gitlab_version\030\027 \001(\t\022\034\n\016secu" +
-      "rity_group\030\033 \001(\tB\004\350\3071\000\022\032\n\014disk_type_id\030 " +
-      " \001(\tB\004\350\3071\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"\210\002\n\006Status\022\026\n\022STATUS_U" +
-      "NSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022" +
-      "\014\n\010UPDATING\020\003\022\t\n\005ERROR\020\004\022\014\n\010DELETING\020\005\022\023" +
-      "\n\017BACKUP_CREATING\020\006\022\024\n\020BACKUP_RESTORING\020" +
-      "\007\022\014\n\010STARTING\020\010\022\014\n\010STOPPING\020\t\022\013\n\007STOPPED" +
-      "\020\n\022\031\n\025BACKGROUND_MIGRATIONS\020\013\022\035\n\031OBJECT_" +
-      "STORAGE_MIGRATIONS\020\014\022\026\n\022SNAPSHOT_RESTORI" +
-      "NG\020\rJ\004\010\017\020\020J\004\010\022\020\023J\004\010\025\020\026J\004\010\030\020\031J\004\010\031\020\032J\004\010\032\020\033" +
-      "J\004\010\034\020 Bc\n\032yandex.cloud.api.gitlab.v1B\002GI" +
-      "ZAgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/gitlab/v1;gitlabb\006proto3"
+      "\212\3101\004<=30\022\026\n\016gitlab_version\030\027 \001(\t\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "\210\002\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CR" +
+      "EATING\020\001\022\013\n\007RUNNING\020\002\022\014\n\010UPDATING\020\003\022\t\n\005E" +
+      "RROR\020\004\022\014\n\010DELETING\020\005\022\023\n\017BACKUP_CREATING\020" +
+      "\006\022\024\n\020BACKUP_RESTORING\020\007\022\014\n\010STARTING\020\010\022\014\n" +
+      "\010STOPPING\020\t\022\013\n\007STOPPED\020\n\022\031\n\025BACKGROUND_M" +
+      "IGRATIONS\020\013\022\035\n\031OBJECT_STORAGE_MIGRATIONS" +
+      "\020\014\022\026\n\022SNAPSHOT_RESTORING\020\rJ\004\010\017\020\020J\004\010\022\020\023J\004" +
+      "\010\025\020\026Bc\n\032yandex.cloud.api.gitlab.v1B\002GIZA" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/gitlab/v1;gitlabb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3987,7 +4561,7 @@ public final class GI {
     internal_static_yandex_cloud_gitlab_v1_Instance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_gitlab_v1_Instance_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "UpdatedAt", "Name", "Description", "Labels", "ResourcePresetId", "DiskSize", "Status", "AdminLogin", "AdminEmail", "Domain", "SubnetId", "PlannedOperation", "BackupRetainPeriodDays", "MaintenanceDeleteUntagged", "DeletionProtection", "ApprovalRulesId", "GitlabVersion", "SecurityGroup", "DiskTypeId", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "UpdatedAt", "Name", "Description", "Labels", "ResourcePresetId", "DiskSize", "Status", "AdminLogin", "AdminEmail", "Domain", "SubnetId", "PlannedOperation", "BackupRetainPeriodDays", "MaintenanceDeleteUntagged", "DeletionProtection", "ApprovalRulesId", "GitlabVersion", });
     internal_static_yandex_cloud_gitlab_v1_Instance_LabelsEntry_descriptor =
       internal_static_yandex_cloud_gitlab_v1_Instance_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_gitlab_v1_Instance_LabelsEntry_fieldAccessorTable = new

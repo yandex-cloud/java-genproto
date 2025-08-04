@@ -19,11 +19,19 @@ public final class GIS {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the GitLab instance to return
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The instanceId.
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the GitLab instance to return
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for instanceId.
      */
@@ -31,6 +39,10 @@ public final class GIS {
         getInstanceIdBytes();
   }
   /**
+   * <pre>
+   * Request message for InstanceService.Get
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.GetInstanceRequest}
    */
   public static final class GetInstanceRequest extends
@@ -117,6 +129,10 @@ public final class GIS {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the GitLab instance to return
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The instanceId.
      */
@@ -134,6 +150,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of the GitLab instance to return
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for instanceId.
      */
@@ -307,6 +327,10 @@ public final class GIS {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for InstanceService.Get
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.GetInstanceRequest}
      */
     public static final class Builder extends
@@ -456,6 +480,10 @@ public final class GIS {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the GitLab instance to return
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The instanceId.
        */
@@ -472,6 +500,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to return
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for instanceId.
        */
@@ -489,6 +521,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to return
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The instanceId to set.
        * @return This builder for chaining.
@@ -504,6 +540,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to return
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -514,6 +554,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to return
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for instanceId to set.
        * @return This builder for chaining.
@@ -587,11 +631,19 @@ public final class GIS {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list instances in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list instances in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -599,17 +651,33 @@ public final class GIS {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListInstancesRequest.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListInstancesRequest.next_page_token]
+     * returned by the previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListInstancesRequest.next_page_token]
+     * returned by the previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -617,6 +685,10 @@ public final class GIS {
         getPageTokenBytes();
   }
   /**
+   * <pre>
+   * Request message for InstanceService.List.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.ListInstancesRequest}
    */
   public static final class ListInstancesRequest extends
@@ -715,6 +787,10 @@ public final class GIS {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list instances in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -732,6 +808,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list instances in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -753,6 +833,12 @@ public final class GIS {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListInstancesRequest.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The pageSize.
      */
@@ -764,6 +850,11 @@ public final class GIS {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListInstancesRequest.next_page_token]
+     * returned by the previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
@@ -781,6 +872,11 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListInstancesRequest.next_page_token]
+     * returned by the previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -976,6 +1072,10 @@ public final class GIS {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for InstanceService.List.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.ListInstancesRequest}
      */
     public static final class Builder extends
@@ -1138,6 +1238,10 @@ public final class GIS {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list instances in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -1154,6 +1258,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list instances in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -1171,6 +1279,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list instances in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1186,6 +1298,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list instances in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -1196,6 +1312,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list instances in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -1214,6 +1334,12 @@ public final class GIS {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListInstancesRequest.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return The pageSize.
        */
@@ -1222,6 +1348,12 @@ public final class GIS {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListInstancesRequest.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1233,6 +1365,12 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListInstancesRequest.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return This builder for chaining.
        */
@@ -1245,6 +1383,11 @@ public final class GIS {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListInstancesRequest.next_page_token]
+       * returned by the previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
@@ -1261,6 +1404,11 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListInstancesRequest.next_page_token]
+       * returned by the previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
@@ -1278,6 +1426,11 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListInstancesRequest.next_page_token]
+       * returned by the previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -1293,6 +1446,11 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListInstancesRequest.next_page_token]
+       * returned by the previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
@@ -1303,6 +1461,11 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListInstancesRequest.next_page_token]
+       * returned by the previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -1376,35 +1539,69 @@ public final class GIS {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of GitLab instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
      */
     java.util.List<yandex.cloud.api.gitlab.v1.GI.Instance> 
         getInstancesList();
     /**
+     * <pre>
+     * List of GitLab instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
      */
     yandex.cloud.api.gitlab.v1.GI.Instance getInstances(int index);
     /**
+     * <pre>
+     * List of GitLab instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
      */
     int getInstancesCount();
     /**
+     * <pre>
+     * List of GitLab instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.gitlab.v1.GI.InstanceOrBuilder> 
         getInstancesOrBuilderList();
     /**
+     * <pre>
+     * List of GitLab instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
      */
     yandex.cloud.api.gitlab.v1.GI.InstanceOrBuilder getInstancesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListInstancesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListInstancesRequest.page_token] parameter in the next list request. Each subsequent
+     * list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListInstancesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListInstancesRequest.page_token] parameter in the next list request. Each subsequent
+     * list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1412,6 +1609,10 @@ public final class GIS {
         getNextPageTokenBytes();
   }
   /**
+   * <pre>
+   * Response message for InstanceService.List.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.ListInstancesResponse}
    */
   public static final class ListInstancesResponse extends
@@ -1512,6 +1713,10 @@ public final class GIS {
     public static final int INSTANCES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.gitlab.v1.GI.Instance> instances_;
     /**
+     * <pre>
+     * List of GitLab instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
      */
     @java.lang.Override
@@ -1519,6 +1724,10 @@ public final class GIS {
       return instances_;
     }
     /**
+     * <pre>
+     * List of GitLab instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
      */
     @java.lang.Override
@@ -1527,6 +1736,10 @@ public final class GIS {
       return instances_;
     }
     /**
+     * <pre>
+     * List of GitLab instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
      */
     @java.lang.Override
@@ -1534,6 +1747,10 @@ public final class GIS {
       return instances_.size();
     }
     /**
+     * <pre>
+     * List of GitLab instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
      */
     @java.lang.Override
@@ -1541,6 +1758,10 @@ public final class GIS {
       return instances_.get(index);
     }
     /**
+     * <pre>
+     * List of GitLab instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
      */
     @java.lang.Override
@@ -1552,6 +1773,13 @@ public final class GIS {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListInstancesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListInstancesRequest.page_token] parameter in the next list request. Each subsequent
+     * list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -1569,6 +1797,13 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListInstancesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListInstancesRequest.page_token] parameter in the next list request. Each subsequent
+     * list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1755,6 +1990,10 @@ public final class GIS {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for InstanceService.List.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.ListInstancesResponse}
      */
     public static final class Builder extends
@@ -1959,6 +2198,10 @@ public final class GIS {
           yandex.cloud.api.gitlab.v1.GI.Instance, yandex.cloud.api.gitlab.v1.GI.Instance.Builder, yandex.cloud.api.gitlab.v1.GI.InstanceOrBuilder> instancesBuilder_;
 
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public java.util.List<yandex.cloud.api.gitlab.v1.GI.Instance> getInstancesList() {
@@ -1969,6 +2212,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public int getInstancesCount() {
@@ -1979,6 +2226,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public yandex.cloud.api.gitlab.v1.GI.Instance getInstances(int index) {
@@ -1989,6 +2240,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public Builder setInstances(
@@ -2006,6 +2261,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public Builder setInstances(
@@ -2020,6 +2279,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public Builder addInstances(yandex.cloud.api.gitlab.v1.GI.Instance value) {
@@ -2036,6 +2299,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public Builder addInstances(
@@ -2053,6 +2320,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public Builder addInstances(
@@ -2067,6 +2338,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public Builder addInstances(
@@ -2081,6 +2356,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public Builder addAllInstances(
@@ -2096,6 +2375,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public Builder clearInstances() {
@@ -2109,6 +2392,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public Builder removeInstances(int index) {
@@ -2122,6 +2409,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public yandex.cloud.api.gitlab.v1.GI.Instance.Builder getInstancesBuilder(
@@ -2129,6 +2420,10 @@ public final class GIS {
         return getInstancesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public yandex.cloud.api.gitlab.v1.GI.InstanceOrBuilder getInstancesOrBuilder(
@@ -2139,6 +2434,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.gitlab.v1.GI.InstanceOrBuilder> 
@@ -2150,6 +2449,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public yandex.cloud.api.gitlab.v1.GI.Instance.Builder addInstancesBuilder() {
@@ -2157,6 +2460,10 @@ public final class GIS {
             yandex.cloud.api.gitlab.v1.GI.Instance.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public yandex.cloud.api.gitlab.v1.GI.Instance.Builder addInstancesBuilder(
@@ -2165,6 +2472,10 @@ public final class GIS {
             index, yandex.cloud.api.gitlab.v1.GI.Instance.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of GitLab instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.gitlab.v1.Instance instances = 1;</code>
        */
       public java.util.List<yandex.cloud.api.gitlab.v1.GI.Instance.Builder> 
@@ -2188,6 +2499,13 @@ public final class GIS {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListInstancesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListInstancesRequest.page_token] parameter in the next list request. Each subsequent
+       * list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -2204,6 +2522,13 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListInstancesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListInstancesRequest.page_token] parameter in the next list request. Each subsequent
+       * list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -2221,6 +2546,13 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListInstancesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListInstancesRequest.page_token] parameter in the next list request. Each subsequent
+       * list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -2236,6 +2568,13 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListInstancesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListInstancesRequest.page_token] parameter in the next list request. Each subsequent
+       * list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -2246,6 +2585,13 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListInstancesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListInstancesRequest.page_token] parameter in the next list request. Each subsequent
+       * list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -2319,11 +2665,19 @@ public final class GIS {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create instance in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create instance in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -2331,11 +2685,19 @@ public final class GIS {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the instance (must be unique within the folder).
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the instance (must be unique within the folder).
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The bytes for name.
      */
@@ -2343,11 +2705,19 @@ public final class GIS {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the instance.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the instance.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -2355,10 +2725,18 @@ public final class GIS {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -2370,11 +2748,19 @@ public final class GIS {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2382,6 +2768,10 @@ public final class GIS {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2389,11 +2779,19 @@ public final class GIS {
         java.lang.String key);
 
     /**
+     * <pre>
+     * ID of the resource preset for computational resources.
+     * </pre>
+     *
      * <code>string resource_preset_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The resourcePresetId.
      */
     java.lang.String getResourcePresetId();
     /**
+     * <pre>
+     * ID of the resource preset for computational resources.
+     * </pre>
+     *
      * <code>string resource_preset_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for resourcePresetId.
      */
@@ -2401,17 +2799,29 @@ public final class GIS {
         getResourcePresetIdBytes();
 
     /**
+     * <pre>
+     * Disk size in bytes.
+     * </pre>
+     *
      * <code>int64 disk_size = 6;</code>
      * @return The diskSize.
      */
     long getDiskSize();
 
     /**
+     * <pre>
+     * Admin user login.
+     * </pre>
+     *
      * <code>string admin_login = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The adminLogin.
      */
     java.lang.String getAdminLogin();
     /**
+     * <pre>
+     * Admin user login.
+     * </pre>
+     *
      * <code>string admin_login = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for adminLogin.
      */
@@ -2419,11 +2829,19 @@ public final class GIS {
         getAdminLoginBytes();
 
     /**
+     * <pre>
+     * Admin user email.
+     * </pre>
+     *
      * <code>string admin_email = 8 [(.yandex.cloud.required) = true];</code>
      * @return The adminEmail.
      */
     java.lang.String getAdminEmail();
     /**
+     * <pre>
+     * Admin user email.
+     * </pre>
+     *
      * <code>string admin_email = 8 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for adminEmail.
      */
@@ -2431,11 +2849,19 @@ public final class GIS {
         getAdminEmailBytes();
 
     /**
+     * <pre>
+     * Domain prefix for the GitLab instance.
+     * </pre>
+     *
      * <code>string domain_prefix = 9 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9][a-z0-9-]{3,48}[a-z0-9]", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The domainPrefix.
      */
     java.lang.String getDomainPrefix();
     /**
+     * <pre>
+     * Domain prefix for the GitLab instance.
+     * </pre>
+     *
      * <code>string domain_prefix = 9 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9][a-z0-9-]{3,48}[a-z0-9]", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for domainPrefix.
      */
@@ -2443,11 +2869,19 @@ public final class GIS {
         getDomainPrefixBytes();
 
     /**
+     * <pre>
+     * ID of the subnet where instance will be created.
+     * </pre>
+     *
      * <code>string subnet_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
+     * <pre>
+     * ID of the subnet where instance will be created.
+     * </pre>
+     *
      * <code>string subnet_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for subnetId.
      */
@@ -2455,84 +2889,60 @@ public final class GIS {
         getSubnetIdBytes();
 
     /**
+     * <pre>
+     * Number of days to retain backups.
+     * </pre>
+     *
      * <code>int64 backup_retain_period_days = 12 [(.yandex.cloud.required) = false];</code>
      * @return The backupRetainPeriodDays.
      */
     long getBackupRetainPeriodDays();
 
     /**
+     * <pre>
+     * Whether to delete untagged resources during maintenance.
+     * </pre>
+     *
      * <code>bool maintenance_delete_untagged = 14;</code>
      * @return The maintenanceDeleteUntagged.
      */
     boolean getMaintenanceDeleteUntagged();
 
     /**
+     * <pre>
+     * Whether deletion protection is enabled.
+     * </pre>
+     *
      * <code>bool deletion_protection = 15;</code>
      * @return The deletionProtection.
      */
     boolean getDeletionProtection();
 
     /**
-     * <code>string gitlab_type = 17 [(.yandex.cloud.length) = "&lt;=10"];</code>
-     * @return The gitlabType.
-     */
-    java.lang.String getGitlabType();
-    /**
-     * <code>string gitlab_type = 17 [(.yandex.cloud.length) = "&lt;=10"];</code>
-     * @return The bytes for gitlabType.
-     */
-    com.google.protobuf.ByteString
-        getGitlabTypeBytes();
-
-    /**
-     * <code>string gitlab_version = 18 [(.yandex.cloud.length) = "&lt;=30"];</code>
-     * @return The gitlabVersion.
-     */
-    java.lang.String getGitlabVersion();
-    /**
-     * <code>string gitlab_version = 18 [(.yandex.cloud.length) = "&lt;=30"];</code>
-     * @return The bytes for gitlabVersion.
-     */
-    com.google.protobuf.ByteString
-        getGitlabVersionBytes();
-
-    /**
+     * <pre>
+     * ID of approval rules for the instance.
+     * </pre>
+     *
      * <code>string approval_rules_id = 19 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
      * @return The approvalRulesId.
      */
     java.lang.String getApprovalRulesId();
     /**
+     * <pre>
+     * ID of approval rules for the instance.
+     * </pre>
+     *
      * <code>string approval_rules_id = 19 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
      * @return The bytes for approvalRulesId.
      */
     com.google.protobuf.ByteString
         getApprovalRulesIdBytes();
-
-    /**
-     * <code>string security_group = 22 [(.yandex.cloud.required) = false];</code>
-     * @return The securityGroup.
-     */
-    java.lang.String getSecurityGroup();
-    /**
-     * <code>string security_group = 22 [(.yandex.cloud.required) = false];</code>
-     * @return The bytes for securityGroup.
-     */
-    com.google.protobuf.ByteString
-        getSecurityGroupBytes();
-
-    /**
-     * <code>string disk_type_id = 25 [(.yandex.cloud.required) = false];</code>
-     * @return The diskTypeId.
-     */
-    java.lang.String getDiskTypeId();
-    /**
-     * <code>string disk_type_id = 25 [(.yandex.cloud.required) = false];</code>
-     * @return The bytes for diskTypeId.
-     */
-    com.google.protobuf.ByteString
-        getDiskTypeIdBytes();
   }
   /**
+   * <pre>
+   * Request message for InstanceService.Create.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.CreateInstanceRequest}
    */
   public static final class CreateInstanceRequest extends
@@ -2553,11 +2963,7 @@ public final class GIS {
       adminEmail_ = "";
       domainPrefix_ = "";
       subnetId_ = "";
-      gitlabType_ = "";
-      gitlabVersion_ = "";
       approvalRulesId_ = "";
-      securityGroup_ = "";
-      diskTypeId_ = "";
     }
 
     @java.lang.Override
@@ -2672,34 +3078,10 @@ public final class GIS {
               deletionProtection_ = input.readBool();
               break;
             }
-            case 138: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              gitlabType_ = s;
-              break;
-            }
-            case 146: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              gitlabVersion_ = s;
-              break;
-            }
             case 154: {
               java.lang.String s = input.readStringRequireUtf8();
 
               approvalRulesId_ = s;
-              break;
-            }
-            case 178: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              securityGroup_ = s;
-              break;
-            }
-            case 202: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              diskTypeId_ = s;
               break;
             }
             default: {
@@ -2749,6 +3131,10 @@ public final class GIS {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create instance in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -2766,6 +3152,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create instance in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -2787,6 +3177,10 @@ public final class GIS {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the instance (must be unique within the folder).
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The name.
      */
@@ -2804,6 +3198,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * Name of the instance (must be unique within the folder).
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The bytes for name.
      */
@@ -2825,6 +3223,10 @@ public final class GIS {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the instance.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
@@ -2842,6 +3244,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * Description of the instance.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -2887,6 +3293,10 @@ public final class GIS {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2905,6 +3315,10 @@ public final class GIS {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -2913,6 +3327,10 @@ public final class GIS {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -2926,6 +3344,10 @@ public final class GIS {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -2944,6 +3366,10 @@ public final class GIS {
     public static final int RESOURCE_PRESET_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object resourcePresetId_;
     /**
+     * <pre>
+     * ID of the resource preset for computational resources.
+     * </pre>
+     *
      * <code>string resource_preset_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The resourcePresetId.
      */
@@ -2961,6 +3387,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of the resource preset for computational resources.
+     * </pre>
+     *
      * <code>string resource_preset_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for resourcePresetId.
      */
@@ -2982,6 +3412,10 @@ public final class GIS {
     public static final int DISK_SIZE_FIELD_NUMBER = 6;
     private long diskSize_;
     /**
+     * <pre>
+     * Disk size in bytes.
+     * </pre>
+     *
      * <code>int64 disk_size = 6;</code>
      * @return The diskSize.
      */
@@ -2993,6 +3427,10 @@ public final class GIS {
     public static final int ADMIN_LOGIN_FIELD_NUMBER = 7;
     private volatile java.lang.Object adminLogin_;
     /**
+     * <pre>
+     * Admin user login.
+     * </pre>
+     *
      * <code>string admin_login = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The adminLogin.
      */
@@ -3010,6 +3448,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * Admin user login.
+     * </pre>
+     *
      * <code>string admin_login = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for adminLogin.
      */
@@ -3031,6 +3473,10 @@ public final class GIS {
     public static final int ADMIN_EMAIL_FIELD_NUMBER = 8;
     private volatile java.lang.Object adminEmail_;
     /**
+     * <pre>
+     * Admin user email.
+     * </pre>
+     *
      * <code>string admin_email = 8 [(.yandex.cloud.required) = true];</code>
      * @return The adminEmail.
      */
@@ -3048,6 +3494,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * Admin user email.
+     * </pre>
+     *
      * <code>string admin_email = 8 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for adminEmail.
      */
@@ -3069,6 +3519,10 @@ public final class GIS {
     public static final int DOMAIN_PREFIX_FIELD_NUMBER = 9;
     private volatile java.lang.Object domainPrefix_;
     /**
+     * <pre>
+     * Domain prefix for the GitLab instance.
+     * </pre>
+     *
      * <code>string domain_prefix = 9 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9][a-z0-9-]{3,48}[a-z0-9]", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The domainPrefix.
      */
@@ -3086,6 +3540,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * Domain prefix for the GitLab instance.
+     * </pre>
+     *
      * <code>string domain_prefix = 9 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9][a-z0-9-]{3,48}[a-z0-9]", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for domainPrefix.
      */
@@ -3107,6 +3565,10 @@ public final class GIS {
     public static final int SUBNET_ID_FIELD_NUMBER = 10;
     private volatile java.lang.Object subnetId_;
     /**
+     * <pre>
+     * ID of the subnet where instance will be created.
+     * </pre>
+     *
      * <code>string subnet_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The subnetId.
      */
@@ -3124,6 +3586,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of the subnet where instance will be created.
+     * </pre>
+     *
      * <code>string subnet_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for subnetId.
      */
@@ -3145,6 +3611,10 @@ public final class GIS {
     public static final int BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER = 12;
     private long backupRetainPeriodDays_;
     /**
+     * <pre>
+     * Number of days to retain backups.
+     * </pre>
+     *
      * <code>int64 backup_retain_period_days = 12 [(.yandex.cloud.required) = false];</code>
      * @return The backupRetainPeriodDays.
      */
@@ -3156,6 +3626,10 @@ public final class GIS {
     public static final int MAINTENANCE_DELETE_UNTAGGED_FIELD_NUMBER = 14;
     private boolean maintenanceDeleteUntagged_;
     /**
+     * <pre>
+     * Whether to delete untagged resources during maintenance.
+     * </pre>
+     *
      * <code>bool maintenance_delete_untagged = 14;</code>
      * @return The maintenanceDeleteUntagged.
      */
@@ -3167,6 +3641,10 @@ public final class GIS {
     public static final int DELETION_PROTECTION_FIELD_NUMBER = 15;
     private boolean deletionProtection_;
     /**
+     * <pre>
+     * Whether deletion protection is enabled.
+     * </pre>
+     *
      * <code>bool deletion_protection = 15;</code>
      * @return The deletionProtection.
      */
@@ -3175,85 +3653,13 @@ public final class GIS {
       return deletionProtection_;
     }
 
-    public static final int GITLAB_TYPE_FIELD_NUMBER = 17;
-    private volatile java.lang.Object gitlabType_;
-    /**
-     * <code>string gitlab_type = 17 [(.yandex.cloud.length) = "&lt;=10"];</code>
-     * @return The gitlabType.
-     */
-    @java.lang.Override
-    public java.lang.String getGitlabType() {
-      java.lang.Object ref = gitlabType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        gitlabType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string gitlab_type = 17 [(.yandex.cloud.length) = "&lt;=10"];</code>
-     * @return The bytes for gitlabType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getGitlabTypeBytes() {
-      java.lang.Object ref = gitlabType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        gitlabType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int GITLAB_VERSION_FIELD_NUMBER = 18;
-    private volatile java.lang.Object gitlabVersion_;
-    /**
-     * <code>string gitlab_version = 18 [(.yandex.cloud.length) = "&lt;=30"];</code>
-     * @return The gitlabVersion.
-     */
-    @java.lang.Override
-    public java.lang.String getGitlabVersion() {
-      java.lang.Object ref = gitlabVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        gitlabVersion_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string gitlab_version = 18 [(.yandex.cloud.length) = "&lt;=30"];</code>
-     * @return The bytes for gitlabVersion.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getGitlabVersionBytes() {
-      java.lang.Object ref = gitlabVersion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        gitlabVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int APPROVAL_RULES_ID_FIELD_NUMBER = 19;
     private volatile java.lang.Object approvalRulesId_;
     /**
+     * <pre>
+     * ID of approval rules for the instance.
+     * </pre>
+     *
      * <code>string approval_rules_id = 19 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
      * @return The approvalRulesId.
      */
@@ -3271,6 +3677,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of approval rules for the instance.
+     * </pre>
+     *
      * <code>string approval_rules_id = 19 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
      * @return The bytes for approvalRulesId.
      */
@@ -3283,82 +3693,6 @@ public final class GIS {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         approvalRulesId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SECURITY_GROUP_FIELD_NUMBER = 22;
-    private volatile java.lang.Object securityGroup_;
-    /**
-     * <code>string security_group = 22 [(.yandex.cloud.required) = false];</code>
-     * @return The securityGroup.
-     */
-    @java.lang.Override
-    public java.lang.String getSecurityGroup() {
-      java.lang.Object ref = securityGroup_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        securityGroup_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string security_group = 22 [(.yandex.cloud.required) = false];</code>
-     * @return The bytes for securityGroup.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSecurityGroupBytes() {
-      java.lang.Object ref = securityGroup_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        securityGroup_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DISK_TYPE_ID_FIELD_NUMBER = 25;
-    private volatile java.lang.Object diskTypeId_;
-    /**
-     * <code>string disk_type_id = 25 [(.yandex.cloud.required) = false];</code>
-     * @return The diskTypeId.
-     */
-    @java.lang.Override
-    public java.lang.String getDiskTypeId() {
-      java.lang.Object ref = diskTypeId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        diskTypeId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string disk_type_id = 25 [(.yandex.cloud.required) = false];</code>
-     * @return The bytes for diskTypeId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDiskTypeIdBytes() {
-      java.lang.Object ref = diskTypeId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        diskTypeId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3421,20 +3755,8 @@ public final class GIS {
       if (deletionProtection_ != false) {
         output.writeBool(15, deletionProtection_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gitlabType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, gitlabType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gitlabVersion_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, gitlabVersion_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalRulesId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 19, approvalRulesId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroup_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 22, securityGroup_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, diskTypeId_);
       }
       unknownFields.writeTo(output);
     }
@@ -3495,20 +3817,8 @@ public final class GIS {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, deletionProtection_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gitlabType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, gitlabType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gitlabVersion_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, gitlabVersion_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalRulesId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, approvalRulesId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroup_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, securityGroup_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, diskTypeId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3551,16 +3861,8 @@ public final class GIS {
           != other.getMaintenanceDeleteUntagged()) return false;
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
-      if (!getGitlabType()
-          .equals(other.getGitlabType())) return false;
-      if (!getGitlabVersion()
-          .equals(other.getGitlabVersion())) return false;
       if (!getApprovalRulesId()
           .equals(other.getApprovalRulesId())) return false;
-      if (!getSecurityGroup()
-          .equals(other.getSecurityGroup())) return false;
-      if (!getDiskTypeId()
-          .equals(other.getDiskTypeId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3604,16 +3906,8 @@ public final class GIS {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
-      hash = (37 * hash) + GITLAB_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getGitlabType().hashCode();
-      hash = (37 * hash) + GITLAB_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getGitlabVersion().hashCode();
       hash = (37 * hash) + APPROVAL_RULES_ID_FIELD_NUMBER;
       hash = (53 * hash) + getApprovalRulesId().hashCode();
-      hash = (37 * hash) + SECURITY_GROUP_FIELD_NUMBER;
-      hash = (53 * hash) + getSecurityGroup().hashCode();
-      hash = (37 * hash) + DISK_TYPE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDiskTypeId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3710,6 +4004,10 @@ public final class GIS {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for InstanceService.Create.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.CreateInstanceRequest}
      */
     public static final class Builder extends
@@ -3794,15 +4092,7 @@ public final class GIS {
 
         deletionProtection_ = false;
 
-        gitlabType_ = "";
-
-        gitlabVersion_ = "";
-
         approvalRulesId_ = "";
-
-        securityGroup_ = "";
-
-        diskTypeId_ = "";
 
         return this;
       }
@@ -3845,11 +4135,7 @@ public final class GIS {
         result.backupRetainPeriodDays_ = backupRetainPeriodDays_;
         result.maintenanceDeleteUntagged_ = maintenanceDeleteUntagged_;
         result.deletionProtection_ = deletionProtection_;
-        result.gitlabType_ = gitlabType_;
-        result.gitlabVersion_ = gitlabVersion_;
         result.approvalRulesId_ = approvalRulesId_;
-        result.securityGroup_ = securityGroup_;
-        result.diskTypeId_ = diskTypeId_;
         onBuilt();
         return result;
       }
@@ -3944,24 +4230,8 @@ public final class GIS {
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
         }
-        if (!other.getGitlabType().isEmpty()) {
-          gitlabType_ = other.gitlabType_;
-          onChanged();
-        }
-        if (!other.getGitlabVersion().isEmpty()) {
-          gitlabVersion_ = other.gitlabVersion_;
-          onChanged();
-        }
         if (!other.getApprovalRulesId().isEmpty()) {
           approvalRulesId_ = other.approvalRulesId_;
-          onChanged();
-        }
-        if (!other.getSecurityGroup().isEmpty()) {
-          securityGroup_ = other.securityGroup_;
-          onChanged();
-        }
-        if (!other.getDiskTypeId().isEmpty()) {
-          diskTypeId_ = other.diskTypeId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3996,6 +4266,10 @@ public final class GIS {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create instance in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -4012,6 +4286,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create instance in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -4029,6 +4307,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create instance in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -4044,6 +4326,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create instance in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -4054,6 +4340,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create instance in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -4072,6 +4362,10 @@ public final class GIS {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the instance (must be unique within the folder).
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return The name.
        */
@@ -4088,6 +4382,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Name of the instance (must be unique within the folder).
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return The bytes for name.
        */
@@ -4105,6 +4403,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Name of the instance (must be unique within the folder).
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -4120,6 +4422,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Name of the instance (must be unique within the folder).
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return This builder for chaining.
        */
@@ -4130,6 +4436,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Name of the instance (must be unique within the folder).
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -4148,6 +4458,10 @@ public final class GIS {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the instance.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
@@ -4164,6 +4478,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Description of the instance.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
@@ -4181,6 +4499,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Description of the instance.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -4196,6 +4518,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Description of the instance.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
@@ -4206,6 +4532,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Description of the instance.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -4249,6 +4579,10 @@ public final class GIS {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4267,6 +4601,10 @@ public final class GIS {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -4275,6 +4613,10 @@ public final class GIS {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -4288,6 +4630,10 @@ public final class GIS {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -4309,6 +4655,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4328,6 +4678,10 @@ public final class GIS {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -4343,6 +4697,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod".
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4355,6 +4713,10 @@ public final class GIS {
 
       private java.lang.Object resourcePresetId_ = "";
       /**
+       * <pre>
+       * ID of the resource preset for computational resources.
+       * </pre>
+       *
        * <code>string resource_preset_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The resourcePresetId.
        */
@@ -4371,6 +4733,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the resource preset for computational resources.
+       * </pre>
+       *
        * <code>string resource_preset_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for resourcePresetId.
        */
@@ -4388,6 +4754,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the resource preset for computational resources.
+       * </pre>
+       *
        * <code>string resource_preset_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The resourcePresetId to set.
        * @return This builder for chaining.
@@ -4403,6 +4773,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource preset for computational resources.
+       * </pre>
+       *
        * <code>string resource_preset_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -4413,6 +4787,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource preset for computational resources.
+       * </pre>
+       *
        * <code>string resource_preset_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for resourcePresetId to set.
        * @return This builder for chaining.
@@ -4431,6 +4809,10 @@ public final class GIS {
 
       private long diskSize_ ;
       /**
+       * <pre>
+       * Disk size in bytes.
+       * </pre>
+       *
        * <code>int64 disk_size = 6;</code>
        * @return The diskSize.
        */
@@ -4439,6 +4821,10 @@ public final class GIS {
         return diskSize_;
       }
       /**
+       * <pre>
+       * Disk size in bytes.
+       * </pre>
+       *
        * <code>int64 disk_size = 6;</code>
        * @param value The diskSize to set.
        * @return This builder for chaining.
@@ -4450,6 +4836,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Disk size in bytes.
+       * </pre>
+       *
        * <code>int64 disk_size = 6;</code>
        * @return This builder for chaining.
        */
@@ -4462,6 +4852,10 @@ public final class GIS {
 
       private java.lang.Object adminLogin_ = "";
       /**
+       * <pre>
+       * Admin user login.
+       * </pre>
+       *
        * <code>string admin_login = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The adminLogin.
        */
@@ -4478,6 +4872,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Admin user login.
+       * </pre>
+       *
        * <code>string admin_login = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for adminLogin.
        */
@@ -4495,6 +4893,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Admin user login.
+       * </pre>
+       *
        * <code>string admin_login = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The adminLogin to set.
        * @return This builder for chaining.
@@ -4510,6 +4912,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Admin user login.
+       * </pre>
+       *
        * <code>string admin_login = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -4520,6 +4926,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Admin user login.
+       * </pre>
+       *
        * <code>string admin_login = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for adminLogin to set.
        * @return This builder for chaining.
@@ -4538,6 +4948,10 @@ public final class GIS {
 
       private java.lang.Object adminEmail_ = "";
       /**
+       * <pre>
+       * Admin user email.
+       * </pre>
+       *
        * <code>string admin_email = 8 [(.yandex.cloud.required) = true];</code>
        * @return The adminEmail.
        */
@@ -4554,6 +4968,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Admin user email.
+       * </pre>
+       *
        * <code>string admin_email = 8 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for adminEmail.
        */
@@ -4571,6 +4989,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Admin user email.
+       * </pre>
+       *
        * <code>string admin_email = 8 [(.yandex.cloud.required) = true];</code>
        * @param value The adminEmail to set.
        * @return This builder for chaining.
@@ -4586,6 +5008,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Admin user email.
+       * </pre>
+       *
        * <code>string admin_email = 8 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -4596,6 +5022,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Admin user email.
+       * </pre>
+       *
        * <code>string admin_email = 8 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for adminEmail to set.
        * @return This builder for chaining.
@@ -4614,6 +5044,10 @@ public final class GIS {
 
       private java.lang.Object domainPrefix_ = "";
       /**
+       * <pre>
+       * Domain prefix for the GitLab instance.
+       * </pre>
+       *
        * <code>string domain_prefix = 9 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9][a-z0-9-]{3,48}[a-z0-9]", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The domainPrefix.
        */
@@ -4630,6 +5064,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Domain prefix for the GitLab instance.
+       * </pre>
+       *
        * <code>string domain_prefix = 9 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9][a-z0-9-]{3,48}[a-z0-9]", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for domainPrefix.
        */
@@ -4647,6 +5085,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * Domain prefix for the GitLab instance.
+       * </pre>
+       *
        * <code>string domain_prefix = 9 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9][a-z0-9-]{3,48}[a-z0-9]", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The domainPrefix to set.
        * @return This builder for chaining.
@@ -4662,6 +5104,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Domain prefix for the GitLab instance.
+       * </pre>
+       *
        * <code>string domain_prefix = 9 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9][a-z0-9-]{3,48}[a-z0-9]", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -4672,6 +5118,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Domain prefix for the GitLab instance.
+       * </pre>
+       *
        * <code>string domain_prefix = 9 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9][a-z0-9-]{3,48}[a-z0-9]", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for domainPrefix to set.
        * @return This builder for chaining.
@@ -4690,6 +5140,10 @@ public final class GIS {
 
       private java.lang.Object subnetId_ = "";
       /**
+       * <pre>
+       * ID of the subnet where instance will be created.
+       * </pre>
+       *
        * <code>string subnet_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The subnetId.
        */
@@ -4706,6 +5160,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the subnet where instance will be created.
+       * </pre>
+       *
        * <code>string subnet_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for subnetId.
        */
@@ -4723,6 +5181,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the subnet where instance will be created.
+       * </pre>
+       *
        * <code>string subnet_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The subnetId to set.
        * @return This builder for chaining.
@@ -4738,6 +5200,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subnet where instance will be created.
+       * </pre>
+       *
        * <code>string subnet_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -4748,6 +5214,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subnet where instance will be created.
+       * </pre>
+       *
        * <code>string subnet_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for subnetId to set.
        * @return This builder for chaining.
@@ -4766,6 +5236,10 @@ public final class GIS {
 
       private long backupRetainPeriodDays_ ;
       /**
+       * <pre>
+       * Number of days to retain backups.
+       * </pre>
+       *
        * <code>int64 backup_retain_period_days = 12 [(.yandex.cloud.required) = false];</code>
        * @return The backupRetainPeriodDays.
        */
@@ -4774,6 +5248,10 @@ public final class GIS {
         return backupRetainPeriodDays_;
       }
       /**
+       * <pre>
+       * Number of days to retain backups.
+       * </pre>
+       *
        * <code>int64 backup_retain_period_days = 12 [(.yandex.cloud.required) = false];</code>
        * @param value The backupRetainPeriodDays to set.
        * @return This builder for chaining.
@@ -4785,6 +5263,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Number of days to retain backups.
+       * </pre>
+       *
        * <code>int64 backup_retain_period_days = 12 [(.yandex.cloud.required) = false];</code>
        * @return This builder for chaining.
        */
@@ -4797,6 +5279,10 @@ public final class GIS {
 
       private boolean maintenanceDeleteUntagged_ ;
       /**
+       * <pre>
+       * Whether to delete untagged resources during maintenance.
+       * </pre>
+       *
        * <code>bool maintenance_delete_untagged = 14;</code>
        * @return The maintenanceDeleteUntagged.
        */
@@ -4805,6 +5291,10 @@ public final class GIS {
         return maintenanceDeleteUntagged_;
       }
       /**
+       * <pre>
+       * Whether to delete untagged resources during maintenance.
+       * </pre>
+       *
        * <code>bool maintenance_delete_untagged = 14;</code>
        * @param value The maintenanceDeleteUntagged to set.
        * @return This builder for chaining.
@@ -4816,6 +5306,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Whether to delete untagged resources during maintenance.
+       * </pre>
+       *
        * <code>bool maintenance_delete_untagged = 14;</code>
        * @return This builder for chaining.
        */
@@ -4828,6 +5322,10 @@ public final class GIS {
 
       private boolean deletionProtection_ ;
       /**
+       * <pre>
+       * Whether deletion protection is enabled.
+       * </pre>
+       *
        * <code>bool deletion_protection = 15;</code>
        * @return The deletionProtection.
        */
@@ -4836,6 +5334,10 @@ public final class GIS {
         return deletionProtection_;
       }
       /**
+       * <pre>
+       * Whether deletion protection is enabled.
+       * </pre>
+       *
        * <code>bool deletion_protection = 15;</code>
        * @param value The deletionProtection to set.
        * @return This builder for chaining.
@@ -4847,6 +5349,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * Whether deletion protection is enabled.
+       * </pre>
+       *
        * <code>bool deletion_protection = 15;</code>
        * @return This builder for chaining.
        */
@@ -4857,160 +5363,12 @@ public final class GIS {
         return this;
       }
 
-      private java.lang.Object gitlabType_ = "";
-      /**
-       * <code>string gitlab_type = 17 [(.yandex.cloud.length) = "&lt;=10"];</code>
-       * @return The gitlabType.
-       */
-      public java.lang.String getGitlabType() {
-        java.lang.Object ref = gitlabType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          gitlabType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string gitlab_type = 17 [(.yandex.cloud.length) = "&lt;=10"];</code>
-       * @return The bytes for gitlabType.
-       */
-      public com.google.protobuf.ByteString
-          getGitlabTypeBytes() {
-        java.lang.Object ref = gitlabType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          gitlabType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string gitlab_type = 17 [(.yandex.cloud.length) = "&lt;=10"];</code>
-       * @param value The gitlabType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGitlabType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        gitlabType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string gitlab_type = 17 [(.yandex.cloud.length) = "&lt;=10"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGitlabType() {
-        
-        gitlabType_ = getDefaultInstance().getGitlabType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string gitlab_type = 17 [(.yandex.cloud.length) = "&lt;=10"];</code>
-       * @param value The bytes for gitlabType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGitlabTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        gitlabType_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object gitlabVersion_ = "";
-      /**
-       * <code>string gitlab_version = 18 [(.yandex.cloud.length) = "&lt;=30"];</code>
-       * @return The gitlabVersion.
-       */
-      public java.lang.String getGitlabVersion() {
-        java.lang.Object ref = gitlabVersion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          gitlabVersion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string gitlab_version = 18 [(.yandex.cloud.length) = "&lt;=30"];</code>
-       * @return The bytes for gitlabVersion.
-       */
-      public com.google.protobuf.ByteString
-          getGitlabVersionBytes() {
-        java.lang.Object ref = gitlabVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          gitlabVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string gitlab_version = 18 [(.yandex.cloud.length) = "&lt;=30"];</code>
-       * @param value The gitlabVersion to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGitlabVersion(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        gitlabVersion_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string gitlab_version = 18 [(.yandex.cloud.length) = "&lt;=30"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGitlabVersion() {
-        
-        gitlabVersion_ = getDefaultInstance().getGitlabVersion();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string gitlab_version = 18 [(.yandex.cloud.length) = "&lt;=30"];</code>
-       * @param value The bytes for gitlabVersion to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGitlabVersionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        gitlabVersion_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object approvalRulesId_ = "";
       /**
+       * <pre>
+       * ID of approval rules for the instance.
+       * </pre>
+       *
        * <code>string approval_rules_id = 19 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
        * @return The approvalRulesId.
        */
@@ -5027,6 +5385,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of approval rules for the instance.
+       * </pre>
+       *
        * <code>string approval_rules_id = 19 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
        * @return The bytes for approvalRulesId.
        */
@@ -5044,6 +5406,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of approval rules for the instance.
+       * </pre>
+       *
        * <code>string approval_rules_id = 19 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
        * @param value The approvalRulesId to set.
        * @return This builder for chaining.
@@ -5059,6 +5425,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of approval rules for the instance.
+       * </pre>
+       *
        * <code>string approval_rules_id = 19 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
        * @return This builder for chaining.
        */
@@ -5069,6 +5439,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of approval rules for the instance.
+       * </pre>
+       *
        * <code>string approval_rules_id = 19 [(.yandex.cloud.required) = false, (.yandex.cloud.length) = "&lt;=30"];</code>
        * @param value The bytes for approvalRulesId to set.
        * @return This builder for chaining.
@@ -5081,158 +5455,6 @@ public final class GIS {
   checkByteStringIsUtf8(value);
         
         approvalRulesId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object securityGroup_ = "";
-      /**
-       * <code>string security_group = 22 [(.yandex.cloud.required) = false];</code>
-       * @return The securityGroup.
-       */
-      public java.lang.String getSecurityGroup() {
-        java.lang.Object ref = securityGroup_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          securityGroup_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string security_group = 22 [(.yandex.cloud.required) = false];</code>
-       * @return The bytes for securityGroup.
-       */
-      public com.google.protobuf.ByteString
-          getSecurityGroupBytes() {
-        java.lang.Object ref = securityGroup_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          securityGroup_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string security_group = 22 [(.yandex.cloud.required) = false];</code>
-       * @param value The securityGroup to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSecurityGroup(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        securityGroup_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string security_group = 22 [(.yandex.cloud.required) = false];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSecurityGroup() {
-        
-        securityGroup_ = getDefaultInstance().getSecurityGroup();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string security_group = 22 [(.yandex.cloud.required) = false];</code>
-       * @param value The bytes for securityGroup to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSecurityGroupBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        securityGroup_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object diskTypeId_ = "";
-      /**
-       * <code>string disk_type_id = 25 [(.yandex.cloud.required) = false];</code>
-       * @return The diskTypeId.
-       */
-      public java.lang.String getDiskTypeId() {
-        java.lang.Object ref = diskTypeId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          diskTypeId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string disk_type_id = 25 [(.yandex.cloud.required) = false];</code>
-       * @return The bytes for diskTypeId.
-       */
-      public com.google.protobuf.ByteString
-          getDiskTypeIdBytes() {
-        java.lang.Object ref = diskTypeId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          diskTypeId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string disk_type_id = 25 [(.yandex.cloud.required) = false];</code>
-       * @param value The diskTypeId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDiskTypeId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        diskTypeId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string disk_type_id = 25 [(.yandex.cloud.required) = false];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDiskTypeId() {
-        
-        diskTypeId_ = getDefaultInstance().getDiskTypeId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string disk_type_id = 25 [(.yandex.cloud.required) = false];</code>
-       * @param value The bytes for diskTypeId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDiskTypeIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        diskTypeId_ = value;
         onChanged();
         return this;
       }
@@ -5294,11 +5516,19 @@ public final class GIS {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the GitLab instance being created.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the GitLab instance being created.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -5306,6 +5536,10 @@ public final class GIS {
         getInstanceIdBytes();
   }
   /**
+   * <pre>
+   * Metadata message for InstanceService.Create.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.CreateInstanceMetadata}
    */
   public static final class CreateInstanceMetadata extends
@@ -5392,6 +5626,10 @@ public final class GIS {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the GitLab instance being created.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
@@ -5409,6 +5647,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of the GitLab instance being created.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -5582,6 +5824,10 @@ public final class GIS {
       return builder;
     }
     /**
+     * <pre>
+     * Metadata message for InstanceService.Create.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.CreateInstanceMetadata}
      */
     public static final class Builder extends
@@ -5731,6 +5977,10 @@ public final class GIS {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the GitLab instance being created.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The instanceId.
        */
@@ -5747,6 +5997,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being created.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The bytes for instanceId.
        */
@@ -5764,6 +6018,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being created.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The instanceId to set.
        * @return This builder for chaining.
@@ -5779,6 +6037,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being created.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -5789,6 +6051,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being created.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The bytes for instanceId to set.
        * @return This builder for chaining.
@@ -5857,16 +6123,2580 @@ public final class GIS {
 
   }
 
-  public interface DeleteInstanceRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.gitlab.v1.DeleteInstanceRequest)
+  public interface UpdateInstanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.gitlab.v1.UpdateInstanceRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the GitLab instance to update.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The instanceId.
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the GitLab instance to update.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for instanceId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <pre>
+     * Name of the instance (must be unique within the folder).
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the instance (must be unique within the folder).
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description of the instance.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the instance.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Number of days to retain backups.
+     * </pre>
+     *
+     * <code>int64 backup_retain_period_days = 6;</code>
+     * @return The backupRetainPeriodDays.
+     */
+    long getBackupRetainPeriodDays();
+
+    /**
+     * <pre>
+     * ID of the resource preset for computational resources.
+     * </pre>
+     *
+     * <code>string resource_preset_id = 7;</code>
+     * @return The resourcePresetId.
+     */
+    java.lang.String getResourcePresetId();
+    /**
+     * <pre>
+     * ID of the resource preset for computational resources.
+     * </pre>
+     *
+     * <code>string resource_preset_id = 7;</code>
+     * @return The bytes for resourcePresetId.
+     */
+    com.google.protobuf.ByteString
+        getResourcePresetIdBytes();
+
+    /**
+     * <pre>
+     * Whether to delete untagged resources during maintenance.
+     * </pre>
+     *
+     * <code>bool maintenance_delete_untagged = 10;</code>
+     * @return The maintenanceDeleteUntagged.
+     */
+    boolean getMaintenanceDeleteUntagged();
+
+    /**
+     * <pre>
+     * Whether deletion protection is enabled.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 11;</code>
+     * @return The deletionProtection.
+     */
+    boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * ID of approval rules for the instance.
+     * </pre>
+     *
+     * <code>string approval_rules_id = 12 [(.yandex.cloud.length) = "&lt;=30"];</code>
+     * @return The approvalRulesId.
+     */
+    java.lang.String getApprovalRulesId();
+    /**
+     * <pre>
+     * ID of approval rules for the instance.
+     * </pre>
+     *
+     * <code>string approval_rules_id = 12 [(.yandex.cloud.length) = "&lt;=30"];</code>
+     * @return The bytes for approvalRulesId.
+     */
+    com.google.protobuf.ByteString
+        getApprovalRulesIdBytes();
+
+    /**
+     * <pre>
+     * Token of approval rules for the instance.
+     * </pre>
+     *
+     * <code>string approval_rules_token = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The approvalRulesToken.
+     */
+    java.lang.String getApprovalRulesToken();
+    /**
+     * <pre>
+     * Token of approval rules for the instance.
+     * </pre>
+     *
+     * <code>string approval_rules_token = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for approvalRulesToken.
+     */
+    com.google.protobuf.ByteString
+        getApprovalRulesTokenBytes();
+
+    /**
+     * <pre>
+     * Disk size in bytes.
+     * </pre>
+     *
+     * <code>int64 disk_size = 21;</code>
+     * @return The diskSize.
+     */
+    long getDiskSize();
+
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the trail are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+     * @return Whether the updateMask field is set.
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the trail are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+     * @return The updateMask.
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the trail are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+  }
+  /**
+   * <pre>
+   * Request message for InstanceService.Update.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.gitlab.v1.UpdateInstanceRequest}
+   */
+  public static final class UpdateInstanceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.gitlab.v1.UpdateInstanceRequest)
+      UpdateInstanceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateInstanceRequest.newBuilder() to construct.
+    private UpdateInstanceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateInstanceRequest() {
+      instanceId_ = "";
+      name_ = "";
+      description_ = "";
+      resourcePresetId_ = "";
+      approvalRulesId_ = "";
+      approvalRulesToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateInstanceRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateInstanceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 48: {
+
+              backupRetainPeriodDays_ = input.readInt64();
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourcePresetId_ = s;
+              break;
+            }
+            case 80: {
+
+              maintenanceDeleteUntagged_ = input.readBool();
+              break;
+            }
+            case 88: {
+
+              deletionProtection_ = input.readBool();
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              approvalRulesId_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              approvalRulesToken_ = s;
+              break;
+            }
+            case 168: {
+
+              diskSize_ = input.readInt64();
+              break;
+            }
+            case 194: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.gitlab.v1.GIS.internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.gitlab.v1.GIS.internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest.class, yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the GitLab instance to update.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The instanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the GitLab instance to update.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for instanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the instance (must be unique within the folder).
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the instance (must be unique within the folder).
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the instance.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the instance.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 4;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.gitlab.v1.GIS.internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER = 6;
+    private long backupRetainPeriodDays_;
+    /**
+     * <pre>
+     * Number of days to retain backups.
+     * </pre>
+     *
+     * <code>int64 backup_retain_period_days = 6;</code>
+     * @return The backupRetainPeriodDays.
+     */
+    @java.lang.Override
+    public long getBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_;
+    }
+
+    public static final int RESOURCE_PRESET_ID_FIELD_NUMBER = 7;
+    private volatile java.lang.Object resourcePresetId_;
+    /**
+     * <pre>
+     * ID of the resource preset for computational resources.
+     * </pre>
+     *
+     * <code>string resource_preset_id = 7;</code>
+     * @return The resourcePresetId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourcePresetId() {
+      java.lang.Object ref = resourcePresetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourcePresetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the resource preset for computational resources.
+     * </pre>
+     *
+     * <code>string resource_preset_id = 7;</code>
+     * @return The bytes for resourcePresetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourcePresetIdBytes() {
+      java.lang.Object ref = resourcePresetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourcePresetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAINTENANCE_DELETE_UNTAGGED_FIELD_NUMBER = 10;
+    private boolean maintenanceDeleteUntagged_;
+    /**
+     * <pre>
+     * Whether to delete untagged resources during maintenance.
+     * </pre>
+     *
+     * <code>bool maintenance_delete_untagged = 10;</code>
+     * @return The maintenanceDeleteUntagged.
+     */
+    @java.lang.Override
+    public boolean getMaintenanceDeleteUntagged() {
+      return maintenanceDeleteUntagged_;
+    }
+
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 11;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Whether deletion protection is enabled.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 11;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
+    public static final int APPROVAL_RULES_ID_FIELD_NUMBER = 12;
+    private volatile java.lang.Object approvalRulesId_;
+    /**
+     * <pre>
+     * ID of approval rules for the instance.
+     * </pre>
+     *
+     * <code>string approval_rules_id = 12 [(.yandex.cloud.length) = "&lt;=30"];</code>
+     * @return The approvalRulesId.
+     */
+    @java.lang.Override
+    public java.lang.String getApprovalRulesId() {
+      java.lang.Object ref = approvalRulesId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        approvalRulesId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of approval rules for the instance.
+     * </pre>
+     *
+     * <code>string approval_rules_id = 12 [(.yandex.cloud.length) = "&lt;=30"];</code>
+     * @return The bytes for approvalRulesId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApprovalRulesIdBytes() {
+      java.lang.Object ref = approvalRulesId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        approvalRulesId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APPROVAL_RULES_TOKEN_FIELD_NUMBER = 13;
+    private volatile java.lang.Object approvalRulesToken_;
+    /**
+     * <pre>
+     * Token of approval rules for the instance.
+     * </pre>
+     *
+     * <code>string approval_rules_token = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The approvalRulesToken.
+     */
+    @java.lang.Override
+    public java.lang.String getApprovalRulesToken() {
+      java.lang.Object ref = approvalRulesToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        approvalRulesToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Token of approval rules for the instance.
+     * </pre>
+     *
+     * <code>string approval_rules_token = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for approvalRulesToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApprovalRulesTokenBytes() {
+      java.lang.Object ref = approvalRulesToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        approvalRulesToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISK_SIZE_FIELD_NUMBER = 21;
+    private long diskSize_;
+    /**
+     * <pre>
+     * Disk size in bytes.
+     * </pre>
+     *
+     * <code>int64 disk_size = 21;</code>
+     * @return The diskSize.
+     */
+    @java.lang.Override
+    public long getDiskSize() {
+      return diskSize_;
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 24;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the trail are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+     * @return Whether the updateMask field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the trail are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+     * @return The updateMask.
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the trail are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          4);
+      if (backupRetainPeriodDays_ != 0L) {
+        output.writeInt64(6, backupRetainPeriodDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, resourcePresetId_);
+      }
+      if (maintenanceDeleteUntagged_ != false) {
+        output.writeBool(10, maintenanceDeleteUntagged_);
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(11, deletionProtection_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalRulesId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, approvalRulesId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalRulesToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, approvalRulesToken_);
+      }
+      if (diskSize_ != 0L) {
+        output.writeInt64(21, diskSize_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(24, getUpdateMask());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, labels__);
+      }
+      if (backupRetainPeriodDays_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, backupRetainPeriodDays_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, resourcePresetId_);
+      }
+      if (maintenanceDeleteUntagged_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, maintenanceDeleteUntagged_);
+      }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, deletionProtection_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalRulesId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, approvalRulesId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approvalRulesToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, approvalRulesToken_);
+      }
+      if (diskSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(21, diskSize_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getUpdateMask());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest other = (yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest) obj;
+
+      if (!getInstanceId()
+          .equals(other.getInstanceId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (getBackupRetainPeriodDays()
+          != other.getBackupRetainPeriodDays()) return false;
+      if (!getResourcePresetId()
+          .equals(other.getResourcePresetId())) return false;
+      if (getMaintenanceDeleteUntagged()
+          != other.getMaintenanceDeleteUntagged()) return false;
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
+      if (!getApprovalRulesId()
+          .equals(other.getApprovalRulesId())) return false;
+      if (!getApprovalRulesToken()
+          .equals(other.getApprovalRulesToken())) return false;
+      if (getDiskSize()
+          != other.getDiskSize()) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
+      if (hasUpdateMask()) {
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (37 * hash) + BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBackupRetainPeriodDays());
+      hash = (37 * hash) + RESOURCE_PRESET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourcePresetId().hashCode();
+      hash = (37 * hash) + MAINTENANCE_DELETE_UNTAGGED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMaintenanceDeleteUntagged());
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
+      hash = (37 * hash) + APPROVAL_RULES_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getApprovalRulesId().hashCode();
+      hash = (37 * hash) + APPROVAL_RULES_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getApprovalRulesToken().hashCode();
+      hash = (37 * hash) + DISK_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDiskSize());
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Request message for InstanceService.Update.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.gitlab.v1.UpdateInstanceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.gitlab.v1.UpdateInstanceRequest)
+        yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.gitlab.v1.GIS.internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.gitlab.v1.GIS.internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest.class, yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        name_ = "";
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
+        backupRetainPeriodDays_ = 0L;
+
+        resourcePresetId_ = "";
+
+        maintenanceDeleteUntagged_ = false;
+
+        deletionProtection_ = false;
+
+        approvalRulesId_ = "";
+
+        approvalRulesToken_ = "";
+
+        diskSize_ = 0L;
+
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.gitlab.v1.GIS.internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest build() {
+        yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest buildPartial() {
+        yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest result = new yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.instanceId_ = instanceId_;
+        result.name_ = name_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.backupRetainPeriodDays_ = backupRetainPeriodDays_;
+        result.resourcePresetId_ = resourcePresetId_;
+        result.maintenanceDeleteUntagged_ = maintenanceDeleteUntagged_;
+        result.deletionProtection_ = deletionProtection_;
+        result.approvalRulesId_ = approvalRulesId_;
+        result.approvalRulesToken_ = approvalRulesToken_;
+        result.diskSize_ = diskSize_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest) {
+          return mergeFrom((yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest other) {
+        if (other == yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        if (other.getBackupRetainPeriodDays() != 0L) {
+          setBackupRetainPeriodDays(other.getBackupRetainPeriodDays());
+        }
+        if (!other.getResourcePresetId().isEmpty()) {
+          resourcePresetId_ = other.resourcePresetId_;
+          onChanged();
+        }
+        if (other.getMaintenanceDeleteUntagged() != false) {
+          setMaintenanceDeleteUntagged(other.getMaintenanceDeleteUntagged());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
+        }
+        if (!other.getApprovalRulesId().isEmpty()) {
+          approvalRulesId_ = other.approvalRulesId_;
+          onChanged();
+        }
+        if (!other.getApprovalRulesToken().isEmpty()) {
+          approvalRulesToken_ = other.approvalRulesToken_;
+          onChanged();
+        }
+        if (other.getDiskSize() != 0L) {
+          setDiskSize(other.getDiskSize());
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the GitLab instance to update.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The instanceId.
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the GitLab instance to update.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for instanceId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the GitLab instance to update.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the GitLab instance to update.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the GitLab instance to update.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the instance (must be unique within the folder).
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the instance (must be unique within the folder).
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the instance (must be unique within the folder).
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the instance (must be unique within the folder).
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the instance (must be unique within the folder).
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the instance.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the instance.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the instance.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the instance.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the instance.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels for the instance as `` key:value `` pairs. For example, "env": "prod"
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private long backupRetainPeriodDays_ ;
+      /**
+       * <pre>
+       * Number of days to retain backups.
+       * </pre>
+       *
+       * <code>int64 backup_retain_period_days = 6;</code>
+       * @return The backupRetainPeriodDays.
+       */
+      @java.lang.Override
+      public long getBackupRetainPeriodDays() {
+        return backupRetainPeriodDays_;
+      }
+      /**
+       * <pre>
+       * Number of days to retain backups.
+       * </pre>
+       *
+       * <code>int64 backup_retain_period_days = 6;</code>
+       * @param value The backupRetainPeriodDays to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupRetainPeriodDays(long value) {
+        
+        backupRetainPeriodDays_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of days to retain backups.
+       * </pre>
+       *
+       * <code>int64 backup_retain_period_days = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackupRetainPeriodDays() {
+        
+        backupRetainPeriodDays_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resourcePresetId_ = "";
+      /**
+       * <pre>
+       * ID of the resource preset for computational resources.
+       * </pre>
+       *
+       * <code>string resource_preset_id = 7;</code>
+       * @return The resourcePresetId.
+       */
+      public java.lang.String getResourcePresetId() {
+        java.lang.Object ref = resourcePresetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourcePresetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource preset for computational resources.
+       * </pre>
+       *
+       * <code>string resource_preset_id = 7;</code>
+       * @return The bytes for resourcePresetId.
+       */
+      public com.google.protobuf.ByteString
+          getResourcePresetIdBytes() {
+        java.lang.Object ref = resourcePresetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourcePresetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource preset for computational resources.
+       * </pre>
+       *
+       * <code>string resource_preset_id = 7;</code>
+       * @param value The resourcePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcePresetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourcePresetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource preset for computational resources.
+       * </pre>
+       *
+       * <code>string resource_preset_id = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourcePresetId() {
+        
+        resourcePresetId_ = getDefaultInstance().getResourcePresetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource preset for computational resources.
+       * </pre>
+       *
+       * <code>string resource_preset_id = 7;</code>
+       * @param value The bytes for resourcePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcePresetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourcePresetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean maintenanceDeleteUntagged_ ;
+      /**
+       * <pre>
+       * Whether to delete untagged resources during maintenance.
+       * </pre>
+       *
+       * <code>bool maintenance_delete_untagged = 10;</code>
+       * @return The maintenanceDeleteUntagged.
+       */
+      @java.lang.Override
+      public boolean getMaintenanceDeleteUntagged() {
+        return maintenanceDeleteUntagged_;
+      }
+      /**
+       * <pre>
+       * Whether to delete untagged resources during maintenance.
+       * </pre>
+       *
+       * <code>bool maintenance_delete_untagged = 10;</code>
+       * @param value The maintenanceDeleteUntagged to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaintenanceDeleteUntagged(boolean value) {
+        
+        maintenanceDeleteUntagged_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether to delete untagged resources during maintenance.
+       * </pre>
+       *
+       * <code>bool maintenance_delete_untagged = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaintenanceDeleteUntagged() {
+        
+        maintenanceDeleteUntagged_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Whether deletion protection is enabled.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 11;</code>
+       * @return The deletionProtection.
+       */
+      @java.lang.Override
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Whether deletion protection is enabled.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 11;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether deletion protection is enabled.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object approvalRulesId_ = "";
+      /**
+       * <pre>
+       * ID of approval rules for the instance.
+       * </pre>
+       *
+       * <code>string approval_rules_id = 12 [(.yandex.cloud.length) = "&lt;=30"];</code>
+       * @return The approvalRulesId.
+       */
+      public java.lang.String getApprovalRulesId() {
+        java.lang.Object ref = approvalRulesId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          approvalRulesId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of approval rules for the instance.
+       * </pre>
+       *
+       * <code>string approval_rules_id = 12 [(.yandex.cloud.length) = "&lt;=30"];</code>
+       * @return The bytes for approvalRulesId.
+       */
+      public com.google.protobuf.ByteString
+          getApprovalRulesIdBytes() {
+        java.lang.Object ref = approvalRulesId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          approvalRulesId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of approval rules for the instance.
+       * </pre>
+       *
+       * <code>string approval_rules_id = 12 [(.yandex.cloud.length) = "&lt;=30"];</code>
+       * @param value The approvalRulesId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApprovalRulesId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        approvalRulesId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of approval rules for the instance.
+       * </pre>
+       *
+       * <code>string approval_rules_id = 12 [(.yandex.cloud.length) = "&lt;=30"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApprovalRulesId() {
+        
+        approvalRulesId_ = getDefaultInstance().getApprovalRulesId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of approval rules for the instance.
+       * </pre>
+       *
+       * <code>string approval_rules_id = 12 [(.yandex.cloud.length) = "&lt;=30"];</code>
+       * @param value The bytes for approvalRulesId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApprovalRulesIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        approvalRulesId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object approvalRulesToken_ = "";
+      /**
+       * <pre>
+       * Token of approval rules for the instance.
+       * </pre>
+       *
+       * <code>string approval_rules_token = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The approvalRulesToken.
+       */
+      public java.lang.String getApprovalRulesToken() {
+        java.lang.Object ref = approvalRulesToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          approvalRulesToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token of approval rules for the instance.
+       * </pre>
+       *
+       * <code>string approval_rules_token = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for approvalRulesToken.
+       */
+      public com.google.protobuf.ByteString
+          getApprovalRulesTokenBytes() {
+        java.lang.Object ref = approvalRulesToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          approvalRulesToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token of approval rules for the instance.
+       * </pre>
+       *
+       * <code>string approval_rules_token = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The approvalRulesToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApprovalRulesToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        approvalRulesToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token of approval rules for the instance.
+       * </pre>
+       *
+       * <code>string approval_rules_token = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApprovalRulesToken() {
+        
+        approvalRulesToken_ = getDefaultInstance().getApprovalRulesToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token of approval rules for the instance.
+       * </pre>
+       *
+       * <code>string approval_rules_token = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for approvalRulesToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApprovalRulesTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        approvalRulesToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long diskSize_ ;
+      /**
+       * <pre>
+       * Disk size in bytes.
+       * </pre>
+       *
+       * <code>int64 disk_size = 21;</code>
+       * @return The diskSize.
+       */
+      @java.lang.Override
+      public long getDiskSize() {
+        return diskSize_;
+      }
+      /**
+       * <pre>
+       * Disk size in bytes.
+       * </pre>
+       *
+       * <code>int64 disk_size = 21;</code>
+       * @param value The diskSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiskSize(long value) {
+        
+        diskSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size in bytes.
+       * </pre>
+       *
+       * <code>int64 disk_size = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiskSize() {
+        
+        diskSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the trail are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+       * @return Whether the updateMask field is set.
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the trail are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+       * @return The updateMask.
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the trail are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the trail are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the trail are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the trail are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the trail are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the trail are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the trail are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 24;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.gitlab.v1.UpdateInstanceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.gitlab.v1.UpdateInstanceRequest)
+    private static final yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest();
+    }
+
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateInstanceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateInstanceRequest>() {
+      @java.lang.Override
+      public UpdateInstanceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateInstanceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateInstanceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateInstanceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateInstanceMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.gitlab.v1.UpdateInstanceMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the GitLab instance to update.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the GitLab instance to update.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -5874,6 +8704,622 @@ public final class GIS {
         getInstanceIdBytes();
   }
   /**
+   * <pre>
+   * Metadata message for InstanceService.Update.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.gitlab.v1.UpdateInstanceMetadata}
+   */
+  public static final class UpdateInstanceMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.gitlab.v1.UpdateInstanceMetadata)
+      UpdateInstanceMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateInstanceMetadata.newBuilder() to construct.
+    private UpdateInstanceMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateInstanceMetadata() {
+      instanceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateInstanceMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateInstanceMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.gitlab.v1.GIS.internal_static_yandex_cloud_gitlab_v1_UpdateInstanceMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.gitlab.v1.GIS.internal_static_yandex_cloud_gitlab_v1_UpdateInstanceMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata.class, yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the GitLab instance to update.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The instanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the GitLab instance to update.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The bytes for instanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata other = (yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata) obj;
+
+      if (!getInstanceId()
+          .equals(other.getInstanceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Metadata message for InstanceService.Update.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.gitlab.v1.UpdateInstanceMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.gitlab.v1.UpdateInstanceMetadata)
+        yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.gitlab.v1.GIS.internal_static_yandex_cloud_gitlab_v1_UpdateInstanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.gitlab.v1.GIS.internal_static_yandex_cloud_gitlab_v1_UpdateInstanceMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata.class, yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.gitlab.v1.GIS.internal_static_yandex_cloud_gitlab_v1_UpdateInstanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata build() {
+        yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata buildPartial() {
+        yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata result = new yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata(this);
+        result.instanceId_ = instanceId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata) {
+          return mergeFrom((yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata other) {
+        if (other == yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the GitLab instance to update.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @return The instanceId.
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the GitLab instance to update.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @return The bytes for instanceId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the GitLab instance to update.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @param value The instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the GitLab instance to update.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the GitLab instance to update.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @param value The bytes for instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.gitlab.v1.UpdateInstanceMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.gitlab.v1.UpdateInstanceMetadata)
+    private static final yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata();
+    }
+
+    public static yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateInstanceMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateInstanceMetadata>() {
+      @java.lang.Override
+      public UpdateInstanceMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateInstanceMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateInstanceMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateInstanceMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteInstanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.gitlab.v1.DeleteInstanceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the GitLab instance to delete.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The instanceId.
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the GitLab instance to delete.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The bytes for instanceId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+  }
+  /**
+   * <pre>
+   * Request message for InstanceService.Delete.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.DeleteInstanceRequest}
    */
   public static final class DeleteInstanceRequest extends
@@ -5960,6 +9406,10 @@ public final class GIS {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the GitLab instance to delete.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
@@ -5977,6 +9427,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of the GitLab instance to delete.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -6150,6 +9604,10 @@ public final class GIS {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for InstanceService.Delete.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.DeleteInstanceRequest}
      */
     public static final class Builder extends
@@ -6299,6 +9757,10 @@ public final class GIS {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the GitLab instance to delete.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The instanceId.
        */
@@ -6315,6 +9777,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to delete.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The bytes for instanceId.
        */
@@ -6332,6 +9798,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to delete.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The instanceId to set.
        * @return This builder for chaining.
@@ -6347,6 +9817,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to delete.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -6357,6 +9831,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to delete.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The bytes for instanceId to set.
        * @return This builder for chaining.
@@ -6430,11 +9908,19 @@ public final class GIS {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the GitLab instance being deleted.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the GitLab instance being deleted.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -6442,6 +9928,10 @@ public final class GIS {
         getInstanceIdBytes();
   }
   /**
+   * <pre>
+   * Metadata message for InstanceService.Delete.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.DeleteInstanceMetadata}
    */
   public static final class DeleteInstanceMetadata extends
@@ -6528,6 +10018,10 @@ public final class GIS {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the GitLab instance being deleted.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
@@ -6545,6 +10039,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of the GitLab instance being deleted.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -6718,6 +10216,10 @@ public final class GIS {
       return builder;
     }
     /**
+     * <pre>
+     * Metadata message for InstanceService.Delete.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.DeleteInstanceMetadata}
      */
     public static final class Builder extends
@@ -6867,6 +10369,10 @@ public final class GIS {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the GitLab instance being deleted.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The instanceId.
        */
@@ -6883,6 +10389,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being deleted.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The bytes for instanceId.
        */
@@ -6900,6 +10410,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being deleted.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The instanceId to set.
        * @return This builder for chaining.
@@ -6915,6 +10429,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being deleted.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -6925,6 +10443,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being deleted.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The bytes for instanceId to set.
        * @return This builder for chaining.
@@ -6998,11 +10520,19 @@ public final class GIS {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the GitLab instance to start.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the GitLab instance to start.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -7010,6 +10540,10 @@ public final class GIS {
         getInstanceIdBytes();
   }
   /**
+   * <pre>
+   * Request message for InstanceService.Start.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.StartInstanceRequest}
    */
   public static final class StartInstanceRequest extends
@@ -7096,6 +10630,10 @@ public final class GIS {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the GitLab instance to start.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
@@ -7113,6 +10651,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of the GitLab instance to start.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -7286,6 +10828,10 @@ public final class GIS {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for InstanceService.Start.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.StartInstanceRequest}
      */
     public static final class Builder extends
@@ -7435,6 +10981,10 @@ public final class GIS {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the GitLab instance to start.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The instanceId.
        */
@@ -7451,6 +11001,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to start.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The bytes for instanceId.
        */
@@ -7468,6 +11022,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to start.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The instanceId to set.
        * @return This builder for chaining.
@@ -7483,6 +11041,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to start.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -7493,6 +11055,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance to start.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The bytes for instanceId to set.
        * @return This builder for chaining.
@@ -7566,11 +11132,19 @@ public final class GIS {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the GitLab instance being started.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the GitLab instance being started.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -7578,6 +11152,10 @@ public final class GIS {
         getInstanceIdBytes();
   }
   /**
+   * <pre>
+   * Metadata message for InstanceService.Start.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.StartInstanceMetadata}
    */
   public static final class StartInstanceMetadata extends
@@ -7664,6 +11242,10 @@ public final class GIS {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the GitLab instance being started.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
@@ -7681,6 +11263,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of the GitLab instance being started.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -7854,6 +11440,10 @@ public final class GIS {
       return builder;
     }
     /**
+     * <pre>
+     * Metadata message for InstanceService.Start.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.StartInstanceMetadata}
      */
     public static final class Builder extends
@@ -8003,6 +11593,10 @@ public final class GIS {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the GitLab instance being started.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The instanceId.
        */
@@ -8019,6 +11613,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being started.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The bytes for instanceId.
        */
@@ -8036,6 +11634,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being started.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The instanceId to set.
        * @return This builder for chaining.
@@ -8051,6 +11653,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being started.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -8061,6 +11667,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being started.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The bytes for instanceId to set.
        * @return This builder for chaining.
@@ -8146,6 +11756,10 @@ public final class GIS {
         getInstanceIdBytes();
   }
   /**
+   * <pre>
+   * Request message for InstanceService.Stop.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.StopInstanceRequest}
    */
   public static final class StopInstanceRequest extends
@@ -8422,6 +12036,10 @@ public final class GIS {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for InstanceService.Stop.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.StopInstanceRequest}
      */
     public static final class Builder extends
@@ -8702,11 +12320,19 @@ public final class GIS {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the GitLab instance being stoped.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the GitLab instance being stoped.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -8714,6 +12340,10 @@ public final class GIS {
         getInstanceIdBytes();
   }
   /**
+   * <pre>
+   * Metadata message for InstanceService.Stop.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.gitlab.v1.StopInstanceMetadata}
    */
   public static final class StopInstanceMetadata extends
@@ -8800,6 +12430,10 @@ public final class GIS {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the GitLab instance being stoped.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The instanceId.
      */
@@ -8817,6 +12451,10 @@ public final class GIS {
       }
     }
     /**
+     * <pre>
+     * ID of the GitLab instance being stoped.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      * @return The bytes for instanceId.
      */
@@ -8990,6 +12628,10 @@ public final class GIS {
       return builder;
     }
     /**
+     * <pre>
+     * Metadata message for InstanceService.Stop.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.gitlab.v1.StopInstanceMetadata}
      */
     public static final class Builder extends
@@ -9139,6 +12781,10 @@ public final class GIS {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the GitLab instance being stoped.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The instanceId.
        */
@@ -9155,6 +12801,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being stoped.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return The bytes for instanceId.
        */
@@ -9172,6 +12822,10 @@ public final class GIS {
         }
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being stoped.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The instanceId to set.
        * @return This builder for chaining.
@@ -9187,6 +12841,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being stoped.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9197,6 +12855,10 @@ public final class GIS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the GitLab instance being stoped.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        * @param value The bytes for instanceId to set.
        * @return This builder for chaining.
@@ -9296,6 +12958,21 @@ public final class GIS {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_gitlab_v1_CreateInstanceMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_gitlab_v1_UpdateInstanceMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_gitlab_v1_UpdateInstanceMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_gitlab_v1_DeleteInstanceRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -9336,80 +13013,99 @@ public final class GIS {
     java.lang.String[] descriptorData = {
       "\n-yandex/cloud/gitlab/v1/instance_servic" +
       "e.proto\022\026yandex.cloud.gitlab.v1\032\034google/" +
-      "api/annotations.proto\032 yandex/cloud/api/" +
-      "operation.proto\032&yandex/cloud/operation/" +
-      "operation.proto\032\035yandex/cloud/validation" +
-      ".proto\032%yandex/cloud/gitlab/v1/instance." +
-      "proto\"7\n\022GetInstanceRequest\022!\n\013instance_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"u\n\024ListInstancesR" +
-      "equest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_t" +
-      "oken\030\003 \001(\tB\t\212\3101\005<=100\"e\n\025ListInstancesRe" +
-      "sponse\0223\n\tinstances\030\001 \003(\0132 .yandex.cloud" +
-      ".gitlab.v1.Instance\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\346\006\n\025CreateInstanceRequest\022\037\n\tfolder" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0223\n\004name\030\002 \001(\tB%\350" +
-      "\3071\001\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013" +
-      "description\030\003 \001(\tB\t\212\3101\005<=256\022\212\001\n\006labels\030" +
-      "\004 \003(\01329.yandex.cloud.gitlab.v1.CreateIns" +
-      "tanceRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=" +
-      "63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-" +
-      "_0-9a-z]*\022(\n\022resource_preset_id\030\005 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\021\n\tdisk_size\030\006 \001(\003\022!\n\013admin_" +
-      "login\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013admin_email" +
-      "\030\010 \001(\tB\004\350\3071\001\022F\n\rdomain_prefix\030\t \001(\tB/\350\3071" +
-      "\001\212\3101\004<=50\362\3071\037[a-z0-9][a-z0-9-]{3,48}[a-z" +
-      "0-9]\022\037\n\tsubnet_id\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\022\'\n" +
-      "\031backup_retain_period_days\030\014 \001(\003B\004\350\3071\000\022#" +
-      "\n\033maintenance_delete_untagged\030\016 \001(\010\022\033\n\023d" +
-      "eletion_protection\030\017 \001(\010\022\035\n\013gitlab_type\030" +
-      "\021 \001(\tB\010\212\3101\004<=10\022 \n\016gitlab_version\030\022 \001(\tB" +
-      "\010\212\3101\004<=30\022\'\n\021approval_rules_id\030\023 \001(\tB\014\350\307" +
-      "1\000\212\3101\004<=30\022\034\n\016security_group\030\026 \001(\tB\004\350\3071\000" +
-      "\022\032\n\014disk_type_id\030\031 \001(\tB\004\350\3071\000\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\013\020" +
-      "\014J\004\010\r\020\016J\004\010\020\020\021J\004\010\024\020\025J\004\010\025\020\026J\004\010\027\020\030J\004\010\030\020\031\"-\n" +
-      "\026CreateInstanceMetadata\022\023\n\013instance_id\030\001" +
-      " \001(\t\",\n\025DeleteInstanceRequest\022\023\n\013instanc" +
-      "e_id\030\001 \001(\t\"-\n\026DeleteInstanceMetadata\022\023\n\013" +
-      "instance_id\030\001 \001(\t\"+\n\024StartInstanceReques" +
-      "t\022\023\n\013instance_id\030\001 \001(\t\",\n\025StartInstanceM" +
-      "etadata\022\023\n\013instance_id\030\001 \001(\t\"*\n\023StopInst" +
-      "anceRequest\022\023\n\013instance_id\030\001 \001(\t\"+\n\024Stop" +
-      "InstanceMetadata\022\023\n\013instance_id\030\001 \001(\t2\326\007" +
-      "\n\017InstanceService\022\177\n\003Get\022*.yandex.cloud." +
-      "gitlab.v1.GetInstanceRequest\032 .yandex.cl" +
-      "oud.gitlab.v1.Instance\"*\202\323\344\223\002$\022\"/gitlab/" +
-      "v1/instances/{instance_id}\022\201\001\n\004List\022,.ya" +
-      "ndex.cloud.gitlab.v1.ListInstancesReques" +
-      "t\032-.yandex.cloud.gitlab.v1.ListInstances" +
-      "Response\"\034\202\323\344\223\002\026\022\024/gitlab/v1/instances\022\241" +
-      "\001\n\006Create\022-.yandex.cloud.gitlab.v1.Creat" +
-      "eInstanceRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"E\202\323\344\223\002\031\"\024/gitlab/v1/instance" +
-      "s:\001*\262\322*\"\n\026CreateInstanceMetadata\022\010Instan" +
-      "ce\022\271\001\n\006Delete\022-.yandex.cloud.gitlab.v1.D" +
-      "eleteInstanceRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"]\202\323\344\223\002$*\"/gitlab/v1/inst" +
-      "ances/{instance_id}\262\322*/\n\026DeleteInstanceM" +
-      "etadata\022\025google.protobuf.Empty\022\257\001\n\005Start" +
-      "\022,.yandex.cloud.gitlab.v1.StartInstanceR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"U\202\323\344\223\002*\"(/gitlab/v1/instances/{instanc" +
-      "e_id}:start\262\322*!\n\025StartInstanceMetadata\022\010" +
-      "Instance\022\253\001\n\004Stop\022+.yandex.cloud.gitlab." +
-      "v1.StopInstanceRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"S\202\323\344\223\002)\"\'/gitlab/v1/in" +
-      "stances/{instance_id}:stop\262\322* \n\024StopInst" +
-      "anceMetadata\022\010InstanceBd\n\032yandex.cloud.a" +
-      "pi.gitlab.v1B\003GISZAgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/gitlab/v1;gi" +
-      "tlabb\006proto3"
+      "api/annotations.proto\032 google/protobuf/f" +
+      "ield_mask.proto\032 yandex/cloud/api/operat" +
+      "ion.proto\032&yandex/cloud/operation/operat" +
+      "ion.proto\032\035yandex/cloud/validation.proto" +
+      "\032%yandex/cloud/gitlab/v1/instance.proto\"" +
+      "7\n\022GetInstanceRequest\022!\n\013instance_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"u\n\024ListInstancesRequest" +
+      "\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
+      "e_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003" +
+      " \001(\tB\t\212\3101\005<=100\"e\n\025ListInstancesResponse" +
+      "\0223\n\tinstances\030\001 \003(\0132 .yandex.cloud.gitla" +
+      "b.v1.Instance\022\027\n\017next_page_token\030\002 \001(\t\"\323" +
+      "\005\n\025CreateInstanceRequest\022\037\n\tfolder_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\0223\n\004name\030\002 \001(\tB%\350\3071\001\362\3071" +
+      "\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descri" +
+      "ption\030\003 \001(\tB\t\212\3101\005<=256\022\212\001\n\006labels\030\004 \003(\0132" +
+      "9.yandex.cloud.gitlab.v1.CreateInstanceR" +
+      "equest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013" +
+      "[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
+      "z]*\022(\n\022resource_preset_id\030\005 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\021\n\tdisk_size\030\006 \001(\003\022!\n\013admin_login\030" +
+      "\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013admin_email\030\010 \001(\t" +
+      "B\004\350\3071\001\022F\n\rdomain_prefix\030\t \001(\tB/\350\3071\001\212\3101\004<" +
+      "=50\362\3071\037[a-z0-9][a-z0-9-]{3,48}[a-z0-9]\022\037" +
+      "\n\tsubnet_id\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\022\'\n\031backu" +
+      "p_retain_period_days\030\014 \001(\003B\004\350\3071\000\022#\n\033main" +
+      "tenance_delete_untagged\030\016 \001(\010\022\033\n\023deletio" +
+      "n_protection\030\017 \001(\010\022\'\n\021approval_rules_id\030" +
+      "\023 \001(\tB\014\350\3071\000\212\3101\004<=30\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\013\020\014J\004\010\r\020\016J\004" +
+      "\010\020\020\023\"-\n\026CreateInstanceMetadata\022\023\n\013instan" +
+      "ce_id\030\001 \001(\t\"\362\004\n\025UpdateInstanceRequest\022!\n" +
+      "\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name" +
+      "\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9" +
+      "]\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\212\001\n\006la" +
+      "bels\030\004 \003(\01329.yandex.cloud.gitlab.v1.Upda" +
+      "teInstanceRequest.LabelsEntryB?\202\3101\004<=64\212" +
+      "\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a" +
+      "-z][-_0-9a-z]*\022!\n\031backup_retain_period_d" +
+      "ays\030\006 \001(\003\022\032\n\022resource_preset_id\030\007 \001(\t\022#\n" +
+      "\033maintenance_delete_untagged\030\n \001(\010\022\033\n\023de" +
+      "letion_protection\030\013 \001(\010\022#\n\021approval_rule" +
+      "s_id\030\014 \001(\tB\010\212\3101\004<=30\022\'\n\024approval_rules_t" +
+      "oken\030\r \001(\tB\t\212\3101\005<=100\022\021\n\tdisk_size\030\025 \001(\003" +
+      "\022/\n\013update_mask\030\030 \001(\0132\032.google.protobuf." +
+      "FieldMask\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001J\004\010\005\020\006J\004\010\010\020\nJ\004\010\016\020\025J\004\010\026\020\030" +
+      "\"-\n\026UpdateInstanceMetadata\022\023\n\013instance_i" +
+      "d\030\001 \001(\t\",\n\025DeleteInstanceRequest\022\023\n\013inst" +
+      "ance_id\030\001 \001(\t\"-\n\026DeleteInstanceMetadata\022" +
+      "\023\n\013instance_id\030\001 \001(\t\"+\n\024StartInstanceReq" +
+      "uest\022\023\n\013instance_id\030\001 \001(\t\",\n\025StartInstan" +
+      "ceMetadata\022\023\n\013instance_id\030\001 \001(\t\"*\n\023StopI" +
+      "nstanceRequest\022\023\n\013instance_id\030\001 \001(\t\"+\n\024S" +
+      "topInstanceMetadata\022\023\n\013instance_id\030\001 \001(\t" +
+      "2\210\t\n\017InstanceService\022\177\n\003Get\022*.yandex.clo" +
+      "ud.gitlab.v1.GetInstanceRequest\032 .yandex" +
+      ".cloud.gitlab.v1.Instance\"*\202\323\344\223\002$\022\"/gitl" +
+      "ab/v1/instances/{instance_id}\022\201\001\n\004List\022," +
+      ".yandex.cloud.gitlab.v1.ListInstancesReq" +
+      "uest\032-.yandex.cloud.gitlab.v1.ListInstan" +
+      "cesResponse\"\034\202\323\344\223\002\026\022\024/gitlab/v1/instance" +
+      "s\022\241\001\n\006Create\022-.yandex.cloud.gitlab.v1.Cr" +
+      "eateInstanceRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"E\202\323\344\223\002\031\"\024/gitlab/v1/insta" +
+      "nces:\001*\262\322*\"\n\026CreateInstanceMetadata\022\010Ins" +
+      "tance\022\257\001\n\006Update\022-.yandex.cloud.gitlab.v" +
+      "1.UpdateInstanceRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"S\202\323\344\223\002\'2\"/gitlab/v1/i" +
+      "nstances/{instance_id}:\001*\262\322*\"\n\026UpdateIns" +
+      "tanceMetadata\022\010Instance\022\271\001\n\006Delete\022-.yan" +
+      "dex.cloud.gitlab.v1.DeleteInstanceReques" +
+      "t\032!.yandex.cloud.operation.Operation\"]\202\323" +
+      "\344\223\002$*\"/gitlab/v1/instances/{instance_id}" +
+      "\262\322*/\n\026DeleteInstanceMetadata\022\025google.pro" +
+      "tobuf.Empty\022\257\001\n\005Start\022,.yandex.cloud.git" +
+      "lab.v1.StartInstanceRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"U\202\323\344\223\002*\"(/gitlab/" +
+      "v1/instances/{instance_id}:start\262\322*!\n\025St" +
+      "artInstanceMetadata\022\010Instance\022\253\001\n\004Stop\022+" +
+      ".yandex.cloud.gitlab.v1.StopInstanceRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"S" +
+      "\202\323\344\223\002)\"\'/gitlab/v1/instances/{instance_i" +
+      "d}:stop\262\322* \n\024StopInstanceMetadata\022\010Insta" +
+      "nceBd\n\032yandex.cloud.api.gitlab.v1B\003GISZA" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/gitlab/v1;gitlabb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -9438,7 +13134,7 @@ public final class GIS {
     internal_static_yandex_cloud_gitlab_v1_CreateInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_gitlab_v1_CreateInstanceRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ResourcePresetId", "DiskSize", "AdminLogin", "AdminEmail", "DomainPrefix", "SubnetId", "BackupRetainPeriodDays", "MaintenanceDeleteUntagged", "DeletionProtection", "GitlabType", "GitlabVersion", "ApprovalRulesId", "SecurityGroup", "DiskTypeId", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ResourcePresetId", "DiskSize", "AdminLogin", "AdminEmail", "DomainPrefix", "SubnetId", "BackupRetainPeriodDays", "MaintenanceDeleteUntagged", "DeletionProtection", "ApprovalRulesId", });
     internal_static_yandex_cloud_gitlab_v1_CreateInstanceRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_gitlab_v1_CreateInstanceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_gitlab_v1_CreateInstanceRequest_LabelsEntry_fieldAccessorTable = new
@@ -9451,38 +13147,56 @@ public final class GIS {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_gitlab_v1_CreateInstanceMetadata_descriptor,
         new java.lang.String[] { "InstanceId", });
-    internal_static_yandex_cloud_gitlab_v1_DeleteInstanceRequest_descriptor =
+    internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_descriptor,
+        new java.lang.String[] { "InstanceId", "Name", "Description", "Labels", "BackupRetainPeriodDays", "ResourcePresetId", "MaintenanceDeleteUntagged", "DeletionProtection", "ApprovalRulesId", "ApprovalRulesToken", "DiskSize", "UpdateMask", });
+    internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_gitlab_v1_UpdateInstanceRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_gitlab_v1_UpdateInstanceMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_gitlab_v1_UpdateInstanceMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_gitlab_v1_UpdateInstanceMetadata_descriptor,
+        new java.lang.String[] { "InstanceId", });
+    internal_static_yandex_cloud_gitlab_v1_DeleteInstanceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_gitlab_v1_DeleteInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_gitlab_v1_DeleteInstanceRequest_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_gitlab_v1_DeleteInstanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_gitlab_v1_DeleteInstanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_gitlab_v1_DeleteInstanceMetadata_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_gitlab_v1_StartInstanceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_gitlab_v1_StartInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_gitlab_v1_StartInstanceRequest_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_gitlab_v1_StartInstanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_gitlab_v1_StartInstanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_gitlab_v1_StartInstanceMetadata_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_gitlab_v1_StopInstanceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_gitlab_v1_StopInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_gitlab_v1_StopInstanceRequest_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_gitlab_v1_StopInstanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_gitlab_v1_StopInstanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_gitlab_v1_StopInstanceMetadata_descriptor,
@@ -9500,6 +13214,7 @@ public final class GIS {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

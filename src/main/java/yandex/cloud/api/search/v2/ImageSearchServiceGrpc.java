@@ -49,6 +49,37 @@ public final class ImageSearchServiceGrpc {
     return getSearchMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest,
+      yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse> getSearchByImageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SearchByImage",
+      requestType = yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest.class,
+      responseType = yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest,
+      yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse> getSearchByImageMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse> getSearchByImageMethod;
+    if ((getSearchByImageMethod = ImageSearchServiceGrpc.getSearchByImageMethod) == null) {
+      synchronized (ImageSearchServiceGrpc.class) {
+        if ((getSearchByImageMethod = ImageSearchServiceGrpc.getSearchByImageMethod) == null) {
+          ImageSearchServiceGrpc.getSearchByImageMethod = getSearchByImageMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchByImage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ImageSearchServiceMethodDescriptorSupplier("SearchByImage"))
+              .build();
+        }
+      }
+    }
+    return getSearchByImageMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -107,6 +138,13 @@ public final class ImageSearchServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void searchByImage(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchByImageMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -116,6 +154,13 @@ public final class ImageSearchServiceGrpc {
                 yandex.cloud.api.search.v2.ImgSearchService.ImageSearchRequest,
                 yandex.cloud.api.search.v2.ImgSearchService.ImageSearchResponse>(
                   this, METHODID_SEARCH)))
+          .addMethod(
+            getSearchByImageMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest,
+                yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse>(
+                  this, METHODID_SEARCH_BY_IMAGE)))
           .build();
     }
   }
@@ -144,6 +189,14 @@ public final class ImageSearchServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void searchByImage(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSearchByImageMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -168,6 +221,13 @@ public final class ImageSearchServiceGrpc {
     public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchResponse search(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSearchMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse searchByImage(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSearchByImageMethod(), getCallOptions(), request);
     }
   }
 
@@ -195,9 +255,18 @@ public final class ImageSearchServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSearchMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse> searchByImage(
+        yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSearchByImageMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEARCH = 0;
+  private static final int METHODID_SEARCH_BY_IMAGE = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -219,6 +288,10 @@ public final class ImageSearchServiceGrpc {
         case METHODID_SEARCH:
           serviceImpl.search((yandex.cloud.api.search.v2.ImgSearchService.ImageSearchRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchResponse>) responseObserver);
+          break;
+        case METHODID_SEARCH_BY_IMAGE:
+          serviceImpl.searchByImage((yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -282,6 +355,7 @@ public final class ImageSearchServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ImageSearchServiceFileDescriptorSupplier())
               .addMethod(getSearchMethod())
+              .addMethod(getSearchByImageMethod())
               .build();
         }
       }

@@ -332,6 +332,38 @@ public final class DesktopGroupOuterClass {
      * <code>.yandex.cloud.clouddesktop.v1.api.DesktopGroupConfiguration group_config = 26;</code>
      */
     yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.DesktopGroupConfigurationOrBuilder getGroupConfigOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+     * @return Whether the autoUpdatePolicy field is set.
+     */
+    boolean hasAutoUpdatePolicy();
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+     * @return The autoUpdatePolicy.
+     */
+    yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy getAutoUpdatePolicy();
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+     */
+    yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicyOrBuilder getAutoUpdatePolicyOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+     * @return Whether the manualUpdatePolicy field is set.
+     */
+    boolean hasManualUpdatePolicy();
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+     * @return The manualUpdatePolicy.
+     */
+    yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy getManualUpdatePolicy();
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+     */
+    yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicyOrBuilder getManualUpdatePolicyOrBuilder();
+
+    public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.DesktopGroup.UpdatePolicyCase getUpdatePolicyCase();
   }
   /**
    * <pre>
@@ -507,6 +539,34 @@ public final class DesktopGroupOuterClass {
                 groupConfig_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 218: {
+              yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.Builder subBuilder = null;
+              if (updatePolicyCase_ == 27) {
+                subBuilder = ((yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) updatePolicy_).toBuilder();
+              }
+              updatePolicy_ =
+                  input.readMessage(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) updatePolicy_);
+                updatePolicy_ = subBuilder.buildPartial();
+              }
+              updatePolicyCase_ = 27;
+              break;
+            }
+            case 226: {
+              yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.Builder subBuilder = null;
+              if (updatePolicyCase_ == 28) {
+                subBuilder = ((yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) updatePolicy_).toBuilder();
+              }
+              updatePolicy_ =
+                  input.readMessage(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) updatePolicy_);
+                updatePolicy_ = subBuilder.buildPartial();
+              }
+              updatePolicyCase_ = 28;
               break;
             }
             default: {
@@ -701,6 +761,47 @@ public final class DesktopGroupOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.clouddesktop.v1.api.DesktopGroup.Status)
+    }
+
+    private int updatePolicyCase_ = 0;
+    private java.lang.Object updatePolicy_;
+    public enum UpdatePolicyCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      AUTO_UPDATE_POLICY(27),
+      MANUAL_UPDATE_POLICY(28),
+      UPDATEPOLICY_NOT_SET(0);
+      private final int value;
+      private UpdatePolicyCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static UpdatePolicyCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static UpdatePolicyCase forNumber(int value) {
+        switch (value) {
+          case 27: return AUTO_UPDATE_POLICY;
+          case 28: return MANUAL_UPDATE_POLICY;
+          case 0: return UPDATEPOLICY_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public UpdatePolicyCase
+    getUpdatePolicyCase() {
+      return UpdatePolicyCase.forNumber(
+          updatePolicyCase_);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1239,6 +1340,68 @@ public final class DesktopGroupOuterClass {
       return getGroupConfig();
     }
 
+    public static final int AUTO_UPDATE_POLICY_FIELD_NUMBER = 27;
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+     * @return Whether the autoUpdatePolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoUpdatePolicy() {
+      return updatePolicyCase_ == 27;
+    }
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+     * @return The autoUpdatePolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy getAutoUpdatePolicy() {
+      if (updatePolicyCase_ == 27) {
+         return (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) updatePolicy_;
+      }
+      return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicyOrBuilder getAutoUpdatePolicyOrBuilder() {
+      if (updatePolicyCase_ == 27) {
+         return (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) updatePolicy_;
+      }
+      return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.getDefaultInstance();
+    }
+
+    public static final int MANUAL_UPDATE_POLICY_FIELD_NUMBER = 28;
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+     * @return Whether the manualUpdatePolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasManualUpdatePolicy() {
+      return updatePolicyCase_ == 28;
+    }
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+     * @return The manualUpdatePolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy getManualUpdatePolicy() {
+      if (updatePolicyCase_ == 28) {
+         return (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) updatePolicy_;
+      }
+      return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicyOrBuilder getManualUpdatePolicyOrBuilder() {
+      if (updatePolicyCase_ == 28) {
+         return (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) updatePolicy_;
+      }
+      return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1291,6 +1454,12 @@ public final class DesktopGroupOuterClass {
       }
       if (groupConfig_ != null) {
         output.writeMessage(26, getGroupConfig());
+      }
+      if (updatePolicyCase_ == 27) {
+        output.writeMessage(27, (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) updatePolicy_);
+      }
+      if (updatePolicyCase_ == 28) {
+        output.writeMessage(28, (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) updatePolicy_);
       }
       unknownFields.writeTo(output);
     }
@@ -1351,6 +1520,14 @@ public final class DesktopGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(26, getGroupConfig());
       }
+      if (updatePolicyCase_ == 27) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(27, (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) updatePolicy_);
+      }
+      if (updatePolicyCase_ == 28) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) updatePolicy_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1407,6 +1584,19 @@ public final class DesktopGroupOuterClass {
         if (!getGroupConfig()
             .equals(other.getGroupConfig())) return false;
       }
+      if (!getUpdatePolicyCase().equals(other.getUpdatePolicyCase())) return false;
+      switch (updatePolicyCase_) {
+        case 27:
+          if (!getAutoUpdatePolicy()
+              .equals(other.getAutoUpdatePolicy())) return false;
+          break;
+        case 28:
+          if (!getManualUpdatePolicy()
+              .equals(other.getManualUpdatePolicy())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1455,6 +1645,18 @@ public final class DesktopGroupOuterClass {
       if (hasGroupConfig()) {
         hash = (37 * hash) + GROUP_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getGroupConfig().hashCode();
+      }
+      switch (updatePolicyCase_) {
+        case 27:
+          hash = (37 * hash) + AUTO_UPDATE_POLICY_FIELD_NUMBER;
+          hash = (53 * hash) + getAutoUpdatePolicy().hashCode();
+          break;
+        case 28:
+          hash = (37 * hash) + MANUAL_UPDATE_POLICY_FIELD_NUMBER;
+          hash = (53 * hash) + getManualUpdatePolicy().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1662,6 +1864,8 @@ public final class DesktopGroupOuterClass {
           groupConfig_ = null;
           groupConfigBuilder_ = null;
         }
+        updatePolicyCase_ = 0;
+        updatePolicy_ = null;
         return this;
       }
 
@@ -1726,6 +1930,21 @@ public final class DesktopGroupOuterClass {
         } else {
           result.groupConfig_ = groupConfigBuilder_.build();
         }
+        if (updatePolicyCase_ == 27) {
+          if (autoUpdatePolicyBuilder_ == null) {
+            result.updatePolicy_ = updatePolicy_;
+          } else {
+            result.updatePolicy_ = autoUpdatePolicyBuilder_.build();
+          }
+        }
+        if (updatePolicyCase_ == 28) {
+          if (manualUpdatePolicyBuilder_ == null) {
+            result.updatePolicy_ = updatePolicy_;
+          } else {
+            result.updatePolicy_ = manualUpdatePolicyBuilder_.build();
+          }
+        }
+        result.updatePolicyCase_ = updatePolicyCase_;
         onBuilt();
         return result;
       }
@@ -1813,6 +2032,19 @@ public final class DesktopGroupOuterClass {
         if (other.hasGroupConfig()) {
           mergeGroupConfig(other.getGroupConfig());
         }
+        switch (other.getUpdatePolicyCase()) {
+          case AUTO_UPDATE_POLICY: {
+            mergeAutoUpdatePolicy(other.getAutoUpdatePolicy());
+            break;
+          }
+          case MANUAL_UPDATE_POLICY: {
+            mergeManualUpdatePolicy(other.getManualUpdatePolicy());
+            break;
+          }
+          case UPDATEPOLICY_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1841,6 +2073,21 @@ public final class DesktopGroupOuterClass {
         }
         return this;
       }
+      private int updatePolicyCase_ = 0;
+      private java.lang.Object updatePolicy_;
+      public UpdatePolicyCase
+          getUpdatePolicyCase() {
+        return UpdatePolicyCase.forNumber(
+            updatePolicyCase_);
+      }
+
+      public Builder clearUpdatePolicy() {
+        updatePolicyCase_ = 0;
+        updatePolicy_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.lang.Object id_ = "";
@@ -3388,6 +3635,288 @@ public final class DesktopGroupOuterClass {
           groupConfig_ = null;
         }
         return groupConfigBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.Builder, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicyOrBuilder> autoUpdatePolicyBuilder_;
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+       * @return Whether the autoUpdatePolicy field is set.
+       */
+      @java.lang.Override
+      public boolean hasAutoUpdatePolicy() {
+        return updatePolicyCase_ == 27;
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+       * @return The autoUpdatePolicy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy getAutoUpdatePolicy() {
+        if (autoUpdatePolicyBuilder_ == null) {
+          if (updatePolicyCase_ == 27) {
+            return (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) updatePolicy_;
+          }
+          return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.getDefaultInstance();
+        } else {
+          if (updatePolicyCase_ == 27) {
+            return autoUpdatePolicyBuilder_.getMessage();
+          }
+          return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+       */
+      public Builder setAutoUpdatePolicy(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy value) {
+        if (autoUpdatePolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatePolicy_ = value;
+          onChanged();
+        } else {
+          autoUpdatePolicyBuilder_.setMessage(value);
+        }
+        updatePolicyCase_ = 27;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+       */
+      public Builder setAutoUpdatePolicy(
+          yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.Builder builderForValue) {
+        if (autoUpdatePolicyBuilder_ == null) {
+          updatePolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoUpdatePolicyBuilder_.setMessage(builderForValue.build());
+        }
+        updatePolicyCase_ = 27;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+       */
+      public Builder mergeAutoUpdatePolicy(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy value) {
+        if (autoUpdatePolicyBuilder_ == null) {
+          if (updatePolicyCase_ == 27 &&
+              updatePolicy_ != yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.getDefaultInstance()) {
+            updatePolicy_ = yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.newBuilder((yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) updatePolicy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            updatePolicy_ = value;
+          }
+          onChanged();
+        } else {
+          if (updatePolicyCase_ == 27) {
+            autoUpdatePolicyBuilder_.mergeFrom(value);
+          }
+          autoUpdatePolicyBuilder_.setMessage(value);
+        }
+        updatePolicyCase_ = 27;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+       */
+      public Builder clearAutoUpdatePolicy() {
+        if (autoUpdatePolicyBuilder_ == null) {
+          if (updatePolicyCase_ == 27) {
+            updatePolicyCase_ = 0;
+            updatePolicy_ = null;
+            onChanged();
+          }
+        } else {
+          if (updatePolicyCase_ == 27) {
+            updatePolicyCase_ = 0;
+            updatePolicy_ = null;
+          }
+          autoUpdatePolicyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+       */
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.Builder getAutoUpdatePolicyBuilder() {
+        return getAutoUpdatePolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicyOrBuilder getAutoUpdatePolicyOrBuilder() {
+        if ((updatePolicyCase_ == 27) && (autoUpdatePolicyBuilder_ != null)) {
+          return autoUpdatePolicyBuilder_.getMessageOrBuilder();
+        } else {
+          if (updatePolicyCase_ == 27) {
+            return (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) updatePolicy_;
+          }
+          return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 27;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.Builder, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicyOrBuilder> 
+          getAutoUpdatePolicyFieldBuilder() {
+        if (autoUpdatePolicyBuilder_ == null) {
+          if (!(updatePolicyCase_ == 27)) {
+            updatePolicy_ = yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.getDefaultInstance();
+          }
+          autoUpdatePolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.Builder, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicyOrBuilder>(
+                  (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) updatePolicy_,
+                  getParentForChildren(),
+                  isClean());
+          updatePolicy_ = null;
+        }
+        updatePolicyCase_ = 27;
+        onChanged();;
+        return autoUpdatePolicyBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.Builder, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicyOrBuilder> manualUpdatePolicyBuilder_;
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+       * @return Whether the manualUpdatePolicy field is set.
+       */
+      @java.lang.Override
+      public boolean hasManualUpdatePolicy() {
+        return updatePolicyCase_ == 28;
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+       * @return The manualUpdatePolicy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy getManualUpdatePolicy() {
+        if (manualUpdatePolicyBuilder_ == null) {
+          if (updatePolicyCase_ == 28) {
+            return (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) updatePolicy_;
+          }
+          return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.getDefaultInstance();
+        } else {
+          if (updatePolicyCase_ == 28) {
+            return manualUpdatePolicyBuilder_.getMessage();
+          }
+          return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+       */
+      public Builder setManualUpdatePolicy(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy value) {
+        if (manualUpdatePolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatePolicy_ = value;
+          onChanged();
+        } else {
+          manualUpdatePolicyBuilder_.setMessage(value);
+        }
+        updatePolicyCase_ = 28;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+       */
+      public Builder setManualUpdatePolicy(
+          yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.Builder builderForValue) {
+        if (manualUpdatePolicyBuilder_ == null) {
+          updatePolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          manualUpdatePolicyBuilder_.setMessage(builderForValue.build());
+        }
+        updatePolicyCase_ = 28;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+       */
+      public Builder mergeManualUpdatePolicy(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy value) {
+        if (manualUpdatePolicyBuilder_ == null) {
+          if (updatePolicyCase_ == 28 &&
+              updatePolicy_ != yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.getDefaultInstance()) {
+            updatePolicy_ = yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.newBuilder((yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) updatePolicy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            updatePolicy_ = value;
+          }
+          onChanged();
+        } else {
+          if (updatePolicyCase_ == 28) {
+            manualUpdatePolicyBuilder_.mergeFrom(value);
+          }
+          manualUpdatePolicyBuilder_.setMessage(value);
+        }
+        updatePolicyCase_ = 28;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+       */
+      public Builder clearManualUpdatePolicy() {
+        if (manualUpdatePolicyBuilder_ == null) {
+          if (updatePolicyCase_ == 28) {
+            updatePolicyCase_ = 0;
+            updatePolicy_ = null;
+            onChanged();
+          }
+        } else {
+          if (updatePolicyCase_ == 28) {
+            updatePolicyCase_ = 0;
+            updatePolicy_ = null;
+          }
+          manualUpdatePolicyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+       */
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.Builder getManualUpdatePolicyBuilder() {
+        return getManualUpdatePolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicyOrBuilder getManualUpdatePolicyOrBuilder() {
+        if ((updatePolicyCase_ == 28) && (manualUpdatePolicyBuilder_ != null)) {
+          return manualUpdatePolicyBuilder_.getMessageOrBuilder();
+        } else {
+          if (updatePolicyCase_ == 28) {
+            return (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) updatePolicy_;
+          }
+          return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 28;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.Builder, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicyOrBuilder> 
+          getManualUpdatePolicyFieldBuilder() {
+        if (manualUpdatePolicyBuilder_ == null) {
+          if (!(updatePolicyCase_ == 28)) {
+            updatePolicy_ = yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.getDefaultInstance();
+          }
+          manualUpdatePolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.Builder, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicyOrBuilder>(
+                  (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) updatePolicy_,
+                  getParentForChildren(),
+                  isClean());
+          updatePolicy_ = null;
+        }
+        updatePolicyCase_ = 28;
+        onChanged();;
+        return manualUpdatePolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6377,6 +6906,842 @@ public final class DesktopGroupOuterClass {
 
   }
 
+  public interface ManualUpdatePolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy}
+   */
+  public static final class ManualUpdatePolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy)
+      ManualUpdatePolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ManualUpdatePolicy.newBuilder() to construct.
+    private ManualUpdatePolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ManualUpdatePolicy() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ManualUpdatePolicy();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ManualUpdatePolicy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_ManualUpdatePolicy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_ManualUpdatePolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.class, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy other = (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy)
+        yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_ManualUpdatePolicy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_ManualUpdatePolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.class, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_ManualUpdatePolicy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy build() {
+        yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy buildPartial() {
+        yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy result = new yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) {
+          return mergeFrom((yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy other) {
+        if (other == yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy)
+    private static final yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy();
+    }
+
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ManualUpdatePolicy>
+        PARSER = new com.google.protobuf.AbstractParser<ManualUpdatePolicy>() {
+      @java.lang.Override
+      public ManualUpdatePolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ManualUpdatePolicy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ManualUpdatePolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ManualUpdatePolicy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AutoUpdatePolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy}
+   */
+  public static final class AutoUpdatePolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy)
+      AutoUpdatePolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AutoUpdatePolicy.newBuilder() to construct.
+    private AutoUpdatePolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AutoUpdatePolicy() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AutoUpdatePolicy();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AutoUpdatePolicy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_AutoUpdatePolicy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_AutoUpdatePolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.class, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy other = (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy)
+        yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_AutoUpdatePolicy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_AutoUpdatePolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.class, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_AutoUpdatePolicy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy build() {
+        yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy buildPartial() {
+        yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy result = new yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) {
+          return mergeFrom((yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy other) {
+        if (other == yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy)
+    private static final yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy();
+    }
+
+    public static yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AutoUpdatePolicy>
+        PARSER = new com.google.protobuf.AbstractParser<AutoUpdatePolicy>() {
+      @java.lang.Override
+      public AutoUpdatePolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AutoUpdatePolicy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AutoUpdatePolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AutoUpdatePolicy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_clouddesktop_v1_api_DesktopGroup_descriptor;
   private static final 
@@ -6402,6 +7767,16 @@ public final class DesktopGroupOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_clouddesktop_v1_api_NetworkInterfaceSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_clouddesktop_v1_api_ManualUpdatePolicy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_clouddesktop_v1_api_ManualUpdatePolicy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_clouddesktop_v1_api_AutoUpdatePolicy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_clouddesktop_v1_api_AutoUpdatePolicy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6416,7 +7791,7 @@ public final class DesktopGroupOuterClass {
       ".api\032\037google/protobuf/timestamp.proto\032 y" +
       "andex/cloud/access/access.proto\032\035yandex/" +
       "cloud/validation.proto\032\'yandex/cloud/clo" +
-      "uddesktop/v1/disk.proto\"\224\006\n\014DesktopGroup" +
+      "uddesktop/v1/disk.proto\"\323\007\n\014DesktopGroup" +
       "\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreat" +
       "ed_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
       "E\n\006status\030\004 \001(\01625.yandex.cloud.clouddesk" +
@@ -6433,26 +7808,32 @@ public final class DesktopGroupOuterClass {
       "dex.cloud.clouddesktop.v1.api.DiskSpec\022Q" +
       "\n\014group_config\030\032 \001(\0132;.yandex.cloud.clou" +
       "ddesktop.v1.api.DesktopGroupConfiguratio" +
-      "n\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPECIFIED" +
-      "\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING" +
-      "\020\003J\004\010\r\020\025J\004\010\005\020\013\"\323\002\n\031DesktopGroupConfigura" +
-      "tion\022%\n\022min_ready_desktops\030\001 \001(\003B\t\372\3071\0051-" +
-      "512\022&\n\023max_desktops_amount\030\002 \001(\003B\t\372\3071\0050-" +
-      "512\022]\n\014desktop_type\030\003 \001(\0162G.yandex.cloud" +
-      ".clouddesktop.v1.api.DesktopGroupConfigu" +
-      "ration.DesktopType\0227\n\007members\030\004 \003(\0132\034.ya" +
-      "ndex.cloud.access.SubjectB\010\202\3101\0040-10\"O\n\013D" +
-      "esktopType\022\034\n\030DESKTOP_TYPE_UNSPECIFIED\020\000" +
-      "\022\016\n\nPERSISTENT\020\001\022\022\n\016NON_PERSISTENT\020\002\"b\n\r" +
-      "ResourcesSpec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003>=1\022\026" +
-      "\n\005cores\030\002 \001(\003B\007\372\3071\003>=1\022 \n\rcore_fraction\030" +
-      "\003 \001(\003B\t\372\3071\0050-100\"`\n\024NetworkInterfaceSpec" +
-      "\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n\nsu" +
-      "bnet_ids\030\002 \003(\tB\022\202\3101\002>0\212\3101\004<=50\220\3101\001Bq\n ya" +
-      "ndex.cloud.api.clouddesktop.v1ZMgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/clouddesktop/v1;clouddesktopb\006proto3"
+      "n\022P\n\022auto_update_policy\030\033 \001(\01322.yandex.c" +
+      "loud.clouddesktop.v1.api.AutoUpdatePolic" +
+      "yH\000\022T\n\024manual_update_policy\030\034 \001(\01324.yand" +
+      "ex.cloud.clouddesktop.v1.api.ManualUpdat" +
+      "ePolicyH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNS" +
+      "PECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010" +
+      "DELETING\020\003B\025\n\rupdate_policy\022\004\300\3011\001J\004\010\r\020\025J" +
+      "\004\010\005\020\013\"\323\002\n\031DesktopGroupConfiguration\022%\n\022m" +
+      "in_ready_desktops\030\001 \001(\003B\t\372\3071\0051-512\022&\n\023ma" +
+      "x_desktops_amount\030\002 \001(\003B\t\372\3071\0050-512\022]\n\014de" +
+      "sktop_type\030\003 \001(\0162G.yandex.cloud.clouddes" +
+      "ktop.v1.api.DesktopGroupConfiguration.De" +
+      "sktopType\0227\n\007members\030\004 \003(\0132\034.yandex.clou" +
+      "d.access.SubjectB\010\202\3101\0040-10\"O\n\013DesktopTyp" +
+      "e\022\034\n\030DESKTOP_TYPE_UNSPECIFIED\020\000\022\016\n\nPERSI" +
+      "STENT\020\001\022\022\n\016NON_PERSISTENT\020\002\"b\n\rResources" +
+      "Spec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003>=1\022\026\n\005cores\030\002" +
+      " \001(\003B\007\372\3071\003>=1\022 \n\rcore_fraction\030\003 \001(\003B\t\372\307" +
+      "1\0050-100\"`\n\024NetworkInterfaceSpec\022 \n\nnetwo" +
+      "rk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n\nsubnet_ids\030" +
+      "\002 \003(\tB\022\202\3101\002>0\212\3101\004<=50\220\3101\001\"\024\n\022ManualUpdat" +
+      "ePolicy\"\022\n\020AutoUpdatePolicyBq\n yandex.cl" +
+      "oud.api.clouddesktop.v1ZMgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/cloudd" +
+      "esktop/v1;clouddesktopb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6467,7 +7848,7 @@ public final class DesktopGroupOuterClass {
     internal_static_yandex_cloud_clouddesktop_v1_api_DesktopGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_DesktopGroup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Status", "Name", "Description", "ResourcesSpec", "NetworkInterfaceSpec", "Labels", "BootDiskSpec", "DataDiskSpec", "GroupConfig", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Status", "Name", "Description", "ResourcesSpec", "NetworkInterfaceSpec", "Labels", "BootDiskSpec", "DataDiskSpec", "GroupConfig", "AutoUpdatePolicy", "ManualUpdatePolicy", "UpdatePolicy", });
     internal_static_yandex_cloud_clouddesktop_v1_api_DesktopGroup_LabelsEntry_descriptor =
       internal_static_yandex_cloud_clouddesktop_v1_api_DesktopGroup_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_clouddesktop_v1_api_DesktopGroup_LabelsEntry_fieldAccessorTable = new
@@ -6492,8 +7873,21 @@ public final class DesktopGroupOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_NetworkInterfaceSpec_descriptor,
         new java.lang.String[] { "NetworkId", "SubnetIds", });
+    internal_static_yandex_cloud_clouddesktop_v1_api_ManualUpdatePolicy_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_clouddesktop_v1_api_ManualUpdatePolicy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_clouddesktop_v1_api_ManualUpdatePolicy_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_clouddesktop_v1_api_AutoUpdatePolicy_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_clouddesktop_v1_api_AutoUpdatePolicy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_clouddesktop_v1_api_AutoUpdatePolicy_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);

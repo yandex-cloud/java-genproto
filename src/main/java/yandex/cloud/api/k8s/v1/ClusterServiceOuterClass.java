@@ -34735,21 +34735,6 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-     * @return Whether the fixedScale field is set.
-     */
-    boolean hasFixedScale();
-    /**
-     * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-     * @return The fixedScale.
-     */
-    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale getFixedScale();
-    /**
-     * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-     */
-    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScaleOrBuilder getFixedScaleOrBuilder();
-
-    /**
      * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.AutoScale auto_scale = 2;</code>
      * @return Whether the autoScale field is set.
      */
@@ -34811,20 +34796,6 @@ public final class ClusterServiceOuterClass {
             case 0:
               done = true;
               break;
-            case 10: {
-              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.Builder subBuilder = null;
-              if (scaleTypeCase_ == 1) {
-                subBuilder = ((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) scaleType_).toBuilder();
-              }
-              scaleType_ =
-                  input.readMessage(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) scaleType_);
-                scaleType_ = subBuilder.buildPartial();
-              }
-              scaleTypeCase_ = 1;
-              break;
-            }
             case 18: {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.AutoScale.Builder subBuilder = null;
               if (scaleTypeCase_ == 2) {
@@ -34869,618 +34840,6 @@ public final class ClusterServiceOuterClass {
       return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.Builder.class);
-    }
-
-    public interface FixedScaleOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <pre>
-       * Preset of computing resources to be used by master.
-       * </pre>
-       *
-       * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
-       * @return The resourcePresetId.
-       */
-      java.lang.String getResourcePresetId();
-      /**
-       * <pre>
-       * Preset of computing resources to be used by master.
-       * </pre>
-       *
-       * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
-       * @return The bytes for resourcePresetId.
-       */
-      com.google.protobuf.ByteString
-          getResourcePresetIdBytes();
-    }
-    /**
-     * <pre>
-     * Fixed master instance resources.
-     * </pre>
-     *
-     * Protobuf type {@code yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale}
-     */
-    public static final class FixedScale extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale)
-        FixedScaleOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use FixedScale.newBuilder() to construct.
-      private FixedScale(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private FixedScale() {
-        resourcePresetId_ = "";
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new FixedScale();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private FixedScale(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                resourcePresetId_ = s;
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_FixedScale_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_FixedScale_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.Builder.class);
-      }
-
-      public static final int RESOURCE_PRESET_ID_FIELD_NUMBER = 1;
-      private volatile java.lang.Object resourcePresetId_;
-      /**
-       * <pre>
-       * Preset of computing resources to be used by master.
-       * </pre>
-       *
-       * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
-       * @return The resourcePresetId.
-       */
-      @java.lang.Override
-      public java.lang.String getResourcePresetId() {
-        java.lang.Object ref = resourcePresetId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          resourcePresetId_ = s;
-          return s;
-        }
-      }
-      /**
-       * <pre>
-       * Preset of computing resources to be used by master.
-       * </pre>
-       *
-       * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
-       * @return The bytes for resourcePresetId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getResourcePresetIdBytes() {
-        java.lang.Object ref = resourcePresetId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          resourcePresetId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourcePresetId_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourcePresetId_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale)) {
-          return super.equals(obj);
-        }
-        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) obj;
-
-        if (!getResourcePresetId()
-            .equals(other.getResourcePresetId())) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + RESOURCE_PRESET_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getResourcePresetId().hashCode();
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * <pre>
-       * Fixed master instance resources.
-       * </pre>
-       *
-       * Protobuf type {@code yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale)
-          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScaleOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_FixedScale_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_FixedScale_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.Builder.class);
-        }
-
-        // Construct using yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          resourcePresetId_ = "";
-
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_FixedScale_descriptor;
-        }
-
-        @java.lang.Override
-        public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale getDefaultInstanceForType() {
-          return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale build() {
-          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale buildPartial() {
-          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale(this);
-          result.resourcePresetId_ = resourcePresetId_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) {
-            return mergeFrom((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale other) {
-          if (other == yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.getDefaultInstance()) return this;
-          if (!other.getResourcePresetId().isEmpty()) {
-            resourcePresetId_ = other.resourcePresetId_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object resourcePresetId_ = "";
-        /**
-         * <pre>
-         * Preset of computing resources to be used by master.
-         * </pre>
-         *
-         * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
-         * @return The resourcePresetId.
-         */
-        public java.lang.String getResourcePresetId() {
-          java.lang.Object ref = resourcePresetId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            resourcePresetId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Preset of computing resources to be used by master.
-         * </pre>
-         *
-         * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
-         * @return The bytes for resourcePresetId.
-         */
-        public com.google.protobuf.ByteString
-            getResourcePresetIdBytes() {
-          java.lang.Object ref = resourcePresetId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            resourcePresetId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Preset of computing resources to be used by master.
-         * </pre>
-         *
-         * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
-         * @param value The resourcePresetId to set.
-         * @return This builder for chaining.
-         */
-        public Builder setResourcePresetId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          resourcePresetId_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Preset of computing resources to be used by master.
-         * </pre>
-         *
-         * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearResourcePresetId() {
-          
-          resourcePresetId_ = getDefaultInstance().getResourcePresetId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Preset of computing resources to be used by master.
-         * </pre>
-         *
-         * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
-         * @param value The bytes for resourcePresetId to set.
-         * @return This builder for chaining.
-         */
-        public Builder setResourcePresetIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          resourcePresetId_ = value;
-          onChanged();
-          return this;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale)
-      }
-
-      // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale)
-      private static final yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale();
-      }
-
-      public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<FixedScale>
-          PARSER = new com.google.protobuf.AbstractParser<FixedScale>() {
-        @java.lang.Override
-        public FixedScale parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new FixedScale(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<FixedScale> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<FixedScale> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
     }
 
     public interface AutoScaleOrBuilder extends
@@ -36100,7 +35459,6 @@ public final class ClusterServiceOuterClass {
     public enum ScaleTypeCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      FIXED_SCALE(1),
       AUTO_SCALE(2),
       SCALETYPE_NOT_SET(0);
       private final int value;
@@ -36119,7 +35477,6 @@ public final class ClusterServiceOuterClass {
 
       public static ScaleTypeCase forNumber(int value) {
         switch (value) {
-          case 1: return FIXED_SCALE;
           case 2: return AUTO_SCALE;
           case 0: return SCALETYPE_NOT_SET;
           default: return null;
@@ -36134,37 +35491,6 @@ public final class ClusterServiceOuterClass {
     getScaleTypeCase() {
       return ScaleTypeCase.forNumber(
           scaleTypeCase_);
-    }
-
-    public static final int FIXED_SCALE_FIELD_NUMBER = 1;
-    /**
-     * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-     * @return Whether the fixedScale field is set.
-     */
-    @java.lang.Override
-    public boolean hasFixedScale() {
-      return scaleTypeCase_ == 1;
-    }
-    /**
-     * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-     * @return The fixedScale.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale getFixedScale() {
-      if (scaleTypeCase_ == 1) {
-         return (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) scaleType_;
-      }
-      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.getDefaultInstance();
-    }
-    /**
-     * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScaleOrBuilder getFixedScaleOrBuilder() {
-      if (scaleTypeCase_ == 1) {
-         return (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) scaleType_;
-      }
-      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.getDefaultInstance();
     }
 
     public static final int AUTO_SCALE_FIELD_NUMBER = 2;
@@ -36212,9 +35538,6 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (scaleTypeCase_ == 1) {
-        output.writeMessage(1, (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) scaleType_);
-      }
       if (scaleTypeCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.AutoScale) scaleType_);
       }
@@ -36227,10 +35550,6 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (scaleTypeCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) scaleType_);
-      }
       if (scaleTypeCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.AutoScale) scaleType_);
@@ -36252,10 +35571,6 @@ public final class ClusterServiceOuterClass {
 
       if (!getScaleTypeCase().equals(other.getScaleTypeCase())) return false;
       switch (scaleTypeCase_) {
-        case 1:
-          if (!getFixedScale()
-              .equals(other.getFixedScale())) return false;
-          break;
         case 2:
           if (!getAutoScale()
               .equals(other.getAutoScale())) return false;
@@ -36275,10 +35590,6 @@ public final class ClusterServiceOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       switch (scaleTypeCase_) {
-        case 1:
-          hash = (37 * hash) + FIXED_SCALE_FIELD_NUMBER;
-          hash = (53 * hash) + getFixedScale().hashCode();
-          break;
         case 2:
           hash = (37 * hash) + AUTO_SCALE_FIELD_NUMBER;
           hash = (53 * hash) + getAutoScale().hashCode();
@@ -36447,13 +35758,6 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec(this);
-        if (scaleTypeCase_ == 1) {
-          if (fixedScaleBuilder_ == null) {
-            result.scaleType_ = scaleType_;
-          } else {
-            result.scaleType_ = fixedScaleBuilder_.build();
-          }
-        }
         if (scaleTypeCase_ == 2) {
           if (autoScaleBuilder_ == null) {
             result.scaleType_ = scaleType_;
@@ -36511,10 +35815,6 @@ public final class ClusterServiceOuterClass {
       public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec other) {
         if (other == yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.getDefaultInstance()) return this;
         switch (other.getScaleTypeCase()) {
-          case FIXED_SCALE: {
-            mergeFixedScale(other.getFixedScale());
-            break;
-          }
           case AUTO_SCALE: {
             mergeAutoScale(other.getAutoScale());
             break;
@@ -36566,147 +35866,6 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScaleOrBuilder> fixedScaleBuilder_;
-      /**
-       * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-       * @return Whether the fixedScale field is set.
-       */
-      @java.lang.Override
-      public boolean hasFixedScale() {
-        return scaleTypeCase_ == 1;
-      }
-      /**
-       * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-       * @return The fixedScale.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale getFixedScale() {
-        if (fixedScaleBuilder_ == null) {
-          if (scaleTypeCase_ == 1) {
-            return (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) scaleType_;
-          }
-          return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.getDefaultInstance();
-        } else {
-          if (scaleTypeCase_ == 1) {
-            return fixedScaleBuilder_.getMessage();
-          }
-          return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-       */
-      public Builder setFixedScale(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale value) {
-        if (fixedScaleBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          scaleType_ = value;
-          onChanged();
-        } else {
-          fixedScaleBuilder_.setMessage(value);
-        }
-        scaleTypeCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-       */
-      public Builder setFixedScale(
-          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.Builder builderForValue) {
-        if (fixedScaleBuilder_ == null) {
-          scaleType_ = builderForValue.build();
-          onChanged();
-        } else {
-          fixedScaleBuilder_.setMessage(builderForValue.build());
-        }
-        scaleTypeCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-       */
-      public Builder mergeFixedScale(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale value) {
-        if (fixedScaleBuilder_ == null) {
-          if (scaleTypeCase_ == 1 &&
-              scaleType_ != yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.getDefaultInstance()) {
-            scaleType_ = yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.newBuilder((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) scaleType_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            scaleType_ = value;
-          }
-          onChanged();
-        } else {
-          if (scaleTypeCase_ == 1) {
-            fixedScaleBuilder_.mergeFrom(value);
-          }
-          fixedScaleBuilder_.setMessage(value);
-        }
-        scaleTypeCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-       */
-      public Builder clearFixedScale() {
-        if (fixedScaleBuilder_ == null) {
-          if (scaleTypeCase_ == 1) {
-            scaleTypeCase_ = 0;
-            scaleType_ = null;
-            onChanged();
-          }
-        } else {
-          if (scaleTypeCase_ == 1) {
-            scaleTypeCase_ = 0;
-            scaleType_ = null;
-          }
-          fixedScaleBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-       */
-      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.Builder getFixedScaleBuilder() {
-        return getFixedScaleFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScaleOrBuilder getFixedScaleOrBuilder() {
-        if ((scaleTypeCase_ == 1) && (fixedScaleBuilder_ != null)) {
-          return fixedScaleBuilder_.getMessageOrBuilder();
-        } else {
-          if (scaleTypeCase_ == 1) {
-            return (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) scaleType_;
-          }
-          return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.yandex.cloud.k8s.v1.MasterScalePolicySpec.FixedScale fixed_scale = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScaleOrBuilder> 
-          getFixedScaleFieldBuilder() {
-        if (fixedScaleBuilder_ == null) {
-          if (!(scaleTypeCase_ == 1)) {
-            scaleType_ = yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.getDefaultInstance();
-          }
-          fixedScaleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScaleOrBuilder>(
-                  (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.FixedScale) scaleType_,
-                  getParentForChildren(),
-                  isClean());
-          scaleType_ = null;
-        }
-        scaleTypeCase_ = 1;
-        onChanged();;
-        return fixedScaleBuilder_;
-      }
 
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.AutoScale, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.AutoScale.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterScalePolicySpec.AutoScaleOrBuilder> autoScaleBuilder_;
@@ -37067,11 +36226,6 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_FixedScale_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_FixedScale_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_AutoScale_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -37220,14 +36374,11 @@ public final class ClusterServiceOuterClass {
       "\001(\tB\004\350\3071\001\0227\n\rdelayed_until\030\002 \001(\0132\032.googl" +
       "e.protobuf.TimestampB\004\350\3071\001\"3\n\035Reschedule" +
       "MaintenanceMetadata\022\022\n\ncluster_id\030\001 \001(\t\"" +
-      "\250\002\n\025MasterScalePolicySpec\022L\n\013fixed_scale" +
-      "\030\001 \001(\01325.yandex.cloud.k8s.v1.MasterScale" +
-      "PolicySpec.FixedScaleH\000\022J\n\nauto_scale\030\002 " +
-      "\001(\01324.yandex.cloud.k8s.v1.MasterScalePol" +
-      "icySpec.AutoScaleH\000\032.\n\nFixedScale\022 \n\022res" +
-      "ource_preset_id\030\001 \001(\tB\004\350\3071\001\0321\n\tAutoScale" +
-      "\022$\n\026min_resource_preset_id\030\001 \001(\tB\004\350\3071\001B\022" +
-      "\n\nscale_type\022\004\300\3011\0012\221\025\n\016ClusterService\022\201\001" +
+      "\260\001\n\025MasterScalePolicySpec\022J\n\nauto_scale\030" +
+      "\002 \001(\01324.yandex.cloud.k8s.v1.MasterScaleP" +
+      "olicySpec.AutoScaleH\000\0321\n\tAutoScale\022$\n\026mi" +
+      "n_resource_preset_id\030\001 \001(\tB\004\350\3071\001B\022\n\nscal" +
+      "e_type\022\004\300\3011\001J\004\010\001\020\0022\221\025\n\016ClusterService\022\201\001" +
       "\n\003Get\022&.yandex.cloud.k8s.v1.GetClusterRe" +
       "quest\032\034.yandex.cloud.k8s.v1.Cluster\"4\202\323\344" +
       "\223\002.\022,/managed-kubernetes/v1/clusters/{cl" +
@@ -37511,15 +36662,9 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_descriptor,
-        new java.lang.String[] { "FixedScale", "AutoScale", "ScaleType", });
-    internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_FixedScale_descriptor =
-      internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_descriptor.getNestedTypes().get(0);
-    internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_FixedScale_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_FixedScale_descriptor,
-        new java.lang.String[] { "ResourcePresetId", });
+        new java.lang.String[] { "AutoScale", "ScaleType", });
     internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_AutoScale_descriptor =
-      internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_descriptor.getNestedTypes().get(1);
+      internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_AutoScale_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_AutoScale_descriptor,

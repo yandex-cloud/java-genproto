@@ -259,16 +259,18 @@ public final class HbaRule {
        * Matches connection attempts made using TCP/IP, but only when the connection is made with SSL encryption.
        * </pre>
        *
-       * <code>HOSTSSL = 2;</code>
+       * <code>HOSTSSL = 2 [deprecated = true];</code>
        */
+      @java.lang.Deprecated
       HOSTSSL(2),
       /**
        * <pre>
        * Matches connection attempts made over TCP/IP that do not use SSL.
        * </pre>
        *
-       * <code>HOSTNOSSL = 3;</code>
+       * <code>HOSTNOSSL = 3 [deprecated = true];</code>
        */
+      @java.lang.Deprecated
       HOSTNOSSL(3),
       UNRECOGNIZED(-1),
       ;
@@ -290,17 +292,17 @@ public final class HbaRule {
        * Matches connection attempts made using TCP/IP, but only when the connection is made with SSL encryption.
        * </pre>
        *
-       * <code>HOSTSSL = 2;</code>
+       * <code>HOSTSSL = 2 [deprecated = true];</code>
        */
-      public static final int HOSTSSL_VALUE = 2;
+      @java.lang.Deprecated public static final int HOSTSSL_VALUE = 2;
       /**
        * <pre>
        * Matches connection attempts made over TCP/IP that do not use SSL.
        * </pre>
        *
-       * <code>HOSTNOSSL = 3;</code>
+       * <code>HOSTNOSSL = 3 [deprecated = true];</code>
        */
-      public static final int HOSTNOSSL_VALUE = 3;
+      @java.lang.Deprecated public static final int HOSTNOSSL_VALUE = 3;
 
 
       public final int getNumber() {
@@ -420,6 +422,14 @@ public final class HbaRule {
        * <code>REJECT = 3;</code>
        */
       REJECT(3),
+      /**
+       * <pre>
+       * Perform authentication with IAM token
+       * </pre>
+       *
+       * <code>IAM = 4;</code>
+       */
+      IAM(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -451,6 +461,14 @@ public final class HbaRule {
        * <code>REJECT = 3;</code>
        */
       public static final int REJECT_VALUE = 3;
+      /**
+       * <pre>
+       * Perform authentication with IAM token
+       * </pre>
+       *
+       * <code>IAM = 4;</code>
+       */
+      public static final int IAM_VALUE = 4;
 
 
       public final int getNumber() {
@@ -481,6 +499,7 @@ public final class HbaRule {
           case 1: return MD5;
           case 2: return LDAP;
           case 3: return REJECT;
+          case 4: return IAM;
           default: return null;
         }
       }
@@ -1656,21 +1675,21 @@ public final class HbaRule {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/mdb/greenplum/v1/hba_rule" +
       ".proto\022\035yandex.cloud.mdb.greenplum.v1\032\035y" +
-      "andex/cloud/validation.proto\"\245\003\n\007HBARule" +
+      "andex/cloud/validation.proto\"\266\003\n\007HBARule" +
       "\022\034\n\010priority\030\001 \001(\003B\n\372\3071\0060-1000\022N\n\017connec" +
       "tion_type\030\002 \001(\01625.yandex.cloud.mdb.green" +
       "plum.v1.HBARule.ConnectionType\022\026\n\010databa" +
       "se\030\003 \001(\tB\004\350\3071\001\022\022\n\004user\030\004 \001(\tB\004\350\3071\001\022\025\n\007ad" +
       "dress\030\005 \001(\tB\004\350\3071\001\022F\n\013auth_method\030\006 \001(\01621" +
       ".yandex.cloud.mdb.greenplum.v1.HBARule.A" +
-      "uthMethod\"W\n\016ConnectionType\022\037\n\033CONNECTIO" +
-      "N_TYPE_UNSPECIFIED\020\000\022\010\n\004HOST\020\001\022\013\n\007HOSTSS" +
-      "L\020\002\022\r\n\tHOSTNOSSL\020\003\"H\n\nAuthMethod\022\033\n\027AUTH" +
-      "_METHOD_UNSPECIFIED\020\000\022\007\n\003MD5\020\001\022\010\n\004LDAP\020\002" +
-      "\022\n\n\006REJECT\020\003Bp\n!yandex.cloud.api.mdb.gre" +
-      "enplum.v1ZKgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/mdb/greenplum/v1;gre" +
-      "enplumb\006proto3"
+      "uthMethod\"_\n\016ConnectionType\022\037\n\033CONNECTIO" +
+      "N_TYPE_UNSPECIFIED\020\000\022\010\n\004HOST\020\001\022\017\n\007HOSTSS" +
+      "L\020\002\032\002\010\001\022\021\n\tHOSTNOSSL\020\003\032\002\010\001\"Q\n\nAuthMethod" +
+      "\022\033\n\027AUTH_METHOD_UNSPECIFIED\020\000\022\007\n\003MD5\020\001\022\010" +
+      "\n\004LDAP\020\002\022\n\n\006REJECT\020\003\022\007\n\003IAM\020\004Bp\n!yandex." +
+      "cloud.api.mdb.greenplum.v1ZKgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/mdb" +
+      "/greenplum/v1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

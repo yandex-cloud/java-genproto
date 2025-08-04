@@ -5,6 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Subtitle management service.
+ * Provides methods for creating, retrieving, updating, and deleting subtitles,
+ * which provide text translations or transcriptions of video content in various languages.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -220,13 +222,16 @@ public final class SubtitleServiceGrpc {
   /**
    * <pre>
    * Subtitle management service.
+   * Provides methods for creating, retrieving, updating, and deleting subtitles,
+   * which provide text translations or transcriptions of video content in various languages.
    * </pre>
    */
   public static abstract class SubtitleServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Get a specific subtitle.
+     * Retrieves detailed information about a specific subtitle by its ID.
+     * Returns all subtitle metadata and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.GetSubtitleRequest request,
@@ -236,7 +241,8 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * List subtitles.
+     * Lists all subtitles associated with a specific video with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.ListSubtitlesRequest request,
@@ -246,7 +252,9 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Create a new subtitle.
+     * Creates a new subtitle record for a specific video.
+     * This method only creates the metadata record; the actual subtitle file must be uploaded
+     * using the URL obtained from the GenerateUploadURL method.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.CreateSubtitleRequest request,
@@ -256,7 +264,9 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Generate an upload URL to add a new subtitle file.
+     * Generates a URL for uploading a subtitle file to an existing subtitle record.
+     * This URL can be used to upload the actual subtitle file using an HTTP PUT request.
+     * The URL is pre-signed and has a limited validity period.
      * </pre>
      */
     public void generateUploadURL(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.GenerateSubtitleUploadURLRequest request,
@@ -266,7 +276,8 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Delete a specific subtitle.
+     * Deletes a specific subtitle by its ID.
+     * This removes both the metadata record and the associated subtitle file.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.DeleteSubtitleRequest request,
@@ -318,6 +329,8 @@ public final class SubtitleServiceGrpc {
   /**
    * <pre>
    * Subtitle management service.
+   * Provides methods for creating, retrieving, updating, and deleting subtitles,
+   * which provide text translations or transcriptions of video content in various languages.
    * </pre>
    */
   public static final class SubtitleServiceStub extends io.grpc.stub.AbstractAsyncStub<SubtitleServiceStub> {
@@ -334,7 +347,8 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Get a specific subtitle.
+     * Retrieves detailed information about a specific subtitle by its ID.
+     * Returns all subtitle metadata and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.GetSubtitleRequest request,
@@ -345,7 +359,8 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * List subtitles.
+     * Lists all subtitles associated with a specific video with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.ListSubtitlesRequest request,
@@ -356,7 +371,9 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Create a new subtitle.
+     * Creates a new subtitle record for a specific video.
+     * This method only creates the metadata record; the actual subtitle file must be uploaded
+     * using the URL obtained from the GenerateUploadURL method.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.CreateSubtitleRequest request,
@@ -367,7 +384,9 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Generate an upload URL to add a new subtitle file.
+     * Generates a URL for uploading a subtitle file to an existing subtitle record.
+     * This URL can be used to upload the actual subtitle file using an HTTP PUT request.
+     * The URL is pre-signed and has a limited validity period.
      * </pre>
      */
     public void generateUploadURL(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.GenerateSubtitleUploadURLRequest request,
@@ -378,7 +397,8 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Delete a specific subtitle.
+     * Deletes a specific subtitle by its ID.
+     * This removes both the metadata record and the associated subtitle file.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.DeleteSubtitleRequest request,
@@ -391,6 +411,8 @@ public final class SubtitleServiceGrpc {
   /**
    * <pre>
    * Subtitle management service.
+   * Provides methods for creating, retrieving, updating, and deleting subtitles,
+   * which provide text translations or transcriptions of video content in various languages.
    * </pre>
    */
   public static final class SubtitleServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SubtitleServiceBlockingStub> {
@@ -407,7 +429,8 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Get a specific subtitle.
+     * Retrieves detailed information about a specific subtitle by its ID.
+     * Returns all subtitle metadata and related information.
      * </pre>
      */
     public yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle get(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.GetSubtitleRequest request) {
@@ -417,7 +440,8 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * List subtitles.
+     * Lists all subtitles associated with a specific video with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public yandex.cloud.api.video.v1.SubtitleServiceOuterClass.ListSubtitlesResponse list(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.ListSubtitlesRequest request) {
@@ -427,7 +451,9 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Create a new subtitle.
+     * Creates a new subtitle record for a specific video.
+     * This method only creates the metadata record; the actual subtitle file must be uploaded
+     * using the URL obtained from the GenerateUploadURL method.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.CreateSubtitleRequest request) {
@@ -437,7 +463,9 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Generate an upload URL to add a new subtitle file.
+     * Generates a URL for uploading a subtitle file to an existing subtitle record.
+     * This URL can be used to upload the actual subtitle file using an HTTP PUT request.
+     * The URL is pre-signed and has a limited validity period.
      * </pre>
      */
     public yandex.cloud.api.video.v1.SubtitleServiceOuterClass.GenerateSubtitleUploadURLResponse generateUploadURL(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.GenerateSubtitleUploadURLRequest request) {
@@ -447,7 +475,8 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Delete a specific subtitle.
+     * Deletes a specific subtitle by its ID.
+     * This removes both the metadata record and the associated subtitle file.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.DeleteSubtitleRequest request) {
@@ -459,6 +488,8 @@ public final class SubtitleServiceGrpc {
   /**
    * <pre>
    * Subtitle management service.
+   * Provides methods for creating, retrieving, updating, and deleting subtitles,
+   * which provide text translations or transcriptions of video content in various languages.
    * </pre>
    */
   public static final class SubtitleServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SubtitleServiceFutureStub> {
@@ -475,7 +506,8 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Get a specific subtitle.
+     * Retrieves detailed information about a specific subtitle by its ID.
+     * Returns all subtitle metadata and related information.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle> get(
@@ -486,7 +518,8 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * List subtitles.
+     * Lists all subtitles associated with a specific video with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.SubtitleServiceOuterClass.ListSubtitlesResponse> list(
@@ -497,7 +530,9 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Create a new subtitle.
+     * Creates a new subtitle record for a specific video.
+     * This method only creates the metadata record; the actual subtitle file must be uploaded
+     * using the URL obtained from the GenerateUploadURL method.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -508,7 +543,9 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Generate an upload URL to add a new subtitle file.
+     * Generates a URL for uploading a subtitle file to an existing subtitle record.
+     * This URL can be used to upload the actual subtitle file using an HTTP PUT request.
+     * The URL is pre-signed and has a limited validity period.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.SubtitleServiceOuterClass.GenerateSubtitleUploadURLResponse> generateUploadURL(
@@ -519,7 +556,8 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Delete a specific subtitle.
+     * Deletes a specific subtitle by its ID.
+     * This removes both the metadata record and the associated subtitle file.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(

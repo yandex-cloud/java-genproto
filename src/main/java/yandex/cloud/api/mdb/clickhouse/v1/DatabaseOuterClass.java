@@ -14,6 +14,123 @@ public final class DatabaseOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.DatabaseEngine}
+   */
+  public enum DatabaseEngine
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DATABASE_ENGINE_UNSPECIFIED = 0;</code>
+     */
+    DATABASE_ENGINE_UNSPECIFIED(0),
+    /**
+     * <code>DATABASE_ENGINE_ATOMIC = 1;</code>
+     */
+    DATABASE_ENGINE_ATOMIC(1),
+    /**
+     * <code>DATABASE_ENGINE_REPLICATED = 2;</code>
+     */
+    DATABASE_ENGINE_REPLICATED(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>DATABASE_ENGINE_UNSPECIFIED = 0;</code>
+     */
+    public static final int DATABASE_ENGINE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>DATABASE_ENGINE_ATOMIC = 1;</code>
+     */
+    public static final int DATABASE_ENGINE_ATOMIC_VALUE = 1;
+    /**
+     * <code>DATABASE_ENGINE_REPLICATED = 2;</code>
+     */
+    public static final int DATABASE_ENGINE_REPLICATED_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static DatabaseEngine valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static DatabaseEngine forNumber(int value) {
+      switch (value) {
+        case 0: return DATABASE_ENGINE_UNSPECIFIED;
+        case 1: return DATABASE_ENGINE_ATOMIC;
+        case 2: return DATABASE_ENGINE_REPLICATED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DatabaseEngine>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DatabaseEngine> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DatabaseEngine>() {
+            public DatabaseEngine findValueByNumber(int number) {
+              return DatabaseEngine.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final DatabaseEngine[] VALUES = values();
+
+    public static DatabaseEngine valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private DatabaseEngine(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.DatabaseEngine)
+  }
+
   public interface DatabaseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.Database)
       com.google.protobuf.MessageOrBuilder {
@@ -57,10 +174,29 @@ public final class DatabaseOuterClass {
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 3;</code>
+     * @return The enum numeric value on the wire for engine.
+     */
+    int getEngineValue();
+    /**
+     * <pre>
+     * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 3;</code>
+     * @return The engine.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine getEngine();
   }
   /**
    * <pre>
-   * A ClickHouse Database resource. For more information, see the 
+   * A ClickHouse Database resource. For more information, see the
    * [Developer's Guide](/docs/managed-clickhouse/concepts).
    * </pre>
    *
@@ -78,6 +214,7 @@ public final class DatabaseOuterClass {
     private Database() {
       name_ = "";
       clusterId_ = "";
+      engine_ = 0;
     }
 
     @java.lang.Override
@@ -120,6 +257,12 @@ public final class DatabaseOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               clusterId_ = s;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              engine_ = rawValue;
               break;
             }
             default: {
@@ -246,6 +389,33 @@ public final class DatabaseOuterClass {
       }
     }
 
+    public static final int ENGINE_FIELD_NUMBER = 3;
+    private int engine_;
+    /**
+     * <pre>
+     * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 3;</code>
+     * @return The enum numeric value on the wire for engine.
+     */
+    @java.lang.Override public int getEngineValue() {
+      return engine_;
+    }
+    /**
+     * <pre>
+     * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 3;</code>
+     * @return The engine.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine getEngine() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine result = yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.valueOf(engine_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -266,6 +436,9 @@ public final class DatabaseOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clusterId_);
       }
+      if (engine_ != yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.DATABASE_ENGINE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, engine_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -280,6 +453,10 @@ public final class DatabaseOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clusterId_);
+      }
+      if (engine_ != yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.DATABASE_ENGINE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, engine_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -300,6 +477,7 @@ public final class DatabaseOuterClass {
           .equals(other.getName())) return false;
       if (!getClusterId()
           .equals(other.getClusterId())) return false;
+      if (engine_ != other.engine_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -315,6 +493,8 @@ public final class DatabaseOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + ENGINE_FIELD_NUMBER;
+      hash = (53 * hash) + engine_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -412,7 +592,7 @@ public final class DatabaseOuterClass {
     }
     /**
      * <pre>
-     * A ClickHouse Database resource. For more information, see the 
+     * A ClickHouse Database resource. For more information, see the
      * [Developer's Guide](/docs/managed-clickhouse/concepts).
      * </pre>
      *
@@ -457,6 +637,8 @@ public final class DatabaseOuterClass {
 
         clusterId_ = "";
 
+        engine_ = 0;
+
         return this;
       }
 
@@ -485,6 +667,7 @@ public final class DatabaseOuterClass {
         yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.Database result = new yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.Database(this);
         result.name_ = name_;
         result.clusterId_ = clusterId_;
+        result.engine_ = engine_;
         onBuilt();
         return result;
       }
@@ -540,6 +723,9 @@ public final class DatabaseOuterClass {
         if (!other.getClusterId().isEmpty()) {
           clusterId_ = other.clusterId_;
           onChanged();
+        }
+        if (other.engine_ != 0) {
+          setEngineValue(other.getEngineValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -761,6 +947,80 @@ public final class DatabaseOuterClass {
         onChanged();
         return this;
       }
+
+      private int engine_ = 0;
+      /**
+       * <pre>
+       * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 3;</code>
+       * @return The enum numeric value on the wire for engine.
+       */
+      @java.lang.Override public int getEngineValue() {
+        return engine_;
+      }
+      /**
+       * <pre>
+       * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 3;</code>
+       * @param value The enum numeric value on the wire for engine to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEngineValue(int value) {
+        
+        engine_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 3;</code>
+       * @return The engine.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine getEngine() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine result = yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.valueOf(engine_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 3;</code>
+       * @param value The engine to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEngine(yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        engine_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEngine() {
+        
+        engine_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -837,6 +1097,25 @@ public final class DatabaseOuterClass {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <pre>
+     * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 2;</code>
+     * @return The enum numeric value on the wire for engine.
+     */
+    int getEngineValue();
+    /**
+     * <pre>
+     * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 2;</code>
+     * @return The engine.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine getEngine();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.DatabaseSpec}
@@ -852,6 +1131,7 @@ public final class DatabaseOuterClass {
     }
     private DatabaseSpec() {
       name_ = "";
+      engine_ = 0;
     }
 
     @java.lang.Override
@@ -888,6 +1168,12 @@ public final class DatabaseOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              engine_ = rawValue;
               break;
             }
             default: {
@@ -968,6 +1254,33 @@ public final class DatabaseOuterClass {
       }
     }
 
+    public static final int ENGINE_FIELD_NUMBER = 2;
+    private int engine_;
+    /**
+     * <pre>
+     * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 2;</code>
+     * @return The enum numeric value on the wire for engine.
+     */
+    @java.lang.Override public int getEngineValue() {
+      return engine_;
+    }
+    /**
+     * <pre>
+     * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 2;</code>
+     * @return The engine.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine getEngine() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine result = yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.valueOf(engine_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -985,6 +1298,9 @@ public final class DatabaseOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
+      if (engine_ != yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.DATABASE_ENGINE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, engine_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -996,6 +1312,10 @@ public final class DatabaseOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (engine_ != yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.DATABASE_ENGINE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, engine_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1014,6 +1334,7 @@ public final class DatabaseOuterClass {
 
       if (!getName()
           .equals(other.getName())) return false;
+      if (engine_ != other.engine_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1027,6 +1348,8 @@ public final class DatabaseOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ENGINE_FIELD_NUMBER;
+      hash = (53 * hash) + engine_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1162,6 +1485,8 @@ public final class DatabaseOuterClass {
         super.clear();
         name_ = "";
 
+        engine_ = 0;
+
         return this;
       }
 
@@ -1189,6 +1514,7 @@ public final class DatabaseOuterClass {
       public yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseSpec buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseSpec result = new yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseSpec(this);
         result.name_ = name_;
+        result.engine_ = engine_;
         onBuilt();
         return result;
       }
@@ -1240,6 +1566,9 @@ public final class DatabaseOuterClass {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.engine_ != 0) {
+          setEngineValue(other.getEngineValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1365,6 +1694,80 @@ public final class DatabaseOuterClass {
         onChanged();
         return this;
       }
+
+      private int engine_ = 0;
+      /**
+       * <pre>
+       * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 2;</code>
+       * @return The enum numeric value on the wire for engine.
+       */
+      @java.lang.Override public int getEngineValue() {
+        return engine_;
+      }
+      /**
+       * <pre>
+       * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 2;</code>
+       * @param value The enum numeric value on the wire for engine to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEngineValue(int value) {
+        
+        engine_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 2;</code>
+       * @return The engine.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine getEngine() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine result = yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.valueOf(engine_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 2;</code>
+       * @param value The engine to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEngine(yandex.cloud.api.mdb.clickhouse.v1.DatabaseOuterClass.DatabaseEngine value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        engine_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database engine. For details, see [ClickHouse documentation](https://clickhouse.com/docs/engines/database-engines).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.DatabaseEngine engine = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEngine() {
+        
+        engine_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1439,13 +1842,19 @@ public final class DatabaseOuterClass {
     java.lang.String[] descriptorData = {
       "\n-yandex/cloud/mdb/clickhouse/v1/databas" +
       "e.proto\022\036yandex.cloud.mdb.clickhouse.v1\032" +
-      "\035yandex/cloud/validation.proto\",\n\010Databa" +
-      "se\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"<\n\014" +
-      "DatabaseSpec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63" +
-      "\362\3071\016[a-zA-Z0-9_-]*Bs\n\"yandex.cloud.api.m" +
-      "db.clickhouse.v1ZMgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/clickhous" +
-      "e/v1;clickhouseb\006proto3"
+      "\035yandex/cloud/validation.proto\"l\n\010Databa" +
+      "se\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022>\n\006" +
+      "engine\030\003 \001(\0162..yandex.cloud.mdb.clickhou" +
+      "se.v1.DatabaseEngine\"|\n\014DatabaseSpec\022,\n\004" +
+      "name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-" +
+      "]*\022>\n\006engine\030\002 \001(\0162..yandex.cloud.mdb.cl" +
+      "ickhouse.v1.DatabaseEngine*m\n\016DatabaseEn" +
+      "gine\022\037\n\033DATABASE_ENGINE_UNSPECIFIED\020\000\022\032\n" +
+      "\026DATABASE_ENGINE_ATOMIC\020\001\022\036\n\032DATABASE_EN" +
+      "GINE_REPLICATED\020\002Bs\n\"yandex.cloud.api.md" +
+      "b.clickhouse.v1ZMgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/mdb/clickhouse" +
+      "/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1457,13 +1866,13 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_Database_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_Database_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", });
+        new java.lang.String[] { "Name", "ClusterId", "Engine", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DatabaseSpec_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DatabaseSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DatabaseSpec_descriptor,
-        new java.lang.String[] { "Name", });
+        new java.lang.String[] { "Name", "Engine", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

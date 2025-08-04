@@ -10086,6 +10086,3531 @@ public final class Stt {
 
   }
 
+  public interface JsonSchemaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.JsonSchema)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     * @return Whether the schema field is set.
+     */
+    boolean hasSchema();
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     * @return The schema.
+     */
+    com.google.protobuf.Struct getSchema();
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     */
+    com.google.protobuf.StructOrBuilder getSchemaOrBuilder();
+  }
+  /**
+   * <pre>
+   * Represents the expected structure of the model's response using a JSON Schema.
+   * </pre>
+   *
+   * Protobuf type {@code speechkit.stt.v3.JsonSchema}
+   */
+  public static final class JsonSchema extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.JsonSchema)
+      JsonSchemaOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use JsonSchema.newBuilder() to construct.
+    private JsonSchema(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private JsonSchema() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new JsonSchema();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private JsonSchema(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (schema_ != null) {
+                subBuilder = schema_.toBuilder();
+              }
+              schema_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(schema_);
+                schema_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_JsonSchema_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_JsonSchema_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.class, yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.Builder.class);
+    }
+
+    public static final int SCHEMA_FIELD_NUMBER = 1;
+    private com.google.protobuf.Struct schema_;
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     * @return Whether the schema field is set.
+     */
+    @java.lang.Override
+    public boolean hasSchema() {
+      return schema_ != null;
+    }
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     * @return The schema.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getSchema() {
+      return schema_ == null ? com.google.protobuf.Struct.getDefaultInstance() : schema_;
+    }
+    /**
+     * <pre>
+     * The JSON Schema that the model's output must conform to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct schema = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getSchemaOrBuilder() {
+      return getSchema();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (schema_ != null) {
+        output.writeMessage(1, getSchema());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (schema_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSchema());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.JsonSchema)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.JsonSchema other = (yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) obj;
+
+      if (hasSchema() != other.hasSchema()) return false;
+      if (hasSchema()) {
+        if (!getSchema()
+            .equals(other.getSchema())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSchema()) {
+        hash = (37 * hash) + SCHEMA_FIELD_NUMBER;
+        hash = (53 * hash) + getSchema().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.JsonSchema prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents the expected structure of the model's response using a JSON Schema.
+     * </pre>
+     *
+     * Protobuf type {@code speechkit.stt.v3.JsonSchema}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.JsonSchema)
+        yandex.cloud.api.ai.stt.v3.Stt.JsonSchemaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_JsonSchema_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_JsonSchema_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.class, yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (schemaBuilder_ == null) {
+          schema_ = null;
+        } else {
+          schema_ = null;
+          schemaBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_JsonSchema_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.JsonSchema getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.JsonSchema build() {
+        yandex.cloud.api.ai.stt.v3.Stt.JsonSchema result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.JsonSchema buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.JsonSchema result = new yandex.cloud.api.ai.stt.v3.Stt.JsonSchema(this);
+        if (schemaBuilder_ == null) {
+          result.schema_ = schema_;
+        } else {
+          result.schema_ = schemaBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.JsonSchema)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.JsonSchema other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.getDefaultInstance()) return this;
+        if (other.hasSchema()) {
+          mergeSchema(other.getSchema());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.JsonSchema parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Struct schema_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> schemaBuilder_;
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       * @return Whether the schema field is set.
+       */
+      public boolean hasSchema() {
+        return schemaBuilder_ != null || schema_ != null;
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       * @return The schema.
+       */
+      public com.google.protobuf.Struct getSchema() {
+        if (schemaBuilder_ == null) {
+          return schema_ == null ? com.google.protobuf.Struct.getDefaultInstance() : schema_;
+        } else {
+          return schemaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public Builder setSchema(com.google.protobuf.Struct value) {
+        if (schemaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schema_ = value;
+          onChanged();
+        } else {
+          schemaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public Builder setSchema(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (schemaBuilder_ == null) {
+          schema_ = builderForValue.build();
+          onChanged();
+        } else {
+          schemaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public Builder mergeSchema(com.google.protobuf.Struct value) {
+        if (schemaBuilder_ == null) {
+          if (schema_ != null) {
+            schema_ =
+              com.google.protobuf.Struct.newBuilder(schema_).mergeFrom(value).buildPartial();
+          } else {
+            schema_ = value;
+          }
+          onChanged();
+        } else {
+          schemaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public Builder clearSchema() {
+        if (schemaBuilder_ == null) {
+          schema_ = null;
+          onChanged();
+        } else {
+          schema_ = null;
+          schemaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public com.google.protobuf.Struct.Builder getSchemaBuilder() {
+        
+        onChanged();
+        return getSchemaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getSchemaOrBuilder() {
+        if (schemaBuilder_ != null) {
+          return schemaBuilder_.getMessageOrBuilder();
+        } else {
+          return schema_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : schema_;
+        }
+      }
+      /**
+       * <pre>
+       * The JSON Schema that the model's output must conform to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct schema = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getSchemaFieldBuilder() {
+        if (schemaBuilder_ == null) {
+          schemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getSchema(),
+                  getParentForChildren(),
+                  isClean());
+          schema_ = null;
+        }
+        return schemaBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.JsonSchema)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.JsonSchema)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.JsonSchema DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.JsonSchema();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.JsonSchema getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<JsonSchema>
+        PARSER = new com.google.protobuf.AbstractParser<JsonSchema>() {
+      @java.lang.Override
+      public JsonSchema parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new JsonSchema(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<JsonSchema> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<JsonSchema> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.JsonSchema getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SummarizationPropertyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.SummarizationProperty)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Summarization instruction for model.
+     * </pre>
+     *
+     * <code>string instruction = 1;</code>
+     * @return The instruction.
+     */
+    java.lang.String getInstruction();
+    /**
+     * <pre>
+     * Summarization instruction for model.
+     * </pre>
+     *
+     * <code>string instruction = 1;</code>
+     * @return The bytes for instruction.
+     */
+    com.google.protobuf.ByteString
+        getInstructionBytes();
+
+    /**
+     * <pre>
+     * When set to true, the model will respond with a valid JSON object.
+     * Be sure to explicitly ask the model for JSON.
+     * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+     * </pre>
+     *
+     * <code>bool json_object = 2;</code>
+     * @return Whether the jsonObject field is set.
+     */
+    boolean hasJsonObject();
+    /**
+     * <pre>
+     * When set to true, the model will respond with a valid JSON object.
+     * Be sure to explicitly ask the model for JSON.
+     * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+     * </pre>
+     *
+     * <code>bool json_object = 2;</code>
+     * @return The jsonObject.
+     */
+    boolean getJsonObject();
+
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+     * @return Whether the jsonSchema field is set.
+     */
+    boolean hasJsonSchema();
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+     * @return The jsonSchema.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.JsonSchema getJsonSchema();
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.JsonSchemaOrBuilder getJsonSchemaOrBuilder();
+
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.ResponseFormatCase getResponseFormatCase();
+  }
+  /**
+   * <pre>
+   * Represents summarization entry for transcription. 
+   * </pre>
+   *
+   * Protobuf type {@code speechkit.stt.v3.SummarizationProperty}
+   */
+  public static final class SummarizationProperty extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.SummarizationProperty)
+      SummarizationPropertyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SummarizationProperty.newBuilder() to construct.
+    private SummarizationProperty(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SummarizationProperty() {
+      instruction_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SummarizationProperty();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SummarizationProperty(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instruction_ = s;
+              break;
+            }
+            case 16: {
+              responseFormat_ = input.readBool();
+              responseFormatCase_ = 2;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.Builder subBuilder = null;
+              if (responseFormatCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) responseFormat_).toBuilder();
+              }
+              responseFormat_ =
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) responseFormat_);
+                responseFormat_ = subBuilder.buildPartial();
+              }
+              responseFormatCase_ = 3;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationProperty_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationProperty_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.class, yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder.class);
+    }
+
+    private int responseFormatCase_ = 0;
+    private java.lang.Object responseFormat_;
+    public enum ResponseFormatCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      JSON_OBJECT(2),
+      JSON_SCHEMA(3),
+      RESPONSEFORMAT_NOT_SET(0);
+      private final int value;
+      private ResponseFormatCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ResponseFormatCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ResponseFormatCase forNumber(int value) {
+        switch (value) {
+          case 2: return JSON_OBJECT;
+          case 3: return JSON_SCHEMA;
+          case 0: return RESPONSEFORMAT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ResponseFormatCase
+    getResponseFormatCase() {
+      return ResponseFormatCase.forNumber(
+          responseFormatCase_);
+    }
+
+    public static final int INSTRUCTION_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instruction_;
+    /**
+     * <pre>
+     * Summarization instruction for model.
+     * </pre>
+     *
+     * <code>string instruction = 1;</code>
+     * @return The instruction.
+     */
+    @java.lang.Override
+    public java.lang.String getInstruction() {
+      java.lang.Object ref = instruction_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instruction_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Summarization instruction for model.
+     * </pre>
+     *
+     * <code>string instruction = 1;</code>
+     * @return The bytes for instruction.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstructionBytes() {
+      java.lang.Object ref = instruction_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instruction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JSON_OBJECT_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * When set to true, the model will respond with a valid JSON object.
+     * Be sure to explicitly ask the model for JSON.
+     * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+     * </pre>
+     *
+     * <code>bool json_object = 2;</code>
+     * @return Whether the jsonObject field is set.
+     */
+    @java.lang.Override
+    public boolean hasJsonObject() {
+      return responseFormatCase_ == 2;
+    }
+    /**
+     * <pre>
+     * When set to true, the model will respond with a valid JSON object.
+     * Be sure to explicitly ask the model for JSON.
+     * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+     * </pre>
+     *
+     * <code>bool json_object = 2;</code>
+     * @return The jsonObject.
+     */
+    @java.lang.Override
+    public boolean getJsonObject() {
+      if (responseFormatCase_ == 2) {
+        return (java.lang.Boolean) responseFormat_;
+      }
+      return false;
+    }
+
+    public static final int JSON_SCHEMA_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+     * @return Whether the jsonSchema field is set.
+     */
+    @java.lang.Override
+    public boolean hasJsonSchema() {
+      return responseFormatCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+     * @return The jsonSchema.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.JsonSchema getJsonSchema() {
+      if (responseFormatCase_ == 3) {
+         return (yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) responseFormat_;
+      }
+      return yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Enforces a specific JSON structure for the model's response based on a provided schema.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.JsonSchemaOrBuilder getJsonSchemaOrBuilder() {
+      if (responseFormatCase_ == 3) {
+         return (yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) responseFormat_;
+      }
+      return yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instruction_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instruction_);
+      }
+      if (responseFormatCase_ == 2) {
+        output.writeBool(
+            2, (boolean)((java.lang.Boolean) responseFormat_));
+      }
+      if (responseFormatCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) responseFormat_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instruction_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instruction_);
+      }
+      if (responseFormatCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              2, (boolean)((java.lang.Boolean) responseFormat_));
+      }
+      if (responseFormatCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) responseFormat_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty other = (yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty) obj;
+
+      if (!getInstruction()
+          .equals(other.getInstruction())) return false;
+      if (!getResponseFormatCase().equals(other.getResponseFormatCase())) return false;
+      switch (responseFormatCase_) {
+        case 2:
+          if (getJsonObject()
+              != other.getJsonObject()) return false;
+          break;
+        case 3:
+          if (!getJsonSchema()
+              .equals(other.getJsonSchema())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTRUCTION_FIELD_NUMBER;
+      hash = (53 * hash) + getInstruction().hashCode();
+      switch (responseFormatCase_) {
+        case 2:
+          hash = (37 * hash) + JSON_OBJECT_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getJsonObject());
+          break;
+        case 3:
+          hash = (37 * hash) + JSON_SCHEMA_FIELD_NUMBER;
+          hash = (53 * hash) + getJsonSchema().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents summarization entry for transcription. 
+     * </pre>
+     *
+     * Protobuf type {@code speechkit.stt.v3.SummarizationProperty}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.SummarizationProperty)
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationProperty_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationProperty_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.class, yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instruction_ = "";
+
+        responseFormatCase_ = 0;
+        responseFormat_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationProperty_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty build() {
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty result = new yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty(this);
+        result.instruction_ = instruction_;
+        if (responseFormatCase_ == 2) {
+          result.responseFormat_ = responseFormat_;
+        }
+        if (responseFormatCase_ == 3) {
+          if (jsonSchemaBuilder_ == null) {
+            result.responseFormat_ = responseFormat_;
+          } else {
+            result.responseFormat_ = jsonSchemaBuilder_.build();
+          }
+        }
+        result.responseFormatCase_ = responseFormatCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.getDefaultInstance()) return this;
+        if (!other.getInstruction().isEmpty()) {
+          instruction_ = other.instruction_;
+          onChanged();
+        }
+        switch (other.getResponseFormatCase()) {
+          case JSON_OBJECT: {
+            setJsonObject(other.getJsonObject());
+            break;
+          }
+          case JSON_SCHEMA: {
+            mergeJsonSchema(other.getJsonSchema());
+            break;
+          }
+          case RESPONSEFORMAT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int responseFormatCase_ = 0;
+      private java.lang.Object responseFormat_;
+      public ResponseFormatCase
+          getResponseFormatCase() {
+        return ResponseFormatCase.forNumber(
+            responseFormatCase_);
+      }
+
+      public Builder clearResponseFormat() {
+        responseFormatCase_ = 0;
+        responseFormat_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object instruction_ = "";
+      /**
+       * <pre>
+       * Summarization instruction for model.
+       * </pre>
+       *
+       * <code>string instruction = 1;</code>
+       * @return The instruction.
+       */
+      public java.lang.String getInstruction() {
+        java.lang.Object ref = instruction_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instruction_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Summarization instruction for model.
+       * </pre>
+       *
+       * <code>string instruction = 1;</code>
+       * @return The bytes for instruction.
+       */
+      public com.google.protobuf.ByteString
+          getInstructionBytes() {
+        java.lang.Object ref = instruction_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instruction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Summarization instruction for model.
+       * </pre>
+       *
+       * <code>string instruction = 1;</code>
+       * @param value The instruction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstruction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instruction_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization instruction for model.
+       * </pre>
+       *
+       * <code>string instruction = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstruction() {
+        
+        instruction_ = getDefaultInstance().getInstruction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization instruction for model.
+       * </pre>
+       *
+       * <code>string instruction = 1;</code>
+       * @param value The bytes for instruction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstructionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instruction_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * When set to true, the model will respond with a valid JSON object.
+       * Be sure to explicitly ask the model for JSON.
+       * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+       * </pre>
+       *
+       * <code>bool json_object = 2;</code>
+       * @return Whether the jsonObject field is set.
+       */
+      public boolean hasJsonObject() {
+        return responseFormatCase_ == 2;
+      }
+      /**
+       * <pre>
+       * When set to true, the model will respond with a valid JSON object.
+       * Be sure to explicitly ask the model for JSON.
+       * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+       * </pre>
+       *
+       * <code>bool json_object = 2;</code>
+       * @return The jsonObject.
+       */
+      public boolean getJsonObject() {
+        if (responseFormatCase_ == 2) {
+          return (java.lang.Boolean) responseFormat_;
+        }
+        return false;
+      }
+      /**
+       * <pre>
+       * When set to true, the model will respond with a valid JSON object.
+       * Be sure to explicitly ask the model for JSON.
+       * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+       * </pre>
+       *
+       * <code>bool json_object = 2;</code>
+       * @param value The jsonObject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonObject(boolean value) {
+        responseFormatCase_ = 2;
+        responseFormat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * When set to true, the model will respond with a valid JSON object.
+       * Be sure to explicitly ask the model for JSON.
+       * Otherwise, it may generate excessive whitespace and run indefinitely until it reaches the token limit.
+       * </pre>
+       *
+       * <code>bool json_object = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJsonObject() {
+        if (responseFormatCase_ == 2) {
+          responseFormatCase_ = 0;
+          responseFormat_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.JsonSchema, yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.Builder, yandex.cloud.api.ai.stt.v3.Stt.JsonSchemaOrBuilder> jsonSchemaBuilder_;
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+       * @return Whether the jsonSchema field is set.
+       */
+      @java.lang.Override
+      public boolean hasJsonSchema() {
+        return responseFormatCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+       * @return The jsonSchema.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.JsonSchema getJsonSchema() {
+        if (jsonSchemaBuilder_ == null) {
+          if (responseFormatCase_ == 3) {
+            return (yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) responseFormat_;
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.getDefaultInstance();
+        } else {
+          if (responseFormatCase_ == 3) {
+            return jsonSchemaBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+       */
+      public Builder setJsonSchema(yandex.cloud.api.ai.stt.v3.Stt.JsonSchema value) {
+        if (jsonSchemaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          responseFormat_ = value;
+          onChanged();
+        } else {
+          jsonSchemaBuilder_.setMessage(value);
+        }
+        responseFormatCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+       */
+      public Builder setJsonSchema(
+          yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.Builder builderForValue) {
+        if (jsonSchemaBuilder_ == null) {
+          responseFormat_ = builderForValue.build();
+          onChanged();
+        } else {
+          jsonSchemaBuilder_.setMessage(builderForValue.build());
+        }
+        responseFormatCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+       */
+      public Builder mergeJsonSchema(yandex.cloud.api.ai.stt.v3.Stt.JsonSchema value) {
+        if (jsonSchemaBuilder_ == null) {
+          if (responseFormatCase_ == 3 &&
+              responseFormat_ != yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.getDefaultInstance()) {
+            responseFormat_ = yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.newBuilder((yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) responseFormat_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            responseFormat_ = value;
+          }
+          onChanged();
+        } else {
+          if (responseFormatCase_ == 3) {
+            jsonSchemaBuilder_.mergeFrom(value);
+          }
+          jsonSchemaBuilder_.setMessage(value);
+        }
+        responseFormatCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+       */
+      public Builder clearJsonSchema() {
+        if (jsonSchemaBuilder_ == null) {
+          if (responseFormatCase_ == 3) {
+            responseFormatCase_ = 0;
+            responseFormat_ = null;
+            onChanged();
+          }
+        } else {
+          if (responseFormatCase_ == 3) {
+            responseFormatCase_ = 0;
+            responseFormat_ = null;
+          }
+          jsonSchemaBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.Builder getJsonSchemaBuilder() {
+        return getJsonSchemaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.JsonSchemaOrBuilder getJsonSchemaOrBuilder() {
+        if ((responseFormatCase_ == 3) && (jsonSchemaBuilder_ != null)) {
+          return jsonSchemaBuilder_.getMessageOrBuilder();
+        } else {
+          if (responseFormatCase_ == 3) {
+            return (yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) responseFormat_;
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Enforces a specific JSON structure for the model's response based on a provided schema.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.JsonSchema json_schema = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.JsonSchema, yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.Builder, yandex.cloud.api.ai.stt.v3.Stt.JsonSchemaOrBuilder> 
+          getJsonSchemaFieldBuilder() {
+        if (jsonSchemaBuilder_ == null) {
+          if (!(responseFormatCase_ == 3)) {
+            responseFormat_ = yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.getDefaultInstance();
+          }
+          jsonSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.JsonSchema, yandex.cloud.api.ai.stt.v3.Stt.JsonSchema.Builder, yandex.cloud.api.ai.stt.v3.Stt.JsonSchemaOrBuilder>(
+                  (yandex.cloud.api.ai.stt.v3.Stt.JsonSchema) responseFormat_,
+                  getParentForChildren(),
+                  isClean());
+          responseFormat_ = null;
+        }
+        responseFormatCase_ = 3;
+        onChanged();;
+        return jsonSchemaBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.SummarizationProperty)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.SummarizationProperty)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SummarizationProperty>
+        PARSER = new com.google.protobuf.AbstractParser<SummarizationProperty>() {
+      @java.lang.Override
+      public SummarizationProperty parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SummarizationProperty(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SummarizationProperty> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SummarizationProperty> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SummarizationOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.SummarizationOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The modelUri.
+     */
+    java.lang.String getModelUri();
+    /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The bytes for modelUri.
+     */
+    com.google.protobuf.ByteString
+        getModelUriBytes();
+
+    /**
+     * <pre>
+     * A list of suimmarizations to perform with transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty> 
+        getPropertiesList();
+    /**
+     * <pre>
+     * A list of suimmarizations to perform with transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty getProperties(int index);
+    /**
+     * <pre>
+     * A list of suimmarizations to perform with transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+     */
+    int getPropertiesCount();
+    /**
+     * <pre>
+     * A list of suimmarizations to perform with transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyOrBuilder> 
+        getPropertiesOrBuilderList();
+    /**
+     * <pre>
+     * A list of suimmarizations to perform with transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyOrBuilder getPropertiesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Represents transcription summarization options. 
+   * </pre>
+   *
+   * Protobuf type {@code speechkit.stt.v3.SummarizationOptions}
+   */
+  public static final class SummarizationOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.SummarizationOptions)
+      SummarizationOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SummarizationOptions.newBuilder() to construct.
+    private SummarizationOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SummarizationOptions() {
+      modelUri_ = "";
+      properties_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SummarizationOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SummarizationOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              modelUri_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                properties_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              properties_.add(
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          properties_ = java.util.Collections.unmodifiableList(properties_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.class, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder.class);
+    }
+
+    public static final int MODEL_URI_FIELD_NUMBER = 1;
+    private volatile java.lang.Object modelUri_;
+    /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The modelUri.
+     */
+    @java.lang.Override
+    public java.lang.String getModelUri() {
+      java.lang.Object ref = modelUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        modelUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The bytes for modelUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelUriBytes() {
+      java.lang.Object ref = modelUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROPERTIES_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty> properties_;
+    /**
+     * <pre>
+     * A list of suimmarizations to perform with transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty> getPropertiesList() {
+      return properties_;
+    }
+    /**
+     * <pre>
+     * A list of suimmarizations to perform with transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyOrBuilder> 
+        getPropertiesOrBuilderList() {
+      return properties_;
+    }
+    /**
+     * <pre>
+     * A list of suimmarizations to perform with transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+     */
+    @java.lang.Override
+    public int getPropertiesCount() {
+      return properties_.size();
+    }
+    /**
+     * <pre>
+     * A list of suimmarizations to perform with transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty getProperties(int index) {
+      return properties_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of suimmarizations to perform with transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyOrBuilder getPropertiesOrBuilder(
+        int index) {
+      return properties_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelUri_);
+      }
+      for (int i = 0; i < properties_.size(); i++) {
+        output.writeMessage(2, properties_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelUri_);
+      }
+      for (int i = 0; i < properties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, properties_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions other = (yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions) obj;
+
+      if (!getModelUri()
+          .equals(other.getModelUri())) return false;
+      if (!getPropertiesList()
+          .equals(other.getPropertiesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODEL_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getModelUri().hashCode();
+      if (getPropertiesCount() > 0) {
+        hash = (37 * hash) + PROPERTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getPropertiesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents transcription summarization options. 
+     * </pre>
+     *
+     * Protobuf type {@code speechkit.stt.v3.SummarizationOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.SummarizationOptions)
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.class, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPropertiesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        modelUri_ = "";
+
+        if (propertiesBuilder_ == null) {
+          properties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          propertiesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions build() {
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions result = new yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions(this);
+        int from_bitField0_ = bitField0_;
+        result.modelUri_ = modelUri_;
+        if (propertiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            properties_ = java.util.Collections.unmodifiableList(properties_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.properties_ = properties_;
+        } else {
+          result.properties_ = propertiesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.getDefaultInstance()) return this;
+        if (!other.getModelUri().isEmpty()) {
+          modelUri_ = other.modelUri_;
+          onChanged();
+        }
+        if (propertiesBuilder_ == null) {
+          if (!other.properties_.isEmpty()) {
+            if (properties_.isEmpty()) {
+              properties_ = other.properties_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePropertiesIsMutable();
+              properties_.addAll(other.properties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.properties_.isEmpty()) {
+            if (propertiesBuilder_.isEmpty()) {
+              propertiesBuilder_.dispose();
+              propertiesBuilder_ = null;
+              properties_ = other.properties_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              propertiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPropertiesFieldBuilder() : null;
+            } else {
+              propertiesBuilder_.addAllMessages(other.properties_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object modelUri_ = "";
+      /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @return The modelUri.
+       */
+      public java.lang.String getModelUri() {
+        java.lang.Object ref = modelUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          modelUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @return The bytes for modelUri.
+       */
+      public com.google.protobuf.ByteString
+          getModelUriBytes() {
+        java.lang.Object ref = modelUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          modelUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @param value The modelUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        modelUri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelUri() {
+        
+        modelUri_ = getDefaultInstance().getModelUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @param value The bytes for modelUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        modelUri_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty> properties_ =
+        java.util.Collections.emptyList();
+      private void ensurePropertiesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          properties_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty>(properties_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty, yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyOrBuilder> propertiesBuilder_;
+
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty> getPropertiesList() {
+        if (propertiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(properties_);
+        } else {
+          return propertiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public int getPropertiesCount() {
+        if (propertiesBuilder_ == null) {
+          return properties_.size();
+        } else {
+          return propertiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty getProperties(int index) {
+        if (propertiesBuilder_ == null) {
+          return properties_.get(index);
+        } else {
+          return propertiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public Builder setProperties(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty value) {
+        if (propertiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropertiesIsMutable();
+          properties_.set(index, value);
+          onChanged();
+        } else {
+          propertiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public Builder setProperties(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder builderForValue) {
+        if (propertiesBuilder_ == null) {
+          ensurePropertiesIsMutable();
+          properties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          propertiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public Builder addProperties(yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty value) {
+        if (propertiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropertiesIsMutable();
+          properties_.add(value);
+          onChanged();
+        } else {
+          propertiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public Builder addProperties(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty value) {
+        if (propertiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropertiesIsMutable();
+          properties_.add(index, value);
+          onChanged();
+        } else {
+          propertiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public Builder addProperties(
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder builderForValue) {
+        if (propertiesBuilder_ == null) {
+          ensurePropertiesIsMutable();
+          properties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          propertiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public Builder addProperties(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder builderForValue) {
+        if (propertiesBuilder_ == null) {
+          ensurePropertiesIsMutable();
+          properties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          propertiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public Builder addAllProperties(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty> values) {
+        if (propertiesBuilder_ == null) {
+          ensurePropertiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, properties_);
+          onChanged();
+        } else {
+          propertiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public Builder clearProperties() {
+        if (propertiesBuilder_ == null) {
+          properties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          propertiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public Builder removeProperties(int index) {
+        if (propertiesBuilder_ == null) {
+          ensurePropertiesIsMutable();
+          properties_.remove(index);
+          onChanged();
+        } else {
+          propertiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder getPropertiesBuilder(
+          int index) {
+        return getPropertiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyOrBuilder getPropertiesOrBuilder(
+          int index) {
+        if (propertiesBuilder_ == null) {
+          return properties_.get(index);  } else {
+          return propertiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyOrBuilder> 
+           getPropertiesOrBuilderList() {
+        if (propertiesBuilder_ != null) {
+          return propertiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(properties_);
+        }
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder addPropertiesBuilder() {
+        return getPropertiesFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder addPropertiesBuilder(
+          int index) {
+        return getPropertiesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of suimmarizations to perform with transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationProperty properties = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder> 
+           getPropertiesBuilderList() {
+        return getPropertiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty, yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyOrBuilder> 
+          getPropertiesFieldBuilder() {
+        if (propertiesBuilder_ == null) {
+          propertiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty, yandex.cloud.api.ai.stt.v3.Stt.SummarizationProperty.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyOrBuilder>(
+                  properties_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          properties_ = null;
+        }
+        return propertiesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.SummarizationOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.SummarizationOptions)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SummarizationOptions>
+        PARSER = new com.google.protobuf.AbstractParser<SummarizationOptions>() {
+      @java.lang.Override
+      public SummarizationOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SummarizationOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SummarizationOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SummarizationOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SummarizationPropertyResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.SummarizationPropertyResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Summarization response text.
+     * </pre>
+     *
+     * <code>string response = 1;</code>
+     * @return The response.
+     */
+    java.lang.String getResponse();
+    /**
+     * <pre>
+     * Summarization response text.
+     * </pre>
+     *
+     * <code>string response = 1;</code>
+     * @return The bytes for response.
+     */
+    com.google.protobuf.ByteString
+        getResponseBytes();
+  }
+  /**
+   * <pre>
+   * Represents summarization response entry for transcription. 
+   * </pre>
+   *
+   * Protobuf type {@code speechkit.stt.v3.SummarizationPropertyResult}
+   */
+  public static final class SummarizationPropertyResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.SummarizationPropertyResult)
+      SummarizationPropertyResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SummarizationPropertyResult.newBuilder() to construct.
+    private SummarizationPropertyResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SummarizationPropertyResult() {
+      response_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SummarizationPropertyResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SummarizationPropertyResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              response_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationPropertyResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationPropertyResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.class, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder.class);
+    }
+
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object response_;
+    /**
+     * <pre>
+     * Summarization response text.
+     * </pre>
+     *
+     * <code>string response = 1;</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public java.lang.String getResponse() {
+      java.lang.Object ref = response_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        response_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Summarization response text.
+     * </pre>
+     *
+     * <code>string response = 1;</code>
+     * @return The bytes for response.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResponseBytes() {
+      java.lang.Object ref = response_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        response_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(response_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, response_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(response_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, response_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult other = (yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult) obj;
+
+      if (!getResponse()
+          .equals(other.getResponse())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + getResponse().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents summarization response entry for transcription. 
+     * </pre>
+     *
+     * Protobuf type {@code speechkit.stt.v3.SummarizationPropertyResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.SummarizationPropertyResult)
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationPropertyResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationPropertyResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.class, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        response_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SummarizationPropertyResult_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult build() {
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult result = new yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult(this);
+        result.response_ = response_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.getDefaultInstance()) return this;
+        if (!other.getResponse().isEmpty()) {
+          response_ = other.response_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object response_ = "";
+      /**
+       * <pre>
+       * Summarization response text.
+       * </pre>
+       *
+       * <code>string response = 1;</code>
+       * @return The response.
+       */
+      public java.lang.String getResponse() {
+        java.lang.Object ref = response_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          response_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Summarization response text.
+       * </pre>
+       *
+       * <code>string response = 1;</code>
+       * @return The bytes for response.
+       */
+      public com.google.protobuf.ByteString
+          getResponseBytes() {
+        java.lang.Object ref = response_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          response_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Summarization response text.
+       * </pre>
+       *
+       * <code>string response = 1;</code>
+       * @param value The response to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponse(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        response_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization response text.
+       * </pre>
+       *
+       * <code>string response = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResponse() {
+        
+        response_ = getDefaultInstance().getResponse();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization response text.
+       * </pre>
+       *
+       * <code>string response = 1;</code>
+       * @param value The bytes for response to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        response_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.SummarizationPropertyResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.SummarizationPropertyResult)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SummarizationPropertyResult>
+        PARSER = new com.google.protobuf.AbstractParser<SummarizationPropertyResult>() {
+      @java.lang.Override
+      public SummarizationPropertyResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SummarizationPropertyResult(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SummarizationPropertyResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SummarizationPropertyResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RecognitionModelOptionsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.RecognitionModelOptions)
       com.google.protobuf.MessageOrBuilder {
@@ -12596,6 +16121,33 @@ public final class Stt {
      * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
      */
     yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder getSpeakerLabelingOrBuilder();
+
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+     * @return Whether the summarization field is set.
+     */
+    boolean hasSummarization();
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+     * @return The summarization.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions getSummarization();
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder getSummarizationOrBuilder();
   }
   /**
    * Protobuf type {@code speechkit.stt.v3.StreamingOptions}
@@ -12703,6 +16255,19 @@ public final class Stt {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(speakerLabeling_);
                 speakerLabeling_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder subBuilder = null;
+              if (summarization_ != null) {
+                subBuilder = summarization_.toBuilder();
+              }
+              summarization_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(summarization_);
+                summarization_ = subBuilder.buildPartial();
               }
 
               break;
@@ -12929,6 +16494,44 @@ public final class Stt {
       return getSpeakerLabeling();
     }
 
+    public static final int SUMMARIZATION_FIELD_NUMBER = 6;
+    private yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions summarization_;
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+     * @return Whether the summarization field is set.
+     */
+    @java.lang.Override
+    public boolean hasSummarization() {
+      return summarization_ != null;
+    }
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+     * @return The summarization.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions getSummarization() {
+      return summarization_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.getDefaultInstance() : summarization_;
+    }
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder getSummarizationOrBuilder() {
+      return getSummarization();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12958,6 +16561,9 @@ public final class Stt {
       if (speakerLabeling_ != null) {
         output.writeMessage(5, getSpeakerLabeling());
       }
+      if (summarization_ != null) {
+        output.writeMessage(6, getSummarization());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12986,6 +16592,10 @@ public final class Stt {
       if (speakerLabeling_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getSpeakerLabeling());
+      }
+      if (summarization_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getSummarization());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13027,6 +16637,11 @@ public final class Stt {
         if (!getSpeakerLabeling()
             .equals(other.getSpeakerLabeling())) return false;
       }
+      if (hasSummarization() != other.hasSummarization()) return false;
+      if (hasSummarization()) {
+        if (!getSummarization()
+            .equals(other.getSummarization())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13057,6 +16672,10 @@ public final class Stt {
       if (hasSpeakerLabeling()) {
         hash = (37 * hash) + SPEAKER_LABELING_FIELD_NUMBER;
         hash = (53 * hash) + getSpeakerLabeling().hashCode();
+      }
+      if (hasSummarization()) {
+        hash = (37 * hash) + SUMMARIZATION_FIELD_NUMBER;
+        hash = (53 * hash) + getSummarization().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -13221,6 +16840,12 @@ public final class Stt {
           speakerLabeling_ = null;
           speakerLabelingBuilder_ = null;
         }
+        if (summarizationBuilder_ == null) {
+          summarization_ = null;
+        } else {
+          summarization_ = null;
+          summarizationBuilder_ = null;
+        }
         return this;
       }
 
@@ -13271,6 +16896,11 @@ public final class Stt {
           result.speakerLabeling_ = speakerLabeling_;
         } else {
           result.speakerLabeling_ = speakerLabelingBuilder_.build();
+        }
+        if (summarizationBuilder_ == null) {
+          result.summarization_ = summarization_;
+        } else {
+          result.summarization_ = summarizationBuilder_.build();
         }
         onBuilt();
         return result;
@@ -13334,6 +16964,9 @@ public final class Stt {
         }
         if (other.hasSpeakerLabeling()) {
           mergeSpeakerLabeling(other.getSpeakerLabeling());
+        }
+        if (other.hasSummarization()) {
+          mergeSummarization(other.getSummarization());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14137,6 +17770,161 @@ public final class Stt {
           speakerLabeling_ = null;
         }
         return speakerLabelingBuilder_;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions summarization_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder> summarizationBuilder_;
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+       * @return Whether the summarization field is set.
+       */
+      public boolean hasSummarization() {
+        return summarizationBuilder_ != null || summarization_ != null;
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+       * @return The summarization.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions getSummarization() {
+        if (summarizationBuilder_ == null) {
+          return summarization_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.getDefaultInstance() : summarization_;
+        } else {
+          return summarizationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+       */
+      public Builder setSummarization(yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions value) {
+        if (summarizationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          summarization_ = value;
+          onChanged();
+        } else {
+          summarizationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+       */
+      public Builder setSummarization(
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder builderForValue) {
+        if (summarizationBuilder_ == null) {
+          summarization_ = builderForValue.build();
+          onChanged();
+        } else {
+          summarizationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+       */
+      public Builder mergeSummarization(yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions value) {
+        if (summarizationBuilder_ == null) {
+          if (summarization_ != null) {
+            summarization_ =
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.newBuilder(summarization_).mergeFrom(value).buildPartial();
+          } else {
+            summarization_ = value;
+          }
+          onChanged();
+        } else {
+          summarizationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+       */
+      public Builder clearSummarization() {
+        if (summarizationBuilder_ == null) {
+          summarization_ = null;
+          onChanged();
+        } else {
+          summarization_ = null;
+          summarizationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder getSummarizationBuilder() {
+        
+        onChanged();
+        return getSummarizationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder getSummarizationOrBuilder() {
+        if (summarizationBuilder_ != null) {
+          return summarizationBuilder_.getMessageOrBuilder();
+        } else {
+          return summarization_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.getDefaultInstance() : summarization_;
+        }
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder> 
+          getSummarizationFieldBuilder() {
+        if (summarizationBuilder_ == null) {
+          summarizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder>(
+                  getSummarization(),
+                  getParentForChildren(),
+                  isClean());
+          summarization_ = null;
+        }
+        return summarizationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17473,6 +21261,33 @@ public final class Stt {
      */
     yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder getSpeakerLabelingOrBuilder();
 
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+     * @return Whether the summarization field is set.
+     */
+    boolean hasSummarization();
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+     * @return The summarization.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions getSummarization();
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder getSummarizationOrBuilder();
+
     public yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest.AudioSourceCase getAudioSourceCase();
   }
   /**
@@ -17579,6 +21394,19 @@ public final class Stt {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(speakerLabeling_);
                 speakerLabeling_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder subBuilder = null;
+              if (summarization_ != null) {
+                subBuilder = summarization_.toBuilder();
+              }
+              summarization_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(summarization_);
+                summarization_ = subBuilder.buildPartial();
               }
 
               break;
@@ -17901,6 +21729,44 @@ public final class Stt {
       return getSpeakerLabeling();
     }
 
+    public static final int SUMMARIZATION_FIELD_NUMBER = 7;
+    private yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions summarization_;
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+     * @return Whether the summarization field is set.
+     */
+    @java.lang.Override
+    public boolean hasSummarization() {
+      return summarization_ != null;
+    }
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+     * @return The summarization.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions getSummarization() {
+      return summarization_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.getDefaultInstance() : summarization_;
+    }
+    /**
+     * <pre>
+     * Summarization options
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder getSummarizationOrBuilder() {
+      return getSummarization();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17934,6 +21800,9 @@ public final class Stt {
       if (speakerLabeling_ != null) {
         output.writeMessage(6, getSpeakerLabeling());
       }
+      if (summarization_ != null) {
+        output.writeMessage(7, getSummarization());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -17966,6 +21835,10 @@ public final class Stt {
       if (speakerLabeling_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSpeakerLabeling());
+      }
+      if (summarization_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getSummarization());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -18001,6 +21874,11 @@ public final class Stt {
       if (hasSpeakerLabeling()) {
         if (!getSpeakerLabeling()
             .equals(other.getSpeakerLabeling())) return false;
+      }
+      if (hasSummarization() != other.hasSummarization()) return false;
+      if (hasSummarization()) {
+        if (!getSummarization()
+            .equals(other.getSummarization())) return false;
       }
       if (!getAudioSourceCase().equals(other.getAudioSourceCase())) return false;
       switch (audioSourceCase_) {
@@ -18041,6 +21919,10 @@ public final class Stt {
       if (hasSpeakerLabeling()) {
         hash = (37 * hash) + SPEAKER_LABELING_FIELD_NUMBER;
         hash = (53 * hash) + getSpeakerLabeling().hashCode();
+      }
+      if (hasSummarization()) {
+        hash = (37 * hash) + SUMMARIZATION_FIELD_NUMBER;
+        hash = (53 * hash) + getSummarization().hashCode();
       }
       switch (audioSourceCase_) {
         case 1:
@@ -18211,6 +22093,12 @@ public final class Stt {
           speakerLabeling_ = null;
           speakerLabelingBuilder_ = null;
         }
+        if (summarizationBuilder_ == null) {
+          summarization_ = null;
+        } else {
+          summarization_ = null;
+          summarizationBuilder_ = null;
+        }
         audioSourceCase_ = 0;
         audioSource_ = null;
         return this;
@@ -18264,6 +22152,11 @@ public final class Stt {
           result.speakerLabeling_ = speakerLabeling_;
         } else {
           result.speakerLabeling_ = speakerLabelingBuilder_.build();
+        }
+        if (summarizationBuilder_ == null) {
+          result.summarization_ = summarization_;
+        } else {
+          result.summarization_ = summarizationBuilder_.build();
         }
         result.audioSourceCase_ = audioSourceCase_;
         onBuilt();
@@ -18325,6 +22218,9 @@ public final class Stt {
         }
         if (other.hasSpeakerLabeling()) {
           mergeSpeakerLabeling(other.getSpeakerLabeling());
+        }
+        if (other.hasSummarization()) {
+          mergeSummarization(other.getSummarization());
         }
         switch (other.getAudioSourceCase()) {
           case CONTENT: {
@@ -19185,6 +23081,161 @@ public final class Stt {
         }
         return speakerLabelingBuilder_;
       }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions summarization_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder> summarizationBuilder_;
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+       * @return Whether the summarization field is set.
+       */
+      public boolean hasSummarization() {
+        return summarizationBuilder_ != null || summarization_ != null;
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+       * @return The summarization.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions getSummarization() {
+        if (summarizationBuilder_ == null) {
+          return summarization_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.getDefaultInstance() : summarization_;
+        } else {
+          return summarizationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+       */
+      public Builder setSummarization(yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions value) {
+        if (summarizationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          summarization_ = value;
+          onChanged();
+        } else {
+          summarizationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+       */
+      public Builder setSummarization(
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder builderForValue) {
+        if (summarizationBuilder_ == null) {
+          summarization_ = builderForValue.build();
+          onChanged();
+        } else {
+          summarizationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+       */
+      public Builder mergeSummarization(yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions value) {
+        if (summarizationBuilder_ == null) {
+          if (summarization_ != null) {
+            summarization_ =
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.newBuilder(summarization_).mergeFrom(value).buildPartial();
+          } else {
+            summarization_ = value;
+          }
+          onChanged();
+        } else {
+          summarizationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+       */
+      public Builder clearSummarization() {
+        if (summarizationBuilder_ == null) {
+          summarization_ = null;
+          onChanged();
+        } else {
+          summarization_ = null;
+          summarizationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder getSummarizationBuilder() {
+        
+        onChanged();
+        return getSummarizationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder getSummarizationOrBuilder() {
+        if (summarizationBuilder_ != null) {
+          return summarizationBuilder_.getMessageOrBuilder();
+        } else {
+          return summarization_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.getDefaultInstance() : summarization_;
+        }
+      }
+      /**
+       * <pre>
+       * Summarization options
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SummarizationOptions summarization = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder> 
+          getSummarizationFieldBuilder() {
+        if (summarizationBuilder_ == null) {
+          summarizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOptionsOrBuilder>(
+                  getSummarization(),
+                  getParentForChildren(),
+                  isClean());
+          summarization_ = null;
+        }
+        return summarizationBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -20038,7 +24089,7 @@ public final class Stt {
 
     /**
      * <pre>
-     * Language code in ISO 639-1 format.
+     * Language tag in IETF BCP 47 format, consisting of ISO 639-1 language code and ISO 3166-1 country code (e.g., en-US, ru-RU).
      * </pre>
      *
      * <code>string language_code = 1;</code>
@@ -20047,7 +24098,7 @@ public final class Stt {
     java.lang.String getLanguageCode();
     /**
      * <pre>
-     * Language code in ISO 639-1 format.
+     * Language tag in IETF BCP 47 format, consisting of ISO 639-1 language code and ISO 3166-1 country code (e.g., en-US, ru-RU).
      * </pre>
      *
      * <code>string language_code = 1;</code>
@@ -20163,7 +24214,7 @@ public final class Stt {
     private volatile java.lang.Object languageCode_;
     /**
      * <pre>
-     * Language code in ISO 639-1 format.
+     * Language tag in IETF BCP 47 format, consisting of ISO 639-1 language code and ISO 3166-1 country code (e.g., en-US, ru-RU).
      * </pre>
      *
      * <code>string language_code = 1;</code>
@@ -20184,7 +24235,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * Language code in ISO 639-1 format.
+     * Language tag in IETF BCP 47 format, consisting of ISO 639-1 language code and ISO 3166-1 country code (e.g., en-US, ru-RU).
      * </pre>
      *
      * <code>string language_code = 1;</code>
@@ -20548,7 +24599,7 @@ public final class Stt {
       private java.lang.Object languageCode_ = "";
       /**
        * <pre>
-       * Language code in ISO 639-1 format.
+       * Language tag in IETF BCP 47 format, consisting of ISO 639-1 language code and ISO 3166-1 country code (e.g., en-US, ru-RU).
        * </pre>
        *
        * <code>string language_code = 1;</code>
@@ -20568,7 +24619,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Language code in ISO 639-1 format.
+       * Language tag in IETF BCP 47 format, consisting of ISO 639-1 language code and ISO 3166-1 country code (e.g., en-US, ru-RU).
        * </pre>
        *
        * <code>string language_code = 1;</code>
@@ -20589,7 +24640,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Language code in ISO 639-1 format.
+       * Language tag in IETF BCP 47 format, consisting of ISO 639-1 language code and ISO 3166-1 country code (e.g., en-US, ru-RU).
        * </pre>
        *
        * <code>string language_code = 1;</code>
@@ -20608,7 +24659,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Language code in ISO 639-1 format.
+       * Language tag in IETF BCP 47 format, consisting of ISO 639-1 language code and ISO 3166-1 country code (e.g., en-US, ru-RU).
        * </pre>
        *
        * <code>string language_code = 1;</code>
@@ -20622,7 +24673,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Language code in ISO 639-1 format.
+       * Language tag in IETF BCP 47 format, consisting of ISO 639-1 language code and ISO 3166-1 country code (e.g., en-US, ru-RU).
        * </pre>
        *
        * <code>string language_code = 1;</code>
@@ -40911,6 +44962,1873 @@ public final class Stt {
 
   }
 
+  public interface ContentUsageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.ContentUsage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The number of tokens in the textual part of the model input.
+     * </pre>
+     *
+     * <code>int64 input_text_tokens = 1;</code>
+     * @return The inputTextTokens.
+     */
+    long getInputTextTokens();
+
+    /**
+     * <pre>
+     * The number of tokens in the generated completion.
+     * </pre>
+     *
+     * <code>int64 completion_tokens = 2;</code>
+     * @return The completionTokens.
+     */
+    long getCompletionTokens();
+
+    /**
+     * <pre>
+     * The total number of tokens, including all input tokens and all generated tokens.
+     * </pre>
+     *
+     * <code>int64 total_tokens = 3;</code>
+     * @return The totalTokens.
+     */
+    long getTotalTokens();
+  }
+  /**
+   * <pre>
+   * An object representing the number of content [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+   * </pre>
+   *
+   * Protobuf type {@code speechkit.stt.v3.ContentUsage}
+   */
+  public static final class ContentUsage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.ContentUsage)
+      ContentUsageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContentUsage.newBuilder() to construct.
+    private ContentUsage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContentUsage() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContentUsage();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ContentUsage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              inputTextTokens_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              completionTokens_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              totalTokens_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ContentUsage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ContentUsage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.class, yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.Builder.class);
+    }
+
+    public static final int INPUT_TEXT_TOKENS_FIELD_NUMBER = 1;
+    private long inputTextTokens_;
+    /**
+     * <pre>
+     * The number of tokens in the textual part of the model input.
+     * </pre>
+     *
+     * <code>int64 input_text_tokens = 1;</code>
+     * @return The inputTextTokens.
+     */
+    @java.lang.Override
+    public long getInputTextTokens() {
+      return inputTextTokens_;
+    }
+
+    public static final int COMPLETION_TOKENS_FIELD_NUMBER = 2;
+    private long completionTokens_;
+    /**
+     * <pre>
+     * The number of tokens in the generated completion.
+     * </pre>
+     *
+     * <code>int64 completion_tokens = 2;</code>
+     * @return The completionTokens.
+     */
+    @java.lang.Override
+    public long getCompletionTokens() {
+      return completionTokens_;
+    }
+
+    public static final int TOTAL_TOKENS_FIELD_NUMBER = 3;
+    private long totalTokens_;
+    /**
+     * <pre>
+     * The total number of tokens, including all input tokens and all generated tokens.
+     * </pre>
+     *
+     * <code>int64 total_tokens = 3;</code>
+     * @return The totalTokens.
+     */
+    @java.lang.Override
+    public long getTotalTokens() {
+      return totalTokens_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (inputTextTokens_ != 0L) {
+        output.writeInt64(1, inputTextTokens_);
+      }
+      if (completionTokens_ != 0L) {
+        output.writeInt64(2, completionTokens_);
+      }
+      if (totalTokens_ != 0L) {
+        output.writeInt64(3, totalTokens_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (inputTextTokens_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, inputTextTokens_);
+      }
+      if (completionTokens_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, completionTokens_);
+      }
+      if (totalTokens_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, totalTokens_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.ContentUsage)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.ContentUsage other = (yandex.cloud.api.ai.stt.v3.Stt.ContentUsage) obj;
+
+      if (getInputTextTokens()
+          != other.getInputTextTokens()) return false;
+      if (getCompletionTokens()
+          != other.getCompletionTokens()) return false;
+      if (getTotalTokens()
+          != other.getTotalTokens()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INPUT_TEXT_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getInputTextTokens());
+      hash = (37 * hash) + COMPLETION_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCompletionTokens());
+      hash = (37 * hash) + TOTAL_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalTokens());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.ContentUsage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * An object representing the number of content [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
+     * </pre>
+     *
+     * Protobuf type {@code speechkit.stt.v3.ContentUsage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.ContentUsage)
+        yandex.cloud.api.ai.stt.v3.Stt.ContentUsageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ContentUsage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ContentUsage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.class, yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        inputTextTokens_ = 0L;
+
+        completionTokens_ = 0L;
+
+        totalTokens_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ContentUsage_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.ContentUsage getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.ContentUsage build() {
+        yandex.cloud.api.ai.stt.v3.Stt.ContentUsage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.ContentUsage buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.ContentUsage result = new yandex.cloud.api.ai.stt.v3.Stt.ContentUsage(this);
+        result.inputTextTokens_ = inputTextTokens_;
+        result.completionTokens_ = completionTokens_;
+        result.totalTokens_ = totalTokens_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.ContentUsage) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.ContentUsage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.ContentUsage other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.getDefaultInstance()) return this;
+        if (other.getInputTextTokens() != 0L) {
+          setInputTextTokens(other.getInputTextTokens());
+        }
+        if (other.getCompletionTokens() != 0L) {
+          setCompletionTokens(other.getCompletionTokens());
+        }
+        if (other.getTotalTokens() != 0L) {
+          setTotalTokens(other.getTotalTokens());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.ContentUsage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.ContentUsage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long inputTextTokens_ ;
+      /**
+       * <pre>
+       * The number of tokens in the textual part of the model input.
+       * </pre>
+       *
+       * <code>int64 input_text_tokens = 1;</code>
+       * @return The inputTextTokens.
+       */
+      @java.lang.Override
+      public long getInputTextTokens() {
+        return inputTextTokens_;
+      }
+      /**
+       * <pre>
+       * The number of tokens in the textual part of the model input.
+       * </pre>
+       *
+       * <code>int64 input_text_tokens = 1;</code>
+       * @param value The inputTextTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInputTextTokens(long value) {
+        
+        inputTextTokens_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of tokens in the textual part of the model input.
+       * </pre>
+       *
+       * <code>int64 input_text_tokens = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInputTextTokens() {
+        
+        inputTextTokens_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long completionTokens_ ;
+      /**
+       * <pre>
+       * The number of tokens in the generated completion.
+       * </pre>
+       *
+       * <code>int64 completion_tokens = 2;</code>
+       * @return The completionTokens.
+       */
+      @java.lang.Override
+      public long getCompletionTokens() {
+        return completionTokens_;
+      }
+      /**
+       * <pre>
+       * The number of tokens in the generated completion.
+       * </pre>
+       *
+       * <code>int64 completion_tokens = 2;</code>
+       * @param value The completionTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompletionTokens(long value) {
+        
+        completionTokens_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of tokens in the generated completion.
+       * </pre>
+       *
+       * <code>int64 completion_tokens = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompletionTokens() {
+        
+        completionTokens_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalTokens_ ;
+      /**
+       * <pre>
+       * The total number of tokens, including all input tokens and all generated tokens.
+       * </pre>
+       *
+       * <code>int64 total_tokens = 3;</code>
+       * @return The totalTokens.
+       */
+      @java.lang.Override
+      public long getTotalTokens() {
+        return totalTokens_;
+      }
+      /**
+       * <pre>
+       * The total number of tokens, including all input tokens and all generated tokens.
+       * </pre>
+       *
+       * <code>int64 total_tokens = 3;</code>
+       * @param value The totalTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalTokens(long value) {
+        
+        totalTokens_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of tokens, including all input tokens and all generated tokens.
+       * </pre>
+       *
+       * <code>int64 total_tokens = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalTokens() {
+        
+        totalTokens_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.ContentUsage)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.ContentUsage)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.ContentUsage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.ContentUsage();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.ContentUsage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContentUsage>
+        PARSER = new com.google.protobuf.AbstractParser<ContentUsage>() {
+      @java.lang.Override
+      public ContentUsage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ContentUsage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContentUsage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContentUsage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.ContentUsage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SummarizationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.Summarization)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A list of summarizations of transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult> 
+        getResultsList();
+    /**
+     * <pre>
+     * A list of summarizations of transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult getResults(int index);
+    /**
+     * <pre>
+     * A list of summarizations of transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+     */
+    int getResultsCount();
+    /**
+     * <pre>
+     * A list of summarizations of transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResultOrBuilder> 
+        getResultsOrBuilderList();
+    /**
+     * <pre>
+     * A list of summarizations of transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResultOrBuilder getResultsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * A set of statistics describing the number of content tokens used by the completion model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+     * @return Whether the contentUsage field is set.
+     */
+    boolean hasContentUsage();
+    /**
+     * <pre>
+     * A set of statistics describing the number of content tokens used by the completion model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+     * @return The contentUsage.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.ContentUsage getContentUsage();
+    /**
+     * <pre>
+     * A set of statistics describing the number of content tokens used by the completion model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.ContentUsageOrBuilder getContentUsageOrBuilder();
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.Summarization}
+   */
+  public static final class Summarization extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.Summarization)
+      SummarizationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Summarization.newBuilder() to construct.
+    private Summarization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Summarization() {
+      results_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Summarization();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Summarization(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                results_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              results_.add(
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.Builder subBuilder = null;
+              if (contentUsage_ != null) {
+                subBuilder = contentUsage_.toBuilder();
+              }
+              contentUsage_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(contentUsage_);
+                contentUsage_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          results_ = java.util.Collections.unmodifiableList(results_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_Summarization_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_Summarization_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.Summarization.class, yandex.cloud.api.ai.stt.v3.Stt.Summarization.Builder.class);
+    }
+
+    public static final int RESULTS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult> results_;
+    /**
+     * <pre>
+     * A list of summarizations of transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult> getResultsList() {
+      return results_;
+    }
+    /**
+     * <pre>
+     * A list of summarizations of transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResultOrBuilder> 
+        getResultsOrBuilderList() {
+      return results_;
+    }
+    /**
+     * <pre>
+     * A list of summarizations of transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+     */
+    @java.lang.Override
+    public int getResultsCount() {
+      return results_.size();
+    }
+    /**
+     * <pre>
+     * A list of summarizations of transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult getResults(int index) {
+      return results_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of summarizations of transcription.
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResultOrBuilder getResultsOrBuilder(
+        int index) {
+      return results_.get(index);
+    }
+
+    public static final int CONTENT_USAGE_FIELD_NUMBER = 2;
+    private yandex.cloud.api.ai.stt.v3.Stt.ContentUsage contentUsage_;
+    /**
+     * <pre>
+     * A set of statistics describing the number of content tokens used by the completion model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+     * @return Whether the contentUsage field is set.
+     */
+    @java.lang.Override
+    public boolean hasContentUsage() {
+      return contentUsage_ != null;
+    }
+    /**
+     * <pre>
+     * A set of statistics describing the number of content tokens used by the completion model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+     * @return The contentUsage.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.ContentUsage getContentUsage() {
+      return contentUsage_ == null ? yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.getDefaultInstance() : contentUsage_;
+    }
+    /**
+     * <pre>
+     * A set of statistics describing the number of content tokens used by the completion model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.ContentUsageOrBuilder getContentUsageOrBuilder() {
+      return getContentUsage();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < results_.size(); i++) {
+        output.writeMessage(1, results_.get(i));
+      }
+      if (contentUsage_ != null) {
+        output.writeMessage(2, getContentUsage());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < results_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, results_.get(i));
+      }
+      if (contentUsage_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getContentUsage());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.Summarization)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.Summarization other = (yandex.cloud.api.ai.stt.v3.Stt.Summarization) obj;
+
+      if (!getResultsList()
+          .equals(other.getResultsList())) return false;
+      if (hasContentUsage() != other.hasContentUsage()) return false;
+      if (hasContentUsage()) {
+        if (!getContentUsage()
+            .equals(other.getContentUsage())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getResultsCount() > 0) {
+        hash = (37 * hash) + RESULTS_FIELD_NUMBER;
+        hash = (53 * hash) + getResultsList().hashCode();
+      }
+      if (hasContentUsage()) {
+        hash = (37 * hash) + CONTENT_USAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getContentUsage().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.Summarization prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.Summarization}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.Summarization)
+        yandex.cloud.api.ai.stt.v3.Stt.SummarizationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_Summarization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_Summarization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.Summarization.class, yandex.cloud.api.ai.stt.v3.Stt.Summarization.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.Summarization.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResultsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (resultsBuilder_ == null) {
+          results_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          resultsBuilder_.clear();
+        }
+        if (contentUsageBuilder_ == null) {
+          contentUsage_ = null;
+        } else {
+          contentUsage_ = null;
+          contentUsageBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_Summarization_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.Summarization getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.Summarization.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.Summarization build() {
+        yandex.cloud.api.ai.stt.v3.Stt.Summarization result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.Summarization buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.Summarization result = new yandex.cloud.api.ai.stt.v3.Stt.Summarization(this);
+        int from_bitField0_ = bitField0_;
+        if (resultsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            results_ = java.util.Collections.unmodifiableList(results_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.results_ = results_;
+        } else {
+          result.results_ = resultsBuilder_.build();
+        }
+        if (contentUsageBuilder_ == null) {
+          result.contentUsage_ = contentUsage_;
+        } else {
+          result.contentUsage_ = contentUsageBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.Summarization) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.Summarization)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.Summarization other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.Summarization.getDefaultInstance()) return this;
+        if (resultsBuilder_ == null) {
+          if (!other.results_.isEmpty()) {
+            if (results_.isEmpty()) {
+              results_ = other.results_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureResultsIsMutable();
+              results_.addAll(other.results_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.results_.isEmpty()) {
+            if (resultsBuilder_.isEmpty()) {
+              resultsBuilder_.dispose();
+              resultsBuilder_ = null;
+              results_ = other.results_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              resultsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResultsFieldBuilder() : null;
+            } else {
+              resultsBuilder_.addAllMessages(other.results_);
+            }
+          }
+        }
+        if (other.hasContentUsage()) {
+          mergeContentUsage(other.getContentUsage());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.Summarization parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.Summarization) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult> results_ =
+        java.util.Collections.emptyList();
+      private void ensureResultsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          results_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult>(results_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResultOrBuilder> resultsBuilder_;
+
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult> getResultsList() {
+        if (resultsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(results_);
+        } else {
+          return resultsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public int getResultsCount() {
+        if (resultsBuilder_ == null) {
+          return results_.size();
+        } else {
+          return resultsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult getResults(int index) {
+        if (resultsBuilder_ == null) {
+          return results_.get(index);
+        } else {
+          return resultsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public Builder setResults(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.set(index, value);
+          onChanged();
+        } else {
+          resultsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public Builder setResults(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public Builder addResults(yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.add(value);
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public Builder addResults(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.add(index, value);
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public Builder addResults(
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public Builder addResults(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public Builder addAllResults(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult> values) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, results_);
+          onChanged();
+        } else {
+          resultsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public Builder clearResults() {
+        if (resultsBuilder_ == null) {
+          results_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          resultsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public Builder removeResults(int index) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.remove(index);
+          onChanged();
+        } else {
+          resultsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder getResultsBuilder(
+          int index) {
+        return getResultsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResultOrBuilder getResultsOrBuilder(
+          int index) {
+        if (resultsBuilder_ == null) {
+          return results_.get(index);  } else {
+          return resultsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResultOrBuilder> 
+           getResultsOrBuilderList() {
+        if (resultsBuilder_ != null) {
+          return resultsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(results_);
+        }
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder addResultsBuilder() {
+        return getResultsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder addResultsBuilder(
+          int index) {
+        return getResultsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of summarizations of transcription.
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.SummarizationPropertyResult results = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder> 
+           getResultsBuilderList() {
+        return getResultsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResultOrBuilder> 
+          getResultsFieldBuilder() {
+        if (resultsBuilder_ == null) {
+          resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResult.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationPropertyResultOrBuilder>(
+                  results_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          results_ = null;
+        }
+        return resultsBuilder_;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.ContentUsage contentUsage_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.ContentUsage, yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.Builder, yandex.cloud.api.ai.stt.v3.Stt.ContentUsageOrBuilder> contentUsageBuilder_;
+      /**
+       * <pre>
+       * A set of statistics describing the number of content tokens used by the completion model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+       * @return Whether the contentUsage field is set.
+       */
+      public boolean hasContentUsage() {
+        return contentUsageBuilder_ != null || contentUsage_ != null;
+      }
+      /**
+       * <pre>
+       * A set of statistics describing the number of content tokens used by the completion model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+       * @return The contentUsage.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.ContentUsage getContentUsage() {
+        if (contentUsageBuilder_ == null) {
+          return contentUsage_ == null ? yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.getDefaultInstance() : contentUsage_;
+        } else {
+          return contentUsageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * A set of statistics describing the number of content tokens used by the completion model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+       */
+      public Builder setContentUsage(yandex.cloud.api.ai.stt.v3.Stt.ContentUsage value) {
+        if (contentUsageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contentUsage_ = value;
+          onChanged();
+        } else {
+          contentUsageBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of statistics describing the number of content tokens used by the completion model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+       */
+      public Builder setContentUsage(
+          yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.Builder builderForValue) {
+        if (contentUsageBuilder_ == null) {
+          contentUsage_ = builderForValue.build();
+          onChanged();
+        } else {
+          contentUsageBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of statistics describing the number of content tokens used by the completion model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+       */
+      public Builder mergeContentUsage(yandex.cloud.api.ai.stt.v3.Stt.ContentUsage value) {
+        if (contentUsageBuilder_ == null) {
+          if (contentUsage_ != null) {
+            contentUsage_ =
+              yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.newBuilder(contentUsage_).mergeFrom(value).buildPartial();
+          } else {
+            contentUsage_ = value;
+          }
+          onChanged();
+        } else {
+          contentUsageBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of statistics describing the number of content tokens used by the completion model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+       */
+      public Builder clearContentUsage() {
+        if (contentUsageBuilder_ == null) {
+          contentUsage_ = null;
+          onChanged();
+        } else {
+          contentUsage_ = null;
+          contentUsageBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of statistics describing the number of content tokens used by the completion model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.Builder getContentUsageBuilder() {
+        
+        onChanged();
+        return getContentUsageFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A set of statistics describing the number of content tokens used by the completion model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.ContentUsageOrBuilder getContentUsageOrBuilder() {
+        if (contentUsageBuilder_ != null) {
+          return contentUsageBuilder_.getMessageOrBuilder();
+        } else {
+          return contentUsage_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.getDefaultInstance() : contentUsage_;
+        }
+      }
+      /**
+       * <pre>
+       * A set of statistics describing the number of content tokens used by the completion model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ContentUsage content_usage = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.ContentUsage, yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.Builder, yandex.cloud.api.ai.stt.v3.Stt.ContentUsageOrBuilder> 
+          getContentUsageFieldBuilder() {
+        if (contentUsageBuilder_ == null) {
+          contentUsageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.ContentUsage, yandex.cloud.api.ai.stt.v3.Stt.ContentUsage.Builder, yandex.cloud.api.ai.stt.v3.Stt.ContentUsageOrBuilder>(
+                  getContentUsage(),
+                  getParentForChildren(),
+                  isClean());
+          contentUsage_ = null;
+        }
+        return contentUsageBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.Summarization)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.Summarization)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.Summarization DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.Summarization();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.Summarization getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Summarization>
+        PARSER = new com.google.protobuf.AbstractParser<Summarization>() {
+      @java.lang.Override
+      public Summarization parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Summarization(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Summarization> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Summarization> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.Summarization getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface StreamingResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.StreamingResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -41206,6 +47124,33 @@ public final class Stt {
 
     /**
      * <pre>
+     * Summary
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+     * @return Whether the summarization field is set.
+     */
+    boolean hasSummarization();
+    /**
+     * <pre>
+     * Summary
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+     * @return The summarization.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.Summarization getSummarization();
+    /**
+     * <pre>
+     * Summary
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SummarizationOrBuilder getSummarizationOrBuilder();
+
+    /**
+     * <pre>
      * Tag for distinguish audio channels.
      * </pre>
      *
@@ -41428,6 +47373,20 @@ public final class Stt {
               eventCase_ = 12;
               break;
             }
+            case 106: {
+              yandex.cloud.api.ai.stt.v3.Stt.Summarization.Builder subBuilder = null;
+              if (eventCase_ == 13) {
+                subBuilder = ((yandex.cloud.api.ai.stt.v3.Stt.Summarization) event_).toBuilder();
+              }
+              event_ =
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.Summarization.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.Summarization) event_);
+                event_ = subBuilder.buildPartial();
+              }
+              eventCase_ = 13;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -41473,6 +47432,7 @@ public final class Stt {
       CLASSIFIER_UPDATE(10),
       SPEAKER_ANALYSIS(11),
       CONVERSATION_ANALYSIS(12),
+      SUMMARIZATION(13),
       EVENT_NOT_SET(0);
       private final int value;
       private EventCase(int value) {
@@ -41498,6 +47458,7 @@ public final class Stt {
           case 10: return CLASSIFIER_UPDATE;
           case 11: return SPEAKER_ANALYSIS;
           case 12: return CONVERSATION_ANALYSIS;
+          case 13: return SUMMARIZATION;
           case 0: return EVENT_NOT_SET;
           default: return null;
         }
@@ -41957,6 +47918,49 @@ public final class Stt {
       return yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.getDefaultInstance();
     }
 
+    public static final int SUMMARIZATION_FIELD_NUMBER = 13;
+    /**
+     * <pre>
+     * Summary
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+     * @return Whether the summarization field is set.
+     */
+    @java.lang.Override
+    public boolean hasSummarization() {
+      return eventCase_ == 13;
+    }
+    /**
+     * <pre>
+     * Summary
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+     * @return The summarization.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.Summarization getSummarization() {
+      if (eventCase_ == 13) {
+         return (yandex.cloud.api.ai.stt.v3.Stt.Summarization) event_;
+      }
+      return yandex.cloud.api.ai.stt.v3.Stt.Summarization.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Summary
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOrBuilder getSummarizationOrBuilder() {
+      if (eventCase_ == 13) {
+         return (yandex.cloud.api.ai.stt.v3.Stt.Summarization) event_;
+      }
+      return yandex.cloud.api.ai.stt.v3.Stt.Summarization.getDefaultInstance();
+    }
+
     public static final int CHANNEL_TAG_FIELD_NUMBER = 9;
     private volatile java.lang.Object channelTag_;
     /**
@@ -42053,6 +48057,9 @@ public final class Stt {
       if (eventCase_ == 12) {
         output.writeMessage(12, (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_);
       }
+      if (eventCase_ == 13) {
+        output.writeMessage(13, (yandex.cloud.api.ai.stt.v3.Stt.Summarization) event_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -42108,6 +48115,10 @@ public final class Stt {
       if (eventCase_ == 12) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_);
+      }
+      if (eventCase_ == 13) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, (yandex.cloud.api.ai.stt.v3.Stt.Summarization) event_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -42172,6 +48183,10 @@ public final class Stt {
           if (!getConversationAnalysis()
               .equals(other.getConversationAnalysis())) return false;
           break;
+        case 13:
+          if (!getSummarization()
+              .equals(other.getSummarization())) return false;
+          break;
         case 0:
         default:
       }
@@ -42231,6 +48246,10 @@ public final class Stt {
         case 12:
           hash = (37 * hash) + CONVERSATION_ANALYSIS_FIELD_NUMBER;
           hash = (53 * hash) + getConversationAnalysis().hashCode();
+          break;
+        case 13:
+          hash = (37 * hash) + SUMMARIZATION_FIELD_NUMBER;
+          hash = (53 * hash) + getSummarization().hashCode();
           break;
         case 0:
         default:
@@ -42486,6 +48505,13 @@ public final class Stt {
             result.event_ = conversationAnalysisBuilder_.build();
           }
         }
+        if (eventCase_ == 13) {
+          if (summarizationBuilder_ == null) {
+            result.event_ = event_;
+          } else {
+            result.event_ = summarizationBuilder_.build();
+          }
+        }
         result.channelTag_ = channelTag_;
         result.eventCase_ = eventCase_;
         onBuilt();
@@ -42580,6 +48606,10 @@ public final class Stt {
           }
           case CONVERSATION_ANALYSIS: {
             mergeConversationAnalysis(other.getConversationAnalysis());
+            break;
+          }
+          case SUMMARIZATION: {
+            mergeSummarization(other.getSummarization());
             break;
           }
           case EVENT_NOT_SET: {
@@ -44426,6 +50456,183 @@ public final class Stt {
         return conversationAnalysisBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.Summarization, yandex.cloud.api.ai.stt.v3.Stt.Summarization.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOrBuilder> summarizationBuilder_;
+      /**
+       * <pre>
+       * Summary
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+       * @return Whether the summarization field is set.
+       */
+      @java.lang.Override
+      public boolean hasSummarization() {
+        return eventCase_ == 13;
+      }
+      /**
+       * <pre>
+       * Summary
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+       * @return The summarization.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.Summarization getSummarization() {
+        if (summarizationBuilder_ == null) {
+          if (eventCase_ == 13) {
+            return (yandex.cloud.api.ai.stt.v3.Stt.Summarization) event_;
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.Summarization.getDefaultInstance();
+        } else {
+          if (eventCase_ == 13) {
+            return summarizationBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.Summarization.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Summary
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+       */
+      public Builder setSummarization(yandex.cloud.api.ai.stt.v3.Stt.Summarization value) {
+        if (summarizationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          summarizationBuilder_.setMessage(value);
+        }
+        eventCase_ = 13;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+       */
+      public Builder setSummarization(
+          yandex.cloud.api.ai.stt.v3.Stt.Summarization.Builder builderForValue) {
+        if (summarizationBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          summarizationBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 13;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+       */
+      public Builder mergeSummarization(yandex.cloud.api.ai.stt.v3.Stt.Summarization value) {
+        if (summarizationBuilder_ == null) {
+          if (eventCase_ == 13 &&
+              event_ != yandex.cloud.api.ai.stt.v3.Stt.Summarization.getDefaultInstance()) {
+            event_ = yandex.cloud.api.ai.stt.v3.Stt.Summarization.newBuilder((yandex.cloud.api.ai.stt.v3.Stt.Summarization) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 13) {
+            summarizationBuilder_.mergeFrom(value);
+          }
+          summarizationBuilder_.setMessage(value);
+        }
+        eventCase_ = 13;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+       */
+      public Builder clearSummarization() {
+        if (summarizationBuilder_ == null) {
+          if (eventCase_ == 13) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 13) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          summarizationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.Summarization.Builder getSummarizationBuilder() {
+        return getSummarizationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Summary
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SummarizationOrBuilder getSummarizationOrBuilder() {
+        if ((eventCase_ == 13) && (summarizationBuilder_ != null)) {
+          return summarizationBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 13) {
+            return (yandex.cloud.api.ai.stt.v3.Stt.Summarization) event_;
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.Summarization.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Summary
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.Summarization summarization = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.Summarization, yandex.cloud.api.ai.stt.v3.Stt.Summarization.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOrBuilder> 
+          getSummarizationFieldBuilder() {
+        if (summarizationBuilder_ == null) {
+          if (!(eventCase_ == 13)) {
+            event_ = yandex.cloud.api.ai.stt.v3.Stt.Summarization.getDefaultInstance();
+          }
+          summarizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.Summarization, yandex.cloud.api.ai.stt.v3.Stt.Summarization.Builder, yandex.cloud.api.ai.stt.v3.Stt.SummarizationOrBuilder>(
+                  (yandex.cloud.api.ai.stt.v3.Stt.Summarization) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 13;
+        onChanged();;
+        return summarizationBuilder_;
+      }
+
       private java.lang.Object channelTag_ = "";
       /**
        * <pre>
@@ -45991,6 +52198,26 @@ public final class Stt {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_stt_v3_LanguageRestrictionOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_JsonSchema_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_JsonSchema_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_SummarizationProperty_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_SummarizationProperty_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_SummarizationOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_SummarizationOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_SummarizationPropertyResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_SummarizationPropertyResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_stt_v3_RecognitionModelOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -46126,6 +52353,16 @@ public final class Stt {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_ContentUsage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_ContentUsage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_Summarization_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_Summarization_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_stt_v3_StreamingResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -46150,214 +52387,235 @@ public final class Stt {
   static {
     java.lang.String[] descriptorData = {
       "\n yandex/cloud/ai/stt/v3/stt.proto\022\020spee" +
-      "chkit.stt.v3\"\342\003\n\030TextNormalizationOption" +
-      "s\022X\n\022text_normalization\030\001 \001(\0162<.speechki" +
-      "t.stt.v3.TextNormalizationOptions.TextNo" +
-      "rmalization\022\030\n\020profanity_filter\030\002 \001(\010\022\027\n" +
-      "\017literature_text\030\003 \001(\010\022]\n\025phone_formatti" +
-      "ng_mode\030\004 \001(\0162>.speechkit.stt.v3.TextNor" +
-      "malizationOptions.PhoneFormattingMode\"x\n" +
-      "\021TextNormalization\022\"\n\036TEXT_NORMALIZATION" +
-      "_UNSPECIFIED\020\000\022\036\n\032TEXT_NORMALIZATION_ENA" +
-      "BLED\020\001\022\037\n\033TEXT_NORMALIZATION_DISABLED\020\002\"" +
-      "`\n\023PhoneFormattingMode\022%\n!PHONE_FORMATTI" +
-      "NG_MODE_UNSPECIFIED\020\000\022\"\n\036PHONE_FORMATTIN" +
-      "G_MODE_DISABLED\020\001\"\316\001\n\024DefaultEouClassifi" +
-      "er\022C\n\004type\030\001 \001(\01625.speechkit.stt.v3.Defa" +
-      "ultEouClassifier.EouSensitivity\022\'\n\037max_p" +
-      "ause_between_words_hint_ms\030\002 \001(\003\"H\n\016EouS" +
-      "ensitivity\022\037\n\033EOU_SENSITIVITY_UNSPECIFIE" +
-      "D\020\000\022\013\n\007DEFAULT\020\001\022\010\n\004HIGH\020\002\"\027\n\025ExternalEo" +
-      "uClassifier\"\262\001\n\024EouClassifierOptions\022D\n\022" +
-      "default_classifier\030\001 \001(\0132&.speechkit.stt" +
-      ".v3.DefaultEouClassifierH\000\022F\n\023external_c" +
-      "lassifier\030\002 \001(\0132\'.speechkit.stt.v3.Exter" +
-      "nalEouClassifierH\000B\014\n\nClassifier\"\323\001\n\025Rec" +
-      "ognitionClassifier\022\022\n\nclassifier\030\001 \001(\t\022E" +
-      "\n\010triggers\030\002 \003(\01623.speechkit.stt.v3.Reco" +
-      "gnitionClassifier.TriggerType\"_\n\013Trigger" +
-      "Type\022 \n\030TRIGGER_TYPE_UNSPECIFIED\020\000\032\002\010\001\022\020" +
-      "\n\014ON_UTTERANCE\020\001\022\014\n\010ON_FINAL\020\002\022\016\n\nON_PAR" +
-      "TIAL\020\003\"\\\n\034RecognitionClassifierOptions\022<" +
-      "\n\013classifiers\030\001 \003(\0132\'.speechkit.stt.v3.R" +
-      "ecognitionClassifier\"\210\001\n\025SpeechAnalysisO" +
-      "ptions\022\037\n\027enable_speaker_analysis\030\001 \001(\010\022" +
-      "$\n\034enable_conversation_analysis\030\002 \001(\010\022(\n" +
-      " descriptive_statistics_quantiles\030\003 \003(\001\"" +
-      "\307\001\n\010RawAudio\022@\n\016audio_encoding\030\001 \001(\0162(.s" +
-      "peechkit.stt.v3.RawAudio.AudioEncoding\022\031" +
-      "\n\021sample_rate_hertz\030\002 \001(\003\022\033\n\023audio_chann" +
-      "el_count\030\003 \001(\003\"A\n\rAudioEncoding\022\036\n\032AUDIO" +
-      "_ENCODING_UNSPECIFIED\020\000\022\020\n\014LINEAR16_PCM\020" +
-      "\001\"\277\001\n\016ContainerAudio\022Q\n\024container_audio_" +
-      "type\030\001 \001(\01623.speechkit.stt.v3.ContainerA" +
-      "udio.ContainerAudioType\"Z\n\022ContainerAudi" +
-      "oType\022$\n CONTAINER_AUDIO_TYPE_UNSPECIFIE" +
-      "D\020\000\022\007\n\003WAV\020\001\022\014\n\010OGG_OPUS\020\002\022\007\n\003MP3\020\003\"\221\001\n\022" +
-      "AudioFormatOptions\022/\n\traw_audio\030\001 \001(\0132\032." +
-      "speechkit.stt.v3.RawAudioH\000\022;\n\017container" +
-      "_audio\030\002 \001(\0132 .speechkit.stt.v3.Containe" +
-      "rAudioH\000B\r\n\013AudioFormat\"\367\001\n\032LanguageRest" +
-      "rictionOptions\022^\n\020restriction_type\030\001 \001(\016" +
-      "2D.speechkit.stt.v3.LanguageRestrictionO" +
-      "ptions.LanguageRestrictionType\022\025\n\rlangua" +
-      "ge_code\030\002 \003(\t\"b\n\027LanguageRestrictionType" +
-      "\022)\n%LANGUAGE_RESTRICTION_TYPE_UNSPECIFIE" +
-      "D\020\000\022\r\n\tWHITELIST\020\001\022\r\n\tBLACKLIST\020\002\"\262\003\n\027Re" +
-      "cognitionModelOptions\022\r\n\005model\030\001 \001(\t\022:\n\014" +
-      "audio_format\030\002 \001(\0132$.speechkit.stt.v3.Au" +
-      "dioFormatOptions\022F\n\022text_normalization\030\003" +
-      " \001(\0132*.speechkit.stt.v3.TextNormalizatio" +
-      "nOptions\022J\n\024language_restriction\030\004 \001(\0132," +
-      ".speechkit.stt.v3.LanguageRestrictionOpt" +
-      "ions\022\\\n\025audio_processing_type\030\005 \001(\0162=.sp" +
-      "eechkit.stt.v3.RecognitionModelOptions.A" +
-      "udioProcessingType\"Z\n\023AudioProcessingTyp" +
-      "e\022%\n!AUDIO_PROCESSING_TYPE_UNSPECIFIED\020\000" +
-      "\022\r\n\tREAL_TIME\020\001\022\r\n\tFULL_DATA\020\002\"\336\001\n\026Speak" +
-      "erLabelingOptions\022R\n\020speaker_labeling\030\001 " +
-      "\001(\01628.speechkit.stt.v3.SpeakerLabelingOp" +
-      "tions.SpeakerLabeling\"p\n\017SpeakerLabeling" +
-      "\022 \n\034SPEAKER_LABELING_UNSPECIFIED\020\000\022\034\n\030SP" +
-      "EAKER_LABELING_ENABLED\020\001\022\035\n\031SPEAKER_LABE" +
-      "LING_DISABLED\020\002\"\356\002\n\020StreamingOptions\022D\n\021" +
-      "recognition_model\030\001 \001(\0132).speechkit.stt." +
-      "v3.RecognitionModelOptions\022>\n\016eou_classi" +
-      "fier\030\002 \001(\0132&.speechkit.stt.v3.EouClassif" +
-      "ierOptions\022N\n\026recognition_classifier\030\003 \001" +
-      "(\0132..speechkit.stt.v3.RecognitionClassif" +
-      "ierOptions\022@\n\017speech_analysis\030\004 \001(\0132\'.sp" +
-      "eechkit.stt.v3.SpeechAnalysisOptions\022B\n\020" +
-      "speaker_labeling\030\005 \001(\0132(.speechkit.stt.v" +
-      "3.SpeakerLabelingOptions\"\032\n\nAudioChunk\022\014" +
-      "\n\004data\030\001 \001(\014\"#\n\014SilenceChunk\022\023\n\013duration" +
-      "_ms\030\001 \001(\003\"\005\n\003Eou\"\350\001\n\020StreamingRequest\022=\n" +
-      "\017session_options\030\001 \001(\0132\".speechkit.stt.v" +
-      "3.StreamingOptionsH\000\022-\n\005chunk\030\002 \001(\0132\034.sp" +
-      "eechkit.stt.v3.AudioChunkH\000\0227\n\rsilence_c" +
-      "hunk\030\003 \001(\0132\036.speechkit.stt.v3.SilenceChu" +
-      "nkH\000\022$\n\003eou\030\004 \001(\0132\025.speechkit.stt.v3.Eou" +
-      "H\000B\007\n\005Event\"\343\002\n\024RecognizeFileRequest\022\021\n\007" +
-      "content\030\001 \001(\014H\000\022\r\n\003uri\030\002 \001(\tH\000\022D\n\021recogn" +
-      "ition_model\030\003 \001(\0132).speechkit.stt.v3.Rec" +
-      "ognitionModelOptions\022N\n\026recognition_clas" +
-      "sifier\030\004 \001(\0132..speechkit.stt.v3.Recognit" +
-      "ionClassifierOptions\022@\n\017speech_analysis\030" +
-      "\005 \001(\0132\'.speechkit.stt.v3.SpeechAnalysisO" +
-      "ptions\022B\n\020speaker_labeling\030\006 \001(\0132(.speec" +
-      "hkit.stt.v3.SpeakerLabelingOptionsB\r\n\013Au" +
-      "dioSource\"@\n\004Word\022\014\n\004text\030\001 \001(\t\022\025\n\rstart" +
-      "_time_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"@\n\022L" +
-      "anguageEstimation\022\025\n\rlanguage_code\030\001 \001(\t" +
-      "\022\023\n\013probability\030\002 \001(\001\"\273\001\n\013Alternative\022%\n" +
-      "\005words\030\001 \003(\0132\026.speechkit.stt.v3.Word\022\014\n\004" +
-      "text\030\002 \001(\t\022\025\n\rstart_time_ms\030\003 \001(\003\022\023\n\013end" +
-      "_time_ms\030\004 \001(\003\022\022\n\nconfidence\030\005 \001(\001\0227\n\tla" +
-      "nguages\030\006 \003(\0132$.speechkit.stt.v3.Languag" +
-      "eEstimation\"\034\n\tEouUpdate\022\017\n\007time_ms\030\002 \001(" +
-      "\003\"a\n\021AlternativeUpdate\0223\n\014alternatives\030\001" +
-      " \003(\0132\035.speechkit.stt.v3.Alternative\022\027\n\013c" +
-      "hannel_tag\030\002 \001(\tB\002\030\001\"\231\001\n\014AudioCursors\022\030\n" +
-      "\020received_data_ms\030\001 \001(\003\022\025\n\rreset_time_ms" +
-      "\030\002 \001(\003\022\027\n\017partial_time_ms\030\003 \001(\003\022\025\n\rfinal" +
-      "_time_ms\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022\023\n\013e" +
-      "ou_time_ms\030\006 \001(\003\"n\n\017FinalRefinement\022\023\n\013f" +
-      "inal_index\030\001 \001(\003\022>\n\017normalized_text\030\002 \001(" +
+      "chkit.stt.v3\032\034google/protobuf/struct.pro" +
+      "to\"\342\003\n\030TextNormalizationOptions\022X\n\022text_" +
+      "normalization\030\001 \001(\0162<.speechkit.stt.v3.T" +
+      "extNormalizationOptions.TextNormalizatio" +
+      "n\022\030\n\020profanity_filter\030\002 \001(\010\022\027\n\017literatur" +
+      "e_text\030\003 \001(\010\022]\n\025phone_formatting_mode\030\004 " +
+      "\001(\0162>.speechkit.stt.v3.TextNormalization" +
+      "Options.PhoneFormattingMode\"x\n\021TextNorma" +
+      "lization\022\"\n\036TEXT_NORMALIZATION_UNSPECIFI" +
+      "ED\020\000\022\036\n\032TEXT_NORMALIZATION_ENABLED\020\001\022\037\n\033" +
+      "TEXT_NORMALIZATION_DISABLED\020\002\"`\n\023PhoneFo" +
+      "rmattingMode\022%\n!PHONE_FORMATTING_MODE_UN" +
+      "SPECIFIED\020\000\022\"\n\036PHONE_FORMATTING_MODE_DIS" +
+      "ABLED\020\001\"\316\001\n\024DefaultEouClassifier\022C\n\004type" +
+      "\030\001 \001(\01625.speechkit.stt.v3.DefaultEouClas" +
+      "sifier.EouSensitivity\022\'\n\037max_pause_betwe" +
+      "en_words_hint_ms\030\002 \001(\003\"H\n\016EouSensitivity" +
+      "\022\037\n\033EOU_SENSITIVITY_UNSPECIFIED\020\000\022\013\n\007DEF" +
+      "AULT\020\001\022\010\n\004HIGH\020\002\"\027\n\025ExternalEouClassifie" +
+      "r\"\262\001\n\024EouClassifierOptions\022D\n\022default_cl" +
+      "assifier\030\001 \001(\0132&.speechkit.stt.v3.Defaul" +
+      "tEouClassifierH\000\022F\n\023external_classifier\030" +
+      "\002 \001(\0132\'.speechkit.stt.v3.ExternalEouClas" +
+      "sifierH\000B\014\n\nClassifier\"\323\001\n\025RecognitionCl" +
+      "assifier\022\022\n\nclassifier\030\001 \001(\t\022E\n\010triggers" +
+      "\030\002 \003(\01623.speechkit.stt.v3.RecognitionCla" +
+      "ssifier.TriggerType\"_\n\013TriggerType\022 \n\030TR" +
+      "IGGER_TYPE_UNSPECIFIED\020\000\032\002\010\001\022\020\n\014ON_UTTER" +
+      "ANCE\020\001\022\014\n\010ON_FINAL\020\002\022\016\n\nON_PARTIAL\020\003\"\\\n\034" +
+      "RecognitionClassifierOptions\022<\n\013classifi" +
+      "ers\030\001 \003(\0132\'.speechkit.stt.v3.Recognition" +
+      "Classifier\"\210\001\n\025SpeechAnalysisOptions\022\037\n\027" +
+      "enable_speaker_analysis\030\001 \001(\010\022$\n\034enable_" +
+      "conversation_analysis\030\002 \001(\010\022(\n descripti" +
+      "ve_statistics_quantiles\030\003 \003(\001\"\307\001\n\010RawAud" +
+      "io\022@\n\016audio_encoding\030\001 \001(\0162(.speechkit.s" +
+      "tt.v3.RawAudio.AudioEncoding\022\031\n\021sample_r" +
+      "ate_hertz\030\002 \001(\003\022\033\n\023audio_channel_count\030\003" +
+      " \001(\003\"A\n\rAudioEncoding\022\036\n\032AUDIO_ENCODING_" +
+      "UNSPECIFIED\020\000\022\020\n\014LINEAR16_PCM\020\001\"\277\001\n\016Cont" +
+      "ainerAudio\022Q\n\024container_audio_type\030\001 \001(\016" +
+      "23.speechkit.stt.v3.ContainerAudio.Conta" +
+      "inerAudioType\"Z\n\022ContainerAudioType\022$\n C" +
+      "ONTAINER_AUDIO_TYPE_UNSPECIFIED\020\000\022\007\n\003WAV" +
+      "\020\001\022\014\n\010OGG_OPUS\020\002\022\007\n\003MP3\020\003\"\221\001\n\022AudioForma" +
+      "tOptions\022/\n\traw_audio\030\001 \001(\0132\032.speechkit." +
+      "stt.v3.RawAudioH\000\022;\n\017container_audio\030\002 \001" +
+      "(\0132 .speechkit.stt.v3.ContainerAudioH\000B\r" +
+      "\n\013AudioFormat\"\367\001\n\032LanguageRestrictionOpt" +
+      "ions\022^\n\020restriction_type\030\001 \001(\0162D.speechk" +
+      "it.stt.v3.LanguageRestrictionOptions.Lan" +
+      "guageRestrictionType\022\025\n\rlanguage_code\030\002 " +
+      "\003(\t\"b\n\027LanguageRestrictionType\022)\n%LANGUA" +
+      "GE_RESTRICTION_TYPE_UNSPECIFIED\020\000\022\r\n\tWHI" +
+      "TELIST\020\001\022\r\n\tBLACKLIST\020\002\"5\n\nJsonSchema\022\'\n" +
+      "\006schema\030\001 \001(\0132\027.google.protobuf.Struct\"\212" +
+      "\001\n\025SummarizationProperty\022\023\n\013instruction\030" +
+      "\001 \001(\t\022\025\n\013json_object\030\002 \001(\010H\000\0223\n\013json_sch" +
+      "ema\030\003 \001(\0132\034.speechkit.stt.v3.JsonSchemaH" +
+      "\000B\020\n\016ResponseFormat\"f\n\024SummarizationOpti" +
+      "ons\022\021\n\tmodel_uri\030\001 \001(\t\022;\n\nproperties\030\002 \003" +
+      "(\0132\'.speechkit.stt.v3.SummarizationPrope" +
+      "rty\"/\n\033SummarizationPropertyResult\022\020\n\010re" +
+      "sponse\030\001 \001(\t\"\262\003\n\027RecognitionModelOptions" +
+      "\022\r\n\005model\030\001 \001(\t\022:\n\014audio_format\030\002 \001(\0132$." +
+      "speechkit.stt.v3.AudioFormatOptions\022F\n\022t" +
+      "ext_normalization\030\003 \001(\0132*.speechkit.stt." +
+      "v3.TextNormalizationOptions\022J\n\024language_" +
+      "restriction\030\004 \001(\0132,.speechkit.stt.v3.Lan" +
+      "guageRestrictionOptions\022\\\n\025audio_process" +
+      "ing_type\030\005 \001(\0162=.speechkit.stt.v3.Recogn" +
+      "itionModelOptions.AudioProcessingType\"Z\n" +
+      "\023AudioProcessingType\022%\n!AUDIO_PROCESSING" +
+      "_TYPE_UNSPECIFIED\020\000\022\r\n\tREAL_TIME\020\001\022\r\n\tFU" +
+      "LL_DATA\020\002\"\336\001\n\026SpeakerLabelingOptions\022R\n\020" +
+      "speaker_labeling\030\001 \001(\01628.speechkit.stt.v" +
+      "3.SpeakerLabelingOptions.SpeakerLabeling" +
+      "\"p\n\017SpeakerLabeling\022 \n\034SPEAKER_LABELING_" +
+      "UNSPECIFIED\020\000\022\034\n\030SPEAKER_LABELING_ENABLE" +
+      "D\020\001\022\035\n\031SPEAKER_LABELING_DISABLED\020\002\"\255\003\n\020S" +
+      "treamingOptions\022D\n\021recognition_model\030\001 \001" +
+      "(\0132).speechkit.stt.v3.RecognitionModelOp" +
+      "tions\022>\n\016eou_classifier\030\002 \001(\0132&.speechki" +
+      "t.stt.v3.EouClassifierOptions\022N\n\026recogni" +
+      "tion_classifier\030\003 \001(\0132..speechkit.stt.v3" +
+      ".RecognitionClassifierOptions\022@\n\017speech_" +
+      "analysis\030\004 \001(\0132\'.speechkit.stt.v3.Speech" +
+      "AnalysisOptions\022B\n\020speaker_labeling\030\005 \001(" +
+      "\0132(.speechkit.stt.v3.SpeakerLabelingOpti" +
+      "ons\022=\n\rsummarization\030\006 \001(\0132&.speechkit.s" +
+      "tt.v3.SummarizationOptions\"\032\n\nAudioChunk" +
+      "\022\014\n\004data\030\001 \001(\014\"#\n\014SilenceChunk\022\023\n\013durati" +
+      "on_ms\030\001 \001(\003\"\005\n\003Eou\"\350\001\n\020StreamingRequest\022" +
+      "=\n\017session_options\030\001 \001(\0132\".speechkit.stt" +
+      ".v3.StreamingOptionsH\000\022-\n\005chunk\030\002 \001(\0132\034." +
+      "speechkit.stt.v3.AudioChunkH\000\0227\n\rsilence" +
+      "_chunk\030\003 \001(\0132\036.speechkit.stt.v3.SilenceC" +
+      "hunkH\000\022$\n\003eou\030\004 \001(\0132\025.speechkit.stt.v3.E" +
+      "ouH\000B\007\n\005Event\"\242\003\n\024RecognizeFileRequest\022\021" +
+      "\n\007content\030\001 \001(\014H\000\022\r\n\003uri\030\002 \001(\tH\000\022D\n\021reco" +
+      "gnition_model\030\003 \001(\0132).speechkit.stt.v3.R" +
+      "ecognitionModelOptions\022N\n\026recognition_cl" +
+      "assifier\030\004 \001(\0132..speechkit.stt.v3.Recogn" +
+      "itionClassifierOptions\022@\n\017speech_analysi" +
+      "s\030\005 \001(\0132\'.speechkit.stt.v3.SpeechAnalysi" +
+      "sOptions\022B\n\020speaker_labeling\030\006 \001(\0132(.spe" +
+      "echkit.stt.v3.SpeakerLabelingOptions\022=\n\r" +
+      "summarization\030\007 \001(\0132&.speechkit.stt.v3.S" +
+      "ummarizationOptionsB\r\n\013AudioSource\"@\n\004Wo" +
+      "rd\022\014\n\004text\030\001 \001(\t\022\025\n\rstart_time_ms\030\002 \001(\003\022" +
+      "\023\n\013end_time_ms\030\003 \001(\003\"@\n\022LanguageEstimati" +
+      "on\022\025\n\rlanguage_code\030\001 \001(\t\022\023\n\013probability" +
+      "\030\002 \001(\001\"\273\001\n\013Alternative\022%\n\005words\030\001 \003(\0132\026." +
+      "speechkit.stt.v3.Word\022\014\n\004text\030\002 \001(\t\022\025\n\rs" +
+      "tart_time_ms\030\003 \001(\003\022\023\n\013end_time_ms\030\004 \001(\003\022" +
+      "\022\n\nconfidence\030\005 \001(\001\0227\n\tlanguages\030\006 \003(\0132$" +
+      ".speechkit.stt.v3.LanguageEstimation\"\034\n\t" +
+      "EouUpdate\022\017\n\007time_ms\030\002 \001(\003\"a\n\021Alternativ" +
+      "eUpdate\0223\n\014alternatives\030\001 \003(\0132\035.speechki" +
+      "t.stt.v3.Alternative\022\027\n\013channel_tag\030\002 \001(" +
+      "\tB\002\030\001\"\231\001\n\014AudioCursors\022\030\n\020received_data_" +
+      "ms\030\001 \001(\003\022\025\n\rreset_time_ms\030\002 \001(\003\022\027\n\017parti" +
+      "al_time_ms\030\003 \001(\003\022\025\n\rfinal_time_ms\030\004 \001(\003\022" +
+      "\023\n\013final_index\030\005 \001(\003\022\023\n\013eou_time_ms\030\006 \001(" +
+      "\003\"n\n\017FinalRefinement\022\023\n\013final_index\030\001 \001(" +
+      "\003\022>\n\017normalized_text\030\002 \001(\0132#.speechkit.s" +
+      "tt.v3.AlternativeUpdateH\000B\006\n\004Type\"L\n\nSta" +
+      "tusCode\022-\n\tcode_type\030\001 \001(\0162\032.speechkit.s" +
+      "tt.v3.CodeType\022\017\n\007message\030\002 \001(\t\"4\n\013Sessi" +
+      "onUuid\022\014\n\004uuid\030\001 \001(\t\022\027\n\017user_request_id\030" +
+      "\002 \001(\t\"K\n\017PhraseHighlight\022\014\n\004text\030\001 \001(\t\022\025" +
+      "\n\rstart_time_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001" +
+      "(\003\"?\n\032RecognitionClassifierLabel\022\r\n\005labe" +
+      "l\030\001 \001(\t\022\022\n\nconfidence\030\002 \001(\001\"\246\001\n\033Recognit" +
+      "ionClassifierResult\022\022\n\nclassifier\030\001 \001(\t\022" +
+      "5\n\nhighlights\030\002 \003(\0132!.speechkit.stt.v3.P" +
+      "hraseHighlight\022<\n\006labels\030\003 \003(\0132,.speechk" +
+      "it.stt.v3.RecognitionClassifierLabel\"\307\002\n" +
+      "\033RecognitionClassifierUpdate\022M\n\013window_t" +
+      "ype\030\001 \001(\01628.speechkit.stt.v3.Recognition" +
+      "ClassifierUpdate.WindowType\022\025\n\rstart_tim" +
+      "e_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\022H\n\021class" +
+      "ifier_result\030\004 \001(\0132-.speechkit.stt.v3.Re" +
+      "cognitionClassifierResult\"c\n\nWindowType\022" +
+      "\037\n\027WINDOW_TYPE_UNSPECIFIED\020\000\032\002\010\001\022\022\n\016LAST" +
+      "_UTTERANCE\020\001\022\016\n\nLAST_FINAL\020\002\022\020\n\014LAST_PAR" +
+      "TIAL\020\003\"\273\001\n\025DescriptiveStatistics\022\013\n\003min\030" +
+      "\001 \001(\001\022\013\n\003max\030\002 \001(\001\022\014\n\004mean\030\003 \001(\001\022\013\n\003std\030" +
+      "\004 \001(\001\022C\n\tquantiles\030\005 \003(\01320.speechkit.stt" +
+      ".v3.DescriptiveStatistics.Quantile\032(\n\010Qu" +
+      "antile\022\r\n\005level\030\001 \001(\001\022\r\n\005value\030\002 \001(\001\"D\n\026" +
+      "AudioSegmentBoundaries\022\025\n\rstart_time_ms\030" +
+      "\001 \001(\003\022\023\n\013end_time_ms\030\002 \001(\003\"\207\006\n\017SpeakerAn" +
+      "alysis\022\023\n\013speaker_tag\030\001 \001(\t\022A\n\013window_ty" +
+      "pe\030\002 \001(\0162,.speechkit.stt.v3.SpeakerAnaly" +
+      "sis.WindowType\022C\n\021speech_boundaries\030\003 \001(" +
+      "\0132(.speechkit.stt.v3.AudioSegmentBoundar" +
+      "ies\022\027\n\017total_speech_ms\030\004 \001(\003\022\024\n\014speech_r" +
+      "atio\030\005 \001(\001\022\030\n\020total_silence_ms\030\006 \001(\003\022\025\n\r" +
+      "silence_ratio\030\007 \001(\001\022\023\n\013words_count\030\010 \001(\003" +
+      "\022\025\n\rletters_count\030\t \001(\003\022A\n\020words_per_sec" +
+      "ond\030\n \001(\0132\'.speechkit.stt.v3.Descriptive" +
+      "Statistics\022C\n\022letters_per_second\030\013 \001(\0132\'" +
+      ".speechkit.stt.v3.DescriptiveStatistics\022" +
+      "D\n\023words_per_utterance\030\014 \001(\0132\'.speechkit" +
+      ".stt.v3.DescriptiveStatistics\022F\n\025letters" +
+      "_per_utterance\030\r \001(\0132\'.speechkit.stt.v3." +
+      "DescriptiveStatistics\022\027\n\017utterance_count" +
+      "\030\016 \001(\003\022N\n\035utterance_duration_estimation\030" +
+      "\017 \001(\0132\'.speechkit.stt.v3.DescriptiveStat" +
+      "istics\"L\n\nWindowType\022\037\n\027WINDOW_TYPE_UNSP" +
+      "ECIFIED\020\000\032\002\010\001\022\t\n\005TOTAL\020\001\022\022\n\016LAST_UTTERAN" +
+      "CE\020\002\"\205\006\n\024ConversationAnalysis\022I\n\027convers" +
+      "ation_boundaries\030\001 \001(\0132(.speechkit.stt.v" +
+      "3.AudioSegmentBoundaries\022.\n&total_simult" +
+      "aneous_silence_duration_ms\030\002 \001(\003\022(\n tota" +
+      "l_simultaneous_silence_ratio\030\003 \001(\001\022Y\n(si" +
+      "multaneous_silence_duration_estimation\030\004" +
+      " \001(\0132\'.speechkit.stt.v3.DescriptiveStati" +
+      "stics\022-\n%total_simultaneous_speech_durat" +
+      "ion_ms\030\005 \001(\003\022\'\n\037total_simultaneous_speec" +
+      "h_ratio\030\006 \001(\001\022X\n\'simultaneous_speech_dur" +
+      "ation_estimation\030\007 \001(\0132\'.speechkit.stt.v" +
+      "3.DescriptiveStatistics\022W\n\022speaker_inter" +
+      "rupts\030\010 \003(\0132;.speechkit.stt.v3.Conversat" +
+      "ionAnalysis.InterruptsEvaluation\022 \n\030tota" +
+      "l_speech_duration_ms\030\t \001(\003\022\032\n\022total_spee" +
+      "ch_ratio\030\n \001(\001\032\243\001\n\024InterruptsEvaluation\022" +
+      "\023\n\013speaker_tag\030\001 \001(\t\022\030\n\020interrupts_count" +
+      "\030\002 \001(\003\022\036\n\026interrupts_duration_ms\030\003 \001(\003\022<" +
+      "\n\ninterrupts\030\004 \003(\0132(.speechkit.stt.v3.Au" +
+      "dioSegmentBoundaries\"Z\n\014ContentUsage\022\031\n\021" +
+      "input_text_tokens\030\001 \001(\003\022\031\n\021completion_to" +
+      "kens\030\002 \001(\003\022\024\n\014total_tokens\030\003 \001(\003\"\206\001\n\rSum" +
+      "marization\022>\n\007results\030\001 \003(\0132-.speechkit." +
+      "stt.v3.SummarizationPropertyResult\0225\n\rco" +
+      "ntent_usage\030\002 \001(\0132\036.speechkit.stt.v3.Con" +
+      "tentUsage\"\337\005\n\021StreamingResponse\0223\n\014sessi" +
+      "on_uuid\030\001 \001(\0132\035.speechkit.stt.v3.Session" +
+      "Uuid\0225\n\raudio_cursors\030\002 \001(\0132\036.speechkit." +
+      "stt.v3.AudioCursors\022\035\n\025response_wall_tim" +
+      "e_ms\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#.speechkit." +
+      "stt.v3.AlternativeUpdateH\000\0224\n\005final\030\005 \001(" +
       "\0132#.speechkit.stt.v3.AlternativeUpdateH\000" +
-      "B\006\n\004Type\"L\n\nStatusCode\022-\n\tcode_type\030\001 \001(" +
-      "\0162\032.speechkit.stt.v3.CodeType\022\017\n\007message" +
-      "\030\002 \001(\t\"4\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022\027\n\017u" +
-      "ser_request_id\030\002 \001(\t\"K\n\017PhraseHighlight\022" +
-      "\014\n\004text\030\001 \001(\t\022\025\n\rstart_time_ms\030\002 \001(\003\022\023\n\013" +
-      "end_time_ms\030\003 \001(\003\"?\n\032RecognitionClassifi" +
-      "erLabel\022\r\n\005label\030\001 \001(\t\022\022\n\nconfidence\030\002 \001" +
-      "(\001\"\246\001\n\033RecognitionClassifierResult\022\022\n\ncl" +
-      "assifier\030\001 \001(\t\0225\n\nhighlights\030\002 \003(\0132!.spe" +
-      "echkit.stt.v3.PhraseHighlight\022<\n\006labels\030" +
-      "\003 \003(\0132,.speechkit.stt.v3.RecognitionClas" +
-      "sifierLabel\"\307\002\n\033RecognitionClassifierUpd" +
-      "ate\022M\n\013window_type\030\001 \001(\01628.speechkit.stt" +
-      ".v3.RecognitionClassifierUpdate.WindowTy" +
-      "pe\022\025\n\rstart_time_ms\030\002 \001(\003\022\023\n\013end_time_ms" +
-      "\030\003 \001(\003\022H\n\021classifier_result\030\004 \001(\0132-.spee" +
-      "chkit.stt.v3.RecognitionClassifierResult" +
-      "\"c\n\nWindowType\022\037\n\027WINDOW_TYPE_UNSPECIFIE" +
-      "D\020\000\032\002\010\001\022\022\n\016LAST_UTTERANCE\020\001\022\016\n\nLAST_FINA" +
-      "L\020\002\022\020\n\014LAST_PARTIAL\020\003\"\273\001\n\025DescriptiveSta" +
-      "tistics\022\013\n\003min\030\001 \001(\001\022\013\n\003max\030\002 \001(\001\022\014\n\004mea" +
-      "n\030\003 \001(\001\022\013\n\003std\030\004 \001(\001\022C\n\tquantiles\030\005 \003(\0132" +
-      "0.speechkit.stt.v3.DescriptiveStatistics" +
-      ".Quantile\032(\n\010Quantile\022\r\n\005level\030\001 \001(\001\022\r\n\005" +
-      "value\030\002 \001(\001\"D\n\026AudioSegmentBoundaries\022\025\n" +
-      "\rstart_time_ms\030\001 \001(\003\022\023\n\013end_time_ms\030\002 \001(" +
-      "\003\"\207\006\n\017SpeakerAnalysis\022\023\n\013speaker_tag\030\001 \001" +
-      "(\t\022A\n\013window_type\030\002 \001(\0162,.speechkit.stt." +
-      "v3.SpeakerAnalysis.WindowType\022C\n\021speech_" +
-      "boundaries\030\003 \001(\0132(.speechkit.stt.v3.Audi" +
-      "oSegmentBoundaries\022\027\n\017total_speech_ms\030\004 " +
-      "\001(\003\022\024\n\014speech_ratio\030\005 \001(\001\022\030\n\020total_silen" +
-      "ce_ms\030\006 \001(\003\022\025\n\rsilence_ratio\030\007 \001(\001\022\023\n\013wo" +
-      "rds_count\030\010 \001(\003\022\025\n\rletters_count\030\t \001(\003\022A" +
-      "\n\020words_per_second\030\n \001(\0132\'.speechkit.stt" +
-      ".v3.DescriptiveStatistics\022C\n\022letters_per" +
-      "_second\030\013 \001(\0132\'.speechkit.stt.v3.Descrip" +
-      "tiveStatistics\022D\n\023words_per_utterance\030\014 " +
-      "\001(\0132\'.speechkit.stt.v3.DescriptiveStatis" +
-      "tics\022F\n\025letters_per_utterance\030\r \001(\0132\'.sp" +
-      "eechkit.stt.v3.DescriptiveStatistics\022\027\n\017" +
-      "utterance_count\030\016 \001(\003\022N\n\035utterance_durat" +
-      "ion_estimation\030\017 \001(\0132\'.speechkit.stt.v3." +
-      "DescriptiveStatistics\"L\n\nWindowType\022\037\n\027W" +
-      "INDOW_TYPE_UNSPECIFIED\020\000\032\002\010\001\022\t\n\005TOTAL\020\001\022" +
-      "\022\n\016LAST_UTTERANCE\020\002\"\205\006\n\024ConversationAnal" +
-      "ysis\022I\n\027conversation_boundaries\030\001 \001(\0132(." +
-      "speechkit.stt.v3.AudioSegmentBoundaries\022" +
-      ".\n&total_simultaneous_silence_duration_m" +
-      "s\030\002 \001(\003\022(\n total_simultaneous_silence_ra" +
-      "tio\030\003 \001(\001\022Y\n(simultaneous_silence_durati" +
-      "on_estimation\030\004 \001(\0132\'.speechkit.stt.v3.D" +
-      "escriptiveStatistics\022-\n%total_simultaneo" +
-      "us_speech_duration_ms\030\005 \001(\003\022\'\n\037total_sim" +
-      "ultaneous_speech_ratio\030\006 \001(\001\022X\n\'simultan" +
-      "eous_speech_duration_estimation\030\007 \001(\0132\'." +
-      "speechkit.stt.v3.DescriptiveStatistics\022W" +
-      "\n\022speaker_interrupts\030\010 \003(\0132;.speechkit.s" +
-      "tt.v3.ConversationAnalysis.InterruptsEva" +
-      "luation\022 \n\030total_speech_duration_ms\030\t \001(" +
-      "\003\022\032\n\022total_speech_ratio\030\n \001(\001\032\243\001\n\024Interr" +
-      "uptsEvaluation\022\023\n\013speaker_tag\030\001 \001(\t\022\030\n\020i" +
-      "nterrupts_count\030\002 \001(\003\022\036\n\026interrupts_dura" +
-      "tion_ms\030\003 \001(\003\022<\n\ninterrupts\030\004 \003(\0132(.spee" +
-      "chkit.stt.v3.AudioSegmentBoundaries\"\245\005\n\021" +
-      "StreamingResponse\0223\n\014session_uuid\030\001 \001(\0132" +
-      "\035.speechkit.stt.v3.SessionUuid\0225\n\raudio_" +
-      "cursors\030\002 \001(\0132\036.speechkit.stt.v3.AudioCu" +
-      "rsors\022\035\n\025response_wall_time_ms\030\003 \001(\003\0226\n\007" +
-      "partial\030\004 \001(\0132#.speechkit.stt.v3.Alterna" +
-      "tiveUpdateH\000\0224\n\005final\030\005 \001(\0132#.speechkit." +
-      "stt.v3.AlternativeUpdateH\000\0221\n\neou_update" +
-      "\030\006 \001(\0132\033.speechkit.stt.v3.EouUpdateH\000\022=\n" +
-      "\020final_refinement\030\007 \001(\0132!.speechkit.stt." +
-      "v3.FinalRefinementH\000\0223\n\013status_code\030\010 \001(" +
-      "\0132\034.speechkit.stt.v3.StatusCodeH\000\022J\n\021cla" +
-      "ssifier_update\030\n \001(\0132-.speechkit.stt.v3." +
-      "RecognitionClassifierUpdateH\000\022=\n\020speaker" +
-      "_analysis\030\013 \001(\0132!.speechkit.stt.v3.Speak" +
-      "erAnalysisH\000\022G\n\025conversation_analysis\030\014 " +
-      "\001(\0132&.speechkit.stt.v3.ConversationAnaly" +
-      "sisH\000\022\023\n\013channel_tag\030\t \001(\tB\007\n\005Event\"0\n\030D" +
-      "eleteRecognitionRequest\022\024\n\014operation_id\030" +
-      "\001 \001(\t\"Y\n\025StreamingResponseList\022@\n\023stream" +
-      "ing_responses\030\001 \003(\0132#.speechkit.stt.v3.S" +
-      "treamingResponse*O\n\010CodeType\022\035\n\025CODE_TYP" +
-      "E_UNSPECIFIED\020\000\032\002\010\001\022\013\n\007WORKING\020\001\022\013\n\007WARN" +
-      "ING\020\002\022\n\n\006CLOSED\020\003B\\\n\032yandex.cloud.api.ai" +
-      ".stt.v3Z>github.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/ai/stt/v3;sttb\006proto3"
+      "\0221\n\neou_update\030\006 \001(\0132\033.speechkit.stt.v3." +
+      "EouUpdateH\000\022=\n\020final_refinement\030\007 \001(\0132!." +
+      "speechkit.stt.v3.FinalRefinementH\000\0223\n\013st" +
+      "atus_code\030\010 \001(\0132\034.speechkit.stt.v3.Statu" +
+      "sCodeH\000\022J\n\021classifier_update\030\n \001(\0132-.spe" +
+      "echkit.stt.v3.RecognitionClassifierUpdat" +
+      "eH\000\022=\n\020speaker_analysis\030\013 \001(\0132!.speechki" +
+      "t.stt.v3.SpeakerAnalysisH\000\022G\n\025conversati" +
+      "on_analysis\030\014 \001(\0132&.speechkit.stt.v3.Con" +
+      "versationAnalysisH\000\0228\n\rsummarization\030\r \001" +
+      "(\0132\037.speechkit.stt.v3.SummarizationH\000\022\023\n" +
+      "\013channel_tag\030\t \001(\tB\007\n\005Event\"0\n\030DeleteRec" +
+      "ognitionRequest\022\024\n\014operation_id\030\001 \001(\t\"Y\n" +
+      "\025StreamingResponseList\022@\n\023streaming_resp" +
+      "onses\030\001 \003(\0132#.speechkit.stt.v3.Streaming" +
+      "Response*O\n\010CodeType\022\035\n\025CODE_TYPE_UNSPEC" +
+      "IFIED\020\000\032\002\010\001\022\013\n\007WORKING\020\001\022\013\n\007WARNING\020\002\022\n\n" +
+      "\006CLOSED\020\003B\\\n\032yandex.cloud.api.ai.stt.v3Z" +
+      ">github.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/ai/stt/v3;sttb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.StructProto.getDescriptor(),
         });
     internal_static_speechkit_stt_v3_TextNormalizationOptions_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -46425,134 +52683,158 @@ public final class Stt {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_LanguageRestrictionOptions_descriptor,
         new java.lang.String[] { "RestrictionType", "LanguageCode", });
-    internal_static_speechkit_stt_v3_RecognitionModelOptions_descriptor =
+    internal_static_speechkit_stt_v3_JsonSchema_descriptor =
       getDescriptor().getMessageTypes().get(11);
+    internal_static_speechkit_stt_v3_JsonSchema_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_JsonSchema_descriptor,
+        new java.lang.String[] { "Schema", });
+    internal_static_speechkit_stt_v3_SummarizationProperty_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_speechkit_stt_v3_SummarizationProperty_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_SummarizationProperty_descriptor,
+        new java.lang.String[] { "Instruction", "JsonObject", "JsonSchema", "ResponseFormat", });
+    internal_static_speechkit_stt_v3_SummarizationOptions_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_speechkit_stt_v3_SummarizationOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_SummarizationOptions_descriptor,
+        new java.lang.String[] { "ModelUri", "Properties", });
+    internal_static_speechkit_stt_v3_SummarizationPropertyResult_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_speechkit_stt_v3_SummarizationPropertyResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_SummarizationPropertyResult_descriptor,
+        new java.lang.String[] { "Response", });
+    internal_static_speechkit_stt_v3_RecognitionModelOptions_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_speechkit_stt_v3_RecognitionModelOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionModelOptions_descriptor,
         new java.lang.String[] { "Model", "AudioFormat", "TextNormalization", "LanguageRestriction", "AudioProcessingType", });
     internal_static_speechkit_stt_v3_SpeakerLabelingOptions_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_speechkit_stt_v3_SpeakerLabelingOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SpeakerLabelingOptions_descriptor,
         new java.lang.String[] { "SpeakerLabeling", });
     internal_static_speechkit_stt_v3_StreamingOptions_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_speechkit_stt_v3_StreamingOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingOptions_descriptor,
-        new java.lang.String[] { "RecognitionModel", "EouClassifier", "RecognitionClassifier", "SpeechAnalysis", "SpeakerLabeling", });
+        new java.lang.String[] { "RecognitionModel", "EouClassifier", "RecognitionClassifier", "SpeechAnalysis", "SpeakerLabeling", "Summarization", });
     internal_static_speechkit_stt_v3_AudioChunk_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_speechkit_stt_v3_AudioChunk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioChunk_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_speechkit_stt_v3_SilenceChunk_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_speechkit_stt_v3_SilenceChunk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SilenceChunk_descriptor,
         new java.lang.String[] { "DurationMs", });
     internal_static_speechkit_stt_v3_Eou_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_speechkit_stt_v3_Eou_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Eou_descriptor,
         new java.lang.String[] { });
     internal_static_speechkit_stt_v3_StreamingRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_speechkit_stt_v3_StreamingRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingRequest_descriptor,
         new java.lang.String[] { "SessionOptions", "Chunk", "SilenceChunk", "Eou", "Event", });
     internal_static_speechkit_stt_v3_RecognizeFileRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_speechkit_stt_v3_RecognizeFileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognizeFileRequest_descriptor,
-        new java.lang.String[] { "Content", "Uri", "RecognitionModel", "RecognitionClassifier", "SpeechAnalysis", "SpeakerLabeling", "AudioSource", });
+        new java.lang.String[] { "Content", "Uri", "RecognitionModel", "RecognitionClassifier", "SpeechAnalysis", "SpeakerLabeling", "Summarization", "AudioSource", });
     internal_static_speechkit_stt_v3_Word_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_speechkit_stt_v3_Word_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Word_descriptor,
         new java.lang.String[] { "Text", "StartTimeMs", "EndTimeMs", });
     internal_static_speechkit_stt_v3_LanguageEstimation_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_speechkit_stt_v3_LanguageEstimation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_LanguageEstimation_descriptor,
         new java.lang.String[] { "LanguageCode", "Probability", });
     internal_static_speechkit_stt_v3_Alternative_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_speechkit_stt_v3_Alternative_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Alternative_descriptor,
         new java.lang.String[] { "Words", "Text", "StartTimeMs", "EndTimeMs", "Confidence", "Languages", });
     internal_static_speechkit_stt_v3_EouUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_speechkit_stt_v3_EouUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_EouUpdate_descriptor,
         new java.lang.String[] { "TimeMs", });
     internal_static_speechkit_stt_v3_AlternativeUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_speechkit_stt_v3_AlternativeUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AlternativeUpdate_descriptor,
         new java.lang.String[] { "Alternatives", "ChannelTag", });
     internal_static_speechkit_stt_v3_AudioCursors_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_speechkit_stt_v3_AudioCursors_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioCursors_descriptor,
         new java.lang.String[] { "ReceivedDataMs", "ResetTimeMs", "PartialTimeMs", "FinalTimeMs", "FinalIndex", "EouTimeMs", });
     internal_static_speechkit_stt_v3_FinalRefinement_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_speechkit_stt_v3_FinalRefinement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_FinalRefinement_descriptor,
         new java.lang.String[] { "FinalIndex", "NormalizedText", "Type", });
     internal_static_speechkit_stt_v3_StatusCode_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_speechkit_stt_v3_StatusCode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StatusCode_descriptor,
         new java.lang.String[] { "CodeType", "Message", });
     internal_static_speechkit_stt_v3_SessionUuid_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_speechkit_stt_v3_SessionUuid_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SessionUuid_descriptor,
         new java.lang.String[] { "Uuid", "UserRequestId", });
     internal_static_speechkit_stt_v3_PhraseHighlight_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_speechkit_stt_v3_PhraseHighlight_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_PhraseHighlight_descriptor,
         new java.lang.String[] { "Text", "StartTimeMs", "EndTimeMs", });
     internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_speechkit_stt_v3_RecognitionClassifierLabel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor,
         new java.lang.String[] { "Label", "Confidence", });
     internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_speechkit_stt_v3_RecognitionClassifierResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor,
         new java.lang.String[] { "Classifier", "Highlights", "Labels", });
     internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor,
         new java.lang.String[] { "WindowType", "StartTimeMs", "EndTimeMs", "ClassifierResult", });
     internal_static_speechkit_stt_v3_DescriptiveStatistics_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_speechkit_stt_v3_DescriptiveStatistics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_DescriptiveStatistics_descriptor,
@@ -46564,19 +52846,19 @@ public final class Stt {
         internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_descriptor,
         new java.lang.String[] { "Level", "Value", });
     internal_static_speechkit_stt_v3_AudioSegmentBoundaries_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_speechkit_stt_v3_AudioSegmentBoundaries_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioSegmentBoundaries_descriptor,
         new java.lang.String[] { "StartTimeMs", "EndTimeMs", });
     internal_static_speechkit_stt_v3_SpeakerAnalysis_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_speechkit_stt_v3_SpeakerAnalysis_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SpeakerAnalysis_descriptor,
         new java.lang.String[] { "SpeakerTag", "WindowType", "SpeechBoundaries", "TotalSpeechMs", "SpeechRatio", "TotalSilenceMs", "SilenceRatio", "WordsCount", "LettersCount", "WordsPerSecond", "LettersPerSecond", "WordsPerUtterance", "LettersPerUtterance", "UtteranceCount", "UtteranceDurationEstimation", });
     internal_static_speechkit_stt_v3_ConversationAnalysis_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_speechkit_stt_v3_ConversationAnalysis_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_ConversationAnalysis_descriptor,
@@ -46587,24 +52869,37 @@ public final class Stt {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_descriptor,
         new java.lang.String[] { "SpeakerTag", "InterruptsCount2", "InterruptsDurationMs", "Interrupts4", });
+    internal_static_speechkit_stt_v3_ContentUsage_descriptor =
+      getDescriptor().getMessageTypes().get(40);
+    internal_static_speechkit_stt_v3_ContentUsage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_ContentUsage_descriptor,
+        new java.lang.String[] { "InputTextTokens", "CompletionTokens", "TotalTokens", });
+    internal_static_speechkit_stt_v3_Summarization_descriptor =
+      getDescriptor().getMessageTypes().get(41);
+    internal_static_speechkit_stt_v3_Summarization_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_Summarization_descriptor,
+        new java.lang.String[] { "Results", "ContentUsage", });
     internal_static_speechkit_stt_v3_StreamingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_speechkit_stt_v3_StreamingResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingResponse_descriptor,
-        new java.lang.String[] { "SessionUuid", "AudioCursors", "ResponseWallTimeMs", "Partial", "Final", "EouUpdate", "FinalRefinement", "StatusCode", "ClassifierUpdate", "SpeakerAnalysis", "ConversationAnalysis", "ChannelTag", "Event", });
+        new java.lang.String[] { "SessionUuid", "AudioCursors", "ResponseWallTimeMs", "Partial", "Final", "EouUpdate", "FinalRefinement", "StatusCode", "ClassifierUpdate", "SpeakerAnalysis", "ConversationAnalysis", "Summarization", "ChannelTag", "Event", });
     internal_static_speechkit_stt_v3_DeleteRecognitionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_speechkit_stt_v3_DeleteRecognitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_DeleteRecognitionRequest_descriptor,
         new java.lang.String[] { "OperationId", });
     internal_static_speechkit_stt_v3_StreamingResponseList_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_speechkit_stt_v3_StreamingResponseList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingResponseList_descriptor,
         new java.lang.String[] { "StreamingResponses", });
+    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

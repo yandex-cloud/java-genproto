@@ -336,6 +336,33 @@ public final class RunOuterClass {
      */
     yandex.cloud.api.ai.assistants.v1.Common.ToolOrBuilder getToolsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Specifies the format of the model's response.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+     * @return Whether the customResponseFormat field is set.
+     */
+    boolean hasCustomResponseFormat();
+    /**
+     * <pre>
+     * Specifies the format of the model's response.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+     * @return The customResponseFormat.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat getCustomResponseFormat();
+    /**
+     * <pre>
+     * Specifies the format of the model's response.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ResponseFormatOrBuilder getCustomResponseFormatOrBuilder();
   }
   /**
    * <pre>
@@ -501,6 +528,19 @@ public final class RunOuterClass {
               }
               tools_.add(
                   input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.Tool.parser(), extensionRegistry));
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat.Builder subBuilder = null;
+              if (customResponseFormat_ != null) {
+                subBuilder = customResponseFormat_.toBuilder();
+              }
+              customResponseFormat_ = input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(customResponseFormat_);
+                customResponseFormat_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1087,6 +1127,44 @@ public final class RunOuterClass {
       return tools_.get(index);
     }
 
+    public static final int CUSTOM_RESPONSE_FORMAT_FIELD_NUMBER = 12;
+    private yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat customResponseFormat_;
+    /**
+     * <pre>
+     * Specifies the format of the model's response.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+     * @return Whether the customResponseFormat field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomResponseFormat() {
+      return customResponseFormat_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies the format of the model's response.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+     * @return The customResponseFormat.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat getCustomResponseFormat() {
+      return customResponseFormat_ == null ? yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat.getDefaultInstance() : customResponseFormat_;
+    }
+    /**
+     * <pre>
+     * Specifies the format of the model's response.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ResponseFormatOrBuilder getCustomResponseFormatOrBuilder() {
+      return getCustomResponseFormat();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1136,6 +1214,9 @@ public final class RunOuterClass {
       }
       for (int i = 0; i < tools_.size(); i++) {
         output.writeMessage(11, tools_.get(i));
+      }
+      if (customResponseFormat_ != null) {
+        output.writeMessage(12, getCustomResponseFormat());
       }
       unknownFields.writeTo(output);
     }
@@ -1192,6 +1273,10 @@ public final class RunOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, tools_.get(i));
       }
+      if (customResponseFormat_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getCustomResponseFormat());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1244,6 +1329,11 @@ public final class RunOuterClass {
       }
       if (!getToolsList()
           .equals(other.getToolsList())) return false;
+      if (hasCustomResponseFormat() != other.hasCustomResponseFormat()) return false;
+      if (hasCustomResponseFormat()) {
+        if (!getCustomResponseFormat()
+            .equals(other.getCustomResponseFormat())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1290,6 +1380,10 @@ public final class RunOuterClass {
       if (getToolsCount() > 0) {
         hash = (37 * hash) + TOOLS_FIELD_NUMBER;
         hash = (53 * hash) + getToolsList().hashCode();
+      }
+      if (hasCustomResponseFormat()) {
+        hash = (37 * hash) + CUSTOM_RESPONSE_FORMAT_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomResponseFormat().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1496,6 +1590,12 @@ public final class RunOuterClass {
         } else {
           toolsBuilder_.clear();
         }
+        if (customResponseFormatBuilder_ == null) {
+          customResponseFormat_ = null;
+        } else {
+          customResponseFormat_ = null;
+          customResponseFormatBuilder_ = null;
+        }
         return this;
       }
 
@@ -1562,6 +1662,11 @@ public final class RunOuterClass {
           result.tools_ = tools_;
         } else {
           result.tools_ = toolsBuilder_.build();
+        }
+        if (customResponseFormatBuilder_ == null) {
+          result.customResponseFormat_ = customResponseFormat_;
+        } else {
+          result.customResponseFormat_ = customResponseFormatBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1669,6 +1774,9 @@ public final class RunOuterClass {
               toolsBuilder_.addAllMessages(other.tools_);
             }
           }
+        }
+        if (other.hasCustomResponseFormat()) {
+          mergeCustomResponseFormat(other.getCustomResponseFormat());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3346,6 +3454,161 @@ public final class RunOuterClass {
           tools_ = null;
         }
         return toolsBuilder_;
+      }
+
+      private yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat customResponseFormat_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat, yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat.Builder, yandex.cloud.api.ai.assistants.v1.Common.ResponseFormatOrBuilder> customResponseFormatBuilder_;
+      /**
+       * <pre>
+       * Specifies the format of the model's response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+       * @return Whether the customResponseFormat field is set.
+       */
+      public boolean hasCustomResponseFormat() {
+        return customResponseFormatBuilder_ != null || customResponseFormat_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the format of the model's response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+       * @return The customResponseFormat.
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat getCustomResponseFormat() {
+        if (customResponseFormatBuilder_ == null) {
+          return customResponseFormat_ == null ? yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat.getDefaultInstance() : customResponseFormat_;
+        } else {
+          return customResponseFormatBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the format of the model's response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+       */
+      public Builder setCustomResponseFormat(yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat value) {
+        if (customResponseFormatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          customResponseFormat_ = value;
+          onChanged();
+        } else {
+          customResponseFormatBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the format of the model's response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+       */
+      public Builder setCustomResponseFormat(
+          yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat.Builder builderForValue) {
+        if (customResponseFormatBuilder_ == null) {
+          customResponseFormat_ = builderForValue.build();
+          onChanged();
+        } else {
+          customResponseFormatBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the format of the model's response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+       */
+      public Builder mergeCustomResponseFormat(yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat value) {
+        if (customResponseFormatBuilder_ == null) {
+          if (customResponseFormat_ != null) {
+            customResponseFormat_ =
+              yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat.newBuilder(customResponseFormat_).mergeFrom(value).buildPartial();
+          } else {
+            customResponseFormat_ = value;
+          }
+          onChanged();
+        } else {
+          customResponseFormatBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the format of the model's response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+       */
+      public Builder clearCustomResponseFormat() {
+        if (customResponseFormatBuilder_ == null) {
+          customResponseFormat_ = null;
+          onChanged();
+        } else {
+          customResponseFormat_ = null;
+          customResponseFormatBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the format of the model's response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat.Builder getCustomResponseFormatBuilder() {
+        
+        onChanged();
+        return getCustomResponseFormatFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies the format of the model's response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ResponseFormatOrBuilder getCustomResponseFormatOrBuilder() {
+        if (customResponseFormatBuilder_ != null) {
+          return customResponseFormatBuilder_.getMessageOrBuilder();
+        } else {
+          return customResponseFormat_ == null ?
+              yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat.getDefaultInstance() : customResponseFormat_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the format of the model's response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ResponseFormat custom_response_format = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat, yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat.Builder, yandex.cloud.api.ai.assistants.v1.Common.ResponseFormatOrBuilder> 
+          getCustomResponseFormatFieldBuilder() {
+        if (customResponseFormatBuilder_ == null) {
+          customResponseFormatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat, yandex.cloud.api.ai.assistants.v1.Common.ResponseFormat.Builder, yandex.cloud.api.ai.assistants.v1.Common.ResponseFormatOrBuilder>(
+                  getCustomResponseFormat(),
+                  getParentForChildren(),
+                  isClean());
+          customResponseFormat_ = null;
+        }
+        return customResponseFormatBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5837,7 +6100,7 @@ public final class RunOuterClass {
       "*yandex/cloud/ai/assistants/v1/common.pr" +
       "oto\0323yandex/cloud/ai/assistants/v1/threa" +
       "ds/message.proto\032\037google/protobuf/timest" +
-      "amp.proto\"\333\004\n\003Run\022\n\n\002id\030\001 \001(\t\022\024\n\014assista" +
+      "amp.proto\"\252\005\n\003Run\022\n\n\002id\030\001 \001(\t\022\024\n\014assista" +
       "nt_id\030\002 \001(\t\022\021\n\tthread_id\030\003 \001(\t\022\022\n\ncreate" +
       "d_by\030\004 \001(\t\022.\n\ncreated_at\030\005 \001(\0132\032.google." +
       "protobuf.Timestamp\022C\n\006labels\030\006 \003(\01323.yan" +
@@ -5851,23 +6114,25 @@ public final class RunOuterClass {
       "m_completion_options\030\n \001(\01320.yandex.clou" +
       "d.ai.assistants.v1.CompletionOptions\0222\n\005" +
       "tools\030\013 \003(\0132#.yandex.cloud.ai.assistants" +
-      ".v1.Tool\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"\225\003\n\010RunState\022F\n\006status\030\001" +
-      " \001(\01626.yandex.cloud.ai.assistants.v1.run" +
-      "s.RunState.RunStatus\022.\n\005error\030\002 \001(\0132\035.ya" +
-      "ndex.cloud.ai.common.ErrorH\000\022K\n\021complete" +
-      "d_message\030\003 \001(\0132..yandex.cloud.ai.assist" +
-      "ants.v1.threads.MessageH\000\022E\n\016tool_call_l" +
-      "ist\030\004 \001(\0132+.yandex.cloud.ai.assistants.v" +
-      "1.ToolCallListH\000\"p\n\tRunStatus\022\032\n\026RUN_STA" +
-      "TUS_UNSPECIFIED\020\000\022\013\n\007PENDING\020\001\022\017\n\013IN_PRO" +
-      "GRESS\020\002\022\n\n\006FAILED\020\003\022\r\n\tCOMPLETED\020\004\022\016\n\nTO" +
-      "OL_CALLS\020\005B\013\n\tStateData\"V\n\014ContentUsage\022" +
-      "\025\n\rprompt_tokens\030\001 \001(\003\022\031\n\021completion_tok" +
-      "ens\030\002 \001(\003\022\024\n\014total_tokens\030\003 \001(\003Bu\n&yande" +
-      "x.cloud.api.ai.assistants.v1.runsZKgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/ai/assistants/v1/runs;runsb\006proto3"
+      ".v1.Tool\022M\n\026custom_response_format\030\014 \001(\013" +
+      "2-.yandex.cloud.ai.assistants.v1.Respons" +
+      "eFormat\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"\225\003\n\010RunState\022F\n\006status\030\001 " +
+      "\001(\01626.yandex.cloud.ai.assistants.v1.runs" +
+      ".RunState.RunStatus\022.\n\005error\030\002 \001(\0132\035.yan" +
+      "dex.cloud.ai.common.ErrorH\000\022K\n\021completed" +
+      "_message\030\003 \001(\0132..yandex.cloud.ai.assista" +
+      "nts.v1.threads.MessageH\000\022E\n\016tool_call_li" +
+      "st\030\004 \001(\0132+.yandex.cloud.ai.assistants.v1" +
+      ".ToolCallListH\000\"p\n\tRunStatus\022\032\n\026RUN_STAT" +
+      "US_UNSPECIFIED\020\000\022\013\n\007PENDING\020\001\022\017\n\013IN_PROG" +
+      "RESS\020\002\022\n\n\006FAILED\020\003\022\r\n\tCOMPLETED\020\004\022\016\n\nTOO" +
+      "L_CALLS\020\005B\013\n\tStateData\"V\n\014ContentUsage\022\025" +
+      "\n\rprompt_tokens\030\001 \001(\003\022\031\n\021completion_toke" +
+      "ns\030\002 \001(\003\022\024\n\014total_tokens\030\003 \001(\003Bu\n&yandex" +
+      ".cloud.api.ai.assistants.v1.runsZKgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/ai/assistants/v1/runs;runsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5882,7 +6147,7 @@ public final class RunOuterClass {
     internal_static_yandex_cloud_ai_assistants_v1_runs_Run_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_runs_Run_descriptor,
-        new java.lang.String[] { "Id", "AssistantId", "ThreadId", "CreatedBy", "CreatedAt", "Labels", "State", "Usage", "CustomPromptTruncationOptions", "CustomCompletionOptions", "Tools", });
+        new java.lang.String[] { "Id", "AssistantId", "ThreadId", "CreatedBy", "CreatedAt", "Labels", "State", "Usage", "CustomPromptTruncationOptions", "CustomCompletionOptions", "Tools", "CustomResponseFormat", });
     internal_static_yandex_cloud_ai_assistants_v1_runs_Run_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ai_assistants_v1_runs_Run_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_assistants_v1_runs_Run_LabelsEntry_fieldAccessorTable = new

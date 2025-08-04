@@ -20,7 +20,8 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * Unique identifier of the channel.
+     * This ID is used to reference the channel in API calls and URLs.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -29,7 +30,8 @@ public final class ChannelOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the channel.
+     * Unique identifier of the channel.
+     * This ID is used to reference the channel in API calls and URLs.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -40,7 +42,8 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * ID of the organization where channel should be created.
+     * Identifier of the organization to which this channel belongs.
+     * Each channel must be associated with exactly one organization.
      * </pre>
      *
      * <code>string organization_id = 2;</code>
@@ -49,7 +52,8 @@ public final class ChannelOuterClass {
     java.lang.String getOrganizationId();
     /**
      * <pre>
-     * ID of the organization where channel should be created.
+     * Identifier of the organization to which this channel belongs.
+     * Each channel must be associated with exactly one organization.
      * </pre>
      *
      * <code>string organization_id = 2;</code>
@@ -60,7 +64,8 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * Channel title.
+     * Title of the channel displayed in interfaces.
+     * This is the primary display name shown to users.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -69,7 +74,8 @@ public final class ChannelOuterClass {
     java.lang.String getTitle();
     /**
      * <pre>
-     * Channel title.
+     * Title of the channel displayed in interfaces.
+     * This is the primary display name shown to users.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -80,7 +86,8 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * Channel description.
+     * Detailed description of the channel's purpose and content.
+     * This optional field provides additional context about the channel.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -89,7 +96,8 @@ public final class ChannelOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Channel description.
+     * Detailed description of the channel's purpose and content.
+     * This optional field provides additional context about the channel.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -100,7 +108,32 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * Time when channel was created.
+     * Identifier of the default style preset applied to videos in this channel.
+     * Videos, episodes, and playlists created in this channel
+     * inherit this preset unless explicitly overridden.
+     * </pre>
+     *
+     * <code>string default_style_preset_id = 5;</code>
+     * @return The defaultStylePresetId.
+     */
+    java.lang.String getDefaultStylePresetId();
+    /**
+     * <pre>
+     * Identifier of the default style preset applied to videos in this channel.
+     * Videos, episodes, and playlists created in this channel
+     * inherit this preset unless explicitly overridden.
+     * </pre>
+     *
+     * <code>string default_style_preset_id = 5;</code>
+     * @return The bytes for defaultStylePresetId.
+     */
+    com.google.protobuf.ByteString
+        getDefaultStylePresetIdBytes();
+
+    /**
+     * <pre>
+     * Timestamp when the channel was initially created.
+     * This value is set automatically by the system and cannot be modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -109,7 +142,8 @@ public final class ChannelOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Time when channel was created.
+     * Timestamp when the channel was initially created.
+     * This value is set automatically by the system and cannot be modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -118,7 +152,8 @@ public final class ChannelOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Time when channel was created.
+     * Timestamp when the channel was initially created.
+     * This value is set automatically by the system and cannot be modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -127,7 +162,8 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * Time of last channel update.
+     * Timestamp of the last modification to the channel or its settings.
+     * This value is updated automatically whenever the channel is modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -136,7 +172,8 @@ public final class ChannelOuterClass {
     boolean hasUpdatedAt();
     /**
      * <pre>
-     * Time of last channel update.
+     * Timestamp of the last modification to the channel or its settings.
+     * This value is updated automatically whenever the channel is modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -145,7 +182,8 @@ public final class ChannelOuterClass {
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
      * <pre>
-     * Time of last channel update.
+     * Timestamp of the last modification to the channel or its settings.
+     * This value is updated automatically whenever the channel is modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -154,7 +192,9 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per channel.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -162,7 +202,9 @@ public final class ChannelOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per channel.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -177,7 +219,9 @@ public final class ChannelOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per channel.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -186,7 +230,9 @@ public final class ChannelOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per channel.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -197,7 +243,9 @@ public final class ChannelOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per channel.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -208,7 +256,9 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * Channel settings.
+     * Configuration settings for the channel's behavior and features.
+     * These settings control advertisements, content cleanup policies,
+     * and embedding restrictions for all content in the channel.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -217,7 +267,9 @@ public final class ChannelOuterClass {
     boolean hasSettings();
     /**
      * <pre>
-     * Channel settings.
+     * Configuration settings for the channel's behavior and features.
+     * These settings control advertisements, content cleanup policies,
+     * and embedding restrictions for all content in the channel.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -226,7 +278,9 @@ public final class ChannelOuterClass {
     yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getSettings();
     /**
      * <pre>
-     * Channel settings.
+     * Configuration settings for the channel's behavior and features.
+     * These settings control advertisements, content cleanup policies,
+     * and embedding restrictions for all content in the channel.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -235,7 +289,11 @@ public final class ChannelOuterClass {
   }
   /**
    * <pre>
-   * Root entity for content separation.
+   * Root entity for content organization and separation within the video platform.
+   * A channel serves as a container for videos and streams, providing a way to
+   * group related content and apply common settings and access controls.
+   * Each channel belongs to a specific organization and can have its own
+   * configuration for advertisements, content cleanup, and embedding restrictions.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.Channel}
@@ -254,6 +312,7 @@ public final class ChannelOuterClass {
       organizationId_ = "";
       title_ = "";
       description_ = "";
+      defaultStylePresetId_ = "";
     }
 
     @java.lang.Override
@@ -309,6 +368,12 @@ public final class ChannelOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               description_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultStylePresetId_ = s;
               break;
             }
             case 802: {
@@ -411,7 +476,8 @@ public final class ChannelOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the channel.
+     * Unique identifier of the channel.
+     * This ID is used to reference the channel in API calls and URLs.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -432,7 +498,8 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * Unique identifier of the channel.
+     * This ID is used to reference the channel in API calls and URLs.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -457,7 +524,8 @@ public final class ChannelOuterClass {
     private volatile java.lang.Object organizationId_;
     /**
      * <pre>
-     * ID of the organization where channel should be created.
+     * Identifier of the organization to which this channel belongs.
+     * Each channel must be associated with exactly one organization.
      * </pre>
      *
      * <code>string organization_id = 2;</code>
@@ -478,7 +546,8 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * ID of the organization where channel should be created.
+     * Identifier of the organization to which this channel belongs.
+     * Each channel must be associated with exactly one organization.
      * </pre>
      *
      * <code>string organization_id = 2;</code>
@@ -503,7 +572,8 @@ public final class ChannelOuterClass {
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Channel title.
+     * Title of the channel displayed in interfaces.
+     * This is the primary display name shown to users.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -524,7 +594,8 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Channel title.
+     * Title of the channel displayed in interfaces.
+     * This is the primary display name shown to users.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -549,7 +620,8 @@ public final class ChannelOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Channel description.
+     * Detailed description of the channel's purpose and content.
+     * This optional field provides additional context about the channel.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -570,7 +642,8 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Channel description.
+     * Detailed description of the channel's purpose and content.
+     * This optional field provides additional context about the channel.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -591,11 +664,62 @@ public final class ChannelOuterClass {
       }
     }
 
+    public static final int DEFAULT_STYLE_PRESET_ID_FIELD_NUMBER = 5;
+    private volatile java.lang.Object defaultStylePresetId_;
+    /**
+     * <pre>
+     * Identifier of the default style preset applied to videos in this channel.
+     * Videos, episodes, and playlists created in this channel
+     * inherit this preset unless explicitly overridden.
+     * </pre>
+     *
+     * <code>string default_style_preset_id = 5;</code>
+     * @return The defaultStylePresetId.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultStylePresetId() {
+      java.lang.Object ref = defaultStylePresetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultStylePresetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Identifier of the default style preset applied to videos in this channel.
+     * Videos, episodes, and playlists created in this channel
+     * inherit this preset unless explicitly overridden.
+     * </pre>
+     *
+     * <code>string default_style_preset_id = 5;</code>
+     * @return The bytes for defaultStylePresetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultStylePresetIdBytes() {
+      java.lang.Object ref = defaultStylePresetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultStylePresetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int CREATED_AT_FIELD_NUMBER = 100;
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Time when channel was created.
+     * Timestamp when the channel was initially created.
+     * This value is set automatically by the system and cannot be modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -607,7 +731,8 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Time when channel was created.
+     * Timestamp when the channel was initially created.
+     * This value is set automatically by the system and cannot be modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -619,7 +744,8 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Time when channel was created.
+     * Timestamp when the channel was initially created.
+     * This value is set automatically by the system and cannot be modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -633,7 +759,8 @@ public final class ChannelOuterClass {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <pre>
-     * Time of last channel update.
+     * Timestamp of the last modification to the channel or its settings.
+     * This value is updated automatically whenever the channel is modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -645,7 +772,8 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Time of last channel update.
+     * Timestamp of the last modification to the channel or its settings.
+     * This value is updated automatically whenever the channel is modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -657,7 +785,8 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Time of last channel update.
+     * Timestamp of the last modification to the channel or its settings.
+     * This value is updated automatically whenever the channel is modified.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -695,7 +824,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per channel.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -717,7 +848,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per channel.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -729,7 +862,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per channel.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -746,7 +881,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per channel.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -768,7 +905,9 @@ public final class ChannelOuterClass {
     private yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings settings_;
     /**
      * <pre>
-     * Channel settings.
+     * Configuration settings for the channel's behavior and features.
+     * These settings control advertisements, content cleanup policies,
+     * and embedding restrictions for all content in the channel.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -780,7 +919,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Channel settings.
+     * Configuration settings for the channel's behavior and features.
+     * These settings control advertisements, content cleanup policies,
+     * and embedding restrictions for all content in the channel.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -792,7 +933,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Channel settings.
+     * Configuration settings for the channel's behavior and features.
+     * These settings control advertisements, content cleanup policies,
+     * and embedding restrictions for all content in the channel.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -827,6 +970,9 @@ public final class ChannelOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultStylePresetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, defaultStylePresetId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(100, getCreatedAt());
@@ -863,6 +1009,9 @@ public final class ChannelOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultStylePresetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, defaultStylePresetId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -909,6 +1058,8 @@ public final class ChannelOuterClass {
           .equals(other.getTitle())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (!getDefaultStylePresetId()
+          .equals(other.getDefaultStylePresetId())) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
         if (!getCreatedAt()
@@ -945,6 +1096,8 @@ public final class ChannelOuterClass {
       hash = (53 * hash) + getTitle().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + DEFAULT_STYLE_PRESET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultStylePresetId().hashCode();
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
@@ -1058,7 +1211,11 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Root entity for content separation.
+     * Root entity for content organization and separation within the video platform.
+     * A channel serves as a container for videos and streams, providing a way to
+     * group related content and apply common settings and access controls.
+     * Each channel belongs to a specific organization and can have its own
+     * configuration for advertisements, content cleanup, and embedding restrictions.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.Channel}
@@ -1128,6 +1285,8 @@ public final class ChannelOuterClass {
 
         description_ = "";
 
+        defaultStylePresetId_ = "";
+
         if (createdAtBuilder_ == null) {
           createdAt_ = null;
         } else {
@@ -1178,6 +1337,7 @@ public final class ChannelOuterClass {
         result.organizationId_ = organizationId_;
         result.title_ = title_;
         result.description_ = description_;
+        result.defaultStylePresetId_ = defaultStylePresetId_;
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
         } else {
@@ -1259,6 +1419,10 @@ public final class ChannelOuterClass {
           description_ = other.description_;
           onChanged();
         }
+        if (!other.getDefaultStylePresetId().isEmpty()) {
+          defaultStylePresetId_ = other.defaultStylePresetId_;
+          onChanged();
+        }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
         }
@@ -1303,7 +1467,8 @@ public final class ChannelOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * Unique identifier of the channel.
+       * This ID is used to reference the channel in API calls and URLs.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1323,7 +1488,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * Unique identifier of the channel.
+       * This ID is used to reference the channel in API calls and URLs.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1344,7 +1510,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * Unique identifier of the channel.
+       * This ID is used to reference the channel in API calls and URLs.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1363,7 +1530,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * Unique identifier of the channel.
+       * This ID is used to reference the channel in API calls and URLs.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1377,7 +1545,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * Unique identifier of the channel.
+       * This ID is used to reference the channel in API calls and URLs.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1399,7 +1568,8 @@ public final class ChannelOuterClass {
       private java.lang.Object organizationId_ = "";
       /**
        * <pre>
-       * ID of the organization where channel should be created.
+       * Identifier of the organization to which this channel belongs.
+       * Each channel must be associated with exactly one organization.
        * </pre>
        *
        * <code>string organization_id = 2;</code>
@@ -1419,7 +1589,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * ID of the organization where channel should be created.
+       * Identifier of the organization to which this channel belongs.
+       * Each channel must be associated with exactly one organization.
        * </pre>
        *
        * <code>string organization_id = 2;</code>
@@ -1440,7 +1611,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * ID of the organization where channel should be created.
+       * Identifier of the organization to which this channel belongs.
+       * Each channel must be associated with exactly one organization.
        * </pre>
        *
        * <code>string organization_id = 2;</code>
@@ -1459,7 +1631,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * ID of the organization where channel should be created.
+       * Identifier of the organization to which this channel belongs.
+       * Each channel must be associated with exactly one organization.
        * </pre>
        *
        * <code>string organization_id = 2;</code>
@@ -1473,7 +1646,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * ID of the organization where channel should be created.
+       * Identifier of the organization to which this channel belongs.
+       * Each channel must be associated with exactly one organization.
        * </pre>
        *
        * <code>string organization_id = 2;</code>
@@ -1495,7 +1669,8 @@ public final class ChannelOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Channel title.
+       * Title of the channel displayed in interfaces.
+       * This is the primary display name shown to users.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -1515,7 +1690,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel title.
+       * Title of the channel displayed in interfaces.
+       * This is the primary display name shown to users.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -1536,7 +1712,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel title.
+       * Title of the channel displayed in interfaces.
+       * This is the primary display name shown to users.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -1555,7 +1732,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel title.
+       * Title of the channel displayed in interfaces.
+       * This is the primary display name shown to users.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -1569,7 +1747,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel title.
+       * Title of the channel displayed in interfaces.
+       * This is the primary display name shown to users.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -1591,7 +1770,8 @@ public final class ChannelOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Channel description.
+       * Detailed description of the channel's purpose and content.
+       * This optional field provides additional context about the channel.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -1611,7 +1791,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel description.
+       * Detailed description of the channel's purpose and content.
+       * This optional field provides additional context about the channel.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -1632,7 +1813,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel description.
+       * Detailed description of the channel's purpose and content.
+       * This optional field provides additional context about the channel.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -1651,7 +1833,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel description.
+       * Detailed description of the channel's purpose and content.
+       * This optional field provides additional context about the channel.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -1665,7 +1848,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel description.
+       * Detailed description of the channel's purpose and content.
+       * This optional field provides additional context about the channel.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -1684,12 +1868,119 @@ public final class ChannelOuterClass {
         return this;
       }
 
+      private java.lang.Object defaultStylePresetId_ = "";
+      /**
+       * <pre>
+       * Identifier of the default style preset applied to videos in this channel.
+       * Videos, episodes, and playlists created in this channel
+       * inherit this preset unless explicitly overridden.
+       * </pre>
+       *
+       * <code>string default_style_preset_id = 5;</code>
+       * @return The defaultStylePresetId.
+       */
+      public java.lang.String getDefaultStylePresetId() {
+        java.lang.Object ref = defaultStylePresetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultStylePresetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the default style preset applied to videos in this channel.
+       * Videos, episodes, and playlists created in this channel
+       * inherit this preset unless explicitly overridden.
+       * </pre>
+       *
+       * <code>string default_style_preset_id = 5;</code>
+       * @return The bytes for defaultStylePresetId.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultStylePresetIdBytes() {
+        java.lang.Object ref = defaultStylePresetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultStylePresetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the default style preset applied to videos in this channel.
+       * Videos, episodes, and playlists created in this channel
+       * inherit this preset unless explicitly overridden.
+       * </pre>
+       *
+       * <code>string default_style_preset_id = 5;</code>
+       * @param value The defaultStylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultStylePresetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultStylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the default style preset applied to videos in this channel.
+       * Videos, episodes, and playlists created in this channel
+       * inherit this preset unless explicitly overridden.
+       * </pre>
+       *
+       * <code>string default_style_preset_id = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultStylePresetId() {
+        
+        defaultStylePresetId_ = getDefaultInstance().getDefaultStylePresetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the default style preset applied to videos in this channel.
+       * Videos, episodes, and playlists created in this channel
+       * inherit this preset unless explicitly overridden.
+       * </pre>
+       *
+       * <code>string default_style_preset_id = 5;</code>
+       * @param value The bytes for defaultStylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultStylePresetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultStylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Time when channel was created.
+       * Timestamp when the channel was initially created.
+       * This value is set automatically by the system and cannot be modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1700,7 +1991,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time when channel was created.
+       * Timestamp when the channel was initially created.
+       * This value is set automatically by the system and cannot be modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1715,7 +2007,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time when channel was created.
+       * Timestamp when the channel was initially created.
+       * This value is set automatically by the system and cannot be modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1735,7 +2028,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time when channel was created.
+       * Timestamp when the channel was initially created.
+       * This value is set automatically by the system and cannot be modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1753,7 +2047,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time when channel was created.
+       * Timestamp when the channel was initially created.
+       * This value is set automatically by the system and cannot be modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1775,7 +2070,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time when channel was created.
+       * Timestamp when the channel was initially created.
+       * This value is set automatically by the system and cannot be modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1793,7 +2089,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time when channel was created.
+       * Timestamp when the channel was initially created.
+       * This value is set automatically by the system and cannot be modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1805,7 +2102,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time when channel was created.
+       * Timestamp when the channel was initially created.
+       * This value is set automatically by the system and cannot be modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1820,7 +2118,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time when channel was created.
+       * Timestamp when the channel was initially created.
+       * This value is set automatically by the system and cannot be modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1844,7 +2143,8 @@ public final class ChannelOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <pre>
-       * Time of last channel update.
+       * Timestamp of the last modification to the channel or its settings.
+       * This value is updated automatically whenever the channel is modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1855,7 +2155,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time of last channel update.
+       * Timestamp of the last modification to the channel or its settings.
+       * This value is updated automatically whenever the channel is modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1870,7 +2171,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time of last channel update.
+       * Timestamp of the last modification to the channel or its settings.
+       * This value is updated automatically whenever the channel is modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1890,7 +2192,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time of last channel update.
+       * Timestamp of the last modification to the channel or its settings.
+       * This value is updated automatically whenever the channel is modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1908,7 +2211,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time of last channel update.
+       * Timestamp of the last modification to the channel or its settings.
+       * This value is updated automatically whenever the channel is modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1930,7 +2234,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time of last channel update.
+       * Timestamp of the last modification to the channel or its settings.
+       * This value is updated automatically whenever the channel is modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1948,7 +2253,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time of last channel update.
+       * Timestamp of the last modification to the channel or its settings.
+       * This value is updated automatically whenever the channel is modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1960,7 +2266,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time of last channel update.
+       * Timestamp of the last modification to the channel or its settings.
+       * This value is updated automatically whenever the channel is modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1975,7 +2282,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Time of last channel update.
+       * Timestamp of the last modification to the channel or its settings.
+       * This value is updated automatically whenever the channel is modified.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2022,7 +2330,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per channel.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2044,7 +2354,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per channel.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2056,7 +2368,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per channel.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2073,7 +2387,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per channel.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2098,7 +2414,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per channel.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2121,7 +2439,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per channel.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2140,7 +2460,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per channel.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2158,7 +2480,9 @@ public final class ChannelOuterClass {
           yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder> settingsBuilder_;
       /**
        * <pre>
-       * Channel settings.
+       * Configuration settings for the channel's behavior and features.
+       * These settings control advertisements, content cleanup policies,
+       * and embedding restrictions for all content in the channel.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -2169,7 +2493,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel settings.
+       * Configuration settings for the channel's behavior and features.
+       * These settings control advertisements, content cleanup policies,
+       * and embedding restrictions for all content in the channel.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -2184,7 +2510,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel settings.
+       * Configuration settings for the channel's behavior and features.
+       * These settings control advertisements, content cleanup policies,
+       * and embedding restrictions for all content in the channel.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -2204,7 +2532,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel settings.
+       * Configuration settings for the channel's behavior and features.
+       * These settings control advertisements, content cleanup policies,
+       * and embedding restrictions for all content in the channel.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -2222,7 +2552,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel settings.
+       * Configuration settings for the channel's behavior and features.
+       * These settings control advertisements, content cleanup policies,
+       * and embedding restrictions for all content in the channel.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -2244,7 +2576,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel settings.
+       * Configuration settings for the channel's behavior and features.
+       * These settings control advertisements, content cleanup policies,
+       * and embedding restrictions for all content in the channel.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -2262,7 +2596,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel settings.
+       * Configuration settings for the channel's behavior and features.
+       * These settings control advertisements, content cleanup policies,
+       * and embedding restrictions for all content in the channel.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -2274,7 +2610,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel settings.
+       * Configuration settings for the channel's behavior and features.
+       * These settings control advertisements, content cleanup policies,
+       * and embedding restrictions for all content in the channel.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -2289,7 +2627,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Channel settings.
+       * Configuration settings for the channel's behavior and features.
+       * These settings control advertisements, content cleanup policies,
+       * and embedding restrictions for all content in the channel.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
@@ -2366,7 +2706,9 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * Advertisement settings.
+     * Settings for advertisement display and behavior.
+     * Controls whether and how advertisements are shown with content in this channel.
+     * If not specified, default advertisement settings are applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -2375,7 +2717,9 @@ public final class ChannelOuterClass {
     boolean hasAdvertisement();
     /**
      * <pre>
-     * Advertisement settings.
+     * Settings for advertisement display and behavior.
+     * Controls whether and how advertisements are shown with content in this channel.
+     * If not specified, default advertisement settings are applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -2384,7 +2728,9 @@ public final class ChannelOuterClass {
     yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings getAdvertisement();
     /**
      * <pre>
-     * Advertisement settings.
+     * Settings for advertisement display and behavior.
+     * Controls whether and how advertisements are shown with content in this channel.
+     * If not specified, default advertisement settings are applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -2393,7 +2739,9 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * Referer verification settings
+     * Settings for HTTP Referer verification to control content embedding.
+     * Restricts which domains can embed content from this channel.
+     * If not specified or disabled, content can be embedded on any domain.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -2402,7 +2750,9 @@ public final class ChannelOuterClass {
     boolean hasRefererVerification();
     /**
      * <pre>
-     * Referer verification settings
+     * Settings for HTTP Referer verification to control content embedding.
+     * Restricts which domains can embed content from this channel.
+     * If not specified or disabled, content can be embedded on any domain.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -2411,7 +2761,9 @@ public final class ChannelOuterClass {
     yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings getRefererVerification();
     /**
      * <pre>
-     * Referer verification settings
+     * Settings for HTTP Referer verification to control content embedding.
+     * Restricts which domains can embed content from this channel.
+     * If not specified or disabled, content can be embedded on any domain.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -2420,7 +2772,9 @@ public final class ChannelOuterClass {
   }
   /**
    * <pre>
-   * Channel settings.
+   * Configuration settings for the channel's behavior and features.
+   * These settings apply to all content in the channel and control
+   * various aspects of how the channel and its content behave.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.ChannelSettings}
@@ -2529,7 +2883,9 @@ public final class ChannelOuterClass {
     private yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings advertisement_;
     /**
      * <pre>
-     * Advertisement settings.
+     * Settings for advertisement display and behavior.
+     * Controls whether and how advertisements are shown with content in this channel.
+     * If not specified, default advertisement settings are applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -2541,7 +2897,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Advertisement settings.
+     * Settings for advertisement display and behavior.
+     * Controls whether and how advertisements are shown with content in this channel.
+     * If not specified, default advertisement settings are applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -2553,7 +2911,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Advertisement settings.
+     * Settings for advertisement display and behavior.
+     * Controls whether and how advertisements are shown with content in this channel.
+     * If not specified, default advertisement settings are applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -2567,7 +2927,9 @@ public final class ChannelOuterClass {
     private yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings refererVerification_;
     /**
      * <pre>
-     * Referer verification settings
+     * Settings for HTTP Referer verification to control content embedding.
+     * Restricts which domains can embed content from this channel.
+     * If not specified or disabled, content can be embedded on any domain.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -2579,7 +2941,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Referer verification settings
+     * Settings for HTTP Referer verification to control content embedding.
+     * Restricts which domains can embed content from this channel.
+     * If not specified or disabled, content can be embedded on any domain.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -2591,7 +2955,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Referer verification settings
+     * Settings for HTTP Referer verification to control content embedding.
+     * Restricts which domains can embed content from this channel.
+     * If not specified or disabled, content can be embedded on any domain.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -2779,7 +3145,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Channel settings.
+     * Configuration settings for the channel's behavior and features.
+     * These settings apply to all content in the channel and control
+     * various aspects of how the channel and its content behave.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.ChannelSettings}
@@ -2955,7 +3323,9 @@ public final class ChannelOuterClass {
           yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettingsOrBuilder> advertisementBuilder_;
       /**
        * <pre>
-       * Advertisement settings.
+       * Settings for advertisement display and behavior.
+       * Controls whether and how advertisements are shown with content in this channel.
+       * If not specified, default advertisement settings are applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -2966,7 +3336,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Advertisement settings.
+       * Settings for advertisement display and behavior.
+       * Controls whether and how advertisements are shown with content in this channel.
+       * If not specified, default advertisement settings are applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -2981,7 +3353,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Advertisement settings.
+       * Settings for advertisement display and behavior.
+       * Controls whether and how advertisements are shown with content in this channel.
+       * If not specified, default advertisement settings are applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -3001,7 +3375,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Advertisement settings.
+       * Settings for advertisement display and behavior.
+       * Controls whether and how advertisements are shown with content in this channel.
+       * If not specified, default advertisement settings are applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -3019,7 +3395,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Advertisement settings.
+       * Settings for advertisement display and behavior.
+       * Controls whether and how advertisements are shown with content in this channel.
+       * If not specified, default advertisement settings are applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -3041,7 +3419,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Advertisement settings.
+       * Settings for advertisement display and behavior.
+       * Controls whether and how advertisements are shown with content in this channel.
+       * If not specified, default advertisement settings are applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -3059,7 +3439,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Advertisement settings.
+       * Settings for advertisement display and behavior.
+       * Controls whether and how advertisements are shown with content in this channel.
+       * If not specified, default advertisement settings are applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -3071,7 +3453,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Advertisement settings.
+       * Settings for advertisement display and behavior.
+       * Controls whether and how advertisements are shown with content in this channel.
+       * If not specified, default advertisement settings are applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -3086,7 +3470,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Advertisement settings.
+       * Settings for advertisement display and behavior.
+       * Controls whether and how advertisements are shown with content in this channel.
+       * If not specified, default advertisement settings are applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
@@ -3110,7 +3496,9 @@ public final class ChannelOuterClass {
           yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings, yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettingsOrBuilder> refererVerificationBuilder_;
       /**
        * <pre>
-       * Referer verification settings
+       * Settings for HTTP Referer verification to control content embedding.
+       * Restricts which domains can embed content from this channel.
+       * If not specified or disabled, content can be embedded on any domain.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -3121,7 +3509,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Referer verification settings
+       * Settings for HTTP Referer verification to control content embedding.
+       * Restricts which domains can embed content from this channel.
+       * If not specified or disabled, content can be embedded on any domain.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -3136,7 +3526,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Referer verification settings
+       * Settings for HTTP Referer verification to control content embedding.
+       * Restricts which domains can embed content from this channel.
+       * If not specified or disabled, content can be embedded on any domain.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -3156,7 +3548,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Referer verification settings
+       * Settings for HTTP Referer verification to control content embedding.
+       * Restricts which domains can embed content from this channel.
+       * If not specified or disabled, content can be embedded on any domain.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -3174,7 +3568,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Referer verification settings
+       * Settings for HTTP Referer verification to control content embedding.
+       * Restricts which domains can embed content from this channel.
+       * If not specified or disabled, content can be embedded on any domain.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -3196,7 +3592,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Referer verification settings
+       * Settings for HTTP Referer verification to control content embedding.
+       * Restricts which domains can embed content from this channel.
+       * If not specified or disabled, content can be embedded on any domain.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -3214,7 +3612,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Referer verification settings
+       * Settings for HTTP Referer verification to control content embedding.
+       * Restricts which domains can embed content from this channel.
+       * If not specified or disabled, content can be embedded on any domain.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -3226,7 +3626,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Referer verification settings
+       * Settings for HTTP Referer verification to control content embedding.
+       * Restricts which domains can embed content from this channel.
+       * If not specified or disabled, content can be embedded on any domain.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -3241,7 +3643,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Referer verification settings
+       * Settings for HTTP Referer verification to control content embedding.
+       * Restricts which domains can embed content from this channel.
+       * If not specified or disabled, content can be embedded on any domain.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
@@ -3317,16 +3721,31 @@ public final class ChannelOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Yandex.Direct advertisement provider settings.
+     * When specified, advertisements will be served through Yandex.Direct.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
      * @return Whether the yandexDirect field is set.
      */
     boolean hasYandexDirect();
     /**
+     * <pre>
+     * Yandex.Direct advertisement provider settings.
+     * When specified, advertisements will be served through Yandex.Direct.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
      * @return The yandexDirect.
      */
     yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect getYandexDirect();
     /**
+     * <pre>
+     * Yandex.Direct advertisement provider settings.
+     * When specified, advertisements will be served through Yandex.Direct.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
      */
     yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirectOrBuilder getYandexDirectOrBuilder();
@@ -3335,7 +3754,9 @@ public final class ChannelOuterClass {
   }
   /**
    * <pre>
-   * Advertisement settings.
+   * Settings for advertisement display and behavior in the channel.
+   * These settings control whether and how advertisements are shown
+   * with content in this channel, including both videos and streams.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.AdvertisementSettings}
@@ -3434,7 +3855,9 @@ public final class ChannelOuterClass {
 
       /**
        * <pre>
-       * Enable Partner Ad for Live and VOD content.
+       * Enables or disables Partner Ad for both Live and VOD content.
+       * When set to true, advertisements will be shown with content.
+       * When set to false, no advertisements will be shown.
        * </pre>
        *
        * <code>bool enable = 1;</code>
@@ -3444,7 +3867,9 @@ public final class ChannelOuterClass {
 
       /**
        * <pre>
-       * Advertisement page ID.
+       * Yandex.Direct page identifier.
+       * This ID is used to associate the channel with a specific page
+       * in the Yandex.Direct system for targeting and reporting.
        * </pre>
        *
        * <code>int64 page_id = 2;</code>
@@ -3454,7 +3879,9 @@ public final class ChannelOuterClass {
 
       /**
        * <pre>
-       * Advertisement category.
+       * Yandex.Direct category identifier.
+       * This ID is used to categorize the channel's content for
+       * appropriate advertisement targeting and compliance.
        * </pre>
        *
        * <code>int64 category = 3;</code>
@@ -3464,7 +3891,8 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * YandexDirect provider settings.
+     * Configuration for the Yandex.Direct advertisement provider.
+     * These settings are specific to the Yandex.Direct advertising platform.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.AdvertisementSettings.YandexDirect}
@@ -3562,7 +3990,9 @@ public final class ChannelOuterClass {
       private boolean enable_;
       /**
        * <pre>
-       * Enable Partner Ad for Live and VOD content.
+       * Enables or disables Partner Ad for both Live and VOD content.
+       * When set to true, advertisements will be shown with content.
+       * When set to false, no advertisements will be shown.
        * </pre>
        *
        * <code>bool enable = 1;</code>
@@ -3577,7 +4007,9 @@ public final class ChannelOuterClass {
       private long pageId_;
       /**
        * <pre>
-       * Advertisement page ID.
+       * Yandex.Direct page identifier.
+       * This ID is used to associate the channel with a specific page
+       * in the Yandex.Direct system for targeting and reporting.
        * </pre>
        *
        * <code>int64 page_id = 2;</code>
@@ -3592,7 +4024,9 @@ public final class ChannelOuterClass {
       private long category_;
       /**
        * <pre>
-       * Advertisement category.
+       * Yandex.Direct category identifier.
+       * This ID is used to categorize the channel's content for
+       * appropriate advertisement targeting and compliance.
        * </pre>
        *
        * <code>int64 category = 3;</code>
@@ -3785,7 +4219,8 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * YandexDirect provider settings.
+       * Configuration for the Yandex.Direct advertisement provider.
+       * These settings are specific to the Yandex.Direct advertising platform.
        * </pre>
        *
        * Protobuf type {@code yandex.cloud.video.v1.AdvertisementSettings.YandexDirect}
@@ -3949,7 +4384,9 @@ public final class ChannelOuterClass {
         private boolean enable_ ;
         /**
          * <pre>
-         * Enable Partner Ad for Live and VOD content.
+         * Enables or disables Partner Ad for both Live and VOD content.
+         * When set to true, advertisements will be shown with content.
+         * When set to false, no advertisements will be shown.
          * </pre>
          *
          * <code>bool enable = 1;</code>
@@ -3961,7 +4398,9 @@ public final class ChannelOuterClass {
         }
         /**
          * <pre>
-         * Enable Partner Ad for Live and VOD content.
+         * Enables or disables Partner Ad for both Live and VOD content.
+         * When set to true, advertisements will be shown with content.
+         * When set to false, no advertisements will be shown.
          * </pre>
          *
          * <code>bool enable = 1;</code>
@@ -3976,7 +4415,9 @@ public final class ChannelOuterClass {
         }
         /**
          * <pre>
-         * Enable Partner Ad for Live and VOD content.
+         * Enables or disables Partner Ad for both Live and VOD content.
+         * When set to true, advertisements will be shown with content.
+         * When set to false, no advertisements will be shown.
          * </pre>
          *
          * <code>bool enable = 1;</code>
@@ -3992,7 +4433,9 @@ public final class ChannelOuterClass {
         private long pageId_ ;
         /**
          * <pre>
-         * Advertisement page ID.
+         * Yandex.Direct page identifier.
+         * This ID is used to associate the channel with a specific page
+         * in the Yandex.Direct system for targeting and reporting.
          * </pre>
          *
          * <code>int64 page_id = 2;</code>
@@ -4004,7 +4447,9 @@ public final class ChannelOuterClass {
         }
         /**
          * <pre>
-         * Advertisement page ID.
+         * Yandex.Direct page identifier.
+         * This ID is used to associate the channel with a specific page
+         * in the Yandex.Direct system for targeting and reporting.
          * </pre>
          *
          * <code>int64 page_id = 2;</code>
@@ -4019,7 +4464,9 @@ public final class ChannelOuterClass {
         }
         /**
          * <pre>
-         * Advertisement page ID.
+         * Yandex.Direct page identifier.
+         * This ID is used to associate the channel with a specific page
+         * in the Yandex.Direct system for targeting and reporting.
          * </pre>
          *
          * <code>int64 page_id = 2;</code>
@@ -4035,7 +4482,9 @@ public final class ChannelOuterClass {
         private long category_ ;
         /**
          * <pre>
-         * Advertisement category.
+         * Yandex.Direct category identifier.
+         * This ID is used to categorize the channel's content for
+         * appropriate advertisement targeting and compliance.
          * </pre>
          *
          * <code>int64 category = 3;</code>
@@ -4047,7 +4496,9 @@ public final class ChannelOuterClass {
         }
         /**
          * <pre>
-         * Advertisement category.
+         * Yandex.Direct category identifier.
+         * This ID is used to categorize the channel's content for
+         * appropriate advertisement targeting and compliance.
          * </pre>
          *
          * <code>int64 category = 3;</code>
@@ -4062,7 +4513,9 @@ public final class ChannelOuterClass {
         }
         /**
          * <pre>
-         * Advertisement category.
+         * Yandex.Direct category identifier.
+         * This ID is used to categorize the channel's content for
+         * appropriate advertisement targeting and compliance.
          * </pre>
          *
          * <code>int64 category = 3;</code>
@@ -4168,6 +4621,11 @@ public final class ChannelOuterClass {
 
     public static final int YANDEX_DIRECT_FIELD_NUMBER = 100;
     /**
+     * <pre>
+     * Yandex.Direct advertisement provider settings.
+     * When specified, advertisements will be served through Yandex.Direct.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
      * @return Whether the yandexDirect field is set.
      */
@@ -4176,6 +4634,11 @@ public final class ChannelOuterClass {
       return providerCase_ == 100;
     }
     /**
+     * <pre>
+     * Yandex.Direct advertisement provider settings.
+     * When specified, advertisements will be served through Yandex.Direct.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
      * @return The yandexDirect.
      */
@@ -4187,6 +4650,11 @@ public final class ChannelOuterClass {
       return yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Yandex.Direct advertisement provider settings.
+     * When specified, advertisements will be served through Yandex.Direct.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
      */
     @java.lang.Override
@@ -4367,7 +4835,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Advertisement settings.
+     * Settings for advertisement display and behavior in the channel.
+     * These settings control whether and how advertisements are shown
+     * with content in this channel, including both videos and streams.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.AdvertisementSettings}
@@ -4547,6 +5017,11 @@ public final class ChannelOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirectOrBuilder> yandexDirectBuilder_;
       /**
+       * <pre>
+       * Yandex.Direct advertisement provider settings.
+       * When specified, advertisements will be served through Yandex.Direct.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
        * @return Whether the yandexDirect field is set.
        */
@@ -4555,6 +5030,11 @@ public final class ChannelOuterClass {
         return providerCase_ == 100;
       }
       /**
+       * <pre>
+       * Yandex.Direct advertisement provider settings.
+       * When specified, advertisements will be served through Yandex.Direct.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
        * @return The yandexDirect.
        */
@@ -4573,6 +5053,11 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex.Direct advertisement provider settings.
+       * When specified, advertisements will be served through Yandex.Direct.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
        */
       public Builder setYandexDirect(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect value) {
@@ -4589,6 +5074,11 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex.Direct advertisement provider settings.
+       * When specified, advertisements will be served through Yandex.Direct.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
        */
       public Builder setYandexDirect(
@@ -4603,6 +5093,11 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex.Direct advertisement provider settings.
+       * When specified, advertisements will be served through Yandex.Direct.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
        */
       public Builder mergeYandexDirect(yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect value) {
@@ -4625,6 +5120,11 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex.Direct advertisement provider settings.
+       * When specified, advertisements will be served through Yandex.Direct.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
        */
       public Builder clearYandexDirect() {
@@ -4644,12 +5144,22 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex.Direct advertisement provider settings.
+       * When specified, advertisements will be served through Yandex.Direct.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
        */
       public yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettings.YandexDirect.Builder getYandexDirectBuilder() {
         return getYandexDirectFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Yandex.Direct advertisement provider settings.
+       * When specified, advertisements will be served through Yandex.Direct.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
        */
       @java.lang.Override
@@ -4664,6 +5174,11 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex.Direct advertisement provider settings.
+       * When specified, advertisements will be served through Yandex.Direct.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AdvertisementSettings.YandexDirect yandex_direct = 100;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4743,7 +5258,9 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * Enable verification
+     * Enables or disables Referer verification for this channel.
+     * When set to true, only requests from allowed domains will be permitted.
+     * When set to false, content can be embedded on any domain.
      * </pre>
      *
      * <code>bool enable = 1;</code>
@@ -4753,7 +5270,9 @@ public final class ChannelOuterClass {
 
     /**
      * <pre>
-     * List of available domains
+     * List of domains allowed to embed content from this channel.
+     * Only relevant when enable is set to true.
+     * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
      * </pre>
      *
      * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -4763,7 +5282,9 @@ public final class ChannelOuterClass {
         getAllowedDomainsList();
     /**
      * <pre>
-     * List of available domains
+     * List of domains allowed to embed content from this channel.
+     * Only relevant when enable is set to true.
+     * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
      * </pre>
      *
      * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -4772,7 +5293,9 @@ public final class ChannelOuterClass {
     int getAllowedDomainsCount();
     /**
      * <pre>
-     * List of available domains
+     * List of domains allowed to embed content from this channel.
+     * Only relevant when enable is set to true.
+     * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
      * </pre>
      *
      * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -4782,7 +5305,9 @@ public final class ChannelOuterClass {
     java.lang.String getAllowedDomains(int index);
     /**
      * <pre>
-     * List of available domains
+     * List of domains allowed to embed content from this channel.
+     * Only relevant when enable is set to true.
+     * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
      * </pre>
      *
      * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -4794,7 +5319,9 @@ public final class ChannelOuterClass {
   }
   /**
    * <pre>
-   * Referer verification settings.
+   * Settings for HTTP Referer verification to control where content can be embedded.
+   * When enabled, the system checks the HTTP Referer request header to ensure
+   * that content is only embedded on allowed domains.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.RefererVerificationSettings}
@@ -4896,7 +5423,9 @@ public final class ChannelOuterClass {
     private boolean enable_;
     /**
      * <pre>
-     * Enable verification
+     * Enables or disables Referer verification for this channel.
+     * When set to true, only requests from allowed domains will be permitted.
+     * When set to false, content can be embedded on any domain.
      * </pre>
      *
      * <code>bool enable = 1;</code>
@@ -4911,7 +5440,9 @@ public final class ChannelOuterClass {
     private com.google.protobuf.LazyStringList allowedDomains_;
     /**
      * <pre>
-     * List of available domains
+     * List of domains allowed to embed content from this channel.
+     * Only relevant when enable is set to true.
+     * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
      * </pre>
      *
      * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -4923,7 +5454,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * List of available domains
+     * List of domains allowed to embed content from this channel.
+     * Only relevant when enable is set to true.
+     * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
      * </pre>
      *
      * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -4934,7 +5467,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * List of available domains
+     * List of domains allowed to embed content from this channel.
+     * Only relevant when enable is set to true.
+     * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
      * </pre>
      *
      * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -4946,7 +5481,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * List of available domains
+     * List of domains allowed to embed content from this channel.
+     * Only relevant when enable is set to true.
+     * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
      * </pre>
      *
      * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -5133,7 +5670,9 @@ public final class ChannelOuterClass {
     }
     /**
      * <pre>
-     * Referer verification settings.
+     * Settings for HTTP Referer verification to control where content can be embedded.
+     * When enabled, the system checks the HTTP Referer request header to ensure
+     * that content is only embedded on allowed domains.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.RefererVerificationSettings}
@@ -5304,7 +5843,9 @@ public final class ChannelOuterClass {
       private boolean enable_ ;
       /**
        * <pre>
-       * Enable verification
+       * Enables or disables Referer verification for this channel.
+       * When set to true, only requests from allowed domains will be permitted.
+       * When set to false, content can be embedded on any domain.
        * </pre>
        *
        * <code>bool enable = 1;</code>
@@ -5316,7 +5857,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Enable verification
+       * Enables or disables Referer verification for this channel.
+       * When set to true, only requests from allowed domains will be permitted.
+       * When set to false, content can be embedded on any domain.
        * </pre>
        *
        * <code>bool enable = 1;</code>
@@ -5331,7 +5874,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * Enable verification
+       * Enables or disables Referer verification for this channel.
+       * When set to true, only requests from allowed domains will be permitted.
+       * When set to false, content can be embedded on any domain.
        * </pre>
        *
        * <code>bool enable = 1;</code>
@@ -5353,7 +5898,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * List of available domains
+       * List of domains allowed to embed content from this channel.
+       * Only relevant when enable is set to true.
+       * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
        * </pre>
        *
        * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -5365,7 +5912,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * List of available domains
+       * List of domains allowed to embed content from this channel.
+       * Only relevant when enable is set to true.
+       * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
        * </pre>
        *
        * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -5376,7 +5925,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * List of available domains
+       * List of domains allowed to embed content from this channel.
+       * Only relevant when enable is set to true.
+       * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
        * </pre>
        *
        * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -5388,7 +5939,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * List of available domains
+       * List of domains allowed to embed content from this channel.
+       * Only relevant when enable is set to true.
+       * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
        * </pre>
        *
        * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -5401,7 +5954,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * List of available domains
+       * List of domains allowed to embed content from this channel.
+       * Only relevant when enable is set to true.
+       * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
        * </pre>
        *
        * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -5421,7 +5976,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * List of available domains
+       * List of domains allowed to embed content from this channel.
+       * Only relevant when enable is set to true.
+       * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
        * </pre>
        *
        * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -5440,7 +5997,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * List of available domains
+       * List of domains allowed to embed content from this channel.
+       * Only relevant when enable is set to true.
+       * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
        * </pre>
        *
        * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -5457,7 +6016,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * List of available domains
+       * List of domains allowed to embed content from this channel.
+       * Only relevant when enable is set to true.
+       * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
        * </pre>
        *
        * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -5471,7 +6032,9 @@ public final class ChannelOuterClass {
       }
       /**
        * <pre>
-       * List of available domains
+       * List of domains allowed to embed content from this channel.
+       * Only relevant when enable is set to true.
+       * Supports wildcard notation (e.g., "*.example.com") to allow all subdomains.
        * </pre>
        *
        * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
@@ -5584,31 +6147,32 @@ public final class ChannelOuterClass {
       "\n#yandex/cloud/video/v1/channel.proto\022\025y" +
       "andex.cloud.video.v1\032\037google/protobuf/ti" +
       "mestamp.proto\032\035yandex/cloud/validation.p" +
-      "roto\"\346\002\n\007Channel\022\n\n\002id\030\001 \001(\t\022\027\n\017organiza" +
+      "roto\"\207\003\n\007Channel\022\n\n\002id\030\001 \001(\t\022\027\n\017organiza" +
       "tion_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n\013descript" +
-      "ion\030\004 \001(\t\022.\n\ncreated_at\030d \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022.\n\nupdated_at\030e \001(\0132\032." +
-      "google.protobuf.Timestamp\022;\n\006labels\030\310\001 \003" +
-      "(\0132*.yandex.cloud.video.v1.Channel.Label" +
-      "sEntry\0229\n\010settings\030\311\001 \001(\0132&.yandex.cloud" +
-      ".video.v1.ChannelSettings\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020dJ\005" +
-      "\010f\020\310\001\"\256\001\n\017ChannelSettings\022C\n\radvertiseme" +
-      "nt\030\001 \001(\0132,.yandex.cloud.video.v1.Adverti" +
-      "sementSettings\022P\n\024referer_verification\030\003" +
-      " \001(\01322.yandex.cloud.video.v1.RefererVeri" +
-      "ficationSettingsJ\004\010\002\020\003\"\300\001\n\025Advertisement" +
-      "Settings\022R\n\ryandex_direct\030d \001(\01329.yandex" +
-      ".cloud.video.v1.AdvertisementSettings.Ya" +
-      "ndexDirectH\000\032A\n\014YandexDirect\022\016\n\006enable\030\001" +
-      " \001(\010\022\017\n\007page_id\030\002 \001(\003\022\020\n\010category\030\003 \001(\003B" +
-      "\n\n\010providerJ\004\010\001\020d\"\234\001\n\033RefererVerificatio" +
-      "nSettings\022\016\n\006enable\030\001 \001(\010\022m\n\017allowed_dom" +
-      "ains\030\002 \003(\tBT\362\3071>^(?:\\*\\.)?(?:[a-zA-Z0-9-" +
-      "]*\\.)+[a-zA-Z]{2,}$|^\\*\\.[a-zA-Z]{2,}$\212\310" +
-      "1\0054-255\202\3101\005<=100B\\\n\031yandex.cloud.api.vid" +
-      "eo.v1Z?github.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/video/v1;videob\006proto3"
+      "ion\030\004 \001(\t\022\037\n\027default_style_preset_id\030\005 \001" +
+      "(\t\022.\n\ncreated_at\030d \001(\0132\032.google.protobuf" +
+      ".Timestamp\022.\n\nupdated_at\030e \001(\0132\032.google." +
+      "protobuf.Timestamp\022;\n\006labels\030\310\001 \003(\0132*.ya" +
+      "ndex.cloud.video.v1.Channel.LabelsEntry\022" +
+      "9\n\010settings\030\311\001 \001(\0132&.yandex.cloud.video." +
+      "v1.ChannelSettings\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\006\020dJ\005\010f\020\310\001\"\256" +
+      "\001\n\017ChannelSettings\022C\n\radvertisement\030\001 \001(" +
+      "\0132,.yandex.cloud.video.v1.AdvertisementS" +
+      "ettings\022P\n\024referer_verification\030\003 \001(\01322." +
+      "yandex.cloud.video.v1.RefererVerificatio" +
+      "nSettingsJ\004\010\002\020\003\"\300\001\n\025AdvertisementSetting" +
+      "s\022R\n\ryandex_direct\030d \001(\01329.yandex.cloud." +
+      "video.v1.AdvertisementSettings.YandexDir" +
+      "ectH\000\032A\n\014YandexDirect\022\016\n\006enable\030\001 \001(\010\022\017\n" +
+      "\007page_id\030\002 \001(\003\022\020\n\010category\030\003 \001(\003B\n\n\010prov" +
+      "iderJ\004\010\001\020d\"\234\001\n\033RefererVerificationSettin" +
+      "gs\022\016\n\006enable\030\001 \001(\010\022m\n\017allowed_domains\030\002 " +
+      "\003(\tBT\362\3071>^(?:\\*\\.)?(?:[a-zA-Z0-9-]*\\.)+[" +
+      "a-zA-Z]{2,}$|^\\*\\.[a-zA-Z]{2,}$\212\3101\0054-255" +
+      "\202\3101\005<=100B\\\n\031yandex.cloud.api.video.v1Z?" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5621,7 +6185,7 @@ public final class ChannelOuterClass {
     internal_static_yandex_cloud_video_v1_Channel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Channel_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "Title", "Description", "CreatedAt", "UpdatedAt", "Labels", "Settings", });
+        new java.lang.String[] { "Id", "OrganizationId", "Title", "Description", "DefaultStylePresetId", "CreatedAt", "UpdatedAt", "Labels", "Settings", });
     internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_Channel_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_fieldAccessorTable = new

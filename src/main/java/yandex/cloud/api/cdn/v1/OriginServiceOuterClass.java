@@ -2463,6 +2463,26 @@ public final class OriginServiceOuterClass {
      * <code>.yandex.cloud.cdn.v1.OriginMeta meta = 6;</code>
      */
     yandex.cloud.api.cdn.v1.OriginOuterClass.OriginMetaOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 7;</code>
+     * @return The providerType.
+     */
+    java.lang.String getProviderType();
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 7;</code>
+     * @return The bytes for providerType.
+     */
+    com.google.protobuf.ByteString
+        getProviderTypeBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.CreateOriginRequest}
@@ -2479,6 +2499,7 @@ public final class OriginServiceOuterClass {
     private CreateOriginRequest() {
       folderId_ = "";
       source_ = "";
+      providerType_ = "";
     }
 
     @java.lang.Override
@@ -2565,6 +2586,12 @@ public final class OriginServiceOuterClass {
                 meta_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              providerType_ = s;
               break;
             }
             default: {
@@ -2840,6 +2867,52 @@ public final class OriginServiceOuterClass {
       return getMeta();
     }
 
+    public static final int PROVIDER_TYPE_FIELD_NUMBER = 7;
+    private volatile java.lang.Object providerType_;
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 7;</code>
+     * @return The providerType.
+     */
+    @java.lang.Override
+    public java.lang.String getProviderType() {
+      java.lang.Object ref = providerType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 7;</code>
+     * @return The bytes for providerType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderTypeBytes() {
+      java.lang.Object ref = providerType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2872,6 +2945,9 @@ public final class OriginServiceOuterClass {
       if (meta_ != null) {
         output.writeMessage(6, getMeta());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, providerType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2902,6 +2978,9 @@ public final class OriginServiceOuterClass {
       if (meta_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getMeta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, providerType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2939,6 +3018,8 @@ public final class OriginServiceOuterClass {
         if (!getMeta()
             .equals(other.getMeta())) return false;
       }
+      if (!getProviderType()
+          .equals(other.getProviderType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2969,6 +3050,8 @@ public final class OriginServiceOuterClass {
         hash = (37 * hash) + META_FIELD_NUMBER;
         hash = (53 * hash) + getMeta().hashCode();
       }
+      hash = (37 * hash) + PROVIDER_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getProviderType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3126,6 +3209,8 @@ public final class OriginServiceOuterClass {
           meta_ = null;
           metaBuilder_ = null;
         }
+        providerType_ = "";
+
         return this;
       }
 
@@ -3170,6 +3255,7 @@ public final class OriginServiceOuterClass {
         } else {
           result.meta_ = metaBuilder_.build();
         }
+        result.providerType_ = providerType_;
         onBuilt();
         return result;
       }
@@ -3237,6 +3323,10 @@ public final class OriginServiceOuterClass {
         }
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
+        }
+        if (!other.getProviderType().isEmpty()) {
+          providerType_ = other.providerType_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4024,6 +4114,102 @@ public final class OriginServiceOuterClass {
           meta_ = null;
         }
         return metaBuilder_;
+      }
+
+      private java.lang.Object providerType_ = "";
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 7;</code>
+       * @return The providerType.
+       */
+      public java.lang.String getProviderType() {
+        java.lang.Object ref = providerType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 7;</code>
+       * @return The bytes for providerType.
+       */
+      public com.google.protobuf.ByteString
+          getProviderTypeBytes() {
+        java.lang.Object ref = providerType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 7;</code>
+       * @param value The providerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        providerType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderType() {
+        
+        providerType_ = getDefaultInstance().getProviderType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 7;</code>
+       * @param value The bytes for providerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        providerType_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7927,46 +8113,47 @@ public final class OriginServiceOuterClass {
       "equest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
       "\037\n\017origin_group_id\030\002 \001(\003B\006\372\3071\002>0\"C\n\023List" +
       "OriginsResponse\022,\n\007origins\030\001 \003(\0132\033.yande" +
-      "x.cloud.cdn.v1.Origin\"\375\001\n\023CreateOriginRe" +
+      "x.cloud.cdn.v1.Origin\"\224\002\n\023CreateOriginRe" +
       "quest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037" +
       "\n\017origin_group_id\030\002 \001(\003B\006\372\3071\002>0\022\034\n\006sourc" +
       "e\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\007enabled\030\004 \001(\0132\032" +
       ".google.protobuf.BoolValue\022*\n\006backup\030\005 \001" +
       "(\0132\032.google.protobuf.BoolValue\022-\n\004meta\030\006" +
-      " \001(\0132\037.yandex.cloud.cdn.v1.OriginMeta\"R\n" +
-      "\024CreateOriginMetadata\022\031\n\torigin_id\030\001 \001(\003" +
-      "B\006\372\3071\002>0\022\037\n\017origin_group_id\030\002 \001(\003B\006\372\3071\002>" +
-      "0\"\261\001\n\023UpdateOriginRequest\022\037\n\tfolder_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\torigin_id\030\002 \001(\003B\006\372" +
-      "\3071\002>0\022\016\n\006source\030\003 \001(\t\022\017\n\007enabled\030\004 \001(\010\022\016" +
-      "\n\006backup\030\005 \001(\010\022-\n\004meta\030\006 \001(\0132\037.yandex.cl" +
-      "oud.cdn.v1.OriginMeta\"R\n\024UpdateOriginMet" +
-      "adata\022\031\n\torigin_id\030\001 \001(\003B\006\372\3071\002>0\022\037\n\017orig" +
-      "in_group_id\030\002 \001(\003B\006\372\3071\002>0\"Q\n\023DeleteOrigi" +
+      " \001(\0132\037.yandex.cloud.cdn.v1.OriginMeta\022\025\n" +
+      "\rprovider_type\030\007 \001(\t\"R\n\024CreateOriginMeta" +
+      "data\022\031\n\torigin_id\030\001 \001(\003B\006\372\3071\002>0\022\037\n\017origi" +
+      "n_group_id\030\002 \001(\003B\006\372\3071\002>0\"\261\001\n\023UpdateOrigi" +
       "nRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022\031\n\torigin_id\030\002 \001(\003B\006\372\3071\002>0\"1\n\024DeleteOr" +
-      "iginMetadata\022\031\n\torigin_id\030\001 \001(\003B\006\372\3071\002>02" +
-      "\331\005\n\rOriginService\022n\n\003Get\022%.yandex.cloud." +
-      "cdn.v1.GetOriginRequest\032\033.yandex.cloud.c" +
-      "dn.v1.Origin\"#\202\323\344\223\002\035\022\033/cdn/v1/origins/{o" +
-      "rigin_id}\022r\n\004List\022\'.yandex.cloud.cdn.v1." +
-      "ListOriginsRequest\032(.yandex.cloud.cdn.v1" +
-      ".ListOriginsResponse\"\027\202\323\344\223\002\021\022\017/cdn/v1/or" +
-      "igins\022\223\001\n\006Create\022(.yandex.cloud.cdn.v1.C" +
-      "reateOriginRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"<\202\323\344\223\002\024\"\017/cdn/v1/origins:\001" +
-      "*\262\322*\036\n\024CreateOriginMetadata\022\006Origin\022\237\001\n\006" +
-      "Update\022(.yandex.cloud.cdn.v1.UpdateOrigi" +
-      "nRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"H\202\323\344\223\002 2\033/cdn/v1/origins/{origin_id}" +
-      ":\001*\262\322*\036\n\024UpdateOriginMetadata\022\006Origin\022\253\001" +
-      "\n\006Delete\022(.yandex.cloud.cdn.v1.DeleteOri" +
-      "ginRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"T\202\323\344\223\002\035*\033/cdn/v1/origins/{origin_i" +
-      "d}\262\322*-\n\024DeleteOriginMetadata\022\025google.pro" +
-      "tobuf.EmptyBV\n\027yandex.cloud.api.cdn.v1Z;" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/cdn/v1;cdnb\006proto3"
+      "0\022\031\n\torigin_id\030\002 \001(\003B\006\372\3071\002>0\022\016\n\006source\030\003" +
+      " \001(\t\022\017\n\007enabled\030\004 \001(\010\022\016\n\006backup\030\005 \001(\010\022-\n" +
+      "\004meta\030\006 \001(\0132\037.yandex.cloud.cdn.v1.Origin" +
+      "Meta\"R\n\024UpdateOriginMetadata\022\031\n\torigin_i" +
+      "d\030\001 \001(\003B\006\372\3071\002>0\022\037\n\017origin_group_id\030\002 \001(\003" +
+      "B\006\372\3071\002>0\"Q\n\023DeleteOriginRequest\022\037\n\tfolde" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\torigin_id\030\002 " +
+      "\001(\003B\006\372\3071\002>0\"1\n\024DeleteOriginMetadata\022\031\n\to" +
+      "rigin_id\030\001 \001(\003B\006\372\3071\002>02\331\005\n\rOriginService" +
+      "\022n\n\003Get\022%.yandex.cloud.cdn.v1.GetOriginR" +
+      "equest\032\033.yandex.cloud.cdn.v1.Origin\"#\202\323\344" +
+      "\223\002\035\022\033/cdn/v1/origins/{origin_id}\022r\n\004List" +
+      "\022\'.yandex.cloud.cdn.v1.ListOriginsReques" +
+      "t\032(.yandex.cloud.cdn.v1.ListOriginsRespo" +
+      "nse\"\027\202\323\344\223\002\021\022\017/cdn/v1/origins\022\223\001\n\006Create\022" +
+      "(.yandex.cloud.cdn.v1.CreateOriginReques" +
+      "t\032!.yandex.cloud.operation.Operation\"<\202\323" +
+      "\344\223\002\024\"\017/cdn/v1/origins:\001*\262\322*\036\n\024CreateOrig" +
+      "inMetadata\022\006Origin\022\237\001\n\006Update\022(.yandex.c" +
+      "loud.cdn.v1.UpdateOriginRequest\032!.yandex" +
+      ".cloud.operation.Operation\"H\202\323\344\223\002 2\033/cdn" +
+      "/v1/origins/{origin_id}:\001*\262\322*\036\n\024UpdateOr" +
+      "iginMetadata\022\006Origin\022\253\001\n\006Delete\022(.yandex" +
+      ".cloud.cdn.v1.DeleteOriginRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"T\202\323\344\223\002\035*\033/c" +
+      "dn/v1/origins/{origin_id}\262\322*-\n\024DeleteOri" +
+      "ginMetadata\022\025google.protobuf.EmptyBV\n\027ya" +
+      "ndex.cloud.api.cdn.v1Z;github.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/cdn/v1;c" +
+      "dnb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8001,7 +8188,7 @@ public final class OriginServiceOuterClass {
     internal_static_yandex_cloud_cdn_v1_CreateOriginRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_CreateOriginRequest_descriptor,
-        new java.lang.String[] { "FolderId", "OriginGroupId", "Source", "Enabled", "Backup", "Meta", });
+        new java.lang.String[] { "FolderId", "OriginGroupId", "Source", "Enabled", "Backup", "Meta", "ProviderType", });
     internal_static_yandex_cloud_cdn_v1_CreateOriginMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_cdn_v1_CreateOriginMetadata_fieldAccessorTable = new

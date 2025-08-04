@@ -20,7 +20,7 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to retrieve.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,7 +29,7 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getPlaylistId();
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to retrieve.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -126,7 +126,7 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object playlistId_;
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to retrieve.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -147,7 +147,7 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to retrieve.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -473,7 +473,7 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object playlistId_ = "";
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to retrieve.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -493,7 +493,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to retrieve.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -514,7 +514,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to retrieve.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -533,7 +533,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to retrieve.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -547,7 +547,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to retrieve.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -624,7 +624,7 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the playlists to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -633,7 +633,7 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the playlists to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -644,8 +644,7 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of the results per page to return.
-     * Default value: 100.
+     * The maximum number of playlists to return per page.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -655,7 +654,8 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListPlaylistsResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -664,7 +664,8 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListPlaylistsResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -675,27 +676,27 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The orderBy.
      */
     java.lang.String getOrderBy();
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for orderBy.
      */
     com.google.protobuf.ByteString
@@ -703,17 +704,16 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned playlists.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'highlights' AND id='playlist-1'`
+     * Filterable fields: ["id", "title"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -722,17 +722,16 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned playlists.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'highlights' AND id='playlist-1'`
+     * Filterable fields: ["id", "title"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -855,7 +854,7 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the playlists to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -876,7 +875,7 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the playlists to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -901,8 +900,7 @@ public final class PlaylistServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of the results per page to return.
-     * Default value: 100.
+     * The maximum number of playlists to return per page.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -917,7 +915,8 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListPlaylistsResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -938,7 +937,8 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListPlaylistsResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -963,14 +963,14 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object orderBy_;
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The orderBy.
      */
     @java.lang.Override
@@ -988,14 +988,14 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for orderBy.
      */
     @java.lang.Override
@@ -1017,17 +1017,16 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned playlists.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'highlights' AND id='playlist-1'`
+     * Filterable fields: ["id", "title"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1048,17 +1047,16 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned playlists.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'highlights' AND id='playlist-1'`
+     * Filterable fields: ["id", "title"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1453,7 +1451,7 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the playlists to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1473,7 +1471,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the playlists to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1494,7 +1492,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the playlists to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1513,7 +1511,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the playlists to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1527,7 +1525,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the playlists to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1549,8 +1547,7 @@ public final class PlaylistServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of playlists to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1562,8 +1559,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of playlists to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1578,8 +1574,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of playlists to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1595,7 +1590,8 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListPlaylistsResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1615,7 +1611,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListPlaylistsResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1636,7 +1633,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListPlaylistsResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1655,7 +1653,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListPlaylistsResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1669,7 +1668,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListPlaylistsResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1691,14 +1691,14 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object orderBy_ = "";
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The orderBy.
        */
       public java.lang.String getOrderBy() {
@@ -1715,14 +1715,14 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for orderBy.
        */
       public com.google.protobuf.ByteString
@@ -1740,14 +1740,14 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The orderBy to set.
        * @return This builder for chaining.
        */
@@ -1763,14 +1763,14 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
@@ -1781,14 +1781,14 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for orderBy to set.
        * @return This builder for chaining.
        */
@@ -1807,17 +1807,16 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned playlists.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'highlights' AND id='playlist-1'`
+       * Filterable fields: ["id", "title"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1837,17 +1836,16 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned playlists.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'highlights' AND id='playlist-1'`
+       * Filterable fields: ["id", "title"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1868,17 +1866,16 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned playlists.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'highlights' AND id='playlist-1'`
+       * Filterable fields: ["id", "title"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1897,17 +1894,16 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned playlists.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'highlights' AND id='playlist-1'`
+       * Filterable fields: ["id", "title"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1921,17 +1917,16 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned playlists.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'highlights' AND id='playlist-1'`
+       * Filterable fields: ["id", "title"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -2008,7 +2003,8 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * List of playlists for specific channel.
+     * List of playlists matching the request criteria.
+     * May be empty if no playlists match the criteria or if the channel has no playlists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2017,7 +2013,8 @@ public final class PlaylistServiceOuterClass {
         getPlaylistsList();
     /**
      * <pre>
-     * List of playlists for specific channel.
+     * List of playlists matching the request criteria.
+     * May be empty if no playlists match the criteria or if the channel has no playlists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2025,7 +2022,8 @@ public final class PlaylistServiceOuterClass {
     yandex.cloud.api.video.v1.PlaylistOuterClass.Playlist getPlaylists(int index);
     /**
      * <pre>
-     * List of playlists for specific channel.
+     * List of playlists matching the request criteria.
+     * May be empty if no playlists match the criteria or if the channel has no playlists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2033,7 +2031,8 @@ public final class PlaylistServiceOuterClass {
     int getPlaylistsCount();
     /**
      * <pre>
-     * List of playlists for specific channel.
+     * List of playlists matching the request criteria.
+     * May be empty if no playlists match the criteria or if the channel has no playlists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2042,7 +2041,8 @@ public final class PlaylistServiceOuterClass {
         getPlaylistsOrBuilderList();
     /**
      * <pre>
-     * List of playlists for specific channel.
+     * List of playlists matching the request criteria.
+     * May be empty if no playlists match the criteria or if the channel has no playlists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2052,7 +2052,8 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2061,7 +2062,8 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2172,7 +2174,8 @@ public final class PlaylistServiceOuterClass {
     private java.util.List<yandex.cloud.api.video.v1.PlaylistOuterClass.Playlist> playlists_;
     /**
      * <pre>
-     * List of playlists for specific channel.
+     * List of playlists matching the request criteria.
+     * May be empty if no playlists match the criteria or if the channel has no playlists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2183,7 +2186,8 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlists for specific channel.
+     * List of playlists matching the request criteria.
+     * May be empty if no playlists match the criteria or if the channel has no playlists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2195,7 +2199,8 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlists for specific channel.
+     * List of playlists matching the request criteria.
+     * May be empty if no playlists match the criteria or if the channel has no playlists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2206,7 +2211,8 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlists for specific channel.
+     * List of playlists matching the request criteria.
+     * May be empty if no playlists match the criteria or if the channel has no playlists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2217,7 +2223,8 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlists for specific channel.
+     * List of playlists matching the request criteria.
+     * May be empty if no playlists match the criteria or if the channel has no playlists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2232,7 +2239,8 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2253,7 +2261,8 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2647,7 +2656,8 @@ public final class PlaylistServiceOuterClass {
 
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2661,7 +2671,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2675,7 +2686,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2689,7 +2701,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2710,7 +2723,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2728,7 +2742,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2748,7 +2763,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2769,7 +2785,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2787,7 +2804,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2805,7 +2823,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2824,7 +2843,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2841,7 +2861,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2858,7 +2879,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2869,7 +2891,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2883,7 +2906,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2898,7 +2922,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2909,7 +2934,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2921,7 +2947,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlists for specific channel.
+       * List of playlists matching the request criteria.
+       * May be empty if no playlists match the criteria or if the channel has no playlists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Playlist playlists = 1;</code>
@@ -2948,7 +2975,8 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2968,7 +2996,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2989,7 +3018,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -3008,7 +3038,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -3022,7 +3053,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -3099,7 +3131,7 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the playlist will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3108,7 +3140,7 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the playlist will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3119,19 +3151,19 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * Playlist title.
+     * Title of the playlist to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
      * <pre>
-     * Playlist title.
+     * Title of the playlist to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -3139,19 +3171,21 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * Playlist description.
+     * Detailed description of the playlist content and context.
+     * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <pre>
-     * Playlist description.
+     * Detailed description of the playlist content and context.
+     * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -3159,7 +3193,9 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * List of playlist items.
+     * List of items to include in the playlist.
+     * Each item represents a video or episode to be played in sequence.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -3168,7 +3204,9 @@ public final class PlaylistServiceOuterClass {
         getItemsList();
     /**
      * <pre>
-     * List of playlist items.
+     * List of items to include in the playlist.
+     * Each item represents a video or episode to be played in sequence.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -3176,7 +3214,9 @@ public final class PlaylistServiceOuterClass {
     yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItem getItems(int index);
     /**
      * <pre>
-     * List of playlist items.
+     * List of items to include in the playlist.
+     * Each item represents a video or episode to be played in sequence.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -3184,7 +3224,9 @@ public final class PlaylistServiceOuterClass {
     int getItemsCount();
     /**
      * <pre>
-     * List of playlist items.
+     * List of items to include in the playlist.
+     * Each item represents a video or episode to be played in sequence.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -3193,13 +3235,37 @@ public final class PlaylistServiceOuterClass {
         getItemsOrBuilderList();
     /**
      * <pre>
-     * List of playlist items.
+     * List of items to include in the playlist.
+     * Each item represents a video or episode to be played in sequence.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItemOrBuilder getItemsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * ID of the style preset to be applied to the playlist player.
+     * Style presets control the visual appearance of the player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The stylePresetId.
+     */
+    java.lang.String getStylePresetId();
+    /**
+     * <pre>
+     * ID of the style preset to be applied to the playlist player.
+     * Style presets control the visual appearance of the player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for stylePresetId.
+     */
+    com.google.protobuf.ByteString
+        getStylePresetIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.video.v1.CreatePlaylistRequest}
@@ -3218,6 +3284,7 @@ public final class PlaylistServiceOuterClass {
       title_ = "";
       description_ = "";
       items_ = java.util.Collections.emptyList();
+      stylePresetId_ = "";
     }
 
     @java.lang.Override
@@ -3278,6 +3345,12 @@ public final class PlaylistServiceOuterClass {
                   input.readMessage(yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItem.parser(), extensionRegistry));
               break;
             }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stylePresetId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3317,7 +3390,7 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the playlist will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3338,7 +3411,7 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the playlist will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3363,10 +3436,10 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Playlist title.
+     * Title of the playlist to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -3384,10 +3457,10 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * Playlist title.
+     * Title of the playlist to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -3409,10 +3482,11 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Playlist description.
+     * Detailed description of the playlist content and context.
+     * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -3430,10 +3504,11 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * Playlist description.
+     * Detailed description of the playlist content and context.
+     * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -3455,7 +3530,9 @@ public final class PlaylistServiceOuterClass {
     private java.util.List<yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItem> items_;
     /**
      * <pre>
-     * List of playlist items.
+     * List of items to include in the playlist.
+     * Each item represents a video or episode to be played in sequence.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -3466,7 +3543,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * List of items to include in the playlist.
+     * Each item represents a video or episode to be played in sequence.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -3478,7 +3557,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * List of items to include in the playlist.
+     * Each item represents a video or episode to be played in sequence.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -3489,7 +3570,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * List of items to include in the playlist.
+     * Each item represents a video or episode to be played in sequence.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -3500,7 +3583,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * List of items to include in the playlist.
+     * Each item represents a video or episode to be played in sequence.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -3509,6 +3594,54 @@ public final class PlaylistServiceOuterClass {
     public yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItemOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
+    }
+
+    public static final int STYLE_PRESET_ID_FIELD_NUMBER = 5;
+    private volatile java.lang.Object stylePresetId_;
+    /**
+     * <pre>
+     * ID of the style preset to be applied to the playlist player.
+     * Style presets control the visual appearance of the player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The stylePresetId.
+     */
+    @java.lang.Override
+    public java.lang.String getStylePresetId() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stylePresetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the style preset to be applied to the playlist player.
+     * Style presets control the visual appearance of the player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for stylePresetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStylePresetIdBytes() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stylePresetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3537,6 +3670,9 @@ public final class PlaylistServiceOuterClass {
       for (int i = 0; i < items_.size(); i++) {
         output.writeMessage(4, items_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, stylePresetId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3558,6 +3694,9 @@ public final class PlaylistServiceOuterClass {
       for (int i = 0; i < items_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, items_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, stylePresetId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3582,6 +3721,8 @@ public final class PlaylistServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!getItemsList()
           .equals(other.getItemsList())) return false;
+      if (!getStylePresetId()
+          .equals(other.getStylePresetId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3603,6 +3744,8 @@ public final class PlaylistServiceOuterClass {
         hash = (37 * hash) + ITEMS_FIELD_NUMBER;
         hash = (53 * hash) + getItemsList().hashCode();
       }
+      hash = (37 * hash) + STYLE_PRESET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStylePresetId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3749,6 +3892,8 @@ public final class PlaylistServiceOuterClass {
         } else {
           itemsBuilder_.clear();
         }
+        stylePresetId_ = "";
+
         return this;
       }
 
@@ -3788,6 +3933,7 @@ public final class PlaylistServiceOuterClass {
         } else {
           result.items_ = itemsBuilder_.build();
         }
+        result.stylePresetId_ = stylePresetId_;
         onBuilt();
         return result;
       }
@@ -3874,6 +4020,10 @@ public final class PlaylistServiceOuterClass {
             }
           }
         }
+        if (!other.getStylePresetId().isEmpty()) {
+          stylePresetId_ = other.stylePresetId_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3907,7 +4057,7 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the playlist will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3927,7 +4077,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the playlist will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3948,7 +4098,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the playlist will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3967,7 +4117,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the playlist will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3981,7 +4131,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the playlist will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4003,10 +4153,10 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Playlist title.
+       * Title of the playlist to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -4023,10 +4173,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * Title of the playlist to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -4044,10 +4194,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * Title of the playlist to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -4063,10 +4213,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * Title of the playlist to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -4077,10 +4227,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * Title of the playlist to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -4099,10 +4249,11 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Playlist description.
+       * Detailed description of the playlist content and context.
+       * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -4119,10 +4270,11 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * Detailed description of the playlist content and context.
+       * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -4140,10 +4292,11 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * Detailed description of the playlist content and context.
+       * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -4159,10 +4312,11 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * Detailed description of the playlist content and context.
+       * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -4173,10 +4327,11 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * Detailed description of the playlist content and context.
+       * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -4206,7 +4361,9 @@ public final class PlaylistServiceOuterClass {
 
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4220,7 +4377,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4234,7 +4393,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4248,7 +4409,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4269,7 +4432,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4287,7 +4452,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4307,7 +4474,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4328,7 +4497,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4346,7 +4517,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4364,7 +4537,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4383,7 +4558,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4400,7 +4577,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4417,7 +4596,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4428,7 +4609,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4442,7 +4625,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4457,7 +4642,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4468,7 +4655,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4480,7 +4669,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * List of items to include in the playlist.
+       * Each item represents a video or episode to be played in sequence.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 4 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -4502,6 +4693,107 @@ public final class PlaylistServiceOuterClass {
           items_ = null;
         }
         return itemsBuilder_;
+      }
+
+      private java.lang.Object stylePresetId_ = "";
+      /**
+       * <pre>
+       * ID of the style preset to be applied to the playlist player.
+       * Style presets control the visual appearance of the player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The stylePresetId.
+       */
+      public java.lang.String getStylePresetId() {
+        java.lang.Object ref = stylePresetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stylePresetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the style preset to be applied to the playlist player.
+       * Style presets control the visual appearance of the player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for stylePresetId.
+       */
+      public com.google.protobuf.ByteString
+          getStylePresetIdBytes() {
+        java.lang.Object ref = stylePresetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stylePresetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the style preset to be applied to the playlist player.
+       * Style presets control the visual appearance of the player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the style preset to be applied to the playlist player.
+       * Style presets control the visual appearance of the player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStylePresetId() {
+        
+        stylePresetId_ = getDefaultInstance().getStylePresetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the style preset to be applied to the playlist player.
+       * Style presets control the visual appearance of the player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stylePresetId_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4562,7 +4854,7 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being created.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -4571,7 +4863,7 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getPlaylistId();
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being created.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -4668,7 +4960,7 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object playlistId_;
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being created.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -4689,7 +4981,7 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being created.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -5015,7 +5307,7 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object playlistId_ = "";
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being created.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -5035,7 +5327,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being created.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -5056,7 +5348,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being created.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -5075,7 +5367,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being created.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -5089,7 +5381,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being created.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -5166,7 +5458,7 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to update.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5175,7 +5467,7 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getPlaylistId();
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to update.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5186,7 +5478,10 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the playlist are going to be updated.
+     * Field mask specifying which fields of the playlist should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -5195,7 +5490,10 @@ public final class PlaylistServiceOuterClass {
     boolean hasFieldMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the playlist are going to be updated.
+     * Field mask specifying which fields of the playlist should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -5204,7 +5502,10 @@ public final class PlaylistServiceOuterClass {
     com.google.protobuf.FieldMask getFieldMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the playlist are going to be updated.
+     * Field mask specifying which fields of the playlist should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -5213,19 +5514,19 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * Playlist title.
+     * New title for the playlist.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
      * <pre>
-     * Playlist title.
+     * New title for the playlist.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -5233,19 +5534,21 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * Playlist description.
+     * New description for the playlist.
+     * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <pre>
-     * Playlist description.
+     * New description for the playlist.
+     * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -5253,7 +5556,9 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * List of playlist items.
+     * New list of items to include in the playlist.
+     * This completely replaces the existing items if specified in the field mask.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -5262,7 +5567,9 @@ public final class PlaylistServiceOuterClass {
         getItemsList();
     /**
      * <pre>
-     * List of playlist items.
+     * New list of items to include in the playlist.
+     * This completely replaces the existing items if specified in the field mask.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -5270,7 +5577,9 @@ public final class PlaylistServiceOuterClass {
     yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItem getItems(int index);
     /**
      * <pre>
-     * List of playlist items.
+     * New list of items to include in the playlist.
+     * This completely replaces the existing items if specified in the field mask.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -5278,7 +5587,9 @@ public final class PlaylistServiceOuterClass {
     int getItemsCount();
     /**
      * <pre>
-     * List of playlist items.
+     * New list of items to include in the playlist.
+     * This completely replaces the existing items if specified in the field mask.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -5287,13 +5598,35 @@ public final class PlaylistServiceOuterClass {
         getItemsOrBuilderList();
     /**
      * <pre>
-     * List of playlist items.
+     * New list of items to include in the playlist.
+     * This completely replaces the existing items if specified in the field mask.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItemOrBuilder getItemsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * New ID of the style preset to be applied to the playlist player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The stylePresetId.
+     */
+    java.lang.String getStylePresetId();
+    /**
+     * <pre>
+     * New ID of the style preset to be applied to the playlist player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for stylePresetId.
+     */
+    com.google.protobuf.ByteString
+        getStylePresetIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.video.v1.UpdatePlaylistRequest}
@@ -5312,6 +5645,7 @@ public final class PlaylistServiceOuterClass {
       title_ = "";
       description_ = "";
       items_ = java.util.Collections.emptyList();
+      stylePresetId_ = "";
     }
 
     @java.lang.Override
@@ -5385,6 +5719,12 @@ public final class PlaylistServiceOuterClass {
                   input.readMessage(yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItem.parser(), extensionRegistry));
               break;
             }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stylePresetId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5424,7 +5764,7 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object playlistId_;
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to update.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5445,7 +5785,7 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to update.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5470,7 +5810,10 @@ public final class PlaylistServiceOuterClass {
     private com.google.protobuf.FieldMask fieldMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the playlist are going to be updated.
+     * Field mask specifying which fields of the playlist should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -5482,7 +5825,10 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the playlist are going to be updated.
+     * Field mask specifying which fields of the playlist should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -5494,7 +5840,10 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the playlist are going to be updated.
+     * Field mask specifying which fields of the playlist should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -5508,10 +5857,10 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Playlist title.
+     * New title for the playlist.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -5529,10 +5878,10 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * Playlist title.
+     * New title for the playlist.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -5554,10 +5903,11 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Playlist description.
+     * New description for the playlist.
+     * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -5575,10 +5925,11 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * Playlist description.
+     * New description for the playlist.
+     * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -5600,7 +5951,9 @@ public final class PlaylistServiceOuterClass {
     private java.util.List<yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItem> items_;
     /**
      * <pre>
-     * List of playlist items.
+     * New list of items to include in the playlist.
+     * This completely replaces the existing items if specified in the field mask.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -5611,7 +5964,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * New list of items to include in the playlist.
+     * This completely replaces the existing items if specified in the field mask.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -5623,7 +5978,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * New list of items to include in the playlist.
+     * This completely replaces the existing items if specified in the field mask.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -5634,7 +5991,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * New list of items to include in the playlist.
+     * This completely replaces the existing items if specified in the field mask.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -5645,7 +6004,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * New list of items to include in the playlist.
+     * This completely replaces the existing items if specified in the field mask.
+     * The order of items in this list determines the playback order.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -5654,6 +6015,52 @@ public final class PlaylistServiceOuterClass {
     public yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItemOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
+    }
+
+    public static final int STYLE_PRESET_ID_FIELD_NUMBER = 6;
+    private volatile java.lang.Object stylePresetId_;
+    /**
+     * <pre>
+     * New ID of the style preset to be applied to the playlist player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The stylePresetId.
+     */
+    @java.lang.Override
+    public java.lang.String getStylePresetId() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stylePresetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New ID of the style preset to be applied to the playlist player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for stylePresetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStylePresetIdBytes() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stylePresetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5685,6 +6092,9 @@ public final class PlaylistServiceOuterClass {
       for (int i = 0; i < items_.size(); i++) {
         output.writeMessage(5, items_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, stylePresetId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5710,6 +6120,9 @@ public final class PlaylistServiceOuterClass {
       for (int i = 0; i < items_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, items_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, stylePresetId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5739,6 +6152,8 @@ public final class PlaylistServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!getItemsList()
           .equals(other.getItemsList())) return false;
+      if (!getStylePresetId()
+          .equals(other.getStylePresetId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5764,6 +6179,8 @@ public final class PlaylistServiceOuterClass {
         hash = (37 * hash) + ITEMS_FIELD_NUMBER;
         hash = (53 * hash) + getItemsList().hashCode();
       }
+      hash = (37 * hash) + STYLE_PRESET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStylePresetId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5916,6 +6333,8 @@ public final class PlaylistServiceOuterClass {
         } else {
           itemsBuilder_.clear();
         }
+        stylePresetId_ = "";
+
         return this;
       }
 
@@ -5960,6 +6379,7 @@ public final class PlaylistServiceOuterClass {
         } else {
           result.items_ = itemsBuilder_.build();
         }
+        result.stylePresetId_ = stylePresetId_;
         onBuilt();
         return result;
       }
@@ -6049,6 +6469,10 @@ public final class PlaylistServiceOuterClass {
             }
           }
         }
+        if (!other.getStylePresetId().isEmpty()) {
+          stylePresetId_ = other.stylePresetId_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6082,7 +6506,7 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object playlistId_ = "";
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to update.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6102,7 +6526,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to update.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6123,7 +6547,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to update.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6142,7 +6566,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to update.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6156,7 +6580,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to update.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6180,7 +6604,10 @@ public final class PlaylistServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the playlist are going to be updated.
+       * Field mask specifying which fields of the playlist should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -6191,7 +6618,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the playlist are going to be updated.
+       * Field mask specifying which fields of the playlist should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -6206,7 +6636,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the playlist are going to be updated.
+       * Field mask specifying which fields of the playlist should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -6226,7 +6659,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the playlist are going to be updated.
+       * Field mask specifying which fields of the playlist should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -6244,7 +6680,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the playlist are going to be updated.
+       * Field mask specifying which fields of the playlist should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -6266,7 +6705,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the playlist are going to be updated.
+       * Field mask specifying which fields of the playlist should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -6284,7 +6726,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the playlist are going to be updated.
+       * Field mask specifying which fields of the playlist should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -6296,7 +6741,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the playlist are going to be updated.
+       * Field mask specifying which fields of the playlist should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -6311,7 +6759,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the playlist are going to be updated.
+       * Field mask specifying which fields of the playlist should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -6333,10 +6784,10 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Playlist title.
+       * New title for the playlist.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -6353,10 +6804,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * New title for the playlist.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -6374,10 +6825,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * New title for the playlist.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -6393,10 +6844,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * New title for the playlist.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -6407,10 +6858,10 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * New title for the playlist.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -6429,10 +6880,11 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Playlist description.
+       * New description for the playlist.
+       * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -6449,10 +6901,11 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * New description for the playlist.
+       * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -6470,10 +6923,11 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * New description for the playlist.
+       * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -6489,10 +6943,11 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * New description for the playlist.
+       * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -6503,10 +6958,11 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * New description for the playlist.
+       * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -6536,7 +6992,9 @@ public final class PlaylistServiceOuterClass {
 
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6550,7 +7008,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6564,7 +7024,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6578,7 +7040,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6599,7 +7063,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6617,7 +7083,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6637,7 +7105,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6658,7 +7128,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6676,7 +7148,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6694,7 +7168,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6713,7 +7189,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6730,7 +7208,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6747,7 +7227,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6758,7 +7240,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6772,7 +7256,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6787,7 +7273,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6798,7 +7286,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6810,7 +7300,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * New list of items to include in the playlist.
+       * This completely replaces the existing items if specified in the field mask.
+       * The order of items in this list determines the playback order.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5 [(.yandex.cloud.size) = "&lt;=100"];</code>
@@ -6832,6 +7324,102 @@ public final class PlaylistServiceOuterClass {
           items_ = null;
         }
         return itemsBuilder_;
+      }
+
+      private java.lang.Object stylePresetId_ = "";
+      /**
+       * <pre>
+       * New ID of the style preset to be applied to the playlist player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The stylePresetId.
+       */
+      public java.lang.String getStylePresetId() {
+        java.lang.Object ref = stylePresetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stylePresetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New ID of the style preset to be applied to the playlist player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for stylePresetId.
+       */
+      public com.google.protobuf.ByteString
+          getStylePresetIdBytes() {
+        java.lang.Object ref = stylePresetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stylePresetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New ID of the style preset to be applied to the playlist player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New ID of the style preset to be applied to the playlist player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStylePresetId() {
+        
+        stylePresetId_ = getDefaultInstance().getStylePresetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New ID of the style preset to be applied to the playlist player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stylePresetId_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6892,7 +7480,7 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being updated.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -6901,7 +7489,7 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getPlaylistId();
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being updated.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -6998,7 +7586,7 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object playlistId_;
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being updated.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -7019,7 +7607,7 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being updated.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -7345,7 +7933,7 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object playlistId_ = "";
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being updated.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -7365,7 +7953,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being updated.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -7386,7 +7974,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being updated.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -7405,7 +7993,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being updated.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -7419,7 +8007,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being updated.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -7496,7 +8084,7 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to delete.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7505,7 +8093,7 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getPlaylistId();
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to delete.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7602,7 +8190,7 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object playlistId_;
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to delete.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7623,7 +8211,7 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist to delete.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7949,7 +8537,7 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object playlistId_ = "";
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to delete.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7969,7 +8557,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to delete.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7990,7 +8578,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to delete.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8009,7 +8597,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to delete.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8023,7 +8611,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist to delete.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8100,7 +8688,8 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being deleted.
+     * This identifier can be used to track the playlist deletion operation.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -8109,7 +8698,8 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getPlaylistId();
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being deleted.
+     * This identifier can be used to track the playlist deletion operation.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -8206,7 +8796,8 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object playlistId_;
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being deleted.
+     * This identifier can be used to track the playlist deletion operation.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -8227,7 +8818,8 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist being deleted.
+     * This identifier can be used to track the playlist deletion operation.
      * </pre>
      *
      * <code>string playlist_id = 1;</code>
@@ -8553,7 +9145,8 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object playlistId_ = "";
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being deleted.
+       * This identifier can be used to track the playlist deletion operation.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -8573,7 +9166,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being deleted.
+       * This identifier can be used to track the playlist deletion operation.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -8594,7 +9188,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being deleted.
+       * This identifier can be used to track the playlist deletion operation.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -8613,7 +9208,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being deleted.
+       * This identifier can be used to track the playlist deletion operation.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -8627,7 +9223,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist being deleted.
+       * This identifier can be used to track the playlist deletion operation.
        * </pre>
        *
        * <code>string playlist_id = 1;</code>
@@ -8704,7 +9301,7 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the playlists to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8713,7 +9310,7 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the playlists to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8724,7 +9321,8 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs to delete.
+     * All playlists must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8734,7 +9332,8 @@ public final class PlaylistServiceOuterClass {
         getPlaylistIdsList();
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs to delete.
+     * All playlists must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8743,7 +9342,8 @@ public final class PlaylistServiceOuterClass {
     int getPlaylistIdsCount();
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs to delete.
+     * All playlists must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8753,7 +9353,8 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getPlaylistIds(int index);
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs to delete.
+     * All playlists must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8865,7 +9466,7 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the playlists to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8886,7 +9487,7 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the playlists to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8911,7 +9512,8 @@ public final class PlaylistServiceOuterClass {
     private com.google.protobuf.LazyStringList playlistIds_;
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs to delete.
+     * All playlists must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8923,7 +9525,8 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs to delete.
+     * All playlists must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8934,7 +9537,8 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs to delete.
+     * All playlists must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8946,7 +9550,8 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs to delete.
+     * All playlists must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9299,7 +9904,7 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the playlists to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9319,7 +9924,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the playlists to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9340,7 +9945,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the playlists to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9359,7 +9964,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the playlists to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9373,7 +9978,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the playlists to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9401,7 +10006,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs to delete.
+       * All playlists must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9413,7 +10019,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs to delete.
+       * All playlists must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9424,7 +10031,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs to delete.
+       * All playlists must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9436,7 +10044,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs to delete.
+       * All playlists must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9449,7 +10058,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs to delete.
+       * All playlists must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9469,7 +10079,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs to delete.
+       * All playlists must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9488,7 +10099,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs to delete.
+       * All playlists must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9505,7 +10117,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs to delete.
+       * All playlists must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9519,7 +10132,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs to delete.
+       * All playlists must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string playlist_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9596,7 +10210,9 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs being deleted.
+     * This list can be used to track which playlists are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string playlist_ids = 1;</code>
@@ -9606,7 +10222,9 @@ public final class PlaylistServiceOuterClass {
         getPlaylistIdsList();
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs being deleted.
+     * This list can be used to track which playlists are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string playlist_ids = 1;</code>
@@ -9615,7 +10233,9 @@ public final class PlaylistServiceOuterClass {
     int getPlaylistIdsCount();
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs being deleted.
+     * This list can be used to track which playlists are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string playlist_ids = 1;</code>
@@ -9625,7 +10245,9 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getPlaylistIds(int index);
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs being deleted.
+     * This list can be used to track which playlists are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string playlist_ids = 1;</code>
@@ -9730,7 +10352,9 @@ public final class PlaylistServiceOuterClass {
     private com.google.protobuf.LazyStringList playlistIds_;
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs being deleted.
+     * This list can be used to track which playlists are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string playlist_ids = 1;</code>
@@ -9742,7 +10366,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs being deleted.
+     * This list can be used to track which playlists are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string playlist_ids = 1;</code>
@@ -9753,7 +10379,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs being deleted.
+     * This list can be used to track which playlists are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string playlist_ids = 1;</code>
@@ -9765,7 +10393,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * List of playlist IDs.
+     * List of playlist IDs being deleted.
+     * This list can be used to track which playlists are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string playlist_ids = 1;</code>
@@ -10107,7 +10737,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs being deleted.
+       * This list can be used to track which playlists are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string playlist_ids = 1;</code>
@@ -10119,7 +10751,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs being deleted.
+       * This list can be used to track which playlists are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string playlist_ids = 1;</code>
@@ -10130,7 +10764,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs being deleted.
+       * This list can be used to track which playlists are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string playlist_ids = 1;</code>
@@ -10142,7 +10778,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs being deleted.
+       * This list can be used to track which playlists are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string playlist_ids = 1;</code>
@@ -10155,7 +10793,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs being deleted.
+       * This list can be used to track which playlists are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string playlist_ids = 1;</code>
@@ -10175,7 +10815,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs being deleted.
+       * This list can be used to track which playlists are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string playlist_ids = 1;</code>
@@ -10194,7 +10836,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs being deleted.
+       * This list can be used to track which playlists are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string playlist_ids = 1;</code>
@@ -10211,7 +10855,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs being deleted.
+       * This list can be used to track which playlists are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string playlist_ids = 1;</code>
@@ -10225,7 +10871,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * List of playlist IDs.
+       * List of playlist IDs being deleted.
+       * This list can be used to track which playlists are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string playlist_ids = 1;</code>
@@ -10302,7 +10950,7 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist for which to generate a player URL.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10311,7 +10959,7 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getPlaylistId();
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist for which to generate a player URL.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10321,16 +10969,31 @@ public final class PlaylistServiceOuterClass {
         getPlaylistIdBytes();
 
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
      * @return Whether the params field is set.
      */
     boolean hasParams();
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
      * @return The params.
      */
     yandex.cloud.api.video.v1.PlaylistServiceOuterClass.PlaylistPlayerParams getParams();
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
      */
     yandex.cloud.api.video.v1.PlaylistServiceOuterClass.PlaylistPlayerParamsOrBuilder getParamsOrBuilder();
@@ -10436,7 +11099,7 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object playlistId_;
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist for which to generate a player URL.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10457,7 +11120,7 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the playlist.
+     * ID of the playlist for which to generate a player URL.
      * </pre>
      *
      * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10481,6 +11144,11 @@ public final class PlaylistServiceOuterClass {
     public static final int PARAMS_FIELD_NUMBER = 2;
     private yandex.cloud.api.video.v1.PlaylistServiceOuterClass.PlaylistPlayerParams params_;
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
      * @return Whether the params field is set.
      */
@@ -10489,6 +11157,11 @@ public final class PlaylistServiceOuterClass {
       return params_ != null;
     }
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
      * @return The params.
      */
@@ -10497,6 +11170,11 @@ public final class PlaylistServiceOuterClass {
       return params_ == null ? yandex.cloud.api.video.v1.PlaylistServiceOuterClass.PlaylistPlayerParams.getDefaultInstance() : params_;
     }
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
      */
     @java.lang.Override
@@ -10839,7 +11517,7 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object playlistId_ = "";
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist for which to generate a player URL.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10859,7 +11537,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist for which to generate a player URL.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10880,7 +11558,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist for which to generate a player URL.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10899,7 +11577,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist for which to generate a player URL.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10913,7 +11591,7 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * ID of the playlist for which to generate a player URL.
        * </pre>
        *
        * <code>string playlist_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10936,6 +11614,11 @@ public final class PlaylistServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.PlaylistServiceOuterClass.PlaylistPlayerParams, yandex.cloud.api.video.v1.PlaylistServiceOuterClass.PlaylistPlayerParams.Builder, yandex.cloud.api.video.v1.PlaylistServiceOuterClass.PlaylistPlayerParamsOrBuilder> paramsBuilder_;
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
        * @return Whether the params field is set.
        */
@@ -10943,6 +11626,11 @@ public final class PlaylistServiceOuterClass {
         return paramsBuilder_ != null || params_ != null;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
        * @return The params.
        */
@@ -10954,6 +11642,11 @@ public final class PlaylistServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
        */
       public Builder setParams(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.PlaylistPlayerParams value) {
@@ -10970,6 +11663,11 @@ public final class PlaylistServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
        */
       public Builder setParams(
@@ -10984,6 +11682,11 @@ public final class PlaylistServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
        */
       public Builder mergeParams(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.PlaylistPlayerParams value) {
@@ -11002,6 +11705,11 @@ public final class PlaylistServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
        */
       public Builder clearParams() {
@@ -11016,6 +11724,11 @@ public final class PlaylistServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
        */
       public yandex.cloud.api.video.v1.PlaylistServiceOuterClass.PlaylistPlayerParams.Builder getParamsBuilder() {
@@ -11024,6 +11737,11 @@ public final class PlaylistServiceOuterClass {
         return getParamsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
        */
       public yandex.cloud.api.video.v1.PlaylistServiceOuterClass.PlaylistPlayerParamsOrBuilder getParamsOrBuilder() {
@@ -11035,6 +11753,11 @@ public final class PlaylistServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PlaylistPlayerParams params = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11109,7 +11832,8 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * If true, a player will be muted by default.
+     * If true, the player will start with audio muted.
+     * Users can unmute the audio manually after playback starts.
      * </pre>
      *
      * <code>bool mute = 1;</code>
@@ -11119,7 +11843,8 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * If true, playback will start automatically.
+     * If true, the playlist will start playing automatically when the player loads.
+     * This may be subject to browser autoplay policies that restrict autoplay with sound.
      * </pre>
      *
      * <code>bool autoplay = 2;</code>
@@ -11129,7 +11854,8 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * If true, a player interface will be hidden by default.
+     * If true, the player interface controls will be hidden initially.
+     * Users can typically reveal the controls by moving the mouse over the player.
      * </pre>
      *
      * <code>bool hidden = 3;</code>
@@ -11233,7 +11959,8 @@ public final class PlaylistServiceOuterClass {
     private boolean mute_;
     /**
      * <pre>
-     * If true, a player will be muted by default.
+     * If true, the player will start with audio muted.
+     * Users can unmute the audio manually after playback starts.
      * </pre>
      *
      * <code>bool mute = 1;</code>
@@ -11248,7 +11975,8 @@ public final class PlaylistServiceOuterClass {
     private boolean autoplay_;
     /**
      * <pre>
-     * If true, playback will start automatically.
+     * If true, the playlist will start playing automatically when the player loads.
+     * This may be subject to browser autoplay policies that restrict autoplay with sound.
      * </pre>
      *
      * <code>bool autoplay = 2;</code>
@@ -11263,7 +11991,8 @@ public final class PlaylistServiceOuterClass {
     private boolean hidden_;
     /**
      * <pre>
-     * If true, a player interface will be hidden by default.
+     * If true, the player interface controls will be hidden initially.
+     * Users can typically reveal the controls by moving the mouse over the player.
      * </pre>
      *
      * <code>bool hidden = 3;</code>
@@ -11616,7 +12345,8 @@ public final class PlaylistServiceOuterClass {
       private boolean mute_ ;
       /**
        * <pre>
-       * If true, a player will be muted by default.
+       * If true, the player will start with audio muted.
+       * Users can unmute the audio manually after playback starts.
        * </pre>
        *
        * <code>bool mute = 1;</code>
@@ -11628,7 +12358,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, a player will be muted by default.
+       * If true, the player will start with audio muted.
+       * Users can unmute the audio manually after playback starts.
        * </pre>
        *
        * <code>bool mute = 1;</code>
@@ -11643,7 +12374,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, a player will be muted by default.
+       * If true, the player will start with audio muted.
+       * Users can unmute the audio manually after playback starts.
        * </pre>
        *
        * <code>bool mute = 1;</code>
@@ -11659,7 +12391,8 @@ public final class PlaylistServiceOuterClass {
       private boolean autoplay_ ;
       /**
        * <pre>
-       * If true, playback will start automatically.
+       * If true, the playlist will start playing automatically when the player loads.
+       * This may be subject to browser autoplay policies that restrict autoplay with sound.
        * </pre>
        *
        * <code>bool autoplay = 2;</code>
@@ -11671,7 +12404,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, playback will start automatically.
+       * If true, the playlist will start playing automatically when the player loads.
+       * This may be subject to browser autoplay policies that restrict autoplay with sound.
        * </pre>
        *
        * <code>bool autoplay = 2;</code>
@@ -11686,7 +12420,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, playback will start automatically.
+       * If true, the playlist will start playing automatically when the player loads.
+       * This may be subject to browser autoplay policies that restrict autoplay with sound.
        * </pre>
        *
        * <code>bool autoplay = 2;</code>
@@ -11702,7 +12437,8 @@ public final class PlaylistServiceOuterClass {
       private boolean hidden_ ;
       /**
        * <pre>
-       * If true, a player interface will be hidden by default.
+       * If true, the player interface controls will be hidden initially.
+       * Users can typically reveal the controls by moving the mouse over the player.
        * </pre>
        *
        * <code>bool hidden = 3;</code>
@@ -11714,7 +12450,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, a player interface will be hidden by default.
+       * If true, the player interface controls will be hidden initially.
+       * Users can typically reveal the controls by moving the mouse over the player.
        * </pre>
        *
        * <code>bool hidden = 3;</code>
@@ -11729,7 +12466,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, a player interface will be hidden by default.
+       * If true, the player interface controls will be hidden initially.
+       * Users can typically reveal the controls by moving the mouse over the player.
        * </pre>
        *
        * <code>bool hidden = 3;</code>
@@ -11800,7 +12538,9 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * Direct link to the playlist.
+     * Direct URL to the playlist player.
+     * This URL can be used to access the playlist in a web browser
+     * or shared with users who have appropriate permissions.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -11809,7 +12549,9 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getPlayerUrl();
     /**
      * <pre>
-     * Direct link to the playlist.
+     * Direct URL to the playlist player.
+     * This URL can be used to access the playlist in a web browser
+     * or shared with users who have appropriate permissions.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -11820,7 +12562,8 @@ public final class PlaylistServiceOuterClass {
 
     /**
      * <pre>
-     * HTML embed code in Iframe format.
+     * HTML embed code in iframe format that can be inserted into web pages.
+     * This code allows the playlist to be embedded directly in third-party websites.
      * </pre>
      *
      * <code>string html = 2;</code>
@@ -11829,7 +12572,8 @@ public final class PlaylistServiceOuterClass {
     java.lang.String getHtml();
     /**
      * <pre>
-     * HTML embed code in Iframe format.
+     * HTML embed code in iframe format that can be inserted into web pages.
+     * This code allows the playlist to be embedded directly in third-party websites.
      * </pre>
      *
      * <code>string html = 2;</code>
@@ -11933,7 +12677,9 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object playerUrl_;
     /**
      * <pre>
-     * Direct link to the playlist.
+     * Direct URL to the playlist player.
+     * This URL can be used to access the playlist in a web browser
+     * or shared with users who have appropriate permissions.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -11954,7 +12700,9 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * Direct link to the playlist.
+     * Direct URL to the playlist player.
+     * This URL can be used to access the playlist in a web browser
+     * or shared with users who have appropriate permissions.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -11979,7 +12727,8 @@ public final class PlaylistServiceOuterClass {
     private volatile java.lang.Object html_;
     /**
      * <pre>
-     * HTML embed code in Iframe format.
+     * HTML embed code in iframe format that can be inserted into web pages.
+     * This code allows the playlist to be embedded directly in third-party websites.
      * </pre>
      *
      * <code>string html = 2;</code>
@@ -12000,7 +12749,8 @@ public final class PlaylistServiceOuterClass {
     }
     /**
      * <pre>
-     * HTML embed code in Iframe format.
+     * HTML embed code in iframe format that can be inserted into web pages.
+     * This code allows the playlist to be embedded directly in third-party websites.
      * </pre>
      *
      * <code>string html = 2;</code>
@@ -12343,7 +13093,9 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object playerUrl_ = "";
       /**
        * <pre>
-       * Direct link to the playlist.
+       * Direct URL to the playlist player.
+       * This URL can be used to access the playlist in a web browser
+       * or shared with users who have appropriate permissions.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -12363,7 +13115,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the playlist.
+       * Direct URL to the playlist player.
+       * This URL can be used to access the playlist in a web browser
+       * or shared with users who have appropriate permissions.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -12384,7 +13138,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the playlist.
+       * Direct URL to the playlist player.
+       * This URL can be used to access the playlist in a web browser
+       * or shared with users who have appropriate permissions.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -12403,7 +13159,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the playlist.
+       * Direct URL to the playlist player.
+       * This URL can be used to access the playlist in a web browser
+       * or shared with users who have appropriate permissions.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -12417,7 +13175,9 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the playlist.
+       * Direct URL to the playlist player.
+       * This URL can be used to access the playlist in a web browser
+       * or shared with users who have appropriate permissions.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -12439,7 +13199,8 @@ public final class PlaylistServiceOuterClass {
       private java.lang.Object html_ = "";
       /**
        * <pre>
-       * HTML embed code in Iframe format.
+       * HTML embed code in iframe format that can be inserted into web pages.
+       * This code allows the playlist to be embedded directly in third-party websites.
        * </pre>
        *
        * <code>string html = 2;</code>
@@ -12459,7 +13220,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * HTML embed code in Iframe format.
+       * HTML embed code in iframe format that can be inserted into web pages.
+       * This code allows the playlist to be embedded directly in third-party websites.
        * </pre>
        *
        * <code>string html = 2;</code>
@@ -12480,7 +13242,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * HTML embed code in Iframe format.
+       * HTML embed code in iframe format that can be inserted into web pages.
+       * This code allows the playlist to be embedded directly in third-party websites.
        * </pre>
        *
        * <code>string html = 2;</code>
@@ -12499,7 +13262,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * HTML embed code in Iframe format.
+       * HTML embed code in iframe format that can be inserted into web pages.
+       * This code allows the playlist to be embedded directly in third-party websites.
        * </pre>
        *
        * <code>string html = 2;</code>
@@ -12513,7 +13277,8 @@ public final class PlaylistServiceOuterClass {
       }
       /**
        * <pre>
-       * HTML embed code in Iframe format.
+       * HTML embed code in iframe format that can be inserted into web pages.
+       * This code allows the playlist to be embedded directly in third-party websites.
        * </pre>
        *
        * <code>string html = 2;</code>
@@ -12671,72 +13436,74 @@ public final class PlaylistServiceOuterClass {
       "n.proto\032\035yandex/cloud/validation.proto\032$" +
       "yandex/cloud/video/v1/playlist.proto\"7\n\022" +
       "GetPlaylistRequest\022!\n\013playlist_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"\253\001\n\024ListPlaylistsRequest\022 " +
+      "\014\350\3071\001\212\3101\004<=50\"\265\001\n\024ListPlaylistsRequest\022 " +
       "\n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\tpage" +
       "_size\030d \001(\003B\t\372\3071\005<=100\022\037\n\npage_token\030e \001" +
-      "(\tB\013\212\3101\007<=15000\022\020\n\010order_by\030f \001(\t\022\032\n\006fil" +
-      "ter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"j\n\025ListPlayl" +
-      "istsResponse\0222\n\tplaylists\030\001 \003(\0132\037.yandex" +
-      ".cloud.video.v1.Playlist\022\027\n\017next_page_to" +
-      "ken\030d \001(\tJ\004\010\002\020d\"\254\001\n\025CreatePlaylistReques" +
-      "t\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\005t" +
-      "itle\030\002 \001(\tB\016\350\3071\001\212\3101\006<=2500\022\023\n\013descriptio" +
-      "n\030\003 \001(\t\022=\n\005items\030\004 \003(\0132#.yandex.cloud.vi" +
-      "deo.v1.PlaylistItemB\t\202\3101\005<=100\"-\n\026Create" +
-      "PlaylistMetadata\022\023\n\013playlist_id\030\001 \001(\t\"\337\001" +
-      "\n\025UpdatePlaylistRequest\022!\n\013playlist_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\nfield_mask\030\002 \001(\0132\032" +
-      ".google.protobuf.FieldMaskB\004\350\3071\001\022\031\n\005titl" +
-      "e\030\003 \001(\tB\n\212\3101\006<=2500\022\023\n\013description\030\004 \001(\t" +
-      "\022=\n\005items\030\005 \003(\0132#.yandex.cloud.video.v1." +
-      "PlaylistItemB\t\202\3101\005<=100\"-\n\026UpdatePlaylis" +
-      "tMetadata\022\023\n\013playlist_id\030\001 \001(\t\":\n\025Delete" +
-      "PlaylistRequest\022!\n\013playlist_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"-\n\026DeletePlaylistMetadata\022\023\n\013" +
-      "playlist_id\030\001 \001(\t\"h\n\033BatchDeletePlaylist" +
-      "sRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\'\n\014playlist_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<" +
-      "=50\"4\n\034BatchDeletePlaylistsMetadata\022\024\n\014p" +
-      "laylist_ids\030\001 \003(\t\"}\n\033GetPlaylistPlayerUR" +
-      "LRequest\022!\n\013playlist_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022;\n\006params\030\002 \001(\0132+.yandex.cloud.video" +
-      ".v1.PlaylistPlayerParams\"F\n\024PlaylistPlay" +
-      "erParams\022\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010" +
-      "\022\016\n\006hidden\030\003 \001(\010\"@\n\034GetPlaylistPlayerURL" +
-      "Response\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030\002 \001" +
-      "(\t2\231\t\n\017PlaylistService\022|\n\003Get\022).yandex.c" +
-      "loud.video.v1.GetPlaylistRequest\032\037.yande" +
-      "x.cloud.video.v1.Playlist\")\202\323\344\223\002#\022!/vide" +
-      "o/v1/playlists/{playlist_id}\022~\n\004List\022+.y" +
-      "andex.cloud.video.v1.ListPlaylistsReques" +
-      "t\032,.yandex.cloud.video.v1.ListPlaylistsR" +
-      "esponse\"\033\202\323\344\223\002\025\022\023/video/v1/playlists\022\237\001\n" +
-      "\006Create\022,.yandex.cloud.video.v1.CreatePl" +
+      "(\tB\013\212\3101\007<=15000\022\032\n\010order_by\030f \001(\tB\010\212\3101\004<" +
+      "=50\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"j\n" +
+      "\025ListPlaylistsResponse\0222\n\tplaylists\030\001 \003(" +
+      "\0132\037.yandex.cloud.video.v1.Playlist\022\027\n\017ne" +
+      "xt_page_token\030d \001(\tJ\004\010\002\020d\"\332\001\n\025CreatePlay" +
+      "listRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\034\n\005title\030\002 \001(\tB\r\350\3071\001\212\3101\005<=300\022\037\n\013d" +
+      "escription\030\003 \001(\tB\n\212\3101\006<=4000\022=\n\005items\030\004 " +
+      "\003(\0132#.yandex.cloud.video.v1.PlaylistItem" +
+      "B\t\202\3101\005<=100\022!\n\017style_preset_id\030\005 \001(\tB\010\212\310" +
+      "1\004<=50\"-\n\026CreatePlaylistMetadata\022\023\n\013play" +
+      "list_id\030\001 \001(\t\"\215\002\n\025UpdatePlaylistRequest\022" +
+      "!\n\013playlist_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\nfi" +
+      "eld_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
+      "skB\004\350\3071\001\022\030\n\005title\030\003 \001(\tB\t\212\3101\005<=300\022\037\n\013de" +
+      "scription\030\004 \001(\tB\n\212\3101\006<=4000\022=\n\005items\030\005 \003" +
+      "(\0132#.yandex.cloud.video.v1.PlaylistItemB" +
+      "\t\202\3101\005<=100\022!\n\017style_preset_id\030\006 \001(\tB\010\212\3101" +
+      "\004<=50\"-\n\026UpdatePlaylistMetadata\022\023\n\013playl" +
+      "ist_id\030\001 \001(\t\":\n\025DeletePlaylistRequest\022!\n" +
+      "\013playlist_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026Dele" +
+      "tePlaylistMetadata\022\023\n\013playlist_id\030\001 \001(\t\"" +
+      "h\n\033BatchDeletePlaylistsRequest\022 \n\nchanne" +
+      "l_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\'\n\014playlist_ids" +
+      "\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"4\n\034BatchDelete" +
+      "PlaylistsMetadata\022\024\n\014playlist_ids\030\001 \003(\t\"" +
+      "}\n\033GetPlaylistPlayerURLRequest\022!\n\013playli" +
+      "st_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022;\n\006params\030\002 \001(" +
+      "\0132+.yandex.cloud.video.v1.PlaylistPlayer" +
+      "Params\"F\n\024PlaylistPlayerParams\022\014\n\004mute\030\001" +
+      " \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"@" +
+      "\n\034GetPlaylistPlayerURLResponse\022\022\n\nplayer" +
+      "_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t2\231\t\n\017PlaylistSer" +
+      "vice\022|\n\003Get\022).yandex.cloud.video.v1.GetP" +
+      "laylistRequest\032\037.yandex.cloud.video.v1.P" +
+      "laylist\")\202\323\344\223\002#\022!/video/v1/playlists/{pl" +
+      "aylist_id}\022~\n\004List\022+.yandex.cloud.video." +
+      "v1.ListPlaylistsRequest\032,.yandex.cloud.v" +
+      "ideo.v1.ListPlaylistsResponse\"\033\202\323\344\223\002\025\022\023/" +
+      "video/v1/playlists\022\237\001\n\006Create\022,.yandex.c" +
+      "loud.video.v1.CreatePlaylistRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"D\202\323\344\223\002\030\"\023" +
+      "/video/v1/playlists:\001*\262\322*\"\n\026CreatePlayli" +
+      "stMetadata\022\010Playlist\022\255\001\n\006Update\022,.yandex" +
+      ".cloud.video.v1.UpdatePlaylistRequest\032!." +
+      "yandex.cloud.operation.Operation\"R\202\323\344\223\002&" +
+      "2!/video/v1/playlists/{playlist_id}:\001*\262\322" +
+      "*\"\n\026UpdatePlaylistMetadata\022\010Playlist\022\267\001\n" +
+      "\006Delete\022,.yandex.cloud.video.v1.DeletePl" +
       "aylistRequest\032!.yandex.cloud.operation.O" +
-      "peration\"D\202\323\344\223\002\030\"\023/video/v1/playlists:\001*" +
-      "\262\322*\"\n\026CreatePlaylistMetadata\022\010Playlist\022\255" +
-      "\001\n\006Update\022,.yandex.cloud.video.v1.Update" +
-      "PlaylistRequest\032!.yandex.cloud.operation" +
-      ".Operation\"R\202\323\344\223\002&2!/video/v1/playlists/" +
-      "{playlist_id}:\001*\262\322*\"\n\026UpdatePlaylistMeta" +
-      "data\022\010Playlist\022\267\001\n\006Delete\022,.yandex.cloud" +
-      ".video.v1.DeletePlaylistRequest\032!.yandex" +
-      ".cloud.operation.Operation\"\\\202\323\344\223\002#*!/vid" +
-      "eo/v1/playlists/{playlist_id}\262\322*/\n\026Delet" +
-      "ePlaylistMetadata\022\025google.protobuf.Empty" +
-      "\022\311\001\n\013BatchDelete\0222.yandex.cloud.video.v1" +
-      ".BatchDeletePlaylistsRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"c\202\323\344\223\002$\"\037/video/" +
-      "v1/playlists:batchDelete:\001*\262\322*5\n\034BatchDe" +
-      "letePlaylistsMetadata\022\025google.protobuf.E" +
-      "mpty\022\257\001\n\014GetPlayerURL\0222.yandex.cloud.vid" +
-      "eo.v1.GetPlaylistPlayerURLRequest\0323.yand" +
-      "ex.cloud.video.v1.GetPlaylistPlayerURLRe" +
-      "sponse\"6\202\323\344\223\0020\022./video/v1/playlists/{pla" +
-      "ylist_id}:getPlayerURLB\\\n\031yandex.cloud.a" +
-      "pi.video.v1Z?github.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/video/v1;videob\006pr" +
-      "oto3"
+      "peration\"\\\202\323\344\223\002#*!/video/v1/playlists/{p" +
+      "laylist_id}\262\322*/\n\026DeletePlaylistMetadata\022" +
+      "\025google.protobuf.Empty\022\311\001\n\013BatchDelete\0222" +
+      ".yandex.cloud.video.v1.BatchDeletePlayli" +
+      "stsRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"c\202\323\344\223\002$\"\037/video/v1/playlists:batch" +
+      "Delete:\001*\262\322*5\n\034BatchDeletePlaylistsMetad" +
+      "ata\022\025google.protobuf.Empty\022\257\001\n\014GetPlayer" +
+      "URL\0222.yandex.cloud.video.v1.GetPlaylistP" +
+      "layerURLRequest\0323.yandex.cloud.video.v1." +
+      "GetPlaylistPlayerURLResponse\"6\202\323\344\223\0020\022./v" +
+      "ideo/v1/playlists/{playlist_id}:getPlaye" +
+      "rURLB\\\n\031yandex.cloud.api.video.v1Z?githu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12771,7 +13538,7 @@ public final class PlaylistServiceOuterClass {
     internal_static_yandex_cloud_video_v1_CreatePlaylistRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreatePlaylistRequest_descriptor,
-        new java.lang.String[] { "ChannelId", "Title", "Description", "Items", });
+        new java.lang.String[] { "ChannelId", "Title", "Description", "Items", "StylePresetId", });
     internal_static_yandex_cloud_video_v1_CreatePlaylistMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_video_v1_CreatePlaylistMetadata_fieldAccessorTable = new
@@ -12783,7 +13550,7 @@ public final class PlaylistServiceOuterClass {
     internal_static_yandex_cloud_video_v1_UpdatePlaylistRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdatePlaylistRequest_descriptor,
-        new java.lang.String[] { "PlaylistId", "FieldMask", "Title", "Description", "Items", });
+        new java.lang.String[] { "PlaylistId", "FieldMask", "Title", "Description", "Items", "StylePresetId", });
     internal_static_yandex_cloud_video_v1_UpdatePlaylistMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_video_v1_UpdatePlaylistMetadata_fieldAccessorTable = new

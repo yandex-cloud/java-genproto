@@ -20211,6 +20211,7916 @@ public final class FederationServiceOuterClass {
 
   }
 
+  public interface GetFederationDomainRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.GetFederationDomainRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the federation to get domain information for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    java.lang.String getFederationId();
+    /**
+     * <pre>
+     * ID of the federation to get domain information for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    com.google.protobuf.ByteString
+        getFederationIdBytes();
+
+    /**
+     * <pre>
+     * Domain name to get information for.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain name to get information for.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.GetFederationDomainRequest}
+   */
+  public static final class GetFederationDomainRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.GetFederationDomainRequest)
+      GetFederationDomainRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetFederationDomainRequest.newBuilder() to construct.
+    private GetFederationDomainRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetFederationDomainRequest() {
+      federationId_ = "";
+      domain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetFederationDomainRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetFederationDomainRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              federationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domain_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationDomainRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationDomainRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest.Builder.class);
+    }
+
+    public static final int FEDERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object federationId_;
+    /**
+     * <pre>
+     * ID of the federation to get domain information for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    @java.lang.Override
+    public java.lang.String getFederationId() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        federationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the federation to get domain information for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFederationIdBytes() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        federationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domain_;
+    /**
+     * <pre>
+     * Domain name to get information for.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain name to get information for.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domain_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domain_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest) obj;
+
+      if (!getFederationId()
+          .equals(other.getFederationId())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEDERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFederationId().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.GetFederationDomainRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.GetFederationDomainRequest)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationDomainRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        federationId_ = "";
+
+        domain_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest(this);
+        result.federationId_ = federationId_;
+        result.domain_ = domain_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest.getDefaultInstance()) return this;
+        if (!other.getFederationId().isEmpty()) {
+          federationId_ = other.federationId_;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object federationId_ = "";
+      /**
+       * <pre>
+       * ID of the federation to get domain information for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The federationId.
+       */
+      public java.lang.String getFederationId() {
+        java.lang.Object ref = federationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          federationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to get domain information for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for federationId.
+       */
+      public com.google.protobuf.ByteString
+          getFederationIdBytes() {
+        java.lang.Object ref = federationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          federationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to get domain information for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to get domain information for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFederationId() {
+        
+        federationId_ = getDefaultInstance().getFederationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to get domain information for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain name to get information for.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name to get information for.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name to get information for.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name to get information for.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name to get information for.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.GetFederationDomainRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.GetFederationDomainRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetFederationDomainRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetFederationDomainRequest>() {
+      @java.lang.Override
+      public GetFederationDomainRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetFederationDomainRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetFederationDomainRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetFederationDomainRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListFederationDomainsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the federation to list domains for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    java.lang.String getFederationId();
+    /**
+     * <pre>
+     * ID of the federation to list domains for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    com.google.protobuf.ByteString
+        getFederationIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListFederationDomainsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token]
+     * to the [ListFederationDomainsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token]
+     * to the [ListFederationDomainsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression supports the following operations:
+     * - `=` for exact match: `domain = 'domain-1.com'`
+     * - `IN` for multiple values: `status IN ('NEED_TO_VALIDATE', 'VALID')`
+     * - `contains` for domain substring search: `domain contains '3'`
+     * - `AND` for combining conditions: `status = 'INVALID' AND domain contains '3'`
+     * Available fields for filtering:
+     * - `domain` - domain name
+     * - `status` - domain validation status
+     * Must be 1-1000 characters long.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression supports the following operations:
+     * - `=` for exact match: `domain = 'domain-1.com'`
+     * - `IN` for multiple values: `status IN ('NEED_TO_VALIDATE', 'VALID')`
+     * - `contains` for domain substring search: `domain contains '3'`
+     * - `AND` for combining conditions: `status = 'INVALID' AND domain contains '3'`
+     * Available fields for filtering:
+     * - `domain` - domain name
+     * - `status` - domain validation status
+     * Must be 1-1000 characters long.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsRequest}
+   */
+  public static final class ListFederationDomainsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsRequest)
+      ListFederationDomainsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListFederationDomainsRequest.newBuilder() to construct.
+    private ListFederationDomainsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListFederationDomainsRequest() {
+      federationId_ = "";
+      pageToken_ = "";
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFederationDomainsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListFederationDomainsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              federationId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest.Builder.class);
+    }
+
+    public static final int FEDERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object federationId_;
+    /**
+     * <pre>
+     * ID of the federation to list domains for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    @java.lang.Override
+    public java.lang.String getFederationId() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        federationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the federation to list domains for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFederationIdBytes() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        federationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListFederationDomainsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token]
+     * to the [ListFederationDomainsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token]
+     * to the [ListFederationDomainsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression supports the following operations:
+     * - `=` for exact match: `domain = 'domain-1.com'`
+     * - `IN` for multiple values: `status IN ('NEED_TO_VALIDATE', 'VALID')`
+     * - `contains` for domain substring search: `domain contains '3'`
+     * - `AND` for combining conditions: `status = 'INVALID' AND domain contains '3'`
+     * Available fields for filtering:
+     * - `domain` - domain name
+     * - `status` - domain validation status
+     * Must be 1-1000 characters long.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression supports the following operations:
+     * - `=` for exact match: `domain = 'domain-1.com'`
+     * - `IN` for multiple values: `status IN ('NEED_TO_VALIDATE', 'VALID')`
+     * - `contains` for domain substring search: `domain contains '3'`
+     * - `AND` for combining conditions: `status = 'INVALID' AND domain contains '3'`
+     * Available fields for filtering:
+     * - `domain` - domain name
+     * - `status` - domain validation status
+     * Must be 1-1000 characters long.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest) obj;
+
+      if (!getFederationId()
+          .equals(other.getFederationId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEDERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFederationId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsRequest)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        federationId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest(this);
+        result.federationId_ = federationId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest.getDefaultInstance()) return this;
+        if (!other.getFederationId().isEmpty()) {
+          federationId_ = other.federationId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object federationId_ = "";
+      /**
+       * <pre>
+       * ID of the federation to list domains for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The federationId.
+       */
+      public java.lang.String getFederationId() {
+        java.lang.Object ref = federationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          federationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to list domains for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for federationId.
+       */
+      public com.google.protobuf.ByteString
+          getFederationIdBytes() {
+        java.lang.Object ref = federationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          federationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to list domains for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to list domains for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFederationId() {
+        
+        federationId_ = getDefaultInstance().getFederationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to list domains for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListFederationDomainsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListFederationDomainsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListFederationDomainsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token]
+       * to the [ListFederationDomainsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token]
+       * to the [ListFederationDomainsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token]
+       * to the [ListFederationDomainsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token]
+       * to the [ListFederationDomainsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token]
+       * to the [ListFederationDomainsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression supports the following operations:
+       * - `=` for exact match: `domain = 'domain-1.com'`
+       * - `IN` for multiple values: `status IN ('NEED_TO_VALIDATE', 'VALID')`
+       * - `contains` for domain substring search: `domain contains '3'`
+       * - `AND` for combining conditions: `status = 'INVALID' AND domain contains '3'`
+       * Available fields for filtering:
+       * - `domain` - domain name
+       * - `status` - domain validation status
+       * Must be 1-1000 characters long.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression supports the following operations:
+       * - `=` for exact match: `domain = 'domain-1.com'`
+       * - `IN` for multiple values: `status IN ('NEED_TO_VALIDATE', 'VALID')`
+       * - `contains` for domain substring search: `domain contains '3'`
+       * - `AND` for combining conditions: `status = 'INVALID' AND domain contains '3'`
+       * Available fields for filtering:
+       * - `domain` - domain name
+       * - `status` - domain validation status
+       * Must be 1-1000 characters long.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression supports the following operations:
+       * - `=` for exact match: `domain = 'domain-1.com'`
+       * - `IN` for multiple values: `status IN ('NEED_TO_VALIDATE', 'VALID')`
+       * - `contains` for domain substring search: `domain contains '3'`
+       * - `AND` for combining conditions: `status = 'INVALID' AND domain contains '3'`
+       * Available fields for filtering:
+       * - `domain` - domain name
+       * - `status` - domain validation status
+       * Must be 1-1000 characters long.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression supports the following operations:
+       * - `=` for exact match: `domain = 'domain-1.com'`
+       * - `IN` for multiple values: `status IN ('NEED_TO_VALIDATE', 'VALID')`
+       * - `contains` for domain substring search: `domain contains '3'`
+       * - `AND` for combining conditions: `status = 'INVALID' AND domain contains '3'`
+       * Available fields for filtering:
+       * - `domain` - domain name
+       * - `status` - domain validation status
+       * Must be 1-1000 characters long.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression supports the following operations:
+       * - `=` for exact match: `domain = 'domain-1.com'`
+       * - `IN` for multiple values: `status IN ('NEED_TO_VALIDATE', 'VALID')`
+       * - `contains` for domain substring search: `domain contains '3'`
+       * - `AND` for combining conditions: `status = 'INVALID' AND domain contains '3'`
+       * Available fields for filtering:
+       * - `domain` - domain name
+       * - `status` - domain validation status
+       * Must be 1-1000 characters long.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListFederationDomainsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListFederationDomainsRequest>() {
+      @java.lang.Override
+      public ListFederationDomainsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListFederationDomainsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListFederationDomainsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListFederationDomainsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListFederationDomainsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of domains for the specified federation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> 
+        getDomainsList();
+    /**
+     * <pre>
+     * List of domains for the specified federation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain getDomains(int index);
+    /**
+     * <pre>
+     * List of domains for the specified federation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+     */
+    int getDomainsCount();
+    /**
+     * <pre>
+     * List of domains for the specified federation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainOrBuilder> 
+        getDomainsOrBuilderList();
+    /**
+     * <pre>
+     * List of domains for the specified federation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainOrBuilder getDomainsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListFederationDomainsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListFederationDomainsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListFederationDomainsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListFederationDomainsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsResponse}
+   */
+  public static final class ListFederationDomainsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsResponse)
+      ListFederationDomainsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListFederationDomainsResponse.newBuilder() to construct.
+    private ListFederationDomainsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListFederationDomainsResponse() {
+      domains_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFederationDomainsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListFederationDomainsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                domains_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              domains_.add(
+                  input.readMessage(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          domains_ = java.util.Collections.unmodifiableList(domains_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse.Builder.class);
+    }
+
+    public static final int DOMAINS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> domains_;
+    /**
+     * <pre>
+     * List of domains for the specified federation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> getDomainsList() {
+      return domains_;
+    }
+    /**
+     * <pre>
+     * List of domains for the specified federation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainOrBuilder> 
+        getDomainsOrBuilderList() {
+      return domains_;
+    }
+    /**
+     * <pre>
+     * List of domains for the specified federation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+     */
+    @java.lang.Override
+    public int getDomainsCount() {
+      return domains_.size();
+    }
+    /**
+     * <pre>
+     * List of domains for the specified federation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain getDomains(int index) {
+      return domains_.get(index);
+    }
+    /**
+     * <pre>
+     * List of domains for the specified federation.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainOrBuilder getDomainsOrBuilder(
+        int index) {
+      return domains_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListFederationDomainsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListFederationDomainsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListFederationDomainsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListFederationDomainsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < domains_.size(); i++) {
+        output.writeMessage(1, domains_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < domains_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, domains_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse) obj;
+
+      if (!getDomainsList()
+          .equals(other.getDomainsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDomainsCount() > 0) {
+        hash = (37 * hash) + DOMAINS_FIELD_NUMBER;
+        hash = (53 * hash) + getDomainsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsResponse)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDomainsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (domainsBuilder_ == null) {
+          domains_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          domainsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (domainsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            domains_ = java.util.Collections.unmodifiableList(domains_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.domains_ = domains_;
+        } else {
+          result.domains_ = domainsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse.getDefaultInstance()) return this;
+        if (domainsBuilder_ == null) {
+          if (!other.domains_.isEmpty()) {
+            if (domains_.isEmpty()) {
+              domains_ = other.domains_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDomainsIsMutable();
+              domains_.addAll(other.domains_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.domains_.isEmpty()) {
+            if (domainsBuilder_.isEmpty()) {
+              domainsBuilder_.dispose();
+              domainsBuilder_ = null;
+              domains_ = other.domains_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              domainsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDomainsFieldBuilder() : null;
+            } else {
+              domainsBuilder_.addAllMessages(other.domains_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> domains_ =
+        java.util.Collections.emptyList();
+      private void ensureDomainsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          domains_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain>(domains_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainOrBuilder> domainsBuilder_;
+
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> getDomainsList() {
+        if (domainsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(domains_);
+        } else {
+          return domainsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public int getDomainsCount() {
+        if (domainsBuilder_ == null) {
+          return domains_.size();
+        } else {
+          return domainsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain getDomains(int index) {
+        if (domainsBuilder_ == null) {
+          return domains_.get(index);
+        } else {
+          return domainsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public Builder setDomains(
+          int index, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain value) {
+        if (domainsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDomainsIsMutable();
+          domains_.set(index, value);
+          onChanged();
+        } else {
+          domainsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public Builder setDomains(
+          int index, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder builderForValue) {
+        if (domainsBuilder_ == null) {
+          ensureDomainsIsMutable();
+          domains_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          domainsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public Builder addDomains(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain value) {
+        if (domainsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDomainsIsMutable();
+          domains_.add(value);
+          onChanged();
+        } else {
+          domainsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public Builder addDomains(
+          int index, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain value) {
+        if (domainsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDomainsIsMutable();
+          domains_.add(index, value);
+          onChanged();
+        } else {
+          domainsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public Builder addDomains(
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder builderForValue) {
+        if (domainsBuilder_ == null) {
+          ensureDomainsIsMutable();
+          domains_.add(builderForValue.build());
+          onChanged();
+        } else {
+          domainsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public Builder addDomains(
+          int index, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder builderForValue) {
+        if (domainsBuilder_ == null) {
+          ensureDomainsIsMutable();
+          domains_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          domainsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public Builder addAllDomains(
+          java.lang.Iterable<? extends yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> values) {
+        if (domainsBuilder_ == null) {
+          ensureDomainsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, domains_);
+          onChanged();
+        } else {
+          domainsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public Builder clearDomains() {
+        if (domainsBuilder_ == null) {
+          domains_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          domainsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public Builder removeDomains(int index) {
+        if (domainsBuilder_ == null) {
+          ensureDomainsIsMutable();
+          domains_.remove(index);
+          onChanged();
+        } else {
+          domainsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder getDomainsBuilder(
+          int index) {
+        return getDomainsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainOrBuilder getDomainsOrBuilder(
+          int index) {
+        if (domainsBuilder_ == null) {
+          return domains_.get(index);  } else {
+          return domainsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainOrBuilder> 
+           getDomainsOrBuilderList() {
+        if (domainsBuilder_ != null) {
+          return domainsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(domains_);
+        }
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder addDomainsBuilder() {
+        return getDomainsFieldBuilder().addBuilder(
+            yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder addDomainsBuilder(
+          int index) {
+        return getDomainsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of domains for the specified federation.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.Domain domains = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder> 
+           getDomainsBuilderList() {
+        return getDomainsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainOrBuilder> 
+          getDomainsFieldBuilder() {
+        if (domainsBuilder_ == null) {
+          domainsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainOrBuilder>(
+                  domains_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          domains_ = null;
+        }
+        return domainsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListFederationDomainsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListFederationDomainsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListFederationDomainsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListFederationDomainsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListFederationDomainsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListFederationDomainsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListFederationDomainsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListFederationDomainsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListFederationDomainsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListFederationDomainsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.ListFederationDomainsResponse)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListFederationDomainsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListFederationDomainsResponse>() {
+      @java.lang.Override
+      public ListFederationDomainsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListFederationDomainsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListFederationDomainsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListFederationDomainsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddFederationDomainRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.AddFederationDomainRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the federation to add a domain to.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    java.lang.String getFederationId();
+    /**
+     * <pre>
+     * ID of the federation to add a domain to.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    com.google.protobuf.ByteString
+        getFederationIdBytes();
+
+    /**
+     * <pre>
+     * Domain name to add to the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain name to add to the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.AddFederationDomainRequest}
+   */
+  public static final class AddFederationDomainRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.AddFederationDomainRequest)
+      AddFederationDomainRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddFederationDomainRequest.newBuilder() to construct.
+    private AddFederationDomainRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddFederationDomainRequest() {
+      federationId_ = "";
+      domain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddFederationDomainRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddFederationDomainRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              federationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domain_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest.Builder.class);
+    }
+
+    public static final int FEDERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object federationId_;
+    /**
+     * <pre>
+     * ID of the federation to add a domain to.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    @java.lang.Override
+    public java.lang.String getFederationId() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        federationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the federation to add a domain to.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFederationIdBytes() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        federationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domain_;
+    /**
+     * <pre>
+     * Domain name to add to the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain name to add to the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domain_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domain_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest) obj;
+
+      if (!getFederationId()
+          .equals(other.getFederationId())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEDERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFederationId().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.AddFederationDomainRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.AddFederationDomainRequest)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        federationId_ = "";
+
+        domain_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest(this);
+        result.federationId_ = federationId_;
+        result.domain_ = domain_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest.getDefaultInstance()) return this;
+        if (!other.getFederationId().isEmpty()) {
+          federationId_ = other.federationId_;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object federationId_ = "";
+      /**
+       * <pre>
+       * ID of the federation to add a domain to.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The federationId.
+       */
+      public java.lang.String getFederationId() {
+        java.lang.Object ref = federationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          federationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to add a domain to.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for federationId.
+       */
+      public com.google.protobuf.ByteString
+          getFederationIdBytes() {
+        java.lang.Object ref = federationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          federationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to add a domain to.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to add a domain to.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFederationId() {
+        
+        federationId_ = getDefaultInstance().getFederationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to add a domain to.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain name to add to the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name to add to the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name to add to the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name to add to the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name to add to the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.AddFederationDomainRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.AddFederationDomainRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddFederationDomainRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AddFederationDomainRequest>() {
+      @java.lang.Override
+      public AddFederationDomainRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddFederationDomainRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddFederationDomainRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddFederationDomainRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddFederationDomainMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.AddFederationDomainMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the federation that the domain is being added to.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The federationId.
+     */
+    java.lang.String getFederationId();
+    /**
+     * <pre>
+     * ID of the federation that the domain is being added to.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The bytes for federationId.
+     */
+    com.google.protobuf.ByteString
+        getFederationIdBytes();
+
+    /**
+     * <pre>
+     * Domain name that is being added to the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain name that is being added to the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.AddFederationDomainMetadata}
+   */
+  public static final class AddFederationDomainMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.AddFederationDomainMetadata)
+      AddFederationDomainMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddFederationDomainMetadata.newBuilder() to construct.
+    private AddFederationDomainMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddFederationDomainMetadata() {
+      federationId_ = "";
+      domain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddFederationDomainMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddFederationDomainMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              federationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domain_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata.Builder.class);
+    }
+
+    public static final int FEDERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object federationId_;
+    /**
+     * <pre>
+     * ID of the federation that the domain is being added to.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The federationId.
+     */
+    @java.lang.Override
+    public java.lang.String getFederationId() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        federationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the federation that the domain is being added to.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The bytes for federationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFederationIdBytes() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        federationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domain_;
+    /**
+     * <pre>
+     * Domain name that is being added to the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain name that is being added to the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domain_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domain_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata) obj;
+
+      if (!getFederationId()
+          .equals(other.getFederationId())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEDERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFederationId().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.AddFederationDomainMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.AddFederationDomainMetadata)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        federationId_ = "";
+
+        domain_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata(this);
+        result.federationId_ = federationId_;
+        result.domain_ = domain_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata.getDefaultInstance()) return this;
+        if (!other.getFederationId().isEmpty()) {
+          federationId_ = other.federationId_;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object federationId_ = "";
+      /**
+       * <pre>
+       * ID of the federation that the domain is being added to.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return The federationId.
+       */
+      public java.lang.String getFederationId() {
+        java.lang.Object ref = federationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          federationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain is being added to.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return The bytes for federationId.
+       */
+      public com.google.protobuf.ByteString
+          getFederationIdBytes() {
+        java.lang.Object ref = federationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          federationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain is being added to.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @param value The federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain is being added to.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFederationId() {
+        
+        federationId_ = getDefaultInstance().getFederationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain is being added to.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @param value The bytes for federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain name that is being added to the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name that is being added to the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name that is being added to the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name that is being added to the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name that is being added to the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.AddFederationDomainMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.AddFederationDomainMetadata)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddFederationDomainMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<AddFederationDomainMetadata>() {
+      @java.lang.Override
+      public AddFederationDomainMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddFederationDomainMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddFederationDomainMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddFederationDomainMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ValidateFederationDomainRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the federation to validate a domain for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    java.lang.String getFederationId();
+    /**
+     * <pre>
+     * ID of the federation to validate a domain for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    com.google.protobuf.ByteString
+        getFederationIdBytes();
+
+    /**
+     * <pre>
+     * Domain name to validate for the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain name to validate for the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainRequest}
+   */
+  public static final class ValidateFederationDomainRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainRequest)
+      ValidateFederationDomainRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ValidateFederationDomainRequest.newBuilder() to construct.
+    private ValidateFederationDomainRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ValidateFederationDomainRequest() {
+      federationId_ = "";
+      domain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ValidateFederationDomainRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ValidateFederationDomainRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              federationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domain_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest.Builder.class);
+    }
+
+    public static final int FEDERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object federationId_;
+    /**
+     * <pre>
+     * ID of the federation to validate a domain for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    @java.lang.Override
+    public java.lang.String getFederationId() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        federationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the federation to validate a domain for.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFederationIdBytes() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        federationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domain_;
+    /**
+     * <pre>
+     * Domain name to validate for the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain name to validate for the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domain_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domain_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest) obj;
+
+      if (!getFederationId()
+          .equals(other.getFederationId())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEDERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFederationId().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainRequest)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        federationId_ = "";
+
+        domain_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest(this);
+        result.federationId_ = federationId_;
+        result.domain_ = domain_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest.getDefaultInstance()) return this;
+        if (!other.getFederationId().isEmpty()) {
+          federationId_ = other.federationId_;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object federationId_ = "";
+      /**
+       * <pre>
+       * ID of the federation to validate a domain for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The federationId.
+       */
+      public java.lang.String getFederationId() {
+        java.lang.Object ref = federationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          federationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to validate a domain for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for federationId.
+       */
+      public com.google.protobuf.ByteString
+          getFederationIdBytes() {
+        java.lang.Object ref = federationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          federationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to validate a domain for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to validate a domain for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFederationId() {
+        
+        federationId_ = getDefaultInstance().getFederationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to validate a domain for.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain name to validate for the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name to validate for the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name to validate for the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name to validate for the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name to validate for the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ValidateFederationDomainRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ValidateFederationDomainRequest>() {
+      @java.lang.Override
+      public ValidateFederationDomainRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ValidateFederationDomainRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ValidateFederationDomainRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ValidateFederationDomainRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ValidateFederationDomainMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the federation that the domain validation is being performed for.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The federationId.
+     */
+    java.lang.String getFederationId();
+    /**
+     * <pre>
+     * ID of the federation that the domain validation is being performed for.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The bytes for federationId.
+     */
+    com.google.protobuf.ByteString
+        getFederationIdBytes();
+
+    /**
+     * <pre>
+     * Domain name that is being validated for the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain name that is being validated for the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainMetadata}
+   */
+  public static final class ValidateFederationDomainMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainMetadata)
+      ValidateFederationDomainMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ValidateFederationDomainMetadata.newBuilder() to construct.
+    private ValidateFederationDomainMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ValidateFederationDomainMetadata() {
+      federationId_ = "";
+      domain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ValidateFederationDomainMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ValidateFederationDomainMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              federationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domain_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata.Builder.class);
+    }
+
+    public static final int FEDERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object federationId_;
+    /**
+     * <pre>
+     * ID of the federation that the domain validation is being performed for.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The federationId.
+     */
+    @java.lang.Override
+    public java.lang.String getFederationId() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        federationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the federation that the domain validation is being performed for.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The bytes for federationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFederationIdBytes() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        federationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domain_;
+    /**
+     * <pre>
+     * Domain name that is being validated for the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain name that is being validated for the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domain_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domain_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata) obj;
+
+      if (!getFederationId()
+          .equals(other.getFederationId())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEDERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFederationId().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainMetadata)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        federationId_ = "";
+
+        domain_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata(this);
+        result.federationId_ = federationId_;
+        result.domain_ = domain_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata.getDefaultInstance()) return this;
+        if (!other.getFederationId().isEmpty()) {
+          federationId_ = other.federationId_;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object federationId_ = "";
+      /**
+       * <pre>
+       * ID of the federation that the domain validation is being performed for.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return The federationId.
+       */
+      public java.lang.String getFederationId() {
+        java.lang.Object ref = federationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          federationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain validation is being performed for.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return The bytes for federationId.
+       */
+      public com.google.protobuf.ByteString
+          getFederationIdBytes() {
+        java.lang.Object ref = federationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          federationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain validation is being performed for.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @param value The federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain validation is being performed for.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFederationId() {
+        
+        federationId_ = getDefaultInstance().getFederationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain validation is being performed for.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @param value The bytes for federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain name that is being validated for the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name that is being validated for the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name that is being validated for the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name that is being validated for the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name that is being validated for the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.ValidateFederationDomainMetadata)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ValidateFederationDomainMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<ValidateFederationDomainMetadata>() {
+      @java.lang.Override
+      public ValidateFederationDomainMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ValidateFederationDomainMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ValidateFederationDomainMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ValidateFederationDomainMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteFederationDomainRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the federation to delete a domain from.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    java.lang.String getFederationId();
+    /**
+     * <pre>
+     * ID of the federation to delete a domain from.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    com.google.protobuf.ByteString
+        getFederationIdBytes();
+
+    /**
+     * <pre>
+     * Domain name to delete from the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain name to delete from the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainRequest}
+   */
+  public static final class DeleteFederationDomainRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainRequest)
+      DeleteFederationDomainRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteFederationDomainRequest.newBuilder() to construct.
+    private DeleteFederationDomainRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteFederationDomainRequest() {
+      federationId_ = "";
+      domain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFederationDomainRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteFederationDomainRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              federationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domain_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest.Builder.class);
+    }
+
+    public static final int FEDERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object federationId_;
+    /**
+     * <pre>
+     * ID of the federation to delete a domain from.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    @java.lang.Override
+    public java.lang.String getFederationId() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        federationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the federation to delete a domain from.
+     * To get the federation ID, make a [FederationService.List] request.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFederationIdBytes() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        federationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domain_;
+    /**
+     * <pre>
+     * Domain name to delete from the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain name to delete from the federation.
+     * Must be a valid domain name (1-253 characters).
+     * </pre>
+     *
+     * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domain_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domain_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest) obj;
+
+      if (!getFederationId()
+          .equals(other.getFederationId())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEDERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFederationId().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainRequest)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        federationId_ = "";
+
+        domain_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest(this);
+        result.federationId_ = federationId_;
+        result.domain_ = domain_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest.getDefaultInstance()) return this;
+        if (!other.getFederationId().isEmpty()) {
+          federationId_ = other.federationId_;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object federationId_ = "";
+      /**
+       * <pre>
+       * ID of the federation to delete a domain from.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The federationId.
+       */
+      public java.lang.String getFederationId() {
+        java.lang.Object ref = federationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          federationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to delete a domain from.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for federationId.
+       */
+      public com.google.protobuf.ByteString
+          getFederationIdBytes() {
+        java.lang.Object ref = federationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          federationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to delete a domain from.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to delete a domain from.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFederationId() {
+        
+        federationId_ = getDefaultInstance().getFederationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to delete a domain from.
+       * To get the federation ID, make a [FederationService.List] request.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain name to delete from the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name to delete from the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name to delete from the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name to delete from the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name to delete from the federation.
+       * Must be a valid domain name (1-253 characters).
+       * </pre>
+       *
+       * <code>string domain = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-253"];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteFederationDomainRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteFederationDomainRequest>() {
+      @java.lang.Override
+      public DeleteFederationDomainRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteFederationDomainRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteFederationDomainRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteFederationDomainRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteFederationDomainMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the federation that the domain is being deleted from.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The federationId.
+     */
+    java.lang.String getFederationId();
+    /**
+     * <pre>
+     * ID of the federation that the domain is being deleted from.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The bytes for federationId.
+     */
+    com.google.protobuf.ByteString
+        getFederationIdBytes();
+
+    /**
+     * <pre>
+     * Domain name that is being deleted from the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain name that is being deleted from the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainMetadata}
+   */
+  public static final class DeleteFederationDomainMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainMetadata)
+      DeleteFederationDomainMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteFederationDomainMetadata.newBuilder() to construct.
+    private DeleteFederationDomainMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteFederationDomainMetadata() {
+      federationId_ = "";
+      domain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFederationDomainMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteFederationDomainMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              federationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domain_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata.Builder.class);
+    }
+
+    public static final int FEDERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object federationId_;
+    /**
+     * <pre>
+     * ID of the federation that the domain is being deleted from.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The federationId.
+     */
+    @java.lang.Override
+    public java.lang.String getFederationId() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        federationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the federation that the domain is being deleted from.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The bytes for federationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFederationIdBytes() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        federationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domain_;
+    /**
+     * <pre>
+     * Domain name that is being deleted from the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain name that is being deleted from the federation.
+     * </pre>
+     *
+     * <code>string domain = 2;</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domain_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domain_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata) obj;
+
+      if (!getFederationId()
+          .equals(other.getFederationId())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEDERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFederationId().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainMetadata)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        federationId_ = "";
+
+        domain_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata(this);
+        result.federationId_ = federationId_;
+        result.domain_ = domain_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata.getDefaultInstance()) return this;
+        if (!other.getFederationId().isEmpty()) {
+          federationId_ = other.federationId_;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object federationId_ = "";
+      /**
+       * <pre>
+       * ID of the federation that the domain is being deleted from.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return The federationId.
+       */
+      public java.lang.String getFederationId() {
+        java.lang.Object ref = federationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          federationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain is being deleted from.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return The bytes for federationId.
+       */
+      public com.google.protobuf.ByteString
+          getFederationIdBytes() {
+        java.lang.Object ref = federationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          federationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain is being deleted from.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @param value The federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain is being deleted from.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFederationId() {
+        
+        federationId_ = getDefaultInstance().getFederationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation that the domain is being deleted from.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @param value The bytes for federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain name that is being deleted from the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name that is being deleted from the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name that is being deleted from the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name that is being deleted from the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name that is being deleted from the federation.
+       * </pre>
+       *
+       * <code>string domain = 2;</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.DeleteFederationDomainMetadata)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteFederationDomainMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteFederationDomainMetadata>() {
+      @java.lang.Override
+      public DeleteFederationDomainMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteFederationDomainMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteFederationDomainMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteFederationDomainMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationRequest_descriptor;
   private static final 
@@ -20316,6 +28226,51 @@ public final class FederationServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationOperationsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationDomainRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationDomainRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -20414,65 +28369,118 @@ public final class FederationServiceOuterClass {
       "_token\030\003 \001(\tB\n\212\3101\006<=2000\"r\n ListFederati" +
       "onOperationsResponse\0225\n\noperations\030\001 \003(\013" +
       "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t2\373\020\n\021FederationServi" +
-      "ce\022\276\001\n\003Get\022>.yandex.cloud.organizationma" +
-      "nager.v1.saml.GetFederationRequest\0324.yan" +
-      "dex.cloud.organizationmanager.v1.saml.Fe" +
-      "deration\"A\202\323\344\223\002;\0229/organization-manager/" +
-      "v1/saml/federations/{federation_id}\022\276\001\n\004" +
-      "List\022@.yandex.cloud.organizationmanager." +
-      "v1.saml.ListFederationsRequest\032A.yandex." +
-      "cloud.organizationmanager.v1.saml.ListFe" +
-      "derationsResponse\"1\202\323\344\223\002+\022)/organization" +
-      "-manager/v1/saml/federations\022\316\001\n\006Create\022" +
-      "A.yandex.cloud.organizationmanager.v1.sa" +
-      "ml.CreateFederationRequest\032!.yandex.clou" +
-      "d.operation.Operation\"^\202\323\344\223\002.\")/organiza" +
-      "tion-manager/v1/saml/federations:\001*\262\322*&\n" +
-      "\030CreateFederationMetadata\022\nFederation\022\336\001" +
-      "\n\006Update\022A.yandex.cloud.organizationmana" +
-      "ger.v1.saml.UpdateFederationRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"n\202\323\344\223\002>29" +
-      "/organization-manager/v1/saml/federation" +
-      "s/{federation_id}:\001*\262\322*&\n\030UpdateFederati" +
-      "onMetadata\022\nFederation\022\346\001\n\006Delete\022A.yand" +
-      "ex.cloud.organizationmanager.v1.saml.Del" +
-      "eteFederationRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"v\202\323\344\223\002;*9/organization-m" +
-      "anager/v1/saml/federations/{federation_i" +
-      "d}\262\322*1\n\030DeleteFederationMetadata\022\025google" +
-      ".protobuf.Empty\022\236\002\n\017AddUserAccounts\022I.ya" +
-      "ndex.cloud.organizationmanager.v1.saml.A" +
-      "ddFederatedUserAccountsRequest\032!.yandex." +
-      "cloud.operation.Operation\"\234\001\202\323\344\223\002N\"I/org" +
-      "anization-manager/v1/saml/federations/{f" +
-      "ederation_id}:addUserAccounts:\001*\262\322*D\n Ad" +
-      "dFederatedUserAccountsMetadata\022 AddFeder" +
-      "atedUserAccountsResponse\022\255\002\n\022DeleteUserA" +
-      "ccounts\022L.yandex.cloud.organizationmanag" +
-      "er.v1.saml.DeleteFederatedUserAccountsRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\245\001\202\323\344\223\002Q\"L/organization-manager/v1/saml" +
-      "/federations/{federation_id}:deleteUserA" +
-      "ccounts:\001*\262\322*J\n#DeleteFederatedUserAccou" +
-      "ntsMetadata\022#DeleteFederatedUserAccounts" +
-      "Response\022\377\001\n\020ListUserAccounts\022J.yandex.c" +
+      "ext_page_token\030\002 \001(\t\"`\n\032GetFederationDom" +
+      "ainRequest\022#\n\rfederation_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\035\n\006domain\030\002 \001(\tB\r\350\3071\001\212\3101\0051-253\"\236" +
+      "\001\n\034ListFederationDomainsRequest\022#\n\rfeder" +
+      "ation_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB" +
+      "\n\212\3101\006<=2000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"" +
+      "{\n\035ListFederationDomainsResponse\022A\n\007doma" +
+      "ins\030\001 \003(\01320.yandex.cloud.organizationman" +
+      "ager.v1.saml.Domain\022\027\n\017next_page_token\030\002" +
+      " \001(\t\"`\n\032AddFederationDomainRequest\022#\n\rfe" +
+      "deration_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\006domai" +
+      "n\030\002 \001(\tB\r\350\3071\001\212\3101\0051-253\"D\n\033AddFederationD" +
+      "omainMetadata\022\025\n\rfederation_id\030\001 \001(\t\022\016\n\006" +
+      "domain\030\002 \001(\t\"e\n\037ValidateFederationDomain" +
+      "Request\022#\n\rfederation_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\035\n\006domain\030\002 \001(\tB\r\350\3071\001\212\3101\0051-253\"I\n V" +
+      "alidateFederationDomainMetadata\022\025\n\rfeder" +
+      "ation_id\030\001 \001(\t\022\016\n\006domain\030\002 \001(\t\"c\n\035Delete" +
+      "FederationDomainRequest\022#\n\rfederation_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\006domain\030\002 \001(\tB\r\350\307" +
+      "1\001\212\3101\0051-253\"G\n\036DeleteFederationDomainMet" +
+      "adata\022\025\n\rfederation_id\030\001 \001(\t\022\016\n\006domain\030\002" +
+      " \001(\t2\314\032\n\021FederationService\022\276\001\n\003Get\022>.yan" +
+      "dex.cloud.organizationmanager.v1.saml.Ge" +
+      "tFederationRequest\0324.yandex.cloud.organi" +
+      "zationmanager.v1.saml.Federation\"A\202\323\344\223\002;" +
+      "\0229/organization-manager/v1/saml/federati" +
+      "ons/{federation_id}\022\276\001\n\004List\022@.yandex.cl" +
+      "oud.organizationmanager.v1.saml.ListFede" +
+      "rationsRequest\032A.yandex.cloud.organizati" +
+      "onmanager.v1.saml.ListFederationsRespons" +
+      "e\"1\202\323\344\223\002+\022)/organization-manager/v1/saml" +
+      "/federations\022\316\001\n\006Create\022A.yandex.cloud.o" +
+      "rganizationmanager.v1.saml.CreateFederat" +
+      "ionRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"^\202\323\344\223\002.\")/organization-manager/v1/" +
+      "saml/federations:\001*\262\322*&\n\030CreateFederatio" +
+      "nMetadata\022\nFederation\022\336\001\n\006Update\022A.yande" +
+      "x.cloud.organizationmanager.v1.saml.Upda" +
+      "teFederationRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"n\202\323\344\223\002>29/organization-ma" +
+      "nager/v1/saml/federations/{federation_id" +
+      "}:\001*\262\322*&\n\030UpdateFederationMetadata\022\nFede" +
+      "ration\022\346\001\n\006Delete\022A.yandex.cloud.organiz" +
+      "ationmanager.v1.saml.DeleteFederationReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "v\202\323\344\223\002;*9/organization-manager/v1/saml/f" +
+      "ederations/{federation_id}\262\322*1\n\030DeleteFe" +
+      "derationMetadata\022\025google.protobuf.Empty\022" +
+      "\236\002\n\017AddUserAccounts\022I.yandex.cloud.organ" +
+      "izationmanager.v1.saml.AddFederatedUserA" +
+      "ccountsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\234\001\202\323\344\223\002N\"I/organization-manage" +
+      "r/v1/saml/federations/{federation_id}:ad" +
+      "dUserAccounts:\001*\262\322*D\n AddFederatedUserAc" +
+      "countsMetadata\022 AddFederatedUserAccounts" +
+      "Response\022\255\002\n\022DeleteUserAccounts\022L.yandex" +
+      ".cloud.organizationmanager.v1.saml.Delet" +
+      "eFederatedUserAccountsRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\245\001\202\323\344\223\002Q\"L/orga" +
+      "nization-manager/v1/saml/federations/{fe" +
+      "deration_id}:deleteUserAccounts:\001*\262\322*J\n#" +
+      "DeleteFederatedUserAccountsMetadata\022#Del" +
+      "eteFederatedUserAccountsResponse\022\377\001\n\020Lis" +
+      "tUserAccounts\022J.yandex.cloud.organizatio" +
+      "nmanager.v1.saml.ListFederatedUserAccoun" +
+      "tsRequest\032K.yandex.cloud.organizationman" +
+      "ager.v1.saml.ListFederatedUserAccountsRe" +
+      "sponse\"R\202\323\344\223\002L\022J/organization-manager/v1" +
+      "/saml/federations/{federation_id}:listUs" +
+      "erAccounts\022\365\001\n\016ListOperations\022I.yandex.c" +
       "loud.organizationmanager.v1.saml.ListFed" +
-      "eratedUserAccountsRequest\032K.yandex.cloud" +
-      ".organizationmanager.v1.saml.ListFederat" +
-      "edUserAccountsResponse\"R\202\323\344\223\002L\022J/organiz" +
-      "ation-manager/v1/saml/federations/{feder" +
-      "ation_id}:listUserAccounts\022\365\001\n\016ListOpera" +
-      "tions\022I.yandex.cloud.organizationmanager" +
-      ".v1.saml.ListFederationOperationsRequest" +
-      "\032J.yandex.cloud.organizationmanager.v1.s" +
-      "aml.ListFederationOperationsResponse\"L\202\323" +
-      "\344\223\002F\022D/organization-manager/v1/saml/fede" +
-      "rations/{federation_id}/operationsB\201\001\n,y" +
-      "andex.cloud.api.organizationmanager.v1.s" +
-      "amlZQgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/organizationmanager/v1/sam" +
-      "l;samlb\006proto3"
+      "erationOperationsRequest\032J.yandex.cloud." +
+      "organizationmanager.v1.saml.ListFederati" +
+      "onOperationsResponse\"L\202\323\344\223\002F\022D/organizat" +
+      "ion-manager/v1/saml/federations/{federat" +
+      "ion_id}/operations\022\327\001\n\tGetDomain\022D.yande" +
+      "x.cloud.organizationmanager.v1.saml.GetF" +
+      "ederationDomainRequest\0320.yandex.cloud.or" +
+      "ganizationmanager.v1.saml.Domain\"R\202\323\344\223\002L" +
+      "\022J/organization-manager/v1/saml/federati" +
+      "ons/{federation_id}/domains/{domain}\022\351\001\n" +
+      "\013ListDomains\022F.yandex.cloud.organization" +
+      "manager.v1.saml.ListFederationDomainsReq" +
+      "uest\032G.yandex.cloud.organizationmanager." +
+      "v1.saml.ListFederationDomainsResponse\"I\202" +
+      "\323\344\223\002C\022A/organization-manager/v1/saml/fed" +
+      "erations/{federation_id}/domains\022\353\001\n\tAdd" +
+      "Domain\022D.yandex.cloud.organizationmanage" +
+      "r.v1.saml.AddFederationDomainRequest\032!.y" +
+      "andex.cloud.operation.Operation\"u\202\323\344\223\002F\"" +
+      "A/organization-manager/v1/saml/federatio" +
+      "ns/{federation_id}/domains:\001*\262\322*%\n\033AddFe" +
+      "derationDomainMetadata\022\006Domain\022\215\002\n\016Valid" +
+      "ateDomain\022I.yandex.cloud.organizationman" +
+      "ager.v1.saml.ValidateFederationDomainReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "\214\001\202\323\344\223\002X\"S/organization-manager/v1/saml/" +
+      "federations/{federation_id}/domains/{dom" +
+      "ain}:validate:\001*\262\322**\n ValidateFederation" +
+      "DomainMetadata\022\006Domain\022\212\002\n\014DeleteDomain\022" +
+      "G.yandex.cloud.organizationmanager.v1.sa" +
+      "ml.DeleteFederationDomainRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\215\001\202\323\344\223\002L*J/o" +
+      "rganization-manager/v1/saml/federations/" +
+      "{federation_id}/domains/{domain}\262\322*7\n\036De" +
+      "leteFederationDomainMetadata\022\025google.pro" +
+      "tobuf.EmptyB\201\001\n,yandex.cloud.api.organiz" +
+      "ationmanager.v1.samlZQgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/organizat" +
+      "ionmanager/v1/saml;samlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20612,6 +28620,60 @@ public final class FederationServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationDomainRequest_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationDomainRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationDomainRequest_descriptor,
+        new java.lang.String[] { "FederationId", "Domain", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsRequest_descriptor,
+        new java.lang.String[] { "FederationId", "PageSize", "PageToken", "Filter", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationDomainsResponse_descriptor,
+        new java.lang.String[] { "Domains", "NextPageToken", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainRequest_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainRequest_descriptor,
+        new java.lang.String[] { "FederationId", "Domain", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederationDomainMetadata_descriptor,
+        new java.lang.String[] { "FederationId", "Domain", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainRequest_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainRequest_descriptor,
+        new java.lang.String[] { "FederationId", "Domain", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_ValidateFederationDomainMetadata_descriptor,
+        new java.lang.String[] { "FederationId", "Domain", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainRequest_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainRequest_descriptor,
+        new java.lang.String[] { "FederationId", "Domain", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederationDomainMetadata_descriptor,
+        new java.lang.String[] { "FederationId", "Domain", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

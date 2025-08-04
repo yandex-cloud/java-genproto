@@ -297,6 +297,161 @@ public final class FederationServiceGrpc {
     return getListOperationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest,
+      yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> getGetDomainMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDomain",
+      requestType = yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest.class,
+      responseType = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest,
+      yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> getGetDomainMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> getGetDomainMethod;
+    if ((getGetDomainMethod = FederationServiceGrpc.getGetDomainMethod) == null) {
+      synchronized (FederationServiceGrpc.class) {
+        if ((getGetDomainMethod = FederationServiceGrpc.getGetDomainMethod) == null) {
+          FederationServiceGrpc.getGetDomainMethod = getGetDomainMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDomain"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.getDefaultInstance()))
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("GetDomain"))
+              .build();
+        }
+      }
+    }
+    return getGetDomainMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest,
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse> getListDomainsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListDomains",
+      requestType = yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest.class,
+      responseType = yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest,
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse> getListDomainsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse> getListDomainsMethod;
+    if ((getListDomainsMethod = FederationServiceGrpc.getListDomainsMethod) == null) {
+      synchronized (FederationServiceGrpc.class) {
+        if ((getListDomainsMethod = FederationServiceGrpc.getListDomainsMethod) == null) {
+          FederationServiceGrpc.getListDomainsMethod = getListDomainsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDomains"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("ListDomains"))
+              .build();
+        }
+      }
+    }
+    return getListDomainsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddDomainMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddDomain",
+      requestType = yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddDomainMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getAddDomainMethod;
+    if ((getAddDomainMethod = FederationServiceGrpc.getAddDomainMethod) == null) {
+      synchronized (FederationServiceGrpc.class) {
+        if ((getAddDomainMethod = FederationServiceGrpc.getAddDomainMethod) == null) {
+          FederationServiceGrpc.getAddDomainMethod = getAddDomainMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddDomain"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("AddDomain"))
+              .build();
+        }
+      }
+    }
+    return getAddDomainMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getValidateDomainMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ValidateDomain",
+      requestType = yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getValidateDomainMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getValidateDomainMethod;
+    if ((getValidateDomainMethod = FederationServiceGrpc.getValidateDomainMethod) == null) {
+      synchronized (FederationServiceGrpc.class) {
+        if ((getValidateDomainMethod = FederationServiceGrpc.getValidateDomainMethod) == null) {
+          FederationServiceGrpc.getValidateDomainMethod = getValidateDomainMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ValidateDomain"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("ValidateDomain"))
+              .build();
+        }
+      }
+    }
+    return getValidateDomainMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteDomainMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteDomain",
+      requestType = yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteDomainMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteDomainMethod;
+    if ((getDeleteDomainMethod = FederationServiceGrpc.getDeleteDomainMethod) == null) {
+      synchronized (FederationServiceGrpc.class) {
+        if ((getDeleteDomainMethod = FederationServiceGrpc.getDeleteDomainMethod) == null) {
+          FederationServiceGrpc.getDeleteDomainMethod = getDeleteDomainMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteDomain"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("DeleteDomain"))
+              .build();
+        }
+      }
+    }
+    return getDeleteDomainMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -439,6 +594,57 @@ public final class FederationServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns the specified domain in the federation.
+     * To get the list of available domains, make a [ListDomains] request.
+     * </pre>
+     */
+    public void getDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDomainMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of domains in the specified federation.
+     * </pre>
+     */
+    public void listDomains(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDomainsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Adds a domain to the specified federation.
+     * </pre>
+     */
+    public void addDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddDomainMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Validates a domain in the specified federation.
+     * </pre>
+     */
+    public void validateDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getValidateDomainMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified domain from the federation.
+     * </pre>
+     */
+    public void deleteDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDomainMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -504,6 +710,41 @@ public final class FederationServiceGrpc {
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsRequest,
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
+          .addMethod(
+            getGetDomainMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest,
+                yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain>(
+                  this, METHODID_GET_DOMAIN)))
+          .addMethod(
+            getListDomainsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest,
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse>(
+                  this, METHODID_LIST_DOMAINS)))
+          .addMethod(
+            getAddDomainMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ADD_DOMAIN)))
+          .addMethod(
+            getValidateDomainMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_VALIDATE_DOMAIN)))
+          .addMethod(
+            getDeleteDomainMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE_DOMAIN)))
           .build();
     }
   }
@@ -624,6 +865,62 @@ public final class FederationServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns the specified domain in the federation.
+     * To get the list of available domains, make a [ListDomains] request.
+     * </pre>
+     */
+    public void getDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDomainMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of domains in the specified federation.
+     * </pre>
+     */
+    public void listDomains(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListDomainsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Adds a domain to the specified federation.
+     * </pre>
+     */
+    public void addDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddDomainMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Validates a domain in the specified federation.
+     * </pre>
+     */
+    public void validateDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getValidateDomainMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified domain from the federation.
+     * </pre>
+     */
+    public void deleteDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteDomainMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -732,6 +1029,57 @@ public final class FederationServiceGrpc {
     public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsResponse listOperations(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified domain in the federation.
+     * To get the list of available domains, make a [ListDomains] request.
+     * </pre>
+     */
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain getDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDomainMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of domains in the specified federation.
+     * </pre>
+     */
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse listDomains(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListDomainsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Adds a domain to the specified federation.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation addDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddDomainMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Validates a domain in the specified federation.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation validateDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getValidateDomainMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified domain from the federation.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation deleteDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteDomainMethod(), getCallOptions(), request);
     }
   }
 
@@ -851,6 +1199,62 @@ public final class FederationServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns the specified domain in the federation.
+     * To get the list of available domains, make a [ListDomains] request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain> getDomain(
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDomainMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of domains in the specified federation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse> listDomains(
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListDomainsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Adds a domain to the specified federation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addDomain(
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddDomainMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Validates a domain in the specified federation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> validateDomain(
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getValidateDomainMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified domain from the federation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteDomain(
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteDomainMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -862,6 +1266,11 @@ public final class FederationServiceGrpc {
   private static final int METHODID_DELETE_USER_ACCOUNTS = 6;
   private static final int METHODID_LIST_USER_ACCOUNTS = 7;
   private static final int METHODID_LIST_OPERATIONS = 8;
+  private static final int METHODID_GET_DOMAIN = 9;
+  private static final int METHODID_LIST_DOMAINS = 10;
+  private static final int METHODID_ADD_DOMAIN = 11;
+  private static final int METHODID_VALIDATE_DOMAIN = 12;
+  private static final int METHODID_DELETE_DOMAIN = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -915,6 +1324,26 @@ public final class FederationServiceGrpc {
         case METHODID_LIST_OPERATIONS:
           serviceImpl.listOperations((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsResponse>) responseObserver);
+          break;
+        case METHODID_GET_DOMAIN:
+          serviceImpl.getDomain((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationDomainRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain>) responseObserver);
+          break;
+        case METHODID_LIST_DOMAINS:
+          serviceImpl.listDomains((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationDomainsResponse>) responseObserver);
+          break;
+        case METHODID_ADD_DOMAIN:
+          serviceImpl.addDomain((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederationDomainRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_VALIDATE_DOMAIN:
+          serviceImpl.validateDomain((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ValidateFederationDomainRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE_DOMAIN:
+          serviceImpl.deleteDomain((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -986,6 +1415,11 @@ public final class FederationServiceGrpc {
               .addMethod(getDeleteUserAccountsMethod())
               .addMethod(getListUserAccountsMethod())
               .addMethod(getListOperationsMethod())
+              .addMethod(getGetDomainMethod())
+              .addMethod(getListDomainsMethod())
+              .addMethod(getAddDomainMethod())
+              .addMethod(getValidateDomainMethod())
+              .addMethod(getDeleteDomainMethod())
               .build();
         }
       }

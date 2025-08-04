@@ -5,6 +5,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Episode management service.
+ * Provides methods for creating, retrieving, updating, and deleting episodes,
+ * which represent specific time segments of streams
+ * that can be individually accessed, managed, and published.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -375,13 +378,17 @@ public final class EpisodeServiceGrpc {
   /**
    * <pre>
    * Episode management service.
+   * Provides methods for creating, retrieving, updating, and deleting episodes,
+   * which represent specific time segments of streams
+   * that can be individually accessed, managed, and published.
    * </pre>
    */
   public static abstract class EpisodeServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Get the specific channel.
+     * Retrieves detailed information about a specific episode by its ID.
+     * Returns all episode metadata, status, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeRequest request,
@@ -391,7 +398,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * List episodes for stream or line.
+     * Lists all episodes associated with a specific stream or stream line with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesRequest request,
@@ -401,7 +409,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch get episodes for channel.
+     * Retrieves multiple episodes by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several episodes.
      * </pre>
      */
     public void batchGet(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest request,
@@ -411,7 +420,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Create episode.
+     * Creates a new episode associated with a stream or stream line.
+     * Episodes can be configured with various settings including title, description,
+     * time boundaries, and access rights.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest request,
@@ -421,7 +432,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Update episode.
+     * Updates an existing episode's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UpdateEpisodeRequest request,
@@ -431,7 +443,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Delete episode.
+     * Deletes a specific episode by its ID.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.DeleteEpisodeRequest request,
@@ -441,7 +453,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete episodes.
+     * Deletes multiple episodes associated with a specific stream or stream line in a single request.
+     * This is more efficient than making multiple Delete requests when removing several episodes.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest request,
@@ -451,7 +464,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Performs a specific action on an episode, such as publishing or unpublishing.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest request,
@@ -461,7 +474,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a player URL for watching the episode.
+     * The URL can include player parameters such as autoplay, mute, and visibility of interface controls.
+     * For episodes with signed URL access, an expiration duration can be specified.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest request,
@@ -471,7 +486,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Get manifest urls.
+     * Retrieves the manifest URLs for the episode's media content.
+     * Manifests provide players with necessary information
+     * for streaming the content with different quality levels and formats.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request,
@@ -558,6 +575,9 @@ public final class EpisodeServiceGrpc {
   /**
    * <pre>
    * Episode management service.
+   * Provides methods for creating, retrieving, updating, and deleting episodes,
+   * which represent specific time segments of streams
+   * that can be individually accessed, managed, and published.
    * </pre>
    */
   public static final class EpisodeServiceStub extends io.grpc.stub.AbstractAsyncStub<EpisodeServiceStub> {
@@ -574,7 +594,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific channel.
+     * Retrieves detailed information about a specific episode by its ID.
+     * Returns all episode metadata, status, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeRequest request,
@@ -585,7 +606,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * List episodes for stream or line.
+     * Lists all episodes associated with a specific stream or stream line with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesRequest request,
@@ -596,7 +618,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch get episodes for channel.
+     * Retrieves multiple episodes by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several episodes.
      * </pre>
      */
     public void batchGet(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest request,
@@ -607,7 +630,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Create episode.
+     * Creates a new episode associated with a stream or stream line.
+     * Episodes can be configured with various settings including title, description,
+     * time boundaries, and access rights.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest request,
@@ -618,7 +643,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Update episode.
+     * Updates an existing episode's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UpdateEpisodeRequest request,
@@ -629,7 +655,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Delete episode.
+     * Deletes a specific episode by its ID.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.DeleteEpisodeRequest request,
@@ -640,7 +666,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete episodes.
+     * Deletes multiple episodes associated with a specific stream or stream line in a single request.
+     * This is more efficient than making multiple Delete requests when removing several episodes.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest request,
@@ -651,7 +678,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Performs a specific action on an episode, such as publishing or unpublishing.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest request,
@@ -662,7 +689,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a player URL for watching the episode.
+     * The URL can include player parameters such as autoplay, mute, and visibility of interface controls.
+     * For episodes with signed URL access, an expiration duration can be specified.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest request,
@@ -673,7 +702,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Get manifest urls.
+     * Retrieves the manifest URLs for the episode's media content.
+     * Manifests provide players with necessary information
+     * for streaming the content with different quality levels and formats.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request,
@@ -686,6 +717,9 @@ public final class EpisodeServiceGrpc {
   /**
    * <pre>
    * Episode management service.
+   * Provides methods for creating, retrieving, updating, and deleting episodes,
+   * which represent specific time segments of streams
+   * that can be individually accessed, managed, and published.
    * </pre>
    */
   public static final class EpisodeServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<EpisodeServiceBlockingStub> {
@@ -702,7 +736,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific channel.
+     * Retrieves detailed information about a specific episode by its ID.
+     * Returns all episode metadata, status, and related information.
      * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode get(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeRequest request) {
@@ -712,7 +747,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * List episodes for stream or line.
+     * Lists all episodes associated with a specific stream or stream line with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesResponse list(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesRequest request) {
@@ -722,7 +758,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch get episodes for channel.
+     * Retrieves multiple episodes by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several episodes.
      * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse batchGet(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesRequest request) {
@@ -732,7 +769,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Create episode.
+     * Creates a new episode associated with a stream or stream line.
+     * Episodes can be configured with various settings including title, description,
+     * time boundaries, and access rights.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest request) {
@@ -742,7 +781,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Update episode.
+     * Updates an existing episode's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UpdateEpisodeRequest request) {
@@ -752,7 +792,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Delete episode.
+     * Deletes a specific episode by its ID.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.DeleteEpisodeRequest request) {
@@ -762,7 +802,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete episodes.
+     * Deletes multiple episodes associated with a specific stream or stream line in a single request.
+     * This is more efficient than making multiple Delete requests when removing several episodes.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest request) {
@@ -772,7 +813,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Performs a specific action on an episode, such as publishing or unpublishing.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation performAction(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest request) {
@@ -782,7 +823,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a player URL for watching the episode.
+     * The URL can include player parameters such as autoplay, mute, and visibility of interface controls.
+     * For episodes with signed URL access, an expiration duration can be specified.
      * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLResponse getPlayerURL(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest request) {
@@ -792,7 +835,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Get manifest urls.
+     * Retrieves the manifest URLs for the episode's media content.
+     * Manifests provide players with necessary information
+     * for streaming the content with different quality levels and formats.
      * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request) {
@@ -804,6 +849,9 @@ public final class EpisodeServiceGrpc {
   /**
    * <pre>
    * Episode management service.
+   * Provides methods for creating, retrieving, updating, and deleting episodes,
+   * which represent specific time segments of streams
+   * that can be individually accessed, managed, and published.
    * </pre>
    */
   public static final class EpisodeServiceFutureStub extends io.grpc.stub.AbstractFutureStub<EpisodeServiceFutureStub> {
@@ -820,7 +868,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific channel.
+     * Retrieves detailed information about a specific episode by its ID.
+     * Returns all episode metadata, status, and related information.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> get(
@@ -831,7 +880,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * List episodes for stream or line.
+     * Lists all episodes associated with a specific stream or stream line with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesResponse> list(
@@ -842,7 +892,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch get episodes for channel.
+     * Retrieves multiple episodes by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several episodes.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchGetEpisodesResponse> batchGet(
@@ -853,7 +904,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Create episode.
+     * Creates a new episode associated with a stream or stream line.
+     * Episodes can be configured with various settings including title, description,
+     * time boundaries, and access rights.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -864,7 +917,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Update episode.
+     * Updates an existing episode's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -875,7 +929,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Delete episode.
+     * Deletes a specific episode by its ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -886,7 +940,8 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete episodes.
+     * Deletes multiple episodes associated with a specific stream or stream line in a single request.
+     * This is more efficient than making multiple Delete requests when removing several episodes.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
@@ -897,7 +952,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Performs a specific action on an episode, such as publishing or unpublishing.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> performAction(
@@ -908,7 +963,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a player URL for watching the episode.
+     * The URL can include player parameters such as autoplay, mute, and visibility of interface controls.
+     * For episodes with signed URL access, an expiration duration can be specified.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLResponse> getPlayerURL(
@@ -919,7 +976,9 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Get manifest urls.
+     * Retrieves the manifest URLs for the episode's media content.
+     * Manifests provide players with necessary information
+     * for streaming the content with different quality levels and formats.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse> getManifests(

@@ -7230,7 +7230,7 @@ public final class TransferServiceOuterClass {
      * to
      * fetch the next page. Defaults to `100` if not specified. The maximum allowed
      * value
-     * for this field is `500`.
+     * for this field is `1000`.
      * </pre>
      *
      * <code>int64 page_size = 3;</code>
@@ -7423,7 +7423,7 @@ public final class TransferServiceOuterClass {
      * to
      * fetch the next page. Defaults to `100` if not specified. The maximum allowed
      * value
-     * for this field is `500`.
+     * for this field is `1000`.
      * </pre>
      *
      * <code>int64 page_size = 3;</code>
@@ -7944,7 +7944,7 @@ public final class TransferServiceOuterClass {
        * to
        * fetch the next page. Defaults to `100` if not specified. The maximum allowed
        * value
-       * for this field is `500`.
+       * for this field is `1000`.
        * </pre>
        *
        * <code>int64 page_size = 3;</code>
@@ -7963,7 +7963,7 @@ public final class TransferServiceOuterClass {
        * to
        * fetch the next page. Defaults to `100` if not specified. The maximum allowed
        * value
-       * for this field is `500`.
+       * for this field is `1000`.
        * </pre>
        *
        * <code>int64 page_size = 3;</code>
@@ -7985,7 +7985,7 @@ public final class TransferServiceOuterClass {
        * to
        * fetch the next page. Defaults to `100` if not specified. The maximum allowed
        * value
-       * for this field is `500`.
+       * for this field is `1000`.
        * </pre>
        *
        * <code>int64 page_size = 3;</code>

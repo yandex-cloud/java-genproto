@@ -5,6 +5,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Channel management service.
+ * Provides methods for creating, retrieving, updating, and deleting channels,
+ * as well as managing channel-related operations such as access control.
+ * Channels serve as containers for videos and streams in an organization.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -344,13 +347,17 @@ public final class ChannelServiceGrpc {
   /**
    * <pre>
    * Channel management service.
+   * Provides methods for creating, retrieving, updating, and deleting channels,
+   * as well as managing channel-related operations such as access control.
+   * Channels serve as containers for videos and streams in an organization.
    * </pre>
    */
   public static abstract class ChannelServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Get the specific channel.
+     * Retrieves detailed information about a specific channel by its ID.
+     * Returns all channel metadata, settings, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.ChannelServiceOuterClass.GetChannelRequest request,
@@ -360,7 +367,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * List channels for organization.
+     * Lists all channels in a specific organization with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsRequest request,
@@ -370,7 +378,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Create channel.
+     * Creates a new channel in the specified organization.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.ChannelServiceOuterClass.CreateChannelRequest request,
@@ -380,7 +388,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Update channel.
+     * Updates an existing channel's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.ChannelServiceOuterClass.UpdateChannelRequest request,
@@ -390,7 +399,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Delete channel.
+     * Deletes a specific channel by its ID.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.ChannelServiceOuterClass.DeleteChannelRequest request,
@@ -400,7 +409,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete channels.
+     * Deletes multiple channels in a specific organization in a single request.
+     * This is more efficient than making multiple Delete requests when removing several channels.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest request,
@@ -410,7 +420,9 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * List existing access bindings for the specified channel.
+     * Lists all access bindings for a specific channel.
+     * Access bindings define which users or service accounts have access to the channel
+     * and what actions they can perform.
      * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
@@ -420,7 +432,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Set access bindings for the channel.
+     * Sets all access bindings for a specific channel.
+     * This operation completely replaces any existing access bindings.
      * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
@@ -430,7 +443,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Update access bindings for the specified channel.
+     * Updates access bindings for a specific channel by adding or removing individual bindings.
+     * This operation modifies existing access bindings without replacing them completely.
      * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
@@ -510,6 +524,9 @@ public final class ChannelServiceGrpc {
   /**
    * <pre>
    * Channel management service.
+   * Provides methods for creating, retrieving, updating, and deleting channels,
+   * as well as managing channel-related operations such as access control.
+   * Channels serve as containers for videos and streams in an organization.
    * </pre>
    */
   public static final class ChannelServiceStub extends io.grpc.stub.AbstractAsyncStub<ChannelServiceStub> {
@@ -526,7 +543,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific channel.
+     * Retrieves detailed information about a specific channel by its ID.
+     * Returns all channel metadata, settings, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.ChannelServiceOuterClass.GetChannelRequest request,
@@ -537,7 +555,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * List channels for organization.
+     * Lists all channels in a specific organization with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsRequest request,
@@ -548,7 +567,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Create channel.
+     * Creates a new channel in the specified organization.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.ChannelServiceOuterClass.CreateChannelRequest request,
@@ -559,7 +578,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Update channel.
+     * Updates an existing channel's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.ChannelServiceOuterClass.UpdateChannelRequest request,
@@ -570,7 +590,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Delete channel.
+     * Deletes a specific channel by its ID.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.ChannelServiceOuterClass.DeleteChannelRequest request,
@@ -581,7 +601,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete channels.
+     * Deletes multiple channels in a specific organization in a single request.
+     * This is more efficient than making multiple Delete requests when removing several channels.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest request,
@@ -592,7 +613,9 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * List existing access bindings for the specified channel.
+     * Lists all access bindings for a specific channel.
+     * Access bindings define which users or service accounts have access to the channel
+     * and what actions they can perform.
      * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
@@ -603,7 +626,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Set access bindings for the channel.
+     * Sets all access bindings for a specific channel.
+     * This operation completely replaces any existing access bindings.
      * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
@@ -614,7 +638,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Update access bindings for the specified channel.
+     * Updates access bindings for a specific channel by adding or removing individual bindings.
+     * This operation modifies existing access bindings without replacing them completely.
      * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
@@ -627,6 +652,9 @@ public final class ChannelServiceGrpc {
   /**
    * <pre>
    * Channel management service.
+   * Provides methods for creating, retrieving, updating, and deleting channels,
+   * as well as managing channel-related operations such as access control.
+   * Channels serve as containers for videos and streams in an organization.
    * </pre>
    */
   public static final class ChannelServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ChannelServiceBlockingStub> {
@@ -643,7 +671,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific channel.
+     * Retrieves detailed information about a specific channel by its ID.
+     * Returns all channel metadata, settings, and related information.
      * </pre>
      */
     public yandex.cloud.api.video.v1.ChannelOuterClass.Channel get(yandex.cloud.api.video.v1.ChannelServiceOuterClass.GetChannelRequest request) {
@@ -653,7 +682,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * List channels for organization.
+     * Lists all channels in a specific organization with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsResponse list(yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsRequest request) {
@@ -663,7 +693,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Create channel.
+     * Creates a new channel in the specified organization.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.ChannelServiceOuterClass.CreateChannelRequest request) {
@@ -673,7 +703,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Update channel.
+     * Updates an existing channel's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.video.v1.ChannelServiceOuterClass.UpdateChannelRequest request) {
@@ -683,7 +714,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Delete channel.
+     * Deletes a specific channel by its ID.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.ChannelServiceOuterClass.DeleteChannelRequest request) {
@@ -693,7 +724,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete channels.
+     * Deletes multiple channels in a specific organization in a single request.
+     * This is more efficient than making multiple Delete requests when removing several channels.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.ChannelServiceOuterClass.BatchDeleteChannelsRequest request) {
@@ -703,7 +735,9 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * List existing access bindings for the specified channel.
+     * Lists all access bindings for a specific channel.
+     * Access bindings define which users or service accounts have access to the channel
+     * and what actions they can perform.
      * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
@@ -713,7 +747,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Set access bindings for the channel.
+     * Sets all access bindings for a specific channel.
+     * This operation completely replaces any existing access bindings.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
@@ -723,7 +758,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Update access bindings for the specified channel.
+     * Updates access bindings for a specific channel by adding or removing individual bindings.
+     * This operation modifies existing access bindings without replacing them completely.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
@@ -735,6 +771,9 @@ public final class ChannelServiceGrpc {
   /**
    * <pre>
    * Channel management service.
+   * Provides methods for creating, retrieving, updating, and deleting channels,
+   * as well as managing channel-related operations such as access control.
+   * Channels serve as containers for videos and streams in an organization.
    * </pre>
    */
   public static final class ChannelServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ChannelServiceFutureStub> {
@@ -751,7 +790,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific channel.
+     * Retrieves detailed information about a specific channel by its ID.
+     * Returns all channel metadata, settings, and related information.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ChannelOuterClass.Channel> get(
@@ -762,7 +802,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * List channels for organization.
+     * Lists all channels in a specific organization with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsResponse> list(
@@ -773,7 +814,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Create channel.
+     * Creates a new channel in the specified organization.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -784,7 +825,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Update channel.
+     * Updates an existing channel's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -795,7 +837,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Delete channel.
+     * Deletes a specific channel by its ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -806,7 +848,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete channels.
+     * Deletes multiple channels in a specific organization in a single request.
+     * This is more efficient than making multiple Delete requests when removing several channels.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
@@ -817,7 +860,9 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * List existing access bindings for the specified channel.
+     * Lists all access bindings for a specific channel.
+     * Access bindings define which users or service accounts have access to the channel
+     * and what actions they can perform.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
@@ -828,7 +873,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Set access bindings for the channel.
+     * Sets all access bindings for a specific channel.
+     * This operation completely replaces any existing access bindings.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
@@ -839,7 +885,8 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Update access bindings for the specified channel.
+     * Updates access bindings for a specific channel by adding or removing individual bindings.
+     * This operation modifies existing access bindings without replacing them completely.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(

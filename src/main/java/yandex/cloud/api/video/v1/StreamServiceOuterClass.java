@@ -20,7 +20,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream to retrieve.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,7 +29,7 @@ public final class StreamServiceOuterClass {
     java.lang.String getStreamId();
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream to retrieve.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -126,7 +126,7 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object streamId_;
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream to retrieve.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -147,7 +147,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream to retrieve.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -473,7 +473,7 @@ public final class StreamServiceOuterClass {
       private java.lang.Object streamId_ = "";
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream to retrieve.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -493,7 +493,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream to retrieve.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -514,7 +514,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream to retrieve.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -533,7 +533,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream to retrieve.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -547,7 +547,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream to retrieve.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -624,7 +624,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -633,7 +633,7 @@ public final class StreamServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -644,8 +644,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of the results per page to return.
-     * Default value: 100.
+     * The maximum number of streams to return per page.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -655,7 +654,8 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListStreamsResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -664,7 +664,8 @@ public final class StreamServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListStreamsResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -675,27 +676,27 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "startTime desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The orderBy.
      */
     java.lang.String getOrderBy();
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "startTime desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for orderBy.
      */
     com.google.protobuf.ByteString
@@ -703,17 +704,16 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned streams.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title", "lineId", "status"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'live' AND (status='READY' OR status='ONAIR')`
+     * Filterable fields: ["id", "title", "lineId", "status"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -722,17 +722,16 @@ public final class StreamServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned streams.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title", "lineId", "status"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'live' AND (status='READY' OR status='ONAIR')`
+     * Filterable fields: ["id", "title", "lineId", "status"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -855,7 +854,7 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -876,7 +875,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -901,8 +900,7 @@ public final class StreamServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of the results per page to return.
-     * Default value: 100.
+     * The maximum number of streams to return per page.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -917,7 +915,8 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListStreamsResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -938,7 +937,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListStreamsResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -963,14 +963,14 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object orderBy_;
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "startTime desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The orderBy.
      */
     @java.lang.Override
@@ -988,14 +988,14 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "startTime desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for orderBy.
      */
     @java.lang.Override
@@ -1017,17 +1017,16 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned streams.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title", "lineId", "status"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'live' AND (status='READY' OR status='ONAIR')`
+     * Filterable fields: ["id", "title", "lineId", "status"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1048,17 +1047,16 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned streams.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title", "lineId", "status"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'live' AND (status='READY' OR status='ONAIR')`
+     * Filterable fields: ["id", "title", "lineId", "status"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1453,7 +1451,7 @@ public final class StreamServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1473,7 +1471,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1494,7 +1492,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1513,7 +1511,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1527,7 +1525,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1549,8 +1547,7 @@ public final class StreamServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of streams to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1562,8 +1559,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of streams to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1578,8 +1574,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of streams to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1595,7 +1590,8 @@ public final class StreamServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListStreamsResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1615,7 +1611,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListStreamsResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1636,7 +1633,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListStreamsResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1655,7 +1653,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListStreamsResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1669,7 +1668,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListStreamsResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1691,14 +1691,14 @@ public final class StreamServiceOuterClass {
       private java.lang.Object orderBy_ = "";
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "startTime desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The orderBy.
        */
       public java.lang.String getOrderBy() {
@@ -1715,14 +1715,14 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "startTime desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for orderBy.
        */
       public com.google.protobuf.ByteString
@@ -1740,14 +1740,14 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "startTime desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The orderBy to set.
        * @return This builder for chaining.
        */
@@ -1763,14 +1763,14 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "startTime desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
@@ -1781,14 +1781,14 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "startTime desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "startTime", "finishTime", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for orderBy to set.
        * @return This builder for chaining.
        */
@@ -1807,17 +1807,16 @@ public final class StreamServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned streams.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title", "lineId", "status"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'live' AND (status='READY' OR status='ONAIR')`
+       * Filterable fields: ["id", "title", "lineId", "status"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1837,17 +1836,16 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned streams.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title", "lineId", "status"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'live' AND (status='READY' OR status='ONAIR')`
+       * Filterable fields: ["id", "title", "lineId", "status"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1868,17 +1866,16 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned streams.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title", "lineId", "status"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'live' AND (status='READY' OR status='ONAIR')`
+       * Filterable fields: ["id", "title", "lineId", "status"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1897,17 +1894,16 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned streams.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title", "lineId", "status"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'live' AND (status='READY' OR status='ONAIR')`
+       * Filterable fields: ["id", "title", "lineId", "status"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1921,17 +1917,16 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned streams.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title", "lineId", "status"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'live' AND (status='READY' OR status='ONAIR')`
+       * Filterable fields: ["id", "title", "lineId", "status"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -2008,7 +2003,8 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * List of streams for channel.
+     * List of streams matching the request criteria.
+     * May be empty if no streams match the criteria or if the channel has no streams.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2017,7 +2013,8 @@ public final class StreamServiceOuterClass {
         getStreamsList();
     /**
      * <pre>
-     * List of streams for channel.
+     * List of streams matching the request criteria.
+     * May be empty if no streams match the criteria or if the channel has no streams.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2025,7 +2022,8 @@ public final class StreamServiceOuterClass {
     yandex.cloud.api.video.v1.StreamOuterClass.Stream getStreams(int index);
     /**
      * <pre>
-     * List of streams for channel.
+     * List of streams matching the request criteria.
+     * May be empty if no streams match the criteria or if the channel has no streams.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2033,7 +2031,8 @@ public final class StreamServiceOuterClass {
     int getStreamsCount();
     /**
      * <pre>
-     * List of streams for channel.
+     * List of streams matching the request criteria.
+     * May be empty if no streams match the criteria or if the channel has no streams.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2042,7 +2041,8 @@ public final class StreamServiceOuterClass {
         getStreamsOrBuilderList();
     /**
      * <pre>
-     * List of streams for channel.
+     * List of streams matching the request criteria.
+     * May be empty if no streams match the criteria or if the channel has no streams.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2052,7 +2052,8 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2061,7 +2062,8 @@ public final class StreamServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2172,7 +2174,8 @@ public final class StreamServiceOuterClass {
     private java.util.List<yandex.cloud.api.video.v1.StreamOuterClass.Stream> streams_;
     /**
      * <pre>
-     * List of streams for channel.
+     * List of streams matching the request criteria.
+     * May be empty if no streams match the criteria or if the channel has no streams.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2183,7 +2186,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of streams for channel.
+     * List of streams matching the request criteria.
+     * May be empty if no streams match the criteria or if the channel has no streams.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2195,7 +2199,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of streams for channel.
+     * List of streams matching the request criteria.
+     * May be empty if no streams match the criteria or if the channel has no streams.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2206,7 +2211,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of streams for channel.
+     * List of streams matching the request criteria.
+     * May be empty if no streams match the criteria or if the channel has no streams.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2217,7 +2223,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of streams for channel.
+     * List of streams matching the request criteria.
+     * May be empty if no streams match the criteria or if the channel has no streams.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2232,7 +2239,8 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2253,7 +2261,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2647,7 +2656,8 @@ public final class StreamServiceOuterClass {
 
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2661,7 +2671,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2675,7 +2686,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2689,7 +2701,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2710,7 +2723,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2728,7 +2742,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2748,7 +2763,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2769,7 +2785,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2787,7 +2804,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2805,7 +2823,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2824,7 +2843,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2841,7 +2861,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2858,7 +2879,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2869,7 +2891,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2883,7 +2906,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2898,7 +2922,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2909,7 +2934,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2921,7 +2947,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for channel.
+       * List of streams matching the request criteria.
+       * May be empty if no streams match the criteria or if the channel has no streams.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -2948,7 +2975,8 @@ public final class StreamServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2968,7 +2996,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2989,7 +3018,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -3008,7 +3038,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -3022,7 +3053,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -3099,7 +3131,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to retrieve.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3108,7 +3140,7 @@ public final class StreamServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to retrieve.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3119,7 +3151,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * List of requested stream IDs.
+     * List of stream IDs to retrieve.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3129,7 +3161,7 @@ public final class StreamServiceOuterClass {
         getStreamIdsList();
     /**
      * <pre>
-     * List of requested stream IDs.
+     * List of stream IDs to retrieve.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3138,7 +3170,7 @@ public final class StreamServiceOuterClass {
     int getStreamIdsCount();
     /**
      * <pre>
-     * List of requested stream IDs.
+     * List of stream IDs to retrieve.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3148,7 +3180,7 @@ public final class StreamServiceOuterClass {
     java.lang.String getStreamIds(int index);
     /**
      * <pre>
-     * List of requested stream IDs.
+     * List of stream IDs to retrieve.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3260,7 +3292,7 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to retrieve.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3281,7 +3313,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to retrieve.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3306,7 +3338,7 @@ public final class StreamServiceOuterClass {
     private com.google.protobuf.LazyStringList streamIds_;
     /**
      * <pre>
-     * List of requested stream IDs.
+     * List of stream IDs to retrieve.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3318,7 +3350,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of requested stream IDs.
+     * List of stream IDs to retrieve.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3329,7 +3361,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of requested stream IDs.
+     * List of stream IDs to retrieve.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3341,7 +3373,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of requested stream IDs.
+     * List of stream IDs to retrieve.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3694,7 +3726,7 @@ public final class StreamServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to retrieve.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3714,7 +3746,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to retrieve.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3735,7 +3767,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to retrieve.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3754,7 +3786,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to retrieve.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3768,7 +3800,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to retrieve.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3796,7 +3828,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested stream IDs.
+       * List of stream IDs to retrieve.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3808,7 +3840,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested stream IDs.
+       * List of stream IDs to retrieve.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3819,7 +3851,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested stream IDs.
+       * List of stream IDs to retrieve.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3831,7 +3863,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested stream IDs.
+       * List of stream IDs to retrieve.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3844,7 +3876,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested stream IDs.
+       * List of stream IDs to retrieve.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3864,7 +3896,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested stream IDs.
+       * List of stream IDs to retrieve.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3883,7 +3915,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested stream IDs.
+       * List of stream IDs to retrieve.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3900,7 +3932,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested stream IDs.
+       * List of stream IDs to retrieve.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3914,7 +3946,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested stream IDs.
+       * List of stream IDs to retrieve.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3991,7 +4023,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * List of streams for specific channel.
+     * List of streams matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4000,7 +4032,7 @@ public final class StreamServiceOuterClass {
         getStreamsList();
     /**
      * <pre>
-     * List of streams for specific channel.
+     * List of streams matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4008,7 +4040,7 @@ public final class StreamServiceOuterClass {
     yandex.cloud.api.video.v1.StreamOuterClass.Stream getStreams(int index);
     /**
      * <pre>
-     * List of streams for specific channel.
+     * List of streams matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4016,7 +4048,7 @@ public final class StreamServiceOuterClass {
     int getStreamsCount();
     /**
      * <pre>
-     * List of streams for specific channel.
+     * List of streams matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4025,7 +4057,7 @@ public final class StreamServiceOuterClass {
         getStreamsOrBuilderList();
     /**
      * <pre>
-     * List of streams for specific channel.
+     * List of streams matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4128,7 +4160,7 @@ public final class StreamServiceOuterClass {
     private java.util.List<yandex.cloud.api.video.v1.StreamOuterClass.Stream> streams_;
     /**
      * <pre>
-     * List of streams for specific channel.
+     * List of streams matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4139,7 +4171,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of streams for specific channel.
+     * List of streams matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4151,7 +4183,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of streams for specific channel.
+     * List of streams matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4162,7 +4194,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of streams for specific channel.
+     * List of streams matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4173,7 +4205,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of streams for specific channel.
+     * List of streams matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4540,7 +4572,7 @@ public final class StreamServiceOuterClass {
 
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4554,7 +4586,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4568,7 +4600,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4582,7 +4614,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4603,7 +4635,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4621,7 +4653,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4641,7 +4673,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4662,7 +4694,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4680,7 +4712,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4698,7 +4730,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4717,7 +4749,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4734,7 +4766,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4751,7 +4783,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4762,7 +4794,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4776,7 +4808,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4791,7 +4823,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4802,7 +4834,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4814,7 +4846,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of streams for specific channel.
+       * List of streams matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
@@ -4896,7 +4928,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the stream will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4905,7 +4937,7 @@ public final class StreamServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the stream will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4916,7 +4948,8 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the line.
+     * ID of the stream line to which this stream will be linked.
+     * Stream lines define the technical configuration for streaming.
      * </pre>
      *
      * <code>string line_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4925,7 +4958,8 @@ public final class StreamServiceOuterClass {
     java.lang.String getLineId();
     /**
      * <pre>
-     * ID of the line.
+     * ID of the stream line to which this stream will be linked.
+     * Stream lines define the technical configuration for streaming.
      * </pre>
      *
      * <code>string line_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4936,19 +4970,19 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * Stream title.
+     * Title of the stream to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
      * <pre>
-     * Stream title.
+     * Title of the stream to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -4956,19 +4990,21 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * Stream description.
+     * Detailed description of the stream content and context.
+     * Optional field that can provide additional information about the stream.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <pre>
-     * Stream description.
+     * Detailed description of the stream content and context.
+     * Optional field that can provide additional information about the stream.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -4976,7 +5012,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image to be used for the stream.
      * </pre>
      *
      * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4985,7 +5021,7 @@ public final class StreamServiceOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image to be used for the stream.
      * </pre>
      *
      * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4996,8 +5032,10 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls whether the stream is automatically published when ready.
+     * When set to true, the stream's status will automatically change from
+     * READY to ONAIR when the streaming infrastructure is prepared,
+     * making it available for viewing without manual intervention.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -5006,8 +5044,10 @@ public final class StreamServiceOuterClass {
     boolean hasAutoPublish();
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls whether the stream is automatically published when ready.
+     * When set to true, the stream's status will automatically change from
+     * READY to ONAIR when the streaming infrastructure is prepared,
+     * making it available for viewing without manual intervention.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -5016,8 +5056,10 @@ public final class StreamServiceOuterClass {
     com.google.protobuf.BoolValue getAutoPublish();
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls whether the stream is automatically published when ready.
+     * When set to true, the stream's status will automatically change from
+     * READY to ONAIR when the streaming infrastructure is prepared,
+     * making it available for viewing without manual intervention.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -5026,7 +5068,10 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5034,7 +5079,10 @@ public final class StreamServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5049,7 +5097,10 @@ public final class StreamServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5058,7 +5109,10 @@ public final class StreamServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5069,7 +5123,10 @@ public final class StreamServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5080,7 +5137,8 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream that starts immediately when a video signal appears.
+     * This type of stream has no predetermined start or end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -5089,7 +5147,8 @@ public final class StreamServiceOuterClass {
     boolean hasOnDemand();
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream that starts immediately when a video signal appears.
+     * This type of stream has no predetermined start or end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -5098,7 +5157,8 @@ public final class StreamServiceOuterClass {
     yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams getOnDemand();
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream that starts immediately when a video signal appears.
+     * This type of stream has no predetermined start or end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -5107,7 +5167,8 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * Schedule stream. Starts or finishes at the specified time.
+     * Scheduled stream that starts and finishes at specified time.
+     * This type of stream has predetermined start and end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -5116,7 +5177,8 @@ public final class StreamServiceOuterClass {
     boolean hasSchedule();
     /**
      * <pre>
-     * Schedule stream. Starts or finishes at the specified time.
+     * Scheduled stream that starts and finishes at specified time.
+     * This type of stream has predetermined start and end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -5125,7 +5187,8 @@ public final class StreamServiceOuterClass {
     yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams getSchedule();
     /**
      * <pre>
-     * Schedule stream. Starts or finishes at the specified time.
+     * Scheduled stream that starts and finishes at specified time.
+     * This type of stream has predetermined start and end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -5358,7 +5421,7 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the stream will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5379,7 +5442,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the stream will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5404,7 +5467,8 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object lineId_;
     /**
      * <pre>
-     * ID of the line.
+     * ID of the stream line to which this stream will be linked.
+     * Stream lines define the technical configuration for streaming.
      * </pre>
      *
      * <code>string line_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5425,7 +5489,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the line.
+     * ID of the stream line to which this stream will be linked.
+     * Stream lines define the technical configuration for streaming.
      * </pre>
      *
      * <code>string line_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5450,10 +5515,10 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Stream title.
+     * Title of the stream to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -5471,10 +5536,10 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Stream title.
+     * Title of the stream to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -5496,10 +5561,11 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Stream description.
+     * Detailed description of the stream content and context.
+     * Optional field that can provide additional information about the stream.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -5517,10 +5583,11 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Stream description.
+     * Detailed description of the stream content and context.
+     * Optional field that can provide additional information about the stream.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -5542,7 +5609,7 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image to be used for the stream.
      * </pre>
      *
      * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5563,7 +5630,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image to be used for the stream.
      * </pre>
      *
      * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5588,8 +5655,10 @@ public final class StreamServiceOuterClass {
     private com.google.protobuf.BoolValue autoPublish_;
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls whether the stream is automatically published when ready.
+     * When set to true, the stream's status will automatically change from
+     * READY to ONAIR when the streaming infrastructure is prepared,
+     * making it available for viewing without manual intervention.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -5601,8 +5670,10 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls whether the stream is automatically published when ready.
+     * When set to true, the stream's status will automatically change from
+     * READY to ONAIR when the streaming infrastructure is prepared,
+     * making it available for viewing without manual intervention.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -5614,8 +5685,10 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls whether the stream is automatically published when ready.
+     * When set to true, the stream's status will automatically change from
+     * READY to ONAIR when the streaming infrastructure is prepared,
+     * making it available for viewing without manual intervention.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -5653,7 +5726,10 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5675,7 +5751,10 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5687,7 +5766,10 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5704,7 +5786,10 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5725,7 +5810,8 @@ public final class StreamServiceOuterClass {
     public static final int ON_DEMAND_FIELD_NUMBER = 1000;
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream that starts immediately when a video signal appears.
+     * This type of stream has no predetermined start or end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -5737,7 +5823,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream that starts immediately when a video signal appears.
+     * This type of stream has no predetermined start or end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -5752,7 +5839,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream that starts immediately when a video signal appears.
+     * This type of stream has no predetermined start or end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -5768,7 +5856,8 @@ public final class StreamServiceOuterClass {
     public static final int SCHEDULE_FIELD_NUMBER = 1001;
     /**
      * <pre>
-     * Schedule stream. Starts or finishes at the specified time.
+     * Scheduled stream that starts and finishes at specified time.
+     * This type of stream has predetermined start and end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -5780,7 +5869,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Schedule stream. Starts or finishes at the specified time.
+     * Scheduled stream that starts and finishes at specified time.
+     * This type of stream has predetermined start and end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -5795,7 +5885,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Schedule stream. Starts or finishes at the specified time.
+     * Scheduled stream that starts and finishes at specified time.
+     * This type of stream has predetermined start and end time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -6346,7 +6437,7 @@ public final class StreamServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the stream will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6366,7 +6457,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the stream will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6387,7 +6478,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the stream will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6406,7 +6497,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the stream will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6420,7 +6511,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the stream will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6442,7 +6533,8 @@ public final class StreamServiceOuterClass {
       private java.lang.Object lineId_ = "";
       /**
        * <pre>
-       * ID of the line.
+       * ID of the stream line to which this stream will be linked.
+       * Stream lines define the technical configuration for streaming.
        * </pre>
        *
        * <code>string line_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6462,7 +6554,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the line.
+       * ID of the stream line to which this stream will be linked.
+       * Stream lines define the technical configuration for streaming.
        * </pre>
        *
        * <code>string line_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6483,7 +6576,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the line.
+       * ID of the stream line to which this stream will be linked.
+       * Stream lines define the technical configuration for streaming.
        * </pre>
        *
        * <code>string line_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6502,7 +6596,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the line.
+       * ID of the stream line to which this stream will be linked.
+       * Stream lines define the technical configuration for streaming.
        * </pre>
        *
        * <code>string line_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6516,7 +6611,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the line.
+       * ID of the stream line to which this stream will be linked.
+       * Stream lines define the technical configuration for streaming.
        * </pre>
        *
        * <code>string line_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6538,10 +6634,10 @@ public final class StreamServiceOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Stream title.
+       * Title of the stream to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -6558,10 +6654,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Stream title.
+       * Title of the stream to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -6579,10 +6675,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Stream title.
+       * Title of the stream to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -6598,10 +6694,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Stream title.
+       * Title of the stream to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -6612,10 +6708,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Stream title.
+       * Title of the stream to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -6634,10 +6730,11 @@ public final class StreamServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Stream description.
+       * Detailed description of the stream content and context.
+       * Optional field that can provide additional information about the stream.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -6654,10 +6751,11 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Stream description.
+       * Detailed description of the stream content and context.
+       * Optional field that can provide additional information about the stream.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -6675,10 +6773,11 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Stream description.
+       * Detailed description of the stream content and context.
+       * Optional field that can provide additional information about the stream.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -6694,10 +6793,11 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Stream description.
+       * Detailed description of the stream content and context.
+       * Optional field that can provide additional information about the stream.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -6708,10 +6808,11 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Stream description.
+       * Detailed description of the stream content and context.
+       * Optional field that can provide additional information about the stream.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -6730,7 +6831,7 @@ public final class StreamServiceOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image to be used for the stream.
        * </pre>
        *
        * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6750,7 +6851,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image to be used for the stream.
        * </pre>
        *
        * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6771,7 +6872,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image to be used for the stream.
        * </pre>
        *
        * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6790,7 +6891,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image to be used for the stream.
        * </pre>
        *
        * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6804,7 +6905,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image to be used for the stream.
        * </pre>
        *
        * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6828,8 +6929,10 @@ public final class StreamServiceOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> autoPublishBuilder_;
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls whether the stream is automatically published when ready.
+       * When set to true, the stream's status will automatically change from
+       * READY to ONAIR when the streaming infrastructure is prepared,
+       * making it available for viewing without manual intervention.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -6840,8 +6943,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls whether the stream is automatically published when ready.
+       * When set to true, the stream's status will automatically change from
+       * READY to ONAIR when the streaming infrastructure is prepared,
+       * making it available for viewing without manual intervention.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -6856,8 +6961,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls whether the stream is automatically published when ready.
+       * When set to true, the stream's status will automatically change from
+       * READY to ONAIR when the streaming infrastructure is prepared,
+       * making it available for viewing without manual intervention.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -6877,8 +6984,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls whether the stream is automatically published when ready.
+       * When set to true, the stream's status will automatically change from
+       * READY to ONAIR when the streaming infrastructure is prepared,
+       * making it available for viewing without manual intervention.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -6896,8 +7005,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls whether the stream is automatically published when ready.
+       * When set to true, the stream's status will automatically change from
+       * READY to ONAIR when the streaming infrastructure is prepared,
+       * making it available for viewing without manual intervention.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -6919,8 +7030,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls whether the stream is automatically published when ready.
+       * When set to true, the stream's status will automatically change from
+       * READY to ONAIR when the streaming infrastructure is prepared,
+       * making it available for viewing without manual intervention.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -6938,8 +7051,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls whether the stream is automatically published when ready.
+       * When set to true, the stream's status will automatically change from
+       * READY to ONAIR when the streaming infrastructure is prepared,
+       * making it available for viewing without manual intervention.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -6951,8 +7066,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls whether the stream is automatically published when ready.
+       * When set to true, the stream's status will automatically change from
+       * READY to ONAIR when the streaming infrastructure is prepared,
+       * making it available for viewing without manual intervention.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -6967,8 +7084,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls whether the stream is automatically published when ready.
+       * When set to true, the stream's status will automatically change from
+       * READY to ONAIR when the streaming infrastructure is prepared,
+       * making it available for viewing without manual intervention.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 6;</code>
@@ -7015,7 +7134,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7037,7 +7159,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7049,7 +7174,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7066,7 +7194,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7091,7 +7222,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7114,7 +7248,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7133,7 +7270,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7150,7 +7290,8 @@ public final class StreamServiceOuterClass {
           yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams, yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams.Builder, yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParamsOrBuilder> onDemandBuilder_;
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream that starts immediately when a video signal appears.
+       * This type of stream has no predetermined start or end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -7162,7 +7303,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream that starts immediately when a video signal appears.
+       * This type of stream has no predetermined start or end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -7184,7 +7326,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream that starts immediately when a video signal appears.
+       * This type of stream has no predetermined start or end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -7204,7 +7347,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream that starts immediately when a video signal appears.
+       * This type of stream has no predetermined start or end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -7222,7 +7366,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream that starts immediately when a video signal appears.
+       * This type of stream has no predetermined start or end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -7248,7 +7393,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream that starts immediately when a video signal appears.
+       * This type of stream has no predetermined start or end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -7271,7 +7417,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream that starts immediately when a video signal appears.
+       * This type of stream has no predetermined start or end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -7281,7 +7428,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream that starts immediately when a video signal appears.
+       * This type of stream has no predetermined start or end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -7299,7 +7447,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream that starts immediately when a video signal appears.
+       * This type of stream has no predetermined start or end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -7327,7 +7476,8 @@ public final class StreamServiceOuterClass {
           yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams, yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams.Builder, yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParamsOrBuilder> scheduleBuilder_;
       /**
        * <pre>
-       * Schedule stream. Starts or finishes at the specified time.
+       * Scheduled stream that starts and finishes at specified time.
+       * This type of stream has predetermined start and end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -7339,7 +7489,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finishes at the specified time.
+       * Scheduled stream that starts and finishes at specified time.
+       * This type of stream has predetermined start and end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -7361,7 +7512,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finishes at the specified time.
+       * Scheduled stream that starts and finishes at specified time.
+       * This type of stream has predetermined start and end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -7381,7 +7533,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finishes at the specified time.
+       * Scheduled stream that starts and finishes at specified time.
+       * This type of stream has predetermined start and end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -7399,7 +7552,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finishes at the specified time.
+       * Scheduled stream that starts and finishes at specified time.
+       * This type of stream has predetermined start and end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -7425,7 +7579,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finishes at the specified time.
+       * Scheduled stream that starts and finishes at specified time.
+       * This type of stream has predetermined start and end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -7448,7 +7603,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finishes at the specified time.
+       * Scheduled stream that starts and finishes at specified time.
+       * This type of stream has predetermined start and end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -7458,7 +7614,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finishes at the specified time.
+       * Scheduled stream that starts and finishes at specified time.
+       * This type of stream has predetermined start and end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -7476,7 +7633,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finishes at the specified time.
+       * Scheduled stream that starts and finishes at specified time.
+       * This type of stream has predetermined start and end time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -7557,6 +7715,11 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * On-demand streams start automatically when a video signal is detected
+   * and must be manually stopped when no longer needed.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.OnDemandParams}
    */
   public static final class OnDemandParams extends
@@ -7778,6 +7941,11 @@ public final class StreamServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * On-demand streams start automatically when a video signal is detected
+     * and must be manually stopped when no longer needed.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.OnDemandParams}
      */
     public static final class Builder extends
@@ -7975,31 +8143,67 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * The streaming infrastructure will be prepared at this time
+     * and will begin accepting the video signal.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
      * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * The streaming infrastructure will be prepared at this time
+     * and will begin accepting the video signal.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
      * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * The streaming infrastructure will be prepared at this time
+     * and will begin accepting the video signal.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * The streaming infrastructure will be shut down at this time
+     * and the stream will be marked as FINISHED.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the finishTime field is set.
      */
     boolean hasFinishTime();
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * The streaming infrastructure will be shut down at this time
+     * and the stream will be marked as FINISHED.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
      * @return The finishTime.
      */
     com.google.protobuf.Timestamp getFinishTime();
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * The streaming infrastructure will be shut down at this time
+     * and the stream will be marked as FINISHED.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder();
@@ -8110,6 +8314,12 @@ public final class StreamServiceOuterClass {
     public static final int START_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp startTime_;
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * The streaming infrastructure will be prepared at this time
+     * and will begin accepting the video signal.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
      * @return Whether the startTime field is set.
      */
@@ -8118,6 +8328,12 @@ public final class StreamServiceOuterClass {
       return startTime_ != null;
     }
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * The streaming infrastructure will be prepared at this time
+     * and will begin accepting the video signal.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
      * @return The startTime.
      */
@@ -8126,6 +8342,12 @@ public final class StreamServiceOuterClass {
       return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * The streaming infrastructure will be prepared at this time
+     * and will begin accepting the video signal.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
@@ -8136,6 +8358,12 @@ public final class StreamServiceOuterClass {
     public static final int FINISH_TIME_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp finishTime_;
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * The streaming infrastructure will be shut down at this time
+     * and the stream will be marked as FINISHED.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the finishTime field is set.
      */
@@ -8144,6 +8372,12 @@ public final class StreamServiceOuterClass {
       return finishTime_ != null;
     }
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * The streaming infrastructure will be shut down at this time
+     * and the stream will be marked as FINISHED.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
      * @return The finishTime.
      */
@@ -8152,6 +8386,12 @@ public final class StreamServiceOuterClass {
       return finishTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishTime_;
     }
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * The streaming infrastructure will be shut down at this time
+     * and the stream will be marked as FINISHED.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
@@ -8508,6 +8748,12 @@ public final class StreamServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * The streaming infrastructure will be prepared at this time
+       * and will begin accepting the video signal.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
        * @return Whether the startTime field is set.
        */
@@ -8515,6 +8761,12 @@ public final class StreamServiceOuterClass {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * The streaming infrastructure will be prepared at this time
+       * and will begin accepting the video signal.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
        * @return The startTime.
        */
@@ -8526,6 +8778,12 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * The streaming infrastructure will be prepared at this time
+       * and will begin accepting the video signal.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setStartTime(com.google.protobuf.Timestamp value) {
@@ -8542,6 +8800,12 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * The streaming infrastructure will be prepared at this time
+       * and will begin accepting the video signal.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setStartTime(
@@ -8556,6 +8820,12 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * The streaming infrastructure will be prepared at this time
+       * and will begin accepting the video signal.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
@@ -8574,6 +8844,12 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * The streaming infrastructure will be prepared at this time
+       * and will begin accepting the video signal.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearStartTime() {
@@ -8588,6 +8864,12 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * The streaming infrastructure will be prepared at this time
+       * and will begin accepting the video signal.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
@@ -8596,6 +8878,12 @@ public final class StreamServiceOuterClass {
         return getStartTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * The streaming infrastructure will be prepared at this time
+       * and will begin accepting the video signal.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
@@ -8607,6 +8895,12 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * The streaming infrastructure will be prepared at this time
+       * and will begin accepting the video signal.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8627,6 +8921,12 @@ public final class StreamServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishTimeBuilder_;
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * The streaming infrastructure will be shut down at this time
+       * and the stream will be marked as FINISHED.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the finishTime field is set.
        */
@@ -8634,6 +8934,12 @@ public final class StreamServiceOuterClass {
         return finishTimeBuilder_ != null || finishTime_ != null;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * The streaming infrastructure will be shut down at this time
+       * and the stream will be marked as FINISHED.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
        * @return The finishTime.
        */
@@ -8645,6 +8951,12 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * The streaming infrastructure will be shut down at this time
+       * and the stream will be marked as FINISHED.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFinishTime(com.google.protobuf.Timestamp value) {
@@ -8661,6 +8973,12 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * The streaming infrastructure will be shut down at this time
+       * and the stream will be marked as FINISHED.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFinishTime(
@@ -8675,6 +8993,12 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * The streaming infrastructure will be shut down at this time
+       * and the stream will be marked as FINISHED.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeFinishTime(com.google.protobuf.Timestamp value) {
@@ -8693,6 +9017,12 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * The streaming infrastructure will be shut down at this time
+       * and the stream will be marked as FINISHED.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFinishTime() {
@@ -8707,6 +9037,12 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * The streaming infrastructure will be shut down at this time
+       * and the stream will be marked as FINISHED.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.Timestamp.Builder getFinishTimeBuilder() {
@@ -8715,6 +9051,12 @@ public final class StreamServiceOuterClass {
         return getFinishTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * The streaming infrastructure will be shut down at this time
+       * and the stream will be marked as FINISHED.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
@@ -8726,6 +9068,12 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * The streaming infrastructure will be shut down at this time
+       * and the stream will be marked as FINISHED.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8800,7 +9148,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream being created.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -8809,7 +9157,7 @@ public final class StreamServiceOuterClass {
     java.lang.String getStreamId();
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream being created.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -8906,7 +9254,7 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object streamId_;
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream being created.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -8927,7 +9275,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream being created.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -9253,7 +9601,7 @@ public final class StreamServiceOuterClass {
       private java.lang.Object streamId_ = "";
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream being created.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -9273,7 +9621,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream being created.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -9294,7 +9642,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream being created.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -9313,7 +9661,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream being created.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -9327,7 +9675,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream being created.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -9424,7 +9772,10 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the stream are going to be updated.
+     * Field mask specifying which fields of the stream should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -9433,7 +9784,10 @@ public final class StreamServiceOuterClass {
     boolean hasFieldMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the stream are going to be updated.
+     * Field mask specifying which fields of the stream should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -9442,7 +9796,10 @@ public final class StreamServiceOuterClass {
     com.google.protobuf.FieldMask getFieldMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the stream are going to be updated.
+     * Field mask specifying which fields of the stream should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -9451,7 +9808,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the line.
+     * DEPRECATED.
      * </pre>
      *
      * <code>string line_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9460,7 +9817,7 @@ public final class StreamServiceOuterClass {
     java.lang.String getLineId();
     /**
      * <pre>
-     * ID of the line.
+     * DEPRECATED.
      * </pre>
      *
      * <code>string line_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9474,7 +9831,7 @@ public final class StreamServiceOuterClass {
      * Stream title.
      * </pre>
      *
-     * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -9483,7 +9840,7 @@ public final class StreamServiceOuterClass {
      * Stream title.
      * </pre>
      *
-     * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -9494,7 +9851,7 @@ public final class StreamServiceOuterClass {
      * Stream description.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
@@ -9503,7 +9860,7 @@ public final class StreamServiceOuterClass {
      * Stream description.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -9561,7 +9918,9 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the stream as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9569,7 +9928,9 @@ public final class StreamServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the stream as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9584,7 +9945,9 @@ public final class StreamServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the stream as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9593,7 +9956,9 @@ public final class StreamServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the stream as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9604,7 +9969,9 @@ public final class StreamServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the stream as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9615,7 +9982,8 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * On demand stream.
+     * It starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -9624,7 +9992,8 @@ public final class StreamServiceOuterClass {
     boolean hasOnDemand();
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * On demand stream.
+     * It starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -9633,7 +10002,8 @@ public final class StreamServiceOuterClass {
     yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams getOnDemand();
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * On demand stream.
+     * It starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -9642,7 +10012,8 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Scheduled stream.
+     * It starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -9651,7 +10022,8 @@ public final class StreamServiceOuterClass {
     boolean hasSchedule();
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Scheduled stream.
+     * It starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -9660,7 +10032,8 @@ public final class StreamServiceOuterClass {
     yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams getSchedule();
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Scheduled stream.
+     * It starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -9952,7 +10325,10 @@ public final class StreamServiceOuterClass {
     private com.google.protobuf.FieldMask fieldMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the stream are going to be updated.
+     * Field mask specifying which fields of the stream should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -9964,7 +10340,10 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the stream are going to be updated.
+     * Field mask specifying which fields of the stream should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -9976,7 +10355,10 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the stream are going to be updated.
+     * Field mask specifying which fields of the stream should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -9990,7 +10372,7 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object lineId_;
     /**
      * <pre>
-     * ID of the line.
+     * DEPRECATED.
      * </pre>
      *
      * <code>string line_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10011,7 +10393,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the line.
+     * DEPRECATED.
      * </pre>
      *
      * <code>string line_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10039,7 +10421,7 @@ public final class StreamServiceOuterClass {
      * Stream title.
      * </pre>
      *
-     * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -10060,7 +10442,7 @@ public final class StreamServiceOuterClass {
      * Stream title.
      * </pre>
      *
-     * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -10085,7 +10467,7 @@ public final class StreamServiceOuterClass {
      * Stream description.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -10106,7 +10488,7 @@ public final class StreamServiceOuterClass {
      * Stream description.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -10239,7 +10621,9 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the stream as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10261,7 +10645,9 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the stream as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10273,7 +10659,9 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the stream as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10290,7 +10678,9 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the stream as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10311,7 +10701,8 @@ public final class StreamServiceOuterClass {
     public static final int ON_DEMAND_FIELD_NUMBER = 1000;
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * On demand stream.
+     * It starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -10323,7 +10714,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * On demand stream.
+     * It starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -10338,7 +10730,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * On demand stream.
+     * It starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -10354,7 +10747,8 @@ public final class StreamServiceOuterClass {
     public static final int SCHEDULE_FIELD_NUMBER = 1001;
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Scheduled stream.
+     * It starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -10366,7 +10760,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Scheduled stream.
+     * It starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -10381,7 +10776,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Scheduled stream.
+     * It starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -11060,7 +11456,10 @@ public final class StreamServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the stream are going to be updated.
+       * Field mask specifying which fields of the stream should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11071,7 +11470,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the stream are going to be updated.
+       * Field mask specifying which fields of the stream should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11086,7 +11488,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the stream are going to be updated.
+       * Field mask specifying which fields of the stream should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11106,7 +11511,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the stream are going to be updated.
+       * Field mask specifying which fields of the stream should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11124,7 +11532,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the stream are going to be updated.
+       * Field mask specifying which fields of the stream should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11146,7 +11557,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the stream are going to be updated.
+       * Field mask specifying which fields of the stream should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11164,7 +11578,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the stream are going to be updated.
+       * Field mask specifying which fields of the stream should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11176,7 +11593,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the stream are going to be updated.
+       * Field mask specifying which fields of the stream should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11191,7 +11611,10 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the stream are going to be updated.
+       * Field mask specifying which fields of the stream should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11213,7 +11636,7 @@ public final class StreamServiceOuterClass {
       private java.lang.Object lineId_ = "";
       /**
        * <pre>
-       * ID of the line.
+       * DEPRECATED.
        * </pre>
        *
        * <code>string line_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11233,7 +11656,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the line.
+       * DEPRECATED.
        * </pre>
        *
        * <code>string line_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11254,7 +11677,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the line.
+       * DEPRECATED.
        * </pre>
        *
        * <code>string line_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11273,7 +11696,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the line.
+       * DEPRECATED.
        * </pre>
        *
        * <code>string line_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11287,7 +11710,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the line.
+       * DEPRECATED.
        * </pre>
        *
        * <code>string line_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11312,7 +11735,7 @@ public final class StreamServiceOuterClass {
        * Stream title.
        * </pre>
        *
-       * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -11332,7 +11755,7 @@ public final class StreamServiceOuterClass {
        * Stream title.
        * </pre>
        *
-       * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -11353,7 +11776,7 @@ public final class StreamServiceOuterClass {
        * Stream title.
        * </pre>
        *
-       * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -11372,7 +11795,7 @@ public final class StreamServiceOuterClass {
        * Stream title.
        * </pre>
        *
-       * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -11386,7 +11809,7 @@ public final class StreamServiceOuterClass {
        * Stream title.
        * </pre>
        *
-       * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 4 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -11408,7 +11831,7 @@ public final class StreamServiceOuterClass {
        * Stream description.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -11428,7 +11851,7 @@ public final class StreamServiceOuterClass {
        * Stream description.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -11449,7 +11872,7 @@ public final class StreamServiceOuterClass {
        * Stream description.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -11468,7 +11891,7 @@ public final class StreamServiceOuterClass {
        * Stream description.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -11482,7 +11905,7 @@ public final class StreamServiceOuterClass {
        * Stream description.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -11786,7 +12209,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the stream as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11808,7 +12233,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the stream as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11820,7 +12247,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the stream as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11837,7 +12266,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the stream as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11862,7 +12293,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the stream as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11885,7 +12318,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the stream as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11904,7 +12339,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the stream as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11921,7 +12358,8 @@ public final class StreamServiceOuterClass {
           yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams, yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams.Builder, yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParamsOrBuilder> onDemandBuilder_;
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On demand stream.
+       * It starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -11933,7 +12371,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On demand stream.
+       * It starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -11955,7 +12394,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On demand stream.
+       * It starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -11975,7 +12415,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On demand stream.
+       * It starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -11993,7 +12434,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On demand stream.
+       * It starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -12019,7 +12461,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On demand stream.
+       * It starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -12042,7 +12485,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On demand stream.
+       * It starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -12052,7 +12496,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On demand stream.
+       * It starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -12070,7 +12515,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On demand stream.
+       * It starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
@@ -12098,7 +12544,8 @@ public final class StreamServiceOuterClass {
           yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams, yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams.Builder, yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParamsOrBuilder> scheduleBuilder_;
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Scheduled stream.
+       * It starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -12110,7 +12557,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Scheduled stream.
+       * It starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -12132,7 +12580,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Scheduled stream.
+       * It starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -12152,7 +12601,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Scheduled stream.
+       * It starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -12170,7 +12620,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Scheduled stream.
+       * It starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -12196,7 +12647,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Scheduled stream.
+       * It starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -12219,7 +12671,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Scheduled stream.
+       * It starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -12229,7 +12682,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Scheduled stream.
+       * It starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -12247,7 +12701,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Scheduled stream.
+       * It starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
@@ -12933,7 +13388,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream to delete.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12942,7 +13397,7 @@ public final class StreamServiceOuterClass {
     java.lang.String getStreamId();
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream to delete.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13039,7 +13494,7 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object streamId_;
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream to delete.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13060,7 +13515,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream to delete.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13386,7 +13841,7 @@ public final class StreamServiceOuterClass {
       private java.lang.Object streamId_ = "";
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream to delete.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13406,7 +13861,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream to delete.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13427,7 +13882,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream to delete.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13446,7 +13901,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream to delete.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13460,7 +13915,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream to delete.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13538,6 +13993,7 @@ public final class StreamServiceOuterClass {
     /**
      * <pre>
      * ID of the stream.
+     * This identifier can be used to track the stream deletion operation.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -13547,6 +14003,7 @@ public final class StreamServiceOuterClass {
     /**
      * <pre>
      * ID of the stream.
+     * This identifier can be used to track the stream deletion operation.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -13644,6 +14101,7 @@ public final class StreamServiceOuterClass {
     /**
      * <pre>
      * ID of the stream.
+     * This identifier can be used to track the stream deletion operation.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -13665,6 +14123,7 @@ public final class StreamServiceOuterClass {
     /**
      * <pre>
      * ID of the stream.
+     * This identifier can be used to track the stream deletion operation.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -13991,6 +14450,7 @@ public final class StreamServiceOuterClass {
       /**
        * <pre>
        * ID of the stream.
+       * This identifier can be used to track the stream deletion operation.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -14011,6 +14471,7 @@ public final class StreamServiceOuterClass {
       /**
        * <pre>
        * ID of the stream.
+       * This identifier can be used to track the stream deletion operation.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -14032,6 +14493,7 @@ public final class StreamServiceOuterClass {
       /**
        * <pre>
        * ID of the stream.
+       * This identifier can be used to track the stream deletion operation.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -14051,6 +14513,7 @@ public final class StreamServiceOuterClass {
       /**
        * <pre>
        * ID of the stream.
+       * This identifier can be used to track the stream deletion operation.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -14065,6 +14528,7 @@ public final class StreamServiceOuterClass {
       /**
        * <pre>
        * ID of the stream.
+       * This identifier can be used to track the stream deletion operation.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -14141,7 +14605,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14150,7 +14614,7 @@ public final class StreamServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14161,7 +14625,8 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs to delete.
+     * All streams must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14171,7 +14636,8 @@ public final class StreamServiceOuterClass {
         getStreamIdsList();
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs to delete.
+     * All streams must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14180,7 +14646,8 @@ public final class StreamServiceOuterClass {
     int getStreamIdsCount();
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs to delete.
+     * All streams must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14190,7 +14657,8 @@ public final class StreamServiceOuterClass {
     java.lang.String getStreamIds(int index);
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs to delete.
+     * All streams must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14302,7 +14770,7 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14323,7 +14791,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the streams to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14348,7 +14816,8 @@ public final class StreamServiceOuterClass {
     private com.google.protobuf.LazyStringList streamIds_;
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs to delete.
+     * All streams must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14360,7 +14829,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs to delete.
+     * All streams must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14371,7 +14841,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs to delete.
+     * All streams must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14383,7 +14854,8 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs to delete.
+     * All streams must exist in the specified channel.
      * </pre>
      *
      * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14736,7 +15208,7 @@ public final class StreamServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14756,7 +15228,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14777,7 +15249,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14796,7 +15268,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14810,7 +15282,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the streams to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14838,7 +15310,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs to delete.
+       * All streams must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14850,7 +15323,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs to delete.
+       * All streams must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14861,7 +15335,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs to delete.
+       * All streams must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14873,7 +15348,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs to delete.
+       * All streams must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14886,7 +15362,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs to delete.
+       * All streams must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14906,7 +15383,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs to delete.
+       * All streams must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14925,7 +15403,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs to delete.
+       * All streams must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14942,7 +15421,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs to delete.
+       * All streams must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14956,7 +15436,8 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs to delete.
+       * All streams must exist in the specified channel.
        * </pre>
        *
        * <code>repeated string stream_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15033,7 +15514,9 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs being deleted.
+     * This list can be used to track which streams are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string stream_ids = 1;</code>
@@ -15043,7 +15526,9 @@ public final class StreamServiceOuterClass {
         getStreamIdsList();
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs being deleted.
+     * This list can be used to track which streams are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string stream_ids = 1;</code>
@@ -15052,7 +15537,9 @@ public final class StreamServiceOuterClass {
     int getStreamIdsCount();
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs being deleted.
+     * This list can be used to track which streams are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string stream_ids = 1;</code>
@@ -15062,7 +15549,9 @@ public final class StreamServiceOuterClass {
     java.lang.String getStreamIds(int index);
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs being deleted.
+     * This list can be used to track which streams are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string stream_ids = 1;</code>
@@ -15167,7 +15656,9 @@ public final class StreamServiceOuterClass {
     private com.google.protobuf.LazyStringList streamIds_;
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs being deleted.
+     * This list can be used to track which streams are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string stream_ids = 1;</code>
@@ -15179,7 +15670,9 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs being deleted.
+     * This list can be used to track which streams are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string stream_ids = 1;</code>
@@ -15190,7 +15683,9 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs being deleted.
+     * This list can be used to track which streams are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string stream_ids = 1;</code>
@@ -15202,7 +15697,9 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * List of stream IDs.
+     * List of stream IDs being deleted.
+     * This list can be used to track which streams are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string stream_ids = 1;</code>
@@ -15544,7 +16041,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs being deleted.
+       * This list can be used to track which streams are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string stream_ids = 1;</code>
@@ -15556,7 +16055,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs being deleted.
+       * This list can be used to track which streams are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string stream_ids = 1;</code>
@@ -15567,7 +16068,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs being deleted.
+       * This list can be used to track which streams are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string stream_ids = 1;</code>
@@ -15579,7 +16082,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs being deleted.
+       * This list can be used to track which streams are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string stream_ids = 1;</code>
@@ -15592,7 +16097,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs being deleted.
+       * This list can be used to track which streams are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string stream_ids = 1;</code>
@@ -15612,7 +16119,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs being deleted.
+       * This list can be used to track which streams are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string stream_ids = 1;</code>
@@ -15631,7 +16140,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs being deleted.
+       * This list can be used to track which streams are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string stream_ids = 1;</code>
@@ -15648,7 +16159,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs being deleted.
+       * This list can be used to track which streams are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string stream_ids = 1;</code>
@@ -15662,7 +16175,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * List of stream IDs.
+       * List of stream IDs being deleted.
+       * This list can be used to track which streams are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string stream_ids = 1;</code>
@@ -15739,7 +16254,7 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream on which to perform the action.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15748,7 +16263,7 @@ public final class StreamServiceOuterClass {
     java.lang.String getStreamId();
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream on which to perform the action.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15758,31 +16273,61 @@ public final class StreamServiceOuterClass {
         getStreamIdBytes();
 
     /**
+     * <pre>
+     * Publish the stream, changing its status from READY to ONAIR.
+     * This makes the stream available for watching.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
      * @return Whether the publish field is set.
      */
     boolean hasPublish();
     /**
+     * <pre>
+     * Publish the stream, changing its status from READY to ONAIR.
+     * This makes the stream available for watching.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
      * @return The publish.
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.PublishAction getPublish();
     /**
+     * <pre>
+     * Publish the stream, changing its status from READY to ONAIR.
+     * This makes the stream available for watching.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.PublishActionOrBuilder getPublishOrBuilder();
 
     /**
+     * <pre>
+     * Stop the stream, changing its status to FINISHED.
+     * This terminates the streaming session and releases resources.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
      * @return Whether the stop field is set.
      */
     boolean hasStop();
     /**
+     * <pre>
+     * Stop the stream, changing its status to FINISHED.
+     * This terminates the streaming session and releases resources.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
      * @return The stop.
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.StopAction getStop();
     /**
+     * <pre>
+     * Stop the stream, changing its status to FINISHED.
+     * This terminates the streaming session and releases resources.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.StopActionOrBuilder getStopOrBuilder();
@@ -15946,7 +16491,7 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object streamId_;
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream on which to perform the action.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15967,7 +16512,7 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream on which to perform the action.
      * </pre>
      *
      * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15990,6 +16535,11 @@ public final class StreamServiceOuterClass {
 
     public static final int PUBLISH_FIELD_NUMBER = 1000;
     /**
+     * <pre>
+     * Publish the stream, changing its status from READY to ONAIR.
+     * This makes the stream available for watching.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
      * @return Whether the publish field is set.
      */
@@ -15998,6 +16548,11 @@ public final class StreamServiceOuterClass {
       return actionCase_ == 1000;
     }
     /**
+     * <pre>
+     * Publish the stream, changing its status from READY to ONAIR.
+     * This makes the stream available for watching.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
      * @return The publish.
      */
@@ -16009,6 +16564,11 @@ public final class StreamServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamServiceOuterClass.PublishAction.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Publish the stream, changing its status from READY to ONAIR.
+     * This makes the stream available for watching.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
      */
     @java.lang.Override
@@ -16021,6 +16581,11 @@ public final class StreamServiceOuterClass {
 
     public static final int STOP_FIELD_NUMBER = 1002;
     /**
+     * <pre>
+     * Stop the stream, changing its status to FINISHED.
+     * This terminates the streaming session and releases resources.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
      * @return Whether the stop field is set.
      */
@@ -16029,6 +16594,11 @@ public final class StreamServiceOuterClass {
       return actionCase_ == 1002;
     }
     /**
+     * <pre>
+     * Stop the stream, changing its status to FINISHED.
+     * This terminates the streaming session and releases resources.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
      * @return The stop.
      */
@@ -16040,6 +16610,11 @@ public final class StreamServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamServiceOuterClass.StopAction.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Stop the stream, changing its status to FINISHED.
+     * This terminates the streaming session and releases resources.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
      */
     @java.lang.Override
@@ -16439,7 +17014,7 @@ public final class StreamServiceOuterClass {
       private java.lang.Object streamId_ = "";
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream on which to perform the action.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16459,7 +17034,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream on which to perform the action.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16480,7 +17055,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream on which to perform the action.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16499,7 +17074,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream on which to perform the action.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16513,7 +17088,7 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream on which to perform the action.
        * </pre>
        *
        * <code>string stream_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16535,6 +17110,11 @@ public final class StreamServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamServiceOuterClass.PublishAction, yandex.cloud.api.video.v1.StreamServiceOuterClass.PublishAction.Builder, yandex.cloud.api.video.v1.StreamServiceOuterClass.PublishActionOrBuilder> publishBuilder_;
       /**
+       * <pre>
+       * Publish the stream, changing its status from READY to ONAIR.
+       * This makes the stream available for watching.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
        * @return Whether the publish field is set.
        */
@@ -16543,6 +17123,11 @@ public final class StreamServiceOuterClass {
         return actionCase_ == 1000;
       }
       /**
+       * <pre>
+       * Publish the stream, changing its status from READY to ONAIR.
+       * This makes the stream available for watching.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
        * @return The publish.
        */
@@ -16561,6 +17146,11 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Publish the stream, changing its status from READY to ONAIR.
+       * This makes the stream available for watching.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
        */
       public Builder setPublish(yandex.cloud.api.video.v1.StreamServiceOuterClass.PublishAction value) {
@@ -16577,6 +17167,11 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publish the stream, changing its status from READY to ONAIR.
+       * This makes the stream available for watching.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
        */
       public Builder setPublish(
@@ -16591,6 +17186,11 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publish the stream, changing its status from READY to ONAIR.
+       * This makes the stream available for watching.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
        */
       public Builder mergePublish(yandex.cloud.api.video.v1.StreamServiceOuterClass.PublishAction value) {
@@ -16613,6 +17213,11 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publish the stream, changing its status from READY to ONAIR.
+       * This makes the stream available for watching.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
        */
       public Builder clearPublish() {
@@ -16632,12 +17237,22 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publish the stream, changing its status from READY to ONAIR.
+       * This makes the stream available for watching.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
        */
       public yandex.cloud.api.video.v1.StreamServiceOuterClass.PublishAction.Builder getPublishBuilder() {
         return getPublishFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Publish the stream, changing its status from READY to ONAIR.
+       * This makes the stream available for watching.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
        */
       @java.lang.Override
@@ -16652,6 +17267,11 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Publish the stream, changing its status from READY to ONAIR.
+       * This makes the stream available for watching.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishAction publish = 1000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -16676,6 +17296,11 @@ public final class StreamServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamServiceOuterClass.StopAction, yandex.cloud.api.video.v1.StreamServiceOuterClass.StopAction.Builder, yandex.cloud.api.video.v1.StreamServiceOuterClass.StopActionOrBuilder> stopBuilder_;
       /**
+       * <pre>
+       * Stop the stream, changing its status to FINISHED.
+       * This terminates the streaming session and releases resources.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
        * @return Whether the stop field is set.
        */
@@ -16684,6 +17309,11 @@ public final class StreamServiceOuterClass {
         return actionCase_ == 1002;
       }
       /**
+       * <pre>
+       * Stop the stream, changing its status to FINISHED.
+       * This terminates the streaming session and releases resources.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
        * @return The stop.
        */
@@ -16702,6 +17332,11 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Stop the stream, changing its status to FINISHED.
+       * This terminates the streaming session and releases resources.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
        */
       public Builder setStop(yandex.cloud.api.video.v1.StreamServiceOuterClass.StopAction value) {
@@ -16718,6 +17353,11 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stop the stream, changing its status to FINISHED.
+       * This terminates the streaming session and releases resources.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
        */
       public Builder setStop(
@@ -16732,6 +17372,11 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stop the stream, changing its status to FINISHED.
+       * This terminates the streaming session and releases resources.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
        */
       public Builder mergeStop(yandex.cloud.api.video.v1.StreamServiceOuterClass.StopAction value) {
@@ -16754,6 +17399,11 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stop the stream, changing its status to FINISHED.
+       * This terminates the streaming session and releases resources.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
        */
       public Builder clearStop() {
@@ -16773,12 +17423,22 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stop the stream, changing its status to FINISHED.
+       * This terminates the streaming session and releases resources.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
        */
       public yandex.cloud.api.video.v1.StreamServiceOuterClass.StopAction.Builder getStopBuilder() {
         return getStopFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Stop the stream, changing its status to FINISHED.
+       * This terminates the streaming session and releases resources.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
        */
       @java.lang.Override
@@ -16793,6 +17453,11 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Stop the stream, changing its status to FINISHED.
+       * This terminates the streaming session and releases resources.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.StopAction stop = 1002;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -16871,6 +17536,11 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Parameters for the publish action.
+   * The action changes the stream's status from READY to ONAIR.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.PublishAction}
    */
   public static final class PublishAction extends
@@ -17092,6 +17762,11 @@ public final class StreamServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Parameters for the publish action.
+     * The action changes the stream's status from READY to ONAIR.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.PublishAction}
      */
     public static final class Builder extends
@@ -17289,6 +17964,11 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Parameters for the stop action.
+   * The action changes the stream's status to FINISHED.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.StopAction}
    */
   public static final class StopAction extends
@@ -17510,6 +18190,11 @@ public final class StreamServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Parameters for the stop action.
+     * The action changes the stream's status to FINISHED.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.StopAction}
      */
     public static final class Builder extends
@@ -17708,7 +18393,9 @@ public final class StreamServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream on which the action is being performed.
+     * This identifier can be used to track the action operation
+     * and to verify that the action is being applied to the correct stream.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -17717,7 +18404,9 @@ public final class StreamServiceOuterClass {
     java.lang.String getStreamId();
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream on which the action is being performed.
+     * This identifier can be used to track the action operation
+     * and to verify that the action is being applied to the correct stream.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -17814,7 +18503,9 @@ public final class StreamServiceOuterClass {
     private volatile java.lang.Object streamId_;
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream on which the action is being performed.
+     * This identifier can be used to track the action operation
+     * and to verify that the action is being applied to the correct stream.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -17835,7 +18526,9 @@ public final class StreamServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the stream.
+     * ID of the stream on which the action is being performed.
+     * This identifier can be used to track the action operation
+     * and to verify that the action is being applied to the correct stream.
      * </pre>
      *
      * <code>string stream_id = 1;</code>
@@ -18161,7 +18854,9 @@ public final class StreamServiceOuterClass {
       private java.lang.Object streamId_ = "";
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream on which the action is being performed.
+       * This identifier can be used to track the action operation
+       * and to verify that the action is being applied to the correct stream.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -18181,7 +18876,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream on which the action is being performed.
+       * This identifier can be used to track the action operation
+       * and to verify that the action is being applied to the correct stream.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -18202,7 +18899,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream on which the action is being performed.
+       * This identifier can be used to track the action operation
+       * and to verify that the action is being applied to the correct stream.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -18221,7 +18920,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream on which the action is being performed.
+       * This identifier can be used to track the action operation
+       * and to verify that the action is being applied to the correct stream.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -18235,7 +18936,9 @@ public final class StreamServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * ID of the stream on which the action is being performed.
+       * This identifier can be used to track the action operation
+       * and to verify that the action is being applied to the correct stream.
        * </pre>
        *
        * <code>string stream_id = 1;</code>
@@ -18429,102 +19132,103 @@ public final class StreamServiceOuterClass {
       "loud/operation/operation.proto\032\035yandex/c" +
       "loud/validation.proto\032\"yandex/cloud/vide" +
       "o/v1/stream.proto\"3\n\020GetStreamRequest\022\037\n" +
-      "\tstream_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\251\001\n\022ListS" +
+      "\tstream_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\263\001\n\022ListS" +
       "treamsRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212" +
       "\3101\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\037\n" +
-      "\npage_token\030e \001(\tB\013\212\3101\007<=15000\022\020\n\010order_" +
-      "by\030f \001(\t\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002" +
-      "\020d\"d\n\023ListStreamsResponse\022.\n\007streams\030\001 \003" +
-      "(\0132\035.yandex.cloud.video.v1.Stream\022\027\n\017nex" +
-      "t_page_token\030d \001(\tJ\004\010\002\020d\"a\n\026BatchGetStre" +
-      "amsRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022%\n\nstream_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<" +
-      "=50\"I\n\027BatchGetStreamsResponse\022.\n\007stream" +
-      "s\030\001 \003(\0132\035.yandex.cloud.video.v1.Stream\"\272" +
-      "\004\n\023CreateStreamRequest\022 \n\nchannel_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007line_id\030\002 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022\035\n\005title\030\003 \001(\tB\016\350\3071\001\212\3101\006<=2500\022\023" +
-      "\n\013description\030\004 \001(\t\022\036\n\014thumbnail_id\030\005 \001(" +
-      "\tB\010\212\3101\004<=50\0220\n\014auto_publish\030\006 \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\022\217\001\n\006labels\030\310\001 \003(\0132" +
-      "6.yandex.cloud.video.v1.CreateStreamRequ" +
-      "est.LabelsEntryBF\202\3101\004<=64\212\3101\004<=63\362\3071\022[-_" +
-      ".@:/0-9a-zA-Z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0" +
-      "-9a-z]*\022;\n\ton_demand\030\350\007 \001(\0132%.yandex.clo" +
-      "ud.video.v1.OnDemandParamsH\000\022:\n\010schedule" +
-      "\030\351\007 \001(\0132%.yandex.cloud.video.v1.Schedule" +
-      "ParamsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001B\023\n\013stream_type\022\004\300\3011\001J\005\010\007" +
-      "\020\310\001J\006\010\311\001\020\350\007\"\020\n\016OnDemandParams\"}\n\016Schedul" +
-      "eParams\0224\n\nstart_time\030\001 \001(\0132\032.google.pro" +
-      "tobuf.TimestampB\004\350\3071\001\0225\n\013finish_time\030\002 \001" +
-      "(\0132\032.google.protobuf.TimestampB\004\350\3071\001\")\n\024" +
-      "CreateStreamMetadata\022\021\n\tstream_id\030\001 \001(\t\"" +
-      "\341\004\n\023UpdateStreamRequest\022\037\n\tstream_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\0224\n\nfield_mask\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.FieldMaskB\004\350\3071\001\022\031\n\007line_i" +
-      "d\030\003 \001(\tB\010\212\3101\004<=50\022\031\n\005title\030\004 \001(\tB\n\212\3101\006<=" +
-      "2500\022\023\n\013description\030\005 \001(\t\022\036\n\014thumbnail_i" +
-      "d\030\006 \001(\tB\010\212\3101\004<=50\0220\n\014auto_publish\030\007 \001(\0132" +
-      "\032.google.protobuf.BoolValue\022\217\001\n\006labels\030\310" +
-      "\001 \003(\01326.yandex.cloud.video.v1.UpdateStre" +
-      "amRequest.LabelsEntryBF\202\3101\004<=64\212\3101\004<=63\362" +
-      "\3071\022[-_.@:/0-9a-zA-Z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-" +
-      "z][-_0-9a-z]*\022;\n\ton_demand\030\350\007 \001(\0132%.yand" +
-      "ex.cloud.video.v1.OnDemandParamsH\000\022:\n\010sc" +
-      "hedule\030\351\007 \001(\0132%.yandex.cloud.video.v1.Sc" +
-      "heduleParamsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\r\n\013stream_typeJ\005\010\010" +
-      "\020\310\001J\006\010\311\001\020\350\007\")\n\024UpdateStreamMetadata\022\021\n\ts" +
-      "tream_id\030\001 \001(\t\"6\n\023DeleteStreamRequest\022\037\n" +
-      "\tstream_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024Delete" +
-      "StreamMetadata\022\021\n\tstream_id\030\001 \001(\t\"d\n\031Bat" +
-      "chDeleteStreamsRequest\022 \n\nchannel_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022%\n\nstream_ids\030\002 \003(\tB\021\202\310" +
-      "1\0051-100\212\3101\004<=50\"0\n\032BatchDeleteStreamsMet" +
-      "adata\022\022\n\nstream_ids\030\001 \003(\t\"\312\001\n\032PerformStr" +
-      "eamActionRequest\022\037\n\tstream_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\0228\n\007publish\030\350\007 \001(\0132$.yandex.clo" +
-      "ud.video.v1.PublishActionH\000\0222\n\004stop\030\352\007 \001" +
-      "(\0132!.yandex.cloud.video.v1.StopActionH\000B" +
-      "\016\n\006action\022\004\300\3011\001J\006\010\351\007\020\352\007J\005\010\002\020\350\007\"\017\n\rPublis" +
-      "hAction\"\014\n\nStopAction\"0\n\033PerformStreamAc" +
-      "tionMetadata\022\021\n\tstream_id\030\001 \001(\t2\223\n\n\rStre" +
-      "amService\022t\n\003Get\022\'.yandex.cloud.video.v1" +
-      ".GetStreamRequest\032\035.yandex.cloud.video.v" +
-      "1.Stream\"%\202\323\344\223\002\037\022\035/video/v1/streams/{str" +
-      "eam_id}\022x\n\004List\022).yandex.cloud.video.v1." +
-      "ListStreamsRequest\032*.yandex.cloud.video." +
-      "v1.ListStreamsResponse\"\031\202\323\344\223\002\023\022\021/video/v" +
-      "1/streams\022\220\001\n\010BatchGet\022-.yandex.cloud.vi" +
-      "deo.v1.BatchGetStreamsRequest\032..yandex.c" +
-      "loud.video.v1.BatchGetStreamsResponse\"%\202" +
-      "\323\344\223\002\037\"\032/video/v1/streams:batchGet:\001*\022\227\001\n" +
-      "\006Create\022*.yandex.cloud.video.v1.CreateSt" +
-      "reamRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\">\202\323\344\223\002\026\"\021/video/v1/streams:\001*\262\322*\036" +
-      "\n\024CreateStreamMetadata\022\006Stream\022\243\001\n\006Updat" +
-      "e\022*.yandex.cloud.video.v1.UpdateStreamRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"J\202\323\344\223\002\"2\035/video/v1/streams/{stream_id}:" +
-      "\001*\262\322*\036\n\024UpdateStreamMetadata\022\006Stream\022\257\001\n" +
-      "\006Delete\022*.yandex.cloud.video.v1.DeleteSt" +
-      "reamRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"V\202\323\344\223\002\037*\035/video/v1/streams/{strea" +
-      "m_id}\262\322*-\n\024DeleteStreamMetadata\022\025google." +
-      "protobuf.Empty\022\303\001\n\013BatchDelete\0220.yandex." +
-      "cloud.video.v1.BatchDeleteStreamsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"_\202\323\344" +
-      "\223\002\"\"\035/video/v1/streams:batchDelete:\001*\262\322*" +
-      "3\n\032BatchDeleteStreamsMetadata\022\025google.pr" +
-      "otobuf.Empty\022\306\001\n\rPerformAction\0221.yandex." +
-      "cloud.video.v1.PerformStreamActionReques" +
-      "t\032!.yandex.cloud.operation.Operation\"_\202\323" +
-      "\344\223\0020\"+/video/v1/streams/{stream_id}:perf" +
-      "ormAction:\001*\262\322*%\n\033PerformStreamActionMet" +
-      "adata\022\006StreamB\\\n\031yandex.cloud.api.video." +
-      "v1Z?github.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/video/v1;videob\006proto3"
+      "\npage_token\030e \001(\tB\013\212\3101\007<=15000\022\032\n\010order_" +
+      "by\030f \001(\tB\010\212\3101\004<=50\022\032\n\006filter\030g \001(\tB\n\212\3101\006" +
+      "<=1000J\004\010\002\020d\"d\n\023ListStreamsResponse\022.\n\007s" +
+      "treams\030\001 \003(\0132\035.yandex.cloud.video.v1.Str" +
+      "eam\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"a\n\026Ba" +
+      "tchGetStreamsRequest\022 \n\nchannel_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022%\n\nstream_ids\030\002 \003(\tB\021\202\3101\005" +
+      "1-100\212\3101\004<=50\"I\n\027BatchGetStreamsResponse" +
+      "\022.\n\007streams\030\001 \003(\0132\035.yandex.cloud.video.v" +
+      "1.Stream\"\305\004\n\023CreateStreamRequest\022 \n\nchan" +
+      "nel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007line_id\030\002 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\005title\030\003 \001(\tB\r\350\3071\001\212\310" +
+      "1\005<=300\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=4000" +
+      "\022\036\n\014thumbnail_id\030\005 \001(\tB\010\212\3101\004<=50\0220\n\014auto" +
+      "_publish\030\006 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\022\217\001\n\006labels\030\310\001 \003(\01326.yandex.cloud.vide" +
+      "o.v1.CreateStreamRequest.LabelsEntryBF\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\022[-_.@:/0-9a-zA-Z]*\262\3101\006" +
+      "\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022;\n\ton_deman" +
+      "d\030\350\007 \001(\0132%.yandex.cloud.video.v1.OnDeman" +
+      "dParamsH\000\022:\n\010schedule\030\351\007 \001(\0132%.yandex.cl" +
+      "oud.video.v1.ScheduleParamsH\000\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\023\n\013" +
+      "stream_type\022\004\300\3011\001J\005\010\007\020\310\001J\006\010\311\001\020\350\007\"\020\n\016OnDe" +
+      "mandParams\"}\n\016ScheduleParams\0224\n\nstart_ti" +
+      "me\030\001 \001(\0132\032.google.protobuf.TimestampB\004\350\307" +
+      "1\001\0225\n\013finish_time\030\002 \001(\0132\032.google.protobu" +
+      "f.TimestampB\004\350\3071\001\")\n\024CreateStreamMetadat" +
+      "a\022\021\n\tstream_id\030\001 \001(\t\"\354\004\n\023UpdateStreamReq" +
+      "uest\022\037\n\tstream_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n" +
+      "\nfield_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
+      "dMaskB\004\350\3071\001\022\031\n\007line_id\030\003 \001(\tB\010\212\3101\004<=50\022\030" +
+      "\n\005title\030\004 \001(\tB\t\212\3101\005<=300\022\037\n\013description\030" +
+      "\005 \001(\tB\n\212\3101\006<=4000\022\036\n\014thumbnail_id\030\006 \001(\tB" +
+      "\010\212\3101\004<=50\0220\n\014auto_publish\030\007 \001(\0132\032.google" +
+      ".protobuf.BoolValue\022\217\001\n\006labels\030\310\001 \003(\01326." +
+      "yandex.cloud.video.v1.UpdateStreamReques" +
+      "t.LabelsEntryBF\202\3101\004<=64\212\3101\004<=63\362\3071\022[-_.@" +
+      ":/0-9a-zA-Z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9" +
+      "a-z]*\022;\n\ton_demand\030\350\007 \001(\0132%.yandex.cloud" +
+      ".video.v1.OnDemandParamsH\000\022:\n\010schedule\030\351" +
+      "\007 \001(\0132%.yandex.cloud.video.v1.SchedulePa" +
+      "ramsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001B\r\n\013stream_typeJ\005\010\010\020\310\001J\006\010\311\001" +
+      "\020\350\007\")\n\024UpdateStreamMetadata\022\021\n\tstream_id" +
+      "\030\001 \001(\t\"6\n\023DeleteStreamRequest\022\037\n\tstream_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteStreamMe" +
+      "tadata\022\021\n\tstream_id\030\001 \001(\t\"d\n\031BatchDelete" +
+      "StreamsRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022%\n\nstream_ids\030\002 \003(\tB\021\202\3101\0051-100\212" +
+      "\3101\004<=50\"0\n\032BatchDeleteStreamsMetadata\022\022\n" +
+      "\nstream_ids\030\001 \003(\t\"\312\001\n\032PerformStreamActio" +
+      "nRequest\022\037\n\tstream_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\0228\n\007publish\030\350\007 \001(\0132$.yandex.cloud.video" +
+      ".v1.PublishActionH\000\0222\n\004stop\030\352\007 \001(\0132!.yan" +
+      "dex.cloud.video.v1.StopActionH\000B\016\n\006actio" +
+      "n\022\004\300\3011\001J\006\010\351\007\020\352\007J\005\010\002\020\350\007\"\017\n\rPublishAction\"" +
+      "\014\n\nStopAction\"0\n\033PerformStreamActionMeta" +
+      "data\022\021\n\tstream_id\030\001 \001(\t2\223\n\n\rStreamServic" +
+      "e\022t\n\003Get\022\'.yandex.cloud.video.v1.GetStre" +
+      "amRequest\032\035.yandex.cloud.video.v1.Stream" +
+      "\"%\202\323\344\223\002\037\022\035/video/v1/streams/{stream_id}\022" +
+      "x\n\004List\022).yandex.cloud.video.v1.ListStre" +
+      "amsRequest\032*.yandex.cloud.video.v1.ListS" +
+      "treamsResponse\"\031\202\323\344\223\002\023\022\021/video/v1/stream" +
+      "s\022\220\001\n\010BatchGet\022-.yandex.cloud.video.v1.B" +
+      "atchGetStreamsRequest\032..yandex.cloud.vid" +
+      "eo.v1.BatchGetStreamsResponse\"%\202\323\344\223\002\037\"\032/" +
+      "video/v1/streams:batchGet:\001*\022\227\001\n\006Create\022" +
+      "*.yandex.cloud.video.v1.CreateStreamRequ" +
+      "est\032!.yandex.cloud.operation.Operation\">" +
+      "\202\323\344\223\002\026\"\021/video/v1/streams:\001*\262\322*\036\n\024Create" +
+      "StreamMetadata\022\006Stream\022\243\001\n\006Update\022*.yand" +
+      "ex.cloud.video.v1.UpdateStreamRequest\032!." +
+      "yandex.cloud.operation.Operation\"J\202\323\344\223\002\"" +
+      "2\035/video/v1/streams/{stream_id}:\001*\262\322*\036\n\024" +
+      "UpdateStreamMetadata\022\006Stream\022\257\001\n\006Delete\022" +
+      "*.yandex.cloud.video.v1.DeleteStreamRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"V" +
+      "\202\323\344\223\002\037*\035/video/v1/streams/{stream_id}\262\322*" +
+      "-\n\024DeleteStreamMetadata\022\025google.protobuf" +
+      ".Empty\022\303\001\n\013BatchDelete\0220.yandex.cloud.vi" +
+      "deo.v1.BatchDeleteStreamsRequest\032!.yande" +
+      "x.cloud.operation.Operation\"_\202\323\344\223\002\"\"\035/vi" +
+      "deo/v1/streams:batchDelete:\001*\262\322*3\n\032Batch" +
+      "DeleteStreamsMetadata\022\025google.protobuf.E" +
+      "mpty\022\306\001\n\rPerformAction\0221.yandex.cloud.vi" +
+      "deo.v1.PerformStreamActionRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"_\202\323\344\223\0020\"+/v" +
+      "ideo/v1/streams/{stream_id}:performActio" +
+      "n:\001*\262\322*%\n\033PerformStreamActionMetadata\022\006S" +
+      "treamB\\\n\031yandex.cloud.api.video.v1Z?gith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

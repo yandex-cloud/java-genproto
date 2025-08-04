@@ -5,6 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Thumbnail management service.
+ * Provides methods for creating, retrieving, and managing thumbnail images
+ * that can be associated with various resources such as videos, streams, episodes, and channels.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -251,13 +253,16 @@ public final class ThumbnailServiceGrpc {
   /**
    * <pre>
    * Thumbnail management service.
+   * Provides methods for creating, retrieving, and managing thumbnail images
+   * that can be associated with various resources such as videos, streams, episodes, and channels.
    * </pre>
    */
   public static abstract class ThumbnailServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Get the specific thumbnail.
+     * Retrieves detailed information about a specific thumbnail by its ID.
+     * Returns all thumbnail metadata and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest request,
@@ -267,7 +272,8 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * List thumbnails for channel.
+     * Lists all thumbnails associated with a specific resource (channel, stream, video, etc.)
+     * with pagination support.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest request,
@@ -277,7 +283,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Create thumbnail.
+     * Creates a new thumbnail record for a specific resource.
+     * This method only creates the metadata record; the actual image must be uploaded
+     * using the URL obtained from the GenerateUploadURL method.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest request,
@@ -287,7 +295,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate urls for downloading images.
+     * Generates download URLs for multiple thumbnails in a single request.
+     * The response includes URLs for both original and scaled versions of each thumbnail.
+     * This is useful for efficiently retrieving multiple thumbnails at once.
      * </pre>
      */
     public void batchGenerateDownloadURLs(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsRequest request,
@@ -297,7 +307,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate url for uploading an image.
+     * Generates a URL for uploading an image to an existing thumbnail record.
+     * This URL can be used to upload the actual image file using an HTTP PUT request.
+     * The URL is pre-signed and has a limited validity period.
      * </pre>
      */
     public void generateUploadURL(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest request,
@@ -307,7 +319,8 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Delete thumbnail.
+     * Deletes a specific thumbnail by its ID.
+     * This removes both the metadata record and the associated image file.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest request,
@@ -366,6 +379,8 @@ public final class ThumbnailServiceGrpc {
   /**
    * <pre>
    * Thumbnail management service.
+   * Provides methods for creating, retrieving, and managing thumbnail images
+   * that can be associated with various resources such as videos, streams, episodes, and channels.
    * </pre>
    */
   public static final class ThumbnailServiceStub extends io.grpc.stub.AbstractAsyncStub<ThumbnailServiceStub> {
@@ -382,7 +397,8 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific thumbnail.
+     * Retrieves detailed information about a specific thumbnail by its ID.
+     * Returns all thumbnail metadata and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest request,
@@ -393,7 +409,8 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * List thumbnails for channel.
+     * Lists all thumbnails associated with a specific resource (channel, stream, video, etc.)
+     * with pagination support.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest request,
@@ -404,7 +421,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Create thumbnail.
+     * Creates a new thumbnail record for a specific resource.
+     * This method only creates the metadata record; the actual image must be uploaded
+     * using the URL obtained from the GenerateUploadURL method.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest request,
@@ -415,7 +434,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate urls for downloading images.
+     * Generates download URLs for multiple thumbnails in a single request.
+     * The response includes URLs for both original and scaled versions of each thumbnail.
+     * This is useful for efficiently retrieving multiple thumbnails at once.
      * </pre>
      */
     public void batchGenerateDownloadURLs(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsRequest request,
@@ -426,7 +447,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate url for uploading an image.
+     * Generates a URL for uploading an image to an existing thumbnail record.
+     * This URL can be used to upload the actual image file using an HTTP PUT request.
+     * The URL is pre-signed and has a limited validity period.
      * </pre>
      */
     public void generateUploadURL(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest request,
@@ -437,7 +460,8 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Delete thumbnail.
+     * Deletes a specific thumbnail by its ID.
+     * This removes both the metadata record and the associated image file.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest request,
@@ -450,6 +474,8 @@ public final class ThumbnailServiceGrpc {
   /**
    * <pre>
    * Thumbnail management service.
+   * Provides methods for creating, retrieving, and managing thumbnail images
+   * that can be associated with various resources such as videos, streams, episodes, and channels.
    * </pre>
    */
   public static final class ThumbnailServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ThumbnailServiceBlockingStub> {
@@ -466,7 +492,8 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific thumbnail.
+     * Retrieves detailed information about a specific thumbnail by its ID.
+     * Returns all thumbnail metadata and related information.
      * </pre>
      */
     public yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail get(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest request) {
@@ -476,7 +503,8 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * List thumbnails for channel.
+     * Lists all thumbnails associated with a specific resource (channel, stream, video, etc.)
+     * with pagination support.
      * </pre>
      */
     public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailResponse list(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest request) {
@@ -486,7 +514,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Create thumbnail.
+     * Creates a new thumbnail record for a specific resource.
+     * This method only creates the metadata record; the actual image must be uploaded
+     * using the URL obtained from the GenerateUploadURL method.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest request) {
@@ -496,7 +526,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate urls for downloading images.
+     * Generates download URLs for multiple thumbnails in a single request.
+     * The response includes URLs for both original and scaled versions of each thumbnail.
+     * This is useful for efficiently retrieving multiple thumbnails at once.
      * </pre>
      */
     public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsResponse batchGenerateDownloadURLs(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsRequest request) {
@@ -506,7 +538,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate url for uploading an image.
+     * Generates a URL for uploading an image to an existing thumbnail record.
+     * This URL can be used to upload the actual image file using an HTTP PUT request.
+     * The URL is pre-signed and has a limited validity period.
      * </pre>
      */
     public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLResponse generateUploadURL(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest request) {
@@ -516,7 +550,8 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Delete thumbnail.
+     * Deletes a specific thumbnail by its ID.
+     * This removes both the metadata record and the associated image file.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.DeleteThumbnailRequest request) {
@@ -528,6 +563,8 @@ public final class ThumbnailServiceGrpc {
   /**
    * <pre>
    * Thumbnail management service.
+   * Provides methods for creating, retrieving, and managing thumbnail images
+   * that can be associated with various resources such as videos, streams, episodes, and channels.
    * </pre>
    */
   public static final class ThumbnailServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ThumbnailServiceFutureStub> {
@@ -544,7 +581,8 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific thumbnail.
+     * Retrieves detailed information about a specific thumbnail by its ID.
+     * Returns all thumbnail metadata and related information.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> get(
@@ -555,7 +593,8 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * List thumbnails for channel.
+     * Lists all thumbnails associated with a specific resource (channel, stream, video, etc.)
+     * with pagination support.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailResponse> list(
@@ -566,7 +605,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Create thumbnail.
+     * Creates a new thumbnail record for a specific resource.
+     * This method only creates the metadata record; the actual image must be uploaded
+     * using the URL obtained from the GenerateUploadURL method.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -577,7 +618,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate urls for downloading images.
+     * Generates download URLs for multiple thumbnails in a single request.
+     * The response includes URLs for both original and scaled versions of each thumbnail.
+     * This is useful for efficiently retrieving multiple thumbnails at once.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsResponse> batchGenerateDownloadURLs(
@@ -588,7 +631,9 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate url for uploading an image.
+     * Generates a URL for uploading an image to an existing thumbnail record.
+     * This URL can be used to upload the actual image file using an HTTP PUT request.
+     * The URL is pre-signed and has a limited validity period.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLResponse> generateUploadURL(
@@ -599,7 +644,8 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Delete thumbnail.
+     * Deletes a specific thumbnail by its ID.
+     * This removes both the metadata record and the associated image file.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(

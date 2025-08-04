@@ -5884,6 +5884,1416 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface UpdateClusterConfigSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.spark.v1.UpdateClusterConfigSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+     * @return Whether the resourcePools field is set.
+     */
+    boolean hasResourcePools();
+    /**
+     * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+     * @return The resourcePools.
+     */
+    yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools getResourcePools();
+    /**
+     * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+     */
+    yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePoolsOrBuilder getResourcePoolsOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for HistoryServer
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+     * @return Whether the historyServer field is set.
+     */
+    boolean hasHistoryServer();
+    /**
+     * <pre>
+     * Configuration for HistoryServer
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+     * @return The historyServer.
+     */
+    yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig getHistoryServer();
+    /**
+     * <pre>
+     * Configuration for HistoryServer
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+     */
+    yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfigOrBuilder getHistoryServerOrBuilder();
+
+    /**
+     * <pre>
+     * Container custom environment dependencies
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+     * @return Whether the dependencies field is set.
+     */
+    boolean hasDependencies();
+    /**
+     * <pre>
+     * Container custom environment dependencies
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+     * @return The dependencies.
+     */
+    yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies getDependencies();
+    /**
+     * <pre>
+     * Container custom environment dependencies
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+     */
+    yandex.cloud.api.spark.v1.ClusterOuterClass.DependenciesOrBuilder getDependenciesOrBuilder();
+
+    /**
+     * <pre>
+     * Metastore Cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+     * @return Whether the metastore field is set.
+     */
+    boolean hasMetastore();
+    /**
+     * <pre>
+     * Metastore Cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+     * @return The metastore.
+     */
+    yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore getMetastore();
+    /**
+     * <pre>
+     * Metastore Cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+     */
+    yandex.cloud.api.spark.v1.ClusterOuterClass.MetastoreOrBuilder getMetastoreOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.spark.v1.UpdateClusterConfigSpec}
+   */
+  public static final class UpdateClusterConfigSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.spark.v1.UpdateClusterConfigSpec)
+      UpdateClusterConfigSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateClusterConfigSpec.newBuilder() to construct.
+    private UpdateClusterConfigSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateClusterConfigSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateClusterConfigSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateClusterConfigSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools.Builder subBuilder = null;
+              if (resourcePools_ != null) {
+                subBuilder = resourcePools_.toBuilder();
+              }
+              resourcePools_ = input.readMessage(yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resourcePools_);
+                resourcePools_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig.Builder subBuilder = null;
+              if (historyServer_ != null) {
+                subBuilder = historyServer_.toBuilder();
+              }
+              historyServer_ = input.readMessage(yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(historyServer_);
+                historyServer_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies.Builder subBuilder = null;
+              if (dependencies_ != null) {
+                subBuilder = dependencies_.toBuilder();
+              }
+              dependencies_ = input.readMessage(yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dependencies_);
+                dependencies_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore.Builder subBuilder = null;
+              if (metastore_ != null) {
+                subBuilder = metastore_.toBuilder();
+              }
+              metastore_ = input.readMessage(yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metastore_);
+                metastore_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.spark.v1.ClusterOuterClass.internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.spark.v1.ClusterOuterClass.internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec.class, yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec.Builder.class);
+    }
+
+    public static final int RESOURCE_POOLS_FIELD_NUMBER = 1;
+    private yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools resourcePools_;
+    /**
+     * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+     * @return Whether the resourcePools field is set.
+     */
+    @java.lang.Override
+    public boolean hasResourcePools() {
+      return resourcePools_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+     * @return The resourcePools.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools getResourcePools() {
+      return resourcePools_ == null ? yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools.getDefaultInstance() : resourcePools_;
+    }
+    /**
+     * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePoolsOrBuilder getResourcePoolsOrBuilder() {
+      return getResourcePools();
+    }
+
+    public static final int HISTORY_SERVER_FIELD_NUMBER = 2;
+    private yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig historyServer_;
+    /**
+     * <pre>
+     * Configuration for HistoryServer
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+     * @return Whether the historyServer field is set.
+     */
+    @java.lang.Override
+    public boolean hasHistoryServer() {
+      return historyServer_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for HistoryServer
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+     * @return The historyServer.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig getHistoryServer() {
+      return historyServer_ == null ? yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig.getDefaultInstance() : historyServer_;
+    }
+    /**
+     * <pre>
+     * Configuration for HistoryServer
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfigOrBuilder getHistoryServerOrBuilder() {
+      return getHistoryServer();
+    }
+
+    public static final int DEPENDENCIES_FIELD_NUMBER = 3;
+    private yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies dependencies_;
+    /**
+     * <pre>
+     * Container custom environment dependencies
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+     * @return Whether the dependencies field is set.
+     */
+    @java.lang.Override
+    public boolean hasDependencies() {
+      return dependencies_ != null;
+    }
+    /**
+     * <pre>
+     * Container custom environment dependencies
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+     * @return The dependencies.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies getDependencies() {
+      return dependencies_ == null ? yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies.getDefaultInstance() : dependencies_;
+    }
+    /**
+     * <pre>
+     * Container custom environment dependencies
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.ClusterOuterClass.DependenciesOrBuilder getDependenciesOrBuilder() {
+      return getDependencies();
+    }
+
+    public static final int METASTORE_FIELD_NUMBER = 4;
+    private yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore metastore_;
+    /**
+     * <pre>
+     * Metastore Cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+     * @return Whether the metastore field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetastore() {
+      return metastore_ != null;
+    }
+    /**
+     * <pre>
+     * Metastore Cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+     * @return The metastore.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore getMetastore() {
+      return metastore_ == null ? yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore.getDefaultInstance() : metastore_;
+    }
+    /**
+     * <pre>
+     * Metastore Cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.ClusterOuterClass.MetastoreOrBuilder getMetastoreOrBuilder() {
+      return getMetastore();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (resourcePools_ != null) {
+        output.writeMessage(1, getResourcePools());
+      }
+      if (historyServer_ != null) {
+        output.writeMessage(2, getHistoryServer());
+      }
+      if (dependencies_ != null) {
+        output.writeMessage(3, getDependencies());
+      }
+      if (metastore_ != null) {
+        output.writeMessage(4, getMetastore());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (resourcePools_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResourcePools());
+      }
+      if (historyServer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getHistoryServer());
+      }
+      if (dependencies_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDependencies());
+      }
+      if (metastore_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMetastore());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec other = (yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec) obj;
+
+      if (hasResourcePools() != other.hasResourcePools()) return false;
+      if (hasResourcePools()) {
+        if (!getResourcePools()
+            .equals(other.getResourcePools())) return false;
+      }
+      if (hasHistoryServer() != other.hasHistoryServer()) return false;
+      if (hasHistoryServer()) {
+        if (!getHistoryServer()
+            .equals(other.getHistoryServer())) return false;
+      }
+      if (hasDependencies() != other.hasDependencies()) return false;
+      if (hasDependencies()) {
+        if (!getDependencies()
+            .equals(other.getDependencies())) return false;
+      }
+      if (hasMetastore() != other.hasMetastore()) return false;
+      if (hasMetastore()) {
+        if (!getMetastore()
+            .equals(other.getMetastore())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResourcePools()) {
+        hash = (37 * hash) + RESOURCE_POOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getResourcePools().hashCode();
+      }
+      if (hasHistoryServer()) {
+        hash = (37 * hash) + HISTORY_SERVER_FIELD_NUMBER;
+        hash = (53 * hash) + getHistoryServer().hashCode();
+      }
+      if (hasDependencies()) {
+        hash = (37 * hash) + DEPENDENCIES_FIELD_NUMBER;
+        hash = (53 * hash) + getDependencies().hashCode();
+      }
+      if (hasMetastore()) {
+        hash = (37 * hash) + METASTORE_FIELD_NUMBER;
+        hash = (53 * hash) + getMetastore().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.spark.v1.UpdateClusterConfigSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.spark.v1.UpdateClusterConfigSpec)
+        yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.spark.v1.ClusterOuterClass.internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.spark.v1.ClusterOuterClass.internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec.class, yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (resourcePoolsBuilder_ == null) {
+          resourcePools_ = null;
+        } else {
+          resourcePools_ = null;
+          resourcePoolsBuilder_ = null;
+        }
+        if (historyServerBuilder_ == null) {
+          historyServer_ = null;
+        } else {
+          historyServer_ = null;
+          historyServerBuilder_ = null;
+        }
+        if (dependenciesBuilder_ == null) {
+          dependencies_ = null;
+        } else {
+          dependencies_ = null;
+          dependenciesBuilder_ = null;
+        }
+        if (metastoreBuilder_ == null) {
+          metastore_ = null;
+        } else {
+          metastore_ = null;
+          metastoreBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.spark.v1.ClusterOuterClass.internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec build() {
+        yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec buildPartial() {
+        yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec result = new yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec(this);
+        if (resourcePoolsBuilder_ == null) {
+          result.resourcePools_ = resourcePools_;
+        } else {
+          result.resourcePools_ = resourcePoolsBuilder_.build();
+        }
+        if (historyServerBuilder_ == null) {
+          result.historyServer_ = historyServer_;
+        } else {
+          result.historyServer_ = historyServerBuilder_.build();
+        }
+        if (dependenciesBuilder_ == null) {
+          result.dependencies_ = dependencies_;
+        } else {
+          result.dependencies_ = dependenciesBuilder_.build();
+        }
+        if (metastoreBuilder_ == null) {
+          result.metastore_ = metastore_;
+        } else {
+          result.metastore_ = metastoreBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec) {
+          return mergeFrom((yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec other) {
+        if (other == yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec.getDefaultInstance()) return this;
+        if (other.hasResourcePools()) {
+          mergeResourcePools(other.getResourcePools());
+        }
+        if (other.hasHistoryServer()) {
+          mergeHistoryServer(other.getHistoryServer());
+        }
+        if (other.hasDependencies()) {
+          mergeDependencies(other.getDependencies());
+        }
+        if (other.hasMetastore()) {
+          mergeMetastore(other.getMetastore());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools resourcePools_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools, yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePoolsOrBuilder> resourcePoolsBuilder_;
+      /**
+       * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+       * @return Whether the resourcePools field is set.
+       */
+      public boolean hasResourcePools() {
+        return resourcePoolsBuilder_ != null || resourcePools_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+       * @return The resourcePools.
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools getResourcePools() {
+        if (resourcePoolsBuilder_ == null) {
+          return resourcePools_ == null ? yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools.getDefaultInstance() : resourcePools_;
+        } else {
+          return resourcePoolsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+       */
+      public Builder setResourcePools(yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools value) {
+        if (resourcePoolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resourcePools_ = value;
+          onChanged();
+        } else {
+          resourcePoolsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+       */
+      public Builder setResourcePools(
+          yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools.Builder builderForValue) {
+        if (resourcePoolsBuilder_ == null) {
+          resourcePools_ = builderForValue.build();
+          onChanged();
+        } else {
+          resourcePoolsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+       */
+      public Builder mergeResourcePools(yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools value) {
+        if (resourcePoolsBuilder_ == null) {
+          if (resourcePools_ != null) {
+            resourcePools_ =
+              yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools.newBuilder(resourcePools_).mergeFrom(value).buildPartial();
+          } else {
+            resourcePools_ = value;
+          }
+          onChanged();
+        } else {
+          resourcePoolsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+       */
+      public Builder clearResourcePools() {
+        if (resourcePoolsBuilder_ == null) {
+          resourcePools_ = null;
+          onChanged();
+        } else {
+          resourcePools_ = null;
+          resourcePoolsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools.Builder getResourcePoolsBuilder() {
+        
+        onChanged();
+        return getResourcePoolsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePoolsOrBuilder getResourcePoolsOrBuilder() {
+        if (resourcePoolsBuilder_ != null) {
+          return resourcePoolsBuilder_.getMessageOrBuilder();
+        } else {
+          return resourcePools_ == null ?
+              yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools.getDefaultInstance() : resourcePools_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.ResourcePools resource_pools = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools, yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePoolsOrBuilder> 
+          getResourcePoolsFieldBuilder() {
+        if (resourcePoolsBuilder_ == null) {
+          resourcePoolsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools, yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePools.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.ResourcePoolsOrBuilder>(
+                  getResourcePools(),
+                  getParentForChildren(),
+                  isClean());
+          resourcePools_ = null;
+        }
+        return resourcePoolsBuilder_;
+      }
+
+      private yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig historyServer_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig, yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfigOrBuilder> historyServerBuilder_;
+      /**
+       * <pre>
+       * Configuration for HistoryServer
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+       * @return Whether the historyServer field is set.
+       */
+      public boolean hasHistoryServer() {
+        return historyServerBuilder_ != null || historyServer_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for HistoryServer
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+       * @return The historyServer.
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig getHistoryServer() {
+        if (historyServerBuilder_ == null) {
+          return historyServer_ == null ? yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig.getDefaultInstance() : historyServer_;
+        } else {
+          return historyServerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for HistoryServer
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+       */
+      public Builder setHistoryServer(yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig value) {
+        if (historyServerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          historyServer_ = value;
+          onChanged();
+        } else {
+          historyServerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for HistoryServer
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+       */
+      public Builder setHistoryServer(
+          yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig.Builder builderForValue) {
+        if (historyServerBuilder_ == null) {
+          historyServer_ = builderForValue.build();
+          onChanged();
+        } else {
+          historyServerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for HistoryServer
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+       */
+      public Builder mergeHistoryServer(yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig value) {
+        if (historyServerBuilder_ == null) {
+          if (historyServer_ != null) {
+            historyServer_ =
+              yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig.newBuilder(historyServer_).mergeFrom(value).buildPartial();
+          } else {
+            historyServer_ = value;
+          }
+          onChanged();
+        } else {
+          historyServerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for HistoryServer
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+       */
+      public Builder clearHistoryServer() {
+        if (historyServerBuilder_ == null) {
+          historyServer_ = null;
+          onChanged();
+        } else {
+          historyServer_ = null;
+          historyServerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for HistoryServer
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig.Builder getHistoryServerBuilder() {
+        
+        onChanged();
+        return getHistoryServerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for HistoryServer
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfigOrBuilder getHistoryServerOrBuilder() {
+        if (historyServerBuilder_ != null) {
+          return historyServerBuilder_.getMessageOrBuilder();
+        } else {
+          return historyServer_ == null ?
+              yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig.getDefaultInstance() : historyServer_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for HistoryServer
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.HistoryServerConfig history_server = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig, yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfigOrBuilder> 
+          getHistoryServerFieldBuilder() {
+        if (historyServerBuilder_ == null) {
+          historyServerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig, yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfig.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.HistoryServerConfigOrBuilder>(
+                  getHistoryServer(),
+                  getParentForChildren(),
+                  isClean());
+          historyServer_ = null;
+        }
+        return historyServerBuilder_;
+      }
+
+      private yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies dependencies_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies, yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.DependenciesOrBuilder> dependenciesBuilder_;
+      /**
+       * <pre>
+       * Container custom environment dependencies
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+       * @return Whether the dependencies field is set.
+       */
+      public boolean hasDependencies() {
+        return dependenciesBuilder_ != null || dependencies_ != null;
+      }
+      /**
+       * <pre>
+       * Container custom environment dependencies
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+       * @return The dependencies.
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies getDependencies() {
+        if (dependenciesBuilder_ == null) {
+          return dependencies_ == null ? yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies.getDefaultInstance() : dependencies_;
+        } else {
+          return dependenciesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Container custom environment dependencies
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+       */
+      public Builder setDependencies(yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies value) {
+        if (dependenciesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dependencies_ = value;
+          onChanged();
+        } else {
+          dependenciesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Container custom environment dependencies
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+       */
+      public Builder setDependencies(
+          yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies.Builder builderForValue) {
+        if (dependenciesBuilder_ == null) {
+          dependencies_ = builderForValue.build();
+          onChanged();
+        } else {
+          dependenciesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Container custom environment dependencies
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+       */
+      public Builder mergeDependencies(yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies value) {
+        if (dependenciesBuilder_ == null) {
+          if (dependencies_ != null) {
+            dependencies_ =
+              yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies.newBuilder(dependencies_).mergeFrom(value).buildPartial();
+          } else {
+            dependencies_ = value;
+          }
+          onChanged();
+        } else {
+          dependenciesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Container custom environment dependencies
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+       */
+      public Builder clearDependencies() {
+        if (dependenciesBuilder_ == null) {
+          dependencies_ = null;
+          onChanged();
+        } else {
+          dependencies_ = null;
+          dependenciesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Container custom environment dependencies
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies.Builder getDependenciesBuilder() {
+        
+        onChanged();
+        return getDependenciesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Container custom environment dependencies
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.DependenciesOrBuilder getDependenciesOrBuilder() {
+        if (dependenciesBuilder_ != null) {
+          return dependenciesBuilder_.getMessageOrBuilder();
+        } else {
+          return dependencies_ == null ?
+              yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies.getDefaultInstance() : dependencies_;
+        }
+      }
+      /**
+       * <pre>
+       * Container custom environment dependencies
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Dependencies dependencies = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies, yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.DependenciesOrBuilder> 
+          getDependenciesFieldBuilder() {
+        if (dependenciesBuilder_ == null) {
+          dependenciesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies, yandex.cloud.api.spark.v1.ClusterOuterClass.Dependencies.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.DependenciesOrBuilder>(
+                  getDependencies(),
+                  getParentForChildren(),
+                  isClean());
+          dependencies_ = null;
+        }
+        return dependenciesBuilder_;
+      }
+
+      private yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore metastore_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore, yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.MetastoreOrBuilder> metastoreBuilder_;
+      /**
+       * <pre>
+       * Metastore Cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+       * @return Whether the metastore field is set.
+       */
+      public boolean hasMetastore() {
+        return metastoreBuilder_ != null || metastore_ != null;
+      }
+      /**
+       * <pre>
+       * Metastore Cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+       * @return The metastore.
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore getMetastore() {
+        if (metastoreBuilder_ == null) {
+          return metastore_ == null ? yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore.getDefaultInstance() : metastore_;
+        } else {
+          return metastoreBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Metastore Cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+       */
+      public Builder setMetastore(yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore value) {
+        if (metastoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metastore_ = value;
+          onChanged();
+        } else {
+          metastoreBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metastore Cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+       */
+      public Builder setMetastore(
+          yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore.Builder builderForValue) {
+        if (metastoreBuilder_ == null) {
+          metastore_ = builderForValue.build();
+          onChanged();
+        } else {
+          metastoreBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metastore Cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+       */
+      public Builder mergeMetastore(yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore value) {
+        if (metastoreBuilder_ == null) {
+          if (metastore_ != null) {
+            metastore_ =
+              yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore.newBuilder(metastore_).mergeFrom(value).buildPartial();
+          } else {
+            metastore_ = value;
+          }
+          onChanged();
+        } else {
+          metastoreBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metastore Cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+       */
+      public Builder clearMetastore() {
+        if (metastoreBuilder_ == null) {
+          metastore_ = null;
+          onChanged();
+        } else {
+          metastore_ = null;
+          metastoreBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metastore Cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore.Builder getMetastoreBuilder() {
+        
+        onChanged();
+        return getMetastoreFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Metastore Cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+       */
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.MetastoreOrBuilder getMetastoreOrBuilder() {
+        if (metastoreBuilder_ != null) {
+          return metastoreBuilder_.getMessageOrBuilder();
+        } else {
+          return metastore_ == null ?
+              yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore.getDefaultInstance() : metastore_;
+        }
+      }
+      /**
+       * <pre>
+       * Metastore Cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore, yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.MetastoreOrBuilder> 
+          getMetastoreFieldBuilder() {
+        if (metastoreBuilder_ == null) {
+          metastoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore, yandex.cloud.api.spark.v1.ClusterOuterClass.Metastore.Builder, yandex.cloud.api.spark.v1.ClusterOuterClass.MetastoreOrBuilder>(
+                  getMetastore(),
+                  getParentForChildren(),
+                  isClean());
+          metastore_ = null;
+        }
+        return metastoreBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.spark.v1.UpdateClusterConfigSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.spark.v1.UpdateClusterConfigSpec)
+    private static final yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec();
+    }
+
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateClusterConfigSpec>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateClusterConfigSpec>() {
+      @java.lang.Override
+      public UpdateClusterConfigSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateClusterConfigSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateClusterConfigSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateClusterConfigSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateClusterConfigSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface HistoryServerConfigOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.spark.v1.HistoryServerConfig)
       com.google.protobuf.MessageOrBuilder {
@@ -7359,6 +8769,712 @@ public final class ClusterOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.spark.v1.ClusterOuterClass.NetworkConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateNetworkConfigSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.spark.v1.UpdateNetworkConfigSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * User security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 1;</code>
+     * @return A list containing the securityGroupIds.
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <pre>
+     * User security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 1;</code>
+     * @return The count of securityGroupIds.
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <pre>
+     * User security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <pre>
+     * User security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.spark.v1.UpdateNetworkConfigSpec}
+   */
+  public static final class UpdateNetworkConfigSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.spark.v1.UpdateNetworkConfigSpec)
+      UpdateNetworkConfigSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateNetworkConfigSpec.newBuilder() to construct.
+    private UpdateNetworkConfigSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateNetworkConfigSpec() {
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateNetworkConfigSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateNetworkConfigSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.spark.v1.ClusterOuterClass.internal_static_yandex_cloud_spark_v1_UpdateNetworkConfigSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.spark.v1.ClusterOuterClass.internal_static_yandex_cloud_spark_v1_UpdateNetworkConfigSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec.class, yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec.Builder.class);
+    }
+
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <pre>
+     * User security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 1;</code>
+     * @return A list containing the securityGroupIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <pre>
+     * User security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 1;</code>
+     * @return The count of securityGroupIds.
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * User security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * User security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec other = (yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec) obj;
+
+      if (!getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.spark.v1.UpdateNetworkConfigSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.spark.v1.UpdateNetworkConfigSpec)
+        yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.spark.v1.ClusterOuterClass.internal_static_yandex_cloud_spark_v1_UpdateNetworkConfigSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.spark.v1.ClusterOuterClass.internal_static_yandex_cloud_spark_v1_UpdateNetworkConfigSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec.class, yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.spark.v1.ClusterOuterClass.internal_static_yandex_cloud_spark_v1_UpdateNetworkConfigSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec build() {
+        yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec buildPartial() {
+        yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec result = new yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec) {
+          return mergeFrom((yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec other) {
+        if (other == yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec.getDefaultInstance()) return this;
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * User security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 1;</code>
+       * @return A list containing the securityGroupIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * User security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 1;</code>
+       * @return The count of securityGroupIds.
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * User security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 1;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroupIds at the given index.
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * User security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroupIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * User security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroupIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 1;</code>
+       * @param value The securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 1;</code>
+       * @param values The securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 1;</code>
+       * @param value The bytes of the securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.spark.v1.UpdateNetworkConfigSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.spark.v1.UpdateNetworkConfigSpec)
+    private static final yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec();
+    }
+
+    public static yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateNetworkConfigSpec>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateNetworkConfigSpec>() {
+      @java.lang.Override
+      public UpdateNetworkConfigSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateNetworkConfigSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateNetworkConfigSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateNetworkConfigSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.ClusterOuterClass.UpdateNetworkConfigSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14102,6 +16218,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_spark_v1_ClusterConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_spark_v1_HistoryServerConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14111,6 +16232,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_spark_v1_NetworkConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_spark_v1_UpdateNetworkConfigSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_spark_v1_UpdateNetworkConfigSpec_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_spark_v1_ResourcePools_descriptor;
   private static final 
@@ -14198,35 +16324,43 @@ public final class ClusterOuterClass {
       "rverConfig\0229\n\014dependencies\030\003 \001(\0132#.yande" +
       "x.cloud.spark.v1.Dependencies\0223\n\tmetasto" +
       "re\030\004 \001(\0132 .yandex.cloud.spark.v1.Metasto" +
-      "re\"&\n\023HistoryServerConfig\022\017\n\007enabled\030\001 \001" +
-      "(\010\"?\n\rNetworkConfig\022\022\n\nsubnet_ids\030\001 \003(\t\022" +
-      "\032\n\022security_group_ids\030\002 \003(\t\"\207\001\n\rResource" +
-      "Pools\0229\n\006driver\030\001 \001(\0132#.yandex.cloud.spa" +
-      "rk.v1.ResourcePoolB\004\350\3071\001\022;\n\010executor\030\002 \001" +
-      "(\0132#.yandex.cloud.spark.v1.ResourcePoolB" +
-      "\004\350\3071\001\"x\n\014ResourcePool\022(\n\022resource_preset" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\014scale_policy\030" +
-      "\002 \001(\0132\".yandex.cloud.spark.v1.ScalePolic" +
-      "yB\004\350\3071\001\"\231\002\n\013ScalePolicy\022D\n\013fixed_scale\030\001" +
-      " \001(\0132-.yandex.cloud.spark.v1.ScalePolicy" +
-      ".FixedScaleH\000\022B\n\nauto_scale\030\002 \001(\0132,.yand" +
-      "ex.cloud.spark.v1.ScalePolicy.AutoScaleH" +
-      "\000\032%\n\nFixedScale\022\027\n\004size\030\001 \001(\003B\t\372\3071\0051-100" +
-      "\032E\n\tAutoScale\022\033\n\010min_size\030\001 \001(\003B\t\372\3071\0050-1" +
-      "00\022\033\n\010max_size\030\002 \001(\003B\t\372\3071\0051-100B\022\n\nscale" +
-      "_type\022\004\300\3011\001\":\n\014Dependencies\022\024\n\014pip_packa" +
-      "ges\030\001 \003(\t\022\024\n\014deb_packages\030\002 \003(\t\")\n\tMetas" +
-      "tore\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<=50\"\246\001\n\rL" +
-      "oggingConfig\022\017\n\007enabled\030\001 \001(\010\0228\n\tfolder_" +
-      "id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0," +
-      "63})?H\000\022;\n\014log_group_id\030\003 \001(\tB#\362\3071\037([a-z" +
-      "A-Z][-a-zA-Z0-9_.]{0,63})?H\000B\r\n\013destinat" +
-      "ion\"#\n\006UILink\022\014\n\004name\030\001 \001(\t\022\013\n\003url\030\002 \001(\t" +
-      "*?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020" +
-      "\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003B\\\n\031yandex.clou" +
-      "d.api.spark.v1Z?github.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/spark/v1;sparkb" +
-      "\006proto3"
+      "re\"\213\002\n\027UpdateClusterConfigSpec\022<\n\016resour" +
+      "ce_pools\030\001 \001(\0132$.yandex.cloud.spark.v1.R" +
+      "esourcePools\022B\n\016history_server\030\002 \001(\0132*.y" +
+      "andex.cloud.spark.v1.HistoryServerConfig" +
+      "\0229\n\014dependencies\030\003 \001(\0132#.yandex.cloud.sp" +
+      "ark.v1.Dependencies\0223\n\tmetastore\030\004 \001(\0132 " +
+      ".yandex.cloud.spark.v1.Metastore\"&\n\023Hist" +
+      "oryServerConfig\022\017\n\007enabled\030\001 \001(\010\"?\n\rNetw" +
+      "orkConfig\022\022\n\nsubnet_ids\030\001 \003(\t\022\032\n\022securit" +
+      "y_group_ids\030\002 \003(\t\"5\n\027UpdateNetworkConfig" +
+      "Spec\022\032\n\022security_group_ids\030\001 \003(\t\"\207\001\n\rRes" +
+      "ourcePools\0229\n\006driver\030\001 \001(\0132#.yandex.clou" +
+      "d.spark.v1.ResourcePoolB\004\350\3071\001\022;\n\010executo" +
+      "r\030\002 \001(\0132#.yandex.cloud.spark.v1.Resource" +
+      "PoolB\004\350\3071\001\"x\n\014ResourcePool\022(\n\022resource_p" +
+      "reset_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\014scale_po" +
+      "licy\030\002 \001(\0132\".yandex.cloud.spark.v1.Scale" +
+      "PolicyB\004\350\3071\001\"\231\002\n\013ScalePolicy\022D\n\013fixed_sc" +
+      "ale\030\001 \001(\0132-.yandex.cloud.spark.v1.ScaleP" +
+      "olicy.FixedScaleH\000\022B\n\nauto_scale\030\002 \001(\0132," +
+      ".yandex.cloud.spark.v1.ScalePolicy.AutoS" +
+      "caleH\000\032%\n\nFixedScale\022\027\n\004size\030\001 \001(\003B\t\372\3071\005" +
+      "1-100\032E\n\tAutoScale\022\033\n\010min_size\030\001 \001(\003B\t\372\307" +
+      "1\0050-100\022\033\n\010max_size\030\002 \001(\003B\t\372\3071\0051-100B\022\n\n" +
+      "scale_type\022\004\300\3011\001\":\n\014Dependencies\022\024\n\014pip_" +
+      "packages\030\001 \003(\t\022\024\n\014deb_packages\030\002 \003(\t\")\n\t" +
+      "Metastore\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<=50\"" +
+      "\246\001\n\rLoggingConfig\022\017\n\007enabled\030\001 \001(\010\0228\n\tfo" +
+      "lder_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_" +
+      ".]{0,63})?H\000\022;\n\014log_group_id\030\003 \001(\tB#\362\3071\037" +
+      "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000B\r\n\013des" +
+      "tination\"#\n\006UILink\022\014\n\004name\030\001 \001(\t\022\013\n\003url\030" +
+      "\002 \001(\t*?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005A" +
+      "LIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003B\\\n\031yandex" +
+      ".cloud.api.spark.v1Z?github.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/spark/v1;s" +
+      "parkb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14253,32 +16387,44 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_ClusterConfig_descriptor,
         new java.lang.String[] { "ResourcePools", "HistoryServer", "Dependencies", "Metastore", });
-    internal_static_yandex_cloud_spark_v1_HistoryServerConfig_descriptor =
+    internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_descriptor,
+        new java.lang.String[] { "ResourcePools", "HistoryServer", "Dependencies", "Metastore", });
+    internal_static_yandex_cloud_spark_v1_HistoryServerConfig_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_spark_v1_HistoryServerConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_HistoryServerConfig_descriptor,
         new java.lang.String[] { "Enabled", });
     internal_static_yandex_cloud_spark_v1_NetworkConfig_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_spark_v1_NetworkConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_NetworkConfig_descriptor,
         new java.lang.String[] { "SubnetIds", "SecurityGroupIds", });
+    internal_static_yandex_cloud_spark_v1_UpdateNetworkConfigSpec_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_spark_v1_UpdateNetworkConfigSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_spark_v1_UpdateNetworkConfigSpec_descriptor,
+        new java.lang.String[] { "SecurityGroupIds", });
     internal_static_yandex_cloud_spark_v1_ResourcePools_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_spark_v1_ResourcePools_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_ResourcePools_descriptor,
         new java.lang.String[] { "Driver", "Executor", });
     internal_static_yandex_cloud_spark_v1_ResourcePool_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_spark_v1_ResourcePool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_ResourcePool_descriptor,
         new java.lang.String[] { "ResourcePresetId", "ScalePolicy", });
     internal_static_yandex_cloud_spark_v1_ScalePolicy_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_spark_v1_ScalePolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_ScalePolicy_descriptor,
@@ -14296,25 +16442,25 @@ public final class ClusterOuterClass {
         internal_static_yandex_cloud_spark_v1_ScalePolicy_AutoScale_descriptor,
         new java.lang.String[] { "MinSize", "MaxSize", });
     internal_static_yandex_cloud_spark_v1_Dependencies_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_spark_v1_Dependencies_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_Dependencies_descriptor,
         new java.lang.String[] { "PipPackages", "DebPackages", });
     internal_static_yandex_cloud_spark_v1_Metastore_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_spark_v1_Metastore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_Metastore_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_spark_v1_LoggingConfig_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_spark_v1_LoggingConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_LoggingConfig_descriptor,
         new java.lang.String[] { "Enabled", "FolderId", "LogGroupId", "Destination", });
     internal_static_yandex_cloud_spark_v1_UILink_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_spark_v1_UILink_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_UILink_descriptor,

@@ -97,26 +97,6 @@ public final class PERB {
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getMinLevel();
 
-    /**
-     * <pre>
-     * Service account, which has permission to write to destination
-     * </pre>
-     *
-     * <code>string service_account_id = 4;</code>
-     * @return The serviceAccountId.
-     */
-    java.lang.String getServiceAccountId();
-    /**
-     * <pre>
-     * Service account, which has permission to write to destination
-     * </pre>
-     *
-     * <code>string service_account_id = 4;</code>
-     * @return The bytes for serviceAccountId.
-     */
-    com.google.protobuf.ByteString
-        getServiceAccountIdBytes();
-
     public yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.DestinationCase getDestinationCase();
   }
   /**
@@ -133,7 +113,6 @@ public final class PERB {
     }
     private LogOptions() {
       minLevel_ = 0;
-      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -182,12 +161,6 @@ public final class PERB {
               int rawValue = input.readEnum();
 
               minLevel_ = rawValue;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              serviceAccountId_ = s;
               break;
             }
             default: {
@@ -420,52 +393,6 @@ public final class PERB {
       return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
     }
 
-    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 4;
-    private volatile java.lang.Object serviceAccountId_;
-    /**
-     * <pre>
-     * Service account, which has permission to write to destination
-     * </pre>
-     *
-     * <code>string service_account_id = 4;</code>
-     * @return The serviceAccountId.
-     */
-    @java.lang.Override
-    public java.lang.String getServiceAccountId() {
-      java.lang.Object ref = serviceAccountId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        serviceAccountId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Service account, which has permission to write to destination
-     * </pre>
-     *
-     * <code>string service_account_id = 4;</code>
-     * @return The bytes for serviceAccountId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getServiceAccountIdBytes() {
-      java.lang.Object ref = serviceAccountId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        serviceAccountId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -489,9 +416,6 @@ public final class PERB {
       if (minLevel_ != yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.LEVEL_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, minLevel_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, serviceAccountId_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -511,9 +435,6 @@ public final class PERB {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, minLevel_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, serviceAccountId_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -530,8 +451,6 @@ public final class PERB {
       yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions other = (yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions) obj;
 
       if (minLevel_ != other.minLevel_) return false;
-      if (!getServiceAccountId()
-          .equals(other.getServiceAccountId())) return false;
       if (!getDestinationCase().equals(other.getDestinationCase())) return false;
       switch (destinationCase_) {
         case 1:
@@ -558,8 +477,6 @@ public final class PERB {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MIN_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + minLevel_;
-      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getServiceAccountId().hashCode();
       switch (destinationCase_) {
         case 1:
           hash = (37 * hash) + LOG_GROUP_ID_FIELD_NUMBER;
@@ -707,8 +624,6 @@ public final class PERB {
         super.clear();
         minLevel_ = 0;
 
-        serviceAccountId_ = "";
-
         destinationCase_ = 0;
         destination_ = null;
         return this;
@@ -744,7 +659,6 @@ public final class PERB {
           result.destination_ = destination_;
         }
         result.minLevel_ = minLevel_;
-        result.serviceAccountId_ = serviceAccountId_;
         result.destinationCase_ = destinationCase_;
         onBuilt();
         return result;
@@ -796,10 +710,6 @@ public final class PERB {
         if (other == yandex.cloud.api.serverless.eventrouter.v1.PERB.LogOptions.getDefaultInstance()) return this;
         if (other.minLevel_ != 0) {
           setMinLevelValue(other.getMinLevelValue());
-        }
-        if (!other.getServiceAccountId().isEmpty()) {
-          serviceAccountId_ = other.serviceAccountId_;
-          onChanged();
         }
         switch (other.getDestinationCase()) {
           case LOG_GROUP_ID: {
@@ -1179,102 +1089,6 @@ public final class PERB {
       public Builder clearMinLevel() {
         
         minLevel_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object serviceAccountId_ = "";
-      /**
-       * <pre>
-       * Service account, which has permission to write to destination
-       * </pre>
-       *
-       * <code>string service_account_id = 4;</code>
-       * @return The serviceAccountId.
-       */
-      public java.lang.String getServiceAccountId() {
-        java.lang.Object ref = serviceAccountId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          serviceAccountId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Service account, which has permission to write to destination
-       * </pre>
-       *
-       * <code>string service_account_id = 4;</code>
-       * @return The bytes for serviceAccountId.
-       */
-      public com.google.protobuf.ByteString
-          getServiceAccountIdBytes() {
-        java.lang.Object ref = serviceAccountId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          serviceAccountId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Service account, which has permission to write to destination
-       * </pre>
-       *
-       * <code>string service_account_id = 4;</code>
-       * @param value The serviceAccountId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServiceAccountId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        serviceAccountId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Service account, which has permission to write to destination
-       * </pre>
-       *
-       * <code>string service_account_id = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServiceAccountId() {
-        
-        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Service account, which has permission to write to destination
-       * </pre>
-       *
-       * <code>string service_account_id = 4;</code>
-       * @param value The bytes for serviceAccountId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServiceAccountIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        serviceAccountId_ = value;
         onChanged();
         return this;
       }
@@ -4071,29 +3885,28 @@ public final class PERB {
       "/bus.proto\022&yandex.cloud.serverless.even" +
       "trouter.v1\032\037google/protobuf/timestamp.pr" +
       "oto\032\'yandex/cloud/logging/v1/log_entry.p" +
-      "roto\032\035yandex/cloud/validation.proto\"\264\001\n\n" +
+      "roto\032\035yandex/cloud/validation.proto\"\236\001\n\n" +
       "LogOptions\022 \n\014log_group_id\030\001 \001(\tB\010\212\3101\004<=" +
       "50H\000\022\035\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022:\n\tm" +
       "in_level\030\003 \001(\0162\'.yandex.cloud.logging.v1" +
-      ".LogLevel.Level\022\032\n\022service_account_id\030\004 " +
-      "\001(\tB\r\n\013destination\"\216\004\n\003Bus\022\n\n\002id\030\001 \001(\t\022\021" +
-      "\n\tfolder_id\030\002 \001(\t\022\020\n\010cloud_id\030\003 \001(\t\022.\n\nc" +
-      "reated_at\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022\014\n\004name\030\005 \001(\t\022\023\n\013description\030\006 \001(\t\022G" +
-      "\n\006labels\030\007 \003(\01327.yandex.cloud.serverless" +
-      ".eventrouter.v1.Bus.LabelsEntry\022\033\n\023delet" +
-      "ion_protection\030\010 \001(\010\022B\n\006status\030\t \001(\01622.y" +
-      "andex.cloud.serverless.eventrouter.v1.Bu" +
-      "s.Status\022\027\n\017logging_enabled\030\n \001(\010\022G\n\013log" +
-      "_options\030\013 \001(\01322.yandex.cloud.serverless" +
-      ".eventrouter.v1.LogOptions\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"H\n\006Sta" +
-      "tus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020" +
-      "\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003B\212\001\n*yandex.c" +
-      "loud.api.serverless.eventrouter.v1B\004PERB" +
-      "ZVgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/serverless/eventrouter/v1;eve" +
-      "ntrouterb\006proto3"
+      ".LogLevel.LevelB\r\n\013destinationJ\004\010\004\020\005\"\216\004\n" +
+      "\003Bus\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\020\n\010c" +
+      "loud_id\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022\014\n\004name\030\005 \001(\t\022\023\n\013d" +
+      "escription\030\006 \001(\t\022G\n\006labels\030\007 \003(\01327.yande" +
+      "x.cloud.serverless.eventrouter.v1.Bus.La" +
+      "belsEntry\022\033\n\023deletion_protection\030\010 \001(\010\022B" +
+      "\n\006status\030\t \001(\01622.yandex.cloud.serverless" +
+      ".eventrouter.v1.Bus.Status\022\027\n\017logging_en" +
+      "abled\030\n \001(\010\022G\n\013log_options\030\013 \001(\01322.yande" +
+      "x.cloud.serverless.eventrouter.v1.LogOpt" +
+      "ions\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPECIF" +
+      "IED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELET" +
+      "ING\020\003B\212\001\n*yandex.cloud.api.serverless.ev" +
+      "entrouter.v1B\004PERBZVgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/serverless/" +
+      "eventrouter/v1;eventrouterb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4107,7 +3920,7 @@ public final class PERB {
     internal_static_yandex_cloud_serverless_eventrouter_v1_LogOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_eventrouter_v1_LogOptions_descriptor,
-        new java.lang.String[] { "LogGroupId", "FolderId", "MinLevel", "ServiceAccountId", "Destination", });
+        new java.lang.String[] { "LogGroupId", "FolderId", "MinLevel", "Destination", });
     internal_static_yandex_cloud_serverless_eventrouter_v1_Bus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_serverless_eventrouter_v1_Bus_fieldAccessorTable = new

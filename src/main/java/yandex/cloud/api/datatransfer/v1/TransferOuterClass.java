@@ -237,6 +237,22 @@ public final class TransferOuterClass {
      * <code>DONE = 8;</code>
      */
     DONE(8),
+    /**
+     * <pre>
+     * Transfer is paused by user - same as stopped, but replication slot is alive
+     * </pre>
+     *
+     * <code>PAUSED = 9;</code>
+     */
+    PAUSED(9),
+    /**
+     * <pre>
+     * Transfer does some work before replication
+     * </pre>
+     *
+     * <code>PREPARING = 10;</code>
+     */
+    PREPARING(10),
     UNRECOGNIZED(-1),
     ;
 
@@ -308,6 +324,22 @@ public final class TransferOuterClass {
      * <code>DONE = 8;</code>
      */
     public static final int DONE_VALUE = 8;
+    /**
+     * <pre>
+     * Transfer is paused by user - same as stopped, but replication slot is alive
+     * </pre>
+     *
+     * <code>PAUSED = 9;</code>
+     */
+    public static final int PAUSED_VALUE = 9;
+    /**
+     * <pre>
+     * Transfer does some work before replication
+     * </pre>
+     *
+     * <code>PREPARING = 10;</code>
+     */
+    public static final int PREPARING_VALUE = 10;
 
 
     public final int getNumber() {
@@ -343,6 +375,8 @@ public final class TransferOuterClass {
         case 6: return ERROR;
         case 7: return SNAPSHOTTING;
         case 8: return DONE;
+        case 9: return PAUSED;
+        case 10: return PREPARING;
         default: return null;
       }
     }
@@ -23035,14 +23069,14 @@ public final class TransferOuterClass {
       "de_objects\030\001 \003(\t*p\n\014TransferType\022\035\n\031TRAN" +
       "SFER_TYPE_UNSPECIFIED\020\000\022\032\n\026SNAPSHOT_AND_" +
       "INCREMENT\020\001\022\021\n\rSNAPSHOT_ONLY\020\002\022\022\n\016INCREM" +
-      "ENT_ONLY\020\003*\233\001\n\016TransferStatus\022\037\n\033TRANSFE" +
+      "ENT_ONLY\020\003*\266\001\n\016TransferStatus\022\037\n\033TRANSFE" +
       "R_STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\013\n\007" +
       "CREATED\020\002\022\013\n\007RUNNING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007" +
       "STOPPED\020\005\022\t\n\005ERROR\020\006\022\020\n\014SNAPSHOTTING\020\007\022\010" +
-      "\n\004DONE\020\010Bq\n yandex.cloud.api.datatransfe" +
-      "r.v1ZMgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/datatransfer/v1;datatrans" +
-      "ferb\006proto3"
+      "\n\004DONE\020\010\022\n\n\006PAUSED\020\t\022\r\n\tPREPARING\020\nBq\n y" +
+      "andex.cloud.api.datatransfer.v1ZMgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/datatransfer/v1;datatransferb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

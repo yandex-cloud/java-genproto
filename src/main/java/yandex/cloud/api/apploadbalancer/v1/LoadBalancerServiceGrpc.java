@@ -545,6 +545,68 @@ public final class LoadBalancerServiceGrpc {
     return getCancelZonalShiftMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableZonesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DisableZones",
+      requestType = yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableZonesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableZonesMethod;
+    if ((getDisableZonesMethod = LoadBalancerServiceGrpc.getDisableZonesMethod) == null) {
+      synchronized (LoadBalancerServiceGrpc.class) {
+        if ((getDisableZonesMethod = LoadBalancerServiceGrpc.getDisableZonesMethod) == null) {
+          LoadBalancerServiceGrpc.getDisableZonesMethod = getDisableZonesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisableZones"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("DisableZones"))
+              .build();
+        }
+      }
+    }
+    return getDisableZonesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableZonesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EnableZones",
+      requestType = yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableZonesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableZonesMethod;
+    if ((getEnableZonesMethod = LoadBalancerServiceGrpc.getEnableZonesMethod) == null) {
+      synchronized (LoadBalancerServiceGrpc.class) {
+        if ((getEnableZonesMethod = LoadBalancerServiceGrpc.getEnableZonesMethod) == null) {
+          LoadBalancerServiceGrpc.getEnableZonesMethod = getEnableZonesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableZones"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("EnableZones"))
+              .build();
+        }
+      }
+    }
+    return getEnableZonesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -755,6 +817,7 @@ public final class LoadBalancerServiceGrpc {
      * Start ZonalShift for the specified load balancer.
      * </pre>
      */
+    @java.lang.Deprecated
     public void startZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStartZonalShiftMethod(), responseObserver);
@@ -765,9 +828,30 @@ public final class LoadBalancerServiceGrpc {
      * Cancel ZonalShift for the specified load balancer.
      * </pre>
      */
+    @java.lang.Deprecated
     public void cancelZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelZonalShiftMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Disable L7 traffic routing in zones for the specified load balancer.
+     * </pre>
+     */
+    public void disableZones(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableZonesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Enable L7 traffic routing back in zones for the specified load balancer.
+     * </pre>
+     */
+    public void enableZones(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableZonesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -891,6 +975,20 @@ public final class LoadBalancerServiceGrpc {
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CANCEL_ZONAL_SHIFT)))
+          .addMethod(
+            getDisableZonesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DISABLE_ZONES)))
+          .addMethod(
+            getEnableZonesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ENABLE_ZONES)))
           .build();
     }
   }
@@ -1086,6 +1184,7 @@ public final class LoadBalancerServiceGrpc {
      * Start ZonalShift for the specified load balancer.
      * </pre>
      */
+    @java.lang.Deprecated
     public void startZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1097,10 +1196,33 @@ public final class LoadBalancerServiceGrpc {
      * Cancel ZonalShift for the specified load balancer.
      * </pre>
      */
+    @java.lang.Deprecated
     public void cancelZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCancelZonalShiftMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Disable L7 traffic routing in zones for the specified load balancer.
+     * </pre>
+     */
+    public void disableZones(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDisableZonesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Enable L7 traffic routing back in zones for the specified load balancer.
+     * </pre>
+     */
+    public void enableZones(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEnableZonesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1280,6 +1402,7 @@ public final class LoadBalancerServiceGrpc {
      * Start ZonalShift for the specified load balancer.
      * </pre>
      */
+    @java.lang.Deprecated
     public yandex.cloud.api.operation.OperationOuterClass.Operation startZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStartZonalShiftMethod(), getCallOptions(), request);
@@ -1290,9 +1413,30 @@ public final class LoadBalancerServiceGrpc {
      * Cancel ZonalShift for the specified load balancer.
      * </pre>
      */
+    @java.lang.Deprecated
     public yandex.cloud.api.operation.OperationOuterClass.Operation cancelZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCancelZonalShiftMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Disable L7 traffic routing in zones for the specified load balancer.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation disableZones(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDisableZonesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Enable L7 traffic routing back in zones for the specified load balancer.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation enableZones(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEnableZonesMethod(), getCallOptions(), request);
     }
   }
 
@@ -1487,6 +1631,7 @@ public final class LoadBalancerServiceGrpc {
      * Start ZonalShift for the specified load balancer.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> startZonalShift(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1498,10 +1643,33 @@ public final class LoadBalancerServiceGrpc {
      * Cancel ZonalShift for the specified load balancer.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> cancelZonalShift(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCancelZonalShiftMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Disable L7 traffic routing in zones for the specified load balancer.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> disableZones(
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDisableZonesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Enable L7 traffic routing back in zones for the specified load balancer.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> enableZones(
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEnableZonesMethod(), getCallOptions()), request);
     }
   }
 
@@ -1522,6 +1690,8 @@ public final class LoadBalancerServiceGrpc {
   private static final int METHODID_LIST_OPERATIONS = 14;
   private static final int METHODID_START_ZONAL_SHIFT = 15;
   private static final int METHODID_CANCEL_ZONAL_SHIFT = 16;
+  private static final int METHODID_DISABLE_ZONES = 17;
+  private static final int METHODID_ENABLE_ZONES = 18;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1608,6 +1778,14 @@ public final class LoadBalancerServiceGrpc {
           serviceImpl.cancelZonalShift((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_DISABLE_ZONES:
+          serviceImpl.disableZones((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ENABLE_ZONES:
+          serviceImpl.enableZones((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1686,6 +1864,8 @@ public final class LoadBalancerServiceGrpc {
               .addMethod(getListOperationsMethod())
               .addMethod(getStartZonalShiftMethod())
               .addMethod(getCancelZonalShiftMethod())
+              .addMethod(getDisableZonesMethod())
+              .addMethod(getEnableZonesMethod())
               .build();
         }
       }

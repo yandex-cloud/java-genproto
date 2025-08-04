@@ -3896,6 +3896,4676 @@ public final class ImgSearchService {
 
   }
 
+  public interface ImageSearchByImageRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.searchapi.v2.ImageSearchByImageRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Restricts the search to the specific website.
+     * </pre>
+     *
+     * <code>string site = 1 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The site.
+     */
+    java.lang.String getSite();
+    /**
+     * <pre>
+     * Restricts the search to the specific website.
+     * </pre>
+     *
+     * <code>string site = 1 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for site.
+     */
+    com.google.protobuf.ByteString
+        getSiteBytes();
+
+    /**
+     * <pre>
+     * ID of the folder.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * The image url to use for the search.
+     * </pre>
+     *
+     * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return Whether the url field is set.
+     */
+    boolean hasUrl();
+    /**
+     * <pre>
+     * The image url to use for the search.
+     * </pre>
+     *
+     * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The url.
+     */
+    java.lang.String getUrl();
+    /**
+     * <pre>
+     * The image url to use for the search.
+     * </pre>
+     *
+     * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for url.
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+
+    /**
+     * <pre>
+     * The image data to use for the search.
+     * </pre>
+     *
+     * <code>bytes data = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return Whether the data field is set.
+     */
+    boolean hasData();
+    /**
+     * <pre>
+     * The image data to use for the search.
+     * </pre>
+     *
+     * <code>bytes data = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+
+    /**
+     * <pre>
+     * CBIR ID of the image to use for the search.
+     * </pre>
+     *
+     * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <pre>
+     * CBIR ID of the image to use for the search.
+     * </pre>
+     *
+     * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * CBIR ID of the image to use for the search.
+     * </pre>
+     *
+     * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * The number of a requested page with search results.
+     * </pre>
+     *
+     * <code>int64 page = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The page.
+     */
+    long getPage();
+
+    /**
+     * <pre>
+     * Rule for filtering search results and determines whether any documents should be excluded.
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchQuery.FamilyMode family_mode = 7;</code>
+     * @return The enum numeric value on the wire for familyMode.
+     */
+    int getFamilyModeValue();
+    /**
+     * <pre>
+     * Rule for filtering search results and determines whether any documents should be excluded.
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchQuery.FamilyMode family_mode = 7;</code>
+     * @return The familyMode.
+     */
+    yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode getFamilyMode();
+
+    public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest.ImageCase getImageCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.searchapi.v2.ImageSearchByImageRequest}
+   */
+  public static final class ImageSearchByImageRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.searchapi.v2.ImageSearchByImageRequest)
+      ImageSearchByImageRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ImageSearchByImageRequest.newBuilder() to construct.
+    private ImageSearchByImageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ImageSearchByImageRequest() {
+      site_ = "";
+      folderId_ = "";
+      familyMode_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ImageSearchByImageRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ImageSearchByImageRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              site_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              imageCase_ = 3;
+              image_ = s;
+              break;
+            }
+            case 34: {
+              image_ = input.readBytes();
+              imageCase_ = 4;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              imageCase_ = 5;
+              image_ = s;
+              break;
+            }
+            case 48: {
+
+              page_ = input.readInt64();
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              familyMode_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest.class, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest.Builder.class);
+    }
+
+    private int imageCase_ = 0;
+    private java.lang.Object image_;
+    public enum ImageCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      URL(3),
+      DATA(4),
+      ID(5),
+      IMAGE_NOT_SET(0);
+      private final int value;
+      private ImageCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ImageCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ImageCase forNumber(int value) {
+        switch (value) {
+          case 3: return URL;
+          case 4: return DATA;
+          case 5: return ID;
+          case 0: return IMAGE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ImageCase
+    getImageCase() {
+      return ImageCase.forNumber(
+          imageCase_);
+    }
+
+    public static final int SITE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object site_;
+    /**
+     * <pre>
+     * Restricts the search to the specific website.
+     * </pre>
+     *
+     * <code>string site = 1 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The site.
+     */
+    @java.lang.Override
+    public java.lang.String getSite() {
+      java.lang.Object ref = site_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        site_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Restricts the search to the specific website.
+     * </pre>
+     *
+     * <code>string site = 1 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for site.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSiteBytes() {
+      java.lang.Object ref = site_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        site_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URL_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * The image url to use for the search.
+     * </pre>
+     *
+     * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return Whether the url field is set.
+     */
+    public boolean hasUrl() {
+      return imageCase_ == 3;
+    }
+    /**
+     * <pre>
+     * The image url to use for the search.
+     * </pre>
+     *
+     * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The url.
+     */
+    public java.lang.String getUrl() {
+      java.lang.Object ref = "";
+      if (imageCase_ == 3) {
+        ref = image_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (imageCase_ == 3) {
+          image_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The image url to use for the search.
+     * </pre>
+     *
+     * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for url.
+     */
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = "";
+      if (imageCase_ == 3) {
+        ref = image_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (imageCase_ == 3) {
+          image_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * The image data to use for the search.
+     * </pre>
+     *
+     * <code>bytes data = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return Whether the data field is set.
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return imageCase_ == 4;
+    }
+    /**
+     * <pre>
+     * The image data to use for the search.
+     * </pre>
+     *
+     * <code>bytes data = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      if (imageCase_ == 4) {
+        return (com.google.protobuf.ByteString) image_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final int ID_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * CBIR ID of the image to use for the search.
+     * </pre>
+     *
+     * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return Whether the id field is set.
+     */
+    public boolean hasId() {
+      return imageCase_ == 5;
+    }
+    /**
+     * <pre>
+     * CBIR ID of the image to use for the search.
+     * </pre>
+     *
+     * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The id.
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = "";
+      if (imageCase_ == 5) {
+        ref = image_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (imageCase_ == 5) {
+          image_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * CBIR ID of the image to use for the search.
+     * </pre>
+     *
+     * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for id.
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = "";
+      if (imageCase_ == 5) {
+        ref = image_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (imageCase_ == 5) {
+          image_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_FIELD_NUMBER = 6;
+    private long page_;
+    /**
+     * <pre>
+     * The number of a requested page with search results.
+     * </pre>
+     *
+     * <code>int64 page = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The page.
+     */
+    @java.lang.Override
+    public long getPage() {
+      return page_;
+    }
+
+    public static final int FAMILY_MODE_FIELD_NUMBER = 7;
+    private int familyMode_;
+    /**
+     * <pre>
+     * Rule for filtering search results and determines whether any documents should be excluded.
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchQuery.FamilyMode family_mode = 7;</code>
+     * @return The enum numeric value on the wire for familyMode.
+     */
+    @java.lang.Override public int getFamilyModeValue() {
+      return familyMode_;
+    }
+    /**
+     * <pre>
+     * Rule for filtering search results and determines whether any documents should be excluded.
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchQuery.FamilyMode family_mode = 7;</code>
+     * @return The familyMode.
+     */
+    @java.lang.Override public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode getFamilyMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode result = yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode.valueOf(familyMode_);
+      return result == null ? yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(site_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, site_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
+      }
+      if (imageCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, image_);
+      }
+      if (imageCase_ == 4) {
+        output.writeBytes(
+            4, (com.google.protobuf.ByteString) image_);
+      }
+      if (imageCase_ == 5) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, image_);
+      }
+      if (page_ != 0L) {
+        output.writeInt64(6, page_);
+      }
+      if (familyMode_ != yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode.FAMILY_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, familyMode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(site_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, site_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
+      }
+      if (imageCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, image_);
+      }
+      if (imageCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              4, (com.google.protobuf.ByteString) image_);
+      }
+      if (imageCase_ == 5) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, image_);
+      }
+      if (page_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, page_);
+      }
+      if (familyMode_ != yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode.FAMILY_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, familyMode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest other = (yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest) obj;
+
+      if (!getSite()
+          .equals(other.getSite())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPage()
+          != other.getPage()) return false;
+      if (familyMode_ != other.familyMode_) return false;
+      if (!getImageCase().equals(other.getImageCase())) return false;
+      switch (imageCase_) {
+        case 3:
+          if (!getUrl()
+              .equals(other.getUrl())) return false;
+          break;
+        case 4:
+          if (!getData()
+              .equals(other.getData())) return false;
+          break;
+        case 5:
+          if (!getId()
+              .equals(other.getId())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SITE_FIELD_NUMBER;
+      hash = (53 * hash) + getSite().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + PAGE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPage());
+      hash = (37 * hash) + FAMILY_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + familyMode_;
+      switch (imageCase_) {
+        case 3:
+          hash = (37 * hash) + URL_FIELD_NUMBER;
+          hash = (53 * hash) + getUrl().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + DATA_FIELD_NUMBER;
+          hash = (53 * hash) + getData().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + ID_FIELD_NUMBER;
+          hash = (53 * hash) + getId().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.searchapi.v2.ImageSearchByImageRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.searchapi.v2.ImageSearchByImageRequest)
+        yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest.class, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        site_ = "";
+
+        folderId_ = "";
+
+        page_ = 0L;
+
+        familyMode_ = 0;
+
+        imageCase_ = 0;
+        image_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest build() {
+        yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest buildPartial() {
+        yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest result = new yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest(this);
+        result.site_ = site_;
+        result.folderId_ = folderId_;
+        if (imageCase_ == 3) {
+          result.image_ = image_;
+        }
+        if (imageCase_ == 4) {
+          result.image_ = image_;
+        }
+        if (imageCase_ == 5) {
+          result.image_ = image_;
+        }
+        result.page_ = page_;
+        result.familyMode_ = familyMode_;
+        result.imageCase_ = imageCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest) {
+          return mergeFrom((yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest other) {
+        if (other == yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest.getDefaultInstance()) return this;
+        if (!other.getSite().isEmpty()) {
+          site_ = other.site_;
+          onChanged();
+        }
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (other.getPage() != 0L) {
+          setPage(other.getPage());
+        }
+        if (other.familyMode_ != 0) {
+          setFamilyModeValue(other.getFamilyModeValue());
+        }
+        switch (other.getImageCase()) {
+          case URL: {
+            imageCase_ = 3;
+            image_ = other.image_;
+            onChanged();
+            break;
+          }
+          case DATA: {
+            setData(other.getData());
+            break;
+          }
+          case ID: {
+            imageCase_ = 5;
+            image_ = other.image_;
+            onChanged();
+            break;
+          }
+          case IMAGE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int imageCase_ = 0;
+      private java.lang.Object image_;
+      public ImageCase
+          getImageCase() {
+        return ImageCase.forNumber(
+            imageCase_);
+      }
+
+      public Builder clearImage() {
+        imageCase_ = 0;
+        image_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object site_ = "";
+      /**
+       * <pre>
+       * Restricts the search to the specific website.
+       * </pre>
+       *
+       * <code>string site = 1 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The site.
+       */
+      public java.lang.String getSite() {
+        java.lang.Object ref = site_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          site_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Restricts the search to the specific website.
+       * </pre>
+       *
+       * <code>string site = 1 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for site.
+       */
+      public com.google.protobuf.ByteString
+          getSiteBytes() {
+        java.lang.Object ref = site_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          site_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Restricts the search to the specific website.
+       * </pre>
+       *
+       * <code>string site = 1 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The site to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSite(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        site_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Restricts the search to the specific website.
+       * </pre>
+       *
+       * <code>string site = 1 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSite() {
+        
+        site_ = getDefaultInstance().getSite();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Restricts the search to the specific website.
+       * </pre>
+       *
+       * <code>string site = 1 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for site to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSiteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        site_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The image url to use for the search.
+       * </pre>
+       *
+       * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return Whether the url field is set.
+       */
+      @java.lang.Override
+      public boolean hasUrl() {
+        return imageCase_ == 3;
+      }
+      /**
+       * <pre>
+       * The image url to use for the search.
+       * </pre>
+       *
+       * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The url.
+       */
+      @java.lang.Override
+      public java.lang.String getUrl() {
+        java.lang.Object ref = "";
+        if (imageCase_ == 3) {
+          ref = image_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (imageCase_ == 3) {
+            image_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The image url to use for the search.
+       * </pre>
+       *
+       * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for url.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = "";
+        if (imageCase_ == 3) {
+          ref = image_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (imageCase_ == 3) {
+            image_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The image url to use for the search.
+       * </pre>
+       *
+       * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  imageCase_ = 3;
+        image_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The image url to use for the search.
+       * </pre>
+       *
+       * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrl() {
+        if (imageCase_ == 3) {
+          imageCase_ = 0;
+          image_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The image url to use for the search.
+       * </pre>
+       *
+       * <code>string url = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        imageCase_ = 3;
+        image_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The image data to use for the search.
+       * </pre>
+       *
+       * <code>bytes data = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @return Whether the data field is set.
+       */
+      public boolean hasData() {
+        return imageCase_ == 4;
+      }
+      /**
+       * <pre>
+       * The image data to use for the search.
+       * </pre>
+       *
+       * <code>bytes data = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @return The data.
+       */
+      public com.google.protobuf.ByteString getData() {
+        if (imageCase_ == 4) {
+          return (com.google.protobuf.ByteString) image_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <pre>
+       * The image data to use for the search.
+       * </pre>
+       *
+       * <code>bytes data = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  imageCase_ = 4;
+        image_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The image data to use for the search.
+       * </pre>
+       *
+       * <code>bytes data = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        if (imageCase_ == 4) {
+          imageCase_ = 0;
+          image_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * CBIR ID of the image to use for the search.
+       * </pre>
+       *
+       * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return Whether the id field is set.
+       */
+      @java.lang.Override
+      public boolean hasId() {
+        return imageCase_ == 5;
+      }
+      /**
+       * <pre>
+       * CBIR ID of the image to use for the search.
+       * </pre>
+       *
+       * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        java.lang.Object ref = "";
+        if (imageCase_ == 5) {
+          ref = image_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (imageCase_ == 5) {
+            image_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CBIR ID of the image to use for the search.
+       * </pre>
+       *
+       * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = "";
+        if (imageCase_ == 5) {
+          ref = image_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (imageCase_ == 5) {
+            image_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CBIR ID of the image to use for the search.
+       * </pre>
+       *
+       * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  imageCase_ = 5;
+        image_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CBIR ID of the image to use for the search.
+       * </pre>
+       *
+       * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        if (imageCase_ == 5) {
+          imageCase_ = 0;
+          image_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * CBIR ID of the image to use for the search.
+       * </pre>
+       *
+       * <code>string id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        imageCase_ = 5;
+        image_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long page_ ;
+      /**
+       * <pre>
+       * The number of a requested page with search results.
+       * </pre>
+       *
+       * <code>int64 page = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The page.
+       */
+      @java.lang.Override
+      public long getPage() {
+        return page_;
+      }
+      /**
+       * <pre>
+       * The number of a requested page with search results.
+       * </pre>
+       *
+       * <code>int64 page = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @param value The page to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPage(long value) {
+        
+        page_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of a requested page with search results.
+       * </pre>
+       *
+       * <code>int64 page = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPage() {
+        
+        page_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int familyMode_ = 0;
+      /**
+       * <pre>
+       * Rule for filtering search results and determines whether any documents should be excluded.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchQuery.FamilyMode family_mode = 7;</code>
+       * @return The enum numeric value on the wire for familyMode.
+       */
+      @java.lang.Override public int getFamilyModeValue() {
+        return familyMode_;
+      }
+      /**
+       * <pre>
+       * Rule for filtering search results and determines whether any documents should be excluded.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchQuery.FamilyMode family_mode = 7;</code>
+       * @param value The enum numeric value on the wire for familyMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFamilyModeValue(int value) {
+        
+        familyMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule for filtering search results and determines whether any documents should be excluded.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchQuery.FamilyMode family_mode = 7;</code>
+       * @return The familyMode.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode getFamilyMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode result = yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode.valueOf(familyMode_);
+        return result == null ? yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Rule for filtering search results and determines whether any documents should be excluded.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchQuery.FamilyMode family_mode = 7;</code>
+       * @param value The familyMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFamilyMode(yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchQuery.FamilyMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        familyMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule for filtering search results and determines whether any documents should be excluded.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchQuery.FamilyMode family_mode = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFamilyMode() {
+        
+        familyMode_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.searchapi.v2.ImageSearchByImageRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.searchapi.v2.ImageSearchByImageRequest)
+    private static final yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest();
+    }
+
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImageSearchByImageRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ImageSearchByImageRequest>() {
+      @java.lang.Override
+      public ImageSearchByImageRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ImageSearchByImageRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImageSearchByImageRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImageSearchByImageRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ImageSearchByImageResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.searchapi.v2.ImageSearchByImageResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The images found.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo> 
+        getImagesList();
+    /**
+     * <pre>
+     * The images found.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+     */
+    yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo getImages(int index);
+    /**
+     * <pre>
+     * The images found.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+     */
+    int getImagesCount();
+    /**
+     * <pre>
+     * The images found.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfoOrBuilder> 
+        getImagesOrBuilderList();
+    /**
+     * <pre>
+     * The images found.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+     */
+    yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfoOrBuilder getImagesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * The number of the page with search results.
+     * </pre>
+     *
+     * <code>int64 page = 2;</code>
+     * @return The page.
+     */
+    long getPage();
+
+    /**
+     * <pre>
+     * The number of the last page with search results.
+     * </pre>
+     *
+     * <code>int64 max_page = 3;</code>
+     * @return The maxPage.
+     */
+    long getMaxPage();
+
+    /**
+     * <pre>
+     * CBIR ID of the image used for the search.
+     * </pre>
+     *
+     * <code>string id = 4;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * CBIR ID of the image used for the search.
+     * </pre>
+     *
+     * <code>string id = 4;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.searchapi.v2.ImageSearchByImageResponse}
+   */
+  public static final class ImageSearchByImageResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.searchapi.v2.ImageSearchByImageResponse)
+      ImageSearchByImageResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ImageSearchByImageResponse.newBuilder() to construct.
+    private ImageSearchByImageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ImageSearchByImageResponse() {
+      images_ = java.util.Collections.emptyList();
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ImageSearchByImageResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ImageSearchByImageResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                images_ = new java.util.ArrayList<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              images_.add(
+                  input.readMessage(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 16: {
+
+              page_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              maxPage_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          images_ = java.util.Collections.unmodifiableList(images_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.class, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.Builder.class);
+    }
+
+    public interface ImageInfoOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Image URL.
+       * </pre>
+       *
+       * <code>string url = 1;</code>
+       * @return The url.
+       */
+      java.lang.String getUrl();
+      /**
+       * <pre>
+       * Image URL.
+       * </pre>
+       *
+       * <code>string url = 1;</code>
+       * @return The bytes for url.
+       */
+      com.google.protobuf.ByteString
+          getUrlBytes();
+
+      /**
+       * <pre>
+       * Image format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.ImageSpec.ImageFormat format = 2;</code>
+       * @return The enum numeric value on the wire for format.
+       */
+      int getFormatValue();
+      /**
+       * <pre>
+       * Image format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.ImageSpec.ImageFormat format = 2;</code>
+       * @return The format.
+       */
+      yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat getFormat();
+
+      /**
+       * <pre>
+       * Image width.
+       * </pre>
+       *
+       * <code>int64 width = 3;</code>
+       * @return The width.
+       */
+      long getWidth();
+
+      /**
+       * <pre>
+       * Image height.
+       * </pre>
+       *
+       * <code>int64 height = 4;</code>
+       * @return The height.
+       */
+      long getHeight();
+
+      /**
+       * <pre>
+       * Text passage.
+       * </pre>
+       *
+       * <code>string passage = 5;</code>
+       * @return The passage.
+       */
+      java.lang.String getPassage();
+      /**
+       * <pre>
+       * Text passage.
+       * </pre>
+       *
+       * <code>string passage = 5;</code>
+       * @return The bytes for passage.
+       */
+      com.google.protobuf.ByteString
+          getPassageBytes();
+
+      /**
+       * <pre>
+       * Document host.
+       * </pre>
+       *
+       * <code>string host = 6;</code>
+       * @return The host.
+       */
+      java.lang.String getHost();
+      /**
+       * <pre>
+       * Document host.
+       * </pre>
+       *
+       * <code>string host = 6;</code>
+       * @return The bytes for host.
+       */
+      com.google.protobuf.ByteString
+          getHostBytes();
+
+      /**
+       * <pre>
+       * Document title.
+       * </pre>
+       *
+       * <code>string page_title = 7;</code>
+       * @return The pageTitle.
+       */
+      java.lang.String getPageTitle();
+      /**
+       * <pre>
+       * Document title.
+       * </pre>
+       *
+       * <code>string page_title = 7;</code>
+       * @return The bytes for pageTitle.
+       */
+      com.google.protobuf.ByteString
+          getPageTitleBytes();
+
+      /**
+       * <pre>
+       * Document URL.
+       * </pre>
+       *
+       * <code>string page_url = 8;</code>
+       * @return The pageUrl.
+       */
+      java.lang.String getPageUrl();
+      /**
+       * <pre>
+       * Document URL.
+       * </pre>
+       *
+       * <code>string page_url = 8;</code>
+       * @return The bytes for pageUrl.
+       */
+      com.google.protobuf.ByteString
+          getPageUrlBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo}
+     */
+    public static final class ImageInfo extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo)
+        ImageInfoOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ImageInfo.newBuilder() to construct.
+      private ImageInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ImageInfo() {
+        url_ = "";
+        format_ = 0;
+        passage_ = "";
+        host_ = "";
+        pageTitle_ = "";
+        pageUrl_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ImageInfo();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ImageInfo(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                url_ = s;
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+
+                format_ = rawValue;
+                break;
+              }
+              case 24: {
+
+                width_ = input.readInt64();
+                break;
+              }
+              case 32: {
+
+                height_ = input.readInt64();
+                break;
+              }
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                passage_ = s;
+                break;
+              }
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                host_ = s;
+                break;
+              }
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                pageTitle_ = s;
+                break;
+              }
+              case 66: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                pageUrl_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_ImageInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_ImageInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.class, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder.class);
+      }
+
+      public static final int URL_FIELD_NUMBER = 1;
+      private volatile java.lang.Object url_;
+      /**
+       * <pre>
+       * Image URL.
+       * </pre>
+       *
+       * <code>string url = 1;</code>
+       * @return The url.
+       */
+      @java.lang.Override
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          url_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Image URL.
+       * </pre>
+       *
+       * <code>string url = 1;</code>
+       * @return The bytes for url.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int FORMAT_FIELD_NUMBER = 2;
+      private int format_;
+      /**
+       * <pre>
+       * Image format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.ImageSpec.ImageFormat format = 2;</code>
+       * @return The enum numeric value on the wire for format.
+       */
+      @java.lang.Override public int getFormatValue() {
+        return format_;
+      }
+      /**
+       * <pre>
+       * Image format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.ImageSpec.ImageFormat format = 2;</code>
+       * @return The format.
+       */
+      @java.lang.Override public yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat getFormat() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat result = yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat.valueOf(format_);
+        return result == null ? yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat.UNRECOGNIZED : result;
+      }
+
+      public static final int WIDTH_FIELD_NUMBER = 3;
+      private long width_;
+      /**
+       * <pre>
+       * Image width.
+       * </pre>
+       *
+       * <code>int64 width = 3;</code>
+       * @return The width.
+       */
+      @java.lang.Override
+      public long getWidth() {
+        return width_;
+      }
+
+      public static final int HEIGHT_FIELD_NUMBER = 4;
+      private long height_;
+      /**
+       * <pre>
+       * Image height.
+       * </pre>
+       *
+       * <code>int64 height = 4;</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+
+      public static final int PASSAGE_FIELD_NUMBER = 5;
+      private volatile java.lang.Object passage_;
+      /**
+       * <pre>
+       * Text passage.
+       * </pre>
+       *
+       * <code>string passage = 5;</code>
+       * @return The passage.
+       */
+      @java.lang.Override
+      public java.lang.String getPassage() {
+        java.lang.Object ref = passage_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          passage_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Text passage.
+       * </pre>
+       *
+       * <code>string passage = 5;</code>
+       * @return The bytes for passage.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPassageBytes() {
+        java.lang.Object ref = passage_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          passage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int HOST_FIELD_NUMBER = 6;
+      private volatile java.lang.Object host_;
+      /**
+       * <pre>
+       * Document host.
+       * </pre>
+       *
+       * <code>string host = 6;</code>
+       * @return The host.
+       */
+      @java.lang.Override
+      public java.lang.String getHost() {
+        java.lang.Object ref = host_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          host_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Document host.
+       * </pre>
+       *
+       * <code>string host = 6;</code>
+       * @return The bytes for host.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getHostBytes() {
+        java.lang.Object ref = host_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          host_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PAGE_TITLE_FIELD_NUMBER = 7;
+      private volatile java.lang.Object pageTitle_;
+      /**
+       * <pre>
+       * Document title.
+       * </pre>
+       *
+       * <code>string page_title = 7;</code>
+       * @return The pageTitle.
+       */
+      @java.lang.Override
+      public java.lang.String getPageTitle() {
+        java.lang.Object ref = pageTitle_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageTitle_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Document title.
+       * </pre>
+       *
+       * <code>string page_title = 7;</code>
+       * @return The bytes for pageTitle.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPageTitleBytes() {
+        java.lang.Object ref = pageTitle_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageTitle_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PAGE_URL_FIELD_NUMBER = 8;
+      private volatile java.lang.Object pageUrl_;
+      /**
+       * <pre>
+       * Document URL.
+       * </pre>
+       *
+       * <code>string page_url = 8;</code>
+       * @return The pageUrl.
+       */
+      @java.lang.Override
+      public java.lang.String getPageUrl() {
+        java.lang.Object ref = pageUrl_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageUrl_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Document URL.
+       * </pre>
+       *
+       * <code>string page_url = 8;</code>
+       * @return The bytes for pageUrl.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPageUrlBytes() {
+        java.lang.Object ref = pageUrl_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
+        }
+        if (format_ != yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat.IMAGE_FORMAT_UNSPECIFIED.getNumber()) {
+          output.writeEnum(2, format_);
+        }
+        if (width_ != 0L) {
+          output.writeInt64(3, width_);
+        }
+        if (height_ != 0L) {
+          output.writeInt64(4, height_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passage_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 5, passage_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 6, host_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageTitle_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 7, pageTitle_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageUrl_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 8, pageUrl_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
+        }
+        if (format_ != yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat.IMAGE_FORMAT_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, format_);
+        }
+        if (width_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(3, width_);
+        }
+        if (height_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(4, height_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passage_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, passage_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, host_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageTitle_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, pageTitle_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageUrl_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, pageUrl_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo other = (yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo) obj;
+
+        if (!getUrl()
+            .equals(other.getUrl())) return false;
+        if (format_ != other.format_) return false;
+        if (getWidth()
+            != other.getWidth()) return false;
+        if (getHeight()
+            != other.getHeight()) return false;
+        if (!getPassage()
+            .equals(other.getPassage())) return false;
+        if (!getHost()
+            .equals(other.getHost())) return false;
+        if (!getPageTitle()
+            .equals(other.getPageTitle())) return false;
+        if (!getPageUrl()
+            .equals(other.getPageUrl())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + URL_FIELD_NUMBER;
+        hash = (53 * hash) + getUrl().hashCode();
+        hash = (37 * hash) + FORMAT_FIELD_NUMBER;
+        hash = (53 * hash) + format_;
+        hash = (37 * hash) + WIDTH_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getWidth());
+        hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getHeight());
+        hash = (37 * hash) + PASSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getPassage().hashCode();
+        hash = (37 * hash) + HOST_FIELD_NUMBER;
+        hash = (53 * hash) + getHost().hashCode();
+        hash = (37 * hash) + PAGE_TITLE_FIELD_NUMBER;
+        hash = (53 * hash) + getPageTitle().hashCode();
+        hash = (37 * hash) + PAGE_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getPageUrl().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo)
+          yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfoOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_ImageInfo_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_ImageInfo_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.class, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          url_ = "";
+
+          format_ = 0;
+
+          width_ = 0L;
+
+          height_ = 0L;
+
+          passage_ = "";
+
+          host_ = "";
+
+          pageTitle_ = "";
+
+          pageUrl_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_ImageInfo_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo getDefaultInstanceForType() {
+          return yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo build() {
+          yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo buildPartial() {
+          yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo result = new yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo(this);
+          result.url_ = url_;
+          result.format_ = format_;
+          result.width_ = width_;
+          result.height_ = height_;
+          result.passage_ = passage_;
+          result.host_ = host_;
+          result.pageTitle_ = pageTitle_;
+          result.pageUrl_ = pageUrl_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo) {
+            return mergeFrom((yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo other) {
+          if (other == yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.getDefaultInstance()) return this;
+          if (!other.getUrl().isEmpty()) {
+            url_ = other.url_;
+            onChanged();
+          }
+          if (other.format_ != 0) {
+            setFormatValue(other.getFormatValue());
+          }
+          if (other.getWidth() != 0L) {
+            setWidth(other.getWidth());
+          }
+          if (other.getHeight() != 0L) {
+            setHeight(other.getHeight());
+          }
+          if (!other.getPassage().isEmpty()) {
+            passage_ = other.passage_;
+            onChanged();
+          }
+          if (!other.getHost().isEmpty()) {
+            host_ = other.host_;
+            onChanged();
+          }
+          if (!other.getPageTitle().isEmpty()) {
+            pageTitle_ = other.pageTitle_;
+            onChanged();
+          }
+          if (!other.getPageUrl().isEmpty()) {
+            pageUrl_ = other.pageUrl_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object url_ = "";
+        /**
+         * <pre>
+         * Image URL.
+         * </pre>
+         *
+         * <code>string url = 1;</code>
+         * @return The url.
+         */
+        public java.lang.String getUrl() {
+          java.lang.Object ref = url_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            url_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Image URL.
+         * </pre>
+         *
+         * <code>string url = 1;</code>
+         * @return The bytes for url.
+         */
+        public com.google.protobuf.ByteString
+            getUrlBytes() {
+          java.lang.Object ref = url_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            url_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Image URL.
+         * </pre>
+         *
+         * <code>string url = 1;</code>
+         * @param value The url to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUrl(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          url_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Image URL.
+         * </pre>
+         *
+         * <code>string url = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUrl() {
+          
+          url_ = getDefaultInstance().getUrl();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Image URL.
+         * </pre>
+         *
+         * <code>string url = 1;</code>
+         * @param value The bytes for url to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          url_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int format_ = 0;
+        /**
+         * <pre>
+         * Image format.
+         * </pre>
+         *
+         * <code>.yandex.cloud.searchapi.v2.ImageSpec.ImageFormat format = 2;</code>
+         * @return The enum numeric value on the wire for format.
+         */
+        @java.lang.Override public int getFormatValue() {
+          return format_;
+        }
+        /**
+         * <pre>
+         * Image format.
+         * </pre>
+         *
+         * <code>.yandex.cloud.searchapi.v2.ImageSpec.ImageFormat format = 2;</code>
+         * @param value The enum numeric value on the wire for format to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFormatValue(int value) {
+          
+          format_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Image format.
+         * </pre>
+         *
+         * <code>.yandex.cloud.searchapi.v2.ImageSpec.ImageFormat format = 2;</code>
+         * @return The format.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat getFormat() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat result = yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat.valueOf(format_);
+          return result == null ? yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Image format.
+         * </pre>
+         *
+         * <code>.yandex.cloud.searchapi.v2.ImageSpec.ImageFormat format = 2;</code>
+         * @param value The format to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFormat(yandex.cloud.api.search.v2.ImgSearchService.ImageSpec.ImageFormat value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          format_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Image format.
+         * </pre>
+         *
+         * <code>.yandex.cloud.searchapi.v2.ImageSpec.ImageFormat format = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFormat() {
+          
+          format_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private long width_ ;
+        /**
+         * <pre>
+         * Image width.
+         * </pre>
+         *
+         * <code>int64 width = 3;</code>
+         * @return The width.
+         */
+        @java.lang.Override
+        public long getWidth() {
+          return width_;
+        }
+        /**
+         * <pre>
+         * Image width.
+         * </pre>
+         *
+         * <code>int64 width = 3;</code>
+         * @param value The width to set.
+         * @return This builder for chaining.
+         */
+        public Builder setWidth(long value) {
+          
+          width_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Image width.
+         * </pre>
+         *
+         * <code>int64 width = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearWidth() {
+          
+          width_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long height_ ;
+        /**
+         * <pre>
+         * Image height.
+         * </pre>
+         *
+         * <code>int64 height = 4;</code>
+         * @return The height.
+         */
+        @java.lang.Override
+        public long getHeight() {
+          return height_;
+        }
+        /**
+         * <pre>
+         * Image height.
+         * </pre>
+         *
+         * <code>int64 height = 4;</code>
+         * @param value The height to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHeight(long value) {
+          
+          height_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Image height.
+         * </pre>
+         *
+         * <code>int64 height = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHeight() {
+          
+          height_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object passage_ = "";
+        /**
+         * <pre>
+         * Text passage.
+         * </pre>
+         *
+         * <code>string passage = 5;</code>
+         * @return The passage.
+         */
+        public java.lang.String getPassage() {
+          java.lang.Object ref = passage_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            passage_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Text passage.
+         * </pre>
+         *
+         * <code>string passage = 5;</code>
+         * @return The bytes for passage.
+         */
+        public com.google.protobuf.ByteString
+            getPassageBytes() {
+          java.lang.Object ref = passage_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            passage_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Text passage.
+         * </pre>
+         *
+         * <code>string passage = 5;</code>
+         * @param value The passage to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPassage(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          passage_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Text passage.
+         * </pre>
+         *
+         * <code>string passage = 5;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPassage() {
+          
+          passage_ = getDefaultInstance().getPassage();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Text passage.
+         * </pre>
+         *
+         * <code>string passage = 5;</code>
+         * @param value The bytes for passage to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPassageBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          passage_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object host_ = "";
+        /**
+         * <pre>
+         * Document host.
+         * </pre>
+         *
+         * <code>string host = 6;</code>
+         * @return The host.
+         */
+        public java.lang.String getHost() {
+          java.lang.Object ref = host_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            host_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Document host.
+         * </pre>
+         *
+         * <code>string host = 6;</code>
+         * @return The bytes for host.
+         */
+        public com.google.protobuf.ByteString
+            getHostBytes() {
+          java.lang.Object ref = host_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            host_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Document host.
+         * </pre>
+         *
+         * <code>string host = 6;</code>
+         * @param value The host to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHost(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          host_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Document host.
+         * </pre>
+         *
+         * <code>string host = 6;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHost() {
+          
+          host_ = getDefaultInstance().getHost();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Document host.
+         * </pre>
+         *
+         * <code>string host = 6;</code>
+         * @param value The bytes for host to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHostBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          host_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object pageTitle_ = "";
+        /**
+         * <pre>
+         * Document title.
+         * </pre>
+         *
+         * <code>string page_title = 7;</code>
+         * @return The pageTitle.
+         */
+        public java.lang.String getPageTitle() {
+          java.lang.Object ref = pageTitle_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            pageTitle_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Document title.
+         * </pre>
+         *
+         * <code>string page_title = 7;</code>
+         * @return The bytes for pageTitle.
+         */
+        public com.google.protobuf.ByteString
+            getPageTitleBytes() {
+          java.lang.Object ref = pageTitle_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            pageTitle_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Document title.
+         * </pre>
+         *
+         * <code>string page_title = 7;</code>
+         * @param value The pageTitle to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPageTitle(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          pageTitle_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Document title.
+         * </pre>
+         *
+         * <code>string page_title = 7;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPageTitle() {
+          
+          pageTitle_ = getDefaultInstance().getPageTitle();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Document title.
+         * </pre>
+         *
+         * <code>string page_title = 7;</code>
+         * @param value The bytes for pageTitle to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPageTitleBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          pageTitle_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object pageUrl_ = "";
+        /**
+         * <pre>
+         * Document URL.
+         * </pre>
+         *
+         * <code>string page_url = 8;</code>
+         * @return The pageUrl.
+         */
+        public java.lang.String getPageUrl() {
+          java.lang.Object ref = pageUrl_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            pageUrl_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Document URL.
+         * </pre>
+         *
+         * <code>string page_url = 8;</code>
+         * @return The bytes for pageUrl.
+         */
+        public com.google.protobuf.ByteString
+            getPageUrlBytes() {
+          java.lang.Object ref = pageUrl_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            pageUrl_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Document URL.
+         * </pre>
+         *
+         * <code>string page_url = 8;</code>
+         * @param value The pageUrl to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPageUrl(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          pageUrl_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Document URL.
+         * </pre>
+         *
+         * <code>string page_url = 8;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPageUrl() {
+          
+          pageUrl_ = getDefaultInstance().getPageUrl();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Document URL.
+         * </pre>
+         *
+         * <code>string page_url = 8;</code>
+         * @param value The bytes for pageUrl to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPageUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          pageUrl_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo)
+      private static final yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo();
+      }
+
+      public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ImageInfo>
+          PARSER = new com.google.protobuf.AbstractParser<ImageInfo>() {
+        @java.lang.Override
+        public ImageInfo parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ImageInfo(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ImageInfo> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ImageInfo> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int IMAGES_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo> images_;
+    /**
+     * <pre>
+     * The images found.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo> getImagesList() {
+      return images_;
+    }
+    /**
+     * <pre>
+     * The images found.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfoOrBuilder> 
+        getImagesOrBuilderList() {
+      return images_;
+    }
+    /**
+     * <pre>
+     * The images found.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+     */
+    @java.lang.Override
+    public int getImagesCount() {
+      return images_.size();
+    }
+    /**
+     * <pre>
+     * The images found.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo getImages(int index) {
+      return images_.get(index);
+    }
+    /**
+     * <pre>
+     * The images found.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfoOrBuilder getImagesOrBuilder(
+        int index) {
+      return images_.get(index);
+    }
+
+    public static final int PAGE_FIELD_NUMBER = 2;
+    private long page_;
+    /**
+     * <pre>
+     * The number of the page with search results.
+     * </pre>
+     *
+     * <code>int64 page = 2;</code>
+     * @return The page.
+     */
+    @java.lang.Override
+    public long getPage() {
+      return page_;
+    }
+
+    public static final int MAX_PAGE_FIELD_NUMBER = 3;
+    private long maxPage_;
+    /**
+     * <pre>
+     * The number of the last page with search results.
+     * </pre>
+     *
+     * <code>int64 max_page = 3;</code>
+     * @return The maxPage.
+     */
+    @java.lang.Override
+    public long getMaxPage() {
+      return maxPage_;
+    }
+
+    public static final int ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * CBIR ID of the image used for the search.
+     * </pre>
+     *
+     * <code>string id = 4;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * CBIR ID of the image used for the search.
+     * </pre>
+     *
+     * <code>string id = 4;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < images_.size(); i++) {
+        output.writeMessage(1, images_.get(i));
+      }
+      if (page_ != 0L) {
+        output.writeInt64(2, page_);
+      }
+      if (maxPage_ != 0L) {
+        output.writeInt64(3, maxPage_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < images_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, images_.get(i));
+      }
+      if (page_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, page_);
+      }
+      if (maxPage_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, maxPage_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse other = (yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse) obj;
+
+      if (!getImagesList()
+          .equals(other.getImagesList())) return false;
+      if (getPage()
+          != other.getPage()) return false;
+      if (getMaxPage()
+          != other.getMaxPage()) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getImagesCount() > 0) {
+        hash = (37 * hash) + IMAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getImagesList().hashCode();
+      }
+      hash = (37 * hash) + PAGE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPage());
+      hash = (37 * hash) + MAX_PAGE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxPage());
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.searchapi.v2.ImageSearchByImageResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.searchapi.v2.ImageSearchByImageResponse)
+        yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.class, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getImagesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (imagesBuilder_ == null) {
+          images_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          imagesBuilder_.clear();
+        }
+        page_ = 0L;
+
+        maxPage_ = 0L;
+
+        id_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.search.v2.ImgSearchService.internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse build() {
+        yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse buildPartial() {
+        yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse result = new yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (imagesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            images_ = java.util.Collections.unmodifiableList(images_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.images_ = images_;
+        } else {
+          result.images_ = imagesBuilder_.build();
+        }
+        result.page_ = page_;
+        result.maxPage_ = maxPage_;
+        result.id_ = id_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse) {
+          return mergeFrom((yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse other) {
+        if (other == yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.getDefaultInstance()) return this;
+        if (imagesBuilder_ == null) {
+          if (!other.images_.isEmpty()) {
+            if (images_.isEmpty()) {
+              images_ = other.images_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureImagesIsMutable();
+              images_.addAll(other.images_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.images_.isEmpty()) {
+            if (imagesBuilder_.isEmpty()) {
+              imagesBuilder_.dispose();
+              imagesBuilder_ = null;
+              images_ = other.images_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              imagesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getImagesFieldBuilder() : null;
+            } else {
+              imagesBuilder_.addAllMessages(other.images_);
+            }
+          }
+        }
+        if (other.getPage() != 0L) {
+          setPage(other.getPage());
+        }
+        if (other.getMaxPage() != 0L) {
+          setMaxPage(other.getMaxPage());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo> images_ =
+        java.util.Collections.emptyList();
+      private void ensureImagesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          images_ = new java.util.ArrayList<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo>(images_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfoOrBuilder> imagesBuilder_;
+
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo> getImagesList() {
+        if (imagesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(images_);
+        } else {
+          return imagesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public int getImagesCount() {
+        if (imagesBuilder_ == null) {
+          return images_.size();
+        } else {
+          return imagesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo getImages(int index) {
+        if (imagesBuilder_ == null) {
+          return images_.get(index);
+        } else {
+          return imagesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public Builder setImages(
+          int index, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo value) {
+        if (imagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureImagesIsMutable();
+          images_.set(index, value);
+          onChanged();
+        } else {
+          imagesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public Builder setImages(
+          int index, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder builderForValue) {
+        if (imagesBuilder_ == null) {
+          ensureImagesIsMutable();
+          images_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          imagesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public Builder addImages(yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo value) {
+        if (imagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureImagesIsMutable();
+          images_.add(value);
+          onChanged();
+        } else {
+          imagesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public Builder addImages(
+          int index, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo value) {
+        if (imagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureImagesIsMutable();
+          images_.add(index, value);
+          onChanged();
+        } else {
+          imagesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public Builder addImages(
+          yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder builderForValue) {
+        if (imagesBuilder_ == null) {
+          ensureImagesIsMutable();
+          images_.add(builderForValue.build());
+          onChanged();
+        } else {
+          imagesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public Builder addImages(
+          int index, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder builderForValue) {
+        if (imagesBuilder_ == null) {
+          ensureImagesIsMutable();
+          images_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          imagesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public Builder addAllImages(
+          java.lang.Iterable<? extends yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo> values) {
+        if (imagesBuilder_ == null) {
+          ensureImagesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, images_);
+          onChanged();
+        } else {
+          imagesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public Builder clearImages() {
+        if (imagesBuilder_ == null) {
+          images_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          imagesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public Builder removeImages(int index) {
+        if (imagesBuilder_ == null) {
+          ensureImagesIsMutable();
+          images_.remove(index);
+          onChanged();
+        } else {
+          imagesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder getImagesBuilder(
+          int index) {
+        return getImagesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfoOrBuilder getImagesOrBuilder(
+          int index) {
+        if (imagesBuilder_ == null) {
+          return images_.get(index);  } else {
+          return imagesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfoOrBuilder> 
+           getImagesOrBuilderList() {
+        if (imagesBuilder_ != null) {
+          return imagesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(images_);
+        }
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder addImagesBuilder() {
+        return getImagesFieldBuilder().addBuilder(
+            yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder addImagesBuilder(
+          int index) {
+        return getImagesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The images found.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.searchapi.v2.ImageSearchByImageResponse.ImageInfo images = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder> 
+           getImagesBuilderList() {
+        return getImagesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfoOrBuilder> 
+          getImagesFieldBuilder() {
+        if (imagesBuilder_ == null) {
+          imagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfo.Builder, yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse.ImageInfoOrBuilder>(
+                  images_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          images_ = null;
+        }
+        return imagesBuilder_;
+      }
+
+      private long page_ ;
+      /**
+       * <pre>
+       * The number of the page with search results.
+       * </pre>
+       *
+       * <code>int64 page = 2;</code>
+       * @return The page.
+       */
+      @java.lang.Override
+      public long getPage() {
+        return page_;
+      }
+      /**
+       * <pre>
+       * The number of the page with search results.
+       * </pre>
+       *
+       * <code>int64 page = 2;</code>
+       * @param value The page to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPage(long value) {
+        
+        page_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of the page with search results.
+       * </pre>
+       *
+       * <code>int64 page = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPage() {
+        
+        page_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long maxPage_ ;
+      /**
+       * <pre>
+       * The number of the last page with search results.
+       * </pre>
+       *
+       * <code>int64 max_page = 3;</code>
+       * @return The maxPage.
+       */
+      @java.lang.Override
+      public long getMaxPage() {
+        return maxPage_;
+      }
+      /**
+       * <pre>
+       * The number of the last page with search results.
+       * </pre>
+       *
+       * <code>int64 max_page = 3;</code>
+       * @param value The maxPage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPage(long value) {
+        
+        maxPage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of the last page with search results.
+       * </pre>
+       *
+       * <code>int64 max_page = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxPage() {
+        
+        maxPage_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * CBIR ID of the image used for the search.
+       * </pre>
+       *
+       * <code>string id = 4;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CBIR ID of the image used for the search.
+       * </pre>
+       *
+       * <code>string id = 4;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CBIR ID of the image used for the search.
+       * </pre>
+       *
+       * <code>string id = 4;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CBIR ID of the image used for the search.
+       * </pre>
+       *
+       * <code>string id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CBIR ID of the image used for the search.
+       * </pre>
+       *
+       * <code>string id = 4;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.searchapi.v2.ImageSearchByImageResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.searchapi.v2.ImageSearchByImageResponse)
+    private static final yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse();
+    }
+
+    public static yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImageSearchByImageResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ImageSearchByImageResponse>() {
+      @java.lang.Override
+      public ImageSearchByImageResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ImageSearchByImageResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImageSearchByImageResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImageSearchByImageResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.search.v2.ImgSearchService.ImageSearchByImageResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_searchapi_v2_ImageSpec_descriptor;
   private static final 
@@ -3911,6 +8581,21 @@ public final class ImgSearchService {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_searchapi_v2_ImageSearchResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_ImageInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_ImageInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3923,52 +8608,75 @@ public final class ImgSearchService {
       "\n2yandex/cloud/searchapi/v2/img_search_s" +
       "ervice.proto\022\031yandex.cloud.searchapi.v2\032" +
       "\035yandex/cloud/validation.proto\032,yandex/c" +
-      "loud/searchapi/v2/search_query.proto\"\200\010\n" +
-      "\tImageSpec\022@\n\006format\030\001 \001(\01620.yandex.clou" +
-      "d.searchapi.v2.ImageSpec.ImageFormat\022<\n\004" +
-      "size\030\002 \001(\0162..yandex.cloud.searchapi.v2.I" +
-      "mageSpec.ImageSize\022J\n\013orientation\030\003 \001(\0162" +
-      "5.yandex.cloud.searchapi.v2.ImageSpec.Im" +
-      "ageOrientation\022>\n\005color\030\004 \001(\0162/.yandex.c" +
-      "loud.searchapi.v2.ImageSpec.ImageColor\"n" +
-      "\n\013ImageFormat\022\034\n\030IMAGE_FORMAT_UNSPECIFIE" +
-      "D\020\000\022\025\n\021IMAGE_FORMAT_JPEG\020\001\022\024\n\020IMAGE_FORM" +
-      "AT_GIF\020\002\022\024\n\020IMAGE_FORMAT_PNG\020\003\"\225\001\n\020Image" +
-      "Orientation\022!\n\035IMAGE_ORIENTATION_UNSPECI" +
-      "FIED\020\000\022\036\n\032IMAGE_ORIENTATION_VERTICAL\020\001\022 " +
-      "\n\034IMAGE_ORIENTATION_HORIZONTAL\020\002\022\034\n\030IMAG" +
-      "E_ORIENTATION_SQUARE\020\003\"\262\001\n\tImageSize\022\032\n\026" +
-      "IMAGE_SIZE_UNSPECIFIED\020\000\022\027\n\023IMAGE_SIZE_E" +
-      "NORMOUS\020\001\022\024\n\020IMAGE_SIZE_LARGE\020\002\022\025\n\021IMAGE" +
-      "_SIZE_MEDIUM\020\003\022\024\n\020IMAGE_SIZE_SMALL\020\004\022\023\n\017" +
-      "IMAGE_SIZE_TINY\020\005\022\030\n\024IMAGE_SIZE_WALLPAPE" +
-      "R\020\006\"\251\002\n\nImageColor\022\033\n\027IMAGE_COLOR_UNSPEC" +
-      "IFIED\020\000\022\025\n\021IMAGE_COLOR_COLOR\020\001\022\031\n\025IMAGE_" +
-      "COLOR_GRAYSCALE\020\002\022\023\n\017IMAGE_COLOR_RED\020\003\022\026" +
-      "\n\022IMAGE_COLOR_ORANGE\020\004\022\026\n\022IMAGE_COLOR_YE" +
-      "LLOW\020\005\022\025\n\021IMAGE_COLOR_GREEN\020\006\022\024\n\020IMAGE_C" +
-      "OLOR_CYAN\020\007\022\024\n\020IMAGE_COLOR_BLUE\020\010\022\026\n\022IMA" +
-      "GE_COLOR_VIOLET\020\t\022\025\n\021IMAGE_COLOR_WHITE\020\n" +
-      "\022\025\n\021IMAGE_COLOR_BLACK\020\013\"\366\001\n\022ImageSearchR" +
-      "equest\022;\n\005query\030\001 \001(\0132&.yandex.cloud.sea" +
-      "rchapi.v2.SearchQueryB\004\350\3071\001\0228\n\nimage_spe" +
-      "c\030\002 \001(\0132$.yandex.cloud.searchapi.v2.Imag" +
-      "eSpec\022\014\n\004site\030\003 \001(\t\022\037\n\014docs_on_page\030\004 \001(" +
-      "\003B\t\372\3071\0051-100\022\033\n\tfolder_id\030\005 \001(\tB\010\212\3101\004<=5" +
-      "0\022\035\n\nuser_agent\030\006 \001(\tB\t\212\3101\005<=200\"-\n\023Imag" +
-      "eSearchResponse\022\026\n\010raw_data\030\001 \001(\014B\004\350\3071\0012" +
-      "\177\n\022ImageSearchService\022i\n\006Search\022-.yandex" +
-      ".cloud.searchapi.v2.ImageSearchRequest\032." +
-      ".yandex.cloud.searchapi.v2.ImageSearchRe" +
-      "sponse\"\000Be\n\032yandex.cloud.api.search.v2ZG" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/searchapi/v2;searchapib\006proto3"
+      "loud/searchapi/v2/search_query.proto\032\034go" +
+      "ogle/api/annotations.proto\"\200\010\n\tImageSpec" +
+      "\022@\n\006format\030\001 \001(\01620.yandex.cloud.searchap" +
+      "i.v2.ImageSpec.ImageFormat\022<\n\004size\030\002 \001(\016" +
+      "2..yandex.cloud.searchapi.v2.ImageSpec.I" +
+      "mageSize\022J\n\013orientation\030\003 \001(\01625.yandex.c" +
+      "loud.searchapi.v2.ImageSpec.ImageOrienta" +
+      "tion\022>\n\005color\030\004 \001(\0162/.yandex.cloud.searc" +
+      "hapi.v2.ImageSpec.ImageColor\"n\n\013ImageFor" +
+      "mat\022\034\n\030IMAGE_FORMAT_UNSPECIFIED\020\000\022\025\n\021IMA" +
+      "GE_FORMAT_JPEG\020\001\022\024\n\020IMAGE_FORMAT_GIF\020\002\022\024" +
+      "\n\020IMAGE_FORMAT_PNG\020\003\"\225\001\n\020ImageOrientatio" +
+      "n\022!\n\035IMAGE_ORIENTATION_UNSPECIFIED\020\000\022\036\n\032" +
+      "IMAGE_ORIENTATION_VERTICAL\020\001\022 \n\034IMAGE_OR" +
+      "IENTATION_HORIZONTAL\020\002\022\034\n\030IMAGE_ORIENTAT" +
+      "ION_SQUARE\020\003\"\262\001\n\tImageSize\022\032\n\026IMAGE_SIZE" +
+      "_UNSPECIFIED\020\000\022\027\n\023IMAGE_SIZE_ENORMOUS\020\001\022" +
+      "\024\n\020IMAGE_SIZE_LARGE\020\002\022\025\n\021IMAGE_SIZE_MEDI" +
+      "UM\020\003\022\024\n\020IMAGE_SIZE_SMALL\020\004\022\023\n\017IMAGE_SIZE" +
+      "_TINY\020\005\022\030\n\024IMAGE_SIZE_WALLPAPER\020\006\"\251\002\n\nIm" +
+      "ageColor\022\033\n\027IMAGE_COLOR_UNSPECIFIED\020\000\022\025\n" +
+      "\021IMAGE_COLOR_COLOR\020\001\022\031\n\025IMAGE_COLOR_GRAY" +
+      "SCALE\020\002\022\023\n\017IMAGE_COLOR_RED\020\003\022\026\n\022IMAGE_CO" +
+      "LOR_ORANGE\020\004\022\026\n\022IMAGE_COLOR_YELLOW\020\005\022\025\n\021" +
+      "IMAGE_COLOR_GREEN\020\006\022\024\n\020IMAGE_COLOR_CYAN\020" +
+      "\007\022\024\n\020IMAGE_COLOR_BLUE\020\010\022\026\n\022IMAGE_COLOR_V" +
+      "IOLET\020\t\022\025\n\021IMAGE_COLOR_WHITE\020\n\022\025\n\021IMAGE_" +
+      "COLOR_BLACK\020\013\"\366\001\n\022ImageSearchRequest\022;\n\005" +
+      "query\030\001 \001(\0132&.yandex.cloud.searchapi.v2." +
+      "SearchQueryB\004\350\3071\001\0228\n\nimage_spec\030\002 \001(\0132$." +
+      "yandex.cloud.searchapi.v2.ImageSpec\022\014\n\004s" +
+      "ite\030\003 \001(\t\022\037\n\014docs_on_page\030\004 \001(\003B\t\372\3071\0051-1" +
+      "00\022\033\n\tfolder_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\nuser_" +
+      "agent\030\006 \001(\tB\t\212\3101\005<=200\"-\n\023ImageSearchRes" +
+      "ponse\022\026\n\010raw_data\030\001 \001(\014B\004\350\3071\001\"\232\002\n\031ImageS" +
+      "earchByImageRequest\022\030\n\004site\030\001 \001(\tB\n\212\3101\006<" +
+      "=1024\022\033\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=50\022\035\n\003ur" +
+      "l\030\003 \001(\tB\016\350\3071\001\212\3101\006<=1024H\000\022!\n\004data\030\004 \001(\014B" +
+      "\021\350\3071\001\212\3101\t<=3145728H\000\022\034\n\002id\030\005 \001(\tB\016\350\3071\001\212\310" +
+      "1\006<=1024H\000\022\025\n\004page\030\006 \001(\003B\007\372\3071\003>=0\022F\n\013fam" +
+      "ily_mode\030\007 \001(\01621.yandex.cloud.searchapi." +
+      "v2.SearchQuery.FamilyModeB\007\n\005image\"\332\002\n\032I" +
+      "mageSearchByImageResponse\022O\n\006images\030\001 \003(" +
+      "\0132?.yandex.cloud.searchapi.v2.ImageSearc" +
+      "hByImageResponse.ImageInfo\022\014\n\004page\030\002 \001(\003" +
+      "\022\020\n\010max_page\030\003 \001(\003\022\n\n\002id\030\004 \001(\t\032\276\001\n\tImage" +
+      "Info\022\013\n\003url\030\001 \001(\t\022@\n\006format\030\002 \001(\01620.yand" +
+      "ex.cloud.searchapi.v2.ImageSpec.ImageFor" +
+      "mat\022\r\n\005width\030\003 \001(\003\022\016\n\006height\030\004 \001(\003\022\017\n\007pa" +
+      "ssage\030\005 \001(\t\022\014\n\004host\030\006 \001(\t\022\022\n\npage_title\030" +
+      "\007 \001(\t\022\020\n\010page_url\030\010 \001(\t2\300\002\n\022ImageSearchS" +
+      "ervice\022\204\001\n\006Search\022-.yandex.cloud.searcha" +
+      "pi.v2.ImageSearchRequest\032..yandex.cloud." +
+      "searchapi.v2.ImageSearchResponse\"\033\202\323\344\223\002\025" +
+      "\"\020/v2/image/search:\001*\022\242\001\n\rSearchByImage\022" +
+      "4.yandex.cloud.searchapi.v2.ImageSearchB" +
+      "yImageRequest\0325.yandex.cloud.searchapi.v" +
+      "2.ImageSearchByImageResponse\"$\202\323\344\223\002\036\"\031/v" +
+      "2/image/search_by_image:\001*Be\n\032yandex.clo" +
+      "ud.api.search.v2ZGgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/searchapi/v2;" +
+      "searchapib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.search.v2.SearchQueryOuterClass.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_yandex_cloud_searchapi_v2_ImageSpec_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3988,8 +8696,27 @@ public final class ImgSearchService {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_searchapi_v2_ImageSearchResponse_descriptor,
         new java.lang.String[] { "RawData", });
+    internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageRequest_descriptor,
+        new java.lang.String[] { "Site", "FolderId", "Url", "Data", "Id", "Page", "FamilyMode", "Image", });
+    internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_descriptor,
+        new java.lang.String[] { "Images", "Page", "MaxPage", "Id", });
+    internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_ImageInfo_descriptor =
+      internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_ImageInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_searchapi_v2_ImageSearchByImageResponse_ImageInfo_descriptor,
+        new java.lang.String[] { "Url", "Format", "Width", "Height", "Passage", "Host", "PageTitle", "PageUrl", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.value);
@@ -3997,6 +8724,7 @@ public final class ImgSearchService {
         .internalUpdateFileDescriptor(descriptor, registry);
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.search.v2.SearchQueryOuterClass.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

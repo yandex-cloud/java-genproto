@@ -40207,6 +40207,4429 @@ public final class S3Api {
 
   }
 
+  public interface S3APIGetAclResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.S3APIGetAclResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string request_id = 1;</code>
+     * @return The requestId.
+     */
+    java.lang.String getRequestId();
+    /**
+     * <code>string request_id = 1;</code>
+     * @return The bytes for requestId.
+     */
+    com.google.protobuf.ByteString
+        getRequestIdBytes();
+
+    /**
+     * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+     * @return Whether the owner field is set.
+     */
+    boolean hasOwner();
+    /**
+     * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+     * @return The owner.
+     */
+    yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner getOwner();
+    /**
+     * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+     */
+    yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.OwnerOrBuilder getOwnerOrBuilder();
+
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+     */
+    java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant> 
+        getGrantsList();
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+     */
+    yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant getGrants(int index);
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+     */
+    int getGrantsCount();
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.GrantOrBuilder> 
+        getGrantsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+     */
+    yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.GrantOrBuilder getGrantsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Represents a response of the get bucket acl or get object acl requests to S3.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.storage.v1.S3APIGetAclResponse}
+   */
+  public static final class S3APIGetAclResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.S3APIGetAclResponse)
+      S3APIGetAclResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use S3APIGetAclResponse.newBuilder() to construct.
+    private S3APIGetAclResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private S3APIGetAclResponse() {
+      requestId_ = "";
+      grants_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new S3APIGetAclResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private S3APIGetAclResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              requestId_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.Builder subBuilder = null;
+              if (owner_ != null) {
+                subBuilder = owner_.toBuilder();
+              }
+              owner_ = input.readMessage(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(owner_);
+                owner_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                grants_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              grants_.add(
+                  input.readMessage(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          grants_ = java.util.Collections.unmodifiableList(grants_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.class, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Builder.class);
+    }
+
+    public interface OwnerOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.S3APIGetAclResponse.Owner)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      java.lang.String getId();
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      com.google.protobuf.ByteString
+          getIdBytes();
+
+      /**
+       * <code>string display_name = 2;</code>
+       * @return The displayName.
+       */
+      java.lang.String getDisplayName();
+      /**
+       * <code>string display_name = 2;</code>
+       * @return The bytes for displayName.
+       */
+      com.google.protobuf.ByteString
+          getDisplayNameBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.storage.v1.S3APIGetAclResponse.Owner}
+     */
+    public static final class Owner extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.S3APIGetAclResponse.Owner)
+        OwnerOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Owner.newBuilder() to construct.
+      private Owner(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Owner() {
+        id_ = "";
+        displayName_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Owner();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Owner(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                id_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                displayName_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Owner_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Owner_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.class, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.Builder.class);
+      }
+
+      public static final int ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object id_;
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DISPLAY_NAME_FIELD_NUMBER = 2;
+      private volatile java.lang.Object displayName_;
+      /**
+       * <code>string display_name = 2;</code>
+       * @return The displayName.
+       */
+      @java.lang.Override
+      public java.lang.String getDisplayName() {
+        java.lang.Object ref = displayName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          displayName_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string display_name = 2;</code>
+       * @return The bytes for displayName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDisplayNameBytes() {
+        java.lang.Object ref = displayName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          displayName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, displayName_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, displayName_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner other = (yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner) obj;
+
+        if (!getId()
+            .equals(other.getId())) return false;
+        if (!getDisplayName()
+            .equals(other.getDisplayName())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+        hash = (37 * hash) + DISPLAY_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getDisplayName().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.storage.v1.S3APIGetAclResponse.Owner}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.S3APIGetAclResponse.Owner)
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.OwnerOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Owner_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Owner_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.class, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          id_ = "";
+
+          displayName_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Owner_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner getDefaultInstanceForType() {
+          return yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner build() {
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner buildPartial() {
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner result = new yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner(this);
+          result.id_ = id_;
+          result.displayName_ = displayName_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner) {
+            return mergeFrom((yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner other) {
+          if (other == yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.getDefaultInstance()) return this;
+          if (!other.getId().isEmpty()) {
+            id_ = other.id_;
+            onChanged();
+          }
+          if (!other.getDisplayName().isEmpty()) {
+            displayName_ = other.displayName_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object id_ = "";
+        /**
+         * <code>string id = 1;</code>
+         * @return The id.
+         */
+        public java.lang.String getId() {
+          java.lang.Object ref = id_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            id_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string id = 1;</code>
+         * @return The bytes for id.
+         */
+        public com.google.protobuf.ByteString
+            getIdBytes() {
+          java.lang.Object ref = id_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            id_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string id = 1;</code>
+         * @param value The id to set.
+         * @return This builder for chaining.
+         */
+        public Builder setId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          id_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string id = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearId() {
+          
+          id_ = getDefaultInstance().getId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string id = 1;</code>
+         * @param value The bytes for id to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          id_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object displayName_ = "";
+        /**
+         * <code>string display_name = 2;</code>
+         * @return The displayName.
+         */
+        public java.lang.String getDisplayName() {
+          java.lang.Object ref = displayName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            displayName_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string display_name = 2;</code>
+         * @return The bytes for displayName.
+         */
+        public com.google.protobuf.ByteString
+            getDisplayNameBytes() {
+          java.lang.Object ref = displayName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            displayName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string display_name = 2;</code>
+         * @param value The displayName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDisplayName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          displayName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string display_name = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDisplayName() {
+          
+          displayName_ = getDefaultInstance().getDisplayName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string display_name = 2;</code>
+         * @param value The bytes for displayName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDisplayNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          displayName_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.S3APIGetAclResponse.Owner)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.S3APIGetAclResponse.Owner)
+      private static final yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner();
+      }
+
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Owner>
+          PARSER = new com.google.protobuf.AbstractParser<Owner>() {
+        @java.lang.Override
+        public Owner parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Owner(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Owner> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Owner> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface GrantOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.S3APIGetAclResponse.Grant)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+       * @return Whether the grantee field is set.
+       */
+      boolean hasGrantee();
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+       * @return The grantee.
+       */
+      yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee getGrantee();
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+       */
+      yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.GranteeOrBuilder getGranteeOrBuilder();
+
+      /**
+       * <code>string permission = 2;</code>
+       * @return The permission.
+       */
+      java.lang.String getPermission();
+      /**
+       * <code>string permission = 2;</code>
+       * @return The bytes for permission.
+       */
+      com.google.protobuf.ByteString
+          getPermissionBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.storage.v1.S3APIGetAclResponse.Grant}
+     */
+    public static final class Grant extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.S3APIGetAclResponse.Grant)
+        GrantOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Grant.newBuilder() to construct.
+      private Grant(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Grant() {
+        permission_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Grant();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Grant(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.Builder subBuilder = null;
+                if (grantee_ != null) {
+                  subBuilder = grantee_.toBuilder();
+                }
+                grantee_ = input.readMessage(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(grantee_);
+                  grantee_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                permission_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.class, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder.class);
+      }
+
+      public interface GranteeOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string id = 1;</code>
+         * @return The id.
+         */
+        java.lang.String getId();
+        /**
+         * <code>string id = 1;</code>
+         * @return The bytes for id.
+         */
+        com.google.protobuf.ByteString
+            getIdBytes();
+
+        /**
+         * <code>string type = 2;</code>
+         * @return The type.
+         */
+        java.lang.String getType();
+        /**
+         * <code>string type = 2;</code>
+         * @return The bytes for type.
+         */
+        com.google.protobuf.ByteString
+            getTypeBytes();
+
+        /**
+         * <code>string uri = 3;</code>
+         * @return The uri.
+         */
+        java.lang.String getUri();
+        /**
+         * <code>string uri = 3;</code>
+         * @return The bytes for uri.
+         */
+        com.google.protobuf.ByteString
+            getUriBytes();
+
+        /**
+         * <code>string display_name = 4;</code>
+         * @return The displayName.
+         */
+        java.lang.String getDisplayName();
+        /**
+         * <code>string display_name = 4;</code>
+         * @return The bytes for displayName.
+         */
+        com.google.protobuf.ByteString
+            getDisplayNameBytes();
+
+        /**
+         * <code>string email_address = 5;</code>
+         * @return The emailAddress.
+         */
+        java.lang.String getEmailAddress();
+        /**
+         * <code>string email_address = 5;</code>
+         * @return The bytes for emailAddress.
+         */
+        com.google.protobuf.ByteString
+            getEmailAddressBytes();
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee}
+       */
+      public static final class Grantee extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee)
+          GranteeOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use Grantee.newBuilder() to construct.
+        private Grantee(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private Grantee() {
+          id_ = "";
+          type_ = "";
+          uri_ = "";
+          displayName_ = "";
+          emailAddress_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Grantee();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private Grantee(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  id_ = s;
+                  break;
+                }
+                case 18: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  type_ = s;
+                  break;
+                }
+                case 26: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  uri_ = s;
+                  break;
+                }
+                case 34: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  displayName_ = s;
+                  break;
+                }
+                case 42: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  emailAddress_ = s;
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_Grantee_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_Grantee_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.class, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.Builder.class);
+        }
+
+        public static final int ID_FIELD_NUMBER = 1;
+        private volatile java.lang.Object id_;
+        /**
+         * <code>string id = 1;</code>
+         * @return The id.
+         */
+        @java.lang.Override
+        public java.lang.String getId() {
+          java.lang.Object ref = id_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            id_ = s;
+            return s;
+          }
+        }
+        /**
+         * <code>string id = 1;</code>
+         * @return The bytes for id.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getIdBytes() {
+          java.lang.Object ref = id_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            id_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int TYPE_FIELD_NUMBER = 2;
+        private volatile java.lang.Object type_;
+        /**
+         * <code>string type = 2;</code>
+         * @return The type.
+         */
+        @java.lang.Override
+        public java.lang.String getType() {
+          java.lang.Object ref = type_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            type_ = s;
+            return s;
+          }
+        }
+        /**
+         * <code>string type = 2;</code>
+         * @return The bytes for type.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getTypeBytes() {
+          java.lang.Object ref = type_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            type_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int URI_FIELD_NUMBER = 3;
+        private volatile java.lang.Object uri_;
+        /**
+         * <code>string uri = 3;</code>
+         * @return The uri.
+         */
+        @java.lang.Override
+        public java.lang.String getUri() {
+          java.lang.Object ref = uri_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            uri_ = s;
+            return s;
+          }
+        }
+        /**
+         * <code>string uri = 3;</code>
+         * @return The bytes for uri.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getUriBytes() {
+          java.lang.Object ref = uri_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            uri_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int DISPLAY_NAME_FIELD_NUMBER = 4;
+        private volatile java.lang.Object displayName_;
+        /**
+         * <code>string display_name = 4;</code>
+         * @return The displayName.
+         */
+        @java.lang.Override
+        public java.lang.String getDisplayName() {
+          java.lang.Object ref = displayName_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            displayName_ = s;
+            return s;
+          }
+        }
+        /**
+         * <code>string display_name = 4;</code>
+         * @return The bytes for displayName.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getDisplayNameBytes() {
+          java.lang.Object ref = displayName_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            displayName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int EMAIL_ADDRESS_FIELD_NUMBER = 5;
+        private volatile java.lang.Object emailAddress_;
+        /**
+         * <code>string email_address = 5;</code>
+         * @return The emailAddress.
+         */
+        @java.lang.Override
+        public java.lang.String getEmailAddress() {
+          java.lang.Object ref = emailAddress_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            emailAddress_ = s;
+            return s;
+          }
+        }
+        /**
+         * <code>string email_address = 5;</code>
+         * @return The bytes for emailAddress.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getEmailAddressBytes() {
+          java.lang.Object ref = emailAddress_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            emailAddress_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 3, uri_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 4, displayName_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddress_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 5, emailAddress_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, uri_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, displayName_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddress_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, emailAddress_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee)) {
+            return super.equals(obj);
+          }
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee other = (yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee) obj;
+
+          if (!getId()
+              .equals(other.getId())) return false;
+          if (!getType()
+              .equals(other.getType())) return false;
+          if (!getUri()
+              .equals(other.getUri())) return false;
+          if (!getDisplayName()
+              .equals(other.getDisplayName())) return false;
+          if (!getEmailAddress()
+              .equals(other.getEmailAddress())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (37 * hash) + ID_FIELD_NUMBER;
+          hash = (53 * hash) + getId().hashCode();
+          hash = (37 * hash) + TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + getType().hashCode();
+          hash = (37 * hash) + URI_FIELD_NUMBER;
+          hash = (53 * hash) + getUri().hashCode();
+          hash = (37 * hash) + DISPLAY_NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getDisplayName().hashCode();
+          hash = (37 * hash) + EMAIL_ADDRESS_FIELD_NUMBER;
+          hash = (53 * hash) + getEmailAddress().hashCode();
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee)
+            yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.GranteeOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_Grantee_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_Grantee_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.class, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.Builder.class);
+          }
+
+          // Construct using yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            id_ = "";
+
+            type_ = "";
+
+            uri_ = "";
+
+            displayName_ = "";
+
+            emailAddress_ = "";
+
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_Grantee_descriptor;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee getDefaultInstanceForType() {
+            return yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee build() {
+            yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee buildPartial() {
+            yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee result = new yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee(this);
+            result.id_ = id_;
+            result.type_ = type_;
+            result.uri_ = uri_;
+            result.displayName_ = displayName_;
+            result.emailAddress_ = emailAddress_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee) {
+              return mergeFrom((yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee other) {
+            if (other == yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.getDefaultInstance()) return this;
+            if (!other.getId().isEmpty()) {
+              id_ = other.id_;
+              onChanged();
+            }
+            if (!other.getType().isEmpty()) {
+              type_ = other.type_;
+              onChanged();
+            }
+            if (!other.getUri().isEmpty()) {
+              uri_ = other.uri_;
+              onChanged();
+            }
+            if (!other.getDisplayName().isEmpty()) {
+              displayName_ = other.displayName_;
+              onChanged();
+            }
+            if (!other.getEmailAddress().isEmpty()) {
+              emailAddress_ = other.emailAddress_;
+              onChanged();
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+
+          private java.lang.Object id_ = "";
+          /**
+           * <code>string id = 1;</code>
+           * @return The id.
+           */
+          public java.lang.String getId() {
+            java.lang.Object ref = id_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              id_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>string id = 1;</code>
+           * @return The bytes for id.
+           */
+          public com.google.protobuf.ByteString
+              getIdBytes() {
+            java.lang.Object ref = id_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              id_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>string id = 1;</code>
+           * @param value The id to set.
+           * @return This builder for chaining.
+           */
+          public Builder setId(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            id_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string id = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearId() {
+            
+            id_ = getDefaultInstance().getId();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string id = 1;</code>
+           * @param value The bytes for id to set.
+           * @return This builder for chaining.
+           */
+          public Builder setIdBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            id_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object type_ = "";
+          /**
+           * <code>string type = 2;</code>
+           * @return The type.
+           */
+          public java.lang.String getType() {
+            java.lang.Object ref = type_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              type_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>string type = 2;</code>
+           * @return The bytes for type.
+           */
+          public com.google.protobuf.ByteString
+              getTypeBytes() {
+            java.lang.Object ref = type_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              type_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>string type = 2;</code>
+           * @param value The type to set.
+           * @return This builder for chaining.
+           */
+          public Builder setType(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            type_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string type = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearType() {
+            
+            type_ = getDefaultInstance().getType();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string type = 2;</code>
+           * @param value The bytes for type to set.
+           * @return This builder for chaining.
+           */
+          public Builder setTypeBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            type_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object uri_ = "";
+          /**
+           * <code>string uri = 3;</code>
+           * @return The uri.
+           */
+          public java.lang.String getUri() {
+            java.lang.Object ref = uri_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              uri_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>string uri = 3;</code>
+           * @return The bytes for uri.
+           */
+          public com.google.protobuf.ByteString
+              getUriBytes() {
+            java.lang.Object ref = uri_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              uri_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>string uri = 3;</code>
+           * @param value The uri to set.
+           * @return This builder for chaining.
+           */
+          public Builder setUri(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            uri_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string uri = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearUri() {
+            
+            uri_ = getDefaultInstance().getUri();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string uri = 3;</code>
+           * @param value The bytes for uri to set.
+           * @return This builder for chaining.
+           */
+          public Builder setUriBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            uri_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object displayName_ = "";
+          /**
+           * <code>string display_name = 4;</code>
+           * @return The displayName.
+           */
+          public java.lang.String getDisplayName() {
+            java.lang.Object ref = displayName_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              displayName_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>string display_name = 4;</code>
+           * @return The bytes for displayName.
+           */
+          public com.google.protobuf.ByteString
+              getDisplayNameBytes() {
+            java.lang.Object ref = displayName_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              displayName_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>string display_name = 4;</code>
+           * @param value The displayName to set.
+           * @return This builder for chaining.
+           */
+          public Builder setDisplayName(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            displayName_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string display_name = 4;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearDisplayName() {
+            
+            displayName_ = getDefaultInstance().getDisplayName();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string display_name = 4;</code>
+           * @param value The bytes for displayName to set.
+           * @return This builder for chaining.
+           */
+          public Builder setDisplayNameBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            displayName_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object emailAddress_ = "";
+          /**
+           * <code>string email_address = 5;</code>
+           * @return The emailAddress.
+           */
+          public java.lang.String getEmailAddress() {
+            java.lang.Object ref = emailAddress_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              emailAddress_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>string email_address = 5;</code>
+           * @return The bytes for emailAddress.
+           */
+          public com.google.protobuf.ByteString
+              getEmailAddressBytes() {
+            java.lang.Object ref = emailAddress_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              emailAddress_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>string email_address = 5;</code>
+           * @param value The emailAddress to set.
+           * @return This builder for chaining.
+           */
+          public Builder setEmailAddress(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            emailAddress_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string email_address = 5;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearEmailAddress() {
+            
+            emailAddress_ = getDefaultInstance().getEmailAddress();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string email_address = 5;</code>
+           * @param value The bytes for emailAddress to set.
+           * @return This builder for chaining.
+           */
+          public Builder setEmailAddressBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            emailAddress_ = value;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee)
+        }
+
+        // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee)
+        private static final yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee();
+        }
+
+        public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Grantee>
+            PARSER = new com.google.protobuf.AbstractParser<Grantee>() {
+          @java.lang.Override
+          public Grantee parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Grantee(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<Grantee> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Grantee> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public static final int GRANTEE_FIELD_NUMBER = 1;
+      private yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee grantee_;
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+       * @return Whether the grantee field is set.
+       */
+      @java.lang.Override
+      public boolean hasGrantee() {
+        return grantee_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+       * @return The grantee.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee getGrantee() {
+        return grantee_ == null ? yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.getDefaultInstance() : grantee_;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.GranteeOrBuilder getGranteeOrBuilder() {
+        return getGrantee();
+      }
+
+      public static final int PERMISSION_FIELD_NUMBER = 2;
+      private volatile java.lang.Object permission_;
+      /**
+       * <code>string permission = 2;</code>
+       * @return The permission.
+       */
+      @java.lang.Override
+      public java.lang.String getPermission() {
+        java.lang.Object ref = permission_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          permission_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string permission = 2;</code>
+       * @return The bytes for permission.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPermissionBytes() {
+        java.lang.Object ref = permission_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          permission_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (grantee_ != null) {
+          output.writeMessage(1, getGrantee());
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(permission_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, permission_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (grantee_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getGrantee());
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(permission_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, permission_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant other = (yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant) obj;
+
+        if (hasGrantee() != other.hasGrantee()) return false;
+        if (hasGrantee()) {
+          if (!getGrantee()
+              .equals(other.getGrantee())) return false;
+        }
+        if (!getPermission()
+            .equals(other.getPermission())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasGrantee()) {
+          hash = (37 * hash) + GRANTEE_FIELD_NUMBER;
+          hash = (53 * hash) + getGrantee().hashCode();
+        }
+        hash = (37 * hash) + PERMISSION_FIELD_NUMBER;
+        hash = (53 * hash) + getPermission().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.storage.v1.S3APIGetAclResponse.Grant}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.S3APIGetAclResponse.Grant)
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.GrantOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.class, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (granteeBuilder_ == null) {
+            grantee_ = null;
+          } else {
+            grantee_ = null;
+            granteeBuilder_ = null;
+          }
+          permission_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant getDefaultInstanceForType() {
+          return yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant build() {
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant buildPartial() {
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant result = new yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant(this);
+          if (granteeBuilder_ == null) {
+            result.grantee_ = grantee_;
+          } else {
+            result.grantee_ = granteeBuilder_.build();
+          }
+          result.permission_ = permission_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant) {
+            return mergeFrom((yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant other) {
+          if (other == yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.getDefaultInstance()) return this;
+          if (other.hasGrantee()) {
+            mergeGrantee(other.getGrantee());
+          }
+          if (!other.getPermission().isEmpty()) {
+            permission_ = other.permission_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee grantee_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.GranteeOrBuilder> granteeBuilder_;
+        /**
+         * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+         * @return Whether the grantee field is set.
+         */
+        public boolean hasGrantee() {
+          return granteeBuilder_ != null || grantee_ != null;
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+         * @return The grantee.
+         */
+        public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee getGrantee() {
+          if (granteeBuilder_ == null) {
+            return grantee_ == null ? yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.getDefaultInstance() : grantee_;
+          } else {
+            return granteeBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+         */
+        public Builder setGrantee(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee value) {
+          if (granteeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            grantee_ = value;
+            onChanged();
+          } else {
+            granteeBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+         */
+        public Builder setGrantee(
+            yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.Builder builderForValue) {
+          if (granteeBuilder_ == null) {
+            grantee_ = builderForValue.build();
+            onChanged();
+          } else {
+            granteeBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+         */
+        public Builder mergeGrantee(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee value) {
+          if (granteeBuilder_ == null) {
+            if (grantee_ != null) {
+              grantee_ =
+                yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.newBuilder(grantee_).mergeFrom(value).buildPartial();
+            } else {
+              grantee_ = value;
+            }
+            onChanged();
+          } else {
+            granteeBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+         */
+        public Builder clearGrantee() {
+          if (granteeBuilder_ == null) {
+            grantee_ = null;
+            onChanged();
+          } else {
+            grantee_ = null;
+            granteeBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+         */
+        public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.Builder getGranteeBuilder() {
+          
+          onChanged();
+          return getGranteeFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+         */
+        public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.GranteeOrBuilder getGranteeOrBuilder() {
+          if (granteeBuilder_ != null) {
+            return granteeBuilder_.getMessageOrBuilder();
+          } else {
+            return grantee_ == null ?
+                yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.getDefaultInstance() : grantee_;
+          }
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Grant.Grantee grantee = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.GranteeOrBuilder> 
+            getGranteeFieldBuilder() {
+          if (granteeBuilder_ == null) {
+            granteeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Grantee.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.GranteeOrBuilder>(
+                    getGrantee(),
+                    getParentForChildren(),
+                    isClean());
+            grantee_ = null;
+          }
+          return granteeBuilder_;
+        }
+
+        private java.lang.Object permission_ = "";
+        /**
+         * <code>string permission = 2;</code>
+         * @return The permission.
+         */
+        public java.lang.String getPermission() {
+          java.lang.Object ref = permission_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            permission_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string permission = 2;</code>
+         * @return The bytes for permission.
+         */
+        public com.google.protobuf.ByteString
+            getPermissionBytes() {
+          java.lang.Object ref = permission_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            permission_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string permission = 2;</code>
+         * @param value The permission to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPermission(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          permission_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string permission = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPermission() {
+          
+          permission_ = getDefaultInstance().getPermission();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string permission = 2;</code>
+         * @param value The bytes for permission to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPermissionBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          permission_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.S3APIGetAclResponse.Grant)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.S3APIGetAclResponse.Grant)
+      private static final yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant();
+      }
+
+      public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Grant>
+          PARSER = new com.google.protobuf.AbstractParser<Grant>() {
+        @java.lang.Override
+        public Grant parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Grant(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Grant> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Grant> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int REQUEST_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object requestId_;
+    /**
+     * <code>string request_id = 1;</code>
+     * @return The requestId.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestId() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string request_id = 1;</code>
+     * @return The bytes for requestId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestIdBytes() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 2;
+    private yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner owner_;
+    /**
+     * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+     * @return Whether the owner field is set.
+     */
+    @java.lang.Override
+    public boolean hasOwner() {
+      return owner_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner getOwner() {
+      return owner_ == null ? yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.getDefaultInstance() : owner_;
+    }
+    /**
+     * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.OwnerOrBuilder getOwnerOrBuilder() {
+      return getOwner();
+    }
+
+    public static final int GRANTS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant> grants_;
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant> getGrantsList() {
+      return grants_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.GrantOrBuilder> 
+        getGrantsOrBuilderList() {
+      return grants_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+     */
+    @java.lang.Override
+    public int getGrantsCount() {
+      return grants_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant getGrants(int index) {
+      return grants_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.GrantOrBuilder getGrantsOrBuilder(
+        int index) {
+      return grants_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestId_);
+      }
+      if (owner_ != null) {
+        output.writeMessage(2, getOwner());
+      }
+      for (int i = 0; i < grants_.size(); i++) {
+        output.writeMessage(3, grants_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestId_);
+      }
+      if (owner_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOwner());
+      }
+      for (int i = 0; i < grants_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, grants_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse other = (yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse) obj;
+
+      if (!getRequestId()
+          .equals(other.getRequestId())) return false;
+      if (hasOwner() != other.hasOwner()) return false;
+      if (hasOwner()) {
+        if (!getOwner()
+            .equals(other.getOwner())) return false;
+      }
+      if (!getGrantsList()
+          .equals(other.getGrantsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestId().hashCode();
+      if (hasOwner()) {
+        hash = (37 * hash) + OWNER_FIELD_NUMBER;
+        hash = (53 * hash) + getOwner().hashCode();
+      }
+      if (getGrantsCount() > 0) {
+        hash = (37 * hash) + GRANTS_FIELD_NUMBER;
+        hash = (53 * hash) + getGrantsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a response of the get bucket acl or get object acl requests to S3.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.storage.v1.S3APIGetAclResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.S3APIGetAclResponse)
+        yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.class, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getGrantsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        requestId_ = "";
+
+        if (ownerBuilder_ == null) {
+          owner_ = null;
+        } else {
+          owner_ = null;
+          ownerBuilder_ = null;
+        }
+        if (grantsBuilder_ == null) {
+          grants_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          grantsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse build() {
+        yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse buildPartial() {
+        yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse result = new yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse(this);
+        int from_bitField0_ = bitField0_;
+        result.requestId_ = requestId_;
+        if (ownerBuilder_ == null) {
+          result.owner_ = owner_;
+        } else {
+          result.owner_ = ownerBuilder_.build();
+        }
+        if (grantsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            grants_ = java.util.Collections.unmodifiableList(grants_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.grants_ = grants_;
+        } else {
+          result.grants_ = grantsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse) {
+          return mergeFrom((yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse other) {
+        if (other == yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.getDefaultInstance()) return this;
+        if (!other.getRequestId().isEmpty()) {
+          requestId_ = other.requestId_;
+          onChanged();
+        }
+        if (other.hasOwner()) {
+          mergeOwner(other.getOwner());
+        }
+        if (grantsBuilder_ == null) {
+          if (!other.grants_.isEmpty()) {
+            if (grants_.isEmpty()) {
+              grants_ = other.grants_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureGrantsIsMutable();
+              grants_.addAll(other.grants_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.grants_.isEmpty()) {
+            if (grantsBuilder_.isEmpty()) {
+              grantsBuilder_.dispose();
+              grantsBuilder_ = null;
+              grants_ = other.grants_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              grantsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGrantsFieldBuilder() : null;
+            } else {
+              grantsBuilder_.addAllMessages(other.grants_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requestId_ = "";
+      /**
+       * <code>string request_id = 1;</code>
+       * @return The requestId.
+       */
+      public java.lang.String getRequestId() {
+        java.lang.Object ref = requestId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string request_id = 1;</code>
+       * @return The bytes for requestId.
+       */
+      public com.google.protobuf.ByteString
+          getRequestIdBytes() {
+        java.lang.Object ref = requestId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string request_id = 1;</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        requestId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestId() {
+        
+        requestId_ = getDefaultInstance().getRequestId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_id = 1;</code>
+       * @param value The bytes for requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        requestId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner owner_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.OwnerOrBuilder> ownerBuilder_;
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+       * @return Whether the owner field is set.
+       */
+      public boolean hasOwner() {
+        return ownerBuilder_ != null || owner_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+       * @return The owner.
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner getOwner() {
+        if (ownerBuilder_ == null) {
+          return owner_ == null ? yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.getDefaultInstance() : owner_;
+        } else {
+          return ownerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+       */
+      public Builder setOwner(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner value) {
+        if (ownerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          owner_ = value;
+          onChanged();
+        } else {
+          ownerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+       */
+      public Builder setOwner(
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.Builder builderForValue) {
+        if (ownerBuilder_ == null) {
+          owner_ = builderForValue.build();
+          onChanged();
+        } else {
+          ownerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+       */
+      public Builder mergeOwner(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner value) {
+        if (ownerBuilder_ == null) {
+          if (owner_ != null) {
+            owner_ =
+              yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.newBuilder(owner_).mergeFrom(value).buildPartial();
+          } else {
+            owner_ = value;
+          }
+          onChanged();
+        } else {
+          ownerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+       */
+      public Builder clearOwner() {
+        if (ownerBuilder_ == null) {
+          owner_ = null;
+          onChanged();
+        } else {
+          owner_ = null;
+          ownerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.Builder getOwnerBuilder() {
+        
+        onChanged();
+        return getOwnerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.OwnerOrBuilder getOwnerOrBuilder() {
+        if (ownerBuilder_ != null) {
+          return ownerBuilder_.getMessageOrBuilder();
+        } else {
+          return owner_ == null ?
+              yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.getDefaultInstance() : owner_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.S3APIGetAclResponse.Owner owner = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.OwnerOrBuilder> 
+          getOwnerFieldBuilder() {
+        if (ownerBuilder_ == null) {
+          ownerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Owner.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.OwnerOrBuilder>(
+                  getOwner(),
+                  getParentForChildren(),
+                  isClean());
+          owner_ = null;
+        }
+        return ownerBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant> grants_ =
+        java.util.Collections.emptyList();
+      private void ensureGrantsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          grants_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant>(grants_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.GrantOrBuilder> grantsBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant> getGrantsList() {
+        if (grantsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(grants_);
+        } else {
+          return grantsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public int getGrantsCount() {
+        if (grantsBuilder_ == null) {
+          return grants_.size();
+        } else {
+          return grantsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant getGrants(int index) {
+        if (grantsBuilder_ == null) {
+          return grants_.get(index);
+        } else {
+          return grantsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public Builder setGrants(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant value) {
+        if (grantsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGrantsIsMutable();
+          grants_.set(index, value);
+          onChanged();
+        } else {
+          grantsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public Builder setGrants(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder builderForValue) {
+        if (grantsBuilder_ == null) {
+          ensureGrantsIsMutable();
+          grants_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          grantsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public Builder addGrants(yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant value) {
+        if (grantsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGrantsIsMutable();
+          grants_.add(value);
+          onChanged();
+        } else {
+          grantsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public Builder addGrants(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant value) {
+        if (grantsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGrantsIsMutable();
+          grants_.add(index, value);
+          onChanged();
+        } else {
+          grantsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public Builder addGrants(
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder builderForValue) {
+        if (grantsBuilder_ == null) {
+          ensureGrantsIsMutable();
+          grants_.add(builderForValue.build());
+          onChanged();
+        } else {
+          grantsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public Builder addGrants(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder builderForValue) {
+        if (grantsBuilder_ == null) {
+          ensureGrantsIsMutable();
+          grants_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          grantsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public Builder addAllGrants(
+          java.lang.Iterable<? extends yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant> values) {
+        if (grantsBuilder_ == null) {
+          ensureGrantsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, grants_);
+          onChanged();
+        } else {
+          grantsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public Builder clearGrants() {
+        if (grantsBuilder_ == null) {
+          grants_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          grantsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public Builder removeGrants(int index) {
+        if (grantsBuilder_ == null) {
+          ensureGrantsIsMutable();
+          grants_.remove(index);
+          onChanged();
+        } else {
+          grantsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder getGrantsBuilder(
+          int index) {
+        return getGrantsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.GrantOrBuilder getGrantsOrBuilder(
+          int index) {
+        if (grantsBuilder_ == null) {
+          return grants_.get(index);  } else {
+          return grantsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.GrantOrBuilder> 
+           getGrantsOrBuilderList() {
+        if (grantsBuilder_ != null) {
+          return grantsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(grants_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder addGrantsBuilder() {
+        return getGrantsFieldBuilder().addBuilder(
+            yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder addGrantsBuilder(
+          int index) {
+        return getGrantsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.S3APIGetAclResponse.Grant grants = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder> 
+           getGrantsBuilderList() {
+        return getGrantsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.GrantOrBuilder> 
+          getGrantsFieldBuilder() {
+        if (grantsBuilder_ == null) {
+          grantsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.Grant.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse.GrantOrBuilder>(
+                  grants_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          grants_ = null;
+        }
+        return grantsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.S3APIGetAclResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.S3APIGetAclResponse)
+    private static final yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse();
+    }
+
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<S3APIGetAclResponse>
+        PARSER = new com.google.protobuf.AbstractParser<S3APIGetAclResponse>() {
+      @java.lang.Override
+      public S3APIGetAclResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new S3APIGetAclResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<S3APIGetAclResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<S3APIGetAclResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIGetAclResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface S3APIPutAclResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.S3APIPutAclResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
+     * <code>string request_id = 1;</code>
+     * @return The requestId.
+     */
+    java.lang.String getRequestId();
+    /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
+     * <code>string request_id = 1;</code>
+     * @return The bytes for requestId.
+     */
+    com.google.protobuf.ByteString
+        getRequestIdBytes();
+  }
+  /**
+   * <pre>
+   * Represents a response of the put bucket acl or put object acl requests to S3.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.storage.v1.S3APIPutAclResponse}
+   */
+  public static final class S3APIPutAclResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.S3APIPutAclResponse)
+      S3APIPutAclResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use S3APIPutAclResponse.newBuilder() to construct.
+    private S3APIPutAclResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private S3APIPutAclResponse() {
+      requestId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new S3APIPutAclResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private S3APIPutAclResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              requestId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIPutAclResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIPutAclResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse.class, yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse.Builder.class);
+    }
+
+    public static final int REQUEST_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object requestId_;
+    /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
+     * <code>string request_id = 1;</code>
+     * @return The requestId.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestId() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
+     * <code>string request_id = 1;</code>
+     * @return The bytes for requestId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestIdBytes() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse other = (yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse) obj;
+
+      if (!getRequestId()
+          .equals(other.getRequestId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a response of the put bucket acl or put object acl requests to S3.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.storage.v1.S3APIPutAclResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.S3APIPutAclResponse)
+        yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIPutAclResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIPutAclResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse.class, yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        requestId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIPutAclResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse build() {
+        yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse buildPartial() {
+        yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse result = new yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse(this);
+        result.requestId_ = requestId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse) {
+          return mergeFrom((yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse other) {
+        if (other == yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse.getDefaultInstance()) return this;
+        if (!other.getRequestId().isEmpty()) {
+          requestId_ = other.requestId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object requestId_ = "";
+      /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
+       * <code>string request_id = 1;</code>
+       * @return The requestId.
+       */
+      public java.lang.String getRequestId() {
+        java.lang.Object ref = requestId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
+       * <code>string request_id = 1;</code>
+       * @return The bytes for requestId.
+       */
+      public com.google.protobuf.ByteString
+          getRequestIdBytes() {
+        java.lang.Object ref = requestId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
+       * <code>string request_id = 1;</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        requestId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
+       * <code>string request_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestId() {
+        
+        requestId_ = getDefaultInstance().getRequestId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
+       * <code>string request_id = 1;</code>
+       * @param value The bytes for requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        requestId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.S3APIPutAclResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.S3APIPutAclResponse)
+    private static final yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse();
+    }
+
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<S3APIPutAclResponse>
+        PARSER = new com.google.protobuf.AbstractParser<S3APIPutAclResponse>() {
+      @java.lang.Override
+      public S3APIPutAclResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new S3APIPutAclResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<S3APIPutAclResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<S3APIPutAclResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIPutAclResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_storage_v1_S3APIGetObjectResponse_descriptor;
   private static final 
@@ -40367,6 +44790,31 @@ public final class S3Api {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Owner_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Owner_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_Grantee_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_Grantee_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_S3APIPutAclResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_S3APIPutAclResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -40490,10 +44938,22 @@ public final class S3Api {
       "tobuf.Timestamp\022\014\n\004etag\030\003 \001(\t\022\014\n\004size\030\004 " +
       "\001(\003\0222\n\005owner\030\005 \001(\0132#.yandex.cloud.storag" +
       "e.v1.S3APIOwner\022\025\n\rstorage_class\030\006 \001(\t\"#" +
-      "\n\021S3APICommonPrefix\022\016\n\006prefix\030\001 \001(\tBb\n\033y" +
-      "andex.cloud.api.storage.v1ZCgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/sto" +
-      "rage/v1;storageb\006proto3"
+      "\n\021S3APICommonPrefix\022\016\n\006prefix\030\001 \001(\t\"\245\003\n\023" +
+      "S3APIGetAclResponse\022\022\n\nrequest_id\030\001 \001(\t\022" +
+      "A\n\005owner\030\002 \001(\01322.yandex.cloud.storage.v1" +
+      ".S3APIGetAclResponse.Owner\022B\n\006grants\030\003 \003" +
+      "(\01322.yandex.cloud.storage.v1.S3APIGetAcl" +
+      "Response.Grant\032)\n\005Owner\022\n\n\002id\030\001 \001(\t\022\024\n\014d" +
+      "isplay_name\030\002 \001(\t\032\307\001\n\005Grant\022K\n\007grantee\030\001" +
+      " \001(\0132:.yandex.cloud.storage.v1.S3APIGetA" +
+      "clResponse.Grant.Grantee\022\022\n\npermission\030\002" +
+      " \001(\t\032]\n\007Grantee\022\n\n\002id\030\001 \001(\t\022\014\n\004type\030\002 \001(" +
+      "\t\022\013\n\003uri\030\003 \001(\t\022\024\n\014display_name\030\004 \001(\t\022\025\n\r" +
+      "email_address\030\005 \001(\t\")\n\023S3APIPutAclRespon" +
+      "se\022\022\n\nrequest_id\030\001 \001(\tBb\n\033yandex.cloud.a" +
+      "pi.storage.v1ZCgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/storage/v1;stora" +
+      "geb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -40692,6 +45152,36 @@ public final class S3Api {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_descriptor,
         new java.lang.String[] { "Prefix", });
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_descriptor,
+        new java.lang.String[] { "RequestId", "Owner", "Grants", });
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Owner_descriptor =
+      internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Owner_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Owner_descriptor,
+        new java.lang.String[] { "Id", "DisplayName", });
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_descriptor =
+      internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_descriptor,
+        new java.lang.String[] { "Grantee", "Permission", });
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_Grantee_descriptor =
+      internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_Grantee_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_S3APIGetAclResponse_Grant_Grantee_descriptor,
+        new java.lang.String[] { "Id", "Type", "Uri", "DisplayName", "EmailAddress", });
+    internal_static_yandex_cloud_storage_v1_S3APIPutAclResponse_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_yandex_cloud_storage_v1_S3APIPutAclResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_S3APIPutAclResponse_descriptor,
+        new java.lang.String[] { "RequestId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

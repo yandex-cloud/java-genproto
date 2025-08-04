@@ -489,6 +489,33 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceOperation planned_operation = 17;</code>
      */
     yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder();
+
+    /**
+     * <pre>
+     * KafkaUI state.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+     * @return Whether the kafkaUi field is set.
+     */
+    boolean hasKafkaUi();
+    /**
+     * <pre>
+     * KafkaUI state.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+     * @return The kafkaUi.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI getKafkaUi();
+    /**
+     * <pre>
+     * KafkaUI state.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUIOrBuilder getKafkaUiOrBuilder();
   }
   /**
    * <pre>
@@ -693,6 +720,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(plannedOperation_);
                 plannedOperation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 146: {
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.Builder subBuilder = null;
+              if (kafkaUi_ != null) {
+                subBuilder = kafkaUi_.toBuilder();
+              }
+              kafkaUi_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kafkaUi_);
+                kafkaUi_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1265,6 +1305,610 @@ public final class ClusterOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.kafka.v1.Cluster.Status)
+    }
+
+    public interface KafkaUIOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * URL for connection to kafka ui
+       * </pre>
+       *
+       * <code>string url = 1;</code>
+       * @return The url.
+       */
+      java.lang.String getUrl();
+      /**
+       * <pre>
+       * URL for connection to kafka ui
+       * </pre>
+       *
+       * <code>string url = 1;</code>
+       * @return The bytes for url.
+       */
+      com.google.protobuf.ByteString
+          getUrlBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI}
+     */
+    public static final class KafkaUI extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI)
+        KafkaUIOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use KafkaUI.newBuilder() to construct.
+      private KafkaUI(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private KafkaUI() {
+        url_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new KafkaUI();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private KafkaUI(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                url_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_Cluster_KafkaUI_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_Cluster_KafkaUI_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.Builder.class);
+      }
+
+      public static final int URL_FIELD_NUMBER = 1;
+      private volatile java.lang.Object url_;
+      /**
+       * <pre>
+       * URL for connection to kafka ui
+       * </pre>
+       *
+       * <code>string url = 1;</code>
+       * @return The url.
+       */
+      @java.lang.Override
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          url_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * URL for connection to kafka ui
+       * </pre>
+       *
+       * <code>string url = 1;</code>
+       * @return The bytes for url.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI other = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI) obj;
+
+        if (!getUrl()
+            .equals(other.getUrl())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + URL_FIELD_NUMBER;
+        hash = (53 * hash) + getUrl().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI)
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUIOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_Cluster_KafkaUI_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_Cluster_KafkaUI_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          url_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_Cluster_KafkaUI_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI build() {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI buildPartial() {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI result = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI(this);
+          result.url_ = url_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI) {
+            return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI other) {
+          if (other == yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.getDefaultInstance()) return this;
+          if (!other.getUrl().isEmpty()) {
+            url_ = other.url_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object url_ = "";
+        /**
+         * <pre>
+         * URL for connection to kafka ui
+         * </pre>
+         *
+         * <code>string url = 1;</code>
+         * @return The url.
+         */
+        public java.lang.String getUrl() {
+          java.lang.Object ref = url_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            url_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * URL for connection to kafka ui
+         * </pre>
+         *
+         * <code>string url = 1;</code>
+         * @return The bytes for url.
+         */
+        public com.google.protobuf.ByteString
+            getUrlBytes() {
+          java.lang.Object ref = url_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            url_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * URL for connection to kafka ui
+         * </pre>
+         *
+         * <code>string url = 1;</code>
+         * @param value The url to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUrl(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          url_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * URL for connection to kafka ui
+         * </pre>
+         *
+         * <code>string url = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUrl() {
+          
+          url_ = getDefaultInstance().getUrl();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * URL for connection to kafka ui
+         * </pre>
+         *
+         * <code>string url = 1;</code>
+         * @param value The bytes for url to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          url_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI)
+      private static final yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI();
+      }
+
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<KafkaUI>
+          PARSER = new com.google.protobuf.AbstractParser<KafkaUI>() {
+        @java.lang.Override
+        public KafkaUI parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new KafkaUI(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<KafkaUI> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<KafkaUI> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -2020,6 +2664,44 @@ public final class ClusterOuterClass {
       return getPlannedOperation();
     }
 
+    public static final int KAFKA_UI_FIELD_NUMBER = 18;
+    private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI kafkaUi_;
+    /**
+     * <pre>
+     * KafkaUI state.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+     * @return Whether the kafkaUi field is set.
+     */
+    @java.lang.Override
+    public boolean hasKafkaUi() {
+      return kafkaUi_ != null;
+    }
+    /**
+     * <pre>
+     * KafkaUI state.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+     * @return The kafkaUi.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI getKafkaUi() {
+      return kafkaUi_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.getDefaultInstance() : kafkaUi_;
+    }
+    /**
+     * <pre>
+     * KafkaUI state.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUIOrBuilder getKafkaUiOrBuilder() {
+      return getKafkaUi();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2087,6 +2769,9 @@ public final class ClusterOuterClass {
       }
       if (plannedOperation_ != null) {
         output.writeMessage(17, getPlannedOperation());
+      }
+      if (kafkaUi_ != null) {
+        output.writeMessage(18, getKafkaUi());
       }
       unknownFields.writeTo(output);
     }
@@ -2174,6 +2859,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getPlannedOperation());
       }
+      if (kafkaUi_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getKafkaUi());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2231,6 +2920,11 @@ public final class ClusterOuterClass {
       if (hasPlannedOperation()) {
         if (!getPlannedOperation()
             .equals(other.getPlannedOperation())) return false;
+      }
+      if (hasKafkaUi() != other.hasKafkaUi()) return false;
+      if (hasKafkaUi()) {
+        if (!getKafkaUi()
+            .equals(other.getKafkaUi())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -2293,6 +2987,10 @@ public final class ClusterOuterClass {
       if (hasPlannedOperation()) {
         hash = (37 * hash) + PLANNED_OPERATION_FIELD_NUMBER;
         hash = (53 * hash) + getPlannedOperation().hashCode();
+      }
+      if (hasKafkaUi()) {
+        hash = (37 * hash) + KAFKA_UI_FIELD_NUMBER;
+        hash = (53 * hash) + getKafkaUi().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2508,6 +3206,12 @@ public final class ClusterOuterClass {
           plannedOperation_ = null;
           plannedOperationBuilder_ = null;
         }
+        if (kafkaUiBuilder_ == null) {
+          kafkaUi_ = null;
+        } else {
+          kafkaUi_ = null;
+          kafkaUiBuilder_ = null;
+        }
         return this;
       }
 
@@ -2584,6 +3288,11 @@ public final class ClusterOuterClass {
           result.plannedOperation_ = plannedOperation_;
         } else {
           result.plannedOperation_ = plannedOperationBuilder_.build();
+        }
+        if (kafkaUiBuilder_ == null) {
+          result.kafkaUi_ = kafkaUi_;
+        } else {
+          result.kafkaUi_ = kafkaUiBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2724,6 +3433,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasPlannedOperation()) {
           mergePlannedOperation(other.getPlannedOperation());
+        }
+        if (other.hasKafkaUi()) {
+          mergeKafkaUi(other.getKafkaUi());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4926,6 +5638,161 @@ public final class ClusterOuterClass {
         }
         return plannedOperationBuilder_;
       }
+
+      private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI kafkaUi_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUIOrBuilder> kafkaUiBuilder_;
+      /**
+       * <pre>
+       * KafkaUI state.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+       * @return Whether the kafkaUi field is set.
+       */
+      public boolean hasKafkaUi() {
+        return kafkaUiBuilder_ != null || kafkaUi_ != null;
+      }
+      /**
+       * <pre>
+       * KafkaUI state.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+       * @return The kafkaUi.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI getKafkaUi() {
+        if (kafkaUiBuilder_ == null) {
+          return kafkaUi_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.getDefaultInstance() : kafkaUi_;
+        } else {
+          return kafkaUiBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * KafkaUI state.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+       */
+      public Builder setKafkaUi(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI value) {
+        if (kafkaUiBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kafkaUi_ = value;
+          onChanged();
+        } else {
+          kafkaUiBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KafkaUI state.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+       */
+      public Builder setKafkaUi(
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.Builder builderForValue) {
+        if (kafkaUiBuilder_ == null) {
+          kafkaUi_ = builderForValue.build();
+          onChanged();
+        } else {
+          kafkaUiBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KafkaUI state.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+       */
+      public Builder mergeKafkaUi(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI value) {
+        if (kafkaUiBuilder_ == null) {
+          if (kafkaUi_ != null) {
+            kafkaUi_ =
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.newBuilder(kafkaUi_).mergeFrom(value).buildPartial();
+          } else {
+            kafkaUi_ = value;
+          }
+          onChanged();
+        } else {
+          kafkaUiBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KafkaUI state.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+       */
+      public Builder clearKafkaUi() {
+        if (kafkaUiBuilder_ == null) {
+          kafkaUi_ = null;
+          onChanged();
+        } else {
+          kafkaUi_ = null;
+          kafkaUiBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KafkaUI state.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.Builder getKafkaUiBuilder() {
+        
+        onChanged();
+        return getKafkaUiFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * KafkaUI state.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUIOrBuilder getKafkaUiOrBuilder() {
+        if (kafkaUiBuilder_ != null) {
+          return kafkaUiBuilder_.getMessageOrBuilder();
+        } else {
+          return kafkaUi_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.getDefaultInstance() : kafkaUi_;
+        }
+      }
+      /**
+       * <pre>
+       * KafkaUI state.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Cluster.KafkaUI kafka_ui = 18;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUIOrBuilder> 
+          getKafkaUiFieldBuilder() {
+        if (kafkaUiBuilder_ == null) {
+          kafkaUiBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUI.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Cluster.KafkaUIOrBuilder>(
+                  getKafkaUi(),
+                  getParentForChildren(),
+                  isClean());
+          kafkaUi_ = null;
+        }
+        return kafkaUiBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6249,6 +7116,33 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
      */
     yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaftOrBuilder getKraftOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration of Kafka UI.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+     * @return Whether the kafkaUiConfig field is set.
+     */
+    boolean hasKafkaUiConfig();
+    /**
+     * <pre>
+     * Configuration of Kafka UI.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+     * @return The kafkaUiConfig.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig getKafkaUiConfig();
+    /**
+     * <pre>
+     * Configuration of Kafka UI.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfigOrBuilder getKafkaUiConfigOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec}
@@ -6415,6 +7309,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(kraft_);
                 kraft_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.Builder subBuilder = null;
+              if (kafkaUiConfig_ != null) {
+                subBuilder = kafkaUiConfig_.toBuilder();
+              }
+              kafkaUiConfig_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kafkaUiConfig_);
+                kafkaUiConfig_ = subBuilder.buildPartial();
               }
 
               break;
@@ -9535,6 +10442,515 @@ public final class ClusterOuterClass {
 
     }
 
+    public interface KafkaUIConfigOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Is Kafka UI enabled for this cluster.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      boolean getEnabled();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig}
+     */
+    public static final class KafkaUIConfig extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig)
+        KafkaUIConfigOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use KafkaUIConfig.newBuilder() to construct.
+      private KafkaUIConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private KafkaUIConfig() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new KafkaUIConfig();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private KafkaUIConfig(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                enabled_ = input.readBool();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KafkaUIConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KafkaUIConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.Builder.class);
+      }
+
+      public static final int ENABLED_FIELD_NUMBER = 1;
+      private boolean enabled_;
+      /**
+       * <pre>
+       * Is Kafka UI enabled for this cluster.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (enabled_ != false) {
+          output.writeBool(1, enabled_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enabled_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, enabled_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig other = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig) obj;
+
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnabled());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig)
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfigOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KafkaUIConfig_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KafkaUIConfig_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          enabled_ = false;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KafkaUIConfig_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig build() {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig buildPartial() {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig result = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig(this);
+          result.enabled_ = enabled_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig) {
+            return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig other) {
+          if (other == yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.getDefaultInstance()) return this;
+          if (other.getEnabled() != false) {
+            setEnabled(other.getEnabled());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private boolean enabled_ ;
+        /**
+         * <pre>
+         * Is Kafka UI enabled for this cluster.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return The enabled.
+         */
+        @java.lang.Override
+        public boolean getEnabled() {
+          return enabled_;
+        }
+        /**
+         * <pre>
+         * Is Kafka UI enabled for this cluster.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnabled(boolean value) {
+          
+          enabled_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Is Kafka UI enabled for this cluster.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnabled() {
+          
+          enabled_ = false;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig)
+      private static final yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig();
+      }
+
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<KafkaUIConfig>
+          PARSER = new com.google.protobuf.AbstractParser<KafkaUIConfig>() {
+        @java.lang.Override
+        public KafkaUIConfig parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new KafkaUIConfig(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<KafkaUIConfig> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<KafkaUIConfig> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int VERSION_FIELD_NUMBER = 1;
     private volatile java.lang.Object version_;
     /**
@@ -9946,6 +11362,44 @@ public final class ClusterOuterClass {
       return getKraft();
     }
 
+    public static final int KAFKA_UI_CONFIG_FIELD_NUMBER = 13;
+    private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig kafkaUiConfig_;
+    /**
+     * <pre>
+     * Configuration of Kafka UI.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+     * @return Whether the kafkaUiConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasKafkaUiConfig() {
+      return kafkaUiConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration of Kafka UI.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+     * @return The kafkaUiConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig getKafkaUiConfig() {
+      return kafkaUiConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.getDefaultInstance() : kafkaUiConfig_;
+    }
+    /**
+     * <pre>
+     * Configuration of Kafka UI.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfigOrBuilder getKafkaUiConfigOrBuilder() {
+      return getKafkaUiConfig();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9995,6 +11449,9 @@ public final class ClusterOuterClass {
       }
       if (kraft_ != null) {
         output.writeMessage(12, getKraft());
+      }
+      if (kafkaUiConfig_ != null) {
+        output.writeMessage(13, getKafkaUiConfig());
       }
       unknownFields.writeTo(output);
     }
@@ -10056,6 +11513,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getKraft());
       }
+      if (kafkaUiConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getKafkaUiConfig());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10116,6 +11577,11 @@ public final class ClusterOuterClass {
         if (!getKraft()
             .equals(other.getKraft())) return false;
       }
+      if (hasKafkaUiConfig() != other.hasKafkaUiConfig()) return false;
+      if (hasKafkaUiConfig()) {
+        if (!getKafkaUiConfig()
+            .equals(other.getKafkaUiConfig())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10169,6 +11635,10 @@ public final class ClusterOuterClass {
       if (hasKraft()) {
         hash = (37 * hash) + KRAFT_FIELD_NUMBER;
         hash = (53 * hash) + getKraft().hashCode();
+      }
+      if (hasKafkaUiConfig()) {
+        hash = (37 * hash) + KAFKA_UI_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getKafkaUiConfig().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10355,6 +11825,12 @@ public final class ClusterOuterClass {
           kraft_ = null;
           kraftBuilder_ = null;
         }
+        if (kafkaUiConfigBuilder_ == null) {
+          kafkaUiConfig_ = null;
+        } else {
+          kafkaUiConfig_ = null;
+          kafkaUiConfigBuilder_ = null;
+        }
         return this;
       }
 
@@ -10425,6 +11901,11 @@ public final class ClusterOuterClass {
           result.kraft_ = kraft_;
         } else {
           result.kraft_ = kraftBuilder_.build();
+        }
+        if (kafkaUiConfigBuilder_ == null) {
+          result.kafkaUiConfig_ = kafkaUiConfig_;
+        } else {
+          result.kafkaUiConfig_ = kafkaUiConfigBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10517,6 +11998,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasKraft()) {
           mergeKraft(other.getKraft());
+        }
+        if (other.hasKafkaUiConfig()) {
+          mergeKafkaUiConfig(other.getKafkaUiConfig());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12011,6 +13495,161 @@ public final class ClusterOuterClass {
           kraft_ = null;
         }
         return kraftBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig kafkaUiConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfigOrBuilder> kafkaUiConfigBuilder_;
+      /**
+       * <pre>
+       * Configuration of Kafka UI.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+       * @return Whether the kafkaUiConfig field is set.
+       */
+      public boolean hasKafkaUiConfig() {
+        return kafkaUiConfigBuilder_ != null || kafkaUiConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration of Kafka UI.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+       * @return The kafkaUiConfig.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig getKafkaUiConfig() {
+        if (kafkaUiConfigBuilder_ == null) {
+          return kafkaUiConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.getDefaultInstance() : kafkaUiConfig_;
+        } else {
+          return kafkaUiConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of Kafka UI.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+       */
+      public Builder setKafkaUiConfig(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig value) {
+        if (kafkaUiConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kafkaUiConfig_ = value;
+          onChanged();
+        } else {
+          kafkaUiConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Kafka UI.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+       */
+      public Builder setKafkaUiConfig(
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.Builder builderForValue) {
+        if (kafkaUiConfigBuilder_ == null) {
+          kafkaUiConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          kafkaUiConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Kafka UI.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+       */
+      public Builder mergeKafkaUiConfig(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig value) {
+        if (kafkaUiConfigBuilder_ == null) {
+          if (kafkaUiConfig_ != null) {
+            kafkaUiConfig_ =
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.newBuilder(kafkaUiConfig_).mergeFrom(value).buildPartial();
+          } else {
+            kafkaUiConfig_ = value;
+          }
+          onChanged();
+        } else {
+          kafkaUiConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Kafka UI.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+       */
+      public Builder clearKafkaUiConfig() {
+        if (kafkaUiConfigBuilder_ == null) {
+          kafkaUiConfig_ = null;
+          onChanged();
+        } else {
+          kafkaUiConfig_ = null;
+          kafkaUiConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Kafka UI.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.Builder getKafkaUiConfigBuilder() {
+        
+        onChanged();
+        return getKafkaUiConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of Kafka UI.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfigOrBuilder getKafkaUiConfigOrBuilder() {
+        if (kafkaUiConfigBuilder_ != null) {
+          return kafkaUiConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return kafkaUiConfig_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.getDefaultInstance() : kafkaUiConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of Kafka UI.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KafkaUIConfig kafka_ui_config = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfigOrBuilder> 
+          getKafkaUiConfigFieldBuilder() {
+        if (kafkaUiConfigBuilder_ == null) {
+          kafkaUiConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfig.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KafkaUIConfigOrBuilder>(
+                  getKafkaUiConfig(),
+                  getParentForChildren(),
+                  isClean());
+          kafkaUiConfig_ = null;
+        }
+        return kafkaUiConfigBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -25081,6 +26720,14 @@ public final class ClusterOuterClass {
        * <code>ZOOKEEPER = 2;</code>
        */
       ZOOKEEPER(2),
+      /**
+       * <pre>
+       * The host is a Kafka KRaft controller broker.
+       * </pre>
+       *
+       * <code>KRAFT = 3;</code>
+       */
+      KRAFT(3),
       UNRECOGNIZED(-1),
       ;
 
@@ -25108,6 +26755,14 @@ public final class ClusterOuterClass {
        * <code>ZOOKEEPER = 2;</code>
        */
       public static final int ZOOKEEPER_VALUE = 2;
+      /**
+       * <pre>
+       * The host is a Kafka KRaft controller broker.
+       * </pre>
+       *
+       * <code>KRAFT = 3;</code>
+       */
+      public static final int KRAFT_VALUE = 3;
 
 
       public final int getNumber() {
@@ -25137,6 +26792,7 @@ public final class ClusterOuterClass {
           case 0: return ROLE_UNSPECIFIED;
           case 1: return KAFKA;
           case 2: return ZOOKEEPER;
+          case 3: return KRAFT;
           default: return null;
         }
       }
@@ -28076,6 +29732,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_Cluster_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_Cluster_KafkaUI_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_Cluster_KafkaUI_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_Monitoring_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -28105,6 +29766,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KafkaUIConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KafkaUIConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_Resources_descriptor;
   private static final 
@@ -28151,7 +29817,7 @@ public final class ClusterOuterClass {
       "s.proto\032&yandex/cloud/mdb/kafka/v1/commo" +
       "n.proto\032+yandex/cloud/mdb/kafka/v1/maint" +
       "enance.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"\231\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
+      "oto\"\357\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
       "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
       "obuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descript" +
       "ion\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..yandex.cloud" +
@@ -28169,122 +29835,127 @@ public final class ClusterOuterClass {
       "aintenance_window\030\020 \001(\0132,.yandex.cloud.m" +
       "db.kafka.v1.MaintenanceWindow\022J\n\021planned" +
       "_operation\030\021 \001(\0132/.yandex.cloud.mdb.kafk" +
-      "a.v1.MaintenanceOperation\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Envi" +
-      "ronment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\n" +
-      "PRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n" +
-      "\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014" +
-      "\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN" +
-      "\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003" +
-      "\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020" +
-      "\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 " +
-      "\001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\354" +
-      "\007\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022:\n\005kafka\030" +
-      "\002 \001(\0132+.yandex.cloud.mdb.kafka.v1.Config" +
-      "Spec.Kafka\022B\n\tzookeeper\030\003 \001(\0132/.yandex.c" +
-      "loud.mdb.kafka.v1.ConfigSpec.Zookeeper\022\017" +
-      "\n\007zone_id\030\004 \003(\t\0222\n\rbrokers_count\030\005 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022\030\n\020assign_pu" +
-      "blic_ip\030\006 \001(\010\022\034\n\020unmanaged_topics\030\007 \001(\010B" +
-      "\002\030\001\022\027\n\017schema_registry\030\010 \001(\010\0221\n\006access\030\t" +
-      " \001(\0132!.yandex.cloud.mdb.kafka.v1.Access\022" +
-      "L\n\017rest_api_config\030\n \001(\01323.yandex.cloud." +
-      "mdb.kafka.v1.ConfigSpec.RestAPIConfig\022M\n" +
-      "\025disk_size_autoscaling\030\013 \001(\0132..yandex.cl" +
-      "oud.mdb.kafka.v1.DiskSizeAutoscaling\022:\n\005" +
-      "kraft\030\014 \001(\0132+.yandex.cloud.mdb.kafka.v1." +
-      "ConfigSpec.KRaft\032\200\002\n\005Kafka\0227\n\tresources\030" +
-      "\001 \001(\0132$.yandex.cloud.mdb.kafka.v1.Resour" +
-      "ces\022V\n\020kafka_config_2_8\030\004 \001(\0132).yandex.c" +
-      "loud.mdb.kafka.v1.KafkaConfig2_8H\000R\017kafk" +
-      "aConfig_2_8\022P\n\016kafka_config_3\030\005 \001(\0132\'.ya" +
-      "ndex.cloud.mdb.kafka.v1.KafkaConfig3H\000R\r" +
-      "kafkaConfig_3B\016\n\014kafka_configJ\004\010\002\020\004\032D\n\tZ" +
-      "ookeeper\0227\n\tresources\030\001 \001(\0132$.yandex.clo" +
-      "ud.mdb.kafka.v1.Resources\032@\n\005KRaft\0227\n\tre" +
-      "sources\030\001 \001(\0132$.yandex.cloud.mdb.kafka.v" +
-      "1.Resources\032 \n\rRestAPIConfig\022\017\n\007enabled\030" +
-      "\001 \001(\010\"P\n\tResources\022\032\n\022resource_preset_id" +
-      "\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_i" +
-      "d\030\003 \001(\t\"\304\t\n\016KafkaConfig2_8\022D\n\020compressio" +
-      "n_type\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1" +
-      ".CompressionType\022@\n\033log_flush_interval_m" +
-      "essages\030\002 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022:\n\025log_flush_interval_ms\030\003 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022D\n\037log_flush_sche" +
-      "duler_interval_ms\030\004 \001(\0132\033.google.protobu" +
-      "f.Int64Value\0228\n\023log_retention_bytes\030\005 \001(" +
-      "\0132\033.google.protobuf.Int64Value\0228\n\023log_re" +
-      "tention_hours\030\006 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022:\n\025log_retention_minutes\030\007 \001(\0132" +
-      "\033.google.protobuf.Int64Value\0225\n\020log_rete" +
-      "ntion_ms\030\010 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\0226\n\021log_segment_bytes\030\t \001(\0132\033.google." +
-      "protobuf.Int64Value\0227\n\017log_preallocate\030\n" +
-      " \001(\0132\032.google.protobuf.BoolValueB\002\030\001\022=\n\030" +
-      "socket_send_buffer_bytes\030\013 \001(\0132\033.google." +
-      "protobuf.Int64Value\022@\n\033socket_receive_bu" +
-      "ffer_bytes\030\014 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022=\n\031auto_create_topics_enable\030\r \001(\013" +
-      "2\032.google.protobuf.BoolValue\0223\n\016num_part" +
-      "itions\030\016 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022?\n\032default_replication_factor\030\017 \001(\0132\033." +
-      "google.protobuf.Int64Value\0226\n\021message_ma" +
-      "x_bytes\030\020 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022<\n\027replica_fetch_max_bytes\030\021 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022\031\n\021ssl_cipher_s" +
-      "uites\030\022 \003(\t\022>\n\031offsets_retention_minutes" +
-      "\030\023 \001(\0132\033.google.protobuf.Int64Value\022I\n\027s" +
-      "asl_enabled_mechanisms\030\024 \003(\0162(.yandex.cl" +
-      "oud.mdb.kafka.v1.SaslMechanism\"\302\t\n\014Kafka" +
-      "Config3\022D\n\020compression_type\030\001 \001(\0162*.yand" +
-      "ex.cloud.mdb.kafka.v1.CompressionType\022@\n" +
-      "\033log_flush_interval_messages\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022:\n\025log_flush_int" +
-      "erval_ms\030\003 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022D\n\037log_flush_scheduler_interval_ms\030\004" +
-      " \001(\0132\033.google.protobuf.Int64Value\0228\n\023log" +
-      "_retention_bytes\030\005 \001(\0132\033.google.protobuf" +
-      ".Int64Value\0228\n\023log_retention_hours\030\006 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022:\n\025log_ret" +
-      "ention_minutes\030\007 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0226\n\021log_segment_" +
-      "bytes\030\t \001(\0132\033.google.protobuf.Int64Value" +
-      "\0227\n\017log_preallocate\030\n \001(\0132\032.google.proto" +
-      "buf.BoolValueB\002\030\001\022=\n\030socket_send_buffer_" +
-      "bytes\030\013 \001(\0132\033.google.protobuf.Int64Value" +
-      "\022@\n\033socket_receive_buffer_bytes\030\014 \001(\0132\033." +
-      "google.protobuf.Int64Value\022=\n\031auto_creat" +
-      "e_topics_enable\030\r \001(\0132\032.google.protobuf." +
-      "BoolValue\0223\n\016num_partitions\030\016 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022?\n\032default_replic" +
-      "ation_factor\030\017 \001(\0132\033.google.protobuf.Int" +
-      "64Value\0226\n\021message_max_bytes\030\020 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022<\n\027replica_fetch" +
-      "_max_bytes\030\021 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022>\n\031offs" +
-      "ets_retention_minutes\030\023 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022I\n\027sasl_enabled_mechani" +
-      "sms\030\024 \003(\0162(.yandex.cloud.mdb.kafka.v1.Sa" +
-      "slMechanism\"\203\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncl" +
-      "uster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030" +
-      "\004 \001(\0162$.yandex.cloud.mdb.kafka.v1.Host.R" +
-      "ole\0227\n\tresources\030\005 \001(\0132$.yandex.cloud.md" +
-      "b.kafka.v1.Resources\0226\n\006health\030\006 \001(\0162&.y" +
-      "andex.cloud.mdb.kafka.v1.Host.Health\022\021\n\t" +
-      "subnet_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(" +
-      "\010\"6\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA" +
-      "\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000" +
-      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003J\004\010\007\020" +
-      "\010\"\037\n\006Access\022\025\n\rdata_transfer\030\001 \001(\010\"\220\001\n\023D" +
-      "iskSizeAutoscaling\022.\n\027planned_usage_thre" +
-      "shold\030\001 \001(\003B\r\350\3071\000\372\3071\0050-100\0220\n\031emergency_" +
-      "usage_threshold\030\002 \001(\003B\r\350\3071\000\372\3071\0050-100\022\027\n\017" +
-      "disk_size_limit\030\003 \001(\003Bd\n\035yandex.cloud.ap" +
-      "i.mdb.kafka.v1ZCgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/mdb/kafka/v1;ka" +
-      "fkab\006proto3"
+      "a.v1.MaintenanceOperation\022<\n\010kafka_ui\030\022 " +
+      "\001(\0132*.yandex.cloud.mdb.kafka.v1.Cluster." +
+      "KafkaUI\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\032\026\n\007KafkaUI\022\013\n\003url\030\001 \001(\t\"I" +
+      "\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIFIED" +
+      "\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Hea" +
+      "lth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DE" +
+      "AD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_U" +
+      "NKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005E" +
+      "RROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007ST" +
+      "OPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003" +
+      " \001(\t\"\334\010\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022:\n\005" +
+      "kafka\030\002 \001(\0132+.yandex.cloud.mdb.kafka.v1." +
+      "ConfigSpec.Kafka\022B\n\tzookeeper\030\003 \001(\0132/.ya" +
+      "ndex.cloud.mdb.kafka.v1.ConfigSpec.Zooke" +
+      "eper\022\017\n\007zone_id\030\004 \003(\t\0222\n\rbrokers_count\030\005" +
+      " \001(\0132\033.google.protobuf.Int64Value\022\030\n\020ass" +
+      "ign_public_ip\030\006 \001(\010\022\034\n\020unmanaged_topics\030" +
+      "\007 \001(\010B\002\030\001\022\027\n\017schema_registry\030\010 \001(\010\0221\n\006ac" +
+      "cess\030\t \001(\0132!.yandex.cloud.mdb.kafka.v1.A" +
+      "ccess\022L\n\017rest_api_config\030\n \001(\01323.yandex." +
+      "cloud.mdb.kafka.v1.ConfigSpec.RestAPICon" +
+      "fig\022M\n\025disk_size_autoscaling\030\013 \001(\0132..yan" +
+      "dex.cloud.mdb.kafka.v1.DiskSizeAutoscali" +
+      "ng\022:\n\005kraft\030\014 \001(\0132+.yandex.cloud.mdb.kaf" +
+      "ka.v1.ConfigSpec.KRaft\022L\n\017kafka_ui_confi" +
+      "g\030\r \001(\01323.yandex.cloud.mdb.kafka.v1.Conf" +
+      "igSpec.KafkaUIConfig\032\200\002\n\005Kafka\0227\n\tresour" +
+      "ces\030\001 \001(\0132$.yandex.cloud.mdb.kafka.v1.Re" +
+      "sources\022V\n\020kafka_config_2_8\030\004 \001(\0132).yand" +
+      "ex.cloud.mdb.kafka.v1.KafkaConfig2_8H\000R\017" +
+      "kafkaConfig_2_8\022P\n\016kafka_config_3\030\005 \001(\0132" +
+      "\'.yandex.cloud.mdb.kafka.v1.KafkaConfig3" +
+      "H\000R\rkafkaConfig_3B\016\n\014kafka_configJ\004\010\002\020\004\032" +
+      "D\n\tZookeeper\0227\n\tresources\030\001 \001(\0132$.yandex" +
+      ".cloud.mdb.kafka.v1.Resources\032@\n\005KRaft\0227" +
+      "\n\tresources\030\001 \001(\0132$.yandex.cloud.mdb.kaf" +
+      "ka.v1.Resources\032 \n\rRestAPIConfig\022\017\n\007enab" +
+      "led\030\001 \001(\010\032 \n\rKafkaUIConfig\022\017\n\007enabled\030\001 " +
+      "\001(\010\"P\n\tResources\022\032\n\022resource_preset_id\030\001" +
+      " \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030" +
+      "\003 \001(\t\"\304\t\n\016KafkaConfig2_8\022D\n\020compression_" +
+      "type\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1.C" +
+      "ompressionType\022@\n\033log_flush_interval_mes" +
+      "sages\030\002 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022:\n\025log_flush_interval_ms\030\003 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022D\n\037log_flush_schedu" +
+      "ler_interval_ms\030\004 \001(\0132\033.google.protobuf." +
+      "Int64Value\0228\n\023log_retention_bytes\030\005 \001(\0132" +
+      "\033.google.protobuf.Int64Value\0228\n\023log_rete" +
+      "ntion_hours\030\006 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022:\n\025log_retention_minutes\030\007 \001(\0132\033." +
+      "google.protobuf.Int64Value\0225\n\020log_retent" +
+      "ion_ms\030\010 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0226\n\021log_segment_bytes\030\t \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\0227\n\017log_preallocate\030\n \001" +
+      "(\0132\032.google.protobuf.BoolValueB\002\030\001\022=\n\030so" +
+      "cket_send_buffer_bytes\030\013 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022@\n\033socket_receive_buff" +
+      "er_bytes\030\014 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022=\n\031auto_create_topics_enable\030\r \001(\0132\032" +
+      ".google.protobuf.BoolValue\0223\n\016num_partit" +
+      "ions\030\016 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "?\n\032default_replication_factor\030\017 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0226\n\021message_max_" +
+      "bytes\030\020 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022<\n\027replica_fetch_max_bytes\030\021 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022\031\n\021ssl_cipher_sui" +
+      "tes\030\022 \003(\t\022>\n\031offsets_retention_minutes\030\023" +
+      " \001(\0132\033.google.protobuf.Int64Value\022I\n\027sas" +
+      "l_enabled_mechanisms\030\024 \003(\0162(.yandex.clou" +
+      "d.mdb.kafka.v1.SaslMechanism\"\302\t\n\014KafkaCo" +
+      "nfig3\022D\n\020compression_type\030\001 \001(\0162*.yandex" +
+      ".cloud.mdb.kafka.v1.CompressionType\022@\n\033l" +
+      "og_flush_interval_messages\030\002 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022:\n\025log_flush_inter" +
+      "val_ms\030\003 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022D\n\037log_flush_scheduler_interval_ms\030\004 \001" +
+      "(\0132\033.google.protobuf.Int64Value\0228\n\023log_r" +
+      "etention_bytes\030\005 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\0228\n\023log_retention_hours\030\006 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022:\n\025log_reten" +
+      "tion_minutes\030\007 \001(\0132\033.google.protobuf.Int" +
+      "64Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0226\n\021log_segment_by" +
+      "tes\030\t \001(\0132\033.google.protobuf.Int64Value\0227" +
+      "\n\017log_preallocate\030\n \001(\0132\032.google.protobu" +
+      "f.BoolValueB\002\030\001\022=\n\030socket_send_buffer_by" +
+      "tes\030\013 \001(\0132\033.google.protobuf.Int64Value\022@" +
+      "\n\033socket_receive_buffer_bytes\030\014 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022=\n\031auto_create_" +
+      "topics_enable\030\r \001(\0132\032.google.protobuf.Bo" +
+      "olValue\0223\n\016num_partitions\030\016 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022?\n\032default_replicat" +
+      "ion_factor\030\017 \001(\0132\033.google.protobuf.Int64" +
+      "Value\0226\n\021message_max_bytes\030\020 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022<\n\027replica_fetch_m" +
+      "ax_bytes\030\021 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022>\n\031offset" +
+      "s_retention_minutes\030\023 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022I\n\027sasl_enabled_mechanism" +
+      "s\030\024 \003(\0162(.yandex.cloud.mdb.kafka.v1.Sasl" +
+      "Mechanism\"\216\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\nclus" +
+      "ter_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 " +
+      "\001(\0162$.yandex.cloud.mdb.kafka.v1.Host.Rol" +
+      "e\0227\n\tresources\030\005 \001(\0132$.yandex.cloud.mdb." +
+      "kafka.v1.Resources\0226\n\006health\030\006 \001(\0162&.yan" +
+      "dex.cloud.mdb.kafka.v1.Host.Health\022\021\n\tsu" +
+      "bnet_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"" +
+      "A\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001" +
+      "\022\r\n\tZOOKEEPER\020\002\022\t\n\005KRAFT\020\003\"8\n\006Health\022\013\n\007" +
+      "UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRAD" +
+      "ED\020\003J\004\010\007\020\010\"\037\n\006Access\022\025\n\rdata_transfer\030\001 " +
+      "\001(\010\"\220\001\n\023DiskSizeAutoscaling\022.\n\027planned_u" +
+      "sage_threshold\030\001 \001(\003B\r\350\3071\000\372\3071\0050-100\0220\n\031e" +
+      "mergency_usage_threshold\030\002 \001(\003B\r\350\3071\000\372\3071\005" +
+      "0-100\022\027\n\017disk_size_limit\030\003 \001(\003Bd\n\035yandex" +
+      ".cloud.api.mdb.kafka.v1ZCgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/mdb/ka" +
+      "fka/v1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -28301,13 +29972,19 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", "HostGroupIds", "DeletionProtection", "MaintenanceWindow", "PlannedOperation", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", "HostGroupIds", "DeletionProtection", "MaintenanceWindow", "PlannedOperation", "KafkaUi", });
     internal_static_yandex_cloud_mdb_kafka_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_Cluster_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_Cluster_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_mdb_kafka_v1_Cluster_KafkaUI_descriptor =
+      internal_static_yandex_cloud_mdb_kafka_v1_Cluster_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_mdb_kafka_v1_Cluster_KafkaUI_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_Cluster_KafkaUI_descriptor,
+        new java.lang.String[] { "Url", });
     internal_static_yandex_cloud_mdb_kafka_v1_Monitoring_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_kafka_v1_Monitoring_fieldAccessorTable = new
@@ -28319,7 +29996,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", "SchemaRegistry", "Access", "RestApiConfig", "DiskSizeAutoscaling", "Kraft", });
+        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", "SchemaRegistry", "Access", "RestApiConfig", "DiskSizeAutoscaling", "Kraft", "KafkaUiConfig", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_fieldAccessorTable = new
@@ -28343,6 +30020,12 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_descriptor,
+        new java.lang.String[] { "Enabled", });
+    internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KafkaUIConfig_descriptor =
+      internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(4);
+    internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KafkaUIConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KafkaUIConfig_descriptor,
         new java.lang.String[] { "Enabled", });
     internal_static_yandex_cloud_mdb_kafka_v1_Resources_descriptor =
       getDescriptor().getMessageTypes().get(3);

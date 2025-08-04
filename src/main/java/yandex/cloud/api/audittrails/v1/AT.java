@@ -17917,13 +17917,24 @@ public final class AT {
 
       /**
        * <pre>
-       * Only recursive queries will be delivered
+       * deprecated: use all_dns_queries instead
        * </pre>
        *
-       * <code>bool only_recursive_queries = 1;</code>
+       * <code>bool only_recursive_queries = 1 [deprecated = true];</code>
+       * @deprecated
        * @return The onlyRecursiveQueries.
        */
-      boolean getOnlyRecursiveQueries();
+      @java.lang.Deprecated boolean getOnlyRecursiveQueries();
+
+      /**
+       * <pre>
+       * Not only recursive queries will be delivered
+       * </pre>
+       *
+       * <code>bool include_nonrecursive_queries = 2;</code>
+       * @return The includeNonrecursiveQueries.
+       */
+      boolean getIncludeNonrecursiveQueries();
     }
     /**
      * Protobuf type {@code yandex.cloud.audittrails.v1.Trail.DnsDataEventsFilter}
@@ -17975,6 +17986,11 @@ public final class AT {
                 onlyRecursiveQueries_ = input.readBool();
                 break;
               }
+              case 16: {
+
+                includeNonrecursiveQueries_ = input.readBool();
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -18011,15 +18027,31 @@ public final class AT {
       private boolean onlyRecursiveQueries_;
       /**
        * <pre>
-       * Only recursive queries will be delivered
+       * deprecated: use all_dns_queries instead
        * </pre>
        *
-       * <code>bool only_recursive_queries = 1;</code>
+       * <code>bool only_recursive_queries = 1 [deprecated = true];</code>
+       * @deprecated
        * @return The onlyRecursiveQueries.
        */
       @java.lang.Override
-      public boolean getOnlyRecursiveQueries() {
+      @java.lang.Deprecated public boolean getOnlyRecursiveQueries() {
         return onlyRecursiveQueries_;
+      }
+
+      public static final int INCLUDE_NONRECURSIVE_QUERIES_FIELD_NUMBER = 2;
+      private boolean includeNonrecursiveQueries_;
+      /**
+       * <pre>
+       * Not only recursive queries will be delivered
+       * </pre>
+       *
+       * <code>bool include_nonrecursive_queries = 2;</code>
+       * @return The includeNonrecursiveQueries.
+       */
+      @java.lang.Override
+      public boolean getIncludeNonrecursiveQueries() {
+        return includeNonrecursiveQueries_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -18039,6 +18071,9 @@ public final class AT {
         if (onlyRecursiveQueries_ != false) {
           output.writeBool(1, onlyRecursiveQueries_);
         }
+        if (includeNonrecursiveQueries_ != false) {
+          output.writeBool(2, includeNonrecursiveQueries_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -18051,6 +18086,10 @@ public final class AT {
         if (onlyRecursiveQueries_ != false) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(1, onlyRecursiveQueries_);
+        }
+        if (includeNonrecursiveQueries_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(2, includeNonrecursiveQueries_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -18069,6 +18108,8 @@ public final class AT {
 
         if (getOnlyRecursiveQueries()
             != other.getOnlyRecursiveQueries()) return false;
+        if (getIncludeNonrecursiveQueries()
+            != other.getIncludeNonrecursiveQueries()) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -18083,6 +18124,9 @@ public final class AT {
         hash = (37 * hash) + ONLY_RECURSIVE_QUERIES_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getOnlyRecursiveQueries());
+        hash = (37 * hash) + INCLUDE_NONRECURSIVE_QUERIES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIncludeNonrecursiveQueries());
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -18218,6 +18262,8 @@ public final class AT {
           super.clear();
           onlyRecursiveQueries_ = false;
 
+          includeNonrecursiveQueries_ = false;
+
           return this;
         }
 
@@ -18245,6 +18291,7 @@ public final class AT {
         public yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter buildPartial() {
           yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter result = new yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter(this);
           result.onlyRecursiveQueries_ = onlyRecursiveQueries_;
+          result.includeNonrecursiveQueries_ = includeNonrecursiveQueries_;
           onBuilt();
           return result;
         }
@@ -18296,6 +18343,9 @@ public final class AT {
           if (other.getOnlyRecursiveQueries() != false) {
             setOnlyRecursiveQueries(other.getOnlyRecursiveQueries());
           }
+          if (other.getIncludeNonrecursiveQueries() != false) {
+            setIncludeNonrecursiveQueries(other.getIncludeNonrecursiveQueries());
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -18328,26 +18378,28 @@ public final class AT {
         private boolean onlyRecursiveQueries_ ;
         /**
          * <pre>
-         * Only recursive queries will be delivered
+         * deprecated: use all_dns_queries instead
          * </pre>
          *
-         * <code>bool only_recursive_queries = 1;</code>
+         * <code>bool only_recursive_queries = 1 [deprecated = true];</code>
+         * @deprecated
          * @return The onlyRecursiveQueries.
          */
         @java.lang.Override
-        public boolean getOnlyRecursiveQueries() {
+        @java.lang.Deprecated public boolean getOnlyRecursiveQueries() {
           return onlyRecursiveQueries_;
         }
         /**
          * <pre>
-         * Only recursive queries will be delivered
+         * deprecated: use all_dns_queries instead
          * </pre>
          *
-         * <code>bool only_recursive_queries = 1;</code>
+         * <code>bool only_recursive_queries = 1 [deprecated = true];</code>
+         * @deprecated
          * @param value The onlyRecursiveQueries to set.
          * @return This builder for chaining.
          */
-        public Builder setOnlyRecursiveQueries(boolean value) {
+        @java.lang.Deprecated public Builder setOnlyRecursiveQueries(boolean value) {
           
           onlyRecursiveQueries_ = value;
           onChanged();
@@ -18355,15 +18407,59 @@ public final class AT {
         }
         /**
          * <pre>
-         * Only recursive queries will be delivered
+         * deprecated: use all_dns_queries instead
          * </pre>
          *
-         * <code>bool only_recursive_queries = 1;</code>
+         * <code>bool only_recursive_queries = 1 [deprecated = true];</code>
+         * @deprecated
          * @return This builder for chaining.
          */
-        public Builder clearOnlyRecursiveQueries() {
+        @java.lang.Deprecated public Builder clearOnlyRecursiveQueries() {
           
           onlyRecursiveQueries_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean includeNonrecursiveQueries_ ;
+        /**
+         * <pre>
+         * Not only recursive queries will be delivered
+         * </pre>
+         *
+         * <code>bool include_nonrecursive_queries = 2;</code>
+         * @return The includeNonrecursiveQueries.
+         */
+        @java.lang.Override
+        public boolean getIncludeNonrecursiveQueries() {
+          return includeNonrecursiveQueries_;
+        }
+        /**
+         * <pre>
+         * Not only recursive queries will be delivered
+         * </pre>
+         *
+         * <code>bool include_nonrecursive_queries = 2;</code>
+         * @param value The includeNonrecursiveQueries to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIncludeNonrecursiveQueries(boolean value) {
+          
+          includeNonrecursiveQueries_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Not only recursive queries will be delivered
+         * </pre>
+         *
+         * <code>bool include_nonrecursive_queries = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIncludeNonrecursiveQueries() {
+          
+          includeNonrecursiveQueries_ = false;
           onChanged();
           return this;
         }
@@ -21553,7 +21649,7 @@ public final class AT {
       "\n\'yandex/cloud/audittrails/v1/trail.prot" +
       "o\022\033yandex.cloud.audittrails.v1\032\037google/p" +
       "rotobuf/timestamp.proto\032\035yandex/cloud/va" +
-      "lidation.proto\"\245\034\n\005Trail\022\n\n\002id\030\001 \001(\t\022\037\n\t" +
+      "lidation.proto\"\317\034\n\005Trail\022\n\n\002id\030\001 \001(\t\022\037\n\t" +
       "folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\ncreated" +
       "_at\030\003 \001(\0132\032.google.protobuf.TimestampB\004\350" +
       "\3071\001\0224\n\nupdated_at\030\004 \001(\0132\032.google.protobu" +
@@ -21636,18 +21732,19 @@ public final class AT {
       "gementEventsFilteringB\004\350\3071\000\022]\n\023data_even" +
       "ts_filters\030\002 \003(\01326.yandex.cloud.audittra" +
       "ils.v1.Trail.DataEventsFilteringB\010\202\3101\004<1" +
-      "28\0325\n\023DnsDataEventsFilter\022\036\n\026only_recurs" +
-      "ive_queries\030\001 \001(\010\"D\n\006Status\022\026\n\022STATUS_UN" +
-      "SPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\t\n\005ERROR\020\002\022\013\n\007DE" +
-      "LETED\020\003\"_\n\023EventCategoryFilter\022%\n!EVENT_" +
-      "CATEGORY_FILTER_UNSPECIFIED\020\000\022\021\n\rCONTROL" +
-      "_PLANE\020\001\022\016\n\nDATA_PLANE\020\002\"V\n\025EventAccessT" +
-      "ypeFilter\022(\n$EVENT_ACCESS_TYPE_FILTER_UN" +
-      "SPECIFIED\020\000\022\t\n\005WRITE\020\001\022\010\n\004READ\020\002J\004\010\r\020\016Br" +
-      "\n\037yandex.cloud.api.audittrails.v1B\002ATZKg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/audittrails/v1;audittrailsb\006prot" +
-      "o3"
+      "28\032_\n\023DnsDataEventsFilter\022\"\n\026only_recurs" +
+      "ive_queries\030\001 \001(\010B\002\030\001\022$\n\034include_nonrecu" +
+      "rsive_queries\030\002 \001(\010\"D\n\006Status\022\026\n\022STATUS_" +
+      "UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\t\n\005ERROR\020\002\022\013\n\007" +
+      "DELETED\020\003\"_\n\023EventCategoryFilter\022%\n!EVEN" +
+      "T_CATEGORY_FILTER_UNSPECIFIED\020\000\022\021\n\rCONTR" +
+      "OL_PLANE\020\001\022\016\n\nDATA_PLANE\020\002\"V\n\025EventAcces" +
+      "sTypeFilter\022(\n$EVENT_ACCESS_TYPE_FILTER_" +
+      "UNSPECIFIED\020\000\022\t\n\005WRITE\020\001\022\010\n\004READ\020\002J\004\010\r\020\016" +
+      "Br\n\037yandex.cloud.api.audittrails.v1B\002ATZ" +
+      "Kgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/audittrails/v1;audittrailsb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21774,7 +21871,7 @@ public final class AT {
     internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_descriptor,
-        new java.lang.String[] { "OnlyRecursiveQueries", });
+        new java.lang.String[] { "OnlyRecursiveQueries", "IncludeNonrecursiveQueries", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

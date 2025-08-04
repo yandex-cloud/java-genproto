@@ -2973,6 +2973,21 @@ public final class PERC {
      */
     yandex.cloud.api.serverless.eventrouter.v1.PERC.EventServiceSourceOrBuilder getEventServiceSourceOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+     * @return Whether the auditTrails field is set.
+     */
+    boolean hasAuditTrails();
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+     * @return The auditTrails.
+     */
+    yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails getAuditTrails();
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+     */
+    yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrailsOrBuilder getAuditTrailsOrBuilder();
+
     public yandex.cloud.api.serverless.eventrouter.v1.PERC.Source.SourceCase getSourceCase();
   }
   /**
@@ -3076,6 +3091,20 @@ public final class PERC {
               sourceCase_ = 4;
               break;
             }
+            case 42: {
+              yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.Builder subBuilder = null;
+              if (sourceCase_ == 5) {
+                subBuilder = ((yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) source_).toBuilder();
+              }
+              source_ =
+                  input.readMessage(yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) source_);
+                source_ = subBuilder.buildPartial();
+              }
+              sourceCase_ = 5;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3117,6 +3146,7 @@ public final class PERC {
       MESSAGE_QUEUE(2),
       TIMER(3),
       EVENT_SERVICE_SOURCE(4),
+      AUDIT_TRAILS(5),
       SOURCE_NOT_SET(0);
       private final int value;
       private SourceCase(int value) {
@@ -3138,6 +3168,7 @@ public final class PERC {
           case 2: return MESSAGE_QUEUE;
           case 3: return TIMER;
           case 4: return EVENT_SERVICE_SOURCE;
+          case 5: return AUDIT_TRAILS;
           case 0: return SOURCE_NOT_SET;
           default: return null;
         }
@@ -3277,6 +3308,37 @@ public final class PERC {
       return yandex.cloud.api.serverless.eventrouter.v1.PERC.EventServiceSource.getDefaultInstance();
     }
 
+    public static final int AUDIT_TRAILS_FIELD_NUMBER = 5;
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+     * @return Whether the auditTrails field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuditTrails() {
+      return sourceCase_ == 5;
+    }
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+     * @return The auditTrails.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails getAuditTrails() {
+      if (sourceCase_ == 5) {
+         return (yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) source_;
+      }
+      return yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrailsOrBuilder getAuditTrailsOrBuilder() {
+      if (sourceCase_ == 5) {
+         return (yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) source_;
+      }
+      return yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3303,6 +3365,9 @@ public final class PERC {
       if (sourceCase_ == 4) {
         output.writeMessage(4, (yandex.cloud.api.serverless.eventrouter.v1.PERC.EventServiceSource) source_);
       }
+      if (sourceCase_ == 5) {
+        output.writeMessage(5, (yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) source_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3327,6 +3392,10 @@ public final class PERC {
       if (sourceCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (yandex.cloud.api.serverless.eventrouter.v1.PERC.EventServiceSource) source_);
+      }
+      if (sourceCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) source_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3361,6 +3430,10 @@ public final class PERC {
           if (!getEventServiceSource()
               .equals(other.getEventServiceSource())) return false;
           break;
+        case 5:
+          if (!getAuditTrails()
+              .equals(other.getAuditTrails())) return false;
+          break;
         case 0:
         default:
       }
@@ -3391,6 +3464,10 @@ public final class PERC {
         case 4:
           hash = (37 * hash) + EVENT_SERVICE_SOURCE_FIELD_NUMBER;
           hash = (53 * hash) + getEventServiceSource().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + AUDIT_TRAILS_FIELD_NUMBER;
+          hash = (53 * hash) + getAuditTrails().hashCode();
           break;
         case 0:
         default:
@@ -3584,6 +3661,13 @@ public final class PERC {
             result.source_ = eventServiceSourceBuilder_.build();
           }
         }
+        if (sourceCase_ == 5) {
+          if (auditTrailsBuilder_ == null) {
+            result.source_ = source_;
+          } else {
+            result.source_ = auditTrailsBuilder_.build();
+          }
+        }
         result.sourceCase_ = sourceCase_;
         onBuilt();
         return result;
@@ -3648,6 +3732,10 @@ public final class PERC {
           }
           case EVENT_SERVICE_SOURCE: {
             mergeEventServiceSource(other.getEventServiceSource());
+            break;
+          }
+          case AUDIT_TRAILS: {
+            mergeAuditTrails(other.getAuditTrails());
             break;
           }
           case SOURCE_NOT_SET: {
@@ -4260,6 +4348,147 @@ public final class PERC {
         sourceCase_ = 4;
         onChanged();;
         return eventServiceSourceBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails, yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrailsOrBuilder> auditTrailsBuilder_;
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+       * @return Whether the auditTrails field is set.
+       */
+      @java.lang.Override
+      public boolean hasAuditTrails() {
+        return sourceCase_ == 5;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+       * @return The auditTrails.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails getAuditTrails() {
+        if (auditTrailsBuilder_ == null) {
+          if (sourceCase_ == 5) {
+            return (yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) source_;
+          }
+          return yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.getDefaultInstance();
+        } else {
+          if (sourceCase_ == 5) {
+            return auditTrailsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+       */
+      public Builder setAuditTrails(yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails value) {
+        if (auditTrailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          source_ = value;
+          onChanged();
+        } else {
+          auditTrailsBuilder_.setMessage(value);
+        }
+        sourceCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+       */
+      public Builder setAuditTrails(
+          yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.Builder builderForValue) {
+        if (auditTrailsBuilder_ == null) {
+          source_ = builderForValue.build();
+          onChanged();
+        } else {
+          auditTrailsBuilder_.setMessage(builderForValue.build());
+        }
+        sourceCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+       */
+      public Builder mergeAuditTrails(yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails value) {
+        if (auditTrailsBuilder_ == null) {
+          if (sourceCase_ == 5 &&
+              source_ != yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.getDefaultInstance()) {
+            source_ = yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.newBuilder((yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) source_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            source_ = value;
+          }
+          onChanged();
+        } else {
+          if (sourceCase_ == 5) {
+            auditTrailsBuilder_.mergeFrom(value);
+          }
+          auditTrailsBuilder_.setMessage(value);
+        }
+        sourceCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+       */
+      public Builder clearAuditTrails() {
+        if (auditTrailsBuilder_ == null) {
+          if (sourceCase_ == 5) {
+            sourceCase_ = 0;
+            source_ = null;
+            onChanged();
+          }
+        } else {
+          if (sourceCase_ == 5) {
+            sourceCase_ = 0;
+            source_ = null;
+          }
+          auditTrailsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+       */
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.Builder getAuditTrailsBuilder() {
+        return getAuditTrailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrailsOrBuilder getAuditTrailsOrBuilder() {
+        if ((sourceCase_ == 5) && (auditTrailsBuilder_ != null)) {
+          return auditTrailsBuilder_.getMessageOrBuilder();
+        } else {
+          if (sourceCase_ == 5) {
+            return (yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) source_;
+          }
+          return yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.eventrouter.v1.AuditTrails audit_trails = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails, yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrailsOrBuilder> 
+          getAuditTrailsFieldBuilder() {
+        if (auditTrailsBuilder_ == null) {
+          if (!(sourceCase_ == 5)) {
+            source_ = yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.getDefaultInstance();
+          }
+          auditTrailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails, yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrailsOrBuilder>(
+                  (yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) source_,
+                  getParentForChildren(),
+                  isClean());
+          source_ = null;
+        }
+        sourceCase_ = 5;
+        onChanged();;
+        return auditTrailsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8295,6 +8524,424 @@ public final class PERC {
 
   }
 
+  public interface AuditTrailsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.eventrouter.v1.AuditTrails)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.eventrouter.v1.AuditTrails}
+   */
+  public static final class AuditTrails extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.eventrouter.v1.AuditTrails)
+      AuditTrailsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AuditTrails.newBuilder() to construct.
+    private AuditTrails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AuditTrails() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AuditTrails();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AuditTrails(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.eventrouter.v1.PERC.internal_static_yandex_cloud_serverless_eventrouter_v1_AuditTrails_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.eventrouter.v1.PERC.internal_static_yandex_cloud_serverless_eventrouter_v1_AuditTrails_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.class, yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails other = (yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.eventrouter.v1.AuditTrails}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.eventrouter.v1.AuditTrails)
+        yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrailsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERC.internal_static_yandex_cloud_serverless_eventrouter_v1_AuditTrails_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERC.internal_static_yandex_cloud_serverless_eventrouter_v1_AuditTrails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.class, yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERC.internal_static_yandex_cloud_serverless_eventrouter_v1_AuditTrails_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails build() {
+        yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails buildPartial() {
+        yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails result = new yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) {
+          return mergeFrom((yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails other) {
+        if (other == yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.eventrouter.v1.AuditTrails)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.eventrouter.v1.AuditTrails)
+    private static final yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails();
+    }
+
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AuditTrails>
+        PARSER = new com.google.protobuf.AbstractParser<AuditTrails>() {
+      @java.lang.Override
+      public AuditTrails parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AuditTrails(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AuditTrails> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AuditTrails> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.eventrouter.v1.PERC.AuditTrails getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_eventrouter_v1_Connector_descriptor;
   private static final 
@@ -8330,6 +8977,11 @@ public final class PERC {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_eventrouter_v1_AuditTrails_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_eventrouter_v1_AuditTrails_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8359,7 +9011,7 @@ public final class PERC {
       "\020\000\022\013\n\007RUNNING\020\001\022\013\n\007STOPPED\020\002\022\026\n\022RESOURCE" +
       "_NOT_FOUND\020\003\022\025\n\021PERMISSION_DENIED\020\004\022\025\n\021S" +
       "UBJECT_NOT_FOUND\020\005\022\014\n\010DELETING\020\007\022\014\n\010CREA" +
-      "TING\020\010\"\316\002\n\006Source\022I\n\013data_stream\030\001 \001(\01322" +
+      "TING\020\010\"\233\003\n\006Source\022I\n\013data_stream\030\001 \001(\01322" +
       ".yandex.cloud.serverless.eventrouter.v1." +
       "DataStreamH\000\022M\n\rmessage_queue\030\002 \001(\01324.ya" +
       "ndex.cloud.serverless.eventrouter.v1.Mes" +
@@ -8367,23 +9019,25 @@ public final class PERC {
       "d.serverless.eventrouter.v1.TimerH\000\022Z\n\024e" +
       "vent_service_source\030\004 \001(\0132:.yandex.cloud" +
       ".serverless.eventrouter.v1.EventServiceS" +
-      "ourceH\000B\016\n\006source\022\004\300\3011\001\"y\n\nDataStream\022\026\n" +
-      "\010database\030\001 \001(\tB\004\350\3071\001\022\031\n\013stream_name\030\002 \001" +
-      "(\tB\004\350\3071\001\022\026\n\010consumer\030\003 \001(\tB\004\350\3071\001\022 \n\022serv" +
-      "ice_account_id\030\004 \001(\tB\004\350\3071\001\"\360\001\n\014MessageQu" +
-      "eue\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022service_" +
-      "account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022@\n\022visibi" +
-      "lity_timeout\030\003 \001(\0132\031.google.protobuf.Dur" +
-      "ationB\t\372\3071\005<=12h\022\034\n\nbatch_size\030\004 \001(\003B\010\372\307" +
-      "1\004<=10\022=\n\017polling_timeout\030\005 \001(\0132\031.google" +
-      ".protobuf.DurationB\t\372\3071\005<=20s\"\024\n\022EventSe" +
-      "rviceSource\"e\n\005Timer\022&\n\017cron_expression\030" +
-      "\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022\021\n\ttime_zone\030\002 \001(\t\022" +
-      "\033\n\007payload\030\004 \001(\tB\n\212\3101\006<=4096J\004\010\003\020\004B\212\001\n*y" +
-      "andex.cloud.api.serverless.eventrouter.v" +
-      "1B\004PERCZVgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/serverless/eventrouter" +
-      "/v1;eventrouterb\006proto3"
+      "ourceH\000\022K\n\014audit_trails\030\005 \001(\01323.yandex.c" +
+      "loud.serverless.eventrouter.v1.AuditTrai" +
+      "lsH\000B\016\n\006source\022\004\300\3011\001\"y\n\nDataStream\022\026\n\010da" +
+      "tabase\030\001 \001(\tB\004\350\3071\001\022\031\n\013stream_name\030\002 \001(\tB" +
+      "\004\350\3071\001\022\026\n\010consumer\030\003 \001(\tB\004\350\3071\001\022 \n\022service" +
+      "_account_id\030\004 \001(\tB\004\350\3071\001\"\360\001\n\014MessageQueue" +
+      "\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022service_acc" +
+      "ount_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022@\n\022visibilit" +
+      "y_timeout\030\003 \001(\0132\031.google.protobuf.Durati" +
+      "onB\t\372\3071\005<=12h\022\034\n\nbatch_size\030\004 \001(\003B\010\372\3071\004<" +
+      "=10\022=\n\017polling_timeout\030\005 \001(\0132\031.google.pr" +
+      "otobuf.DurationB\t\372\3071\005<=20s\"\024\n\022EventServi" +
+      "ceSource\"e\n\005Timer\022&\n\017cron_expression\030\001 \001" +
+      "(\tB\r\350\3071\001\212\3101\005<=100\022\021\n\ttime_zone\030\002 \001(\t\022\033\n\007" +
+      "payload\030\004 \001(\tB\n\212\3101\006<=4096J\004\010\003\020\004\"\r\n\013Audit" +
+      "TrailsB\212\001\n*yandex.cloud.api.serverless.e" +
+      "ventrouter.v1B\004PERCZVgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/serverless" +
+      "/eventrouter/v1;eventrouterb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8409,7 +9063,7 @@ public final class PERC {
     internal_static_yandex_cloud_serverless_eventrouter_v1_Source_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_eventrouter_v1_Source_descriptor,
-        new java.lang.String[] { "DataStream", "MessageQueue", "Timer", "EventServiceSource", "Source", });
+        new java.lang.String[] { "DataStream", "MessageQueue", "Timer", "EventServiceSource", "AuditTrails", "Source", });
     internal_static_yandex_cloud_serverless_eventrouter_v1_DataStream_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_serverless_eventrouter_v1_DataStream_fieldAccessorTable = new
@@ -8434,6 +9088,12 @@ public final class PERC {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_eventrouter_v1_Timer_descriptor,
         new java.lang.String[] { "CronExpression", "TimeZone", "Payload", });
+    internal_static_yandex_cloud_serverless_eventrouter_v1_AuditTrails_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_serverless_eventrouter_v1_AuditTrails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_eventrouter_v1_AuditTrails_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

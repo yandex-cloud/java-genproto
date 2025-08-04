@@ -5,6 +5,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Stream management service.
+ * Provides methods for creating, retrieving, updating, and deleting live streams,
+ * as well as managing stream-related operations
+ * such as publishing, stopping, and generating playback URLs.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -313,13 +316,17 @@ public final class StreamServiceGrpc {
   /**
    * <pre>
    * Stream management service.
+   * Provides methods for creating, retrieving, updating, and deleting live streams,
+   * as well as managing stream-related operations
+   * such as publishing, stopping, and generating playback URLs.
    * </pre>
    */
   public static abstract class StreamServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Get the specific stream.
+     * Retrieves detailed information about a specific stream by its ID.
+     * Returns all stream metadata, status, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.StreamServiceOuterClass.GetStreamRequest request,
@@ -329,7 +336,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * List streams for channel.
+     * Lists all streams in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.StreamServiceOuterClass.ListStreamsRequest request,
@@ -339,7 +347,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Batch get streams for channel.
+     * Retrieves multiple streams by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several streams.
      * </pre>
      */
     public void batchGet(yandex.cloud.api.video.v1.StreamServiceOuterClass.BatchGetStreamsRequest request,
@@ -349,7 +358,9 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Create stream.
+     * Creates a new stream in the specified channel.
+     * Streams can be created as on-demand (starting when a signal appears)
+     * or scheduled (starting and finishing at specified time).
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.StreamServiceOuterClass.CreateStreamRequest request,
@@ -359,7 +370,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Update stream.
+     * Updates an existing stream's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.StreamServiceOuterClass.UpdateStreamRequest request,
@@ -369,7 +381,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Delete stream.
+     * Deletes a specific stream by its ID.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.StreamServiceOuterClass.DeleteStreamRequest request,
@@ -379,7 +391,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete streams.
+     * Deletes multiple streams in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several streams.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.StreamServiceOuterClass.BatchDeleteStreamsRequest request,
@@ -389,7 +402,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the stream.
+     * Performs a specific action on a stream, such as publishing or stopping.
+     * Actions change the stream's state without modifying its content or metadata.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.StreamServiceOuterClass.PerformStreamActionRequest request,
@@ -462,6 +476,9 @@ public final class StreamServiceGrpc {
   /**
    * <pre>
    * Stream management service.
+   * Provides methods for creating, retrieving, updating, and deleting live streams,
+   * as well as managing stream-related operations
+   * such as publishing, stopping, and generating playback URLs.
    * </pre>
    */
   public static final class StreamServiceStub extends io.grpc.stub.AbstractAsyncStub<StreamServiceStub> {
@@ -478,7 +495,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific stream.
+     * Retrieves detailed information about a specific stream by its ID.
+     * Returns all stream metadata, status, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.StreamServiceOuterClass.GetStreamRequest request,
@@ -489,7 +507,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * List streams for channel.
+     * Lists all streams in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.StreamServiceOuterClass.ListStreamsRequest request,
@@ -500,7 +519,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Batch get streams for channel.
+     * Retrieves multiple streams by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several streams.
      * </pre>
      */
     public void batchGet(yandex.cloud.api.video.v1.StreamServiceOuterClass.BatchGetStreamsRequest request,
@@ -511,7 +531,9 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Create stream.
+     * Creates a new stream in the specified channel.
+     * Streams can be created as on-demand (starting when a signal appears)
+     * or scheduled (starting and finishing at specified time).
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.StreamServiceOuterClass.CreateStreamRequest request,
@@ -522,7 +544,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Update stream.
+     * Updates an existing stream's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.StreamServiceOuterClass.UpdateStreamRequest request,
@@ -533,7 +556,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Delete stream.
+     * Deletes a specific stream by its ID.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.StreamServiceOuterClass.DeleteStreamRequest request,
@@ -544,7 +567,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete streams.
+     * Deletes multiple streams in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several streams.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.StreamServiceOuterClass.BatchDeleteStreamsRequest request,
@@ -555,7 +579,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the stream.
+     * Performs a specific action on a stream, such as publishing or stopping.
+     * Actions change the stream's state without modifying its content or metadata.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.StreamServiceOuterClass.PerformStreamActionRequest request,
@@ -568,6 +593,9 @@ public final class StreamServiceGrpc {
   /**
    * <pre>
    * Stream management service.
+   * Provides methods for creating, retrieving, updating, and deleting live streams,
+   * as well as managing stream-related operations
+   * such as publishing, stopping, and generating playback URLs.
    * </pre>
    */
   public static final class StreamServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<StreamServiceBlockingStub> {
@@ -584,7 +612,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific stream.
+     * Retrieves detailed information about a specific stream by its ID.
+     * Returns all stream metadata, status, and related information.
      * </pre>
      */
     public yandex.cloud.api.video.v1.StreamOuterClass.Stream get(yandex.cloud.api.video.v1.StreamServiceOuterClass.GetStreamRequest request) {
@@ -594,7 +623,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * List streams for channel.
+     * Lists all streams in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public yandex.cloud.api.video.v1.StreamServiceOuterClass.ListStreamsResponse list(yandex.cloud.api.video.v1.StreamServiceOuterClass.ListStreamsRequest request) {
@@ -604,7 +634,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Batch get streams for channel.
+     * Retrieves multiple streams by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several streams.
      * </pre>
      */
     public yandex.cloud.api.video.v1.StreamServiceOuterClass.BatchGetStreamsResponse batchGet(yandex.cloud.api.video.v1.StreamServiceOuterClass.BatchGetStreamsRequest request) {
@@ -614,7 +645,9 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Create stream.
+     * Creates a new stream in the specified channel.
+     * Streams can be created as on-demand (starting when a signal appears)
+     * or scheduled (starting and finishing at specified time).
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.StreamServiceOuterClass.CreateStreamRequest request) {
@@ -624,7 +657,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Update stream.
+     * Updates an existing stream's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.video.v1.StreamServiceOuterClass.UpdateStreamRequest request) {
@@ -634,7 +668,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Delete stream.
+     * Deletes a specific stream by its ID.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.StreamServiceOuterClass.DeleteStreamRequest request) {
@@ -644,7 +678,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete streams.
+     * Deletes multiple streams in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several streams.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.StreamServiceOuterClass.BatchDeleteStreamsRequest request) {
@@ -654,7 +689,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the stream.
+     * Performs a specific action on a stream, such as publishing or stopping.
+     * Actions change the stream's state without modifying its content or metadata.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation performAction(yandex.cloud.api.video.v1.StreamServiceOuterClass.PerformStreamActionRequest request) {
@@ -666,6 +702,9 @@ public final class StreamServiceGrpc {
   /**
    * <pre>
    * Stream management service.
+   * Provides methods for creating, retrieving, updating, and deleting live streams,
+   * as well as managing stream-related operations
+   * such as publishing, stopping, and generating playback URLs.
    * </pre>
    */
   public static final class StreamServiceFutureStub extends io.grpc.stub.AbstractFutureStub<StreamServiceFutureStub> {
@@ -682,7 +721,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific stream.
+     * Retrieves detailed information about a specific stream by its ID.
+     * Returns all stream metadata, status, and related information.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamOuterClass.Stream> get(
@@ -693,7 +733,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * List streams for channel.
+     * Lists all streams in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamServiceOuterClass.ListStreamsResponse> list(
@@ -704,7 +745,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Batch get streams for channel.
+     * Retrieves multiple streams by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several streams.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamServiceOuterClass.BatchGetStreamsResponse> batchGet(
@@ -715,7 +757,9 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Create stream.
+     * Creates a new stream in the specified channel.
+     * Streams can be created as on-demand (starting when a signal appears)
+     * or scheduled (starting and finishing at specified time).
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -726,7 +770,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Update stream.
+     * Updates an existing stream's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -737,7 +782,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Delete stream.
+     * Deletes a specific stream by its ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -748,7 +793,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete streams.
+     * Deletes multiple streams in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several streams.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
@@ -759,7 +805,8 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the stream.
+     * Performs a specific action on a stream, such as publishing or stopping.
+     * Actions change the stream's state without modifying its content or metadata.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> performAction(

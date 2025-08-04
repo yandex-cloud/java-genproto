@@ -20,7 +20,7 @@ public final class PlaylistOuterClass {
 
     /**
      * <pre>
-     * ID of the playlist.
+     * Unique identifier of the playlist.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -29,7 +29,7 @@ public final class PlaylistOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the playlist.
+     * Unique identifier of the playlist.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -40,7 +40,7 @@ public final class PlaylistOuterClass {
 
     /**
      * <pre>
-     * ID of the channel to create the playlist in.
+     * Identifier of the channel where this playlist is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -49,7 +49,7 @@ public final class PlaylistOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel to create the playlist in.
+     * Identifier of the channel where this playlist is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -60,7 +60,7 @@ public final class PlaylistOuterClass {
 
     /**
      * <pre>
-     * Playlist title.
+     * Title of the playlist displayed in interfaces and players.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -69,7 +69,7 @@ public final class PlaylistOuterClass {
     java.lang.String getTitle();
     /**
      * <pre>
-     * Playlist title.
+     * Title of the playlist displayed in interfaces and players.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -80,7 +80,7 @@ public final class PlaylistOuterClass {
 
     /**
      * <pre>
-     * Playlist description.
+     * Detailed description of the playlist's content and purpose.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -89,7 +89,7 @@ public final class PlaylistOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Playlist description.
+     * Detailed description of the playlist's content and purpose.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -100,7 +100,7 @@ public final class PlaylistOuterClass {
 
     /**
      * <pre>
-     * List of playlist items.
+     * Ordered list of content items included in this playlist.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -109,7 +109,7 @@ public final class PlaylistOuterClass {
         getItemsList();
     /**
      * <pre>
-     * List of playlist items.
+     * Ordered list of content items included in this playlist.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -117,7 +117,7 @@ public final class PlaylistOuterClass {
     yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItem getItems(int index);
     /**
      * <pre>
-     * List of playlist items.
+     * Ordered list of content items included in this playlist.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -125,7 +125,7 @@ public final class PlaylistOuterClass {
     int getItemsCount();
     /**
      * <pre>
-     * List of playlist items.
+     * Ordered list of content items included in this playlist.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -134,7 +134,7 @@ public final class PlaylistOuterClass {
         getItemsOrBuilderList();
     /**
      * <pre>
-     * List of playlist items.
+     * Ordered list of content items included in this playlist.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -144,7 +144,27 @@ public final class PlaylistOuterClass {
 
     /**
      * <pre>
-     * Time when playlist was created.
+     * Identifier of the style preset used in the player during playlist playback.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6;</code>
+     * @return The stylePresetId.
+     */
+    java.lang.String getStylePresetId();
+    /**
+     * <pre>
+     * Identifier of the style preset used in the player during playlist playback.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6;</code>
+     * @return The bytes for stylePresetId.
+     */
+    com.google.protobuf.ByteString
+        getStylePresetIdBytes();
+
+    /**
+     * <pre>
+     * Timestamp when the playlist was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -153,7 +173,7 @@ public final class PlaylistOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Time when playlist was created.
+     * Timestamp when the playlist was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -162,7 +182,7 @@ public final class PlaylistOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Time when playlist was created.
+     * Timestamp when the playlist was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -171,7 +191,7 @@ public final class PlaylistOuterClass {
 
     /**
      * <pre>
-     * Time of last playlist update.
+     * Timestamp of the last modification to the playlist or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -180,7 +200,7 @@ public final class PlaylistOuterClass {
     boolean hasUpdatedAt();
     /**
      * <pre>
-     * Time of last playlist update.
+     * Timestamp of the last modification to the playlist or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -189,7 +209,7 @@ public final class PlaylistOuterClass {
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
      * <pre>
-     * Time of last playlist update.
+     * Timestamp of the last modification to the playlist or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -198,7 +218,8 @@ public final class PlaylistOuterClass {
   }
   /**
    * <pre>
-   * Entity representing an ordered list of videos or episodes.
+   * Entity representing an ordered collection of videos or episodes.
+   * Playlists allow organizing content into sequences for improved user experience.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.Playlist}
@@ -218,6 +239,7 @@ public final class PlaylistOuterClass {
       title_ = "";
       description_ = "";
       items_ = java.util.Collections.emptyList();
+      stylePresetId_ = "";
     }
 
     @java.lang.Override
@@ -282,6 +304,12 @@ public final class PlaylistOuterClass {
               }
               items_.add(
                   input.readMessage(yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItem.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stylePresetId_ = s;
               break;
             }
             case 802: {
@@ -349,7 +377,7 @@ public final class PlaylistOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the playlist.
+     * Unique identifier of the playlist.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -370,7 +398,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * ID of the playlist.
+     * Unique identifier of the playlist.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -395,7 +423,7 @@ public final class PlaylistOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel to create the playlist in.
+     * Identifier of the channel where this playlist is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -416,7 +444,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel to create the playlist in.
+     * Identifier of the channel where this playlist is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -441,7 +469,7 @@ public final class PlaylistOuterClass {
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Playlist title.
+     * Title of the playlist displayed in interfaces and players.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -462,7 +490,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * Playlist title.
+     * Title of the playlist displayed in interfaces and players.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -487,7 +515,7 @@ public final class PlaylistOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Playlist description.
+     * Detailed description of the playlist's content and purpose.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -508,7 +536,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * Playlist description.
+     * Detailed description of the playlist's content and purpose.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -533,7 +561,7 @@ public final class PlaylistOuterClass {
     private java.util.List<yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItem> items_;
     /**
      * <pre>
-     * List of playlist items.
+     * Ordered list of content items included in this playlist.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -544,7 +572,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * Ordered list of content items included in this playlist.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -556,7 +584,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * Ordered list of content items included in this playlist.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -567,7 +595,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * Ordered list of content items included in this playlist.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -578,7 +606,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * List of playlist items.
+     * Ordered list of content items included in this playlist.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -589,11 +617,57 @@ public final class PlaylistOuterClass {
       return items_.get(index);
     }
 
+    public static final int STYLE_PRESET_ID_FIELD_NUMBER = 6;
+    private volatile java.lang.Object stylePresetId_;
+    /**
+     * <pre>
+     * Identifier of the style preset used in the player during playlist playback.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6;</code>
+     * @return The stylePresetId.
+     */
+    @java.lang.Override
+    public java.lang.String getStylePresetId() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stylePresetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Identifier of the style preset used in the player during playlist playback.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6;</code>
+     * @return The bytes for stylePresetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStylePresetIdBytes() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stylePresetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int CREATED_AT_FIELD_NUMBER = 100;
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Time when playlist was created.
+     * Timestamp when the playlist was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -605,7 +679,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * Time when playlist was created.
+     * Timestamp when the playlist was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -617,7 +691,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * Time when playlist was created.
+     * Timestamp when the playlist was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -631,7 +705,7 @@ public final class PlaylistOuterClass {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <pre>
-     * Time of last playlist update.
+     * Timestamp of the last modification to the playlist or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -643,7 +717,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * Time of last playlist update.
+     * Timestamp of the last modification to the playlist or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -655,7 +729,7 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * Time of last playlist update.
+     * Timestamp of the last modification to the playlist or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -694,6 +768,9 @@ public final class PlaylistOuterClass {
       for (int i = 0; i < items_.size(); i++) {
         output.writeMessage(5, items_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, stylePresetId_);
+      }
       if (createdAt_ != null) {
         output.writeMessage(100, getCreatedAt());
       }
@@ -724,6 +801,9 @@ public final class PlaylistOuterClass {
       for (int i = 0; i < items_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, items_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, stylePresetId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -758,6 +838,8 @@ public final class PlaylistOuterClass {
           .equals(other.getDescription())) return false;
       if (!getItemsList()
           .equals(other.getItemsList())) return false;
+      if (!getStylePresetId()
+          .equals(other.getStylePresetId())) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
         if (!getCreatedAt()
@@ -791,6 +873,8 @@ public final class PlaylistOuterClass {
         hash = (37 * hash) + ITEMS_FIELD_NUMBER;
         hash = (53 * hash) + getItemsList().hashCode();
       }
+      hash = (37 * hash) + STYLE_PRESET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStylePresetId().hashCode();
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
@@ -896,7 +980,8 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * Entity representing an ordered list of videos or episodes.
+     * Entity representing an ordered collection of videos or episodes.
+     * Playlists allow organizing content into sequences for improved user experience.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.Playlist}
@@ -951,6 +1036,8 @@ public final class PlaylistOuterClass {
         } else {
           itemsBuilder_.clear();
         }
+        stylePresetId_ = "";
+
         if (createdAtBuilder_ == null) {
           createdAt_ = null;
         } else {
@@ -1003,6 +1090,7 @@ public final class PlaylistOuterClass {
         } else {
           result.items_ = itemsBuilder_.build();
         }
+        result.stylePresetId_ = stylePresetId_;
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
         } else {
@@ -1103,6 +1191,10 @@ public final class PlaylistOuterClass {
             }
           }
         }
+        if (!other.getStylePresetId().isEmpty()) {
+          stylePresetId_ = other.stylePresetId_;
+          onChanged();
+        }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
         }
@@ -1142,7 +1234,7 @@ public final class PlaylistOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the playlist.
+       * Unique identifier of the playlist.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1162,7 +1254,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * Unique identifier of the playlist.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1183,7 +1275,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * Unique identifier of the playlist.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1202,7 +1294,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * Unique identifier of the playlist.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1216,7 +1308,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the playlist.
+       * Unique identifier of the playlist.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1238,7 +1330,7 @@ public final class PlaylistOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel to create the playlist in.
+       * Identifier of the channel where this playlist is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -1258,7 +1350,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel to create the playlist in.
+       * Identifier of the channel where this playlist is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -1279,7 +1371,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel to create the playlist in.
+       * Identifier of the channel where this playlist is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -1298,7 +1390,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel to create the playlist in.
+       * Identifier of the channel where this playlist is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -1312,7 +1404,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel to create the playlist in.
+       * Identifier of the channel where this playlist is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -1334,7 +1426,7 @@ public final class PlaylistOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Playlist title.
+       * Title of the playlist displayed in interfaces and players.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -1354,7 +1446,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * Title of the playlist displayed in interfaces and players.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -1375,7 +1467,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * Title of the playlist displayed in interfaces and players.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -1394,7 +1486,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * Title of the playlist displayed in interfaces and players.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -1408,7 +1500,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Playlist title.
+       * Title of the playlist displayed in interfaces and players.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -1430,7 +1522,7 @@ public final class PlaylistOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Playlist description.
+       * Detailed description of the playlist's content and purpose.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -1450,7 +1542,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * Detailed description of the playlist's content and purpose.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -1471,7 +1563,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * Detailed description of the playlist's content and purpose.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -1490,7 +1582,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * Detailed description of the playlist's content and purpose.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -1504,7 +1596,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Playlist description.
+       * Detailed description of the playlist's content and purpose.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -1537,7 +1629,7 @@ public final class PlaylistOuterClass {
 
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1551,7 +1643,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1565,7 +1657,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1579,7 +1671,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1600,7 +1692,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1618,7 +1710,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1638,7 +1730,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1659,7 +1751,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1677,7 +1769,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1695,7 +1787,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1714,7 +1806,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1731,7 +1823,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1748,7 +1840,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1759,7 +1851,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1773,7 +1865,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1788,7 +1880,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1799,7 +1891,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1811,7 +1903,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * List of playlist items.
+       * Ordered list of content items included in this playlist.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.PlaylistItem items = 5;</code>
@@ -1835,12 +1927,108 @@ public final class PlaylistOuterClass {
         return itemsBuilder_;
       }
 
+      private java.lang.Object stylePresetId_ = "";
+      /**
+       * <pre>
+       * Identifier of the style preset used in the player during playlist playback.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6;</code>
+       * @return The stylePresetId.
+       */
+      public java.lang.String getStylePresetId() {
+        java.lang.Object ref = stylePresetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stylePresetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the style preset used in the player during playlist playback.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6;</code>
+       * @return The bytes for stylePresetId.
+       */
+      public com.google.protobuf.ByteString
+          getStylePresetIdBytes() {
+        java.lang.Object ref = stylePresetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stylePresetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the style preset used in the player during playlist playback.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6;</code>
+       * @param value The stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the style preset used in the player during playlist playback.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStylePresetId() {
+        
+        stylePresetId_ = getDefaultInstance().getStylePresetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the style preset used in the player during playlist playback.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6;</code>
+       * @param value The bytes for stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Time when playlist was created.
+       * Timestamp when the playlist was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1851,7 +2039,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time when playlist was created.
+       * Timestamp when the playlist was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1866,7 +2054,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time when playlist was created.
+       * Timestamp when the playlist was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1886,7 +2074,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time when playlist was created.
+       * Timestamp when the playlist was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1904,7 +2092,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time when playlist was created.
+       * Timestamp when the playlist was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1926,7 +2114,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time when playlist was created.
+       * Timestamp when the playlist was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1944,7 +2132,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time when playlist was created.
+       * Timestamp when the playlist was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1956,7 +2144,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time when playlist was created.
+       * Timestamp when the playlist was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1971,7 +2159,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time when playlist was created.
+       * Timestamp when the playlist was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1995,7 +2183,7 @@ public final class PlaylistOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <pre>
-       * Time of last playlist update.
+       * Timestamp of the last modification to the playlist or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2006,7 +2194,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time of last playlist update.
+       * Timestamp of the last modification to the playlist or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2021,7 +2209,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time of last playlist update.
+       * Timestamp of the last modification to the playlist or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2041,7 +2229,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time of last playlist update.
+       * Timestamp of the last modification to the playlist or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2059,7 +2247,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time of last playlist update.
+       * Timestamp of the last modification to the playlist or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2081,7 +2269,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time of last playlist update.
+       * Timestamp of the last modification to the playlist or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2099,7 +2287,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time of last playlist update.
+       * Timestamp of the last modification to the playlist or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2111,7 +2299,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time of last playlist update.
+       * Timestamp of the last modification to the playlist or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2126,7 +2314,7 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Time of last playlist update.
+       * Timestamp of the last modification to the playlist or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2203,28 +2391,28 @@ public final class PlaylistOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of a video included in the playlist.
      * </pre>
      *
-     * <code>string video_id = 100;</code>
+     * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the videoId field is set.
      */
     boolean hasVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of a video included in the playlist.
      * </pre>
      *
-     * <code>string video_id = 100;</code>
+     * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The videoId.
      */
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of a video included in the playlist.
      * </pre>
      *
-     * <code>string video_id = 100;</code>
+     * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for videoId.
      */
     com.google.protobuf.ByteString
@@ -2232,28 +2420,28 @@ public final class PlaylistOuterClass {
 
     /**
      * <pre>
-     * ID of the episode.
+     * Identifier of an episode included in the playlist.
      * </pre>
      *
-     * <code>string episode_id = 101;</code>
+     * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the episodeId field is set.
      */
     boolean hasEpisodeId();
     /**
      * <pre>
-     * ID of the episode.
+     * Identifier of an episode included in the playlist.
      * </pre>
      *
-     * <code>string episode_id = 101;</code>
+     * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
     /**
      * <pre>
-     * ID of the episode.
+     * Identifier of an episode included in the playlist.
      * </pre>
      *
-     * <code>string episode_id = 101;</code>
+     * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     com.google.protobuf.ByteString
@@ -2261,10 +2449,11 @@ public final class PlaylistOuterClass {
 
     /**
      * <pre>
-     * Item position (zero-indexed).
+     * Position of this item in the playlist sequence (zero-indexed).
+     * Determines the playback order of content in the playlist.
      * </pre>
      *
-     * <code>int64 position = 1;</code>
+     * <code>int64 position = 1 [(.yandex.cloud.value) = "0-100"];</code>
      * @return The position.
      */
     long getPosition();
@@ -2272,6 +2461,11 @@ public final class PlaylistOuterClass {
     public yandex.cloud.api.video.v1.PlaylistOuterClass.PlaylistItem.IdCase getIdCase();
   }
   /**
+   * <pre>
+   * Represents a single item in a playlist.
+   * Each item references either a video or an episode and specifies its position in the sequence.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.PlaylistItem}
    */
   public static final class PlaylistItem extends
@@ -2409,10 +2603,10 @@ public final class PlaylistOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 100;
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of a video included in the playlist.
      * </pre>
      *
-     * <code>string video_id = 100;</code>
+     * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the videoId field is set.
      */
     public boolean hasVideoId() {
@@ -2420,10 +2614,10 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of a video included in the playlist.
      * </pre>
      *
-     * <code>string video_id = 100;</code>
+     * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The videoId.
      */
     public java.lang.String getVideoId() {
@@ -2445,10 +2639,10 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * Identifier of a video included in the playlist.
      * </pre>
      *
-     * <code>string video_id = 100;</code>
+     * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for videoId.
      */
     public com.google.protobuf.ByteString
@@ -2473,10 +2667,10 @@ public final class PlaylistOuterClass {
     public static final int EPISODE_ID_FIELD_NUMBER = 101;
     /**
      * <pre>
-     * ID of the episode.
+     * Identifier of an episode included in the playlist.
      * </pre>
      *
-     * <code>string episode_id = 101;</code>
+     * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return Whether the episodeId field is set.
      */
     public boolean hasEpisodeId() {
@@ -2484,10 +2678,10 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * ID of the episode.
+     * Identifier of an episode included in the playlist.
      * </pre>
      *
-     * <code>string episode_id = 101;</code>
+     * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The episodeId.
      */
     public java.lang.String getEpisodeId() {
@@ -2509,10 +2703,10 @@ public final class PlaylistOuterClass {
     }
     /**
      * <pre>
-     * ID of the episode.
+     * Identifier of an episode included in the playlist.
      * </pre>
      *
-     * <code>string episode_id = 101;</code>
+     * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for episodeId.
      */
     public com.google.protobuf.ByteString
@@ -2538,10 +2732,11 @@ public final class PlaylistOuterClass {
     private long position_;
     /**
      * <pre>
-     * Item position (zero-indexed).
+     * Position of this item in the playlist sequence (zero-indexed).
+     * Determines the playback order of content in the playlist.
      * </pre>
      *
-     * <code>int64 position = 1;</code>
+     * <code>int64 position = 1 [(.yandex.cloud.value) = "0-100"];</code>
      * @return The position.
      */
     @java.lang.Override
@@ -2743,6 +2938,11 @@ public final class PlaylistOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents a single item in a playlist.
+     * Each item references either a video or an episode and specifies its position in the sequence.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.PlaylistItem}
      */
     public static final class Builder extends
@@ -2932,10 +3132,10 @@ public final class PlaylistOuterClass {
 
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of a video included in the playlist.
        * </pre>
        *
-       * <code>string video_id = 100;</code>
+       * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return Whether the videoId field is set.
        */
       @java.lang.Override
@@ -2944,10 +3144,10 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of a video included in the playlist.
        * </pre>
        *
-       * <code>string video_id = 100;</code>
+       * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The videoId.
        */
       @java.lang.Override
@@ -2970,10 +3170,10 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of a video included in the playlist.
        * </pre>
        *
-       * <code>string video_id = 100;</code>
+       * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for videoId.
        */
       @java.lang.Override
@@ -2997,10 +3197,10 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of a video included in the playlist.
        * </pre>
        *
-       * <code>string video_id = 100;</code>
+       * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The videoId to set.
        * @return This builder for chaining.
        */
@@ -3016,10 +3216,10 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of a video included in the playlist.
        * </pre>
        *
-       * <code>string video_id = 100;</code>
+       * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearVideoId() {
@@ -3032,10 +3232,10 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Identifier of a video included in the playlist.
        * </pre>
        *
-       * <code>string video_id = 100;</code>
+       * <code>string video_id = 100 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for videoId to set.
        * @return This builder for chaining.
        */
@@ -3053,10 +3253,10 @@ public final class PlaylistOuterClass {
 
       /**
        * <pre>
-       * ID of the episode.
+       * Identifier of an episode included in the playlist.
        * </pre>
        *
-       * <code>string episode_id = 101;</code>
+       * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return Whether the episodeId field is set.
        */
       @java.lang.Override
@@ -3065,10 +3265,10 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the episode.
+       * Identifier of an episode included in the playlist.
        * </pre>
        *
-       * <code>string episode_id = 101;</code>
+       * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The episodeId.
        */
       @java.lang.Override
@@ -3091,10 +3291,10 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the episode.
+       * Identifier of an episode included in the playlist.
        * </pre>
        *
-       * <code>string episode_id = 101;</code>
+       * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for episodeId.
        */
       @java.lang.Override
@@ -3118,10 +3318,10 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the episode.
+       * Identifier of an episode included in the playlist.
        * </pre>
        *
-       * <code>string episode_id = 101;</code>
+       * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
        */
@@ -3137,10 +3337,10 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the episode.
+       * Identifier of an episode included in the playlist.
        * </pre>
        *
-       * <code>string episode_id = 101;</code>
+       * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEpisodeId() {
@@ -3153,10 +3353,10 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * ID of the episode.
+       * Identifier of an episode included in the playlist.
        * </pre>
        *
-       * <code>string episode_id = 101;</code>
+       * <code>string episode_id = 101 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
        */
@@ -3175,10 +3375,11 @@ public final class PlaylistOuterClass {
       private long position_ ;
       /**
        * <pre>
-       * Item position (zero-indexed).
+       * Position of this item in the playlist sequence (zero-indexed).
+       * Determines the playback order of content in the playlist.
        * </pre>
        *
-       * <code>int64 position = 1;</code>
+       * <code>int64 position = 1 [(.yandex.cloud.value) = "0-100"];</code>
        * @return The position.
        */
       @java.lang.Override
@@ -3187,10 +3388,11 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Item position (zero-indexed).
+       * Position of this item in the playlist sequence (zero-indexed).
+       * Determines the playback order of content in the playlist.
        * </pre>
        *
-       * <code>int64 position = 1;</code>
+       * <code>int64 position = 1 [(.yandex.cloud.value) = "0-100"];</code>
        * @param value The position to set.
        * @return This builder for chaining.
        */
@@ -3202,10 +3404,11 @@ public final class PlaylistOuterClass {
       }
       /**
        * <pre>
-       * Item position (zero-indexed).
+       * Position of this item in the playlist sequence (zero-indexed).
+       * Determines the playback order of content in the playlist.
        * </pre>
        *
-       * <code>int64 position = 1;</code>
+       * <code>int64 position = 1 [(.yandex.cloud.value) = "0-100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPosition() {
@@ -3288,36 +3491,47 @@ public final class PlaylistOuterClass {
     java.lang.String[] descriptorData = {
       "\n$yandex/cloud/video/v1/playlist.proto\022\025" +
       "yandex.cloud.video.v1\032\037google/protobuf/t" +
-      "imestamp.proto\"\350\001\n\010Playlist\022\n\n\002id\030\001 \001(\t\022" +
-      "\022\n\nchannel_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n\013de" +
-      "scription\030\004 \001(\t\0222\n\005items\030\005 \003(\0132#.yandex." +
-      "cloud.video.v1.PlaylistItem\022.\n\ncreated_a" +
-      "t\030d \001(\0132\032.google.protobuf.Timestamp\022.\n\nu" +
-      "pdated_at\030e \001(\0132\032.google.protobuf.Timest" +
-      "ampJ\004\010\006\020d\"V\n\014PlaylistItem\022\022\n\010video_id\030d " +
-      "\001(\tH\000\022\024\n\nepisode_id\030e \001(\tH\000\022\020\n\010position\030" +
-      "\001 \001(\003B\004\n\002idJ\004\010\002\020dB\\\n\031yandex.cloud.api.vi" +
-      "deo.v1Z?github.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/video/v1;videob\006proto3"
+      "imestamp.proto\032\035yandex/cloud/validation." +
+      "proto\"\201\002\n\010Playlist\022\n\n\002id\030\001 \001(\t\022\022\n\nchanne" +
+      "l_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n\013description" +
+      "\030\004 \001(\t\0222\n\005items\030\005 \003(\0132#.yandex.cloud.vid" +
+      "eo.v1.PlaylistItem\022\027\n\017style_preset_id\030\006 " +
+      "\001(\t\022.\n\ncreated_at\030d \001(\0132\032.google.protobu" +
+      "f.Timestamp\022.\n\nupdated_at\030e \001(\0132\032.google" +
+      ".protobuf.TimestampJ\004\010\007\020d\"u\n\014PlaylistIte" +
+      "m\022\034\n\010video_id\030d \001(\tB\010\212\3101\004<=50H\000\022\036\n\nepiso" +
+      "de_id\030e \001(\tB\010\212\3101\004<=50H\000\022\033\n\010position\030\001 \001(" +
+      "\003B\t\372\3071\0050-100B\004\n\002idJ\004\010\002\020dB\\\n\031yandex.cloud" +
+      ".api.video.v1Z?github.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/video/v1;videob\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_video_v1_Playlist_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_video_v1_Playlist_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Playlist_descriptor,
-        new java.lang.String[] { "Id", "ChannelId", "Title", "Description", "Items", "CreatedAt", "UpdatedAt", });
+        new java.lang.String[] { "Id", "ChannelId", "Title", "Description", "Items", "StylePresetId", "CreatedAt", "UpdatedAt", });
     internal_static_yandex_cloud_video_v1_PlaylistItem_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_video_v1_PlaylistItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PlaylistItem_descriptor,
         new java.lang.String[] { "VideoId", "EpisodeId", "Position", "Id", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.value);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

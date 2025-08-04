@@ -690,8 +690,9 @@ public final class ServerOuterClass {
        * Server is being deleted.
        * </pre>
        *
-       * <code>DELETING = 8;</code>
+       * <code>DELETING = 8 [deprecated = true];</code>
        */
+      @java.lang.Deprecated
       DELETING(8),
       /**
        * <pre>
@@ -789,9 +790,9 @@ public final class ServerOuterClass {
        * Server is being deleted.
        * </pre>
        *
-       * <code>DELETING = 8;</code>
+       * <code>DELETING = 8 [deprecated = true];</code>
        */
-      public static final int DELETING_VALUE = 8;
+      @java.lang.Deprecated public static final int DELETING_VALUE = 8;
       /**
        * <pre>
        * Server operating system is being reinstalled.
@@ -8437,7 +8438,7 @@ public final class ServerOuterClass {
       "oogle/protobuf/timestamp.proto\032)yandex/c" +
       "loud/baremetal/v1alpha/disk.proto\032,yande" +
       "x/cloud/baremetal/v1alpha/storage.proto\"" +
-      "\342\006\n\006Server\022\n\n\002id\030\001 \001(\t\022\020\n\010cloud_id\030\002 \001(\t" +
+      "\346\006\n\006Server\022\n\n\002id\030\001 \001(\t\022\020\n\010cloud_id\030\002 \001(\t" +
       "\022\021\n\tfolder_id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\023\n\013des" +
       "cription\030\005 \001(\t\022\017\n\007zone_id\030\006 \001(\t\022\030\n\020hardw" +
       "are_pool_id\030\007 \001(\t\022=\n\006status\030\t \001(\0162-.yand" +
@@ -8451,30 +8452,30 @@ public final class ServerOuterClass {
       "(\0132\032.google.protobuf.Timestamp\022C\n\006labels" +
       "\030\310\001 \003(\01322.yandex.cloud.baremetal.v1alpha" +
       ".Server.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\324\001\n\006Status\022\026\n" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\330\001\n\006Status\022\026\n" +
       "\022STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022" +
       "\014\n\010STOPPING\020\003\022\013\n\007STOPPED\020\004\022\014\n\010STARTING\020\005" +
-      "\022\016\n\nRESTARTING\020\006\022\t\n\005ERROR\020\007\022\014\n\010DELETING\020" +
-      "\010\022\020\n\014REINSTALLING\020\t\022\014\n\010UPDATING\020\n\022\017\n\013QUA" +
-      "RANTINED\020\014\022\013\n\007RUNNING\020\016\"\004\010\002\020\002\"\004\010\013\020\013\"\004\010\r\020" +
-      "\rJ\004\010\010\020\tJ\004\010\013\020\014J\004\010\014\020\rJ\004\010\017\020\022J\004\010\023\020\024J\004\010\026\020\027J\004\010" +
-      "\027\020\030J\004\010\r\020\016J\004\010\016\020\017J\004\010\030\020dJ\005\010e\020\310\001\"\207\002\n\020Network" +
-      "Interface\022\n\n\002id\030\001 \001(\t\022\023\n\013mac_address\030\002 \001" +
-      "(\t\022\022\n\nip_address\030\003 \001(\t\022W\n\016private_subnet" +
-      "\030\007 \001(\0132=.yandex.cloud.baremetal.v1alpha." +
-      "PrivateSubnetNetworkInterfaceH\000\022U\n\rpubli" +
-      "c_subnet\030\010 \001(\0132<.yandex.cloud.baremetal." +
-      "v1alpha.PublicSubnetNetworkInterfaceH\000B\010" +
-      "\n\006subnetJ\004\010\004\020\007\":\n\035PrivateSubnetNetworkIn" +
-      "terface\022\031\n\021private_subnet_id\030\001 \001(\t\"8\n\034Pu" +
-      "blicSubnetNetworkInterface\022\030\n\020public_sub" +
-      "net_id\030\001 \001(\t\"q\n\nOsSettings\022\020\n\010image_id\030\001" +
-      " \001(\t\022\026\n\016ssh_public_key\030\002 \001(\t\0229\n\010storages" +
-      "\030\003 \003(\0132\'.yandex.cloud.baremetal.v1alpha." +
-      "StorageBr\n\"yandex.cloud.api.baremetal.v1" +
-      "alphaZLgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/baremetal/v1alpha;bareme" +
-      "talb\006proto3"
+      "\022\016\n\nRESTARTING\020\006\022\t\n\005ERROR\020\007\022\020\n\010DELETING\020" +
+      "\010\032\002\010\001\022\020\n\014REINSTALLING\020\t\022\014\n\010UPDATING\020\n\022\017\n" +
+      "\013QUARANTINED\020\014\022\013\n\007RUNNING\020\016\"\004\010\002\020\002\"\004\010\013\020\013\"" +
+      "\004\010\r\020\rJ\004\010\010\020\tJ\004\010\013\020\014J\004\010\014\020\rJ\004\010\017\020\022J\004\010\023\020\024J\004\010\026\020" +
+      "\027J\004\010\027\020\030J\004\010\r\020\016J\004\010\016\020\017J\004\010\030\020dJ\005\010e\020\310\001\"\207\002\n\020Net" +
+      "workInterface\022\n\n\002id\030\001 \001(\t\022\023\n\013mac_address" +
+      "\030\002 \001(\t\022\022\n\nip_address\030\003 \001(\t\022W\n\016private_su" +
+      "bnet\030\007 \001(\0132=.yandex.cloud.baremetal.v1al" +
+      "pha.PrivateSubnetNetworkInterfaceH\000\022U\n\rp" +
+      "ublic_subnet\030\010 \001(\0132<.yandex.cloud.bareme" +
+      "tal.v1alpha.PublicSubnetNetworkInterface" +
+      "H\000B\010\n\006subnetJ\004\010\004\020\007\":\n\035PrivateSubnetNetwo" +
+      "rkInterface\022\031\n\021private_subnet_id\030\001 \001(\t\"8" +
+      "\n\034PublicSubnetNetworkInterface\022\030\n\020public" +
+      "_subnet_id\030\001 \001(\t\"q\n\nOsSettings\022\020\n\010image_" +
+      "id\030\001 \001(\t\022\026\n\016ssh_public_key\030\002 \001(\t\0229\n\010stor" +
+      "ages\030\003 \003(\0132\'.yandex.cloud.baremetal.v1al" +
+      "pha.StorageBr\n\"yandex.cloud.api.baremeta" +
+      "l.v1alphaZLgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/baremetal/v1alpha;ba" +
+      "remetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

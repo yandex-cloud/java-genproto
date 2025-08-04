@@ -15129,6 +15129,1740 @@ public final class VirtualHostOuterClass {
 
   }
 
+  public interface HttpRouteHeaderMatchOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the HTTP Header to be matched. 
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[-0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the HTTP Header to be matched. 
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[-0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Value of HTTP Header to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <pre>
+     * Value of HTTP Header to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     * @return The value.
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch getValue();
+    /**
+     * <pre>
+     * Value of HTTP Header to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getValueOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch}
+   */
+  public static final class HttpRouteHeaderMatch extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch)
+      HttpRouteHeaderMatchOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HttpRouteHeaderMatch.newBuilder() to construct.
+    private HttpRouteHeaderMatch(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HttpRouteHeaderMatch() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HttpRouteHeaderMatch();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HttpRouteHeaderMatch(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder subBuilder = null;
+              if (value_ != null) {
+                subBuilder = value_.toBuilder();
+              }
+              value_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(value_);
+                value_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the HTTP Header to be matched. 
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[-0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the HTTP Header to be matched. 
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[-0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value_;
+    /**
+     * <pre>
+     * Value of HTTP Header to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <pre>
+     * Value of HTTP Header to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch getValue() {
+      return value_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.getDefaultInstance() : value_;
+    }
+    /**
+     * <pre>
+     * Value of HTTP Header to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getValueOrBuilder() {
+      return getValue();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (value_ != null) {
+        output.writeMessage(2, getValue());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (value_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getValue());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch)
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatchOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        if (valueBuilder_ == null) {
+          value_ = null;
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch build() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch(this);
+        result.name_ = name_;
+        if (valueBuilder_ == null) {
+          result.value_ = value_;
+        } else {
+          result.value_ = valueBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasValue()) {
+          mergeValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the HTTP Header to be matched. 
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[-0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the HTTP Header to be matched. 
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[-0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the HTTP Header to be matched. 
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[-0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the HTTP Header to be matched. 
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[-0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the HTTP Header to be matched. 
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[-0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder> valueBuilder_;
+      /**
+       * <pre>
+       * Value of HTTP Header to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return valueBuilder_ != null || value_ != null;
+      }
+      /**
+       * <pre>
+       * Value of HTTP Header to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       * @return The value.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch getValue() {
+        if (valueBuilder_ == null) {
+          return value_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.getDefaultInstance() : value_;
+        } else {
+          return valueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Value of HTTP Header to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public Builder setValue(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of HTTP Header to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public Builder setValue(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of HTTP Header to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public Builder mergeValue(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value) {
+        if (valueBuilder_ == null) {
+          if (value_ != null) {
+            value_ =
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.newBuilder(value_).mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          valueBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of HTTP Header to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public Builder clearValue() {
+        if (valueBuilder_ == null) {
+          value_ = null;
+          onChanged();
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of HTTP Header to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder getValueBuilder() {
+        
+        onChanged();
+        return getValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Value of HTTP Header to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getValueOrBuilder() {
+        if (valueBuilder_ != null) {
+          return valueBuilder_.getMessageOrBuilder();
+        } else {
+          return value_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.getDefaultInstance() : value_;
+        }
+      }
+      /**
+       * <pre>
+       * Value of HTTP Header to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder> 
+          getValueFieldBuilder() {
+        if (valueBuilder_ == null) {
+          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder>(
+                  getValue(),
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        return valueBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch)
+    private static final yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HttpRouteHeaderMatch>
+        PARSER = new com.google.protobuf.AbstractParser<HttpRouteHeaderMatch>() {
+      @java.lang.Override
+      public HttpRouteHeaderMatch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HttpRouteHeaderMatch(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HttpRouteHeaderMatch> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HttpRouteHeaderMatch> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HttpRouteQueryParamMatchOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the HTTP query parameter to be matched.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the HTTP query parameter to be matched.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Value of HTTP query parameter to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <pre>
+     * Value of HTTP query parameter to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     * @return The value.
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch getValue();
+    /**
+     * <pre>
+     * Value of HTTP query parameter to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getValueOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch}
+   */
+  public static final class HttpRouteQueryParamMatch extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch)
+      HttpRouteQueryParamMatchOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HttpRouteQueryParamMatch.newBuilder() to construct.
+    private HttpRouteQueryParamMatch(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HttpRouteQueryParamMatch() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HttpRouteQueryParamMatch();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HttpRouteQueryParamMatch(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder subBuilder = null;
+              if (value_ != null) {
+                subBuilder = value_.toBuilder();
+              }
+              value_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(value_);
+                value_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the HTTP query parameter to be matched.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the HTTP query parameter to be matched.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value_;
+    /**
+     * <pre>
+     * Value of HTTP query parameter to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <pre>
+     * Value of HTTP query parameter to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch getValue() {
+      return value_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.getDefaultInstance() : value_;
+    }
+    /**
+     * <pre>
+     * Value of HTTP query parameter to be matched.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getValueOrBuilder() {
+      return getValue();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (value_ != null) {
+        output.writeMessage(2, getValue());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (value_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getValue());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch)
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatchOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        if (valueBuilder_ == null) {
+          value_ = null;
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch build() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch(this);
+        result.name_ = name_;
+        if (valueBuilder_ == null) {
+          result.value_ = value_;
+        } else {
+          result.value_ = valueBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasValue()) {
+          mergeValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z]+", (.yandex.cloud.length) = "1-256"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder> valueBuilder_;
+      /**
+       * <pre>
+       * Value of HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return valueBuilder_ != null || value_ != null;
+      }
+      /**
+       * <pre>
+       * Value of HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       * @return The value.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch getValue() {
+        if (valueBuilder_ == null) {
+          return value_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.getDefaultInstance() : value_;
+        } else {
+          return valueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Value of HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public Builder setValue(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public Builder setValue(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public Builder mergeValue(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value) {
+        if (valueBuilder_ == null) {
+          if (value_ != null) {
+            value_ =
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.newBuilder(value_).mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          valueBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public Builder clearValue() {
+        if (valueBuilder_ == null) {
+          value_ = null;
+          onChanged();
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder getValueBuilder() {
+        
+        onChanged();
+        return getValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Value of HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getValueOrBuilder() {
+        if (valueBuilder_ != null) {
+          return valueBuilder_.getMessageOrBuilder();
+        } else {
+          return value_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.getDefaultInstance() : value_;
+        }
+      }
+      /**
+       * <pre>
+       * Value of HTTP query parameter to be matched.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder> 
+          getValueFieldBuilder() {
+        if (valueBuilder_ == null) {
+          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder>(
+                  getValue(),
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        return valueBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch)
+    private static final yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HttpRouteQueryParamMatch>
+        PARSER = new com.google.protobuf.AbstractParser<HttpRouteQueryParamMatch>() {
+      @java.lang.Override
+      public HttpRouteQueryParamMatch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HttpRouteQueryParamMatch(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HttpRouteQueryParamMatch> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HttpRouteQueryParamMatch> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface HttpRouteMatchOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.HttpRouteMatch)
       com.google.protobuf.MessageOrBuilder {
@@ -15203,6 +16937,114 @@ public final class VirtualHostOuterClass {
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getPathOrBuilder();
+
+    /**
+     * <pre>
+     * Headers specify HTTP request header matchers. Multiple match values are
+     * ANDed together, meaning, a request must match all the specified headers
+     * to select the route. Headers must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch> 
+        getHeadersList();
+    /**
+     * <pre>
+     * Headers specify HTTP request header matchers. Multiple match values are
+     * ANDed together, meaning, a request must match all the specified headers
+     * to select the route. Headers must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch getHeaders(int index);
+    /**
+     * <pre>
+     * Headers specify HTTP request header matchers. Multiple match values are
+     * ANDed together, meaning, a request must match all the specified headers
+     * to select the route. Headers must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    int getHeadersCount();
+    /**
+     * <pre>
+     * Headers specify HTTP request header matchers. Multiple match values are
+     * ANDed together, meaning, a request must match all the specified headers
+     * to select the route. Headers must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatchOrBuilder> 
+        getHeadersOrBuilderList();
+    /**
+     * <pre>
+     * Headers specify HTTP request header matchers. Multiple match values are
+     * ANDed together, meaning, a request must match all the specified headers
+     * to select the route. Headers must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatchOrBuilder getHeadersOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Query Parameters specify HTTP query parameter matchers. Multiple match
+     * values are ANDed together, meaning, a request must match all the
+     * specified query parameters to select the route. Query parameters must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch> 
+        getQueryParametersList();
+    /**
+     * <pre>
+     * Query Parameters specify HTTP query parameter matchers. Multiple match
+     * values are ANDed together, meaning, a request must match all the
+     * specified query parameters to select the route. Query parameters must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch getQueryParameters(int index);
+    /**
+     * <pre>
+     * Query Parameters specify HTTP query parameter matchers. Multiple match
+     * values are ANDed together, meaning, a request must match all the
+     * specified query parameters to select the route. Query parameters must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    int getQueryParametersCount();
+    /**
+     * <pre>
+     * Query Parameters specify HTTP query parameter matchers. Multiple match
+     * values are ANDed together, meaning, a request must match all the
+     * specified query parameters to select the route. Query parameters must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatchOrBuilder> 
+        getQueryParametersOrBuilderList();
+    /**
+     * <pre>
+     * Query Parameters specify HTTP query parameter matchers. Multiple match
+     * values are ANDed together, meaning, a request must match all the
+     * specified query parameters to select the route. Query parameters must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatchOrBuilder getQueryParametersOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -15222,6 +17064,8 @@ public final class VirtualHostOuterClass {
     }
     private HttpRouteMatch() {
       httpMethod_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      headers_ = java.util.Collections.emptyList();
+      queryParameters_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -15277,6 +17121,24 @@ public final class VirtualHostOuterClass {
 
               break;
             }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                headers_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              headers_.add(
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.parser(), extensionRegistry));
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                queryParameters_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              queryParameters_.add(
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -15294,6 +17156,12 @@ public final class VirtualHostOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           httpMethod_ = httpMethod_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          headers_ = java.util.Collections.unmodifiableList(headers_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          queryParameters_ = java.util.Collections.unmodifiableList(queryParameters_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -15404,6 +17272,146 @@ public final class VirtualHostOuterClass {
       return getPath();
     }
 
+    public static final int HEADERS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch> headers_;
+    /**
+     * <pre>
+     * Headers specify HTTP request header matchers. Multiple match values are
+     * ANDed together, meaning, a request must match all the specified headers
+     * to select the route. Headers must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch> getHeadersList() {
+      return headers_;
+    }
+    /**
+     * <pre>
+     * Headers specify HTTP request header matchers. Multiple match values are
+     * ANDed together, meaning, a request must match all the specified headers
+     * to select the route. Headers must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatchOrBuilder> 
+        getHeadersOrBuilderList() {
+      return headers_;
+    }
+    /**
+     * <pre>
+     * Headers specify HTTP request header matchers. Multiple match values are
+     * ANDed together, meaning, a request must match all the specified headers
+     * to select the route. Headers must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    @java.lang.Override
+    public int getHeadersCount() {
+      return headers_.size();
+    }
+    /**
+     * <pre>
+     * Headers specify HTTP request header matchers. Multiple match values are
+     * ANDed together, meaning, a request must match all the specified headers
+     * to select the route. Headers must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch getHeaders(int index) {
+      return headers_.get(index);
+    }
+    /**
+     * <pre>
+     * Headers specify HTTP request header matchers. Multiple match values are
+     * ANDed together, meaning, a request must match all the specified headers
+     * to select the route. Headers must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatchOrBuilder getHeadersOrBuilder(
+        int index) {
+      return headers_.get(index);
+    }
+
+    public static final int QUERY_PARAMETERS_FIELD_NUMBER = 4;
+    private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch> queryParameters_;
+    /**
+     * <pre>
+     * Query Parameters specify HTTP query parameter matchers. Multiple match
+     * values are ANDed together, meaning, a request must match all the
+     * specified query parameters to select the route. Query parameters must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch> getQueryParametersList() {
+      return queryParameters_;
+    }
+    /**
+     * <pre>
+     * Query Parameters specify HTTP query parameter matchers. Multiple match
+     * values are ANDed together, meaning, a request must match all the
+     * specified query parameters to select the route. Query parameters must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatchOrBuilder> 
+        getQueryParametersOrBuilderList() {
+      return queryParameters_;
+    }
+    /**
+     * <pre>
+     * Query Parameters specify HTTP query parameter matchers. Multiple match
+     * values are ANDed together, meaning, a request must match all the
+     * specified query parameters to select the route. Query parameters must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    @java.lang.Override
+    public int getQueryParametersCount() {
+      return queryParameters_.size();
+    }
+    /**
+     * <pre>
+     * Query Parameters specify HTTP query parameter matchers. Multiple match
+     * values are ANDed together, meaning, a request must match all the
+     * specified query parameters to select the route. Query parameters must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch getQueryParameters(int index) {
+      return queryParameters_.get(index);
+    }
+    /**
+     * <pre>
+     * Query Parameters specify HTTP query parameter matchers. Multiple match
+     * values are ANDed together, meaning, a request must match all the
+     * specified query parameters to select the route. Query parameters must be unique.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatchOrBuilder getQueryParametersOrBuilder(
+        int index) {
+      return queryParameters_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15423,6 +17431,12 @@ public final class VirtualHostOuterClass {
       }
       if (path_ != null) {
         output.writeMessage(2, getPath());
+      }
+      for (int i = 0; i < headers_.size(); i++) {
+        output.writeMessage(3, headers_.get(i));
+      }
+      for (int i = 0; i < queryParameters_.size(); i++) {
+        output.writeMessage(4, queryParameters_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -15444,6 +17458,14 @@ public final class VirtualHostOuterClass {
       if (path_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPath());
+      }
+      for (int i = 0; i < headers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, headers_.get(i));
+      }
+      for (int i = 0; i < queryParameters_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, queryParameters_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -15467,6 +17489,10 @@ public final class VirtualHostOuterClass {
         if (!getPath()
             .equals(other.getPath())) return false;
       }
+      if (!getHeadersList()
+          .equals(other.getHeadersList())) return false;
+      if (!getQueryParametersList()
+          .equals(other.getQueryParametersList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15485,6 +17511,14 @@ public final class VirtualHostOuterClass {
       if (hasPath()) {
         hash = (37 * hash) + PATH_FIELD_NUMBER;
         hash = (53 * hash) + getPath().hashCode();
+      }
+      if (getHeadersCount() > 0) {
+        hash = (37 * hash) + HEADERS_FIELD_NUMBER;
+        hash = (53 * hash) + getHeadersList().hashCode();
+      }
+      if (getQueryParametersCount() > 0) {
+        hash = (37 * hash) + QUERY_PARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryParametersList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -15618,6 +17652,8 @@ public final class VirtualHostOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getHeadersFieldBuilder();
+          getQueryParametersFieldBuilder();
         }
       }
       @java.lang.Override
@@ -15630,6 +17666,18 @@ public final class VirtualHostOuterClass {
         } else {
           path_ = null;
           pathBuilder_ = null;
+        }
+        if (headersBuilder_ == null) {
+          headers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          headersBuilder_.clear();
+        }
+        if (queryParametersBuilder_ == null) {
+          queryParameters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          queryParametersBuilder_.clear();
         }
         return this;
       }
@@ -15667,6 +17715,24 @@ public final class VirtualHostOuterClass {
           result.path_ = path_;
         } else {
           result.path_ = pathBuilder_.build();
+        }
+        if (headersBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            headers_ = java.util.Collections.unmodifiableList(headers_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.headers_ = headers_;
+        } else {
+          result.headers_ = headersBuilder_.build();
+        }
+        if (queryParametersBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            queryParameters_ = java.util.Collections.unmodifiableList(queryParameters_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.queryParameters_ = queryParameters_;
+        } else {
+          result.queryParameters_ = queryParametersBuilder_.build();
         }
         onBuilt();
         return result;
@@ -15728,6 +17794,58 @@ public final class VirtualHostOuterClass {
         }
         if (other.hasPath()) {
           mergePath(other.getPath());
+        }
+        if (headersBuilder_ == null) {
+          if (!other.headers_.isEmpty()) {
+            if (headers_.isEmpty()) {
+              headers_ = other.headers_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureHeadersIsMutable();
+              headers_.addAll(other.headers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.headers_.isEmpty()) {
+            if (headersBuilder_.isEmpty()) {
+              headersBuilder_.dispose();
+              headersBuilder_ = null;
+              headers_ = other.headers_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              headersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHeadersFieldBuilder() : null;
+            } else {
+              headersBuilder_.addAllMessages(other.headers_);
+            }
+          }
+        }
+        if (queryParametersBuilder_ == null) {
+          if (!other.queryParameters_.isEmpty()) {
+            if (queryParameters_.isEmpty()) {
+              queryParameters_ = other.queryParameters_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureQueryParametersIsMutable();
+              queryParameters_.addAll(other.queryParameters_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.queryParameters_.isEmpty()) {
+            if (queryParametersBuilder_.isEmpty()) {
+              queryParametersBuilder_.dispose();
+              queryParametersBuilder_ = null;
+              queryParameters_ = other.queryParameters_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              queryParametersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQueryParametersFieldBuilder() : null;
+            } else {
+              queryParametersBuilder_.addAllMessages(other.queryParameters_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -16067,6 +18185,702 @@ public final class VirtualHostOuterClass {
           path_ = null;
         }
         return pathBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch> headers_ =
+        java.util.Collections.emptyList();
+      private void ensureHeadersIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          headers_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch>(headers_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatchOrBuilder> headersBuilder_;
+
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch> getHeadersList() {
+        if (headersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(headers_);
+        } else {
+          return headersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public int getHeadersCount() {
+        if (headersBuilder_ == null) {
+          return headers_.size();
+        } else {
+          return headersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch getHeaders(int index) {
+        if (headersBuilder_ == null) {
+          return headers_.get(index);
+        } else {
+          return headersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder setHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch value) {
+        if (headersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHeadersIsMutable();
+          headers_.set(index, value);
+          onChanged();
+        } else {
+          headersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder setHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder builderForValue) {
+        if (headersBuilder_ == null) {
+          ensureHeadersIsMutable();
+          headers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          headersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder addHeaders(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch value) {
+        if (headersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHeadersIsMutable();
+          headers_.add(value);
+          onChanged();
+        } else {
+          headersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder addHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch value) {
+        if (headersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHeadersIsMutable();
+          headers_.add(index, value);
+          onChanged();
+        } else {
+          headersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder addHeaders(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder builderForValue) {
+        if (headersBuilder_ == null) {
+          ensureHeadersIsMutable();
+          headers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          headersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder addHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder builderForValue) {
+        if (headersBuilder_ == null) {
+          ensureHeadersIsMutable();
+          headers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          headersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder addAllHeaders(
+          java.lang.Iterable<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch> values) {
+        if (headersBuilder_ == null) {
+          ensureHeadersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, headers_);
+          onChanged();
+        } else {
+          headersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder clearHeaders() {
+        if (headersBuilder_ == null) {
+          headers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          headersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder removeHeaders(int index) {
+        if (headersBuilder_ == null) {
+          ensureHeadersIsMutable();
+          headers_.remove(index);
+          onChanged();
+        } else {
+          headersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder getHeadersBuilder(
+          int index) {
+        return getHeadersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatchOrBuilder getHeadersOrBuilder(
+          int index) {
+        if (headersBuilder_ == null) {
+          return headers_.get(index);  } else {
+          return headersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatchOrBuilder> 
+           getHeadersOrBuilderList() {
+        if (headersBuilder_ != null) {
+          return headersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(headers_);
+        }
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder addHeadersBuilder() {
+        return getHeadersFieldBuilder().addBuilder(
+            yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder addHeadersBuilder(
+          int index) {
+        return getHeadersFieldBuilder().addBuilder(
+            index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Headers specify HTTP request header matchers. Multiple match values are
+       * ANDed together, meaning, a request must match all the specified headers
+       * to select the route. Headers must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteHeaderMatch headers = 3 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder> 
+           getHeadersBuilderList() {
+        return getHeadersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatchOrBuilder> 
+          getHeadersFieldBuilder() {
+        if (headersBuilder_ == null) {
+          headersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteHeaderMatchOrBuilder>(
+                  headers_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          headers_ = null;
+        }
+        return headersBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch> queryParameters_ =
+        java.util.Collections.emptyList();
+      private void ensureQueryParametersIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          queryParameters_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch>(queryParameters_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatchOrBuilder> queryParametersBuilder_;
+
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch> getQueryParametersList() {
+        if (queryParametersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(queryParameters_);
+        } else {
+          return queryParametersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public int getQueryParametersCount() {
+        if (queryParametersBuilder_ == null) {
+          return queryParameters_.size();
+        } else {
+          return queryParametersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch getQueryParameters(int index) {
+        if (queryParametersBuilder_ == null) {
+          return queryParameters_.get(index);
+        } else {
+          return queryParametersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder setQueryParameters(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch value) {
+        if (queryParametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueryParametersIsMutable();
+          queryParameters_.set(index, value);
+          onChanged();
+        } else {
+          queryParametersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder setQueryParameters(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder builderForValue) {
+        if (queryParametersBuilder_ == null) {
+          ensureQueryParametersIsMutable();
+          queryParameters_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          queryParametersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder addQueryParameters(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch value) {
+        if (queryParametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueryParametersIsMutable();
+          queryParameters_.add(value);
+          onChanged();
+        } else {
+          queryParametersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder addQueryParameters(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch value) {
+        if (queryParametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueryParametersIsMutable();
+          queryParameters_.add(index, value);
+          onChanged();
+        } else {
+          queryParametersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder addQueryParameters(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder builderForValue) {
+        if (queryParametersBuilder_ == null) {
+          ensureQueryParametersIsMutable();
+          queryParameters_.add(builderForValue.build());
+          onChanged();
+        } else {
+          queryParametersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder addQueryParameters(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder builderForValue) {
+        if (queryParametersBuilder_ == null) {
+          ensureQueryParametersIsMutable();
+          queryParameters_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          queryParametersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder addAllQueryParameters(
+          java.lang.Iterable<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch> values) {
+        if (queryParametersBuilder_ == null) {
+          ensureQueryParametersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, queryParameters_);
+          onChanged();
+        } else {
+          queryParametersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder clearQueryParameters() {
+        if (queryParametersBuilder_ == null) {
+          queryParameters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          queryParametersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public Builder removeQueryParameters(int index) {
+        if (queryParametersBuilder_ == null) {
+          ensureQueryParametersIsMutable();
+          queryParameters_.remove(index);
+          onChanged();
+        } else {
+          queryParametersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder getQueryParametersBuilder(
+          int index) {
+        return getQueryParametersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatchOrBuilder getQueryParametersOrBuilder(
+          int index) {
+        if (queryParametersBuilder_ == null) {
+          return queryParameters_.get(index);  } else {
+          return queryParametersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatchOrBuilder> 
+           getQueryParametersOrBuilderList() {
+        if (queryParametersBuilder_ != null) {
+          return queryParametersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(queryParameters_);
+        }
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder addQueryParametersBuilder() {
+        return getQueryParametersFieldBuilder().addBuilder(
+            yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder addQueryParametersBuilder(
+          int index) {
+        return getQueryParametersFieldBuilder().addBuilder(
+            index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Query Parameters specify HTTP query parameter matchers. Multiple match
+       * values are ANDed together, meaning, a request must match all the
+       * specified query parameters to select the route. Query parameters must be unique.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouteQueryParamMatch query_parameters = 4 [(.yandex.cloud.size) = "&lt;=32"];</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder> 
+           getQueryParametersBuilderList() {
+        return getQueryParametersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatchOrBuilder> 
+          getQueryParametersFieldBuilder() {
+        if (queryParametersBuilder_ == null) {
+          queryParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteQueryParamMatchOrBuilder>(
+                  queryParameters_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          queryParameters_ = null;
+        }
+        return queryParametersBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21750,6 +24564,7 @@ public final class VirtualHostOuterClass {
      * a request with `/foobaz` path is forwarded with `/barbaz` path.
      * For [StringMatch.exact_match], the whole path is replaced.
      * If not specified, the path is not changed.
+     * Only one of regex_rewrite, or prefix_rewrite may be specified.
      * </pre>
      *
      * <code>string prefix_rewrite = 6;</code>
@@ -21763,6 +24578,7 @@ public final class VirtualHostOuterClass {
      * a request with `/foobaz` path is forwarded with `/barbaz` path.
      * For [StringMatch.exact_match], the whole path is replaced.
      * If not specified, the path is not changed.
+     * Only one of regex_rewrite, or prefix_rewrite may be specified.
      * </pre>
      *
      * <code>string prefix_rewrite = 6;</code>
@@ -21838,6 +24654,69 @@ public final class VirtualHostOuterClass {
      * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 8;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder getRateLimitOrBuilder();
+
+    /**
+     * <pre>
+     * Replacement for portions of the path that match the pattern should be rewritten,
+     * even allowing the substitution of capture groups from the pattern into the new path as specified
+     * by the rewrite substitution string.
+     * Only one of regex_rewrite, or prefix_rewrite may be specified.
+     * Examples of using:
+     *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+     *    /service/foo/v1/api into /v1/api/instance/foo.
+     *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+     *    into /xxx/two/yyy/two/zzz.
+     *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+     *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+     *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+     *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+     * @return Whether the regexRewrite field is set.
+     */
+    boolean hasRegexRewrite();
+    /**
+     * <pre>
+     * Replacement for portions of the path that match the pattern should be rewritten,
+     * even allowing the substitution of capture groups from the pattern into the new path as specified
+     * by the rewrite substitution string.
+     * Only one of regex_rewrite, or prefix_rewrite may be specified.
+     * Examples of using:
+     *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+     *    /service/foo/v1/api into /v1/api/instance/foo.
+     *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+     *    into /xxx/two/yyy/two/zzz.
+     *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+     *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+     *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+     *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+     * @return The regexRewrite.
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute getRegexRewrite();
+    /**
+     * <pre>
+     * Replacement for portions of the path that match the pattern should be rewritten,
+     * even allowing the substitution of capture groups from the pattern into the new path as specified
+     * by the rewrite substitution string.
+     * Only one of regex_rewrite, or prefix_rewrite may be specified.
+     * Examples of using:
+     *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+     *    /service/foo/v1/api into /v1/api/instance/foo.
+     *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+     *    into /xxx/two/yyy/two/zzz.
+     *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+     *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+     *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+     *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstituteOrBuilder getRegexRewriteOrBuilder();
 
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction.HostRewriteSpecifierCase getHostRewriteSpecifierCase();
   }
@@ -21961,6 +24840,19 @@ public final class VirtualHostOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(rateLimit_);
                 rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.Builder subBuilder = null;
+              if (regexRewrite_ != null) {
+                subBuilder = regexRewrite_.toBuilder();
+              }
+              regexRewrite_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(regexRewrite_);
+                regexRewrite_ = subBuilder.buildPartial();
               }
 
               break;
@@ -22291,6 +25183,7 @@ public final class VirtualHostOuterClass {
      * a request with `/foobaz` path is forwarded with `/barbaz` path.
      * For [StringMatch.exact_match], the whole path is replaced.
      * If not specified, the path is not changed.
+     * Only one of regex_rewrite, or prefix_rewrite may be specified.
      * </pre>
      *
      * <code>string prefix_rewrite = 6;</code>
@@ -22316,6 +25209,7 @@ public final class VirtualHostOuterClass {
      * a request with `/foobaz` path is forwarded with `/barbaz` path.
      * For [StringMatch.exact_match], the whole path is replaced.
      * If not specified, the path is not changed.
+     * Only one of regex_rewrite, or prefix_rewrite may be specified.
      * </pre>
      *
      * <code>string prefix_rewrite = 6;</code>
@@ -22425,6 +25319,80 @@ public final class VirtualHostOuterClass {
       return getRateLimit();
     }
 
+    public static final int REGEX_REWRITE_FIELD_NUMBER = 9;
+    private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute regexRewrite_;
+    /**
+     * <pre>
+     * Replacement for portions of the path that match the pattern should be rewritten,
+     * even allowing the substitution of capture groups from the pattern into the new path as specified
+     * by the rewrite substitution string.
+     * Only one of regex_rewrite, or prefix_rewrite may be specified.
+     * Examples of using:
+     *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+     *    /service/foo/v1/api into /v1/api/instance/foo.
+     *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+     *    into /xxx/two/yyy/two/zzz.
+     *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+     *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+     *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+     *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+     * @return Whether the regexRewrite field is set.
+     */
+    @java.lang.Override
+    public boolean hasRegexRewrite() {
+      return regexRewrite_ != null;
+    }
+    /**
+     * <pre>
+     * Replacement for portions of the path that match the pattern should be rewritten,
+     * even allowing the substitution of capture groups from the pattern into the new path as specified
+     * by the rewrite substitution string.
+     * Only one of regex_rewrite, or prefix_rewrite may be specified.
+     * Examples of using:
+     *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+     *    /service/foo/v1/api into /v1/api/instance/foo.
+     *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+     *    into /xxx/two/yyy/two/zzz.
+     *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+     *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+     *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+     *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+     * @return The regexRewrite.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute getRegexRewrite() {
+      return regexRewrite_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.getDefaultInstance() : regexRewrite_;
+    }
+    /**
+     * <pre>
+     * Replacement for portions of the path that match the pattern should be rewritten,
+     * even allowing the substitution of capture groups from the pattern into the new path as specified
+     * by the rewrite substitution string.
+     * Only one of regex_rewrite, or prefix_rewrite may be specified.
+     * Examples of using:
+     *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+     *    /service/foo/v1/api into /v1/api/instance/foo.
+     *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+     *    into /xxx/two/yyy/two/zzz.
+     *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+     *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+     *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+     *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstituteOrBuilder getRegexRewriteOrBuilder() {
+      return getRegexRewrite();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -22463,6 +25431,9 @@ public final class VirtualHostOuterClass {
       }
       if (rateLimit_ != null) {
         output.writeMessage(8, getRateLimit());
+      }
+      if (regexRewrite_ != null) {
+        output.writeMessage(9, getRegexRewrite());
       }
       unknownFields.writeTo(output);
     }
@@ -22507,6 +25478,10 @@ public final class VirtualHostOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getRateLimit());
       }
+      if (regexRewrite_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getRegexRewrite());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -22542,6 +25517,11 @@ public final class VirtualHostOuterClass {
       if (hasRateLimit()) {
         if (!getRateLimit()
             .equals(other.getRateLimit())) return false;
+      }
+      if (hasRegexRewrite() != other.hasRegexRewrite()) return false;
+      if (hasRegexRewrite()) {
+        if (!getRegexRewrite()
+            .equals(other.getRegexRewrite())) return false;
       }
       if (!getHostRewriteSpecifierCase().equals(other.getHostRewriteSpecifierCase())) return false;
       switch (hostRewriteSpecifierCase_) {
@@ -22586,6 +25566,10 @@ public final class VirtualHostOuterClass {
       if (hasRateLimit()) {
         hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
         hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      if (hasRegexRewrite()) {
+        hash = (37 * hash) + REGEX_REWRITE_FIELD_NUMBER;
+        hash = (53 * hash) + getRegexRewrite().hashCode();
       }
       switch (hostRewriteSpecifierCase_) {
         case 4:
@@ -22761,6 +25745,12 @@ public final class VirtualHostOuterClass {
           rateLimit_ = null;
           rateLimitBuilder_ = null;
         }
+        if (regexRewriteBuilder_ == null) {
+          regexRewrite_ = null;
+        } else {
+          regexRewrite_ = null;
+          regexRewriteBuilder_ = null;
+        }
         hostRewriteSpecifierCase_ = 0;
         hostRewriteSpecifier_ = null;
         return this;
@@ -22817,6 +25807,11 @@ public final class VirtualHostOuterClass {
           result.rateLimit_ = rateLimit_;
         } else {
           result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        if (regexRewriteBuilder_ == null) {
+          result.regexRewrite_ = regexRewrite_;
+        } else {
+          result.regexRewrite_ = regexRewriteBuilder_.build();
         }
         result.hostRewriteSpecifierCase_ = hostRewriteSpecifierCase_;
         onBuilt();
@@ -22893,6 +25888,9 @@ public final class VirtualHostOuterClass {
         }
         if (other.hasRateLimit()) {
           mergeRateLimit(other.getRateLimit());
+        }
+        if (other.hasRegexRewrite()) {
+          mergeRegexRewrite(other.getRegexRewrite());
         }
         switch (other.getHostRewriteSpecifierCase()) {
           case HOST_REWRITE: {
@@ -23623,6 +26621,7 @@ public final class VirtualHostOuterClass {
        * a request with `/foobaz` path is forwarded with `/barbaz` path.
        * For [StringMatch.exact_match], the whole path is replaced.
        * If not specified, the path is not changed.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
        * </pre>
        *
        * <code>string prefix_rewrite = 6;</code>
@@ -23647,6 +26646,7 @@ public final class VirtualHostOuterClass {
        * a request with `/foobaz` path is forwarded with `/barbaz` path.
        * For [StringMatch.exact_match], the whole path is replaced.
        * If not specified, the path is not changed.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
        * </pre>
        *
        * <code>string prefix_rewrite = 6;</code>
@@ -23672,6 +26672,7 @@ public final class VirtualHostOuterClass {
        * a request with `/foobaz` path is forwarded with `/barbaz` path.
        * For [StringMatch.exact_match], the whole path is replaced.
        * If not specified, the path is not changed.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
        * </pre>
        *
        * <code>string prefix_rewrite = 6;</code>
@@ -23695,6 +26696,7 @@ public final class VirtualHostOuterClass {
        * a request with `/foobaz` path is forwarded with `/barbaz` path.
        * For [StringMatch.exact_match], the whole path is replaced.
        * If not specified, the path is not changed.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
        * </pre>
        *
        * <code>string prefix_rewrite = 6;</code>
@@ -23713,6 +26715,7 @@ public final class VirtualHostOuterClass {
        * a request with `/foobaz` path is forwarded with `/barbaz` path.
        * For [StringMatch.exact_match], the whole path is replaced.
        * If not specified, the path is not changed.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
        * </pre>
        *
        * <code>string prefix_rewrite = 6;</code>
@@ -24031,6 +27034,269 @@ public final class VirtualHostOuterClass {
         }
         return rateLimitBuilder_;
       }
+
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute regexRewrite_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstituteOrBuilder> regexRewriteBuilder_;
+      /**
+       * <pre>
+       * Replacement for portions of the path that match the pattern should be rewritten,
+       * even allowing the substitution of capture groups from the pattern into the new path as specified
+       * by the rewrite substitution string.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
+       * Examples of using:
+       *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+       *    /service/foo/v1/api into /v1/api/instance/foo.
+       *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+       *    into /xxx/two/yyy/two/zzz.
+       *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+       *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+       *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+       *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+       * @return Whether the regexRewrite field is set.
+       */
+      public boolean hasRegexRewrite() {
+        return regexRewriteBuilder_ != null || regexRewrite_ != null;
+      }
+      /**
+       * <pre>
+       * Replacement for portions of the path that match the pattern should be rewritten,
+       * even allowing the substitution of capture groups from the pattern into the new path as specified
+       * by the rewrite substitution string.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
+       * Examples of using:
+       *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+       *    /service/foo/v1/api into /v1/api/instance/foo.
+       *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+       *    into /xxx/two/yyy/two/zzz.
+       *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+       *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+       *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+       *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+       * @return The regexRewrite.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute getRegexRewrite() {
+        if (regexRewriteBuilder_ == null) {
+          return regexRewrite_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.getDefaultInstance() : regexRewrite_;
+        } else {
+          return regexRewriteBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Replacement for portions of the path that match the pattern should be rewritten,
+       * even allowing the substitution of capture groups from the pattern into the new path as specified
+       * by the rewrite substitution string.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
+       * Examples of using:
+       *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+       *    /service/foo/v1/api into /v1/api/instance/foo.
+       *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+       *    into /xxx/two/yyy/two/zzz.
+       *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+       *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+       *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+       *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+       */
+      public Builder setRegexRewrite(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute value) {
+        if (regexRewriteBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          regexRewrite_ = value;
+          onChanged();
+        } else {
+          regexRewriteBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replacement for portions of the path that match the pattern should be rewritten,
+       * even allowing the substitution of capture groups from the pattern into the new path as specified
+       * by the rewrite substitution string.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
+       * Examples of using:
+       *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+       *    /service/foo/v1/api into /v1/api/instance/foo.
+       *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+       *    into /xxx/two/yyy/two/zzz.
+       *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+       *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+       *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+       *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+       */
+      public Builder setRegexRewrite(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.Builder builderForValue) {
+        if (regexRewriteBuilder_ == null) {
+          regexRewrite_ = builderForValue.build();
+          onChanged();
+        } else {
+          regexRewriteBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replacement for portions of the path that match the pattern should be rewritten,
+       * even allowing the substitution of capture groups from the pattern into the new path as specified
+       * by the rewrite substitution string.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
+       * Examples of using:
+       *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+       *    /service/foo/v1/api into /v1/api/instance/foo.
+       *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+       *    into /xxx/two/yyy/two/zzz.
+       *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+       *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+       *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+       *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+       */
+      public Builder mergeRegexRewrite(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute value) {
+        if (regexRewriteBuilder_ == null) {
+          if (regexRewrite_ != null) {
+            regexRewrite_ =
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.newBuilder(regexRewrite_).mergeFrom(value).buildPartial();
+          } else {
+            regexRewrite_ = value;
+          }
+          onChanged();
+        } else {
+          regexRewriteBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replacement for portions of the path that match the pattern should be rewritten,
+       * even allowing the substitution of capture groups from the pattern into the new path as specified
+       * by the rewrite substitution string.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
+       * Examples of using:
+       *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+       *    /service/foo/v1/api into /v1/api/instance/foo.
+       *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+       *    into /xxx/two/yyy/two/zzz.
+       *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+       *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+       *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+       *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+       */
+      public Builder clearRegexRewrite() {
+        if (regexRewriteBuilder_ == null) {
+          regexRewrite_ = null;
+          onChanged();
+        } else {
+          regexRewrite_ = null;
+          regexRewriteBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replacement for portions of the path that match the pattern should be rewritten,
+       * even allowing the substitution of capture groups from the pattern into the new path as specified
+       * by the rewrite substitution string.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
+       * Examples of using:
+       *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+       *    /service/foo/v1/api into /v1/api/instance/foo.
+       *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+       *    into /xxx/two/yyy/two/zzz.
+       *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+       *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+       *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+       *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.Builder getRegexRewriteBuilder() {
+        
+        onChanged();
+        return getRegexRewriteFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Replacement for portions of the path that match the pattern should be rewritten,
+       * even allowing the substitution of capture groups from the pattern into the new path as specified
+       * by the rewrite substitution string.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
+       * Examples of using:
+       *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+       *    /service/foo/v1/api into /v1/api/instance/foo.
+       *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+       *    into /xxx/two/yyy/two/zzz.
+       *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+       *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+       *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+       *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstituteOrBuilder getRegexRewriteOrBuilder() {
+        if (regexRewriteBuilder_ != null) {
+          return regexRewriteBuilder_.getMessageOrBuilder();
+        } else {
+          return regexRewrite_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.getDefaultInstance() : regexRewrite_;
+        }
+      }
+      /**
+       * <pre>
+       * Replacement for portions of the path that match the pattern should be rewritten,
+       * even allowing the substitution of capture groups from the pattern into the new path as specified
+       * by the rewrite substitution string.
+       * Only one of regex_rewrite, or prefix_rewrite may be specified.
+       * Examples of using:
+       *  - The path pattern ^/service/([^/]+)(/.*)$ paired with a substitution string of &#92;2/instance/&#92;1 would transform
+       *    /service/foo/v1/api into /v1/api/instance/foo.
+       *  - The pattern one paired with a substitution string of two would transform /xxx/one/yyy/one/zzz
+       *    into /xxx/two/yyy/two/zzz.
+       *  - The pattern ^(.*?)one(.*)$ paired with a substitution string of &#92;1two&#92;2 would replace only the first
+       *    occurrence of one, transforming path /xxx/one/yyy/one/zzz into /xxx/two/yyy/one/zzz.
+       *  - The pattern (?i)/xxx/ paired with a substitution string of /yyy/ would do a case-insensitive match and transform
+       *    path /aaa/XxX/bbb to /aaa/yyy/bbb.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute regex_rewrite = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstituteOrBuilder> 
+          getRegexRewriteFieldBuilder() {
+        if (regexRewriteBuilder_ == null) {
+          regexRewriteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstituteOrBuilder>(
+                  getRegexRewrite(),
+                  getParentForChildren(),
+                  isClean());
+          regexRewrite_ = null;
+        }
+        return regexRewriteBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -24079,6 +27345,805 @@ public final class VirtualHostOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegexMatchAndSubstituteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The regular expression used to find portions of a string that should be replaced.
+     * </pre>
+     *
+     * <code>string regex = 1;</code>
+     * @return The regex.
+     */
+    java.lang.String getRegex();
+    /**
+     * <pre>
+     * The regular expression used to find portions of a string that should be replaced.
+     * </pre>
+     *
+     * <code>string regex = 1;</code>
+     * @return The bytes for regex.
+     */
+    com.google.protobuf.ByteString
+        getRegexBytes();
+
+    /**
+     * <pre>
+     * The string that should be substituted into matching portions of the subject string during a substitution operation
+     * to produce a new string.
+     * </pre>
+     *
+     * <code>string substitute = 2;</code>
+     * @return The substitute.
+     */
+    java.lang.String getSubstitute();
+    /**
+     * <pre>
+     * The string that should be substituted into matching portions of the subject string during a substitution operation
+     * to produce a new string.
+     * </pre>
+     *
+     * <code>string substitute = 2;</code>
+     * @return The bytes for substitute.
+     */
+    com.google.protobuf.ByteString
+        getSubstituteBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute}
+   */
+  public static final class RegexMatchAndSubstitute extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute)
+      RegexMatchAndSubstituteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegexMatchAndSubstitute.newBuilder() to construct.
+    private RegexMatchAndSubstitute(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegexMatchAndSubstitute() {
+      regex_ = "";
+      substitute_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegexMatchAndSubstitute();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RegexMatchAndSubstitute(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              regex_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              substitute_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.Builder.class);
+    }
+
+    public static final int REGEX_FIELD_NUMBER = 1;
+    private volatile java.lang.Object regex_;
+    /**
+     * <pre>
+     * The regular expression used to find portions of a string that should be replaced.
+     * </pre>
+     *
+     * <code>string regex = 1;</code>
+     * @return The regex.
+     */
+    @java.lang.Override
+    public java.lang.String getRegex() {
+      java.lang.Object ref = regex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        regex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The regular expression used to find portions of a string that should be replaced.
+     * </pre>
+     *
+     * <code>string regex = 1;</code>
+     * @return The bytes for regex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegexBytes() {
+      java.lang.Object ref = regex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        regex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBSTITUTE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object substitute_;
+    /**
+     * <pre>
+     * The string that should be substituted into matching portions of the subject string during a substitution operation
+     * to produce a new string.
+     * </pre>
+     *
+     * <code>string substitute = 2;</code>
+     * @return The substitute.
+     */
+    @java.lang.Override
+    public java.lang.String getSubstitute() {
+      java.lang.Object ref = substitute_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        substitute_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The string that should be substituted into matching portions of the subject string during a substitution operation
+     * to produce a new string.
+     * </pre>
+     *
+     * <code>string substitute = 2;</code>
+     * @return The bytes for substitute.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubstituteBytes() {
+      java.lang.Object ref = substitute_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        substitute_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, regex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(substitute_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, substitute_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, regex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(substitute_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, substitute_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute) obj;
+
+      if (!getRegex()
+          .equals(other.getRegex())) return false;
+      if (!getSubstitute()
+          .equals(other.getSubstitute())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGEX_FIELD_NUMBER;
+      hash = (53 * hash) + getRegex().hashCode();
+      hash = (37 * hash) + SUBSTITUTE_FIELD_NUMBER;
+      hash = (53 * hash) + getSubstitute().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute)
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstituteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        regex_ = "";
+
+        substitute_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute build() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute(this);
+        result.regex_ = regex_;
+        result.substitute_ = substitute_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute.getDefaultInstance()) return this;
+        if (!other.getRegex().isEmpty()) {
+          regex_ = other.regex_;
+          onChanged();
+        }
+        if (!other.getSubstitute().isEmpty()) {
+          substitute_ = other.substitute_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object regex_ = "";
+      /**
+       * <pre>
+       * The regular expression used to find portions of a string that should be replaced.
+       * </pre>
+       *
+       * <code>string regex = 1;</code>
+       * @return The regex.
+       */
+      public java.lang.String getRegex() {
+        java.lang.Object ref = regex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          regex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The regular expression used to find portions of a string that should be replaced.
+       * </pre>
+       *
+       * <code>string regex = 1;</code>
+       * @return The bytes for regex.
+       */
+      public com.google.protobuf.ByteString
+          getRegexBytes() {
+        java.lang.Object ref = regex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          regex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The regular expression used to find portions of a string that should be replaced.
+       * </pre>
+       *
+       * <code>string regex = 1;</code>
+       * @param value The regex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegex(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        regex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The regular expression used to find portions of a string that should be replaced.
+       * </pre>
+       *
+       * <code>string regex = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegex() {
+        
+        regex_ = getDefaultInstance().getRegex();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The regular expression used to find portions of a string that should be replaced.
+       * </pre>
+       *
+       * <code>string regex = 1;</code>
+       * @param value The bytes for regex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        regex_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object substitute_ = "";
+      /**
+       * <pre>
+       * The string that should be substituted into matching portions of the subject string during a substitution operation
+       * to produce a new string.
+       * </pre>
+       *
+       * <code>string substitute = 2;</code>
+       * @return The substitute.
+       */
+      public java.lang.String getSubstitute() {
+        java.lang.Object ref = substitute_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          substitute_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The string that should be substituted into matching portions of the subject string during a substitution operation
+       * to produce a new string.
+       * </pre>
+       *
+       * <code>string substitute = 2;</code>
+       * @return The bytes for substitute.
+       */
+      public com.google.protobuf.ByteString
+          getSubstituteBytes() {
+        java.lang.Object ref = substitute_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          substitute_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The string that should be substituted into matching portions of the subject string during a substitution operation
+       * to produce a new string.
+       * </pre>
+       *
+       * <code>string substitute = 2;</code>
+       * @param value The substitute to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubstitute(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        substitute_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The string that should be substituted into matching portions of the subject string during a substitution operation
+       * to produce a new string.
+       * </pre>
+       *
+       * <code>string substitute = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubstitute() {
+        
+        substitute_ = getDefaultInstance().getSubstitute();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The string that should be substituted into matching portions of the subject string during a substitution operation
+       * to produce a new string.
+       * </pre>
+       *
+       * <code>string substitute = 2;</code>
+       * @param value The bytes for substitute to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubstituteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        substitute_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.RegexMatchAndSubstitute)
+    private static final yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegexMatchAndSubstitute>
+        PARSER = new com.google.protobuf.AbstractParser<RegexMatchAndSubstitute>() {
+      @java.lang.Override
+      public RegexMatchAndSubstitute parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RegexMatchAndSubstitute(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegexMatchAndSubstitute> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegexMatchAndSubstitute> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RegexMatchAndSubstitute getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -26139,6 +30204,16 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_apploadbalancer_v1_GrpcRoute_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -26173,6 +30248,11 @@ public final class VirtualHostOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_descriptor;
   private static final 
@@ -26246,52 +30326,66 @@ public final class VirtualHostOuterClass {
       "dex.cloud.apploadbalancer.v1.GrpcRouteAc" +
       "tionH\000\022T\n\017status_response\030\003 \001(\01329.yandex" +
       ".cloud.apploadbalancer.v1.GrpcStatusResp" +
-      "onseActionH\000B\016\n\006action\022\004\300\3011\001\"a\n\016HttpRout" +
-      "eMatch\022\023\n\013http_method\030\001 \003(\t\022:\n\004path\030\002 \001(" +
-      "\0132,.yandex.cloud.apploadbalancer.v1.Stri" +
-      "ngMatch\"L\n\016GrpcRouteMatch\022:\n\004fqmn\030\001 \001(\0132" +
-      ",.yandex.cloud.apploadbalancer.v1.String" +
-      "Match\"b\n\013StringMatch\022\025\n\013exact_match\030\001 \001(" +
-      "\tH\000\022\026\n\014prefix_match\030\002 \001(\tH\000\022\025\n\013regex_mat" +
-      "ch\030\003 \001(\tH\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016RedirectAc" +
-      "tion\022\026\n\016replace_scheme\030\001 \001(\t\022\024\n\014replace_" +
-      "host\030\002 \001(\t\022\024\n\014replace_port\030\003 \001(\003\022\026\n\014repl" +
-      "ace_path\030\004 \001(\tH\000\022\030\n\016replace_prefix\030\005 \001(\t" +
-      "H\000\022\024\n\014remove_query\030\006 \001(\010\022[\n\rresponse_cod" +
-      "e\030\007 \001(\0162D.yandex.cloud.apploadbalancer.v" +
-      "1.RedirectAction.RedirectResponseCode\"w\n" +
-      "\024RedirectResponseCode\022\025\n\021MOVED_PERMANENT" +
-      "LY\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026\n\022TEMPOR" +
-      "ARY_REDIRECT\020\003\022\026\n\022PERMANENT_REDIRECT\020\004B\006" +
-      "\n\004path\"k\n\024DirectResponseAction\022\033\n\006status" +
-      "\030\001 \001(\003B\013\372\3071\007100-599\0226\n\004body\030\002 \001(\0132(.yand" +
-      "ex.cloud.apploadbalancer.v1.Payload\"\202\002\n\030" +
-      "GrpcStatusResponseAction\022P\n\006status\030\001 \001(\016" +
-      "2@.yandex.cloud.apploadbalancer.v1.GrpcS" +
-      "tatusResponseAction.Status\"\223\001\n\006Status\022\006\n" +
-      "\002OK\020\000\022\024\n\020INVALID_ARGUMENT\020\001\022\r\n\tNOT_FOUND" +
-      "\020\002\022\025\n\021PERMISSION_DENIED\020\003\022\023\n\017UNAUTHENTIC" +
-      "ATED\020\004\022\021\n\rUNIMPLEMENTED\020\005\022\014\n\010INTERNAL\020\006\022" +
-      "\017\n\013UNAVAILABLE\020\007\"\314\002\n\017HttpRouteAction\022\036\n\020" +
-      "backend_group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007timeout\030" +
+      "onseActionH\000B\016\n\006action\022\004\300\3011\001\"}\n\024HttpRout" +
+      "eHeaderMatch\022(\n\004name\030\001 \001(\tB\032\212\3101\0051-256\362\3071" +
+      "\r[-0-9a-zA-Z]+\022;\n\005value\030\002 \001(\0132,.yandex.c" +
+      "loud.apploadbalancer.v1.StringMatch\"\202\001\n\030" +
+      "HttpRouteQueryParamMatch\022)\n\004name\030\001 \001(\tB\033" +
+      "\212\3101\0051-256\362\3071\016[-_0-9a-zA-Z]+\022;\n\005value\030\002 \001" +
+      "(\0132,.yandex.cloud.apploadbalancer.v1.Str" +
+      "ingMatch\"\222\002\n\016HttpRouteMatch\022\023\n\013http_meth" +
+      "od\030\001 \003(\t\022:\n\004path\030\002 \001(\0132,.yandex.cloud.ap" +
+      "ploadbalancer.v1.StringMatch\022P\n\007headers\030" +
+      "\003 \003(\01325.yandex.cloud.apploadbalancer.v1." +
+      "HttpRouteHeaderMatchB\010\202\3101\004<=32\022]\n\020query_" +
+      "parameters\030\004 \003(\01329.yandex.cloud.apploadb" +
+      "alancer.v1.HttpRouteQueryParamMatchB\010\202\3101" +
+      "\004<=32\"L\n\016GrpcRouteMatch\022:\n\004fqmn\030\001 \001(\0132,." +
+      "yandex.cloud.apploadbalancer.v1.StringMa" +
+      "tch\"b\n\013StringMatch\022\025\n\013exact_match\030\001 \001(\tH" +
+      "\000\022\026\n\014prefix_match\030\002 \001(\tH\000\022\025\n\013regex_match" +
+      "\030\003 \001(\tH\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016RedirectActi" +
+      "on\022\026\n\016replace_scheme\030\001 \001(\t\022\024\n\014replace_ho" +
+      "st\030\002 \001(\t\022\024\n\014replace_port\030\003 \001(\003\022\026\n\014replac" +
+      "e_path\030\004 \001(\tH\000\022\030\n\016replace_prefix\030\005 \001(\tH\000" +
+      "\022\024\n\014remove_query\030\006 \001(\010\022[\n\rresponse_code\030" +
+      "\007 \001(\0162D.yandex.cloud.apploadbalancer.v1." +
+      "RedirectAction.RedirectResponseCode\"w\n\024R" +
+      "edirectResponseCode\022\025\n\021MOVED_PERMANENTLY" +
+      "\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026\n\022TEMPORAR" +
+      "Y_REDIRECT\020\003\022\026\n\022PERMANENT_REDIRECT\020\004B\006\n\004" +
+      "path\"k\n\024DirectResponseAction\022\033\n\006status\030\001" +
+      " \001(\003B\013\372\3071\007100-599\0226\n\004body\030\002 \001(\0132(.yandex" +
+      ".cloud.apploadbalancer.v1.Payload\"\202\002\n\030Gr" +
+      "pcStatusResponseAction\022P\n\006status\030\001 \001(\0162@" +
+      ".yandex.cloud.apploadbalancer.v1.GrpcSta" +
+      "tusResponseAction.Status\"\223\001\n\006Status\022\006\n\002O" +
+      "K\020\000\022\024\n\020INVALID_ARGUMENT\020\001\022\r\n\tNOT_FOUND\020\002" +
+      "\022\025\n\021PERMISSION_DENIED\020\003\022\023\n\017UNAUTHENTICAT" +
+      "ED\020\004\022\021\n\rUNIMPLEMENTED\020\005\022\014\n\010INTERNAL\020\006\022\017\n" +
+      "\013UNAVAILABLE\020\007\"\235\003\n\017HttpRouteAction\022\036\n\020ba" +
+      "ckend_group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007timeout\030\002 " +
+      "\001(\0132\031.google.protobuf.Duration\022/\n\014idle_t" +
+      "imeout\030\003 \001(\0132\031.google.protobuf.Duration\022" +
+      "\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_rew" +
+      "rite\030\005 \001(\010H\000\022\026\n\016prefix_rewrite\030\006 \001(\t\022\025\n\r" +
+      "upgrade_types\030\007 \003(\t\022>\n\nrate_limit\030\010 \001(\0132" +
+      "*.yandex.cloud.apploadbalancer.v1.RateLi" +
+      "mit\022O\n\rregex_rewrite\030\t \001(\01328.yandex.clou" +
+      "d.apploadbalancer.v1.RegexMatchAndSubsti" +
+      "tuteB\030\n\026host_rewrite_specifier\"<\n\027RegexM" +
+      "atchAndSubstitute\022\r\n\005regex\030\001 \001(\t\022\022\n\nsubs" +
+      "titute\030\002 \001(\t\"\241\002\n\017GrpcRouteAction\022\036\n\020back" +
+      "end_group_id\030\001 \001(\tB\004\350\3071\001\022.\n\013max_timeout\030" +
       "\002 \001(\0132\031.google.protobuf.Duration\022/\n\014idle" +
       "_timeout\030\003 \001(\0132\031.google.protobuf.Duratio" +
       "n\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_r" +
-      "ewrite\030\005 \001(\010H\000\022\026\n\016prefix_rewrite\030\006 \001(\t\022\025" +
-      "\n\rupgrade_types\030\007 \003(\t\022>\n\nrate_limit\030\010 \001(" +
-      "\0132*.yandex.cloud.apploadbalancer.v1.Rate" +
-      "LimitB\030\n\026host_rewrite_specifier\"\241\002\n\017Grpc" +
-      "RouteAction\022\036\n\020backend_group_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022.\n\013max_timeout\030\002 \001(\0132\031.google.protob" +
-      "uf.Duration\022/\n\014idle_timeout\030\003 \001(\0132\031.goog" +
-      "le.protobuf.Duration\022\026\n\014host_rewrite\030\004 \001" +
-      "(\tH\000\022\033\n\021auto_host_rewrite\030\005 \001(\010H\000\022>\n\nrat" +
-      "e_limit\030\006 \001(\0132*.yandex.cloud.apploadbala" +
-      "ncer.v1.RateLimitB\030\n\026host_rewrite_specif" +
-      "ierBz\n#yandex.cloud.api.apploadbalancer." +
-      "v1ZSgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/apploadbalancer/v1;apploadb" +
-      "alancerb\006proto3"
+      "ewrite\030\005 \001(\010H\000\022>\n\nrate_limit\030\006 \001(\0132*.yan" +
+      "dex.cloud.apploadbalancer.v1.RateLimitB\030" +
+      "\n\026host_rewrite_specifierBz\n#yandex.cloud" +
+      ".api.apploadbalancer.v1ZSgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/apploa" +
+      "dbalancer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26361,50 +30455,68 @@ public final class VirtualHostOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRoute_descriptor,
         new java.lang.String[] { "Match", "Route", "StatusResponse", "Action", });
-    internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_descriptor =
+    internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_descriptor,
+        new java.lang.String[] { "Name", "Value", });
+    internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_descriptor,
+        new java.lang.String[] { "Name", "Value", });
+    internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_descriptor =
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_descriptor,
-        new java.lang.String[] { "HttpMethod", "Path", });
+        new java.lang.String[] { "HttpMethod", "Path", "Headers", "QueryParameters", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_descriptor,
         new java.lang.String[] { "Fqmn", });
     internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_descriptor,
         new java.lang.String[] { "ExactMatch", "PrefixMatch", "RegexMatch", "Match", });
     internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_descriptor,
         new java.lang.String[] { "ReplaceScheme", "ReplaceHost", "ReplacePort", "ReplacePath", "ReplacePrefix", "RemoveQuery", "ResponseCode", "Path", });
     internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_descriptor,
         new java.lang.String[] { "Status", "Body", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_descriptor,
         new java.lang.String[] { "Status", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_descriptor,
-        new java.lang.String[] { "BackendGroupId", "Timeout", "IdleTimeout", "HostRewrite", "AutoHostRewrite", "PrefixRewrite", "UpgradeTypes", "RateLimit", "HostRewriteSpecifier", });
+        new java.lang.String[] { "BackendGroupId", "Timeout", "IdleTimeout", "HostRewrite", "AutoHostRewrite", "PrefixRewrite", "UpgradeTypes", "RateLimit", "RegexRewrite", "HostRewriteSpecifier", });
+    internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_descriptor,
+        new java.lang.String[] { "Regex", "Substitute", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_descriptor,
@@ -26412,6 +30524,8 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);

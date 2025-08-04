@@ -80,27 +80,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail image associated with the stream line..
-     * </pre>
-     *
-     * <code>string thumbnail_id = 4;</code>
-     * @return The thumbnailId.
-     */
-    java.lang.String getThumbnailId();
-    /**
-     * <pre>
-     * ID of the thumbnail image associated with the stream line..
-     * </pre>
-     *
-     * <code>string thumbnail_id = 4;</code>
-     * @return The bytes for thumbnailId.
-     */
-    com.google.protobuf.ByteString
-        getThumbnailIdBytes();
-
-    /**
-     * <pre>
-     * Real-Time Messaging Protocol (RTMP) push input settings.
+     * Real-Time Messaging Protocol (RTMP) push input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -109,7 +89,7 @@ public final class StreamLineOuterClass {
     boolean hasRtmpPush();
     /**
      * <pre>
-     * Real-Time Messaging Protocol (RTMP) push input settings.
+     * Real-Time Messaging Protocol (RTMP) push input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -118,7 +98,7 @@ public final class StreamLineOuterClass {
     yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPushInput getRtmpPush();
     /**
      * <pre>
-     * Real-Time Messaging Protocol (RTMP) push input settings.
+     * Real-Time Messaging Protocol (RTMP) push input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -154,7 +134,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * Manual control of stream.
+     * Manual stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -163,7 +143,7 @@ public final class StreamLineOuterClass {
     boolean hasManualLine();
     /**
      * <pre>
-     * Manual control of stream.
+     * Manual stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -172,7 +152,7 @@ public final class StreamLineOuterClass {
     yandex.cloud.api.video.v1.StreamLineOuterClass.ManualLine getManualLine();
     /**
      * <pre>
-     * Manual control of stream.
+     * Manual stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -181,7 +161,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * Automatic control of stream.
+     * Automatic stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -190,7 +170,7 @@ public final class StreamLineOuterClass {
     boolean hasAutoLine();
     /**
      * <pre>
-     * Automatic control of stream.
+     * Automatic stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -199,7 +179,7 @@ public final class StreamLineOuterClass {
     yandex.cloud.api.video.v1.StreamLineOuterClass.AutoLine getAutoLine();
     /**
      * <pre>
-     * Automatic control of stream.
+     * Automatic stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -208,7 +188,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * Time when the stream line was created.
+     * Timestamp when the stream line was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -217,7 +197,7 @@ public final class StreamLineOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Time when the stream line was created.
+     * Timestamp when the stream line was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -226,7 +206,7 @@ public final class StreamLineOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Time when the stream line was created.
+     * Timestamp when the stream line was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -235,7 +215,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * Time when the stream line was last updated.
+     * Timestamp of the last modification to the stream line or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -244,7 +224,7 @@ public final class StreamLineOuterClass {
     boolean hasUpdatedAt();
     /**
      * <pre>
-     * Time when the stream line was last updated.
+     * Timestamp of the last modification to the stream line or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -253,7 +233,7 @@ public final class StreamLineOuterClass {
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
      * <pre>
-     * Time when the stream line was last updated.
+     * Timestamp of the last modification to the stream line or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -262,7 +242,9 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream line.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -270,7 +252,9 @@ public final class StreamLineOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream line.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -285,7 +269,9 @@ public final class StreamLineOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream line.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -294,7 +280,9 @@ public final class StreamLineOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream line.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -305,7 +293,9 @@ public final class StreamLineOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream line.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -320,7 +310,7 @@ public final class StreamLineOuterClass {
   }
   /**
    * <pre>
-   * Entity that is responsible for the incoming video signal settings.
+   * Entity representing the incoming video signal settings.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.StreamLine}
@@ -338,7 +328,6 @@ public final class StreamLineOuterClass {
       id_ = "";
       channelId_ = "";
       title_ = "";
-      thumbnailId_ = "";
     }
 
     @java.lang.Override
@@ -388,12 +377,6 @@ public final class StreamLineOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               title_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              thumbnailId_ = s;
               break;
             }
             case 802: {
@@ -755,56 +738,10 @@ public final class StreamLineOuterClass {
       }
     }
 
-    public static final int THUMBNAIL_ID_FIELD_NUMBER = 4;
-    private volatile java.lang.Object thumbnailId_;
-    /**
-     * <pre>
-     * ID of the thumbnail image associated with the stream line..
-     * </pre>
-     *
-     * <code>string thumbnail_id = 4;</code>
-     * @return The thumbnailId.
-     */
-    @java.lang.Override
-    public java.lang.String getThumbnailId() {
-      java.lang.Object ref = thumbnailId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        thumbnailId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ID of the thumbnail image associated with the stream line..
-     * </pre>
-     *
-     * <code>string thumbnail_id = 4;</code>
-     * @return The bytes for thumbnailId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getThumbnailIdBytes() {
-      java.lang.Object ref = thumbnailId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        thumbnailId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int RTMP_PUSH_FIELD_NUMBER = 1000;
     /**
      * <pre>
-     * Real-Time Messaging Protocol (RTMP) push input settings.
+     * Real-Time Messaging Protocol (RTMP) push input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -816,7 +753,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Real-Time Messaging Protocol (RTMP) push input settings.
+     * Real-Time Messaging Protocol (RTMP) push input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -831,7 +768,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Real-Time Messaging Protocol (RTMP) push input settings.
+     * Real-Time Messaging Protocol (RTMP) push input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -890,7 +827,7 @@ public final class StreamLineOuterClass {
     public static final int MANUAL_LINE_FIELD_NUMBER = 2000;
     /**
      * <pre>
-     * Manual control of stream.
+     * Manual stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -902,7 +839,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Manual control of stream.
+     * Manual stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -917,7 +854,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Manual control of stream.
+     * Manual stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -933,7 +870,7 @@ public final class StreamLineOuterClass {
     public static final int AUTO_LINE_FIELD_NUMBER = 2001;
     /**
      * <pre>
-     * Automatic control of stream.
+     * Automatic stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -945,7 +882,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Automatic control of stream.
+     * Automatic stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -960,7 +897,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Automatic control of stream.
+     * Automatic stream control.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -977,7 +914,7 @@ public final class StreamLineOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Time when the stream line was created.
+     * Timestamp when the stream line was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -989,7 +926,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Time when the stream line was created.
+     * Timestamp when the stream line was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1001,7 +938,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Time when the stream line was created.
+     * Timestamp when the stream line was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1015,7 +952,7 @@ public final class StreamLineOuterClass {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <pre>
-     * Time when the stream line was last updated.
+     * Timestamp of the last modification to the stream line or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1027,7 +964,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Time when the stream line was last updated.
+     * Timestamp of the last modification to the stream line or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1039,7 +976,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Time when the stream line was last updated.
+     * Timestamp of the last modification to the stream line or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1077,7 +1014,9 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream line.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -1099,7 +1038,9 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream line.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -1111,7 +1052,9 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream line.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -1128,7 +1071,9 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream line.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -1168,9 +1113,6 @@ public final class StreamLineOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, title_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, thumbnailId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(100, getCreatedAt());
@@ -1213,9 +1155,6 @@ public final class StreamLineOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, title_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, thumbnailId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1272,8 +1211,6 @@ public final class StreamLineOuterClass {
           .equals(other.getChannelId())) return false;
       if (!getTitle()
           .equals(other.getTitle())) return false;
-      if (!getThumbnailId()
-          .equals(other.getThumbnailId())) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
         if (!getCreatedAt()
@@ -1329,8 +1266,6 @@ public final class StreamLineOuterClass {
       hash = (53 * hash) + getChannelId().hashCode();
       hash = (37 * hash) + TITLE_FIELD_NUMBER;
       hash = (53 * hash) + getTitle().hashCode();
-      hash = (37 * hash) + THUMBNAIL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getThumbnailId().hashCode();
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
@@ -1464,7 +1399,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Entity that is responsible for the incoming video signal settings.
+     * Entity representing the incoming video signal settings.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.StreamLine}
@@ -1532,8 +1467,6 @@ public final class StreamLineOuterClass {
 
         title_ = "";
 
-        thumbnailId_ = "";
-
         if (createdAtBuilder_ == null) {
           createdAt_ = null;
         } else {
@@ -1581,7 +1514,6 @@ public final class StreamLineOuterClass {
         result.id_ = id_;
         result.channelId_ = channelId_;
         result.title_ = title_;
-        result.thumbnailId_ = thumbnailId_;
         if (inputTypeCase_ == 1000) {
           if (rtmpPushBuilder_ == null) {
             result.inputType_ = inputType_;
@@ -1682,10 +1614,6 @@ public final class StreamLineOuterClass {
         }
         if (!other.getTitle().isEmpty()) {
           title_ = other.title_;
-          onChanged();
-        }
-        if (!other.getThumbnailId().isEmpty()) {
-          thumbnailId_ = other.thumbnailId_;
           onChanged();
         }
         if (other.hasCreatedAt()) {
@@ -2070,107 +1998,11 @@ public final class StreamLineOuterClass {
         return this;
       }
 
-      private java.lang.Object thumbnailId_ = "";
-      /**
-       * <pre>
-       * ID of the thumbnail image associated with the stream line..
-       * </pre>
-       *
-       * <code>string thumbnail_id = 4;</code>
-       * @return The thumbnailId.
-       */
-      public java.lang.String getThumbnailId() {
-        java.lang.Object ref = thumbnailId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          thumbnailId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the thumbnail image associated with the stream line..
-       * </pre>
-       *
-       * <code>string thumbnail_id = 4;</code>
-       * @return The bytes for thumbnailId.
-       */
-      public com.google.protobuf.ByteString
-          getThumbnailIdBytes() {
-        java.lang.Object ref = thumbnailId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          thumbnailId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the thumbnail image associated with the stream line..
-       * </pre>
-       *
-       * <code>string thumbnail_id = 4;</code>
-       * @param value The thumbnailId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setThumbnailId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        thumbnailId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the thumbnail image associated with the stream line..
-       * </pre>
-       *
-       * <code>string thumbnail_id = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearThumbnailId() {
-        
-        thumbnailId_ = getDefaultInstance().getThumbnailId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the thumbnail image associated with the stream line..
-       * </pre>
-       *
-       * <code>string thumbnail_id = 4;</code>
-       * @param value The bytes for thumbnailId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setThumbnailIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        thumbnailId_ = value;
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPushInput, yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPushInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPushInputOrBuilder> rtmpPushBuilder_;
       /**
        * <pre>
-       * Real-Time Messaging Protocol (RTMP) push input settings.
+       * Real-Time Messaging Protocol (RTMP) push input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2182,7 +2014,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Real-Time Messaging Protocol (RTMP) push input settings.
+       * Real-Time Messaging Protocol (RTMP) push input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2204,7 +2036,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Real-Time Messaging Protocol (RTMP) push input settings.
+       * Real-Time Messaging Protocol (RTMP) push input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2224,7 +2056,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Real-Time Messaging Protocol (RTMP) push input settings.
+       * Real-Time Messaging Protocol (RTMP) push input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2242,7 +2074,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Real-Time Messaging Protocol (RTMP) push input settings.
+       * Real-Time Messaging Protocol (RTMP) push input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2268,7 +2100,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Real-Time Messaging Protocol (RTMP) push input settings.
+       * Real-Time Messaging Protocol (RTMP) push input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2291,7 +2123,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Real-Time Messaging Protocol (RTMP) push input settings.
+       * Real-Time Messaging Protocol (RTMP) push input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2301,7 +2133,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Real-Time Messaging Protocol (RTMP) push input settings.
+       * Real-Time Messaging Protocol (RTMP) push input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2319,7 +2151,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Real-Time Messaging Protocol (RTMP) push input settings.
+       * Real-Time Messaging Protocol (RTMP) push input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2524,7 +2356,7 @@ public final class StreamLineOuterClass {
           yandex.cloud.api.video.v1.StreamLineOuterClass.ManualLine, yandex.cloud.api.video.v1.StreamLineOuterClass.ManualLine.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.ManualLineOrBuilder> manualLineBuilder_;
       /**
        * <pre>
-       * Manual control of stream.
+       * Manual stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -2536,7 +2368,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Manual control of stream.
+       * Manual stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -2558,7 +2390,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Manual control of stream.
+       * Manual stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -2578,7 +2410,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Manual control of stream.
+       * Manual stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -2596,7 +2428,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Manual control of stream.
+       * Manual stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -2622,7 +2454,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Manual control of stream.
+       * Manual stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -2645,7 +2477,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Manual control of stream.
+       * Manual stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -2655,7 +2487,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Manual control of stream.
+       * Manual stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -2673,7 +2505,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Manual control of stream.
+       * Manual stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ManualLine manual_line = 2000;</code>
@@ -2701,7 +2533,7 @@ public final class StreamLineOuterClass {
           yandex.cloud.api.video.v1.StreamLineOuterClass.AutoLine, yandex.cloud.api.video.v1.StreamLineOuterClass.AutoLine.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.AutoLineOrBuilder> autoLineBuilder_;
       /**
        * <pre>
-       * Automatic control of stream.
+       * Automatic stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -2713,7 +2545,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Automatic control of stream.
+       * Automatic stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -2735,7 +2567,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Automatic control of stream.
+       * Automatic stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -2755,7 +2587,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Automatic control of stream.
+       * Automatic stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -2773,7 +2605,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Automatic control of stream.
+       * Automatic stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -2799,7 +2631,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Automatic control of stream.
+       * Automatic stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -2822,7 +2654,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Automatic control of stream.
+       * Automatic stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -2832,7 +2664,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Automatic control of stream.
+       * Automatic stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -2850,7 +2682,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Automatic control of stream.
+       * Automatic stream control.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine auto_line = 2001;</code>
@@ -2879,7 +2711,7 @@ public final class StreamLineOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Time when the stream line was created.
+       * Timestamp when the stream line was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2890,7 +2722,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was created.
+       * Timestamp when the stream line was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2905,7 +2737,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was created.
+       * Timestamp when the stream line was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2925,7 +2757,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was created.
+       * Timestamp when the stream line was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2943,7 +2775,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was created.
+       * Timestamp when the stream line was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2965,7 +2797,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was created.
+       * Timestamp when the stream line was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2983,7 +2815,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was created.
+       * Timestamp when the stream line was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2995,7 +2827,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was created.
+       * Timestamp when the stream line was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -3010,7 +2842,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was created.
+       * Timestamp when the stream line was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -3034,7 +2866,7 @@ public final class StreamLineOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <pre>
-       * Time when the stream line was last updated.
+       * Timestamp of the last modification to the stream line or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -3045,7 +2877,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was last updated.
+       * Timestamp of the last modification to the stream line or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -3060,7 +2892,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was last updated.
+       * Timestamp of the last modification to the stream line or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -3080,7 +2912,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was last updated.
+       * Timestamp of the last modification to the stream line or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -3098,7 +2930,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was last updated.
+       * Timestamp of the last modification to the stream line or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -3120,7 +2952,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was last updated.
+       * Timestamp of the last modification to the stream line or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -3138,7 +2970,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was last updated.
+       * Timestamp of the last modification to the stream line or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -3150,7 +2982,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was last updated.
+       * Timestamp of the last modification to the stream line or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -3165,7 +2997,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when the stream line was last updated.
+       * Timestamp of the last modification to the stream line or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -3212,7 +3044,9 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream line.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -3234,7 +3068,9 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream line.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -3246,7 +3082,9 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream line.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -3263,7 +3101,9 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream line.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -3288,7 +3128,9 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream line.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -3311,7 +3153,9 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream line.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -3330,7 +3174,9 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream line.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -6428,31 +6274,30 @@ public final class StreamLineOuterClass {
     java.lang.String[] descriptorData = {
       "\n\'yandex/cloud/video/v1/stream_line.prot" +
       "o\022\025yandex.cloud.video.v1\032\037google/protobu" +
-      "f/timestamp.proto\"\312\004\n\nStreamLine\022\n\n\002id\030\001" +
+      "f/timestamp.proto\"\272\004\n\nStreamLine\022\n\n\002id\030\001" +
       " \001(\t\022\022\n\nchannel_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022" +
-      "\024\n\014thumbnail_id\030\004 \001(\t\022:\n\trtmp_push\030\350\007 \001(" +
-      "\0132$.yandex.cloud.video.v1.RTMPPushInputH" +
-      "\000\022:\n\trtmp_pull\030\352\007 \001(\0132$.yandex.cloud.vid" +
-      "eo.v1.RTMPPullInputH\000\0229\n\013manual_line\030\320\017 " +
-      "\001(\0132!.yandex.cloud.video.v1.ManualLineH\001" +
-      "\0225\n\tauto_line\030\321\017 \001(\0132\037.yandex.cloud.vide" +
-      "o.v1.AutoLineH\001\022.\n\ncreated_at\030d \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022.\n\nupdated_at\030e " +
-      "\001(\0132\032.google.protobuf.Timestamp\022>\n\006label" +
-      "s\030\310\001 \003(\0132-.yandex.cloud.video.v1.StreamL" +
-      "ine.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\ninput_typeB\013\n\t" +
-      "line_typeJ\004\010\005\020dJ\005\010f\020\310\001J\006\010\311\001\020\350\007J\006\010\351\007\020\352\007J\006" +
-      "\010\353\007\020\320\017\"\034\n\rPushStreamKey\022\013\n\003key\030\001 \001(\t\"\034\n\r" +
-      "RTMPPushInput\022\013\n\003url\030\001 \001(\t\"\034\n\rRTMPPullIn" +
-      "put\022\013\n\003url\030\001 \001(\t\"\014\n\nManualLine\"\233\001\n\010AutoL" +
-      "ine\022>\n\006status\030\001 \001(\0162..yandex.cloud.video" +
-      ".v1.AutoLine.AutoLineStatus\"O\n\016AutoLineS" +
-      "tatus\022 \n\034AUTO_LINE_STATUS_UNSPECIFIED\020\000\022" +
-      "\017\n\013DEACTIVATED\020\001\022\n\n\006ACTIVE\020\002B\\\n\031yandex.c" +
-      "loud.api.video.v1Z?github.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/video/v1;vid" +
-      "eob\006proto3"
+      ":\n\trtmp_push\030\350\007 \001(\0132$.yandex.cloud.video" +
+      ".v1.RTMPPushInputH\000\022:\n\trtmp_pull\030\352\007 \001(\0132" +
+      "$.yandex.cloud.video.v1.RTMPPullInputH\000\022" +
+      "9\n\013manual_line\030\320\017 \001(\0132!.yandex.cloud.vid" +
+      "eo.v1.ManualLineH\001\0225\n\tauto_line\030\321\017 \001(\0132\037" +
+      ".yandex.cloud.video.v1.AutoLineH\001\022.\n\ncre" +
+      "ated_at\030d \001(\0132\032.google.protobuf.Timestam" +
+      "p\022.\n\nupdated_at\030e \001(\0132\032.google.protobuf." +
+      "Timestamp\022>\n\006labels\030\310\001 \003(\0132-.yandex.clou" +
+      "d.video.v1.StreamLine.LabelsEntry\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "B\014\n\ninput_typeB\013\n\tline_typeJ\004\010\004\020\005J\004\010\005\020dJ" +
+      "\005\010f\020\310\001J\006\010\311\001\020\350\007J\006\010\351\007\020\352\007J\006\010\353\007\020\320\017\"\034\n\rPushSt" +
+      "reamKey\022\013\n\003key\030\001 \001(\t\"\034\n\rRTMPPushInput\022\013\n" +
+      "\003url\030\001 \001(\t\"\034\n\rRTMPPullInput\022\013\n\003url\030\001 \001(\t" +
+      "\"\014\n\nManualLine\"\233\001\n\010AutoLine\022>\n\006status\030\001 " +
+      "\001(\0162..yandex.cloud.video.v1.AutoLine.Aut" +
+      "oLineStatus\"O\n\016AutoLineStatus\022 \n\034AUTO_LI" +
+      "NE_STATUS_UNSPECIFIED\020\000\022\017\n\013DEACTIVATED\020\001" +
+      "\022\n\n\006ACTIVE\020\002B\\\n\031yandex.cloud.api.video.v" +
+      "1Z?github.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6464,7 +6309,7 @@ public final class StreamLineOuterClass {
     internal_static_yandex_cloud_video_v1_StreamLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_StreamLine_descriptor,
-        new java.lang.String[] { "Id", "ChannelId", "Title", "ThumbnailId", "RtmpPush", "RtmpPull", "ManualLine", "AutoLine", "CreatedAt", "UpdatedAt", "Labels", "InputType", "LineType", });
+        new java.lang.String[] { "Id", "ChannelId", "Title", "RtmpPush", "RtmpPull", "ManualLine", "AutoLine", "CreatedAt", "UpdatedAt", "Labels", "InputType", "LineType", });
     internal_static_yandex_cloud_video_v1_StreamLine_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_StreamLine_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_StreamLine_LabelsEntry_fieldAccessorTable = new

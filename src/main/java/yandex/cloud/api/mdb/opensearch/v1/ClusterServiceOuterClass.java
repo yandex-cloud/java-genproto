@@ -3162,6 +3162,33 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.mdb.opensearch.v1.MaintenanceWindow maintenance_window = 11;</code>
      */
     yandex.cloud.api.mdb.opensearch.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
+
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+     * @return Whether the diskEncryptionKeyId field is set.
+     */
+    boolean hasDiskEncryptionKeyId();
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+     * @return The diskEncryptionKeyId.
+     */
+    com.google.protobuf.StringValue getDiskEncryptionKeyId();
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.CreateClusterRequest}
@@ -3301,6 +3328,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(maintenanceWindow_);
                 maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (diskEncryptionKeyId_ != null) {
+                subBuilder = diskEncryptionKeyId_.toBuilder();
+              }
+              diskEncryptionKeyId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskEncryptionKeyId_);
+                diskEncryptionKeyId_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3852,6 +3892,44 @@ public final class ClusterServiceOuterClass {
       return getMaintenanceWindow();
     }
 
+    public static final int DISK_ENCRYPTION_KEY_ID_FIELD_NUMBER = 12;
+    private com.google.protobuf.StringValue diskEncryptionKeyId_;
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+     * @return Whether the diskEncryptionKeyId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskEncryptionKeyId() {
+      return diskEncryptionKeyId_ != null;
+    }
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+     * @return The diskEncryptionKeyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDiskEncryptionKeyId() {
+      return diskEncryptionKeyId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+    }
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder() {
+      return getDiskEncryptionKeyId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3901,6 +3979,9 @@ public final class ClusterServiceOuterClass {
       }
       if (maintenanceWindow_ != null) {
         output.writeMessage(11, getMaintenanceWindow());
+      }
+      if (diskEncryptionKeyId_ != null) {
+        output.writeMessage(12, getDiskEncryptionKeyId());
       }
       unknownFields.writeTo(output);
     }
@@ -3960,6 +4041,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getMaintenanceWindow());
       }
+      if (diskEncryptionKeyId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getDiskEncryptionKeyId());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4002,6 +4087,11 @@ public final class ClusterServiceOuterClass {
         if (!getMaintenanceWindow()
             .equals(other.getMaintenanceWindow())) return false;
       }
+      if (hasDiskEncryptionKeyId() != other.hasDiskEncryptionKeyId()) return false;
+      if (hasDiskEncryptionKeyId()) {
+        if (!getDiskEncryptionKeyId()
+            .equals(other.getDiskEncryptionKeyId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4043,6 +4133,10 @@ public final class ClusterServiceOuterClass {
       if (hasMaintenanceWindow()) {
         hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
+      if (hasDiskEncryptionKeyId()) {
+        hash = (37 * hash) + DISK_ENCRYPTION_KEY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskEncryptionKeyId().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4228,6 +4322,12 @@ public final class ClusterServiceOuterClass {
           maintenanceWindow_ = null;
           maintenanceWindowBuilder_ = null;
         }
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = null;
+        } else {
+          diskEncryptionKeyId_ = null;
+          diskEncryptionKeyIdBuilder_ = null;
+        }
         return this;
       }
 
@@ -4278,6 +4378,11 @@ public final class ClusterServiceOuterClass {
           result.maintenanceWindow_ = maintenanceWindow_;
         } else {
           result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          result.diskEncryptionKeyId_ = diskEncryptionKeyId_;
+        } else {
+          result.diskEncryptionKeyId_ = diskEncryptionKeyIdBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4370,6 +4475,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasMaintenanceWindow()) {
           mergeMaintenanceWindow(other.getMaintenanceWindow());
+        }
+        if (other.hasDiskEncryptionKeyId()) {
+          mergeDiskEncryptionKeyId(other.getDiskEncryptionKeyId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5619,6 +5727,161 @@ public final class ClusterServiceOuterClass {
         }
         return maintenanceWindowBuilder_;
       }
+
+      private com.google.protobuf.StringValue diskEncryptionKeyId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> diskEncryptionKeyIdBuilder_;
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+       * @return Whether the diskEncryptionKeyId field is set.
+       */
+      public boolean hasDiskEncryptionKeyId() {
+        return diskEncryptionKeyIdBuilder_ != null || diskEncryptionKeyId_ != null;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+       * @return The diskEncryptionKeyId.
+       */
+      public com.google.protobuf.StringValue getDiskEncryptionKeyId() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          return diskEncryptionKeyId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+        } else {
+          return diskEncryptionKeyIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+       */
+      public Builder setDiskEncryptionKeyId(com.google.protobuf.StringValue value) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskEncryptionKeyId_ = value;
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+       */
+      public Builder setDiskEncryptionKeyId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+       */
+      public Builder mergeDiskEncryptionKeyId(com.google.protobuf.StringValue value) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          if (diskEncryptionKeyId_ != null) {
+            diskEncryptionKeyId_ =
+              com.google.protobuf.StringValue.newBuilder(diskEncryptionKeyId_).mergeFrom(value).buildPartial();
+          } else {
+            diskEncryptionKeyId_ = value;
+          }
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+       */
+      public Builder clearDiskEncryptionKeyId() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = null;
+          onChanged();
+        } else {
+          diskEncryptionKeyId_ = null;
+          diskEncryptionKeyIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDiskEncryptionKeyIdBuilder() {
+        
+        onChanged();
+        return getDiskEncryptionKeyIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder() {
+        if (diskEncryptionKeyIdBuilder_ != null) {
+          return diskEncryptionKeyIdBuilder_.getMessageOrBuilder();
+        } else {
+          return diskEncryptionKeyId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDiskEncryptionKeyIdFieldBuilder() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getDiskEncryptionKeyId(),
+                  getParentForChildren(),
+                  isClean());
+          diskEncryptionKeyId_ = null;
+        }
+        return diskEncryptionKeyIdBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5695,6 +5958,33 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     * @return Whether the operationLog field is set.
+     */
+    boolean hasOperationLog();
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     * @return The operationLog.
+     */
+    yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog getOperationLog();
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     */
+    yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder getOperationLogOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.CreateClusterMetadata}
@@ -5746,6 +6036,19 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               clusterId_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder subBuilder = null;
+              if (operationLog_ != null) {
+                subBuilder = operationLog_.toBuilder();
+              }
+              operationLog_ = input.readMessage(yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(operationLog_);
+                operationLog_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5826,6 +6129,44 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int OPERATION_LOG_FIELD_NUMBER = 2;
+    private yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog operationLog_;
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     * @return Whether the operationLog field is set.
+     */
+    @java.lang.Override
+    public boolean hasOperationLog() {
+      return operationLog_ != null;
+    }
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     * @return The operationLog.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog getOperationLog() {
+      return operationLog_ == null ? yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.getDefaultInstance() : operationLog_;
+    }
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder getOperationLogOrBuilder() {
+      return getOperationLog();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5843,6 +6184,9 @@ public final class ClusterServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
+      if (operationLog_ != null) {
+        output.writeMessage(2, getOperationLog());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5854,6 +6198,10 @@ public final class ClusterServiceOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (operationLog_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOperationLog());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5872,6 +6220,11 @@ public final class ClusterServiceOuterClass {
 
       if (!getClusterId()
           .equals(other.getClusterId())) return false;
+      if (hasOperationLog() != other.hasOperationLog()) return false;
+      if (hasOperationLog()) {
+        if (!getOperationLog()
+            .equals(other.getOperationLog())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5885,6 +6238,10 @@ public final class ClusterServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getClusterId().hashCode();
+      if (hasOperationLog()) {
+        hash = (37 * hash) + OPERATION_LOG_FIELD_NUMBER;
+        hash = (53 * hash) + getOperationLog().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6020,6 +6377,12 @@ public final class ClusterServiceOuterClass {
         super.clear();
         clusterId_ = "";
 
+        if (operationLogBuilder_ == null) {
+          operationLog_ = null;
+        } else {
+          operationLog_ = null;
+          operationLogBuilder_ = null;
+        }
         return this;
       }
 
@@ -6047,6 +6410,11 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.CreateClusterMetadata buildPartial() {
         yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.CreateClusterMetadata result = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.CreateClusterMetadata(this);
         result.clusterId_ = clusterId_;
+        if (operationLogBuilder_ == null) {
+          result.operationLog_ = operationLog_;
+        } else {
+          result.operationLog_ = operationLogBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6098,6 +6466,9 @@ public final class ClusterServiceOuterClass {
         if (!other.getClusterId().isEmpty()) {
           clusterId_ = other.clusterId_;
           onChanged();
+        }
+        if (other.hasOperationLog()) {
+          mergeOperationLog(other.getOperationLog());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6222,6 +6593,161 @@ public final class ClusterServiceOuterClass {
         clusterId_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog operationLog_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder> operationLogBuilder_;
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       * @return Whether the operationLog field is set.
+       */
+      public boolean hasOperationLog() {
+        return operationLogBuilder_ != null || operationLog_ != null;
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       * @return The operationLog.
+       */
+      public yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog getOperationLog() {
+        if (operationLogBuilder_ == null) {
+          return operationLog_ == null ? yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.getDefaultInstance() : operationLog_;
+        } else {
+          return operationLogBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public Builder setOperationLog(yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog value) {
+        if (operationLogBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          operationLog_ = value;
+          onChanged();
+        } else {
+          operationLogBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public Builder setOperationLog(
+          yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder builderForValue) {
+        if (operationLogBuilder_ == null) {
+          operationLog_ = builderForValue.build();
+          onChanged();
+        } else {
+          operationLogBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public Builder mergeOperationLog(yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog value) {
+        if (operationLogBuilder_ == null) {
+          if (operationLog_ != null) {
+            operationLog_ =
+              yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.newBuilder(operationLog_).mergeFrom(value).buildPartial();
+          } else {
+            operationLog_ = value;
+          }
+          onChanged();
+        } else {
+          operationLogBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public Builder clearOperationLog() {
+        if (operationLogBuilder_ == null) {
+          operationLog_ = null;
+          onChanged();
+        } else {
+          operationLog_ = null;
+          operationLogBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder getOperationLogBuilder() {
+        
+        onChanged();
+        return getOperationLogFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder getOperationLogOrBuilder() {
+        if (operationLogBuilder_ != null) {
+          return operationLogBuilder_.getMessageOrBuilder();
+        } else {
+          return operationLog_ == null ?
+              yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.getDefaultInstance() : operationLog_;
+        }
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder> 
+          getOperationLogFieldBuilder() {
+        if (operationLogBuilder_ == null) {
+          operationLogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder>(
+                  getOperationLog(),
+                  getParentForChildren(),
+                  isClean());
+          operationLog_ = null;
+        }
+        return operationLogBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9256,6 +9782,33 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     * @return Whether the operationLog field is set.
+     */
+    boolean hasOperationLog();
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     * @return The operationLog.
+     */
+    yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog getOperationLog();
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     */
+    yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder getOperationLogOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.UpdateClusterMetadata}
@@ -9307,6 +9860,19 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               clusterId_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder subBuilder = null;
+              if (operationLog_ != null) {
+                subBuilder = operationLog_.toBuilder();
+              }
+              operationLog_ = input.readMessage(yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(operationLog_);
+                operationLog_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -9387,6 +9953,44 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int OPERATION_LOG_FIELD_NUMBER = 2;
+    private yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog operationLog_;
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     * @return Whether the operationLog field is set.
+     */
+    @java.lang.Override
+    public boolean hasOperationLog() {
+      return operationLog_ != null;
+    }
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     * @return The operationLog.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog getOperationLog() {
+      return operationLog_ == null ? yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.getDefaultInstance() : operationLog_;
+    }
+    /**
+     * <pre>
+     * Log of actions during operation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder getOperationLogOrBuilder() {
+      return getOperationLog();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9404,6 +10008,9 @@ public final class ClusterServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
+      if (operationLog_ != null) {
+        output.writeMessage(2, getOperationLog());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9415,6 +10022,10 @@ public final class ClusterServiceOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (operationLog_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOperationLog());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9433,6 +10044,11 @@ public final class ClusterServiceOuterClass {
 
       if (!getClusterId()
           .equals(other.getClusterId())) return false;
+      if (hasOperationLog() != other.hasOperationLog()) return false;
+      if (hasOperationLog()) {
+        if (!getOperationLog()
+            .equals(other.getOperationLog())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9446,6 +10062,10 @@ public final class ClusterServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getClusterId().hashCode();
+      if (hasOperationLog()) {
+        hash = (37 * hash) + OPERATION_LOG_FIELD_NUMBER;
+        hash = (53 * hash) + getOperationLog().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9581,6 +10201,12 @@ public final class ClusterServiceOuterClass {
         super.clear();
         clusterId_ = "";
 
+        if (operationLogBuilder_ == null) {
+          operationLog_ = null;
+        } else {
+          operationLog_ = null;
+          operationLogBuilder_ = null;
+        }
         return this;
       }
 
@@ -9608,6 +10234,11 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.UpdateClusterMetadata buildPartial() {
         yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.UpdateClusterMetadata result = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.UpdateClusterMetadata(this);
         result.clusterId_ = clusterId_;
+        if (operationLogBuilder_ == null) {
+          result.operationLog_ = operationLog_;
+        } else {
+          result.operationLog_ = operationLogBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -9659,6 +10290,9 @@ public final class ClusterServiceOuterClass {
         if (!other.getClusterId().isEmpty()) {
           clusterId_ = other.clusterId_;
           onChanged();
+        }
+        if (other.hasOperationLog()) {
+          mergeOperationLog(other.getOperationLog());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9783,6 +10417,161 @@ public final class ClusterServiceOuterClass {
         clusterId_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog operationLog_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder> operationLogBuilder_;
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       * @return Whether the operationLog field is set.
+       */
+      public boolean hasOperationLog() {
+        return operationLogBuilder_ != null || operationLog_ != null;
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       * @return The operationLog.
+       */
+      public yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog getOperationLog() {
+        if (operationLogBuilder_ == null) {
+          return operationLog_ == null ? yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.getDefaultInstance() : operationLog_;
+        } else {
+          return operationLogBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public Builder setOperationLog(yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog value) {
+        if (operationLogBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          operationLog_ = value;
+          onChanged();
+        } else {
+          operationLogBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public Builder setOperationLog(
+          yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder builderForValue) {
+        if (operationLogBuilder_ == null) {
+          operationLog_ = builderForValue.build();
+          onChanged();
+        } else {
+          operationLogBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public Builder mergeOperationLog(yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog value) {
+        if (operationLogBuilder_ == null) {
+          if (operationLog_ != null) {
+            operationLog_ =
+              yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.newBuilder(operationLog_).mergeFrom(value).buildPartial();
+          } else {
+            operationLog_ = value;
+          }
+          onChanged();
+        } else {
+          operationLogBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public Builder clearOperationLog() {
+        if (operationLogBuilder_ == null) {
+          operationLog_ = null;
+          onChanged();
+        } else {
+          operationLog_ = null;
+          operationLogBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder getOperationLogBuilder() {
+        
+        onChanged();
+        return getOperationLogFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      public yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder getOperationLogOrBuilder() {
+        if (operationLogBuilder_ != null) {
+          return operationLogBuilder_.getMessageOrBuilder();
+        } else {
+          return operationLog_ == null ?
+              yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.getDefaultInstance() : operationLog_;
+        }
+      }
+      /**
+       * <pre>
+       * Log of actions during operation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.operationlog.v1.OperationLog operation_log = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder> 
+          getOperationLogFieldBuilder() {
+        if (operationLogBuilder_ == null) {
+          operationLogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLog.Builder, yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.OperationLogOrBuilder>(
+                  getOperationLog(),
+                  getParentForChildren(),
+                  isClean());
+          operationLog_ = null;
+        }
+        return operationLogBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -43765,6 +44554,33 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.mdb.opensearch.v1.MaintenanceWindow maintenance_window = 12;</code>
      */
     yandex.cloud.api.mdb.opensearch.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
+
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+     * @return Whether the diskEncryptionKeyId field is set.
+     */
+    boolean hasDiskEncryptionKeyId();
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+     * @return The diskEncryptionKeyId.
+     */
+    com.google.protobuf.StringValue getDiskEncryptionKeyId();
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.RestoreClusterRequest}
@@ -43911,6 +44727,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(maintenanceWindow_);
                 maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (diskEncryptionKeyId_ != null) {
+                subBuilder = diskEncryptionKeyId_.toBuilder();
+              }
+              diskEncryptionKeyId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskEncryptionKeyId_);
+                diskEncryptionKeyId_ = subBuilder.buildPartial();
               }
 
               break;
@@ -44512,6 +45341,44 @@ public final class ClusterServiceOuterClass {
       return getMaintenanceWindow();
     }
 
+    public static final int DISK_ENCRYPTION_KEY_ID_FIELD_NUMBER = 13;
+    private com.google.protobuf.StringValue diskEncryptionKeyId_;
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+     * @return Whether the diskEncryptionKeyId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskEncryptionKeyId() {
+      return diskEncryptionKeyId_ != null;
+    }
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+     * @return The diskEncryptionKeyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDiskEncryptionKeyId() {
+      return diskEncryptionKeyId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+    }
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder() {
+      return getDiskEncryptionKeyId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -44564,6 +45431,9 @@ public final class ClusterServiceOuterClass {
       }
       if (maintenanceWindow_ != null) {
         output.writeMessage(12, getMaintenanceWindow());
+      }
+      if (diskEncryptionKeyId_ != null) {
+        output.writeMessage(13, getDiskEncryptionKeyId());
       }
       unknownFields.writeTo(output);
     }
@@ -44626,6 +45496,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getMaintenanceWindow());
       }
+      if (diskEncryptionKeyId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getDiskEncryptionKeyId());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -44670,6 +45544,11 @@ public final class ClusterServiceOuterClass {
         if (!getMaintenanceWindow()
             .equals(other.getMaintenanceWindow())) return false;
       }
+      if (hasDiskEncryptionKeyId() != other.hasDiskEncryptionKeyId()) return false;
+      if (hasDiskEncryptionKeyId()) {
+        if (!getDiskEncryptionKeyId()
+            .equals(other.getDiskEncryptionKeyId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -44713,6 +45592,10 @@ public final class ClusterServiceOuterClass {
       if (hasMaintenanceWindow()) {
         hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
+      if (hasDiskEncryptionKeyId()) {
+        hash = (37 * hash) + DISK_ENCRYPTION_KEY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskEncryptionKeyId().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -44900,6 +45783,12 @@ public final class ClusterServiceOuterClass {
           maintenanceWindow_ = null;
           maintenanceWindowBuilder_ = null;
         }
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = null;
+        } else {
+          diskEncryptionKeyId_ = null;
+          diskEncryptionKeyIdBuilder_ = null;
+        }
         return this;
       }
 
@@ -44951,6 +45840,11 @@ public final class ClusterServiceOuterClass {
           result.maintenanceWindow_ = maintenanceWindow_;
         } else {
           result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          result.diskEncryptionKeyId_ = diskEncryptionKeyId_;
+        } else {
+          result.diskEncryptionKeyId_ = diskEncryptionKeyIdBuilder_.build();
         }
         onBuilt();
         return result;
@@ -45047,6 +45941,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasMaintenanceWindow()) {
           mergeMaintenanceWindow(other.getMaintenanceWindow());
+        }
+        if (other.hasDiskEncryptionKeyId()) {
+          mergeDiskEncryptionKeyId(other.getDiskEncryptionKeyId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -46401,6 +47298,161 @@ public final class ClusterServiceOuterClass {
           maintenanceWindow_ = null;
         }
         return maintenanceWindowBuilder_;
+      }
+
+      private com.google.protobuf.StringValue diskEncryptionKeyId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> diskEncryptionKeyIdBuilder_;
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+       * @return Whether the diskEncryptionKeyId field is set.
+       */
+      public boolean hasDiskEncryptionKeyId() {
+        return diskEncryptionKeyIdBuilder_ != null || diskEncryptionKeyId_ != null;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+       * @return The diskEncryptionKeyId.
+       */
+      public com.google.protobuf.StringValue getDiskEncryptionKeyId() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          return diskEncryptionKeyId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+        } else {
+          return diskEncryptionKeyIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+       */
+      public Builder setDiskEncryptionKeyId(com.google.protobuf.StringValue value) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskEncryptionKeyId_ = value;
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+       */
+      public Builder setDiskEncryptionKeyId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+       */
+      public Builder mergeDiskEncryptionKeyId(com.google.protobuf.StringValue value) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          if (diskEncryptionKeyId_ != null) {
+            diskEncryptionKeyId_ =
+              com.google.protobuf.StringValue.newBuilder(diskEncryptionKeyId_).mergeFrom(value).buildPartial();
+          } else {
+            diskEncryptionKeyId_ = value;
+          }
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+       */
+      public Builder clearDiskEncryptionKeyId() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = null;
+          onChanged();
+        } else {
+          diskEncryptionKeyId_ = null;
+          diskEncryptionKeyIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDiskEncryptionKeyIdBuilder() {
+        
+        onChanged();
+        return getDiskEncryptionKeyIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder() {
+        if (diskEncryptionKeyIdBuilder_ != null) {
+          return diskEncryptionKeyIdBuilder_.getMessageOrBuilder();
+        } else {
+          return diskEncryptionKeyId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDiskEncryptionKeyIdFieldBuilder() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getDiskEncryptionKeyId(),
+                  getParentForChildren(),
+                  isClean());
+          diskEncryptionKeyId_ = null;
+        }
+        return diskEncryptionKeyIdBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -69283,419 +70335,428 @@ public final class ClusterServiceOuterClass {
       "_service.proto\022\036yandex.cloud.mdb.opensea" +
       "rch.v1\032\034google/api/annotations.proto\032 go" +
       "ogle/protobuf/field_mask.proto\032\037google/p" +
-      "rotobuf/timestamp.proto\032 yandex/cloud/ap" +
-      "i/operation.proto\032)yandex/cloud/mdb/open" +
-      "search/v1/auth.proto\032+yandex/cloud/mdb/o" +
-      "pensearch/v1/backup.proto\032,yandex/cloud/" +
-      "mdb/opensearch/v1/cluster.proto\0326yandex/" +
-      "cloud/mdb/opensearch/v1/config/opensearc" +
-      "h.proto\0320yandex/cloud/mdb/opensearch/v1/" +
-      "maintenance.proto\032&yandex/cloud/operatio" +
-      "n/operation.proto\032\035yandex/cloud/validati" +
-      "on.proto\"5\n\021GetClusterRequest\022 \n\ncluster" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClusters" +
-      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n" +
-      "\212\3101\006<=1000\"j\n\024ListClustersResponse\0229\n\010cl" +
-      "usters\030\001 \003(\0132\'.yandex.cloud.mdb.opensear" +
-      "ch.v1.Cluster\022\027\n\017next_page_token\030\002 \001(\t\"\245" +
-      "\005\n\024CreateClusterRequest\022\037\n\tfolder_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004" +
-      "<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 " +
-      "\001(\tB\t\212\3101\005<=256\022\221\001\n\006labels\030\004 \003(\0132@.yandex" +
-      ".cloud.mdb.opensearch.v1.CreateClusterRe" +
-      "quest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[" +
-      "-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z" +
-      "]*\022H\n\013environment\030\005 \001(\01623.yandex.cloud.m" +
-      "db.opensearch.v1.Cluster.Environment\022K\n\013" +
-      "config_spec\030\006 \001(\01320.yandex.cloud.mdb.ope" +
-      "nsearch.v1.ConfigCreateSpecB\004\350\3071\001\022 \n\nnet" +
-      "work_id\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_" +
-      "group_ids\030\010 \003(\t\022\032\n\022service_account_id\030\t " +
-      "\001(\t\022\033\n\023deletion_protection\030\n \001(\010\022M\n\022main" +
-      "tenance_window\030\013 \001(\01321.yandex.cloud.mdb." +
-      "opensearch.v1.MaintenanceWindow\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+" +
-      "\n\025CreateClusterMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\"\377\004\n\024UpdateClusterRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 " +
-      "\001(\0132\032.google.protobuf.FieldMask\022\036\n\013descr" +
-      "iption\030\003 \001(\tB\t\212\3101\005<=256\022\221\001\n\006labels\030\004 \003(\013" +
-      "2@.yandex.cloud.mdb.opensearch.v1.Update" +
-      "ClusterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004" +
-      "<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z]" +
-      "[-_0-9a-z]*\022E\n\013config_spec\030\005 \001(\01320.yande" +
-      "x.cloud.mdb.opensearch.v1.ConfigUpdateSp" +
-      "ec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
-      "_-]*\022\032\n\022security_group_ids\030\007 \003(\t\022\032\n\022serv" +
-      "ice_account_id\030\010 \001(\t\022\033\n\023deletion_protect" +
-      "ion\030\t \001(\010\022M\n\022maintenance_window\030\n \001(\01321." +
-      "yandex.cloud.mdb.opensearch.v1.Maintenan" +
-      "ceWindow\022\034\n\nnetwork_id\030\013 \001(\tB\010\212\3101\004<=50\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteCl" +
-      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\316\003\n\026Li" +
-      "stClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n" +
-      "\tfrom_time\030\003 \001(\0132\032.google.protobuf.Times" +
-      "tamp\022+\n\007to_time\030\004 \001(\0132\032.google.protobuf." +
-      "Timestamp\022\035\n\tpage_size\030\005 \001(\003B\n\372\3071\006<=1000" +
-      "\022\035\n\npage_token\030\006 \001(\tB\t\212\3101\005<=100\022\036\n\026alway" +
-      "s_next_page_token\030\007 \001(\010\022\032\n\006filter\030\010 \001(\tB" +
-      "\n\212\3101\006<=1000\022X\n\014service_type\030\t \001(\0162B.yand" +
-      "ex.cloud.mdb.opensearch.v1.ListClusterLo" +
-      "gsRequest.ServiceType\"K\n\013ServiceType\022\034\n\030" +
-      "SERVICE_TYPE_UNSPECIFIED\020\000\022\016\n\nOPENSEARCH" +
-      "\020\001\022\016\n\nDASHBOARDS\020\002\"\263\001\n\tLogRecord\022-\n\ttime" +
-      "stamp\030\001 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "G\n\007message\030\002 \003(\01326.yandex.cloud.mdb.open" +
-      "search.v1.LogRecord.MessageEntry\032.\n\014Mess" +
-      "ageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\"k\n\027ListClusterLogsResponse\0227\n\004logs\030\001 \003(" +
-      "\0132).yandex.cloud.mdb.opensearch.v1.LogRe" +
-      "cord\022\027\n\017next_page_token\030\002 \001(\t\"g\n\017StreamL" +
-      "ogRecord\0229\n\006record\030\001 \001(\0132).yandex.cloud." +
-      "mdb.opensearch.v1.LogRecord\022\031\n\021next_reco" +
-      "rd_token\030\002 \001(\t\"\225\003\n\030StreamClusterLogsRequ" +
-      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n" +
-      "\rcolumn_filter\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022+\n\007to_time\030\004" +
-      " \001(\0132\032.google.protobuf.Timestamp\022\037\n\014reco" +
-      "rd_token\030\005 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\006 \001(" +
-      "\tB\n\212\3101\006<=1000\022Z\n\014service_type\030\007 \001(\0162D.ya" +
-      "ndex.cloud.mdb.opensearch.v1.StreamClust" +
-      "erLogsRequest.ServiceType\"K\n\013ServiceType" +
-      "\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\016\n\nOPENSE" +
-      "ARCH\020\001\022\016\n\nDASHBOARDS\020\002\"~\n\034ListClusterOpe" +
-      "rationsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022" +
-      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListCl" +
-      "usterOperationsResponse\0225\n\noperations\030\001 " +
-      "\003(\0132!.yandex.cloud.operation.Operation\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"y\n\027ListClusterHo" +
-      "stsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"h\n\030ListCluste" +
-      "rHostsResponse\0223\n\005hosts\030\001 \003(\0132$.yandex.c" +
-      "loud.mdb.opensearch.v1.Host\022\027\n\017next_page" +
-      "_token\030\002 \001(\t\"c\n\022MoveClusterRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destinat" +
-      "ion_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023Mov" +
-      "eClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020" +
-      "source_folder_id\030\002 \001(\t\022\035\n\025destination_fo" +
-      "lder_id\030\003 \001(\t\"7\n\023StartClusterRequest\022 \n\n" +
-      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022St" +
-      "opClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\nclu" +
-      "ster_id\030\001 \001(\t\"\350\002\n\020ConfigCreateSpec\022\017\n\007ve" +
-      "rsion\030\001 \001(\t\022\034\n\016admin_password\030\002 \001(\tB\004\350\3071" +
-      "\001\022M\n\017opensearch_spec\030\003 \001(\01324.yandex.clou" +
-      "d.mdb.opensearch.v1.OpenSearchCreateSpec" +
-      "\022M\n\017dashboards_spec\030\004 \001(\01324.yandex.cloud" +
-      ".mdb.opensearch.v1.DashboardsCreateSpec\022" +
-      "6\n\006access\030\005 \001(\0132&.yandex.cloud.mdb.opens" +
-      "earch.v1.Access\022O\n\023snapshot_management\030\006" +
-      " \001(\01322.yandex.cloud.mdb.opensearch.v1.Sn" +
-      "apshotManagement\".\n\017KeystoreSetting\022\014\n\004n" +
-      "ame\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\324\005\n\024OpenSearchC" +
-      "reateSpec\022\017\n\007plugins\030\001 \003(\t\022S\n\013node_group" +
-      "s\030\002 \003(\0132>.yandex.cloud.mdb.opensearch.v1" +
-      ".OpenSearchCreateSpec.NodeGroup\022k\n\023opens" +
-      "earch_config_2\030\003 \001(\01328.yandex.cloud.mdb." +
-      "opensearch.v1.config.OpenSearchConfig2H\000" +
-      "R\022opensearchConfig_2\022J\n\021keystore_setting" +
-      "s\030\004 \003(\0132/.yandex.cloud.mdb.opensearch.v1" +
-      ".KeystoreSetting\032\222\003\n\tNodeGroup\022,\n\004name\030\001" +
-      " \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022<\n\t" +
-      "resources\030\002 \001(\0132).yandex.cloud.mdb.opens" +
-      "earch.v1.Resources\022\034\n\013hosts_count\030\003 \001(\003B" +
-      "\007\372\3071\003>=1\022\"\n\010zone_ids\030\004 \003(\tB\020\202\3101\004<=10\212\3101\004" +
-      "<=50\022$\n\nsubnet_ids\030\005 \003(\tB\020\202\3101\004<=10\212\3101\004<=" +
-      "50\022\030\n\020assign_public_ip\030\006 \001(\010\022C\n\005roles\030\007 " +
-      "\003(\01624.yandex.cloud.mdb.opensearch.v1.Ope" +
-      "nSearch.GroupRole\022R\n\025disk_size_autoscali" +
-      "ng\030\010 \001(\01323.yandex.cloud.mdb.opensearch.v" +
-      "1.DiskSizeAutoscalingB\010\n\006config\"\251\003\n\024Dash" +
-      "boardsCreateSpec\022S\n\013node_groups\030\002 \003(\0132>." +
-      "yandex.cloud.mdb.opensearch.v1.Dashboard" +
-      "sCreateSpec.NodeGroup\032\273\002\n\tNodeGroup\022,\n\004n" +
-      "ame\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]" +
-      "*\022<\n\tresources\030\002 \001(\0132).yandex.cloud.mdb." +
-      "opensearch.v1.Resources\022\034\n\013hosts_count\030\003" +
-      " \001(\003B\007\372\3071\003>=1\022\020\n\010zone_ids\030\004 \003(\t\022$\n\nsubne" +
-      "t_ids\030\005 \003(\tB\020\202\3101\004<=10\212\3101\004<=50\022\030\n\020assign_" +
-      "public_ip\030\006 \001(\010\022R\n\025disk_size_autoscaling" +
-      "\030\007 \001(\01323.yandex.cloud.mdb.opensearch.v1." +
-      "DiskSizeAutoscaling\"\366\002\n\020ConfigUpdateSpec" +
-      "\022\017\n\007version\030\001 \001(\t\022\034\n\016admin_password\030\002 \001(" +
-      "\tB\004\350\3071\001\022T\n\017opensearch_spec\030\003 \001(\0132;.yande" +
-      "x.cloud.mdb.opensearch.v1.OpenSearchClus" +
-      "terUpdateSpec\022T\n\017dashboards_spec\030\004 \001(\0132;" +
-      ".yandex.cloud.mdb.opensearch.v1.Dashboar" +
-      "dsClusterUpdateSpec\0226\n\006access\030\005 \001(\0132&.ya" +
-      "ndex.cloud.mdb.opensearch.v1.Access\022O\n\023s" +
-      "napshot_management\030\006 \001(\01322.yandex.cloud." +
-      "mdb.opensearch.v1.SnapshotManagement\"\227\002\n" +
-      "\033OpenSearchClusterUpdateSpec\022\017\n\007plugins\030" +
-      "\001 \003(\t\022k\n\023opensearch_config_2\030\002 \001(\01328.yan" +
-      "dex.cloud.mdb.opensearch.v1.config.OpenS" +
-      "earchConfig2H\000R\022opensearchConfig_2\022N\n\025se" +
-      "t_keystore_settings\030\003 \003(\0132/.yandex.cloud" +
-      ".mdb.opensearch.v1.KeystoreSetting\022 \n\030re" +
-      "move_keystore_settings\030\004 \003(\tB\010\n\006config\"\035" +
-      "\n\033DashboardsClusterUpdateSpec\"8\n\024BackupC" +
-      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\"+\n\025BackupClusterMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\"X\n\023DeleteBackupRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n\tbackup_" +
-      "id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"=\n\024DeleteBackupMe" +
-      "tadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030" +
-      "\002 \001(\t\"\300\005\n\025RestoreClusterRequest\022\027\n\tbacku" +
-      "p_id\030\001 \001(\tB\004\350\3071\001\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004" +
-      "<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 " +
-      "\001(\tB\t\212\3101\005<=256\022\222\001\n\006labels\030\004 \003(\0132A.yandex" +
-      ".cloud.mdb.opensearch.v1.RestoreClusterR" +
-      "equest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013" +
-      "[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
-      "z]*\022H\n\013environment\030\005 \001(\01623.yandex.cloud." +
-      "mdb.opensearch.v1.Cluster.Environment\022K\n" +
-      "\013config_spec\030\006 \001(\01320.yandex.cloud.mdb.op" +
-      "ensearch.v1.ConfigCreateSpecB\004\350\3071\001\022 \n\nne" +
-      "twork_id\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security" +
-      "_group_ids\030\010 \003(\t\022\032\n\022service_account_id\030\t" +
-      " \001(\t\022\033\n\023deletion_protection\030\n \001(\010\022\037\n\tfol" +
-      "der_id\030\013 \001(\tB\014\350\3071\001\212\3101\004<=50\022M\n\022maintenanc" +
-      "e_window\030\014 \001(\01321.yandex.cloud.mdb.opense" +
-      "arch.v1.MaintenanceWindow\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026Rest" +
-      "oreClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021" +
-      "\n\tbackup_id\030\002 \001(\t\"\317\002\n\034RescheduleMaintena" +
-      "nceRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022j\n\017reschedule_type\030\002 \001(\0162K.yandex.c" +
-      "loud.mdb.opensearch.v1.RescheduleMainten" +
-      "anceRequest.RescheduleTypeB\004\350\3071\001\0221\n\rdela" +
-      "yed_until\030\003 \001(\0132\032.google.protobuf.Timest" +
-      "amp\"n\n\016RescheduleType\022\037\n\033RESCHEDULE_TYPE" +
-      "_UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AV" +
-      "AILABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"l\n\035R" +
-      "escheduleMaintenanceMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.google" +
-      ".protobuf.TimestampJ\004\010\002\020\004\"{\n\031ListCluster" +
-      "BackupsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022" +
-      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\032ListCl" +
-      "usterBackupsResponse\0227\n\007backups\030\001 \003(\0132&." +
-      "yandex.cloud.mdb.opensearch.v1.Backup\022\027\n" +
-      "\017next_page_token\030\002 \001(\t\"R\n DeleteOpenSear" +
-      "chNodeGroupRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022\014\n\004name\030\002 \001(\t\"\373\001\n UpdateOpe" +
-      "nSearchNodeGroupRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101" +
-      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003" +
-      " \001(\0132\032.google.protobuf.FieldMask\022V\n\017node" +
-      "_group_spec\030\004 \001(\0132=.yandex.cloud.mdb.ope" +
-      "nsearch.v1.OpenSearchNodeGroupUpdateSpec" +
-      "\"\313\002\n\035OpenSearchNodeGroupUpdateSpec\022<\n\tre" +
-      "sources\030\001 \001(\0132).yandex.cloud.mdb.opensea" +
-      "rch.v1.Resources\022\023\n\013hosts_count\030\002 \001(\003\022C\n" +
-      "\005roles\030\003 \003(\01624.yandex.cloud.mdb.opensear" +
-      "ch.v1.OpenSearch.GroupRole\022\020\n\010zone_ids\030\004" +
-      " \003(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\030\n\020assign_publi" +
-      "c_ip\030\006 \001(\010\022R\n\025disk_size_autoscaling\030\007 \001(" +
-      "\01323.yandex.cloud.mdb.opensearch.v1.DiskS" +
-      "izeAutoscaling\"\232\001\n\035AddOpenSearchNodeGrou" +
-      "pRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022W\n\017node_group_spec\030\002 \001(\0132>.yandex.clo" +
-      "ud.mdb.opensearch.v1.OpenSearchCreateSpe" +
-      "c.NodeGroup\"r\n DeleteDashboardsNodeGroup" +
+      "rotobuf/timestamp.proto\032\036google/protobuf" +
+      "/wrappers.proto\032 yandex/cloud/api/operat" +
+      "ion.proto\0324yandex/cloud/mdb/operationlog" +
+      "/v1/operation_log.proto\032)yandex/cloud/md" +
+      "b/opensearch/v1/auth.proto\032+yandex/cloud" +
+      "/mdb/opensearch/v1/backup.proto\032,yandex/" +
+      "cloud/mdb/opensearch/v1/cluster.proto\0326y" +
+      "andex/cloud/mdb/opensearch/v1/config/ope" +
+      "nsearch.proto\0320yandex/cloud/mdb/opensear" +
+      "ch/v1/maintenance.proto\032&yandex/cloud/op" +
+      "eration/operation.proto\032\035yandex/cloud/va" +
+      "lidation.proto\"5\n\021GetClusterRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListCl" +
+      "ustersRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004" +
+      " \001(\tB\n\212\3101\006<=1000\"j\n\024ListClustersResponse" +
+      "\0229\n\010clusters\030\001 \003(\0132\'.yandex.cloud.mdb.op" +
+      "ensearch.v1.Cluster\022\027\n\017next_page_token\030\002" +
+      " \001(\t\"\343\005\n\024CreateClusterRequest\022\037\n\tfolder_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\307" +
+      "1\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013descript" +
+      "ion\030\003 \001(\tB\t\212\3101\005<=256\022\221\001\n\006labels\030\004 \003(\0132@." +
+      "yandex.cloud.mdb.opensearch.v1.CreateClu" +
+      "sterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
+      "0-9a-z]*\022H\n\013environment\030\005 \001(\01623.yandex.c" +
+      "loud.mdb.opensearch.v1.Cluster.Environme" +
+      "nt\022K\n\013config_spec\030\006 \001(\01320.yandex.cloud.m" +
+      "db.opensearch.v1.ConfigCreateSpecB\004\350\3071\001\022" +
+      " \n\nnetwork_id\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022sec" +
+      "urity_group_ids\030\010 \003(\t\022\032\n\022service_account" +
+      "_id\030\t \001(\t\022\033\n\023deletion_protection\030\n \001(\010\022M" +
+      "\n\022maintenance_window\030\013 \001(\01321.yandex.clou" +
+      "d.mdb.opensearch.v1.MaintenanceWindow\022<\n" +
+      "\026disk_encryption_key_id\030\014 \001(\0132\034.google.p" +
+      "rotobuf.StringValue\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"r\n\025CreateClus" +
+      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\022E\n\ropera" +
+      "tion_log\030\002 \001(\0132..yandex.cloud.mdb.operat" +
+      "ionlog.v1.OperationLog\"\377\004\n\024UpdateCluster" +
       "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z" +
-      "0-9_-]*\"\373\001\n UpdateDashboardsNodeGroupReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022," +
-      "\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
-      "_-]*\022/\n\013update_mask\030\003 \001(\0132\032.google.proto" +
-      "buf.FieldMask\022V\n\017node_group_spec\030\004 \001(\0132=" +
-      ".yandex.cloud.mdb.opensearch.v1.Dashboar" +
-      "dsNodeGroupUpdateSpec\"\206\002\n\035DashboardsNode" +
-      "GroupUpdateSpec\022<\n\tresources\030\001 \001(\0132).yan" +
-      "dex.cloud.mdb.opensearch.v1.Resources\022\023\n" +
-      "\013hosts_count\030\002 \001(\003\022\020\n\010zone_ids\030\003 \003(\t\022\022\n\n" +
-      "subnet_ids\030\004 \003(\t\022\030\n\020assign_public_ip\030\005 \001" +
-      "(\010\022R\n\025disk_size_autoscaling\030\006 \001(\01323.yand" +
+      "0\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
+      ".FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=2" +
+      "56\022\221\001\n\006labels\030\004 \003(\0132@.yandex.cloud.mdb.o" +
+      "pensearch.v1.UpdateClusterRequest.Labels" +
+      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
+      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022E\n\013config" +
+      "_spec\030\005 \001(\01320.yandex.cloud.mdb.opensearc" +
+      "h.v1.ConfigUpdateSpec\022(\n\004name\030\006 \001(\tB\032\212\3101" +
+      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\032\n\022security_grou" +
+      "p_ids\030\007 \003(\t\022\032\n\022service_account_id\030\010 \001(\t\022" +
+      "\033\n\023deletion_protection\030\t \001(\010\022M\n\022maintena" +
+      "nce_window\030\n \001(\01321.yandex.cloud.mdb.open" +
+      "search.v1.MaintenanceWindow\022\034\n\nnetwork_i" +
+      "d\030\013 \001(\tB\010\212\3101\004<=50\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"r\n\025UpdateCluste" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\022E\n\roperati" +
+      "on_log\030\002 \001(\0132..yandex.cloud.mdb.operatio" +
+      "nlog.v1.OperationLog\"8\n\024DeleteClusterReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+" +
+      "\n\025DeleteClusterMetadata\022\022\n\ncluster_id\030\001 " +
+      "\001(\t\"\316\003\n\026ListClusterLogsRequest\022 \n\ncluste" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filte" +
+      "r\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022+\n\007to_time\030\004 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022\035\n\tpage_size\030\005 \001(\003B\n" +
+      "\372\3071\006<=1000\022\035\n\npage_token\030\006 \001(\tB\t\212\3101\005<=10" +
+      "0\022\036\n\026always_next_page_token\030\007 \001(\010\022\032\n\006fil" +
+      "ter\030\010 \001(\tB\n\212\3101\006<=1000\022X\n\014service_type\030\t " +
+      "\001(\0162B.yandex.cloud.mdb.opensearch.v1.Lis" +
+      "tClusterLogsRequest.ServiceType\"K\n\013Servi" +
+      "ceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\016\n\n" +
+      "OPENSEARCH\020\001\022\016\n\nDASHBOARDS\020\002\"\263\001\n\tLogReco" +
+      "rd\022-\n\ttimestamp\030\001 \001(\0132\032.google.protobuf." +
+      "Timestamp\022G\n\007message\030\002 \003(\01326.yandex.clou" +
+      "d.mdb.opensearch.v1.LogRecord.MessageEnt" +
+      "ry\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"k\n\027ListClusterLogsResponse\0227\n" +
+      "\004logs\030\001 \003(\0132).yandex.cloud.mdb.opensearc" +
+      "h.v1.LogRecord\022\027\n\017next_page_token\030\002 \001(\t\"" +
+      "g\n\017StreamLogRecord\0229\n\006record\030\001 \001(\0132).yan" +
+      "dex.cloud.mdb.opensearch.v1.LogRecord\022\031\n" +
+      "\021next_record_token\030\002 \001(\t\"\225\003\n\030StreamClust" +
+      "erLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\tfrom_t" +
+      "ime\030\003 \001(\0132\032.google.protobuf.Timestamp\022+\n" +
+      "\007to_time\030\004 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022\037\n\014record_token\030\005 \001(\tB\t\212\3101\005<=100\022\032\n\006f" +
+      "ilter\030\006 \001(\tB\n\212\3101\006<=1000\022Z\n\014service_type\030" +
+      "\007 \001(\0162D.yandex.cloud.mdb.opensearch.v1.S" +
+      "treamClusterLogsRequest.ServiceType\"K\n\013S" +
+      "erviceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000" +
+      "\022\016\n\nOPENSEARCH\020\001\022\016\n\nDASHBOARDS\020\002\"~\n\034List" +
+      "ClusterOperationsRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"o\n\035ListClusterOperationsResponse\0225\n\nope" +
+      "rations\030\001 \003(\0132!.yandex.cloud.operation.O" +
+      "peration\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027Lis" +
+      "tClusterHostsRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
+      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"h\n\030" +
+      "ListClusterHostsResponse\0223\n\005hosts\030\001 \003(\0132" +
+      "$.yandex.cloud.mdb.opensearch.v1.Host\022\027\n" +
+      "\017next_page_token\030\002 \001(\t\"c\n\022MoveClusterReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+" +
+      "\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\"b\n\023MoveClusterMetadata\022\022\n\ncluster_id" +
+      "\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025dest" +
+      "ination_folder_id\030\003 \001(\t\"7\n\023StartClusterR" +
+      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"*\n\024StartClusterMetadata\022\022\n\ncluster_id\030\001" +
+      " \001(\t\"6\n\022StopClusterRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\"\350\002\n\020ConfigCreate" +
+      "Spec\022\017\n\007version\030\001 \001(\t\022\034\n\016admin_password\030" +
+      "\002 \001(\tB\004\350\3071\001\022M\n\017opensearch_spec\030\003 \001(\01324.y" +
+      "andex.cloud.mdb.opensearch.v1.OpenSearch" +
+      "CreateSpec\022M\n\017dashboards_spec\030\004 \001(\01324.ya" +
+      "ndex.cloud.mdb.opensearch.v1.DashboardsC" +
+      "reateSpec\0226\n\006access\030\005 \001(\0132&.yandex.cloud" +
+      ".mdb.opensearch.v1.Access\022O\n\023snapshot_ma" +
+      "nagement\030\006 \001(\01322.yandex.cloud.mdb.opense" +
+      "arch.v1.SnapshotManagement\".\n\017KeystoreSe" +
+      "tting\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\324\005\n\024O" +
+      "penSearchCreateSpec\022\017\n\007plugins\030\001 \003(\t\022S\n\013" +
+      "node_groups\030\002 \003(\0132>.yandex.cloud.mdb.ope" +
+      "nsearch.v1.OpenSearchCreateSpec.NodeGrou" +
+      "p\022k\n\023opensearch_config_2\030\003 \001(\01328.yandex." +
+      "cloud.mdb.opensearch.v1.config.OpenSearc" +
+      "hConfig2H\000R\022opensearchConfig_2\022J\n\021keysto" +
+      "re_settings\030\004 \003(\0132/.yandex.cloud.mdb.ope" +
+      "nsearch.v1.KeystoreSetting\032\222\003\n\tNodeGroup" +
+      "\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0" +
+      "-9_-]*\022<\n\tresources\030\002 \001(\0132).yandex.cloud" +
+      ".mdb.opensearch.v1.Resources\022\034\n\013hosts_co" +
+      "unt\030\003 \001(\003B\007\372\3071\003>=1\022\"\n\010zone_ids\030\004 \003(\tB\020\202\310" +
+      "1\004<=10\212\3101\004<=50\022$\n\nsubnet_ids\030\005 \003(\tB\020\202\3101\004" +
+      "<=10\212\3101\004<=50\022\030\n\020assign_public_ip\030\006 \001(\010\022C" +
+      "\n\005roles\030\007 \003(\01624.yandex.cloud.mdb.opensea" +
+      "rch.v1.OpenSearch.GroupRole\022R\n\025disk_size" +
+      "_autoscaling\030\010 \001(\01323.yandex.cloud.mdb.op" +
+      "ensearch.v1.DiskSizeAutoscalingB\010\n\006confi" +
+      "g\"\251\003\n\024DashboardsCreateSpec\022S\n\013node_group" +
+      "s\030\002 \003(\0132>.yandex.cloud.mdb.opensearch.v1" +
+      ".DashboardsCreateSpec.NodeGroup\032\273\002\n\tNode" +
+      "Group\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-" +
+      "zA-Z0-9_-]*\022<\n\tresources\030\002 \001(\0132).yandex." +
+      "cloud.mdb.opensearch.v1.Resources\022\034\n\013hos" +
+      "ts_count\030\003 \001(\003B\007\372\3071\003>=1\022\020\n\010zone_ids\030\004 \003(" +
+      "\t\022$\n\nsubnet_ids\030\005 \003(\tB\020\202\3101\004<=10\212\3101\004<=50\022" +
+      "\030\n\020assign_public_ip\030\006 \001(\010\022R\n\025disk_size_a" +
+      "utoscaling\030\007 \001(\01323.yandex.cloud.mdb.open" +
+      "search.v1.DiskSizeAutoscaling\"\366\002\n\020Config" +
+      "UpdateSpec\022\017\n\007version\030\001 \001(\t\022\034\n\016admin_pas" +
+      "sword\030\002 \001(\tB\004\350\3071\001\022T\n\017opensearch_spec\030\003 \001" +
+      "(\0132;.yandex.cloud.mdb.opensearch.v1.Open" +
+      "SearchClusterUpdateSpec\022T\n\017dashboards_sp" +
+      "ec\030\004 \001(\0132;.yandex.cloud.mdb.opensearch.v" +
+      "1.DashboardsClusterUpdateSpec\0226\n\006access\030" +
+      "\005 \001(\0132&.yandex.cloud.mdb.opensearch.v1.A" +
+      "ccess\022O\n\023snapshot_management\030\006 \001(\01322.yan" +
+      "dex.cloud.mdb.opensearch.v1.SnapshotMana" +
+      "gement\"\227\002\n\033OpenSearchClusterUpdateSpec\022\017" +
+      "\n\007plugins\030\001 \003(\t\022k\n\023opensearch_config_2\030\002" +
+      " \001(\01328.yandex.cloud.mdb.opensearch.v1.co" +
+      "nfig.OpenSearchConfig2H\000R\022opensearchConf" +
+      "ig_2\022N\n\025set_keystore_settings\030\003 \003(\0132/.ya" +
+      "ndex.cloud.mdb.opensearch.v1.KeystoreSet" +
+      "ting\022 \n\030remove_keystore_settings\030\004 \003(\tB\010" +
+      "\n\006config\"\035\n\033DashboardsClusterUpdateSpec\"" +
+      "8\n\024BackupClusterRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupClusterMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\"X\n\023DeleteBackupRe" +
+      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "\037\n\tbackup_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"=\n\024Dele" +
+      "teBackupMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\t" +
+      "backup_id\030\002 \001(\t\"\376\005\n\025RestoreClusterReques" +
+      "t\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022,\n\004name\030\002 \001(\t" +
+      "B\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013desc" +
+      "ription\030\003 \001(\tB\t\212\3101\005<=256\022\222\001\n\006labels\030\004 \003(" +
+      "\0132A.yandex.cloud.mdb.opensearch.v1.Resto" +
+      "reClusterRequest.LabelsEntryB?\202\3101\004<=64\212\310" +
+      "1\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-" +
+      "z][-_0-9a-z]*\022H\n\013environment\030\005 \001(\01623.yan" +
+      "dex.cloud.mdb.opensearch.v1.Cluster.Envi" +
+      "ronment\022K\n\013config_spec\030\006 \001(\01320.yandex.cl" +
+      "oud.mdb.opensearch.v1.ConfigCreateSpecB\004" +
+      "\350\3071\001\022 \n\nnetwork_id\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032" +
+      "\n\022security_group_ids\030\010 \003(\t\022\032\n\022service_ac" +
+      "count_id\030\t \001(\t\022\033\n\023deletion_protection\030\n " +
+      "\001(\010\022\037\n\tfolder_id\030\013 \001(\tB\014\350\3071\001\212\3101\004<=50\022M\n\022" +
+      "maintenance_window\030\014 \001(\01321.yandex.cloud." +
+      "mdb.opensearch.v1.MaintenanceWindow\022<\n\026d" +
+      "isk_encryption_key_id\030\r \001(\0132\034.google.pro" +
+      "tobuf.StringValue\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026RestoreClust" +
+      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup" +
+      "_id\030\002 \001(\t\"\317\002\n\034RescheduleMaintenanceReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022j\n\017" +
+      "reschedule_type\030\002 \001(\0162K.yandex.cloud.mdb" +
+      ".opensearch.v1.RescheduleMaintenanceRequ" +
+      "est.RescheduleTypeB\004\350\3071\001\0221\n\rdelayed_unti" +
+      "l\030\003 \001(\0132\032.google.protobuf.Timestamp\"n\n\016R" +
+      "escheduleType\022\037\n\033RESCHEDULE_TYPE_UNSPECI" +
+      "FIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAILABLE_" +
+      "WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"l\n\035Reschedul" +
+      "eMaintenanceMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\0221\n\rdelayed_until\030\004 \001(\0132\032.google.protobu" +
+      "f.TimestampJ\004\010\002\020\004\"{\n\031ListClusterBackupsR" +
+      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_" +
+      "token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\032ListClusterBac" +
+      "kupsResponse\0227\n\007backups\030\001 \003(\0132&.yandex.c" +
+      "loud.mdb.opensearch.v1.Backup\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t\"R\n DeleteOpenSearchNodeGr" +
+      "oupRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\014\n\004name\030\002 \001(\t\"\373\001\n UpdateOpenSearchN" +
+      "odeGroupRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071" +
+      "\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMask\022V\n\017node_group_s" +
+      "pec\030\004 \001(\0132=.yandex.cloud.mdb.opensearch." +
+      "v1.OpenSearchNodeGroupUpdateSpec\"\313\002\n\035Ope" +
+      "nSearchNodeGroupUpdateSpec\022<\n\tresources\030" +
+      "\001 \001(\0132).yandex.cloud.mdb.opensearch.v1.R" +
+      "esources\022\023\n\013hosts_count\030\002 \001(\003\022C\n\005roles\030\003" +
+      " \003(\01624.yandex.cloud.mdb.opensearch.v1.Op" +
+      "enSearch.GroupRole\022\020\n\010zone_ids\030\004 \003(\t\022\022\n\n" +
+      "subnet_ids\030\005 \003(\t\022\030\n\020assign_public_ip\030\006 \001" +
+      "(\010\022R\n\025disk_size_autoscaling\030\007 \001(\01323.yand" +
       "ex.cloud.mdb.opensearch.v1.DiskSizeAutos" +
-      "caling\"\232\001\n\035AddDashboardsNodeGroupRequest" +
+      "caling\"\232\001\n\035AddOpenSearchNodeGroupRequest" +
       "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\017no" +
       "de_group_spec\030\002 \001(\0132>.yandex.cloud.mdb.o" +
-      "pensearch.v1.DashboardsCreateSpec.NodeGr" +
-      "oup\"8\n\024AddNodeGroupMetadata\022\022\n\ncluster_i" +
-      "d\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\";\n\027UpdateNodeGroup" +
-      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004name\030\002 \001" +
-      "(\t\";\n\027DeleteNodeGroupMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\":\n\026GetAuthSettin" +
-      "gsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"}\n\031UpdateAuthSettingsRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\010settings\030\002" +
-      " \001(\0132,.yandex.cloud.mdb.opensearch.v1.Au" +
-      "thSettings\"0\n\032UpdateAuthSettingsMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\"P\n\030RestartOpenSearc" +
-      "hRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\022\n\004host\030\002 \001(\tB\004\350\3071\001\"=\n\031RestartOpenSea" +
-      "rchMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004host\030" +
-      "\002 \001(\t\"K\n\023SwitchMasterRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\nfrom_hosts\030\002 \003" +
-      "(\t\">\n\024SwitchMasterMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\022\022\n\nfrom_hosts\030\002 \003(\t2\202-\n\016ClusterSe" +
-      "rvice\022\227\001\n\003Get\0221.yandex.cloud.mdb.opensea" +
-      "rch.v1.GetClusterRequest\032\'.yandex.cloud." +
-      "mdb.opensearch.v1.Cluster\"4\202\323\344\223\002.\022,/mana" +
-      "ged-opensearch/v1/clusters/{cluster_id}\022" +
-      "\232\001\n\004List\0223.yandex.cloud.mdb.opensearch.v" +
-      "1.ListClustersRequest\0324.yandex.cloud.mdb" +
-      ".opensearch.v1.ListClustersResponse\"\'\202\323\344" +
-      "\223\002!\022\037/managed-opensearch/v1/clusters\022\261\001\n" +
-      "\006Create\0224.yandex.cloud.mdb.opensearch.v1" +
-      ".CreateClusterRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"N\202\323\344\223\002$\"\037/managed-opens" +
-      "earch/v1/clusters:\001*\262\322* \n\025CreateClusterM" +
-      "etadata\022\007Cluster\022\276\001\n\006Update\0224.yandex.clo" +
-      "ud.mdb.opensearch.v1.UpdateClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"[\202\323" +
-      "\344\223\00212,/managed-opensearch/v1/clusters/{c" +
-      "luster_id}:\001*\262\322* \n\025UpdateClusterMetadata" +
-      "\022\007Cluster\022\311\001\n\006Delete\0224.yandex.cloud.mdb." +
-      "opensearch.v1.DeleteClusterRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"f\202\323\344\223\002.*,/" +
-      "managed-opensearch/v1/clusters/{cluster_" +
-      "id}\262\322*.\n\025DeleteClusterMetadata\022\025google.p" +
-      "rotobuf.Empty\022\302\001\n\006Backup\0224.yandex.cloud." +
-      "mdb.opensearch.v1.BackupClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"_\202\323\344\223\002" +
-      "5\"3/managed-opensearch/v1/clusters/{clus" +
-      "ter_id}:backup\262\322* \n\025BackupClusterMetadat" +
-      "a\022\007Cluster\022\341\001\n\014DeleteBackup\0223.yandex.clo" +
-      "ud.mdb.opensearch.v1.DeleteBackupRequest" +
-      "\032!.yandex.cloud.operation.Operation\"y\202\323\344" +
-      "\223\002B*@/managed-opensearch/v1/clusters/{cl" +
-      "uster_id}/backups/{backup_id}\262\322*-\n\024Delet" +
-      "eBackupMetadata\022\025google.protobuf.Empty\022\274" +
-      "\001\n\007Restore\0225.yandex.cloud.mdb.opensearch" +
-      ".v1.RestoreClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"W\202\323\344\223\002,\"\'/managed-o" +
-      "pensearch/v1/clusters:restore:\001*\262\322*!\n\026Re" +
-      "storeClusterMetadata\022\007Cluster\022\363\001\n\025Resche" +
-      "duleMaintenance\022<.yandex.cloud.mdb.opens" +
-      "earch.v1.RescheduleMaintenanceRequest\032!." +
-      "yandex.cloud.operation.Operation\"y\202\323\344\223\002G" +
-      "\"B/managed-opensearch/v1/clusters/{clust" +
-      "er_id}:rescheduleMaintenance:\001*\262\322*(\n\035Res" +
-      "cheduleMaintenanceMetadata\022\007Cluster\022\302\001\n\013" +
-      "ListBackups\0229.yandex.cloud.mdb.opensearc" +
-      "h.v1.ListClusterBackupsRequest\032:.yandex." +
-      "cloud.mdb.opensearch.v1.ListClusterBacku" +
-      "psResponse\"<\202\323\344\223\0026\0224/managed-opensearch/" +
-      "v1/clusters/{cluster_id}/backups\022\275\001\n\004Mov" +
-      "e\0222.yandex.cloud.mdb.opensearch.v1.MoveC" +
+      "pensearch.v1.OpenSearchCreateSpec.NodeGr" +
+      "oup\"r\n DeleteDashboardsNodeGroupRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004nam" +
+      "e\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"" +
+      "\373\001\n UpdateDashboardsNodeGroupRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002" +
+      " \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013" +
+      "update_mask\030\003 \001(\0132\032.google.protobuf.Fiel" +
+      "dMask\022V\n\017node_group_spec\030\004 \001(\0132=.yandex." +
+      "cloud.mdb.opensearch.v1.DashboardsNodeGr" +
+      "oupUpdateSpec\"\206\002\n\035DashboardsNodeGroupUpd" +
+      "ateSpec\022<\n\tresources\030\001 \001(\0132).yandex.clou" +
+      "d.mdb.opensearch.v1.Resources\022\023\n\013hosts_c" +
+      "ount\030\002 \001(\003\022\020\n\010zone_ids\030\003 \003(\t\022\022\n\nsubnet_i" +
+      "ds\030\004 \003(\t\022\030\n\020assign_public_ip\030\005 \001(\010\022R\n\025di" +
+      "sk_size_autoscaling\030\006 \001(\01323.yandex.cloud" +
+      ".mdb.opensearch.v1.DiskSizeAutoscaling\"\232" +
+      "\001\n\035AddDashboardsNodeGroupRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\017node_group" +
+      "_spec\030\002 \001(\0132>.yandex.cloud.mdb.opensearc" +
+      "h.v1.DashboardsCreateSpec.NodeGroup\"8\n\024A" +
+      "ddNodeGroupMetadata\022\022\n\ncluster_id\030\001 \001(\t\022" +
+      "\014\n\004name\030\002 \001(\t\";\n\027UpdateNodeGroupMetadata" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\";\n\027De" +
+      "leteNodeGroupMetadata\022\022\n\ncluster_id\030\001 \001(" +
+      "\t\022\014\n\004name\030\002 \001(\t\":\n\026GetAuthSettingsReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"}\n\031U" +
+      "pdateAuthSettingsRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\010settings\030\002 \001(\0132,.y" +
+      "andex.cloud.mdb.opensearch.v1.AuthSettin" +
+      "gs\"0\n\032UpdateAuthSettingsMetadata\022\022\n\nclus" +
+      "ter_id\030\001 \001(\t\"P\n\030RestartOpenSearchRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004ho" +
+      "st\030\002 \001(\tB\004\350\3071\001\"=\n\031RestartOpenSearchMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004host\030\002 \001(\t\"K\n" +
+      "\023SwitchMasterRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\022\n\nfrom_hosts\030\002 \003(\t\">\n\024Sw" +
+      "itchMasterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022" +
+      "\n\nfrom_hosts\030\002 \003(\t2\202-\n\016ClusterService\022\227\001" +
+      "\n\003Get\0221.yandex.cloud.mdb.opensearch.v1.G" +
+      "etClusterRequest\032\'.yandex.cloud.mdb.open" +
+      "search.v1.Cluster\"4\202\323\344\223\002.\022,/managed-open" +
+      "search/v1/clusters/{cluster_id}\022\232\001\n\004List" +
+      "\0223.yandex.cloud.mdb.opensearch.v1.ListCl" +
+      "ustersRequest\0324.yandex.cloud.mdb.opensea" +
+      "rch.v1.ListClustersResponse\"\'\202\323\344\223\002!\022\037/ma" +
+      "naged-opensearch/v1/clusters\022\261\001\n\006Create\022" +
+      "4.yandex.cloud.mdb.opensearch.v1.CreateC" +
       "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"^\202\323\344\223\0026\"1/managed-opensearch/v1" +
-      "/clusters/{cluster_id}:move:\001*\262\322*\036\n\023Move" +
-      "ClusterMetadata\022\007Cluster\022\276\001\n\005Start\0223.yan" +
-      "dex.cloud.mdb.opensearch.v1.StartCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"]\202\323\344\223\0024\"2/managed-opensearch/v1/clust" +
-      "ers/{cluster_id}:start\262\322*\037\n\024StartCluster" +
-      "Metadata\022\007Cluster\022\272\001\n\004Stop\0222.yandex.clou" +
-      "d.mdb.opensearch.v1.StopClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"[\202\323\344\223\002" +
-      "3\"1/managed-opensearch/v1/clusters/{clus" +
-      "ter_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007C" +
-      "luster\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb.o" +
-      "pensearch.v1.ListClusterLogsRequest\0327.ya" +
-      "ndex.cloud.mdb.opensearch.v1.ListCluster" +
-      "LogsResponse\"9\202\323\344\223\0023\0221/managed-opensearc" +
-      "h/v1/clusters/{cluster_id}:logs\022\273\001\n\nStre" +
-      "amLogs\0228.yandex.cloud.mdb.opensearch.v1." +
-      "StreamClusterLogsRequest\032/.yandex.cloud." +
-      "mdb.opensearch.v1.StreamLogRecord\"@\202\323\344\223\002" +
-      ":\0228/managed-opensearch/v1/clusters/{clus" +
-      "ter_id}:stream_logs0\001\022\316\001\n\016ListOperations" +
-      "\022<.yandex.cloud.mdb.opensearch.v1.ListCl" +
-      "usterOperationsRequest\032=.yandex.cloud.md" +
-      "b.opensearch.v1.ListClusterOperationsRes" +
-      "ponse\"?\202\323\344\223\0029\0227/managed-opensearch/v1/cl" +
-      "usters/{cluster_id}/operations\022\272\001\n\tListH" +
-      "osts\0227.yandex.cloud.mdb.opensearch.v1.Li" +
-      "stClusterHostsRequest\0328.yandex.cloud.mdb" +
-      ".opensearch.v1.ListClusterHostsResponse\"" +
-      ":\202\323\344\223\0024\0222/managed-opensearch/v1/clusters" +
-      "/{cluster_id}/hosts\022\373\001\n\026AddOpenSearchNod" +
-      "eGroup\022=.yandex.cloud.mdb.opensearch.v1." +
-      "AddOpenSearchNodeGroupRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\177\202\323\344\223\002H\"C/manag" +
-      "ed-opensearch/v1/clusters/{cluster_id}/o" +
-      "pensearch/node_groups:\001*\262\322*-\n\024AddNodeGro" +
-      "upMetadata\022\025google.protobuf.Empty\022\211\002\n\031De" +
-      "leteOpenSearchNodeGroup\022@.yandex.cloud.m" +
-      "db.opensearch.v1.DeleteOpenSearchNodeGro" +
-      "upRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"\206\001\202\323\344\223\002L*J/managed-opensearch/v1/cl" +
-      "usters/{cluster_id}/opensearch/node_grou" +
-      "ps/{name}\262\322*0\n\027DeleteNodeGroupMetadata\022\025" +
-      "google.protobuf.Empty\022\214\002\n\031UpdateOpenSear" +
-      "chNodeGroup\022@.yandex.cloud.mdb.opensearc" +
-      "h.v1.UpdateOpenSearchNodeGroupRequest\032!." +
-      "yandex.cloud.operation.Operation\"\211\001\202\323\344\223\002" +
-      "O2J/managed-opensearch/v1/clusters/{clus" +
-      "ter_id}/opensearch/node_groups/{name}:\001*" +
-      "\262\322*0\n\027UpdateNodeGroupMetadata\022\025google.pr" +
-      "otobuf.Empty\022\373\001\n\026AddDashboardsNodeGroup\022" +
-      "=.yandex.cloud.mdb.opensearch.v1.AddDash" +
+      "peration\"N\202\323\344\223\002$\"\037/managed-opensearch/v1" +
+      "/clusters:\001*\262\322* \n\025CreateClusterMetadata\022" +
+      "\007Cluster\022\276\001\n\006Update\0224.yandex.cloud.mdb.o" +
+      "pensearch.v1.UpdateClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"[\202\323\344\223\00212,/m" +
+      "anaged-opensearch/v1/clusters/{cluster_i" +
+      "d}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluste" +
+      "r\022\311\001\n\006Delete\0224.yandex.cloud.mdb.opensear" +
+      "ch.v1.DeleteClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"f\202\323\344\223\002.*,/managed-" +
+      "opensearch/v1/clusters/{cluster_id}\262\322*.\n" +
+      "\025DeleteClusterMetadata\022\025google.protobuf." +
+      "Empty\022\302\001\n\006Backup\0224.yandex.cloud.mdb.open" +
+      "search.v1.BackupClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"_\202\323\344\223\0025\"3/mana" +
+      "ged-opensearch/v1/clusters/{cluster_id}:" +
+      "backup\262\322* \n\025BackupClusterMetadata\022\007Clust" +
+      "er\022\341\001\n\014DeleteBackup\0223.yandex.cloud.mdb.o" +
+      "pensearch.v1.DeleteBackupRequest\032!.yande" +
+      "x.cloud.operation.Operation\"y\202\323\344\223\002B*@/ma" +
+      "naged-opensearch/v1/clusters/{cluster_id" +
+      "}/backups/{backup_id}\262\322*-\n\024DeleteBackupM" +
+      "etadata\022\025google.protobuf.Empty\022\274\001\n\007Resto" +
+      "re\0225.yandex.cloud.mdb.opensearch.v1.Rest" +
+      "oreClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"W\202\323\344\223\002,\"\'/managed-opensearc" +
+      "h/v1/clusters:restore:\001*\262\322*!\n\026RestoreClu" +
+      "sterMetadata\022\007Cluster\022\363\001\n\025RescheduleMain" +
+      "tenance\022<.yandex.cloud.mdb.opensearch.v1" +
+      ".RescheduleMaintenanceRequest\032!.yandex.c" +
+      "loud.operation.Operation\"y\202\323\344\223\002G\"B/manag" +
+      "ed-opensearch/v1/clusters/{cluster_id}:r" +
+      "escheduleMaintenance:\001*\262\322*(\n\035RescheduleM" +
+      "aintenanceMetadata\022\007Cluster\022\302\001\n\013ListBack" +
+      "ups\0229.yandex.cloud.mdb.opensearch.v1.Lis" +
+      "tClusterBackupsRequest\032:.yandex.cloud.md" +
+      "b.opensearch.v1.ListClusterBackupsRespon" +
+      "se\"<\202\323\344\223\0026\0224/managed-opensearch/v1/clust" +
+      "ers/{cluster_id}/backups\022\275\001\n\004Move\0222.yand" +
+      "ex.cloud.mdb.opensearch.v1.MoveClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"^\202\323\344\223\0026\"1/managed-opensearch/v1/cluster" +
+      "s/{cluster_id}:move:\001*\262\322*\036\n\023MoveClusterM" +
+      "etadata\022\007Cluster\022\276\001\n\005Start\0223.yandex.clou" +
+      "d.mdb.opensearch.v1.StartClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"]\202\323\344\223" +
+      "\0024\"2/managed-opensearch/v1/clusters/{clu" +
+      "ster_id}:start\262\322*\037\n\024StartClusterMetadata" +
+      "\022\007Cluster\022\272\001\n\004Stop\0222.yandex.cloud.mdb.op" +
+      "ensearch.v1.StopClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"[\202\323\344\223\0023\"1/mana" +
+      "ged-opensearch/v1/clusters/{cluster_id}:" +
+      "stop\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\266" +
+      "\001\n\010ListLogs\0226.yandex.cloud.mdb.opensearc" +
+      "h.v1.ListClusterLogsRequest\0327.yandex.clo" +
+      "ud.mdb.opensearch.v1.ListClusterLogsResp" +
+      "onse\"9\202\323\344\223\0023\0221/managed-opensearch/v1/clu" +
+      "sters/{cluster_id}:logs\022\273\001\n\nStreamLogs\0228" +
+      ".yandex.cloud.mdb.opensearch.v1.StreamCl" +
+      "usterLogsRequest\032/.yandex.cloud.mdb.open" +
+      "search.v1.StreamLogRecord\"@\202\323\344\223\002:\0228/mana" +
+      "ged-opensearch/v1/clusters/{cluster_id}:" +
+      "stream_logs0\001\022\316\001\n\016ListOperations\022<.yande" +
+      "x.cloud.mdb.opensearch.v1.ListClusterOpe" +
+      "rationsRequest\032=.yandex.cloud.mdb.opense" +
+      "arch.v1.ListClusterOperationsResponse\"?\202" +
+      "\323\344\223\0029\0227/managed-opensearch/v1/clusters/{" +
+      "cluster_id}/operations\022\272\001\n\tListHosts\0227.y" +
+      "andex.cloud.mdb.opensearch.v1.ListCluste" +
+      "rHostsRequest\0328.yandex.cloud.mdb.opensea" +
+      "rch.v1.ListClusterHostsResponse\":\202\323\344\223\0024\022" +
+      "2/managed-opensearch/v1/clusters/{cluste" +
+      "r_id}/hosts\022\373\001\n\026AddOpenSearchNodeGroup\022=" +
+      ".yandex.cloud.mdb.opensearch.v1.AddOpenS" +
+      "earchNodeGroupRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\177\202\323\344\223\002H\"C/managed-opens" +
+      "earch/v1/clusters/{cluster_id}/opensearc" +
+      "h/node_groups:\001*\262\322*-\n\024AddNodeGroupMetada" +
+      "ta\022\025google.protobuf.Empty\022\211\002\n\031DeleteOpen" +
+      "SearchNodeGroup\022@.yandex.cloud.mdb.opens" +
+      "earch.v1.DeleteOpenSearchNodeGroupReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\206\001\202" +
+      "\323\344\223\002L*J/managed-opensearch/v1/clusters/{" +
+      "cluster_id}/opensearch/node_groups/{name" +
+      "}\262\322*0\n\027DeleteNodeGroupMetadata\022\025google.p" +
+      "rotobuf.Empty\022\214\002\n\031UpdateOpenSearchNodeGr" +
+      "oup\022@.yandex.cloud.mdb.opensearch.v1.Upd" +
+      "ateOpenSearchNodeGroupRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\211\001\202\323\344\223\002O2J/mana" +
+      "ged-opensearch/v1/clusters/{cluster_id}/" +
+      "opensearch/node_groups/{name}:\001*\262\322*0\n\027Up" +
+      "dateNodeGroupMetadata\022\025google.protobuf.E" +
+      "mpty\022\373\001\n\026AddDashboardsNodeGroup\022=.yandex" +
+      ".cloud.mdb.opensearch.v1.AddDashboardsNo" +
+      "deGroupRequest\032!.yandex.cloud.operation." +
+      "Operation\"\177\202\323\344\223\002H\"C/managed-opensearch/v" +
+      "1/clusters/{cluster_id}/dashboards/node_" +
+      "groups:\001*\262\322*-\n\024AddNodeGroupMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\211\002\n\031DeleteDashboardsN" +
+      "odeGroup\022@.yandex.cloud.mdb.opensearch.v" +
+      "1.DeleteDashboardsNodeGroupRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"\206\001\202\323\344\223\002L*J" +
+      "/managed-opensearch/v1/clusters/{cluster" +
+      "_id}/dashboards/node_groups/{name}\262\322*0\n\027" +
+      "DeleteNodeGroupMetadata\022\025google.protobuf" +
+      ".Empty\022\214\002\n\031UpdateDashboardsNodeGroup\022@.y" +
+      "andex.cloud.mdb.opensearch.v1.UpdateDash" +
       "boardsNodeGroupRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"\177\202\323\344\223\002H\"C/managed-open" +
-      "search/v1/clusters/{cluster_id}/dashboar" +
-      "ds/node_groups:\001*\262\322*-\n\024AddNodeGroupMetad" +
-      "ata\022\025google.protobuf.Empty\022\211\002\n\031DeleteDas" +
-      "hboardsNodeGroup\022@.yandex.cloud.mdb.open" +
-      "search.v1.DeleteDashboardsNodeGroupReque" +
-      "st\032!.yandex.cloud.operation.Operation\"\206\001" +
-      "\202\323\344\223\002L*J/managed-opensearch/v1/clusters/" +
-      "{cluster_id}/dashboards/node_groups/{nam" +
-      "e}\262\322*0\n\027DeleteNodeGroupMetadata\022\025google." +
-      "protobuf.Empty\022\214\002\n\031UpdateDashboardsNodeG" +
-      "roup\022@.yandex.cloud.mdb.opensearch.v1.Up" +
-      "dateDashboardsNodeGroupRequest\032!.yandex." +
-      "cloud.operation.Operation\"\211\001\202\323\344\223\002O2J/man" +
-      "aged-opensearch/v1/clusters/{cluster_id}" +
-      "/dashboards/node_groups/{name}:\001*\262\322*0\n\027U" +
-      "pdateNodeGroupMetadata\022\025google.protobuf." +
-      "Empty\022\262\001\n\017GetAuthSettings\0226.yandex.cloud" +
-      ".mdb.opensearch.v1.GetAuthSettingsReques" +
-      "t\032,.yandex.cloud.mdb.opensearch.v1.AuthS" +
-      "ettings\"9\202\323\344\223\0023\0221/managed-opensearch/v1/" +
-      "clusters/{cluster_id}/auth\022\336\001\n\022UpdateAut" +
-      "hSettings\0229.yandex.cloud.mdb.opensearch." +
-      "v1.UpdateAuthSettingsRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"j\202\323\344\223\0026\0321/manage",
-      "d-opensearch/v1/clusters/{cluster_id}/au" +
-      "th:\001*\262\322**\n\032UpdateAuthSettingsMetadata\022\014A" +
-      "uthSettings\022\350\001\n\021RestartOpenSearch\0228.yand" +
-      "ex.cloud.mdb.opensearch.v1.RestartOpenSe" +
-      "archRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"v\202\323\344\223\002:\"8/managed-opensearch/v1/c" +
-      "lusters/{cluster_id}/host/{host}\262\322*2\n\031Re" +
-      "startOpenSearchMetadata\022\025google.protobuf" +
-      ".Empty\022\336\001\n\014SwitchMaster\0223.yandex.cloud.m" +
-      "db.opensearch.v1.SwitchMasterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"v\202\323\344\223\002?\"" +
-      ":/managed-opensearch/v1/clusters/{cluste" +
-      "r_id}:switch_master:\001*\262\322*-\n\024SwitchMaster" +
-      "Metadata\022\025google.protobuf.EmptyBs\n\"yande" +
-      "x.cloud.api.mdb.opensearch.v1ZMgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "mdb/opensearch/v1;opensearchb\006proto3"
+      "eration.Operation\"\211\001\202\323\344\223\002O2J/managed-ope" +
+      "nsearch/v1/clusters/{cluster_id}/dashboa" +
+      "rds/node_groups/{name}:\001*\262\322*0\n\027UpdateNod",
+      "eGroupMetadata\022\025google.protobuf.Empty\022\262\001" +
+      "\n\017GetAuthSettings\0226.yandex.cloud.mdb.ope" +
+      "nsearch.v1.GetAuthSettingsRequest\032,.yand" +
+      "ex.cloud.mdb.opensearch.v1.AuthSettings\"" +
+      "9\202\323\344\223\0023\0221/managed-opensearch/v1/clusters" +
+      "/{cluster_id}/auth\022\336\001\n\022UpdateAuthSetting" +
+      "s\0229.yandex.cloud.mdb.opensearch.v1.Updat" +
+      "eAuthSettingsRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"j\202\323\344\223\0026\0321/managed-opense" +
+      "arch/v1/clusters/{cluster_id}/auth:\001*\262\322*" +
+      "*\n\032UpdateAuthSettingsMetadata\022\014AuthSetti" +
+      "ngs\022\350\001\n\021RestartOpenSearch\0228.yandex.cloud" +
+      ".mdb.opensearch.v1.RestartOpenSearchRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"v" +
+      "\202\323\344\223\002:\"8/managed-opensearch/v1/clusters/" +
+      "{cluster_id}/host/{host}\262\322*2\n\031RestartOpe" +
+      "nSearchMetadata\022\025google.protobuf.Empty\022\336" +
+      "\001\n\014SwitchMaster\0223.yandex.cloud.mdb.opens" +
+      "earch.v1.SwitchMasterRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"v\202\323\344\223\002?\":/manage" +
+      "d-opensearch/v1/clusters/{cluster_id}:sw" +
+      "itch_master:\001*\262\322*-\n\024SwitchMasterMetadata" +
+      "\022\025google.protobuf.EmptyBs\n\"yandex.cloud." +
+      "api.mdb.opensearch.v1ZMgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/mdb/open" +
+      "search/v1;opensearchb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -69703,7 +70764,9 @@ public final class ClusterServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.opensearch.v1.Auth.getDescriptor(),
           yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.getDescriptor(),
@@ -69735,7 +70798,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "NetworkId", "SecurityGroupIds", "ServiceAccountId", "DeletionProtection", "MaintenanceWindow", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "NetworkId", "SecurityGroupIds", "ServiceAccountId", "DeletionProtection", "MaintenanceWindow", "DiskEncryptionKeyId", });
     internal_static_yandex_cloud_mdb_opensearch_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_opensearch_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_opensearch_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -69747,7 +70810,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_CreateClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_CreateClusterMetadata_descriptor,
-        new java.lang.String[] { "ClusterId", });
+        new java.lang.String[] { "ClusterId", "OperationLog", });
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateClusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateClusterRequest_fieldAccessorTable = new
@@ -69765,7 +70828,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_UpdateClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_UpdateClusterMetadata_descriptor,
-        new java.lang.String[] { "ClusterId", });
+        new java.lang.String[] { "ClusterId", "OperationLog", });
     internal_static_yandex_cloud_mdb_opensearch_v1_DeleteClusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_opensearch_v1_DeleteClusterRequest_fieldAccessorTable = new
@@ -69957,7 +71020,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterRequest_descriptor,
-        new java.lang.String[] { "BackupId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "NetworkId", "SecurityGroupIds", "ServiceAccountId", "DeletionProtection", "FolderId", "MaintenanceWindow", });
+        new java.lang.String[] { "BackupId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "NetworkId", "SecurityGroupIds", "ServiceAccountId", "DeletionProtection", "FolderId", "MaintenanceWindow", "DiskEncryptionKeyId", });
     internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_opensearch_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -70117,7 +71180,9 @@ public final class ClusterServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.mdb.operationlog.v1.OperationLogOuterClass.getDescriptor();
     yandex.cloud.api.mdb.opensearch.v1.Auth.getDescriptor();
     yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.getDescriptor();
     yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.getDescriptor();

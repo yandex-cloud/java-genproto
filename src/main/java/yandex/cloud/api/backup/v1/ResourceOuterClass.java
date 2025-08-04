@@ -1123,6 +1123,795 @@ public final class ResourceOuterClass {
 
   }
 
+  public interface AgentInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.AgentInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string current_version = 1;</code>
+     * @return The currentVersion.
+     */
+    java.lang.String getCurrentVersion();
+    /**
+     * <code>string current_version = 1;</code>
+     * @return The bytes for currentVersion.
+     */
+    com.google.protobuf.ByteString
+        getCurrentVersionBytes();
+
+    /**
+     * <code>string latest_version = 2;</code>
+     * @return The latestVersion.
+     */
+    java.lang.String getLatestVersion();
+    /**
+     * <code>string latest_version = 2;</code>
+     * @return The bytes for latestVersion.
+     */
+    com.google.protobuf.ByteString
+        getLatestVersionBytes();
+
+    /**
+     * <code>bool can_update = 3;</code>
+     * @return The canUpdate.
+     */
+    boolean getCanUpdate();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.backup.v1.AgentInfo}
+   */
+  public static final class AgentInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.AgentInfo)
+      AgentInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AgentInfo.newBuilder() to construct.
+    private AgentInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AgentInfo() {
+      currentVersion_ = "";
+      latestVersion_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AgentInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AgentInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              currentVersion_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              latestVersion_ = s;
+              break;
+            }
+            case 24: {
+
+              canUpdate_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.ResourceOuterClass.internal_static_yandex_cloud_backup_v1_AgentInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.backup.v1.ResourceOuterClass.internal_static_yandex_cloud_backup_v1_AgentInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.class, yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.Builder.class);
+    }
+
+    public static final int CURRENT_VERSION_FIELD_NUMBER = 1;
+    private volatile java.lang.Object currentVersion_;
+    /**
+     * <code>string current_version = 1;</code>
+     * @return The currentVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getCurrentVersion() {
+      java.lang.Object ref = currentVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        currentVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string current_version = 1;</code>
+     * @return The bytes for currentVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCurrentVersionBytes() {
+      java.lang.Object ref = currentVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        currentVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LATEST_VERSION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object latestVersion_;
+    /**
+     * <code>string latest_version = 2;</code>
+     * @return The latestVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getLatestVersion() {
+      java.lang.Object ref = latestVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        latestVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string latest_version = 2;</code>
+     * @return The bytes for latestVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLatestVersionBytes() {
+      java.lang.Object ref = latestVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        latestVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CAN_UPDATE_FIELD_NUMBER = 3;
+    private boolean canUpdate_;
+    /**
+     * <code>bool can_update = 3;</code>
+     * @return The canUpdate.
+     */
+    @java.lang.Override
+    public boolean getCanUpdate() {
+      return canUpdate_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, currentVersion_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, latestVersion_);
+      }
+      if (canUpdate_ != false) {
+        output.writeBool(3, canUpdate_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, currentVersion_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, latestVersion_);
+      }
+      if (canUpdate_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, canUpdate_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo other = (yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo) obj;
+
+      if (!getCurrentVersion()
+          .equals(other.getCurrentVersion())) return false;
+      if (!getLatestVersion()
+          .equals(other.getLatestVersion())) return false;
+      if (getCanUpdate()
+          != other.getCanUpdate()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CURRENT_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrentVersion().hashCode();
+      hash = (37 * hash) + LATEST_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getLatestVersion().hashCode();
+      hash = (37 * hash) + CAN_UPDATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getCanUpdate());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.AgentInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.AgentInfo)
+        yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.ResourceOuterClass.internal_static_yandex_cloud_backup_v1_AgentInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.ResourceOuterClass.internal_static_yandex_cloud_backup_v1_AgentInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.class, yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        currentVersion_ = "";
+
+        latestVersion_ = "";
+
+        canUpdate_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.backup.v1.ResourceOuterClass.internal_static_yandex_cloud_backup_v1_AgentInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo getDefaultInstanceForType() {
+        return yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo build() {
+        yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo buildPartial() {
+        yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo result = new yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo(this);
+        result.currentVersion_ = currentVersion_;
+        result.latestVersion_ = latestVersion_;
+        result.canUpdate_ = canUpdate_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo) {
+          return mergeFrom((yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo other) {
+        if (other == yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.getDefaultInstance()) return this;
+        if (!other.getCurrentVersion().isEmpty()) {
+          currentVersion_ = other.currentVersion_;
+          onChanged();
+        }
+        if (!other.getLatestVersion().isEmpty()) {
+          latestVersion_ = other.latestVersion_;
+          onChanged();
+        }
+        if (other.getCanUpdate() != false) {
+          setCanUpdate(other.getCanUpdate());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object currentVersion_ = "";
+      /**
+       * <code>string current_version = 1;</code>
+       * @return The currentVersion.
+       */
+      public java.lang.String getCurrentVersion() {
+        java.lang.Object ref = currentVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          currentVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string current_version = 1;</code>
+       * @return The bytes for currentVersion.
+       */
+      public com.google.protobuf.ByteString
+          getCurrentVersionBytes() {
+        java.lang.Object ref = currentVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          currentVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string current_version = 1;</code>
+       * @param value The currentVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        currentVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string current_version = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentVersion() {
+        
+        currentVersion_ = getDefaultInstance().getCurrentVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string current_version = 1;</code>
+       * @param value The bytes for currentVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        currentVersion_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object latestVersion_ = "";
+      /**
+       * <code>string latest_version = 2;</code>
+       * @return The latestVersion.
+       */
+      public java.lang.String getLatestVersion() {
+        java.lang.Object ref = latestVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          latestVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string latest_version = 2;</code>
+       * @return The bytes for latestVersion.
+       */
+      public com.google.protobuf.ByteString
+          getLatestVersionBytes() {
+        java.lang.Object ref = latestVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          latestVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string latest_version = 2;</code>
+       * @param value The latestVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        latestVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string latest_version = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatestVersion() {
+        
+        latestVersion_ = getDefaultInstance().getLatestVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string latest_version = 2;</code>
+       * @param value The bytes for latestVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        latestVersion_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean canUpdate_ ;
+      /**
+       * <code>bool can_update = 3;</code>
+       * @return The canUpdate.
+       */
+      @java.lang.Override
+      public boolean getCanUpdate() {
+        return canUpdate_;
+      }
+      /**
+       * <code>bool can_update = 3;</code>
+       * @param value The canUpdate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCanUpdate(boolean value) {
+        
+        canUpdate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool can_update = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCanUpdate() {
+        
+        canUpdate_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.AgentInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.AgentInfo)
+    private static final yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo();
+    }
+
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AgentInfo>
+        PARSER = new com.google.protobuf.AbstractParser<AgentInfo>() {
+      @java.lang.Override
+      public AgentInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AgentInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AgentInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AgentInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ResourceOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.Resource)
       com.google.protobuf.MessageOrBuilder {
@@ -1365,7 +2154,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * Additional info abount tenant which resource belongs to
+     * Additional info about tenant which resource belongs to
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -1374,7 +2163,7 @@ public final class ResourceOuterClass {
     boolean hasTenantInfo();
     /**
      * <pre>
-     * Additional info abount tenant which resource belongs to
+     * Additional info about tenant which resource belongs to
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -1383,12 +2172,39 @@ public final class ResourceOuterClass {
     yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo getTenantInfo();
     /**
      * <pre>
-     * Additional info abount tenant which resource belongs to
+     * Additional info about tenant which resource belongs to
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfoOrBuilder getTenantInfoOrBuilder();
+
+    /**
+     * <pre>
+     * Additional Info about agent version
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+     * @return Whether the agentInfo field is set.
+     */
+    boolean hasAgentInfo();
+    /**
+     * <pre>
+     * Additional Info about agent version
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+     * @return The agentInfo.
+     */
+    yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo getAgentInfo();
+    /**
+     * <pre>
+     * Additional Info about agent version
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+     */
+    yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfoOrBuilder getAgentInfoOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.Resource}
@@ -1569,6 +2385,19 @@ public final class ResourceOuterClass {
 
               break;
             }
+            case 146: {
+              yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.Builder subBuilder = null;
+              if (agentInfo_ != null) {
+                subBuilder = agentInfo_.toBuilder();
+              }
+              agentInfo_ = input.readMessage(yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(agentInfo_);
+                agentInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1636,7 +2465,7 @@ public final class ResourceOuterClass {
       RECOVERING(3),
       /**
        * <pre>
-       * Compute Cloud instance is in failure state, check content of 
+       * Compute Cloud instance is in failure state, check content of
        * `status_details` field for more information.
        * </pre>
        *
@@ -1685,7 +2514,7 @@ public final class ResourceOuterClass {
       public static final int RECOVERING_VALUE = 3;
       /**
        * <pre>
-       * Compute Cloud instance is in failure state, check content of 
+       * Compute Cloud instance is in failure state, check content of
        * `status_details` field for more information.
        * </pre>
        *
@@ -2388,7 +3217,7 @@ public final class ResourceOuterClass {
     private yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo tenantInfo_;
     /**
      * <pre>
-     * Additional info abount tenant which resource belongs to
+     * Additional info about tenant which resource belongs to
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -2400,7 +3229,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Additional info abount tenant which resource belongs to
+     * Additional info about tenant which resource belongs to
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -2412,7 +3241,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Additional info abount tenant which resource belongs to
+     * Additional info about tenant which resource belongs to
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -2420,6 +3249,44 @@ public final class ResourceOuterClass {
     @java.lang.Override
     public yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfoOrBuilder getTenantInfoOrBuilder() {
       return getTenantInfo();
+    }
+
+    public static final int AGENT_INFO_FIELD_NUMBER = 18;
+    private yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo agentInfo_;
+    /**
+     * <pre>
+     * Additional Info about agent version
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+     * @return Whether the agentInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasAgentInfo() {
+      return agentInfo_ != null;
+    }
+    /**
+     * <pre>
+     * Additional Info about agent version
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+     * @return The agentInfo.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo getAgentInfo() {
+      return agentInfo_ == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.getDefaultInstance() : agentInfo_;
+    }
+    /**
+     * <pre>
+     * Additional Info about agent version
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfoOrBuilder getAgentInfoOrBuilder() {
+      return getAgentInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2483,6 +3350,9 @@ public final class ResourceOuterClass {
       }
       if (tenantInfo_ != null) {
         output.writeMessage(16, getTenantInfo());
+      }
+      if (agentInfo_ != null) {
+        output.writeMessage(18, getAgentInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -2553,6 +3423,10 @@ public final class ResourceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getTenantInfo());
       }
+      if (agentInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getAgentInfo());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2612,6 +3486,11 @@ public final class ResourceOuterClass {
         if (!getTenantInfo()
             .equals(other.getTenantInfo())) return false;
       }
+      if (hasAgentInfo() != other.hasAgentInfo()) return false;
+      if (hasAgentInfo()) {
+        if (!getAgentInfo()
+            .equals(other.getAgentInfo())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2668,6 +3547,10 @@ public final class ResourceOuterClass {
       if (hasTenantInfo()) {
         hash = (37 * hash) + TENANT_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getTenantInfo().hashCode();
+      }
+      if (hasAgentInfo()) {
+        hash = (37 * hash) + AGENT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentInfo().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2854,6 +3737,12 @@ public final class ResourceOuterClass {
           tenantInfo_ = null;
           tenantInfoBuilder_ = null;
         }
+        if (agentInfoBuilder_ == null) {
+          agentInfo_ = null;
+        } else {
+          agentInfo_ = null;
+          agentInfoBuilder_ = null;
+        }
         return this;
       }
 
@@ -2915,6 +3804,11 @@ public final class ResourceOuterClass {
           result.tenantInfo_ = tenantInfo_;
         } else {
           result.tenantInfo_ = tenantInfoBuilder_.build();
+        }
+        if (agentInfoBuilder_ == null) {
+          result.agentInfo_ = agentInfo_;
+        } else {
+          result.agentInfo_ = agentInfoBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3015,6 +3909,9 @@ public final class ResourceOuterClass {
         }
         if (other.hasTenantInfo()) {
           mergeTenantInfo(other.getTenantInfo());
+        }
+        if (other.hasAgentInfo()) {
+          mergeAgentInfo(other.getAgentInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4303,7 +5200,7 @@ public final class ResourceOuterClass {
           yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo, yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.Builder, yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfoOrBuilder> tenantInfoBuilder_;
       /**
        * <pre>
-       * Additional info abount tenant which resource belongs to
+       * Additional info about tenant which resource belongs to
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -4314,7 +5211,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Additional info abount tenant which resource belongs to
+       * Additional info about tenant which resource belongs to
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -4329,7 +5226,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Additional info abount tenant which resource belongs to
+       * Additional info about tenant which resource belongs to
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -4349,7 +5246,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Additional info abount tenant which resource belongs to
+       * Additional info about tenant which resource belongs to
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -4367,7 +5264,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Additional info abount tenant which resource belongs to
+       * Additional info about tenant which resource belongs to
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -4389,7 +5286,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Additional info abount tenant which resource belongs to
+       * Additional info about tenant which resource belongs to
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -4407,7 +5304,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Additional info abount tenant which resource belongs to
+       * Additional info about tenant which resource belongs to
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -4419,7 +5316,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Additional info abount tenant which resource belongs to
+       * Additional info about tenant which resource belongs to
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -4434,7 +5331,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Additional info abount tenant which resource belongs to
+       * Additional info about tenant which resource belongs to
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
@@ -4451,6 +5348,161 @@ public final class ResourceOuterClass {
           tenantInfo_ = null;
         }
         return tenantInfoBuilder_;
+      }
+
+      private yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo agentInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo, yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.Builder, yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfoOrBuilder> agentInfoBuilder_;
+      /**
+       * <pre>
+       * Additional Info about agent version
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+       * @return Whether the agentInfo field is set.
+       */
+      public boolean hasAgentInfo() {
+        return agentInfoBuilder_ != null || agentInfo_ != null;
+      }
+      /**
+       * <pre>
+       * Additional Info about agent version
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+       * @return The agentInfo.
+       */
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo getAgentInfo() {
+        if (agentInfoBuilder_ == null) {
+          return agentInfo_ == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.getDefaultInstance() : agentInfo_;
+        } else {
+          return agentInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Additional Info about agent version
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+       */
+      public Builder setAgentInfo(yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo value) {
+        if (agentInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          agentInfo_ = value;
+          onChanged();
+        } else {
+          agentInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional Info about agent version
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+       */
+      public Builder setAgentInfo(
+          yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.Builder builderForValue) {
+        if (agentInfoBuilder_ == null) {
+          agentInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          agentInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional Info about agent version
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+       */
+      public Builder mergeAgentInfo(yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo value) {
+        if (agentInfoBuilder_ == null) {
+          if (agentInfo_ != null) {
+            agentInfo_ =
+              yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.newBuilder(agentInfo_).mergeFrom(value).buildPartial();
+          } else {
+            agentInfo_ = value;
+          }
+          onChanged();
+        } else {
+          agentInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional Info about agent version
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+       */
+      public Builder clearAgentInfo() {
+        if (agentInfoBuilder_ == null) {
+          agentInfo_ = null;
+          onChanged();
+        } else {
+          agentInfo_ = null;
+          agentInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional Info about agent version
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+       */
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.Builder getAgentInfoBuilder() {
+        
+        onChanged();
+        return getAgentInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Additional Info about agent version
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+       */
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfoOrBuilder getAgentInfoOrBuilder() {
+        if (agentInfoBuilder_ != null) {
+          return agentInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return agentInfo_ == null ?
+              yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.getDefaultInstance() : agentInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * Additional Info about agent version
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.AgentInfo agent_info = 18;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo, yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.Builder, yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfoOrBuilder> 
+          getAgentInfoFieldBuilder() {
+        if (agentInfoBuilder_ == null) {
+          agentInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo, yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfo.Builder, yandex.cloud.api.backup.v1.ResourceOuterClass.AgentInfoOrBuilder>(
+                  getAgentInfo(),
+                  getParentForChildren(),
+                  isClean());
+          agentInfo_ = null;
+        }
+        return agentInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8187,6 +9239,11 @@ public final class ResourceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_backup_v1_TenantInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_AgentInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_AgentInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_backup_v1_Resource_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8214,54 +9271,57 @@ public final class ResourceOuterClass {
       "\026yandex.cloud.backup.v1\032\037google/protobuf" +
       "/timestamp.proto\"L\n\nTenantInfo\022\021\n\tfolder" +
       "_id\030\001 \001(\t\022\032\n\022personal_tenant_id\030\002 \001(\t\022\017\n" +
-      "\007user_id\030\003 \001(\t\"\272\006\n\010Resource\022\033\n\023compute_i" +
-      "nstance_id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022.\n\nupdated_at\030\003" +
-      " \001(\0132\032.google.protobuf.Timestamp\022\016\n\006onli" +
-      "ne\030\004 \001(\010\022\017\n\007enabled\030\005 \001(\010\0227\n\006status\030\006 \001(" +
-      "\0162\'.yandex.cloud.backup.v1.Resource.Stat" +
-      "us\022\026\n\016status_details\030\007 \001(\t\022\027\n\017status_pro" +
-      "gress\030\010 \001(\003\0224\n\020last_backup_time\030\t \001(\0132\032." +
-      "google.protobuf.Timestamp\0224\n\020next_backup" +
-      "_time\030\n \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\023\n\013resource_id\030\013 \001(\t\022\021\n\tis_active\030\014 \001(\010\022" +
-      "@\n\013init_status\030\r \001(\0162+.yandex.cloud.back" +
-      "up.v1.Resource.InitStatus\022\020\n\010metadata\030\016 " +
-      "\001(\t\0222\n\004type\030\017 \001(\0162$.yandex.cloud.backup." +
-      "v1.ResourceType\0227\n\013tenant_info\030\020 \001(\0132\".y" +
-      "andex.cloud.backup.v1.TenantInfo\"`\n\006Stat" +
-      "us\022\026\n\022STATUS_UNSPECIFIED\020\000\022\010\n\004IDLE\020\001\022\r\n\t" +
-      "BACKUPING\020\002\022\016\n\nRECOVERING\020\003\022\n\n\006FAILED\020\004\022" +
-      "\t\n\005OTHER\020\005\"o\n\nInitStatus\022\033\n\027INIT_STATUS_" +
-      "UNSPECIFIED\020\000\022\017\n\013REGISTERING\020\001\022\r\n\tREGIST" +
-      "RED\020\002\022\027\n\023FAILED_REGISTRATION\020\003\022\013\n\007DELETE" +
-      "D\020\004\"*\n\010Progress\022\017\n\007current\030\001 \001(\003\022\r\n\005tota" +
-      "l\030\002 \001(\003\"\267\006\n\004Task\022\n\n\002id\030\001 \001(\003\022\023\n\013cancella" +
-      "ble\030\002 \001(\010\022\021\n\tpolicy_id\030\003 \001(\t\022/\n\004type\030\004 \001" +
-      "(\0162!.yandex.cloud.backup.v1.Task.Type\0222\n" +
-      "\010progress\030\005 \001(\0132 .yandex.cloud.backup.v1" +
-      ".Progress\0223\n\006status\030\006 \001(\0162#.yandex.cloud" +
-      ".backup.v1.Task.Status\022/\n\013enqueued_at\030\007 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022.\n\nstart" +
-      "ed_at\030\010 \001(\0132\032.google.protobuf.Timestamp\022" +
-      ".\n\nupdated_at\030\t \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\0220\n\014completed_at\030\n \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022\033\n\023compute_instance_id" +
-      "\030\013 \001(\t\0226\n\013result_code\030\014 \001(\0162!.yandex.clo" +
-      "ud.backup.v1.Task.Code\022\r\n\005error\030\r \001(\t\"j\n" +
-      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006BACKUP\020\001\022" +
-      "\r\n\tRETENTION\020\002\022\014\n\010RECOVERY\020\003\022\020\n\014APPLY_PO" +
-      "LICY\020\004\022\021\n\rREVOKE_POLICY\020\005\"d\n\006Status\022\026\n\022S" +
-      "TATUS_UNSPECIFIED\020\000\022\014\n\010ENQUEUED\020\001\022\014\n\010ASS" +
-      "IGNED\020\002\022\013\n\007STARTED\020\003\022\n\n\006PAUSED\020\004\022\r\n\tCOMP" +
-      "LETED\020\005\"h\n\004Code\022\024\n\020CODE_UNSPECIFIED\020\000\022\006\n" +
-      "\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007WARNING\020\003\022\r\n\tCANCELL" +
-      "ED\020\004\022\r\n\tABANDONED\020\005\022\014\n\010TIMEDOUT\020\006*C\n\014Res" +
-      "ourceType\022\035\n\031RESOURCE_TYPE_UNSPECIFIED\020\000" +
-      "\022\013\n\007COMPUTE\020\001\022\007\n\003BMS\020\002B_\n\032yandex.cloud.a" +
-      "pi.backup.v1ZAgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/backup/v1;backupb" +
-      "\006proto3"
+      "\007user_id\030\003 \001(\t\"P\n\tAgentInfo\022\027\n\017current_v" +
+      "ersion\030\001 \001(\t\022\026\n\016latest_version\030\002 \001(\t\022\022\n\n" +
+      "can_update\030\003 \001(\010\"\367\006\n\010Resource\022\033\n\023compute" +
+      "_instance_id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022.\n\nupdated_at" +
+      "\030\003 \001(\0132\032.google.protobuf.Timestamp\022\016\n\006on" +
+      "line\030\004 \001(\010\022\017\n\007enabled\030\005 \001(\010\0227\n\006status\030\006 " +
+      "\001(\0162\'.yandex.cloud.backup.v1.Resource.St" +
+      "atus\022\026\n\016status_details\030\007 \001(\t\022\027\n\017status_p" +
+      "rogress\030\010 \001(\003\0224\n\020last_backup_time\030\t \001(\0132" +
+      "\032.google.protobuf.Timestamp\0224\n\020next_back" +
+      "up_time\030\n \001(\0132\032.google.protobuf.Timestam" +
+      "p\022\023\n\013resource_id\030\013 \001(\t\022\021\n\tis_active\030\014 \001(" +
+      "\010\022@\n\013init_status\030\r \001(\0162+.yandex.cloud.ba" +
+      "ckup.v1.Resource.InitStatus\022\020\n\010metadata\030" +
+      "\016 \001(\t\0222\n\004type\030\017 \001(\0162$.yandex.cloud.backu" +
+      "p.v1.ResourceType\0227\n\013tenant_info\030\020 \001(\0132\"" +
+      ".yandex.cloud.backup.v1.TenantInfo\0225\n\nag" +
+      "ent_info\030\022 \001(\0132!.yandex.cloud.backup.v1." +
+      "AgentInfo\"`\n\006Status\022\026\n\022STATUS_UNSPECIFIE" +
+      "D\020\000\022\010\n\004IDLE\020\001\022\r\n\tBACKUPING\020\002\022\016\n\nRECOVERI" +
+      "NG\020\003\022\n\n\006FAILED\020\004\022\t\n\005OTHER\020\005\"o\n\nInitStatu" +
+      "s\022\033\n\027INIT_STATUS_UNSPECIFIED\020\000\022\017\n\013REGIST" +
+      "ERING\020\001\022\r\n\tREGISTRED\020\002\022\027\n\023FAILED_REGISTR" +
+      "ATION\020\003\022\013\n\007DELETED\020\004J\004\010\021\020\022\"*\n\010Progress\022\017" +
+      "\n\007current\030\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\267\006\n\004Task\022" +
+      "\n\n\002id\030\001 \001(\003\022\023\n\013cancellable\030\002 \001(\010\022\021\n\tpoli" +
+      "cy_id\030\003 \001(\t\022/\n\004type\030\004 \001(\0162!.yandex.cloud" +
+      ".backup.v1.Task.Type\0222\n\010progress\030\005 \001(\0132 " +
+      ".yandex.cloud.backup.v1.Progress\0223\n\006stat" +
+      "us\030\006 \001(\0162#.yandex.cloud.backup.v1.Task.S" +
+      "tatus\022/\n\013enqueued_at\030\007 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022.\n\nstarted_at\030\010 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022.\n\nupdated_at\030\t \001" +
+      "(\0132\032.google.protobuf.Timestamp\0220\n\014comple" +
+      "ted_at\030\n \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\033\n\023compute_instance_id\030\013 \001(\t\0226\n\013result_" +
+      "code\030\014 \001(\0162!.yandex.cloud.backup.v1.Task" +
+      ".Code\022\r\n\005error\030\r \001(\t\"j\n\004Type\022\024\n\020TYPE_UNS" +
+      "PECIFIED\020\000\022\n\n\006BACKUP\020\001\022\r\n\tRETENTION\020\002\022\014\n" +
+      "\010RECOVERY\020\003\022\020\n\014APPLY_POLICY\020\004\022\021\n\rREVOKE_" +
+      "POLICY\020\005\"d\n\006Status\022\026\n\022STATUS_UNSPECIFIED" +
+      "\020\000\022\014\n\010ENQUEUED\020\001\022\014\n\010ASSIGNED\020\002\022\013\n\007STARTE" +
+      "D\020\003\022\n\n\006PAUSED\020\004\022\r\n\tCOMPLETED\020\005\"h\n\004Code\022\024" +
+      "\n\020CODE_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022" +
+      "\013\n\007WARNING\020\003\022\r\n\tCANCELLED\020\004\022\r\n\tABANDONED" +
+      "\020\005\022\014\n\010TIMEDOUT\020\006*C\n\014ResourceType\022\035\n\031RESO" +
+      "URCE_TYPE_UNSPECIFIED\020\000\022\013\n\007COMPUTE\020\001\022\007\n\003" +
+      "BMS\020\002B_\n\032yandex.cloud.api.backup.v1ZAgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/backup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8274,20 +9334,26 @@ public final class ResourceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_TenantInfo_descriptor,
         new java.lang.String[] { "FolderId", "PersonalTenantId", "UserId", });
-    internal_static_yandex_cloud_backup_v1_Resource_descriptor =
+    internal_static_yandex_cloud_backup_v1_AgentInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_backup_v1_AgentInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_AgentInfo_descriptor,
+        new java.lang.String[] { "CurrentVersion", "LatestVersion", "CanUpdate", });
+    internal_static_yandex_cloud_backup_v1_Resource_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_backup_v1_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_Resource_descriptor,
-        new java.lang.String[] { "ComputeInstanceId", "CreatedAt", "UpdatedAt", "Online", "Enabled", "Status", "StatusDetails", "StatusProgress", "LastBackupTime", "NextBackupTime", "ResourceId", "IsActive", "InitStatus", "Metadata", "Type", "TenantInfo", });
+        new java.lang.String[] { "ComputeInstanceId", "CreatedAt", "UpdatedAt", "Online", "Enabled", "Status", "StatusDetails", "StatusProgress", "LastBackupTime", "NextBackupTime", "ResourceId", "IsActive", "InitStatus", "Metadata", "Type", "TenantInfo", "AgentInfo", });
     internal_static_yandex_cloud_backup_v1_Progress_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_backup_v1_Progress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_Progress_descriptor,
         new java.lang.String[] { "Current", "Total", });
     internal_static_yandex_cloud_backup_v1_Task_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_backup_v1_Task_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_Task_descriptor,

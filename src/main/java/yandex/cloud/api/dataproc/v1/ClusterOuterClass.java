@@ -490,6 +490,26 @@ public final class ClusterOuterClass {
      * @return The environment.
      */
     yandex.cloud.api.dataproc.v1.ClusterOuterClass.Cluster.Environment getEnvironment();
+
+    /**
+     * <pre>
+     * ID of service account for working with the Instance Groups service.
+     * </pre>
+     *
+     * <code>string autoscaling_service_account_id = 20;</code>
+     * @return The autoscalingServiceAccountId.
+     */
+    java.lang.String getAutoscalingServiceAccountId();
+    /**
+     * <pre>
+     * ID of service account for working with the Instance Groups service.
+     * </pre>
+     *
+     * <code>string autoscaling_service_account_id = 20;</code>
+     * @return The bytes for autoscalingServiceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getAutoscalingServiceAccountIdBytes();
   }
   /**
    * <pre>
@@ -522,6 +542,7 @@ public final class ClusterOuterClass {
       hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       logGroupId_ = "";
       environment_ = 0;
+      autoscalingServiceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -695,6 +716,12 @@ public final class ClusterOuterClass {
               int rawValue = input.readEnum();
 
               environment_ = rawValue;
+              break;
+            }
+            case 162: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              autoscalingServiceAccountId_ = s;
               break;
             }
             default: {
@@ -1892,6 +1919,52 @@ public final class ClusterOuterClass {
       return result == null ? yandex.cloud.api.dataproc.v1.ClusterOuterClass.Cluster.Environment.UNRECOGNIZED : result;
     }
 
+    public static final int AUTOSCALING_SERVICE_ACCOUNT_ID_FIELD_NUMBER = 20;
+    private volatile java.lang.Object autoscalingServiceAccountId_;
+    /**
+     * <pre>
+     * ID of service account for working with the Instance Groups service.
+     * </pre>
+     *
+     * <code>string autoscaling_service_account_id = 20;</code>
+     * @return The autoscalingServiceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getAutoscalingServiceAccountId() {
+      java.lang.Object ref = autoscalingServiceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        autoscalingServiceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of service account for working with the Instance Groups service.
+     * </pre>
+     *
+     * <code>string autoscaling_service_account_id = 20;</code>
+     * @return The bytes for autoscalingServiceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAutoscalingServiceAccountIdBytes() {
+      java.lang.Object ref = autoscalingServiceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        autoscalingServiceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1965,6 +2038,9 @@ public final class ClusterOuterClass {
       }
       if (environment_ != yandex.cloud.api.dataproc.v1.ClusterOuterClass.Cluster.Environment.ENVIRONMENT_UNSPECIFIED.getNumber()) {
         output.writeEnum(19, environment_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(autoscalingServiceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, autoscalingServiceAccountId_);
       }
       unknownFields.writeTo(output);
     }
@@ -2057,6 +2133,9 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(19, environment_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(autoscalingServiceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, autoscalingServiceAccountId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2113,6 +2192,8 @@ public final class ClusterOuterClass {
       if (!getLogGroupId()
           .equals(other.getLogGroupId())) return false;
       if (environment_ != other.environment_) return false;
+      if (!getAutoscalingServiceAccountId()
+          .equals(other.getAutoscalingServiceAccountId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2176,6 +2257,8 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + getLogGroupId().hashCode();
       hash = (37 * hash) + ENVIRONMENT_FIELD_NUMBER;
       hash = (53 * hash) + environment_;
+      hash = (37 * hash) + AUTOSCALING_SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAutoscalingServiceAccountId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2385,6 +2468,8 @@ public final class ClusterOuterClass {
 
         environment_ = 0;
 
+        autoscalingServiceAccountId_ = "";
+
         return this;
       }
 
@@ -2456,6 +2541,7 @@ public final class ClusterOuterClass {
         result.deletionProtection_ = deletionProtection_;
         result.logGroupId_ = logGroupId_;
         result.environment_ = environment_;
+        result.autoscalingServiceAccountId_ = autoscalingServiceAccountId_;
         onBuilt();
         return result;
       }
@@ -2604,6 +2690,10 @@ public final class ClusterOuterClass {
         }
         if (other.environment_ != 0) {
           setEnvironmentValue(other.getEnvironmentValue());
+        }
+        if (!other.getAutoscalingServiceAccountId().isEmpty()) {
+          autoscalingServiceAccountId_ = other.autoscalingServiceAccountId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4785,6 +4875,102 @@ public final class ClusterOuterClass {
       public Builder clearEnvironment() {
         
         environment_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object autoscalingServiceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of service account for working with the Instance Groups service.
+       * </pre>
+       *
+       * <code>string autoscaling_service_account_id = 20;</code>
+       * @return The autoscalingServiceAccountId.
+       */
+      public java.lang.String getAutoscalingServiceAccountId() {
+        java.lang.Object ref = autoscalingServiceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          autoscalingServiceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of service account for working with the Instance Groups service.
+       * </pre>
+       *
+       * <code>string autoscaling_service_account_id = 20;</code>
+       * @return The bytes for autoscalingServiceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getAutoscalingServiceAccountIdBytes() {
+        java.lang.Object ref = autoscalingServiceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          autoscalingServiceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of service account for working with the Instance Groups service.
+       * </pre>
+       *
+       * <code>string autoscaling_service_account_id = 20;</code>
+       * @param value The autoscalingServiceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAutoscalingServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        autoscalingServiceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of service account for working with the Instance Groups service.
+       * </pre>
+       *
+       * <code>string autoscaling_service_account_id = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAutoscalingServiceAccountId() {
+        
+        autoscalingServiceAccountId_ = getDefaultInstance().getAutoscalingServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of service account for working with the Instance Groups service.
+       * </pre>
+       *
+       * <code>string autoscaling_service_account_id = 20;</code>
+       * @param value The bytes for autoscalingServiceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAutoscalingServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        autoscalingServiceAccountId_ = value;
         onChanged();
         return this;
       }
@@ -10055,7 +10241,7 @@ public final class ClusterOuterClass {
       "\022\030yandex.cloud.dataproc.v1\032\037google/proto" +
       "buf/timestamp.proto\032%yandex/cloud/datapr" +
       "oc/v1/common.proto\032\035yandex/cloud/validat" +
-      "ion.proto\"\231\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
+      "ion.proto\"\301\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
       "der_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.googl" +
       "e.protobuf.Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\004" +
       "1-63\022\036\n\013description\030\005 \001(\tB\t\212\3101\0050-256\022G\n\006" +
@@ -10072,7 +10258,8 @@ public final class ClusterOuterClass {
       "\026\n\016host_group_ids\030\020 \003(\t\022\033\n\023deletion_prot" +
       "ection\030\021 \001(\010\022\024\n\014log_group_id\030\022 \001(\t\022B\n\013en" +
       "vironment\030\023 \001(\0162-.yandex.cloud.dataproc." +
-      "v1.Cluster.Environment\032-\n\013LabelsEntry\022\013\n" +
+      "v1.Cluster.Environment\022&\n\036autoscaling_se" +
+      "rvice_account_id\030\024 \001(\t\032-\n\013LabelsEntry\022\013\n" +
       "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"k\n\006Status\022" +
       "\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUN" +
       "NING\020\002\022\t\n\005ERROR\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPP" +
@@ -10113,7 +10300,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_dataproc_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Monitoring", "Config", "Health", "Status", "ZoneId", "ServiceAccountId", "Bucket", "UiProxy", "SecurityGroupIds", "HostGroupIds", "DeletionProtection", "LogGroupId", "Environment", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Monitoring", "Config", "Health", "Status", "ZoneId", "ServiceAccountId", "Bucket", "UiProxy", "SecurityGroupIds", "HostGroupIds", "DeletionProtection", "LogGroupId", "Environment", "AutoscalingServiceAccountId", });
     internal_static_yandex_cloud_dataproc_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_dataproc_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_Cluster_LabelsEntry_fieldAccessorTable = new

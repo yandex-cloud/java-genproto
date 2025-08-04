@@ -15,13 +15,17 @@ public final class VideoOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   * Enum controlling whether videos are automatically transcoded after upload.
+   * </pre>
+   *
    * Protobuf enum {@code yandex.cloud.video.v1.AutoTranscode}
    */
   public enum AutoTranscode
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
-     * Unspecified auto transcoding value.
+     * The auto-transcoding setting is not specified.
      * </pre>
      *
      * <code>AUTO_TRANSCODE_UNSPECIFIED = 0;</code>
@@ -29,7 +33,7 @@ public final class VideoOuterClass {
     AUTO_TRANSCODE_UNSPECIFIED(0),
     /**
      * <pre>
-     * Enable auto transcoding.
+     * Automatically start transcoding after the video upload is complete.
      * </pre>
      *
      * <code>ENABLE = 1;</code>
@@ -37,7 +41,7 @@ public final class VideoOuterClass {
     ENABLE(1),
     /**
      * <pre>
-     * Disable auto transcoding.
+     * Do not automatically transcode; requires manual initiation via the Transcode() method.
      * </pre>
      *
      * <code>DISABLE = 2;</code>
@@ -48,7 +52,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Unspecified auto transcoding value.
+     * The auto-transcoding setting is not specified.
      * </pre>
      *
      * <code>AUTO_TRANSCODE_UNSPECIFIED = 0;</code>
@@ -56,7 +60,7 @@ public final class VideoOuterClass {
     public static final int AUTO_TRANSCODE_UNSPECIFIED_VALUE = 0;
     /**
      * <pre>
-     * Enable auto transcoding.
+     * Automatically start transcoding after the video upload is complete.
      * </pre>
      *
      * <code>ENABLE = 1;</code>
@@ -64,7 +68,7 @@ public final class VideoOuterClass {
     public static final int ENABLE_VALUE = 1;
     /**
      * <pre>
-     * Disable auto transcoding.
+     * Do not automatically transcode; requires manual initiation via the Transcode() method.
      * </pre>
      *
      * <code>DISABLE = 2;</code>
@@ -161,7 +165,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * Unique identifier of the video.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -170,7 +174,7 @@ public final class VideoOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the video.
+     * Unique identifier of the video.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -181,7 +185,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * ID of the channel where the video was created.
+     * Identifier of the channel where the video is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -190,7 +194,7 @@ public final class VideoOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel where the video was created.
+     * Identifier of the channel where the video is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -201,7 +205,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Video title displayed to users.
+     * Title of the video displayed to users in interfaces and players.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -210,7 +214,7 @@ public final class VideoOuterClass {
     java.lang.String getTitle();
     /**
      * <pre>
-     * Video title displayed to users.
+     * Title of the video displayed to users in interfaces and players.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -221,7 +225,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Detailed description of the video.
+     * Detailed description of the video content and context.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -230,7 +234,7 @@ public final class VideoOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Detailed description of the video.
+     * Detailed description of the video content and context.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -241,7 +245,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * ID of the video's thumbnail image.
+     * Identifier of the thumbnail image used to represent the video visually.
      * </pre>
      *
      * <code>string thumbnail_id = 5;</code>
@@ -250,7 +254,7 @@ public final class VideoOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the video's thumbnail image.
+     * Identifier of the thumbnail image used to represent the video visually.
      * </pre>
      *
      * <code>string thumbnail_id = 5;</code>
@@ -261,7 +265,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Video status.
+     * Current processing status of the video.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Video.VideoStatus status = 6;</code>
@@ -270,7 +274,7 @@ public final class VideoOuterClass {
     int getStatusValue();
     /**
      * <pre>
-     * Video status.
+     * Current processing status of the video.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Video.VideoStatus status = 6;</code>
@@ -300,7 +304,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Visibility status of the video.
+     * Current visibility status controlling whether the video is publicly available.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
@@ -309,7 +313,7 @@ public final class VideoOuterClass {
     int getVisibilityStatusValue();
     /**
      * <pre>
-     * Visibility status of the video.
+     * Current visibility status controlling whether the video is publicly available.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
@@ -319,7 +323,8 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Video duration. Optional, may be empty until the transcoding result is ready.
+     * Total duration of the video.
+     * Optional, may be empty until the transcoding result is ready.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 8;</code>
@@ -328,7 +333,8 @@ public final class VideoOuterClass {
     boolean hasDuration();
     /**
      * <pre>
-     * Video duration. Optional, may be empty until the transcoding result is ready.
+     * Total duration of the video.
+     * Optional, may be empty until the transcoding result is ready.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 8;</code>
@@ -337,7 +343,8 @@ public final class VideoOuterClass {
     com.google.protobuf.Duration getDuration();
     /**
      * <pre>
-     * Video duration. Optional, may be empty until the transcoding result is ready.
+     * Total duration of the video.
+     * Optional, may be empty until the transcoding result is ready.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 8;</code>
@@ -346,7 +353,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Auto-transcoding setting.
+     * Auto-transcoding setting that controls the video processing workflow.
      * Set ENABLE to automatically initiate transcoding after upload,
      * or DISABLE for manual initiation via the Transcode() method.
      * </pre>
@@ -357,7 +364,7 @@ public final class VideoOuterClass {
     int getAutoTranscodeValue();
     /**
      * <pre>
-     * Auto-transcoding setting.
+     * Auto-transcoding setting that controls the video processing workflow.
      * Set ENABLE to automatically initiate transcoding after upload,
      * or DISABLE for manual initiation via the Transcode() method.
      * </pre>
@@ -369,7 +376,27 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Enable advertisement for this video.
+     * Identifier of the style preset applied to the video during processing.
+     * </pre>
+     *
+     * <code>string style_preset_id = 16;</code>
+     * @return The stylePresetId.
+     */
+    java.lang.String getStylePresetId();
+    /**
+     * <pre>
+     * Identifier of the style preset applied to the video during processing.
+     * </pre>
+     *
+     * <code>string style_preset_id = 16;</code>
+     * @return The bytes for stylePresetId.
+     */
+    com.google.protobuf.ByteString
+        getStylePresetIdBytes();
+
+    /**
+     * <pre>
+     * Controls the ability to display advertisements for this video.
      * Default: true.
      * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
@@ -380,7 +407,7 @@ public final class VideoOuterClass {
     boolean hasEnableAd();
     /**
      * <pre>
-     * Enable advertisement for this video.
+     * Controls the ability to display advertisements for this video.
      * Default: true.
      * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
@@ -391,7 +418,7 @@ public final class VideoOuterClass {
     com.google.protobuf.BoolValue getEnableAd();
     /**
      * <pre>
-     * Enable advertisement for this video.
+     * Controls the ability to display advertisements for this video.
      * Default: true.
      * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
@@ -402,7 +429,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * List of IDs defining the active subtitles for the video.
+     * List of identifiers defining the active subtitles available for the video.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 12;</code>
@@ -412,7 +439,7 @@ public final class VideoOuterClass {
         getSubtitleIdsList();
     /**
      * <pre>
-     * List of IDs defining the active subtitles for the video.
+     * List of identifiers defining the active subtitles available for the video.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 12;</code>
@@ -421,7 +448,7 @@ public final class VideoOuterClass {
     int getSubtitleIdsCount();
     /**
      * <pre>
-     * List of IDs defining the active subtitles for the video.
+     * List of identifiers defining the active subtitles available for the video.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 12;</code>
@@ -431,7 +458,7 @@ public final class VideoOuterClass {
     java.lang.String getSubtitleIds(int index);
     /**
      * <pre>
-     * List of IDs defining the active subtitles for the video.
+     * List of identifiers defining the active subtitles available for the video.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 12;</code>
@@ -443,7 +470,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Additional video processing features and their results.
+     * Additional video processing features and their results, such as summarization.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -452,7 +479,7 @@ public final class VideoOuterClass {
     boolean hasFeatures();
     /**
      * <pre>
-     * Additional video processing features and their results.
+     * Additional video processing features and their results, such as summarization.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -461,7 +488,7 @@ public final class VideoOuterClass {
     yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures getFeatures();
     /**
      * <pre>
-     * Additional video processing features and their results.
+     * Additional video processing features and their results, such as summarization.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -470,7 +497,8 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * &#64;see https://tus.io/
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -479,7 +507,8 @@ public final class VideoOuterClass {
     boolean hasTusd();
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * &#64;see https://tus.io/
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -488,7 +517,8 @@ public final class VideoOuterClass {
     yandex.cloud.api.video.v1.VideoOuterClass.VideoTUSDSource getTusd();
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * &#64;see https://tus.io/
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -497,7 +527,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
+     * Allows unrestricted public access to the video via direct link.
      * No additional authorization or access control is applied.
      * </pre>
      *
@@ -507,7 +537,7 @@ public final class VideoOuterClass {
     boolean hasPublicAccess();
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
+     * Allows unrestricted public access to the video via direct link.
      * No additional authorization or access control is applied.
      * </pre>
      *
@@ -517,7 +547,7 @@ public final class VideoOuterClass {
     yandex.cloud.api.video.v1.VideoOuterClass.VideoPublicAccessRights getPublicAccess();
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
+     * Allows unrestricted public access to the video via direct link.
      * No additional authorization or access control is applied.
      * </pre>
      *
@@ -527,7 +557,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -536,7 +566,7 @@ public final class VideoOuterClass {
     boolean hasSignUrlAccess();
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -545,7 +575,7 @@ public final class VideoOuterClass {
     yandex.cloud.api.video.v1.VideoOuterClass.VideoSignURLAccessRights getSignUrlAccess();
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -554,7 +584,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Time when video was created.
+     * Timestamp when the video was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -563,7 +593,7 @@ public final class VideoOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Time when video was created.
+     * Timestamp when the video was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -572,7 +602,7 @@ public final class VideoOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Time when video was created.
+     * Timestamp when the video was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -581,7 +611,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Time of last video update.
+     * Timestamp of the last modification to the video or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -590,7 +620,7 @@ public final class VideoOuterClass {
     boolean hasUpdatedAt();
     /**
      * <pre>
-     * Time of last video update.
+     * Timestamp of the last modification to the video or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -599,7 +629,7 @@ public final class VideoOuterClass {
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
      * <pre>
-     * Time of last video update.
+     * Timestamp of the last modification to the video or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -608,7 +638,9 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -616,7 +648,9 @@ public final class VideoOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -631,7 +665,9 @@ public final class VideoOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -640,7 +676,9 @@ public final class VideoOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -651,7 +689,9 @@ public final class VideoOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -665,6 +705,10 @@ public final class VideoOuterClass {
     public yandex.cloud.api.video.v1.VideoOuterClass.Video.AccessRightsCase getAccessRightsCase();
   }
   /**
+   * <pre>
+   * Main entity representing a video in the platform.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.Video}
    */
   public static final class Video extends
@@ -686,6 +730,7 @@ public final class VideoOuterClass {
       errorMessage_ = "";
       visibilityStatus_ = 0;
       autoTranscode_ = 0;
+      stylePresetId_ = "";
       subtitleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -801,6 +846,12 @@ public final class VideoOuterClass {
                 features_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stylePresetId_ = s;
               break;
             }
             case 138: {
@@ -951,13 +1002,17 @@ public final class VideoOuterClass {
     }
 
     /**
+     * <pre>
+     * Current processing status of the video.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.video.v1.Video.VideoStatus}
      */
     public enum VideoStatus
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Video status unspecified.
+       * The video status is not specified.
        * </pre>
        *
        * <code>VIDEO_STATUS_UNSPECIFIED = 0;</code>
@@ -965,7 +1020,7 @@ public final class VideoOuterClass {
       VIDEO_STATUS_UNSPECIFIED(0),
       /**
        * <pre>
-       * Waiting for all the bytes to be loaded.
+       * The video upload is in progress, waiting for all bytes to be received.
        * </pre>
        *
        * <code>WAIT_UPLOADING = 1;</code>
@@ -973,7 +1028,7 @@ public final class VideoOuterClass {
       WAIT_UPLOADING(1),
       /**
        * <pre>
-       * Fully uploaded, ready to be transcoded.
+       * The video has been fully uploaded and is ready for transcoding.
        * </pre>
        *
        * <code>UPLOADED = 2;</code>
@@ -981,7 +1036,7 @@ public final class VideoOuterClass {
       UPLOADED(2),
       /**
        * <pre>
-       * Video is being processed.
+       * The video is currently being processed.
        * </pre>
        *
        * <code>PROCESSING = 4;</code>
@@ -989,7 +1044,7 @@ public final class VideoOuterClass {
       PROCESSING(4),
       /**
        * <pre>
-       * Successfully processed and ready for use.
+       * The video has been successfully processed and is ready for watching.
        * </pre>
        *
        * <code>READY = 5;</code>
@@ -997,7 +1052,7 @@ public final class VideoOuterClass {
       READY(5),
       /**
        * <pre>
-       * Video processing has failed.
+       * An error occurred during video processing.
        * </pre>
        *
        * <code>ERROR = 7;</code>
@@ -1008,7 +1063,7 @@ public final class VideoOuterClass {
 
       /**
        * <pre>
-       * Video status unspecified.
+       * The video status is not specified.
        * </pre>
        *
        * <code>VIDEO_STATUS_UNSPECIFIED = 0;</code>
@@ -1016,7 +1071,7 @@ public final class VideoOuterClass {
       public static final int VIDEO_STATUS_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Waiting for all the bytes to be loaded.
+       * The video upload is in progress, waiting for all bytes to be received.
        * </pre>
        *
        * <code>WAIT_UPLOADING = 1;</code>
@@ -1024,7 +1079,7 @@ public final class VideoOuterClass {
       public static final int WAIT_UPLOADING_VALUE = 1;
       /**
        * <pre>
-       * Fully uploaded, ready to be transcoded.
+       * The video has been fully uploaded and is ready for transcoding.
        * </pre>
        *
        * <code>UPLOADED = 2;</code>
@@ -1032,7 +1087,7 @@ public final class VideoOuterClass {
       public static final int UPLOADED_VALUE = 2;
       /**
        * <pre>
-       * Video is being processed.
+       * The video is currently being processed.
        * </pre>
        *
        * <code>PROCESSING = 4;</code>
@@ -1040,7 +1095,7 @@ public final class VideoOuterClass {
       public static final int PROCESSING_VALUE = 4;
       /**
        * <pre>
-       * Successfully processed and ready for use.
+       * The video has been successfully processed and is ready for watching.
        * </pre>
        *
        * <code>READY = 5;</code>
@@ -1048,7 +1103,7 @@ public final class VideoOuterClass {
       public static final int READY_VALUE = 5;
       /**
        * <pre>
-       * Video processing has failed.
+       * An error occurred during video processing.
        * </pre>
        *
        * <code>ERROR = 7;</code>
@@ -1143,13 +1198,17 @@ public final class VideoOuterClass {
     }
 
     /**
+     * <pre>
+     * Visibility status of the video.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.video.v1.Video.VisibilityStatus}
      */
     public enum VisibilityStatus
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Visibility status unspecified.
+       * The visibility status is not specified.
        * </pre>
        *
        * <code>VISIBILITY_STATUS_UNSPECIFIED = 0;</code>
@@ -1157,7 +1216,7 @@ public final class VideoOuterClass {
       VISIBILITY_STATUS_UNSPECIFIED(0),
       /**
        * <pre>
-       * Video published and available for public viewing.
+       * The video is publicly available, subject to its access permission settings.
        * </pre>
        *
        * <code>PUBLISHED = 1;</code>
@@ -1165,7 +1224,7 @@ public final class VideoOuterClass {
       PUBLISHED(1),
       /**
        * <pre>
-       * Video unpublished, available only to administrators.
+       * The video is available only to administrators.
        * </pre>
        *
        * <code>UNPUBLISHED = 2;</code>
@@ -1176,7 +1235,7 @@ public final class VideoOuterClass {
 
       /**
        * <pre>
-       * Visibility status unspecified.
+       * The visibility status is not specified.
        * </pre>
        *
        * <code>VISIBILITY_STATUS_UNSPECIFIED = 0;</code>
@@ -1184,7 +1243,7 @@ public final class VideoOuterClass {
       public static final int VISIBILITY_STATUS_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Video published and available for public viewing.
+       * The video is publicly available, subject to its access permission settings.
        * </pre>
        *
        * <code>PUBLISHED = 1;</code>
@@ -1192,7 +1251,7 @@ public final class VideoOuterClass {
       public static final int PUBLISHED_VALUE = 1;
       /**
        * <pre>
-       * Video unpublished, available only to administrators.
+       * The video is available only to administrators.
        * </pre>
        *
        * <code>UNPUBLISHED = 2;</code>
@@ -1367,7 +1426,7 @@ public final class VideoOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the video.
+     * Unique identifier of the video.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1388,7 +1447,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * Unique identifier of the video.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1413,7 +1472,7 @@ public final class VideoOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel where the video was created.
+     * Identifier of the channel where the video is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -1434,7 +1493,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel where the video was created.
+     * Identifier of the channel where the video is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -1459,7 +1518,7 @@ public final class VideoOuterClass {
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Video title displayed to users.
+     * Title of the video displayed to users in interfaces and players.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -1480,7 +1539,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Video title displayed to users.
+     * Title of the video displayed to users in interfaces and players.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -1505,7 +1564,7 @@ public final class VideoOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Detailed description of the video.
+     * Detailed description of the video content and context.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1526,7 +1585,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Detailed description of the video.
+     * Detailed description of the video content and context.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1551,7 +1610,7 @@ public final class VideoOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the video's thumbnail image.
+     * Identifier of the thumbnail image used to represent the video visually.
      * </pre>
      *
      * <code>string thumbnail_id = 5;</code>
@@ -1572,7 +1631,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * ID of the video's thumbnail image.
+     * Identifier of the thumbnail image used to represent the video visually.
      * </pre>
      *
      * <code>string thumbnail_id = 5;</code>
@@ -1597,7 +1656,7 @@ public final class VideoOuterClass {
     private int status_;
     /**
      * <pre>
-     * Video status.
+     * Current processing status of the video.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Video.VideoStatus status = 6;</code>
@@ -1608,7 +1667,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Video status.
+     * Current processing status of the video.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Video.VideoStatus status = 6;</code>
@@ -1670,7 +1729,7 @@ public final class VideoOuterClass {
     private int visibilityStatus_;
     /**
      * <pre>
-     * Visibility status of the video.
+     * Current visibility status controlling whether the video is publicly available.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
@@ -1681,7 +1740,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Visibility status of the video.
+     * Current visibility status controlling whether the video is publicly available.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
@@ -1697,7 +1756,8 @@ public final class VideoOuterClass {
     private com.google.protobuf.Duration duration_;
     /**
      * <pre>
-     * Video duration. Optional, may be empty until the transcoding result is ready.
+     * Total duration of the video.
+     * Optional, may be empty until the transcoding result is ready.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 8;</code>
@@ -1709,7 +1769,8 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Video duration. Optional, may be empty until the transcoding result is ready.
+     * Total duration of the video.
+     * Optional, may be empty until the transcoding result is ready.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 8;</code>
@@ -1721,7 +1782,8 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Video duration. Optional, may be empty until the transcoding result is ready.
+     * Total duration of the video.
+     * Optional, may be empty until the transcoding result is ready.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 8;</code>
@@ -1735,7 +1797,7 @@ public final class VideoOuterClass {
     private int autoTranscode_;
     /**
      * <pre>
-     * Auto-transcoding setting.
+     * Auto-transcoding setting that controls the video processing workflow.
      * Set ENABLE to automatically initiate transcoding after upload,
      * or DISABLE for manual initiation via the Transcode() method.
      * </pre>
@@ -1748,7 +1810,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Auto-transcoding setting.
+     * Auto-transcoding setting that controls the video processing workflow.
      * Set ENABLE to automatically initiate transcoding after upload,
      * or DISABLE for manual initiation via the Transcode() method.
      * </pre>
@@ -1762,11 +1824,57 @@ public final class VideoOuterClass {
       return result == null ? yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.UNRECOGNIZED : result;
     }
 
+    public static final int STYLE_PRESET_ID_FIELD_NUMBER = 16;
+    private volatile java.lang.Object stylePresetId_;
+    /**
+     * <pre>
+     * Identifier of the style preset applied to the video during processing.
+     * </pre>
+     *
+     * <code>string style_preset_id = 16;</code>
+     * @return The stylePresetId.
+     */
+    @java.lang.Override
+    public java.lang.String getStylePresetId() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stylePresetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Identifier of the style preset applied to the video during processing.
+     * </pre>
+     *
+     * <code>string style_preset_id = 16;</code>
+     * @return The bytes for stylePresetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStylePresetIdBytes() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stylePresetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int ENABLE_AD_FIELD_NUMBER = 17;
     private com.google.protobuf.BoolValue enableAd_;
     /**
      * <pre>
-     * Enable advertisement for this video.
+     * Controls the ability to display advertisements for this video.
      * Default: true.
      * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
@@ -1780,7 +1888,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Enable advertisement for this video.
+     * Controls the ability to display advertisements for this video.
      * Default: true.
      * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
@@ -1794,7 +1902,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Enable advertisement for this video.
+     * Controls the ability to display advertisements for this video.
      * Default: true.
      * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
@@ -1810,7 +1918,7 @@ public final class VideoOuterClass {
     private com.google.protobuf.LazyStringList subtitleIds_;
     /**
      * <pre>
-     * List of IDs defining the active subtitles for the video.
+     * List of identifiers defining the active subtitles available for the video.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 12;</code>
@@ -1822,7 +1930,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * List of IDs defining the active subtitles for the video.
+     * List of identifiers defining the active subtitles available for the video.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 12;</code>
@@ -1833,7 +1941,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * List of IDs defining the active subtitles for the video.
+     * List of identifiers defining the active subtitles available for the video.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 12;</code>
@@ -1845,7 +1953,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * List of IDs defining the active subtitles for the video.
+     * List of identifiers defining the active subtitles available for the video.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 12;</code>
@@ -1861,7 +1969,7 @@ public final class VideoOuterClass {
     private yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures features_;
     /**
      * <pre>
-     * Additional video processing features and their results.
+     * Additional video processing features and their results, such as summarization.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -1873,7 +1981,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Additional video processing features and their results.
+     * Additional video processing features and their results, such as summarization.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -1885,7 +1993,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Additional video processing features and their results.
+     * Additional video processing features and their results, such as summarization.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -1898,7 +2006,8 @@ public final class VideoOuterClass {
     public static final int TUSD_FIELD_NUMBER = 1000;
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * &#64;see https://tus.io/
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -1910,7 +2019,8 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * &#64;see https://tus.io/
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -1925,7 +2035,8 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * &#64;see https://tus.io/
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -1941,7 +2052,7 @@ public final class VideoOuterClass {
     public static final int PUBLIC_ACCESS_FIELD_NUMBER = 2000;
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
+     * Allows unrestricted public access to the video via direct link.
      * No additional authorization or access control is applied.
      * </pre>
      *
@@ -1954,7 +2065,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
+     * Allows unrestricted public access to the video via direct link.
      * No additional authorization or access control is applied.
      * </pre>
      *
@@ -1970,7 +2081,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
+     * Allows unrestricted public access to the video via direct link.
      * No additional authorization or access control is applied.
      * </pre>
      *
@@ -1987,7 +2098,7 @@ public final class VideoOuterClass {
     public static final int SIGN_URL_ACCESS_FIELD_NUMBER = 2003;
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -1999,7 +2110,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -2014,7 +2125,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -2031,7 +2142,7 @@ public final class VideoOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Time when video was created.
+     * Timestamp when the video was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2043,7 +2154,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Time when video was created.
+     * Timestamp when the video was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2055,7 +2166,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Time when video was created.
+     * Timestamp when the video was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -2069,7 +2180,7 @@ public final class VideoOuterClass {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <pre>
-     * Time of last video update.
+     * Timestamp of the last modification to the video or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2081,7 +2192,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Time of last video update.
+     * Timestamp of the last modification to the video or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2093,7 +2204,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Time of last video update.
+     * Timestamp of the last modification to the video or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -2131,7 +2242,9 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2153,7 +2266,9 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2165,7 +2280,9 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2182,7 +2299,9 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2246,6 +2365,9 @@ public final class VideoOuterClass {
       }
       if (features_ != null) {
         output.writeMessage(13, getFeatures());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, stylePresetId_);
       }
       if (enableAd_ != null) {
         output.writeMessage(17, getEnableAd());
@@ -2326,6 +2448,9 @@ public final class VideoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getFeatures());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, stylePresetId_);
+      }
       if (enableAd_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getEnableAd());
@@ -2398,6 +2523,8 @@ public final class VideoOuterClass {
             .equals(other.getDuration())) return false;
       }
       if (autoTranscode_ != other.autoTranscode_) return false;
+      if (!getStylePresetId()
+          .equals(other.getStylePresetId())) return false;
       if (hasEnableAd() != other.hasEnableAd()) return false;
       if (hasEnableAd()) {
         if (!getEnableAd()
@@ -2477,6 +2604,8 @@ public final class VideoOuterClass {
       }
       hash = (37 * hash) + AUTO_TRANSCODE_FIELD_NUMBER;
       hash = (53 * hash) + autoTranscode_;
+      hash = (37 * hash) + STYLE_PRESET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStylePresetId().hashCode();
       if (hasEnableAd()) {
         hash = (37 * hash) + ENABLE_AD_FIELD_NUMBER;
         hash = (53 * hash) + getEnableAd().hashCode();
@@ -2617,6 +2746,10 @@ public final class VideoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Main entity representing a video in the platform.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.Video}
      */
     public static final class Builder extends
@@ -2700,6 +2833,8 @@ public final class VideoOuterClass {
         }
         autoTranscode_ = 0;
 
+        stylePresetId_ = "";
+
         if (enableAdBuilder_ == null) {
           enableAd_ = null;
         } else {
@@ -2772,6 +2907,7 @@ public final class VideoOuterClass {
           result.duration_ = durationBuilder_.build();
         }
         result.autoTranscode_ = autoTranscode_;
+        result.stylePresetId_ = stylePresetId_;
         if (enableAdBuilder_ == null) {
           result.enableAd_ = enableAd_;
         } else {
@@ -2906,6 +3042,10 @@ public final class VideoOuterClass {
         if (other.autoTranscode_ != 0) {
           setAutoTranscodeValue(other.getAutoTranscodeValue());
         }
+        if (!other.getStylePresetId().isEmpty()) {
+          stylePresetId_ = other.stylePresetId_;
+          onChanged();
+        }
         if (other.hasEnableAd()) {
           mergeEnableAd(other.getEnableAd());
         }
@@ -3015,7 +3155,7 @@ public final class VideoOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the video.
+       * Unique identifier of the video.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3035,7 +3175,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Unique identifier of the video.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3056,7 +3196,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Unique identifier of the video.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3075,7 +3215,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Unique identifier of the video.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3089,7 +3229,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Unique identifier of the video.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3111,7 +3251,7 @@ public final class VideoOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel where the video was created.
+       * Identifier of the channel where the video is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -3131,7 +3271,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the video was created.
+       * Identifier of the channel where the video is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -3152,7 +3292,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the video was created.
+       * Identifier of the channel where the video is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -3171,7 +3311,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the video was created.
+       * Identifier of the channel where the video is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -3185,7 +3325,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the video was created.
+       * Identifier of the channel where the video is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -3207,7 +3347,7 @@ public final class VideoOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Video title displayed to users.
+       * Title of the video displayed to users in interfaces and players.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -3227,7 +3367,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video title displayed to users.
+       * Title of the video displayed to users in interfaces and players.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -3248,7 +3388,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video title displayed to users.
+       * Title of the video displayed to users in interfaces and players.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -3267,7 +3407,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video title displayed to users.
+       * Title of the video displayed to users in interfaces and players.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -3281,7 +3421,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video title displayed to users.
+       * Title of the video displayed to users in interfaces and players.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -3303,7 +3443,7 @@ public final class VideoOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Detailed description of the video.
+       * Detailed description of the video content and context.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -3323,7 +3463,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Detailed description of the video.
+       * Detailed description of the video content and context.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -3344,7 +3484,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Detailed description of the video.
+       * Detailed description of the video content and context.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -3363,7 +3503,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Detailed description of the video.
+       * Detailed description of the video content and context.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -3377,7 +3517,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Detailed description of the video.
+       * Detailed description of the video content and context.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -3399,7 +3539,7 @@ public final class VideoOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the video's thumbnail image.
+       * Identifier of the thumbnail image used to represent the video visually.
        * </pre>
        *
        * <code>string thumbnail_id = 5;</code>
@@ -3419,7 +3559,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the video's thumbnail image.
+       * Identifier of the thumbnail image used to represent the video visually.
        * </pre>
        *
        * <code>string thumbnail_id = 5;</code>
@@ -3440,7 +3580,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the video's thumbnail image.
+       * Identifier of the thumbnail image used to represent the video visually.
        * </pre>
        *
        * <code>string thumbnail_id = 5;</code>
@@ -3459,7 +3599,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the video's thumbnail image.
+       * Identifier of the thumbnail image used to represent the video visually.
        * </pre>
        *
        * <code>string thumbnail_id = 5;</code>
@@ -3473,7 +3613,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * ID of the video's thumbnail image.
+       * Identifier of the thumbnail image used to represent the video visually.
        * </pre>
        *
        * <code>string thumbnail_id = 5;</code>
@@ -3495,7 +3635,7 @@ public final class VideoOuterClass {
       private int status_ = 0;
       /**
        * <pre>
-       * Video status.
+       * Current processing status of the video.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Video.VideoStatus status = 6;</code>
@@ -3506,7 +3646,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video status.
+       * Current processing status of the video.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Video.VideoStatus status = 6;</code>
@@ -3521,7 +3661,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video status.
+       * Current processing status of the video.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Video.VideoStatus status = 6;</code>
@@ -3535,7 +3675,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video status.
+       * Current processing status of the video.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Video.VideoStatus status = 6;</code>
@@ -3553,7 +3693,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video status.
+       * Current processing status of the video.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Video.VideoStatus status = 6;</code>
@@ -3665,7 +3805,7 @@ public final class VideoOuterClass {
       private int visibilityStatus_ = 0;
       /**
        * <pre>
-       * Visibility status of the video.
+       * Current visibility status controlling whether the video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
@@ -3676,7 +3816,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Visibility status of the video.
+       * Current visibility status controlling whether the video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
@@ -3691,7 +3831,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Visibility status of the video.
+       * Current visibility status controlling whether the video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
@@ -3705,7 +3845,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Visibility status of the video.
+       * Current visibility status controlling whether the video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
@@ -3723,7 +3863,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Visibility status of the video.
+       * Current visibility status controlling whether the video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
@@ -3741,7 +3881,8 @@ public final class VideoOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
       /**
        * <pre>
-       * Video duration. Optional, may be empty until the transcoding result is ready.
+       * Total duration of the video.
+       * Optional, may be empty until the transcoding result is ready.
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 8;</code>
@@ -3752,7 +3893,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video duration. Optional, may be empty until the transcoding result is ready.
+       * Total duration of the video.
+       * Optional, may be empty until the transcoding result is ready.
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 8;</code>
@@ -3767,7 +3909,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video duration. Optional, may be empty until the transcoding result is ready.
+       * Total duration of the video.
+       * Optional, may be empty until the transcoding result is ready.
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 8;</code>
@@ -3787,7 +3930,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video duration. Optional, may be empty until the transcoding result is ready.
+       * Total duration of the video.
+       * Optional, may be empty until the transcoding result is ready.
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 8;</code>
@@ -3805,7 +3949,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video duration. Optional, may be empty until the transcoding result is ready.
+       * Total duration of the video.
+       * Optional, may be empty until the transcoding result is ready.
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 8;</code>
@@ -3827,7 +3972,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video duration. Optional, may be empty until the transcoding result is ready.
+       * Total duration of the video.
+       * Optional, may be empty until the transcoding result is ready.
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 8;</code>
@@ -3845,7 +3991,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video duration. Optional, may be empty until the transcoding result is ready.
+       * Total duration of the video.
+       * Optional, may be empty until the transcoding result is ready.
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 8;</code>
@@ -3857,7 +4004,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video duration. Optional, may be empty until the transcoding result is ready.
+       * Total duration of the video.
+       * Optional, may be empty until the transcoding result is ready.
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 8;</code>
@@ -3872,7 +4020,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Video duration. Optional, may be empty until the transcoding result is ready.
+       * Total duration of the video.
+       * Optional, may be empty until the transcoding result is ready.
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 8;</code>
@@ -3894,7 +4043,7 @@ public final class VideoOuterClass {
       private int autoTranscode_ = 0;
       /**
        * <pre>
-       * Auto-transcoding setting.
+       * Auto-transcoding setting that controls the video processing workflow.
        * Set ENABLE to automatically initiate transcoding after upload,
        * or DISABLE for manual initiation via the Transcode() method.
        * </pre>
@@ -3907,7 +4056,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Auto-transcoding setting.
+       * Auto-transcoding setting that controls the video processing workflow.
        * Set ENABLE to automatically initiate transcoding after upload,
        * or DISABLE for manual initiation via the Transcode() method.
        * </pre>
@@ -3924,7 +4073,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Auto-transcoding setting.
+       * Auto-transcoding setting that controls the video processing workflow.
        * Set ENABLE to automatically initiate transcoding after upload,
        * or DISABLE for manual initiation via the Transcode() method.
        * </pre>
@@ -3940,7 +4089,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Auto-transcoding setting.
+       * Auto-transcoding setting that controls the video processing workflow.
        * Set ENABLE to automatically initiate transcoding after upload,
        * or DISABLE for manual initiation via the Transcode() method.
        * </pre>
@@ -3960,7 +4109,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Auto-transcoding setting.
+       * Auto-transcoding setting that controls the video processing workflow.
        * Set ENABLE to automatically initiate transcoding after upload,
        * or DISABLE for manual initiation via the Transcode() method.
        * </pre>
@@ -3975,12 +4124,108 @@ public final class VideoOuterClass {
         return this;
       }
 
+      private java.lang.Object stylePresetId_ = "";
+      /**
+       * <pre>
+       * Identifier of the style preset applied to the video during processing.
+       * </pre>
+       *
+       * <code>string style_preset_id = 16;</code>
+       * @return The stylePresetId.
+       */
+      public java.lang.String getStylePresetId() {
+        java.lang.Object ref = stylePresetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stylePresetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the style preset applied to the video during processing.
+       * </pre>
+       *
+       * <code>string style_preset_id = 16;</code>
+       * @return The bytes for stylePresetId.
+       */
+      public com.google.protobuf.ByteString
+          getStylePresetIdBytes() {
+        java.lang.Object ref = stylePresetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stylePresetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the style preset applied to the video during processing.
+       * </pre>
+       *
+       * <code>string style_preset_id = 16;</code>
+       * @param value The stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the style preset applied to the video during processing.
+       * </pre>
+       *
+       * <code>string style_preset_id = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStylePresetId() {
+        
+        stylePresetId_ = getDefaultInstance().getStylePresetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the style preset applied to the video during processing.
+       * </pre>
+       *
+       * <code>string style_preset_id = 16;</code>
+       * @param value The bytes for stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.BoolValue enableAd_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableAdBuilder_;
       /**
        * <pre>
-       * Enable advertisement for this video.
+       * Controls the ability to display advertisements for this video.
        * Default: true.
        * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
@@ -3993,7 +4238,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
+       * Controls the ability to display advertisements for this video.
        * Default: true.
        * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
@@ -4010,7 +4255,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
+       * Controls the ability to display advertisements for this video.
        * Default: true.
        * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
@@ -4032,7 +4277,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
+       * Controls the ability to display advertisements for this video.
        * Default: true.
        * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
@@ -4052,7 +4297,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
+       * Controls the ability to display advertisements for this video.
        * Default: true.
        * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
@@ -4076,7 +4321,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
+       * Controls the ability to display advertisements for this video.
        * Default: true.
        * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
@@ -4096,7 +4341,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
+       * Controls the ability to display advertisements for this video.
        * Default: true.
        * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
@@ -4110,7 +4355,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
+       * Controls the ability to display advertisements for this video.
        * Default: true.
        * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
@@ -4127,7 +4372,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
+       * Controls the ability to display advertisements for this video.
        * Default: true.
        * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
@@ -4157,7 +4402,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * List of IDs defining the active subtitles for the video.
+       * List of identifiers defining the active subtitles available for the video.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 12;</code>
@@ -4169,7 +4414,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * List of IDs defining the active subtitles for the video.
+       * List of identifiers defining the active subtitles available for the video.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 12;</code>
@@ -4180,7 +4425,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * List of IDs defining the active subtitles for the video.
+       * List of identifiers defining the active subtitles available for the video.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 12;</code>
@@ -4192,7 +4437,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * List of IDs defining the active subtitles for the video.
+       * List of identifiers defining the active subtitles available for the video.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 12;</code>
@@ -4205,7 +4450,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * List of IDs defining the active subtitles for the video.
+       * List of identifiers defining the active subtitles available for the video.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 12;</code>
@@ -4225,7 +4470,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * List of IDs defining the active subtitles for the video.
+       * List of identifiers defining the active subtitles available for the video.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 12;</code>
@@ -4244,7 +4489,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * List of IDs defining the active subtitles for the video.
+       * List of identifiers defining the active subtitles available for the video.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 12;</code>
@@ -4261,7 +4506,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * List of IDs defining the active subtitles for the video.
+       * List of identifiers defining the active subtitles available for the video.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 12;</code>
@@ -4275,7 +4520,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * List of IDs defining the active subtitles for the video.
+       * List of identifiers defining the active subtitles available for the video.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 12;</code>
@@ -4299,7 +4544,7 @@ public final class VideoOuterClass {
           yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures, yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Builder, yandex.cloud.api.video.v1.VideoOuterClass.VideoFeaturesOrBuilder> featuresBuilder_;
       /**
        * <pre>
-       * Additional video processing features and their results.
+       * Additional video processing features and their results, such as summarization.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -4310,7 +4555,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Additional video processing features and their results.
+       * Additional video processing features and their results, such as summarization.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -4325,7 +4570,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Additional video processing features and their results.
+       * Additional video processing features and their results, such as summarization.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -4345,7 +4590,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Additional video processing features and their results.
+       * Additional video processing features and their results, such as summarization.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -4363,7 +4608,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Additional video processing features and their results.
+       * Additional video processing features and their results, such as summarization.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -4385,7 +4630,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Additional video processing features and their results.
+       * Additional video processing features and their results, such as summarization.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -4403,7 +4648,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Additional video processing features and their results.
+       * Additional video processing features and their results, such as summarization.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -4415,7 +4660,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Additional video processing features and their results.
+       * Additional video processing features and their results, such as summarization.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -4430,7 +4675,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Additional video processing features and their results.
+       * Additional video processing features and their results, such as summarization.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures features = 13;</code>
@@ -4453,7 +4698,8 @@ public final class VideoOuterClass {
           yandex.cloud.api.video.v1.VideoOuterClass.VideoTUSDSource, yandex.cloud.api.video.v1.VideoOuterClass.VideoTUSDSource.Builder, yandex.cloud.api.video.v1.VideoOuterClass.VideoTUSDSourceOrBuilder> tusdBuilder_;
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * &#64;see https://tus.io/
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -4465,7 +4711,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * &#64;see https://tus.io/
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -4487,7 +4734,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * &#64;see https://tus.io/
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -4507,7 +4755,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * &#64;see https://tus.io/
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -4525,7 +4774,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * &#64;see https://tus.io/
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -4551,7 +4801,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * &#64;see https://tus.io/
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -4574,7 +4825,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * &#64;see https://tus.io/
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -4584,7 +4836,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * &#64;see https://tus.io/
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -4602,7 +4855,8 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * &#64;see https://tus.io/
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -4630,7 +4884,7 @@ public final class VideoOuterClass {
           yandex.cloud.api.video.v1.VideoOuterClass.VideoPublicAccessRights, yandex.cloud.api.video.v1.VideoOuterClass.VideoPublicAccessRights.Builder, yandex.cloud.api.video.v1.VideoOuterClass.VideoPublicAccessRightsOrBuilder> publicAccessBuilder_;
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
+       * Allows unrestricted public access to the video via direct link.
        * No additional authorization or access control is applied.
        * </pre>
        *
@@ -4643,7 +4897,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
+       * Allows unrestricted public access to the video via direct link.
        * No additional authorization or access control is applied.
        * </pre>
        *
@@ -4666,7 +4920,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
+       * Allows unrestricted public access to the video via direct link.
        * No additional authorization or access control is applied.
        * </pre>
        *
@@ -4687,7 +4941,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
+       * Allows unrestricted public access to the video via direct link.
        * No additional authorization or access control is applied.
        * </pre>
        *
@@ -4706,7 +4960,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
+       * Allows unrestricted public access to the video via direct link.
        * No additional authorization or access control is applied.
        * </pre>
        *
@@ -4733,7 +4987,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
+       * Allows unrestricted public access to the video via direct link.
        * No additional authorization or access control is applied.
        * </pre>
        *
@@ -4757,7 +5011,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
+       * Allows unrestricted public access to the video via direct link.
        * No additional authorization or access control is applied.
        * </pre>
        *
@@ -4768,7 +5022,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
+       * Allows unrestricted public access to the video via direct link.
        * No additional authorization or access control is applied.
        * </pre>
        *
@@ -4787,7 +5041,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
+       * Allows unrestricted public access to the video via direct link.
        * No additional authorization or access control is applied.
        * </pre>
        *
@@ -4816,7 +5070,7 @@ public final class VideoOuterClass {
           yandex.cloud.api.video.v1.VideoOuterClass.VideoSignURLAccessRights, yandex.cloud.api.video.v1.VideoOuterClass.VideoSignURLAccessRights.Builder, yandex.cloud.api.video.v1.VideoOuterClass.VideoSignURLAccessRightsOrBuilder> signUrlAccessBuilder_;
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -4828,7 +5082,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -4850,7 +5104,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -4870,7 +5124,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -4888,7 +5142,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -4914,7 +5168,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -4937,7 +5191,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -4947,7 +5201,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -4965,7 +5219,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessRights sign_url_access = 2003;</code>
@@ -4994,7 +5248,7 @@ public final class VideoOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Time when video was created.
+       * Timestamp when the video was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -5005,7 +5259,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time when video was created.
+       * Timestamp when the video was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -5020,7 +5274,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time when video was created.
+       * Timestamp when the video was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -5040,7 +5294,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time when video was created.
+       * Timestamp when the video was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -5058,7 +5312,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time when video was created.
+       * Timestamp when the video was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -5080,7 +5334,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time when video was created.
+       * Timestamp when the video was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -5098,7 +5352,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time when video was created.
+       * Timestamp when the video was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -5110,7 +5364,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time when video was created.
+       * Timestamp when the video was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -5125,7 +5379,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time when video was created.
+       * Timestamp when the video was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -5149,7 +5403,7 @@ public final class VideoOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <pre>
-       * Time of last video update.
+       * Timestamp of the last modification to the video or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -5160,7 +5414,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time of last video update.
+       * Timestamp of the last modification to the video or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -5175,7 +5429,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time of last video update.
+       * Timestamp of the last modification to the video or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -5195,7 +5449,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time of last video update.
+       * Timestamp of the last modification to the video or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -5213,7 +5467,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time of last video update.
+       * Timestamp of the last modification to the video or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -5235,7 +5489,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time of last video update.
+       * Timestamp of the last modification to the video or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -5253,7 +5507,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time of last video update.
+       * Timestamp of the last modification to the video or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -5265,7 +5519,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time of last video update.
+       * Timestamp of the last modification to the video or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -5280,7 +5534,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Time of last video update.
+       * Timestamp of the last modification to the video or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -5327,7 +5581,9 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -5349,7 +5605,9 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -5361,7 +5619,9 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -5378,7 +5638,9 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -5403,7 +5665,9 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -5426,7 +5690,9 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -5445,7 +5711,9 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -5516,7 +5784,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * URL for uploading video via the tus protocol.
+     * URL endpoint for uploading the video via the TUS protocol.
      * </pre>
      *
      * <code>string url = 1;</code>
@@ -5525,7 +5793,7 @@ public final class VideoOuterClass {
     java.lang.String getUrl();
     /**
      * <pre>
-     * URL for uploading video via the tus protocol.
+     * URL endpoint for uploading the video via the TUS protocol.
      * </pre>
      *
      * <code>string url = 1;</code>
@@ -5536,7 +5804,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Size of the uploaded file, in bytes.
+     * Total size of the uploaded file, in bytes.
      * </pre>
      *
      * <code>int64 file_size = 2;</code>
@@ -5546,7 +5814,9 @@ public final class VideoOuterClass {
   }
   /**
    * <pre>
-   * Video upload source via tus protocol.
+   * Represents a video upload source using the TUS (Tus Resumable Upload Protocol) protocol.
+   * This is a push-based upload method where the client pushes data to the server.
+   * &#64;see https://tus.io/
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.VideoTUSDSource}
@@ -5641,7 +5911,7 @@ public final class VideoOuterClass {
     private volatile java.lang.Object url_;
     /**
      * <pre>
-     * URL for uploading video via the tus protocol.
+     * URL endpoint for uploading the video via the TUS protocol.
      * </pre>
      *
      * <code>string url = 1;</code>
@@ -5662,7 +5932,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * URL for uploading video via the tus protocol.
+     * URL endpoint for uploading the video via the TUS protocol.
      * </pre>
      *
      * <code>string url = 1;</code>
@@ -5687,7 +5957,7 @@ public final class VideoOuterClass {
     private long fileSize_;
     /**
      * <pre>
-     * Size of the uploaded file, in bytes.
+     * Total size of the uploaded file, in bytes.
      * </pre>
      *
      * <code>int64 file_size = 2;</code>
@@ -5866,7 +6136,9 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Video upload source via tus protocol.
+     * Represents a video upload source using the TUS (Tus Resumable Upload Protocol) protocol.
+     * This is a push-based upload method where the client pushes data to the server.
+     * &#64;see https://tus.io/
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.VideoTUSDSource}
@@ -6025,7 +6297,7 @@ public final class VideoOuterClass {
       private java.lang.Object url_ = "";
       /**
        * <pre>
-       * URL for uploading video via the tus protocol.
+       * URL endpoint for uploading the video via the TUS protocol.
        * </pre>
        *
        * <code>string url = 1;</code>
@@ -6045,7 +6317,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * URL for uploading video via the tus protocol.
+       * URL endpoint for uploading the video via the TUS protocol.
        * </pre>
        *
        * <code>string url = 1;</code>
@@ -6066,7 +6338,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * URL for uploading video via the tus protocol.
+       * URL endpoint for uploading the video via the TUS protocol.
        * </pre>
        *
        * <code>string url = 1;</code>
@@ -6085,7 +6357,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * URL for uploading video via the tus protocol.
+       * URL endpoint for uploading the video via the TUS protocol.
        * </pre>
        *
        * <code>string url = 1;</code>
@@ -6099,7 +6371,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * URL for uploading video via the tus protocol.
+       * URL endpoint for uploading the video via the TUS protocol.
        * </pre>
        *
        * <code>string url = 1;</code>
@@ -6121,7 +6393,7 @@ public final class VideoOuterClass {
       private long fileSize_ ;
       /**
        * <pre>
-       * Size of the uploaded file, in bytes.
+       * Total size of the uploaded file, in bytes.
        * </pre>
        *
        * <code>int64 file_size = 2;</code>
@@ -6133,7 +6405,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Size of the uploaded file, in bytes.
+       * Total size of the uploaded file, in bytes.
        * </pre>
        *
        * <code>int64 file_size = 2;</code>
@@ -6148,7 +6420,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Size of the uploaded file, in bytes.
+       * Total size of the uploaded file, in bytes.
        * </pre>
        *
        * <code>int64 file_size = 2;</code>
@@ -6218,6 +6490,11 @@ public final class VideoOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Represents public access rights for a video.
+   * When this access type is set, the video is publicly accessible via direct link.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.VideoPublicAccessRights}
    */
   public static final class VideoPublicAccessRights extends
@@ -6439,6 +6716,11 @@ public final class VideoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents public access rights for a video.
+     * When this access type is set, the video is publicly accessible via direct link.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.VideoPublicAccessRights}
      */
     public static final class Builder extends
@@ -6636,6 +6918,11 @@ public final class VideoOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Represents access rights controlled by URL signatures.
+   * When this access type is set, the video is accessible only via properly signed temporary link.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.VideoSignURLAccessRights}
    */
   public static final class VideoSignURLAccessRights extends
@@ -6857,6 +7144,11 @@ public final class VideoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents access rights controlled by URL signatures.
+     * When this access type is set, the video is accessible only via properly signed temporary link.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.VideoSignURLAccessRights}
      */
     public static final class Builder extends
@@ -7055,7 +7347,7 @@ public final class VideoOuterClass {
 
     /**
      * <pre>
-     * Summarization result.
+     * Results of the video content summarization process.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -7064,7 +7356,7 @@ public final class VideoOuterClass {
     boolean hasSummary();
     /**
      * <pre>
-     * Summarization result.
+     * Results of the video content summarization process.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -7073,7 +7365,7 @@ public final class VideoOuterClass {
     yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary getSummary();
     /**
      * <pre>
-     * Summarization result.
+     * Results of the video content summarization process.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -7081,6 +7373,10 @@ public final class VideoOuterClass {
     yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.SummaryOrBuilder getSummaryOrBuilder();
   }
   /**
+   * <pre>
+   * Contains additional processing features and their results for the video.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.VideoFeatures}
    */
   public static final class VideoFeatures extends
@@ -7171,17 +7467,25 @@ public final class VideoOuterClass {
     }
 
     /**
+     * <pre>
+     * Status of a feature processing request.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.video.v1.VideoFeatures.FeatureResult}
      */
     public enum FeatureResult
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * The feature result status is not specified.
+       * </pre>
+       *
        * <code>FEATURE_RESULT_UNSPECIFIED = 0;</code>
        */
       FEATURE_RESULT_UNSPECIFIED(0),
       /**
        * <pre>
-       * Feature has not been requested.
+       * The feature processing has not been requested.
        * </pre>
        *
        * <code>NOT_REQUESTED = 1;</code>
@@ -7189,7 +7493,7 @@ public final class VideoOuterClass {
       NOT_REQUESTED(1),
       /**
        * <pre>
-       * Feature is being processed.
+       * The feature is currently being processed.
        * </pre>
        *
        * <code>PROCESSING = 2;</code>
@@ -7197,7 +7501,7 @@ public final class VideoOuterClass {
       PROCESSING(2),
       /**
        * <pre>
-       * Feature processing completed successfully.
+       * The feature processing has completed successfully.
        * </pre>
        *
        * <code>SUCCESS = 3;</code>
@@ -7205,7 +7509,7 @@ public final class VideoOuterClass {
       SUCCESS(3),
       /**
        * <pre>
-       * Feature processing has failed.
+       * The feature processing has failed.
        * </pre>
        *
        * <code>FAILED = 4;</code>
@@ -7215,12 +7519,16 @@ public final class VideoOuterClass {
       ;
 
       /**
+       * <pre>
+       * The feature result status is not specified.
+       * </pre>
+       *
        * <code>FEATURE_RESULT_UNSPECIFIED = 0;</code>
        */
       public static final int FEATURE_RESULT_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Feature has not been requested.
+       * The feature processing has not been requested.
        * </pre>
        *
        * <code>NOT_REQUESTED = 1;</code>
@@ -7228,7 +7536,7 @@ public final class VideoOuterClass {
       public static final int NOT_REQUESTED_VALUE = 1;
       /**
        * <pre>
-       * Feature is being processed.
+       * The feature is currently being processed.
        * </pre>
        *
        * <code>PROCESSING = 2;</code>
@@ -7236,7 +7544,7 @@ public final class VideoOuterClass {
       public static final int PROCESSING_VALUE = 2;
       /**
        * <pre>
-       * Feature processing completed successfully.
+       * The feature processing has completed successfully.
        * </pre>
        *
        * <code>SUCCESS = 3;</code>
@@ -7244,7 +7552,7 @@ public final class VideoOuterClass {
       public static final int SUCCESS_VALUE = 3;
       /**
        * <pre>
-       * Feature processing has failed.
+       * The feature processing has failed.
        * </pre>
        *
        * <code>FAILED = 4;</code>
@@ -7342,41 +7650,73 @@ public final class VideoOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Current status of the summarization process.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoFeatures.FeatureResult result = 1;</code>
        * @return The enum numeric value on the wire for result.
        */
       int getResultValue();
       /**
+       * <pre>
+       * Current status of the summarization process.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoFeatures.FeatureResult result = 1;</code>
        * @return The result.
        */
       yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.FeatureResult getResult();
 
       /**
+       * <pre>
+       * List of URLs to summarization results for different audio tracks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
        */
       java.util.List<yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL> 
           getUrlsList();
       /**
+       * <pre>
+       * List of URLs to summarization results for different audio tracks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
        */
       yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL getUrls(int index);
       /**
+       * <pre>
+       * List of URLs to summarization results for different audio tracks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
        */
       int getUrlsCount();
       /**
+       * <pre>
+       * List of URLs to summarization results for different audio tracks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
        */
       java.util.List<? extends yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURLOrBuilder> 
           getUrlsOrBuilderList();
       /**
+       * <pre>
+       * List of URLs to summarization results for different audio tracks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
        */
       yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURLOrBuilder getUrlsOrBuilder(
           int index);
     }
     /**
+     * <pre>
+     * Contains the results of video summarization.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.VideoFeatures.Summary}
      */
     public static final class Summary extends
@@ -7479,11 +7819,19 @@ public final class VideoOuterClass {
           com.google.protobuf.MessageOrBuilder {
 
         /**
+         * <pre>
+         * URL to the summarization result file.
+         * </pre>
+         *
          * <code>string url = 1;</code>
          * @return The url.
          */
         java.lang.String getUrl();
         /**
+         * <pre>
+         * URL to the summarization result file.
+         * </pre>
+         *
          * <code>string url = 1;</code>
          * @return The bytes for url.
          */
@@ -7492,7 +7840,7 @@ public final class VideoOuterClass {
 
         /**
          * <pre>
-         * Input audio track index (one-based).
+         * Input audio track index (one-based) that was summarized.
          * </pre>
          *
          * <code>int64 track_index = 2;</code>
@@ -7502,8 +7850,7 @@ public final class VideoOuterClass {
 
         /**
          * <pre>
-         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
-         * Either provided in transcoding settings earlier or automatically deduced.
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
          * <code>string src_lang = 3;</code>
@@ -7512,8 +7859,7 @@ public final class VideoOuterClass {
         java.lang.String getSrcLang();
         /**
          * <pre>
-         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
-         * Either provided in transcoding settings earlier or automatically deduced.
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
          * <code>string src_lang = 3;</code>
@@ -7523,6 +7869,10 @@ public final class VideoOuterClass {
             getSrcLangBytes();
       }
       /**
+       * <pre>
+       * Contains a URL to a summarization result for a specific audio track.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL}
        */
       public static final class SummaryURL extends
@@ -7621,6 +7971,10 @@ public final class VideoOuterClass {
         public static final int URL_FIELD_NUMBER = 1;
         private volatile java.lang.Object url_;
         /**
+         * <pre>
+         * URL to the summarization result file.
+         * </pre>
+         *
          * <code>string url = 1;</code>
          * @return The url.
          */
@@ -7638,6 +7992,10 @@ public final class VideoOuterClass {
           }
         }
         /**
+         * <pre>
+         * URL to the summarization result file.
+         * </pre>
+         *
          * <code>string url = 1;</code>
          * @return The bytes for url.
          */
@@ -7660,7 +8018,7 @@ public final class VideoOuterClass {
         private long trackIndex_;
         /**
          * <pre>
-         * Input audio track index (one-based).
+         * Input audio track index (one-based) that was summarized.
          * </pre>
          *
          * <code>int64 track_index = 2;</code>
@@ -7675,8 +8033,7 @@ public final class VideoOuterClass {
         private volatile java.lang.Object srcLang_;
         /**
          * <pre>
-         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
-         * Either provided in transcoding settings earlier or automatically deduced.
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
          * <code>string src_lang = 3;</code>
@@ -7697,8 +8054,7 @@ public final class VideoOuterClass {
         }
         /**
          * <pre>
-         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
-         * Either provided in transcoding settings earlier or automatically deduced.
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
          * <code>string src_lang = 3;</code>
@@ -7896,6 +8252,10 @@ public final class VideoOuterClass {
           return builder;
         }
         /**
+         * <pre>
+         * Contains a URL to a summarization result for a specific audio track.
+         * </pre>
+         *
          * Protobuf type {@code yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL}
          */
         public static final class Builder extends
@@ -8058,6 +8418,10 @@ public final class VideoOuterClass {
 
           private java.lang.Object url_ = "";
           /**
+           * <pre>
+           * URL to the summarization result file.
+           * </pre>
+           *
            * <code>string url = 1;</code>
            * @return The url.
            */
@@ -8074,6 +8438,10 @@ public final class VideoOuterClass {
             }
           }
           /**
+           * <pre>
+           * URL to the summarization result file.
+           * </pre>
+           *
            * <code>string url = 1;</code>
            * @return The bytes for url.
            */
@@ -8091,6 +8459,10 @@ public final class VideoOuterClass {
             }
           }
           /**
+           * <pre>
+           * URL to the summarization result file.
+           * </pre>
+           *
            * <code>string url = 1;</code>
            * @param value The url to set.
            * @return This builder for chaining.
@@ -8106,6 +8478,10 @@ public final class VideoOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * URL to the summarization result file.
+           * </pre>
+           *
            * <code>string url = 1;</code>
            * @return This builder for chaining.
            */
@@ -8116,6 +8492,10 @@ public final class VideoOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * URL to the summarization result file.
+           * </pre>
+           *
            * <code>string url = 1;</code>
            * @param value The bytes for url to set.
            * @return This builder for chaining.
@@ -8135,7 +8515,7 @@ public final class VideoOuterClass {
           private long trackIndex_ ;
           /**
            * <pre>
-           * Input audio track index (one-based).
+           * Input audio track index (one-based) that was summarized.
            * </pre>
            *
            * <code>int64 track_index = 2;</code>
@@ -8147,7 +8527,7 @@ public final class VideoOuterClass {
           }
           /**
            * <pre>
-           * Input audio track index (one-based).
+           * Input audio track index (one-based) that was summarized.
            * </pre>
            *
            * <code>int64 track_index = 2;</code>
@@ -8162,7 +8542,7 @@ public final class VideoOuterClass {
           }
           /**
            * <pre>
-           * Input audio track index (one-based).
+           * Input audio track index (one-based) that was summarized.
            * </pre>
            *
            * <code>int64 track_index = 2;</code>
@@ -8178,8 +8558,7 @@ public final class VideoOuterClass {
           private java.lang.Object srcLang_ = "";
           /**
            * <pre>
-           * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
-           * Either provided in transcoding settings earlier or automatically deduced.
+           * Source track language represented as a three-letter code according to ISO 639-2/T.
            * </pre>
            *
            * <code>string src_lang = 3;</code>
@@ -8199,8 +8578,7 @@ public final class VideoOuterClass {
           }
           /**
            * <pre>
-           * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
-           * Either provided in transcoding settings earlier or automatically deduced.
+           * Source track language represented as a three-letter code according to ISO 639-2/T.
            * </pre>
            *
            * <code>string src_lang = 3;</code>
@@ -8221,8 +8599,7 @@ public final class VideoOuterClass {
           }
           /**
            * <pre>
-           * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
-           * Either provided in transcoding settings earlier or automatically deduced.
+           * Source track language represented as a three-letter code according to ISO 639-2/T.
            * </pre>
            *
            * <code>string src_lang = 3;</code>
@@ -8241,8 +8618,7 @@ public final class VideoOuterClass {
           }
           /**
            * <pre>
-           * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
-           * Either provided in transcoding settings earlier or automatically deduced.
+           * Source track language represented as a three-letter code according to ISO 639-2/T.
            * </pre>
            *
            * <code>string src_lang = 3;</code>
@@ -8256,8 +8632,7 @@ public final class VideoOuterClass {
           }
           /**
            * <pre>
-           * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
-           * Either provided in transcoding settings earlier or automatically deduced.
+           * Source track language represented as a three-letter code according to ISO 639-2/T.
            * </pre>
            *
            * <code>string src_lang = 3;</code>
@@ -8331,6 +8706,10 @@ public final class VideoOuterClass {
       public static final int RESULT_FIELD_NUMBER = 1;
       private int result_;
       /**
+       * <pre>
+       * Current status of the summarization process.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoFeatures.FeatureResult result = 1;</code>
        * @return The enum numeric value on the wire for result.
        */
@@ -8338,6 +8717,10 @@ public final class VideoOuterClass {
         return result_;
       }
       /**
+       * <pre>
+       * Current status of the summarization process.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoFeatures.FeatureResult result = 1;</code>
        * @return The result.
        */
@@ -8350,6 +8733,10 @@ public final class VideoOuterClass {
       public static final int URLS_FIELD_NUMBER = 3;
       private java.util.List<yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL> urls_;
       /**
+       * <pre>
+       * List of URLs to summarization results for different audio tracks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
        */
       @java.lang.Override
@@ -8357,6 +8744,10 @@ public final class VideoOuterClass {
         return urls_;
       }
       /**
+       * <pre>
+       * List of URLs to summarization results for different audio tracks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
        */
       @java.lang.Override
@@ -8365,6 +8756,10 @@ public final class VideoOuterClass {
         return urls_;
       }
       /**
+       * <pre>
+       * List of URLs to summarization results for different audio tracks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
        */
       @java.lang.Override
@@ -8372,6 +8767,10 @@ public final class VideoOuterClass {
         return urls_.size();
       }
       /**
+       * <pre>
+       * List of URLs to summarization results for different audio tracks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
        */
       @java.lang.Override
@@ -8379,6 +8778,10 @@ public final class VideoOuterClass {
         return urls_.get(index);
       }
       /**
+       * <pre>
+       * List of URLs to summarization results for different audio tracks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
        */
       @java.lang.Override
@@ -8555,6 +8958,10 @@ public final class VideoOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Contains the results of video summarization.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.video.v1.VideoFeatures.Summary}
        */
       public static final class Builder extends
@@ -8747,6 +9154,10 @@ public final class VideoOuterClass {
 
         private int result_ = 0;
         /**
+         * <pre>
+         * Current status of the summarization process.
+         * </pre>
+         *
          * <code>.yandex.cloud.video.v1.VideoFeatures.FeatureResult result = 1;</code>
          * @return The enum numeric value on the wire for result.
          */
@@ -8754,6 +9165,10 @@ public final class VideoOuterClass {
           return result_;
         }
         /**
+         * <pre>
+         * Current status of the summarization process.
+         * </pre>
+         *
          * <code>.yandex.cloud.video.v1.VideoFeatures.FeatureResult result = 1;</code>
          * @param value The enum numeric value on the wire for result to set.
          * @return This builder for chaining.
@@ -8765,6 +9180,10 @@ public final class VideoOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Current status of the summarization process.
+         * </pre>
+         *
          * <code>.yandex.cloud.video.v1.VideoFeatures.FeatureResult result = 1;</code>
          * @return The result.
          */
@@ -8775,6 +9194,10 @@ public final class VideoOuterClass {
           return result == null ? yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.FeatureResult.UNRECOGNIZED : result;
         }
         /**
+         * <pre>
+         * Current status of the summarization process.
+         * </pre>
+         *
          * <code>.yandex.cloud.video.v1.VideoFeatures.FeatureResult result = 1;</code>
          * @param value The result to set.
          * @return This builder for chaining.
@@ -8789,6 +9212,10 @@ public final class VideoOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Current status of the summarization process.
+         * </pre>
+         *
          * <code>.yandex.cloud.video.v1.VideoFeatures.FeatureResult result = 1;</code>
          * @return This builder for chaining.
          */
@@ -8812,6 +9239,10 @@ public final class VideoOuterClass {
             yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL, yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL.Builder, yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURLOrBuilder> urlsBuilder_;
 
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public java.util.List<yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL> getUrlsList() {
@@ -8822,6 +9253,10 @@ public final class VideoOuterClass {
           }
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public int getUrlsCount() {
@@ -8832,6 +9267,10 @@ public final class VideoOuterClass {
           }
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL getUrls(int index) {
@@ -8842,6 +9281,10 @@ public final class VideoOuterClass {
           }
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public Builder setUrls(
@@ -8859,6 +9302,10 @@ public final class VideoOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public Builder setUrls(
@@ -8873,6 +9320,10 @@ public final class VideoOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public Builder addUrls(yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL value) {
@@ -8889,6 +9340,10 @@ public final class VideoOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public Builder addUrls(
@@ -8906,6 +9361,10 @@ public final class VideoOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public Builder addUrls(
@@ -8920,6 +9379,10 @@ public final class VideoOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public Builder addUrls(
@@ -8934,6 +9397,10 @@ public final class VideoOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public Builder addAllUrls(
@@ -8949,6 +9416,10 @@ public final class VideoOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public Builder clearUrls() {
@@ -8962,6 +9433,10 @@ public final class VideoOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public Builder removeUrls(int index) {
@@ -8975,6 +9450,10 @@ public final class VideoOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL.Builder getUrlsBuilder(
@@ -8982,6 +9461,10 @@ public final class VideoOuterClass {
           return getUrlsFieldBuilder().getBuilder(index);
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURLOrBuilder getUrlsOrBuilder(
@@ -8992,6 +9475,10 @@ public final class VideoOuterClass {
           }
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public java.util.List<? extends yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURLOrBuilder> 
@@ -9003,6 +9490,10 @@ public final class VideoOuterClass {
           }
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL.Builder addUrlsBuilder() {
@@ -9010,6 +9501,10 @@ public final class VideoOuterClass {
               yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL.getDefaultInstance());
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL.Builder addUrlsBuilder(
@@ -9018,6 +9513,10 @@ public final class VideoOuterClass {
               index, yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL.getDefaultInstance());
         }
         /**
+         * <pre>
+         * List of URLs to summarization results for different audio tracks.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.video.v1.VideoFeatures.Summary.SummaryURL urls = 3;</code>
          */
         public java.util.List<yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.SummaryURL.Builder> 
@@ -9095,7 +9594,7 @@ public final class VideoOuterClass {
     private yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary summary_;
     /**
      * <pre>
-     * Summarization result.
+     * Results of the video content summarization process.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9107,7 +9606,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Summarization result.
+     * Results of the video content summarization process.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9119,7 +9618,7 @@ public final class VideoOuterClass {
     }
     /**
      * <pre>
-     * Summarization result.
+     * Results of the video content summarization process.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9290,6 +9789,10 @@ public final class VideoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Contains additional processing features and their results for the video.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.VideoFeatures}
      */
     public static final class Builder extends
@@ -9449,7 +9952,7 @@ public final class VideoOuterClass {
           yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary, yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.Summary.Builder, yandex.cloud.api.video.v1.VideoOuterClass.VideoFeatures.SummaryOrBuilder> summaryBuilder_;
       /**
        * <pre>
-       * Summarization result.
+       * Results of the video content summarization process.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9460,7 +9963,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Summarization result.
+       * Results of the video content summarization process.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9475,7 +9978,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Summarization result.
+       * Results of the video content summarization process.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9495,7 +9998,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Summarization result.
+       * Results of the video content summarization process.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9513,7 +10016,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Summarization result.
+       * Results of the video content summarization process.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9535,7 +10038,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Summarization result.
+       * Results of the video content summarization process.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9553,7 +10056,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Summarization result.
+       * Results of the video content summarization process.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9565,7 +10068,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Summarization result.
+       * Results of the video content summarization process.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9580,7 +10083,7 @@ public final class VideoOuterClass {
       }
       /**
        * <pre>
-       * Summarization result.
+       * Results of the video content summarization process.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoFeatures.Summary summary = 1;</code>
@@ -9703,7 +10206,7 @@ public final class VideoOuterClass {
       "\n!yandex/cloud/video/v1/video.proto\022\025yan" +
       "dex.cloud.video.v1\032\036google/protobuf/dura" +
       "tion.proto\032\037google/protobuf/timestamp.pr" +
-      "oto\032\036google/protobuf/wrappers.proto\"\260\t\n\005" +
+      "oto\032\036google/protobuf/wrappers.proto\"\311\t\n\005" +
       "Video\022\n\n\002id\030\001 \001(\t\022\022\n\nchannel_id\030\002 \001(\t\022\r\n" +
       "\005title\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\024\n\014thu" +
       "mbnail_id\030\005 \001(\t\0228\n\006status\030\006 \001(\0162(.yandex" +
@@ -9712,46 +10215,46 @@ public final class VideoOuterClass {
       "\001(\0162-.yandex.cloud.video.v1.Video.Visibi" +
       "lityStatus\022+\n\010duration\030\010 \001(\0132\031.google.pr" +
       "otobuf.Duration\022<\n\016auto_transcode\030\013 \001(\0162" +
-      "$.yandex.cloud.video.v1.AutoTranscode\022-\n" +
-      "\tenable_ad\030\021 \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022\024\n\014subtitle_ids\030\014 \003(\t\0226\n\010features\030\r" +
-      " \001(\0132$.yandex.cloud.video.v1.VideoFeatur" +
-      "es\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud.video.v" +
-      "1.VideoTUSDSourceH\000\022H\n\rpublic_access\030\320\017 " +
-      "\001(\0132..yandex.cloud.video.v1.VideoPublicA" +
-      "ccessRightsH\001\022K\n\017sign_url_access\030\323\017 \001(\0132" +
-      "/.yandex.cloud.video.v1.VideoSignURLAcce" +
-      "ssRightsH\001\022.\n\ncreated_at\030d \001(\0132\032.google." +
-      "protobuf.Timestamp\022.\n\nupdated_at\030e \001(\0132\032" +
-      ".google.protobuf.Timestamp\0229\n\006labels\030\310\001 " +
-      "\003(\0132(.yandex.cloud.video.v1.Video.Labels" +
-      "Entry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"\177\n\013VideoStatus\022\034\n\030VIDEO_STA" +
-      "TUS_UNSPECIFIED\020\000\022\022\n\016WAIT_UPLOADING\020\001\022\014\n" +
-      "\010UPLOADED\020\002\022\016\n\nPROCESSING\020\004\022\t\n\005READY\020\005\022\t" +
-      "\n\005ERROR\020\007\"\004\010\003\020\003\"\004\010\006\020\006\"U\n\020VisibilityStatu" +
-      "s\022!\n\035VISIBILITY_STATUS_UNSPECIFIED\020\000\022\r\n\t" +
-      "PUBLISHED\020\001\022\017\n\013UNPUBLISHED\020\002B\010\n\006sourceB\017" +
-      "\n\raccess_rightsJ\006\010\321\017\020\322\017J\006\010\322\017\020\323\017J\004\010\007\020\010J\004\010" +
-      "\n\020\013J\004\010\016\020\021J\004\010\023\020dJ\005\010f\020\310\001J\006\010\311\001\020\350\007J\006\010\351\007\020\320\017\"1" +
-      "\n\017VideoTUSDSource\022\013\n\003url\030\001 \001(\t\022\021\n\tfile_s" +
-      "ize\030\002 \001(\003\"\031\n\027VideoPublicAccessRights\"\032\n\030" +
-      "VideoSignURLAccessRights\"\232\003\n\rVideoFeatur" +
-      "es\022=\n\007summary\030\001 \001(\0132,.yandex.cloud.video" +
-      ".v1.VideoFeatures.Summary\032\334\001\n\007Summary\022B\n" +
-      "\006result\030\001 \001(\01622.yandex.cloud.video.v1.Vi" +
-      "deoFeatures.FeatureResult\022E\n\004urls\030\003 \003(\0132" +
-      "7.yandex.cloud.video.v1.VideoFeatures.Su" +
-      "mmary.SummaryURL\032@\n\nSummaryURL\022\013\n\003url\030\001 " +
-      "\001(\t\022\023\n\013track_index\030\002 \001(\003\022\020\n\010src_lang\030\003 \001" +
-      "(\tJ\004\010\002\020\003\"k\n\rFeatureResult\022\036\n\032FEATURE_RES" +
-      "ULT_UNSPECIFIED\020\000\022\021\n\rNOT_REQUESTED\020\001\022\016\n\n" +
-      "PROCESSING\020\002\022\013\n\007SUCCESS\020\003\022\n\n\006FAILED\020\004*H\n" +
-      "\rAutoTranscode\022\036\n\032AUTO_TRANSCODE_UNSPECI" +
-      "FIED\020\000\022\n\n\006ENABLE\020\001\022\013\n\007DISABLE\020\002B\\\n\031yande" +
-      "x.cloud.api.video.v1Z?github.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/video/v1;" +
-      "videob\006proto3"
+      "$.yandex.cloud.video.v1.AutoTranscode\022\027\n" +
+      "\017style_preset_id\030\020 \001(\t\022-\n\tenable_ad\030\021 \001(" +
+      "\0132\032.google.protobuf.BoolValue\022\024\n\014subtitl" +
+      "e_ids\030\014 \003(\t\0226\n\010features\030\r \001(\0132$.yandex.c" +
+      "loud.video.v1.VideoFeatures\0227\n\004tusd\030\350\007 \001" +
+      "(\0132&.yandex.cloud.video.v1.VideoTUSDSour" +
+      "ceH\000\022H\n\rpublic_access\030\320\017 \001(\0132..yandex.cl" +
+      "oud.video.v1.VideoPublicAccessRightsH\001\022K" +
+      "\n\017sign_url_access\030\323\017 \001(\0132/.yandex.cloud." +
+      "video.v1.VideoSignURLAccessRightsH\001\022.\n\nc" +
+      "reated_at\030d \001(\0132\032.google.protobuf.Timest" +
+      "amp\022.\n\nupdated_at\030e \001(\0132\032.google.protobu" +
+      "f.Timestamp\0229\n\006labels\030\310\001 \003(\0132(.yandex.cl" +
+      "oud.video.v1.Video.LabelsEntry\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\177\n" +
+      "\013VideoStatus\022\034\n\030VIDEO_STATUS_UNSPECIFIED" +
+      "\020\000\022\022\n\016WAIT_UPLOADING\020\001\022\014\n\010UPLOADED\020\002\022\016\n\n" +
+      "PROCESSING\020\004\022\t\n\005READY\020\005\022\t\n\005ERROR\020\007\"\004\010\003\020\003" +
+      "\"\004\010\006\020\006\"U\n\020VisibilityStatus\022!\n\035VISIBILITY" +
+      "_STATUS_UNSPECIFIED\020\000\022\r\n\tPUBLISHED\020\001\022\017\n\013" +
+      "UNPUBLISHED\020\002B\010\n\006sourceB\017\n\raccess_rights" +
+      "J\004\010\n\020\013J\006\010\321\017\020\322\017J\006\010\322\017\020\323\017J\004\010\007\020\010J\004\010\016\020\020J\004\010\023\020d" +
+      "J\005\010f\020\310\001J\006\010\311\001\020\350\007J\006\010\351\007\020\320\017\"1\n\017VideoTUSDSour" +
+      "ce\022\013\n\003url\030\001 \001(\t\022\021\n\tfile_size\030\002 \001(\003\"\031\n\027Vi" +
+      "deoPublicAccessRights\"\032\n\030VideoSignURLAcc" +
+      "essRights\"\232\003\n\rVideoFeatures\022=\n\007summary\030\001" +
+      " \001(\0132,.yandex.cloud.video.v1.VideoFeatur" +
+      "es.Summary\032\334\001\n\007Summary\022B\n\006result\030\001 \001(\01622" +
+      ".yandex.cloud.video.v1.VideoFeatures.Fea" +
+      "tureResult\022E\n\004urls\030\003 \003(\01327.yandex.cloud." +
+      "video.v1.VideoFeatures.Summary.SummaryUR" +
+      "L\032@\n\nSummaryURL\022\013\n\003url\030\001 \001(\t\022\023\n\013track_in" +
+      "dex\030\002 \001(\003\022\020\n\010src_lang\030\003 \001(\tJ\004\010\002\020\003\"k\n\rFea" +
+      "tureResult\022\036\n\032FEATURE_RESULT_UNSPECIFIED" +
+      "\020\000\022\021\n\rNOT_REQUESTED\020\001\022\016\n\nPROCESSING\020\002\022\013\n" +
+      "\007SUCCESS\020\003\022\n\n\006FAILED\020\004*H\n\rAutoTranscode\022" +
+      "\036\n\032AUTO_TRANSCODE_UNSPECIFIED\020\000\022\n\n\006ENABL" +
+      "E\020\001\022\013\n\007DISABLE\020\002B\\\n\031yandex.cloud.api.vid" +
+      "eo.v1Z?github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9765,7 +10268,7 @@ public final class VideoOuterClass {
     internal_static_yandex_cloud_video_v1_Video_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Video_descriptor,
-        new java.lang.String[] { "Id", "ChannelId", "Title", "Description", "ThumbnailId", "Status", "ErrorMessage", "VisibilityStatus", "Duration", "AutoTranscode", "EnableAd", "SubtitleIds", "Features", "Tusd", "PublicAccess", "SignUrlAccess", "CreatedAt", "UpdatedAt", "Labels", "Source", "AccessRights", });
+        new java.lang.String[] { "Id", "ChannelId", "Title", "Description", "ThumbnailId", "Status", "ErrorMessage", "VisibilityStatus", "Duration", "AutoTranscode", "StylePresetId", "EnableAd", "SubtitleIds", "Features", "Tusd", "PublicAccess", "SignUrlAccess", "CreatedAt", "UpdatedAt", "Labels", "Source", "AccessRights", });
     internal_static_yandex_cloud_video_v1_Video_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_Video_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_Video_LabelsEntry_fieldAccessorTable = new

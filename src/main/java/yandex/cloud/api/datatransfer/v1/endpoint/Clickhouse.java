@@ -2086,6 +2086,21 @@ public final class Clickhouse {
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouseOrBuilder getOnPremiseOrBuilder();
 
     /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return Whether the connectionManagerConnection field is set.
+     */
+    boolean hasConnectionManagerConnection();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return The connectionManagerConnection.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder();
+
+    /**
      * <code>string mdb_cluster_id = 5;</code>
      * @return Whether the mdbClusterId field is set.
      */
@@ -2212,6 +2227,20 @@ public final class Clickhouse {
               addressCase_ = 2;
               break;
             }
+            case 26: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder subBuilder = null;
+              if (addressCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) address_).toBuilder();
+              }
+              address_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) address_);
+                address_ = subBuilder.buildPartial();
+              }
+              addressCase_ = 3;
+              break;
+            }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
               addressCase_ = 5;
@@ -2281,6 +2310,7 @@ public final class Clickhouse {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       ON_PREMISE(2),
+      CONNECTION_MANAGER_CONNECTION(3),
       MDB_CLUSTER_ID(5),
       ADDRESS_NOT_SET(0);
       private final int value;
@@ -2300,6 +2330,7 @@ public final class Clickhouse {
       public static AddressCase forNumber(int value) {
         switch (value) {
           case 2: return ON_PREMISE;
+          case 3: return CONNECTION_MANAGER_CONNECTION;
           case 5: return MDB_CLUSTER_ID;
           case 0: return ADDRESS_NOT_SET;
           default: return null;
@@ -2345,6 +2376,37 @@ public final class Clickhouse {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse) address_;
       }
       return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse.getDefaultInstance();
+    }
+
+    public static final int CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER = 3;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return Whether the connectionManagerConnection field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectionManagerConnection() {
+      return addressCase_ == 3;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return The connectionManagerConnection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection() {
+      if (addressCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) address_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder() {
+      if (addressCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) address_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
     }
 
     public static final int MDB_CLUSTER_ID_FIELD_NUMBER = 5;
@@ -2526,6 +2588,9 @@ public final class Clickhouse {
       if (addressCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse) address_);
       }
+      if (addressCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) address_);
+      }
       if (addressCase_ == 5) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, address_);
       }
@@ -2550,6 +2615,10 @@ public final class Clickhouse {
       if (addressCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse) address_);
+      }
+      if (addressCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) address_);
       }
       if (addressCase_ == 5) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, address_);
@@ -2594,6 +2663,10 @@ public final class Clickhouse {
           if (!getOnPremise()
               .equals(other.getOnPremise())) return false;
           break;
+        case 3:
+          if (!getConnectionManagerConnection()
+              .equals(other.getConnectionManagerConnection())) return false;
+          break;
         case 5:
           if (!getMdbClusterId()
               .equals(other.getMdbClusterId())) return false;
@@ -2624,6 +2697,10 @@ public final class Clickhouse {
         case 2:
           hash = (37 * hash) + ON_PREMISE_FIELD_NUMBER;
           hash = (53 * hash) + getOnPremise().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectionManagerConnection().hashCode();
           break;
         case 5:
           hash = (37 * hash) + MDB_CLUSTER_ID_FIELD_NUMBER;
@@ -2810,6 +2887,13 @@ public final class Clickhouse {
             result.address_ = onPremiseBuilder_.build();
           }
         }
+        if (addressCase_ == 3) {
+          if (connectionManagerConnectionBuilder_ == null) {
+            result.address_ = address_;
+          } else {
+            result.address_ = connectionManagerConnectionBuilder_.build();
+          }
+        }
         if (addressCase_ == 5) {
           result.address_ = address_;
         }
@@ -2883,6 +2967,10 @@ public final class Clickhouse {
         switch (other.getAddressCase()) {
           case ON_PREMISE: {
             mergeOnPremise(other.getOnPremise());
+            break;
+          }
+          case CONNECTION_MANAGER_CONNECTION: {
+            mergeConnectionManagerConnection(other.getConnectionManagerConnection());
             break;
           }
           case MDB_CLUSTER_ID: {
@@ -3078,6 +3166,147 @@ public final class Clickhouse {
         addressCase_ = 2;
         onChanged();;
         return onPremiseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder> connectionManagerConnectionBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       * @return Whether the connectionManagerConnection field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectionManagerConnection() {
+        return addressCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       * @return The connectionManagerConnection.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (addressCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) address_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        } else {
+          if (addressCase_ == 3) {
+            return connectionManagerConnectionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder setConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          address_ = value;
+          onChanged();
+        } else {
+          connectionManagerConnectionBuilder_.setMessage(value);
+        }
+        addressCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder setConnectionManagerConnection(
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder builderForValue) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          address_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionManagerConnectionBuilder_.setMessage(builderForValue.build());
+        }
+        addressCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder mergeConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (addressCase_ == 3 &&
+              address_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance()) {
+            address_ = yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) address_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            address_ = value;
+          }
+          onChanged();
+        } else {
+          if (addressCase_ == 3) {
+            connectionManagerConnectionBuilder_.mergeFrom(value);
+          }
+          connectionManagerConnectionBuilder_.setMessage(value);
+        }
+        addressCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder clearConnectionManagerConnection() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (addressCase_ == 3) {
+            addressCase_ = 0;
+            address_ = null;
+            onChanged();
+          }
+        } else {
+          if (addressCase_ == 3) {
+            addressCase_ = 0;
+            address_ = null;
+          }
+          connectionManagerConnectionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder getConnectionManagerConnectionBuilder() {
+        return getConnectionManagerConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder() {
+        if ((addressCase_ == 3) && (connectionManagerConnectionBuilder_ != null)) {
+          return connectionManagerConnectionBuilder_.getMessageOrBuilder();
+        } else {
+          if (addressCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) address_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder> 
+          getConnectionManagerConnectionFieldBuilder() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (!(addressCase_ == 3)) {
+            address_ = yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+          }
+          connectionManagerConnectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) address_,
+                  getParentForChildren(),
+                  isClean());
+          address_ = null;
+        }
+        addressCase_ = 3;
+        onChanged();;
+        return connectionManagerConnectionBuilder_;
       }
 
       /**
@@ -9817,6 +10046,12 @@ public final class Clickhouse {
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseShardingOrBuilder getShardingOrBuilder();
 
     /**
+     * <code>bool is_schema_migration_disabled = 35;</code>
+     * @return The isSchemaMigrationDisabled.
+     */
+    boolean getIsSchemaMigrationDisabled();
+
+    /**
      * <pre>
      * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
      * ShardGroup.
@@ -9959,6 +10194,11 @@ public final class Clickhouse {
                 sharding_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 280: {
+
+              isSchemaMigrationDisabled_ = input.readBool();
               break;
             }
             case 402: {
@@ -10183,6 +10423,17 @@ public final class Clickhouse {
       return getSharding();
     }
 
+    public static final int IS_SCHEMA_MIGRATION_DISABLED_FIELD_NUMBER = 35;
+    private boolean isSchemaMigrationDisabled_;
+    /**
+     * <code>bool is_schema_migration_disabled = 35;</code>
+     * @return The isSchemaMigrationDisabled.
+     */
+    @java.lang.Override
+    public boolean getIsSchemaMigrationDisabled() {
+      return isSchemaMigrationDisabled_;
+    }
+
     public static final int CLICKHOUSE_CLUSTER_NAME_FIELD_NUMBER = 50;
     private volatile java.lang.Object clickhouseClusterName_;
     /**
@@ -10295,6 +10546,9 @@ public final class Clickhouse {
       if (sharding_ != null) {
         output.writeMessage(22, getSharding());
       }
+      if (isSchemaMigrationDisabled_ != false) {
+        output.writeBool(35, isSchemaMigrationDisabled_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clickhouseClusterName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 50, clickhouseClusterName_);
       }
@@ -10328,6 +10582,10 @@ public final class Clickhouse {
       if (sharding_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, getSharding());
+      }
+      if (isSchemaMigrationDisabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(35, isSchemaMigrationDisabled_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clickhouseClusterName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(50, clickhouseClusterName_);
@@ -10370,6 +10628,8 @@ public final class Clickhouse {
         if (!getSharding()
             .equals(other.getSharding())) return false;
       }
+      if (getIsSchemaMigrationDisabled()
+          != other.getIsSchemaMigrationDisabled()) return false;
       if (!getClickhouseClusterName()
           .equals(other.getClickhouseClusterName())) return false;
       if (!getSecurityGroupsList()
@@ -10401,6 +10661,9 @@ public final class Clickhouse {
         hash = (37 * hash) + SHARDING_FIELD_NUMBER;
         hash = (53 * hash) + getSharding().hashCode();
       }
+      hash = (37 * hash) + IS_SCHEMA_MIGRATION_DISABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsSchemaMigrationDisabled());
       hash = (37 * hash) + CLICKHOUSE_CLUSTER_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getClickhouseClusterName().hashCode();
       if (getSecurityGroupsCount() > 0) {
@@ -10563,6 +10826,8 @@ public final class Clickhouse {
           sharding_ = null;
           shardingBuilder_ = null;
         }
+        isSchemaMigrationDisabled_ = false;
+
         clickhouseClusterName_ = "";
 
         securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -10615,6 +10880,7 @@ public final class Clickhouse {
         } else {
           result.sharding_ = shardingBuilder_.build();
         }
+        result.isSchemaMigrationDisabled_ = isSchemaMigrationDisabled_;
         result.clickhouseClusterName_ = clickhouseClusterName_;
         if (((bitField0_ & 0x00000002) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
@@ -10707,6 +10973,9 @@ public final class Clickhouse {
         }
         if (other.hasSharding()) {
           mergeSharding(other.getSharding());
+        }
+        if (other.getIsSchemaMigrationDisabled() != false) {
+          setIsSchemaMigrationDisabled(other.getIsSchemaMigrationDisabled());
         }
         if (!other.getClickhouseClusterName().isEmpty()) {
           clickhouseClusterName_ = other.clickhouseClusterName_;
@@ -11432,6 +11701,37 @@ public final class Clickhouse {
         return shardingBuilder_;
       }
 
+      private boolean isSchemaMigrationDisabled_ ;
+      /**
+       * <code>bool is_schema_migration_disabled = 35;</code>
+       * @return The isSchemaMigrationDisabled.
+       */
+      @java.lang.Override
+      public boolean getIsSchemaMigrationDisabled() {
+        return isSchemaMigrationDisabled_;
+      }
+      /**
+       * <code>bool is_schema_migration_disabled = 35;</code>
+       * @param value The isSchemaMigrationDisabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsSchemaMigrationDisabled(boolean value) {
+        
+        isSchemaMigrationDisabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_schema_migration_disabled = 35;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsSchemaMigrationDisabled() {
+        
+        isSchemaMigrationDisabled_ = false;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object clickhouseClusterName_ = "";
       /**
        * <pre>
@@ -11764,59 +12064,63 @@ public final class Clickhouse {
       "datatransfer.v1.endpoint.ClickhouseShard" +
       "\022\021\n\thttp_port\030\003 \001(\003\022\023\n\013native_port\030\004 \001(\003" +
       "\022@\n\010tls_mode\030\010 \001(\0132..yandex.cloud.datatr" +
-      "ansfer.v1.endpoint.TLSModeJ\004\010\002\020\003J\004\010\005\020\010\"\201" +
+      "ansfer.v1.endpoint.TLSModeJ\004\010\002\020\003J\004\010\005\020\010\"\356" +
       "\002\n\033ClickhouseConnectionOptions\022P\n\non_pre" +
       "mise\030\002 \001(\0132:.yandex.cloud.datatransfer.v" +
-      "1.endpoint.OnPremiseClickhouseH\000\022\030\n\016mdb_" +
-      "cluster_id\030\005 \001(\tH\000\022\014\n\004user\030\006 \001(\t\022?\n\010pass" +
-      "word\030\007 \001(\0132-.yandex.cloud.datatransfer.v" +
-      "1.endpoint.Secret\022\020\n\010database\030\010 \001(\tB\t\n\007a" +
-      "ddressJ\004\010\001\020\002J\004\010\003\020\005\"\206\001\n\024ClickhouseConnect" +
-      "ion\022`\n\022connection_options\030\001 \001(\0132B.yandex" +
-      ".cloud.datatransfer.v1.endpoint.Clickhou" +
-      "seConnectionOptionsH\000B\014\n\nconnection\"\374\004\n\022" +
-      "ClickhouseSharding\022f\n\021column_value_hash\030" +
-      "\001 \001(\0132I.yandex.cloud.datatransfer.v1.end" +
-      "point.ClickhouseSharding.ColumnValueHash" +
-      "H\000\022f\n\016custom_mapping\030\002 \001(\0132L.yandex.clou" +
-      "d.datatransfer.v1.endpoint.ClickhouseSha" +
-      "rding.ColumnValueMappingH\000\022-\n\013transfer_i" +
-      "d\030\003 \001(\0132\026.google.protobuf.EmptyH\000\022-\n\013rou" +
-      "nd_robin\030\004 \001(\0132\026.google.protobuf.EmptyH\000" +
-      "\032&\n\017ColumnValueHash\022\023\n\013column_name\030\001 \001(\t" +
-      "\032\203\002\n\022ColumnValueMapping\022\023\n\013column_name\030\001" +
-      " \001(\t\022j\n\007mapping\030\002 \003(\0132Y.yandex.cloud.dat" +
-      "atransfer.v1.endpoint.ClickhouseSharding" +
-      ".ColumnValueMapping.ValueToShard\032l\n\014Valu" +
-      "eToShard\022H\n\014column_value\030\001 \001(\01322.yandex." +
-      "cloud.datatransfer.v1.endpoint.ColumnVal" +
-      "ue\022\022\n\nshard_name\030\002 \001(\tB\n\n\010sharding\"\346\001\n\020C" +
-      "lickhouseSource\022O\n\nconnection\030\001 \001(\0132;.ya" +
-      "ndex.cloud.datatransfer.v1.endpoint.Clic" +
-      "khouseConnection\022\026\n\016include_tables\030\007 \003(\t" +
-      "\022\026\n\016exclude_tables\030\010 \003(\t\022\021\n\tsubnet_id\030\t " +
-      "\001(\t\022\027\n\017security_groups\030\n \003(\t\022\037\n\027clickhou" +
-      "se_cluster_name\030\013 \001(\tJ\004\010\002\020\007\"\266\003\n\020Clickhou" +
-      "seTarget\022O\n\nconnection\030\002 \001(\0132;.yandex.cl" +
+      "1.endpoint.OnPremiseClickhouseH\000\022k\n\035conn" +
+      "ection_manager_connection\030\003 \001(\0132B.yandex" +
+      ".cloud.datatransfer.v1.endpoint.Connecti" +
+      "onManagerConnectionH\000\022\030\n\016mdb_cluster_id\030" +
+      "\005 \001(\tH\000\022\014\n\004user\030\006 \001(\t\022?\n\010password\030\007 \001(\0132" +
+      "-.yandex.cloud.datatransfer.v1.endpoint." +
+      "Secret\022\020\n\010database\030\010 \001(\tB\t\n\007addressJ\004\010\001\020" +
+      "\002J\004\010\004\020\005\"\206\001\n\024ClickhouseConnection\022`\n\022conn" +
+      "ection_options\030\001 \001(\0132B.yandex.cloud.data" +
+      "transfer.v1.endpoint.ClickhouseConnectio" +
+      "nOptionsH\000B\014\n\nconnection\"\374\004\n\022ClickhouseS" +
+      "harding\022f\n\021column_value_hash\030\001 \001(\0132I.yan" +
+      "dex.cloud.datatransfer.v1.endpoint.Click" +
+      "houseSharding.ColumnValueHashH\000\022f\n\016custo" +
+      "m_mapping\030\002 \001(\0132L.yandex.cloud.datatrans" +
+      "fer.v1.endpoint.ClickhouseSharding.Colum" +
+      "nValueMappingH\000\022-\n\013transfer_id\030\003 \001(\0132\026.g" +
+      "oogle.protobuf.EmptyH\000\022-\n\013round_robin\030\004 " +
+      "\001(\0132\026.google.protobuf.EmptyH\000\032&\n\017ColumnV" +
+      "alueHash\022\023\n\013column_name\030\001 \001(\t\032\203\002\n\022Column" +
+      "ValueMapping\022\023\n\013column_name\030\001 \001(\t\022j\n\007map" +
+      "ping\030\002 \003(\0132Y.yandex.cloud.datatransfer.v" +
+      "1.endpoint.ClickhouseSharding.ColumnValu" +
+      "eMapping.ValueToShard\032l\n\014ValueToShard\022H\n" +
+      "\014column_value\030\001 \001(\01322.yandex.cloud.datat" +
+      "ransfer.v1.endpoint.ColumnValue\022\022\n\nshard" +
+      "_name\030\002 \001(\tB\n\n\010sharding\"\346\001\n\020ClickhouseSo" +
+      "urce\022O\n\nconnection\030\001 \001(\0132;.yandex.cloud." +
+      "datatransfer.v1.endpoint.ClickhouseConne" +
+      "ction\022\026\n\016include_tables\030\007 \003(\t\022\026\n\016exclude" +
+      "_tables\030\010 \003(\t\022\021\n\tsubnet_id\030\t \001(\t\022\027\n\017secu" +
+      "rity_groups\030\n \003(\t\022\037\n\027clickhouse_cluster_" +
+      "name\030\013 \001(\tJ\004\010\002\020\007\"\342\003\n\020ClickhouseTarget\022O\n" +
+      "\nconnection\030\002 \001(\0132;.yandex.cloud.datatra" +
+      "nsfer.v1.endpoint.ClickhouseConnection\022\021" +
+      "\n\tsubnet_id\030\014 \001(\t\022A\n\talt_names\030\021 \003(\0132..y" +
+      "andex.cloud.datatransfer.v1.endpoint.Alt" +
+      "Name\022V\n\016cleanup_policy\030\025 \001(\0162>.yandex.cl" +
       "oud.datatransfer.v1.endpoint.ClickhouseC" +
-      "onnection\022\021\n\tsubnet_id\030\014 \001(\t\022A\n\talt_name" +
-      "s\030\021 \003(\0132..yandex.cloud.datatransfer.v1.e" +
-      "ndpoint.AltName\022V\n\016cleanup_policy\030\025 \001(\0162" +
-      ">.yandex.cloud.datatransfer.v1.endpoint." +
-      "ClickhouseCleanupPolicy\022K\n\010sharding\030\026 \001(" +
-      "\01329.yandex.cloud.datatransfer.v1.endpoin" +
-      "t.ClickhouseSharding\022\037\n\027clickhouse_clust" +
-      "er_name\0302 \001(\t\022\027\n\017security_groups\0303 \003(\tJ\004" +
-      "\010\001\020\002J\004\010\003\020\014J\004\010\r\020\021J\004\010\022\020\025J\004\010\027\0202*\270\001\n\027Clickho" +
-      "useCleanupPolicy\022)\n%CLICKHOUSE_CLEANUP_P" +
-      "OLICY_UNSPECIFIED\020\000\022&\n\"CLICKHOUSE_CLEANU" +
-      "P_POLICY_DISABLED\020\001\022\"\n\036CLICKHOUSE_CLEANU" +
-      "P_POLICY_DROP\020\002\022&\n\"CLICKHOUSE_CLEANUP_PO" +
-      "LICY_TRUNCATE\020\003B\247\001\n)yandex.cloud.api.dat" +
-      "atransfer.v1.endpointZRgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/datatran" +
-      "sfer/v1/endpoint;endpoint\252\002%Yandex.Cloud" +
-      ".Datatransfer.V1.EndPointb\006proto3"
+      "leanupPolicy\022K\n\010sharding\030\026 \001(\01329.yandex." +
+      "cloud.datatransfer.v1.endpoint.Clickhous" +
+      "eSharding\022$\n\034is_schema_migration_disable" +
+      "d\030# \001(\010\022\037\n\027clickhouse_cluster_name\0302 \001(\t" +
+      "\022\027\n\017security_groups\0303 \003(\tJ\004\010\001\020\002J\004\010\003\020\014J\004\010" +
+      "\r\020\021J\004\010\022\020\025J\004\010\027\020#J\004\010$\0202*\270\001\n\027ClickhouseClea" +
+      "nupPolicy\022)\n%CLICKHOUSE_CLEANUP_POLICY_U" +
+      "NSPECIFIED\020\000\022&\n\"CLICKHOUSE_CLEANUP_POLIC" +
+      "Y_DISABLED\020\001\022\"\n\036CLICKHOUSE_CLEANUP_POLIC" +
+      "Y_DROP\020\002\022&\n\"CLICKHOUSE_CLEANUP_POLICY_TR" +
+      "UNCATE\020\003B\247\001\n)yandex.cloud.api.datatransf" +
+      "er.v1.endpointZRgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/datatransfer/v1" +
+      "/endpoint;endpoint\252\002%Yandex.Cloud.Datatr" +
+      "ansfer.V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11841,7 +12145,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnectionOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnectionOptions_descriptor,
-        new java.lang.String[] { "OnPremise", "MdbClusterId", "User", "Password", "Database", "Address", });
+        new java.lang.String[] { "OnPremise", "ConnectionManagerConnection", "MdbClusterId", "User", "Password", "Database", "Address", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnection_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnection_fieldAccessorTable = new
@@ -11883,7 +12187,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseTarget_descriptor,
-        new java.lang.String[] { "Connection", "SubnetId", "AltNames", "CleanupPolicy", "Sharding", "ClickhouseClusterName", "SecurityGroups", });
+        new java.lang.String[] { "Connection", "SubnetId", "AltNames", "CleanupPolicy", "Sharding", "IsSchemaMigrationDisabled", "ClickhouseClusterName", "SecurityGroups", });
     com.google.protobuf.EmptyProto.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
   }

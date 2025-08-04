@@ -3732,6 +3732,33 @@ public final class InstanceGroupServiceOuterClass {
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpecOrBuilder getApplicationLoadBalancerSpecOrBuilder();
+
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+     * @return Whether the autoHealingPolicy field is set.
+     */
+    boolean hasAutoHealingPolicy();
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+     * @return The autoHealingPolicy.
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getAutoHealingPolicy();
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder getAutoHealingPolicyOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.CreateInstanceGroupRequest}
@@ -3922,6 +3949,19 @@ public final class InstanceGroupServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(applicationLoadBalancerSpec_);
                 applicationLoadBalancerSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 130: {
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder subBuilder = null;
+              if (autoHealingPolicy_ != null) {
+                subBuilder = autoHealingPolicy_.toBuilder();
+              }
+              autoHealingPolicy_ = input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoHealingPolicy_);
+                autoHealingPolicy_ = subBuilder.buildPartial();
               }
 
               break;
@@ -4601,6 +4641,44 @@ public final class InstanceGroupServiceOuterClass {
       return getApplicationLoadBalancerSpec();
     }
 
+    public static final int AUTO_HEALING_POLICY_FIELD_NUMBER = 16;
+    private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy autoHealingPolicy_;
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+     * @return Whether the autoHealingPolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoHealingPolicy() {
+      return autoHealingPolicy_ != null;
+    }
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+     * @return The autoHealingPolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getAutoHealingPolicy() {
+      return autoHealingPolicy_ == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDefaultInstance() : autoHealingPolicy_;
+    }
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder getAutoHealingPolicyOrBuilder() {
+      return getAutoHealingPolicy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4659,6 +4737,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       if (applicationLoadBalancerSpec_ != null) {
         output.writeMessage(15, getApplicationLoadBalancerSpec());
+      }
+      if (autoHealingPolicy_ != null) {
+        output.writeMessage(16, getAutoHealingPolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -4727,6 +4808,10 @@ public final class InstanceGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getApplicationLoadBalancerSpec());
       }
+      if (autoHealingPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getAutoHealingPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4791,6 +4876,11 @@ public final class InstanceGroupServiceOuterClass {
         if (!getApplicationLoadBalancerSpec()
             .equals(other.getApplicationLoadBalancerSpec())) return false;
       }
+      if (hasAutoHealingPolicy() != other.hasAutoHealingPolicy()) return false;
+      if (hasAutoHealingPolicy()) {
+        if (!getAutoHealingPolicy()
+            .equals(other.getAutoHealingPolicy())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4848,6 +4938,10 @@ public final class InstanceGroupServiceOuterClass {
       if (hasApplicationLoadBalancerSpec()) {
         hash = (37 * hash) + APPLICATION_LOAD_BALANCER_SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getApplicationLoadBalancerSpec().hashCode();
+      }
+      if (hasAutoHealingPolicy()) {
+        hash = (37 * hash) + AUTO_HEALING_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoHealingPolicy().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5064,6 +5158,12 @@ public final class InstanceGroupServiceOuterClass {
           applicationLoadBalancerSpec_ = null;
           applicationLoadBalancerSpecBuilder_ = null;
         }
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicy_ = null;
+        } else {
+          autoHealingPolicy_ = null;
+          autoHealingPolicyBuilder_ = null;
+        }
         return this;
       }
 
@@ -5141,6 +5241,11 @@ public final class InstanceGroupServiceOuterClass {
           result.applicationLoadBalancerSpec_ = applicationLoadBalancerSpec_;
         } else {
           result.applicationLoadBalancerSpec_ = applicationLoadBalancerSpecBuilder_.build();
+        }
+        if (autoHealingPolicyBuilder_ == null) {
+          result.autoHealingPolicy_ = autoHealingPolicy_;
+        } else {
+          result.autoHealingPolicy_ = autoHealingPolicyBuilder_.build();
         }
         onBuilt();
         return result;
@@ -5257,6 +5362,9 @@ public final class InstanceGroupServiceOuterClass {
         }
         if (other.hasApplicationLoadBalancerSpec()) {
           mergeApplicationLoadBalancerSpec(other.getApplicationLoadBalancerSpec());
+        }
+        if (other.hasAutoHealingPolicy()) {
+          mergeAutoHealingPolicy(other.getAutoHealingPolicy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7273,6 +7381,161 @@ public final class InstanceGroupServiceOuterClass {
         }
         return applicationLoadBalancerSpecBuilder_;
       }
+
+      private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy autoHealingPolicy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder> autoHealingPolicyBuilder_;
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+       * @return Whether the autoHealingPolicy field is set.
+       */
+      public boolean hasAutoHealingPolicy() {
+        return autoHealingPolicyBuilder_ != null || autoHealingPolicy_ != null;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+       * @return The autoHealingPolicy.
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getAutoHealingPolicy() {
+        if (autoHealingPolicyBuilder_ == null) {
+          return autoHealingPolicy_ == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDefaultInstance() : autoHealingPolicy_;
+        } else {
+          return autoHealingPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+       */
+      public Builder setAutoHealingPolicy(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy value) {
+        if (autoHealingPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoHealingPolicy_ = value;
+          onChanged();
+        } else {
+          autoHealingPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+       */
+      public Builder setAutoHealingPolicy(
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder builderForValue) {
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoHealingPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+       */
+      public Builder mergeAutoHealingPolicy(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy value) {
+        if (autoHealingPolicyBuilder_ == null) {
+          if (autoHealingPolicy_ != null) {
+            autoHealingPolicy_ =
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.newBuilder(autoHealingPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            autoHealingPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          autoHealingPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+       */
+      public Builder clearAutoHealingPolicy() {
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicy_ = null;
+          onChanged();
+        } else {
+          autoHealingPolicy_ = null;
+          autoHealingPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder getAutoHealingPolicyBuilder() {
+        
+        onChanged();
+        return getAutoHealingPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder getAutoHealingPolicyOrBuilder() {
+        if (autoHealingPolicyBuilder_ != null) {
+          return autoHealingPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return autoHealingPolicy_ == null ?
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDefaultInstance() : autoHealingPolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder> 
+          getAutoHealingPolicyFieldBuilder() {
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder>(
+                  getAutoHealingPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          autoHealingPolicy_ = null;
+        }
+        return autoHealingPolicyBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9133,6 +9396,33 @@ public final class InstanceGroupServiceOuterClass {
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 17;</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpecOrBuilder getApplicationLoadBalancerSpecOrBuilder();
+
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+     * @return Whether the autoHealingPolicy field is set.
+     */
+    boolean hasAutoHealingPolicy();
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+     * @return The autoHealingPolicy.
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getAutoHealingPolicy();
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder getAutoHealingPolicyOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.UpdateInstanceGroupRequest}
@@ -9336,6 +9626,19 @@ public final class InstanceGroupServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(applicationLoadBalancerSpec_);
                 applicationLoadBalancerSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 146: {
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder subBuilder = null;
+              if (autoHealingPolicy_ != null) {
+                subBuilder = autoHealingPolicy_.toBuilder();
+              }
+              autoHealingPolicy_ = input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoHealingPolicy_);
+                autoHealingPolicy_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10043,6 +10346,44 @@ public final class InstanceGroupServiceOuterClass {
       return getApplicationLoadBalancerSpec();
     }
 
+    public static final int AUTO_HEALING_POLICY_FIELD_NUMBER = 18;
+    private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy autoHealingPolicy_;
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+     * @return Whether the autoHealingPolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoHealingPolicy() {
+      return autoHealingPolicy_ != null;
+    }
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+     * @return The autoHealingPolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getAutoHealingPolicy() {
+      return autoHealingPolicy_ == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDefaultInstance() : autoHealingPolicy_;
+    }
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder getAutoHealingPolicyOrBuilder() {
+      return getAutoHealingPolicy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10104,6 +10445,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       if (applicationLoadBalancerSpec_ != null) {
         output.writeMessage(17, getApplicationLoadBalancerSpec());
+      }
+      if (autoHealingPolicy_ != null) {
+        output.writeMessage(18, getAutoHealingPolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -10176,6 +10520,10 @@ public final class InstanceGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getApplicationLoadBalancerSpec());
       }
+      if (autoHealingPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getAutoHealingPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10245,6 +10593,11 @@ public final class InstanceGroupServiceOuterClass {
         if (!getApplicationLoadBalancerSpec()
             .equals(other.getApplicationLoadBalancerSpec())) return false;
       }
+      if (hasAutoHealingPolicy() != other.hasAutoHealingPolicy()) return false;
+      if (hasAutoHealingPolicy()) {
+        if (!getAutoHealingPolicy()
+            .equals(other.getAutoHealingPolicy())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10306,6 +10659,10 @@ public final class InstanceGroupServiceOuterClass {
       if (hasApplicationLoadBalancerSpec()) {
         hash = (37 * hash) + APPLICATION_LOAD_BALANCER_SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getApplicationLoadBalancerSpec().hashCode();
+      }
+      if (hasAutoHealingPolicy()) {
+        hash = (37 * hash) + AUTO_HEALING_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoHealingPolicy().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10528,6 +10885,12 @@ public final class InstanceGroupServiceOuterClass {
           applicationLoadBalancerSpec_ = null;
           applicationLoadBalancerSpecBuilder_ = null;
         }
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicy_ = null;
+        } else {
+          autoHealingPolicy_ = null;
+          autoHealingPolicyBuilder_ = null;
+        }
         return this;
       }
 
@@ -10610,6 +10973,11 @@ public final class InstanceGroupServiceOuterClass {
           result.applicationLoadBalancerSpec_ = applicationLoadBalancerSpec_;
         } else {
           result.applicationLoadBalancerSpec_ = applicationLoadBalancerSpecBuilder_.build();
+        }
+        if (autoHealingPolicyBuilder_ == null) {
+          result.autoHealingPolicy_ = autoHealingPolicy_;
+        } else {
+          result.autoHealingPolicy_ = autoHealingPolicyBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10729,6 +11097,9 @@ public final class InstanceGroupServiceOuterClass {
         }
         if (other.hasApplicationLoadBalancerSpec()) {
           mergeApplicationLoadBalancerSpec(other.getApplicationLoadBalancerSpec());
+        }
+        if (other.hasAutoHealingPolicy()) {
+          mergeAutoHealingPolicy(other.getAutoHealingPolicy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12864,6 +13235,161 @@ public final class InstanceGroupServiceOuterClass {
           applicationLoadBalancerSpec_ = null;
         }
         return applicationLoadBalancerSpecBuilder_;
+      }
+
+      private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy autoHealingPolicy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder> autoHealingPolicyBuilder_;
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+       * @return Whether the autoHealingPolicy field is set.
+       */
+      public boolean hasAutoHealingPolicy() {
+        return autoHealingPolicyBuilder_ != null || autoHealingPolicy_ != null;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+       * @return The autoHealingPolicy.
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getAutoHealingPolicy() {
+        if (autoHealingPolicyBuilder_ == null) {
+          return autoHealingPolicy_ == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDefaultInstance() : autoHealingPolicy_;
+        } else {
+          return autoHealingPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+       */
+      public Builder setAutoHealingPolicy(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy value) {
+        if (autoHealingPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoHealingPolicy_ = value;
+          onChanged();
+        } else {
+          autoHealingPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+       */
+      public Builder setAutoHealingPolicy(
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder builderForValue) {
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoHealingPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+       */
+      public Builder mergeAutoHealingPolicy(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy value) {
+        if (autoHealingPolicyBuilder_ == null) {
+          if (autoHealingPolicy_ != null) {
+            autoHealingPolicy_ =
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.newBuilder(autoHealingPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            autoHealingPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          autoHealingPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+       */
+      public Builder clearAutoHealingPolicy() {
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicy_ = null;
+          onChanged();
+        } else {
+          autoHealingPolicy_ = null;
+          autoHealingPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder getAutoHealingPolicyBuilder() {
+        
+        onChanged();
+        return getAutoHealingPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder getAutoHealingPolicyOrBuilder() {
+        if (autoHealingPolicyBuilder_ != null) {
+          return autoHealingPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return autoHealingPolicy_ == null ?
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDefaultInstance() : autoHealingPolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 18;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder> 
+          getAutoHealingPolicyFieldBuilder() {
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder>(
+                  getAutoHealingPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          autoHealingPolicy_ = null;
+        }
+        return autoHealingPolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -33526,7 +34052,7 @@ public final class InstanceGroupServiceOuterClass {
       "p_id\030\001 \001(\t\"\212\001\n\027GetInstanceGroupRequest\022\'" +
       "\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
       "F\n\004view\030\002 \001(\01628.yandex.cloud.compute.v1." +
-      "instancegroup.InstanceGroupView\"\320\010\n\032Crea" +
+      "instancegroup.InstanceGroupView\"\247\t\n\032Crea" +
       "teInstanceGroupRequest\022\027\n\tfolder_id\030\001 \001(" +
       "\tB\004\350\3071\001\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0" +
       "-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\t" +
@@ -33553,227 +34079,232 @@ public final class InstanceGroupServiceOuterClass {
       "_protection\030\016 \001(\010\022j\n\036application_load_ba" +
       "lancer_spec\030\017 \001(\0132B.yandex.cloud.compute" +
       ".v1.instancegroup.ApplicationLoadBalance" +
-      "rSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001J\004\010\002\020\003\"m\n\"CreateInstanceGrou" +
-      "pFromYamlRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022.\n\023instance_group_yaml\030\002 \001(\tB\021\350\3071\001\212\3101\t" +
-      "<=1048576\"B\n\033CreateInstanceGroupMetadata" +
-      "\022#\n\021instance_group_id\030\001 \001(\tB\010\212\3101\004<=50\"\227\t" +
-      "\n\032UpdateInstanceGroupRequest\022\'\n\021instance" +
-      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_" +
-      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\0222" +
-      "\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}" +
-      "[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=2" +
-      "56\022\246\001\n\006labels\030\005 \003(\0132M.yandex.cloud.compu" +
-      "te.v1.instancegroup.UpdateInstanceGroupR" +
-      "equest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017" +
-      "[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_." +
-      "/\\@0-9a-z]*\022X\n\021instance_template\030\006 \001(\01327" +
-      ".yandex.cloud.compute.v1.instancegroup.I" +
-      "nstanceTemplateB\004\350\3071\001\022N\n\014scale_policy\030\007 " +
-      "\001(\01322.yandex.cloud.compute.v1.instancegr" +
-      "oup.ScalePolicyB\004\350\3071\001\022P\n\rdeploy_policy\030\010" +
-      " \001(\01323.yandex.cloud.compute.v1.instanceg" +
-      "roup.DeployPolicyB\004\350\3071\001\022X\n\021allocation_po" +
-      "licy\030\t \001(\01327.yandex.cloud.compute.v1.ins" +
-      "tancegroup.AllocationPolicyB\004\350\3071\001\022S\n\022hea" +
-      "lth_checks_spec\030\013 \001(\01327.yandex.cloud.com" +
-      "pute.v1.instancegroup.HealthChecksSpec\022\032" +
-      "\n\022service_account_id\030\014 \001(\t\022S\n\022load_balan" +
-      "cer_spec\030\016 \001(\01327.yandex.cloud.compute.v1" +
-      ".instancegroup.LoadBalancerSpec\022B\n\tvaria" +
-      "bles\030\017 \003(\0132/.yandex.cloud.compute.v1.ins" +
-      "tancegroup.Variable\022\033\n\023deletion_protecti" +
-      "on\030\020 \001(\010\022j\n\036application_load_balancer_sp" +
-      "ec\030\021 \001(\0132B.yandex.cloud.compute.v1.insta" +
-      "ncegroup.ApplicationLoadBalancerSpec\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001J\004\010\r\020\016J\004\010\n\020\013\"}\n\"UpdateInstanceGroupFr" +
-      "omYamlRequest\022\'\n\021instance_group_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022.\n\023instance_group_yaml\030\002 " +
-      "\001(\tB\021\350\3071\001\212\3101\t<=1048576\"8\n\033UpdateInstance" +
-      "GroupMetadata\022\031\n\021instance_group_id\030\001 \001(\t" +
-      "\"D\n\031StartInstanceGroupRequest\022\'\n\021instanc" +
-      "e_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"7\n\032StartI" +
-      "nstanceGroupMetadata\022\031\n\021instance_group_i" +
-      "d\030\001 \001(\t\"C\n\030StopInstanceGroupRequest\022\'\n\021i" +
-      "nstance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\031" +
-      "StopInstanceGroupMetadata\022\031\n\021instance_gr" +
-      "oup_id\030\001 \001(\t\"^\n\025RollingRestartRequest\022\'\n" +
-      "\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034" +
-      "\n\024managed_instance_ids\030\002 \003(\t\"3\n\026RollingR" +
-      "estartMetadata\022\031\n\021instance_group_id\030\001 \001(" +
-      "\t\"_\n\026RollingRecreateRequest\022\'\n\021instance_" +
-      "group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\024managed_" +
-      "instance_ids\030\002 \003(\t\"4\n\027RollingRecreateMet" +
-      "adata\022\031\n\021instance_group_id\030\001 \001(\t\"E\n\032Dele" +
-      "teInstanceGroupRequest\022\'\n\021instance_group" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"8\n\033DeleteInstanc" +
-      "eGroupMetadata\022\031\n\021instance_group_id\030\001 \001(" +
-      "\t\"4\n\027DeleteInstancesMetadata\022\031\n\021instance" +
-      "_group_id\030\001 \001(\t\"2\n\025StopInstancesMetadata" +
-      "\022\031\n\021instance_group_id\030\001 \001(\t\"\327\001\n\031ListInst" +
-      "anceGroupsRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\307" +
-      "1\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\036\n\npag" +
-      "e_token\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(" +
-      "\tB\n\212\3101\006<=1000\022F\n\004view\030\005 \001(\01628.yandex.clo" +
-      "ud.compute.v1.instancegroup.InstanceGrou" +
-      "pView\"\204\001\n\032ListInstanceGroupsResponse\022M\n\017" +
-      "instance_groups\030\001 \003(\01324.yandex.cloud.com" +
-      "pute.v1.instancegroup.InstanceGroup\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t\"\247\001\n!ListInstanceGro" +
-      "upInstancesRequest\022\'\n\021instance_group_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
-      "\372\3071\006<=1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=10" +
-      "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\210\001\n\"ListI" +
-      "nstanceGroupInstancesResponse\022I\n\tinstanc" +
-      "es\030\001 \003(\01326.yandex.cloud.compute.v1.insta" +
-      "ncegroup.ManagedInstance\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"\210\001\n\026DeleteInstancesRequest\022\'\n\021" +
-      "instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022-\n" +
-      "\024managed_instance_ids\030\002 \003(\tB\017\202\3101\003>=1\212\3101\004" +
-      "<=50\022\026\n\016create_another\030\003 \001(\010\"n\n\024StopInst" +
-      "ancesRequest\022\'\n\021instance_group_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022-\n\024managed_instance_ids\030\002 " +
-      "\003(\tB\017\202\3101\003>=1\212\3101\004<=50\"\250\001\n\"ListInstanceGro" +
-      "upOperationsRequest\022\'\n\021instance_group_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=1" +
-      "000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"u\n#ListI" +
-      "nstanceGroupOperationsResponse\0225\n\noperat" +
-      "ions\030\001 \003(\0132!.yandex.cloud.operation.Oper" +
-      "ation\022\027\n\017next_page_token\030\002 \001(\t\"\240\001\n\"ListI" +
-      "nstanceGroupLogRecordsRequest\022\037\n\021instanc" +
-      "e_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(" +
-      "\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<" +
-      "=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\205\001\n#Li" +
-      "stInstanceGroupLogRecordsResponse\022E\n\013log" +
-      "_records\030\001 \003(\01320.yandex.cloud.compute.v1" +
-      ".instancegroup.LogRecord\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t*(\n\021InstanceGroupView\022\t\n\005BASIC\020" +
-      "\000\022\010\n\004FULL\020\0012\224%\n\024InstanceGroupService\022\263\001\n" +
-      "\003Get\022>.yandex.cloud.compute.v1.instanceg" +
-      "roup.GetInstanceGroupRequest\0324.yandex.cl" +
-      "oud.compute.v1.instancegroup.InstanceGro" +
-      "up\"6\202\323\344\223\0020\022./compute/v1/instanceGroups/{" +
-      "instance_group_id}\022\257\001\n\004List\022@.yandex.clo" +
+      "rSpec\022U\n\023auto_healing_policy\030\020 \001(\01328.yan" +
+      "dex.cloud.compute.v1.instancegroup.AutoH" +
+      "ealingPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\002\020\003\"m\n\"CreateInsta" +
+      "nceGroupFromYamlRequest\022\027\n\tfolder_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022.\n\023instance_group_yaml\030\002 \001(\tB\021\350" +
+      "\3071\001\212\3101\t<=1048576\"B\n\033CreateInstanceGroupM" +
+      "etadata\022#\n\021instance_group_id\030\001 \001(\tB\010\212\3101\004" +
+      "<=50\"\356\t\n\032UpdateInstanceGroupRequest\022\'\n\021i" +
+      "nstance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013" +
+      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
+      "dMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9" +
+      "]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t" +
+      "\212\3101\005<=256\022\246\001\n\006labels\030\005 \003(\0132M.yandex.clou" +
+      "d.compute.v1.instancegroup.UpdateInstanc" +
+      "eGroupRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<" +
+      "=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a" +
+      "-z][-_./\\@0-9a-z]*\022X\n\021instance_template\030" +
+      "\006 \001(\01327.yandex.cloud.compute.v1.instance" +
+      "group.InstanceTemplateB\004\350\3071\001\022N\n\014scale_po" +
+      "licy\030\007 \001(\01322.yandex.cloud.compute.v1.ins" +
+      "tancegroup.ScalePolicyB\004\350\3071\001\022P\n\rdeploy_p" +
+      "olicy\030\010 \001(\01323.yandex.cloud.compute.v1.in" +
+      "stancegroup.DeployPolicyB\004\350\3071\001\022X\n\021alloca" +
+      "tion_policy\030\t \001(\01327.yandex.cloud.compute" +
+      ".v1.instancegroup.AllocationPolicyB\004\350\3071\001" +
+      "\022S\n\022health_checks_spec\030\013 \001(\01327.yandex.cl" +
+      "oud.compute.v1.instancegroup.HealthCheck" +
+      "sSpec\022\032\n\022service_account_id\030\014 \001(\t\022S\n\022loa" +
+      "d_balancer_spec\030\016 \001(\01327.yandex.cloud.com" +
+      "pute.v1.instancegroup.LoadBalancerSpec\022B" +
+      "\n\tvariables\030\017 \003(\0132/.yandex.cloud.compute" +
+      ".v1.instancegroup.Variable\022\033\n\023deletion_p" +
+      "rotection\030\020 \001(\010\022j\n\036application_load_bala" +
+      "ncer_spec\030\021 \001(\0132B.yandex.cloud.compute.v" +
+      "1.instancegroup.ApplicationLoadBalancerS" +
+      "pec\022U\n\023auto_healing_policy\030\022 \001(\01328.yande" +
+      "x.cloud.compute.v1.instancegroup.AutoHea" +
+      "lingPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001J\004\010\r\020\016J\004\010\n\020\013\"}\n\"UpdateI" +
+      "nstanceGroupFromYamlRequest\022\'\n\021instance_" +
+      "group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\023instance" +
+      "_group_yaml\030\002 \001(\tB\021\350\3071\001\212\3101\t<=1048576\"8\n\033" +
+      "UpdateInstanceGroupMetadata\022\031\n\021instance_" +
+      "group_id\030\001 \001(\t\"D\n\031StartInstanceGroupRequ" +
+      "est\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\"7\n\032StartInstanceGroupMetadata\022\031\n\021in" +
+      "stance_group_id\030\001 \001(\t\"C\n\030StopInstanceGro" +
+      "upRequest\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\"6\n\031StopInstanceGroupMetadata\022" +
+      "\031\n\021instance_group_id\030\001 \001(\t\"^\n\025RollingRes" +
+      "tartRequest\022\'\n\021instance_group_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\034\n\024managed_instance_ids\030\002 \003" +
+      "(\t\"3\n\026RollingRestartMetadata\022\031\n\021instance" +
+      "_group_id\030\001 \001(\t\"_\n\026RollingRecreateReques" +
+      "t\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\034\n\024managed_instance_ids\030\002 \003(\t\"4\n\027Roll" +
+      "ingRecreateMetadata\022\031\n\021instance_group_id" +
+      "\030\001 \001(\t\"E\n\032DeleteInstanceGroupRequest\022\'\n\021" +
+      "instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"8\n" +
+      "\033DeleteInstanceGroupMetadata\022\031\n\021instance" +
+      "_group_id\030\001 \001(\t\"4\n\027DeleteInstancesMetada" +
+      "ta\022\031\n\021instance_group_id\030\001 \001(\t\"2\n\025StopIns" +
+      "tancesMetadata\022\031\n\021instance_group_id\030\001 \001(" +
+      "\t\"\327\001\n\031ListInstanceGroupsRequest\022\027\n\tfolde" +
+      "r_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\006<=1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=1000\022" +
+      "\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022F\n\004view\030\005 \001(" +
+      "\01628.yandex.cloud.compute.v1.instancegrou" +
+      "p.InstanceGroupView\"\204\001\n\032ListInstanceGrou" +
+      "psResponse\022M\n\017instance_groups\030\001 \003(\01324.ya" +
+      "ndex.cloud.compute.v1.instancegroup.Inst" +
+      "anceGroup\022\027\n\017next_page_token\030\002 \001(\t\"\247\001\n!L" +
+      "istInstanceGroupInstancesRequest\022\'\n\021inst" +
+      "ance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
+      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\036\n\npage_token\030\003" +
+      " \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=" +
+      "1000\"\210\001\n\"ListInstanceGroupInstancesRespo" +
+      "nse\022I\n\tinstances\030\001 \003(\01326.yandex.cloud.co" +
+      "mpute.v1.instancegroup.ManagedInstance\022\027" +
+      "\n\017next_page_token\030\002 \001(\t\"\210\001\n\026DeleteInstan" +
+      "cesRequest\022\'\n\021instance_group_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022-\n\024managed_instance_ids\030\002 \003(" +
+      "\tB\017\202\3101\003>=1\212\3101\004<=50\022\026\n\016create_another\030\003 \001" +
+      "(\010\"n\n\024StopInstancesRequest\022\'\n\021instance_g" +
+      "roup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022-\n\024managed_i" +
+      "nstance_ids\030\002 \003(\tB\017\202\3101\003>=1\212\3101\004<=50\"\250\001\n\"L" +
+      "istInstanceGroupOperationsRequest\022\'\n\021ins" +
+      "tance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
+      "ge_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030" +
+      "\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<" +
+      "=1000\"u\n#ListInstanceGroupOperationsResp" +
+      "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
+      "operation.Operation\022\027\n\017next_page_token\030\002" +
+      " \001(\t\"\240\001\n\"ListInstanceGroupLogRecordsRequ" +
+      "est\022\037\n\021instance_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\t" +
+      "page_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_toke" +
+      "n\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101" +
+      "\006<=1000\"\205\001\n#ListInstanceGroupLogRecordsR" +
+      "esponse\022E\n\013log_records\030\001 \003(\01320.yandex.cl" +
+      "oud.compute.v1.instancegroup.LogRecord\022\027" +
+      "\n\017next_page_token\030\002 \001(\t*(\n\021InstanceGroup" +
+      "View\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\224%\n\024InstanceGr" +
+      "oupService\022\263\001\n\003Get\022>.yandex.cloud.comput" +
+      "e.v1.instancegroup.GetInstanceGroupReque" +
+      "st\0324.yandex.cloud.compute.v1.instancegro" +
+      "up.InstanceGroup\"6\202\323\344\223\0020\022./compute/v1/in" +
+      "stanceGroups/{instance_group_id}\022\257\001\n\004Lis" +
+      "t\022@.yandex.cloud.compute.v1.instancegrou" +
+      "p.ListInstanceGroupsRequest\032A.yandex.clo" +
       "ud.compute.v1.instancegroup.ListInstance" +
-      "GroupsRequest\032A.yandex.cloud.compute.v1." +
-      "instancegroup.ListInstanceGroupsResponse" +
-      "\"\"\202\323\344\223\002\034\022\032/compute/v1/instanceGroups\022\305\001\n" +
-      "\006Create\022A.yandex.cloud.compute.v1.instan" +
-      "cegroup.CreateInstanceGroupRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"U\202\323\344\223\002\037\"\032/" +
-      "compute/v1/instanceGroups:\001*\262\322*,\n\033Create" +
-      "InstanceGroupMetadata\022\rInstanceGroup\022\332\001\n" +
-      "\016CreateFromYaml\022I.yandex.cloud.compute.v" +
-      "1.instancegroup.CreateInstanceGroupFromY" +
-      "amlRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"Z\202\323\344\223\002$\"\037/compute/v1/instanceGroup" +
-      "s:yaml:\001*\262\322*,\n\033CreateInstanceGroupMetada" +
-      "ta\022\rInstanceGroup\022\331\001\n\006Update\022A.yandex.cl" +
-      "oud.compute.v1.instancegroup.UpdateInsta" +
-      "nceGroupRequest\032!.yandex.cloud.operation" +
-      ".Operation\"i\202\323\344\223\00232./compute/v1/instance" +
-      "Groups/{instance_group_id}:\001*\262\322*,\n\033Updat" +
-      "eInstanceGroupMetadata\022\rInstanceGroup\022\356\001" +
-      "\n\016UpdateFromYaml\022I.yandex.cloud.compute." +
-      "v1.instancegroup.UpdateInstanceGroupFrom" +
-      "YamlRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"n\202\323\344\223\002823/compute/v1/instanceGrou" +
-      "ps/{instance_group_id}:yaml:\001*\262\322*,\n\033Upda" +
-      "teInstanceGroupMetadata\022\rInstanceGroup\022\325" +
-      "\001\n\004Stop\022?.yandex.cloud.compute.v1.instan" +
-      "cegroup.StopInstanceGroupRequest\032!.yande" +
-      "x.cloud.operation.Operation\"i\202\323\344\223\0025\"3/co" +
-      "mpute/v1/instanceGroups/{instance_group_" +
-      "id}:stop\262\322**\n\031StopInstanceGroupMetadata\022" +
-      "\rInstanceGroup\022\346\001\n\016RollingRestart\022<.yand" +
-      "ex.cloud.compute.v1.instancegroup.Rollin" +
-      "gRestartRequest\032!.yandex.cloud.operation" +
-      ".Operation\"s\202\323\344\223\002B\"=/compute/v1/instance" +
-      "Groups/{instance_group_id}:rollingRestar" +
-      "t:\001*\262\322*\'\n\026RollingRestartMetadata\022\rInstan" +
-      "ceGroup\022\352\001\n\017RollingRecreate\022=.yandex.clo" +
-      "ud.compute.v1.instancegroup.RollingRecre" +
-      "ateRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"u\202\323\344\223\002C\">/compute/v1/instanceGroup" +
-      "s/{instance_group_id}:rollingRecreate:\001*" +
-      "\262\322*(\n\027RollingRecreateMetadata\022\rInstanceG" +
-      "roup\022\331\001\n\005Start\022@.yandex.cloud.compute.v1" +
-      ".instancegroup.StartInstanceGroupRequest" +
-      "\032!.yandex.cloud.operation.Operation\"k\202\323\344" +
-      "\223\0026\"4/compute/v1/instanceGroups/{instanc" +
-      "e_group_id}:start\262\322*+\n\032StartInstanceGrou" +
-      "pMetadata\022\rInstanceGroup\022\336\001\n\006Delete\022A.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Dele" +
-      "teInstanceGroupRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"n\202\323\344\223\0020*./compute/v1/i" +
-      "nstanceGroups/{instance_group_id}\262\322*4\n\033D" +
-      "eleteInstanceGroupMetadata\022\025google.proto" +
-      "buf.Empty\022\346\001\n\rListInstances\022H.yandex.clo" +
-      "ud.compute.v1.instancegroup.ListInstance" +
-      "GroupInstancesRequest\032I.yandex.cloud.com" +
-      "pute.v1.instancegroup.ListInstanceGroupI" +
-      "nstancesResponse\"@\202\323\344\223\002:\0228/compute/v1/in" +
-      "stanceGroups/{instance_group_id}/instanc" +
-      "es\022\352\001\n\017DeleteInstances\022=.yandex.cloud.co" +
-      "mpute.v1.instancegroup.DeleteInstancesRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"u\202\323\344\223\002C\">/compute/v1/instanceGroups/{in" +
-      "stance_group_id}:deleteInstances:\001*\262\322*(\n" +
-      "\027DeleteInstancesMetadata\022\rInstanceGroup\022" +
-      "\342\001\n\rStopInstances\022;.yandex.cloud.compute" +
-      ".v1.instancegroup.StopInstancesRequest\032!" +
-      ".yandex.cloud.operation.Operation\"q\202\323\344\223\002" +
-      "A\"</compute/v1/instanceGroups/{instance_" +
-      "group_id}:stopInstances:\001*\262\322*&\n\025StopInst" +
-      "ancesMetadata\022\rInstanceGroup\022\352\001\n\016ListOpe" +
-      "rations\022I.yandex.cloud.compute.v1.instan" +
-      "cegroup.ListInstanceGroupOperationsReque" +
-      "st\032J.yandex.cloud.compute.v1.instancegro" +
-      "up.ListInstanceGroupOperationsResponse\"A" +
-      "\202\323\344\223\002;\0229/compute/v1/instanceGroups/{inst" +
-      "ance_group_id}/operations\022\344\001\n\016ListLogRec" +
-      "ords\022I.yandex.cloud.compute.v1.instanceg" +
-      "roup.ListInstanceGroupLogRecordsRequest\032" +
-      "J.yandex.cloud.compute.v1.instancegroup." +
-      "ListInstanceGroupLogRecordsResponse\";\202\323\344" +
-      "\223\0025\0223/compute/v1/instanceGroups/{instanc" +
-      "e_group_id}:logs\022\272\001\n\022ListAccessBindings\022" +
-      "..yandex.cloud.access.ListAccessBindings" +
-      "Request\032/.yandex.cloud.access.ListAccess" +
-      "BindingsResponse\"C\202\323\344\223\002=\022;/compute/v1/in" +
-      "stanceGroups/{resource_id}:listAccessBin" +
-      "dings\022\352\001\n\021SetAccessBindings\022-.yandex.clo" +
-      "ud.access.SetAccessBindingsRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"\202\001\202\323\344\223\002?\":" +
+      "GroupsResponse\"\"\202\323\344\223\002\034\022\032/compute/v1/inst" +
+      "anceGroups\022\305\001\n\006Create\022A.yandex.cloud.com" +
+      "pute.v1.instancegroup.CreateInstanceGrou" +
+      "pRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"U\202\323\344\223\002\037\"\032/compute/v1/instanceGroups:" +
+      "\001*\262\322*,\n\033CreateInstanceGroupMetadata\022\rIns" +
+      "tanceGroup\022\332\001\n\016CreateFromYaml\022I.yandex.c" +
+      "loud.compute.v1.instancegroup.CreateInst" +
+      "anceGroupFromYamlRequest\032!.yandex.cloud." +
+      "operation.Operation\"Z\202\323\344\223\002$\"\037/compute/v1" +
+      "/instanceGroups:yaml:\001*\262\322*,\n\033CreateInsta" +
+      "nceGroupMetadata\022\rInstanceGroup\022\331\001\n\006Upda" +
+      "te\022A.yandex.cloud.compute.v1.instancegro" +
+      "up.UpdateInstanceGroupRequest\032!.yandex.c" +
+      "loud.operation.Operation\"i\202\323\344\223\00232./compu" +
+      "te/v1/instanceGroups/{instance_group_id}" +
+      ":\001*\262\322*,\n\033UpdateInstanceGroupMetadata\022\rIn" +
+      "stanceGroup\022\356\001\n\016UpdateFromYaml\022I.yandex." +
+      "cloud.compute.v1.instancegroup.UpdateIns" +
+      "tanceGroupFromYamlRequest\032!.yandex.cloud" +
+      ".operation.Operation\"n\202\323\344\223\002823/compute/v" +
+      "1/instanceGroups/{instance_group_id}:yam" +
+      "l:\001*\262\322*,\n\033UpdateInstanceGroupMetadata\022\rI" +
+      "nstanceGroup\022\325\001\n\004Stop\022?.yandex.cloud.com" +
+      "pute.v1.instancegroup.StopInstanceGroupR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"i\202\323\344\223\0025\"3/compute/v1/instanceGroups/{i" +
+      "nstance_group_id}:stop\262\322**\n\031StopInstance" +
+      "GroupMetadata\022\rInstanceGroup\022\346\001\n\016Rolling" +
+      "Restart\022<.yandex.cloud.compute.v1.instan" +
+      "cegroup.RollingRestartRequest\032!.yandex.c" +
+      "loud.operation.Operation\"s\202\323\344\223\002B\"=/compu" +
+      "te/v1/instanceGroups/{instance_group_id}" +
+      ":rollingRestart:\001*\262\322*\'\n\026RollingRestartMe" +
+      "tadata\022\rInstanceGroup\022\352\001\n\017RollingRecreat" +
+      "e\022=.yandex.cloud.compute.v1.instancegrou" +
+      "p.RollingRecreateRequest\032!.yandex.cloud." +
+      "operation.Operation\"u\202\323\344\223\002C\">/compute/v1" +
+      "/instanceGroups/{instance_group_id}:roll" +
+      "ingRecreate:\001*\262\322*(\n\027RollingRecreateMetad" +
+      "ata\022\rInstanceGroup\022\331\001\n\005Start\022@.yandex.cl" +
+      "oud.compute.v1.instancegroup.StartInstan" +
+      "ceGroupRequest\032!.yandex.cloud.operation." +
+      "Operation\"k\202\323\344\223\0026\"4/compute/v1/instanceG" +
+      "roups/{instance_group_id}:start\262\322*+\n\032Sta" +
+      "rtInstanceGroupMetadata\022\rInstanceGroup\022\336" +
+      "\001\n\006Delete\022A.yandex.cloud.compute.v1.inst" +
+      "ancegroup.DeleteInstanceGroupRequest\032!.y" +
+      "andex.cloud.operation.Operation\"n\202\323\344\223\0020*" +
+      "./compute/v1/instanceGroups/{instance_gr" +
+      "oup_id}\262\322*4\n\033DeleteInstanceGroupMetadata" +
+      "\022\025google.protobuf.Empty\022\346\001\n\rListInstance" +
+      "s\022H.yandex.cloud.compute.v1.instancegrou" +
+      "p.ListInstanceGroupInstancesRequest\032I.ya" +
+      "ndex.cloud.compute.v1.instancegroup.List" +
+      "InstanceGroupInstancesResponse\"@\202\323\344\223\002:\0228" +
+      "/compute/v1/instanceGroups/{instance_gro" +
+      "up_id}/instances\022\352\001\n\017DeleteInstances\022=.y" +
+      "andex.cloud.compute.v1.instancegroup.Del" +
+      "eteInstancesRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"u\202\323\344\223\002C\">/compute/v1/inst" +
+      "anceGroups/{instance_group_id}:deleteIns" +
+      "tances:\001*\262\322*(\n\027DeleteInstancesMetadata\022\r" +
+      "InstanceGroup\022\342\001\n\rStopInstances\022;.yandex" +
+      ".cloud.compute.v1.instancegroup.StopInst" +
+      "ancesRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"q\202\323\344\223\002A\"</compute/v1/instanceGro" +
+      "ups/{instance_group_id}:stopInstances:\001*" +
+      "\262\322*&\n\025StopInstancesMetadata\022\rInstanceGro" +
+      "up\022\352\001\n\016ListOperations\022I.yandex.cloud.com" +
+      "pute.v1.instancegroup.ListInstanceGroupO" +
+      "perationsRequest\032J.yandex.cloud.compute." +
+      "v1.instancegroup.ListInstanceGroupOperat" +
+      "ionsResponse\"A\202\323\344\223\002;\0229/compute/v1/instan" +
+      "ceGroups/{instance_group_id}/operations\022" +
+      "\344\001\n\016ListLogRecords\022I.yandex.cloud.comput" +
+      "e.v1.instancegroup.ListInstanceGroupLogR" +
+      "ecordsRequest\032J.yandex.cloud.compute.v1." +
+      "instancegroup.ListInstanceGroupLogRecord" +
+      "sResponse\";\202\323\344\223\0025\0223/compute/v1/instanceG" +
+      "roups/{instance_group_id}:logs\022\272\001\n\022ListA" +
+      "ccessBindings\022..yandex.cloud.access.List" +
+      "AccessBindingsRequest\032/.yandex.cloud.acc" +
+      "ess.ListAccessBindingsResponse\"C\202\323\344\223\002=\022;" +
       "/compute/v1/instanceGroups/{resource_id}" +
-      ":setAccessBindings:\001*\262\322*9\n access.SetAcc" +
-      "essBindingsMetadata\022\025google.protobuf.Emp" +
-      "ty\022\366\001\n\024UpdateAccessBindings\0220.yandex.clo" +
-      "ud.access.UpdateAccessBindingsRequest\032!." +
-      "yandex.cloud.operation.Operation\"\210\001\202\323\344\223\002" +
-      "B\"=/compute/v1/instanceGroups/{resource_" +
-      "id}:updateAccessBindings:\001*\262\322*<\n#access." +
-      "UpdateAccessBindingsMetadata\022\025google.pro" +
-      "tobuf.Empty\022\203\002\n\017ResumeProcesses\022J.yandex" +
-      ".cloud.compute.v1.instancegroup.ResumeIn" +
-      "stanceGroupProcessesRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"\200\001\202\323\344\223\002C\">/comput" +
-      "e/v1/instanceGroups/{instance_group_id}:" +
-      "resumeProcesses:\001*\262\322*3\n\"ResumeInstanceGr" +
-      "oupProcessMetadata\022\rInstanceGroup\022\376\001\n\016Pa" +
-      "useProcesses\022I.yandex.cloud.compute.v1.i" +
-      "nstancegroup.PauseInstanceGroupProcesses" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"~\202\323\344\223\002B\"=/compute/v1/instanceGroups/{" +
-      "instance_group_id}:pauseProcesses:\001*\262\322*2" +
-      "\n!PauseInstanceGroupProcessMetadata\022\rIns" +
-      "tanceGroupB\204\001\n)yandex.cloud.api.compute." +
-      "v1.instancegroupZWgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/compute/v1/in" +
-      "stancegroup;instancegroupb\006proto3"
+      ":listAccessBindings\022\352\001\n\021SetAccessBinding" +
+      "s\022-.yandex.cloud.access.SetAccessBinding" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\202\001\202\323\344\223\002?\":/compute/v1/instanceGroups" +
+      "/{resource_id}:setAccessBindings:\001*\262\322*9\n" +
+      " access.SetAccessBindingsMetadata\022\025googl" +
+      "e.protobuf.Empty\022\366\001\n\024UpdateAccessBinding" +
+      "s\0220.yandex.cloud.access.UpdateAccessBind" +
+      "ingsRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"\210\001\202\323\344\223\002B\"=/compute/v1/instanceGro" +
+      "ups/{resource_id}:updateAccessBindings:\001" +
+      "*\262\322*<\n#access.UpdateAccessBindingsMetada" +
+      "ta\022\025google.protobuf.Empty\022\203\002\n\017ResumeProc" +
+      "esses\022J.yandex.cloud.compute.v1.instance" +
+      "group.ResumeInstanceGroupProcessesReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\200\001\202" +
+      "\323\344\223\002C\">/compute/v1/instanceGroups/{insta" +
+      "nce_group_id}:resumeProcesses:\001*\262\322*3\n\"Re" +
+      "sumeInstanceGroupProcessMetadata\022\rInstan" +
+      "ceGroup\022\376\001\n\016PauseProcesses\022I.yandex.clou" +
+      "d.compute.v1.instancegroup.PauseInstance" +
+      "GroupProcessesRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"~\202\323\344\223\002B\"=/compute/v1/in" +
+      "stanceGroups/{instance_group_id}:pausePr" +
+      "ocesses:\001*\262\322*2\n!PauseInstanceGroupProces" +
+      "sMetadata\022\rInstanceGroupB\204\001\n)yandex.clou" +
+      "d.api.compute.v1.instancegroupZWgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/compute/v1/instancegroup;instancegroupb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -33821,7 +34352,7 @@ public final class InstanceGroupServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "LoadBalancerSpec", "HealthChecksSpec", "ServiceAccountId", "Variables", "DeletionProtection", "ApplicationLoadBalancerSpec", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "LoadBalancerSpec", "HealthChecksSpec", "ServiceAccountId", "Variables", "DeletionProtection", "ApplicationLoadBalancerSpec", "AutoHealingPolicy", });
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_LabelsEntry_fieldAccessorTable = new
@@ -33845,7 +34376,7 @@ public final class InstanceGroupServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_descriptor,
-        new java.lang.String[] { "InstanceGroupId", "UpdateMask", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "HealthChecksSpec", "ServiceAccountId", "LoadBalancerSpec", "Variables", "DeletionProtection", "ApplicationLoadBalancerSpec", });
+        new java.lang.String[] { "InstanceGroupId", "UpdateMask", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "HealthChecksSpec", "ServiceAccountId", "LoadBalancerSpec", "Variables", "DeletionProtection", "ApplicationLoadBalancerSpec", "AutoHealingPolicy", });
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_LabelsEntry_fieldAccessorTable = new

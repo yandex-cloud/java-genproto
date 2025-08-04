@@ -8027,12 +8027,25 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * Show zonal shift status for the location.
+     * Deprecated: use [zonal_traffic_disabled] below to track traffic status.
      * </pre>
      *
-     * <code>bool zonal_shift_active = 4;</code>
+     * <code>bool zonal_shift_active = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The zonalShiftActive.
      */
-    boolean getZonalShiftActive();
+    @java.lang.Deprecated boolean getZonalShiftActive();
+
+    /**
+     * <pre>
+     * Computed field: will be set to true if all traffic in zone is disabled
+     * either manually by user or automatically by Cloud infrastructure.
+     * </pre>
+     *
+     * <code>bool zonal_traffic_disabled = 5;</code>
+     * @return The zonalTrafficDisabled.
+     */
+    boolean getZonalTrafficDisabled();
   }
   /**
    * <pre>
@@ -8106,6 +8119,11 @@ public final class LoadBalancerOuterClass {
             case 32: {
 
               zonalShiftActive_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              zonalTrafficDisabled_ = input.readBool();
               break;
             }
             default: {
@@ -8257,14 +8275,32 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * Show zonal shift status for the location.
+     * Deprecated: use [zonal_traffic_disabled] below to track traffic status.
      * </pre>
      *
-     * <code>bool zonal_shift_active = 4;</code>
+     * <code>bool zonal_shift_active = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The zonalShiftActive.
      */
     @java.lang.Override
-    public boolean getZonalShiftActive() {
+    @java.lang.Deprecated public boolean getZonalShiftActive() {
       return zonalShiftActive_;
+    }
+
+    public static final int ZONAL_TRAFFIC_DISABLED_FIELD_NUMBER = 5;
+    private boolean zonalTrafficDisabled_;
+    /**
+     * <pre>
+     * Computed field: will be set to true if all traffic in zone is disabled
+     * either manually by user or automatically by Cloud infrastructure.
+     * </pre>
+     *
+     * <code>bool zonal_traffic_disabled = 5;</code>
+     * @return The zonalTrafficDisabled.
+     */
+    @java.lang.Override
+    public boolean getZonalTrafficDisabled() {
+      return zonalTrafficDisabled_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8293,6 +8329,9 @@ public final class LoadBalancerOuterClass {
       if (zonalShiftActive_ != false) {
         output.writeBool(4, zonalShiftActive_);
       }
+      if (zonalTrafficDisabled_ != false) {
+        output.writeBool(5, zonalTrafficDisabled_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8315,6 +8354,10 @@ public final class LoadBalancerOuterClass {
       if (zonalShiftActive_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, zonalShiftActive_);
+      }
+      if (zonalTrafficDisabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, zonalTrafficDisabled_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8339,6 +8382,8 @@ public final class LoadBalancerOuterClass {
           != other.getDisableTraffic()) return false;
       if (getZonalShiftActive()
           != other.getZonalShiftActive()) return false;
+      if (getZonalTrafficDisabled()
+          != other.getZonalTrafficDisabled()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8360,6 +8405,9 @@ public final class LoadBalancerOuterClass {
       hash = (37 * hash) + ZONAL_SHIFT_ACTIVE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getZonalShiftActive());
+      hash = (37 * hash) + ZONAL_TRAFFIC_DISABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getZonalTrafficDisabled());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8506,6 +8554,8 @@ public final class LoadBalancerOuterClass {
 
         zonalShiftActive_ = false;
 
+        zonalTrafficDisabled_ = false;
+
         return this;
       }
 
@@ -8536,6 +8586,7 @@ public final class LoadBalancerOuterClass {
         result.subnetId_ = subnetId_;
         result.disableTraffic_ = disableTraffic_;
         result.zonalShiftActive_ = zonalShiftActive_;
+        result.zonalTrafficDisabled_ = zonalTrafficDisabled_;
         onBuilt();
         return result;
       }
@@ -8597,6 +8648,9 @@ public final class LoadBalancerOuterClass {
         }
         if (other.getZonalShiftActive() != false) {
           setZonalShiftActive(other.getZonalShiftActive());
+        }
+        if (other.getZonalTrafficDisabled() != false) {
+          setZonalTrafficDisabled(other.getZonalTrafficDisabled());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8880,25 +8934,29 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * Show zonal shift status for the location.
+       * Deprecated: use [zonal_traffic_disabled] below to track traffic status.
        * </pre>
        *
-       * <code>bool zonal_shift_active = 4;</code>
+       * <code>bool zonal_shift_active = 4 [deprecated = true];</code>
+       * @deprecated
        * @return The zonalShiftActive.
        */
       @java.lang.Override
-      public boolean getZonalShiftActive() {
+      @java.lang.Deprecated public boolean getZonalShiftActive() {
         return zonalShiftActive_;
       }
       /**
        * <pre>
        * Show zonal shift status for the location.
+       * Deprecated: use [zonal_traffic_disabled] below to track traffic status.
        * </pre>
        *
-       * <code>bool zonal_shift_active = 4;</code>
+       * <code>bool zonal_shift_active = 4 [deprecated = true];</code>
+       * @deprecated
        * @param value The zonalShiftActive to set.
        * @return This builder for chaining.
        */
-      public Builder setZonalShiftActive(boolean value) {
+      @java.lang.Deprecated public Builder setZonalShiftActive(boolean value) {
         
         zonalShiftActive_ = value;
         onChanged();
@@ -8907,14 +8965,62 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * Show zonal shift status for the location.
+       * Deprecated: use [zonal_traffic_disabled] below to track traffic status.
        * </pre>
        *
-       * <code>bool zonal_shift_active = 4;</code>
+       * <code>bool zonal_shift_active = 4 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearZonalShiftActive() {
+      @java.lang.Deprecated public Builder clearZonalShiftActive() {
         
         zonalShiftActive_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean zonalTrafficDisabled_ ;
+      /**
+       * <pre>
+       * Computed field: will be set to true if all traffic in zone is disabled
+       * either manually by user or automatically by Cloud infrastructure.
+       * </pre>
+       *
+       * <code>bool zonal_traffic_disabled = 5;</code>
+       * @return The zonalTrafficDisabled.
+       */
+      @java.lang.Override
+      public boolean getZonalTrafficDisabled() {
+        return zonalTrafficDisabled_;
+      }
+      /**
+       * <pre>
+       * Computed field: will be set to true if all traffic in zone is disabled
+       * either manually by user or automatically by Cloud infrastructure.
+       * </pre>
+       *
+       * <code>bool zonal_traffic_disabled = 5;</code>
+       * @param value The zonalTrafficDisabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZonalTrafficDisabled(boolean value) {
+        
+        zonalTrafficDisabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Computed field: will be set to true if all traffic in zone is disabled
+       * either manually by user or automatically by Cloud infrastructure.
+       * </pre>
+       *
+       * <code>bool zonal_traffic_disabled = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZonalTrafficDisabled() {
+        
+        zonalTrafficDisabled_ = false;
         onChanged();
         return this;
       }
@@ -25512,69 +25618,70 @@ public final class LoadBalancerOuterClass {
       "ss\022\004\300\3011\001\"&\n\023ExternalIpv4Address\022\017\n\007addre" +
       "ss\030\001 \001(\t\"9\n\023InternalIpv4Address\022\017\n\007addre" +
       "ss\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t\"&\n\023ExternalI" +
-      "pv6Address\022\017\n\007address\030\001 \001(\t\"i\n\010Location\022" +
-      "\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(" +
-      "\t\022\027\n\017disable_traffic\030\003 \001(\010\022\032\n\022zonal_shif" +
-      "t_active\030\004 \001(\010\"]\n\020AllocationPolicy\022I\n\tlo" +
-      "cations\030\001 \003(\0132).yandex.cloud.apploadbala" +
-      "ncer.v1.LocationB\013\202\3101\003>=1\220\3101\001\"\255\002\n\010Listen" +
-      "er\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022<\n\tendpoints\030\002 \003(" +
-      "\0132).yandex.cloud.apploadbalancer.v1.Endp" +
-      "oint\022=\n\004http\030\003 \001(\0132-.yandex.cloud.apploa" +
-      "dbalancer.v1.HttpListenerH\000\022;\n\003tls\030\004 \001(\013" +
-      "2,.yandex.cloud.apploadbalancer.v1.TlsLi" +
-      "stenerH\000\022A\n\006stream\030\005 \001(\0132/.yandex.cloud." +
-      "apploadbalancer.v1.StreamListenerH\000B\020\n\010l" +
-      "istener\022\004\300\3011\001\"q\n\010Endpoint\022C\n\taddresses\030\001" +
-      " \003(\0132(.yandex.cloud.apploadbalancer.v1.A" +
-      "ddressB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071" +
-      "\0071-65535\"\214\001\n\014HttpListener\022=\n\007handler\030\001 \001" +
-      "(\0132,.yandex.cloud.apploadbalancer.v1.Htt" +
-      "pHandler\022=\n\tredirects\030\002 \001(\0132*.yandex.clo" +
-      "ud.apploadbalancer.v1.Redirects\"\232\001\n\013TlsL" +
-      "istener\022J\n\017default_handler\030\001 \001(\0132+.yande" +
-      "x.cloud.apploadbalancer.v1.TlsHandlerB\004\350" +
-      "\3071\001\022?\n\014sni_handlers\030\002 \003(\0132).yandex.cloud" +
-      ".apploadbalancer.v1.SniMatch\"W\n\016StreamLi" +
-      "stener\022E\n\007handler\030\001 \001(\0132..yandex.cloud.a" +
-      "pploadbalancer.v1.StreamHandlerB\004\350\3071\001\".\n" +
-      "\014Http2Options\022\036\n\026max_concurrent_streams\030" +
-      "\001 \001(\003\"`\n\rStreamHandler\022\036\n\020backend_group_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022/\n\014idle_timeout\030\002 \001(\0132\031.g" +
-      "oogle.protobuf.Duration\"\266\001\n\013HttpHandler\022" +
-      "\026\n\016http_router_id\030\001 \001(\t\022F\n\rhttp2_options" +
-      "\030\002 \001(\0132-.yandex.cloud.apploadbalancer.v1" +
-      ".Http2OptionsH\000\022\026\n\014allow_http10\030\003 \001(\010H\000\022" +
-      "\032\n\022rewrite_request_id\030\004 \001(\010B\023\n\021protocol_" +
-      "settings\"\"\n\tRedirects\022\025\n\rhttp_to_https\030\001" +
-      " \001(\010\"\200\001\n\010SniMatch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n" +
-      "\014server_names\030\002 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003" +
-      " \001(\0132+.yandex.cloud.apploadbalancer.v1.T" +
-      "lsHandlerB\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014http_h" +
-      "andler\030\002 \001(\0132,.yandex.cloud.apploadbalan" +
-      "cer.v1.HttpHandlerH\000\022H\n\016stream_handler\030\004" +
-      " \001(\0132..yandex.cloud.apploadbalancer.v1.S" +
-      "treamHandlerH\000\022\037\n\017certificate_ids\030\003 \003(\tB" +
-      "\006\202\3101\002>0B\017\n\007handler\022\004\300\3011\001\"\214\004\n\013TargetState" +
-      "\022N\n\006status\030\001 \001(\0132>.yandex.cloud.apploadb" +
-      "alancer.v1.TargetState.HealthcheckStatus" +
-      "\022=\n\006target\030\002 \001(\0132\'.yandex.cloud.apploadb" +
-      "alancer.v1.TargetB\004\350\3071\001\032n\n\021HealthcheckSt" +
-      "atus\022Y\n\rzone_statuses\030\001 \003(\0132B.yandex.clo" +
-      "ud.apploadbalancer.v1.TargetState.ZoneHe" +
-      "althcheckStatus\032\215\001\n\025ZoneHealthcheckStatu" +
-      "s\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\016" +
-      "23.yandex.cloud.apploadbalancer.v1.Targe" +
-      "tState.Status\022\030\n\020failed_active_hc\030\003 \001(\010\"" +
-      "n\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007HEA" +
-      "LTHY\020\001\022\025\n\021PARTIALLY_HEALTHY\020\002\022\r\n\tUNHEALT" +
-      "HY\020\003\022\014\n\010DRAINING\020\004\022\013\n\007TIMEOUT\020\005\"R\n\017AutoS" +
-      "calePolicy\022!\n\rmin_zone_size\030\001 \001(\003B\n\372\3071\0060" +
-      "-1000\022\034\n\010max_size\030\002 \001(\003B\n\372\3071\0060-1000Bz\n#y" +
-      "andex.cloud.api.apploadbalancer.v1ZSgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/apploadbalancer/v1;apploadbalancerb" +
-      "\006proto3"
+      "pv6Address\022\017\n\007address\030\001 \001(\t\"\215\001\n\010Location" +
+      "\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001" +
+      "(\t\022\027\n\017disable_traffic\030\003 \001(\010\022\036\n\022zonal_shi" +
+      "ft_active\030\004 \001(\010B\002\030\001\022\036\n\026zonal_traffic_dis" +
+      "abled\030\005 \001(\010\"]\n\020AllocationPolicy\022I\n\tlocat" +
+      "ions\030\001 \003(\0132).yandex.cloud.apploadbalance" +
+      "r.v1.LocationB\013\202\3101\003>=1\220\3101\001\"\255\002\n\010Listener\022" +
+      "\022\n\004name\030\001 \001(\tB\004\350\3071\001\022<\n\tendpoints\030\002 \003(\0132)" +
+      ".yandex.cloud.apploadbalancer.v1.Endpoin" +
+      "t\022=\n\004http\030\003 \001(\0132-.yandex.cloud.apploadba" +
+      "lancer.v1.HttpListenerH\000\022;\n\003tls\030\004 \001(\0132,." +
+      "yandex.cloud.apploadbalancer.v1.TlsListe" +
+      "nerH\000\022A\n\006stream\030\005 \001(\0132/.yandex.cloud.app" +
+      "loadbalancer.v1.StreamListenerH\000B\020\n\010list" +
+      "ener\022\004\300\3011\001\"q\n\010Endpoint\022C\n\taddresses\030\001 \003(" +
+      "\0132(.yandex.cloud.apploadbalancer.v1.Addr" +
+      "essB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071\0071-" +
+      "65535\"\214\001\n\014HttpListener\022=\n\007handler\030\001 \001(\0132" +
+      ",.yandex.cloud.apploadbalancer.v1.HttpHa" +
+      "ndler\022=\n\tredirects\030\002 \001(\0132*.yandex.cloud." +
+      "apploadbalancer.v1.Redirects\"\232\001\n\013TlsList" +
+      "ener\022J\n\017default_handler\030\001 \001(\0132+.yandex.c" +
+      "loud.apploadbalancer.v1.TlsHandlerB\004\350\3071\001" +
+      "\022?\n\014sni_handlers\030\002 \003(\0132).yandex.cloud.ap" +
+      "ploadbalancer.v1.SniMatch\"W\n\016StreamListe" +
+      "ner\022E\n\007handler\030\001 \001(\0132..yandex.cloud.appl" +
+      "oadbalancer.v1.StreamHandlerB\004\350\3071\001\".\n\014Ht" +
+      "tp2Options\022\036\n\026max_concurrent_streams\030\001 \001" +
+      "(\003\"`\n\rStreamHandler\022\036\n\020backend_group_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022/\n\014idle_timeout\030\002 \001(\0132\031.goog" +
+      "le.protobuf.Duration\"\266\001\n\013HttpHandler\022\026\n\016" +
+      "http_router_id\030\001 \001(\t\022F\n\rhttp2_options\030\002 " +
+      "\001(\0132-.yandex.cloud.apploadbalancer.v1.Ht" +
+      "tp2OptionsH\000\022\026\n\014allow_http10\030\003 \001(\010H\000\022\032\n\022" +
+      "rewrite_request_id\030\004 \001(\010B\023\n\021protocol_set" +
+      "tings\"\"\n\tRedirects\022\025\n\rhttp_to_https\030\001 \001(" +
+      "\010\"\200\001\n\010SniMatch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014se" +
+      "rver_names\030\002 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(" +
+      "\0132+.yandex.cloud.apploadbalancer.v1.TlsH" +
+      "andlerB\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014http_hand" +
+      "ler\030\002 \001(\0132,.yandex.cloud.apploadbalancer" +
+      ".v1.HttpHandlerH\000\022H\n\016stream_handler\030\004 \001(" +
+      "\0132..yandex.cloud.apploadbalancer.v1.Stre" +
+      "amHandlerH\000\022\037\n\017certificate_ids\030\003 \003(\tB\006\202\310" +
+      "1\002>0B\017\n\007handler\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n" +
+      "\006status\030\001 \001(\0132>.yandex.cloud.apploadbala" +
+      "ncer.v1.TargetState.HealthcheckStatus\022=\n" +
+      "\006target\030\002 \001(\0132\'.yandex.cloud.apploadbala" +
+      "ncer.v1.TargetB\004\350\3071\001\032n\n\021HealthcheckStatu" +
+      "s\022Y\n\rzone_statuses\030\001 \003(\0132B.yandex.cloud." +
+      "apploadbalancer.v1.TargetState.ZoneHealt" +
+      "hcheckStatus\032\215\001\n\025ZoneHealthcheckStatus\022\025" +
+      "\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623." +
+      "yandex.cloud.apploadbalancer.v1.TargetSt" +
+      "ate.Status\022\030\n\020failed_active_hc\030\003 \001(\010\"n\n\006" +
+      "Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007HEALTH" +
+      "Y\020\001\022\025\n\021PARTIALLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020" +
+      "\003\022\014\n\010DRAINING\020\004\022\013\n\007TIMEOUT\020\005\"R\n\017AutoScal" +
+      "ePolicy\022!\n\rmin_zone_size\030\001 \001(\003B\n\372\3071\0060-10" +
+      "00\022\034\n\010max_size\030\002 \001(\003B\n\372\3071\0060-1000Bz\n#yand" +
+      "ex.cloud.api.apploadbalancer.v1ZSgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/apploadbalancer/v1;apploadbalancerb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25626,7 +25733,7 @@ public final class LoadBalancerOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_Location_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_Location_descriptor,
-        new java.lang.String[] { "ZoneId", "SubnetId", "DisableTraffic", "ZonalShiftActive", });
+        new java.lang.String[] { "ZoneId", "SubnetId", "DisableTraffic", "ZonalShiftActive", "ZonalTrafficDisabled", });
     internal_static_yandex_cloud_apploadbalancer_v1_AllocationPolicy_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_apploadbalancer_v1_AllocationPolicy_fieldAccessorTable = new

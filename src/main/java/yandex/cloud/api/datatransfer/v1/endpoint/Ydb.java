@@ -2606,6 +2606,12 @@ public final class Ydb {
      * @return The defaultCompression.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression getDefaultCompression();
+
+    /**
+     * <code>bool is_schema_migration_disabled = 36;</code>
+     * @return The isSchemaMigrationDisabled.
+     */
+    boolean getIsSchemaMigrationDisabled();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YdbTarget}
@@ -2722,6 +2728,11 @@ public final class Ydb {
               int rawValue = input.readEnum();
 
               defaultCompression_ = rawValue;
+              break;
+            }
+            case 288: {
+
+              isSchemaMigrationDisabled_ = input.readBool();
               break;
             }
             default: {
@@ -3148,6 +3159,17 @@ public final class Ydb {
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression.UNRECOGNIZED : result;
     }
 
+    public static final int IS_SCHEMA_MIGRATION_DISABLED_FIELD_NUMBER = 36;
+    private boolean isSchemaMigrationDisabled_;
+    /**
+     * <code>bool is_schema_migration_disabled = 36;</code>
+     * @return The isSchemaMigrationDisabled.
+     */
+    @java.lang.Override
+    public boolean getIsSchemaMigrationDisabled() {
+      return isSchemaMigrationDisabled_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3191,6 +3213,9 @@ public final class Ydb {
       }
       if (defaultCompression_ != yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression.YDB_DEFAULT_COMPRESSION_UNSPECIFIED.getNumber()) {
         output.writeEnum(35, defaultCompression_);
+      }
+      if (isSchemaMigrationDisabled_ != false) {
+        output.writeBool(36, isSchemaMigrationDisabled_);
       }
       unknownFields.writeTo(output);
     }
@@ -3239,6 +3264,10 @@ public final class Ydb {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(35, defaultCompression_);
       }
+      if (isSchemaMigrationDisabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(36, isSchemaMigrationDisabled_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3272,6 +3301,8 @@ public final class Ydb {
       if (getIsTableColumnOriented()
           != other.getIsTableColumnOriented()) return false;
       if (defaultCompression_ != other.defaultCompression_) return false;
+      if (getIsSchemaMigrationDisabled()
+          != other.getIsSchemaMigrationDisabled()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3306,6 +3337,9 @@ public final class Ydb {
           getIsTableColumnOriented());
       hash = (37 * hash) + DEFAULT_COMPRESSION_FIELD_NUMBER;
       hash = (53 * hash) + defaultCompression_;
+      hash = (37 * hash) + IS_SCHEMA_MIGRATION_DISABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsSchemaMigrationDisabled());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3459,6 +3493,8 @@ public final class Ydb {
 
         defaultCompression_ = 0;
 
+        isSchemaMigrationDisabled_ = false;
+
         return this;
       }
 
@@ -3500,6 +3536,7 @@ public final class Ydb {
         result.securityGroups_ = securityGroups_;
         result.isTableColumnOriented_ = isTableColumnOriented_;
         result.defaultCompression_ = defaultCompression_;
+        result.isSchemaMigrationDisabled_ = isSchemaMigrationDisabled_;
         onBuilt();
         return result;
       }
@@ -3590,6 +3627,9 @@ public final class Ydb {
         }
         if (other.defaultCompression_ != 0) {
           setDefaultCompressionValue(other.getDefaultCompressionValue());
+        }
+        if (other.getIsSchemaMigrationDisabled() != false) {
+          setIsSchemaMigrationDisabled(other.getIsSchemaMigrationDisabled());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4516,6 +4556,37 @@ public final class Ydb {
         onChanged();
         return this;
       }
+
+      private boolean isSchemaMigrationDisabled_ ;
+      /**
+       * <code>bool is_schema_migration_disabled = 36;</code>
+       * @return The isSchemaMigrationDisabled.
+       */
+      @java.lang.Override
+      public boolean getIsSchemaMigrationDisabled() {
+        return isSchemaMigrationDisabled_;
+      }
+      /**
+       * <code>bool is_schema_migration_disabled = 36;</code>
+       * @param value The isSchemaMigrationDisabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsSchemaMigrationDisabled(boolean value) {
+        
+        isSchemaMigrationDisabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_schema_migration_disabled = 36;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsSchemaMigrationDisabled() {
+        
+        isSchemaMigrationDisabled_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4596,7 +4667,7 @@ public final class Ydb {
       "\022\026\n\016sa_key_content\030! \001(\t\022\027\n\017security_gro" +
       "ups\030\" \003(\t\022\036\n\026changefeed_custom_name\030# \001(" +
       "\t\022\'\n\037changefeed_custom_consumer_name\030$ \001" +
-      "(\tJ\004\010\003\020\005J\004\010\007\020\036J\004\010\037\020!\"\203\003\n\tYdbTarget\022\020\n\010da" +
+      "(\tJ\004\010\003\020\005J\004\010\007\020\036J\004\010\037\020!\"\251\003\n\tYdbTarget\022\020\n\010da" +
       "tabase\030\001 \001(\t\022\020\n\010instance\030\002 \001(\t\022\014\n\004path\030\n" +
       " \001(\t\022\032\n\022service_account_id\030\013 \001(\t\022O\n\016clea" +
       "nup_policy\030\025 \001(\01627.yandex.cloud.datatran" +
@@ -4605,19 +4676,20 @@ public final class Ydb {
       "security_groups\030! \003(\t\022 \n\030is_table_column" +
       "_oriented\030\" \001(\010\022Y\n\023default_compression\030#" +
       " \001(\0162<.yandex.cloud.datatransfer.v1.endp" +
-      "oint.YdbDefaultCompressionJ\004\010\003\020\nJ\004\010\014\020\025J\004" +
-      "\010\026\020\036J\004\010\037\020 *t\n\020YdbCleanupPolicy\022\"\n\036YDB_CL" +
-      "EANUP_POLICY_UNSPECIFIED\020\000\022\037\n\033YDB_CLEANU" +
-      "P_POLICY_DISABLED\020\001\022\033\n\027YDB_CLEANUP_POLIC" +
-      "Y_DROP\020\002*\207\001\n\025YdbDefaultCompression\022\'\n#YD" +
-      "B_DEFAULT_COMPRESSION_UNSPECIFIED\020\000\022$\n Y" +
-      "DB_DEFAULT_COMPRESSION_DISABLED\020\001\022\037\n\033YDB" +
-      "_DEFAULT_COMPRESSION_LZ4\020\002B\247\001\n)yandex.cl" +
-      "oud.api.datatransfer.v1.endpointZRgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/datatransfer/v1/endpoint;endpoint\252\002%Y" +
-      "andex.Cloud.Datatransfer.V1.EndPointb\006pr" +
-      "oto3"
+      "oint.YdbDefaultCompression\022$\n\034is_schema_" +
+      "migration_disabled\030$ \001(\010J\004\010\003\020\nJ\004\010\014\020\025J\004\010\026" +
+      "\020\036J\004\010\037\020 *t\n\020YdbCleanupPolicy\022\"\n\036YDB_CLEA" +
+      "NUP_POLICY_UNSPECIFIED\020\000\022\037\n\033YDB_CLEANUP_" +
+      "POLICY_DISABLED\020\001\022\033\n\027YDB_CLEANUP_POLICY_" +
+      "DROP\020\002*\207\001\n\025YdbDefaultCompression\022\'\n#YDB_" +
+      "DEFAULT_COMPRESSION_UNSPECIFIED\020\000\022$\n YDB" +
+      "_DEFAULT_COMPRESSION_DISABLED\020\001\022\037\n\033YDB_D" +
+      "EFAULT_COMPRESSION_LZ4\020\002B\247\001\n)yandex.clou" +
+      "d.api.datatransfer.v1.endpointZRgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/datatransfer/v1/endpoint;endpoint\252\002%Yan" +
+      "dex.Cloud.Datatransfer.V1.EndPointb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4634,7 +4706,7 @@ public final class Ydb {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbTarget_descriptor,
-        new java.lang.String[] { "Database", "Instance", "Path", "ServiceAccountId", "CleanupPolicy", "SubnetId", "SaKeyContent", "SecurityGroups", "IsTableColumnOriented", "DefaultCompression", });
+        new java.lang.String[] { "Database", "Instance", "Path", "ServiceAccountId", "CleanupPolicy", "SubnetId", "SaKeyContent", "SecurityGroups", "IsTableColumnOriented", "DefaultCompression", "IsSchemaMigrationDisabled", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

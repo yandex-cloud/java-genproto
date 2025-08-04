@@ -2305,6 +2305,50 @@ public final class PolicyOuterClass {
      * @return The lvmSnapshottingEnabled.
      */
     boolean getLvmSnapshottingEnabled();
+
+    /**
+     * <pre>
+     * Commands to launch before or after backup execution
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+     */
+    java.util.List<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand> 
+        getPrePostCommandsList();
+    /**
+     * <pre>
+     * Commands to launch before or after backup execution
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+     */
+    yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand getPrePostCommands(int index);
+    /**
+     * <pre>
+     * Commands to launch before or after backup execution
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+     */
+    int getPrePostCommandsCount();
+    /**
+     * <pre>
+     * Commands to launch before or after backup execution
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommandOrBuilder> 
+        getPrePostCommandsOrBuilderList();
+    /**
+     * <pre>
+     * Commands to launch before or after backup execution
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+     */
+    yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommandOrBuilder getPrePostCommandsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -2326,6 +2370,7 @@ public final class PolicyOuterClass {
       compression_ = 0;
       format_ = 0;
       cbt_ = 0;
+      prePostCommands_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2348,6 +2393,7 @@ public final class PolicyOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2533,6 +2579,15 @@ public final class PolicyOuterClass {
               lvmSnapshottingEnabled_ = input.readBool();
               break;
             }
+            case 186: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                prePostCommands_ = new java.util.ArrayList<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              prePostCommands_.add(
+                  input.readMessage(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2548,6 +2603,9 @@ public final class PolicyOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          prePostCommands_ = java.util.Collections.unmodifiableList(prePostCommands_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3125,6 +3183,139 @@ public final class PolicyOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.backup.v1.PolicySettings.ChangedBlockTracking)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.backup.v1.PolicySettings.CommandType}
+     */
+    public enum CommandType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>COMMAND_TYPE_UNSPECIFIED = 0;</code>
+       */
+      COMMAND_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Launch command before backup execution
+       * </pre>
+       *
+       * <code>PRE_COMMAND = 1;</code>
+       */
+      PRE_COMMAND(1),
+      /**
+       * <pre>
+       * Launch command after backup execution
+       * </pre>
+       *
+       * <code>POST_COMMAND = 2;</code>
+       */
+      POST_COMMAND(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>COMMAND_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int COMMAND_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Launch command before backup execution
+       * </pre>
+       *
+       * <code>PRE_COMMAND = 1;</code>
+       */
+      public static final int PRE_COMMAND_VALUE = 1;
+      /**
+       * <pre>
+       * Launch command after backup execution
+       * </pre>
+       *
+       * <code>POST_COMMAND = 2;</code>
+       */
+      public static final int POST_COMMAND_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static CommandType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static CommandType forNumber(int value) {
+        switch (value) {
+          case 0: return COMMAND_TYPE_UNSPECIFIED;
+          case 1: return PRE_COMMAND;
+          case 2: return POST_COMMAND;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<CommandType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          CommandType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<CommandType>() {
+              public CommandType findValueByNumber(int number) {
+                return CommandType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.getDescriptor().getEnumTypes().get(4);
+      }
+
+      private static final CommandType[] VALUES = values();
+
+      public static CommandType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private CommandType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.backup.v1.PolicySettings.CommandType)
     }
 
     public interface IntervalOrBuilder extends
@@ -17910,6 +18101,1398 @@ public final class PolicyOuterClass {
 
     }
 
+    public interface PrePostCommandOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.PolicySettings.PrePostCommand)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Command to execute
+       * </pre>
+       *
+       * <code>string cmd = 1;</code>
+       * @return The cmd.
+       */
+      java.lang.String getCmd();
+      /**
+       * <pre>
+       * Command to execute
+       * </pre>
+       *
+       * <code>string cmd = 1;</code>
+       * @return The bytes for cmd.
+       */
+      com.google.protobuf.ByteString
+          getCmdBytes();
+
+      /**
+       * <pre>
+       * Command args
+       * </pre>
+       *
+       * <code>string args = 2;</code>
+       * @return The args.
+       */
+      java.lang.String getArgs();
+      /**
+       * <pre>
+       * Command args
+       * </pre>
+       *
+       * <code>string args = 2;</code>
+       * @return The bytes for args.
+       */
+      com.google.protobuf.ByteString
+          getArgsBytes();
+
+      /**
+       * <pre>
+       * Is command enabled
+       * </pre>
+       *
+       * <code>bool enabled = 3;</code>
+       * @return The enabled.
+       */
+      boolean getEnabled();
+
+      /**
+       * <pre>
+       * Stop backup execution on error
+       * </pre>
+       *
+       * <code>bool stop_on_error = 4;</code>
+       * @return The stopOnError.
+       */
+      boolean getStopOnError();
+
+      /**
+       * <pre>
+       * Type of command: pre or post
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.CommandType type = 5;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      int getTypeValue();
+      /**
+       * <pre>
+       * Type of command: pre or post
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.CommandType type = 5;</code>
+       * @return The type.
+       */
+      yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType getType();
+
+      /**
+       * <pre>
+       * Wait command finish before launching backup
+       * </pre>
+       *
+       * <code>bool wait = 6;</code>
+       * @return The wait.
+       */
+      boolean getWait();
+
+      /**
+       * <pre>
+       * Workdir for command execution 
+       * </pre>
+       *
+       * <code>string workdir = 7;</code>
+       * @return The workdir.
+       */
+      java.lang.String getWorkdir();
+      /**
+       * <pre>
+       * Workdir for command execution 
+       * </pre>
+       *
+       * <code>string workdir = 7;</code>
+       * @return The bytes for workdir.
+       */
+      com.google.protobuf.ByteString
+          getWorkdirBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.PolicySettings.PrePostCommand}
+     */
+    public static final class PrePostCommand extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.PolicySettings.PrePostCommand)
+        PrePostCommandOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use PrePostCommand.newBuilder() to construct.
+      private PrePostCommand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private PrePostCommand() {
+        cmd_ = "";
+        args_ = "";
+        type_ = 0;
+        workdir_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new PrePostCommand();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private PrePostCommand(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                cmd_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                args_ = s;
+                break;
+              }
+              case 24: {
+
+                enabled_ = input.readBool();
+                break;
+              }
+              case 32: {
+
+                stopOnError_ = input.readBool();
+                break;
+              }
+              case 40: {
+                int rawValue = input.readEnum();
+
+                type_ = rawValue;
+                break;
+              }
+              case 48: {
+
+                wait_ = input.readBool();
+                break;
+              }
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                workdir_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.PolicyOuterClass.internal_static_yandex_cloud_backup_v1_PolicySettings_PrePostCommand_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.PolicyOuterClass.internal_static_yandex_cloud_backup_v1_PolicySettings_PrePostCommand_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.class, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder.class);
+      }
+
+      public static final int CMD_FIELD_NUMBER = 1;
+      private volatile java.lang.Object cmd_;
+      /**
+       * <pre>
+       * Command to execute
+       * </pre>
+       *
+       * <code>string cmd = 1;</code>
+       * @return The cmd.
+       */
+      @java.lang.Override
+      public java.lang.String getCmd() {
+        java.lang.Object ref = cmd_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cmd_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Command to execute
+       * </pre>
+       *
+       * <code>string cmd = 1;</code>
+       * @return The bytes for cmd.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCmdBytes() {
+        java.lang.Object ref = cmd_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cmd_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int ARGS_FIELD_NUMBER = 2;
+      private volatile java.lang.Object args_;
+      /**
+       * <pre>
+       * Command args
+       * </pre>
+       *
+       * <code>string args = 2;</code>
+       * @return The args.
+       */
+      @java.lang.Override
+      public java.lang.String getArgs() {
+        java.lang.Object ref = args_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          args_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Command args
+       * </pre>
+       *
+       * <code>string args = 2;</code>
+       * @return The bytes for args.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getArgsBytes() {
+        java.lang.Object ref = args_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          args_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int ENABLED_FIELD_NUMBER = 3;
+      private boolean enabled_;
+      /**
+       * <pre>
+       * Is command enabled
+       * </pre>
+       *
+       * <code>bool enabled = 3;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+
+      public static final int STOP_ON_ERROR_FIELD_NUMBER = 4;
+      private boolean stopOnError_;
+      /**
+       * <pre>
+       * Stop backup execution on error
+       * </pre>
+       *
+       * <code>bool stop_on_error = 4;</code>
+       * @return The stopOnError.
+       */
+      @java.lang.Override
+      public boolean getStopOnError() {
+        return stopOnError_;
+      }
+
+      public static final int TYPE_FIELD_NUMBER = 5;
+      private int type_;
+      /**
+       * <pre>
+       * Type of command: pre or post
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.CommandType type = 5;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of command: pre or post
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.PolicySettings.CommandType type = 5;</code>
+       * @return The type.
+       */
+      @java.lang.Override public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType result = yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType.valueOf(type_);
+        return result == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType.UNRECOGNIZED : result;
+      }
+
+      public static final int WAIT_FIELD_NUMBER = 6;
+      private boolean wait_;
+      /**
+       * <pre>
+       * Wait command finish before launching backup
+       * </pre>
+       *
+       * <code>bool wait = 6;</code>
+       * @return The wait.
+       */
+      @java.lang.Override
+      public boolean getWait() {
+        return wait_;
+      }
+
+      public static final int WORKDIR_FIELD_NUMBER = 7;
+      private volatile java.lang.Object workdir_;
+      /**
+       * <pre>
+       * Workdir for command execution 
+       * </pre>
+       *
+       * <code>string workdir = 7;</code>
+       * @return The workdir.
+       */
+      @java.lang.Override
+      public java.lang.String getWorkdir() {
+        java.lang.Object ref = workdir_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          workdir_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Workdir for command execution 
+       * </pre>
+       *
+       * <code>string workdir = 7;</code>
+       * @return The bytes for workdir.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getWorkdirBytes() {
+        java.lang.Object ref = workdir_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workdir_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cmd_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cmd_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(args_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, args_);
+        }
+        if (enabled_ != false) {
+          output.writeBool(3, enabled_);
+        }
+        if (stopOnError_ != false) {
+          output.writeBool(4, stopOnError_);
+        }
+        if (type_ != yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType.COMMAND_TYPE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(5, type_);
+        }
+        if (wait_ != false) {
+          output.writeBool(6, wait_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workdir_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 7, workdir_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cmd_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cmd_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(args_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, args_);
+        }
+        if (enabled_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, enabled_);
+        }
+        if (stopOnError_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(4, stopOnError_);
+        }
+        if (type_ != yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType.COMMAND_TYPE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(5, type_);
+        }
+        if (wait_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(6, wait_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workdir_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, workdir_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand other = (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand) obj;
+
+        if (!getCmd()
+            .equals(other.getCmd())) return false;
+        if (!getArgs()
+            .equals(other.getArgs())) return false;
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (getStopOnError()
+            != other.getStopOnError()) return false;
+        if (type_ != other.type_) return false;
+        if (getWait()
+            != other.getWait()) return false;
+        if (!getWorkdir()
+            .equals(other.getWorkdir())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CMD_FIELD_NUMBER;
+        hash = (53 * hash) + getCmd().hashCode();
+        hash = (37 * hash) + ARGS_FIELD_NUMBER;
+        hash = (53 * hash) + getArgs().hashCode();
+        hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnabled());
+        hash = (37 * hash) + STOP_ON_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getStopOnError());
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + type_;
+        hash = (37 * hash) + WAIT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getWait());
+        hash = (37 * hash) + WORKDIR_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkdir().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.backup.v1.PolicySettings.PrePostCommand}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.PolicySettings.PrePostCommand)
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommandOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.backup.v1.PolicyOuterClass.internal_static_yandex_cloud_backup_v1_PolicySettings_PrePostCommand_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.backup.v1.PolicyOuterClass.internal_static_yandex_cloud_backup_v1_PolicySettings_PrePostCommand_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.class, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          cmd_ = "";
+
+          args_ = "";
+
+          enabled_ = false;
+
+          stopOnError_ = false;
+
+          type_ = 0;
+
+          wait_ = false;
+
+          workdir_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.backup.v1.PolicyOuterClass.internal_static_yandex_cloud_backup_v1_PolicySettings_PrePostCommand_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand getDefaultInstanceForType() {
+          return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand build() {
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand buildPartial() {
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand result = new yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand(this);
+          result.cmd_ = cmd_;
+          result.args_ = args_;
+          result.enabled_ = enabled_;
+          result.stopOnError_ = stopOnError_;
+          result.type_ = type_;
+          result.wait_ = wait_;
+          result.workdir_ = workdir_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand) {
+            return mergeFrom((yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand other) {
+          if (other == yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.getDefaultInstance()) return this;
+          if (!other.getCmd().isEmpty()) {
+            cmd_ = other.cmd_;
+            onChanged();
+          }
+          if (!other.getArgs().isEmpty()) {
+            args_ = other.args_;
+            onChanged();
+          }
+          if (other.getEnabled() != false) {
+            setEnabled(other.getEnabled());
+          }
+          if (other.getStopOnError() != false) {
+            setStopOnError(other.getStopOnError());
+          }
+          if (other.type_ != 0) {
+            setTypeValue(other.getTypeValue());
+          }
+          if (other.getWait() != false) {
+            setWait(other.getWait());
+          }
+          if (!other.getWorkdir().isEmpty()) {
+            workdir_ = other.workdir_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object cmd_ = "";
+        /**
+         * <pre>
+         * Command to execute
+         * </pre>
+         *
+         * <code>string cmd = 1;</code>
+         * @return The cmd.
+         */
+        public java.lang.String getCmd() {
+          java.lang.Object ref = cmd_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            cmd_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Command to execute
+         * </pre>
+         *
+         * <code>string cmd = 1;</code>
+         * @return The bytes for cmd.
+         */
+        public com.google.protobuf.ByteString
+            getCmdBytes() {
+          java.lang.Object ref = cmd_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            cmd_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Command to execute
+         * </pre>
+         *
+         * <code>string cmd = 1;</code>
+         * @param value The cmd to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCmd(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          cmd_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Command to execute
+         * </pre>
+         *
+         * <code>string cmd = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCmd() {
+          
+          cmd_ = getDefaultInstance().getCmd();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Command to execute
+         * </pre>
+         *
+         * <code>string cmd = 1;</code>
+         * @param value The bytes for cmd to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCmdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          cmd_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object args_ = "";
+        /**
+         * <pre>
+         * Command args
+         * </pre>
+         *
+         * <code>string args = 2;</code>
+         * @return The args.
+         */
+        public java.lang.String getArgs() {
+          java.lang.Object ref = args_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            args_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Command args
+         * </pre>
+         *
+         * <code>string args = 2;</code>
+         * @return The bytes for args.
+         */
+        public com.google.protobuf.ByteString
+            getArgsBytes() {
+          java.lang.Object ref = args_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            args_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Command args
+         * </pre>
+         *
+         * <code>string args = 2;</code>
+         * @param value The args to set.
+         * @return This builder for chaining.
+         */
+        public Builder setArgs(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          args_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Command args
+         * </pre>
+         *
+         * <code>string args = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearArgs() {
+          
+          args_ = getDefaultInstance().getArgs();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Command args
+         * </pre>
+         *
+         * <code>string args = 2;</code>
+         * @param value The bytes for args to set.
+         * @return This builder for chaining.
+         */
+        public Builder setArgsBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          args_ = value;
+          onChanged();
+          return this;
+        }
+
+        private boolean enabled_ ;
+        /**
+         * <pre>
+         * Is command enabled
+         * </pre>
+         *
+         * <code>bool enabled = 3;</code>
+         * @return The enabled.
+         */
+        @java.lang.Override
+        public boolean getEnabled() {
+          return enabled_;
+        }
+        /**
+         * <pre>
+         * Is command enabled
+         * </pre>
+         *
+         * <code>bool enabled = 3;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnabled(boolean value) {
+          
+          enabled_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Is command enabled
+         * </pre>
+         *
+         * <code>bool enabled = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnabled() {
+          
+          enabled_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean stopOnError_ ;
+        /**
+         * <pre>
+         * Stop backup execution on error
+         * </pre>
+         *
+         * <code>bool stop_on_error = 4;</code>
+         * @return The stopOnError.
+         */
+        @java.lang.Override
+        public boolean getStopOnError() {
+          return stopOnError_;
+        }
+        /**
+         * <pre>
+         * Stop backup execution on error
+         * </pre>
+         *
+         * <code>bool stop_on_error = 4;</code>
+         * @param value The stopOnError to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStopOnError(boolean value) {
+          
+          stopOnError_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Stop backup execution on error
+         * </pre>
+         *
+         * <code>bool stop_on_error = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearStopOnError() {
+          
+          stopOnError_ = false;
+          onChanged();
+          return this;
+        }
+
+        private int type_ = 0;
+        /**
+         * <pre>
+         * Type of command: pre or post
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.CommandType type = 5;</code>
+         * @return The enum numeric value on the wire for type.
+         */
+        @java.lang.Override public int getTypeValue() {
+          return type_;
+        }
+        /**
+         * <pre>
+         * Type of command: pre or post
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.CommandType type = 5;</code>
+         * @param value The enum numeric value on the wire for type to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTypeValue(int value) {
+          
+          type_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Type of command: pre or post
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.CommandType type = 5;</code>
+         * @return The type.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType getType() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType result = yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType.valueOf(type_);
+          return result == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Type of command: pre or post
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.CommandType type = 5;</code>
+         * @param value The type to set.
+         * @return This builder for chaining.
+         */
+        public Builder setType(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.CommandType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          type_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Type of command: pre or post
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.CommandType type = 5;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearType() {
+          
+          type_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private boolean wait_ ;
+        /**
+         * <pre>
+         * Wait command finish before launching backup
+         * </pre>
+         *
+         * <code>bool wait = 6;</code>
+         * @return The wait.
+         */
+        @java.lang.Override
+        public boolean getWait() {
+          return wait_;
+        }
+        /**
+         * <pre>
+         * Wait command finish before launching backup
+         * </pre>
+         *
+         * <code>bool wait = 6;</code>
+         * @param value The wait to set.
+         * @return This builder for chaining.
+         */
+        public Builder setWait(boolean value) {
+          
+          wait_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Wait command finish before launching backup
+         * </pre>
+         *
+         * <code>bool wait = 6;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearWait() {
+          
+          wait_ = false;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object workdir_ = "";
+        /**
+         * <pre>
+         * Workdir for command execution 
+         * </pre>
+         *
+         * <code>string workdir = 7;</code>
+         * @return The workdir.
+         */
+        public java.lang.String getWorkdir() {
+          java.lang.Object ref = workdir_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            workdir_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Workdir for command execution 
+         * </pre>
+         *
+         * <code>string workdir = 7;</code>
+         * @return The bytes for workdir.
+         */
+        public com.google.protobuf.ByteString
+            getWorkdirBytes() {
+          java.lang.Object ref = workdir_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            workdir_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Workdir for command execution 
+         * </pre>
+         *
+         * <code>string workdir = 7;</code>
+         * @param value The workdir to set.
+         * @return This builder for chaining.
+         */
+        public Builder setWorkdir(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          workdir_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Workdir for command execution 
+         * </pre>
+         *
+         * <code>string workdir = 7;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearWorkdir() {
+          
+          workdir_ = getDefaultInstance().getWorkdir();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Workdir for command execution 
+         * </pre>
+         *
+         * <code>string workdir = 7;</code>
+         * @param value The bytes for workdir to set.
+         * @return This builder for chaining.
+         */
+        public Builder setWorkdirBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          workdir_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.PolicySettings.PrePostCommand)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.PolicySettings.PrePostCommand)
+      private static final yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand();
+      }
+
+      public static yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<PrePostCommand>
+          PARSER = new com.google.protobuf.AbstractParser<PrePostCommand>() {
+        @java.lang.Override
+        public PrePostCommand parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new PrePostCommand(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<PrePostCommand> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<PrePostCommand> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int COMPRESSION_FIELD_NUMBER = 1;
     private int compression_;
     /**
@@ -18465,6 +20048,66 @@ public final class PolicyOuterClass {
       return lvmSnapshottingEnabled_;
     }
 
+    public static final int PRE_POST_COMMANDS_FIELD_NUMBER = 23;
+    private java.util.List<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand> prePostCommands_;
+    /**
+     * <pre>
+     * Commands to launch before or after backup execution
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand> getPrePostCommandsList() {
+      return prePostCommands_;
+    }
+    /**
+     * <pre>
+     * Commands to launch before or after backup execution
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommandOrBuilder> 
+        getPrePostCommandsOrBuilderList() {
+      return prePostCommands_;
+    }
+    /**
+     * <pre>
+     * Commands to launch before or after backup execution
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+     */
+    @java.lang.Override
+    public int getPrePostCommandsCount() {
+      return prePostCommands_.size();
+    }
+    /**
+     * <pre>
+     * Commands to launch before or after backup execution
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand getPrePostCommands(int index) {
+      return prePostCommands_.get(index);
+    }
+    /**
+     * <pre>
+     * Commands to launch before or after backup execution
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommandOrBuilder getPrePostCommandsOrBuilder(
+        int index) {
+      return prePostCommands_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -18538,6 +20181,9 @@ public final class PolicyOuterClass {
       }
       if (lvmSnapshottingEnabled_ != false) {
         output.writeBool(22, lvmSnapshottingEnabled_);
+      }
+      for (int i = 0; i < prePostCommands_.size(); i++) {
+        output.writeMessage(23, prePostCommands_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -18628,6 +20274,10 @@ public final class PolicyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(22, lvmSnapshottingEnabled_);
       }
+      for (int i = 0; i < prePostCommands_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, prePostCommands_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -18707,6 +20357,8 @@ public final class PolicyOuterClass {
           != other.getValidationEnabled()) return false;
       if (getLvmSnapshottingEnabled()
           != other.getLvmSnapshottingEnabled()) return false;
+      if (!getPrePostCommandsList()
+          .equals(other.getPrePostCommandsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -18784,6 +20436,10 @@ public final class PolicyOuterClass {
       hash = (37 * hash) + LVM_SNAPSHOTTING_ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getLvmSnapshottingEnabled());
+      if (getPrePostCommandsCount() > 0) {
+        hash = (37 * hash) + PRE_POST_COMMANDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPrePostCommandsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -18916,6 +20572,7 @@ public final class PolicyOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getPrePostCommandsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -18997,6 +20654,12 @@ public final class PolicyOuterClass {
 
         lvmSnapshottingEnabled_ = false;
 
+        if (prePostCommandsBuilder_ == null) {
+          prePostCommands_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          prePostCommandsBuilder_.clear();
+        }
         return this;
       }
 
@@ -19023,6 +20686,7 @@ public final class PolicyOuterClass {
       @java.lang.Override
       public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings buildPartial() {
         yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings result = new yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings(this);
+        int from_bitField0_ = bitField0_;
         result.compression_ = compression_;
         result.format_ = format_;
         result.multiVolumeSnapshottingEnabled_ = multiVolumeSnapshottingEnabled_;
@@ -19079,6 +20743,15 @@ public final class PolicyOuterClass {
         result.sectorBySector_ = sectorBySector_;
         result.validationEnabled_ = validationEnabled_;
         result.lvmSnapshottingEnabled_ = lvmSnapshottingEnabled_;
+        if (prePostCommandsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            prePostCommands_ = java.util.Collections.unmodifiableList(prePostCommands_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.prePostCommands_ = prePostCommands_;
+        } else {
+          result.prePostCommands_ = prePostCommandsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -19187,6 +20860,32 @@ public final class PolicyOuterClass {
         if (other.getLvmSnapshottingEnabled() != false) {
           setLvmSnapshottingEnabled(other.getLvmSnapshottingEnabled());
         }
+        if (prePostCommandsBuilder_ == null) {
+          if (!other.prePostCommands_.isEmpty()) {
+            if (prePostCommands_.isEmpty()) {
+              prePostCommands_ = other.prePostCommands_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePrePostCommandsIsMutable();
+              prePostCommands_.addAll(other.prePostCommands_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.prePostCommands_.isEmpty()) {
+            if (prePostCommandsBuilder_.isEmpty()) {
+              prePostCommandsBuilder_.dispose();
+              prePostCommandsBuilder_ = null;
+              prePostCommands_ = other.prePostCommands_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              prePostCommandsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPrePostCommandsFieldBuilder() : null;
+            } else {
+              prePostCommandsBuilder_.addAllMessages(other.prePostCommands_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -19215,6 +20914,7 @@ public final class PolicyOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private int compression_ = 0;
       /**
@@ -21212,6 +22912,318 @@ public final class PolicyOuterClass {
         onChanged();
         return this;
       }
+
+      private java.util.List<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand> prePostCommands_ =
+        java.util.Collections.emptyList();
+      private void ensurePrePostCommandsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          prePostCommands_ = new java.util.ArrayList<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand>(prePostCommands_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommandOrBuilder> prePostCommandsBuilder_;
+
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public java.util.List<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand> getPrePostCommandsList() {
+        if (prePostCommandsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(prePostCommands_);
+        } else {
+          return prePostCommandsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public int getPrePostCommandsCount() {
+        if (prePostCommandsBuilder_ == null) {
+          return prePostCommands_.size();
+        } else {
+          return prePostCommandsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand getPrePostCommands(int index) {
+        if (prePostCommandsBuilder_ == null) {
+          return prePostCommands_.get(index);
+        } else {
+          return prePostCommandsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public Builder setPrePostCommands(
+          int index, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand value) {
+        if (prePostCommandsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrePostCommandsIsMutable();
+          prePostCommands_.set(index, value);
+          onChanged();
+        } else {
+          prePostCommandsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public Builder setPrePostCommands(
+          int index, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder builderForValue) {
+        if (prePostCommandsBuilder_ == null) {
+          ensurePrePostCommandsIsMutable();
+          prePostCommands_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          prePostCommandsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public Builder addPrePostCommands(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand value) {
+        if (prePostCommandsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrePostCommandsIsMutable();
+          prePostCommands_.add(value);
+          onChanged();
+        } else {
+          prePostCommandsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public Builder addPrePostCommands(
+          int index, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand value) {
+        if (prePostCommandsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrePostCommandsIsMutable();
+          prePostCommands_.add(index, value);
+          onChanged();
+        } else {
+          prePostCommandsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public Builder addPrePostCommands(
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder builderForValue) {
+        if (prePostCommandsBuilder_ == null) {
+          ensurePrePostCommandsIsMutable();
+          prePostCommands_.add(builderForValue.build());
+          onChanged();
+        } else {
+          prePostCommandsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public Builder addPrePostCommands(
+          int index, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder builderForValue) {
+        if (prePostCommandsBuilder_ == null) {
+          ensurePrePostCommandsIsMutable();
+          prePostCommands_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          prePostCommandsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public Builder addAllPrePostCommands(
+          java.lang.Iterable<? extends yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand> values) {
+        if (prePostCommandsBuilder_ == null) {
+          ensurePrePostCommandsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, prePostCommands_);
+          onChanged();
+        } else {
+          prePostCommandsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public Builder clearPrePostCommands() {
+        if (prePostCommandsBuilder_ == null) {
+          prePostCommands_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          prePostCommandsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public Builder removePrePostCommands(int index) {
+        if (prePostCommandsBuilder_ == null) {
+          ensurePrePostCommandsIsMutable();
+          prePostCommands_.remove(index);
+          onChanged();
+        } else {
+          prePostCommandsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder getPrePostCommandsBuilder(
+          int index) {
+        return getPrePostCommandsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommandOrBuilder getPrePostCommandsOrBuilder(
+          int index) {
+        if (prePostCommandsBuilder_ == null) {
+          return prePostCommands_.get(index);  } else {
+          return prePostCommandsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommandOrBuilder> 
+           getPrePostCommandsOrBuilderList() {
+        if (prePostCommandsBuilder_ != null) {
+          return prePostCommandsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(prePostCommands_);
+        }
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder addPrePostCommandsBuilder() {
+        return getPrePostCommandsFieldBuilder().addBuilder(
+            yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder addPrePostCommandsBuilder(
+          int index) {
+        return getPrePostCommandsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Commands to launch before or after backup execution
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.backup.v1.PolicySettings.PrePostCommand pre_post_commands = 23;</code>
+       */
+      public java.util.List<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder> 
+           getPrePostCommandsBuilderList() {
+        return getPrePostCommandsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommandOrBuilder> 
+          getPrePostCommandsFieldBuilder() {
+        if (prePostCommandsBuilder_ == null) {
+          prePostCommandsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommand.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.PrePostCommandOrBuilder>(
+                  prePostCommands_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          prePostCommands_ = null;
+        }
+        return prePostCommandsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -22758,6 +24770,11 @@ public final class PolicyOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_PolicySettings_PrePostCommand_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_PolicySettings_PrePostCommand_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_backup_v1_PolicyApplication_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -22780,7 +24797,7 @@ public final class PolicyOuterClass {
       "\n\nupdated_at\030\004 \001(\0132\032.google.protobuf.Tim" +
       "estamp\022\017\n\007enabled\030\005 \001(\010\0228\n\010settings\030\006 \001(" +
       "\0132&.yandex.cloud.backup.v1.PolicySetting" +
-      "s\022\021\n\tfolder_id\030\007 \001(\t\"\200#\n\016PolicySettings\022" +
+      "s\022\021\n\tfolder_id\030\007 \001(\t\"\331%\n\016PolicySettings\022" +
       "M\n\013compression\030\001 \001(\01622.yandex.cloud.back" +
       "up.v1.PolicySettings.CompressionB\004\350\3071\001\0224" +
       "\n\006format\030\002 \001(\0162\036.yandex.cloud.backup.v1." +
@@ -22811,100 +24828,109 @@ public final class PolicyOuterClass {
       "filters\030\023 \001(\01322.yandex.cloud.backup.v1.P" +
       "olicySettings.FileFilters\022\030\n\020sector_by_s" +
       "ector\030\024 \001(\010\022\032\n\022validation_enabled\030\025 \001(\010\022" +
-      " \n\030lvm_snapshotting_enabled\030\026 \001(\010\032\317\001\n\010In" +
-      "terval\022H\n\004type\030\001 \001(\01624.yandex.cloud.back" +
-      "up.v1.PolicySettings.Interval.TypeB\004\350\3071\001" +
-      "\022\025\n\005count\030\002 \001(\003B\006\372\3071\002>0\"b\n\004Type\022\024\n\020TYPE_" +
-      "UNSPECIFIED\020\000\022\013\n\007SECONDS\020\001\022\013\n\007MINUTES\020\002\022" +
-      "\t\n\005HOURS\020\003\022\010\n\004DAYS\020\004\022\t\n\005WEEKS\020\005\022\n\n\006MONTH" +
-      "S\020\006\032\216\001\n\024RetriesConfiguration\022\017\n\007enabled\030" +
-      "\001 \001(\010\022G\n\010interval\030\002 \001(\0132/.yandex.cloud.b" +
-      "ackup.v1.PolicySettings.IntervalB\004\350\3071\001\022\034" +
-      "\n\014max_attempts\030\003 \001(\003B\006\372\3071\002>0\032\031\n\tSplittin" +
-      "g\022\014\n\004size\030\001 \001(\003\032\362\001\n\037VolumeShadowCopyServ" +
-      "iceSettings\022\017\n\007enabled\030\001 \001(\010\022j\n\010provider" +
-      "\030\002 \001(\0162R.yandex.cloud.backup.v1.PolicySe" +
-      "ttings.VolumeShadowCopyServiceSettings.V" +
-      "SSProviderB\004\350\3071\001\"R\n\013VSSProvider\022\034\n\030VSS_P" +
-      "ROVIDER_UNSPECIFIED\020\000\022\n\n\006NATIVE\020\001\022\031\n\025TAR" +
-      "GET_SYSTEM_DEFINED\020\002\032!\n\021ArchivePropertie" +
-      "s\022\014\n\004name\030\001 \001(\t\032$\n\021PerformanceWindow\022\017\n\007" +
-      "enabled\030\001 \001(\010\032)\n\tTimeOfDay\022\014\n\004hour\030\001 \001(\003" +
-      "\022\016\n\006minute\030\002 \001(\003\032\277\002\n\tRetention\022M\n\005rules\030" +
-      "\001 \003(\0132>.yandex.cloud.backup.v1.PolicySet" +
-      "tings.Retention.RetentionRule\022\025\n\rbefore_" +
-      "backup\030\003 \001(\010\032\305\001\n\rRetentionRule\022H\n\nbackup" +
-      "_set\030\001 \003(\01624.yandex.cloud.backup.v1.Poli" +
-      "cySettings.RepeatePeriod\022B\n\007max_age\030\002 \001(" +
-      "\0132/.yandex.cloud.backup.v1.PolicySetting" +
-      "s.IntervalH\000\022\023\n\tmax_count\030\003 \001(\003H\000B\021\n\tcon" +
-      "dition\022\004\300\3011\001J\004\010\002\020\003\032\200\r\n\nScheduling\022X\n\013bac" +
-      "kup_sets\030\001 \003(\0132;.yandex.cloud.backup.v1." +
-      "PolicySettings.Scheduling.BackupSetB\006\202\3101" +
-      "\002>0\022\017\n\007enabled\030\002 \001(\010\022\034\n\024max_parallel_bac" +
-      "kups\030\003 \001(\003\022M\n\016rand_max_delay\030\004 \001(\0132/.yan" +
-      "dex.cloud.backup.v1.PolicySettings.Inter" +
-      "valB\004\350\3071\001\022N\n\006scheme\030\005 \001(\01628.yandex.cloud" +
-      ".backup.v1.PolicySettings.Scheduling.Sch" +
-      "emeB\004\350\3071\001\022K\n\021weekly_backup_day\030\006 \001(\0162*.y" +
-      "andex.cloud.backup.v1.PolicySettings.Day" +
-      "B\004\350\3071\001\022Q\n\014task_failure\030\007 \001(\0132;.yandex.cl" +
-      "oud.backup.v1.PolicySettings.RetriesConf" +
-      "iguration\032\201\010\n\tBackupSet\022P\n\004time\030\001 \001(\0132@." +
-      "yandex.cloud.backup.v1.PolicySettings.Sc" +
-      "heduling.BackupSet.TimeH\000\022m\n\024since_last_" +
-      "exec_time\030\002 \001(\0132M.yandex.cloud.backup.v1" +
-      ".PolicySettings.Scheduling.BackupSet.Sin" +
-      "ceLastExecTimeH\000\022N\n\004type\030\003 \001(\0162@.yandex." +
-      "cloud.backup.v1.PolicySettings.Schedulin" +
-      "g.BackupSet.Type\032\215\004\n\004Time\022B\n\010weekdays\030\001 " +
-      "\003(\0162*.yandex.cloud.backup.v1.PolicySetti" +
-      "ngs.DayB\004\220\3101\001\022C\n\trepeat_at\030\002 \003(\01320.yande" +
-      "x.cloud.backup.v1.PolicySettings.TimeOfD" +
-      "ay\022E\n\014repeat_every\030\003 \001(\0132/.yandex.cloud." +
-      "backup.v1.PolicySettings.Interval\022C\n\ttim" +
-      "e_from\030\004 \001(\01320.yandex.cloud.backup.v1.Po" +
-      "licySettings.TimeOfDay\022A\n\007time_to\030\005 \001(\0132" +
-      "0.yandex.cloud.backup.v1.PolicySettings." +
-      "TimeOfDay\022\027\n\tmonthdays\030\006 \003(\003B\004\220\3101\001\022!\n\031in" +
-      "clude_last_day_of_month\030\007 \001(\010\022\024\n\006months\030" +
-      "\010 \003(\003B\004\220\3101\001\022H\n\004type\030\t \001(\01624.yandex.cloud" +
-      ".backup.v1.PolicySettings.RepeatePeriodB" +
-      "\004\350\3071\001\022\021\n\trun_later\030\n \001(\010\032Y\n\021SinceLastExe" +
-      "cTime\022D\n\005delay\030\001 \001(\0132/.yandex.cloud.back" +
-      "up.v1.PolicySettings.IntervalB\004\350\3071\001\"g\n\004T" +
-      "ype\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\tTYPE_AUTO\020\001" +
-      "\022\r\n\tTYPE_FULL\020\002\022\024\n\020TYPE_INCREMENTAL\020\003\022\025\n" +
-      "\021TYPE_DIFFERENTIAL\020\004B\017\n\007setting\022\004\300\3011\001\"\245\001" +
-      "\n\006Scheme\022\026\n\022SCHEME_UNSPECIFIED\020\000\022\n\n\006SIMP" +
-      "LE\020\001\022\017\n\013ALWAYS_FULL\020\002\022\026\n\022ALWAYS_INCREMEN" +
-      "TAL\020\003\022\026\n\022WEEKLY_INCREMENTAL\020\004\022!\n\035WEEKLY_" +
-      "FULL_DAILY_INCREMENTAL\020\005\022\n\n\006CUSTOM\020\006\022\007\n\003" +
-      "CDP\020\007\032?\n\013FileFilters\022\027\n\017exclusion_masks\030" +
-      "\001 \003(\t\022\027\n\017inclusion_masks\030\002 \003(\t\"R\n\013Compre" +
-      "ssion\022\033\n\027COMPRESSION_UNSPECIFIED\020\000\022\n\n\006NO" +
-      "RMAL\020\001\022\010\n\004HIGH\020\002\022\007\n\003MAX\020\003\022\007\n\003OFF\020\004\"_\n\rRe" +
-      "peatePeriod\022\036\n\032REPEATE_PERIOD_UNSPECIFIE" +
-      "D\020\000\022\n\n\006HOURLY\020\001\022\t\n\005DAILY\020\002\022\n\n\006WEEKLY\020\003\022\013" +
-      "\n\007MONTHLY\020\004\"v\n\003Day\022\023\n\017DAY_UNSPECIFIED\020\000\022" +
-      "\n\n\006MONDAY\020\001\022\013\n\007TUESDAY\020\002\022\r\n\tWEDNESDAY\020\003\022" +
-      "\014\n\010THURSDAY\020\004\022\n\n\006FRIDAY\020\005\022\014\n\010SATURDAY\020\006\022" +
-      "\n\n\006SUNDAY\020\007\"v\n\024ChangedBlockTracking\022&\n\"C" +
-      "HANGED_BLOCK_TRACKING_UNSPECIFIED\020\000\022\022\n\016U" +
-      "SE_IF_ENABLED\020\001\022\022\n\016ENABLE_AND_USE\020\002\022\016\n\nD" +
-      "O_NOT_USE\020\003J\004\010\r\020\016J\004\010\016\020\017\"\242\002\n\021PolicyApplic" +
-      "ation\022\021\n\tpolicy_id\030\001 \001(\t\022\033\n\023compute_inst" +
-      "ance_id\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022@\n\006status" +
-      "\030\004 \001(\01620.yandex.cloud.backup.v1.PolicyAp" +
-      "plication.Status\022.\n\ncreated_at\030\005 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022\025\n\ris_processin" +
-      "g\030\006 \001(\010\"C\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
-      "\000\022\006\n\002OK\020\001\022\013\n\007RUNNING\020\002\022\014\n\010DISABLED\020\003*J\n\006" +
-      "Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\016\n\nVERSIO" +
-      "N_11\020\001\022\016\n\nVERSION_12\020\002\022\010\n\004AUTO\020\003B_\n\032yand" +
-      "ex.cloud.api.backup.v1ZAgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/backup/" +
-      "v1;backupb\006proto3"
+      " \n\030lvm_snapshotting_enabled\030\026 \001(\010\022P\n\021pre" +
+      "_post_commands\030\027 \003(\01325.yandex.cloud.back" +
+      "up.v1.PolicySettings.PrePostCommand\032\317\001\n\010" +
+      "Interval\022H\n\004type\030\001 \001(\01624.yandex.cloud.ba" +
+      "ckup.v1.PolicySettings.Interval.TypeB\004\350\307" +
+      "1\001\022\025\n\005count\030\002 \001(\003B\006\372\3071\002>0\"b\n\004Type\022\024\n\020TYP" +
+      "E_UNSPECIFIED\020\000\022\013\n\007SECONDS\020\001\022\013\n\007MINUTES\020" +
+      "\002\022\t\n\005HOURS\020\003\022\010\n\004DAYS\020\004\022\t\n\005WEEKS\020\005\022\n\n\006MON" +
+      "THS\020\006\032\216\001\n\024RetriesConfiguration\022\017\n\007enable" +
+      "d\030\001 \001(\010\022G\n\010interval\030\002 \001(\0132/.yandex.cloud" +
+      ".backup.v1.PolicySettings.IntervalB\004\350\3071\001" +
+      "\022\034\n\014max_attempts\030\003 \001(\003B\006\372\3071\002>0\032\031\n\tSplitt" +
+      "ing\022\014\n\004size\030\001 \001(\003\032\362\001\n\037VolumeShadowCopySe" +
+      "rviceSettings\022\017\n\007enabled\030\001 \001(\010\022j\n\010provid" +
+      "er\030\002 \001(\0162R.yandex.cloud.backup.v1.Policy" +
+      "Settings.VolumeShadowCopyServiceSettings" +
+      ".VSSProviderB\004\350\3071\001\"R\n\013VSSProvider\022\034\n\030VSS" +
+      "_PROVIDER_UNSPECIFIED\020\000\022\n\n\006NATIVE\020\001\022\031\n\025T" +
+      "ARGET_SYSTEM_DEFINED\020\002\032!\n\021ArchivePropert" +
+      "ies\022\014\n\004name\030\001 \001(\t\032$\n\021PerformanceWindow\022\017" +
+      "\n\007enabled\030\001 \001(\010\032)\n\tTimeOfDay\022\014\n\004hour\030\001 \001" +
+      "(\003\022\016\n\006minute\030\002 \001(\003\032\277\002\n\tRetention\022M\n\005rule" +
+      "s\030\001 \003(\0132>.yandex.cloud.backup.v1.PolicyS" +
+      "ettings.Retention.RetentionRule\022\025\n\rbefor" +
+      "e_backup\030\003 \001(\010\032\305\001\n\rRetentionRule\022H\n\nback" +
+      "up_set\030\001 \003(\01624.yandex.cloud.backup.v1.Po" +
+      "licySettings.RepeatePeriod\022B\n\007max_age\030\002 " +
+      "\001(\0132/.yandex.cloud.backup.v1.PolicySetti" +
+      "ngs.IntervalH\000\022\023\n\tmax_count\030\003 \001(\003H\000B\021\n\tc" +
+      "ondition\022\004\300\3011\001J\004\010\002\020\003\032\200\r\n\nScheduling\022X\n\013b" +
+      "ackup_sets\030\001 \003(\0132;.yandex.cloud.backup.v" +
+      "1.PolicySettings.Scheduling.BackupSetB\006\202" +
+      "\3101\002>0\022\017\n\007enabled\030\002 \001(\010\022\034\n\024max_parallel_b" +
+      "ackups\030\003 \001(\003\022M\n\016rand_max_delay\030\004 \001(\0132/.y" +
+      "andex.cloud.backup.v1.PolicySettings.Int" +
+      "ervalB\004\350\3071\001\022N\n\006scheme\030\005 \001(\01628.yandex.clo" +
+      "ud.backup.v1.PolicySettings.Scheduling.S" +
+      "chemeB\004\350\3071\001\022K\n\021weekly_backup_day\030\006 \001(\0162*" +
+      ".yandex.cloud.backup.v1.PolicySettings.D" +
+      "ayB\004\350\3071\001\022Q\n\014task_failure\030\007 \001(\0132;.yandex." +
+      "cloud.backup.v1.PolicySettings.RetriesCo" +
+      "nfiguration\032\201\010\n\tBackupSet\022P\n\004time\030\001 \001(\0132" +
+      "@.yandex.cloud.backup.v1.PolicySettings." +
+      "Scheduling.BackupSet.TimeH\000\022m\n\024since_las" +
+      "t_exec_time\030\002 \001(\0132M.yandex.cloud.backup." +
+      "v1.PolicySettings.Scheduling.BackupSet.S" +
+      "inceLastExecTimeH\000\022N\n\004type\030\003 \001(\0162@.yande" +
+      "x.cloud.backup.v1.PolicySettings.Schedul" +
+      "ing.BackupSet.Type\032\215\004\n\004Time\022B\n\010weekdays\030" +
+      "\001 \003(\0162*.yandex.cloud.backup.v1.PolicySet" +
+      "tings.DayB\004\220\3101\001\022C\n\trepeat_at\030\002 \003(\01320.yan" +
+      "dex.cloud.backup.v1.PolicySettings.TimeO" +
+      "fDay\022E\n\014repeat_every\030\003 \001(\0132/.yandex.clou" +
+      "d.backup.v1.PolicySettings.Interval\022C\n\tt" +
+      "ime_from\030\004 \001(\01320.yandex.cloud.backup.v1." +
+      "PolicySettings.TimeOfDay\022A\n\007time_to\030\005 \001(" +
+      "\01320.yandex.cloud.backup.v1.PolicySetting" +
+      "s.TimeOfDay\022\027\n\tmonthdays\030\006 \003(\003B\004\220\3101\001\022!\n\031" +
+      "include_last_day_of_month\030\007 \001(\010\022\024\n\006month" +
+      "s\030\010 \003(\003B\004\220\3101\001\022H\n\004type\030\t \001(\01624.yandex.clo" +
+      "ud.backup.v1.PolicySettings.RepeatePerio" +
+      "dB\004\350\3071\001\022\021\n\trun_later\030\n \001(\010\032Y\n\021SinceLastE" +
+      "xecTime\022D\n\005delay\030\001 \001(\0132/.yandex.cloud.ba" +
+      "ckup.v1.PolicySettings.IntervalB\004\350\3071\001\"g\n" +
+      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\tTYPE_AUTO" +
+      "\020\001\022\r\n\tTYPE_FULL\020\002\022\024\n\020TYPE_INCREMENTAL\020\003\022" +
+      "\025\n\021TYPE_DIFFERENTIAL\020\004B\017\n\007setting\022\004\300\3011\001\"" +
+      "\245\001\n\006Scheme\022\026\n\022SCHEME_UNSPECIFIED\020\000\022\n\n\006SI" +
+      "MPLE\020\001\022\017\n\013ALWAYS_FULL\020\002\022\026\n\022ALWAYS_INCREM" +
+      "ENTAL\020\003\022\026\n\022WEEKLY_INCREMENTAL\020\004\022!\n\035WEEKL" +
+      "Y_FULL_DAILY_INCREMENTAL\020\005\022\n\n\006CUSTOM\020\006\022\007" +
+      "\n\003CDP\020\007\032?\n\013FileFilters\022\027\n\017exclusion_mask" +
+      "s\030\001 \003(\t\022\027\n\017inclusion_masks\030\002 \003(\t\032\264\001\n\016Pre" +
+      "PostCommand\022\013\n\003cmd\030\001 \001(\t\022\014\n\004args\030\002 \001(\t\022\017" +
+      "\n\007enabled\030\003 \001(\010\022\025\n\rstop_on_error\030\004 \001(\010\022@" +
+      "\n\004type\030\005 \001(\01622.yandex.cloud.backup.v1.Po" +
+      "licySettings.CommandType\022\014\n\004wait\030\006 \001(\010\022\017" +
+      "\n\007workdir\030\007 \001(\t\"R\n\013Compression\022\033\n\027COMPRE" +
+      "SSION_UNSPECIFIED\020\000\022\n\n\006NORMAL\020\001\022\010\n\004HIGH\020" +
+      "\002\022\007\n\003MAX\020\003\022\007\n\003OFF\020\004\"_\n\rRepeatePeriod\022\036\n\032" +
+      "REPEATE_PERIOD_UNSPECIFIED\020\000\022\n\n\006HOURLY\020\001" +
+      "\022\t\n\005DAILY\020\002\022\n\n\006WEEKLY\020\003\022\013\n\007MONTHLY\020\004\"v\n\003" +
+      "Day\022\023\n\017DAY_UNSPECIFIED\020\000\022\n\n\006MONDAY\020\001\022\013\n\007" +
+      "TUESDAY\020\002\022\r\n\tWEDNESDAY\020\003\022\014\n\010THURSDAY\020\004\022\n" +
+      "\n\006FRIDAY\020\005\022\014\n\010SATURDAY\020\006\022\n\n\006SUNDAY\020\007\"v\n\024" +
+      "ChangedBlockTracking\022&\n\"CHANGED_BLOCK_TR" +
+      "ACKING_UNSPECIFIED\020\000\022\022\n\016USE_IF_ENABLED\020\001" +
+      "\022\022\n\016ENABLE_AND_USE\020\002\022\016\n\nDO_NOT_USE\020\003\"N\n\013" +
+      "CommandType\022\034\n\030COMMAND_TYPE_UNSPECIFIED\020" +
+      "\000\022\017\n\013PRE_COMMAND\020\001\022\020\n\014POST_COMMAND\020\002J\004\010\r" +
+      "\020\016J\004\010\016\020\017\"\242\002\n\021PolicyApplication\022\021\n\tpolicy" +
+      "_id\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t\022\017" +
+      "\n\007enabled\030\003 \001(\010\022@\n\006status\030\004 \001(\01620.yandex" +
+      ".cloud.backup.v1.PolicyApplication.Statu" +
+      "s\022.\n\ncreated_at\030\005 \001(\0132\032.google.protobuf." +
+      "Timestamp\022\025\n\ris_processing\030\006 \001(\010\"C\n\006Stat" +
+      "us\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\013\n\007RU" +
+      "NNING\020\002\022\014\n\010DISABLED\020\003*J\n\006Format\022\026\n\022FORMA" +
+      "T_UNSPECIFIED\020\000\022\016\n\nVERSION_11\020\001\022\016\n\nVERSI" +
+      "ON_12\020\002\022\010\n\004AUTO\020\003B_\n\032yandex.cloud.api.ba" +
+      "ckup.v1ZAgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/backup/v1;backupb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22923,7 +24949,7 @@ public final class PolicyOuterClass {
     internal_static_yandex_cloud_backup_v1_PolicySettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_PolicySettings_descriptor,
-        new java.lang.String[] { "Compression", "Format", "MultiVolumeSnapshottingEnabled", "PreserveFileSecuritySettings", "Reattempts", "SilentModeEnabled", "Splitting", "VmSnapshotReattempts", "Vss", "Archive", "PerformanceWindow", "Retention", "Scheduling", "Cbt", "FastBackupEnabled", "QuiesceSnapshottingEnabled", "FileFilters", "SectorBySector", "ValidationEnabled", "LvmSnapshottingEnabled", });
+        new java.lang.String[] { "Compression", "Format", "MultiVolumeSnapshottingEnabled", "PreserveFileSecuritySettings", "Reattempts", "SilentModeEnabled", "Splitting", "VmSnapshotReattempts", "Vss", "Archive", "PerformanceWindow", "Retention", "Scheduling", "Cbt", "FastBackupEnabled", "QuiesceSnapshottingEnabled", "FileFilters", "SectorBySector", "ValidationEnabled", "LvmSnapshottingEnabled", "PrePostCommands", });
     internal_static_yandex_cloud_backup_v1_PolicySettings_Interval_descriptor =
       internal_static_yandex_cloud_backup_v1_PolicySettings_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_backup_v1_PolicySettings_Interval_fieldAccessorTable = new
@@ -23008,6 +25034,12 @@ public final class PolicyOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_PolicySettings_FileFilters_descriptor,
         new java.lang.String[] { "ExclusionMasks", "InclusionMasks", });
+    internal_static_yandex_cloud_backup_v1_PolicySettings_PrePostCommand_descriptor =
+      internal_static_yandex_cloud_backup_v1_PolicySettings_descriptor.getNestedTypes().get(10);
+    internal_static_yandex_cloud_backup_v1_PolicySettings_PrePostCommand_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_PolicySettings_PrePostCommand_descriptor,
+        new java.lang.String[] { "Cmd", "Args", "Enabled", "StopOnError", "Type", "Wait", "Workdir", });
     internal_static_yandex_cloud_backup_v1_PolicyApplication_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_backup_v1_PolicyApplication_fieldAccessorTable = new

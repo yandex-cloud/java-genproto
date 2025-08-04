@@ -5,6 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Stream line management service.
+ * Provides methods for creating, retrieving, updating, and deleting stream lines,
+ * which define the technical configuration for receiving and processing video signals.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -375,13 +377,16 @@ public final class StreamLineServiceGrpc {
   /**
    * <pre>
    * Stream line management service.
+   * Provides methods for creating, retrieving, updating, and deleting stream lines,
+   * which define the technical configuration for receiving and processing video signals.
    * </pre>
    */
   public static abstract class StreamLineServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Get the specific stream line.
+     * Retrieves detailed information about a specific stream line by its ID.
+     * Returns all stream line metadata, configuration, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamLineRequest request,
@@ -391,7 +396,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * List lines for channel.
+     * Lists all stream lines in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesRequest request,
@@ -401,7 +407,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Batch get lines for channel.
+     * Retrieves multiple stream lines by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several stream lines.
      * </pre>
      */
     public void batchGet(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest request,
@@ -411,7 +418,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Create stream line.
+     * Creates a new stream line in the specified channel with the provided configuration.
+     * Stream lines define the technical settings for receiving and processing video signals.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest request,
@@ -421,7 +429,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Update stream line.
+     * Updates an existing stream line's metadata and configuration.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamLineRequest request,
@@ -431,7 +440,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Delete stream line.
+     * Deletes a specific stream line by its ID.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest request,
@@ -441,7 +450,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete stream lines.
+     * Deletes multiple stream lines in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several stream lines.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest request,
@@ -451,7 +461,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the line.
+     * Performs a specific action on a stream line, such as activation or deactivation.
+     * Actions change the stream line's state without modifying its configuration.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.PerformLineActionRequest request,
@@ -461,7 +472,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Get unique stream key.
+     * Retrieves the unique stream key for a push-type stream line.
+     * This key is used to authenticate when pushing video streams to the platform.
      * </pre>
      */
     public void getStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamKeyRequest request,
@@ -471,7 +483,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Update stream key.
+     * Regenerates and updates the stream key for a push-type stream line.
+     * This is useful for security purposes when the existing key may be compromised.
      * </pre>
      */
     public void updateStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamKeyRequest request,
@@ -558,6 +571,8 @@ public final class StreamLineServiceGrpc {
   /**
    * <pre>
    * Stream line management service.
+   * Provides methods for creating, retrieving, updating, and deleting stream lines,
+   * which define the technical configuration for receiving and processing video signals.
    * </pre>
    */
   public static final class StreamLineServiceStub extends io.grpc.stub.AbstractAsyncStub<StreamLineServiceStub> {
@@ -574,7 +589,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific stream line.
+     * Retrieves detailed information about a specific stream line by its ID.
+     * Returns all stream line metadata, configuration, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamLineRequest request,
@@ -585,7 +601,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * List lines for channel.
+     * Lists all stream lines in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesRequest request,
@@ -596,7 +613,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Batch get lines for channel.
+     * Retrieves multiple stream lines by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several stream lines.
      * </pre>
      */
     public void batchGet(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest request,
@@ -607,7 +625,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Create stream line.
+     * Creates a new stream line in the specified channel with the provided configuration.
+     * Stream lines define the technical settings for receiving and processing video signals.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest request,
@@ -618,7 +637,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Update stream line.
+     * Updates an existing stream line's metadata and configuration.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamLineRequest request,
@@ -629,7 +649,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Delete stream line.
+     * Deletes a specific stream line by its ID.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest request,
@@ -640,7 +660,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete stream lines.
+     * Deletes multiple stream lines in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several stream lines.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest request,
@@ -651,7 +672,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the line.
+     * Performs a specific action on a stream line, such as activation or deactivation.
+     * Actions change the stream line's state without modifying its configuration.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.PerformLineActionRequest request,
@@ -662,7 +684,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Get unique stream key.
+     * Retrieves the unique stream key for a push-type stream line.
+     * This key is used to authenticate when pushing video streams to the platform.
      * </pre>
      */
     public void getStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamKeyRequest request,
@@ -673,7 +696,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Update stream key.
+     * Regenerates and updates the stream key for a push-type stream line.
+     * This is useful for security purposes when the existing key may be compromised.
      * </pre>
      */
     public void updateStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamKeyRequest request,
@@ -686,6 +710,8 @@ public final class StreamLineServiceGrpc {
   /**
    * <pre>
    * Stream line management service.
+   * Provides methods for creating, retrieving, updating, and deleting stream lines,
+   * which define the technical configuration for receiving and processing video signals.
    * </pre>
    */
   public static final class StreamLineServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<StreamLineServiceBlockingStub> {
@@ -702,7 +728,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific stream line.
+     * Retrieves detailed information about a specific stream line by its ID.
+     * Returns all stream line metadata, configuration, and related information.
      * </pre>
      */
     public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine get(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamLineRequest request) {
@@ -712,7 +739,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * List lines for channel.
+     * Lists all stream lines in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesResponse list(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesRequest request) {
@@ -722,7 +750,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Batch get lines for channel.
+     * Retrieves multiple stream lines by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several stream lines.
      * </pre>
      */
     public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse batchGet(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesRequest request) {
@@ -732,7 +761,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Create stream line.
+     * Creates a new stream line in the specified channel with the provided configuration.
+     * Stream lines define the technical settings for receiving and processing video signals.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest request) {
@@ -742,7 +772,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Update stream line.
+     * Updates an existing stream line's metadata and configuration.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamLineRequest request) {
@@ -752,7 +783,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Delete stream line.
+     * Deletes a specific stream line by its ID.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest request) {
@@ -762,7 +793,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete stream lines.
+     * Deletes multiple stream lines in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several stream lines.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchDeleteStreamLinesRequest request) {
@@ -772,7 +804,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the line.
+     * Performs a specific action on a stream line, such as activation or deactivation.
+     * Actions change the stream line's state without modifying its configuration.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation performAction(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.PerformLineActionRequest request) {
@@ -782,7 +815,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Get unique stream key.
+     * Retrieves the unique stream key for a push-type stream line.
+     * This key is used to authenticate when pushing video streams to the platform.
      * </pre>
      */
     public yandex.cloud.api.video.v1.StreamLineOuterClass.PushStreamKey getStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamKeyRequest request) {
@@ -792,7 +826,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Update stream key.
+     * Regenerates and updates the stream key for a push-type stream line.
+     * This is useful for security purposes when the existing key may be compromised.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamKeyRequest request) {
@@ -804,6 +839,8 @@ public final class StreamLineServiceGrpc {
   /**
    * <pre>
    * Stream line management service.
+   * Provides methods for creating, retrieving, updating, and deleting stream lines,
+   * which define the technical configuration for receiving and processing video signals.
    * </pre>
    */
   public static final class StreamLineServiceFutureStub extends io.grpc.stub.AbstractFutureStub<StreamLineServiceFutureStub> {
@@ -820,7 +857,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific stream line.
+     * Retrieves detailed information about a specific stream line by its ID.
+     * Returns all stream line metadata, configuration, and related information.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> get(
@@ -831,7 +869,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * List lines for channel.
+     * Lists all stream lines in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesResponse> list(
@@ -842,7 +881,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Batch get lines for channel.
+     * Retrieves multiple stream lines by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several stream lines.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.BatchGetStreamLinesResponse> batchGet(
@@ -853,7 +893,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Create stream line.
+     * Creates a new stream line in the specified channel with the provided configuration.
+     * Stream lines define the technical settings for receiving and processing video signals.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -864,7 +905,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Update stream line.
+     * Updates an existing stream line's metadata and configuration.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -875,7 +917,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Delete stream line.
+     * Deletes a specific stream line by its ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -886,7 +928,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete stream lines.
+     * Deletes multiple stream lines in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several stream lines.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
@@ -897,7 +940,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the line.
+     * Performs a specific action on a stream line, such as activation or deactivation.
+     * Actions change the stream line's state without modifying its configuration.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> performAction(
@@ -908,7 +952,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Get unique stream key.
+     * Retrieves the unique stream key for a push-type stream line.
+     * This key is used to authenticate when pushing video streams to the platform.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamLineOuterClass.PushStreamKey> getStreamKey(
@@ -919,7 +964,8 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Update stream key.
+     * Regenerates and updates the stream key for a push-type stream line.
+     * This is useful for security purposes when the existing key may be compromised.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateStreamKey(

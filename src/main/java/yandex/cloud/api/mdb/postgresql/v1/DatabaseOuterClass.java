@@ -2369,22 +2369,24 @@ public final class DatabaseOuterClass {
 
     /**
      * <pre>
-     * Version of the extension.
+     * Version of the extension. The setting is deprecated and has no effect.
      * </pre>
      *
-     * <code>string version = 2;</code>
+     * <code>string version = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The version.
      */
-    java.lang.String getVersion();
+    @java.lang.Deprecated java.lang.String getVersion();
     /**
      * <pre>
-     * Version of the extension.
+     * Version of the extension. The setting is deprecated and has no effect.
      * </pre>
      *
-     * <code>string version = 2;</code>
+     * <code>string version = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for version.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getVersionBytes();
   }
   /**
@@ -2530,14 +2532,15 @@ public final class DatabaseOuterClass {
     private volatile java.lang.Object version_;
     /**
      * <pre>
-     * Version of the extension.
+     * Version of the extension. The setting is deprecated and has no effect.
      * </pre>
      *
-     * <code>string version = 2;</code>
+     * <code>string version = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The version.
      */
     @java.lang.Override
-    public java.lang.String getVersion() {
+    @java.lang.Deprecated public java.lang.String getVersion() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -2551,14 +2554,15 @@ public final class DatabaseOuterClass {
     }
     /**
      * <pre>
-     * Version of the extension.
+     * Version of the extension. The setting is deprecated and has no effect.
      * </pre>
      *
-     * <code>string version = 2;</code>
+     * <code>string version = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for version.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getVersionBytes() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
@@ -2995,13 +2999,14 @@ public final class DatabaseOuterClass {
       private java.lang.Object version_ = "";
       /**
        * <pre>
-       * Version of the extension.
+       * Version of the extension. The setting is deprecated and has no effect.
        * </pre>
        *
-       * <code>string version = 2;</code>
+       * <code>string version = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The version.
        */
-      public java.lang.String getVersion() {
+      @java.lang.Deprecated public java.lang.String getVersion() {
         java.lang.Object ref = version_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -3015,13 +3020,14 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * Version of the extension.
+       * Version of the extension. The setting is deprecated and has no effect.
        * </pre>
        *
-       * <code>string version = 2;</code>
+       * <code>string version = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The bytes for version.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getVersionBytes() {
         java.lang.Object ref = version_;
         if (ref instanceof String) {
@@ -3036,14 +3042,15 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * Version of the extension.
+       * Version of the extension. The setting is deprecated and has no effect.
        * </pre>
        *
-       * <code>string version = 2;</code>
+       * <code>string version = 2 [deprecated = true];</code>
+       * @deprecated
        * @param value The version to set.
        * @return This builder for chaining.
        */
-      public Builder setVersion(
+      @java.lang.Deprecated public Builder setVersion(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -3055,13 +3062,14 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * Version of the extension.
+       * Version of the extension. The setting is deprecated and has no effect.
        * </pre>
        *
-       * <code>string version = 2;</code>
+       * <code>string version = 2 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearVersion() {
+      @java.lang.Deprecated public Builder clearVersion() {
         
         version_ = getDefaultInstance().getVersion();
         onChanged();
@@ -3069,14 +3077,15 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * Version of the extension.
+       * Version of the extension. The setting is deprecated and has no effect.
        * </pre>
        *
-       * <code>string version = 2;</code>
+       * <code>string version = 2 [deprecated = true];</code>
+       * @deprecated
        * @param value The bytes for version to set.
        * @return This builder for chaining.
        */
-      public Builder setVersionBytes(
+      @java.lang.Deprecated public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -5313,20 +5322,21 @@ public final class DatabaseOuterClass {
       "(\t\022=\n\nextensions\030\006 \003(\0132).yandex.cloud.md" +
       "b.postgresql.v1.Extension\022\023\n\013template_db" +
       "\030\007 \001(\t\0227\n\023deletion_protection\030\010 \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\"*\n\tExtension\022\014\n\004" +
-      "name\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\"\354\002\n\014Database" +
-      "Spec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
-      "A-Z0-9_-]*\022-\n\005owner\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362" +
-      "\3071\016[a-zA-Z0-9_-]*\022+\n\nlc_collate\030\003 \001(\tB\027\362" +
-      "\3071\023|[a-zA-Z_]+.UTF-8|C\022)\n\010lc_ctype\030\004 \001(\t" +
-      "B\027\362\3071\023|[a-zA-Z_]+.UTF-8|C\022=\n\nextensions\030" +
-      "\005 \003(\0132).yandex.cloud.mdb.postgresql.v1.E" +
-      "xtension\022/\n\013template_db\030\006 \001(\tB\032\212\3101\004<=63\362" +
-      "\3071\016[a-zA-Z0-9_-]*\0227\n\023deletion_protection" +
-      "\030\007 \001(\0132\032.google.protobuf.BoolValueBs\n\"ya" +
-      "ndex.cloud.api.mdb.postgresql.v1ZMgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/mdb/postgresql/v1;postgresqlb\006proto3"
+      "ogle.protobuf.BoolValue\".\n\tExtension\022\014\n\004" +
+      "name\030\001 \001(\t\022\023\n\007version\030\002 \001(\tB\002\030\001\"\354\002\n\014Data" +
+      "baseSpec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016" +
+      "[a-zA-Z0-9_-]*\022-\n\005owner\030\002 \001(\tB\036\350\3071\001\212\3101\004<" +
+      "=63\362\3071\016[a-zA-Z0-9_-]*\022+\n\nlc_collate\030\003 \001(" +
+      "\tB\027\362\3071\023|[a-zA-Z_]+.UTF-8|C\022)\n\010lc_ctype\030\004" +
+      " \001(\tB\027\362\3071\023|[a-zA-Z_]+.UTF-8|C\022=\n\nextensi" +
+      "ons\030\005 \003(\0132).yandex.cloud.mdb.postgresql." +
+      "v1.Extension\022/\n\013template_db\030\006 \001(\tB\032\212\3101\004<" +
+      "=63\362\3071\016[a-zA-Z0-9_-]*\0227\n\023deletion_protec" +
+      "tion\030\007 \001(\0132\032.google.protobuf.BoolValueBs" +
+      "\n\"yandex.cloud.api.mdb.postgresql.v1ZMgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/mdb/postgresql/v1;postgresqlb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

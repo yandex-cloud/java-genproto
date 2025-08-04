@@ -1734,6 +1734,26 @@ public final class ProductInstanceServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getLicenseInstanceIdBytes();
+
+    /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
+     * <code>string lock_id = 4;</code>
+     * @return The lockId.
+     */
+    java.lang.String getLockId();
+    /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
+     * <code>string lock_id = 4;</code>
+     * @return The bytes for lockId.
+     */
+    com.google.protobuf.ByteString
+        getLockIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.marketplace.pim.v1.saas.ClaimProductInstanceMetadata}
@@ -1751,6 +1771,7 @@ public final class ProductInstanceServiceOuterClass {
       productId_ = "";
       productInstanceId_ = "";
       licenseInstanceId_ = "";
+      lockId_ = "";
     }
 
     @java.lang.Override
@@ -1799,6 +1820,12 @@ public final class ProductInstanceServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               licenseInstanceId_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              lockId_ = s;
               break;
             }
             default: {
@@ -1971,6 +1998,52 @@ public final class ProductInstanceServiceOuterClass {
       }
     }
 
+    public static final int LOCK_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object lockId_;
+    /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
+     * <code>string lock_id = 4;</code>
+     * @return The lockId.
+     */
+    @java.lang.Override
+    public java.lang.String getLockId() {
+      java.lang.Object ref = lockId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lockId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
+     * <code>string lock_id = 4;</code>
+     * @return The bytes for lockId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLockIdBytes() {
+      java.lang.Object ref = lockId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lockId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1994,6 +2067,9 @@ public final class ProductInstanceServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(licenseInstanceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, licenseInstanceId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, lockId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2011,6 +2087,9 @@ public final class ProductInstanceServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(licenseInstanceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, licenseInstanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, lockId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2033,6 +2112,8 @@ public final class ProductInstanceServiceOuterClass {
           .equals(other.getProductInstanceId())) return false;
       if (!getLicenseInstanceId()
           .equals(other.getLicenseInstanceId())) return false;
+      if (!getLockId()
+          .equals(other.getLockId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2050,6 +2131,8 @@ public final class ProductInstanceServiceOuterClass {
       hash = (53 * hash) + getProductInstanceId().hashCode();
       hash = (37 * hash) + LICENSE_INSTANCE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getLicenseInstanceId().hashCode();
+      hash = (37 * hash) + LOCK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLockId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2189,6 +2272,8 @@ public final class ProductInstanceServiceOuterClass {
 
         licenseInstanceId_ = "";
 
+        lockId_ = "";
+
         return this;
       }
 
@@ -2218,6 +2303,7 @@ public final class ProductInstanceServiceOuterClass {
         result.productId_ = productId_;
         result.productInstanceId_ = productInstanceId_;
         result.licenseInstanceId_ = licenseInstanceId_;
+        result.lockId_ = lockId_;
         onBuilt();
         return result;
       }
@@ -2276,6 +2362,10 @@ public final class ProductInstanceServiceOuterClass {
         }
         if (!other.getLicenseInstanceId().isEmpty()) {
           licenseInstanceId_ = other.licenseInstanceId_;
+          onChanged();
+        }
+        if (!other.getLockId().isEmpty()) {
+          lockId_ = other.lockId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2594,6 +2684,102 @@ public final class ProductInstanceServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object lockId_ = "";
+      /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
+       * <code>string lock_id = 4;</code>
+       * @return The lockId.
+       */
+      public java.lang.String getLockId() {
+        java.lang.Object ref = lockId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lockId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
+       * <code>string lock_id = 4;</code>
+       * @return The bytes for lockId.
+       */
+      public com.google.protobuf.ByteString
+          getLockIdBytes() {
+        java.lang.Object ref = lockId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lockId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
+       * <code>string lock_id = 4;</code>
+       * @param value The lockId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        lockId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
+       * <code>string lock_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLockId() {
+        
+        lockId_ = getDefaultInstance().getLockId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
+       * <code>string lock_id = 4;</code>
+       * @param value The bytes for lockId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        lockId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2684,24 +2870,24 @@ public final class ProductInstanceServiceOuterClass {
       "Request\022\035\n\005token\030\001 \001(\tB\016\350\3071\001\212\3101\006<=1000\022\023" +
       "\n\013resource_id\030\002 \001(\t\022E\n\rresource_info\030\003 \001" +
       "(\0132..yandex.cloud.marketplace.pim.v1.saa" +
-      "s.SaasInfo\"l\n\034ClaimProductInstanceMetada" +
+      "s.SaasInfo\"}\n\034ClaimProductInstanceMetada" +
       "ta\022\022\n\nproduct_id\030\001 \001(\t\022\033\n\023product_instan" +
       "ce_id\030\002 \001(\t\022\033\n\023license_instance_id\030\003 \001(\t" +
-      "2\262\003\n\026ProductInstanceService\022\277\001\n\003Get\022?.ya" +
-      "ndex.cloud.marketplace.pim.v1.saas.GetPr" +
-      "oductInstanceRequest\0325.yandex.cloud.mark" +
-      "etplace.pim.v1.saas.ProductInstance\"@\202\323\344" +
-      "\223\002:\0228/marketplace/pim/saas/v1/instances/" +
-      "{product_instance_id}\022\325\001\n\005Claim\022A.yandex" +
-      ".cloud.marketplace.pim.v1.saas.ClaimProd" +
-      "uctInstanceRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"f\202\323\344\223\002-\"(/marketplace/pim/" +
-      "saas/v1/instances/claim:\001*\262\322*/\n\034ClaimPro" +
-      "ductInstanceMetadata\022\017ProductInstanceBy\n" +
-      "(yandex.cloud.api.marketplace.pim.v1.saa" +
-      "sZMgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/marketplace/pim/v1/saas;saas" +
-      "b\006proto3"
+      "\022\017\n\007lock_id\030\004 \001(\t2\262\003\n\026ProductInstanceSer" +
+      "vice\022\277\001\n\003Get\022?.yandex.cloud.marketplace." +
+      "pim.v1.saas.GetProductInstanceRequest\0325." +
+      "yandex.cloud.marketplace.pim.v1.saas.Pro" +
+      "ductInstance\"@\202\323\344\223\002:\0228/marketplace/pim/s" +
+      "aas/v1/instances/{product_instance_id}\022\325" +
+      "\001\n\005Claim\022A.yandex.cloud.marketplace.pim." +
+      "v1.saas.ClaimProductInstanceRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"f\202\323\344\223\002-\"(" +
+      "/marketplace/pim/saas/v1/instances/claim" +
+      ":\001*\262\322*/\n\034ClaimProductInstanceMetadata\022\017P" +
+      "roductInstanceBy\n(yandex.cloud.api.marke" +
+      "tplace.pim.v1.saasZMgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/marketplace" +
+      "/pim/v1/saas;saasb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2729,7 +2915,7 @@ public final class ProductInstanceServiceOuterClass {
     internal_static_yandex_cloud_marketplace_pim_v1_saas_ClaimProductInstanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_marketplace_pim_v1_saas_ClaimProductInstanceMetadata_descriptor,
-        new java.lang.String[] { "ProductId", "ProductInstanceId", "LicenseInstanceId", });
+        new java.lang.String[] { "ProductId", "ProductInstanceId", "LicenseInstanceId", "LockId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

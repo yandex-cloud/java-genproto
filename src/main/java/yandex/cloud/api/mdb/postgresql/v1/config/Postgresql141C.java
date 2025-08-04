@@ -2889,6 +2889,25 @@ public final class Postgresql141C {
      * @return The passwordEncryption.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.PasswordEncryption getPasswordEncryption();
+
+    /**
+     * <pre>
+     * Selects the `` EXPLAIN `` output format to be used. The allowed values are `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``, `` AUTO_EXPLAIN_LOG_FORMAT_XML ``, `` AUTO_EXPLAIN_LOG_FORMAT_JSON ``, and `` AUTO_EXPLAIN_LOG_FORMAT_YAML ``. The default is `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig14_1C.AutoExplainLogFormat auto_explain_log_format = 168;</code>
+     * @return The enum numeric value on the wire for autoExplainLogFormat.
+     */
+    int getAutoExplainLogFormatValue();
+    /**
+     * <pre>
+     * Selects the `` EXPLAIN `` output format to be used. The allowed values are `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``, `` AUTO_EXPLAIN_LOG_FORMAT_XML ``, `` AUTO_EXPLAIN_LOG_FORMAT_JSON ``, and `` AUTO_EXPLAIN_LOG_FORMAT_YAML ``. The default is `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig14_1C.AutoExplainLogFormat auto_explain_log_format = 168;</code>
+     * @return The autoExplainLogFormat.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat getAutoExplainLogFormat();
   }
   /**
    * <pre>
@@ -2930,6 +2949,7 @@ public final class Postgresql141C {
       pgHintPlanDebugPrint_ = 0;
       pgHintPlanMessageLevel_ = 0;
       passwordEncryption_ = 0;
+      autoExplainLogFormat_ = 0;
     }
 
     @java.lang.Override
@@ -4913,6 +4933,12 @@ public final class Postgresql141C {
               passwordEncryption_ = rawValue;
               break;
             }
+            case 1344: {
+              int rawValue = input.readEnum();
+
+              autoExplainLogFormat_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4946,6 +4972,141 @@ public final class Postgresql141C {
       return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig14_1C_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.class, yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig14_1C.AutoExplainLogFormat}
+     */
+    public enum AutoExplainLogFormat
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>AUTO_EXPLAIN_LOG_FORMAT_UNSPECIFIED = 0;</code>
+       */
+      AUTO_EXPLAIN_LOG_FORMAT_UNSPECIFIED(0),
+      /**
+       * <code>AUTO_EXPLAIN_LOG_FORMAT_TEXT = 1;</code>
+       */
+      AUTO_EXPLAIN_LOG_FORMAT_TEXT(1),
+      /**
+       * <code>AUTO_EXPLAIN_LOG_FORMAT_XML = 2;</code>
+       */
+      AUTO_EXPLAIN_LOG_FORMAT_XML(2),
+      /**
+       * <code>AUTO_EXPLAIN_LOG_FORMAT_JSON = 3;</code>
+       */
+      AUTO_EXPLAIN_LOG_FORMAT_JSON(3),
+      /**
+       * <code>AUTO_EXPLAIN_LOG_FORMAT_YAML = 4;</code>
+       */
+      AUTO_EXPLAIN_LOG_FORMAT_YAML(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>AUTO_EXPLAIN_LOG_FORMAT_UNSPECIFIED = 0;</code>
+       */
+      public static final int AUTO_EXPLAIN_LOG_FORMAT_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>AUTO_EXPLAIN_LOG_FORMAT_TEXT = 1;</code>
+       */
+      public static final int AUTO_EXPLAIN_LOG_FORMAT_TEXT_VALUE = 1;
+      /**
+       * <code>AUTO_EXPLAIN_LOG_FORMAT_XML = 2;</code>
+       */
+      public static final int AUTO_EXPLAIN_LOG_FORMAT_XML_VALUE = 2;
+      /**
+       * <code>AUTO_EXPLAIN_LOG_FORMAT_JSON = 3;</code>
+       */
+      public static final int AUTO_EXPLAIN_LOG_FORMAT_JSON_VALUE = 3;
+      /**
+       * <code>AUTO_EXPLAIN_LOG_FORMAT_YAML = 4;</code>
+       */
+      public static final int AUTO_EXPLAIN_LOG_FORMAT_YAML_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static AutoExplainLogFormat valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static AutoExplainLogFormat forNumber(int value) {
+        switch (value) {
+          case 0: return AUTO_EXPLAIN_LOG_FORMAT_UNSPECIFIED;
+          case 1: return AUTO_EXPLAIN_LOG_FORMAT_TEXT;
+          case 2: return AUTO_EXPLAIN_LOG_FORMAT_XML;
+          case 3: return AUTO_EXPLAIN_LOG_FORMAT_JSON;
+          case 4: return AUTO_EXPLAIN_LOG_FORMAT_YAML;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<AutoExplainLogFormat>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          AutoExplainLogFormat> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<AutoExplainLogFormat>() {
+              public AutoExplainLogFormat findValueByNumber(int number) {
+                return AutoExplainLogFormat.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final AutoExplainLogFormat[] VALUES = values();
+
+      public static AutoExplainLogFormat valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private AutoExplainLogFormat(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig14_1C.AutoExplainLogFormat)
     }
 
     /**
@@ -5057,7 +5218,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(0);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(1);
       }
 
       private static final BackslashQuote[] VALUES = values();
@@ -5174,7 +5335,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(1);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(2);
       }
 
       private static final ByteaOutput[] VALUES = values();
@@ -5300,7 +5461,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(2);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(3);
       }
 
       private static final ConstraintExclusion[] VALUES = values();
@@ -5426,7 +5587,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(3);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(4);
       }
 
       private static final ForceParallelMode[] VALUES = values();
@@ -5552,7 +5713,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(4);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(5);
       }
 
       private static final LogErrorVerbosity[] VALUES = values();
@@ -5750,7 +5911,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(5);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(6);
       }
 
       private static final LogLevel[] VALUES = values();
@@ -5885,7 +6046,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(6);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(7);
       }
 
       private static final LogStatement[] VALUES = values();
@@ -6002,7 +6163,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(7);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(8);
       }
 
       private static final PasswordEncryption[] VALUES = values();
@@ -6137,7 +6298,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(8);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(9);
       }
 
       private static final PgHintPlanDebugPrint[] VALUES = values();
@@ -6263,7 +6424,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(9);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(10);
       }
 
       private static final PlanCacheMode[] VALUES = values();
@@ -6434,7 +6595,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(10);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(11);
       }
 
       private static final SharedPreloadLibraries[] VALUES = values();
@@ -6578,7 +6739,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(11);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(12);
       }
 
       private static final SynchronousCommit[] VALUES = values();
@@ -6713,7 +6874,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(12);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(13);
       }
 
       private static final TransactionIsolation[] VALUES = values();
@@ -6830,7 +6991,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(13);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(14);
       }
 
       private static final WalLevel[] VALUES = values();
@@ -6947,7 +7108,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(14);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(15);
       }
 
       private static final XmlBinary[] VALUES = values();
@@ -7064,7 +7225,7 @@ public final class Postgresql141C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(15);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.getDescriptor().getEnumTypes().get(16);
       }
 
       private static final XmlOption[] VALUES = values();
@@ -11716,6 +11877,33 @@ public final class Postgresql141C {
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.PasswordEncryption.UNRECOGNIZED : result;
     }
 
+    public static final int AUTO_EXPLAIN_LOG_FORMAT_FIELD_NUMBER = 168;
+    private int autoExplainLogFormat_;
+    /**
+     * <pre>
+     * Selects the `` EXPLAIN `` output format to be used. The allowed values are `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``, `` AUTO_EXPLAIN_LOG_FORMAT_XML ``, `` AUTO_EXPLAIN_LOG_FORMAT_JSON ``, and `` AUTO_EXPLAIN_LOG_FORMAT_YAML ``. The default is `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig14_1C.AutoExplainLogFormat auto_explain_log_format = 168;</code>
+     * @return The enum numeric value on the wire for autoExplainLogFormat.
+     */
+    @java.lang.Override public int getAutoExplainLogFormatValue() {
+      return autoExplainLogFormat_;
+    }
+    /**
+     * <pre>
+     * Selects the `` EXPLAIN `` output format to be used. The allowed values are `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``, `` AUTO_EXPLAIN_LOG_FORMAT_XML ``, `` AUTO_EXPLAIN_LOG_FORMAT_JSON ``, and `` AUTO_EXPLAIN_LOG_FORMAT_YAML ``. The default is `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig14_1C.AutoExplainLogFormat auto_explain_log_format = 168;</code>
+     * @return The autoExplainLogFormat.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat getAutoExplainLogFormat() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat result = yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat.valueOf(autoExplainLogFormat_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12214,6 +12402,9 @@ public final class Postgresql141C {
       }
       if (passwordEncryption_ != yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.PasswordEncryption.PASSWORD_ENCRYPTION_UNSPECIFIED.getNumber()) {
         output.writeEnum(167, passwordEncryption_);
+      }
+      if (autoExplainLogFormat_ != yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat.AUTO_EXPLAIN_LOG_FORMAT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(168, autoExplainLogFormat_);
       }
       unknownFields.writeTo(output);
     }
@@ -12869,6 +13060,10 @@ public final class Postgresql141C {
       if (passwordEncryption_ != yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.PasswordEncryption.PASSWORD_ENCRYPTION_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(167, passwordEncryption_);
+      }
+      if (autoExplainLogFormat_ != yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat.AUTO_EXPLAIN_LOG_FORMAT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(168, autoExplainLogFormat_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13603,6 +13798,7 @@ public final class Postgresql141C {
             .equals(other.getLogAutovacuumMinDuration())) return false;
       }
       if (passwordEncryption_ != other.passwordEncryption_) return false;
+      if (autoExplainLogFormat_ != other.autoExplainLogFormat_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14214,6 +14410,8 @@ public final class Postgresql141C {
       }
       hash = (37 * hash) + PASSWORD_ENCRYPTION_FIELD_NUMBER;
       hash = (53 * hash) + passwordEncryption_;
+      hash = (37 * hash) + AUTO_EXPLAIN_LOG_FORMAT_FIELD_NUMBER;
+      hash = (53 * hash) + autoExplainLogFormat_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15229,6 +15427,8 @@ public final class Postgresql141C {
         }
         passwordEncryption_ = 0;
 
+        autoExplainLogFormat_ = 0;
+
         return this;
       }
 
@@ -15976,6 +16176,7 @@ public final class Postgresql141C {
           result.logAutovacuumMinDuration_ = logAutovacuumMinDurationBuilder_.build();
         }
         result.passwordEncryption_ = passwordEncryption_;
+        result.autoExplainLogFormat_ = autoExplainLogFormat_;
         onBuilt();
         return result;
       }
@@ -16512,6 +16713,9 @@ public final class Postgresql141C {
         }
         if (other.passwordEncryption_ != 0) {
           setPasswordEncryptionValue(other.getPasswordEncryptionValue());
+        }
+        if (other.autoExplainLogFormat_ != 0) {
+          setAutoExplainLogFormatValue(other.getAutoExplainLogFormatValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -35951,6 +36155,80 @@ public final class Postgresql141C {
         onChanged();
         return this;
       }
+
+      private int autoExplainLogFormat_ = 0;
+      /**
+       * <pre>
+       * Selects the `` EXPLAIN `` output format to be used. The allowed values are `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``, `` AUTO_EXPLAIN_LOG_FORMAT_XML ``, `` AUTO_EXPLAIN_LOG_FORMAT_JSON ``, and `` AUTO_EXPLAIN_LOG_FORMAT_YAML ``. The default is `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig14_1C.AutoExplainLogFormat auto_explain_log_format = 168;</code>
+       * @return The enum numeric value on the wire for autoExplainLogFormat.
+       */
+      @java.lang.Override public int getAutoExplainLogFormatValue() {
+        return autoExplainLogFormat_;
+      }
+      /**
+       * <pre>
+       * Selects the `` EXPLAIN `` output format to be used. The allowed values are `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``, `` AUTO_EXPLAIN_LOG_FORMAT_XML ``, `` AUTO_EXPLAIN_LOG_FORMAT_JSON ``, and `` AUTO_EXPLAIN_LOG_FORMAT_YAML ``. The default is `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig14_1C.AutoExplainLogFormat auto_explain_log_format = 168;</code>
+       * @param value The enum numeric value on the wire for autoExplainLogFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAutoExplainLogFormatValue(int value) {
+        
+        autoExplainLogFormat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Selects the `` EXPLAIN `` output format to be used. The allowed values are `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``, `` AUTO_EXPLAIN_LOG_FORMAT_XML ``, `` AUTO_EXPLAIN_LOG_FORMAT_JSON ``, and `` AUTO_EXPLAIN_LOG_FORMAT_YAML ``. The default is `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig14_1C.AutoExplainLogFormat auto_explain_log_format = 168;</code>
+       * @return The autoExplainLogFormat.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat getAutoExplainLogFormat() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat result = yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat.valueOf(autoExplainLogFormat_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Selects the `` EXPLAIN `` output format to be used. The allowed values are `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``, `` AUTO_EXPLAIN_LOG_FORMAT_XML ``, `` AUTO_EXPLAIN_LOG_FORMAT_JSON ``, and `` AUTO_EXPLAIN_LOG_FORMAT_YAML ``. The default is `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig14_1C.AutoExplainLogFormat auto_explain_log_format = 168;</code>
+       * @param value The autoExplainLogFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAutoExplainLogFormat(yandex.cloud.api.mdb.postgresql.v1.config.Postgresql141C.PostgresqlConfig14_1C.AutoExplainLogFormat value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        autoExplainLogFormat_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Selects the `` EXPLAIN `` output format to be used. The allowed values are `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``, `` AUTO_EXPLAIN_LOG_FORMAT_XML ``, `` AUTO_EXPLAIN_LOG_FORMAT_JSON ``, and `` AUTO_EXPLAIN_LOG_FORMAT_YAML ``. The default is `` AUTO_EXPLAIN_LOG_FORMAT_TEXT ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig14_1C.AutoExplainLogFormat auto_explain_log_format = 168;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAutoExplainLogFormat() {
+        
+        autoExplainLogFormat_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -37249,7 +37527,7 @@ public final class Postgresql141C {
       "postgresql14_1c.proto\022%yandex.cloud.mdb." +
       "postgresql.v1.config\032\036google/protobuf/wr" +
       "appers.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"\372l\n\025PostgresqlConfig14_1C\0224\n\017max_con" +
+      "oto\"\270o\n\025PostgresqlConfig14_1C\0224\n\017max_con" +
       "nections\030\001 \001(\0132\033.google.protobuf.Int64Va" +
       "lue\0223\n\016shared_buffers\030\002 \001(\0132\033.google.pro" +
       "tobuf.Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033" +
@@ -37528,87 +37806,95 @@ public final class Postgresql141C {
       "f.Int64ValueB\021\372\3071\r-1-2147483647\022m\n\023passw" +
       "ord_encryption\030\247\001 \001(\0162O.yandex.cloud.mdb" +
       ".postgresql.v1.config.PostgresqlConfig14" +
-      "_1C.PasswordEncryption\"\232\001\n\016BackslashQuot" +
-      "e\022\037\n\033BACKSLASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BA" +
-      "CKSLASH_QUOTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022" +
-      "\027\n\023BACKSLASH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QU" +
-      "OTE_SAFE_ENCODING\020\004\"[\n\013ByteaOutput\022\034\n\030BY" +
-      "TEA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT" +
-      "_HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"\232\001\n\023Con" +
-      "straintExclusion\022$\n CONSTRAINT_EXCLUSION" +
-      "_UNSPECIFIED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_O" +
-      "N\020\001\022\034\n\030CONSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CON" +
-      "STRAINT_EXCLUSION_PARTITION\020\003\"\222\001\n\021ForceP" +
-      "arallelMode\022#\n\037FORCE_PARALLEL_MODE_UNSPE" +
-      "CIFIED\020\000\022\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027" +
-      "FORCE_PARALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARAL" +
-      "LEL_MODE_REGRESS\020\003\"\231\001\n\021LogErrorVerbosity" +
-      "\022#\n\037LOG_ERROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n" +
-      "\031LOG_ERROR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERRO" +
-      "R_VERBOSITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBO" +
-      "SITY_VERBOSE\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL" +
-      "_UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020" +
-      "LOG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003" +
-      "\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBU" +
-      "G1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOT" +
-      "ICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVE" +
-      "L_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LE" +
-      "VEL_PANIC\020\013\"\212\001\n\014LogStatement\022\035\n\031LOG_STAT" +
-      "EMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NON" +
-      "E\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEM" +
-      "ENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"}\n\022Pass" +
-      "wordEncryption\022#\n\037PASSWORD_ENCRYPTION_UN" +
-      "SPECIFIED\020\000\022\033\n\027PASSWORD_ENCRYPTION_MD5\020\001" +
-      "\022%\n!PASSWORD_ENCRYPTION_SCRAM_SHA_256\020\002\"" +
-      "\320\001\n\024PgHintPlanDebugPrint\022(\n$PG_HINT_PLAN" +
-      "_DEBUG_PRINT_UNSPECIFIED\020\000\022 \n\034PG_HINT_PL" +
-      "AN_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEB" +
-      "UG_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRIN" +
-      "T_DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRINT" +
-      "_VERBOSE\020\004\"\231\001\n\rPlanCacheMode\022\037\n\033PLAN_CAC" +
-      "HE_MODE_UNSPECIFIED\020\000\022\030\n\024PLAN_CACHE_MODE" +
-      "_AUTO\020\001\022%\n!PLAN_CACHE_MODE_FORCE_CUSTOM_" +
-      "PLAN\020\002\022&\n\"PLAN_CACHE_MODE_FORCE_GENERIC_" +
-      "PLAN\020\003\"\212\003\n\026SharedPreloadLibraries\022(\n$SHA" +
-      "RED_PRELOAD_LIBRARIES_UNSPECIFIED\020\000\022)\n%S" +
-      "HARED_PRELOAD_LIBRARIES_AUTO_EXPLAIN\020\001\022)" +
-      "\n%SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN\020" +
-      "\002\022(\n$SHARED_PRELOAD_LIBRARIES_TIMESCALED" +
-      "B\020\003\022)\n%SHARED_PRELOAD_LIBRARIES_PG_QUALS" +
-      "TATS\020\004\022$\n SHARED_PRELOAD_LIBRARIES_PG_CR" +
-      "ON\020\005\022&\n\"SHARED_PRELOAD_LIBRARIES_PGLOGIC" +
-      "AL\020\006\022\'\n#SHARED_PRELOAD_LIBRARIES_PG_PREW" +
-      "ARM\020\007\022$\n SHARED_PRELOAD_LIBRARIES_PGAUDI" +
-      "T\020\010\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRONOUS" +
-      "_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COM" +
-      "MIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030" +
-      "SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOU" +
-      "S_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_C" +
-      "OMMIT_REMOTE_APPLY\020\005\"\346\001\n\024TransactionIsol" +
-      "ation\022%\n!TRANSACTION_ISOLATION_UNSPECIFI" +
-      "ED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNCOM" +
-      "MITTED\020\001\022(\n$TRANSACTION_ISOLATION_READ_C" +
-      "OMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_REPE" +
-      "ATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION_S" +
-      "ERIALIZABLE\020\004\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_U" +
-      "NSPECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021W" +
-      "AL_LEVEL_LOGICAL\020\002\"R\n\tXmlBinary\022\032\n\026XML_B" +
-      "INARY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE64" +
-      "\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026X" +
-      "ML_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_DO" +
-      "CUMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002J\004\010N\020OJ\004" +
-      "\010j\020kJ\004\010}\020~J\006\010\226\001\020\230\001J\006\010\246\001\020\247\001J\004\010@\020A\"\233\002\n\030Pos" +
-      "tgresqlConfigSet14_1C\022V\n\020effective_confi" +
-      "g\030\001 \001(\0132<.yandex.cloud.mdb.postgresql.v1" +
-      ".config.PostgresqlConfig14_1C\022Q\n\013user_co" +
-      "nfig\030\002 \001(\0132<.yandex.cloud.mdb.postgresql" +
-      ".v1.config.PostgresqlConfig14_1C\022T\n\016defa" +
-      "ult_config\030\003 \001(\0132<.yandex.cloud.mdb.post" +
-      "gresql.v1.config.PostgresqlConfig14_1CB\201" +
-      "\001\n)yandex.cloud.api.mdb.postgresql.v1.co" +
-      "nfigZTgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/mdb/postgresql/v1/config;" +
-      "postgresqlb\006proto3"
+      "_1C.PasswordEncryption\022s\n\027auto_explain_l" +
+      "og_format\030\250\001 \001(\0162Q.yandex.cloud.mdb.post" +
+      "gresql.v1.config.PostgresqlConfig14_1C.A" +
+      "utoExplainLogFormat\"\306\001\n\024AutoExplainLogFo" +
+      "rmat\022\'\n#AUTO_EXPLAIN_LOG_FORMAT_UNSPECIF" +
+      "IED\020\000\022 \n\034AUTO_EXPLAIN_LOG_FORMAT_TEXT\020\001\022" +
+      "\037\n\033AUTO_EXPLAIN_LOG_FORMAT_XML\020\002\022 \n\034AUTO" +
+      "_EXPLAIN_LOG_FORMAT_JSON\020\003\022 \n\034AUTO_EXPLA" +
+      "IN_LOG_FORMAT_YAML\020\004\"\232\001\n\016BackslashQuote\022" +
+      "\037\n\033BACKSLASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACK" +
+      "SLASH_QUOTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n" +
+      "\023BACKSLASH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOT" +
+      "E_SAFE_ENCODING\020\004\"[\n\013ByteaOutput\022\034\n\030BYTE" +
+      "A_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_H" +
+      "EX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"\232\001\n\023Const" +
+      "raintExclusion\022$\n CONSTRAINT_EXCLUSION_U" +
+      "NSPECIFIED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020" +
+      "\001\022\034\n\030CONSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CONST" +
+      "RAINT_EXCLUSION_PARTITION\020\003\"\222\001\n\021ForcePar" +
+      "allelMode\022#\n\037FORCE_PARALLEL_MODE_UNSPECI" +
+      "FIED\020\000\022\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FO" +
+      "RCE_PARALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLE" +
+      "L_MODE_REGRESS\020\003\"\231\001\n\021LogErrorVerbosity\022#" +
+      "\n\037LOG_ERROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031L" +
+      "OG_ERROR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_" +
+      "VERBOSITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSI" +
+      "TY_VERBOSE\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_U" +
+      "NSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LO" +
+      "G_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024" +
+      "\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1" +
+      "\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTIC" +
+      "E\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVEL_" +
+      "ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEVE" +
+      "L_PANIC\020\013\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEM" +
+      "ENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020" +
+      "\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMEN" +
+      "T_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"}\n\022Passwo" +
+      "rdEncryption\022#\n\037PASSWORD_ENCRYPTION_UNSP" +
+      "ECIFIED\020\000\022\033\n\027PASSWORD_ENCRYPTION_MD5\020\001\022%" +
+      "\n!PASSWORD_ENCRYPTION_SCRAM_SHA_256\020\002\"\320\001" +
+      "\n\024PgHintPlanDebugPrint\022(\n$PG_HINT_PLAN_D" +
+      "EBUG_PRINT_UNSPECIFIED\020\000\022 \n\034PG_HINT_PLAN" +
+      "_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG" +
+      "_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRINT_" +
+      "DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRINT_V" +
+      "ERBOSE\020\004\"\231\001\n\rPlanCacheMode\022\037\n\033PLAN_CACHE" +
+      "_MODE_UNSPECIFIED\020\000\022\030\n\024PLAN_CACHE_MODE_A" +
+      "UTO\020\001\022%\n!PLAN_CACHE_MODE_FORCE_CUSTOM_PL" +
+      "AN\020\002\022&\n\"PLAN_CACHE_MODE_FORCE_GENERIC_PL" +
+      "AN\020\003\"\212\003\n\026SharedPreloadLibraries\022(\n$SHARE" +
+      "D_PRELOAD_LIBRARIES_UNSPECIFIED\020\000\022)\n%SHA" +
+      "RED_PRELOAD_LIBRARIES_AUTO_EXPLAIN\020\001\022)\n%" +
+      "SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN\020\002\022" +
+      "(\n$SHARED_PRELOAD_LIBRARIES_TIMESCALEDB\020" +
+      "\003\022)\n%SHARED_PRELOAD_LIBRARIES_PG_QUALSTA" +
+      "TS\020\004\022$\n SHARED_PRELOAD_LIBRARIES_PG_CRON" +
+      "\020\005\022&\n\"SHARED_PRELOAD_LIBRARIES_PGLOGICAL" +
+      "\020\006\022\'\n#SHARED_PRELOAD_LIBRARIES_PG_PREWAR" +
+      "M\020\007\022$\n SHARED_PRELOAD_LIBRARIES_PGAUDIT\020" +
+      "\010\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRONOUS_C" +
+      "OMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COMMI" +
+      "T_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SY" +
+      "NCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_" +
+      "COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_COM" +
+      "MIT_REMOTE_APPLY\020\005\"\346\001\n\024TransactionIsolat" +
+      "ion\022%\n!TRANSACTION_ISOLATION_UNSPECIFIED" +
+      "\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNCOMMI" +
+      "TTED\020\001\022(\n$TRANSACTION_ISOLATION_READ_COM" +
+      "MITTED\020\002\022)\n%TRANSACTION_ISOLATION_REPEAT" +
+      "ABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION_SER" +
+      "IALIZABLE\020\004\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_UNS" +
+      "PECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL" +
+      "_LEVEL_LOGICAL\020\002\"R\n\tXmlBinary\022\032\n\026XML_BIN" +
+      "ARY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE64\020\001" +
+      "\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML" +
+      "_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_DOCU" +
+      "MENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002J\004\010N\020OJ\004\010j" +
+      "\020kJ\004\010}\020~J\006\010\226\001\020\230\001J\006\010\246\001\020\247\001J\004\010@\020A\"\233\002\n\030Postg" +
+      "resqlConfigSet14_1C\022V\n\020effective_config\030" +
+      "\001 \001(\0132<.yandex.cloud.mdb.postgresql.v1.c" +
+      "onfig.PostgresqlConfig14_1C\022Q\n\013user_conf" +
+      "ig\030\002 \001(\0132<.yandex.cloud.mdb.postgresql.v" +
+      "1.config.PostgresqlConfig14_1C\022T\n\016defaul" +
+      "t_config\030\003 \001(\0132<.yandex.cloud.mdb.postgr" +
+      "esql.v1.config.PostgresqlConfig14_1CB\201\001\n" +
+      ")yandex.cloud.api.mdb.postgresql.v1.conf" +
+      "igZTgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/mdb/postgresql/v1/config;po" +
+      "stgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -37621,7 +37907,7 @@ public final class Postgresql141C {
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig14_1C_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig14_1C_descriptor,
-        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "OnlineAnalyzeEnable", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "LogTransactionSampleRate", "PlanCacheMode", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "HashMemMultiplier", "LogicalDecodingWorkMem", "MaintenanceIoConcurrency", "MaxSlotWalKeepSize", "WalKeepSize", "EnableIncrementalSort", "AutovacuumVacuumInsertThreshold", "AutovacuumVacuumInsertScaleFactor", "LogMinDurationSample", "LogStatementSampleRate", "LogParameterMaxLength", "LogParameterMaxLengthOnError", "ClientConnectionCheckInterval", "EnableAsyncAppend", "EnableGathermerge", "EnableMemoize", "LogRecoveryConflictWaits", "VacuumFailsafeAge", "VacuumMultixactFailsafeAge", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "PlantunerFixEmptyTable", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", "PgTrgmSimilarityThreshold", "PgTrgmWordSimilarityThreshold", "PgTrgmStrictWordSimilarityThreshold", "MaxStandbyArchiveDelay", "SessionDurationTimeout", "LogReplicationCommands", "LogAutovacuumMinDuration", "PasswordEncryption", });
+        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "OnlineAnalyzeEnable", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "LogTransactionSampleRate", "PlanCacheMode", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "HashMemMultiplier", "LogicalDecodingWorkMem", "MaintenanceIoConcurrency", "MaxSlotWalKeepSize", "WalKeepSize", "EnableIncrementalSort", "AutovacuumVacuumInsertThreshold", "AutovacuumVacuumInsertScaleFactor", "LogMinDurationSample", "LogStatementSampleRate", "LogParameterMaxLength", "LogParameterMaxLengthOnError", "ClientConnectionCheckInterval", "EnableAsyncAppend", "EnableGathermerge", "EnableMemoize", "LogRecoveryConflictWaits", "VacuumFailsafeAge", "VacuumMultixactFailsafeAge", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "PlantunerFixEmptyTable", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", "PgTrgmSimilarityThreshold", "PgTrgmWordSimilarityThreshold", "PgTrgmStrictWordSimilarityThreshold", "MaxStandbyArchiveDelay", "SessionDurationTimeout", "LogReplicationCommands", "LogAutovacuumMinDuration", "PasswordEncryption", "AutoExplainLogFormat", });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet14_1C_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet14_1C_fieldAccessorTable = new

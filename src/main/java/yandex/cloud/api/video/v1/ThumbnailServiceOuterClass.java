@@ -20,7 +20,8 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail to retrieve.
+     * Must be a valid thumbnail identifier string.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,7 +30,8 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail to retrieve.
+     * Must be a valid thumbnail identifier string.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -126,7 +128,8 @@ public final class ThumbnailServiceOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail to retrieve.
+     * Must be a valid thumbnail identifier string.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -147,7 +150,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail to retrieve.
+     * Must be a valid thumbnail identifier string.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -473,7 +477,8 @@ public final class ThumbnailServiceOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail to retrieve.
+       * Must be a valid thumbnail identifier string.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -493,7 +498,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail to retrieve.
+       * Must be a valid thumbnail identifier string.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -514,7 +520,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail to retrieve.
+       * Must be a valid thumbnail identifier string.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -533,7 +540,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail to retrieve.
+       * Must be a valid thumbnail identifier string.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -547,7 +555,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail to retrieve.
+       * Must be a valid thumbnail identifier string.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -624,7 +633,7 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * [Deprecated] ID of the channel.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -633,7 +642,7 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * [Deprecated] ID of the channel.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -644,8 +653,65 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of the results per page to return.
-     * Default value: 100.
+     * ID of the episode containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the episodeId field is set.
+     */
+    boolean hasEpisodeId();
+    /**
+     * <pre>
+     * ID of the episode containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The episodeId.
+     */
+    java.lang.String getEpisodeId();
+    /**
+     * <pre>
+     * ID of the episode containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for episodeId.
+     */
+    com.google.protobuf.ByteString
+        getEpisodeIdBytes();
+
+    /**
+     * <pre>
+     * ID of the video containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the videoId field is set.
+     */
+    boolean hasVideoId();
+    /**
+     * <pre>
+     * ID of the video containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The videoId.
+     */
+    java.lang.String getVideoId();
+    /**
+     * <pre>
+     * ID of the video containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for videoId.
+     */
+    com.google.protobuf.ByteString
+        getVideoIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of thumbnails to return per page.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -655,7 +721,8 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListThumbnailResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -664,7 +731,8 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListThumbnailResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -672,6 +740,8 @@ public final class ThumbnailServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
+
+    public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest.ParentIdCase getParentIdCase();
   }
   /**
    * Protobuf type {@code yandex.cloud.video.v1.ListThumbnailRequest}
@@ -737,6 +807,18 @@ public final class ThumbnailServiceOuterClass {
               pageToken_ = s;
               break;
             }
+            case 8026: {
+              java.lang.String s = input.readStringRequireUtf8();
+              parentIdCase_ = 1003;
+              parentId_ = s;
+              break;
+            }
+            case 8034: {
+              java.lang.String s = input.readStringRequireUtf8();
+              parentIdCase_ = 1004;
+              parentId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -769,11 +851,52 @@ public final class ThumbnailServiceOuterClass {
               yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest.class, yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest.Builder.class);
     }
 
+    private int parentIdCase_ = 0;
+    private java.lang.Object parentId_;
+    public enum ParentIdCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      EPISODE_ID(1003),
+      VIDEO_ID(1004),
+      PARENTID_NOT_SET(0);
+      private final int value;
+      private ParentIdCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ParentIdCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ParentIdCase forNumber(int value) {
+        switch (value) {
+          case 1003: return EPISODE_ID;
+          case 1004: return VIDEO_ID;
+          case 0: return PARENTID_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ParentIdCase
+    getParentIdCase() {
+      return ParentIdCase.forNumber(
+          parentIdCase_);
+    }
+
     public static final int CHANNEL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * [Deprecated] ID of the channel.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -794,7 +917,7 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * [Deprecated] ID of the channel.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -815,12 +938,139 @@ public final class ThumbnailServiceOuterClass {
       }
     }
 
+    public static final int EPISODE_ID_FIELD_NUMBER = 1003;
+    /**
+     * <pre>
+     * ID of the episode containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the episodeId field is set.
+     */
+    public boolean hasEpisodeId() {
+      return parentIdCase_ == 1003;
+    }
+    /**
+     * <pre>
+     * ID of the episode containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The episodeId.
+     */
+    public java.lang.String getEpisodeId() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1003) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (parentIdCase_ == 1003) {
+          parentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the episode containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for episodeId.
+     */
+    public com.google.protobuf.ByteString
+        getEpisodeIdBytes() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1003) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (parentIdCase_ == 1003) {
+          parentId_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VIDEO_ID_FIELD_NUMBER = 1004;
+    /**
+     * <pre>
+     * ID of the video containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the videoId field is set.
+     */
+    public boolean hasVideoId() {
+      return parentIdCase_ == 1004;
+    }
+    /**
+     * <pre>
+     * ID of the video containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The videoId.
+     */
+    public java.lang.String getVideoId() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1004) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (parentIdCase_ == 1004) {
+          parentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the video containing the thumbnails to list.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for videoId.
+     */
+    public com.google.protobuf.ByteString
+        getVideoIdBytes() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1004) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (parentIdCase_ == 1004) {
+          parentId_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int PAGE_SIZE_FIELD_NUMBER = 100;
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of the results per page to return.
-     * Default value: 100.
+     * The maximum number of thumbnails to return per page.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -835,7 +1085,8 @@ public final class ThumbnailServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListThumbnailResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -856,7 +1107,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListThumbnailResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -900,6 +1152,12 @@ public final class ThumbnailServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 101, pageToken_);
       }
+      if (parentIdCase_ == 1003) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1003, parentId_);
+      }
+      if (parentIdCase_ == 1004) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1004, parentId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -918,6 +1176,12 @@ public final class ThumbnailServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, pageToken_);
+      }
+      if (parentIdCase_ == 1003) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1003, parentId_);
+      }
+      if (parentIdCase_ == 1004) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1004, parentId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -940,6 +1204,19 @@ public final class ThumbnailServiceOuterClass {
           != other.getPageSize()) return false;
       if (!getPageToken()
           .equals(other.getPageToken())) return false;
+      if (!getParentIdCase().equals(other.getParentIdCase())) return false;
+      switch (parentIdCase_) {
+        case 1003:
+          if (!getEpisodeId()
+              .equals(other.getEpisodeId())) return false;
+          break;
+        case 1004:
+          if (!getVideoId()
+              .equals(other.getVideoId())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -958,6 +1235,18 @@ public final class ThumbnailServiceOuterClass {
           getPageSize());
       hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getPageToken().hashCode();
+      switch (parentIdCase_) {
+        case 1003:
+          hash = (37 * hash) + EPISODE_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getEpisodeId().hashCode();
+          break;
+        case 1004:
+          hash = (37 * hash) + VIDEO_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getVideoId().hashCode();
+          break;
+        case 0:
+        default:
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1097,6 +1386,8 @@ public final class ThumbnailServiceOuterClass {
 
         pageToken_ = "";
 
+        parentIdCase_ = 0;
+        parentId_ = null;
         return this;
       }
 
@@ -1124,8 +1415,15 @@ public final class ThumbnailServiceOuterClass {
       public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest buildPartial() {
         yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest result = new yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest(this);
         result.channelId_ = channelId_;
+        if (parentIdCase_ == 1003) {
+          result.parentId_ = parentId_;
+        }
+        if (parentIdCase_ == 1004) {
+          result.parentId_ = parentId_;
+        }
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
+        result.parentIdCase_ = parentIdCase_;
         onBuilt();
         return result;
       }
@@ -1185,6 +1483,23 @@ public final class ThumbnailServiceOuterClass {
           pageToken_ = other.pageToken_;
           onChanged();
         }
+        switch (other.getParentIdCase()) {
+          case EPISODE_ID: {
+            parentIdCase_ = 1003;
+            parentId_ = other.parentId_;
+            onChanged();
+            break;
+          }
+          case VIDEO_ID: {
+            parentIdCase_ = 1004;
+            parentId_ = other.parentId_;
+            onChanged();
+            break;
+          }
+          case PARENTID_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1213,11 +1528,26 @@ public final class ThumbnailServiceOuterClass {
         }
         return this;
       }
+      private int parentIdCase_ = 0;
+      private java.lang.Object parentId_;
+      public ParentIdCase
+          getParentIdCase() {
+        return ParentIdCase.forNumber(
+            parentIdCase_);
+      }
+
+      public Builder clearParentId() {
+        parentIdCase_ = 0;
+        parentId_ = null;
+        onChanged();
+        return this;
+      }
+
 
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * [Deprecated] ID of the channel.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1237,7 +1567,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * [Deprecated] ID of the channel.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1258,7 +1588,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * [Deprecated] ID of the channel.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1277,7 +1607,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * [Deprecated] ID of the channel.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1291,7 +1621,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * [Deprecated] ID of the channel.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1310,11 +1640,252 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * ID of the episode containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the episodeId field is set.
+       */
+      @java.lang.Override
+      public boolean hasEpisodeId() {
+        return parentIdCase_ == 1003;
+      }
+      /**
+       * <pre>
+       * ID of the episode containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The episodeId.
+       */
+      @java.lang.Override
+      public java.lang.String getEpisodeId() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1003) {
+          ref = parentId_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (parentIdCase_ == 1003) {
+            parentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the episode containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for episodeId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getEpisodeIdBytes() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1003) {
+          ref = parentId_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (parentIdCase_ == 1003) {
+            parentId_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the episode containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The episodeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpisodeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  parentIdCase_ = 1003;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the episode containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpisodeId() {
+        if (parentIdCase_ == 1003) {
+          parentIdCase_ = 0;
+          parentId_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the episode containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for episodeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpisodeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        parentIdCase_ = 1003;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ID of the video containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the videoId field is set.
+       */
+      @java.lang.Override
+      public boolean hasVideoId() {
+        return parentIdCase_ == 1004;
+      }
+      /**
+       * <pre>
+       * ID of the video containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The videoId.
+       */
+      @java.lang.Override
+      public java.lang.String getVideoId() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1004) {
+          ref = parentId_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (parentIdCase_ == 1004) {
+            parentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the video containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for videoId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getVideoIdBytes() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1004) {
+          ref = parentId_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (parentIdCase_ == 1004) {
+            parentId_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the video containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The videoId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVideoId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  parentIdCase_ = 1004;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the video containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVideoId() {
+        if (parentIdCase_ == 1004) {
+          parentIdCase_ = 0;
+          parentId_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the video containing the thumbnails to list.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for videoId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVideoIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        parentIdCase_ = 1004;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of thumbnails to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1326,8 +1897,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of thumbnails to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1342,8 +1912,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of thumbnails to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1359,7 +1928,8 @@ public final class ThumbnailServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListThumbnailResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1379,7 +1949,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListThumbnailResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1400,7 +1971,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListThumbnailResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1419,7 +1991,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListThumbnailResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1433,7 +2006,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListThumbnailResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1510,7 +2084,8 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * List of thumbnails.
+     * List of thumbnails matching the request criteria.
+     * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -1519,7 +2094,8 @@ public final class ThumbnailServiceOuterClass {
         getThumbnailsList();
     /**
      * <pre>
-     * List of thumbnails.
+     * List of thumbnails matching the request criteria.
+     * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -1527,7 +2103,8 @@ public final class ThumbnailServiceOuterClass {
     yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail getThumbnails(int index);
     /**
      * <pre>
-     * List of thumbnails.
+     * List of thumbnails matching the request criteria.
+     * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -1535,7 +2112,8 @@ public final class ThumbnailServiceOuterClass {
     int getThumbnailsCount();
     /**
      * <pre>
-     * List of thumbnails.
+     * List of thumbnails matching the request criteria.
+     * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -1544,7 +2122,8 @@ public final class ThumbnailServiceOuterClass {
         getThumbnailsOrBuilderList();
     /**
      * <pre>
-     * List of thumbnails.
+     * List of thumbnails matching the request criteria.
+     * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -1554,7 +2133,8 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -1563,7 +2143,8 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -1674,7 +2255,8 @@ public final class ThumbnailServiceOuterClass {
     private java.util.List<yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> thumbnails_;
     /**
      * <pre>
-     * List of thumbnails.
+     * List of thumbnails matching the request criteria.
+     * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -1685,7 +2267,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of thumbnails.
+     * List of thumbnails matching the request criteria.
+     * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -1697,7 +2280,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of thumbnails.
+     * List of thumbnails matching the request criteria.
+     * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -1708,7 +2292,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of thumbnails.
+     * List of thumbnails matching the request criteria.
+     * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -1719,7 +2304,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of thumbnails.
+     * List of thumbnails matching the request criteria.
+     * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -1734,7 +2320,8 @@ public final class ThumbnailServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -1755,7 +2342,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2149,7 +2737,8 @@ public final class ThumbnailServiceOuterClass {
 
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2163,7 +2752,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2177,7 +2767,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2191,7 +2782,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2212,7 +2804,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2230,7 +2823,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2250,7 +2844,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2271,7 +2866,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2289,7 +2885,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2307,7 +2904,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2326,7 +2924,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2343,7 +2942,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2360,7 +2960,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2371,7 +2972,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2385,7 +2987,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2400,7 +3003,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2411,7 +3015,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2423,7 +3028,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails.
+       * List of thumbnails matching the request criteria.
+       * May be empty if no thumbnails match the criteria or if the parent resource has no thumbnails.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
@@ -2450,7 +3056,8 @@ public final class ThumbnailServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2470,7 +3077,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2491,7 +3099,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2510,7 +3119,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2524,7 +3134,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2601,23 +3212,83 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * [Deprecated] ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * [Deprecated] ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     com.google.protobuf.ByteString
         getChannelIdBytes();
+
+    /**
+     * <pre>
+     * ID of the episode to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the episodeId field is set.
+     */
+    boolean hasEpisodeId();
+    /**
+     * <pre>
+     * ID of the episode to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The episodeId.
+     */
+    java.lang.String getEpisodeId();
+    /**
+     * <pre>
+     * ID of the episode to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for episodeId.
+     */
+    com.google.protobuf.ByteString
+        getEpisodeIdBytes();
+
+    /**
+     * <pre>
+     * ID of the video to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the videoId field is set.
+     */
+    boolean hasVideoId();
+    /**
+     * <pre>
+     * ID of the video to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The videoId.
+     */
+    java.lang.String getVideoId();
+    /**
+     * <pre>
+     * ID of the video to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for videoId.
+     */
+    com.google.protobuf.ByteString
+        getVideoIdBytes();
+
+    public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest.ParentIdCase getParentIdCase();
   }
   /**
    * Protobuf type {@code yandex.cloud.video.v1.CreateThumbnailRequest}
@@ -2671,6 +3342,18 @@ public final class ThumbnailServiceOuterClass {
               channelId_ = s;
               break;
             }
+            case 8026: {
+              java.lang.String s = input.readStringRequireUtf8();
+              parentIdCase_ = 1003;
+              parentId_ = s;
+              break;
+            }
+            case 8034: {
+              java.lang.String s = input.readStringRequireUtf8();
+              parentIdCase_ = 1004;
+              parentId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2703,14 +3386,55 @@ public final class ThumbnailServiceOuterClass {
               yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest.class, yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest.Builder.class);
     }
 
+    private int parentIdCase_ = 0;
+    private java.lang.Object parentId_;
+    public enum ParentIdCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      EPISODE_ID(1003),
+      VIDEO_ID(1004),
+      PARENTID_NOT_SET(0);
+      private final int value;
+      private ParentIdCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ParentIdCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ParentIdCase forNumber(int value) {
+        switch (value) {
+          case 1003: return EPISODE_ID;
+          case 1004: return VIDEO_ID;
+          case 0: return PARENTID_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ParentIdCase
+    getParentIdCase() {
+      return ParentIdCase.forNumber(
+          parentIdCase_);
+    }
+
     public static final int CHANNEL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * [Deprecated] ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     @java.lang.Override
@@ -2728,10 +3452,10 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * [Deprecated] ID of the channel.
      * </pre>
      *
-     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     @java.lang.Override
@@ -2743,6 +3467,134 @@ public final class ThumbnailServiceOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         channelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EPISODE_ID_FIELD_NUMBER = 1003;
+    /**
+     * <pre>
+     * ID of the episode to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the episodeId field is set.
+     */
+    public boolean hasEpisodeId() {
+      return parentIdCase_ == 1003;
+    }
+    /**
+     * <pre>
+     * ID of the episode to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The episodeId.
+     */
+    public java.lang.String getEpisodeId() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1003) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (parentIdCase_ == 1003) {
+          parentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the episode to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for episodeId.
+     */
+    public com.google.protobuf.ByteString
+        getEpisodeIdBytes() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1003) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (parentIdCase_ == 1003) {
+          parentId_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VIDEO_ID_FIELD_NUMBER = 1004;
+    /**
+     * <pre>
+     * ID of the video to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the videoId field is set.
+     */
+    public boolean hasVideoId() {
+      return parentIdCase_ == 1004;
+    }
+    /**
+     * <pre>
+     * ID of the video to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The videoId.
+     */
+    public java.lang.String getVideoId() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1004) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (parentIdCase_ == 1004) {
+          parentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the video to associate the thumbnail with.
+     * </pre>
+     *
+     * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for videoId.
+     */
+    public com.google.protobuf.ByteString
+        getVideoIdBytes() {
+      java.lang.Object ref = "";
+      if (parentIdCase_ == 1004) {
+        ref = parentId_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (parentIdCase_ == 1004) {
+          parentId_ = b;
+        }
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2766,6 +3618,12 @@ public final class ThumbnailServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, channelId_);
       }
+      if (parentIdCase_ == 1003) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1003, parentId_);
+      }
+      if (parentIdCase_ == 1004) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1004, parentId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2777,6 +3635,12 @@ public final class ThumbnailServiceOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, channelId_);
+      }
+      if (parentIdCase_ == 1003) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1003, parentId_);
+      }
+      if (parentIdCase_ == 1004) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1004, parentId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2795,6 +3659,19 @@ public final class ThumbnailServiceOuterClass {
 
       if (!getChannelId()
           .equals(other.getChannelId())) return false;
+      if (!getParentIdCase().equals(other.getParentIdCase())) return false;
+      switch (parentIdCase_) {
+        case 1003:
+          if (!getEpisodeId()
+              .equals(other.getEpisodeId())) return false;
+          break;
+        case 1004:
+          if (!getVideoId()
+              .equals(other.getVideoId())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2808,6 +3685,18 @@ public final class ThumbnailServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CHANNEL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getChannelId().hashCode();
+      switch (parentIdCase_) {
+        case 1003:
+          hash = (37 * hash) + EPISODE_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getEpisodeId().hashCode();
+          break;
+        case 1004:
+          hash = (37 * hash) + VIDEO_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getVideoId().hashCode();
+          break;
+        case 0:
+        default:
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2943,6 +3832,8 @@ public final class ThumbnailServiceOuterClass {
         super.clear();
         channelId_ = "";
 
+        parentIdCase_ = 0;
+        parentId_ = null;
         return this;
       }
 
@@ -2970,6 +3861,13 @@ public final class ThumbnailServiceOuterClass {
       public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest buildPartial() {
         yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest result = new yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest(this);
         result.channelId_ = channelId_;
+        if (parentIdCase_ == 1003) {
+          result.parentId_ = parentId_;
+        }
+        if (parentIdCase_ == 1004) {
+          result.parentId_ = parentId_;
+        }
+        result.parentIdCase_ = parentIdCase_;
         onBuilt();
         return result;
       }
@@ -3022,6 +3920,23 @@ public final class ThumbnailServiceOuterClass {
           channelId_ = other.channelId_;
           onChanged();
         }
+        switch (other.getParentIdCase()) {
+          case EPISODE_ID: {
+            parentIdCase_ = 1003;
+            parentId_ = other.parentId_;
+            onChanged();
+            break;
+          }
+          case VIDEO_ID: {
+            parentIdCase_ = 1004;
+            parentId_ = other.parentId_;
+            onChanged();
+            break;
+          }
+          case PARENTID_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3050,14 +3965,29 @@ public final class ThumbnailServiceOuterClass {
         }
         return this;
       }
+      private int parentIdCase_ = 0;
+      private java.lang.Object parentId_;
+      public ParentIdCase
+          getParentIdCase() {
+        return ParentIdCase.forNumber(
+            parentIdCase_);
+      }
+
+      public Builder clearParentId() {
+        parentIdCase_ = 0;
+        parentId_ = null;
+        onChanged();
+        return this;
+      }
+
 
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * [Deprecated] ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The channelId.
        */
       public java.lang.String getChannelId() {
@@ -3074,10 +4004,10 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * [Deprecated] ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for channelId.
        */
       public com.google.protobuf.ByteString
@@ -3095,10 +4025,10 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * [Deprecated] ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
        */
@@ -3114,10 +4044,10 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * [Deprecated] ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearChannelId() {
@@ -3128,10 +4058,10 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * [Deprecated] ID of the channel.
        * </pre>
        *
-       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
        */
@@ -3143,6 +4073,248 @@ public final class ThumbnailServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         channelId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ID of the episode to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the episodeId field is set.
+       */
+      @java.lang.Override
+      public boolean hasEpisodeId() {
+        return parentIdCase_ == 1003;
+      }
+      /**
+       * <pre>
+       * ID of the episode to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The episodeId.
+       */
+      @java.lang.Override
+      public java.lang.String getEpisodeId() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1003) {
+          ref = parentId_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (parentIdCase_ == 1003) {
+            parentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the episode to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for episodeId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getEpisodeIdBytes() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1003) {
+          ref = parentId_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (parentIdCase_ == 1003) {
+            parentId_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the episode to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The episodeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpisodeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  parentIdCase_ = 1003;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the episode to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpisodeId() {
+        if (parentIdCase_ == 1003) {
+          parentIdCase_ = 0;
+          parentId_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the episode to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string episode_id = 1003 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for episodeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpisodeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        parentIdCase_ = 1003;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ID of the video to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the videoId field is set.
+       */
+      @java.lang.Override
+      public boolean hasVideoId() {
+        return parentIdCase_ == 1004;
+      }
+      /**
+       * <pre>
+       * ID of the video to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The videoId.
+       */
+      @java.lang.Override
+      public java.lang.String getVideoId() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1004) {
+          ref = parentId_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (parentIdCase_ == 1004) {
+            parentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the video to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for videoId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getVideoIdBytes() {
+        java.lang.Object ref = "";
+        if (parentIdCase_ == 1004) {
+          ref = parentId_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (parentIdCase_ == 1004) {
+            parentId_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the video to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The videoId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVideoId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  parentIdCase_ = 1004;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the video to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVideoId() {
+        if (parentIdCase_ == 1004) {
+          parentIdCase_ = 0;
+          parentId_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the video to associate the thumbnail with.
+       * </pre>
+       *
+       * <code>string video_id = 1004 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for videoId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVideoIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        parentIdCase_ = 1004;
+        parentId_ = value;
         onChanged();
         return this;
       }
@@ -3205,7 +4377,7 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail being created.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -3214,7 +4386,7 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail being created.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -3311,7 +4483,7 @@ public final class ThumbnailServiceOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail being created.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -3332,7 +4504,7 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail being created.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -3658,7 +4830,7 @@ public final class ThumbnailServiceOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail being created.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -3678,7 +4850,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail being created.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -3699,7 +4871,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail being created.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -3718,7 +4890,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail being created.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -3732,7 +4904,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail being created.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -3809,19 +4981,19 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the thumbnails.
      * </pre>
      *
-     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the thumbnails.
      * </pre>
      *
-     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     com.google.protobuf.ByteString
@@ -3829,7 +5001,7 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * List of thumbnails IDs.
+     * List of thumbnail IDs for which to generate download URLs.
      * </pre>
      *
      * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3839,7 +5011,7 @@ public final class ThumbnailServiceOuterClass {
         getThumbnailIdsList();
     /**
      * <pre>
-     * List of thumbnails IDs.
+     * List of thumbnail IDs for which to generate download URLs.
      * </pre>
      *
      * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3848,7 +5020,7 @@ public final class ThumbnailServiceOuterClass {
     int getThumbnailIdsCount();
     /**
      * <pre>
-     * List of thumbnails IDs.
+     * List of thumbnail IDs for which to generate download URLs.
      * </pre>
      *
      * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3858,7 +5030,7 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getThumbnailIds(int index);
     /**
      * <pre>
-     * List of thumbnails IDs.
+     * List of thumbnail IDs for which to generate download URLs.
      * </pre>
      *
      * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3970,10 +5142,10 @@ public final class ThumbnailServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the thumbnails.
      * </pre>
      *
-     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The channelId.
      */
     @java.lang.Override
@@ -3991,10 +5163,10 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the thumbnails.
      * </pre>
      *
-     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for channelId.
      */
     @java.lang.Override
@@ -4016,7 +5188,7 @@ public final class ThumbnailServiceOuterClass {
     private com.google.protobuf.LazyStringList thumbnailIds_;
     /**
      * <pre>
-     * List of thumbnails IDs.
+     * List of thumbnail IDs for which to generate download URLs.
      * </pre>
      *
      * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4028,7 +5200,7 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of thumbnails IDs.
+     * List of thumbnail IDs for which to generate download URLs.
      * </pre>
      *
      * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4039,7 +5211,7 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of thumbnails IDs.
+     * List of thumbnail IDs for which to generate download URLs.
      * </pre>
      *
      * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4051,7 +5223,7 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of thumbnails IDs.
+     * List of thumbnail IDs for which to generate download URLs.
      * </pre>
      *
      * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4404,10 +5576,10 @@ public final class ThumbnailServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the thumbnails.
        * </pre>
        *
-       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The channelId.
        */
       public java.lang.String getChannelId() {
@@ -4424,10 +5596,10 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the thumbnails.
        * </pre>
        *
-       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for channelId.
        */
       public com.google.protobuf.ByteString
@@ -4445,10 +5617,10 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the thumbnails.
        * </pre>
        *
-       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
        */
@@ -4464,10 +5636,10 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the thumbnails.
        * </pre>
        *
-       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearChannelId() {
@@ -4478,10 +5650,10 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the thumbnails.
        * </pre>
        *
-       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
        */
@@ -4506,7 +5678,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails IDs.
+       * List of thumbnail IDs for which to generate download URLs.
        * </pre>
        *
        * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4518,7 +5690,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails IDs.
+       * List of thumbnail IDs for which to generate download URLs.
        * </pre>
        *
        * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4529,7 +5701,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails IDs.
+       * List of thumbnail IDs for which to generate download URLs.
        * </pre>
        *
        * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4541,7 +5713,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails IDs.
+       * List of thumbnail IDs for which to generate download URLs.
        * </pre>
        *
        * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4554,7 +5726,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails IDs.
+       * List of thumbnail IDs for which to generate download URLs.
        * </pre>
        *
        * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4574,7 +5746,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails IDs.
+       * List of thumbnail IDs for which to generate download URLs.
        * </pre>
        *
        * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4593,7 +5765,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails IDs.
+       * List of thumbnail IDs for which to generate download URLs.
        * </pre>
        *
        * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4610,7 +5782,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails IDs.
+       * List of thumbnail IDs for which to generate download URLs.
        * </pre>
        *
        * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4624,7 +5796,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of thumbnails IDs.
+       * List of thumbnail IDs for which to generate download URLs.
        * </pre>
        *
        * <code>repeated string thumbnail_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4701,7 +5873,8 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * List of download urls.
+     * List of download URLs for the requested thumbnails.
+     * Each entry contains URLs for both the original image and various scaled versions.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -4710,7 +5883,8 @@ public final class ThumbnailServiceOuterClass {
         getDownloadUrlsList();
     /**
      * <pre>
-     * List of download urls.
+     * List of download URLs for the requested thumbnails.
+     * Each entry contains URLs for both the original image and various scaled versions.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -4718,7 +5892,8 @@ public final class ThumbnailServiceOuterClass {
     yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL getDownloadUrls(int index);
     /**
      * <pre>
-     * List of download urls.
+     * List of download URLs for the requested thumbnails.
+     * Each entry contains URLs for both the original image and various scaled versions.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -4726,7 +5901,8 @@ public final class ThumbnailServiceOuterClass {
     int getDownloadUrlsCount();
     /**
      * <pre>
-     * List of download urls.
+     * List of download URLs for the requested thumbnails.
+     * Each entry contains URLs for both the original image and various scaled versions.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -4735,7 +5911,8 @@ public final class ThumbnailServiceOuterClass {
         getDownloadUrlsOrBuilderList();
     /**
      * <pre>
-     * List of download urls.
+     * List of download URLs for the requested thumbnails.
+     * Each entry contains URLs for both the original image and various scaled versions.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -4838,7 +6015,8 @@ public final class ThumbnailServiceOuterClass {
     private java.util.List<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL> downloadUrls_;
     /**
      * <pre>
-     * List of download urls.
+     * List of download URLs for the requested thumbnails.
+     * Each entry contains URLs for both the original image and various scaled versions.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -4849,7 +6027,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of download urls.
+     * List of download URLs for the requested thumbnails.
+     * Each entry contains URLs for both the original image and various scaled versions.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -4861,7 +6040,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of download urls.
+     * List of download URLs for the requested thumbnails.
+     * Each entry contains URLs for both the original image and various scaled versions.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -4872,7 +6052,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of download urls.
+     * List of download URLs for the requested thumbnails.
+     * Each entry contains URLs for both the original image and various scaled versions.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -4883,7 +6064,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of download urls.
+     * List of download URLs for the requested thumbnails.
+     * Each entry contains URLs for both the original image and various scaled versions.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5250,7 +6432,8 @@ public final class ThumbnailServiceOuterClass {
 
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5264,7 +6447,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5278,7 +6462,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5292,7 +6477,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5313,7 +6499,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5331,7 +6518,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5351,7 +6539,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5372,7 +6561,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5390,7 +6580,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5408,7 +6599,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5427,7 +6619,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5444,7 +6637,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5461,7 +6655,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5472,7 +6667,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5486,7 +6682,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5501,7 +6698,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5512,7 +6710,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5524,7 +6723,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls.
+       * List of download URLs for the requested thumbnails.
+       * Each entry contains URLs for both the original image and various scaled versions.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
@@ -5606,7 +6806,7 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail for which download URLs are provided.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -5615,7 +6815,7 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail for which download URLs are provided.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -5626,7 +6826,8 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * Original download url.
+     * URL for downloading the original, unmodified thumbnail image.
+     * This provides access to the image at its original resolution and format.
      * </pre>
      *
      * <code>string original_url = 2;</code>
@@ -5635,7 +6836,8 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getOriginalUrl();
     /**
      * <pre>
-     * Original download url.
+     * URL for downloading the original, unmodified thumbnail image.
+     * This provides access to the image at its original resolution and format.
      * </pre>
      *
      * <code>string original_url = 2;</code>
@@ -5646,7 +6848,8 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * List of download urls, one per each available image size.
+     * List of URLs for downloading scaled versions of the thumbnail.
+     * Different scaled versions are optimized for different display sizes and purposes.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -5655,7 +6858,8 @@ public final class ThumbnailServiceOuterClass {
         getScaledUrlsList();
     /**
      * <pre>
-     * List of download urls, one per each available image size.
+     * List of URLs for downloading scaled versions of the thumbnail.
+     * Different scaled versions are optimized for different display sizes and purposes.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -5663,7 +6867,8 @@ public final class ThumbnailServiceOuterClass {
     yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL.ScaledURL getScaledUrls(int index);
     /**
      * <pre>
-     * List of download urls, one per each available image size.
+     * List of URLs for downloading scaled versions of the thumbnail.
+     * Different scaled versions are optimized for different display sizes and purposes.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -5671,7 +6876,8 @@ public final class ThumbnailServiceOuterClass {
     int getScaledUrlsCount();
     /**
      * <pre>
-     * List of download urls, one per each available image size.
+     * List of URLs for downloading scaled versions of the thumbnail.
+     * Different scaled versions are optimized for different display sizes and purposes.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -5680,7 +6886,8 @@ public final class ThumbnailServiceOuterClass {
         getScaledUrlsOrBuilderList();
     /**
      * <pre>
-     * List of download urls, one per each available image size.
+     * List of URLs for downloading scaled versions of the thumbnail.
+     * Different scaled versions are optimized for different display sizes and purposes.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -5794,13 +7001,17 @@ public final class ThumbnailServiceOuterClass {
     }
 
     /**
+     * <pre>
+     * Image format of a thumbnail.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.video.v1.ThumbnailDownloadURL.ImageFormat}
      */
     public enum ImageFormat
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Image format unspecified.
+       * The image format is not specified.
        * </pre>
        *
        * <code>IMAGE_FORMAT_UNSPECIFIED = 0;</code>
@@ -5809,6 +7020,8 @@ public final class ThumbnailServiceOuterClass {
       /**
        * <pre>
        * JPEG image format.
+       * Provides good compression with some quality loss.
+       * Widely supported across all platforms and browsers.
        * </pre>
        *
        * <code>JPEG = 1;</code>
@@ -5817,6 +7030,8 @@ public final class ThumbnailServiceOuterClass {
       /**
        * <pre>
        * WebP image format.
+       * Provides better compression than JPEG with similar quality.
+       * May not be supported on all platforms and older browsers.
        * </pre>
        *
        * <code>WEBP = 2;</code>
@@ -5827,7 +7042,7 @@ public final class ThumbnailServiceOuterClass {
 
       /**
        * <pre>
-       * Image format unspecified.
+       * The image format is not specified.
        * </pre>
        *
        * <code>IMAGE_FORMAT_UNSPECIFIED = 0;</code>
@@ -5836,6 +7051,8 @@ public final class ThumbnailServiceOuterClass {
       /**
        * <pre>
        * JPEG image format.
+       * Provides good compression with some quality loss.
+       * Widely supported across all platforms and browsers.
        * </pre>
        *
        * <code>JPEG = 1;</code>
@@ -5844,6 +7061,8 @@ public final class ThumbnailServiceOuterClass {
       /**
        * <pre>
        * WebP image format.
+       * Provides better compression than JPEG with similar quality.
+       * May not be supported on all platforms and older browsers.
        * </pre>
        *
        * <code>WEBP = 2;</code>
@@ -5940,7 +7159,7 @@ public final class ThumbnailServiceOuterClass {
 
       /**
        * <pre>
-       * Download url.
+       * URL for downloading this scaled version of the thumbnail.
        * </pre>
        *
        * <code>string url = 1;</code>
@@ -5949,7 +7168,7 @@ public final class ThumbnailServiceOuterClass {
       java.lang.String getUrl();
       /**
        * <pre>
-       * Download url.
+       * URL for downloading this scaled version of the thumbnail.
        * </pre>
        *
        * <code>string url = 1;</code>
@@ -5960,7 +7179,8 @@ public final class ThumbnailServiceOuterClass {
 
       /**
        * <pre>
-       * Maximum width of the rectangle to inscribe the thumbnail into.
+       * Maximum width in pixels of the scaled image.
+       * The actual width may be smaller to maintain the aspect ratio.
        * </pre>
        *
        * <code>int64 max_width = 2;</code>
@@ -5970,7 +7190,8 @@ public final class ThumbnailServiceOuterClass {
 
       /**
        * <pre>
-       * Maximum height of the rectangle to inscribe the thumbnail into.
+       * Maximum height in pixels of the scaled image.
+       * The actual height may be smaller to maintain the aspect ratio.
        * </pre>
        *
        * <code>int64 max_height = 3;</code>
@@ -5980,7 +7201,8 @@ public final class ThumbnailServiceOuterClass {
 
       /**
        * <pre>
-       * Image format.
+       * Format of the scaled image (JPEG, WebP, etc.).
+       * Different formats offer different trade-offs between quality and file size.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ThumbnailDownloadURL.ImageFormat image_format = 4;</code>
@@ -5989,7 +7211,8 @@ public final class ThumbnailServiceOuterClass {
       int getImageFormatValue();
       /**
        * <pre>
-       * Image format.
+       * Format of the scaled image (JPEG, WebP, etc.).
+       * Different formats offer different trade-offs between quality and file size.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ThumbnailDownloadURL.ImageFormat image_format = 4;</code>
@@ -5998,6 +7221,10 @@ public final class ThumbnailServiceOuterClass {
       yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL.ImageFormat getImageFormat();
     }
     /**
+     * <pre>
+     * Represents a URL for a specific scaled version of a thumbnail image.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL}
      */
     public static final class ScaledURL extends
@@ -6102,7 +7329,7 @@ public final class ThumbnailServiceOuterClass {
       private volatile java.lang.Object url_;
       /**
        * <pre>
-       * Download url.
+       * URL for downloading this scaled version of the thumbnail.
        * </pre>
        *
        * <code>string url = 1;</code>
@@ -6123,7 +7350,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Download url.
+       * URL for downloading this scaled version of the thumbnail.
        * </pre>
        *
        * <code>string url = 1;</code>
@@ -6148,7 +7375,8 @@ public final class ThumbnailServiceOuterClass {
       private long maxWidth_;
       /**
        * <pre>
-       * Maximum width of the rectangle to inscribe the thumbnail into.
+       * Maximum width in pixels of the scaled image.
+       * The actual width may be smaller to maintain the aspect ratio.
        * </pre>
        *
        * <code>int64 max_width = 2;</code>
@@ -6163,7 +7391,8 @@ public final class ThumbnailServiceOuterClass {
       private long maxHeight_;
       /**
        * <pre>
-       * Maximum height of the rectangle to inscribe the thumbnail into.
+       * Maximum height in pixels of the scaled image.
+       * The actual height may be smaller to maintain the aspect ratio.
        * </pre>
        *
        * <code>int64 max_height = 3;</code>
@@ -6178,7 +7407,8 @@ public final class ThumbnailServiceOuterClass {
       private int imageFormat_;
       /**
        * <pre>
-       * Image format.
+       * Format of the scaled image (JPEG, WebP, etc.).
+       * Different formats offer different trade-offs between quality and file size.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ThumbnailDownloadURL.ImageFormat image_format = 4;</code>
@@ -6189,7 +7419,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Image format.
+       * Format of the scaled image (JPEG, WebP, etc.).
+       * Different formats offer different trade-offs between quality and file size.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.ThumbnailDownloadURL.ImageFormat image_format = 4;</code>
@@ -6390,6 +7621,10 @@ public final class ThumbnailServiceOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Represents a URL for a specific scaled version of a thumbnail image.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL}
        */
       public static final class Builder extends
@@ -6558,7 +7793,7 @@ public final class ThumbnailServiceOuterClass {
         private java.lang.Object url_ = "";
         /**
          * <pre>
-         * Download url.
+         * URL for downloading this scaled version of the thumbnail.
          * </pre>
          *
          * <code>string url = 1;</code>
@@ -6578,7 +7813,7 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Download url.
+         * URL for downloading this scaled version of the thumbnail.
          * </pre>
          *
          * <code>string url = 1;</code>
@@ -6599,7 +7834,7 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Download url.
+         * URL for downloading this scaled version of the thumbnail.
          * </pre>
          *
          * <code>string url = 1;</code>
@@ -6618,7 +7853,7 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Download url.
+         * URL for downloading this scaled version of the thumbnail.
          * </pre>
          *
          * <code>string url = 1;</code>
@@ -6632,7 +7867,7 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Download url.
+         * URL for downloading this scaled version of the thumbnail.
          * </pre>
          *
          * <code>string url = 1;</code>
@@ -6654,7 +7889,8 @@ public final class ThumbnailServiceOuterClass {
         private long maxWidth_ ;
         /**
          * <pre>
-         * Maximum width of the rectangle to inscribe the thumbnail into.
+         * Maximum width in pixels of the scaled image.
+         * The actual width may be smaller to maintain the aspect ratio.
          * </pre>
          *
          * <code>int64 max_width = 2;</code>
@@ -6666,7 +7902,8 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Maximum width of the rectangle to inscribe the thumbnail into.
+         * Maximum width in pixels of the scaled image.
+         * The actual width may be smaller to maintain the aspect ratio.
          * </pre>
          *
          * <code>int64 max_width = 2;</code>
@@ -6681,7 +7918,8 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Maximum width of the rectangle to inscribe the thumbnail into.
+         * Maximum width in pixels of the scaled image.
+         * The actual width may be smaller to maintain the aspect ratio.
          * </pre>
          *
          * <code>int64 max_width = 2;</code>
@@ -6697,7 +7935,8 @@ public final class ThumbnailServiceOuterClass {
         private long maxHeight_ ;
         /**
          * <pre>
-         * Maximum height of the rectangle to inscribe the thumbnail into.
+         * Maximum height in pixels of the scaled image.
+         * The actual height may be smaller to maintain the aspect ratio.
          * </pre>
          *
          * <code>int64 max_height = 3;</code>
@@ -6709,7 +7948,8 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Maximum height of the rectangle to inscribe the thumbnail into.
+         * Maximum height in pixels of the scaled image.
+         * The actual height may be smaller to maintain the aspect ratio.
          * </pre>
          *
          * <code>int64 max_height = 3;</code>
@@ -6724,7 +7964,8 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Maximum height of the rectangle to inscribe the thumbnail into.
+         * Maximum height in pixels of the scaled image.
+         * The actual height may be smaller to maintain the aspect ratio.
          * </pre>
          *
          * <code>int64 max_height = 3;</code>
@@ -6740,7 +7981,8 @@ public final class ThumbnailServiceOuterClass {
         private int imageFormat_ = 0;
         /**
          * <pre>
-         * Image format.
+         * Format of the scaled image (JPEG, WebP, etc.).
+         * Different formats offer different trade-offs between quality and file size.
          * </pre>
          *
          * <code>.yandex.cloud.video.v1.ThumbnailDownloadURL.ImageFormat image_format = 4;</code>
@@ -6751,7 +7993,8 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Image format.
+         * Format of the scaled image (JPEG, WebP, etc.).
+         * Different formats offer different trade-offs between quality and file size.
          * </pre>
          *
          * <code>.yandex.cloud.video.v1.ThumbnailDownloadURL.ImageFormat image_format = 4;</code>
@@ -6766,7 +8009,8 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Image format.
+         * Format of the scaled image (JPEG, WebP, etc.).
+         * Different formats offer different trade-offs between quality and file size.
          * </pre>
          *
          * <code>.yandex.cloud.video.v1.ThumbnailDownloadURL.ImageFormat image_format = 4;</code>
@@ -6780,7 +8024,8 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Image format.
+         * Format of the scaled image (JPEG, WebP, etc.).
+         * Different formats offer different trade-offs between quality and file size.
          * </pre>
          *
          * <code>.yandex.cloud.video.v1.ThumbnailDownloadURL.ImageFormat image_format = 4;</code>
@@ -6798,7 +8043,8 @@ public final class ThumbnailServiceOuterClass {
         }
         /**
          * <pre>
-         * Image format.
+         * Format of the scaled image (JPEG, WebP, etc.).
+         * Different formats offer different trade-offs between quality and file size.
          * </pre>
          *
          * <code>.yandex.cloud.video.v1.ThumbnailDownloadURL.ImageFormat image_format = 4;</code>
@@ -6867,7 +8113,7 @@ public final class ThumbnailServiceOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail for which download URLs are provided.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -6888,7 +8134,7 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail for which download URLs are provided.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -6913,7 +8159,8 @@ public final class ThumbnailServiceOuterClass {
     private volatile java.lang.Object originalUrl_;
     /**
      * <pre>
-     * Original download url.
+     * URL for downloading the original, unmodified thumbnail image.
+     * This provides access to the image at its original resolution and format.
      * </pre>
      *
      * <code>string original_url = 2;</code>
@@ -6934,7 +8181,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * Original download url.
+     * URL for downloading the original, unmodified thumbnail image.
+     * This provides access to the image at its original resolution and format.
      * </pre>
      *
      * <code>string original_url = 2;</code>
@@ -6959,7 +8207,8 @@ public final class ThumbnailServiceOuterClass {
     private java.util.List<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL.ScaledURL> scaledUrls_;
     /**
      * <pre>
-     * List of download urls, one per each available image size.
+     * List of URLs for downloading scaled versions of the thumbnail.
+     * Different scaled versions are optimized for different display sizes and purposes.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -6970,7 +8219,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of download urls, one per each available image size.
+     * List of URLs for downloading scaled versions of the thumbnail.
+     * Different scaled versions are optimized for different display sizes and purposes.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -6982,7 +8232,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of download urls, one per each available image size.
+     * List of URLs for downloading scaled versions of the thumbnail.
+     * Different scaled versions are optimized for different display sizes and purposes.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -6993,7 +8244,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of download urls, one per each available image size.
+     * List of URLs for downloading scaled versions of the thumbnail.
+     * Different scaled versions are optimized for different display sizes and purposes.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7004,7 +8256,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * List of download urls, one per each available image size.
+     * List of URLs for downloading scaled versions of the thumbnail.
+     * Different scaled versions are optimized for different display sizes and purposes.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7394,7 +8647,7 @@ public final class ThumbnailServiceOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail for which download URLs are provided.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -7414,7 +8667,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail for which download URLs are provided.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -7435,7 +8688,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail for which download URLs are provided.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -7454,7 +8707,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail for which download URLs are provided.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -7468,7 +8721,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail for which download URLs are provided.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -7490,7 +8743,8 @@ public final class ThumbnailServiceOuterClass {
       private java.lang.Object originalUrl_ = "";
       /**
        * <pre>
-       * Original download url.
+       * URL for downloading the original, unmodified thumbnail image.
+       * This provides access to the image at its original resolution and format.
        * </pre>
        *
        * <code>string original_url = 2;</code>
@@ -7510,7 +8764,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Original download url.
+       * URL for downloading the original, unmodified thumbnail image.
+       * This provides access to the image at its original resolution and format.
        * </pre>
        *
        * <code>string original_url = 2;</code>
@@ -7531,7 +8786,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Original download url.
+       * URL for downloading the original, unmodified thumbnail image.
+       * This provides access to the image at its original resolution and format.
        * </pre>
        *
        * <code>string original_url = 2;</code>
@@ -7550,7 +8806,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Original download url.
+       * URL for downloading the original, unmodified thumbnail image.
+       * This provides access to the image at its original resolution and format.
        * </pre>
        *
        * <code>string original_url = 2;</code>
@@ -7564,7 +8821,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Original download url.
+       * URL for downloading the original, unmodified thumbnail image.
+       * This provides access to the image at its original resolution and format.
        * </pre>
        *
        * <code>string original_url = 2;</code>
@@ -7597,7 +8855,8 @@ public final class ThumbnailServiceOuterClass {
 
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7611,7 +8870,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7625,7 +8885,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7639,7 +8900,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7660,7 +8922,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7678,7 +8941,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7698,7 +8962,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7719,7 +8984,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7737,7 +9003,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7755,7 +9022,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7774,7 +9042,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7791,7 +9060,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7808,7 +9078,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7819,7 +9090,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7833,7 +9105,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7848,7 +9121,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7859,7 +9133,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7871,7 +9146,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * List of download urls, one per each available image size.
+       * List of URLs for downloading scaled versions of the thumbnail.
+       * Different scaled versions are optimized for different display sizes and purposes.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL.ScaledURL scaled_urls = 3;</code>
@@ -7953,7 +9229,8 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail for which to generate an upload URL.
+     * The thumbnail record must already exist, typically created using the Create method.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7962,7 +9239,8 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail for which to generate an upload URL.
+     * The thumbnail record must already exist, typically created using the Create method.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8059,7 +9337,8 @@ public final class ThumbnailServiceOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail for which to generate an upload URL.
+     * The thumbnail record must already exist, typically created using the Create method.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8080,7 +9359,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail for which to generate an upload URL.
+     * The thumbnail record must already exist, typically created using the Create method.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8406,7 +9686,8 @@ public final class ThumbnailServiceOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail for which to generate an upload URL.
+       * The thumbnail record must already exist, typically created using the Create method.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8426,7 +9707,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail for which to generate an upload URL.
+       * The thumbnail record must already exist, typically created using the Create method.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8447,7 +9729,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail for which to generate an upload URL.
+       * The thumbnail record must already exist, typically created using the Create method.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8466,7 +9749,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail for which to generate an upload URL.
+       * The thumbnail record must already exist, typically created using the Create method.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8480,7 +9764,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail for which to generate an upload URL.
+       * The thumbnail record must already exist, typically created using the Create method.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8557,7 +9842,9 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * Upload url.
+     * Pre-signed URL for uploading the thumbnail image.
+     * This URL can be used with an HTTP PUT request to upload the image file.
+     * The URL has a limited validity period and will expire after a certain time.
      * </pre>
      *
      * <code>string upload_url = 1;</code>
@@ -8566,7 +9853,9 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getUploadUrl();
     /**
      * <pre>
-     * Upload url.
+     * Pre-signed URL for uploading the thumbnail image.
+     * This URL can be used with an HTTP PUT request to upload the image file.
+     * The URL has a limited validity period and will expire after a certain time.
      * </pre>
      *
      * <code>string upload_url = 1;</code>
@@ -8663,7 +9952,9 @@ public final class ThumbnailServiceOuterClass {
     private volatile java.lang.Object uploadUrl_;
     /**
      * <pre>
-     * Upload url.
+     * Pre-signed URL for uploading the thumbnail image.
+     * This URL can be used with an HTTP PUT request to upload the image file.
+     * The URL has a limited validity period and will expire after a certain time.
      * </pre>
      *
      * <code>string upload_url = 1;</code>
@@ -8684,7 +9975,9 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * Upload url.
+     * Pre-signed URL for uploading the thumbnail image.
+     * This URL can be used with an HTTP PUT request to upload the image file.
+     * The URL has a limited validity period and will expire after a certain time.
      * </pre>
      *
      * <code>string upload_url = 1;</code>
@@ -9010,7 +10303,9 @@ public final class ThumbnailServiceOuterClass {
       private java.lang.Object uploadUrl_ = "";
       /**
        * <pre>
-       * Upload url.
+       * Pre-signed URL for uploading the thumbnail image.
+       * This URL can be used with an HTTP PUT request to upload the image file.
+       * The URL has a limited validity period and will expire after a certain time.
        * </pre>
        *
        * <code>string upload_url = 1;</code>
@@ -9030,7 +10325,9 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload url.
+       * Pre-signed URL for uploading the thumbnail image.
+       * This URL can be used with an HTTP PUT request to upload the image file.
+       * The URL has a limited validity period and will expire after a certain time.
        * </pre>
        *
        * <code>string upload_url = 1;</code>
@@ -9051,7 +10348,9 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload url.
+       * Pre-signed URL for uploading the thumbnail image.
+       * This URL can be used with an HTTP PUT request to upload the image file.
+       * The URL has a limited validity period and will expire after a certain time.
        * </pre>
        *
        * <code>string upload_url = 1;</code>
@@ -9070,7 +10369,9 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload url.
+       * Pre-signed URL for uploading the thumbnail image.
+       * This URL can be used with an HTTP PUT request to upload the image file.
+       * The URL has a limited validity period and will expire after a certain time.
        * </pre>
        *
        * <code>string upload_url = 1;</code>
@@ -9084,7 +10385,9 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload url.
+       * Pre-signed URL for uploading the thumbnail image.
+       * This URL can be used with an HTTP PUT request to upload the image file.
+       * The URL has a limited validity period and will expire after a certain time.
        * </pre>
        *
        * <code>string upload_url = 1;</code>
@@ -9161,7 +10464,7 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail to delete.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9170,7 +10473,7 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail to delete.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9267,7 +10570,7 @@ public final class ThumbnailServiceOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail to delete.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9288,7 +10591,7 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail to delete.
      * </pre>
      *
      * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9614,7 +10917,7 @@ public final class ThumbnailServiceOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail to delete.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9634,7 +10937,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail to delete.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9655,7 +10958,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail to delete.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9674,7 +10977,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail to delete.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9688,7 +10991,7 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail to delete.
        * </pre>
        *
        * <code>string thumbnail_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9765,7 +11068,8 @@ public final class ThumbnailServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail being deleted.
+     * This identifier can be used to track the thumbnail deletion operation.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -9774,7 +11078,8 @@ public final class ThumbnailServiceOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail being deleted.
+     * This identifier can be used to track the thumbnail deletion operation.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -9871,7 +11176,8 @@ public final class ThumbnailServiceOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail being deleted.
+     * This identifier can be used to track the thumbnail deletion operation.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -9892,7 +11198,8 @@ public final class ThumbnailServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail being deleted.
+     * This identifier can be used to track the thumbnail deletion operation.
      * </pre>
      *
      * <code>string thumbnail_id = 1;</code>
@@ -10218,7 +11525,8 @@ public final class ThumbnailServiceOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail being deleted.
+       * This identifier can be used to track the thumbnail deletion operation.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -10238,7 +11546,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail being deleted.
+       * This identifier can be used to track the thumbnail deletion operation.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -10259,7 +11568,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail being deleted.
+       * This identifier can be used to track the thumbnail deletion operation.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -10278,7 +11588,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail being deleted.
+       * This identifier can be used to track the thumbnail deletion operation.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -10292,7 +11603,8 @@ public final class ThumbnailServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail being deleted.
+       * This identifier can be used to track the thumbnail deletion operation.
        * </pre>
        *
        * <code>string thumbnail_id = 1;</code>
@@ -10444,65 +11756,69 @@ public final class ThumbnailServiceOuterClass {
       "peration.proto\032\035yandex/cloud/validation." +
       "proto\032%yandex/cloud/video/v1/thumbnail.p" +
       "roto\"9\n\023GetThumbnailRequest\022\"\n\014thumbnail" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"y\n\024ListThumbnail" +
-      "Request\022\034\n\nchannel_id\030\001 \001(\tB\010\212\3101\004<=50\022\034\n" +
-      "\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\037\n\npage_toke" +
-      "n\030e \001(\tB\013\212\3101\007<=15000J\004\010\002\020d\"l\n\025ListThumbn" +
-      "ailResponse\0224\n\nthumbnails\030\001 \003(\0132 .yandex" +
-      ".cloud.video.v1.Thumbnail\022\027\n\017next_page_t" +
-      "oken\030d \001(\tJ\004\010\002\020d\"7\n\026CreateThumbnailReque" +
-      "st\022\035\n\nchannel_id\030\001 \001(\tB\t\212\3101\005<=200\"/\n\027Cre" +
-      "ateThumbnailMetadata\022\024\n\014thumbnail_id\030\001 \001" +
-      "(\t\"o\n BatchGenerateDownloadURLsRequest\022!" +
-      "\n\nchannel_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\022(\n\rthu" +
-      "mbnail_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"g\n!B" +
-      "atchGenerateDownloadURLsResponse\022B\n\rdown" +
-      "load_urls\030\001 \003(\0132+.yandex.cloud.video.v1." +
-      "ThumbnailDownloadURL\"\340\002\n\024ThumbnailDownlo" +
-      "adURL\022\024\n\014thumbnail_id\030\001 \001(\t\022\024\n\014original_" +
-      "url\030\002 \001(\t\022J\n\013scaled_urls\030\003 \003(\01325.yandex." +
-      "cloud.video.v1.ThumbnailDownloadURL.Scal" +
-      "edURL\032\216\001\n\tScaledURL\022\013\n\003url\030\001 \001(\t\022\021\n\tmax_" +
-      "width\030\002 \001(\003\022\022\n\nmax_height\030\003 \001(\003\022M\n\014image" +
-      "_format\030\004 \001(\01627.yandex.cloud.video.v1.Th" +
-      "umbnailDownloadURL.ImageFormat\"?\n\013ImageF" +
-      "ormat\022\034\n\030IMAGE_FORMAT_UNSPECIFIED\020\000\022\010\n\004J" +
-      "PEG\020\001\022\010\n\004WEBP\020\002\"G\n!GenerateThumbnailUplo" +
-      "adURLRequest\022\"\n\014thumbnail_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"8\n\"GenerateThumbnailUploadURLRe" +
-      "sponse\022\022\n\nupload_url\030\001 \001(\t\"<\n\026DeleteThum" +
-      "bnailRequest\022\"\n\014thumbnail_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"/\n\027DeleteThumbnailMetadata\022\024\n\014t" +
-      "humbnail_id\030\001 \001(\t2\223\010\n\020ThumbnailService\022\200" +
-      "\001\n\003Get\022*.yandex.cloud.video.v1.GetThumbn" +
-      "ailRequest\032 .yandex.cloud.video.v1.Thumb" +
-      "nail\"+\202\323\344\223\002%\022#/video/v1/thumbnails/{thum" +
-      "bnail_id}\022\177\n\004List\022+.yandex.cloud.video.v" +
-      "1.ListThumbnailRequest\032,.yandex.cloud.vi" +
-      "deo.v1.ListThumbnailResponse\"\034\202\323\344\223\002\026\022\024/v" +
-      "ideo/v1/thumbnails\022\243\001\n\006Create\022-.yandex.c" +
-      "loud.video.v1.CreateThumbnailRequest\032!.y" +
-      "andex.cloud.operation.Operation\"G\202\323\344\223\002\031\"" +
-      "\024/video/v1/thumbnails:\001*\262\322*$\n\027CreateThum" +
-      "bnailMetadata\022\tThumbnail\022\311\001\n\031BatchGenera" +
-      "teDownloadURLs\0227.yandex.cloud.video.v1.B" +
-      "atchGenerateDownloadURLsRequest\0328.yandex" +
-      ".cloud.video.v1.BatchGenerateDownloadURL" +
-      "sResponse\"9\202\323\344\223\0023\"./video/v1/thumbnails:" +
-      "batchGenerateDownloadURLs:\001*\022\312\001\n\021Generat" +
-      "eUploadURL\0228.yandex.cloud.video.v1.Gener" +
-      "ateThumbnailUploadURLRequest\0329.yandex.cl" +
-      "oud.video.v1.GenerateThumbnailUploadURLR" +
-      "esponse\"@\202\323\344\223\002:\"5/video/v1/thumbnails/{t" +
-      "humbnail_id}:generateUploadURL:\001*\022\273\001\n\006De" +
-      "lete\022-.yandex.cloud.video.v1.DeleteThumb" +
-      "nailRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"_\202\323\344\223\002%*#/video/v1/thumbnails/{th" +
-      "umbnail_id}\262\322*0\n\027DeleteThumbnailMetadata" +
-      "\022\025google.protobuf.EmptyB\\\n\031yandex.cloud." +
-      "api.video.v1Z?github.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/video/v1;videob\006p" +
-      "roto3"
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\315\001\n\024ListThumbnai" +
+      "lRequest\022\034\n\nchannel_id\030\001 \001(\tB\010\212\3101\004<=50\022\037" +
+      "\n\nepisode_id\030\353\007 \001(\tB\010\212\3101\004<=50H\000\022\035\n\010video" +
+      "_id\030\354\007 \001(\tB\010\212\3101\004<=50H\000\022\034\n\tpage_size\030d \001(" +
+      "\003B\t\372\3071\005<=100\022\037\n\npage_token\030e \001(\tB\013\212\3101\007<=" +
+      "15000B\013\n\tparent_idJ\004\010\002\020dJ\005\010f\020\353\007\"l\n\025ListT" +
+      "humbnailResponse\0224\n\nthumbnails\030\001 \003(\0132 .y" +
+      "andex.cloud.video.v1.Thumbnail\022\027\n\017next_p" +
+      "age_token\030d \001(\tJ\004\010\002\020d\"\212\001\n\026CreateThumbnai" +
+      "lRequest\022\034\n\nchannel_id\030\001 \001(\tB\010\212\3101\004<=50\022\037" +
+      "\n\nepisode_id\030\353\007 \001(\tB\010\212\3101\004<=50H\000\022\035\n\010video" +
+      "_id\030\354\007 \001(\tB\010\212\3101\004<=50H\000B\013\n\tparent_idJ\005\010\002\020" +
+      "\353\007\"/\n\027CreateThumbnailMetadata\022\024\n\014thumbna" +
+      "il_id\030\001 \001(\t\"n\n BatchGenerateDownloadURLs" +
+      "Request\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022(\n\rthumbnail_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<" +
+      "=50\"g\n!BatchGenerateDownloadURLsResponse" +
+      "\022B\n\rdownload_urls\030\001 \003(\0132+.yandex.cloud.v" +
+      "ideo.v1.ThumbnailDownloadURL\"\340\002\n\024Thumbna" +
+      "ilDownloadURL\022\024\n\014thumbnail_id\030\001 \001(\t\022\024\n\014o" +
+      "riginal_url\030\002 \001(\t\022J\n\013scaled_urls\030\003 \003(\01325" +
+      ".yandex.cloud.video.v1.ThumbnailDownload" +
+      "URL.ScaledURL\032\216\001\n\tScaledURL\022\013\n\003url\030\001 \001(\t" +
+      "\022\021\n\tmax_width\030\002 \001(\003\022\022\n\nmax_height\030\003 \001(\003\022" +
+      "M\n\014image_format\030\004 \001(\01627.yandex.cloud.vid" +
+      "eo.v1.ThumbnailDownloadURL.ImageFormat\"?" +
+      "\n\013ImageFormat\022\034\n\030IMAGE_FORMAT_UNSPECIFIE" +
+      "D\020\000\022\010\n\004JPEG\020\001\022\010\n\004WEBP\020\002\"G\n!GenerateThumb" +
+      "nailUploadURLRequest\022\"\n\014thumbnail_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"8\n\"GenerateThumbnailUpl" +
+      "oadURLResponse\022\022\n\nupload_url\030\001 \001(\t\"<\n\026De" +
+      "leteThumbnailRequest\022\"\n\014thumbnail_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"/\n\027DeleteThumbnailMetad" +
+      "ata\022\024\n\014thumbnail_id\030\001 \001(\t2\223\010\n\020ThumbnailS" +
+      "ervice\022\200\001\n\003Get\022*.yandex.cloud.video.v1.G" +
+      "etThumbnailRequest\032 .yandex.cloud.video." +
+      "v1.Thumbnail\"+\202\323\344\223\002%\022#/video/v1/thumbnai" +
+      "ls/{thumbnail_id}\022\177\n\004List\022+.yandex.cloud" +
+      ".video.v1.ListThumbnailRequest\032,.yandex." +
+      "cloud.video.v1.ListThumbnailResponse\"\034\202\323" +
+      "\344\223\002\026\022\024/video/v1/thumbnails\022\243\001\n\006Create\022-." +
+      "yandex.cloud.video.v1.CreateThumbnailReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "G\202\323\344\223\002\031\"\024/video/v1/thumbnails:\001*\262\322*$\n\027Cr" +
+      "eateThumbnailMetadata\022\tThumbnail\022\311\001\n\031Bat" +
+      "chGenerateDownloadURLs\0227.yandex.cloud.vi" +
+      "deo.v1.BatchGenerateDownloadURLsRequest\032" +
+      "8.yandex.cloud.video.v1.BatchGenerateDow" +
+      "nloadURLsResponse\"9\202\323\344\223\0023\"./video/v1/thu" +
+      "mbnails:batchGenerateDownloadURLs:\001*\022\312\001\n" +
+      "\021GenerateUploadURL\0228.yandex.cloud.video." +
+      "v1.GenerateThumbnailUploadURLRequest\0329.y" +
+      "andex.cloud.video.v1.GenerateThumbnailUp" +
+      "loadURLResponse\"@\202\323\344\223\002:\"5/video/v1/thumb" +
+      "nails/{thumbnail_id}:generateUploadURL:\001" +
+      "*\022\273\001\n\006Delete\022-.yandex.cloud.video.v1.Del" +
+      "eteThumbnailRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"_\202\323\344\223\002%*#/video/v1/thumbn" +
+      "ails/{thumbnail_id}\262\322*0\n\027DeleteThumbnail" +
+      "Metadata\022\025google.protobuf.EmptyB\\\n\031yande" +
+      "x.cloud.api.video.v1Z?github.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/video/v1;" +
+      "videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10524,7 +11840,7 @@ public final class ThumbnailServiceOuterClass {
     internal_static_yandex_cloud_video_v1_ListThumbnailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_ListThumbnailRequest_descriptor,
-        new java.lang.String[] { "ChannelId", "PageSize", "PageToken", });
+        new java.lang.String[] { "ChannelId", "EpisodeId", "VideoId", "PageSize", "PageToken", "ParentId", });
     internal_static_yandex_cloud_video_v1_ListThumbnailResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_video_v1_ListThumbnailResponse_fieldAccessorTable = new
@@ -10536,7 +11852,7 @@ public final class ThumbnailServiceOuterClass {
     internal_static_yandex_cloud_video_v1_CreateThumbnailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateThumbnailRequest_descriptor,
-        new java.lang.String[] { "ChannelId", });
+        new java.lang.String[] { "ChannelId", "EpisodeId", "VideoId", "ParentId", });
     internal_static_yandex_cloud_video_v1_CreateThumbnailMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_video_v1_CreateThumbnailMetadata_fieldAccessorTable = new

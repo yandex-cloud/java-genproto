@@ -20,7 +20,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * ID of the stream.
+     * Unique identifier of the stream.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -29,7 +29,7 @@ public final class StreamOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the stream.
+     * Unique identifier of the stream.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -40,7 +40,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * ID of the channel where the stream was created.
+     * Identifier of the channel where the stream is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -49,7 +49,7 @@ public final class StreamOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel where the stream was created.
+     * Identifier of the channel where the stream is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -60,7 +60,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * ID of the line to which stream is linked.
+     * Identifier of the stream line to which this stream is linked.
      * </pre>
      *
      * <code>string line_id = 3;</code>
@@ -69,7 +69,7 @@ public final class StreamOuterClass {
     java.lang.String getLineId();
     /**
      * <pre>
-     * ID of the line to which stream is linked.
+     * Identifier of the stream line to which this stream is linked.
      * </pre>
      *
      * <code>string line_id = 3;</code>
@@ -80,7 +80,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Stream title.
+     * Title of the stream displayed in interfaces and players.
      * </pre>
      *
      * <code>string title = 4;</code>
@@ -89,7 +89,7 @@ public final class StreamOuterClass {
     java.lang.String getTitle();
     /**
      * <pre>
-     * Stream title.
+     * Title of the stream displayed in interfaces and players.
      * </pre>
      *
      * <code>string title = 4;</code>
@@ -100,7 +100,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Stream description.
+     * Detailed description of the stream content and context.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -109,7 +109,7 @@ public final class StreamOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Stream description.
+     * Detailed description of the stream content and context.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -120,7 +120,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * Identifier of the thumbnail image used to represent the stream visually.
      * </pre>
      *
      * <code>string thumbnail_id = 6;</code>
@@ -129,7 +129,7 @@ public final class StreamOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * Identifier of the thumbnail image used to represent the stream visually.
      * </pre>
      *
      * <code>string thumbnail_id = 6;</code>
@@ -140,7 +140,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Stream status.
+     * Current status of the stream.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Stream.StreamStatus status = 8;</code>
@@ -149,7 +149,7 @@ public final class StreamOuterClass {
     int getStatusValue();
     /**
      * <pre>
-     * Stream status.
+     * Current status of the stream.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Stream.StreamStatus status = 8;</code>
@@ -159,7 +159,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Stream start time.
+     * Timestamp when the stream was initiated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -168,7 +168,7 @@ public final class StreamOuterClass {
     boolean hasStartTime();
     /**
      * <pre>
-     * Stream start time.
+     * Timestamp when the stream was initiated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -177,7 +177,7 @@ public final class StreamOuterClass {
     com.google.protobuf.Timestamp getStartTime();
     /**
      * <pre>
-     * Stream start time.
+     * Timestamp when the stream was initiated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -186,7 +186,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Stream publish time. Time when stream switched to ONAIR status.
+     * Timestamp when the stream was published (switched to ONAIR status).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -195,7 +195,7 @@ public final class StreamOuterClass {
     boolean hasPublishTime();
     /**
      * <pre>
-     * Stream publish time. Time when stream switched to ONAIR status.
+     * Timestamp when the stream was published (switched to ONAIR status).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -204,7 +204,7 @@ public final class StreamOuterClass {
     com.google.protobuf.Timestamp getPublishTime();
     /**
      * <pre>
-     * Stream publish time. Time when stream switched to ONAIR status.
+     * Timestamp when the stream was published (switched to ONAIR status).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -213,7 +213,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Stream finish time.
+     * Timestamp when the stream was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -222,7 +222,7 @@ public final class StreamOuterClass {
     boolean hasFinishTime();
     /**
      * <pre>
-     * Stream finish time.
+     * Timestamp when the stream was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -231,7 +231,7 @@ public final class StreamOuterClass {
     com.google.protobuf.Timestamp getFinishTime();
     /**
      * <pre>
-     * Stream finish time.
+     * Timestamp when the stream was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -240,8 +240,8 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls automatic publishing of the stream when it's ready.
+     * When set to true, automatically switches status from READY to ONAIR.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -250,8 +250,8 @@ public final class StreamOuterClass {
     boolean hasAutoPublish();
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls automatic publishing of the stream when it's ready.
+     * When set to true, automatically switches status from READY to ONAIR.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -260,8 +260,8 @@ public final class StreamOuterClass {
     com.google.protobuf.BoolValue getAutoPublish();
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls automatic publishing of the stream when it's ready.
+     * When set to true, automatically switches status from READY to ONAIR.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -270,7 +270,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream starts immediately when a video signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -279,7 +279,7 @@ public final class StreamOuterClass {
     boolean hasOnDemand();
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream starts immediately when a video signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -288,7 +288,7 @@ public final class StreamOuterClass {
     yandex.cloud.api.video.v1.StreamOuterClass.OnDemand getOnDemand();
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream starts immediately when a video signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -297,7 +297,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Schedule stream. Starts or finished at the specified time.
+     * Scheduled stream starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -306,7 +306,7 @@ public final class StreamOuterClass {
     boolean hasSchedule();
     /**
      * <pre>
-     * Schedule stream. Starts or finished at the specified time.
+     * Scheduled stream starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -315,7 +315,7 @@ public final class StreamOuterClass {
     yandex.cloud.api.video.v1.StreamOuterClass.Schedule getSchedule();
     /**
      * <pre>
-     * Schedule stream. Starts or finished at the specified time.
+     * Scheduled stream starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -324,7 +324,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Time when stream was created.
+     * Timestamp when the stream was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -333,7 +333,7 @@ public final class StreamOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Time when stream was created.
+     * Timestamp when the stream was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -342,7 +342,7 @@ public final class StreamOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Time when stream was created.
+     * Timestamp when the stream was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -351,7 +351,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Time of last stream update.
+     * Timestamp of the last modification to the stream or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -360,7 +360,7 @@ public final class StreamOuterClass {
     boolean hasUpdatedAt();
     /**
      * <pre>
-     * Time of last stream update.
+     * Timestamp of the last modification to the stream or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -369,7 +369,7 @@ public final class StreamOuterClass {
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
      * <pre>
-     * Time of last stream update.
+     * Timestamp of the last modification to the stream or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -378,7 +378,10 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Used for organization, filtering, and metadata purposes.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -386,7 +389,10 @@ public final class StreamOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Used for organization, filtering, and metadata purposes.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -401,7 +407,10 @@ public final class StreamOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Used for organization, filtering, and metadata purposes.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -410,7 +419,10 @@ public final class StreamOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Used for organization, filtering, and metadata purposes.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -421,7 +433,10 @@ public final class StreamOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Used for organization, filtering, and metadata purposes.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -433,6 +448,11 @@ public final class StreamOuterClass {
     public yandex.cloud.api.video.v1.StreamOuterClass.Stream.StreamTypeCase getStreamTypeCase();
   }
   /**
+   * <pre>
+   * Entity representing a live video stream.
+   * A stream is a real-time video broadcast linked to a specific stream line.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.Stream}
    */
   public static final class Stream extends
@@ -692,7 +712,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Stream status.
+     * Current status of the stream.
      * </pre>
      *
      * Protobuf enum {@code yandex.cloud.video.v1.Stream.StreamStatus}
@@ -701,7 +721,7 @@ public final class StreamOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Stream status unspecified.
+       * The stream status is not specified.
        * </pre>
        *
        * <code>STREAM_STATUS_UNSPECIFIED = 0;</code>
@@ -709,7 +729,7 @@ public final class StreamOuterClass {
       STREAM_STATUS_UNSPECIFIED(0),
       /**
        * <pre>
-       * Stream offline.
+       * The stream is offline and not broadcasting.
        * </pre>
        *
        * <code>OFFLINE = 1;</code>
@@ -717,7 +737,7 @@ public final class StreamOuterClass {
       OFFLINE(1),
       /**
        * <pre>
-       * Preparing the infrastructure for receiving video signal.
+       * The system is preparing the infrastructure for receiving the video signal.
        * </pre>
        *
        * <code>PREPARING = 2;</code>
@@ -725,7 +745,7 @@ public final class StreamOuterClass {
       PREPARING(2),
       /**
        * <pre>
-       * Everything is ready to launch stream.
+       * The infrastructure is ready to launch the stream.
        * </pre>
        *
        * <code>READY = 3;</code>
@@ -733,7 +753,7 @@ public final class StreamOuterClass {
       READY(3),
       /**
        * <pre>
-       * Stream onair.
+       * The stream is currently broadcasting live.
        * </pre>
        *
        * <code>ONAIR = 4;</code>
@@ -741,7 +761,7 @@ public final class StreamOuterClass {
       ONAIR(4),
       /**
        * <pre>
-       * Stream finished.
+       * The stream has completed and is no longer broadcasting.
        * </pre>
        *
        * <code>FINISHED = 5;</code>
@@ -752,7 +772,7 @@ public final class StreamOuterClass {
 
       /**
        * <pre>
-       * Stream status unspecified.
+       * The stream status is not specified.
        * </pre>
        *
        * <code>STREAM_STATUS_UNSPECIFIED = 0;</code>
@@ -760,7 +780,7 @@ public final class StreamOuterClass {
       public static final int STREAM_STATUS_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Stream offline.
+       * The stream is offline and not broadcasting.
        * </pre>
        *
        * <code>OFFLINE = 1;</code>
@@ -768,7 +788,7 @@ public final class StreamOuterClass {
       public static final int OFFLINE_VALUE = 1;
       /**
        * <pre>
-       * Preparing the infrastructure for receiving video signal.
+       * The system is preparing the infrastructure for receiving the video signal.
        * </pre>
        *
        * <code>PREPARING = 2;</code>
@@ -776,7 +796,7 @@ public final class StreamOuterClass {
       public static final int PREPARING_VALUE = 2;
       /**
        * <pre>
-       * Everything is ready to launch stream.
+       * The infrastructure is ready to launch the stream.
        * </pre>
        *
        * <code>READY = 3;</code>
@@ -784,7 +804,7 @@ public final class StreamOuterClass {
       public static final int READY_VALUE = 3;
       /**
        * <pre>
-       * Stream onair.
+       * The stream is currently broadcasting live.
        * </pre>
        *
        * <code>ONAIR = 4;</code>
@@ -792,7 +812,7 @@ public final class StreamOuterClass {
       public static final int ONAIR_VALUE = 4;
       /**
        * <pre>
-       * Stream finished.
+       * The stream has completed and is no longer broadcasting.
        * </pre>
        *
        * <code>FINISHED = 5;</code>
@@ -931,7 +951,7 @@ public final class StreamOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the stream.
+     * Unique identifier of the stream.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -952,7 +972,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * ID of the stream.
+     * Unique identifier of the stream.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -977,7 +997,7 @@ public final class StreamOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel where the stream was created.
+     * Identifier of the channel where the stream is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -998,7 +1018,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel where the stream was created.
+     * Identifier of the channel where the stream is created and managed.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -1023,7 +1043,7 @@ public final class StreamOuterClass {
     private volatile java.lang.Object lineId_;
     /**
      * <pre>
-     * ID of the line to which stream is linked.
+     * Identifier of the stream line to which this stream is linked.
      * </pre>
      *
      * <code>string line_id = 3;</code>
@@ -1044,7 +1064,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * ID of the line to which stream is linked.
+     * Identifier of the stream line to which this stream is linked.
      * </pre>
      *
      * <code>string line_id = 3;</code>
@@ -1069,7 +1089,7 @@ public final class StreamOuterClass {
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Stream title.
+     * Title of the stream displayed in interfaces and players.
      * </pre>
      *
      * <code>string title = 4;</code>
@@ -1090,7 +1110,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Stream title.
+     * Title of the stream displayed in interfaces and players.
      * </pre>
      *
      * <code>string title = 4;</code>
@@ -1115,7 +1135,7 @@ public final class StreamOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Stream description.
+     * Detailed description of the stream content and context.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1136,7 +1156,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Stream description.
+     * Detailed description of the stream content and context.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1161,7 +1181,7 @@ public final class StreamOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * Identifier of the thumbnail image used to represent the stream visually.
      * </pre>
      *
      * <code>string thumbnail_id = 6;</code>
@@ -1182,7 +1202,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * Identifier of the thumbnail image used to represent the stream visually.
      * </pre>
      *
      * <code>string thumbnail_id = 6;</code>
@@ -1207,7 +1227,7 @@ public final class StreamOuterClass {
     private int status_;
     /**
      * <pre>
-     * Stream status.
+     * Current status of the stream.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Stream.StreamStatus status = 8;</code>
@@ -1218,7 +1238,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Stream status.
+     * Current status of the stream.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Stream.StreamStatus status = 8;</code>
@@ -1234,7 +1254,7 @@ public final class StreamOuterClass {
     private com.google.protobuf.Timestamp startTime_;
     /**
      * <pre>
-     * Stream start time.
+     * Timestamp when the stream was initiated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -1246,7 +1266,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Stream start time.
+     * Timestamp when the stream was initiated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -1258,7 +1278,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Stream start time.
+     * Timestamp when the stream was initiated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -1272,7 +1292,7 @@ public final class StreamOuterClass {
     private com.google.protobuf.Timestamp publishTime_;
     /**
      * <pre>
-     * Stream publish time. Time when stream switched to ONAIR status.
+     * Timestamp when the stream was published (switched to ONAIR status).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -1284,7 +1304,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Stream publish time. Time when stream switched to ONAIR status.
+     * Timestamp when the stream was published (switched to ONAIR status).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -1296,7 +1316,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Stream publish time. Time when stream switched to ONAIR status.
+     * Timestamp when the stream was published (switched to ONAIR status).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -1310,7 +1330,7 @@ public final class StreamOuterClass {
     private com.google.protobuf.Timestamp finishTime_;
     /**
      * <pre>
-     * Stream finish time.
+     * Timestamp when the stream was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -1322,7 +1342,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Stream finish time.
+     * Timestamp when the stream was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -1334,7 +1354,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Stream finish time.
+     * Timestamp when the stream was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -1348,8 +1368,8 @@ public final class StreamOuterClass {
     private com.google.protobuf.BoolValue autoPublish_;
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls automatic publishing of the stream when it's ready.
+     * When set to true, automatically switches status from READY to ONAIR.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -1361,8 +1381,8 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls automatic publishing of the stream when it's ready.
+     * When set to true, automatically switches status from READY to ONAIR.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -1374,8 +1394,8 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Automatically publish stream when ready.
-     * Switches status from READY to ONAIR.
+     * Controls automatic publishing of the stream when it's ready.
+     * When set to true, automatically switches status from READY to ONAIR.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -1388,7 +1408,7 @@ public final class StreamOuterClass {
     public static final int ON_DEMAND_FIELD_NUMBER = 1000;
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream starts immediately when a video signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -1400,7 +1420,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream starts immediately when a video signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -1415,7 +1435,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * On-demand stream. Starts immediately when a signal appears.
+     * On-demand stream starts immediately when a video signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -1431,7 +1451,7 @@ public final class StreamOuterClass {
     public static final int SCHEDULE_FIELD_NUMBER = 1001;
     /**
      * <pre>
-     * Schedule stream. Starts or finished at the specified time.
+     * Scheduled stream starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -1443,7 +1463,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Schedule stream. Starts or finished at the specified time.
+     * Scheduled stream starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -1458,7 +1478,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Schedule stream. Starts or finished at the specified time.
+     * Scheduled stream starts and finishes at specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -1475,7 +1495,7 @@ public final class StreamOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Time when stream was created.
+     * Timestamp when the stream was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1487,7 +1507,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Time when stream was created.
+     * Timestamp when the stream was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1499,7 +1519,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Time when stream was created.
+     * Timestamp when the stream was initially created in the system.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1513,7 +1533,7 @@ public final class StreamOuterClass {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <pre>
-     * Time of last stream update.
+     * Timestamp of the last modification to the stream or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1525,7 +1545,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Time of last stream update.
+     * Timestamp of the last modification to the stream or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1537,7 +1557,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Time of last stream update.
+     * Timestamp of the last modification to the stream or its metadata.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1575,7 +1595,10 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Used for organization, filtering, and metadata purposes.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -1597,7 +1620,10 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Used for organization, filtering, and metadata purposes.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -1609,7 +1635,10 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Used for organization, filtering, and metadata purposes.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -1626,7 +1655,10 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per stream.
+     * Used for organization, filtering, and metadata purposes.
+     * Labels can be used for organization, filtering, and metadata purposes.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -2016,6 +2048,11 @@ public final class StreamOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Entity representing a live video stream.
+     * A stream is a real-time video broadcast linked to a specific stream line.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.Stream}
      */
     public static final class Builder extends
@@ -2365,7 +2402,7 @@ public final class StreamOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the stream.
+       * Unique identifier of the stream.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2385,7 +2422,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * Unique identifier of the stream.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2406,7 +2443,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * Unique identifier of the stream.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2425,7 +2462,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * Unique identifier of the stream.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2439,7 +2476,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the stream.
+       * Unique identifier of the stream.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2461,7 +2498,7 @@ public final class StreamOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel where the stream was created.
+       * Identifier of the channel where the stream is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -2481,7 +2518,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the stream was created.
+       * Identifier of the channel where the stream is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -2502,7 +2539,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the stream was created.
+       * Identifier of the channel where the stream is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -2521,7 +2558,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the stream was created.
+       * Identifier of the channel where the stream is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -2535,7 +2572,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the stream was created.
+       * Identifier of the channel where the stream is created and managed.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -2557,7 +2594,7 @@ public final class StreamOuterClass {
       private java.lang.Object lineId_ = "";
       /**
        * <pre>
-       * ID of the line to which stream is linked.
+       * Identifier of the stream line to which this stream is linked.
        * </pre>
        *
        * <code>string line_id = 3;</code>
@@ -2577,7 +2614,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the line to which stream is linked.
+       * Identifier of the stream line to which this stream is linked.
        * </pre>
        *
        * <code>string line_id = 3;</code>
@@ -2598,7 +2635,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the line to which stream is linked.
+       * Identifier of the stream line to which this stream is linked.
        * </pre>
        *
        * <code>string line_id = 3;</code>
@@ -2617,7 +2654,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the line to which stream is linked.
+       * Identifier of the stream line to which this stream is linked.
        * </pre>
        *
        * <code>string line_id = 3;</code>
@@ -2631,7 +2668,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the line to which stream is linked.
+       * Identifier of the stream line to which this stream is linked.
        * </pre>
        *
        * <code>string line_id = 3;</code>
@@ -2653,7 +2690,7 @@ public final class StreamOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Stream title.
+       * Title of the stream displayed in interfaces and players.
        * </pre>
        *
        * <code>string title = 4;</code>
@@ -2673,7 +2710,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream title.
+       * Title of the stream displayed in interfaces and players.
        * </pre>
        *
        * <code>string title = 4;</code>
@@ -2694,7 +2731,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream title.
+       * Title of the stream displayed in interfaces and players.
        * </pre>
        *
        * <code>string title = 4;</code>
@@ -2713,7 +2750,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream title.
+       * Title of the stream displayed in interfaces and players.
        * </pre>
        *
        * <code>string title = 4;</code>
@@ -2727,7 +2764,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream title.
+       * Title of the stream displayed in interfaces and players.
        * </pre>
        *
        * <code>string title = 4;</code>
@@ -2749,7 +2786,7 @@ public final class StreamOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Stream description.
+       * Detailed description of the stream content and context.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2769,7 +2806,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream description.
+       * Detailed description of the stream content and context.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2790,7 +2827,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream description.
+       * Detailed description of the stream content and context.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2809,7 +2846,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream description.
+       * Detailed description of the stream content and context.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2823,7 +2860,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream description.
+       * Detailed description of the stream content and context.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2845,7 +2882,7 @@ public final class StreamOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * Identifier of the thumbnail image used to represent the stream visually.
        * </pre>
        *
        * <code>string thumbnail_id = 6;</code>
@@ -2865,7 +2902,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * Identifier of the thumbnail image used to represent the stream visually.
        * </pre>
        *
        * <code>string thumbnail_id = 6;</code>
@@ -2886,7 +2923,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * Identifier of the thumbnail image used to represent the stream visually.
        * </pre>
        *
        * <code>string thumbnail_id = 6;</code>
@@ -2905,7 +2942,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * Identifier of the thumbnail image used to represent the stream visually.
        * </pre>
        *
        * <code>string thumbnail_id = 6;</code>
@@ -2919,7 +2956,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * Identifier of the thumbnail image used to represent the stream visually.
        * </pre>
        *
        * <code>string thumbnail_id = 6;</code>
@@ -2941,7 +2978,7 @@ public final class StreamOuterClass {
       private int status_ = 0;
       /**
        * <pre>
-       * Stream status.
+       * Current status of the stream.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Stream.StreamStatus status = 8;</code>
@@ -2952,7 +2989,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream status.
+       * Current status of the stream.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Stream.StreamStatus status = 8;</code>
@@ -2967,7 +3004,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream status.
+       * Current status of the stream.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Stream.StreamStatus status = 8;</code>
@@ -2981,7 +3018,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream status.
+       * Current status of the stream.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Stream.StreamStatus status = 8;</code>
@@ -2999,7 +3036,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream status.
+       * Current status of the stream.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Stream.StreamStatus status = 8;</code>
@@ -3017,7 +3054,7 @@ public final class StreamOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
        * <pre>
-       * Stream start time.
+       * Timestamp when the stream was initiated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -3028,7 +3065,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream start time.
+       * Timestamp when the stream was initiated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -3043,7 +3080,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream start time.
+       * Timestamp when the stream was initiated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -3063,7 +3100,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream start time.
+       * Timestamp when the stream was initiated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -3081,7 +3118,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream start time.
+       * Timestamp when the stream was initiated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -3103,7 +3140,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream start time.
+       * Timestamp when the stream was initiated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -3121,7 +3158,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream start time.
+       * Timestamp when the stream was initiated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -3133,7 +3170,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream start time.
+       * Timestamp when the stream was initiated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -3148,7 +3185,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream start time.
+       * Timestamp when the stream was initiated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_time = 9;</code>
@@ -3172,7 +3209,7 @@ public final class StreamOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> publishTimeBuilder_;
       /**
        * <pre>
-       * Stream publish time. Time when stream switched to ONAIR status.
+       * Timestamp when the stream was published (switched to ONAIR status).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -3183,7 +3220,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream publish time. Time when stream switched to ONAIR status.
+       * Timestamp when the stream was published (switched to ONAIR status).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -3198,7 +3235,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream publish time. Time when stream switched to ONAIR status.
+       * Timestamp when the stream was published (switched to ONAIR status).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -3218,7 +3255,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream publish time. Time when stream switched to ONAIR status.
+       * Timestamp when the stream was published (switched to ONAIR status).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -3236,7 +3273,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream publish time. Time when stream switched to ONAIR status.
+       * Timestamp when the stream was published (switched to ONAIR status).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -3258,7 +3295,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream publish time. Time when stream switched to ONAIR status.
+       * Timestamp when the stream was published (switched to ONAIR status).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -3276,7 +3313,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream publish time. Time when stream switched to ONAIR status.
+       * Timestamp when the stream was published (switched to ONAIR status).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -3288,7 +3325,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream publish time. Time when stream switched to ONAIR status.
+       * Timestamp when the stream was published (switched to ONAIR status).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -3303,7 +3340,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream publish time. Time when stream switched to ONAIR status.
+       * Timestamp when the stream was published (switched to ONAIR status).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp publish_time = 10;</code>
@@ -3327,7 +3364,7 @@ public final class StreamOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishTimeBuilder_;
       /**
        * <pre>
-       * Stream finish time.
+       * Timestamp when the stream was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -3338,7 +3375,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream finish time.
+       * Timestamp when the stream was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -3353,7 +3390,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream finish time.
+       * Timestamp when the stream was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -3373,7 +3410,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream finish time.
+       * Timestamp when the stream was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -3391,7 +3428,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream finish time.
+       * Timestamp when the stream was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -3413,7 +3450,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream finish time.
+       * Timestamp when the stream was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -3431,7 +3468,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream finish time.
+       * Timestamp when the stream was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -3443,7 +3480,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream finish time.
+       * Timestamp when the stream was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -3458,7 +3495,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Stream finish time.
+       * Timestamp when the stream was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finish_time = 11;</code>
@@ -3482,8 +3519,8 @@ public final class StreamOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> autoPublishBuilder_;
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls automatic publishing of the stream when it's ready.
+       * When set to true, automatically switches status from READY to ONAIR.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -3494,8 +3531,8 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls automatic publishing of the stream when it's ready.
+       * When set to true, automatically switches status from READY to ONAIR.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -3510,8 +3547,8 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls automatic publishing of the stream when it's ready.
+       * When set to true, automatically switches status from READY to ONAIR.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -3531,8 +3568,8 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls automatic publishing of the stream when it's ready.
+       * When set to true, automatically switches status from READY to ONAIR.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -3550,8 +3587,8 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls automatic publishing of the stream when it's ready.
+       * When set to true, automatically switches status from READY to ONAIR.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -3573,8 +3610,8 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls automatic publishing of the stream when it's ready.
+       * When set to true, automatically switches status from READY to ONAIR.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -3592,8 +3629,8 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls automatic publishing of the stream when it's ready.
+       * When set to true, automatically switches status from READY to ONAIR.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -3605,8 +3642,8 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls automatic publishing of the stream when it's ready.
+       * When set to true, automatically switches status from READY to ONAIR.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -3621,8 +3658,8 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish stream when ready.
-       * Switches status from READY to ONAIR.
+       * Controls automatic publishing of the stream when it's ready.
+       * When set to true, automatically switches status from READY to ONAIR.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
@@ -3645,7 +3682,7 @@ public final class StreamOuterClass {
           yandex.cloud.api.video.v1.StreamOuterClass.OnDemand, yandex.cloud.api.video.v1.StreamOuterClass.OnDemand.Builder, yandex.cloud.api.video.v1.StreamOuterClass.OnDemandOrBuilder> onDemandBuilder_;
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream starts immediately when a video signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3657,7 +3694,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream starts immediately when a video signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3679,7 +3716,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream starts immediately when a video signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3699,7 +3736,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream starts immediately when a video signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3717,7 +3754,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream starts immediately when a video signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3743,7 +3780,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream starts immediately when a video signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3766,7 +3803,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream starts immediately when a video signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3776,7 +3813,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream starts immediately when a video signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3794,7 +3831,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On-demand stream. Starts immediately when a signal appears.
+       * On-demand stream starts immediately when a video signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3822,7 +3859,7 @@ public final class StreamOuterClass {
           yandex.cloud.api.video.v1.StreamOuterClass.Schedule, yandex.cloud.api.video.v1.StreamOuterClass.Schedule.Builder, yandex.cloud.api.video.v1.StreamOuterClass.ScheduleOrBuilder> scheduleBuilder_;
       /**
        * <pre>
-       * Schedule stream. Starts or finished at the specified time.
+       * Scheduled stream starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3834,7 +3871,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finished at the specified time.
+       * Scheduled stream starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3856,7 +3893,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finished at the specified time.
+       * Scheduled stream starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3876,7 +3913,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finished at the specified time.
+       * Scheduled stream starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3894,7 +3931,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finished at the specified time.
+       * Scheduled stream starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3920,7 +3957,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finished at the specified time.
+       * Scheduled stream starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3943,7 +3980,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finished at the specified time.
+       * Scheduled stream starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3953,7 +3990,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finished at the specified time.
+       * Scheduled stream starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3971,7 +4008,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Starts or finished at the specified time.
+       * Scheduled stream starts and finishes at specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -4000,7 +4037,7 @@ public final class StreamOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Time when stream was created.
+       * Timestamp when the stream was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4011,7 +4048,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time when stream was created.
+       * Timestamp when the stream was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4026,7 +4063,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time when stream was created.
+       * Timestamp when the stream was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4046,7 +4083,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time when stream was created.
+       * Timestamp when the stream was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4064,7 +4101,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time when stream was created.
+       * Timestamp when the stream was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4086,7 +4123,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time when stream was created.
+       * Timestamp when the stream was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4104,7 +4141,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time when stream was created.
+       * Timestamp when the stream was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4116,7 +4153,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time when stream was created.
+       * Timestamp when the stream was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4131,7 +4168,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time when stream was created.
+       * Timestamp when the stream was initially created in the system.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4155,7 +4192,7 @@ public final class StreamOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <pre>
-       * Time of last stream update.
+       * Timestamp of the last modification to the stream or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4166,7 +4203,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time of last stream update.
+       * Timestamp of the last modification to the stream or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4181,7 +4218,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time of last stream update.
+       * Timestamp of the last modification to the stream or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4201,7 +4238,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time of last stream update.
+       * Timestamp of the last modification to the stream or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4219,7 +4256,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time of last stream update.
+       * Timestamp of the last modification to the stream or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4241,7 +4278,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time of last stream update.
+       * Timestamp of the last modification to the stream or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4259,7 +4296,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time of last stream update.
+       * Timestamp of the last modification to the stream or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4271,7 +4308,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time of last stream update.
+       * Timestamp of the last modification to the stream or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4286,7 +4323,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Time of last stream update.
+       * Timestamp of the last modification to the stream or its metadata.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4333,7 +4370,10 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Used for organization, filtering, and metadata purposes.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -4355,7 +4395,10 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Used for organization, filtering, and metadata purposes.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -4367,7 +4410,10 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Used for organization, filtering, and metadata purposes.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -4384,7 +4430,10 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Used for organization, filtering, and metadata purposes.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -4409,7 +4458,10 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Used for organization, filtering, and metadata purposes.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -4432,7 +4484,10 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Used for organization, filtering, and metadata purposes.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -4451,7 +4506,10 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per stream.
+       * Used for organization, filtering, and metadata purposes.
+       * Labels can be used for organization, filtering, and metadata purposes.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200;</code>
@@ -4522,8 +4580,9 @@ public final class StreamOuterClass {
   }
   /**
    * <pre>
-   * On-demand stream type.
-   * This type of streams should be started and finished explicitly.
+   * Represents an on-demand stream type.
+   * This type of stream must be started and finished explicitly by the user.
+   * It begins broadcasting immediately when a video signal is detected.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.OnDemand}
@@ -4748,8 +4807,9 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * On-demand stream type.
-     * This type of streams should be started and finished explicitly.
+     * Represents an on-demand stream type.
+     * This type of stream must be started and finished explicitly by the user.
+     * It begins broadcasting immediately when a video signal is detected.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.OnDemand}
@@ -4949,39 +5009,63 @@ public final class StreamOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
      * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
      * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2;</code>
      * @return Whether the finishTime field is set.
      */
     boolean hasFinishTime();
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2;</code>
      * @return The finishTime.
      */
     com.google.protobuf.Timestamp getFinishTime();
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder();
   }
   /**
    * <pre>
-   * Schedule stream type.
-   * This type of streams start and finish automatically at the specified time.
+   * Represents a scheduled stream type.
+   * This type of stream starts and finishes automatically at specified time.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.Schedule}
@@ -5089,6 +5173,10 @@ public final class StreamOuterClass {
     public static final int START_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp startTime_;
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
      * @return Whether the startTime field is set.
      */
@@ -5097,6 +5185,10 @@ public final class StreamOuterClass {
       return startTime_ != null;
     }
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
      * @return The startTime.
      */
@@ -5105,6 +5197,10 @@ public final class StreamOuterClass {
       return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically start.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
      */
     @java.lang.Override
@@ -5115,6 +5211,10 @@ public final class StreamOuterClass {
     public static final int FINISH_TIME_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp finishTime_;
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2;</code>
      * @return Whether the finishTime field is set.
      */
@@ -5123,6 +5223,10 @@ public final class StreamOuterClass {
       return finishTime_ != null;
     }
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2;</code>
      * @return The finishTime.
      */
@@ -5131,6 +5235,10 @@ public final class StreamOuterClass {
       return finishTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishTime_;
     }
     /**
+     * <pre>
+     * Scheduled time when the stream should automatically finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 2;</code>
      */
     @java.lang.Override
@@ -5316,8 +5424,8 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Schedule stream type.
-     * This type of streams start and finish automatically at the specified time.
+     * Represents a scheduled stream type.
+     * This type of stream starts and finishes automatically at specified time.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.Schedule}
@@ -5492,6 +5600,10 @@ public final class StreamOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
        * @return Whether the startTime field is set.
        */
@@ -5499,6 +5611,10 @@ public final class StreamOuterClass {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
        * @return The startTime.
        */
@@ -5510,6 +5626,10 @@ public final class StreamOuterClass {
         }
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
        */
       public Builder setStartTime(com.google.protobuf.Timestamp value) {
@@ -5526,6 +5646,10 @@ public final class StreamOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
        */
       public Builder setStartTime(
@@ -5540,6 +5664,10 @@ public final class StreamOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
        */
       public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
@@ -5558,6 +5686,10 @@ public final class StreamOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
        */
       public Builder clearStartTime() {
@@ -5572,6 +5704,10 @@ public final class StreamOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
@@ -5580,6 +5716,10 @@ public final class StreamOuterClass {
         return getStartTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
@@ -5591,6 +5731,10 @@ public final class StreamOuterClass {
         }
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically start.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5611,6 +5755,10 @@ public final class StreamOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishTimeBuilder_;
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2;</code>
        * @return Whether the finishTime field is set.
        */
@@ -5618,6 +5766,10 @@ public final class StreamOuterClass {
         return finishTimeBuilder_ != null || finishTime_ != null;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2;</code>
        * @return The finishTime.
        */
@@ -5629,6 +5781,10 @@ public final class StreamOuterClass {
         }
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2;</code>
        */
       public Builder setFinishTime(com.google.protobuf.Timestamp value) {
@@ -5645,6 +5801,10 @@ public final class StreamOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2;</code>
        */
       public Builder setFinishTime(
@@ -5659,6 +5819,10 @@ public final class StreamOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2;</code>
        */
       public Builder mergeFinishTime(com.google.protobuf.Timestamp value) {
@@ -5677,6 +5841,10 @@ public final class StreamOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2;</code>
        */
       public Builder clearFinishTime() {
@@ -5691,6 +5859,10 @@ public final class StreamOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getFinishTimeBuilder() {
@@ -5699,6 +5871,10 @@ public final class StreamOuterClass {
         return getFinishTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
@@ -5710,6 +5886,10 @@ public final class StreamOuterClass {
         }
       }
       /**
+       * <pre>
+       * Scheduled time when the stream should automatically finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

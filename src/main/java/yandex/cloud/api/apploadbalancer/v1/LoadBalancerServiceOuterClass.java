@@ -41783,6 +41783,3837 @@ public final class LoadBalancerServiceOuterClass {
 
   }
 
+  public interface DisableZonesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.DisableZonesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the application load balancer to disable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
+     */
+    java.lang.String getLoadBalancerId();
+    /**
+     * <pre>
+     * ID of the application load balancer to disable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
+     */
+    com.google.protobuf.ByteString
+        getLoadBalancerIdBytes();
+
+    /**
+     * <pre>
+     * Zone IDs to disable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * Zone IDs to disable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * Zone IDs to disable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * Zone IDs to disable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DisableZonesRequest}
+   */
+  public static final class DisableZonesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.DisableZonesRequest)
+      DisableZonesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DisableZonesRequest.newBuilder() to construct.
+    private DisableZonesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DisableZonesRequest() {
+      loadBalancerId_ = "";
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DisableZonesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DisableZonesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              loadBalancerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (duration_ != null) {
+                subBuilder = duration_.toBuilder();
+              }
+              duration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(duration_);
+                duration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest.Builder.class);
+    }
+
+    public static final int LOAD_BALANCER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object loadBalancerId_;
+    /**
+     * <pre>
+     * ID of the application load balancer to disable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
+     */
+    @java.lang.Override
+    public java.lang.String getLoadBalancerId() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        loadBalancerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the application load balancer to disable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLoadBalancerIdBytes() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        loadBalancerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZONE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * Zone IDs to disable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * Zone IDs to disable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * Zone IDs to disable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Zone IDs to disable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return getDuration();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
+      }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, zoneIds_.getRaw(i));
+      }
+      if (duration_ != null) {
+        output.writeMessage(3, getDuration());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDuration());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest) obj;
+
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOAD_BALANCER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLoadBalancerId().hashCode();
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DisableZonesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.DisableZonesRequest)
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        loadBalancerId_ = "";
+
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (durationBuilder_ == null) {
+          duration_ = null;
+        } else {
+          duration_ = null;
+          durationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest build() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.loadBalancerId_ = loadBalancerId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneIds_ = zoneIds_;
+        if (durationBuilder_ == null) {
+          result.duration_ = duration_;
+        } else {
+          result.duration_ = durationBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest.getDefaultInstance()) return this;
+        if (!other.getLoadBalancerId().isEmpty()) {
+          loadBalancerId_ = other.loadBalancerId_;
+          onChanged();
+        }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object loadBalancerId_ = "";
+      /**
+       * <pre>
+       * ID of the application load balancer to disable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
+       */
+      public java.lang.String getLoadBalancerId() {
+        java.lang.Object ref = loadBalancerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loadBalancerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to disable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
+       */
+      public com.google.protobuf.ByteString
+          getLoadBalancerIdBytes() {
+        java.lang.Object ref = loadBalancerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loadBalancerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to disable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to disable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoadBalancerId() {
+        
+        loadBalancerId_ = getDefaultInstance().getLoadBalancerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to disable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return durationBuilder_ != null || duration_ != null;
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (duration_ != null) {
+            duration_ =
+              com.google.protobuf.Duration.newBuilder(duration_).mergeFrom(value).buildPartial();
+          } else {
+            duration_ = value;
+          }
+          onChanged();
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public Builder clearDuration() {
+        if (durationBuilder_ == null) {
+          duration_ = null;
+          onChanged();
+        } else {
+          duration_ = null;
+          durationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled (1m-72h). If not set then until EnableZones call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.DisableZonesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.DisableZonesRequest)
+    private static final yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DisableZonesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DisableZonesRequest>() {
+      @java.lang.Override
+      public DisableZonesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DisableZonesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DisableZonesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DisableZonesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DisableZonesMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.DisableZonesMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the application load balancer to disable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
+     */
+    java.lang.String getLoadBalancerId();
+    /**
+     * <pre>
+     * ID of the application load balancer to disable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
+     */
+    com.google.protobuf.ByteString
+        getLoadBalancerIdBytes();
+
+    /**
+     * <pre>
+     * Zone IDs where traffic was disabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * Zone IDs where traffic was disabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * Zone IDs where traffic was disabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * Zone IDs where traffic was disabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DisableZonesMetadata}
+   */
+  public static final class DisableZonesMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.DisableZonesMetadata)
+      DisableZonesMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DisableZonesMetadata.newBuilder() to construct.
+    private DisableZonesMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DisableZonesMetadata() {
+      loadBalancerId_ = "";
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DisableZonesMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DisableZonesMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              loadBalancerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata.Builder.class);
+    }
+
+    public static final int LOAD_BALANCER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object loadBalancerId_;
+    /**
+     * <pre>
+     * ID of the application load balancer to disable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
+     */
+    @java.lang.Override
+    public java.lang.String getLoadBalancerId() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        loadBalancerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the application load balancer to disable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLoadBalancerIdBytes() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        loadBalancerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZONE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * Zone IDs where traffic was disabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * Zone IDs where traffic was disabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * Zone IDs where traffic was disabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Zone IDs where traffic was disabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
+      }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, zoneIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata) obj;
+
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOAD_BALANCER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLoadBalancerId().hashCode();
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DisableZonesMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.DisableZonesMetadata)
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        loadBalancerId_ = "";
+
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata build() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata(this);
+        int from_bitField0_ = bitField0_;
+        result.loadBalancerId_ = loadBalancerId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneIds_ = zoneIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata.getDefaultInstance()) return this;
+        if (!other.getLoadBalancerId().isEmpty()) {
+          loadBalancerId_ = other.loadBalancerId_;
+          onChanged();
+        }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object loadBalancerId_ = "";
+      /**
+       * <pre>
+       * ID of the application load balancer to disable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
+       */
+      public java.lang.String getLoadBalancerId() {
+        java.lang.Object ref = loadBalancerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loadBalancerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to disable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
+       */
+      public com.google.protobuf.ByteString
+          getLoadBalancerIdBytes() {
+        java.lang.Object ref = loadBalancerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loadBalancerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to disable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to disable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoadBalancerId() {
+        
+        loadBalancerId_ = getDefaultInstance().getLoadBalancerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to disable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was disabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was disabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was disabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was disabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was disabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was disabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was disabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was disabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was disabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.DisableZonesMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.DisableZonesMetadata)
+    private static final yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DisableZonesMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DisableZonesMetadata>() {
+      @java.lang.Override
+      public DisableZonesMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DisableZonesMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DisableZonesMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DisableZonesMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DisableZonesMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnableZonesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.EnableZonesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the application load balancer to enable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
+     */
+    java.lang.String getLoadBalancerId();
+    /**
+     * <pre>
+     * ID of the application load balancer to enable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
+     */
+    com.google.protobuf.ByteString
+        getLoadBalancerIdBytes();
+
+    /**
+     * <pre>
+     * Zone IDs to enable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * Zone IDs to enable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * Zone IDs to enable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * Zone IDs to enable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.EnableZonesRequest}
+   */
+  public static final class EnableZonesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.EnableZonesRequest)
+      EnableZonesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnableZonesRequest.newBuilder() to construct.
+    private EnableZonesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnableZonesRequest() {
+      loadBalancerId_ = "";
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnableZonesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnableZonesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              loadBalancerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest.Builder.class);
+    }
+
+    public static final int LOAD_BALANCER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object loadBalancerId_;
+    /**
+     * <pre>
+     * ID of the application load balancer to enable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
+     */
+    @java.lang.Override
+    public java.lang.String getLoadBalancerId() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        loadBalancerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the application load balancer to enable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLoadBalancerIdBytes() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        loadBalancerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZONE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * Zone IDs to enable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * Zone IDs to enable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * Zone IDs to enable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Zone IDs to enable traffic.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
+      }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, zoneIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest) obj;
+
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOAD_BALANCER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLoadBalancerId().hashCode();
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.EnableZonesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.EnableZonesRequest)
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        loadBalancerId_ = "";
+
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest build() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.loadBalancerId_ = loadBalancerId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneIds_ = zoneIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest.getDefaultInstance()) return this;
+        if (!other.getLoadBalancerId().isEmpty()) {
+          loadBalancerId_ = other.loadBalancerId_;
+          onChanged();
+        }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object loadBalancerId_ = "";
+      /**
+       * <pre>
+       * ID of the application load balancer to enable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
+       */
+      public java.lang.String getLoadBalancerId() {
+        java.lang.Object ref = loadBalancerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loadBalancerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to enable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
+       */
+      public com.google.protobuf.ByteString
+          getLoadBalancerIdBytes() {
+        java.lang.Object ref = loadBalancerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loadBalancerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to enable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to enable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoadBalancerId() {
+        
+        loadBalancerId_ = getDefaultInstance().getLoadBalancerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to enable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable traffic.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.EnableZonesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.EnableZonesRequest)
+    private static final yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnableZonesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<EnableZonesRequest>() {
+      @java.lang.Override
+      public EnableZonesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnableZonesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnableZonesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnableZonesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnableZonesMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.EnableZonesMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the application load balancer to enable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
+     */
+    java.lang.String getLoadBalancerId();
+    /**
+     * <pre>
+     * ID of the application load balancer to enable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
+     */
+    com.google.protobuf.ByteString
+        getLoadBalancerIdBytes();
+
+    /**
+     * <pre>
+     * Zone IDs where traffic was enabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * Zone IDs where traffic was enabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * Zone IDs where traffic was enabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * Zone IDs where traffic was enabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.EnableZonesMetadata}
+   */
+  public static final class EnableZonesMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.EnableZonesMetadata)
+      EnableZonesMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnableZonesMetadata.newBuilder() to construct.
+    private EnableZonesMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnableZonesMetadata() {
+      loadBalancerId_ = "";
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnableZonesMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnableZonesMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              loadBalancerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata.Builder.class);
+    }
+
+    public static final int LOAD_BALANCER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object loadBalancerId_;
+    /**
+     * <pre>
+     * ID of the application load balancer to enable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
+     */
+    @java.lang.Override
+    public java.lang.String getLoadBalancerId() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        loadBalancerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the application load balancer to enable traffic in zones.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLoadBalancerIdBytes() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        loadBalancerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZONE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * Zone IDs where traffic was enabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * Zone IDs where traffic was enabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * Zone IDs where traffic was enabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Zone IDs where traffic was enabled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
+      }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, zoneIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata) obj;
+
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOAD_BALANCER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLoadBalancerId().hashCode();
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.EnableZonesMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.EnableZonesMetadata)
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        loadBalancerId_ = "";
+
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata build() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata(this);
+        int from_bitField0_ = bitField0_;
+        result.loadBalancerId_ = loadBalancerId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneIds_ = zoneIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata.getDefaultInstance()) return this;
+        if (!other.getLoadBalancerId().isEmpty()) {
+          loadBalancerId_ = other.loadBalancerId_;
+          onChanged();
+        }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object loadBalancerId_ = "";
+      /**
+       * <pre>
+       * ID of the application load balancer to enable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
+       */
+      public java.lang.String getLoadBalancerId() {
+        java.lang.Object ref = loadBalancerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loadBalancerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to enable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
+       */
+      public com.google.protobuf.ByteString
+          getLoadBalancerIdBytes() {
+        java.lang.Object ref = loadBalancerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loadBalancerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to enable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to enable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoadBalancerId() {
+        
+        loadBalancerId_ = getDefaultInstance().getLoadBalancerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to enable traffic in zones.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was enabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was enabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was enabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was enabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was enabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was enabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was enabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was enabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where traffic was enabled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.EnableZonesMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.EnableZonesMetadata)
+    private static final yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnableZonesMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<EnableZonesMetadata>() {
+      @java.lang.Override
+      public EnableZonesMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnableZonesMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnableZonesMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnableZonesMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EnableZonesMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_apploadbalancer_v1_GetLoadBalancerRequest_descriptor;
   private static final 
@@ -41988,6 +45819,26 @@ public final class LoadBalancerServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -42000,253 +45851,275 @@ public final class LoadBalancerServiceOuterClass {
       "\n;yandex/cloud/apploadbalancer/v1/load_b" +
       "alancer_service.proto\022\037yandex.cloud.appl" +
       "oadbalancer.v1\032\034google/api/annotations.p" +
-      "roto\032 google/protobuf/field_mask.proto\032 " +
-      "yandex/cloud/api/operation.proto\032&yandex" +
-      "/cloud/operation/operation.proto\0323yandex" +
-      "/cloud/apploadbalancer/v1/load_balancer." +
-      "proto\032-yandex/cloud/apploadbalancer/v1/l" +
-      "ogging.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"8\n\026GetLoadBalancerRequest\022\036\n\020load_ba" +
-      "lancer_id\030\001 \001(\tB\004\350\3071\001\"\215\001\n\030ListLoadBalanc" +
-      "ersRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tp" +
-      "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
-      "\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<" +
-      "=1000\"{\n\031ListLoadBalancersResponse\022E\n\016lo" +
-      "ad_balancers\030\001 \003(\0132-.yandex.cloud.apploa" +
-      "dbalancer.v1.LoadBalancer\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\";\n\031DeleteLoadBalancerRequest\022" +
-      "\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\"6\n\032Delet" +
-      "eLoadBalancerMetadata\022\030\n\020load_balancer_i" +
-      "d\030\001 \001(\t\"\356\005\n\031UpdateLoadBalancerRequest\022\036\n" +
-      "\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_" +
-      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\0224" +
-      "\n\004name\030\003 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}" +
-      "[a-z0-9])?)?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<" +
-      "=256\022\237\001\n\006labels\030\005 \003(\0132F.yandex.cloud.app" +
-      "loadbalancer.v1.UpdateLoadBalancerReques" +
-      "t.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./" +
-      "\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-" +
-      "9a-z]*\022E\n\016listener_specs\030\006 \003(\0132-.yandex." +
-      "cloud.apploadbalancer.v1.ListenerSpec\022L\n" +
-      "\021allocation_policy\030\007 \001(\01321.yandex.cloud." +
-      "apploadbalancer.v1.AllocationPolicy\022\032\n\022s" +
-      "ecurity_group_ids\030\010 \003(\t\022K\n\021auto_scale_po" +
-      "licy\030\t \001(\01320.yandex.cloud.apploadbalance" +
-      "r.v1.AutoScalePolicy\022@\n\013log_options\030\n \001(" +
-      "\0132+.yandex.cloud.apploadbalancer.v1.LogO" +
-      "ptions\022\031\n\021allow_zonal_shift\030\013 \001(\010\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\"6\n\032UpdateLoadBalancerMetadata\022\030\n\020load_b" +
-      "alancer_id\030\001 \001(\t\"\351\005\n\031CreateLoadBalancerR" +
-      "equest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030" +
-      "\002 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9" +
-      "])?)?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\237\001" +
-      "\n\006labels\030\004 \003(\0132F.yandex.cloud.apploadbal" +
-      "ancer.v1.CreateLoadBalancerRequest.Label" +
-      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
-      "\027\n\tregion_id\030\005 \001(\tB\004\350\3071\001\022\030\n\nnetwork_id\030\006" +
-      " \001(\tB\004\350\3071\001\022E\n\016listener_specs\030\007 \003(\0132-.yan" +
-      "dex.cloud.apploadbalancer.v1.ListenerSpe" +
-      "c\022L\n\021allocation_policy\030\010 \001(\01321.yandex.cl" +
-      "oud.apploadbalancer.v1.AllocationPolicy\022" +
-      "\032\n\022security_group_ids\030\t \003(\t\022K\n\021auto_scal" +
-      "e_policy\030\n \001(\01320.yandex.cloud.apploadbal" +
-      "ancer.v1.AutoScalePolicy\022@\n\013log_options\030" +
-      "\013 \001(\0132+.yandex.cloud.apploadbalancer.v1." +
-      "LogOptions\022\031\n\021allow_zonal_shift\030\014 \001(\010\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"6\n\032CreateLoadBalancerMetadata\022\030\n\020lo" +
-      "ad_balancer_id\030\001 \001(\t\":\n\030StartLoadBalance" +
-      "rRequest\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001" +
-      "\"5\n\031StartLoadBalancerMetadata\022\030\n\020load_ba" +
-      "lancer_id\030\001 \001(\t\"9\n\027StopLoadBalancerReque" +
-      "st\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\"4\n\030St" +
-      "opLoadBalancerMetadata\022\030\n\020load_balancer_" +
-      "id\030\001 \001(\t\"\200\001\n\022AddListenerRequest\022\036\n\020load_" +
-      "balancer_id\030\001 \001(\tB\004\350\3071\001\022J\n\rlistener_spec" +
-      "\030\002 \001(\0132-.yandex.cloud.apploadbalancer.v1" +
-      ".ListenerSpecB\004\350\3071\001\"F\n\023AddListenerMetada" +
-      "ta\022\030\n\020load_balancer_id\030\001 \001(\t\022\025\n\rlistener" +
-      "_name\030\002 \001(\t\"K\n\025RemoveListenerRequest\022\036\n\020" +
-      "load_balancer_id\030\001 \001(\tB\004\350\3071\001\022\022\n\004name\030\002 \001" +
-      "(\tB\004\350\3071\001\"I\n\026RemoveListenerMetadata\022\030\n\020lo" +
-      "ad_balancer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 " +
-      "\001(\t\"\264\001\n\025UpdateListenerRequest\022\036\n\020load_ba" +
+      "roto\032\036google/protobuf/duration.proto\032 go" +
+      "ogle/protobuf/field_mask.proto\032 yandex/c" +
+      "loud/api/operation.proto\032&yandex/cloud/o" +
+      "peration/operation.proto\0323yandex/cloud/a" +
+      "pploadbalancer/v1/load_balancer.proto\032-y" +
+      "andex/cloud/apploadbalancer/v1/logging.p" +
+      "roto\032\035yandex/cloud/validation.proto\"8\n\026G" +
+      "etLoadBalancerRequest\022\036\n\020load_balancer_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\"\215\001\n\030ListLoadBalancersReque" +
+      "st\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
+      "\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"{\n" +
+      "\031ListLoadBalancersResponse\022E\n\016load_balan" +
+      "cers\030\001 \003(\0132-.yandex.cloud.apploadbalance" +
+      "r.v1.LoadBalancer\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\";\n\031DeleteLoadBalancerRequest\022\036\n\020load_" +
+      "balancer_id\030\001 \001(\tB\004\350\3071\001\"6\n\032DeleteLoadBal" +
+      "ancerMetadata\022\030\n\020load_balancer_id\030\001 \001(\t\"" +
+      "\356\005\n\031UpdateLoadBalancerRequest\022\036\n\020load_ba" +
       "lancer_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001" +
-      "(\0132\032.google.protobuf.FieldMask\022J\n\rlisten" +
-      "er_spec\030\003 \001(\0132-.yandex.cloud.apploadbala" +
-      "ncer.v1.ListenerSpecB\004\350\3071\001\"I\n\026UpdateList" +
-      "enerMetadata\022\030\n\020load_balancer_id\030\001 \001(\t\022\025" +
-      "\n\rlistener_name\030\002 \001(\t\"\303\002\n\013AddressSpec\022^\n" +
-      "\032external_ipv4_address_spec\030\001 \001(\01328.yand" +
-      "ex.cloud.apploadbalancer.v1.ExternalIpv4" +
-      "AddressSpecH\000\022^\n\032internal_ipv4_address_s" +
-      "pec\030\002 \001(\01328.yandex.cloud.apploadbalancer" +
-      ".v1.InternalIpv4AddressSpecH\000\022^\n\032externa" +
-      "l_ipv6_address_spec\030\003 \001(\01328.yandex.cloud" +
-      ".apploadbalancer.v1.ExternalIpv6AddressS" +
-      "pecH\000B\024\n\014address_spec\022\004\300\3011\001\"*\n\027ExternalI" +
-      "pv4AddressSpec\022\017\n\007address\030\001 \001(\t\"=\n\027Inter" +
-      "nalIpv4AddressSpec\022\017\n\007address\030\001 \001(\t\022\021\n\ts" +
-      "ubnet_id\030\002 \001(\t\"*\n\027ExternalIpv6AddressSpe" +
-      "c\022\017\n\007address\030\001 \001(\t\"}\n\014EndpointSpec\022K\n\rad" +
-      "dress_specs\030\001 \003(\0132,.yandex.cloud.appload" +
-      "balancer.v1.AddressSpecB\006\202\3101\002>0\022 \n\005ports" +
-      "\030\002 \003(\003B\021\202\3101\002>0\372\3071\0071-65535\"\345\002\n\014ListenerSp" +
-      "ec\0225\n\004name\030\001 \001(\tB\'\350\3071\001\362\3071\037[a-z]([-a-z0-9" +
-      "]{0,61}[a-z0-9])?\022M\n\016endpoint_specs\030\002 \003(" +
-      "\0132-.yandex.cloud.apploadbalancer.v1.Endp" +
-      "ointSpecB\006\202\3101\002>0\022=\n\004http\030\003 \001(\0132-.yandex." +
-      "cloud.apploadbalancer.v1.HttpListenerH\000\022" +
-      ";\n\003tls\030\004 \001(\0132,.yandex.cloud.apploadbalan" +
-      "cer.v1.TlsListenerH\000\022A\n\006stream\030\005 \001(\0132/.y" +
-      "andex.cloud.apploadbalancer.v1.StreamLis" +
-      "tenerH\000B\020\n\010listener\022\004\300\3011\001\"w\n\026GetTargetSt" +
-      "atesRequest\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022\036\n\020backend_group_id\030\002 \001(\tB\004\350\3071\001\022\035\n\017t" +
-      "arget_group_id\030\003 \001(\tB\004\350\3071\001\"^\n\027GetTargetS" +
-      "tatesResponse\022C\n\rtarget_states\030\001 \003(\0132,.y" +
-      "andex.cloud.apploadbalancer.v1.TargetSta" +
-      "te\"\307\001\n\022AddSniMatchRequest\022\036\n\020load_balanc" +
-      "er_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rlistener_name\030\002 \001(\t" +
-      "B\004\350\3071\001\022\022\n\004name\030\003 \001(\tB\004\350\3071\001\022\034\n\014server_nam" +
-      "es\030\004 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\005 \001(\0132+.yand" +
-      "ex.cloud.apploadbalancer.v1.TlsHandlerB\004" +
-      "\350\3071\001\"^\n\023AddSniMatchMetadata\022\030\n\020load_bala" +
+      "(\0132\032.google.protobuf.FieldMask\0224\n\004name\030\003" +
+      " \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9]" +
+      ")?)?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\237\001\n" +
+      "\006labels\030\005 \003(\0132F.yandex.cloud.apploadbala" +
+      "ncer.v1.UpdateLoadBalancerRequest.Labels" +
+      "EntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z" +
+      "]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022E" +
+      "\n\016listener_specs\030\006 \003(\0132-.yandex.cloud.ap" +
+      "ploadbalancer.v1.ListenerSpec\022L\n\021allocat" +
+      "ion_policy\030\007 \001(\01321.yandex.cloud.apploadb" +
+      "alancer.v1.AllocationPolicy\022\032\n\022security_" +
+      "group_ids\030\010 \003(\t\022K\n\021auto_scale_policy\030\t \001" +
+      "(\01320.yandex.cloud.apploadbalancer.v1.Aut" +
+      "oScalePolicy\022@\n\013log_options\030\n \001(\0132+.yand" +
+      "ex.cloud.apploadbalancer.v1.LogOptions\022\031" +
+      "\n\021allow_zonal_shift\030\013 \001(\010\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"6\n\032Upda" +
+      "teLoadBalancerMetadata\022\030\n\020load_balancer_" +
+      "id\030\001 \001(\t\"\351\005\n\031CreateLoadBalancerRequest\022\027" +
+      "\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002 \001(\tB&\362" +
+      "\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?\022\036\n" +
+      "\013description\030\003 \001(\tB\t\212\3101\005<=256\022\237\001\n\006labels" +
+      "\030\004 \003(\0132F.yandex.cloud.apploadbalancer.v1" +
+      ".CreateLoadBalancerRequest.LabelsEntryBG" +
+      "\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032" +
+      "\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\027\n\tregio" +
+      "n_id\030\005 \001(\tB\004\350\3071\001\022\030\n\nnetwork_id\030\006 \001(\tB\004\350\307" +
+      "1\001\022E\n\016listener_specs\030\007 \003(\0132-.yandex.clou" +
+      "d.apploadbalancer.v1.ListenerSpec\022L\n\021all" +
+      "ocation_policy\030\010 \001(\01321.yandex.cloud.appl" +
+      "oadbalancer.v1.AllocationPolicy\022\032\n\022secur" +
+      "ity_group_ids\030\t \003(\t\022K\n\021auto_scale_policy" +
+      "\030\n \001(\01320.yandex.cloud.apploadbalancer.v1" +
+      ".AutoScalePolicy\022@\n\013log_options\030\013 \001(\0132+." +
+      "yandex.cloud.apploadbalancer.v1.LogOptio" +
+      "ns\022\031\n\021allow_zonal_shift\030\014 \001(\010\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"6\n\032" +
+      "CreateLoadBalancerMetadata\022\030\n\020load_balan" +
+      "cer_id\030\001 \001(\t\":\n\030StartLoadBalancerRequest" +
+      "\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\"5\n\031Star" +
+      "tLoadBalancerMetadata\022\030\n\020load_balancer_i" +
+      "d\030\001 \001(\t\"9\n\027StopLoadBalancerRequest\022\036\n\020lo" +
+      "ad_balancer_id\030\001 \001(\tB\004\350\3071\001\"4\n\030StopLoadBa" +
+      "lancerMetadata\022\030\n\020load_balancer_id\030\001 \001(\t" +
+      "\"\200\001\n\022AddListenerRequest\022\036\n\020load_balancer" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022J\n\rlistener_spec\030\002 \001(\0132-" +
+      ".yandex.cloud.apploadbalancer.v1.Listene" +
+      "rSpecB\004\350\3071\001\"F\n\023AddListenerMetadata\022\030\n\020lo" +
+      "ad_balancer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 " +
+      "\001(\t\"K\n\025RemoveListenerRequest\022\036\n\020load_bal" +
+      "ancer_id\030\001 \001(\tB\004\350\3071\001\022\022\n\004name\030\002 \001(\tB\004\350\3071\001" +
+      "\"I\n\026RemoveListenerMetadata\022\030\n\020load_balan" +
+      "cer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\"\264\001\n\025" +
+      "UpdateListenerRequest\022\036\n\020load_balancer_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMask\022J\n\rlistener_spec\030" +
+      "\003 \001(\0132-.yandex.cloud.apploadbalancer.v1." +
+      "ListenerSpecB\004\350\3071\001\"I\n\026UpdateListenerMeta" +
+      "data\022\030\n\020load_balancer_id\030\001 \001(\t\022\025\n\rlisten" +
+      "er_name\030\002 \001(\t\"\303\002\n\013AddressSpec\022^\n\032externa" +
+      "l_ipv4_address_spec\030\001 \001(\01328.yandex.cloud" +
+      ".apploadbalancer.v1.ExternalIpv4AddressS" +
+      "pecH\000\022^\n\032internal_ipv4_address_spec\030\002 \001(" +
+      "\01328.yandex.cloud.apploadbalancer.v1.Inte" +
+      "rnalIpv4AddressSpecH\000\022^\n\032external_ipv6_a" +
+      "ddress_spec\030\003 \001(\01328.yandex.cloud.appload" +
+      "balancer.v1.ExternalIpv6AddressSpecH\000B\024\n" +
+      "\014address_spec\022\004\300\3011\001\"*\n\027ExternalIpv4Addre" +
+      "ssSpec\022\017\n\007address\030\001 \001(\t\"=\n\027InternalIpv4A" +
+      "ddressSpec\022\017\n\007address\030\001 \001(\t\022\021\n\tsubnet_id" +
+      "\030\002 \001(\t\"*\n\027ExternalIpv6AddressSpec\022\017\n\007add" +
+      "ress\030\001 \001(\t\"}\n\014EndpointSpec\022K\n\raddress_sp" +
+      "ecs\030\001 \003(\0132,.yandex.cloud.apploadbalancer" +
+      ".v1.AddressSpecB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021" +
+      "\202\3101\002>0\372\3071\0071-65535\"\345\002\n\014ListenerSpec\0225\n\004na" +
+      "me\030\001 \001(\tB\'\350\3071\001\362\3071\037[a-z]([-a-z0-9]{0,61}[" +
+      "a-z0-9])?\022M\n\016endpoint_specs\030\002 \003(\0132-.yand" +
+      "ex.cloud.apploadbalancer.v1.EndpointSpec" +
+      "B\006\202\3101\002>0\022=\n\004http\030\003 \001(\0132-.yandex.cloud.ap" +
+      "ploadbalancer.v1.HttpListenerH\000\022;\n\003tls\030\004" +
+      " \001(\0132,.yandex.cloud.apploadbalancer.v1.T" +
+      "lsListenerH\000\022A\n\006stream\030\005 \001(\0132/.yandex.cl" +
+      "oud.apploadbalancer.v1.StreamListenerH\000B" +
+      "\020\n\010listener\022\004\300\3011\001\"w\n\026GetTargetStatesRequ" +
+      "est\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022\036\n\020b" +
+      "ackend_group_id\030\002 \001(\tB\004\350\3071\001\022\035\n\017target_gr" +
+      "oup_id\030\003 \001(\tB\004\350\3071\001\"^\n\027GetTargetStatesRes" +
+      "ponse\022C\n\rtarget_states\030\001 \003(\0132,.yandex.cl" +
+      "oud.apploadbalancer.v1.TargetState\"\307\001\n\022A" +
+      "ddSniMatchRequest\022\036\n\020load_balancer_id\030\001 " +
+      "\001(\tB\004\350\3071\001\022\033\n\rlistener_name\030\002 \001(\tB\004\350\3071\001\022\022" +
+      "\n\004name\030\003 \001(\tB\004\350\3071\001\022\034\n\014server_names\030\004 \003(\t" +
+      "B\006\202\3101\002>0\022B\n\007handler\030\005 \001(\0132+.yandex.cloud" +
+      ".apploadbalancer.v1.TlsHandlerB\004\350\3071\001\"^\n\023" +
+      "AddSniMatchMetadata\022\030\n\020load_balancer_id\030" +
+      "\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\022\026\n\016sni_matc" +
+      "h_name\030\003 \001(\t\"r\n\025RemoveSniMatchRequest\022\036\n" +
+      "\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rlistene" +
+      "r_name\030\002 \001(\tB\004\350\3071\001\022\034\n\016sni_match_name\030\003 \001" +
+      "(\tB\004\350\3071\001\"a\n\026RemoveSniMatchMetadata\022\030\n\020lo" +
+      "ad_balancer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 " +
+      "\001(\t\022\026\n\016sni_match_name\030\003 \001(\t\"\373\001\n\025UpdateSn" +
+      "iMatchRequest\022\036\n\020load_balancer_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022\033\n\rlistener_name\030\002 \001(\tB\004\350\3071\001\022\022\n\004na" +
+      "me\030\003 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\004 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMask\022\034\n\014server_names\030" +
+      "\005 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\006 \001(\0132+.yandex." +
+      "cloud.apploadbalancer.v1.TlsHandlerB\004\350\3071" +
+      "\001\"a\n\026UpdateSniMatchMetadata\022\030\n\020load_bala" +
       "ncer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\022\026\n\016" +
-      "sni_match_name\030\003 \001(\t\"r\n\025RemoveSniMatchRe" +
-      "quest\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022\033\n" +
-      "\rlistener_name\030\002 \001(\tB\004\350\3071\001\022\034\n\016sni_match_" +
-      "name\030\003 \001(\tB\004\350\3071\001\"a\n\026RemoveSniMatchMetada" +
-      "ta\022\030\n\020load_balancer_id\030\001 \001(\t\022\025\n\rlistener" +
-      "_name\030\002 \001(\t\022\026\n\016sni_match_name\030\003 \001(\t\"\373\001\n\025" +
-      "UpdateSniMatchRequest\022\036\n\020load_balancer_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022\033\n\rlistener_name\030\002 \001(\tB\004\350\307" +
-      "1\001\022\022\n\004name\030\003 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\004 " +
-      "\001(\0132\032.google.protobuf.FieldMask\022\034\n\014serve" +
-      "r_names\030\005 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\006 \001(\0132+" +
-      ".yandex.cloud.apploadbalancer.v1.TlsHand" +
-      "lerB\004\350\3071\001\"a\n\026UpdateSniMatchMetadata\022\030\n\020l" +
-      "oad_balancer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002" +
-      " \001(\t\022\026\n\016sni_match_name\030\003 \001(\t\"\211\001\n!ListLoa" +
-      "dBalancerOperationsRequest\022&\n\020load_balan" +
-      "cer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
-      "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
-      "\3101\005<=100\"t\n\"ListLoadBalancerOperationsRe" +
-      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
-      "d.operation.Operation\022\027\n\017next_page_token" +
-      "\030\002 \001(\t\"R\n\026StartZonalShiftRequest\022\036\n\020load" +
-      "_balancer_id\030\001 \001(\tB\004\350\3071\001\022\030\n\010zone_ids\030\002 \003" +
-      "(\tB\006\202\3101\002>0\"E\n\027StartZonalShiftMetadata\022\030\n" +
-      "\020load_balancer_id\030\001 \001(\t\022\020\n\010zone_ids\030\002 \003(" +
-      "\t\"S\n\027CancelZonalShiftRequest\022\036\n\020load_bal" +
-      "ancer_id\030\001 \001(\tB\004\350\3071\001\022\030\n\010zone_ids\030\002 \003(\tB\006" +
-      "\202\3101\002>0\"F\n\030CancelZonalShiftMetadata\022\030\n\020lo" +
-      "ad_balancer_id\030\001 \001(\t\022\020\n\010zone_ids\030\002 \003(\t2\307" +
-      "\035\n\023LoadBalancerService\022\253\001\n\003Get\0227.yandex." +
-      "cloud.apploadbalancer.v1.GetLoadBalancer" +
-      "Request\032-.yandex.cloud.apploadbalancer.v" +
-      "1.LoadBalancer\"<\202\323\344\223\0026\0224/apploadbalancer" +
-      "/v1/loadBalancers/{load_balancer_id}\022\250\001\n" +
-      "\004List\0229.yandex.cloud.apploadbalancer.v1." +
-      "ListLoadBalancersRequest\032:.yandex.cloud." +
-      "apploadbalancer.v1.ListLoadBalancersResp" +
-      "onse\")\202\323\344\223\002#\022!/apploadbalancer/v1/loadBa" +
-      "lancers\022\303\001\n\006Create\022:.yandex.cloud.apploa" +
-      "dbalancer.v1.CreateLoadBalancerRequest\032!" +
-      ".yandex.cloud.operation.Operation\"Z\202\323\344\223\002" +
-      "&\"!/apploadbalancer/v1/loadBalancers:\001*\262" +
-      "\322**\n\032CreateLoadBalancerMetadata\022\014LoadBal" +
-      "ancer\022\326\001\n\006Update\022:.yandex.cloud.apploadb" +
-      "alancer.v1.UpdateLoadBalancerRequest\032!.y" +
-      "andex.cloud.operation.Operation\"m\202\323\344\223\00292" +
-      "4/apploadbalancer/v1/loadBalancers/{load" +
-      "_balancer_id}:\001*\262\322**\n\032UpdateLoadBalancer" +
-      "Metadata\022\014LoadBalancer\022\334\001\n\006Delete\022:.yand" +
-      "ex.cloud.apploadbalancer.v1.DeleteLoadBa" +
-      "lancerRequest\032!.yandex.cloud.operation.O" +
-      "peration\"s\202\323\344\223\0026*4/apploadbalancer/v1/lo" +
-      "adBalancers/{load_balancer_id}\262\322*3\n\032Dele" +
-      "teLoadBalancerMetadata\022\025google.protobuf." +
-      "Empty\022\326\001\n\005Start\0229.yandex.cloud.apploadba" +
-      "lancer.v1.StartLoadBalancerRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"o\202\323\344\223\002<\":/" +
-      "apploadbalancer/v1/loadBalancers/{load_b" +
-      "alancer_id}:start\262\322*)\n\031StartLoadBalancer" +
-      "Metadata\022\014LoadBalancer\022\322\001\n\004Stop\0228.yandex" +
-      ".cloud.apploadbalancer.v1.StopLoadBalanc" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"m\202\323\344\223\002;\"9/apploadbalancer/v1/loadBa" +
-      "lancers/{load_balancer_id}:stop\262\322*(\n\030Sto" +
-      "pLoadBalancerMetadata\022\014LoadBalancer\022\331\001\n\013" +
-      "AddListener\0223.yandex.cloud.apploadbalanc" +
-      "er.v1.AddListenerRequest\032!.yandex.cloud." +
-      "operation.Operation\"r\202\323\344\223\002E\"@/apploadbal" +
-      "ancer/v1/loadBalancers/{load_balancer_id" +
-      "}:addListener:\001*\262\322*#\n\023AddListenerMetadat" +
-      "a\022\014LoadBalancer\022\345\001\n\016RemoveListener\0226.yan" +
-      "dex.cloud.apploadbalancer.v1.RemoveListe" +
+      "sni_match_name\030\003 \001(\t\"\211\001\n!ListLoadBalance" +
+      "rOperationsRequest\022&\n\020load_balancer_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"t\n\"ListLoadBalancerOperationsResponse\0225" +
+      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
+      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"R" +
+      "\n\026StartZonalShiftRequest\022\036\n\020load_balance" +
+      "r_id\030\001 \001(\tB\004\350\3071\001\022\030\n\010zone_ids\030\002 \003(\tB\006\202\3101\002" +
+      ">0\"E\n\027StartZonalShiftMetadata\022\030\n\020load_ba" +
+      "lancer_id\030\001 \001(\t\022\020\n\010zone_ids\030\002 \003(\t\"S\n\027Can" +
+      "celZonalShiftRequest\022\036\n\020load_balancer_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022\030\n\010zone_ids\030\002 \003(\tB\006\202\3101\002>0\"F" +
+      "\n\030CancelZonalShiftMetadata\022\030\n\020load_balan" +
+      "cer_id\030\001 \001(\t\022\020\n\010zone_ids\030\002 \003(\t\"\210\001\n\023Disab" +
+      "leZonesRequest\022\036\n\020load_balancer_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022\030\n\010zone_ids\030\002 \003(\tB\006\202\3101\002>0\0227\n\010dura" +
+      "tion\030\003 \001(\0132\031.google.protobuf.DurationB\n\372" +
+      "\3071\0061m-72h\"B\n\024DisableZonesMetadata\022\030\n\020loa" +
+      "d_balancer_id\030\001 \001(\t\022\020\n\010zone_ids\030\002 \003(\t\"N\n" +
+      "\022EnableZonesRequest\022\036\n\020load_balancer_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022\030\n\010zone_ids\030\002 \003(\tB\006\202\3101\002>0\"A\n" +
+      "\023EnableZonesMetadata\022\030\n\020load_balancer_id" +
+      "\030\001 \001(\t\022\020\n\010zone_ids\030\002 \003(\t2\211!\n\023LoadBalance" +
+      "rService\022\253\001\n\003Get\0227.yandex.cloud.apploadb" +
+      "alancer.v1.GetLoadBalancerRequest\032-.yand" +
+      "ex.cloud.apploadbalancer.v1.LoadBalancer" +
+      "\"<\202\323\344\223\0026\0224/apploadbalancer/v1/loadBalanc" +
+      "ers/{load_balancer_id}\022\250\001\n\004List\0229.yandex" +
+      ".cloud.apploadbalancer.v1.ListLoadBalanc" +
+      "ersRequest\032:.yandex.cloud.apploadbalance" +
+      "r.v1.ListLoadBalancersResponse\")\202\323\344\223\002#\022!" +
+      "/apploadbalancer/v1/loadBalancers\022\303\001\n\006Cr" +
+      "eate\022:.yandex.cloud.apploadbalancer.v1.C" +
+      "reateLoadBalancerRequest\032!.yandex.cloud." +
+      "operation.Operation\"Z\202\323\344\223\002&\"!/apploadbal" +
+      "ancer/v1/loadBalancers:\001*\262\322**\n\032CreateLoa" +
+      "dBalancerMetadata\022\014LoadBalancer\022\326\001\n\006Upda" +
+      "te\022:.yandex.cloud.apploadbalancer.v1.Upd" +
+      "ateLoadBalancerRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"m\202\323\344\223\002924/apploadbalan" +
+      "cer/v1/loadBalancers/{load_balancer_id}:" +
+      "\001*\262\322**\n\032UpdateLoadBalancerMetadata\022\014Load" +
+      "Balancer\022\334\001\n\006Delete\022:.yandex.cloud.applo" +
+      "adbalancer.v1.DeleteLoadBalancerRequest\032" +
+      "!.yandex.cloud.operation.Operation\"s\202\323\344\223" +
+      "\0026*4/apploadbalancer/v1/loadBalancers/{l" +
+      "oad_balancer_id}\262\322*3\n\032DeleteLoadBalancer" +
+      "Metadata\022\025google.protobuf.Empty\022\326\001\n\005Star" +
+      "t\0229.yandex.cloud.apploadbalancer.v1.Star" +
+      "tLoadBalancerRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"o\202\323\344\223\002<\":/apploadbalance" +
+      "r/v1/loadBalancers/{load_balancer_id}:st" +
+      "art\262\322*)\n\031StartLoadBalancerMetadata\022\014Load" +
+      "Balancer\022\322\001\n\004Stop\0228.yandex.cloud.appload" +
+      "balancer.v1.StopLoadBalancerRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"m\202\323\344\223\002;\"9" +
+      "/apploadbalancer/v1/loadBalancers/{load_" +
+      "balancer_id}:stop\262\322*(\n\030StopLoadBalancerM" +
+      "etadata\022\014LoadBalancer\022\331\001\n\013AddListener\0223." +
+      "yandex.cloud.apploadbalancer.v1.AddListe" +
       "nerRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"x\202\323\344\223\002H\"C/apploadbalancer/v1/loadB" +
-      "alancers/{load_balancer_id}:removeListen" +
-      "er:\001*\262\322*&\n\026RemoveListenerMetadata\022\014LoadB" +
-      "alancer\022\345\001\n\016UpdateListener\0226.yandex.clou" +
-      "d.apploadbalancer.v1.UpdateListenerReque" +
-      "st\032!.yandex.cloud.operation.Operation\"x\202" +
-      "\323\344\223\002H\"C/apploadbalancer/v1/loadBalancers" +
-      "/{load_balancer_id}:updateListener:\001*\262\322*" +
-      "&\n\026UpdateListenerMetadata\022\014LoadBalancer\022" +
-      "\342\001\n\013AddSniMatch\0223.yandex.cloud.apploadba" +
-      "lancer.v1.AddSniMatchRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"{\202\323\344\223\002E\"@/apploa" +
+      "ation\"r\202\323\344\223\002E\"@/apploadbalancer/v1/loadB" +
+      "alancers/{load_balancer_id}:addListener:" +
+      "\001*\262\322*#\n\023AddListenerMetadata\022\014LoadBalance" +
+      "r\022\345\001\n\016RemoveListener\0226.yandex.cloud.appl" +
+      "oadbalancer.v1.RemoveListenerRequest\032!.y" +
+      "andex.cloud.operation.Operation\"x\202\323\344\223\002H\"" +
+      "C/apploadbalancer/v1/loadBalancers/{load" +
+      "_balancer_id}:removeListener:\001*\262\322*&\n\026Rem" +
+      "oveListenerMetadata\022\014LoadBalancer\022\345\001\n\016Up" +
+      "dateListener\0226.yandex.cloud.apploadbalan" +
+      "cer.v1.UpdateListenerRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"x\202\323\344\223\002H\"C/apploa" +
       "dbalancer/v1/loadBalancers/{load_balance" +
-      "r_id}:addSniMatch:\001*\262\322*,\n\023AddSniMatchMet" +
-      "adata\022\025google.protobuf.Empty\022\357\001\n\016UpdateS" +
-      "niMatch\0226.yandex.cloud.apploadbalancer.v" +
-      "1.UpdateSniMatchRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"\201\001\202\323\344\223\002H\"C/apploadbal" +
-      "ancer/v1/loadBalancers/{load_balancer_id" +
-      "}:updateSniMatch:\001*\262\322*/\n\026UpdateSniMatchM" +
-      "etadata\022\025google.protobuf.Empty\022\357\001\n\016Remov" +
-      "eSniMatch\0226.yandex.cloud.apploadbalancer" +
-      ".v1.RemoveSniMatchRequest\032!.yandex.cloud" +
-      ".operation.Operation\"\201\001\202\323\344\223\002H\"C/apploadb" +
+      "r_id}:updateListener:\001*\262\322*&\n\026UpdateListe" +
+      "nerMetadata\022\014LoadBalancer\022\342\001\n\013AddSniMatc" +
+      "h\0223.yandex.cloud.apploadbalancer.v1.AddS" +
+      "niMatchRequest\032!.yandex.cloud.operation." +
+      "Operation\"{\202\323\344\223\002E\"@/apploadbalancer/v1/l" +
+      "oadBalancers/{load_balancer_id}:addSniMa" +
+      "tch:\001*\262\322*,\n\023AddSniMatchMetadata\022\025google." +
+      "protobuf.Empty\022\357\001\n\016UpdateSniMatch\0226.yand" +
+      "ex.cloud.apploadbalancer.v1.UpdateSniMat" +
+      "chRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\201\001\202\323\344\223\002H\"C/apploadbalancer/v1/loadB" +
+      "alancers/{load_balancer_id}:updateSniMat" +
+      "ch:\001*\262\322*/\n\026UpdateSniMatchMetadata\022\025googl" +
+      "e.protobuf.Empty\022\357\001\n\016RemoveSniMatch\0226.ya" +
+      "ndex.cloud.apploadbalancer.v1.RemoveSniM" +
+      "atchRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"\201\001\202\323\344\223\002H\"C/apploadbalancer/v1/loa" +
+      "dBalancers/{load_balancer_id}:removeSniM" +
+      "atch:\001*\262\322*/\n\026RemoveSniMatchMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\364\001\n\017GetTargetStates\0227" +
+      ".yandex.cloud.apploadbalancer.v1.GetTarg" +
+      "etStatesRequest\0328.yandex.cloud.apploadba" +
+      "lancer.v1.GetTargetStatesResponse\"n\202\323\344\223\002" +
+      "h\022f/apploadbalancer/v1/loadBalancers/{lo" +
+      "ad_balancer_id}/targetStates/{backend_gr" +
+      "oup_id}/{target_group_id}\022\342\001\n\016ListOperat" +
+      "ions\022B.yandex.cloud.apploadbalancer.v1.L" +
+      "istLoadBalancerOperationsRequest\032C.yande" +
+      "x.cloud.apploadbalancer.v1.ListLoadBalan" +
+      "cerOperationsResponse\"G\202\323\344\223\002A\022?/apploadb" +
       "alancer/v1/loadBalancers/{load_balancer_" +
-      "id}:removeSniMatch:\001*\262\322*/\n\026RemoveSniMatc" +
-      "hMetadata\022\025google.protobuf.Empty\022\364\001\n\017Get" +
-      "TargetStates\0227.yandex.cloud.apploadbalan" +
-      "cer.v1.GetTargetStatesRequest\0328.yandex.c" +
-      "loud.apploadbalancer.v1.GetTargetStatesR" +
-      "esponse\"n\202\323\344\223\002h\022f/apploadbalancer/v1/loa" +
-      "dBalancers/{load_balancer_id}/targetStat" +
-      "es/{backend_group_id}/{target_group_id}\022" +
-      "\342\001\n\016ListOperations\022B.yandex.cloud.apploa" +
-      "dbalancer.v1.ListLoadBalancerOperationsR" +
-      "equest\032C.yandex.cloud.apploadbalancer.v1" +
-      ".ListLoadBalancerOperationsResponse\"G\202\323\344" +
-      "\223\002A\022?/apploadbalancer/v1/loadBalancers/{" +
-      "load_balancer_id}/operations\022\351\001\n\017StartZo" +
-      "nalShift\0227.yandex.cloud.apploadbalancer." +
-      "v1.StartZonalShiftRequest\032!.yandex.cloud" +
-      ".operation.Operation\"z\202\323\344\223\002I\"D/apploadba" +
-      "lancer/v1/loadBalancers/{load_balancer_i" +
-      "d}:startZonalShift:\001*\262\322*\'\n\027StartZonalShi" +
-      "ftMetadata\022\014LoadBalancer\022\355\001\n\020CancelZonal" +
-      "Shift\0228.yandex.cloud.apploadbalancer.v1." +
-      "CancelZonalShiftRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"|\202\323\344\223\002J\"E/apploadbala" +
-      "ncer/v1/loadBalancers/{load_balancer_id}" +
-      ":cancelZonalShift:\001*\262\322*(\n\030CancelZonalShi" +
-      "ftMetadata\022\014LoadBalancerBz\n#yandex.cloud" +
-      ".api.apploadbalancer.v1ZSgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/apploa" +
-      "dbalancer/v1;apploadbalancerb\006proto3"
+      "id}/operations\022\354\001\n\017StartZonalShift\0227.yan" +
+      "dex.cloud.apploadbalancer.v1.StartZonalS" +
+      "hiftRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"}\210\002\001\202\323\344\223\002I\"D/apploadbalancer/v1/l" +
+      "oadBalancers/{load_balancer_id}:startZon" +
+      "alShift:\001*\262\322*\'\n\027StartZonalShiftMetadata\022" +
+      "\014LoadBalancer\022\360\001\n\020CancelZonalShift\0228.yan" +
+      "dex.cloud.apploadbalancer.v1.CancelZonal" +
+      "ShiftRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\177\210\002\001\202\323\344\223\002J\"E/apploadbalancer/v1/" +
+      "loadBalancers/{load_balancer_id}:cancelZ" +
+      "onalShift:\001*\262\322*(\n\030CancelZonalShiftMetada" +
+      "ta\022\014LoadBalancer\022\335\001\n\014DisableZones\0224.yand" +
+      "ex.cloud.apploadbalancer.v1.DisableZones" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"t\202\323\344\223\002F\"A/apploadbalancer/v1/loadBala" +
+      "ncers/{load_balancer_id}:disableZones:\001*" +
+      "\262\322*$\n\024DisableZonesMetadata\022\014LoadBalancer" +
+      "\022\331\001\n\013EnableZones\0223.yandex.cloud.apploadb" +
+      "alancer.v1.EnableZonesRequest\032!.yandex.c" +
+      "loud.operation.Operation\"r\202\323\344\223\002E\"@/applo" +
+      "adbalancer/v1/loadBalancers/{load_balanc" +
+      "er_id}:enableZones:\001*\262\322*#\n\023EnableZonesMe" +
+      "tadata\022\014LoadBalancerBz\n#yandex.cloud.api" +
+      ".apploadbalancer.v1ZSgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/apploadbal" +
+      "ancer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -42500,6 +46373,30 @@ public final class LoadBalancerServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_descriptor,
         new java.lang.String[] { "LoadBalancerId", "ZoneIds", });
+    internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(39);
+    internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesRequest_descriptor,
+        new java.lang.String[] { "LoadBalancerId", "ZoneIds", "Duration", });
+    internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(40);
+    internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_DisableZonesMetadata_descriptor,
+        new java.lang.String[] { "LoadBalancerId", "ZoneIds", });
+    internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(41);
+    internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesRequest_descriptor,
+        new java.lang.String[] { "LoadBalancerId", "ZoneIds", });
+    internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(42);
+    internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_EnableZonesMetadata_descriptor,
+        new java.lang.String[] { "LoadBalancerId", "ZoneIds", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -42514,6 +46411,7 @@ public final class LoadBalancerServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

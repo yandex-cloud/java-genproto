@@ -5889,7 +5889,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Version of Apache Airflow that runs on the cluster.
-     * Use `airlow_version` instead.
+     * Use `airflow_version` instead.
      * </pre>
      *
      * <code>string version_id = 1 [deprecated = true];</code>
@@ -5900,7 +5900,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Version of Apache Airflow that runs on the cluster.
-     * Use `airlow_version` instead.
+     * Use `airflow_version` instead.
      * </pre>
      *
      * <code>string version_id = 1 [deprecated = true];</code>
@@ -6333,7 +6333,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Version of Apache Airflow that runs on the cluster.
-     * Use `airlow_version` instead.
+     * Use `airflow_version` instead.
      * </pre>
      *
      * <code>string version_id = 1 [deprecated = true];</code>
@@ -6356,7 +6356,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Version of Apache Airflow that runs on the cluster.
-     * Use `airlow_version` instead.
+     * Use `airflow_version` instead.
      * </pre>
      *
      * <code>string version_id = 1 [deprecated = true];</code>
@@ -7286,7 +7286,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Version of Apache Airflow that runs on the cluster.
-       * Use `airlow_version` instead.
+       * Use `airflow_version` instead.
        * </pre>
        *
        * <code>string version_id = 1 [deprecated = true];</code>
@@ -7308,7 +7308,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Version of Apache Airflow that runs on the cluster.
-       * Use `airlow_version` instead.
+       * Use `airflow_version` instead.
        * </pre>
        *
        * <code>string version_id = 1 [deprecated = true];</code>
@@ -7331,7 +7331,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Version of Apache Airflow that runs on the cluster.
-       * Use `airlow_version` instead.
+       * Use `airflow_version` instead.
        * </pre>
        *
        * <code>string version_id = 1 [deprecated = true];</code>
@@ -7352,7 +7352,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Version of Apache Airflow that runs on the cluster.
-       * Use `airlow_version` instead.
+       * Use `airflow_version` instead.
        * </pre>
        *
        * <code>string version_id = 1 [deprecated = true];</code>
@@ -7368,7 +7368,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Version of Apache Airflow that runs on the cluster.
-       * Use `airlow_version` instead.
+       * Use `airflow_version` instead.
        * </pre>
        *
        * <code>string version_id = 1 [deprecated = true];</code>
@@ -15287,6 +15287,1024 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface GitSyncConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.airflow.v1.GitSyncConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string repo = 1;</code>
+     * @return The repo.
+     */
+    java.lang.String getRepo();
+    /**
+     * <code>string repo = 1;</code>
+     * @return The bytes for repo.
+     */
+    com.google.protobuf.ByteString
+        getRepoBytes();
+
+    /**
+     * <code>string branch = 2;</code>
+     * @return The branch.
+     */
+    java.lang.String getBranch();
+    /**
+     * <code>string branch = 2;</code>
+     * @return The bytes for branch.
+     */
+    com.google.protobuf.ByteString
+        getBranchBytes();
+
+    /**
+     * <code>string sub_path = 3;</code>
+     * @return The subPath.
+     */
+    java.lang.String getSubPath();
+    /**
+     * <code>string sub_path = 3;</code>
+     * @return The bytes for subPath.
+     */
+    com.google.protobuf.ByteString
+        getSubPathBytes();
+
+    /**
+     * <code>string ssh_key = 4;</code>
+     * @return The sshKey.
+     */
+    java.lang.String getSshKey();
+    /**
+     * <code>string ssh_key = 4;</code>
+     * @return The bytes for sshKey.
+     */
+    com.google.protobuf.ByteString
+        getSshKeyBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.airflow.v1.GitSyncConfig}
+   */
+  public static final class GitSyncConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.airflow.v1.GitSyncConfig)
+      GitSyncConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GitSyncConfig.newBuilder() to construct.
+    private GitSyncConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GitSyncConfig() {
+      repo_ = "";
+      branch_ = "";
+      subPath_ = "";
+      sshKey_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GitSyncConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GitSyncConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              repo_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              branch_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subPath_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sshKey_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.airflow.v1.ClusterOuterClass.internal_static_yandex_cloud_airflow_v1_GitSyncConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.airflow.v1.ClusterOuterClass.internal_static_yandex_cloud_airflow_v1_GitSyncConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.class, yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.Builder.class);
+    }
+
+    public static final int REPO_FIELD_NUMBER = 1;
+    private volatile java.lang.Object repo_;
+    /**
+     * <code>string repo = 1;</code>
+     * @return The repo.
+     */
+    @java.lang.Override
+    public java.lang.String getRepo() {
+      java.lang.Object ref = repo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        repo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string repo = 1;</code>
+     * @return The bytes for repo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRepoBytes() {
+      java.lang.Object ref = repo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        repo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BRANCH_FIELD_NUMBER = 2;
+    private volatile java.lang.Object branch_;
+    /**
+     * <code>string branch = 2;</code>
+     * @return The branch.
+     */
+    @java.lang.Override
+    public java.lang.String getBranch() {
+      java.lang.Object ref = branch_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        branch_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string branch = 2;</code>
+     * @return The bytes for branch.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBranchBytes() {
+      java.lang.Object ref = branch_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        branch_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUB_PATH_FIELD_NUMBER = 3;
+    private volatile java.lang.Object subPath_;
+    /**
+     * <code>string sub_path = 3;</code>
+     * @return The subPath.
+     */
+    @java.lang.Override
+    public java.lang.String getSubPath() {
+      java.lang.Object ref = subPath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subPath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sub_path = 3;</code>
+     * @return The bytes for subPath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubPathBytes() {
+      java.lang.Object ref = subPath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SSH_KEY_FIELD_NUMBER = 4;
+    private volatile java.lang.Object sshKey_;
+    /**
+     * <code>string ssh_key = 4;</code>
+     * @return The sshKey.
+     */
+    @java.lang.Override
+    public java.lang.String getSshKey() {
+      java.lang.Object ref = sshKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sshKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ssh_key = 4;</code>
+     * @return The bytes for sshKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSshKeyBytes() {
+      java.lang.Object ref = sshKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sshKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repo_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repo_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(branch_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, branch_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subPath_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subPath_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sshKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sshKey_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repo_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, repo_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(branch_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, branch_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subPath_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subPath_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sshKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, sshKey_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig other = (yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) obj;
+
+      if (!getRepo()
+          .equals(other.getRepo())) return false;
+      if (!getBranch()
+          .equals(other.getBranch())) return false;
+      if (!getSubPath()
+          .equals(other.getSubPath())) return false;
+      if (!getSshKey()
+          .equals(other.getSshKey())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REPO_FIELD_NUMBER;
+      hash = (53 * hash) + getRepo().hashCode();
+      hash = (37 * hash) + BRANCH_FIELD_NUMBER;
+      hash = (53 * hash) + getBranch().hashCode();
+      hash = (37 * hash) + SUB_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getSubPath().hashCode();
+      hash = (37 * hash) + SSH_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getSshKey().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.airflow.v1.GitSyncConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.airflow.v1.GitSyncConfig)
+        yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.airflow.v1.ClusterOuterClass.internal_static_yandex_cloud_airflow_v1_GitSyncConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.airflow.v1.ClusterOuterClass.internal_static_yandex_cloud_airflow_v1_GitSyncConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.class, yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        repo_ = "";
+
+        branch_ = "";
+
+        subPath_ = "";
+
+        sshKey_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.airflow.v1.ClusterOuterClass.internal_static_yandex_cloud_airflow_v1_GitSyncConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig getDefaultInstanceForType() {
+        return yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig build() {
+        yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig buildPartial() {
+        yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig result = new yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig(this);
+        result.repo_ = repo_;
+        result.branch_ = branch_;
+        result.subPath_ = subPath_;
+        result.sshKey_ = sshKey_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) {
+          return mergeFrom((yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig other) {
+        if (other == yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.getDefaultInstance()) return this;
+        if (!other.getRepo().isEmpty()) {
+          repo_ = other.repo_;
+          onChanged();
+        }
+        if (!other.getBranch().isEmpty()) {
+          branch_ = other.branch_;
+          onChanged();
+        }
+        if (!other.getSubPath().isEmpty()) {
+          subPath_ = other.subPath_;
+          onChanged();
+        }
+        if (!other.getSshKey().isEmpty()) {
+          sshKey_ = other.sshKey_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object repo_ = "";
+      /**
+       * <code>string repo = 1;</code>
+       * @return The repo.
+       */
+      public java.lang.String getRepo() {
+        java.lang.Object ref = repo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          repo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string repo = 1;</code>
+       * @return The bytes for repo.
+       */
+      public com.google.protobuf.ByteString
+          getRepoBytes() {
+        java.lang.Object ref = repo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          repo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string repo = 1;</code>
+       * @param value The repo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        repo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string repo = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRepo() {
+        
+        repo_ = getDefaultInstance().getRepo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string repo = 1;</code>
+       * @param value The bytes for repo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        repo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object branch_ = "";
+      /**
+       * <code>string branch = 2;</code>
+       * @return The branch.
+       */
+      public java.lang.String getBranch() {
+        java.lang.Object ref = branch_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          branch_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string branch = 2;</code>
+       * @return The bytes for branch.
+       */
+      public com.google.protobuf.ByteString
+          getBranchBytes() {
+        java.lang.Object ref = branch_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          branch_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string branch = 2;</code>
+       * @param value The branch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBranch(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        branch_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string branch = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBranch() {
+        
+        branch_ = getDefaultInstance().getBranch();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string branch = 2;</code>
+       * @param value The bytes for branch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBranchBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        branch_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subPath_ = "";
+      /**
+       * <code>string sub_path = 3;</code>
+       * @return The subPath.
+       */
+      public java.lang.String getSubPath() {
+        java.lang.Object ref = subPath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subPath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sub_path = 3;</code>
+       * @return The bytes for subPath.
+       */
+      public com.google.protobuf.ByteString
+          getSubPathBytes() {
+        java.lang.Object ref = subPath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sub_path = 3;</code>
+       * @param value The subPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subPath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sub_path = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubPath() {
+        
+        subPath_ = getDefaultInstance().getSubPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sub_path = 3;</code>
+       * @param value The bytes for subPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subPath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sshKey_ = "";
+      /**
+       * <code>string ssh_key = 4;</code>
+       * @return The sshKey.
+       */
+      public java.lang.String getSshKey() {
+        java.lang.Object ref = sshKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sshKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ssh_key = 4;</code>
+       * @return The bytes for sshKey.
+       */
+      public com.google.protobuf.ByteString
+          getSshKeyBytes() {
+        java.lang.Object ref = sshKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sshKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ssh_key = 4;</code>
+       * @param value The sshKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSshKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sshKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ssh_key = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSshKey() {
+        
+        sshKey_ = getDefaultInstance().getSshKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ssh_key = 4;</code>
+       * @param value The bytes for sshKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSshKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sshKey_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.airflow.v1.GitSyncConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.airflow.v1.GitSyncConfig)
+    private static final yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig();
+    }
+
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GitSyncConfig>
+        PARSER = new com.google.protobuf.AbstractParser<GitSyncConfig>() {
+      @java.lang.Override
+      public GitSyncConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GitSyncConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GitSyncConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GitSyncConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CodeSyncConfigOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.airflow.v1.CodeSyncConfig)
       com.google.protobuf.MessageOrBuilder {
@@ -15305,6 +16323,21 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.airflow.v1.S3Config s3 = 1;</code>
      */
     yandex.cloud.api.airflow.v1.ClusterOuterClass.S3ConfigOrBuilder getS3OrBuilder();
+
+    /**
+     * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+     * @return Whether the gitSync field is set.
+     */
+    boolean hasGitSync();
+    /**
+     * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+     * @return The gitSync.
+     */
+    yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig getGitSync();
+    /**
+     * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+     */
+    yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfigOrBuilder getGitSyncOrBuilder();
 
     public yandex.cloud.api.airflow.v1.ClusterOuterClass.CodeSyncConfig.SourceCase getSourceCase();
   }
@@ -15367,6 +16400,20 @@ public final class ClusterOuterClass {
               sourceCase_ = 1;
               break;
             }
+            case 18: {
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.Builder subBuilder = null;
+              if (sourceCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) source_).toBuilder();
+              }
+              source_ =
+                  input.readMessage(yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) source_);
+                source_ = subBuilder.buildPartial();
+              }
+              sourceCase_ = 2;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -15405,6 +16452,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       S3(1),
+      GIT_SYNC(2),
       SOURCE_NOT_SET(0);
       private final int value;
       private SourceCase(int value) {
@@ -15423,6 +16471,7 @@ public final class ClusterOuterClass {
       public static SourceCase forNumber(int value) {
         switch (value) {
           case 1: return S3;
+          case 2: return GIT_SYNC;
           case 0: return SOURCE_NOT_SET;
           default: return null;
         }
@@ -15469,6 +16518,37 @@ public final class ClusterOuterClass {
       return yandex.cloud.api.airflow.v1.ClusterOuterClass.S3Config.getDefaultInstance();
     }
 
+    public static final int GIT_SYNC_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+     * @return Whether the gitSync field is set.
+     */
+    @java.lang.Override
+    public boolean hasGitSync() {
+      return sourceCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+     * @return The gitSync.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig getGitSync() {
+      if (sourceCase_ == 2) {
+         return (yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) source_;
+      }
+      return yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfigOrBuilder getGitSyncOrBuilder() {
+      if (sourceCase_ == 2) {
+         return (yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) source_;
+      }
+      return yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15486,6 +16566,9 @@ public final class ClusterOuterClass {
       if (sourceCase_ == 1) {
         output.writeMessage(1, (yandex.cloud.api.airflow.v1.ClusterOuterClass.S3Config) source_);
       }
+      if (sourceCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) source_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15498,6 +16581,10 @@ public final class ClusterOuterClass {
       if (sourceCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, (yandex.cloud.api.airflow.v1.ClusterOuterClass.S3Config) source_);
+      }
+      if (sourceCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) source_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -15520,6 +16607,10 @@ public final class ClusterOuterClass {
           if (!getS3()
               .equals(other.getS3())) return false;
           break;
+        case 2:
+          if (!getGitSync()
+              .equals(other.getGitSync())) return false;
+          break;
         case 0:
         default:
       }
@@ -15538,6 +16629,10 @@ public final class ClusterOuterClass {
         case 1:
           hash = (37 * hash) + S3_FIELD_NUMBER;
           hash = (53 * hash) + getS3().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + GIT_SYNC_FIELD_NUMBER;
+          hash = (53 * hash) + getGitSync().hashCode();
           break;
         case 0:
         default:
@@ -15710,6 +16805,13 @@ public final class ClusterOuterClass {
             result.source_ = s3Builder_.build();
           }
         }
+        if (sourceCase_ == 2) {
+          if (gitSyncBuilder_ == null) {
+            result.source_ = source_;
+          } else {
+            result.source_ = gitSyncBuilder_.build();
+          }
+        }
         result.sourceCase_ = sourceCase_;
         onBuilt();
         return result;
@@ -15762,6 +16864,10 @@ public final class ClusterOuterClass {
         switch (other.getSourceCase()) {
           case S3: {
             mergeS3(other.getS3());
+            break;
+          }
+          case GIT_SYNC: {
+            mergeGitSync(other.getGitSync());
             break;
           }
           case SOURCE_NOT_SET: {
@@ -15951,6 +17057,147 @@ public final class ClusterOuterClass {
         sourceCase_ = 1;
         onChanged();;
         return s3Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig, yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.Builder, yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfigOrBuilder> gitSyncBuilder_;
+      /**
+       * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+       * @return Whether the gitSync field is set.
+       */
+      @java.lang.Override
+      public boolean hasGitSync() {
+        return sourceCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+       * @return The gitSync.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig getGitSync() {
+        if (gitSyncBuilder_ == null) {
+          if (sourceCase_ == 2) {
+            return (yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) source_;
+          }
+          return yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.getDefaultInstance();
+        } else {
+          if (sourceCase_ == 2) {
+            return gitSyncBuilder_.getMessage();
+          }
+          return yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+       */
+      public Builder setGitSync(yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig value) {
+        if (gitSyncBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          source_ = value;
+          onChanged();
+        } else {
+          gitSyncBuilder_.setMessage(value);
+        }
+        sourceCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+       */
+      public Builder setGitSync(
+          yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.Builder builderForValue) {
+        if (gitSyncBuilder_ == null) {
+          source_ = builderForValue.build();
+          onChanged();
+        } else {
+          gitSyncBuilder_.setMessage(builderForValue.build());
+        }
+        sourceCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+       */
+      public Builder mergeGitSync(yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig value) {
+        if (gitSyncBuilder_ == null) {
+          if (sourceCase_ == 2 &&
+              source_ != yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.getDefaultInstance()) {
+            source_ = yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.newBuilder((yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) source_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            source_ = value;
+          }
+          onChanged();
+        } else {
+          if (sourceCase_ == 2) {
+            gitSyncBuilder_.mergeFrom(value);
+          }
+          gitSyncBuilder_.setMessage(value);
+        }
+        sourceCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+       */
+      public Builder clearGitSync() {
+        if (gitSyncBuilder_ == null) {
+          if (sourceCase_ == 2) {
+            sourceCase_ = 0;
+            source_ = null;
+            onChanged();
+          }
+        } else {
+          if (sourceCase_ == 2) {
+            sourceCase_ = 0;
+            source_ = null;
+          }
+          gitSyncBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+       */
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.Builder getGitSyncBuilder() {
+        return getGitSyncFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfigOrBuilder getGitSyncOrBuilder() {
+        if ((sourceCase_ == 2) && (gitSyncBuilder_ != null)) {
+          return gitSyncBuilder_.getMessageOrBuilder();
+        } else {
+          if (sourceCase_ == 2) {
+            return (yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) source_;
+          }
+          return yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.airflow.v1.GitSyncConfig git_sync = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig, yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.Builder, yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfigOrBuilder> 
+          getGitSyncFieldBuilder() {
+        if (gitSyncBuilder_ == null) {
+          if (!(sourceCase_ == 2)) {
+            source_ = yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.getDefaultInstance();
+          }
+          gitSyncBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig, yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig.Builder, yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfigOrBuilder>(
+                  (yandex.cloud.api.airflow.v1.ClusterOuterClass.GitSyncConfig) source_,
+                  getParentForChildren(),
+                  isClean());
+          source_ = null;
+        }
+        sourceCase_ = 2;
+        onChanged();;
+        return gitSyncBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17802,6 +19049,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_airflow_v1_S3Config_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_airflow_v1_GitSyncConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_airflow_v1_GitSyncConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_airflow_v1_CodeSyncConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -17888,18 +19140,22 @@ public final class ClusterOuterClass {
       "endencies\022\024\n\014pip_packages\030\001 \003(\t\022\024\n\014deb_p" +
       "ackages\030\002 \003(\t\"?\n\rNetworkConfig\022\022\n\nsubnet" +
       "_ids\030\001 \003(\t\022\032\n\022security_group_ids\030\002 \003(\t\"\032" +
-      "\n\010S3Config\022\016\n\006bucket\030\003 \001(\t\"Q\n\016CodeSyncCo" +
-      "nfig\022/\n\002s3\030\001 \001(\0132!.yandex.cloud.airflow." +
-      "v1.S3ConfigH\000B\016\n\006source\022\004\300\3011\001\"\342\001\n\rLoggin" +
-      "gConfig\022\017\n\007enabled\030\001 \001(\010\0228\n\tfolder_id\030\002 " +
-      "\001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?" +
-      "H\000\022;\n\014log_group_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][" +
-      "-a-zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001" +
-      "(\0162\'.yandex.cloud.logging.v1.LogLevel.Le" +
-      "velB\r\n\013destination\" \n\rLockboxConfig\022\017\n\007e" +
-      "nabled\030\001 \001(\010Bb\n\033yandex.cloud.api.airflow" +
-      ".v1ZCgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/airflow/v1;airflowb\006proto3"
+      "\n\010S3Config\022\016\n\006bucket\030\003 \001(\t\"P\n\rGitSyncCon" +
+      "fig\022\014\n\004repo\030\001 \001(\t\022\016\n\006branch\030\002 \001(\t\022\020\n\010sub" +
+      "_path\030\003 \001(\t\022\017\n\007ssh_key\030\004 \001(\t\"\215\001\n\016CodeSyn" +
+      "cConfig\022/\n\002s3\030\001 \001(\0132!.yandex.cloud.airfl" +
+      "ow.v1.S3ConfigH\000\022:\n\010git_sync\030\002 \001(\0132&.yan" +
+      "dex.cloud.airflow.v1.GitSyncConfigH\000B\016\n\006" +
+      "source\022\004\300\3011\001\"\342\001\n\rLoggingConfig\022\017\n\007enable" +
+      "d\030\001 \001(\010\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([a-zA-Z" +
+      "][-a-zA-Z0-9_.]{0,63})?H\000\022;\n\014log_group_i" +
+      "d\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,6" +
+      "3})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cloud" +
+      ".logging.v1.LogLevel.LevelB\r\n\013destinatio" +
+      "n\" \n\rLockboxConfig\022\017\n\007enabled\030\001 \001(\010Bb\n\033y" +
+      "andex.cloud.api.airflow.v1ZCgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/air" +
+      "flow/v1;airflowb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17988,20 +19244,26 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_S3Config_descriptor,
         new java.lang.String[] { "Bucket", });
-    internal_static_yandex_cloud_airflow_v1_CodeSyncConfig_descriptor =
+    internal_static_yandex_cloud_airflow_v1_GitSyncConfig_descriptor =
       getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_airflow_v1_GitSyncConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_airflow_v1_GitSyncConfig_descriptor,
+        new java.lang.String[] { "Repo", "Branch", "SubPath", "SshKey", });
+    internal_static_yandex_cloud_airflow_v1_CodeSyncConfig_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_airflow_v1_CodeSyncConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_CodeSyncConfig_descriptor,
-        new java.lang.String[] { "S3", "Source", });
+        new java.lang.String[] { "S3", "GitSync", "Source", });
     internal_static_yandex_cloud_airflow_v1_LoggingConfig_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_airflow_v1_LoggingConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_LoggingConfig_descriptor,
         new java.lang.String[] { "Enabled", "FolderId", "LogGroupId", "MinLevel", "Destination", });
     internal_static_yandex_cloud_airflow_v1_LockboxConfig_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_airflow_v1_LockboxConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_LockboxConfig_descriptor,

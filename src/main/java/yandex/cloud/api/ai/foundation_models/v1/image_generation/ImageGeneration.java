@@ -40,7 +40,7 @@ public final class ImageGeneration {
 
     /**
      * <pre>
-     * Message weight. Negative values indicate negative messages.
+     * Message weight. Negative values indicate negative messages. Note: Currently not supported.
      * </pre>
      *
      * <code>double weight = 2;</code>
@@ -191,7 +191,7 @@ public final class ImageGeneration {
     private double weight_;
     /**
      * <pre>
-     * Message weight. Negative values indicate negative messages.
+     * Message weight. Negative values indicate negative messages. Note: Currently not supported.
      * </pre>
      *
      * <code>double weight = 2;</code>
@@ -626,7 +626,7 @@ public final class ImageGeneration {
       private double weight_ ;
       /**
        * <pre>
-       * Message weight. Negative values indicate negative messages.
+       * Message weight. Negative values indicate negative messages. Note: Currently not supported.
        * </pre>
        *
        * <code>double weight = 2;</code>
@@ -638,7 +638,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * Message weight. Negative values indicate negative messages.
+       * Message weight. Negative values indicate negative messages. Note: Currently not supported.
        * </pre>
        *
        * <code>double weight = 2;</code>
@@ -653,7 +653,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * Message weight. Negative values indicate negative messages.
+       * Message weight. Negative values indicate negative messages. Note: Currently not supported.
        * </pre>
        *
        * <code>double weight = 2;</code>
@@ -1346,7 +1346,7 @@ public final class ImageGeneration {
 
     /**
      * <pre>
-     * Seed for image generation. It serves as a starting point for image generation from noise.
+     * Seed for image generation. It serves as a starting point for image generation from noise. If set to 0 or not provided, a randomly generated value will be used.
      * </pre>
      *
      * <code>int64 seed = 2;</code>
@@ -1535,7 +1535,7 @@ public final class ImageGeneration {
     private long seed_;
     /**
      * <pre>
-     * Seed for image generation. It serves as a starting point for image generation from noise.
+     * Seed for image generation. It serves as a starting point for image generation from noise. If set to 0 or not provided, a randomly generated value will be used.
      * </pre>
      *
      * <code>int64 seed = 2;</code>
@@ -2038,7 +2038,7 @@ public final class ImageGeneration {
       private long seed_ ;
       /**
        * <pre>
-       * Seed for image generation. It serves as a starting point for image generation from noise.
+       * Seed for image generation. It serves as a starting point for image generation from noise. If set to 0 or not provided, a randomly generated value will be used.
        * </pre>
        *
        * <code>int64 seed = 2;</code>
@@ -2050,7 +2050,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * Seed for image generation. It serves as a starting point for image generation from noise.
+       * Seed for image generation. It serves as a starting point for image generation from noise. If set to 0 or not provided, a randomly generated value will be used.
        * </pre>
        *
        * <code>int64 seed = 2;</code>
@@ -2065,7 +2065,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * Seed for image generation. It serves as a starting point for image generation from noise.
+       * Seed for image generation. It serves as a starting point for image generation from noise. If set to 0 or not provided, a randomly generated value will be used.
        * </pre>
        *
        * <code>int64 seed = 2;</code>

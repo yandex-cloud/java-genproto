@@ -149,6 +149,195 @@ public final class Ocr {
     // @@protoc_insertion_point(enum_scope:yandex.cloud.ai.ocr.v1.Angle)
   }
 
+  /**
+   * Protobuf enum {@code yandex.cloud.ai.ocr.v1.LayoutType}
+   */
+  public enum LayoutType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>LAYOUT_TYPE_UNSPECIFIED = 0;</code>
+     */
+    LAYOUT_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>LAYOUT_TYPE_UNKNOWN = 1;</code>
+     */
+    LAYOUT_TYPE_UNKNOWN(1),
+    /**
+     * <code>LAYOUT_TYPE_TEXT = 2;</code>
+     */
+    LAYOUT_TYPE_TEXT(2),
+    /**
+     * <code>LAYOUT_TYPE_HEADER = 3;</code>
+     */
+    LAYOUT_TYPE_HEADER(3),
+    /**
+     * <code>LAYOUT_TYPE_SECTION_HEADER = 4;</code>
+     */
+    LAYOUT_TYPE_SECTION_HEADER(4),
+    /**
+     * <code>LAYOUT_TYPE_FOOTER = 5;</code>
+     */
+    LAYOUT_TYPE_FOOTER(5),
+    /**
+     * <code>LAYOUT_TYPE_FOOTNOTE = 6;</code>
+     */
+    LAYOUT_TYPE_FOOTNOTE(6),
+    /**
+     * <code>LAYOUT_TYPE_PICTURE = 7;</code>
+     */
+    LAYOUT_TYPE_PICTURE(7),
+    /**
+     * <code>LAYOUT_TYPE_CAPTION = 8;</code>
+     */
+    LAYOUT_TYPE_CAPTION(8),
+    /**
+     * <code>LAYOUT_TYPE_TITLE = 9;</code>
+     */
+    LAYOUT_TYPE_TITLE(9),
+    /**
+     * <code>LAYOUT_TYPE_LIST = 10;</code>
+     */
+    LAYOUT_TYPE_LIST(10),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>LAYOUT_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int LAYOUT_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>LAYOUT_TYPE_UNKNOWN = 1;</code>
+     */
+    public static final int LAYOUT_TYPE_UNKNOWN_VALUE = 1;
+    /**
+     * <code>LAYOUT_TYPE_TEXT = 2;</code>
+     */
+    public static final int LAYOUT_TYPE_TEXT_VALUE = 2;
+    /**
+     * <code>LAYOUT_TYPE_HEADER = 3;</code>
+     */
+    public static final int LAYOUT_TYPE_HEADER_VALUE = 3;
+    /**
+     * <code>LAYOUT_TYPE_SECTION_HEADER = 4;</code>
+     */
+    public static final int LAYOUT_TYPE_SECTION_HEADER_VALUE = 4;
+    /**
+     * <code>LAYOUT_TYPE_FOOTER = 5;</code>
+     */
+    public static final int LAYOUT_TYPE_FOOTER_VALUE = 5;
+    /**
+     * <code>LAYOUT_TYPE_FOOTNOTE = 6;</code>
+     */
+    public static final int LAYOUT_TYPE_FOOTNOTE_VALUE = 6;
+    /**
+     * <code>LAYOUT_TYPE_PICTURE = 7;</code>
+     */
+    public static final int LAYOUT_TYPE_PICTURE_VALUE = 7;
+    /**
+     * <code>LAYOUT_TYPE_CAPTION = 8;</code>
+     */
+    public static final int LAYOUT_TYPE_CAPTION_VALUE = 8;
+    /**
+     * <code>LAYOUT_TYPE_TITLE = 9;</code>
+     */
+    public static final int LAYOUT_TYPE_TITLE_VALUE = 9;
+    /**
+     * <code>LAYOUT_TYPE_LIST = 10;</code>
+     */
+    public static final int LAYOUT_TYPE_LIST_VALUE = 10;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static LayoutType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static LayoutType forNumber(int value) {
+      switch (value) {
+        case 0: return LAYOUT_TYPE_UNSPECIFIED;
+        case 1: return LAYOUT_TYPE_UNKNOWN;
+        case 2: return LAYOUT_TYPE_TEXT;
+        case 3: return LAYOUT_TYPE_HEADER;
+        case 4: return LAYOUT_TYPE_SECTION_HEADER;
+        case 5: return LAYOUT_TYPE_FOOTER;
+        case 6: return LAYOUT_TYPE_FOOTNOTE;
+        case 7: return LAYOUT_TYPE_PICTURE;
+        case 8: return LAYOUT_TYPE_CAPTION;
+        case 9: return LAYOUT_TYPE_TITLE;
+        case 10: return LAYOUT_TYPE_LIST;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LayoutType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        LayoutType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LayoutType>() {
+            public LayoutType findValueByNumber(int number) {
+              return LayoutType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.ocr.v1.Ocr.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final LayoutType[] VALUES = values();
+
+    public static LayoutType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private LayoutType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.ai.ocr.v1.LayoutType)
+  }
+
   public interface PolygonOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.ocr.v1.Polygon)
       com.google.protobuf.MessageOrBuilder {
@@ -1828,6 +2017,70 @@ public final class Ocr {
      * @return The rotate.
      */
     yandex.cloud.api.ai.ocr.v1.Ocr.Angle getRotate();
+
+    /**
+     * <pre>
+     * Full markdown (without pictures inside) from image. Available only in markdown and math-markdown models.
+     * </pre>
+     *
+     * <code>string markdown = 8;</code>
+     * @return The markdown.
+     */
+    java.lang.String getMarkdown();
+    /**
+     * <pre>
+     * Full markdown (without pictures inside) from image. Available only in markdown and math-markdown models.
+     * </pre>
+     *
+     * <code>string markdown = 8;</code>
+     * @return The bytes for markdown.
+     */
+    com.google.protobuf.ByteString
+        getMarkdownBytes();
+
+    /**
+     * <pre>
+     * List of pictures locations from image.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Picture> 
+        getPicturesList();
+    /**
+     * <pre>
+     * List of pictures locations from image.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.Picture getPictures(int index);
+    /**
+     * <pre>
+     * List of pictures locations from image.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+     */
+    int getPicturesCount();
+    /**
+     * <pre>
+     * List of pictures locations from image.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.PictureOrBuilder> 
+        getPicturesOrBuilderList();
+    /**
+     * <pre>
+     * List of pictures locations from image.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.PictureOrBuilder getPicturesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.ocr.v1.TextAnnotation}
@@ -1847,6 +2100,8 @@ public final class Ocr {
       tables_ = java.util.Collections.emptyList();
       fullText_ = "";
       rotate_ = 0;
+      markdown_ = "";
+      pictures_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -1929,6 +2184,21 @@ public final class Ocr {
               rotate_ = rawValue;
               break;
             }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              markdown_ = s;
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                pictures_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.Picture>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              pictures_.add(
+                  input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.Picture.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1952,6 +2222,9 @@ public final class Ocr {
         }
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
           tables_ = java.util.Collections.unmodifiableList(tables_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          pictures_ = java.util.Collections.unmodifiableList(pictures_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2233,6 +2506,112 @@ public final class Ocr {
       return result == null ? yandex.cloud.api.ai.ocr.v1.Ocr.Angle.UNRECOGNIZED : result;
     }
 
+    public static final int MARKDOWN_FIELD_NUMBER = 8;
+    private volatile java.lang.Object markdown_;
+    /**
+     * <pre>
+     * Full markdown (without pictures inside) from image. Available only in markdown and math-markdown models.
+     * </pre>
+     *
+     * <code>string markdown = 8;</code>
+     * @return The markdown.
+     */
+    @java.lang.Override
+    public java.lang.String getMarkdown() {
+      java.lang.Object ref = markdown_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        markdown_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Full markdown (without pictures inside) from image. Available only in markdown and math-markdown models.
+     * </pre>
+     *
+     * <code>string markdown = 8;</code>
+     * @return The bytes for markdown.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMarkdownBytes() {
+      java.lang.Object ref = markdown_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        markdown_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PICTURES_FIELD_NUMBER = 9;
+    private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Picture> pictures_;
+    /**
+     * <pre>
+     * List of pictures locations from image.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Picture> getPicturesList() {
+      return pictures_;
+    }
+    /**
+     * <pre>
+     * List of pictures locations from image.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.PictureOrBuilder> 
+        getPicturesOrBuilderList() {
+      return pictures_;
+    }
+    /**
+     * <pre>
+     * List of pictures locations from image.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+     */
+    @java.lang.Override
+    public int getPicturesCount() {
+      return pictures_.size();
+    }
+    /**
+     * <pre>
+     * List of pictures locations from image.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.Picture getPictures(int index) {
+      return pictures_.get(index);
+    }
+    /**
+     * <pre>
+     * List of pictures locations from image.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.PictureOrBuilder getPicturesOrBuilder(
+        int index) {
+      return pictures_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2267,6 +2646,12 @@ public final class Ocr {
       }
       if (rotate_ != yandex.cloud.api.ai.ocr.v1.Ocr.Angle.ANGLE_UNSPECIFIED.getNumber()) {
         output.writeEnum(7, rotate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(markdown_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, markdown_);
+      }
+      for (int i = 0; i < pictures_.size(); i++) {
+        output.writeMessage(9, pictures_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -2304,6 +2689,13 @@ public final class Ocr {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, rotate_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(markdown_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, markdown_);
+      }
+      for (int i = 0; i < pictures_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, pictures_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2332,6 +2724,10 @@ public final class Ocr {
       if (!getFullText()
           .equals(other.getFullText())) return false;
       if (rotate_ != other.rotate_) return false;
+      if (!getMarkdown()
+          .equals(other.getMarkdown())) return false;
+      if (!getPicturesList()
+          .equals(other.getPicturesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2365,6 +2761,12 @@ public final class Ocr {
       hash = (53 * hash) + getFullText().hashCode();
       hash = (37 * hash) + ROTATE_FIELD_NUMBER;
       hash = (53 * hash) + rotate_;
+      hash = (37 * hash) + MARKDOWN_FIELD_NUMBER;
+      hash = (53 * hash) + getMarkdown().hashCode();
+      if (getPicturesCount() > 0) {
+        hash = (37 * hash) + PICTURES_FIELD_NUMBER;
+        hash = (53 * hash) + getPicturesList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2496,6 +2898,7 @@ public final class Ocr {
           getBlocksFieldBuilder();
           getEntitiesFieldBuilder();
           getTablesFieldBuilder();
+          getPicturesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -2527,6 +2930,14 @@ public final class Ocr {
 
         rotate_ = 0;
 
+        markdown_ = "";
+
+        if (picturesBuilder_ == null) {
+          pictures_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          picturesBuilder_.clear();
+        }
         return this;
       }
 
@@ -2585,6 +2996,16 @@ public final class Ocr {
         }
         result.fullText_ = fullText_;
         result.rotate_ = rotate_;
+        result.markdown_ = markdown_;
+        if (picturesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            pictures_ = java.util.Collections.unmodifiableList(pictures_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.pictures_ = pictures_;
+        } else {
+          result.pictures_ = picturesBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -2723,6 +3144,36 @@ public final class Ocr {
         }
         if (other.rotate_ != 0) {
           setRotateValue(other.getRotateValue());
+        }
+        if (!other.getMarkdown().isEmpty()) {
+          markdown_ = other.markdown_;
+          onChanged();
+        }
+        if (picturesBuilder_ == null) {
+          if (!other.pictures_.isEmpty()) {
+            if (pictures_.isEmpty()) {
+              pictures_ = other.pictures_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensurePicturesIsMutable();
+              pictures_.addAll(other.pictures_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pictures_.isEmpty()) {
+            if (picturesBuilder_.isEmpty()) {
+              picturesBuilder_.dispose();
+              picturesBuilder_ = null;
+              pictures_ = other.pictures_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              picturesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPicturesFieldBuilder() : null;
+            } else {
+              picturesBuilder_.addAllMessages(other.pictures_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3873,6 +4324,414 @@ public final class Ocr {
         onChanged();
         return this;
       }
+
+      private java.lang.Object markdown_ = "";
+      /**
+       * <pre>
+       * Full markdown (without pictures inside) from image. Available only in markdown and math-markdown models.
+       * </pre>
+       *
+       * <code>string markdown = 8;</code>
+       * @return The markdown.
+       */
+      public java.lang.String getMarkdown() {
+        java.lang.Object ref = markdown_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          markdown_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full markdown (without pictures inside) from image. Available only in markdown and math-markdown models.
+       * </pre>
+       *
+       * <code>string markdown = 8;</code>
+       * @return The bytes for markdown.
+       */
+      public com.google.protobuf.ByteString
+          getMarkdownBytes() {
+        java.lang.Object ref = markdown_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          markdown_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full markdown (without pictures inside) from image. Available only in markdown and math-markdown models.
+       * </pre>
+       *
+       * <code>string markdown = 8;</code>
+       * @param value The markdown to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMarkdown(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        markdown_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full markdown (without pictures inside) from image. Available only in markdown and math-markdown models.
+       * </pre>
+       *
+       * <code>string markdown = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMarkdown() {
+        
+        markdown_ = getDefaultInstance().getMarkdown();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full markdown (without pictures inside) from image. Available only in markdown and math-markdown models.
+       * </pre>
+       *
+       * <code>string markdown = 8;</code>
+       * @param value The bytes for markdown to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMarkdownBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        markdown_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Picture> pictures_ =
+        java.util.Collections.emptyList();
+      private void ensurePicturesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          pictures_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.Picture>(pictures_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.Picture, yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PictureOrBuilder> picturesBuilder_;
+
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Picture> getPicturesList() {
+        if (picturesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pictures_);
+        } else {
+          return picturesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public int getPicturesCount() {
+        if (picturesBuilder_ == null) {
+          return pictures_.size();
+        } else {
+          return picturesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Picture getPictures(int index) {
+        if (picturesBuilder_ == null) {
+          return pictures_.get(index);
+        } else {
+          return picturesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public Builder setPictures(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Picture value) {
+        if (picturesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePicturesIsMutable();
+          pictures_.set(index, value);
+          onChanged();
+        } else {
+          picturesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public Builder setPictures(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder builderForValue) {
+        if (picturesBuilder_ == null) {
+          ensurePicturesIsMutable();
+          pictures_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          picturesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public Builder addPictures(yandex.cloud.api.ai.ocr.v1.Ocr.Picture value) {
+        if (picturesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePicturesIsMutable();
+          pictures_.add(value);
+          onChanged();
+        } else {
+          picturesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public Builder addPictures(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Picture value) {
+        if (picturesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePicturesIsMutable();
+          pictures_.add(index, value);
+          onChanged();
+        } else {
+          picturesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public Builder addPictures(
+          yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder builderForValue) {
+        if (picturesBuilder_ == null) {
+          ensurePicturesIsMutable();
+          pictures_.add(builderForValue.build());
+          onChanged();
+        } else {
+          picturesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public Builder addPictures(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder builderForValue) {
+        if (picturesBuilder_ == null) {
+          ensurePicturesIsMutable();
+          pictures_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          picturesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public Builder addAllPictures(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.ocr.v1.Ocr.Picture> values) {
+        if (picturesBuilder_ == null) {
+          ensurePicturesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pictures_);
+          onChanged();
+        } else {
+          picturesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public Builder clearPictures() {
+        if (picturesBuilder_ == null) {
+          pictures_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          picturesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public Builder removePictures(int index) {
+        if (picturesBuilder_ == null) {
+          ensurePicturesIsMutable();
+          pictures_.remove(index);
+          onChanged();
+        } else {
+          picturesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder getPicturesBuilder(
+          int index) {
+        return getPicturesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.PictureOrBuilder getPicturesOrBuilder(
+          int index) {
+        if (picturesBuilder_ == null) {
+          return pictures_.get(index);  } else {
+          return picturesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.PictureOrBuilder> 
+           getPicturesOrBuilderList() {
+        if (picturesBuilder_ != null) {
+          return picturesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pictures_);
+        }
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder addPicturesBuilder() {
+        return getPicturesFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.ocr.v1.Ocr.Picture.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder addPicturesBuilder(
+          int index) {
+        return getPicturesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.ocr.v1.Ocr.Picture.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of pictures locations from image.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Picture pictures = 9;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder> 
+           getPicturesBuilderList() {
+        return getPicturesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.Picture, yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PictureOrBuilder> 
+          getPicturesFieldBuilder() {
+        if (picturesBuilder_ == null) {
+          picturesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.Picture, yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PictureOrBuilder>(
+                  pictures_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pictures_ = null;
+        }
+        return picturesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4878,6 +5737,25 @@ public final class Ocr {
      */
     yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Block layout type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.LayoutType layout_type = 5;</code>
+     * @return The enum numeric value on the wire for layoutType.
+     */
+    int getLayoutTypeValue();
+    /**
+     * <pre>
+     * Block layout type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.LayoutType layout_type = 5;</code>
+     * @return The layoutType.
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType getLayoutType();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.ocr.v1.Block}
@@ -4895,6 +5773,7 @@ public final class Ocr {
       lines_ = java.util.Collections.emptyList();
       languages_ = java.util.Collections.emptyList();
       textSegments_ = java.util.Collections.emptyList();
+      layoutType_ = 0;
     }
 
     @java.lang.Override
@@ -4966,6 +5845,12 @@ public final class Ocr {
               }
               textSegments_.add(
                   input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.parser(), extensionRegistry));
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              layoutType_ = rawValue;
               break;
             }
             default: {
@@ -5831,6 +6716,33 @@ public final class Ocr {
       return textSegments_.get(index);
     }
 
+    public static final int LAYOUT_TYPE_FIELD_NUMBER = 5;
+    private int layoutType_;
+    /**
+     * <pre>
+     * Block layout type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.LayoutType layout_type = 5;</code>
+     * @return The enum numeric value on the wire for layoutType.
+     */
+    @java.lang.Override public int getLayoutTypeValue() {
+      return layoutType_;
+    }
+    /**
+     * <pre>
+     * Block layout type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.LayoutType layout_type = 5;</code>
+     * @return The layoutType.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType getLayoutType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType result = yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType.valueOf(layoutType_);
+      return result == null ? yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5857,6 +6769,9 @@ public final class Ocr {
       for (int i = 0; i < textSegments_.size(); i++) {
         output.writeMessage(4, textSegments_.get(i));
       }
+      if (layoutType_ != yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType.LAYOUT_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, layoutType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5881,6 +6796,10 @@ public final class Ocr {
       for (int i = 0; i < textSegments_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, textSegments_.get(i));
+      }
+      if (layoutType_ != yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType.LAYOUT_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, layoutType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5908,6 +6827,7 @@ public final class Ocr {
           .equals(other.getLanguagesList())) return false;
       if (!getTextSegmentsList()
           .equals(other.getTextSegmentsList())) return false;
+      if (layoutType_ != other.layoutType_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5935,6 +6855,8 @@ public final class Ocr {
         hash = (37 * hash) + TEXT_SEGMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getTextSegmentsList().hashCode();
       }
+      hash = (37 * hash) + LAYOUT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + layoutType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6095,6 +7017,8 @@ public final class Ocr {
         } else {
           textSegmentsBuilder_.clear();
         }
+        layoutType_ = 0;
+
         return this;
       }
 
@@ -6154,6 +7078,7 @@ public final class Ocr {
         } else {
           result.textSegments_ = textSegmentsBuilder_.build();
         }
+        result.layoutType_ = layoutType_;
         onBuilt();
         return result;
       }
@@ -6282,6 +7207,9 @@ public final class Ocr {
               textSegmentsBuilder_.addAllMessages(other.textSegments_);
             }
           }
+        }
+        if (other.layoutType_ != 0) {
+          setLayoutTypeValue(other.getLayoutTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7402,6 +8330,80 @@ public final class Ocr {
           textSegments_ = null;
         }
         return textSegmentsBuilder_;
+      }
+
+      private int layoutType_ = 0;
+      /**
+       * <pre>
+       * Block layout type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.LayoutType layout_type = 5;</code>
+       * @return The enum numeric value on the wire for layoutType.
+       */
+      @java.lang.Override public int getLayoutTypeValue() {
+        return layoutType_;
+      }
+      /**
+       * <pre>
+       * Block layout type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.LayoutType layout_type = 5;</code>
+       * @param value The enum numeric value on the wire for layoutType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLayoutTypeValue(int value) {
+        
+        layoutType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Block layout type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.LayoutType layout_type = 5;</code>
+       * @return The layoutType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType getLayoutType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType result = yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType.valueOf(layoutType_);
+        return result == null ? yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Block layout type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.LayoutType layout_type = 5;</code>
+       * @param value The layoutType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLayoutType(yandex.cloud.api.ai.ocr.v1.Ocr.LayoutType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        layoutType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Block layout type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.LayoutType layout_type = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLayoutType() {
+        
+        layoutType_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14550,6 +15552,779 @@ public final class Ocr {
 
   }
 
+  public interface PictureOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.ocr.v1.Picture)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Area on the page where the picture is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
+     */
+    boolean hasBoundingBox();
+    /**
+     * <pre>
+     * Area on the page where the picture is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.Polygon getBoundingBox();
+    /**
+     * <pre>
+     * Area on the page where the picture is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder getBoundingBoxOrBuilder();
+
+    /**
+     * <pre>
+     * Confidence score of picture location.
+     * </pre>
+     *
+     * <code>double score = 2;</code>
+     * @return The score.
+     */
+    double getScore();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.ocr.v1.Picture}
+   */
+  public static final class Picture extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.ocr.v1.Picture)
+      PictureOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Picture.newBuilder() to construct.
+    private Picture(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Picture() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Picture();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Picture(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder subBuilder = null;
+              if (boundingBox_ != null) {
+                subBuilder = boundingBox_.toBuilder();
+              }
+              boundingBox_ = input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(boundingBox_);
+                boundingBox_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 17: {
+
+              score_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Picture_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Picture_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.ocr.v1.Ocr.Picture.class, yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder.class);
+    }
+
+    public static final int BOUNDING_BOX_FIELD_NUMBER = 1;
+    private yandex.cloud.api.ai.ocr.v1.Ocr.Polygon boundingBox_;
+    /**
+     * <pre>
+     * Area on the page where the picture is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
+     */
+    @java.lang.Override
+    public boolean hasBoundingBox() {
+      return boundingBox_ != null;
+    }
+    /**
+     * <pre>
+     * Area on the page where the picture is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.Polygon getBoundingBox() {
+      return boundingBox_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.getDefaultInstance() : boundingBox_;
+    }
+    /**
+     * <pre>
+     * Area on the page where the picture is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder getBoundingBoxOrBuilder() {
+      return getBoundingBox();
+    }
+
+    public static final int SCORE_FIELD_NUMBER = 2;
+    private double score_;
+    /**
+     * <pre>
+     * Confidence score of picture location.
+     * </pre>
+     *
+     * <code>double score = 2;</code>
+     * @return The score.
+     */
+    @java.lang.Override
+    public double getScore() {
+      return score_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (boundingBox_ != null) {
+        output.writeMessage(1, getBoundingBox());
+      }
+      if (java.lang.Double.doubleToRawLongBits(score_) != 0) {
+        output.writeDouble(2, score_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (boundingBox_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBoundingBox());
+      }
+      if (java.lang.Double.doubleToRawLongBits(score_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, score_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.ocr.v1.Ocr.Picture)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.ocr.v1.Ocr.Picture other = (yandex.cloud.api.ai.ocr.v1.Ocr.Picture) obj;
+
+      if (hasBoundingBox() != other.hasBoundingBox()) return false;
+      if (hasBoundingBox()) {
+        if (!getBoundingBox()
+            .equals(other.getBoundingBox())) return false;
+      }
+      if (java.lang.Double.doubleToLongBits(getScore())
+          != java.lang.Double.doubleToLongBits(
+              other.getScore())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBoundingBox()) {
+        hash = (37 * hash) + BOUNDING_BOX_FIELD_NUMBER;
+        hash = (53 * hash) + getBoundingBox().hashCode();
+      }
+      hash = (37 * hash) + SCORE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getScore()));
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.ocr.v1.Ocr.Picture prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.ocr.v1.Picture}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.ocr.v1.Picture)
+        yandex.cloud.api.ai.ocr.v1.Ocr.PictureOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Picture_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Picture_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.ocr.v1.Ocr.Picture.class, yandex.cloud.api.ai.ocr.v1.Ocr.Picture.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.ocr.v1.Ocr.Picture.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = null;
+        } else {
+          boundingBox_ = null;
+          boundingBoxBuilder_ = null;
+        }
+        score_ = 0D;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Picture_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Picture getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.Picture.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Picture build() {
+        yandex.cloud.api.ai.ocr.v1.Ocr.Picture result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Picture buildPartial() {
+        yandex.cloud.api.ai.ocr.v1.Ocr.Picture result = new yandex.cloud.api.ai.ocr.v1.Ocr.Picture(this);
+        if (boundingBoxBuilder_ == null) {
+          result.boundingBox_ = boundingBox_;
+        } else {
+          result.boundingBox_ = boundingBoxBuilder_.build();
+        }
+        result.score_ = score_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.ocr.v1.Ocr.Picture) {
+          return mergeFrom((yandex.cloud.api.ai.ocr.v1.Ocr.Picture)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.ocr.v1.Ocr.Picture other) {
+        if (other == yandex.cloud.api.ai.ocr.v1.Ocr.Picture.getDefaultInstance()) return this;
+        if (other.hasBoundingBox()) {
+          mergeBoundingBox(other.getBoundingBox());
+        }
+        if (other.getScore() != 0D) {
+          setScore(other.getScore());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.ocr.v1.Ocr.Picture parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.ocr.v1.Ocr.Picture) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.ai.ocr.v1.Ocr.Polygon boundingBox_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.Polygon, yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder> boundingBoxBuilder_;
+      /**
+       * <pre>
+       * Area on the page where the picture is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       * @return Whether the boundingBox field is set.
+       */
+      public boolean hasBoundingBox() {
+        return boundingBoxBuilder_ != null || boundingBox_ != null;
+      }
+      /**
+       * <pre>
+       * Area on the page where the picture is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       * @return The boundingBox.
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Polygon getBoundingBox() {
+        if (boundingBoxBuilder_ == null) {
+          return boundingBox_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.getDefaultInstance() : boundingBox_;
+        } else {
+          return boundingBoxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Area on the page where the picture is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder setBoundingBox(yandex.cloud.api.ai.ocr.v1.Ocr.Polygon value) {
+        if (boundingBoxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          boundingBox_ = value;
+          onChanged();
+        } else {
+          boundingBoxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the picture is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder setBoundingBox(
+          yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder builderForValue) {
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = builderForValue.build();
+          onChanged();
+        } else {
+          boundingBoxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the picture is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder mergeBoundingBox(yandex.cloud.api.ai.ocr.v1.Ocr.Polygon value) {
+        if (boundingBoxBuilder_ == null) {
+          if (boundingBox_ != null) {
+            boundingBox_ =
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.newBuilder(boundingBox_).mergeFrom(value).buildPartial();
+          } else {
+            boundingBox_ = value;
+          }
+          onChanged();
+        } else {
+          boundingBoxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the picture is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder clearBoundingBox() {
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = null;
+          onChanged();
+        } else {
+          boundingBox_ = null;
+          boundingBoxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the picture is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder getBoundingBoxBuilder() {
+        
+        onChanged();
+        return getBoundingBoxFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Area on the page where the picture is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder getBoundingBoxOrBuilder() {
+        if (boundingBoxBuilder_ != null) {
+          return boundingBoxBuilder_.getMessageOrBuilder();
+        } else {
+          return boundingBox_ == null ?
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.getDefaultInstance() : boundingBox_;
+        }
+      }
+      /**
+       * <pre>
+       * Area on the page where the picture is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.Polygon, yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder> 
+          getBoundingBoxFieldBuilder() {
+        if (boundingBoxBuilder_ == null) {
+          boundingBoxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon, yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder>(
+                  getBoundingBox(),
+                  getParentForChildren(),
+                  isClean());
+          boundingBox_ = null;
+        }
+        return boundingBoxBuilder_;
+      }
+
+      private double score_ ;
+      /**
+       * <pre>
+       * Confidence score of picture location.
+       * </pre>
+       *
+       * <code>double score = 2;</code>
+       * @return The score.
+       */
+      @java.lang.Override
+      public double getScore() {
+        return score_;
+      }
+      /**
+       * <pre>
+       * Confidence score of picture location.
+       * </pre>
+       *
+       * <code>double score = 2;</code>
+       * @param value The score to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScore(double value) {
+        
+        score_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Confidence score of picture location.
+       * </pre>
+       *
+       * <code>double score = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScore() {
+        
+        score_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.ocr.v1.Picture)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.ocr.v1.Picture)
+    private static final yandex.cloud.api.ai.ocr.v1.Ocr.Picture DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.ocr.v1.Ocr.Picture();
+    }
+
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Picture getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Picture>
+        PARSER = new com.google.protobuf.AbstractParser<Picture>() {
+      @java.lang.Override
+      public Picture parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Picture(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Picture> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Picture> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.Picture getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_ocr_v1_Polygon_descriptor;
   private static final 
@@ -14605,6 +16380,11 @@ public final class Ocr {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_ocr_v1_TableCell_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_ocr_v1_Picture_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_ocr_v1_Picture_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14617,47 +16397,60 @@ public final class Ocr {
       "\n yandex/cloud/ai/ocr/v1/ocr.proto\022\026yand" +
       "ex.cloud.ai.ocr.v1\";\n\007Polygon\0220\n\010vertice" +
       "s\030\001 \003(\0132\036.yandex.cloud.ai.ocr.v1.Vertex\"" +
-      "\036\n\006Vertex\022\t\n\001x\030\001 \001(\003\022\t\n\001y\030\002 \001(\003\"\201\002\n\016Text" +
+      "\036\n\006Vertex\022\t\n\001x\030\001 \001(\003\022\t\n\001y\030\002 \001(\003\"\306\002\n\016Text" +
       "Annotation\022\r\n\005width\030\001 \001(\003\022\016\n\006height\030\002 \001(" +
       "\003\022-\n\006blocks\030\003 \003(\0132\035.yandex.cloud.ai.ocr." +
       "v1.Block\0220\n\010entities\030\004 \003(\0132\036.yandex.clou" +
       "d.ai.ocr.v1.Entity\022-\n\006tables\030\005 \003(\0132\035.yan" +
       "dex.cloud.ai.ocr.v1.Table\022\021\n\tfull_text\030\006" +
       " \001(\t\022-\n\006rotate\030\007 \001(\0162\035.yandex.cloud.ai.o" +
-      "cr.v1.Angle\"$\n\006Entity\022\014\n\004name\030\001 \001(\t\022\014\n\004t" +
-      "ext\030\002 \001(\t\"\226\002\n\005Block\0225\n\014bounding_box\030\001 \001(" +
-      "\0132\037.yandex.cloud.ai.ocr.v1.Polygon\022+\n\005li" +
-      "nes\030\002 \003(\0132\034.yandex.cloud.ai.ocr.v1.Line\022" +
-      "A\n\tlanguages\030\003 \003(\0132..yandex.cloud.ai.ocr" +
-      ".v1.Block.DetectedLanguage\022;\n\rtext_segme" +
-      "nts\030\004 \003(\0132$.yandex.cloud.ai.ocr.v1.TextS" +
-      "egments\032)\n\020DetectedLanguage\022\025\n\rlanguage_" +
-      "code\030\001 \001(\t\"\351\001\n\004Line\0225\n\014bounding_box\030\001 \001(" +
-      "\0132\037.yandex.cloud.ai.ocr.v1.Polygon\022\014\n\004te" +
-      "xt\030\002 \001(\t\022+\n\005words\030\003 \003(\0132\034.yandex.cloud.a" +
-      "i.ocr.v1.Word\022;\n\rtext_segments\030\004 \003(\0132$.y" +
-      "andex.cloud.ai.ocr.v1.TextSegments\0222\n\013or" +
-      "ientation\030\005 \001(\0162\035.yandex.cloud.ai.ocr.v1" +
-      ".Angle\"\236\001\n\004Word\0225\n\014bounding_box\030\001 \001(\0132\037." +
-      "yandex.cloud.ai.ocr.v1.Polygon\022\014\n\004text\030\002" +
-      " \001(\t\022\024\n\014entity_index\030\003 \001(\003\022;\n\rtext_segme" +
-      "nts\030\004 \003(\0132$.yandex.cloud.ai.ocr.v1.TextS" +
-      "egments\"3\n\014TextSegments\022\023\n\013start_index\030\001" +
-      " \001(\003\022\016\n\006length\030\002 \001(\003\"\231\001\n\005Table\0225\n\014boundi" +
-      "ng_box\030\001 \001(\0132\037.yandex.cloud.ai.ocr.v1.Po" +
-      "lygon\022\021\n\trow_count\030\002 \001(\003\022\024\n\014column_count" +
-      "\030\003 \001(\003\0220\n\005cells\030\004 \003(\0132!.yandex.cloud.ai." +
-      "ocr.v1.TableCell\"\335\001\n\tTableCell\0225\n\014boundi" +
-      "ng_box\030\001 \001(\0132\037.yandex.cloud.ai.ocr.v1.Po" +
-      "lygon\022\021\n\trow_index\030\002 \001(\003\022\024\n\014column_index" +
-      "\030\003 \001(\003\022\023\n\013column_span\030\004 \001(\003\022\020\n\010row_span\030" +
-      "\005 \001(\003\022\014\n\004text\030\006 \001(\t\022;\n\rtext_segments\030\007 \003" +
+      "cr.v1.Angle\022\020\n\010markdown\030\010 \001(\t\0221\n\010picture" +
+      "s\030\t \003(\0132\037.yandex.cloud.ai.ocr.v1.Picture" +
+      "\"$\n\006Entity\022\014\n\004name\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\"\317" +
+      "\002\n\005Block\0225\n\014bounding_box\030\001 \001(\0132\037.yandex." +
+      "cloud.ai.ocr.v1.Polygon\022+\n\005lines\030\002 \003(\0132\034" +
+      ".yandex.cloud.ai.ocr.v1.Line\022A\n\tlanguage" +
+      "s\030\003 \003(\0132..yandex.cloud.ai.ocr.v1.Block.D" +
+      "etectedLanguage\022;\n\rtext_segments\030\004 \003(\0132$" +
+      ".yandex.cloud.ai.ocr.v1.TextSegments\0227\n\013" +
+      "layout_type\030\005 \001(\0162\".yandex.cloud.ai.ocr." +
+      "v1.LayoutType\032)\n\020DetectedLanguage\022\025\n\rlan" +
+      "guage_code\030\001 \001(\t\"\351\001\n\004Line\0225\n\014bounding_bo" +
+      "x\030\001 \001(\0132\037.yandex.cloud.ai.ocr.v1.Polygon" +
+      "\022\014\n\004text\030\002 \001(\t\022+\n\005words\030\003 \003(\0132\034.yandex.c" +
+      "loud.ai.ocr.v1.Word\022;\n\rtext_segments\030\004 \003" +
       "(\0132$.yandex.cloud.ai.ocr.v1.TextSegments" +
-      "*W\n\005Angle\022\025\n\021ANGLE_UNSPECIFIED\020\000\022\013\n\007ANGL" +
-      "E_0\020\001\022\014\n\010ANGLE_90\020\002\022\r\n\tANGLE_180\020\003\022\r\n\tAN" +
-      "GLE_270\020\004B\\\n\032yandex.cloud.api.ai.ocr.v1Z" +
-      ">github.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/ai/ocr/v1;ocrb\006proto3"
+      "\0222\n\013orientation\030\005 \001(\0162\035.yandex.cloud.ai." +
+      "ocr.v1.Angle\"\236\001\n\004Word\0225\n\014bounding_box\030\001 " +
+      "\001(\0132\037.yandex.cloud.ai.ocr.v1.Polygon\022\014\n\004" +
+      "text\030\002 \001(\t\022\024\n\014entity_index\030\003 \001(\003\022;\n\rtext" +
+      "_segments\030\004 \003(\0132$.yandex.cloud.ai.ocr.v1" +
+      ".TextSegments\"3\n\014TextSegments\022\023\n\013start_i" +
+      "ndex\030\001 \001(\003\022\016\n\006length\030\002 \001(\003\"\231\001\n\005Table\0225\n\014" +
+      "bounding_box\030\001 \001(\0132\037.yandex.cloud.ai.ocr" +
+      ".v1.Polygon\022\021\n\trow_count\030\002 \001(\003\022\024\n\014column" +
+      "_count\030\003 \001(\003\0220\n\005cells\030\004 \003(\0132!.yandex.clo" +
+      "ud.ai.ocr.v1.TableCell\"\335\001\n\tTableCell\0225\n\014" +
+      "bounding_box\030\001 \001(\0132\037.yandex.cloud.ai.ocr" +
+      ".v1.Polygon\022\021\n\trow_index\030\002 \001(\003\022\024\n\014column" +
+      "_index\030\003 \001(\003\022\023\n\013column_span\030\004 \001(\003\022\020\n\010row" +
+      "_span\030\005 \001(\003\022\014\n\004text\030\006 \001(\t\022;\n\rtext_segmen" +
+      "ts\030\007 \003(\0132$.yandex.cloud.ai.ocr.v1.TextSe" +
+      "gments\"O\n\007Picture\0225\n\014bounding_box\030\001 \001(\0132" +
+      "\037.yandex.cloud.ai.ocr.v1.Polygon\022\r\n\005scor" +
+      "e\030\002 \001(\001*W\n\005Angle\022\025\n\021ANGLE_UNSPECIFIED\020\000\022" +
+      "\013\n\007ANGLE_0\020\001\022\014\n\010ANGLE_90\020\002\022\r\n\tANGLE_180\020" +
+      "\003\022\r\n\tANGLE_270\020\004*\241\002\n\nLayoutType\022\033\n\027LAYOU" +
+      "T_TYPE_UNSPECIFIED\020\000\022\027\n\023LAYOUT_TYPE_UNKN" +
+      "OWN\020\001\022\024\n\020LAYOUT_TYPE_TEXT\020\002\022\026\n\022LAYOUT_TY" +
+      "PE_HEADER\020\003\022\036\n\032LAYOUT_TYPE_SECTION_HEADE" +
+      "R\020\004\022\026\n\022LAYOUT_TYPE_FOOTER\020\005\022\030\n\024LAYOUT_TY" +
+      "PE_FOOTNOTE\020\006\022\027\n\023LAYOUT_TYPE_PICTURE\020\007\022\027" +
+      "\n\023LAYOUT_TYPE_CAPTION\020\010\022\025\n\021LAYOUT_TYPE_T" +
+      "ITLE\020\t\022\024\n\020LAYOUT_TYPE_LIST\020\nB\\\n\032yandex.c" +
+      "loud.api.ai.ocr.v1Z>github.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/ai/ocr/v1;o" +
+      "crb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14680,7 +16473,7 @@ public final class Ocr {
     internal_static_yandex_cloud_ai_ocr_v1_TextAnnotation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_TextAnnotation_descriptor,
-        new java.lang.String[] { "Width", "Height", "Blocks", "Entities", "Tables", "FullText", "Rotate", });
+        new java.lang.String[] { "Width", "Height", "Blocks", "Entities", "Tables", "FullText", "Rotate", "Markdown", "Pictures", });
     internal_static_yandex_cloud_ai_ocr_v1_Entity_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ai_ocr_v1_Entity_fieldAccessorTable = new
@@ -14692,7 +16485,7 @@ public final class Ocr {
     internal_static_yandex_cloud_ai_ocr_v1_Block_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_Block_descriptor,
-        new java.lang.String[] { "BoundingBox", "Lines", "Languages", "TextSegments", });
+        new java.lang.String[] { "BoundingBox", "Lines", "Languages", "TextSegments", "LayoutType", });
     internal_static_yandex_cloud_ai_ocr_v1_Block_DetectedLanguage_descriptor =
       internal_static_yandex_cloud_ai_ocr_v1_Block_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_ocr_v1_Block_DetectedLanguage_fieldAccessorTable = new
@@ -14729,6 +16522,12 @@ public final class Ocr {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_TableCell_descriptor,
         new java.lang.String[] { "BoundingBox", "RowIndex", "ColumnIndex", "ColumnSpan", "RowSpan", "Text", "TextSegments", });
+    internal_static_yandex_cloud_ai_ocr_v1_Picture_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_ai_ocr_v1_Picture_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_ocr_v1_Picture_descriptor,
+        new java.lang.String[] { "BoundingBox", "Score", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

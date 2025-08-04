@@ -3458,38 +3458,66 @@ public final class DesktopImageServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     * @return Whether the updateMask field is set.
-     */
-    boolean hasUpdateMask();
-    /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     * @return The updateMask.
-     */
-    com.google.protobuf.FieldMask getUpdateMask();
-    /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     */
-    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
-
-    /**
-     * <code>string image_id = 2 [(.yandex.cloud.required) = true];</code>
+     * <pre>
+     * Id of image to update.
+     * </pre>
+     *
+     * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The imageId.
      */
     java.lang.String getImageId();
     /**
-     * <code>string image_id = 2 [(.yandex.cloud.required) = true];</code>
+     * <pre>
+     * Id of image to update.
+     * </pre>
+     *
+     * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
 
     /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+
+    /**
+     * <pre>
+     * New desktop image name.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New desktop image name.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
@@ -3497,10 +3525,18 @@ public final class DesktopImageServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New desktop image labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * New desktop image labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -3512,11 +3548,19 @@ public final class DesktopImageServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * New desktop image labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * New desktop image labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3524,6 +3568,10 @@ public final class DesktopImageServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * New desktop image labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3579,6 +3627,12 @@ public final class DesktopImageServiceOuterClass {
               done = true;
               break;
             case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              imageId_ = s;
+              break;
+            }
+            case 18: {
               com.google.protobuf.FieldMask.Builder subBuilder = null;
               if (updateMask_ != null) {
                 subBuilder = updateMask_.toBuilder();
@@ -3589,12 +3643,6 @@ public final class DesktopImageServiceOuterClass {
                 updateMask_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              imageId_ = s;
               break;
             }
             case 26: {
@@ -3660,36 +3708,14 @@ public final class DesktopImageServiceOuterClass {
               yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.UpdateDesktopImageRequest.class, yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.UpdateDesktopImageRequest.Builder.class);
     }
 
-    public static final int UPDATE_MASK_FIELD_NUMBER = 1;
-    private com.google.protobuf.FieldMask updateMask_;
-    /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     * @return Whether the updateMask field is set.
-     */
-    @java.lang.Override
-    public boolean hasUpdateMask() {
-      return updateMask_ != null;
-    }
-    /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     * @return The updateMask.
-     */
-    @java.lang.Override
-    public com.google.protobuf.FieldMask getUpdateMask() {
-      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
-    }
-    /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
-      return getUpdateMask();
-    }
-
-    public static final int IMAGE_ID_FIELD_NUMBER = 2;
+    public static final int IMAGE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object imageId_;
     /**
-     * <code>string image_id = 2 [(.yandex.cloud.required) = true];</code>
+     * <pre>
+     * Id of image to update.
+     * </pre>
+     *
+     * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The imageId.
      */
     @java.lang.Override
@@ -3706,7 +3732,11 @@ public final class DesktopImageServiceOuterClass {
       }
     }
     /**
-     * <code>string image_id = 2 [(.yandex.cloud.required) = true];</code>
+     * <pre>
+     * Id of image to update.
+     * </pre>
+     *
+     * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for imageId.
      */
     @java.lang.Override
@@ -3724,9 +3754,51 @@ public final class DesktopImageServiceOuterClass {
       }
     }
 
+    public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New desktop image name.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
@@ -3744,6 +3816,10 @@ public final class DesktopImageServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New desktop image name.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
@@ -3789,6 +3865,10 @@ public final class DesktopImageServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * New desktop image labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3807,6 +3887,10 @@ public final class DesktopImageServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * New desktop image labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -3815,6 +3899,10 @@ public final class DesktopImageServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * New desktop image labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -3828,6 +3916,10 @@ public final class DesktopImageServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * New desktop image labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -3857,11 +3949,11 @@ public final class DesktopImageServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (updateMask_ != null) {
-        output.writeMessage(1, getUpdateMask());
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, imageId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageId_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(2, getUpdateMask());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
@@ -3881,12 +3973,12 @@ public final class DesktopImageServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageId_);
+      }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getUpdateMask());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, imageId_);
+          .computeMessageSize(2, getUpdateMask());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
@@ -3916,13 +4008,13 @@ public final class DesktopImageServiceOuterClass {
       }
       yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.UpdateDesktopImageRequest other = (yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.UpdateDesktopImageRequest) obj;
 
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
       if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
         if (!getUpdateMask()
             .equals(other.getUpdateMask())) return false;
       }
-      if (!getImageId()
-          .equals(other.getImageId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
       if (!internalGetLabels().equals(
@@ -3938,12 +4030,12 @@ public final class DesktopImageServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IMAGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getImageId().hashCode();
       if (hasUpdateMask()) {
         hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
         hash = (53 * hash) + getUpdateMask().hashCode();
       }
-      hash = (37 * hash) + IMAGE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getImageId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
       if (!internalGetLabels().getMap().isEmpty()) {
@@ -4105,14 +4197,14 @@ public final class DesktopImageServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        imageId_ = "";
+
         if (updateMaskBuilder_ == null) {
           updateMask_ = null;
         } else {
           updateMask_ = null;
           updateMaskBuilder_ = null;
         }
-        imageId_ = "";
-
         name_ = "";
 
         internalGetMutableLabels().clear();
@@ -4143,12 +4235,12 @@ public final class DesktopImageServiceOuterClass {
       public yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.UpdateDesktopImageRequest buildPartial() {
         yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.UpdateDesktopImageRequest result = new yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.UpdateDesktopImageRequest(this);
         int from_bitField0_ = bitField0_;
+        result.imageId_ = imageId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
         } else {
           result.updateMask_ = updateMaskBuilder_.build();
         }
-        result.imageId_ = imageId_;
         result.name_ = name_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
@@ -4200,12 +4292,12 @@ public final class DesktopImageServiceOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.UpdateDesktopImageRequest other) {
         if (other == yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.UpdateDesktopImageRequest.getDefaultInstance()) return this;
-        if (other.hasUpdateMask()) {
-          mergeUpdateMask(other.getUpdateMask());
-        }
         if (!other.getImageId().isEmpty()) {
           imageId_ = other.imageId_;
           onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
@@ -4243,18 +4335,122 @@ public final class DesktopImageServiceOuterClass {
       }
       private int bitField0_;
 
+      private java.lang.Object imageId_ = "";
+      /**
+       * <pre>
+       * Id of image to update.
+       * </pre>
+       *
+       * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The imageId.
+       */
+      public java.lang.String getImageId() {
+        java.lang.Object ref = imageId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          imageId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of image to update.
+       * </pre>
+       *
+       * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for imageId.
+       */
+      public com.google.protobuf.ByteString
+          getImageIdBytes() {
+        java.lang.Object ref = imageId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          imageId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of image to update.
+       * </pre>
+       *
+       * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        imageId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of image to update.
+       * </pre>
+       *
+       * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImageId() {
+        
+        imageId_ = getDefaultInstance().getImageId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of image to update.
+       * </pre>
+       *
+       * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        imageId_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -4265,7 +4461,11 @@ public final class DesktopImageServiceOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
         if (updateMaskBuilder_ == null) {
@@ -4281,7 +4481,11 @@ public final class DesktopImageServiceOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
           com.google.protobuf.FieldMask.Builder builderForValue) {
@@ -4295,7 +4499,11 @@ public final class DesktopImageServiceOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
         if (updateMaskBuilder_ == null) {
@@ -4313,7 +4521,11 @@ public final class DesktopImageServiceOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -4327,7 +4539,11 @@ public final class DesktopImageServiceOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
         
@@ -4335,7 +4551,11 @@ public final class DesktopImageServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
         if (updateMaskBuilder_ != null) {
@@ -4346,7 +4566,11 @@ public final class DesktopImageServiceOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
@@ -4362,84 +4586,12 @@ public final class DesktopImageServiceOuterClass {
         return updateMaskBuilder_;
       }
 
-      private java.lang.Object imageId_ = "";
-      /**
-       * <code>string image_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @return The imageId.
-       */
-      public java.lang.String getImageId() {
-        java.lang.Object ref = imageId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          imageId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string image_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @return The bytes for imageId.
-       */
-      public com.google.protobuf.ByteString
-          getImageIdBytes() {
-        java.lang.Object ref = imageId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          imageId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string image_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @param value The imageId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setImageId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        imageId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string image_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearImageId() {
-        
-        imageId_ = getDefaultInstance().getImageId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string image_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @param value The bytes for imageId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setImageIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        imageId_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New desktop image name.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The name.
        */
@@ -4456,6 +4608,10 @@ public final class DesktopImageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New desktop image name.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for name.
        */
@@ -4473,6 +4629,10 @@ public final class DesktopImageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New desktop image name.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -4488,6 +4648,10 @@ public final class DesktopImageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop image name.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -4498,6 +4662,10 @@ public final class DesktopImageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop image name.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -4541,6 +4709,10 @@ public final class DesktopImageServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * New desktop image labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4559,6 +4731,10 @@ public final class DesktopImageServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * New desktop image labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -4567,6 +4743,10 @@ public final class DesktopImageServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * New desktop image labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -4580,6 +4760,10 @@ public final class DesktopImageServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * New desktop image labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -4601,6 +4785,10 @@ public final class DesktopImageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop image labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4620,6 +4808,10 @@ public final class DesktopImageServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * New desktop image labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -4635,6 +4827,10 @@ public final class DesktopImageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop image labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -9349,9 +9545,9 @@ public final class DesktopImageServiceOuterClass {
       "esktopImageRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
       "\3071\001\212\3101\004<=50\022\032\n\004name\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
       "\036\n\010image_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50J\004\010\003\020\010\"\306\002" +
-      "\n\031UpdateDesktopImageRequest\022/\n\013update_ma" +
-      "sk\030\001 \001(\0132\032.google.protobuf.FieldMask\022\026\n\010" +
-      "image_id\030\002 \001(\tB\004\350\3071\001\022\026\n\004name\030\003 \001(\tB\010\212\3101\004" +
+      "\n\031UpdateDesktopImageRequest\022\026\n\010image_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.googl" +
+      "e.protobuf.FieldMask\022\026\n\004name\030\003 \001(\tB\010\212\3101\004" +
       "<=50\022\230\001\n\006labels\030\004 \003(\0132G.yandex.cloud.clo" +
       "uddesktop.v1.api.UpdateDesktopImageReque" +
       "st.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0" +
@@ -9434,7 +9630,7 @@ public final class DesktopImageServiceOuterClass {
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_descriptor,
-        new java.lang.String[] { "UpdateMask", "ImageId", "Name", "Labels", });
+        new java.lang.String[] { "ImageId", "UpdateMask", "Name", "Labels", });
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_LabelsEntry_fieldAccessorTable = new

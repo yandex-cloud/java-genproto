@@ -20,8 +20,8 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the Metastore cluster.
-     * This ID is assigned by MDB at creation time.
+     * Unique ID of the Metastore Cluster.
+     * This ID is assigned by Cloud in the process of creating a Trino cluster.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -30,8 +30,8 @@ public final class ClusterOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the Metastore cluster.
-     * This ID is assigned by MDB at creation time.
+     * Unique ID of the Metastore Cluster.
+     * This ID is assigned by Cloud in the process of creating a Trino cluster.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -42,7 +42,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the folder that the Metastore cluster belongs to.
+     * ID of the folder that the Metastore Cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -51,7 +51,7 @@ public final class ClusterOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder that the Metastore cluster belongs to.
+     * ID of the folder that the Metastore Cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -62,7 +62,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * The time the Metastore Cluster was created at.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -71,7 +71,7 @@ public final class ClusterOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * The time the Metastore Cluster was created at.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -80,7 +80,7 @@ public final class ClusterOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * The time the Metastore Cluster was created at.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -89,8 +89,8 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Name of the Metastore cluster.
-     * The name is unique within the folder. 1-63 characters long.
+     * Name of the Metastore Cluster.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -99,8 +99,8 @@ public final class ClusterOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Metastore cluster.
-     * The name is unique within the folder. 1-63 characters long.
+     * Name of the Metastore Cluster.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -111,7 +111,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Description of the Metastore cluster. 0-256 characters long.
+     * Description of the Metastore Cluster.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -120,7 +120,7 @@ public final class ClusterOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the Metastore cluster. 0-256 characters long.
+     * Description of the Metastore Cluster.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -131,8 +131,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the Metastore cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the Metastore Cluster as `` key:value `` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -140,8 +139,7 @@ public final class ClusterOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the Metastore cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the Metastore Cluster as `` key:value `` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -156,8 +154,7 @@ public final class ClusterOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the Metastore cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the Metastore Cluster as `` key:value `` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -166,8 +163,7 @@ public final class ClusterOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the Metastore cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the Metastore Cluster as `` key:value `` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -178,8 +174,7 @@ public final class ClusterOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the Metastore cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the Metastore Cluster as `` key:value `` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -209,7 +204,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Current state of the cluster.
+     * Cluster status.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.Cluster.Status status = 9;</code>
@@ -218,7 +213,7 @@ public final class ClusterOuterClass {
     int getStatusValue();
     /**
      * <pre>
-     * Current state of the cluster.
+     * Cluster status.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.Cluster.Status status = 9;</code>
@@ -228,168 +223,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Subnet ids to put metastore servers
-     * </pre>
-     *
-     * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-     * @deprecated
-     * @return A list containing the subnetIds.
-     */
-    @java.lang.Deprecated java.util.List<java.lang.String>
-        getSubnetIdsList();
-    /**
-     * <pre>
-     * Subnet ids to put metastore servers
-     * </pre>
-     *
-     * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-     * @deprecated
-     * @return The count of subnetIds.
-     */
-    @java.lang.Deprecated int getSubnetIdsCount();
-    /**
-     * <pre>
-     * Subnet ids to put metastore servers
-     * </pre>
-     *
-     * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-     * @deprecated
-     * @param index The index of the element to return.
-     * @return The subnetIds at the given index.
-     */
-    @java.lang.Deprecated java.lang.String getSubnetIds(int index);
-    /**
-     * <pre>
-     * Subnet ids to put metastore servers
-     * </pre>
-     *
-     * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-     * @deprecated
-     * @param index The index of the value to return.
-     * @return The bytes of the subnetIds at the given index.
-     */
-    @java.lang.Deprecated com.google.protobuf.ByteString
-        getSubnetIdsBytes(int index);
-
-    /**
-     * <pre>
-     * Minimum number of metastore servers per zone
-     * </pre>
-     *
-     * <code>int64 min_servers_per_zone = 11;</code>
-     * @return The minServersPerZone.
-     */
-    long getMinServersPerZone();
-
-    /**
-     * <pre>
-     * Maximum number of metastore servers per zone
-     * </pre>
-     *
-     * <code>int64 max_servers_per_zone = 12;</code>
-     * @return The maxServersPerZone.
-     */
-    long getMaxServersPerZone();
-
-    /**
-     * <pre>
-     * Actual number of metastore servers per zone
-     * </pre>
-     *
-     * <code>int64 servers_per_zone = 13;</code>
-     * @return The serversPerZone.
-     */
-    long getServersPerZone();
-
-    /**
-     * <pre>
-     * User security groups
-     * </pre>
-     *
-     * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-     * @deprecated
-     * @return A list containing the securityGroupIds.
-     */
-    @java.lang.Deprecated java.util.List<java.lang.String>
-        getSecurityGroupIdsList();
-    /**
-     * <pre>
-     * User security groups
-     * </pre>
-     *
-     * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-     * @deprecated
-     * @return The count of securityGroupIds.
-     */
-    @java.lang.Deprecated int getSecurityGroupIdsCount();
-    /**
-     * <pre>
-     * User security groups
-     * </pre>
-     *
-     * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-     * @deprecated
-     * @param index The index of the element to return.
-     * @return The securityGroupIds at the given index.
-     */
-    @java.lang.Deprecated java.lang.String getSecurityGroupIds(int index);
-    /**
-     * <pre>
-     * User security groups
-     * </pre>
-     *
-     * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-     * @deprecated
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroupIds at the given index.
-     */
-    @java.lang.Deprecated com.google.protobuf.ByteString
-        getSecurityGroupIdsBytes(int index);
-
-    /**
-     * <pre>
-     * Host groups hosting VMs of the cluster.
-     * </pre>
-     *
-     * <code>repeated string host_group_ids = 15;</code>
-     * @return A list containing the hostGroupIds.
-     */
-    java.util.List<java.lang.String>
-        getHostGroupIdsList();
-    /**
-     * <pre>
-     * Host groups hosting VMs of the cluster.
-     * </pre>
-     *
-     * <code>repeated string host_group_ids = 15;</code>
-     * @return The count of hostGroupIds.
-     */
-    int getHostGroupIdsCount();
-    /**
-     * <pre>
-     * Host groups hosting VMs of the cluster.
-     * </pre>
-     *
-     * <code>repeated string host_group_ids = 15;</code>
-     * @param index The index of the element to return.
-     * @return The hostGroupIds at the given index.
-     */
-    java.lang.String getHostGroupIds(int index);
-    /**
-     * <pre>
-     * Host groups hosting VMs of the cluster.
-     * </pre>
-     *
-     * <code>repeated string host_group_ids = 15;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the hostGroupIds at the given index.
-     */
-    com.google.protobuf.ByteString
-        getHostGroupIdsBytes(int index);
-
-    /**
-     * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Deletion Protection prevents deletion of the cluster.
      * </pre>
      *
      * <code>bool deletion_protection = 16;</code>
@@ -399,7 +233,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Metastore server version
+     * Metastore server version.
      * </pre>
      *
      * <code>string version = 17;</code>
@@ -408,7 +242,7 @@ public final class ClusterOuterClass {
     java.lang.String getVersion();
     /**
      * <pre>
-     * Metastore server version
+     * Metastore server version.
      * </pre>
      *
      * <code>string version = 17;</code>
@@ -419,7 +253,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Metastore network
+     * Metastore network ID.
      * </pre>
      *
      * <code>string network_id = 18;</code>
@@ -428,7 +262,7 @@ public final class ClusterOuterClass {
     java.lang.String getNetworkId();
     /**
      * <pre>
-     * Metastore network
+     * Metastore network ID.
      * </pre>
      *
      * <code>string network_id = 18;</code>
@@ -439,7 +273,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * IP address of metastore server balancer endpoint
+     * IP address of the Metastore server load balancer.
      * </pre>
      *
      * <code>string endpoint_ip = 19;</code>
@@ -448,7 +282,7 @@ public final class ClusterOuterClass {
     java.lang.String getEndpointIp();
     /**
      * <pre>
-     * IP address of metastore server balancer endpoint
+     * IP address of the Metastore server load balancer.
      * </pre>
      *
      * <code>string endpoint_ip = 19;</code>
@@ -459,7 +293,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Metastore cluster configuration
+     * Configuration of the Metastore Cluster.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -468,7 +302,7 @@ public final class ClusterOuterClass {
     boolean hasClusterConfig();
     /**
      * <pre>
-     * Metastore cluster configuration
+     * Configuration of the Metastore Cluster.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -477,7 +311,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.metastore.v1.ClusterOuterClass.ClusterConfig getClusterConfig();
     /**
      * <pre>
-     * Metastore cluster configuration
+     * Configuration of the Metastore Cluster.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -486,19 +320,19 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Service account that will be used to access a YC resources
+     * Service account used to access Cloud resources.
      * </pre>
      *
-     * <code>string service_account_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 21;</code>
      * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * Service account that will be used to access a YC resources
+     * Service account used to access Cloud resources.
      * </pre>
      *
-     * <code>string service_account_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 21;</code>
      * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
@@ -506,7 +340,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Cloud logging configuration
+     * Cloud logging configuration.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -515,7 +349,7 @@ public final class ClusterOuterClass {
     boolean hasLogging();
     /**
      * <pre>
-     * Cloud logging configuration
+     * Cloud logging configuration.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -524,7 +358,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.metastore.v1.ClusterOuterClass.LoggingConfig getLogging();
     /**
      * <pre>
-     * Cloud logging configuration
+     * Cloud logging configuration.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -533,7 +367,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Network related configuration options.
+     * Network-related configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -542,7 +376,7 @@ public final class ClusterOuterClass {
     boolean hasNetwork();
     /**
      * <pre>
-     * Network related configuration options.
+     * Network-related configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -551,7 +385,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.metastore.v1.ClusterOuterClass.NetworkConfig getNetwork();
     /**
      * <pre>
-     * Network related configuration options.
+     * Network-related configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -560,7 +394,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -569,7 +403,7 @@ public final class ClusterOuterClass {
     boolean hasMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -578,7 +412,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.metastore.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -587,7 +421,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Maintenance operation scheduled for the nearest maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -596,7 +430,7 @@ public final class ClusterOuterClass {
     boolean hasPlannedOperation();
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Maintenance operation scheduled for the nearest maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -605,7 +439,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.metastore.v1.Maintenance.MaintenanceOperation getPlannedOperation();
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Maintenance operation scheduled for the nearest maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -614,7 +448,7 @@ public final class ClusterOuterClass {
   }
   /**
    * <pre>
-   * Hive Metastore Cluster.
+   * Metastore Cluster.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.metastore.v1.Cluster}
@@ -635,9 +469,6 @@ public final class ClusterOuterClass {
       description_ = "";
       health_ = 0;
       status_ = 0;
-      subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       version_ = "";
       networkId_ = "";
       endpointIp_ = "";
@@ -735,48 +566,6 @@ public final class ClusterOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
-              break;
-            }
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                subnetIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              subnetIds_.add(s);
-              break;
-            }
-            case 88: {
-
-              minServersPerZone_ = input.readInt64();
-              break;
-            }
-            case 96: {
-
-              maxServersPerZone_ = input.readInt64();
-              break;
-            }
-            case 104: {
-
-              serversPerZone_ = input.readInt64();
-              break;
-            }
-            case 114: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              securityGroupIds_.add(s);
-              break;
-            }
-            case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                hostGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              hostGroupIds_.add(s);
               break;
             }
             case 128: {
@@ -888,15 +677,6 @@ public final class ClusterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          subnetIds_ = subnetIds_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -933,7 +713,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * State of the cluster is unknown ([Host.health] for every host in the cluster is UNKNOWN).
+       * Cluster is in unknown state (we have no data).
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -941,7 +721,7 @@ public final class ClusterOuterClass {
       HEALTH_UNKNOWN(0),
       /**
        * <pre>
-       * Cluster is alive and well ([Host.health] for every host in the cluster is ALIVE).
+       * Cluster is alive and operates properly.
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -949,7 +729,7 @@ public final class ClusterOuterClass {
       ALIVE(1),
       /**
        * <pre>
-       * Cluster is inoperable ([Host.health] for every host in the cluster is DEAD).
+       * Cluster is inoperable (it cannot perform any of its essential functions).
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -957,7 +737,7 @@ public final class ClusterOuterClass {
       DEAD(2),
       /**
        * <pre>
-       * Cluster is working below capacity ([Host.health] for at least one host in the cluster is not ALIVE).
+       * Cluster is partially alive (it can perform some of its essential functions).
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -968,7 +748,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * State of the cluster is unknown ([Host.health] for every host in the cluster is UNKNOWN).
+       * Cluster is in unknown state (we have no data).
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -976,7 +756,7 @@ public final class ClusterOuterClass {
       public static final int HEALTH_UNKNOWN_VALUE = 0;
       /**
        * <pre>
-       * Cluster is alive and well ([Host.health] for every host in the cluster is ALIVE).
+       * Cluster is alive and operates properly.
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -984,7 +764,7 @@ public final class ClusterOuterClass {
       public static final int ALIVE_VALUE = 1;
       /**
        * <pre>
-       * Cluster is inoperable ([Host.health] for every host in the cluster is DEAD).
+       * Cluster is inoperable (it cannot perform any of its essential functions).
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -992,7 +772,7 @@ public final class ClusterOuterClass {
       public static final int DEAD_VALUE = 2;
       /**
        * <pre>
-       * Cluster is working below capacity ([Host.health] for at least one host in the cluster is not ALIVE).
+       * Cluster is partially alive (it can perform some of its essential functions).
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -1314,8 +1094,8 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the Metastore cluster.
-     * This ID is assigned by MDB at creation time.
+     * Unique ID of the Metastore Cluster.
+     * This ID is assigned by Cloud in the process of creating a Trino cluster.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1336,8 +1116,8 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the Metastore cluster.
-     * This ID is assigned by MDB at creation time.
+     * Unique ID of the Metastore Cluster.
+     * This ID is assigned by Cloud in the process of creating a Trino cluster.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1362,7 +1142,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder that the Metastore cluster belongs to.
+     * ID of the folder that the Metastore Cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -1383,7 +1163,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder that the Metastore cluster belongs to.
+     * ID of the folder that the Metastore Cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -1408,7 +1188,7 @@ public final class ClusterOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * The time the Metastore Cluster was created at.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1420,7 +1200,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * The time the Metastore Cluster was created at.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1432,7 +1212,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * The time the Metastore Cluster was created at.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1446,8 +1226,8 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Metastore cluster.
-     * The name is unique within the folder. 1-63 characters long.
+     * Name of the Metastore Cluster.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -1468,8 +1248,8 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Name of the Metastore cluster.
-     * The name is unique within the folder. 1-63 characters long.
+     * Name of the Metastore Cluster.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -1494,7 +1274,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the Metastore cluster. 0-256 characters long.
+     * Description of the Metastore Cluster.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1515,7 +1295,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Description of the Metastore cluster. 0-256 characters long.
+     * Description of the Metastore Cluster.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1564,8 +1344,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Metastore cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the Metastore Cluster as `` key:value `` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1587,8 +1366,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Metastore cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the Metastore Cluster as `` key:value `` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1600,8 +1378,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Metastore cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the Metastore Cluster as `` key:value `` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1618,8 +1395,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Metastore cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the Metastore Cluster as `` key:value `` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1668,7 +1444,7 @@ public final class ClusterOuterClass {
     private int status_;
     /**
      * <pre>
-     * Current state of the cluster.
+     * Cluster status.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.Cluster.Status status = 9;</code>
@@ -1679,7 +1455,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Current state of the cluster.
+     * Cluster status.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.Cluster.Status status = 9;</code>
@@ -1691,217 +1467,11 @@ public final class ClusterOuterClass {
       return result == null ? yandex.cloud.api.metastore.v1.ClusterOuterClass.Cluster.Status.UNRECOGNIZED : result;
     }
 
-    public static final int SUBNET_IDS_FIELD_NUMBER = 10;
-    private com.google.protobuf.LazyStringList subnetIds_;
-    /**
-     * <pre>
-     * Subnet ids to put metastore servers
-     * </pre>
-     *
-     * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-     * @deprecated
-     * @return A list containing the subnetIds.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
-        getSubnetIdsList() {
-      return subnetIds_;
-    }
-    /**
-     * <pre>
-     * Subnet ids to put metastore servers
-     * </pre>
-     *
-     * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-     * @deprecated
-     * @return The count of subnetIds.
-     */
-    @java.lang.Deprecated public int getSubnetIdsCount() {
-      return subnetIds_.size();
-    }
-    /**
-     * <pre>
-     * Subnet ids to put metastore servers
-     * </pre>
-     *
-     * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-     * @deprecated
-     * @param index The index of the element to return.
-     * @return The subnetIds at the given index.
-     */
-    @java.lang.Deprecated public java.lang.String getSubnetIds(int index) {
-      return subnetIds_.get(index);
-    }
-    /**
-     * <pre>
-     * Subnet ids to put metastore servers
-     * </pre>
-     *
-     * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-     * @deprecated
-     * @param index The index of the value to return.
-     * @return The bytes of the subnetIds at the given index.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getSubnetIdsBytes(int index) {
-      return subnetIds_.getByteString(index);
-    }
-
-    public static final int MIN_SERVERS_PER_ZONE_FIELD_NUMBER = 11;
-    private long minServersPerZone_;
-    /**
-     * <pre>
-     * Minimum number of metastore servers per zone
-     * </pre>
-     *
-     * <code>int64 min_servers_per_zone = 11;</code>
-     * @return The minServersPerZone.
-     */
-    @java.lang.Override
-    public long getMinServersPerZone() {
-      return minServersPerZone_;
-    }
-
-    public static final int MAX_SERVERS_PER_ZONE_FIELD_NUMBER = 12;
-    private long maxServersPerZone_;
-    /**
-     * <pre>
-     * Maximum number of metastore servers per zone
-     * </pre>
-     *
-     * <code>int64 max_servers_per_zone = 12;</code>
-     * @return The maxServersPerZone.
-     */
-    @java.lang.Override
-    public long getMaxServersPerZone() {
-      return maxServersPerZone_;
-    }
-
-    public static final int SERVERS_PER_ZONE_FIELD_NUMBER = 13;
-    private long serversPerZone_;
-    /**
-     * <pre>
-     * Actual number of metastore servers per zone
-     * </pre>
-     *
-     * <code>int64 servers_per_zone = 13;</code>
-     * @return The serversPerZone.
-     */
-    @java.lang.Override
-    public long getServersPerZone() {
-      return serversPerZone_;
-    }
-
-    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 14;
-    private com.google.protobuf.LazyStringList securityGroupIds_;
-    /**
-     * <pre>
-     * User security groups
-     * </pre>
-     *
-     * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-     * @deprecated
-     * @return A list containing the securityGroupIds.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
-        getSecurityGroupIdsList() {
-      return securityGroupIds_;
-    }
-    /**
-     * <pre>
-     * User security groups
-     * </pre>
-     *
-     * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-     * @deprecated
-     * @return The count of securityGroupIds.
-     */
-    @java.lang.Deprecated public int getSecurityGroupIdsCount() {
-      return securityGroupIds_.size();
-    }
-    /**
-     * <pre>
-     * User security groups
-     * </pre>
-     *
-     * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-     * @deprecated
-     * @param index The index of the element to return.
-     * @return The securityGroupIds at the given index.
-     */
-    @java.lang.Deprecated public java.lang.String getSecurityGroupIds(int index) {
-      return securityGroupIds_.get(index);
-    }
-    /**
-     * <pre>
-     * User security groups
-     * </pre>
-     *
-     * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-     * @deprecated
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroupIds at the given index.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getSecurityGroupIdsBytes(int index) {
-      return securityGroupIds_.getByteString(index);
-    }
-
-    public static final int HOST_GROUP_IDS_FIELD_NUMBER = 15;
-    private com.google.protobuf.LazyStringList hostGroupIds_;
-    /**
-     * <pre>
-     * Host groups hosting VMs of the cluster.
-     * </pre>
-     *
-     * <code>repeated string host_group_ids = 15;</code>
-     * @return A list containing the hostGroupIds.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getHostGroupIdsList() {
-      return hostGroupIds_;
-    }
-    /**
-     * <pre>
-     * Host groups hosting VMs of the cluster.
-     * </pre>
-     *
-     * <code>repeated string host_group_ids = 15;</code>
-     * @return The count of hostGroupIds.
-     */
-    public int getHostGroupIdsCount() {
-      return hostGroupIds_.size();
-    }
-    /**
-     * <pre>
-     * Host groups hosting VMs of the cluster.
-     * </pre>
-     *
-     * <code>repeated string host_group_ids = 15;</code>
-     * @param index The index of the element to return.
-     * @return The hostGroupIds at the given index.
-     */
-    public java.lang.String getHostGroupIds(int index) {
-      return hostGroupIds_.get(index);
-    }
-    /**
-     * <pre>
-     * Host groups hosting VMs of the cluster.
-     * </pre>
-     *
-     * <code>repeated string host_group_ids = 15;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the hostGroupIds at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getHostGroupIdsBytes(int index) {
-      return hostGroupIds_.getByteString(index);
-    }
-
     public static final int DELETION_PROTECTION_FIELD_NUMBER = 16;
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Deletion Protection prevents deletion of the cluster.
      * </pre>
      *
      * <code>bool deletion_protection = 16;</code>
@@ -1916,7 +1486,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object version_;
     /**
      * <pre>
-     * Metastore server version
+     * Metastore server version.
      * </pre>
      *
      * <code>string version = 17;</code>
@@ -1937,7 +1507,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Metastore server version
+     * Metastore server version.
      * </pre>
      *
      * <code>string version = 17;</code>
@@ -1962,7 +1532,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object networkId_;
     /**
      * <pre>
-     * Metastore network
+     * Metastore network ID.
      * </pre>
      *
      * <code>string network_id = 18;</code>
@@ -1983,7 +1553,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Metastore network
+     * Metastore network ID.
      * </pre>
      *
      * <code>string network_id = 18;</code>
@@ -2008,7 +1578,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object endpointIp_;
     /**
      * <pre>
-     * IP address of metastore server balancer endpoint
+     * IP address of the Metastore server load balancer.
      * </pre>
      *
      * <code>string endpoint_ip = 19;</code>
@@ -2029,7 +1599,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * IP address of metastore server balancer endpoint
+     * IP address of the Metastore server load balancer.
      * </pre>
      *
      * <code>string endpoint_ip = 19;</code>
@@ -2054,7 +1624,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.metastore.v1.ClusterOuterClass.ClusterConfig clusterConfig_;
     /**
      * <pre>
-     * Metastore cluster configuration
+     * Configuration of the Metastore Cluster.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -2066,7 +1636,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Metastore cluster configuration
+     * Configuration of the Metastore Cluster.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -2078,7 +1648,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Metastore cluster configuration
+     * Configuration of the Metastore Cluster.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -2092,10 +1662,10 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * Service account that will be used to access a YC resources
+     * Service account used to access Cloud resources.
      * </pre>
      *
-     * <code>string service_account_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 21;</code>
      * @return The serviceAccountId.
      */
     @java.lang.Override
@@ -2113,10 +1683,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Service account that will be used to access a YC resources
+     * Service account used to access Cloud resources.
      * </pre>
      *
-     * <code>string service_account_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 21;</code>
      * @return The bytes for serviceAccountId.
      */
     @java.lang.Override
@@ -2138,7 +1708,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.metastore.v1.ClusterOuterClass.LoggingConfig logging_;
     /**
      * <pre>
-     * Cloud logging configuration
+     * Cloud logging configuration.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -2150,7 +1720,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Cloud logging configuration
+     * Cloud logging configuration.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -2162,7 +1732,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Cloud logging configuration
+     * Cloud logging configuration.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -2176,7 +1746,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.metastore.v1.ClusterOuterClass.NetworkConfig network_;
     /**
      * <pre>
-     * Network related configuration options.
+     * Network-related configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -2188,7 +1758,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Network related configuration options.
+     * Network-related configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -2200,7 +1770,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Network related configuration options.
+     * Network-related configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -2214,7 +1784,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.metastore.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -2226,7 +1796,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -2238,7 +1808,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -2252,7 +1822,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.metastore.v1.Maintenance.MaintenanceOperation plannedOperation_;
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Maintenance operation scheduled for the nearest maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -2264,7 +1834,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Maintenance operation scheduled for the nearest maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -2276,7 +1846,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Maintenance operation scheduled for the nearest maintenance window.
      * </pre>
      *
      * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -2326,24 +1896,6 @@ public final class ClusterOuterClass {
       }
       if (status_ != yandex.cloud.api.metastore.v1.ClusterOuterClass.Cluster.Status.STATUS_UNKNOWN.getNumber()) {
         output.writeEnum(9, status_);
-      }
-      for (int i = 0; i < subnetIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, subnetIds_.getRaw(i));
-      }
-      if (minServersPerZone_ != 0L) {
-        output.writeInt64(11, minServersPerZone_);
-      }
-      if (maxServersPerZone_ != 0L) {
-        output.writeInt64(12, maxServersPerZone_);
-      }
-      if (serversPerZone_ != 0L) {
-        output.writeInt64(13, serversPerZone_);
-      }
-      for (int i = 0; i < securityGroupIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, securityGroupIds_.getRaw(i));
-      }
-      for (int i = 0; i < hostGroupIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, hostGroupIds_.getRaw(i));
       }
       if (deletionProtection_ != false) {
         output.writeBool(16, deletionProtection_);
@@ -2418,42 +1970,6 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, status_);
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < subnetIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(subnetIds_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getSubnetIdsList().size();
-      }
-      if (minServersPerZone_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(11, minServersPerZone_);
-      }
-      if (maxServersPerZone_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(12, maxServersPerZone_);
-      }
-      if (serversPerZone_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(13, serversPerZone_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < securityGroupIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getSecurityGroupIdsList().size();
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < hostGroupIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(hostGroupIds_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getHostGroupIdsList().size();
-      }
       if (deletionProtection_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(16, deletionProtection_);
@@ -2522,18 +2038,6 @@ public final class ClusterOuterClass {
           other.internalGetLabels())) return false;
       if (health_ != other.health_) return false;
       if (status_ != other.status_) return false;
-      if (!getSubnetIdsList()
-          .equals(other.getSubnetIdsList())) return false;
-      if (getMinServersPerZone()
-          != other.getMinServersPerZone()) return false;
-      if (getMaxServersPerZone()
-          != other.getMaxServersPerZone()) return false;
-      if (getServersPerZone()
-          != other.getServersPerZone()) return false;
-      if (!getSecurityGroupIdsList()
-          .equals(other.getSecurityGroupIdsList())) return false;
-      if (!getHostGroupIdsList()
-          .equals(other.getHostGroupIdsList())) return false;
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
       if (!getVersion()
@@ -2600,27 +2104,6 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + health_;
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
-      if (getSubnetIdsCount() > 0) {
-        hash = (37 * hash) + SUBNET_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getSubnetIdsList().hashCode();
-      }
-      hash = (37 * hash) + MIN_SERVERS_PER_ZONE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getMinServersPerZone());
-      hash = (37 * hash) + MAX_SERVERS_PER_ZONE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getMaxServersPerZone());
-      hash = (37 * hash) + SERVERS_PER_ZONE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getServersPerZone());
-      if (getSecurityGroupIdsCount() > 0) {
-        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
-      }
-      if (getHostGroupIdsCount() > 0) {
-        hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getHostGroupIdsList().hashCode();
-      }
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
@@ -2749,7 +2232,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Hive Metastore Cluster.
+     * Metastore Cluster.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.metastore.v1.Cluster}
@@ -2830,18 +2313,6 @@ public final class ClusterOuterClass {
 
         status_ = 0;
 
-        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        minServersPerZone_ = 0L;
-
-        maxServersPerZone_ = 0L;
-
-        serversPerZone_ = 0L;
-
-        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
         deletionProtection_ = false;
 
         version_ = "";
@@ -2922,24 +2393,6 @@ public final class ClusterOuterClass {
         result.labels_.makeImmutable();
         result.health_ = health_;
         result.status_ = status_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          subnetIds_ = subnetIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.subnetIds_ = subnetIds_;
-        result.minServersPerZone_ = minServersPerZone_;
-        result.maxServersPerZone_ = maxServersPerZone_;
-        result.serversPerZone_ = serversPerZone_;
-        if (((bitField0_ & 0x00000004) != 0)) {
-          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.securityGroupIds_ = securityGroupIds_;
-        if (((bitField0_ & 0x00000008) != 0)) {
-          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.hostGroupIds_ = hostGroupIds_;
         result.deletionProtection_ = deletionProtection_;
         result.version_ = version_;
         result.networkId_ = networkId_;
@@ -3045,45 +2498,6 @@ public final class ClusterOuterClass {
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
         }
-        if (!other.subnetIds_.isEmpty()) {
-          if (subnetIds_.isEmpty()) {
-            subnetIds_ = other.subnetIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureSubnetIdsIsMutable();
-            subnetIds_.addAll(other.subnetIds_);
-          }
-          onChanged();
-        }
-        if (other.getMinServersPerZone() != 0L) {
-          setMinServersPerZone(other.getMinServersPerZone());
-        }
-        if (other.getMaxServersPerZone() != 0L) {
-          setMaxServersPerZone(other.getMaxServersPerZone());
-        }
-        if (other.getServersPerZone() != 0L) {
-          setServersPerZone(other.getServersPerZone());
-        }
-        if (!other.securityGroupIds_.isEmpty()) {
-          if (securityGroupIds_.isEmpty()) {
-            securityGroupIds_ = other.securityGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            ensureSecurityGroupIdsIsMutable();
-            securityGroupIds_.addAll(other.securityGroupIds_);
-          }
-          onChanged();
-        }
-        if (!other.hostGroupIds_.isEmpty()) {
-          if (hostGroupIds_.isEmpty()) {
-            hostGroupIds_ = other.hostGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-          } else {
-            ensureHostGroupIdsIsMutable();
-            hostGroupIds_.addAll(other.hostGroupIds_);
-          }
-          onChanged();
-        }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
         }
@@ -3151,8 +2565,8 @@ public final class ClusterOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the Metastore cluster.
-       * This ID is assigned by MDB at creation time.
+       * Unique ID of the Metastore Cluster.
+       * This ID is assigned by Cloud in the process of creating a Trino cluster.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3172,8 +2586,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Metastore cluster.
-       * This ID is assigned by MDB at creation time.
+       * Unique ID of the Metastore Cluster.
+       * This ID is assigned by Cloud in the process of creating a Trino cluster.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3194,8 +2608,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Metastore cluster.
-       * This ID is assigned by MDB at creation time.
+       * Unique ID of the Metastore Cluster.
+       * This ID is assigned by Cloud in the process of creating a Trino cluster.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3214,8 +2628,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Metastore cluster.
-       * This ID is assigned by MDB at creation time.
+       * Unique ID of the Metastore Cluster.
+       * This ID is assigned by Cloud in the process of creating a Trino cluster.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3229,8 +2643,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Metastore cluster.
-       * This ID is assigned by MDB at creation time.
+       * Unique ID of the Metastore Cluster.
+       * This ID is assigned by Cloud in the process of creating a Trino cluster.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3252,7 +2666,7 @@ public final class ClusterOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder that the Metastore cluster belongs to.
+       * ID of the folder that the Metastore Cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -3272,7 +2686,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Metastore cluster belongs to.
+       * ID of the folder that the Metastore Cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -3293,7 +2707,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Metastore cluster belongs to.
+       * ID of the folder that the Metastore Cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -3312,7 +2726,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Metastore cluster belongs to.
+       * ID of the folder that the Metastore Cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -3326,7 +2740,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Metastore cluster belongs to.
+       * ID of the folder that the Metastore Cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -3350,7 +2764,7 @@ public final class ClusterOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * The time the Metastore Cluster was created at.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3361,7 +2775,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * The time the Metastore Cluster was created at.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3376,7 +2790,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * The time the Metastore Cluster was created at.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3396,7 +2810,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * The time the Metastore Cluster was created at.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3414,7 +2828,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * The time the Metastore Cluster was created at.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3436,7 +2850,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * The time the Metastore Cluster was created at.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3454,7 +2868,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * The time the Metastore Cluster was created at.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3466,7 +2880,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * The time the Metastore Cluster was created at.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3481,7 +2895,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * The time the Metastore Cluster was created at.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3503,8 +2917,8 @@ public final class ClusterOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Metastore cluster.
-       * The name is unique within the folder. 1-63 characters long.
+       * Name of the Metastore Cluster.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -3524,8 +2938,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Metastore cluster.
-       * The name is unique within the folder. 1-63 characters long.
+       * Name of the Metastore Cluster.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -3546,8 +2960,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Metastore cluster.
-       * The name is unique within the folder. 1-63 characters long.
+       * Name of the Metastore Cluster.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -3566,8 +2980,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Metastore cluster.
-       * The name is unique within the folder. 1-63 characters long.
+       * Name of the Metastore Cluster.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -3581,8 +2995,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Metastore cluster.
-       * The name is unique within the folder. 1-63 characters long.
+       * Name of the Metastore Cluster.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -3604,7 +3018,7 @@ public final class ClusterOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the Metastore cluster. 0-256 characters long.
+       * Description of the Metastore Cluster.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -3624,7 +3038,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Metastore cluster. 0-256 characters long.
+       * Description of the Metastore Cluster.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -3645,7 +3059,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Metastore cluster. 0-256 characters long.
+       * Description of the Metastore Cluster.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -3664,7 +3078,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Metastore cluster. 0-256 characters long.
+       * Description of the Metastore Cluster.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -3678,7 +3092,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Metastore cluster. 0-256 characters long.
+       * Description of the Metastore Cluster.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -3725,8 +3139,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Metastore cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the Metastore Cluster as `` key:value `` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3748,8 +3161,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Metastore cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the Metastore Cluster as `` key:value `` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3761,8 +3173,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Metastore cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the Metastore Cluster as `` key:value `` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3779,8 +3190,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Metastore cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the Metastore Cluster as `` key:value `` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3805,8 +3215,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Metastore cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the Metastore Cluster as `` key:value `` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3829,8 +3238,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Metastore cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the Metastore Cluster as `` key:value `` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3849,8 +3257,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Metastore cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the Metastore Cluster as `` key:value `` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3940,7 +3347,7 @@ public final class ClusterOuterClass {
       private int status_ = 0;
       /**
        * <pre>
-       * Current state of the cluster.
+       * Cluster status.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.Cluster.Status status = 9;</code>
@@ -3951,7 +3358,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Current state of the cluster.
+       * Cluster status.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.Cluster.Status status = 9;</code>
@@ -3966,7 +3373,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Current state of the cluster.
+       * Cluster status.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.Cluster.Status status = 9;</code>
@@ -3980,7 +3387,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Current state of the cluster.
+       * Cluster status.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.Cluster.Status status = 9;</code>
@@ -3998,7 +3405,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Current state of the cluster.
+       * Cluster status.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.Cluster.Status status = 9;</code>
@@ -4011,595 +3418,10 @@ public final class ClusterOuterClass {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSubnetIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          subnetIds_ = new com.google.protobuf.LazyStringArrayList(subnetIds_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-      /**
-       * <pre>
-       * Subnet ids to put metastore servers
-       * </pre>
-       *
-       * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-       * @deprecated
-       * @return A list containing the subnetIds.
-       */
-      @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
-          getSubnetIdsList() {
-        return subnetIds_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * Subnet ids to put metastore servers
-       * </pre>
-       *
-       * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-       * @deprecated
-       * @return The count of subnetIds.
-       */
-      @java.lang.Deprecated public int getSubnetIdsCount() {
-        return subnetIds_.size();
-      }
-      /**
-       * <pre>
-       * Subnet ids to put metastore servers
-       * </pre>
-       *
-       * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-       * @deprecated
-       * @param index The index of the element to return.
-       * @return The subnetIds at the given index.
-       */
-      @java.lang.Deprecated public java.lang.String getSubnetIds(int index) {
-        return subnetIds_.get(index);
-      }
-      /**
-       * <pre>
-       * Subnet ids to put metastore servers
-       * </pre>
-       *
-       * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-       * @deprecated
-       * @param index The index of the value to return.
-       * @return The bytes of the subnetIds at the given index.
-       */
-      @java.lang.Deprecated public com.google.protobuf.ByteString
-          getSubnetIdsBytes(int index) {
-        return subnetIds_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * Subnet ids to put metastore servers
-       * </pre>
-       *
-       * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-       * @deprecated
-       * @param index The index to set the value at.
-       * @param value The subnetIds to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setSubnetIds(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSubnetIdsIsMutable();
-        subnetIds_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Subnet ids to put metastore servers
-       * </pre>
-       *
-       * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-       * @deprecated
-       * @param value The subnetIds to add.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder addSubnetIds(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSubnetIdsIsMutable();
-        subnetIds_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Subnet ids to put metastore servers
-       * </pre>
-       *
-       * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-       * @deprecated
-       * @param values The subnetIds to add.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder addAllSubnetIds(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSubnetIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, subnetIds_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Subnet ids to put metastore servers
-       * </pre>
-       *
-       * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-       * @deprecated
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder clearSubnetIds() {
-        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Subnet ids to put metastore servers
-       * </pre>
-       *
-       * <code>repeated string subnet_ids = 10 [deprecated = true];</code>
-       * @deprecated
-       * @param value The bytes of the subnetIds to add.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder addSubnetIdsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSubnetIdsIsMutable();
-        subnetIds_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private long minServersPerZone_ ;
-      /**
-       * <pre>
-       * Minimum number of metastore servers per zone
-       * </pre>
-       *
-       * <code>int64 min_servers_per_zone = 11;</code>
-       * @return The minServersPerZone.
-       */
-      @java.lang.Override
-      public long getMinServersPerZone() {
-        return minServersPerZone_;
-      }
-      /**
-       * <pre>
-       * Minimum number of metastore servers per zone
-       * </pre>
-       *
-       * <code>int64 min_servers_per_zone = 11;</code>
-       * @param value The minServersPerZone to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMinServersPerZone(long value) {
-        
-        minServersPerZone_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Minimum number of metastore servers per zone
-       * </pre>
-       *
-       * <code>int64 min_servers_per_zone = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMinServersPerZone() {
-        
-        minServersPerZone_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long maxServersPerZone_ ;
-      /**
-       * <pre>
-       * Maximum number of metastore servers per zone
-       * </pre>
-       *
-       * <code>int64 max_servers_per_zone = 12;</code>
-       * @return The maxServersPerZone.
-       */
-      @java.lang.Override
-      public long getMaxServersPerZone() {
-        return maxServersPerZone_;
-      }
-      /**
-       * <pre>
-       * Maximum number of metastore servers per zone
-       * </pre>
-       *
-       * <code>int64 max_servers_per_zone = 12;</code>
-       * @param value The maxServersPerZone to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaxServersPerZone(long value) {
-        
-        maxServersPerZone_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Maximum number of metastore servers per zone
-       * </pre>
-       *
-       * <code>int64 max_servers_per_zone = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMaxServersPerZone() {
-        
-        maxServersPerZone_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long serversPerZone_ ;
-      /**
-       * <pre>
-       * Actual number of metastore servers per zone
-       * </pre>
-       *
-       * <code>int64 servers_per_zone = 13;</code>
-       * @return The serversPerZone.
-       */
-      @java.lang.Override
-      public long getServersPerZone() {
-        return serversPerZone_;
-      }
-      /**
-       * <pre>
-       * Actual number of metastore servers per zone
-       * </pre>
-       *
-       * <code>int64 servers_per_zone = 13;</code>
-       * @param value The serversPerZone to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServersPerZone(long value) {
-        
-        serversPerZone_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Actual number of metastore servers per zone
-       * </pre>
-       *
-       * <code>int64 servers_per_zone = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServersPerZone() {
-        
-        serversPerZone_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSecurityGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-      /**
-       * <pre>
-       * User security groups
-       * </pre>
-       *
-       * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-       * @deprecated
-       * @return A list containing the securityGroupIds.
-       */
-      @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
-          getSecurityGroupIdsList() {
-        return securityGroupIds_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * User security groups
-       * </pre>
-       *
-       * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-       * @deprecated
-       * @return The count of securityGroupIds.
-       */
-      @java.lang.Deprecated public int getSecurityGroupIdsCount() {
-        return securityGroupIds_.size();
-      }
-      /**
-       * <pre>
-       * User security groups
-       * </pre>
-       *
-       * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-       * @deprecated
-       * @param index The index of the element to return.
-       * @return The securityGroupIds at the given index.
-       */
-      @java.lang.Deprecated public java.lang.String getSecurityGroupIds(int index) {
-        return securityGroupIds_.get(index);
-      }
-      /**
-       * <pre>
-       * User security groups
-       * </pre>
-       *
-       * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-       * @deprecated
-       * @param index The index of the value to return.
-       * @return The bytes of the securityGroupIds at the given index.
-       */
-      @java.lang.Deprecated public com.google.protobuf.ByteString
-          getSecurityGroupIdsBytes(int index) {
-        return securityGroupIds_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * User security groups
-       * </pre>
-       *
-       * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-       * @deprecated
-       * @param index The index to set the value at.
-       * @param value The securityGroupIds to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setSecurityGroupIds(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupIdsIsMutable();
-        securityGroupIds_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * User security groups
-       * </pre>
-       *
-       * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-       * @deprecated
-       * @param value The securityGroupIds to add.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder addSecurityGroupIds(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupIdsIsMutable();
-        securityGroupIds_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * User security groups
-       * </pre>
-       *
-       * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-       * @deprecated
-       * @param values The securityGroupIds to add.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder addAllSecurityGroupIds(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSecurityGroupIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, securityGroupIds_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * User security groups
-       * </pre>
-       *
-       * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-       * @deprecated
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder clearSecurityGroupIds() {
-        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * User security groups
-       * </pre>
-       *
-       * <code>repeated string security_group_ids = 14 [deprecated = true];</code>
-       * @deprecated
-       * @param value The bytes of the securityGroupIds to add.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder addSecurityGroupIdsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSecurityGroupIdsIsMutable();
-        securityGroupIds_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureHostGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          hostGroupIds_ = new com.google.protobuf.LazyStringArrayList(hostGroupIds_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-      /**
-       * <pre>
-       * Host groups hosting VMs of the cluster.
-       * </pre>
-       *
-       * <code>repeated string host_group_ids = 15;</code>
-       * @return A list containing the hostGroupIds.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getHostGroupIdsList() {
-        return hostGroupIds_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * Host groups hosting VMs of the cluster.
-       * </pre>
-       *
-       * <code>repeated string host_group_ids = 15;</code>
-       * @return The count of hostGroupIds.
-       */
-      public int getHostGroupIdsCount() {
-        return hostGroupIds_.size();
-      }
-      /**
-       * <pre>
-       * Host groups hosting VMs of the cluster.
-       * </pre>
-       *
-       * <code>repeated string host_group_ids = 15;</code>
-       * @param index The index of the element to return.
-       * @return The hostGroupIds at the given index.
-       */
-      public java.lang.String getHostGroupIds(int index) {
-        return hostGroupIds_.get(index);
-      }
-      /**
-       * <pre>
-       * Host groups hosting VMs of the cluster.
-       * </pre>
-       *
-       * <code>repeated string host_group_ids = 15;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the hostGroupIds at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getHostGroupIdsBytes(int index) {
-        return hostGroupIds_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * Host groups hosting VMs of the cluster.
-       * </pre>
-       *
-       * <code>repeated string host_group_ids = 15;</code>
-       * @param index The index to set the value at.
-       * @param value The hostGroupIds to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHostGroupIds(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureHostGroupIdsIsMutable();
-        hostGroupIds_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Host groups hosting VMs of the cluster.
-       * </pre>
-       *
-       * <code>repeated string host_group_ids = 15;</code>
-       * @param value The hostGroupIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addHostGroupIds(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureHostGroupIdsIsMutable();
-        hostGroupIds_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Host groups hosting VMs of the cluster.
-       * </pre>
-       *
-       * <code>repeated string host_group_ids = 15;</code>
-       * @param values The hostGroupIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllHostGroupIds(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureHostGroupIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, hostGroupIds_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Host groups hosting VMs of the cluster.
-       * </pre>
-       *
-       * <code>repeated string host_group_ids = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearHostGroupIds() {
-        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Host groups hosting VMs of the cluster.
-       * </pre>
-       *
-       * <code>repeated string host_group_ids = 15;</code>
-       * @param value The bytes of the hostGroupIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addHostGroupIdsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureHostGroupIdsIsMutable();
-        hostGroupIds_.add(value);
-        onChanged();
-        return this;
-      }
-
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Deletion Protection prevents deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 16;</code>
@@ -4611,7 +3433,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Deletion Protection prevents deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 16;</code>
@@ -4626,7 +3448,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Deletion Protection prevents deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 16;</code>
@@ -4642,7 +3464,7 @@ public final class ClusterOuterClass {
       private java.lang.Object version_ = "";
       /**
        * <pre>
-       * Metastore server version
+       * Metastore server version.
        * </pre>
        *
        * <code>string version = 17;</code>
@@ -4662,7 +3484,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore server version
+       * Metastore server version.
        * </pre>
        *
        * <code>string version = 17;</code>
@@ -4683,7 +3505,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore server version
+       * Metastore server version.
        * </pre>
        *
        * <code>string version = 17;</code>
@@ -4702,7 +3524,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore server version
+       * Metastore server version.
        * </pre>
        *
        * <code>string version = 17;</code>
@@ -4716,7 +3538,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore server version
+       * Metastore server version.
        * </pre>
        *
        * <code>string version = 17;</code>
@@ -4738,7 +3560,7 @@ public final class ClusterOuterClass {
       private java.lang.Object networkId_ = "";
       /**
        * <pre>
-       * Metastore network
+       * Metastore network ID.
        * </pre>
        *
        * <code>string network_id = 18;</code>
@@ -4758,7 +3580,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore network
+       * Metastore network ID.
        * </pre>
        *
        * <code>string network_id = 18;</code>
@@ -4779,7 +3601,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore network
+       * Metastore network ID.
        * </pre>
        *
        * <code>string network_id = 18;</code>
@@ -4798,7 +3620,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore network
+       * Metastore network ID.
        * </pre>
        *
        * <code>string network_id = 18;</code>
@@ -4812,7 +3634,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore network
+       * Metastore network ID.
        * </pre>
        *
        * <code>string network_id = 18;</code>
@@ -4834,7 +3656,7 @@ public final class ClusterOuterClass {
       private java.lang.Object endpointIp_ = "";
       /**
        * <pre>
-       * IP address of metastore server balancer endpoint
+       * IP address of the Metastore server load balancer.
        * </pre>
        *
        * <code>string endpoint_ip = 19;</code>
@@ -4854,7 +3676,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * IP address of metastore server balancer endpoint
+       * IP address of the Metastore server load balancer.
        * </pre>
        *
        * <code>string endpoint_ip = 19;</code>
@@ -4875,7 +3697,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * IP address of metastore server balancer endpoint
+       * IP address of the Metastore server load balancer.
        * </pre>
        *
        * <code>string endpoint_ip = 19;</code>
@@ -4894,7 +3716,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * IP address of metastore server balancer endpoint
+       * IP address of the Metastore server load balancer.
        * </pre>
        *
        * <code>string endpoint_ip = 19;</code>
@@ -4908,7 +3730,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * IP address of metastore server balancer endpoint
+       * IP address of the Metastore server load balancer.
        * </pre>
        *
        * <code>string endpoint_ip = 19;</code>
@@ -4932,7 +3754,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.metastore.v1.ClusterOuterClass.ClusterConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.ClusterConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.ClusterConfigOrBuilder> clusterConfigBuilder_;
       /**
        * <pre>
-       * Metastore cluster configuration
+       * Configuration of the Metastore Cluster.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -4943,7 +3765,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore cluster configuration
+       * Configuration of the Metastore Cluster.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -4958,7 +3780,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore cluster configuration
+       * Configuration of the Metastore Cluster.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -4978,7 +3800,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore cluster configuration
+       * Configuration of the Metastore Cluster.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -4996,7 +3818,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore cluster configuration
+       * Configuration of the Metastore Cluster.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -5018,7 +3840,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore cluster configuration
+       * Configuration of the Metastore Cluster.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -5036,7 +3858,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore cluster configuration
+       * Configuration of the Metastore Cluster.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -5048,7 +3870,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore cluster configuration
+       * Configuration of the Metastore Cluster.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -5063,7 +3885,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Metastore cluster configuration
+       * Configuration of the Metastore Cluster.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.ClusterConfig cluster_config = 20;</code>
@@ -5085,10 +3907,10 @@ public final class ClusterOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * Service account that will be used to access a YC resources
+       * Service account used to access Cloud resources.
        * </pre>
        *
-       * <code>string service_account_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 21;</code>
        * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
@@ -5105,10 +3927,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Service account that will be used to access a YC resources
+       * Service account used to access Cloud resources.
        * </pre>
        *
-       * <code>string service_account_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 21;</code>
        * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
@@ -5126,10 +3948,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Service account that will be used to access a YC resources
+       * Service account used to access Cloud resources.
        * </pre>
        *
-       * <code>string service_account_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 21;</code>
        * @param value The serviceAccountId to set.
        * @return This builder for chaining.
        */
@@ -5145,10 +3967,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Service account that will be used to access a YC resources
+       * Service account used to access Cloud resources.
        * </pre>
        *
-       * <code>string service_account_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 21;</code>
        * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
@@ -5159,10 +3981,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Service account that will be used to access a YC resources
+       * Service account used to access Cloud resources.
        * </pre>
        *
-       * <code>string service_account_id = 21 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 21;</code>
        * @param value The bytes for serviceAccountId to set.
        * @return This builder for chaining.
        */
@@ -5183,7 +4005,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.metastore.v1.ClusterOuterClass.LoggingConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.LoggingConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.LoggingConfigOrBuilder> loggingBuilder_;
       /**
        * <pre>
-       * Cloud logging configuration
+       * Cloud logging configuration.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -5194,7 +4016,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cloud logging configuration
+       * Cloud logging configuration.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -5209,7 +4031,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cloud logging configuration
+       * Cloud logging configuration.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -5229,7 +4051,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cloud logging configuration
+       * Cloud logging configuration.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -5247,7 +4069,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cloud logging configuration
+       * Cloud logging configuration.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -5269,7 +4091,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cloud logging configuration
+       * Cloud logging configuration.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -5287,7 +4109,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cloud logging configuration
+       * Cloud logging configuration.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -5299,7 +4121,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cloud logging configuration
+       * Cloud logging configuration.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -5314,7 +4136,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cloud logging configuration
+       * Cloud logging configuration.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.LoggingConfig logging = 22;</code>
@@ -5338,7 +4160,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.metastore.v1.ClusterOuterClass.NetworkConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.NetworkConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.NetworkConfigOrBuilder> networkBuilder_;
       /**
        * <pre>
-       * Network related configuration options.
+       * Network-related configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -5349,7 +4171,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Network related configuration options.
+       * Network-related configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -5364,7 +4186,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Network related configuration options.
+       * Network-related configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -5384,7 +4206,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Network related configuration options.
+       * Network-related configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -5402,7 +4224,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Network related configuration options.
+       * Network-related configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -5424,7 +4246,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Network related configuration options.
+       * Network-related configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -5442,7 +4264,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Network related configuration options.
+       * Network-related configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -5454,7 +4276,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Network related configuration options.
+       * Network-related configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -5469,7 +4291,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Network related configuration options.
+       * Network-related configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.NetworkConfig network = 23;</code>
@@ -5493,7 +4315,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.metastore.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.metastore.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.metastore.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -5504,7 +4326,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -5519,7 +4341,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -5539,7 +4361,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -5557,7 +4379,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -5579,7 +4401,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -5597,7 +4419,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -5609,7 +4431,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -5624,7 +4446,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceWindow maintenance_window = 24;</code>
@@ -5648,7 +4470,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.metastore.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.metastore.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.metastore.v1.Maintenance.MaintenanceOperationOrBuilder> plannedOperationBuilder_;
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Maintenance operation scheduled for the nearest maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -5659,7 +4481,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Maintenance operation scheduled for the nearest maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -5674,7 +4496,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Maintenance operation scheduled for the nearest maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -5694,7 +4516,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Maintenance operation scheduled for the nearest maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -5712,7 +4534,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Maintenance operation scheduled for the nearest maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -5734,7 +4556,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Maintenance operation scheduled for the nearest maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -5752,7 +4574,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Maintenance operation scheduled for the nearest maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -5764,7 +4586,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Maintenance operation scheduled for the nearest maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -5779,7 +4601,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Maintenance operation scheduled for the nearest maintenance window.
        * </pre>
        *
        * <code>.yandex.cloud.metastore.v1.MaintenanceOperation planned_operation = 25;</code>
@@ -5855,16 +4677,28 @@ public final class ClusterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Configuration for computational resources for Metastore server instances.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
      * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
+     * <pre>
+     * Configuration for computational resources for Metastore server instances.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
      * @return The resources.
      */
     yandex.cloud.api.metastore.v1.ClusterOuterClass.Resources getResources();
     /**
+     * <pre>
+     * Configuration for computational resources for Metastore server instances.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
      */
     yandex.cloud.api.metastore.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
@@ -5962,6 +4796,10 @@ public final class ClusterOuterClass {
     public static final int RESOURCES_FIELD_NUMBER = 2;
     private yandex.cloud.api.metastore.v1.ClusterOuterClass.Resources resources_;
     /**
+     * <pre>
+     * Configuration for computational resources for Metastore server instances.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
      * @return Whether the resources field is set.
      */
@@ -5970,6 +4808,10 @@ public final class ClusterOuterClass {
       return resources_ != null;
     }
     /**
+     * <pre>
+     * Configuration for computational resources for Metastore server instances.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
      * @return The resources.
      */
@@ -5978,6 +4820,10 @@ public final class ClusterOuterClass {
       return resources_ == null ? yandex.cloud.api.metastore.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
     }
     /**
+     * <pre>
+     * Configuration for computational resources for Metastore server instances.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
      */
     @java.lang.Override
@@ -6304,6 +5150,10 @@ public final class ClusterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.metastore.v1.ClusterOuterClass.Resources, yandex.cloud.api.metastore.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
       /**
+       * <pre>
+       * Configuration for computational resources for Metastore server instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
        * @return Whether the resources field is set.
        */
@@ -6311,6 +5161,10 @@ public final class ClusterOuterClass {
         return resourcesBuilder_ != null || resources_ != null;
       }
       /**
+       * <pre>
+       * Configuration for computational resources for Metastore server instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
        * @return The resources.
        */
@@ -6322,6 +5176,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for computational resources for Metastore server instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
        */
       public Builder setResources(yandex.cloud.api.metastore.v1.ClusterOuterClass.Resources value) {
@@ -6338,6 +5196,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for computational resources for Metastore server instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
        */
       public Builder setResources(
@@ -6352,6 +5214,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for computational resources for Metastore server instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
        */
       public Builder mergeResources(yandex.cloud.api.metastore.v1.ClusterOuterClass.Resources value) {
@@ -6370,6 +5236,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for computational resources for Metastore server instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
        */
       public Builder clearResources() {
@@ -6384,6 +5254,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for computational resources for Metastore server instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
        */
       public yandex.cloud.api.metastore.v1.ClusterOuterClass.Resources.Builder getResourcesBuilder() {
@@ -6392,6 +5266,10 @@ public final class ClusterOuterClass {
         return getResourcesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration for computational resources for Metastore server instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
        */
       public yandex.cloud.api.metastore.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
@@ -6403,6 +5281,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for computational resources for Metastore server instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7468,19 +6350,19 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the preset for computational resources available to a pod (CPU, memory etc.).
+     * ID of the preset for computational resources allocated to an instance (e.g., CPU, memory, etc.).
      * </pre>
      *
-     * <code>string resource_preset_id = 1;</code>
+     * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The resourcePresetId.
      */
     java.lang.String getResourcePresetId();
     /**
      * <pre>
-     * ID of the preset for computational resources available to a pod (CPU, memory etc.).
+     * ID of the preset for computational resources allocated to an instance (e.g., CPU, memory, etc.).
      * </pre>
      *
-     * <code>string resource_preset_id = 1;</code>
+     * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for resourcePresetId.
      */
     com.google.protobuf.ByteString
@@ -7574,10 +6456,10 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object resourcePresetId_;
     /**
      * <pre>
-     * ID of the preset for computational resources available to a pod (CPU, memory etc.).
+     * ID of the preset for computational resources allocated to an instance (e.g., CPU, memory, etc.).
      * </pre>
      *
-     * <code>string resource_preset_id = 1;</code>
+     * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The resourcePresetId.
      */
     @java.lang.Override
@@ -7595,10 +6477,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the preset for computational resources available to a pod (CPU, memory etc.).
+     * ID of the preset for computational resources allocated to an instance (e.g., CPU, memory, etc.).
      * </pre>
      *
-     * <code>string resource_preset_id = 1;</code>
+     * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for resourcePresetId.
      */
     @java.lang.Override
@@ -7921,10 +6803,10 @@ public final class ClusterOuterClass {
       private java.lang.Object resourcePresetId_ = "";
       /**
        * <pre>
-       * ID of the preset for computational resources available to a pod (CPU, memory etc.).
+       * ID of the preset for computational resources allocated to an instance (e.g., CPU, memory, etc.).
        * </pre>
        *
-       * <code>string resource_preset_id = 1;</code>
+       * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The resourcePresetId.
        */
       public java.lang.String getResourcePresetId() {
@@ -7941,10 +6823,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a pod (CPU, memory etc.).
+       * ID of the preset for computational resources allocated to an instance (e.g., CPU, memory, etc.).
        * </pre>
        *
-       * <code>string resource_preset_id = 1;</code>
+       * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for resourcePresetId.
        */
       public com.google.protobuf.ByteString
@@ -7962,10 +6844,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a pod (CPU, memory etc.).
+       * ID of the preset for computational resources allocated to an instance (e.g., CPU, memory, etc.).
        * </pre>
        *
-       * <code>string resource_preset_id = 1;</code>
+       * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The resourcePresetId to set.
        * @return This builder for chaining.
        */
@@ -7981,10 +6863,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a pod (CPU, memory etc.).
+       * ID of the preset for computational resources allocated to an instance (e.g., CPU, memory, etc.).
        * </pre>
        *
-       * <code>string resource_preset_id = 1;</code>
+       * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearResourcePresetId() {
@@ -7995,10 +6877,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a pod (CPU, memory etc.).
+       * ID of the preset for computational resources allocated to an instance (e.g., CPU, memory, etc.).
        * </pre>
        *
-       * <code>string resource_preset_id = 1;</code>
+       * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for resourcePresetId to set.
        * @return This builder for chaining.
        */
@@ -8071,22 +6953,38 @@ public final class ClusterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Logs generated by the Metastore server are delivered to Cloud Logging.
+     * </pre>
+     *
      * <code>bool enabled = 1;</code>
      * @return The enabled.
      */
     boolean getEnabled();
 
     /**
+     * <pre>
+     * Logs will be written to the default log group of the specified folder.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return Whether the folderId field is set.
      */
     boolean hasFolderId();
     /**
+     * <pre>
+     * Logs will be written to the default log group of the specified folder.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Logs will be written to the default log group of the specified folder.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return The bytes for folderId.
      */
@@ -8094,16 +6992,28 @@ public final class ClusterOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Logs will be written to the log group specified by its ID.
+     * </pre>
+     *
      * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return Whether the logGroupId field is set.
      */
     boolean hasLogGroupId();
     /**
+     * <pre>
+     * Logs will be written to the log group specified by its ID.
+     * </pre>
+     *
      * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * Logs will be written to the log group specified by its ID.
+     * </pre>
+     *
      * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return The bytes for logGroupId.
      */
@@ -8111,11 +7021,21 @@ public final class ClusterOuterClass {
         getLogGroupIdBytes();
 
     /**
+     * <pre>
+     * Minimum severity level for log entries.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
      * @return The enum numeric value on the wire for minLevel.
      */
     int getMinLevelValue();
     /**
+     * <pre>
+     * Minimum severity level for log entries.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
      * @return The minLevel.
      */
@@ -8268,6 +7188,10 @@ public final class ClusterOuterClass {
     public static final int ENABLED_FIELD_NUMBER = 1;
     private boolean enabled_;
     /**
+     * <pre>
+     * Logs generated by the Metastore server are delivered to Cloud Logging.
+     * </pre>
+     *
      * <code>bool enabled = 1;</code>
      * @return The enabled.
      */
@@ -8278,6 +7202,10 @@ public final class ClusterOuterClass {
 
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Logs will be written to the default log group of the specified folder.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return Whether the folderId field is set.
      */
@@ -8285,6 +7213,10 @@ public final class ClusterOuterClass {
       return destinationCase_ == 2;
     }
     /**
+     * <pre>
+     * Logs will be written to the default log group of the specified folder.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return The folderId.
      */
@@ -8306,6 +7238,10 @@ public final class ClusterOuterClass {
       }
     }
     /**
+     * <pre>
+     * Logs will be written to the default log group of the specified folder.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return The bytes for folderId.
      */
@@ -8330,6 +7266,10 @@ public final class ClusterOuterClass {
 
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Logs will be written to the log group specified by its ID.
+     * </pre>
+     *
      * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return Whether the logGroupId field is set.
      */
@@ -8337,6 +7277,10 @@ public final class ClusterOuterClass {
       return destinationCase_ == 3;
     }
     /**
+     * <pre>
+     * Logs will be written to the log group specified by its ID.
+     * </pre>
+     *
      * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return The logGroupId.
      */
@@ -8358,6 +7302,10 @@ public final class ClusterOuterClass {
       }
     }
     /**
+     * <pre>
+     * Logs will be written to the log group specified by its ID.
+     * </pre>
+     *
      * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      * @return The bytes for logGroupId.
      */
@@ -8383,6 +7331,11 @@ public final class ClusterOuterClass {
     public static final int MIN_LEVEL_FIELD_NUMBER = 4;
     private int minLevel_;
     /**
+     * <pre>
+     * Minimum severity level for log entries.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
      * @return The enum numeric value on the wire for minLevel.
      */
@@ -8390,6 +7343,11 @@ public final class ClusterOuterClass {
       return minLevel_;
     }
     /**
+     * <pre>
+     * Minimum severity level for log entries.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
      * @return The minLevel.
      */
@@ -8798,6 +7756,10 @@ public final class ClusterOuterClass {
 
       private boolean enabled_ ;
       /**
+       * <pre>
+       * Logs generated by the Metastore server are delivered to Cloud Logging.
+       * </pre>
+       *
        * <code>bool enabled = 1;</code>
        * @return The enabled.
        */
@@ -8806,6 +7768,10 @@ public final class ClusterOuterClass {
         return enabled_;
       }
       /**
+       * <pre>
+       * Logs generated by the Metastore server are delivered to Cloud Logging.
+       * </pre>
+       *
        * <code>bool enabled = 1;</code>
        * @param value The enabled to set.
        * @return This builder for chaining.
@@ -8817,6 +7783,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Logs generated by the Metastore server are delivered to Cloud Logging.
+       * </pre>
+       *
        * <code>bool enabled = 1;</code>
        * @return This builder for chaining.
        */
@@ -8828,6 +7798,10 @@ public final class ClusterOuterClass {
       }
 
       /**
+       * <pre>
+       * Logs will be written to the default log group of the specified folder.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @return Whether the folderId field is set.
        */
@@ -8836,6 +7810,10 @@ public final class ClusterOuterClass {
         return destinationCase_ == 2;
       }
       /**
+       * <pre>
+       * Logs will be written to the default log group of the specified folder.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @return The folderId.
        */
@@ -8858,6 +7836,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Logs will be written to the default log group of the specified folder.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @return The bytes for folderId.
        */
@@ -8881,6 +7863,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Logs will be written to the default log group of the specified folder.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -8896,6 +7882,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Logs will be written to the default log group of the specified folder.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @return This builder for chaining.
        */
@@ -8908,6 +7898,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Logs will be written to the default log group of the specified folder.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -8925,6 +7919,10 @@ public final class ClusterOuterClass {
       }
 
       /**
+       * <pre>
+       * Logs will be written to the log group specified by its ID.
+       * </pre>
+       *
        * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @return Whether the logGroupId field is set.
        */
@@ -8933,6 +7931,10 @@ public final class ClusterOuterClass {
         return destinationCase_ == 3;
       }
       /**
+       * <pre>
+       * Logs will be written to the log group specified by its ID.
+       * </pre>
+       *
        * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @return The logGroupId.
        */
@@ -8955,6 +7957,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Logs will be written to the log group specified by its ID.
+       * </pre>
+       *
        * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @return The bytes for logGroupId.
        */
@@ -8978,6 +7984,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Logs will be written to the log group specified by its ID.
+       * </pre>
+       *
        * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @param value The logGroupId to set.
        * @return This builder for chaining.
@@ -8993,6 +8003,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Logs will be written to the log group specified by its ID.
+       * </pre>
+       *
        * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @return This builder for chaining.
        */
@@ -9005,6 +8019,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Logs will be written to the log group specified by its ID.
+       * </pre>
+       *
        * <code>string log_group_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        * @param value The bytes for logGroupId to set.
        * @return This builder for chaining.
@@ -9023,6 +8041,11 @@ public final class ClusterOuterClass {
 
       private int minLevel_ = 0;
       /**
+       * <pre>
+       * Minimum severity level for log entries.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
        * @return The enum numeric value on the wire for minLevel.
        */
@@ -9030,6 +8053,11 @@ public final class ClusterOuterClass {
         return minLevel_;
       }
       /**
+       * <pre>
+       * Minimum severity level for log entries.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
        * @param value The enum numeric value on the wire for minLevel to set.
        * @return This builder for chaining.
@@ -9041,6 +8069,11 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Minimum severity level for log entries.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
        * @return The minLevel.
        */
@@ -9051,6 +8084,11 @@ public final class ClusterOuterClass {
         return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Minimum severity level for log entries.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
        * @param value The minLevel to set.
        * @return This builder for chaining.
@@ -9065,6 +8103,11 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Minimum severity level for log entries.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
        * @return This builder for chaining.
        */
@@ -9167,11 +8210,11 @@ public final class ClusterOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\'yandex/cloud/metastore/v1/cluster.prot" +
-      "o\022\031yandex.cloud.metastore.v1\032+yandex/clo" +
-      "ud/metastore/v1/maintenance.proto\032\037googl" +
-      "e/protobuf/timestamp.proto\032\'yandex/cloud" +
-      "/logging/v1/log_entry.proto\032\035yandex/clou" +
-      "d/validation.proto\"\223\t\n\007Cluster\022\n\n\002id\030\001 \001" +
+      "o\022\031yandex.cloud.metastore.v1\032\037google/pro" +
+      "tobuf/timestamp.proto\032\'yandex/cloud/logg" +
+      "ing/v1/log_entry.proto\032+yandex/cloud/met" +
+      "astore/v1/maintenance.proto\032\035yandex/clou" +
+      "d/validation.proto\"\351\007\n\007Cluster\022\n\n\002id\030\001 \001" +
       "(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(" +
       "\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004 " +
       "\001(\t\022\023\n\013description\030\005 \001(\t\022>\n\006labels\030\006 \003(\013" +
@@ -9179,49 +8222,45 @@ public final class ClusterOuterClass {
       "elsEntry\0229\n\006health\030\010 \001(\0162).yandex.cloud." +
       "metastore.v1.Cluster.Health\0229\n\006status\030\t " +
       "\001(\0162).yandex.cloud.metastore.v1.Cluster." +
-      "Status\022\026\n\nsubnet_ids\030\n \003(\tB\002\030\001\022\034\n\024min_se" +
-      "rvers_per_zone\030\013 \001(\003\022\034\n\024max_servers_per_" +
-      "zone\030\014 \001(\003\022\030\n\020servers_per_zone\030\r \001(\003\022\036\n\022" +
-      "security_group_ids\030\016 \003(\tB\002\030\001\022\026\n\016host_gro" +
-      "up_ids\030\017 \003(\t\022\033\n\023deletion_protection\030\020 \001(" +
-      "\010\022\017\n\007version\030\021 \001(\t\022\022\n\nnetwork_id\030\022 \001(\t\022\023" +
-      "\n\013endpoint_ip\030\023 \001(\t\022@\n\016cluster_config\030\024 " +
-      "\001(\0132(.yandex.cloud.metastore.v1.ClusterC" +
-      "onfig\022$\n\022service_account_id\030\025 \001(\tB\010\212\3101\004<" +
-      "=50\0229\n\007logging\030\026 \001(\0132(.yandex.cloud.meta" +
-      "store.v1.LoggingConfig\0229\n\007network\030\027 \001(\0132" +
-      "(.yandex.cloud.metastore.v1.NetworkConfi" +
-      "g\022H\n\022maintenance_window\030\030 \001(\0132,.yandex.c" +
-      "loud.metastore.v1.MaintenanceWindow\022J\n\021p" +
-      "lanned_operation\030\031 \001(\0132/.yandex.cloud.me" +
-      "tastore.v1.MaintenanceOperation\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?" +
-      "\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022" +
-      "\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STA" +
-      "TUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002" +
-      "\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022" +
-      "\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007J\004\010\007\020\010\"N\n\rClus" +
-      "terConfig\0227\n\tresources\030\002 \001(\0132$.yandex.cl" +
-      "oud.metastore.v1.ResourcesJ\004\010\001\020\002\"?\n\rNetw" +
-      "orkConfig\022\022\n\nsubnet_ids\030\001 \003(\t\022\032\n\022securit" +
-      "y_group_ids\030\002 \003(\t\"\'\n\tResources\022\032\n\022resour" +
-      "ce_preset_id\030\001 \001(\t\"\342\001\n\rLoggingConfig\022\017\n\007" +
-      "enabled\030\001 \001(\010\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([" +
-      "a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022;\n\014log_g" +
-      "roup_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_" +
-      ".]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex" +
-      ".cloud.logging.v1.LogLevel.LevelB\r\n\013dest" +
-      "inationBh\n\035yandex.cloud.api.metastore.v1" +
-      "ZGgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/metastore/v1;metastoreb\006proto" +
-      "3"
+      "Status\022\033\n\023deletion_protection\030\020 \001(\010\022\017\n\007v" +
+      "ersion\030\021 \001(\t\022\022\n\nnetwork_id\030\022 \001(\t\022\023\n\013endp" +
+      "oint_ip\030\023 \001(\t\022@\n\016cluster_config\030\024 \001(\0132(." +
+      "yandex.cloud.metastore.v1.ClusterConfig\022" +
+      "\032\n\022service_account_id\030\025 \001(\t\0229\n\007logging\030\026" +
+      " \001(\0132(.yandex.cloud.metastore.v1.Logging" +
+      "Config\0229\n\007network\030\027 \001(\0132(.yandex.cloud.m" +
+      "etastore.v1.NetworkConfig\022H\n\022maintenance" +
+      "_window\030\030 \001(\0132,.yandex.cloud.metastore.v" +
+      "1.MaintenanceWindow\022J\n\021planned_operation" +
+      "\030\031 \001(\0132/.yandex.cloud.metastore.v1.Maint" +
+      "enanceOperation\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\006Health\022\022\n\016HEAL" +
+      "TH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEG" +
+      "RADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n" +
+      "\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010U" +
+      "PDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010" +
+      "STARTING\020\007J\004\010\007\020\010J\004\010\n\020\020\"N\n\rClusterConfig\022" +
+      "7\n\tresources\030\002 \001(\0132$.yandex.cloud.metast" +
+      "ore.v1.ResourcesJ\004\010\001\020\002\"?\n\rNetworkConfig\022" +
+      "\022\n\nsubnet_ids\030\001 \003(\t\022\032\n\022security_group_id" +
+      "s\030\002 \003(\t\"5\n\tResources\022(\n\022resource_preset_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\342\001\n\rLoggingConfig" +
+      "\022\017\n\007enabled\030\001 \001(\010\0228\n\tfolder_id\030\002 \001(\tB#\362\307" +
+      "1\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022;\n\014l" +
+      "og_group_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z" +
+      "0-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.ya" +
+      "ndex.cloud.logging.v1.LogLevel.LevelB\r\n\013" +
+      "destinationBh\n\035yandex.cloud.api.metastor" +
+      "e.v1ZGgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/metastore/v1;metastoreb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          yandex.cloud.api.metastore.v1.Maintenance.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor(),
+          yandex.cloud.api.metastore.v1.Maintenance.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_metastore_v1_Cluster_descriptor =
@@ -9229,7 +8268,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_metastore_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_metastore_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Health", "Status", "SubnetIds", "MinServersPerZone", "MaxServersPerZone", "ServersPerZone", "SecurityGroupIds", "HostGroupIds", "DeletionProtection", "Version", "NetworkId", "EndpointIp", "ClusterConfig", "ServiceAccountId", "Logging", "Network", "MaintenanceWindow", "PlannedOperation", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Health", "Status", "DeletionProtection", "Version", "NetworkId", "EndpointIp", "ClusterConfig", "ServiceAccountId", "Logging", "Network", "MaintenanceWindow", "PlannedOperation", });
     internal_static_yandex_cloud_metastore_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_metastore_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_metastore_v1_Cluster_LabelsEntry_fieldAccessorTable = new
@@ -9264,11 +8303,12 @@ public final class ClusterOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.pattern);
+    registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    yandex.cloud.api.metastore.v1.Maintenance.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor();
+    yandex.cloud.api.metastore.v1.Maintenance.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

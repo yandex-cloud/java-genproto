@@ -3,6 +3,9 @@ package yandex.cloud.api.gitlab.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * InstanceService provides methods for managing GitLab instances.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -106,6 +109,37 @@ public final class InstanceServiceGrpc {
       }
     }
     return getCreateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Update",
+      requestType = yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
+    if ((getUpdateMethod = InstanceServiceGrpc.getUpdateMethod) == null) {
+      synchronized (InstanceServiceGrpc.class) {
+        if ((getUpdateMethod = InstanceServiceGrpc.getUpdateMethod) == null) {
+          InstanceServiceGrpc.getUpdateMethod = getUpdateMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new InstanceServiceMethodDescriptorSupplier("Update"))
+              .build();
+        }
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.gitlab.v1.GIS.DeleteInstanceRequest,
@@ -246,10 +280,16 @@ public final class InstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * InstanceService provides methods for managing GitLab instances.
+   * </pre>
    */
   public static abstract class InstanceServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified GitLab instance.
+     * </pre>
      */
     public void get(yandex.cloud.api.gitlab.v1.GIS.GetInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.gitlab.v1.GI.Instance> responseObserver) {
@@ -257,6 +297,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of GitLab instances in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.gitlab.v1.GIS.ListInstancesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.gitlab.v1.GIS.ListInstancesResponse> responseObserver) {
@@ -264,6 +307,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new GitLab instance in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.gitlab.v1.GIS.CreateInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -271,6 +317,19 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates GitLab instance.
+     * </pre>
+     */
+    public void update(yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified GitLab instance.
+     * </pre>
      */
     public void delete(yandex.cloud.api.gitlab.v1.GIS.DeleteInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -278,6 +337,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified GitLab instance.
+     * </pre>
      */
     public void start(yandex.cloud.api.gitlab.v1.GIS.StartInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -285,6 +347,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified GitLab instance.
+     * </pre>
      */
     public void stop(yandex.cloud.api.gitlab.v1.GIS.StopInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -315,6 +380,13 @@ public final class InstanceServiceGrpc {
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
+            getUpdateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE)))
+          .addMethod(
             getDeleteMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
@@ -340,6 +412,9 @@ public final class InstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * InstanceService provides methods for managing GitLab instances.
+   * </pre>
    */
   public static final class InstanceServiceStub extends io.grpc.stub.AbstractAsyncStub<InstanceServiceStub> {
     private InstanceServiceStub(
@@ -354,6 +429,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified GitLab instance.
+     * </pre>
      */
     public void get(yandex.cloud.api.gitlab.v1.GIS.GetInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.gitlab.v1.GI.Instance> responseObserver) {
@@ -362,6 +440,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of GitLab instances in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.gitlab.v1.GIS.ListInstancesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.gitlab.v1.GIS.ListInstancesResponse> responseObserver) {
@@ -370,6 +451,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new GitLab instance in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.gitlab.v1.GIS.CreateInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -378,6 +462,20 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates GitLab instance.
+     * </pre>
+     */
+    public void update(yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified GitLab instance.
+     * </pre>
      */
     public void delete(yandex.cloud.api.gitlab.v1.GIS.DeleteInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -386,6 +484,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified GitLab instance.
+     * </pre>
      */
     public void start(yandex.cloud.api.gitlab.v1.GIS.StartInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -394,6 +495,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified GitLab instance.
+     * </pre>
      */
     public void stop(yandex.cloud.api.gitlab.v1.GIS.StopInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -403,6 +507,9 @@ public final class InstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * InstanceService provides methods for managing GitLab instances.
+   * </pre>
    */
   public static final class InstanceServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<InstanceServiceBlockingStub> {
     private InstanceServiceBlockingStub(
@@ -417,6 +524,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified GitLab instance.
+     * </pre>
      */
     public yandex.cloud.api.gitlab.v1.GI.Instance get(yandex.cloud.api.gitlab.v1.GIS.GetInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -424,6 +534,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of GitLab instances in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.gitlab.v1.GIS.ListInstancesResponse list(yandex.cloud.api.gitlab.v1.GIS.ListInstancesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -431,6 +544,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new GitLab instance in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.gitlab.v1.GIS.CreateInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -438,6 +554,19 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates GitLab instance.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified GitLab instance.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.gitlab.v1.GIS.DeleteInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -445,6 +574,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified GitLab instance.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.gitlab.v1.GIS.StartInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -452,6 +584,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified GitLab instance.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.gitlab.v1.GIS.StopInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -460,6 +595,9 @@ public final class InstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * InstanceService provides methods for managing GitLab instances.
+   * </pre>
    */
   public static final class InstanceServiceFutureStub extends io.grpc.stub.AbstractFutureStub<InstanceServiceFutureStub> {
     private InstanceServiceFutureStub(
@@ -474,6 +612,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified GitLab instance.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.gitlab.v1.GI.Instance> get(
         yandex.cloud.api.gitlab.v1.GIS.GetInstanceRequest request) {
@@ -482,6 +623,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of GitLab instances in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.gitlab.v1.GIS.ListInstancesResponse> list(
         yandex.cloud.api.gitlab.v1.GIS.ListInstancesRequest request) {
@@ -490,6 +634,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new GitLab instance in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.gitlab.v1.GIS.CreateInstanceRequest request) {
@@ -498,6 +645,20 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates GitLab instance.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
+        yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified GitLab instance.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.gitlab.v1.GIS.DeleteInstanceRequest request) {
@@ -506,6 +667,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified GitLab instance.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> start(
         yandex.cloud.api.gitlab.v1.GIS.StartInstanceRequest request) {
@@ -514,6 +678,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified GitLab instance.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
         yandex.cloud.api.gitlab.v1.GIS.StopInstanceRequest request) {
@@ -525,9 +692,10 @@ public final class InstanceServiceGrpc {
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
   private static final int METHODID_CREATE = 2;
-  private static final int METHODID_DELETE = 3;
-  private static final int METHODID_START = 4;
-  private static final int METHODID_STOP = 5;
+  private static final int METHODID_UPDATE = 3;
+  private static final int METHODID_DELETE = 4;
+  private static final int METHODID_START = 5;
+  private static final int METHODID_STOP = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -556,6 +724,10 @@ public final class InstanceServiceGrpc {
           break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.gitlab.v1.GIS.CreateInstanceRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE:
+          serviceImpl.update((yandex.cloud.api.gitlab.v1.GIS.UpdateInstanceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
@@ -634,6 +806,7 @@ public final class InstanceServiceGrpc {
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
+              .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getStartMethod())
               .addMethod(getStopMethod())

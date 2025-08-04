@@ -3983,6 +3983,50 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.mdb.spqr.v1.MaintenanceWindow maintenance_window = 13;</code>
      */
     yandex.cloud.api.mdb.spqr.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
+
+    /**
+     * <pre>
+     * Descriptions of shards to be created in the SPQR cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec> 
+        getShardSpecsList();
+    /**
+     * <pre>
+     * Descriptions of shards to be created in the SPQR cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+     */
+    yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec getShardSpecs(int index);
+    /**
+     * <pre>
+     * Descriptions of shards to be created in the SPQR cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+     */
+    int getShardSpecsCount();
+    /**
+     * <pre>
+     * Descriptions of shards to be created in the SPQR cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder> 
+        getShardSpecsOrBuilderList();
+    /**
+     * <pre>
+     * Descriptions of shards to be created in the SPQR cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+     */
+    yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder getShardSpecsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.spqr.v1.CreateClusterRequest}
@@ -4006,6 +4050,7 @@ public final class ClusterServiceOuterClass {
       hostSpecs_ = java.util.Collections.emptyList();
       networkId_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      shardSpecs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -4149,6 +4194,15 @@ public final class ClusterServiceOuterClass {
 
               break;
             }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                shardSpecs_ = new java.util.ArrayList<yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              shardSpecs_.add(
+                  input.readMessage(yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4175,6 +4229,9 @@ public final class ClusterServiceOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000010) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          shardSpecs_ = java.util.Collections.unmodifiableList(shardSpecs_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -4839,6 +4896,66 @@ public final class ClusterServiceOuterClass {
       return getMaintenanceWindow();
     }
 
+    public static final int SHARD_SPECS_FIELD_NUMBER = 14;
+    private java.util.List<yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec> shardSpecs_;
+    /**
+     * <pre>
+     * Descriptions of shards to be created in the SPQR cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec> getShardSpecsList() {
+      return shardSpecs_;
+    }
+    /**
+     * <pre>
+     * Descriptions of shards to be created in the SPQR cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder> 
+        getShardSpecsOrBuilderList() {
+      return shardSpecs_;
+    }
+    /**
+     * <pre>
+     * Descriptions of shards to be created in the SPQR cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+     */
+    @java.lang.Override
+    public int getShardSpecsCount() {
+      return shardSpecs_.size();
+    }
+    /**
+     * <pre>
+     * Descriptions of shards to be created in the SPQR cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec getShardSpecs(int index) {
+      return shardSpecs_.get(index);
+    }
+    /**
+     * <pre>
+     * Descriptions of shards to be created in the SPQR cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder getShardSpecsOrBuilder(
+        int index) {
+      return shardSpecs_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4894,6 +5011,9 @@ public final class ClusterServiceOuterClass {
       }
       if (maintenanceWindow_ != null) {
         output.writeMessage(13, getMaintenanceWindow());
+      }
+      for (int i = 0; i < shardSpecs_.size(); i++) {
+        output.writeMessage(14, shardSpecs_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -4962,6 +5082,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getMaintenanceWindow());
       }
+      for (int i = 0; i < shardSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, shardSpecs_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5008,6 +5132,8 @@ public final class ClusterServiceOuterClass {
         if (!getMaintenanceWindow()
             .equals(other.getMaintenanceWindow())) return false;
       }
+      if (!getShardSpecsList()
+          .equals(other.getShardSpecsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5059,6 +5185,10 @@ public final class ClusterServiceOuterClass {
       if (hasMaintenanceWindow()) {
         hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
+      if (getShardSpecsCount() > 0) {
+        hash = (37 * hash) + SHARD_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getShardSpecsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5213,6 +5343,7 @@ public final class ClusterServiceOuterClass {
           getDatabaseSpecsFieldBuilder();
           getUserSpecsFieldBuilder();
           getHostSpecsFieldBuilder();
+          getShardSpecsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -5262,6 +5393,12 @@ public final class ClusterServiceOuterClass {
         } else {
           maintenanceWindow_ = null;
           maintenanceWindowBuilder_ = null;
+        }
+        if (shardSpecsBuilder_ == null) {
+          shardSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          shardSpecsBuilder_.clear();
         }
         return this;
       }
@@ -5339,6 +5476,15 @@ public final class ClusterServiceOuterClass {
           result.maintenanceWindow_ = maintenanceWindow_;
         } else {
           result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
+        if (shardSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            shardSpecs_ = java.util.Collections.unmodifiableList(shardSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.shardSpecs_ = shardSpecs_;
+        } else {
+          result.shardSpecs_ = shardSpecsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -5505,6 +5651,32 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasMaintenanceWindow()) {
           mergeMaintenanceWindow(other.getMaintenanceWindow());
+        }
+        if (shardSpecsBuilder_ == null) {
+          if (!other.shardSpecs_.isEmpty()) {
+            if (shardSpecs_.isEmpty()) {
+              shardSpecs_ = other.shardSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureShardSpecsIsMutable();
+              shardSpecs_.addAll(other.shardSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.shardSpecs_.isEmpty()) {
+            if (shardSpecsBuilder_.isEmpty()) {
+              shardSpecsBuilder_.dispose();
+              shardSpecsBuilder_ = null;
+              shardSpecs_ = other.shardSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              shardSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getShardSpecsFieldBuilder() : null;
+            } else {
+              shardSpecsBuilder_.addAllMessages(other.shardSpecs_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7593,6 +7765,318 @@ public final class ClusterServiceOuterClass {
           maintenanceWindow_ = null;
         }
         return maintenanceWindowBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec> shardSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureShardSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          shardSpecs_ = new java.util.ArrayList<yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec>(shardSpecs_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder> shardSpecsBuilder_;
+
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec> getShardSpecsList() {
+        if (shardSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(shardSpecs_);
+        } else {
+          return shardSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public int getShardSpecsCount() {
+        if (shardSpecsBuilder_ == null) {
+          return shardSpecs_.size();
+        } else {
+          return shardSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec getShardSpecs(int index) {
+        if (shardSpecsBuilder_ == null) {
+          return shardSpecs_.get(index);
+        } else {
+          return shardSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public Builder setShardSpecs(
+          int index, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec value) {
+        if (shardSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShardSpecsIsMutable();
+          shardSpecs_.set(index, value);
+          onChanged();
+        } else {
+          shardSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public Builder setShardSpecs(
+          int index, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder builderForValue) {
+        if (shardSpecsBuilder_ == null) {
+          ensureShardSpecsIsMutable();
+          shardSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          shardSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public Builder addShardSpecs(yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec value) {
+        if (shardSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShardSpecsIsMutable();
+          shardSpecs_.add(value);
+          onChanged();
+        } else {
+          shardSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public Builder addShardSpecs(
+          int index, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec value) {
+        if (shardSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShardSpecsIsMutable();
+          shardSpecs_.add(index, value);
+          onChanged();
+        } else {
+          shardSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public Builder addShardSpecs(
+          yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder builderForValue) {
+        if (shardSpecsBuilder_ == null) {
+          ensureShardSpecsIsMutable();
+          shardSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          shardSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public Builder addShardSpecs(
+          int index, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder builderForValue) {
+        if (shardSpecsBuilder_ == null) {
+          ensureShardSpecsIsMutable();
+          shardSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          shardSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public Builder addAllShardSpecs(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec> values) {
+        if (shardSpecsBuilder_ == null) {
+          ensureShardSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, shardSpecs_);
+          onChanged();
+        } else {
+          shardSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public Builder clearShardSpecs() {
+        if (shardSpecsBuilder_ == null) {
+          shardSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          shardSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public Builder removeShardSpecs(int index) {
+        if (shardSpecsBuilder_ == null) {
+          ensureShardSpecsIsMutable();
+          shardSpecs_.remove(index);
+          onChanged();
+        } else {
+          shardSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder getShardSpecsBuilder(
+          int index) {
+        return getShardSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder getShardSpecsOrBuilder(
+          int index) {
+        if (shardSpecsBuilder_ == null) {
+          return shardSpecs_.get(index);  } else {
+          return shardSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder> 
+           getShardSpecsOrBuilderList() {
+        if (shardSpecsBuilder_ != null) {
+          return shardSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(shardSpecs_);
+        }
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder addShardSpecsBuilder() {
+        return getShardSpecsFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder addShardSpecsBuilder(
+          int index) {
+        return getShardSpecsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Descriptions of shards to be created in the SPQR cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.spqr.v1.ShardSpec shard_specs = 14;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder> 
+           getShardSpecsBuilderList() {
+        return getShardSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder> 
+          getShardSpecsFieldBuilder() {
+        if (shardSpecsBuilder_ == null) {
+          shardSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder>(
+                  shardSpecs_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          shardSpecs_ = null;
+        }
+        return shardSpecsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -60568,40 +61052,30 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the SPQR shard to create.
+     * Properties of the shard to be created.
      * </pre>
      *
-     * <code>string shard_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
-     * @return The shardName.
+     * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the shardSpec field is set.
      */
-    java.lang.String getShardName();
+    boolean hasShardSpec();
     /**
      * <pre>
-     * Name of the SPQR shard to create.
+     * Properties of the shard to be created.
      * </pre>
      *
-     * <code>string shard_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
-     * @return The bytes for shardName.
+     * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The shardSpec.
      */
-    com.google.protobuf.ByteString
-        getShardNameBytes();
-
+    yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec getShardSpec();
     /**
-     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
-     * @return Whether the mdbPostgresql field is set.
+     * <pre>
+     * Properties of the shard to be created.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
      */
-    boolean hasMdbPostgresql();
-    /**
-     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
-     * @return The mdbPostgresql.
-     */
-    yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL getMdbPostgresql();
-    /**
-     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
-     */
-    yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder getMdbPostgresqlOrBuilder();
-
-    public yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterShardRequest.ShardSpecCase getShardSpecCase();
+    yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder getShardSpecOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.spqr.v1.AddClusterShardRequest}
@@ -60617,7 +61091,6 @@ public final class ClusterServiceOuterClass {
     }
     private AddClusterShardRequest() {
       clusterId_ = "";
-      shardName_ = "";
     }
 
     @java.lang.Override
@@ -60656,24 +61129,17 @@ public final class ClusterServiceOuterClass {
               clusterId_ = s;
               break;
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              shardName_ = s;
-              break;
-            }
-            case 26: {
-              yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder subBuilder = null;
-              if (shardSpecCase_ == 3) {
-                subBuilder = ((yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) shardSpec_).toBuilder();
+            case 34: {
+              yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder subBuilder = null;
+              if (shardSpec_ != null) {
+                subBuilder = shardSpec_.toBuilder();
               }
-              shardSpec_ =
-                  input.readMessage(yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.parser(), extensionRegistry);
+              shardSpec_ = input.readMessage(yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) shardSpec_);
+                subBuilder.mergeFrom(shardSpec_);
                 shardSpec_ = subBuilder.buildPartial();
               }
-              shardSpecCase_ = 3;
+
               break;
             }
             default: {
@@ -60706,45 +61172,6 @@ public final class ClusterServiceOuterClass {
       return yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_spqr_v1_AddClusterShardRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterShardRequest.class, yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterShardRequest.Builder.class);
-    }
-
-    private int shardSpecCase_ = 0;
-    private java.lang.Object shardSpec_;
-    public enum ShardSpecCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      MDB_POSTGRESQL(3),
-      SHARDSPEC_NOT_SET(0);
-      private final int value;
-      private ShardSpecCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ShardSpecCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static ShardSpecCase forNumber(int value) {
-        switch (value) {
-          case 3: return MDB_POSTGRESQL;
-          case 0: return SHARDSPEC_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public ShardSpecCase
-    getShardSpecCase() {
-      return ShardSpecCase.forNumber(
-          shardSpecCase_);
     }
 
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
@@ -60795,81 +61222,42 @@ public final class ClusterServiceOuterClass {
       }
     }
 
-    public static final int SHARD_NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object shardName_;
+    public static final int SHARD_SPEC_FIELD_NUMBER = 4;
+    private yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec shardSpec_;
     /**
      * <pre>
-     * Name of the SPQR shard to create.
+     * Properties of the shard to be created.
      * </pre>
      *
-     * <code>string shard_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
-     * @return The shardName.
+     * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the shardSpec field is set.
      */
     @java.lang.Override
-    public java.lang.String getShardName() {
-      java.lang.Object ref = shardName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        shardName_ = s;
-        return s;
-      }
+    public boolean hasShardSpec() {
+      return shardSpec_ != null;
     }
     /**
      * <pre>
-     * Name of the SPQR shard to create.
+     * Properties of the shard to be created.
      * </pre>
      *
-     * <code>string shard_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
-     * @return The bytes for shardName.
+     * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The shardSpec.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getShardNameBytes() {
-      java.lang.Object ref = shardName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        shardName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int MDB_POSTGRESQL_FIELD_NUMBER = 3;
-    /**
-     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
-     * @return Whether the mdbPostgresql field is set.
-     */
-    @java.lang.Override
-    public boolean hasMdbPostgresql() {
-      return shardSpecCase_ == 3;
+    public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec getShardSpec() {
+      return shardSpec_ == null ? yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.getDefaultInstance() : shardSpec_;
     }
     /**
-     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
-     * @return The mdbPostgresql.
+     * <pre>
+     * Properties of the shard to be created.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL getMdbPostgresql() {
-      if (shardSpecCase_ == 3) {
-         return (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) shardSpec_;
-      }
-      return yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
-    }
-    /**
-     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder getMdbPostgresqlOrBuilder() {
-      if (shardSpecCase_ == 3) {
-         return (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) shardSpec_;
-      }
-      return yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
+    public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder getShardSpecOrBuilder() {
+      return getShardSpec();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -60889,11 +61277,8 @@ public final class ClusterServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shardName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shardName_);
-      }
-      if (shardSpecCase_ == 3) {
-        output.writeMessage(3, (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) shardSpec_);
+      if (shardSpec_ != null) {
+        output.writeMessage(4, getShardSpec());
       }
       unknownFields.writeTo(output);
     }
@@ -60907,12 +61292,9 @@ public final class ClusterServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shardName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, shardName_);
-      }
-      if (shardSpecCase_ == 3) {
+      if (shardSpec_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) shardSpec_);
+          .computeMessageSize(4, getShardSpec());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -60931,16 +61313,10 @@ public final class ClusterServiceOuterClass {
 
       if (!getClusterId()
           .equals(other.getClusterId())) return false;
-      if (!getShardName()
-          .equals(other.getShardName())) return false;
-      if (!getShardSpecCase().equals(other.getShardSpecCase())) return false;
-      switch (shardSpecCase_) {
-        case 3:
-          if (!getMdbPostgresql()
-              .equals(other.getMdbPostgresql())) return false;
-          break;
-        case 0:
-        default:
+      if (hasShardSpec() != other.hasShardSpec()) return false;
+      if (hasShardSpec()) {
+        if (!getShardSpec()
+            .equals(other.getShardSpec())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -60955,15 +61331,9 @@ public final class ClusterServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getClusterId().hashCode();
-      hash = (37 * hash) + SHARD_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getShardName().hashCode();
-      switch (shardSpecCase_) {
-        case 3:
-          hash = (37 * hash) + MDB_POSTGRESQL_FIELD_NUMBER;
-          hash = (53 * hash) + getMdbPostgresql().hashCode();
-          break;
-        case 0:
-        default:
+      if (hasShardSpec()) {
+        hash = (37 * hash) + SHARD_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getShardSpec().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -61100,10 +61470,12 @@ public final class ClusterServiceOuterClass {
         super.clear();
         clusterId_ = "";
 
-        shardName_ = "";
-
-        shardSpecCase_ = 0;
-        shardSpec_ = null;
+        if (shardSpecBuilder_ == null) {
+          shardSpec_ = null;
+        } else {
+          shardSpec_ = null;
+          shardSpecBuilder_ = null;
+        }
         return this;
       }
 
@@ -61131,15 +61503,11 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterShardRequest buildPartial() {
         yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterShardRequest result = new yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterShardRequest(this);
         result.clusterId_ = clusterId_;
-        result.shardName_ = shardName_;
-        if (shardSpecCase_ == 3) {
-          if (mdbPostgresqlBuilder_ == null) {
-            result.shardSpec_ = shardSpec_;
-          } else {
-            result.shardSpec_ = mdbPostgresqlBuilder_.build();
-          }
+        if (shardSpecBuilder_ == null) {
+          result.shardSpec_ = shardSpec_;
+        } else {
+          result.shardSpec_ = shardSpecBuilder_.build();
         }
-        result.shardSpecCase_ = shardSpecCase_;
         onBuilt();
         return result;
       }
@@ -61192,18 +61560,8 @@ public final class ClusterServiceOuterClass {
           clusterId_ = other.clusterId_;
           onChanged();
         }
-        if (!other.getShardName().isEmpty()) {
-          shardName_ = other.shardName_;
-          onChanged();
-        }
-        switch (other.getShardSpecCase()) {
-          case MDB_POSTGRESQL: {
-            mergeMdbPostgresql(other.getMdbPostgresql());
-            break;
-          }
-          case SHARDSPEC_NOT_SET: {
-            break;
-          }
+        if (other.hasShardSpec()) {
+          mergeShardSpec(other.getShardSpec());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -61233,21 +61591,6 @@ public final class ClusterServiceOuterClass {
         }
         return this;
       }
-      private int shardSpecCase_ = 0;
-      private java.lang.Object shardSpec_;
-      public ShardSpecCase
-          getShardSpecCase() {
-        return ShardSpecCase.forNumber(
-            shardSpecCase_);
-      }
-
-      public Builder clearShardSpec() {
-        shardSpecCase_ = 0;
-        shardSpec_ = null;
-        onChanged();
-        return this;
-      }
-
 
       private java.lang.Object clusterId_ = "";
       /**
@@ -61350,241 +61693,159 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
-      private java.lang.Object shardName_ = "";
-      /**
-       * <pre>
-       * Name of the SPQR shard to create.
-       * </pre>
-       *
-       * <code>string shard_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
-       * @return The shardName.
-       */
-      public java.lang.String getShardName() {
-        java.lang.Object ref = shardName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          shardName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Name of the SPQR shard to create.
-       * </pre>
-       *
-       * <code>string shard_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
-       * @return The bytes for shardName.
-       */
-      public com.google.protobuf.ByteString
-          getShardNameBytes() {
-        java.lang.Object ref = shardName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          shardName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Name of the SPQR shard to create.
-       * </pre>
-       *
-       * <code>string shard_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
-       * @param value The shardName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setShardName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        shardName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Name of the SPQR shard to create.
-       * </pre>
-       *
-       * <code>string shard_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearShardName() {
-        
-        shardName_ = getDefaultInstance().getShardName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Name of the SPQR shard to create.
-       * </pre>
-       *
-       * <code>string shard_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
-       * @param value The bytes for shardName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setShardNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        shardName_ = value;
-        onChanged();
-        return this;
-      }
-
+      private yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec shardSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder> mdbPostgresqlBuilder_;
+          yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder> shardSpecBuilder_;
       /**
-       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
-       * @return Whether the mdbPostgresql field is set.
+       * <pre>
+       * Properties of the shard to be created.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the shardSpec field is set.
        */
-      @java.lang.Override
-      public boolean hasMdbPostgresql() {
-        return shardSpecCase_ == 3;
+      public boolean hasShardSpec() {
+        return shardSpecBuilder_ != null || shardSpec_ != null;
       }
       /**
-       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
-       * @return The mdbPostgresql.
+       * <pre>
+       * Properties of the shard to be created.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The shardSpec.
        */
-      @java.lang.Override
-      public yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL getMdbPostgresql() {
-        if (mdbPostgresqlBuilder_ == null) {
-          if (shardSpecCase_ == 3) {
-            return (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) shardSpec_;
-          }
-          return yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
+      public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec getShardSpec() {
+        if (shardSpecBuilder_ == null) {
+          return shardSpec_ == null ? yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.getDefaultInstance() : shardSpec_;
         } else {
-          if (shardSpecCase_ == 3) {
-            return mdbPostgresqlBuilder_.getMessage();
-          }
-          return yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
+          return shardSpecBuilder_.getMessage();
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
+       * <pre>
+       * Properties of the shard to be created.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder setMdbPostgresql(yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL value) {
-        if (mdbPostgresqlBuilder_ == null) {
+      public Builder setShardSpec(yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec value) {
+        if (shardSpecBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           shardSpec_ = value;
           onChanged();
         } else {
-          mdbPostgresqlBuilder_.setMessage(value);
+          shardSpecBuilder_.setMessage(value);
         }
-        shardSpecCase_ = 3;
+
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
+       * <pre>
+       * Properties of the shard to be created.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder setMdbPostgresql(
-          yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder builderForValue) {
-        if (mdbPostgresqlBuilder_ == null) {
+      public Builder setShardSpec(
+          yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder builderForValue) {
+        if (shardSpecBuilder_ == null) {
           shardSpec_ = builderForValue.build();
           onChanged();
         } else {
-          mdbPostgresqlBuilder_.setMessage(builderForValue.build());
+          shardSpecBuilder_.setMessage(builderForValue.build());
         }
-        shardSpecCase_ = 3;
+
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
+       * <pre>
+       * Properties of the shard to be created.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder mergeMdbPostgresql(yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL value) {
-        if (mdbPostgresqlBuilder_ == null) {
-          if (shardSpecCase_ == 3 &&
-              shardSpec_ != yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance()) {
-            shardSpec_ = yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.newBuilder((yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) shardSpec_)
-                .mergeFrom(value).buildPartial();
+      public Builder mergeShardSpec(yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec value) {
+        if (shardSpecBuilder_ == null) {
+          if (shardSpec_ != null) {
+            shardSpec_ =
+              yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.newBuilder(shardSpec_).mergeFrom(value).buildPartial();
           } else {
             shardSpec_ = value;
           }
           onChanged();
         } else {
-          if (shardSpecCase_ == 3) {
-            mdbPostgresqlBuilder_.mergeFrom(value);
-          }
-          mdbPostgresqlBuilder_.setMessage(value);
+          shardSpecBuilder_.mergeFrom(value);
         }
-        shardSpecCase_ = 3;
+
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
+       * <pre>
+       * Properties of the shard to be created.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder clearMdbPostgresql() {
-        if (mdbPostgresqlBuilder_ == null) {
-          if (shardSpecCase_ == 3) {
-            shardSpecCase_ = 0;
-            shardSpec_ = null;
-            onChanged();
-          }
+      public Builder clearShardSpec() {
+        if (shardSpecBuilder_ == null) {
+          shardSpec_ = null;
+          onChanged();
         } else {
-          if (shardSpecCase_ == 3) {
-            shardSpecCase_ = 0;
-            shardSpec_ = null;
-          }
-          mdbPostgresqlBuilder_.clear();
+          shardSpec_ = null;
+          shardSpecBuilder_ = null;
         }
+
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
+       * <pre>
+       * Properties of the shard to be created.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
        */
-      public yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder getMdbPostgresqlBuilder() {
-        return getMdbPostgresqlFieldBuilder().getBuilder();
+      public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder getShardSpecBuilder() {
+        
+        onChanged();
+        return getShardSpecFieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
+       * <pre>
+       * Properties of the shard to be created.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
        */
-      @java.lang.Override
-      public yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder getMdbPostgresqlOrBuilder() {
-        if ((shardSpecCase_ == 3) && (mdbPostgresqlBuilder_ != null)) {
-          return mdbPostgresqlBuilder_.getMessageOrBuilder();
+      public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder getShardSpecOrBuilder() {
+        if (shardSpecBuilder_ != null) {
+          return shardSpecBuilder_.getMessageOrBuilder();
         } else {
-          if (shardSpecCase_ == 3) {
-            return (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) shardSpec_;
-          }
-          return yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
+          return shardSpec_ == null ?
+              yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.getDefaultInstance() : shardSpec_;
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 3;</code>
+       * <pre>
+       * Properties of the shard to be created.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.ShardSpec shard_spec = 4 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder> 
-          getMdbPostgresqlFieldBuilder() {
-        if (mdbPostgresqlBuilder_ == null) {
-          if (!(shardSpecCase_ == 3)) {
-            shardSpec_ = yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
-          }
-          mdbPostgresqlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder>(
-                  (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) shardSpec_,
+          yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder> 
+          getShardSpecFieldBuilder() {
+        if (shardSpecBuilder_ == null) {
+          shardSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder>(
+                  getShardSpec(),
                   getParentForChildren(),
                   isClean());
           shardSpec_ = null;
         }
-        shardSpecCase_ = 3;
-        onChanged();;
-        return mdbPostgresqlBuilder_;
+        return shardSpecBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -65731,7 +65992,7 @@ public final class ClusterServiceOuterClass {
       "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"d\n\024ListCluster" +
       "sResponse\0223\n\010clusters\030\001 \003(\0132!.yandex.clo" +
       "ud.mdb.spqr.v1.Cluster\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t\"\262\006\n\024CreateClusterRequest\022\037\n\tfold" +
+      "n\030\002 \001(\t\"\354\006\n\024CreateClusterRequest\022\037\n\tfold" +
       "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB" +
       "\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013descr" +
       "iption\030\003 \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\004 \003(\013" +
@@ -65750,344 +66011,344 @@ public final class ClusterServiceOuterClass {
       "1\001\212\3101\005<=150\022\032\n\022security_group_ids\030\013 \003(\t\022" +
       "\033\n\023deletion_protection\030\014 \001(\010\022G\n\022maintena" +
       "nce_window\030\r \001(\0132+.yandex.cloud.mdb.spqr" +
-      ".v1.MaintenanceWindow\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateCl" +
-      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\324\004\n\024Up" +
-      "dateClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.goog" +
-      "le.protobuf.FieldMask\022(\n\004name\030\003 \001(\tB\032\212\3101" +
-      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\004" +
-      " \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:.yande" +
-      "x.cloud.mdb.spqr.v1.UpdateClusterRequest" +
-      ".LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\" +
-      "@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9" +
-      "a-z]*\0229\n\013config_spec\030\006 \001(\0132$.yandex.clou" +
-      "d.mdb.spqr.v1.ConfigSpec\022G\n\022maintenance_" +
-      "window\030\007 \001(\0132+.yandex.cloud.mdb.spqr.v1." +
-      "MaintenanceWindow\022\032\n\022security_group_ids\030" +
-      "\010 \003(\t\022\033\n\023deletion_protection\030\t \001(\010\022\035\n\nne" +
-      "twork_id\030\n \001(\tB\t\212\3101\005<=150\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025Upda" +
-      "teClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n" +
-      "\024DeleteClusterRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023StartClusterRequ" +
-      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n" +
-      "\024StartClusterMetadata\022\022\n\ncluster_id\030\001 \001(" +
-      "\t\"6\n\022StopClusterRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\"c\n\022MoveClusterReque" +
-      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025" +
-      "destination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\"b\n\023MoveClusterMetadata\022\022\n\ncluster_id\030\001" +
-      " \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025destin" +
-      "ation_folder_id\030\003 \001(\t\"8\n\024BackupClusterRe" +
-      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
-      "+\n\025BackupClusterMetadata\022\022\n\ncluster_id\030\001" +
-      " \001(\t\"\320\005\n\025RestoreClusterRequest\022\027\n\tbackup" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<" +
-      "=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001" +
-      "(\tB\t\212\3101\005<=256\022\224\001\n\006labels\030\004 \003(\0132;.yandex." +
-      "cloud.mdb.spqr.v1.RestoreClusterRequest." +
-      "LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@" +
-      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a" +
-      "-z]*\022H\n\013environment\030\005 \001(\0162-.yandex.cloud" +
-      ".mdb.spqr.v1.Cluster.EnvironmentB\004\350\3071\001\022?" +
-      "\n\013config_spec\030\006 \001(\0132$.yandex.cloud.mdb.s" +
-      "pqr.v1.ConfigSpecB\004\350\3071\001\022>\n\nhost_specs\030\007 " +
-      "\003(\0132\".yandex.cloud.mdb.spqr.v1.HostSpecB" +
-      "\006\202\3101\002>0\022!\n\nnetwork_id\030\010 \001(\tB\r\350\3071\001\212\3101\005<=1" +
-      "50\022\033\n\tfolder_id\030\t \001(\tB\010\212\3101\004<=50\022\032\n\022secur" +
-      "ity_group_ids\030\013 \003(\t\022\033\n\023deletion_protecti" +
-      "on\030\014 \001(\010\022(\n\004time\030\r \001(\0132\032.google.protobuf" +
-      ".Timestamp\022\026\n\016time_inclusive\030\016 \001(\010\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001J\004\010\n\020\013\"?\n\026RestoreClusterMetadata\022\022\n\nclu" +
-      "ster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\311\002\n\034Res" +
-      "cheduleMaintenanceRequest\022 \n\ncluster_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022d\n\017reschedule_type\030\002" +
-      " \001(\0162E.yandex.cloud.mdb.spqr.v1.Reschedu" +
-      "leMaintenanceRequest.RescheduleTypeB\004\350\3071" +
-      "\001\0221\n\rdelayed_until\030\003 \001(\0132\032.google.protob" +
-      "uf.Timestamp\"n\n\016RescheduleType\022\037\n\033RESCHE" +
-      "DULE_TYPE_UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031" +
-      "\n\025NEXT_AVAILABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TI" +
-      "ME\020\003\"l\n\035RescheduleMaintenanceMetadata\022\022\n" +
-      "\ncluster_id\030\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\013" +
-      "2\032.google.protobuf.TimestampJ\004\010\002\020\004\"\255\001\n\tL" +
-      "ogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022A\n\007message\030\002 \003(\01320.yande" +
-      "x.cloud.mdb.spqr.v1.LogRecord.MessageEnt" +
-      "ry\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"\347\003\n\026ListClusterLogsRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolum" +
-      "n_filter\030\002 \003(\t\022R\n\014service_type\030\003 \001(\0162<.y" +
-      "andex.cloud.mdb.spqr.v1.ListClusterLogsR" +
-      "equest.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032." +
-      "google.protobuf.Timestamp\022+\n\007to_time\030\005 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022\035\n\tpage_s" +
-      "ize\030\006 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\007 \001(" +
-      "\tB\t\212\3101\005<=100\022\036\n\026always_next_page_token\030\010" +
-      " \001(\010\022\032\n\006filter\030\t \001(\tB\n\212\3101\006<=1000\022\020\n\010orde" +
-      "r_by\030\n \001(\t\"X\n\013ServiceType\022\034\n\030SERVICE_TYP" +
-      "E_UNSPECIFIED\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006ROUTE" +
-      "R\020\002\022\017\n\013COORDINATOR\020\003\"e\n\027ListClusterLogsR" +
-      "esponse\0221\n\004logs\030\001 \003(\0132#.yandex.cloud.mdb" +
-      ".spqr.v1.LogRecord\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"a\n\017StreamLogRecord\0223\n\006record\030\001 \001(\0132#" +
-      ".yandex.cloud.mdb.spqr.v1.LogRecord\022\031\n\021n" +
-      "ext_record_token\030\002 \001(\t\"\234\003\n\030StreamCluster" +
-      "LogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022T\n\014service_" +
-      "type\030\003 \001(\0162>.yandex.cloud.mdb.spqr.v1.St" +
-      "reamClusterLogsRequest.ServiceType\022-\n\tfr" +
-      "om_time\030\004 \001(\0132\032.google.protobuf.Timestam" +
-      "p\022+\n\007to_time\030\005 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022\037\n\014record_token\030\006 \001(\tB\t\212\3101\005<=100\022" +
-      "\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\"X\n\013ServiceTy" +
-      "pe\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\016\n\nPOST" +
-      "GRESQL\020\001\022\n\n\006ROUTER\020\002\022\017\n\013COORDINATOR\020\003\"~\n" +
-      "\034ListClusterOperationsRequest\022 \n\ncluster" +
+      ".v1.MaintenanceWindow\0228\n\013shard_specs\030\016 \003" +
+      "(\0132#.yandex.cloud.mdb.spqr.v1.ShardSpec\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"+\n\025CreateClusterMetadata\022\022\n\nclust" +
+      "er_id\030\001 \001(\t\"\324\004\n\024UpdateClusterRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update" +
+      "_mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022" +
+      "(\n\004name\030\003 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]" +
+      "*\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\223\001\n\006la" +
+      "bels\030\005 \003(\0132:.yandex.cloud.mdb.spqr.v1.Up" +
+      "dateClusterRequest.LabelsEntryBG\202\3101\004<=64" +
+      "\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101" +
+      "\026\022\024[a-z][-_./\\@0-9a-z]*\0229\n\013config_spec\030\006" +
+      " \001(\0132$.yandex.cloud.mdb.spqr.v1.ConfigSp" +
+      "ec\022G\n\022maintenance_window\030\007 \001(\0132+.yandex." +
+      "cloud.mdb.spqr.v1.MaintenanceWindow\022\032\n\022s" +
+      "ecurity_group_ids\030\010 \003(\t\022\033\n\023deletion_prot" +
+      "ection\030\t \001(\010\022\035\n\nnetwork_id\030\n \001(\tB\t\212\3101\005<=" +
+      "150\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Del" +
+      "eteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"7" +
+      "\n\023StartClusterRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023S" +
+      "topClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"c" +
+      "\n\022MoveClusterRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_id\030" +
+      "\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveClusterMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020source_folder_" +
+      "id\030\002 \001(\t\022\035\n\025destination_folder_id\030\003 \001(\t\"" +
+      "8\n\024BackupClusterRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupClusterMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\"\320\005\n\025RestoreCluste" +
+      "rRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022,\n\004nam" +
+      "e\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022" +
+      "\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\224\001\n\006labe" +
+      "ls\030\004 \003(\0132;.yandex.cloud.mdb.spqr.v1.Rest" +
+      "oreClusterRequest.LabelsEntryBG\202\3101\004<=64\212" +
+      "\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026" +
+      "\022\024[a-z][-_./\\@0-9a-z]*\022H\n\013environment\030\005 " +
+      "\001(\0162-.yandex.cloud.mdb.spqr.v1.Cluster.E" +
+      "nvironmentB\004\350\3071\001\022?\n\013config_spec\030\006 \001(\0132$." +
+      "yandex.cloud.mdb.spqr.v1.ConfigSpecB\004\350\3071" +
+      "\001\022>\n\nhost_specs\030\007 \003(\0132\".yandex.cloud.mdb" +
+      ".spqr.v1.HostSpecB\006\202\3101\002>0\022!\n\nnetwork_id\030" +
+      "\010 \001(\tB\r\350\3071\001\212\3101\005<=150\022\033\n\tfolder_id\030\t \001(\tB" +
+      "\010\212\3101\004<=50\022\032\n\022security_group_ids\030\013 \003(\t\022\033\n" +
+      "\023deletion_protection\030\014 \001(\010\022(\n\004time\030\r \001(\013" +
+      "2\032.google.protobuf.Timestamp\022\026\n\016time_inc" +
+      "lusive\030\016 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\n\020\013\"?\n\026RestoreClus" +
+      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbacku" +
+      "p_id\030\002 \001(\t\"\311\002\n\034RescheduleMaintenanceRequ" +
+      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022d\n" +
+      "\017reschedule_type\030\002 \001(\0162E.yandex.cloud.md" +
+      "b.spqr.v1.RescheduleMaintenanceRequest.R" +
+      "escheduleTypeB\004\350\3071\001\0221\n\rdelayed_until\030\003 \001" +
+      "(\0132\032.google.protobuf.Timestamp\"n\n\016Resche" +
+      "duleType\022\037\n\033RESCHEDULE_TYPE_UNSPECIFIED\020" +
+      "\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAILABLE_WINDO" +
+      "W\020\002\022\021\n\rSPECIFIC_TIME\020\003\"l\n\035RescheduleMain" +
+      "tenanceMetadata\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rd" +
+      "elayed_until\030\004 \001(\0132\032.google.protobuf.Tim" +
+      "estampJ\004\010\002\020\004\"\255\001\n\tLogRecord\022-\n\ttimestamp\030" +
+      "\001 \001(\0132\032.google.protobuf.Timestamp\022A\n\007mes" +
+      "sage\030\002 \003(\01320.yandex.cloud.mdb.spqr.v1.Lo" +
+      "gRecord.MessageEntry\032.\n\014MessageEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\347\003\n\026ListClu" +
+      "sterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022R\n\014serv" +
+      "ice_type\030\003 \001(\0162<.yandex.cloud.mdb.spqr.v" +
+      "1.ListClusterLogsRequest.ServiceType\022-\n\t" +
+      "from_time\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022+\n\007to_time\030\005 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\0060-1000\022" +
+      "\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\022\036\n\026always" +
+      "_next_page_token\030\010 \001(\010\022\032\n\006filter\030\t \001(\tB\n" +
+      "\212\3101\006<=1000\022\020\n\010order_by\030\n \001(\t\"X\n\013ServiceT" +
+      "ype\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\016\n\nPOS" +
+      "TGRESQL\020\001\022\n\n\006ROUTER\020\002\022\017\n\013COORDINATOR\020\003\"e" +
+      "\n\027ListClusterLogsResponse\0221\n\004logs\030\001 \003(\0132" +
+      "#.yandex.cloud.mdb.spqr.v1.LogRecord\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"a\n\017StreamLogRecord" +
+      "\0223\n\006record\030\001 \001(\0132#.yandex.cloud.mdb.spqr" +
+      ".v1.LogRecord\022\031\n\021next_record_token\030\002 \001(\t" +
+      "\"\234\003\n\030StreamClusterLogsRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter" +
+      "\030\002 \003(\t\022T\n\014service_type\030\003 \001(\0162>.yandex.cl" +
+      "oud.mdb.spqr.v1.StreamClusterLogsRequest" +
+      ".ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022\037\n\014record_token" +
+      "\030\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<" +
+      "=1000\"X\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNS" +
+      "PECIFIED\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006ROUTER\020\002\022\017" +
+      "\n\013COORDINATOR\020\003\"~\n\034ListClusterOperations" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage" +
+      "_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOp" +
+      "erationsResponse\0225\n\noperations\030\001 \003(\0132!.y" +
+      "andex.cloud.operation.Operation\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"\215\001\n\020BackupListFilter\022.\n" +
+      "\nstart_time\030\001 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022,\n\010end_time\030\002 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022\033\n\023retention_policy_id\030\003 \001(\t" +
+      "\"{\n\031ListClusterBackupsRequest\022 \n\ncluster" +
       "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
       "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\"o\n\035ListClusterOperationsResponse\0225" +
-      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
-      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"\215" +
-      "\001\n\020BackupListFilter\022.\n\nstart_time\030\001 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022,\n\010end_time\030" +
-      "\002 \001(\0132\032.google.protobuf.Timestamp\022\033\n\023ret" +
-      "ention_policy_id\030\003 \001(\t\"{\n\031ListClusterBac" +
-      "kupsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
-      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"h\n\032ListClust" +
-      "erBackupsResponse\0221\n\007backups\030\001 \003(\0132 .yan" +
-      "dex.cloud.mdb.spqr.v1.Backup\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"\351\007\n\010SpqrSpec\0229\n\006router\030\001 \001" +
-      "(\0132).yandex.cloud.mdb.spqr.v1.SpqrSpec.R" +
-      "outer\022C\n\013coordinator\030\002 \001(\0132..yandex.clou" +
-      "d.mdb.spqr.v1.SpqrSpec.Coordinator\022A\n\npo" +
-      "stgresql\030\003 \001(\0132-.yandex.cloud.mdb.spqr.v" +
-      "1.SpqrSpec.PostgreSQL\0227\n\005infra\030\005 \001(\0132(.y" +
-      "andex.cloud.mdb.spqr.v1.SpqrSpec.Infra\022\030" +
-      "\n\020console_password\030\006 \001(\t\0225\n\tlog_level\030\007 " +
-      "\001(\0162\".yandex.cloud.mdb.spqr.v1.LogLevel\022" +
-      "<\n\010balancer\030\010 \001(\0132*.yandex.cloud.mdb.spq" +
-      "r.v1.BalancerSettings\032z\n\006Router\0228\n\006confi" +
-      "g\030\001 \001(\0132(.yandex.cloud.mdb.spqr.v1.Route" +
-      "rSettings\0226\n\tresources\030\002 \001(\0132#.yandex.cl" +
-      "oud.mdb.spqr.v1.Resources\032\204\001\n\013Coordinato" +
-      "r\022=\n\006config\030\001 \001(\0132-.yandex.cloud.mdb.spq" +
-      "r.v1.CoordinatorSettings\0226\n\tresources\030\002 " +
-      "\001(\0132#.yandex.cloud.mdb.spqr.v1.Resources" +
-      "\032\202\001\n\nPostgreSQL\022<\n\006config\030\001 \001(\0132,.yandex" +
-      ".cloud.mdb.spqr.v1.PostgreSQLSettings\0226\n" +
-      "\tresources\030\002 \001(\0132#.yandex.cloud.mdb.spqr" +
-      ".v1.Resources\032\303\001\n\005Infra\0226\n\tresources\030\002 \001" +
-      "(\0132#.yandex.cloud.mdb.spqr.v1.Resources\022" +
-      "8\n\006router\030\003 \001(\0132(.yandex.cloud.mdb.spqr." +
-      "v1.RouterSettings\022B\n\013coordinator\030\004 \001(\0132-" +
-      ".yandex.cloud.mdb.spqr.v1.CoordinatorSet" +
-      "tingsJ\004\010\001\020\002J\004\010\004\020\005\"\231\002\n\nConfigSpec\0225\n\tspqr" +
-      "_spec\030\001 \001(\0132\".yandex.cloud.mdb.spqr.v1.S" +
-      "pqrSpec\0223\n\023backup_window_start\030\002 \001(\0132\026.g" +
-      "oogle.type.TimeOfDay\022>\n\031backup_retain_pe" +
-      "riod_days\030\003 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0220\n\006access\030\004 \001(\0132 .yandex.cloud.mdb." +
-      "spqr.v1.Access\022-\n\tsox_audit\030\005 \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\"y\n\027ListClusterHost" +
+      "<=100\"h\n\032ListClusterBackupsResponse\0221\n\007b" +
+      "ackups\030\001 \003(\0132 .yandex.cloud.mdb.spqr.v1." +
+      "Backup\022\027\n\017next_page_token\030\002 \001(\t\"\351\007\n\010Spqr" +
+      "Spec\0229\n\006router\030\001 \001(\0132).yandex.cloud.mdb." +
+      "spqr.v1.SpqrSpec.Router\022C\n\013coordinator\030\002" +
+      " \001(\0132..yandex.cloud.mdb.spqr.v1.SpqrSpec" +
+      ".Coordinator\022A\n\npostgresql\030\003 \001(\0132-.yande" +
+      "x.cloud.mdb.spqr.v1.SpqrSpec.PostgreSQL\022" +
+      "7\n\005infra\030\005 \001(\0132(.yandex.cloud.mdb.spqr.v" +
+      "1.SpqrSpec.Infra\022\030\n\020console_password\030\006 \001" +
+      "(\t\0225\n\tlog_level\030\007 \001(\0162\".yandex.cloud.mdb" +
+      ".spqr.v1.LogLevel\022<\n\010balancer\030\010 \001(\0132*.ya" +
+      "ndex.cloud.mdb.spqr.v1.BalancerSettings\032" +
+      "z\n\006Router\0228\n\006config\030\001 \001(\0132(.yandex.cloud" +
+      ".mdb.spqr.v1.RouterSettings\0226\n\tresources" +
+      "\030\002 \001(\0132#.yandex.cloud.mdb.spqr.v1.Resour" +
+      "ces\032\204\001\n\013Coordinator\022=\n\006config\030\001 \001(\0132-.ya" +
+      "ndex.cloud.mdb.spqr.v1.CoordinatorSettin" +
+      "gs\0226\n\tresources\030\002 \001(\0132#.yandex.cloud.mdb" +
+      ".spqr.v1.Resources\032\202\001\n\nPostgreSQL\022<\n\006con" +
+      "fig\030\001 \001(\0132,.yandex.cloud.mdb.spqr.v1.Pos" +
+      "tgreSQLSettings\0226\n\tresources\030\002 \001(\0132#.yan" +
+      "dex.cloud.mdb.spqr.v1.Resources\032\303\001\n\005Infr" +
+      "a\0226\n\tresources\030\002 \001(\0132#.yandex.cloud.mdb." +
+      "spqr.v1.Resources\0228\n\006router\030\003 \001(\0132(.yand" +
+      "ex.cloud.mdb.spqr.v1.RouterSettings\022B\n\013c" +
+      "oordinator\030\004 \001(\0132-.yandex.cloud.mdb.spqr" +
+      ".v1.CoordinatorSettingsJ\004\010\001\020\002J\004\010\004\020\005\"\231\002\n\n" +
+      "ConfigSpec\0225\n\tspqr_spec\030\001 \001(\0132\".yandex.c" +
+      "loud.mdb.spqr.v1.SpqrSpec\0223\n\023backup_wind" +
+      "ow_start\030\002 \001(\0132\026.google.type.TimeOfDay\022>" +
+      "\n\031backup_retain_period_days\030\003 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0220\n\006access\030\004 \001(\0132 " +
+      ".yandex.cloud.mdb.spqr.v1.Access\022-\n\tsox_" +
+      "audit\030\005 \001(\0132\032.google.protobuf.BoolValue\"" +
+      "y\n\027ListClusterHostsRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
+      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
+      "00\"\235\001\n!ListClusterHostsAtRevisionRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
+      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
+      "\003 \001(\tB\t\212\3101\005<=100\022\030\n\010revision\030\004 \001(\003B\006\372\3071\002" +
+      ">0\"b\n\030ListClusterHostsResponse\022-\n\005hosts\030" +
+      "\001 \003(\0132\036.yandex.cloud.mdb.spqr.v1.Host\022\027\n" +
+      "\017next_page_token\030\002 \001(\t\"y\n\026AddClusterHost" +
       "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npag" +
-      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"\235\001\n!ListCluster" +
-      "HostsAtRevisionRequest\022 \n\ncluster_id\030\001 \001" +
+      "50\022=\n\nhost_specs\030\002 \003(\0132\".yandex.cloud.md" +
+      "b.spqr.v1.HostSpecB\005\202\3101\0011\"A\n\027AddClusterH" +
+      "ostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost" +
+      "_names\030\002 \003(\t\"\211\001\n\031UpdateClusterHostsReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022J\n\021" +
+      "update_host_specs\030\002 \003(\0132(.yandex.cloud.m" +
+      "db.spqr.v1.UpdateHostSpecB\005\202\3101\0011\"D\n\032Upda" +
+      "teClusterHostsMetadata\022\022\n\ncluster_id\030\001 \001" +
+      "(\t\022\022\n\nhost_names\030\002 \003(\t\"t\n\016UpdateHostSpec" +
+      "\022\027\n\thost_name\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask" +
+      "\030\002 \001(\0132\032.google.protobuf.FieldMask\022\030\n\020as" +
+      "sign_public_ip\030\003 \001(\010\"a\n\031DeleteClusterHos" +
+      "tsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\"\n\nhost_names\030\002 \003(\tB\016\202\3101\0011\212\3101\005<=253\"" +
+      "D\n\032DeleteClusterHostsMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\\\n\023Resetup" +
+      "HostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=" +
+      "253\">\n\024ResetupHostsMetadata\022\022\n\ncluster_i" +
+      "d\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"n\n\026GetCluste" +
+      "rShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=6" +
+      "3\362\3071\016[a-zA-Z0-9_-]*\"z\n\030ListClusterShards" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage" +
+      "_token\030\003 \001(\tB\t\212\3101\005<=100\"\236\001\n\"ListClusterS" +
+      "hardsAtRevisionRequest\022 \n\ncluster_id\030\001 \001" +
       "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
       "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\030" +
-      "\n\010revision\030\004 \001(\003B\006\372\3071\002>0\"b\n\030ListClusterH" +
-      "ostsResponse\022-\n\005hosts\030\001 \003(\0132\036.yandex.clo" +
-      "ud.mdb.spqr.v1.Host\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"y\n\026AddClusterHostsRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022=\n\nhost_specs\030\002" +
-      " \003(\0132\".yandex.cloud.mdb.spqr.v1.HostSpec" +
-      "B\005\202\3101\0011\"A\n\027AddClusterHostsMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\211\001\n\031U" +
-      "pdateClusterHostsRequest\022 \n\ncluster_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022J\n\021update_host_specs\030" +
-      "\002 \003(\0132(.yandex.cloud.mdb.spqr.v1.UpdateH" +
-      "ostSpecB\005\202\3101\0011\"D\n\032UpdateClusterHostsMeta" +
-      "data\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002" +
-      " \003(\t\"t\n\016UpdateHostSpec\022\027\n\thost_name\030\001 \001(" +
-      "\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
-      "otobuf.FieldMask\022\030\n\020assign_public_ip\030\003 \001" +
-      "(\010\"a\n\031DeleteClusterHostsRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\"\n\nhost_names\030" +
-      "\002 \003(\tB\016\202\3101\0011\212\3101\005<=253\"D\n\032DeleteClusterHo" +
-      "stsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_" +
-      "names\030\002 \003(\t\"\\\n\023ResetupHostsRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_nam" +
-      "es\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\">\n\024ResetupHost" +
-      "sMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_na" +
-      "mes\030\002 \003(\t\"n\n\026GetClusterShardRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_n" +
-      "ame\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]" +
-      "*\"z\n\030ListClusterShardsRequest\022 \n\ncluster" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\"\236\001\n\"ListClusterShardsAtRevisionReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\022\030\n\010revision\030\004 \001(\003B\006" +
-      "\372\3071\002>0\"e\n\031ListClusterShardsResponse\022/\n\006s" +
-      "hards\030\001 \003(\0132\037.yandex.cloud.mdb.spqr.v1.S" +
-      "hard\022\027\n\017next_page_token\030\002 \001(\t\"\320\001\n\026AddClu" +
-      "sterShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022>\n\nshard_name\030\002 \001(\tB*\350\3071\001\212\3101\004" +
-      "<=63\362\3071\032^[a-zA-Z0-9][a-zA-Z0-9-]*$\022A\n\016md" +
-      "b_postgresql\030\003 \001(\0132\'.yandex.cloud.mdb.sp" +
-      "qr.v1.MDBPostgreSQLH\000B\021\n\tShardSpec\022\004\300\3011\001" +
-      "\"A\n\027AddClusterShardMetadata\022\022\n\ncluster_i" +
-      "d\030\001 \001(\t\022\022\n\nshard_name\030\002 \001(\t\"}\n\031DeleteClu" +
-      "sterShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022>\n\nshard_name\030\002 \001(\tB*\350\3071\001\212\3101\004" +
-      "<=63\362\3071\032^[a-zA-Z0-9][a-zA-Z0-9-]*$\"D\n\032De" +
-      "leteClusterShardMetadata\022\022\n\ncluster_id\030\001" +
-      " \001(\t\022\022\n\nshard_name\030\002 \001(\t\"\255\001\n\024AddSubclust" +
-      "erRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022=\n\nh" +
-      "ost_specs\030\002 \003(\0132\".yandex.cloud.mdb.spqr." +
-      "v1.HostSpecB\005\202\3101\0011\022<\n\tresources\030\003 \001(\0132#." +
-      "yandex.cloud.mdb.spqr.v1.ResourcesB\004\350\3071\001" +
-      "2\370(\n\016ClusterService\022\205\001\n\003Get\022+.yandex.clo" +
-      "ud.mdb.spqr.v1.GetClusterRequest\032!.yande" +
-      "x.cloud.mdb.spqr.v1.Cluster\".\202\323\344\223\002(\022&/ma" +
-      "naged-spqr/v1/clusters/{cluster_id}\022\244\001\n\r" +
-      "GetAtRevision\0225.yandex.cloud.mdb.spqr.v1" +
-      ".GetClusterAtRevisionRequest\032!.yandex.cl" +
-      "oud.mdb.spqr.v1.Cluster\"9\202\323\344\223\0023\0221/manage" +
-      "d-spqr/v1/clusters/{cluster_id}:atRevisi" +
-      "on\022\210\001\n\004List\022-.yandex.cloud.mdb.spqr.v1.L" +
-      "istClustersRequest\032..yandex.cloud.mdb.sp" +
-      "qr.v1.ListClustersResponse\"!\202\323\344\223\002\033\022\031/man" +
-      "aged-spqr/v1/clusters\022\245\001\n\006Create\022..yande" +
-      "x.cloud.mdb.spqr.v1.CreateClusterRequest" +
-      "\032!.yandex.cloud.operation.Operation\"H\202\323\344" +
-      "\223\002\036\"\031/managed-spqr/v1/clusters:\001*\262\322* \n\025C" +
-      "reateClusterMetadata\022\007Cluster\022\262\001\n\006Update" +
-      "\022..yandex.cloud.mdb.spqr.v1.UpdateCluste" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"U\202\323\344\223\002+2&/managed-spqr/v1/clusters/{" +
-      "cluster_id}:\001*\262\322* \n\025UpdateClusterMetadat" +
-      "a\022\007Cluster\022\275\001\n\006Delete\022..yandex.cloud.mdb" +
-      ".spqr.v1.DeleteClusterRequest\032!.yandex.c" +
-      "loud.operation.Operation\"`\202\323\344\223\002(*&/manag" +
-      "ed-spqr/v1/clusters/{cluster_id}\262\322*.\n\025De" +
-      "leteClusterMetadata\022\025google.protobuf.Emp" +
-      "ty\022\277\001\n\rAddSubcluster\022..yandex.cloud.mdb." +
-      "spqr.v1.AddSubclusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"[\202\323\344\223\002!\"\034/manage" +
-      "d-spqr/v1/subclusters:\001*\262\322*0\n\027AddCluster" +
-      "HostsMetadata\022\025google.protobuf.Empty\022\262\001\n" +
-      "\005Start\022-.yandex.cloud.mdb.spqr.v1.StartC" +
-      "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"W\202\323\344\223\002.\",/managed-spqr/v1/clust" +
-      "ers/{cluster_id}:start\262\322*\037\n\024StartCluster" +
-      "Metadata\022\007Cluster\022\256\001\n\004Stop\022,.yandex.clou" +
-      "d.mdb.spqr.v1.StopClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"U\202\323\344\223\002-\"+/ma" +
-      "naged-spqr/v1/clusters/{cluster_id}:stop" +
-      "\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\261\001\n\004M" +
-      "ove\022,.yandex.cloud.mdb.spqr.v1.MoveClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"X\202\323\344\223\0020\"+/managed-spqr/v1/clusters/" +
-      "{cluster_id}:move:\001*\262\322*\036\n\023MoveClusterMet" +
-      "adata\022\007Cluster\022\266\001\n\006Backup\022..yandex.cloud" +
-      ".mdb.spqr.v1.BackupClusterRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"Y\202\323\344\223\002/\"-/m" +
-      "anaged-spqr/v1/clusters/{cluster_id}:bac" +
-      "kup\262\322* \n\025BackupClusterMetadata\022\007Cluster\022" +
-      "\260\001\n\007Restore\022/.yandex.cloud.mdb.spqr.v1.R" +
-      "estoreClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"Q\202\323\344\223\002&\"!/managed-spqr/v" +
-      "1/clusters:restore:\001*\262\322*!\n\026RestoreCluste" +
-      "rMetadata\022\007Cluster\022\347\001\n\025RescheduleMainten" +
-      "ance\0226.yandex.cloud.mdb.spqr.v1.Reschedu" +
-      "leMaintenanceRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"s\202\323\344\223\002A\"</managed-spqr/v" +
-      "1/clusters/{cluster_id}:rescheduleMainte" +
-      "nance:\001*\262\322*(\n\035RescheduleMaintenanceMetad" +
-      "ata\022\007Cluster\022\244\001\n\010ListLogs\0220.yandex.cloud" +
-      ".mdb.spqr.v1.ListClusterLogsRequest\0321.ya" +
-      "ndex.cloud.mdb.spqr.v1.ListClusterLogsRe" +
-      "sponse\"3\202\323\344\223\002-\022+/managed-spqr/v1/cluster" +
-      "s/{cluster_id}:logs\022\251\001\n\nStreamLogs\0222.yan" +
-      "dex.cloud.mdb.spqr.v1.StreamClusterLogsR" +
-      "equest\032).yandex.cloud.mdb.spqr.v1.Stream" +
-      "LogRecord\":\202\323\344\223\0024\0222/managed-spqr/v1/clus" +
-      "ters/{cluster_id}:stream_logs0\001\022\274\001\n\016List" +
-      "Operations\0226.yandex.cloud.mdb.spqr.v1.Li" +
-      "stClusterOperationsRequest\0327.yandex.clou" +
-      "d.mdb.spqr.v1.ListClusterOperationsRespo" +
-      "nse\"9\202\323\344\223\0023\0221/managed-spqr/v1/clusters/{" +
-      "cluster_id}/operations\022\260\001\n\013ListBackups\0223" +
-      ".yandex.cloud.mdb.spqr.v1.ListClusterBac" +
-      "kupsRequest\0324.yandex.cloud.mdb.spqr.v1.L" +
-      "istClusterBackupsResponse\"6\202\323\344\223\0020\022./mana" +
-      "ged-spqr/v1/clusters/{cluster_id}/backup" +
-      "s\022\250\001\n\tListHosts\0221.yandex.cloud.mdb.spqr." +
-      "v1.ListClusterHostsRequest\0322.yandex.clou" +
-      "d.mdb.spqr.v1.ListClusterHostsResponse\"4" +
-      "\202\323\344\223\002.\022,/managed-spqr/v1/clusters/{clust" +
-      "er_id}/hosts\022\274\001\n\023ListHostsAtRevision\022;.y" +
-      "andex.cloud.mdb.spqr.v1.ListClusterHosts" +
-      "AtRevisionRequest\0322.yandex.cloud.mdb.spq" +
-      "r.v1.ListClusterHostsResponse\"4\202\323\344\223\002.\022,/" +
+      "\n\010revision\030\004 \001(\003B\006\372\3071\002>0\"e\n\031ListClusterS" +
+      "hardsResponse\022/\n\006shards\030\001 \003(\0132\037.yandex.c" +
+      "loud.mdb.spqr.v1.Shard\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\"\205\001\n\026AddClusterShardRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022=\n\nshard_sp" +
+      "ec\030\004 \001(\0132#.yandex.cloud.mdb.spqr.v1.Shar" +
+      "dSpecB\004\350\3071\001J\004\010\002\020\003J\004\010\003\020\004\"A\n\027AddClusterSha" +
+      "rdMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_" +
+      "name\030\002 \001(\t\"}\n\031DeleteClusterShardRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\nsha" +
+      "rd_name\030\002 \001(\tB*\350\3071\001\212\3101\004<=63\362\3071\032^[a-zA-Z0" +
+      "-9][a-zA-Z0-9-]*$\"D\n\032DeleteClusterShardM" +
+      "etadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_nam" +
+      "e\030\002 \001(\t\"\255\001\n\024AddSubclusterRequest\022\030\n\nclus" +
+      "ter_id\030\001 \001(\tB\004\350\3071\001\022=\n\nhost_specs\030\002 \003(\0132\"" +
+      ".yandex.cloud.mdb.spqr.v1.HostSpecB\005\202\3101\001" +
+      "1\022<\n\tresources\030\003 \001(\0132#.yandex.cloud.mdb." +
+      "spqr.v1.ResourcesB\004\350\3071\0012\370(\n\016ClusterServi" +
+      "ce\022\205\001\n\003Get\022+.yandex.cloud.mdb.spqr.v1.Ge" +
+      "tClusterRequest\032!.yandex.cloud.mdb.spqr." +
+      "v1.Cluster\".\202\323\344\223\002(\022&/managed-spqr/v1/clu" +
+      "sters/{cluster_id}\022\244\001\n\rGetAtRevision\0225.y" +
+      "andex.cloud.mdb.spqr.v1.GetClusterAtRevi" +
+      "sionRequest\032!.yandex.cloud.mdb.spqr.v1.C" +
+      "luster\"9\202\323\344\223\0023\0221/managed-spqr/v1/cluster" +
+      "s/{cluster_id}:atRevision\022\210\001\n\004List\022-.yan" +
+      "dex.cloud.mdb.spqr.v1.ListClustersReques" +
+      "t\032..yandex.cloud.mdb.spqr.v1.ListCluster" +
+      "sResponse\"!\202\323\344\223\002\033\022\031/managed-spqr/v1/clus" +
+      "ters\022\245\001\n\006Create\022..yandex.cloud.mdb.spqr." +
+      "v1.CreateClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"H\202\323\344\223\002\036\"\031/managed-spq" +
+      "r/v1/clusters:\001*\262\322* \n\025CreateClusterMetad" +
+      "ata\022\007Cluster\022\262\001\n\006Update\022..yandex.cloud.m" +
+      "db.spqr.v1.UpdateClusterRequest\032!.yandex" +
+      ".cloud.operation.Operation\"U\202\323\344\223\002+2&/man" +
+      "aged-spqr/v1/clusters/{cluster_id}:\001*\262\322*" +
+      " \n\025UpdateClusterMetadata\022\007Cluster\022\275\001\n\006De" +
+      "lete\022..yandex.cloud.mdb.spqr.v1.DeleteCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"`\202\323\344\223\002(*&/managed-spqr/v1/cluste" +
+      "rs/{cluster_id}\262\322*.\n\025DeleteClusterMetada" +
+      "ta\022\025google.protobuf.Empty\022\277\001\n\rAddSubclus" +
+      "ter\022..yandex.cloud.mdb.spqr.v1.AddSubclu" +
+      "sterRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"[\202\323\344\223\002!\"\034/managed-spqr/v1/subclus" +
+      "ters:\001*\262\322*0\n\027AddClusterHostsMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\262\001\n\005Start\022-.yandex.c" +
+      "loud.mdb.spqr.v1.StartClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"W\202\323\344\223\002.\"" +
+      ",/managed-spqr/v1/clusters/{cluster_id}:" +
+      "start\262\322*\037\n\024StartClusterMetadata\022\007Cluster" +
+      "\022\256\001\n\004Stop\022,.yandex.cloud.mdb.spqr.v1.Sto" +
+      "pClusterRequest\032!.yandex.cloud.operation" +
+      ".Operation\"U\202\323\344\223\002-\"+/managed-spqr/v1/clu" +
+      "sters/{cluster_id}:stop\262\322*\036\n\023StopCluster" +
+      "Metadata\022\007Cluster\022\261\001\n\004Move\022,.yandex.clou" +
+      "d.mdb.spqr.v1.MoveClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"X\202\323\344\223\0020\"+/ma" +
+      "naged-spqr/v1/clusters/{cluster_id}:move" +
+      ":\001*\262\322*\036\n\023MoveClusterMetadata\022\007Cluster\022\266\001" +
+      "\n\006Backup\022..yandex.cloud.mdb.spqr.v1.Back" +
+      "upClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"Y\202\323\344\223\002/\"-/managed-spqr/v1/cl" +
+      "usters/{cluster_id}:backup\262\322* \n\025BackupCl" +
+      "usterMetadata\022\007Cluster\022\260\001\n\007Restore\022/.yan" +
+      "dex.cloud.mdb.spqr.v1.RestoreClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"Q" +
+      "\202\323\344\223\002&\"!/managed-spqr/v1/clusters:restor" +
+      "e:\001*\262\322*!\n\026RestoreClusterMetadata\022\007Cluste" +
+      "r\022\347\001\n\025RescheduleMaintenance\0226.yandex.clo" +
+      "ud.mdb.spqr.v1.RescheduleMaintenanceRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"s" +
+      "\202\323\344\223\002A\"</managed-spqr/v1/clusters/{clust" +
+      "er_id}:rescheduleMaintenance:\001*\262\322*(\n\035Res" +
+      "cheduleMaintenanceMetadata\022\007Cluster\022\244\001\n\010" +
+      "ListLogs\0220.yandex.cloud.mdb.spqr.v1.List" +
+      "ClusterLogsRequest\0321.yandex.cloud.mdb.sp" +
+      "qr.v1.ListClusterLogsResponse\"3\202\323\344\223\002-\022+/" +
+      "managed-spqr/v1/clusters/{cluster_id}:lo" +
+      "gs\022\251\001\n\nStreamLogs\0222.yandex.cloud.mdb.spq" +
+      "r.v1.StreamClusterLogsRequest\032).yandex.c" +
+      "loud.mdb.spqr.v1.StreamLogRecord\":\202\323\344\223\0024" +
+      "\0222/managed-spqr/v1/clusters/{cluster_id}" +
+      ":stream_logs0\001\022\274\001\n\016ListOperations\0226.yand" +
+      "ex.cloud.mdb.spqr.v1.ListClusterOperatio" +
+      "nsRequest\0327.yandex.cloud.mdb.spqr.v1.Lis" +
+      "tClusterOperationsResponse\"9\202\323\344\223\0023\0221/man" +
+      "aged-spqr/v1/clusters/{cluster_id}/opera" +
+      "tions\022\260\001\n\013ListBackups\0223.yandex.cloud.mdb" +
+      ".spqr.v1.ListClusterBackupsRequest\0324.yan" +
+      "dex.cloud.mdb.spqr.v1.ListClusterBackups" +
+      "Response\"6\202\323\344\223\0020\022./managed-spqr/v1/clust" +
+      "ers/{cluster_id}/backups\022\250\001\n\tListHosts\0221" +
+      ".yandex.cloud.mdb.spqr.v1.ListClusterHos" +
+      "tsRequest\0322.yandex.cloud.mdb.spqr.v1.Lis" +
+      "tClusterHostsResponse\"4\202\323\344\223\002.\022,/managed-" +
+      "spqr/v1/clusters/{cluster_id}/hosts\022\274\001\n\023" +
+      "ListHostsAtRevision\022;.yandex.cloud.mdb.s" +
+      "pqr.v1.ListClusterHostsAtRevisionRequest" +
+      "\0322.yandex.cloud.mdb.spqr.v1.ListClusterH" +
+      "ostsResponse\"4\202\323\344\223\002.\022,/managed-spqr/v1/c" +
+      "lusters/{cluster_id}/hosts\022\330\001\n\010AddHosts\022" +
+      "0.yandex.cloud.mdb.spqr.v1.AddClusterHos" +
+      "tsRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"w\202\323\344\223\002=\"8/managed-spqr/v1/clusters/" +
+      "{cluster_id}/hosts:batchCreate:\001*\262\322*0\n\027A" +
+      "ddClusterHostsMetadata\022\025google.protobuf." +
+      "Empty\022\341\001\n\013UpdateHosts\0223.yandex.cloud.mdb" +
+      ".spqr.v1.UpdateClusterHostsRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"z\202\323\344\223\002=\"8/" +
       "managed-spqr/v1/clusters/{cluster_id}/ho" +
-      "sts\022\330\001\n\010AddHosts\0220.yandex.cloud.mdb.spqr" +
-      ".v1.AddClusterHostsRequest\032!.yandex.clou" +
-      "d.operation.Operation\"w\202\323\344\223\002=\"8/managed-" +
-      "spqr/v1/clusters/{cluster_id}/hosts:batc" +
-      "hCreate:\001*\262\322*0\n\027AddClusterHostsMetadata\022" +
-      "\025google.protobuf.Empty\022\341\001\n\013UpdateHosts\0223" +
-      ".yandex.cloud.mdb.spqr.v1.UpdateClusterH" +
-      "ostsRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"z\202\323\344\223\002=\"8/managed-spqr/v1/cluster" +
-      "s/{cluster_id}/hosts:batchUpdate:\001*\262\322*3\n" +
-      "\032UpdateClusterHostsMetadata\022\025google.prot" +
-      "obuf.Empty\022\341\001\n\013DeleteHosts\0223.yandex.clou" +
-      "d.mdb.spqr.v1.DeleteClusterHostsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"z\202\323\344\223" +
-      "\002=\"8/managed-spqr/v1/clusters/{cluster_i" +
-      "d}/hosts:batchDelete:\001*\262\322*3\n\032DeleteClust" +
-      "erHostsMetadata\022\025google.protobuf.Empty\022\321" +
-      "\001\n\014ResetupHosts\022-.yandex.cloud.mdb.spqr." +
-      "v1.ResetupHostsRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"o\202\323\344\223\0028\"3/managed-spqr" +
-      "/v1/clusters/{cluster_id}:resetupHosts:\001" +
-      "*\262\322*-\n\024ResetupHostsMetadata\022\025google.prot" +
-      "obuf.Empty\022\241\001\n\010GetShard\0220.yandex.cloud.m" +
-      "db.spqr.v1.GetClusterShardRequest\032\037.yand" +
-      "ex.cloud.mdb.spqr.v1.Shard\"B\202\323\344\223\002<\022:/man" +
-      "aged-spqr/v1/clusters/{cluster_id}/shard" +
-      "s/{shard_name}\022\254\001\n\nListShards\0222.yandex.c" +
-      "loud.mdb.spqr.v1.ListClusterShardsReques" +
-      "t\0323.yandex.cloud.mdb.spqr.v1.ListCluster" +
-      "ShardsResponse\"5\202\323\344\223\002/\022-/managed-spqr/v1" +
-      "/clusters/{cluster_id}/shards\022\300\001\n\024ListSh" +
-      "ardsAtRevision\022<.yandex.cloud.mdb.spqr.v" +
-      "1.ListClusterShardsAtRevisionRequest\0323.y" +
-      "andex.cloud.mdb.spqr.v1.ListClusterShard" +
-      "sResponse\"5\202\323\344\223\002/\022-/managed-spqr/v1/clus" +
-      "ters/{cluster_id}/shards\022\275\001\n\010AddShard\0220." +
-      "yandex.cloud.mdb.spqr.v1.AddClusterShard" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"\\\202\323\344\223\0022\"-/managed-spqr/v1/clusters/{c" +
-      "luster_id}/shards:\001*\262\322* \n\027AddClusterShar" +
-      "dMetadata\022\005Shard\022\340\001\n\013DeleteShard\0223.yande" +
-      "x.cloud.mdb.spqr.v1.DeleteClusterShardRe" +
+      "sts:batchUpdate:\001*\262\322*3\n\032UpdateClusterHos" +
+      "tsMetadata\022\025google.protobuf.Empty\022\341\001\n\013De" +
+      "leteHosts\0223.yandex.cloud.mdb.spqr.v1.Del" +
+      "eteClusterHostsRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"z\202\323\344\223\002=\"8/managed-spqr" +
+      "/v1/clusters/{cluster_id}/hosts:batchDel" +
+      "ete:\001*\262\322*3\n\032DeleteClusterHostsMetadata\022\025" +
+      "google.protobuf.Empty\022\321\001\n\014ResetupHosts\022-" +
+      ".yandex.cloud.mdb.spqr.v1.ResetupHostsRe" +
       "quest\032!.yandex.cloud.operation.Operation" +
-      "\"y\202\323\344\223\002<*:/managed-spqr/v1/clusters/{clu" +
-      "ster_id}/shards/{shard_name}\262\322*3\n\032Delete" +
-      "ClusterShardMetadata\022\025google.protobuf.Em" +
-      "ptyBa\n\034yandex.cloud.api.mdb.spqr.v1ZAgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/mdb/spqr/v1;spqrb\006proto3"
+      "\"o\202\323\344\223\0028\"3/managed-spqr/v1/clusters/{clu" +
+      "ster_id}:resetupHosts:\001*\262\322*-\n\024ResetupHos" +
+      "tsMetadata\022\025google.protobuf.Empty\022\241\001\n\010Ge" +
+      "tShard\0220.yandex.cloud.mdb.spqr.v1.GetClu" +
+      "sterShardRequest\032\037.yandex.cloud.mdb.spqr" +
+      ".v1.Shard\"B\202\323\344\223\002<\022:/managed-spqr/v1/clus" +
+      "ters/{cluster_id}/shards/{shard_name}\022\254\001" +
+      "\n\nListShards\0222.yandex.cloud.mdb.spqr.v1." +
+      "ListClusterShardsRequest\0323.yandex.cloud." +
+      "mdb.spqr.v1.ListClusterShardsResponse\"5\202" +
+      "\323\344\223\002/\022-/managed-spqr/v1/clusters/{cluste" +
+      "r_id}/shards\022\300\001\n\024ListShardsAtRevision\022<." +
+      "yandex.cloud.mdb.spqr.v1.ListClusterShar" +
+      "dsAtRevisionRequest\0323.yandex.cloud.mdb.s" +
+      "pqr.v1.ListClusterShardsResponse\"5\202\323\344\223\002/" +
+      "\022-/managed-spqr/v1/clusters/{cluster_id}" +
+      "/shards\022\275\001\n\010AddShard\0220.yandex.cloud.mdb." +
+      "spqr.v1.AddClusterShardRequest\032!.yandex." +
+      "cloud.operation.Operation\"\\\202\323\344\223\0022\"-/mana" +
+      "ged-spqr/v1/clusters/{cluster_id}/shards" +
+      ":\001*\262\322* \n\027AddClusterShardMetadata\022\005Shard\022" +
+      "\340\001\n\013DeleteShard\0223.yandex.cloud.mdb.spqr." +
+      "v1.DeleteClusterShardRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"y\202\323\344\223\002<*:/manage" +
+      "d-spqr/v1/clusters/{cluster_id}/shards/{" +
+      "shard_name}\262\322*3\n\032DeleteClusterShardMetad" +
+      "ata\022\025google.protobuf.EmptyBa\n\034yandex.clo" +
+      "ud.api.mdb.spqr.v1ZAgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/mdb/spqr/v1" +
+      ";spqrb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -66138,7 +66399,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_spqr_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "DatabaseSpecs", "UserSpecs", "HostSpecs", "NetworkId", "SecurityGroupIds", "DeletionProtection", "MaintenanceWindow", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "DatabaseSpecs", "UserSpecs", "HostSpecs", "NetworkId", "SecurityGroupIds", "DeletionProtection", "MaintenanceWindow", "ShardSpecs", });
     internal_static_yandex_cloud_mdb_spqr_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_spqr_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_spqr_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -66462,7 +66723,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_spqr_v1_AddClusterShardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_AddClusterShardRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "ShardName", "MdbPostgresql", "ShardSpec", });
+        new java.lang.String[] { "ClusterId", "ShardSpec", });
     internal_static_yandex_cloud_mdb_spqr_v1_AddClusterShardMetadata_descriptor =
       getDescriptor().getMessageTypes().get(51);
     internal_static_yandex_cloud_mdb_spqr_v1_AddClusterShardMetadata_fieldAccessorTable = new
@@ -66491,7 +66752,6 @@ public final class ClusterServiceOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
-    registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.mapKey);
     registry.add(yandex.cloud.api.Validation.pattern);

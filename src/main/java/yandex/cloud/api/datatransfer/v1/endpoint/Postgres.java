@@ -411,8 +411,7 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Sequence sets
-     * CREATE SEQUENCE ...
+     * 
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -421,8 +420,7 @@ public final class Postgres {
     int getSequenceSetValue();
     /**
      * <pre>
-     * Sequence sets
-     * CREATE SEQUENCE ...
+     * 
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -1164,8 +1162,7 @@ public final class Postgres {
     private int sequenceSet_;
     /**
      * <pre>
-     * Sequence sets
-     * CREATE SEQUENCE ...
+     * 
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -1176,8 +1173,7 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Sequence sets
-     * CREATE SEQUENCE ...
+     * 
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -3193,8 +3189,7 @@ public final class Postgres {
       private int sequenceSet_ = 0;
       /**
        * <pre>
-       * Sequence sets
-       * CREATE SEQUENCE ...
+       * 
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -3205,8 +3200,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Sequence sets
-       * CREATE SEQUENCE ...
+       * 
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -3221,8 +3215,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Sequence sets
-       * CREATE SEQUENCE ...
+       * 
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -3236,8 +3229,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Sequence sets
-       * CREATE SEQUENCE ...
+       * 
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -3255,8 +3247,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Sequence sets
-       * CREATE SEQUENCE ...
+       * 
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
@@ -8740,6 +8731,12 @@ public final class Postgres {
      */
     com.google.protobuf.ByteString
         getSecurityGroupsBytes(int index);
+
+    /**
+     * <code>bool is_schema_migration_disabled = 8;</code>
+     * @return The isSchemaMigrationDisabled.
+     */
+    boolean getIsSchemaMigrationDisabled();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.PostgresTarget}
@@ -8842,6 +8839,11 @@ public final class Postgres {
                 mutable_bitField0_ |= 0x00000001;
               }
               securityGroups_.add(s);
+              break;
+            }
+            case 64: {
+
+              isSchemaMigrationDisabled_ = input.readBool();
               break;
             }
             default: {
@@ -9127,6 +9129,17 @@ public final class Postgres {
       return securityGroups_.getByteString(index);
     }
 
+    public static final int IS_SCHEMA_MIGRATION_DISABLED_FIELD_NUMBER = 8;
+    private boolean isSchemaMigrationDisabled_;
+    /**
+     * <code>bool is_schema_migration_disabled = 8;</code>
+     * @return The isSchemaMigrationDisabled.
+     */
+    @java.lang.Override
+    public boolean getIsSchemaMigrationDisabled() {
+      return isSchemaMigrationDisabled_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9158,6 +9171,9 @@ public final class Postgres {
       }
       for (int i = 0; i < securityGroups_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, securityGroups_.getRaw(i));
+      }
+      if (isSchemaMigrationDisabled_ != false) {
+        output.writeBool(8, isSchemaMigrationDisabled_);
       }
       unknownFields.writeTo(output);
     }
@@ -9194,6 +9210,10 @@ public final class Postgres {
         size += dataSize;
         size += 1 * getSecurityGroupsList().size();
       }
+      if (isSchemaMigrationDisabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, isSchemaMigrationDisabled_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9226,6 +9246,8 @@ public final class Postgres {
       if (cleanupPolicy_ != other.cleanupPolicy_) return false;
       if (!getSecurityGroupsList()
           .equals(other.getSecurityGroupsList())) return false;
+      if (getIsSchemaMigrationDisabled()
+          != other.getIsSchemaMigrationDisabled()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9255,6 +9277,9 @@ public final class Postgres {
         hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
+      hash = (37 * hash) + IS_SCHEMA_MIGRATION_DISABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsSchemaMigrationDisabled());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9408,6 +9433,8 @@ public final class Postgres {
 
         securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        isSchemaMigrationDisabled_ = false;
+
         return this;
       }
 
@@ -9453,6 +9480,7 @@ public final class Postgres {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.securityGroups_ = securityGroups_;
+        result.isSchemaMigrationDisabled_ = isSchemaMigrationDisabled_;
         onBuilt();
         return result;
       }
@@ -9527,6 +9555,9 @@ public final class Postgres {
             securityGroups_.addAll(other.securityGroups_);
           }
           onChanged();
+        }
+        if (other.getIsSchemaMigrationDisabled() != false) {
+          setIsSchemaMigrationDisabled(other.getIsSchemaMigrationDisabled());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10284,6 +10315,37 @@ public final class Postgres {
         onChanged();
         return this;
       }
+
+      private boolean isSchemaMigrationDisabled_ ;
+      /**
+       * <code>bool is_schema_migration_disabled = 8;</code>
+       * @return The isSchemaMigrationDisabled.
+       */
+      @java.lang.Override
+      public boolean getIsSchemaMigrationDisabled() {
+        return isSchemaMigrationDisabled_;
+      }
+      /**
+       * <code>bool is_schema_migration_disabled = 8;</code>
+       * @param value The isSchemaMigrationDisabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsSchemaMigrationDisabled(boolean value) {
+        
+        isSchemaMigrationDisabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_schema_migration_disabled = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsSchemaMigrationDisabled() {
+        
+        isSchemaMigrationDisabled_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10431,7 +10493,7 @@ public final class Postgres {
       "e_schema\030\t \001(\t\022g\n\030object_transfer_settin" +
       "gs\030\r \001(\0132E.yandex.cloud.datatransfer.v1." +
       "endpoint.PostgresObjectTransferSettings\022" +
-      "\027\n\017security_groups\030\016 \003(\tJ\004\010\007\020\010J\004\010\n\020\r\"\255\002\n" +
+      "\027\n\017security_groups\030\016 \003(\tJ\004\010\007\020\010J\004\010\n\020\r\"\323\002\n" +
       "\016PostgresTarget\022M\n\nconnection\030\001 \001(\01329.ya" +
       "ndex.cloud.datatransfer.v1.endpoint.Post" +
       "gresConnection\022\020\n\010database\030\002 \001(\t\022\014\n\004user" +
@@ -10439,11 +10501,12 @@ public final class Postgres {
       "datatransfer.v1.endpoint.Secret\022L\n\016clean" +
       "up_policy\030\005 \001(\01624.yandex.cloud.datatrans" +
       "fer.v1.endpoint.CleanupPolicy\022\027\n\017securit" +
-      "y_groups\030\007 \003(\tJ\004\010\006\020\007B\247\001\n)yandex.cloud.ap" +
-      "i.datatransfer.v1.endpointZRgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/dat" +
-      "atransfer/v1/endpoint;endpoint\252\002%Yandex." +
-      "Cloud.Datatransfer.V1.EndPointb\006proto3"
+      "y_groups\030\007 \003(\t\022$\n\034is_schema_migration_di" +
+      "sabled\030\010 \001(\010J\004\010\006\020\007B\247\001\n)yandex.cloud.api." +
+      "datatransfer.v1.endpointZRgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/datat" +
+      "ransfer/v1/endpoint;endpoint\252\002%Yandex.Cl" +
+      "oud.Datatransfer.V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10479,7 +10542,7 @@ public final class Postgres {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresTarget_descriptor,
-        new java.lang.String[] { "Connection", "Database", "User", "Password", "CleanupPolicy", "SecurityGroups", });
+        new java.lang.String[] { "Connection", "Database", "User", "Password", "CleanupPolicy", "SecurityGroups", "IsSchemaMigrationDisabled", });
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
   }
 

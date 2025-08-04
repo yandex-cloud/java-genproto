@@ -1113,6 +1113,21 @@ public final class Mongo {
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongoOrBuilder getOnPremiseOrBuilder();
 
     /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+     * @return Whether the connectionManagerConnection field is set.
+     */
+    boolean hasConnectionManagerConnection();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+     * @return The connectionManagerConnection.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection getConnectionManagerConnection();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder();
+
+    /**
      * <pre>
      * User name
      * </pre>
@@ -1273,6 +1288,20 @@ public final class Mongo {
               authSource_ = s;
               break;
             }
+            case 50: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.Builder subBuilder = null;
+              if (addressCase_ == 6) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) address_).toBuilder();
+              }
+              address_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) address_);
+                address_ = subBuilder.buildPartial();
+              }
+              addressCase_ = 6;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1312,6 +1341,7 @@ public final class Mongo {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MDB_CLUSTER_ID(1),
       ON_PREMISE(2),
+      CONNECTION_MANAGER_CONNECTION(6),
       ADDRESS_NOT_SET(0);
       private final int value;
       private AddressCase(int value) {
@@ -1331,6 +1361,7 @@ public final class Mongo {
         switch (value) {
           case 1: return MDB_CLUSTER_ID;
           case 2: return ON_PREMISE;
+          case 6: return CONNECTION_MANAGER_CONNECTION;
           case 0: return ADDRESS_NOT_SET;
           default: return null;
         }
@@ -1427,6 +1458,37 @@ public final class Mongo {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongo) address_;
       }
       return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongo.getDefaultInstance();
+    }
+
+    public static final int CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER = 6;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+     * @return Whether the connectionManagerConnection field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectionManagerConnection() {
+      return addressCase_ == 6;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+     * @return The connectionManagerConnection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection getConnectionManagerConnection() {
+      if (addressCase_ == 6) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) address_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder() {
+      if (addressCase_ == 6) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) address_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.getDefaultInstance();
     }
 
     public static final int USER_FIELD_NUMBER = 3;
@@ -1588,6 +1650,9 @@ public final class Mongo {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authSource_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, authSource_);
       }
+      if (addressCase_ == 6) {
+        output.writeMessage(6, (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) address_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1613,6 +1678,10 @@ public final class Mongo {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authSource_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, authSource_);
+      }
+      if (addressCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) address_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1648,6 +1717,10 @@ public final class Mongo {
           if (!getOnPremise()
               .equals(other.getOnPremise())) return false;
           break;
+        case 6:
+          if (!getConnectionManagerConnection()
+              .equals(other.getConnectionManagerConnection())) return false;
+          break;
         case 0:
         default:
       }
@@ -1678,6 +1751,10 @@ public final class Mongo {
         case 2:
           hash = (37 * hash) + ON_PREMISE_FIELD_NUMBER;
           hash = (53 * hash) + getOnPremise().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectionManagerConnection().hashCode();
           break;
         case 0:
         default:
@@ -1863,6 +1940,13 @@ public final class Mongo {
             result.address_ = onPremiseBuilder_.build();
           }
         }
+        if (addressCase_ == 6) {
+          if (connectionManagerConnectionBuilder_ == null) {
+            result.address_ = address_;
+          } else {
+            result.address_ = connectionManagerConnectionBuilder_.build();
+          }
+        }
         result.user_ = user_;
         if (passwordBuilder_ == null) {
           result.password_ = password_;
@@ -1939,6 +2023,10 @@ public final class Mongo {
           }
           case ON_PREMISE: {
             mergeOnPremise(other.getOnPremise());
+            break;
+          }
+          case CONNECTION_MANAGER_CONNECTION: {
+            mergeConnectionManagerConnection(other.getConnectionManagerConnection());
             break;
           }
           case ADDRESS_NOT_SET: {
@@ -2225,6 +2313,147 @@ public final class Mongo {
         addressCase_ = 2;
         onChanged();;
         return onPremiseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnectionOrBuilder> connectionManagerConnectionBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+       * @return Whether the connectionManagerConnection field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectionManagerConnection() {
+        return addressCase_ == 6;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+       * @return The connectionManagerConnection.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection getConnectionManagerConnection() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (addressCase_ == 6) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) address_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.getDefaultInstance();
+        } else {
+          if (addressCase_ == 6) {
+            return connectionManagerConnectionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+       */
+      public Builder setConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection value) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          address_ = value;
+          onChanged();
+        } else {
+          connectionManagerConnectionBuilder_.setMessage(value);
+        }
+        addressCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+       */
+      public Builder setConnectionManagerConnection(
+          yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.Builder builderForValue) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          address_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionManagerConnectionBuilder_.setMessage(builderForValue.build());
+        }
+        addressCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+       */
+      public Builder mergeConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection value) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (addressCase_ == 6 &&
+              address_ != yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.getDefaultInstance()) {
+            address_ = yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) address_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            address_ = value;
+          }
+          onChanged();
+        } else {
+          if (addressCase_ == 6) {
+            connectionManagerConnectionBuilder_.mergeFrom(value);
+          }
+          connectionManagerConnectionBuilder_.setMessage(value);
+        }
+        addressCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+       */
+      public Builder clearConnectionManagerConnection() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (addressCase_ == 6) {
+            addressCase_ = 0;
+            address_ = null;
+            onChanged();
+          }
+        } else {
+          if (addressCase_ == 6) {
+            addressCase_ = 0;
+            address_ = null;
+          }
+          connectionManagerConnectionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.Builder getConnectionManagerConnectionBuilder() {
+        return getConnectionManagerConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder() {
+        if ((addressCase_ == 6) && (connectionManagerConnectionBuilder_ != null)) {
+          return connectionManagerConnectionBuilder_.getMessageOrBuilder();
+        } else {
+          if (addressCase_ == 6) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) address_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnectionOrBuilder> 
+          getConnectionManagerConnectionFieldBuilder() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (!(addressCase_ == 6)) {
+            address_ = yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.getDefaultInstance();
+          }
+          connectionManagerConnectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnectionOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) address_,
+                  getParentForChildren(),
+                  isClean());
+          address_ = null;
+        }
+        addressCase_ = 6;
+        onChanged();;
+        return connectionManagerConnectionBuilder_;
       }
 
       private java.lang.Object user_ = "";
@@ -7588,6 +7817,760 @@ public final class Mongo {
 
   }
 
+  public interface MongoConnectionManagerConnectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string connection_id = 1;</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <code>string connection_id = 1;</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+
+    /**
+     * <pre>
+     * Used only for on-premise connections
+     * </pre>
+     *
+     * <code>string replica_set = 2;</code>
+     * @return The replicaSet.
+     */
+    java.lang.String getReplicaSet();
+    /**
+     * <pre>
+     * Used only for on-premise connections
+     * </pre>
+     *
+     * <code>string replica_set = 2;</code>
+     * @return The bytes for replicaSet.
+     */
+    com.google.protobuf.ByteString
+        getReplicaSetBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection}
+   */
+  public static final class MongoConnectionManagerConnection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection)
+      MongoConnectionManagerConnectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MongoConnectionManagerConnection.newBuilder() to construct.
+    private MongoConnectionManagerConnection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MongoConnectionManagerConnection() {
+      connectionId_ = "";
+      replicaSet_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MongoConnectionManagerConnection();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MongoConnectionManagerConnection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              connectionId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              replicaSet_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionManagerConnection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionManagerConnection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.class, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.Builder.class);
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object connectionId_;
+    /**
+     * <code>string connection_id = 1;</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string connection_id = 1;</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REPLICA_SET_FIELD_NUMBER = 2;
+    private volatile java.lang.Object replicaSet_;
+    /**
+     * <pre>
+     * Used only for on-premise connections
+     * </pre>
+     *
+     * <code>string replica_set = 2;</code>
+     * @return The replicaSet.
+     */
+    @java.lang.Override
+    public java.lang.String getReplicaSet() {
+      java.lang.Object ref = replicaSet_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        replicaSet_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Used only for on-premise connections
+     * </pre>
+     *
+     * <code>string replica_set = 2;</code>
+     * @return The bytes for replicaSet.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReplicaSetBytes() {
+      java.lang.Object ref = replicaSet_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        replicaSet_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(replicaSet_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, replicaSet_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(replicaSet_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, replicaSet_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection other = (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) obj;
+
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!getReplicaSet()
+          .equals(other.getReplicaSet())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (37 * hash) + REPLICA_SET_FIELD_NUMBER;
+      hash = (53 * hash) + getReplicaSet().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection)
+        yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionManagerConnection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionManagerConnection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.class, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        connectionId_ = "";
+
+        replicaSet_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionManagerConnection_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection build() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection buildPartial() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection result = new yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection(this);
+        result.connectionId_ = connectionId_;
+        result.replicaSet_ = replicaSet_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection other) {
+        if (other == yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.getDefaultInstance()) return this;
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          onChanged();
+        }
+        if (!other.getReplicaSet().isEmpty()) {
+          replicaSet_ = other.replicaSet_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <code>string connection_id = 1;</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 1;</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 1;</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        connectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        
+        connectionId_ = getDefaultInstance().getConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 1;</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        connectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object replicaSet_ = "";
+      /**
+       * <pre>
+       * Used only for on-premise connections
+       * </pre>
+       *
+       * <code>string replica_set = 2;</code>
+       * @return The replicaSet.
+       */
+      public java.lang.String getReplicaSet() {
+        java.lang.Object ref = replicaSet_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          replicaSet_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Used only for on-premise connections
+       * </pre>
+       *
+       * <code>string replica_set = 2;</code>
+       * @return The bytes for replicaSet.
+       */
+      public com.google.protobuf.ByteString
+          getReplicaSetBytes() {
+        java.lang.Object ref = replicaSet_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          replicaSet_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Used only for on-premise connections
+       * </pre>
+       *
+       * <code>string replica_set = 2;</code>
+       * @param value The replicaSet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReplicaSet(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        replicaSet_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Used only for on-premise connections
+       * </pre>
+       *
+       * <code>string replica_set = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReplicaSet() {
+        
+        replicaSet_ = getDefaultInstance().getReplicaSet();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Used only for on-premise connections
+       * </pre>
+       *
+       * <code>string replica_set = 2;</code>
+       * @param value The bytes for replicaSet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReplicaSetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        replicaSet_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection)
+    private static final yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MongoConnectionManagerConnection>
+        PARSER = new com.google.protobuf.AbstractParser<MongoConnectionManagerConnection>() {
+      @java.lang.Override
+      public MongoConnectionManagerConnection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MongoConnectionManagerConnection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MongoConnectionManagerConnection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MongoConnectionManagerConnection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremiseMongo_descriptor;
   private static final 
@@ -7618,6 +8601,11 @@ public final class Mongo {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoTarget_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionManagerConnection_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionManagerConnection_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7634,37 +8622,41 @@ public final class Mongo {
       "o\022\r\n\005hosts\030\001 \003(\t\022\014\n\004port\030\002 \001(\003\022\023\n\013replic" +
       "a_set\030\005 \001(\t\022@\n\010tls_mode\030\006 \001(\0132..yandex.c" +
       "loud.datatransfer.v1.endpoint.TLSModeJ\004\010" +
-      "\003\020\005\"\356\001\n\026MongoConnectionOptions\022\030\n\016mdb_cl" +
+      "\003\020\005\"\340\002\n\026MongoConnectionOptions\022\030\n\016mdb_cl" +
       "uster_id\030\001 \001(\tH\000\022K\n\non_premise\030\002 \001(\01325.y" +
       "andex.cloud.datatransfer.v1.endpoint.OnP" +
-      "remiseMongoH\000\022\014\n\004user\030\003 \001(\t\022?\n\010password\030" +
-      "\004 \001(\0132-.yandex.cloud.datatransfer.v1.end" +
-      "point.Secret\022\023\n\013auth_source\030\005 \001(\tB\t\n\007add" +
-      "ress\"\202\001\n\017MongoConnection\022[\n\022connection_o" +
-      "ptions\030\003 \001(\0132=.yandex.cloud.datatransfer" +
-      ".v1.endpoint.MongoConnectionOptionsH\000B\014\n" +
-      "\nconnectionJ\004\010\001\020\003\"A\n\017MongoCollection\022\025\n\r" +
-      "database_name\030\001 \001(\t\022\027\n\017collection_name\030\002" +
-      " \001(\t\"\326\002\n\013MongoSource\022J\n\nconnection\030\001 \001(\013" +
-      "26.yandex.cloud.datatransfer.v1.endpoint" +
-      ".MongoConnection\022\021\n\tsubnet_id\030\002 \001(\t\022K\n\013c" +
-      "ollections\030\006 \003(\01326.yandex.cloud.datatran" +
-      "sfer.v1.endpoint.MongoCollection\022T\n\024excl" +
-      "uded_collections\030\007 \003(\01326.yandex.cloud.da" +
-      "tatransfer.v1.endpoint.MongoCollection\022 " +
-      "\n\030secondary_preferred_mode\030\010 \001(\010\022\027\n\017secu" +
-      "rity_groups\030\013 \003(\tJ\004\010\003\020\006J\004\010\t\020\013\"\353\001\n\013MongoT" +
-      "arget\022J\n\nconnection\030\001 \001(\01326.yandex.cloud" +
-      ".datatransfer.v1.endpoint.MongoConnectio" +
-      "n\022\020\n\010database\030\002 \001(\t\022L\n\016cleanup_policy\030\006 " +
-      "\001(\01624.yandex.cloud.datatransfer.v1.endpo" +
-      "int.CleanupPolicy\022\021\n\tsubnet_id\030\007 \001(\t\022\027\n\017" +
-      "security_groups\030\010 \003(\tJ\004\010\003\020\006B\247\001\n)yandex.c" +
-      "loud.api.datatransfer.v1.endpointZRgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/datatransfer/v1/endpoint;endpoint\252\002%" +
-      "Yandex.Cloud.Datatransfer.V1.EndPointb\006p" +
-      "roto3"
+      "remiseMongoH\000\022p\n\035connection_manager_conn" +
+      "ection\030\006 \001(\0132G.yandex.cloud.datatransfer" +
+      ".v1.endpoint.MongoConnectionManagerConne" +
+      "ctionH\000\022\014\n\004user\030\003 \001(\t\022?\n\010password\030\004 \001(\0132" +
+      "-.yandex.cloud.datatransfer.v1.endpoint." +
+      "Secret\022\023\n\013auth_source\030\005 \001(\tB\t\n\007address\"\202" +
+      "\001\n\017MongoConnection\022[\n\022connection_options" +
+      "\030\003 \001(\0132=.yandex.cloud.datatransfer.v1.en" +
+      "dpoint.MongoConnectionOptionsH\000B\014\n\nconne" +
+      "ctionJ\004\010\001\020\003\"A\n\017MongoCollection\022\025\n\rdataba" +
+      "se_name\030\001 \001(\t\022\027\n\017collection_name\030\002 \001(\t\"\326" +
+      "\002\n\013MongoSource\022J\n\nconnection\030\001 \001(\01326.yan" +
+      "dex.cloud.datatransfer.v1.endpoint.Mongo" +
+      "Connection\022\021\n\tsubnet_id\030\002 \001(\t\022K\n\013collect" +
+      "ions\030\006 \003(\01326.yandex.cloud.datatransfer.v" +
+      "1.endpoint.MongoCollection\022T\n\024excluded_c" +
+      "ollections\030\007 \003(\01326.yandex.cloud.datatran" +
+      "sfer.v1.endpoint.MongoCollection\022 \n\030seco" +
+      "ndary_preferred_mode\030\010 \001(\010\022\027\n\017security_g" +
+      "roups\030\013 \003(\tJ\004\010\003\020\006J\004\010\t\020\013\"\353\001\n\013MongoTarget\022" +
+      "J\n\nconnection\030\001 \001(\01326.yandex.cloud.datat" +
+      "ransfer.v1.endpoint.MongoConnection\022\020\n\010d" +
+      "atabase\030\002 \001(\t\022L\n\016cleanup_policy\030\006 \001(\01624." +
+      "yandex.cloud.datatransfer.v1.endpoint.Cl" +
+      "eanupPolicy\022\021\n\tsubnet_id\030\007 \001(\t\022\027\n\017securi" +
+      "ty_groups\030\010 \003(\tJ\004\010\003\020\006\"N\n MongoConnection" +
+      "ManagerConnection\022\025\n\rconnection_id\030\001 \001(\t" +
+      "\022\023\n\013replica_set\030\002 \001(\tB\247\001\n)yandex.cloud.a" +
+      "pi.datatransfer.v1.endpointZRgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/da" +
+      "tatransfer/v1/endpoint;endpoint\252\002%Yandex" +
+      ".Cloud.Datatransfer.V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7682,7 +8674,7 @@ public final class Mongo {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionOptions_descriptor,
-        new java.lang.String[] { "MdbClusterId", "OnPremise", "User", "Password", "AuthSource", "Address", });
+        new java.lang.String[] { "MdbClusterId", "OnPremise", "ConnectionManagerConnection", "User", "Password", "AuthSource", "Address", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnection_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnection_fieldAccessorTable = new
@@ -7707,6 +8699,12 @@ public final class Mongo {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoTarget_descriptor,
         new java.lang.String[] { "Connection", "Database", "CleanupPolicy", "SubnetId", "SecurityGroups", });
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionManagerConnection_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionManagerConnection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionManagerConnection_descriptor,
+        new java.lang.String[] { "ConnectionId", "ReplicaSet", });
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
   }
 

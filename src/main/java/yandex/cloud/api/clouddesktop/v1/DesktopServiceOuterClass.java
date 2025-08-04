@@ -19,26 +19,11 @@ public final class DesktopServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     * @return Whether the updateMask field is set.
-     */
-    boolean hasUpdateMask();
-    /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     * @return The updateMask.
-     */
-    com.google.protobuf.FieldMask getUpdateMask();
-    /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     */
-    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
-
-    /**
      * <pre>
      * To get the desktop ID use a [DesktopService.List] request.
      * </pre>
      *
-     * <code>string desktop_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string desktop_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The desktopId.
      */
     java.lang.String getDesktopId();
@@ -47,11 +32,26 @@ public final class DesktopServiceOuterClass {
      * To get the desktop ID use a [DesktopService.List] request.
      * </pre>
      *
-     * <code>string desktop_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string desktop_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for desktopId.
      */
     com.google.protobuf.ByteString
         getDesktopIdBytes();
+
+    /**
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
+     */
+    boolean hasUpdateMask();
+    /**
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
@@ -148,6 +148,12 @@ public final class DesktopServiceOuterClass {
               done = true;
               break;
             case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              desktopId_ = s;
+              break;
+            }
+            case 18: {
               com.google.protobuf.FieldMask.Builder subBuilder = null;
               if (updateMask_ != null) {
                 subBuilder = updateMask_.toBuilder();
@@ -158,12 +164,6 @@ public final class DesktopServiceOuterClass {
                 updateMask_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              desktopId_ = s;
               break;
             }
             case 26: {
@@ -229,40 +229,14 @@ public final class DesktopServiceOuterClass {
               yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.UpdatePropertiesRequest.class, yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.UpdatePropertiesRequest.Builder.class);
     }
 
-    public static final int UPDATE_MASK_FIELD_NUMBER = 1;
-    private com.google.protobuf.FieldMask updateMask_;
-    /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     * @return Whether the updateMask field is set.
-     */
-    @java.lang.Override
-    public boolean hasUpdateMask() {
-      return updateMask_ != null;
-    }
-    /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     * @return The updateMask.
-     */
-    @java.lang.Override
-    public com.google.protobuf.FieldMask getUpdateMask() {
-      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
-    }
-    /**
-     * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
-      return getUpdateMask();
-    }
-
-    public static final int DESKTOP_ID_FIELD_NUMBER = 2;
+    public static final int DESKTOP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object desktopId_;
     /**
      * <pre>
      * To get the desktop ID use a [DesktopService.List] request.
      * </pre>
      *
-     * <code>string desktop_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string desktop_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The desktopId.
      */
     @java.lang.Override
@@ -283,7 +257,7 @@ public final class DesktopServiceOuterClass {
      * To get the desktop ID use a [DesktopService.List] request.
      * </pre>
      *
-     * <code>string desktop_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string desktop_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for desktopId.
      */
     @java.lang.Override
@@ -299,6 +273,32 @@ public final class DesktopServiceOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
     }
 
     public static final int NAME_FIELD_NUMBER = 3;
@@ -434,11 +434,11 @@ public final class DesktopServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (updateMask_ != null) {
-        output.writeMessage(1, getUpdateMask());
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(desktopId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, desktopId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, desktopId_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(2, getUpdateMask());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
@@ -458,12 +458,12 @@ public final class DesktopServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(desktopId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, desktopId_);
+      }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getUpdateMask());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(desktopId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, desktopId_);
+          .computeMessageSize(2, getUpdateMask());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
@@ -493,13 +493,13 @@ public final class DesktopServiceOuterClass {
       }
       yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.UpdatePropertiesRequest other = (yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.UpdatePropertiesRequest) obj;
 
+      if (!getDesktopId()
+          .equals(other.getDesktopId())) return false;
       if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
         if (!getUpdateMask()
             .equals(other.getUpdateMask())) return false;
       }
-      if (!getDesktopId()
-          .equals(other.getDesktopId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
       if (!internalGetLabels().equals(
@@ -515,12 +515,12 @@ public final class DesktopServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DESKTOP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDesktopId().hashCode();
       if (hasUpdateMask()) {
         hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
         hash = (53 * hash) + getUpdateMask().hashCode();
       }
-      hash = (37 * hash) + DESKTOP_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDesktopId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
       if (!internalGetLabels().getMap().isEmpty()) {
@@ -682,14 +682,14 @@ public final class DesktopServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        desktopId_ = "";
+
         if (updateMaskBuilder_ == null) {
           updateMask_ = null;
         } else {
           updateMask_ = null;
           updateMaskBuilder_ = null;
         }
-        desktopId_ = "";
-
         name_ = "";
 
         internalGetMutableLabels().clear();
@@ -720,12 +720,12 @@ public final class DesktopServiceOuterClass {
       public yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.UpdatePropertiesRequest buildPartial() {
         yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.UpdatePropertiesRequest result = new yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.UpdatePropertiesRequest(this);
         int from_bitField0_ = bitField0_;
+        result.desktopId_ = desktopId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
         } else {
           result.updateMask_ = updateMaskBuilder_.build();
         }
-        result.desktopId_ = desktopId_;
         result.name_ = name_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
@@ -777,12 +777,12 @@ public final class DesktopServiceOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.UpdatePropertiesRequest other) {
         if (other == yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.UpdatePropertiesRequest.getDefaultInstance()) return this;
-        if (other.hasUpdateMask()) {
-          mergeUpdateMask(other.getUpdateMask());
-        }
         if (!other.getDesktopId().isEmpty()) {
           desktopId_ = other.desktopId_;
           onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
@@ -820,132 +820,13 @@ public final class DesktopServiceOuterClass {
       }
       private int bitField0_;
 
-      private com.google.protobuf.FieldMask updateMask_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
-      /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-       * @return Whether the updateMask field is set.
-       */
-      public boolean hasUpdateMask() {
-        return updateMaskBuilder_ != null || updateMask_ != null;
-      }
-      /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-       * @return The updateMask.
-       */
-      public com.google.protobuf.FieldMask getUpdateMask() {
-        if (updateMaskBuilder_ == null) {
-          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
-        } else {
-          return updateMaskBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-       */
-      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
-        if (updateMaskBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          updateMask_ = value;
-          onChanged();
-        } else {
-          updateMaskBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-       */
-      public Builder setUpdateMask(
-          com.google.protobuf.FieldMask.Builder builderForValue) {
-        if (updateMaskBuilder_ == null) {
-          updateMask_ = builderForValue.build();
-          onChanged();
-        } else {
-          updateMaskBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-       */
-      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
-        if (updateMaskBuilder_ == null) {
-          if (updateMask_ != null) {
-            updateMask_ =
-              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
-          } else {
-            updateMask_ = value;
-          }
-          onChanged();
-        } else {
-          updateMaskBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-       */
-      public Builder clearUpdateMask() {
-        if (updateMaskBuilder_ == null) {
-          updateMask_ = null;
-          onChanged();
-        } else {
-          updateMask_ = null;
-          updateMaskBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-       */
-      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
-        
-        onChanged();
-        return getUpdateMaskFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-       */
-      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
-        if (updateMaskBuilder_ != null) {
-          return updateMaskBuilder_.getMessageOrBuilder();
-        } else {
-          return updateMask_ == null ?
-              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.FieldMask update_mask = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
-          getUpdateMaskFieldBuilder() {
-        if (updateMaskBuilder_ == null) {
-          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
-                  getUpdateMask(),
-                  getParentForChildren(),
-                  isClean());
-          updateMask_ = null;
-        }
-        return updateMaskBuilder_;
-      }
-
       private java.lang.Object desktopId_ = "";
       /**
        * <pre>
        * To get the desktop ID use a [DesktopService.List] request.
        * </pre>
        *
-       * <code>string desktop_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string desktop_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The desktopId.
        */
       public java.lang.String getDesktopId() {
@@ -965,7 +846,7 @@ public final class DesktopServiceOuterClass {
        * To get the desktop ID use a [DesktopService.List] request.
        * </pre>
        *
-       * <code>string desktop_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string desktop_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for desktopId.
        */
       public com.google.protobuf.ByteString
@@ -986,7 +867,7 @@ public final class DesktopServiceOuterClass {
        * To get the desktop ID use a [DesktopService.List] request.
        * </pre>
        *
-       * <code>string desktop_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string desktop_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The desktopId to set.
        * @return This builder for chaining.
        */
@@ -1005,7 +886,7 @@ public final class DesktopServiceOuterClass {
        * To get the desktop ID use a [DesktopService.List] request.
        * </pre>
        *
-       * <code>string desktop_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string desktop_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDesktopId() {
@@ -1019,7 +900,7 @@ public final class DesktopServiceOuterClass {
        * To get the desktop ID use a [DesktopService.List] request.
        * </pre>
        *
-       * <code>string desktop_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string desktop_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for desktopId to set.
        * @return This builder for chaining.
        */
@@ -1033,6 +914,125 @@ public final class DesktopServiceOuterClass {
         desktopId_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
       }
 
       private java.lang.Object name_ = "";
@@ -18508,9 +18508,9 @@ public final class DesktopServiceOuterClass {
       "ex/cloud/operation/operation.proto\032\035yand" +
       "ex/cloud/validation.proto\032 google/protob" +
       "uf/field_mask.proto\"\347\002\n\027UpdateProperties" +
-      "Request\022/\n\013update_mask\030\001 \001(\0132\032.google.pr" +
-      "otobuf.FieldMask\022 \n\ndesktop_id\030\002 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\0221\n\004name\030\003 \001(\tB#\362\3071\037|[a-z]([-a" +
+      "Request\022 \n\ndesktop_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
+      ".FieldMask\0221\n\004name\030\003 \001(\tB#\362\3071\037|[a-z]([-a" +
       "-z0-9]{0,61}[a-z0-9])\022\226\001\n\006labels\030\004 \003(\0132E" +
       ".yandex.cloud.clouddesktop.v1.api.Update" +
       "PropertiesRequest.LabelsEntryB?\202\3101\004<=64\212" +
@@ -18638,7 +18638,7 @@ public final class DesktopServiceOuterClass {
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdatePropertiesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_UpdatePropertiesRequest_descriptor,
-        new java.lang.String[] { "UpdateMask", "DesktopId", "Name", "Labels", });
+        new java.lang.String[] { "DesktopId", "UpdateMask", "Name", "Labels", });
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdatePropertiesRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_clouddesktop_v1_api_UpdatePropertiesRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdatePropertiesRequest_LabelsEntry_fieldAccessorTable = new

@@ -5,6 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Playlist management service.
+ * Provides methods for creating, retrieving, updating, and deleting playlists,
+ * which are collections of videos or episodes that can be played sequentially.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -282,13 +284,16 @@ public final class PlaylistServiceGrpc {
   /**
    * <pre>
    * Playlist management service.
+   * Provides methods for creating, retrieving, updating, and deleting playlists,
+   * which are collections of videos or episodes that can be played sequentially.
    * </pre>
    */
   public static abstract class PlaylistServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Get the specific playlist.
+     * Retrieves detailed information about a specific playlist by its ID.
+     * Returns all playlist metadata, items, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistRequest request,
@@ -298,7 +303,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * List playlists for a channel.
+     * Lists all playlists in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.ListPlaylistsRequest request,
@@ -308,7 +314,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Create playlist.
+     * Creates a new playlist in the specified channel with the provided items.
+     * Playlists can contain videos, episodes, or a mix of both content types.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.CreatePlaylistRequest request,
@@ -318,7 +325,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Update playlist.
+     * Updates an existing playlist's metadata and items.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.UpdatePlaylistRequest request,
@@ -328,7 +336,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Delete playlist.
+     * Deletes a specific playlist by its ID.
+     * This removes the playlist but does not affect the videos or episodes it contains.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.DeletePlaylistRequest request,
@@ -338,7 +347,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete playlists.
+     * Deletes multiple playlists in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several playlists.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.BatchDeletePlaylistsRequest request,
@@ -348,7 +358,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a player URL for watching the playlist.
+     * The URL can include player parameters such as autoplay, mute, and visibility of interface controls.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistPlayerURLRequest request,
@@ -414,6 +425,8 @@ public final class PlaylistServiceGrpc {
   /**
    * <pre>
    * Playlist management service.
+   * Provides methods for creating, retrieving, updating, and deleting playlists,
+   * which are collections of videos or episodes that can be played sequentially.
    * </pre>
    */
   public static final class PlaylistServiceStub extends io.grpc.stub.AbstractAsyncStub<PlaylistServiceStub> {
@@ -430,7 +443,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific playlist.
+     * Retrieves detailed information about a specific playlist by its ID.
+     * Returns all playlist metadata, items, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistRequest request,
@@ -441,7 +455,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * List playlists for a channel.
+     * Lists all playlists in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.ListPlaylistsRequest request,
@@ -452,7 +467,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Create playlist.
+     * Creates a new playlist in the specified channel with the provided items.
+     * Playlists can contain videos, episodes, or a mix of both content types.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.CreatePlaylistRequest request,
@@ -463,7 +479,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Update playlist.
+     * Updates an existing playlist's metadata and items.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.UpdatePlaylistRequest request,
@@ -474,7 +491,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Delete playlist.
+     * Deletes a specific playlist by its ID.
+     * This removes the playlist but does not affect the videos or episodes it contains.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.DeletePlaylistRequest request,
@@ -485,7 +503,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete playlists.
+     * Deletes multiple playlists in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several playlists.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.BatchDeletePlaylistsRequest request,
@@ -496,7 +515,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a player URL for watching the playlist.
+     * The URL can include player parameters such as autoplay, mute, and visibility of interface controls.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistPlayerURLRequest request,
@@ -509,6 +529,8 @@ public final class PlaylistServiceGrpc {
   /**
    * <pre>
    * Playlist management service.
+   * Provides methods for creating, retrieving, updating, and deleting playlists,
+   * which are collections of videos or episodes that can be played sequentially.
    * </pre>
    */
   public static final class PlaylistServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<PlaylistServiceBlockingStub> {
@@ -525,7 +547,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific playlist.
+     * Retrieves detailed information about a specific playlist by its ID.
+     * Returns all playlist metadata, items, and related information.
      * </pre>
      */
     public yandex.cloud.api.video.v1.PlaylistOuterClass.Playlist get(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistRequest request) {
@@ -535,7 +558,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * List playlists for a channel.
+     * Lists all playlists in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public yandex.cloud.api.video.v1.PlaylistServiceOuterClass.ListPlaylistsResponse list(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.ListPlaylistsRequest request) {
@@ -545,7 +569,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Create playlist.
+     * Creates a new playlist in the specified channel with the provided items.
+     * Playlists can contain videos, episodes, or a mix of both content types.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.CreatePlaylistRequest request) {
@@ -555,7 +580,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Update playlist.
+     * Updates an existing playlist's metadata and items.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.UpdatePlaylistRequest request) {
@@ -565,7 +591,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Delete playlist.
+     * Deletes a specific playlist by its ID.
+     * This removes the playlist but does not affect the videos or episodes it contains.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.DeletePlaylistRequest request) {
@@ -575,7 +602,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete playlists.
+     * Deletes multiple playlists in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several playlists.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.BatchDeletePlaylistsRequest request) {
@@ -585,7 +613,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a player URL for watching the playlist.
+     * The URL can include player parameters such as autoplay, mute, and visibility of interface controls.
      * </pre>
      */
     public yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistPlayerURLResponse getPlayerURL(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistPlayerURLRequest request) {
@@ -597,6 +626,8 @@ public final class PlaylistServiceGrpc {
   /**
    * <pre>
    * Playlist management service.
+   * Provides methods for creating, retrieving, updating, and deleting playlists,
+   * which are collections of videos or episodes that can be played sequentially.
    * </pre>
    */
   public static final class PlaylistServiceFutureStub extends io.grpc.stub.AbstractFutureStub<PlaylistServiceFutureStub> {
@@ -613,7 +644,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific playlist.
+     * Retrieves detailed information about a specific playlist by its ID.
+     * Returns all playlist metadata, items, and related information.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.PlaylistOuterClass.Playlist> get(
@@ -624,7 +656,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * List playlists for a channel.
+     * Lists all playlists in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.PlaylistServiceOuterClass.ListPlaylistsResponse> list(
@@ -635,7 +668,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Create playlist.
+     * Creates a new playlist in the specified channel with the provided items.
+     * Playlists can contain videos, episodes, or a mix of both content types.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -646,7 +680,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Update playlist.
+     * Updates an existing playlist's metadata and items.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -657,7 +692,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Delete playlist.
+     * Deletes a specific playlist by its ID.
+     * This removes the playlist but does not affect the videos or episodes it contains.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -668,7 +704,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete playlists.
+     * Deletes multiple playlists in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several playlists.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
@@ -679,7 +716,8 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a player URL for watching the playlist.
+     * The URL can include player parameters such as autoplay, mute, and visibility of interface controls.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistPlayerURLResponse> getPlayerURL(

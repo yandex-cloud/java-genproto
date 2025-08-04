@@ -2924,6 +2924,26 @@ public final class ResourceServiceOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 10;</code>
+     * @return The providerType.
+     */
+    java.lang.String getProviderType();
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 10;</code>
+     * @return The bytes for providerType.
+     */
+    com.google.protobuf.ByteString
+        getProviderTypeBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.CreateResourceRequest}
@@ -2941,6 +2961,7 @@ public final class ResourceServiceOuterClass {
       folderId_ = "";
       cname_ = "";
       originProtocol_ = 0;
+      providerType_ = "";
     }
 
     @java.lang.Override
@@ -3068,6 +3089,12 @@ public final class ResourceServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              providerType_ = s;
               break;
             }
             default: {
@@ -4698,6 +4725,52 @@ public final class ResourceServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int PROVIDER_TYPE_FIELD_NUMBER = 10;
+    private volatile java.lang.Object providerType_;
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 10;</code>
+     * @return The providerType.
+     */
+    @java.lang.Override
+    public java.lang.String getProviderType() {
+      java.lang.Object ref = providerType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 10;</code>
+     * @return The bytes for providerType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderTypeBytes() {
+      java.lang.Object ref = providerType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4742,6 +4815,9 @@ public final class ResourceServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           9);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, providerType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4791,6 +4867,9 @@ public final class ResourceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(9, labels__);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, providerType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4838,6 +4917,8 @@ public final class ResourceServiceOuterClass {
       }
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (!getProviderType()
+          .equals(other.getProviderType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4879,6 +4960,8 @@ public final class ResourceServiceOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + PROVIDER_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getProviderType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5071,6 +5154,8 @@ public final class ResourceServiceOuterClass {
           sslCertificateBuilder_ = null;
         }
         internalGetMutableLabels().clear();
+        providerType_ = "";
+
         return this;
       }
 
@@ -5128,6 +5213,7 @@ public final class ResourceServiceOuterClass {
         }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.providerType_ = providerType_;
         onBuilt();
         return result;
       }
@@ -5204,6 +5290,10 @@ public final class ResourceServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (!other.getProviderType().isEmpty()) {
+          providerType_ = other.providerType_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6449,6 +6539,102 @@ public final class ResourceServiceOuterClass {
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object providerType_ = "";
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 10;</code>
+       * @return The providerType.
+       */
+      public java.lang.String getProviderType() {
+        java.lang.Object ref = providerType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 10;</code>
+       * @return The bytes for providerType.
+       */
+      public com.google.protobuf.ByteString
+          getProviderTypeBytes() {
+        java.lang.Object ref = providerType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 10;</code>
+       * @param value The providerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        providerType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderType() {
+        
+        providerType_ = getDefaultInstance().getProviderType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 10;</code>
+       * @param value The bytes for providerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        providerType_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -13857,7 +14043,7 @@ public final class ResourceServiceOuterClass {
       "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"b" +
       "\n\025ListResourcesResponse\0220\n\tresources\030\001 \003" +
       "(\0132\035.yandex.cloud.cdn.v1.Resource\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\"\324\005\n\025CreateResourceReq" +
+      "t_page_token\030\002 \001(\t\"\353\005\n\025CreateResourceReq" +
       "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n" +
       "\005cname\030\002 \001(\tB\004\350\3071\001\022G\n\006origin\030\003 \001(\01321.yan" +
       "dex.cloud.cdn.v1.CreateResourceRequest.O" +
@@ -13870,62 +14056,63 @@ public final class ResourceServiceOuterClass {
       "ns\022B\n\017ssl_certificate\030\010 \001(\0132).yandex.clo" +
       "ud.cdn.v1.SSLTargetCertificate\022F\n\006labels" +
       "\030\t \003(\01326.yandex.cloud.cdn.v1.CreateResou" +
-      "rceRequest.LabelsEntry\032\231\001\n\006Origin\022\031\n\017ori" +
-      "gin_group_id\030\001 \001(\003H\000\022\027\n\rorigin_source\030\002 " +
-      "\001(\tH\000\022I\n\024origin_source_params\030\003 \001(\0132).ya" +
-      "ndex.cloud.cdn.v1.ResourceOriginParamsH\000" +
-      "B\020\n\016origin_variant\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"U\n\024ResourceOri" +
-      "ginParams\022\016\n\006source\030\001 \001(\t\022-\n\004meta\030\002 \001(\0132" +
-      "\037.yandex.cloud.cdn.v1.OriginMeta\";\n\026Crea" +
+      "rceRequest.LabelsEntry\022\025\n\rprovider_type\030" +
+      "\n \001(\t\032\231\001\n\006Origin\022\031\n\017origin_group_id\030\001 \001(" +
+      "\003H\000\022\027\n\rorigin_source\030\002 \001(\tH\000\022I\n\024origin_s" +
+      "ource_params\030\003 \001(\0132).yandex.cloud.cdn.v1" +
+      ".ResourceOriginParamsH\000B\020\n\016origin_varian" +
+      "t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"U\n\024ResourceOriginParams\022\016\n\006sour" +
+      "ce\030\001 \001(\t\022-\n\004meta\030\002 \001(\0132\037.yandex.cloud.cd" +
+      "n.v1.OriginMeta\";\n\026CreateResourceMetadat" +
+      "a\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\251\004\n" +
+      "\025UpdateResourceRequest\022!\n\013resource_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\017origin_group_id\030\002 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022D\n\023secon" +
+      "dary_hostnames\030\003 \001(\0132\'.yandex.cloud.cdn." +
+      "v1.SecondaryHostnames\0225\n\007options\030\004 \001(\0132$" +
+      ".yandex.cloud.cdn.v1.ResourceOptions\022<\n\017" +
+      "origin_protocol\030\005 \001(\0162#.yandex.cloud.cdn" +
+      ".v1.OriginProtocol\022*\n\006active\030\006 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022B\n\017ssl_certificat" +
+      "e\030\007 \001(\0132).yandex.cloud.cdn.v1.SSLTargetC" +
+      "ertificate\022F\n\006labels\030\010 \003(\01326.yandex.clou" +
+      "d.cdn.v1.UpdateResourceRequest.LabelsEnt" +
+      "ry\022\025\n\rremove_labels\030\t \001(\010\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\";\n\026Upda" +
       "teResourceMetadata\022!\n\013resource_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"\251\004\n\025UpdateResourceRequest\022" +
-      "!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\017or" +
-      "igin_group_id\030\002 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022D\n\023secondary_hostnames\030\003 \001(\0132\'." +
-      "yandex.cloud.cdn.v1.SecondaryHostnames\0225" +
-      "\n\007options\030\004 \001(\0132$.yandex.cloud.cdn.v1.Re" +
-      "sourceOptions\022<\n\017origin_protocol\030\005 \001(\0162#" +
-      ".yandex.cloud.cdn.v1.OriginProtocol\022*\n\006a" +
-      "ctive\030\006 \001(\0132\032.google.protobuf.BoolValue\022" +
-      "B\n\017ssl_certificate\030\007 \001(\0132).yandex.cloud." +
-      "cdn.v1.SSLTargetCertificate\022F\n\006labels\030\010 " +
-      "\003(\01326.yandex.cloud.cdn.v1.UpdateResource" +
-      "Request.LabelsEntry\022\025\n\rremove_labels\030\t \001" +
-      "(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\";\n\026UpdateResourceMetadata\022!\n\013r" +
-      "esource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\":\n\025Delete" +
-      "ResourceRequest\022!\n\013resource_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"-\n\026DeleteResourceMetadata\022\023\n\013" +
-      "resource_id\030\001 \001(\t\":\n\027GetProviderCNameReq" +
-      "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"<\n" +
-      "\030GetProviderCNameResponse\022\r\n\005cname\030\001 \001(\t" +
-      "\022\021\n\tfolder_id\030\002 \001(\t2\230\007\n\017ResourceService\022" +
-      "v\n\003Get\022\'.yandex.cloud.cdn.v1.GetResource" +
-      "Request\032\035.yandex.cloud.cdn.v1.Resource\"\'" +
-      "\202\323\344\223\002!\022\037/cdn/v1/resources/{resource_id}\022" +
-      "x\n\004List\022).yandex.cloud.cdn.v1.ListResour" +
-      "cesRequest\032*.yandex.cloud.cdn.v1.ListRes" +
-      "ourcesResponse\"\031\202\323\344\223\002\023\022\021/cdn/v1/resource" +
-      "s\022\233\001\n\006Create\022*.yandex.cloud.cdn.v1.Creat" +
-      "eResourceRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"B\202\323\344\223\002\026\"\021/cdn/v1/resources:\001" +
-      "*\262\322*\"\n\026CreateResourceMetadata\022\010Resource\022" +
-      "\251\001\n\006Update\022*.yandex.cloud.cdn.v1.UpdateR" +
-      "esourceRequest\032!.yandex.cloud.operation." +
-      "Operation\"P\202\323\344\223\002$2\037/cdn/v1/resources/{re" +
-      "source_id}:\001*\262\322*\"\n\026UpdateResourceMetadat" +
-      "a\022\010Resource\022\263\001\n\006Delete\022*.yandex.cloud.cd" +
-      "n.v1.DeleteResourceRequest\032!.yandex.clou" +
-      "d.operation.Operation\"Z\202\323\344\223\002!*\037/cdn/v1/r" +
-      "esources/{resource_id}\262\322*/\n\026DeleteResour" +
-      "ceMetadata\022\025google.protobuf.Empty\022\222\001\n\020Ge" +
-      "tProviderCName\022,.yandex.cloud.cdn.v1.Get" +
-      "ProviderCNameRequest\032-.yandex.cloud.cdn." +
-      "v1.GetProviderCNameResponse\"!\202\323\344\223\002\033\022\031/cd" +
-      "n/v1/cname/{folder_id}BV\n\027yandex.cloud.a" +
-      "pi.cdn.v1Z;github.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/cdn/v1;cdnb\006proto3"
+      "\014\350\3071\001\212\3101\004<=50\":\n\025DeleteResourceRequest\022!" +
+      "\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026Del" +
+      "eteResourceMetadata\022\023\n\013resource_id\030\001 \001(\t" +
+      "\":\n\027GetProviderCNameRequest\022\037\n\tfolder_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"<\n\030GetProviderCName" +
+      "Response\022\r\n\005cname\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001" +
+      "(\t2\230\007\n\017ResourceService\022v\n\003Get\022\'.yandex.c" +
+      "loud.cdn.v1.GetResourceRequest\032\035.yandex." +
+      "cloud.cdn.v1.Resource\"\'\202\323\344\223\002!\022\037/cdn/v1/r" +
+      "esources/{resource_id}\022x\n\004List\022).yandex." +
+      "cloud.cdn.v1.ListResourcesRequest\032*.yand" +
+      "ex.cloud.cdn.v1.ListResourcesResponse\"\031\202" +
+      "\323\344\223\002\023\022\021/cdn/v1/resources\022\233\001\n\006Create\022*.ya" +
+      "ndex.cloud.cdn.v1.CreateResourceRequest\032" +
+      "!.yandex.cloud.operation.Operation\"B\202\323\344\223" +
+      "\002\026\"\021/cdn/v1/resources:\001*\262\322*\"\n\026CreateReso" +
+      "urceMetadata\022\010Resource\022\251\001\n\006Update\022*.yand" +
+      "ex.cloud.cdn.v1.UpdateResourceRequest\032!." +
+      "yandex.cloud.operation.Operation\"P\202\323\344\223\002$" +
+      "2\037/cdn/v1/resources/{resource_id}:\001*\262\322*\"" +
+      "\n\026UpdateResourceMetadata\022\010Resource\022\263\001\n\006D" +
+      "elete\022*.yandex.cloud.cdn.v1.DeleteResour" +
+      "ceRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"Z\202\323\344\223\002!*\037/cdn/v1/resources/{resourc" +
+      "e_id}\262\322*/\n\026DeleteResourceMetadata\022\025googl" +
+      "e.protobuf.Empty\022\222\001\n\020GetProviderCName\022,." +
+      "yandex.cloud.cdn.v1.GetProviderCNameRequ" +
+      "est\032-.yandex.cloud.cdn.v1.GetProviderCNa" +
+      "meResponse\"!\202\323\344\223\002\033\022\031/cdn/v1/cname/{folde" +
+      "r_id}BV\n\027yandex.cloud.api.cdn.v1Z;github" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/cdn/v1;cdnb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13961,7 +14148,7 @@ public final class ResourceServiceOuterClass {
     internal_static_yandex_cloud_cdn_v1_CreateResourceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_CreateResourceRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Cname", "Origin", "SecondaryHostnames", "OriginProtocol", "Active", "Options", "SslCertificate", "Labels", });
+        new java.lang.String[] { "FolderId", "Cname", "Origin", "SecondaryHostnames", "OriginProtocol", "Active", "Options", "SslCertificate", "Labels", "ProviderType", });
     internal_static_yandex_cloud_cdn_v1_CreateResourceRequest_Origin_descriptor =
       internal_static_yandex_cloud_cdn_v1_CreateResourceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cdn_v1_CreateResourceRequest_Origin_fieldAccessorTable = new

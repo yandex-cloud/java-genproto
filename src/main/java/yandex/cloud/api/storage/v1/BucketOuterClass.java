@@ -688,6 +688,26 @@ public final class BucketOuterClass {
      * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 17;</code>
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder getAllowedPrivateEndpointsOrBuilder();
+
+    /**
+     * <pre>
+     * ID of the Yandex.Cloud entity that owns the bucket.
+     * </pre>
+     *
+     * <code>string resource_id = 18;</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <pre>
+     * ID of the Yandex.Cloud entity that owns the bucket.
+     * </pre>
+     *
+     * <code>string resource_id = 18;</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
   }
   /**
    * <pre>
@@ -715,6 +735,7 @@ public final class BucketOuterClass {
       cors_ = java.util.Collections.emptyList();
       lifecycleRules_ = java.util.Collections.emptyList();
       tags_ = java.util.Collections.emptyList();
+      resourceId_ = "";
     }
 
     @java.lang.Override
@@ -912,6 +933,12 @@ public final class BucketOuterClass {
                 allowedPrivateEndpoints_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
               break;
             }
             default: {
@@ -1709,6 +1736,52 @@ public final class BucketOuterClass {
       return getAllowedPrivateEndpoints();
     }
 
+    public static final int RESOURCE_ID_FIELD_NUMBER = 18;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <pre>
+     * ID of the Yandex.Cloud entity that owns the bucket.
+     * </pre>
+     *
+     * <code>string resource_id = 18;</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Yandex.Cloud entity that owns the bucket.
+     * </pre>
+     *
+     * <code>string resource_id = 18;</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1773,6 +1846,9 @@ public final class BucketOuterClass {
       }
       if (allowedPrivateEndpoints_ != null) {
         output.writeMessage(17, getAllowedPrivateEndpoints());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, resourceId_);
       }
       unknownFields.writeTo(output);
     }
@@ -1847,6 +1923,9 @@ public final class BucketOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getAllowedPrivateEndpoints());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, resourceId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1919,6 +1998,8 @@ public final class BucketOuterClass {
         if (!getAllowedPrivateEndpoints()
             .equals(other.getAllowedPrivateEndpoints())) return false;
       }
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1987,6 +2068,8 @@ public final class BucketOuterClass {
         hash = (37 * hash) + ALLOWED_PRIVATE_ENDPOINTS_FIELD_NUMBER;
         hash = (53 * hash) + getAllowedPrivateEndpoints().hashCode();
       }
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2206,6 +2289,8 @@ public final class BucketOuterClass {
           allowedPrivateEndpoints_ = null;
           allowedPrivateEndpointsBuilder_ = null;
         }
+        resourceId_ = "";
+
         return this;
       }
 
@@ -2306,6 +2391,7 @@ public final class BucketOuterClass {
         } else {
           result.allowedPrivateEndpoints_ = allowedPrivateEndpointsBuilder_.build();
         }
+        result.resourceId_ = resourceId_;
         onBuilt();
         return result;
       }
@@ -2477,6 +2563,10 @@ public final class BucketOuterClass {
         }
         if (other.hasAllowedPrivateEndpoints()) {
           mergeAllowedPrivateEndpoints(other.getAllowedPrivateEndpoints());
+        }
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5319,6 +5409,102 @@ public final class BucketOuterClass {
           allowedPrivateEndpoints_ = null;
         }
         return allowedPrivateEndpointsBuilder_;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <pre>
+       * ID of the Yandex.Cloud entity that owns the bucket.
+       * </pre>
+       *
+       * <code>string resource_id = 18;</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Yandex.Cloud entity that owns the bucket.
+       * </pre>
+       *
+       * <code>string resource_id = 18;</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Yandex.Cloud entity that owns the bucket.
+       * </pre>
+       *
+       * <code>string resource_id = 18;</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Yandex.Cloud entity that owns the bucket.
+       * </pre>
+       *
+       * <code>string resource_id = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Yandex.Cloud entity that owns the bucket.
+       * </pre>
+       *
+       * <code>string resource_id = 18;</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -43570,7 +43756,7 @@ public final class BucketOuterClass {
       "yandex.cloud.storage.v1\032\034google/protobuf" +
       "/struct.proto\032\037google/protobuf/timestamp" +
       ".proto\032\036google/protobuf/wrappers.proto\032\035" +
-      "yandex/cloud/validation.proto\"\242\006\n\006Bucket" +
+      "yandex/cloud/validation.proto\"\267\006\n\006Bucket" +
       "\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tfolder_id\030" +
       "\003 \001(\t\022M\n\026anonymous_access_flags\030\004 \001(\0132-." +
       "yandex.cloud.storage.v1.AnonymousAccessF" +
@@ -43590,161 +43776,161 @@ public final class BucketOuterClass {
       "ctLock\0227\n\nencryption\030\020 \001(\0132#.yandex.clou" +
       "d.storage.v1.Encryption\022Y\n\031allowed_priva" +
       "te_endpoints\030\021 \001(\01326.yandex.cloud.storag" +
-      "e.v1.BucketAllowedPrivateEndpoints\"!\n\003Ta" +
-      "g\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\234\004\n\003ACL\0222\n" +
-      "\006grants\030\001 \003(\0132\".yandex.cloud.storage.v1." +
-      "ACL.Grant\032\340\003\n\005Grant\022G\n\npermission\030\001 \001(\0162" +
-      "-.yandex.cloud.storage.v1.ACL.Grant.Perm" +
-      "issionB\004\350\3071\001\022F\n\ngrant_type\030\002 \001(\0162,.yande" +
-      "x.cloud.storage.v1.ACL.Grant.GrantTypeB\004" +
-      "\350\3071\001\022\034\n\ngrantee_id\030\003 \001(\tB\010\212\3101\004<=50\"\243\001\n\nP" +
-      "ermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000\022\033\n" +
-      "\027PERMISSION_FULL_CONTROL\020\001\022\024\n\020PERMISSION" +
-      "_WRITE\020\002\022\030\n\024PERMISSION_WRITE_ACP\020\003\022\023\n\017PE" +
-      "RMISSION_READ\020\004\022\027\n\023PERMISSION_READ_ACP\020\005" +
-      "\"\201\001\n\tGrantType\022\032\n\026GRANT_TYPE_UNSPECIFIED" +
-      "\020\000\022\026\n\022GRANT_TYPE_ACCOUNT\020\001\022&\n\"GRANT_TYPE" +
-      "_ALL_AUTHENTICATED_USERS\020\002\022\030\n\024GRANT_TYPE" +
-      "_ALL_USERS\020\003\"\233\001\n\024AnonymousAccessFlags\022(\n" +
-      "\004read\030\001 \001(\0132\032.google.protobuf.BoolValue\022" +
-      "(\n\004list\030\002 \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022/\n\013config_read\030\003 \001(\0132\032.google.protobuf" +
-      ".BoolValue\"\344\002\n\010CorsRule\022\n\n\002id\030\001 \001(\t\022M\n\017a" +
-      "llowed_methods\030\002 \003(\0162(.yandex.cloud.stor" +
-      "age.v1.CorsRule.MethodB\n\202\3101\002>0\220\3101\001\022\027\n\017al" +
-      "lowed_headers\030\003 \003(\t\022\037\n\017allowed_origins\030\004" +
-      " \003(\tB\006\202\3101\002>0\022\026\n\016expose_headers\030\005 \003(\t\0224\n\017" +
-      "max_age_seconds\030\006 \001(\0132\033.google.protobuf." +
-      "Int64Value\"u\n\006Method\022\026\n\022METHOD_UNSPECIFI" +
-      "ED\020\000\022\016\n\nMETHOD_GET\020\001\022\017\n\013METHOD_HEAD\020\002\022\017\n" +
-      "\013METHOD_POST\020\003\022\016\n\nMETHOD_PUT\020\004\022\021\n\rMETHOD" +
-      "_DELETE\020\005\"\274\006\n\017WebsiteSettings\022\r\n\005index\030\001" +
-      " \001(\t\022\r\n\005error\030\002 \001(\t\022N\n\025redirect_all_requ" +
-      "ests\030\003 \001(\0132/.yandex.cloud.storage.v1.Web" +
-      "siteSettings.Scheme\022K\n\rrouting_rules\030\004 \003" +
-      "(\01324.yandex.cloud.storage.v1.WebsiteSett" +
-      "ings.RoutingRule\032_\n\006Scheme\022C\n\010protocol\030\001" +
-      " \001(\01621.yandex.cloud.storage.v1.WebsiteSe" +
-      "ttings.Protocol\022\020\n\010hostname\030\002 \001(\t\032O\n\tCon" +
-      "dition\022\'\n\037http_error_code_returned_equal" +
-      "s\030\001 \001(\t\022\031\n\021key_prefix_equals\030\002 \001(\t\032\322\001\n\010R" +
-      "edirect\022\020\n\010hostname\030\001 \001(\t\0224\n\022http_redire" +
-      "ct_code\030\002 \001(\tB\030\362\3071\0243(0[1-9]|[1-9][0-9])\022" +
-      "C\n\010protocol\030\003 \001(\01621.yandex.cloud.storage" +
-      ".v1.WebsiteSettings.Protocol\022\037\n\027replace_" +
-      "key_prefix_with\030\004 \001(\t\022\030\n\020replace_key_wit" +
-      "h\030\005 \001(\t\032\231\001\n\013RoutingRule\022E\n\tcondition\030\001 \001" +
-      "(\01322.yandex.cloud.storage.v1.WebsiteSett" +
-      "ings.Condition\022C\n\010redirect\030\002 \001(\01321.yande" +
-      "x.cloud.storage.v1.WebsiteSettings.Redir" +
-      "ect\"K\n\010Protocol\022\030\n\024PROTOCOL_UNSPECIFIED\020" +
-      "\000\022\021\n\rPROTOCOL_HTTP\020\001\022\022\n\016PROTOCOL_HTTPS\020\002" +
-      "\"\345\r\n\rLifecycleRule\022(\n\002id\030\001 \001(\0132\034.google." +
-      "protobuf.StringValue\022\017\n\007enabled\030\002 \001(\010\022A\n" +
-      "\006filter\030\003 \001(\01321.yandex.cloud.storage.v1." +
-      "LifecycleRule.RuleFilter\022E\n\nexpiration\030\004" +
-      " \001(\01321.yandex.cloud.storage.v1.Lifecycle" +
-      "Rule.Expiration\022F\n\013transitions\030\005 \003(\01321.y" +
-      "andex.cloud.storage.v1.LifecycleRule.Tra" +
-      "nsition\022[\n!abort_incomplete_multipart_up" +
-      "load\030\006 \001(\01320.yandex.cloud.storage.v1.Lif" +
-      "ecycleRule.AfterDays\022Z\n\025noncurrent_expir" +
-      "ation\030\007 \001(\0132;.yandex.cloud.storage.v1.Li" +
-      "fecycleRule.NoncurrentExpiration\022[\n\026nonc" +
-      "urrent_transitions\030\010 \003(\0132;.yandex.cloud." +
-      "storage.v1.LifecycleRule.NoncurrentTrans" +
-      "ition\022a\n\031noncurrent_delete_markers\030\t \001(\013" +
-      "2>.yandex.cloud.storage.v1.LifecycleRule" +
-      ".NoncurrentDeleteMarkers\032G\n\tAfterDays\022:\n" +
-      "\025days_after_expiration\030\001 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\032O\n\027NoncurrentDeleteMar" +
-      "kers\0224\n\017noncurrent_days\030\001 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\032L\n\024NoncurrentExpirati" +
-      "on\0224\n\017noncurrent_days\030\001 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\032i\n\024NoncurrentTransition" +
-      "\0224\n\017noncurrent_days\030\001 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022\033\n\rstorage_class\030\002 \001(\tB\004\350" +
-      "\3071\001\032\204\001\n\nTransition\022(\n\004date\030\001 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022)\n\004days\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022\033\n\rstorage_class" +
-      "\030\004 \001(\tB\004\350\3071\001J\004\010\003\020\004\032\243\001\n\nExpiration\022(\n\004dat" +
-      "e\030\001 \001(\0132\032.google.protobuf.Timestamp\022)\n\004d" +
-      "ays\030\002 \001(\0132\033.google.protobuf.Int64Value\022@" +
-      "\n\034expired_object_delete_marker\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\032\315\003\n\nRuleFilter\022" +
-      "\016\n\006prefix\030\001 \001(\t\022=\n\030object_size_greater_t" +
-      "han\030\002 \001(\0132\033.google.protobuf.Int64Value\022:" +
-      "\n\025object_size_less_than\030\003 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022)\n\003tag\030\004 \001(\0132\034.yandex" +
-      ".cloud.storage.v1.Tag\022K\n\014and_operator\030\005 " +
-      "\001(\01325.yandex.cloud.storage.v1.LifecycleR" +
-      "ule.RuleFilter.And\032\273\001\n\003And\022\016\n\006prefix\030\001 \001" +
-      "(\t\022=\n\030object_size_greater_than\030\002 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022:\n\025object_size" +
-      "_less_than\030\003 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022)\n\003tag\030\004 \003(\0132\034.yandex.cloud.storag" +
-      "e.v1.Tag\"\335\001\n\010Counters\022\032\n\022simple_object_s" +
-      "ize\030\001 \001(\003\022\033\n\023simple_object_count\030\002 \001(\003\022\032" +
-      "\n\022objects_parts_size\030\003 \001(\003\022\033\n\023objects_pa" +
-      "rts_count\030\004 \001(\003\022\036\n\026multipart_objects_siz" +
-      "e\030\005 \001(\003\022\037\n\027multipart_objects_count\030\006 \001(\003" +
-      "\022\036\n\026active_multipart_count\030\007 \001(\003\"]\n\023Opti" +
-      "onalSizeByClass\022\025\n\rstorage_class\030\001 \001(\t\022/" +
-      "\n\nclass_size\030\002 \001(\0132\033.google.protobuf.Int" +
-      "64Value\"8\n\013SizeByClass\022\025\n\rstorage_class\030" +
-      "\001 \001(\t\022\022\n\nclass_size\030\002 \001(\003\"]\n\017CountersByC" +
-      "lass\022\025\n\rstorage_class\030\001 \001(\t\0223\n\010counters\030" +
-      "\002 \001(\0132!.yandex.cloud.storage.v1.Counters" +
-      "\"\252\004\n\013BucketStats\022\014\n\004name\030\001 \001(\t\022-\n\010max_si" +
-      "ze\030\002 \001(\0132\033.google.protobuf.Int64Value\022\021\n" +
-      "\tused_size\030\003 \001(\003\022M\n\027storage_class_max_si" +
-      "zes\030\004 \003(\0132,.yandex.cloud.storage.v1.Opti" +
-      "onalSizeByClass\022F\n\030storage_class_used_si" +
-      "zes\030\005 \003(\0132$.yandex.cloud.storage.v1.Size" +
-      "ByClass\022H\n\026storage_class_counters\030\006 \003(\0132" +
-      "(.yandex.cloud.storage.v1.CountersByClas" +
-      "s\022;\n\025default_storage_class\030\007 \001(\0132\034.googl" +
-      "e.protobuf.StringValue\022M\n\026anonymous_acce" +
-      "ss_flags\030\010 \001(\0132-.yandex.cloud.storage.v1" +
-      ".AnonymousAccessFlags\022.\n\ncreated_at\030\t \001(" +
-      "\0132\032.google.protobuf.Timestamp\022.\n\nupdated" +
-      "_at\030\n \001(\0132\032.google.protobuf.Timestamp\"\301\003" +
-      "\n\013HTTPSConfig\022\014\n\004name\030\001 \001(\t\022D\n\013source_ty" +
-      "pe\030\002 \001(\0162/.yandex.cloud.storage.v1.HTTPS" +
-      "Config.SourceType\022,\n\006issuer\030\003 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\022-\n\007subject\030\004 \001(\013" +
-      "2\034.google.protobuf.StringValue\022\021\n\tdns_na" +
-      "mes\030\005 \003(\t\022.\n\nnot_before\030\006 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022-\n\tnot_after\030\007 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022\026\n\016certificate_" +
-      "id\030\010 \001(\t\"w\n\nSourceType\022\033\n\027SOURCE_TYPE_UN" +
-      "SPECIFIED\020\000\022\034\n\030SOURCE_TYPE_SELF_MANAGED\020" +
-      "\001\022.\n*SOURCE_TYPE_MANAGED_BY_CERTIFICATE_" +
-      "MANAGER\020\002\"\363\003\n\nObjectLock\022D\n\006status\030\002 \001(\016" +
-      "24.yandex.cloud.storage.v1.ObjectLock.Ob" +
-      "jectLockStatus\022O\n\021default_retention\030\003 \001(" +
-      "\01324.yandex.cloud.storage.v1.ObjectLock.D" +
-      "efaultRetention\032\324\001\n\020DefaultRetention\022G\n\004" +
-      "mode\030\001 \001(\01629.yandex.cloud.storage.v1.Obj" +
-      "ectLock.DefaultRetention.Mode\022\016\n\004days\030\002 " +
-      "\001(\003H\000\022\017\n\005years\030\003 \001(\003H\000\"F\n\004Mode\022\024\n\020MODE_U" +
-      "NSPECIFIED\020\000\022\023\n\017MODE_GOVERNANCE\020\001\022\023\n\017MOD" +
-      "E_COMPLIANCE\020\002B\016\n\006period\022\004\300\3011\001\"w\n\020Object" +
-      "LockStatus\022\"\n\036OBJECT_LOCK_STATUS_UNSPECI" +
-      "FIED\020\000\022\037\n\033OBJECT_LOCK_STATUS_DISABLED\020\001\022" +
-      "\036\n\032OBJECT_LOCK_STATUS_ENABLED\020\002\"\223\001\n\nEncr" +
-      "yption\022A\n\005rules\030\001 \003(\01322.yandex.cloud.sto" +
-      "rage.v1.Encryption.EncryptionRule\032B\n\016Enc" +
-      "ryptionRule\022\031\n\021kms_master_key_id\030\001 \001(\t\022\025" +
-      "\n\rsse_algorithm\030\002 \001(\t\"K\n\035BucketAllowedPr" +
-      "ivateEndpoints\022\017\n\007enabled\030\001 \001(\010\022\031\n\021priva" +
-      "te_endpoints\030\002 \003(\t*s\n\nVersioning\022\032\n\026VERS" +
-      "IONING_UNSPECIFIED\020\000\022\027\n\023VERSIONING_DISAB" +
-      "LED\020\001\022\026\n\022VERSIONING_ENABLED\020\002\022\030\n\024VERSION" +
-      "ING_SUSPENDED\020\003Bb\n\033yandex.cloud.api.stor" +
-      "age.v1ZCgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/storage/v1;storageb\006pro" +
-      "to3"
+      "e.v1.BucketAllowedPrivateEndpoints\022\023\n\013re" +
+      "source_id\030\022 \001(\t\"!\n\003Tag\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t\"\234\004\n\003ACL\0222\n\006grants\030\001 \003(\0132\".yan" +
+      "dex.cloud.storage.v1.ACL.Grant\032\340\003\n\005Grant" +
+      "\022G\n\npermission\030\001 \001(\0162-.yandex.cloud.stor" +
+      "age.v1.ACL.Grant.PermissionB\004\350\3071\001\022F\n\ngra" +
+      "nt_type\030\002 \001(\0162,.yandex.cloud.storage.v1." +
+      "ACL.Grant.GrantTypeB\004\350\3071\001\022\034\n\ngrantee_id\030" +
+      "\003 \001(\tB\010\212\3101\004<=50\"\243\001\n\nPermission\022\032\n\026PERMIS" +
+      "SION_UNSPECIFIED\020\000\022\033\n\027PERMISSION_FULL_CO" +
+      "NTROL\020\001\022\024\n\020PERMISSION_WRITE\020\002\022\030\n\024PERMISS" +
+      "ION_WRITE_ACP\020\003\022\023\n\017PERMISSION_READ\020\004\022\027\n\023" +
+      "PERMISSION_READ_ACP\020\005\"\201\001\n\tGrantType\022\032\n\026G" +
+      "RANT_TYPE_UNSPECIFIED\020\000\022\026\n\022GRANT_TYPE_AC" +
+      "COUNT\020\001\022&\n\"GRANT_TYPE_ALL_AUTHENTICATED_" +
+      "USERS\020\002\022\030\n\024GRANT_TYPE_ALL_USERS\020\003\"\233\001\n\024An" +
+      "onymousAccessFlags\022(\n\004read\030\001 \001(\0132\032.googl" +
+      "e.protobuf.BoolValue\022(\n\004list\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022/\n\013config_read\030\003 " +
+      "\001(\0132\032.google.protobuf.BoolValue\"\344\002\n\010Cors" +
+      "Rule\022\n\n\002id\030\001 \001(\t\022M\n\017allowed_methods\030\002 \003(" +
+      "\0162(.yandex.cloud.storage.v1.CorsRule.Met" +
+      "hodB\n\202\3101\002>0\220\3101\001\022\027\n\017allowed_headers\030\003 \003(\t" +
+      "\022\037\n\017allowed_origins\030\004 \003(\tB\006\202\3101\002>0\022\026\n\016exp" +
+      "ose_headers\030\005 \003(\t\0224\n\017max_age_seconds\030\006 \001" +
+      "(\0132\033.google.protobuf.Int64Value\"u\n\006Metho" +
+      "d\022\026\n\022METHOD_UNSPECIFIED\020\000\022\016\n\nMETHOD_GET\020" +
+      "\001\022\017\n\013METHOD_HEAD\020\002\022\017\n\013METHOD_POST\020\003\022\016\n\nM" +
+      "ETHOD_PUT\020\004\022\021\n\rMETHOD_DELETE\020\005\"\274\006\n\017Websi" +
+      "teSettings\022\r\n\005index\030\001 \001(\t\022\r\n\005error\030\002 \001(\t" +
+      "\022N\n\025redirect_all_requests\030\003 \001(\0132/.yandex" +
+      ".cloud.storage.v1.WebsiteSettings.Scheme" +
+      "\022K\n\rrouting_rules\030\004 \003(\01324.yandex.cloud.s" +
+      "torage.v1.WebsiteSettings.RoutingRule\032_\n" +
+      "\006Scheme\022C\n\010protocol\030\001 \001(\01621.yandex.cloud" +
+      ".storage.v1.WebsiteSettings.Protocol\022\020\n\010" +
+      "hostname\030\002 \001(\t\032O\n\tCondition\022\'\n\037http_erro" +
+      "r_code_returned_equals\030\001 \001(\t\022\031\n\021key_pref" +
+      "ix_equals\030\002 \001(\t\032\322\001\n\010Redirect\022\020\n\010hostname" +
+      "\030\001 \001(\t\0224\n\022http_redirect_code\030\002 \001(\tB\030\362\3071\024" +
+      "3(0[1-9]|[1-9][0-9])\022C\n\010protocol\030\003 \001(\01621" +
+      ".yandex.cloud.storage.v1.WebsiteSettings" +
+      ".Protocol\022\037\n\027replace_key_prefix_with\030\004 \001" +
+      "(\t\022\030\n\020replace_key_with\030\005 \001(\t\032\231\001\n\013Routing" +
+      "Rule\022E\n\tcondition\030\001 \001(\01322.yandex.cloud.s" +
+      "torage.v1.WebsiteSettings.Condition\022C\n\010r" +
+      "edirect\030\002 \001(\01321.yandex.cloud.storage.v1." +
+      "WebsiteSettings.Redirect\"K\n\010Protocol\022\030\n\024" +
+      "PROTOCOL_UNSPECIFIED\020\000\022\021\n\rPROTOCOL_HTTP\020" +
+      "\001\022\022\n\016PROTOCOL_HTTPS\020\002\"\345\r\n\rLifecycleRule\022" +
+      "(\n\002id\030\001 \001(\0132\034.google.protobuf.StringValu" +
+      "e\022\017\n\007enabled\030\002 \001(\010\022A\n\006filter\030\003 \001(\01321.yan" +
+      "dex.cloud.storage.v1.LifecycleRule.RuleF" +
+      "ilter\022E\n\nexpiration\030\004 \001(\01321.yandex.cloud" +
+      ".storage.v1.LifecycleRule.Expiration\022F\n\013" +
+      "transitions\030\005 \003(\01321.yandex.cloud.storage" +
+      ".v1.LifecycleRule.Transition\022[\n!abort_in" +
+      "complete_multipart_upload\030\006 \001(\01320.yandex" +
+      ".cloud.storage.v1.LifecycleRule.AfterDay" +
+      "s\022Z\n\025noncurrent_expiration\030\007 \001(\0132;.yande" +
+      "x.cloud.storage.v1.LifecycleRule.Noncurr" +
+      "entExpiration\022[\n\026noncurrent_transitions\030" +
+      "\010 \003(\0132;.yandex.cloud.storage.v1.Lifecycl" +
+      "eRule.NoncurrentTransition\022a\n\031noncurrent" +
+      "_delete_markers\030\t \001(\0132>.yandex.cloud.sto" +
+      "rage.v1.LifecycleRule.NoncurrentDeleteMa" +
+      "rkers\032G\n\tAfterDays\022:\n\025days_after_expirat" +
+      "ion\030\001 \001(\0132\033.google.protobuf.Int64Value\032O" +
+      "\n\027NoncurrentDeleteMarkers\0224\n\017noncurrent_" +
+      "days\030\001 \001(\0132\033.google.protobuf.Int64Value\032" +
+      "L\n\024NoncurrentExpiration\0224\n\017noncurrent_da" +
+      "ys\030\001 \001(\0132\033.google.protobuf.Int64Value\032i\n" +
+      "\024NoncurrentTransition\0224\n\017noncurrent_days" +
+      "\030\001 \001(\0132\033.google.protobuf.Int64Value\022\033\n\rs" +
+      "torage_class\030\002 \001(\tB\004\350\3071\001\032\204\001\n\nTransition\022" +
+      "(\n\004date\030\001 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022)\n\004days\030\002 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022\033\n\rstorage_class\030\004 \001(\tB\004\350\3071\001J\004\010\003\020\004\032" +
+      "\243\001\n\nExpiration\022(\n\004date\030\001 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022)\n\004days\030\002 \001(\0132\033.google." +
+      "protobuf.Int64Value\022@\n\034expired_object_de" +
+      "lete_marker\030\003 \001(\0132\032.google.protobuf.Bool" +
+      "Value\032\315\003\n\nRuleFilter\022\016\n\006prefix\030\001 \001(\t\022=\n\030" +
+      "object_size_greater_than\030\002 \001(\0132\033.google." +
+      "protobuf.Int64Value\022:\n\025object_size_less_" +
+      "than\030\003 \001(\0132\033.google.protobuf.Int64Value\022" +
+      ")\n\003tag\030\004 \001(\0132\034.yandex.cloud.storage.v1.T" +
+      "ag\022K\n\014and_operator\030\005 \001(\01325.yandex.cloud." +
+      "storage.v1.LifecycleRule.RuleFilter.And\032" +
+      "\273\001\n\003And\022\016\n\006prefix\030\001 \001(\t\022=\n\030object_size_g" +
+      "reater_than\030\002 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022:\n\025object_size_less_than\030\003 \001(\0132\033." +
+      "google.protobuf.Int64Value\022)\n\003tag\030\004 \003(\0132" +
+      "\034.yandex.cloud.storage.v1.Tag\"\335\001\n\010Counte" +
+      "rs\022\032\n\022simple_object_size\030\001 \001(\003\022\033\n\023simple" +
+      "_object_count\030\002 \001(\003\022\032\n\022objects_parts_siz" +
+      "e\030\003 \001(\003\022\033\n\023objects_parts_count\030\004 \001(\003\022\036\n\026" +
+      "multipart_objects_size\030\005 \001(\003\022\037\n\027multipar" +
+      "t_objects_count\030\006 \001(\003\022\036\n\026active_multipar" +
+      "t_count\030\007 \001(\003\"]\n\023OptionalSizeByClass\022\025\n\r" +
+      "storage_class\030\001 \001(\t\022/\n\nclass_size\030\002 \001(\0132" +
+      "\033.google.protobuf.Int64Value\"8\n\013SizeByCl" +
+      "ass\022\025\n\rstorage_class\030\001 \001(\t\022\022\n\nclass_size" +
+      "\030\002 \001(\003\"]\n\017CountersByClass\022\025\n\rstorage_cla" +
+      "ss\030\001 \001(\t\0223\n\010counters\030\002 \001(\0132!.yandex.clou" +
+      "d.storage.v1.Counters\"\252\004\n\013BucketStats\022\014\n" +
+      "\004name\030\001 \001(\t\022-\n\010max_size\030\002 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022\021\n\tused_size\030\003 \001(\003\022M\n" +
+      "\027storage_class_max_sizes\030\004 \003(\0132,.yandex." +
+      "cloud.storage.v1.OptionalSizeByClass\022F\n\030" +
+      "storage_class_used_sizes\030\005 \003(\0132$.yandex." +
+      "cloud.storage.v1.SizeByClass\022H\n\026storage_" +
+      "class_counters\030\006 \003(\0132(.yandex.cloud.stor" +
+      "age.v1.CountersByClass\022;\n\025default_storag" +
+      "e_class\030\007 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\022M\n\026anonymous_access_flags\030\010 \001(\0132-.ya" +
+      "ndex.cloud.storage.v1.AnonymousAccessFla" +
+      "gs\022.\n\ncreated_at\030\t \001(\0132\032.google.protobuf" +
+      ".Timestamp\022.\n\nupdated_at\030\n \001(\0132\032.google." +
+      "protobuf.Timestamp\"\301\003\n\013HTTPSConfig\022\014\n\004na" +
+      "me\030\001 \001(\t\022D\n\013source_type\030\002 \001(\0162/.yandex.c" +
+      "loud.storage.v1.HTTPSConfig.SourceType\022," +
+      "\n\006issuer\030\003 \001(\0132\034.google.protobuf.StringV" +
+      "alue\022-\n\007subject\030\004 \001(\0132\034.google.protobuf." +
+      "StringValue\022\021\n\tdns_names\030\005 \003(\t\022.\n\nnot_be" +
+      "fore\030\006 \001(\0132\032.google.protobuf.Timestamp\022-" +
+      "\n\tnot_after\030\007 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022\026\n\016certificate_id\030\010 \001(\t\"w\n\nSourceT" +
+      "ype\022\033\n\027SOURCE_TYPE_UNSPECIFIED\020\000\022\034\n\030SOUR" +
+      "CE_TYPE_SELF_MANAGED\020\001\022.\n*SOURCE_TYPE_MA" +
+      "NAGED_BY_CERTIFICATE_MANAGER\020\002\"\363\003\n\nObjec" +
+      "tLock\022D\n\006status\030\002 \001(\01624.yandex.cloud.sto" +
+      "rage.v1.ObjectLock.ObjectLockStatus\022O\n\021d" +
+      "efault_retention\030\003 \001(\01324.yandex.cloud.st" +
+      "orage.v1.ObjectLock.DefaultRetention\032\324\001\n" +
+      "\020DefaultRetention\022G\n\004mode\030\001 \001(\01629.yandex" +
+      ".cloud.storage.v1.ObjectLock.DefaultRete" +
+      "ntion.Mode\022\016\n\004days\030\002 \001(\003H\000\022\017\n\005years\030\003 \001(" +
+      "\003H\000\"F\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\023\n\017MOD" +
+      "E_GOVERNANCE\020\001\022\023\n\017MODE_COMPLIANCE\020\002B\016\n\006p" +
+      "eriod\022\004\300\3011\001\"w\n\020ObjectLockStatus\022\"\n\036OBJEC" +
+      "T_LOCK_STATUS_UNSPECIFIED\020\000\022\037\n\033OBJECT_LO" +
+      "CK_STATUS_DISABLED\020\001\022\036\n\032OBJECT_LOCK_STAT" +
+      "US_ENABLED\020\002\"\223\001\n\nEncryption\022A\n\005rules\030\001 \003" +
+      "(\01322.yandex.cloud.storage.v1.Encryption." +
+      "EncryptionRule\032B\n\016EncryptionRule\022\031\n\021kms_" +
+      "master_key_id\030\001 \001(\t\022\025\n\rsse_algorithm\030\002 \001" +
+      "(\t\"K\n\035BucketAllowedPrivateEndpoints\022\017\n\007e" +
+      "nabled\030\001 \001(\010\022\031\n\021private_endpoints\030\002 \003(\t*" +
+      "s\n\nVersioning\022\032\n\026VERSIONING_UNSPECIFIED\020" +
+      "\000\022\027\n\023VERSIONING_DISABLED\020\001\022\026\n\022VERSIONING" +
+      "_ENABLED\020\002\022\030\n\024VERSIONING_SUSPENDED\020\003Bb\n\033" +
+      "yandex.cloud.api.storage.v1ZCgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/st" +
+      "orage/v1;storageb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -43759,7 +43945,7 @@ public final class BucketOuterClass {
     internal_static_yandex_cloud_storage_v1_Bucket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_Bucket_descriptor,
-        new java.lang.String[] { "Id", "Name", "FolderId", "AnonymousAccessFlags", "DefaultStorageClass", "Versioning", "MaxSize", "Policy", "Acl", "CreatedAt", "Cors", "WebsiteSettings", "LifecycleRules", "Tags", "ObjectLock", "Encryption", "AllowedPrivateEndpoints", });
+        new java.lang.String[] { "Id", "Name", "FolderId", "AnonymousAccessFlags", "DefaultStorageClass", "Versioning", "MaxSize", "Policy", "Acl", "CreatedAt", "Cors", "WebsiteSettings", "LifecycleRules", "Tags", "ObjectLock", "Encryption", "AllowedPrivateEndpoints", "ResourceId", });
     internal_static_yandex_cloud_storage_v1_Tag_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_storage_v1_Tag_fieldAccessorTable = new

@@ -804,11 +804,980 @@ public final class ShardOuterClass {
 
   }
 
+  public interface ShardSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.spqr.v1.ShardSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the SPQR shard to create.
+     * </pre>
+     *
+     * <code>string shard_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The shardName.
+     */
+    java.lang.String getShardName();
+    /**
+     * <pre>
+     * Name of the SPQR shard to create.
+     * </pre>
+     *
+     * <code>string shard_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for shardName.
+     */
+    com.google.protobuf.ByteString
+        getShardNameBytes();
+
+    /**
+     * <pre>
+     * Properties of the MDB PostgreSQL cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+     * @return Whether the mdbPostgresql field is set.
+     */
+    boolean hasMdbPostgresql();
+    /**
+     * <pre>
+     * Properties of the MDB PostgreSQL cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+     * @return The mdbPostgresql.
+     */
+    yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL getMdbPostgresql();
+    /**
+     * <pre>
+     * Properties of the MDB PostgreSQL cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+     */
+    yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder getMdbPostgresqlOrBuilder();
+
+    public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.SpecCase getSpecCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.spqr.v1.ShardSpec}
+   */
+  public static final class ShardSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.spqr.v1.ShardSpec)
+      ShardSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShardSpec.newBuilder() to construct.
+    private ShardSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShardSpec() {
+      shardName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShardSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ShardSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              shardName_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder subBuilder = null;
+              if (specCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) spec_).toBuilder();
+              }
+              spec_ =
+                  input.readMessage(yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) spec_);
+                spec_ = subBuilder.buildPartial();
+              }
+              specCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.internal_static_yandex_cloud_mdb_spqr_v1_ShardSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.internal_static_yandex_cloud_mdb_spqr_v1_ShardSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.class, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder.class);
+    }
+
+    private int specCase_ = 0;
+    private java.lang.Object spec_;
+    public enum SpecCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      MDB_POSTGRESQL(2),
+      SPEC_NOT_SET(0);
+      private final int value;
+      private SpecCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SpecCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SpecCase forNumber(int value) {
+        switch (value) {
+          case 2: return MDB_POSTGRESQL;
+          case 0: return SPEC_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SpecCase
+    getSpecCase() {
+      return SpecCase.forNumber(
+          specCase_);
+    }
+
+    public static final int SHARD_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object shardName_;
+    /**
+     * <pre>
+     * Name of the SPQR shard to create.
+     * </pre>
+     *
+     * <code>string shard_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The shardName.
+     */
+    @java.lang.Override
+    public java.lang.String getShardName() {
+      java.lang.Object ref = shardName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        shardName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the SPQR shard to create.
+     * </pre>
+     *
+     * <code>string shard_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for shardName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getShardNameBytes() {
+      java.lang.Object ref = shardName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        shardName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MDB_POSTGRESQL_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Properties of the MDB PostgreSQL cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+     * @return Whether the mdbPostgresql field is set.
+     */
+    @java.lang.Override
+    public boolean hasMdbPostgresql() {
+      return specCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Properties of the MDB PostgreSQL cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+     * @return The mdbPostgresql.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL getMdbPostgresql() {
+      if (specCase_ == 2) {
+         return (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) spec_;
+      }
+      return yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Properties of the MDB PostgreSQL cluster
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder getMdbPostgresqlOrBuilder() {
+      if (specCase_ == 2) {
+         return (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) spec_;
+      }
+      return yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shardName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, shardName_);
+      }
+      if (specCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) spec_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shardName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, shardName_);
+      }
+      if (specCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) spec_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec other = (yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec) obj;
+
+      if (!getShardName()
+          .equals(other.getShardName())) return false;
+      if (!getSpecCase().equals(other.getSpecCase())) return false;
+      switch (specCase_) {
+        case 2:
+          if (!getMdbPostgresql()
+              .equals(other.getMdbPostgresql())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SHARD_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getShardName().hashCode();
+      switch (specCase_) {
+        case 2:
+          hash = (37 * hash) + MDB_POSTGRESQL_FIELD_NUMBER;
+          hash = (53 * hash) + getMdbPostgresql().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.spqr.v1.ShardSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.spqr.v1.ShardSpec)
+        yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.internal_static_yandex_cloud_mdb_spqr_v1_ShardSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.internal_static_yandex_cloud_mdb_spqr_v1_ShardSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.class, yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        shardName_ = "";
+
+        specCase_ = 0;
+        spec_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.internal_static_yandex_cloud_mdb_spqr_v1_ShardSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec build() {
+        yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec buildPartial() {
+        yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec result = new yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec(this);
+        result.shardName_ = shardName_;
+        if (specCase_ == 2) {
+          if (mdbPostgresqlBuilder_ == null) {
+            result.spec_ = spec_;
+          } else {
+            result.spec_ = mdbPostgresqlBuilder_.build();
+          }
+        }
+        result.specCase_ = specCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec other) {
+        if (other == yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec.getDefaultInstance()) return this;
+        if (!other.getShardName().isEmpty()) {
+          shardName_ = other.shardName_;
+          onChanged();
+        }
+        switch (other.getSpecCase()) {
+          case MDB_POSTGRESQL: {
+            mergeMdbPostgresql(other.getMdbPostgresql());
+            break;
+          }
+          case SPEC_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int specCase_ = 0;
+      private java.lang.Object spec_;
+      public SpecCase
+          getSpecCase() {
+        return SpecCase.forNumber(
+            specCase_);
+      }
+
+      public Builder clearSpec() {
+        specCase_ = 0;
+        spec_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object shardName_ = "";
+      /**
+       * <pre>
+       * Name of the SPQR shard to create.
+       * </pre>
+       *
+       * <code>string shard_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The shardName.
+       */
+      public java.lang.String getShardName() {
+        java.lang.Object ref = shardName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          shardName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the SPQR shard to create.
+       * </pre>
+       *
+       * <code>string shard_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for shardName.
+       */
+      public com.google.protobuf.ByteString
+          getShardNameBytes() {
+        java.lang.Object ref = shardName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          shardName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the SPQR shard to create.
+       * </pre>
+       *
+       * <code>string shard_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The shardName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShardName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        shardName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the SPQR shard to create.
+       * </pre>
+       *
+       * <code>string shard_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShardName() {
+        
+        shardName_ = getDefaultInstance().getShardName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the SPQR shard to create.
+       * </pre>
+       *
+       * <code>string shard_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[a-zA-Z0-9][a-zA-Z0-9-]*$", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for shardName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShardNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        shardName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder> mdbPostgresqlBuilder_;
+      /**
+       * <pre>
+       * Properties of the MDB PostgreSQL cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+       * @return Whether the mdbPostgresql field is set.
+       */
+      @java.lang.Override
+      public boolean hasMdbPostgresql() {
+        return specCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Properties of the MDB PostgreSQL cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+       * @return The mdbPostgresql.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL getMdbPostgresql() {
+        if (mdbPostgresqlBuilder_ == null) {
+          if (specCase_ == 2) {
+            return (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) spec_;
+          }
+          return yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
+        } else {
+          if (specCase_ == 2) {
+            return mdbPostgresqlBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Properties of the MDB PostgreSQL cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+       */
+      public Builder setMdbPostgresql(yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL value) {
+        if (mdbPostgresqlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          spec_ = value;
+          onChanged();
+        } else {
+          mdbPostgresqlBuilder_.setMessage(value);
+        }
+        specCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Properties of the MDB PostgreSQL cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+       */
+      public Builder setMdbPostgresql(
+          yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder builderForValue) {
+        if (mdbPostgresqlBuilder_ == null) {
+          spec_ = builderForValue.build();
+          onChanged();
+        } else {
+          mdbPostgresqlBuilder_.setMessage(builderForValue.build());
+        }
+        specCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Properties of the MDB PostgreSQL cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+       */
+      public Builder mergeMdbPostgresql(yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL value) {
+        if (mdbPostgresqlBuilder_ == null) {
+          if (specCase_ == 2 &&
+              spec_ != yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance()) {
+            spec_ = yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.newBuilder((yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) spec_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            spec_ = value;
+          }
+          onChanged();
+        } else {
+          if (specCase_ == 2) {
+            mdbPostgresqlBuilder_.mergeFrom(value);
+          }
+          mdbPostgresqlBuilder_.setMessage(value);
+        }
+        specCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Properties of the MDB PostgreSQL cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+       */
+      public Builder clearMdbPostgresql() {
+        if (mdbPostgresqlBuilder_ == null) {
+          if (specCase_ == 2) {
+            specCase_ = 0;
+            spec_ = null;
+            onChanged();
+          }
+        } else {
+          if (specCase_ == 2) {
+            specCase_ = 0;
+            spec_ = null;
+          }
+          mdbPostgresqlBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Properties of the MDB PostgreSQL cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+       */
+      public yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder getMdbPostgresqlBuilder() {
+        return getMdbPostgresqlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Properties of the MDB PostgreSQL cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder getMdbPostgresqlOrBuilder() {
+        if ((specCase_ == 2) && (mdbPostgresqlBuilder_ != null)) {
+          return mdbPostgresqlBuilder_.getMessageOrBuilder();
+        } else {
+          if (specCase_ == 2) {
+            return (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) spec_;
+          }
+          return yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Properties of the MDB PostgreSQL cluster
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL mdb_postgresql = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder> 
+          getMdbPostgresqlFieldBuilder() {
+        if (mdbPostgresqlBuilder_ == null) {
+          if (!(specCase_ == 2)) {
+            spec_ = yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.getDefaultInstance();
+          }
+          mdbPostgresqlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL.Builder, yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQLOrBuilder>(
+                  (yandex.cloud.api.mdb.spqr.v1.Config.MDBPostgreSQL) spec_,
+                  getParentForChildren(),
+                  isClean());
+          spec_ = null;
+        }
+        specCase_ = 2;
+        onChanged();;
+        return mdbPostgresqlBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.spqr.v1.ShardSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.spqr.v1.ShardSpec)
+    private static final yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec();
+    }
+
+    public static yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShardSpec>
+        PARSER = new com.google.protobuf.AbstractParser<ShardSpec>() {
+      @java.lang.Override
+      public ShardSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ShardSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShardSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShardSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.spqr.v1.ShardOuterClass.ShardSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_spqr_v1_Shard_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_spqr_v1_Shard_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_spqr_v1_ShardSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_spqr_v1_ShardSpec_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -819,15 +1788,23 @@ public final class ShardOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n$yandex/cloud/mdb/spqr/v1/shard.proto\022\030" +
-      "yandex.cloud.mdb.spqr.v1\")\n\005Shard\022\014\n\004nam" +
-      "e\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\tBa\n\034yandex.cl" +
-      "oud.api.mdb.spqr.v1ZAgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/mdb/spqr/v" +
-      "1;spqrb\006proto3"
+      "yandex.cloud.mdb.spqr.v1\032\035yandex/cloud/v" +
+      "alidation.proto\032%yandex/cloud/mdb/spqr/v" +
+      "1/config.proto\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n" +
+      "\ncluster_id\030\002 \001(\t\"\234\001\n\tShardSpec\022>\n\nshard" +
+      "_name\030\001 \001(\tB*\350\3071\001\212\3101\004<=63\362\3071\032^[a-zA-Z0-9" +
+      "][a-zA-Z0-9-]*$\022A\n\016mdb_postgresql\030\002 \001(\0132" +
+      "\'.yandex.cloud.mdb.spqr.v1.MDBPostgreSQL" +
+      "H\000B\014\n\004Spec\022\004\300\3011\001Ba\n\034yandex.cloud.api.mdb" +
+      ".spqr.v1ZAgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/mdb/spqr/v1;spqrb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          yandex.cloud.api.Validation.getDescriptor(),
+          yandex.cloud.api.mdb.spqr.v1.Config.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_spqr_v1_Shard_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -835,6 +1812,22 @@ public final class ShardOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_Shard_descriptor,
         new java.lang.String[] { "Name", "ClusterId", });
+    internal_static_yandex_cloud_mdb_spqr_v1_ShardSpec_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_mdb_spqr_v1_ShardSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_spqr_v1_ShardSpec_descriptor,
+        new java.lang.String[] { "ShardName", "MdbPostgresql", "Spec", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.exactlyOne);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.pattern);
+    registry.add(yandex.cloud.api.Validation.required);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    yandex.cloud.api.Validation.getDescriptor();
+    yandex.cloud.api.mdb.spqr.v1.Config.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

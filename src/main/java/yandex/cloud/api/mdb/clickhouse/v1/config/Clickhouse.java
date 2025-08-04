@@ -1653,6 +1653,120 @@ public final class Clickhouse {
     com.google.protobuf.Int64ValueOrBuilder getProcessorsProfileLogRetentionTimeOrBuilder();
 
     /**
+     * <pre>
+     * Enable or disable error_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+     * @return Whether the errorLogEnabled field is set.
+     */
+    boolean hasErrorLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable error_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+     * @return The errorLogEnabled.
+     */
+    com.google.protobuf.BoolValue getErrorLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable error_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getErrorLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size that error_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+     * @return Whether the errorLogRetentionSize field is set.
+     */
+    boolean hasErrorLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that error_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+     * @return The errorLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getErrorLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that error_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getErrorLogRetentionSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time that error_log records will be retained before removal.
+     * If set to 0, automatic removal of error_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+     * @return Whether the errorLogRetentionTime field is set.
+     */
+    boolean hasErrorLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that error_log records will be retained before removal.
+     * If set to 0, automatic removal of error_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+     * @return The errorLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getErrorLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that error_log records will be retained before removal.
+     * If set to 0, automatic removal of error_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getErrorLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Access control settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+     * @return Whether the accessControlImprovements field is set.
+     */
+    boolean hasAccessControlImprovements();
+    /**
+     * <pre>
+     * Access control settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+     * @return The accessControlImprovements.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements getAccessControlImprovements();
+    /**
+     * <pre>
+     * Access control settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovementsOrBuilder getAccessControlImprovementsOrBuilder();
+
+    /**
      * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
      * @return Whether the backgroundPoolSize field is set.
      */
@@ -3025,6 +3139,58 @@ public final class Clickhouse {
 
               break;
             }
+            case 594: {
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.Builder subBuilder = null;
+              if (accessControlImprovements_ != null) {
+                subBuilder = accessControlImprovements_.toBuilder();
+              }
+              accessControlImprovements_ = input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(accessControlImprovements_);
+                accessControlImprovements_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 602: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (errorLogEnabled_ != null) {
+                subBuilder = errorLogEnabled_.toBuilder();
+              }
+              errorLogEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errorLogEnabled_);
+                errorLogEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 610: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (errorLogRetentionSize_ != null) {
+                subBuilder = errorLogRetentionSize_.toBuilder();
+              }
+              errorLogRetentionSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errorLogRetentionSize_);
+                errorLogRetentionSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 618: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (errorLogRetentionTime_ != null) {
+                subBuilder = errorLogRetentionTime_.toBuilder();
+              }
+              errorLogRetentionTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errorLogRetentionTime_);
+                errorLogRetentionTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4003,6 +4169,141 @@ public final class Clickhouse {
        * <code>.google.protobuf.BoolValue materialize_ttl_recalculate_only = 31;</code>
        */
       com.google.protobuf.BoolValueOrBuilder getMaterializeTtlRecalculateOnlyOrBuilder();
+
+      /**
+       * <pre>
+       * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+       * @return Whether the fsyncAfterInsert field is set.
+       */
+      boolean hasFsyncAfterInsert();
+      /**
+       * <pre>
+       * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+       * @return The fsyncAfterInsert.
+       */
+      com.google.protobuf.BoolValue getFsyncAfterInsert();
+      /**
+       * <pre>
+       * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getFsyncAfterInsertOrBuilder();
+
+      /**
+       * <pre>
+       * Do fsync for part directory after all part operations (writes, renames, etc.).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+       * @return Whether the fsyncPartDirectory field is set.
+       */
+      boolean hasFsyncPartDirectory();
+      /**
+       * <pre>
+       * Do fsync for part directory after all part operations (writes, renames, etc.).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+       * @return The fsyncPartDirectory.
+       */
+      com.google.protobuf.BoolValue getFsyncPartDirectory();
+      /**
+       * <pre>
+       * Do fsync for part directory after all part operations (writes, renames, etc.).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getFsyncPartDirectoryOrBuilder();
+
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+       * @return Whether the minCompressedBytesToFsyncAfterFetch field is set.
+       */
+      boolean hasMinCompressedBytesToFsyncAfterFetch();
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+       * @return The minCompressedBytesToFsyncAfterFetch.
+       */
+      com.google.protobuf.Int64Value getMinCompressedBytesToFsyncAfterFetch();
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMinCompressedBytesToFsyncAfterFetchOrBuilder();
+
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+       * @return Whether the minCompressedBytesToFsyncAfterMerge field is set.
+       */
+      boolean hasMinCompressedBytesToFsyncAfterMerge();
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+       * @return The minCompressedBytesToFsyncAfterMerge.
+       */
+      com.google.protobuf.Int64Value getMinCompressedBytesToFsyncAfterMerge();
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMinCompressedBytesToFsyncAfterMergeOrBuilder();
+
+      /**
+       * <pre>
+       * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+       * @return Whether the minRowsToFsyncAfterMerge field is set.
+       */
+      boolean hasMinRowsToFsyncAfterMerge();
+      /**
+       * <pre>
+       * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+       * @return The minRowsToFsyncAfterMerge.
+       */
+      com.google.protobuf.Int64Value getMinRowsToFsyncAfterMerge();
+      /**
+       * <pre>
+       * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMinRowsToFsyncAfterMergeOrBuilder();
     }
     /**
      * <pre>
@@ -4440,6 +4741,71 @@ public final class Clickhouse {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(materializeTtlRecalculateOnly_);
                   materializeTtlRecalculateOnly_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 258: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (fsyncAfterInsert_ != null) {
+                  subBuilder = fsyncAfterInsert_.toBuilder();
+                }
+                fsyncAfterInsert_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(fsyncAfterInsert_);
+                  fsyncAfterInsert_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 266: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (fsyncPartDirectory_ != null) {
+                  subBuilder = fsyncPartDirectory_.toBuilder();
+                }
+                fsyncPartDirectory_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(fsyncPartDirectory_);
+                  fsyncPartDirectory_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 274: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (minCompressedBytesToFsyncAfterFetch_ != null) {
+                  subBuilder = minCompressedBytesToFsyncAfterFetch_.toBuilder();
+                }
+                minCompressedBytesToFsyncAfterFetch_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(minCompressedBytesToFsyncAfterFetch_);
+                  minCompressedBytesToFsyncAfterFetch_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 282: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (minCompressedBytesToFsyncAfterMerge_ != null) {
+                  subBuilder = minCompressedBytesToFsyncAfterMerge_.toBuilder();
+                }
+                minCompressedBytesToFsyncAfterMerge_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(minCompressedBytesToFsyncAfterMerge_);
+                  minCompressedBytesToFsyncAfterMerge_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 290: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (minRowsToFsyncAfterMerge_ != null) {
+                  subBuilder = minRowsToFsyncAfterMerge_.toBuilder();
+                }
+                minRowsToFsyncAfterMerge_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(minRowsToFsyncAfterMerge_);
+                  minRowsToFsyncAfterMerge_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -5856,6 +6222,196 @@ public final class Clickhouse {
         return getMaterializeTtlRecalculateOnly();
       }
 
+      public static final int FSYNC_AFTER_INSERT_FIELD_NUMBER = 32;
+      private com.google.protobuf.BoolValue fsyncAfterInsert_;
+      /**
+       * <pre>
+       * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+       * @return Whether the fsyncAfterInsert field is set.
+       */
+      @java.lang.Override
+      public boolean hasFsyncAfterInsert() {
+        return fsyncAfterInsert_ != null;
+      }
+      /**
+       * <pre>
+       * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+       * @return The fsyncAfterInsert.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getFsyncAfterInsert() {
+        return fsyncAfterInsert_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : fsyncAfterInsert_;
+      }
+      /**
+       * <pre>
+       * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getFsyncAfterInsertOrBuilder() {
+        return getFsyncAfterInsert();
+      }
+
+      public static final int FSYNC_PART_DIRECTORY_FIELD_NUMBER = 33;
+      private com.google.protobuf.BoolValue fsyncPartDirectory_;
+      /**
+       * <pre>
+       * Do fsync for part directory after all part operations (writes, renames, etc.).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+       * @return Whether the fsyncPartDirectory field is set.
+       */
+      @java.lang.Override
+      public boolean hasFsyncPartDirectory() {
+        return fsyncPartDirectory_ != null;
+      }
+      /**
+       * <pre>
+       * Do fsync for part directory after all part operations (writes, renames, etc.).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+       * @return The fsyncPartDirectory.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getFsyncPartDirectory() {
+        return fsyncPartDirectory_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : fsyncPartDirectory_;
+      }
+      /**
+       * <pre>
+       * Do fsync for part directory after all part operations (writes, renames, etc.).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getFsyncPartDirectoryOrBuilder() {
+        return getFsyncPartDirectory();
+      }
+
+      public static final int MIN_COMPRESSED_BYTES_TO_FSYNC_AFTER_FETCH_FIELD_NUMBER = 34;
+      private com.google.protobuf.Int64Value minCompressedBytesToFsyncAfterFetch_;
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+       * @return Whether the minCompressedBytesToFsyncAfterFetch field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinCompressedBytesToFsyncAfterFetch() {
+        return minCompressedBytesToFsyncAfterFetch_ != null;
+      }
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+       * @return The minCompressedBytesToFsyncAfterFetch.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMinCompressedBytesToFsyncAfterFetch() {
+        return minCompressedBytesToFsyncAfterFetch_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCompressedBytesToFsyncAfterFetch_;
+      }
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMinCompressedBytesToFsyncAfterFetchOrBuilder() {
+        return getMinCompressedBytesToFsyncAfterFetch();
+      }
+
+      public static final int MIN_COMPRESSED_BYTES_TO_FSYNC_AFTER_MERGE_FIELD_NUMBER = 35;
+      private com.google.protobuf.Int64Value minCompressedBytesToFsyncAfterMerge_;
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+       * @return Whether the minCompressedBytesToFsyncAfterMerge field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinCompressedBytesToFsyncAfterMerge() {
+        return minCompressedBytesToFsyncAfterMerge_ != null;
+      }
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+       * @return The minCompressedBytesToFsyncAfterMerge.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMinCompressedBytesToFsyncAfterMerge() {
+        return minCompressedBytesToFsyncAfterMerge_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCompressedBytesToFsyncAfterMerge_;
+      }
+      /**
+       * <pre>
+       * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMinCompressedBytesToFsyncAfterMergeOrBuilder() {
+        return getMinCompressedBytesToFsyncAfterMerge();
+      }
+
+      public static final int MIN_ROWS_TO_FSYNC_AFTER_MERGE_FIELD_NUMBER = 36;
+      private com.google.protobuf.Int64Value minRowsToFsyncAfterMerge_;
+      /**
+       * <pre>
+       * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+       * @return Whether the minRowsToFsyncAfterMerge field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinRowsToFsyncAfterMerge() {
+        return minRowsToFsyncAfterMerge_ != null;
+      }
+      /**
+       * <pre>
+       * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+       * @return The minRowsToFsyncAfterMerge.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMinRowsToFsyncAfterMerge() {
+        return minRowsToFsyncAfterMerge_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minRowsToFsyncAfterMerge_;
+      }
+      /**
+       * <pre>
+       * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMinRowsToFsyncAfterMergeOrBuilder() {
+        return getMinRowsToFsyncAfterMerge();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -5962,6 +6518,21 @@ public final class Clickhouse {
         }
         if (materializeTtlRecalculateOnly_ != null) {
           output.writeMessage(31, getMaterializeTtlRecalculateOnly());
+        }
+        if (fsyncAfterInsert_ != null) {
+          output.writeMessage(32, getFsyncAfterInsert());
+        }
+        if (fsyncPartDirectory_ != null) {
+          output.writeMessage(33, getFsyncPartDirectory());
+        }
+        if (minCompressedBytesToFsyncAfterFetch_ != null) {
+          output.writeMessage(34, getMinCompressedBytesToFsyncAfterFetch());
+        }
+        if (minCompressedBytesToFsyncAfterMerge_ != null) {
+          output.writeMessage(35, getMinCompressedBytesToFsyncAfterMerge());
+        }
+        if (minRowsToFsyncAfterMerge_ != null) {
+          output.writeMessage(36, getMinRowsToFsyncAfterMerge());
         }
         unknownFields.writeTo(output);
       }
@@ -6095,6 +6666,26 @@ public final class Clickhouse {
         if (materializeTtlRecalculateOnly_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(31, getMaterializeTtlRecalculateOnly());
+        }
+        if (fsyncAfterInsert_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(32, getFsyncAfterInsert());
+        }
+        if (fsyncPartDirectory_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(33, getFsyncPartDirectory());
+        }
+        if (minCompressedBytesToFsyncAfterFetch_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(34, getMinCompressedBytesToFsyncAfterFetch());
+        }
+        if (minCompressedBytesToFsyncAfterMerge_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(35, getMinCompressedBytesToFsyncAfterMerge());
+        }
+        if (minRowsToFsyncAfterMerge_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(36, getMinRowsToFsyncAfterMerge());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -6258,6 +6849,31 @@ public final class Clickhouse {
           if (!getMaterializeTtlRecalculateOnly()
               .equals(other.getMaterializeTtlRecalculateOnly())) return false;
         }
+        if (hasFsyncAfterInsert() != other.hasFsyncAfterInsert()) return false;
+        if (hasFsyncAfterInsert()) {
+          if (!getFsyncAfterInsert()
+              .equals(other.getFsyncAfterInsert())) return false;
+        }
+        if (hasFsyncPartDirectory() != other.hasFsyncPartDirectory()) return false;
+        if (hasFsyncPartDirectory()) {
+          if (!getFsyncPartDirectory()
+              .equals(other.getFsyncPartDirectory())) return false;
+        }
+        if (hasMinCompressedBytesToFsyncAfterFetch() != other.hasMinCompressedBytesToFsyncAfterFetch()) return false;
+        if (hasMinCompressedBytesToFsyncAfterFetch()) {
+          if (!getMinCompressedBytesToFsyncAfterFetch()
+              .equals(other.getMinCompressedBytesToFsyncAfterFetch())) return false;
+        }
+        if (hasMinCompressedBytesToFsyncAfterMerge() != other.hasMinCompressedBytesToFsyncAfterMerge()) return false;
+        if (hasMinCompressedBytesToFsyncAfterMerge()) {
+          if (!getMinCompressedBytesToFsyncAfterMerge()
+              .equals(other.getMinCompressedBytesToFsyncAfterMerge())) return false;
+        }
+        if (hasMinRowsToFsyncAfterMerge() != other.hasMinRowsToFsyncAfterMerge()) return false;
+        if (hasMinRowsToFsyncAfterMerge()) {
+          if (!getMinRowsToFsyncAfterMerge()
+              .equals(other.getMinRowsToFsyncAfterMerge())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -6388,6 +7004,26 @@ public final class Clickhouse {
         if (hasMaterializeTtlRecalculateOnly()) {
           hash = (37 * hash) + MATERIALIZE_TTL_RECALCULATE_ONLY_FIELD_NUMBER;
           hash = (53 * hash) + getMaterializeTtlRecalculateOnly().hashCode();
+        }
+        if (hasFsyncAfterInsert()) {
+          hash = (37 * hash) + FSYNC_AFTER_INSERT_FIELD_NUMBER;
+          hash = (53 * hash) + getFsyncAfterInsert().hashCode();
+        }
+        if (hasFsyncPartDirectory()) {
+          hash = (37 * hash) + FSYNC_PART_DIRECTORY_FIELD_NUMBER;
+          hash = (53 * hash) + getFsyncPartDirectory().hashCode();
+        }
+        if (hasMinCompressedBytesToFsyncAfterFetch()) {
+          hash = (37 * hash) + MIN_COMPRESSED_BYTES_TO_FSYNC_AFTER_FETCH_FIELD_NUMBER;
+          hash = (53 * hash) + getMinCompressedBytesToFsyncAfterFetch().hashCode();
+        }
+        if (hasMinCompressedBytesToFsyncAfterMerge()) {
+          hash = (37 * hash) + MIN_COMPRESSED_BYTES_TO_FSYNC_AFTER_MERGE_FIELD_NUMBER;
+          hash = (53 * hash) + getMinCompressedBytesToFsyncAfterMerge().hashCode();
+        }
+        if (hasMinRowsToFsyncAfterMerge()) {
+          hash = (37 * hash) + MIN_ROWS_TO_FSYNC_AFTER_MERGE_FIELD_NUMBER;
+          hash = (53 * hash) + getMinRowsToFsyncAfterMerge().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -6704,6 +7340,36 @@ public final class Clickhouse {
             materializeTtlRecalculateOnly_ = null;
             materializeTtlRecalculateOnlyBuilder_ = null;
           }
+          if (fsyncAfterInsertBuilder_ == null) {
+            fsyncAfterInsert_ = null;
+          } else {
+            fsyncAfterInsert_ = null;
+            fsyncAfterInsertBuilder_ = null;
+          }
+          if (fsyncPartDirectoryBuilder_ == null) {
+            fsyncPartDirectory_ = null;
+          } else {
+            fsyncPartDirectory_ = null;
+            fsyncPartDirectoryBuilder_ = null;
+          }
+          if (minCompressedBytesToFsyncAfterFetchBuilder_ == null) {
+            minCompressedBytesToFsyncAfterFetch_ = null;
+          } else {
+            minCompressedBytesToFsyncAfterFetch_ = null;
+            minCompressedBytesToFsyncAfterFetchBuilder_ = null;
+          }
+          if (minCompressedBytesToFsyncAfterMergeBuilder_ == null) {
+            minCompressedBytesToFsyncAfterMerge_ = null;
+          } else {
+            minCompressedBytesToFsyncAfterMerge_ = null;
+            minCompressedBytesToFsyncAfterMergeBuilder_ = null;
+          }
+          if (minRowsToFsyncAfterMergeBuilder_ == null) {
+            minRowsToFsyncAfterMerge_ = null;
+          } else {
+            minRowsToFsyncAfterMerge_ = null;
+            minRowsToFsyncAfterMergeBuilder_ = null;
+          }
           return this;
         }
 
@@ -6877,6 +7543,31 @@ public final class Clickhouse {
           } else {
             result.materializeTtlRecalculateOnly_ = materializeTtlRecalculateOnlyBuilder_.build();
           }
+          if (fsyncAfterInsertBuilder_ == null) {
+            result.fsyncAfterInsert_ = fsyncAfterInsert_;
+          } else {
+            result.fsyncAfterInsert_ = fsyncAfterInsertBuilder_.build();
+          }
+          if (fsyncPartDirectoryBuilder_ == null) {
+            result.fsyncPartDirectory_ = fsyncPartDirectory_;
+          } else {
+            result.fsyncPartDirectory_ = fsyncPartDirectoryBuilder_.build();
+          }
+          if (minCompressedBytesToFsyncAfterFetchBuilder_ == null) {
+            result.minCompressedBytesToFsyncAfterFetch_ = minCompressedBytesToFsyncAfterFetch_;
+          } else {
+            result.minCompressedBytesToFsyncAfterFetch_ = minCompressedBytesToFsyncAfterFetchBuilder_.build();
+          }
+          if (minCompressedBytesToFsyncAfterMergeBuilder_ == null) {
+            result.minCompressedBytesToFsyncAfterMerge_ = minCompressedBytesToFsyncAfterMerge_;
+          } else {
+            result.minCompressedBytesToFsyncAfterMerge_ = minCompressedBytesToFsyncAfterMergeBuilder_.build();
+          }
+          if (minRowsToFsyncAfterMergeBuilder_ == null) {
+            result.minRowsToFsyncAfterMerge_ = minRowsToFsyncAfterMerge_;
+          } else {
+            result.minRowsToFsyncAfterMerge_ = minRowsToFsyncAfterMergeBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -7017,6 +7708,21 @@ public final class Clickhouse {
           }
           if (other.hasMaterializeTtlRecalculateOnly()) {
             mergeMaterializeTtlRecalculateOnly(other.getMaterializeTtlRecalculateOnly());
+          }
+          if (other.hasFsyncAfterInsert()) {
+            mergeFsyncAfterInsert(other.getFsyncAfterInsert());
+          }
+          if (other.hasFsyncPartDirectory()) {
+            mergeFsyncPartDirectory(other.getFsyncPartDirectory());
+          }
+          if (other.hasMinCompressedBytesToFsyncAfterFetch()) {
+            mergeMinCompressedBytesToFsyncAfterFetch(other.getMinCompressedBytesToFsyncAfterFetch());
+          }
+          if (other.hasMinCompressedBytesToFsyncAfterMerge()) {
+            mergeMinCompressedBytesToFsyncAfterMerge(other.getMinCompressedBytesToFsyncAfterMerge());
+          }
+          if (other.hasMinRowsToFsyncAfterMerge()) {
+            mergeMinRowsToFsyncAfterMerge(other.getMinRowsToFsyncAfterMerge());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -11576,6 +12282,781 @@ public final class Clickhouse {
             materializeTtlRecalculateOnly_ = null;
           }
           return materializeTtlRecalculateOnlyBuilder_;
+        }
+
+        private com.google.protobuf.BoolValue fsyncAfterInsert_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> fsyncAfterInsertBuilder_;
+        /**
+         * <pre>
+         * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+         * @return Whether the fsyncAfterInsert field is set.
+         */
+        public boolean hasFsyncAfterInsert() {
+          return fsyncAfterInsertBuilder_ != null || fsyncAfterInsert_ != null;
+        }
+        /**
+         * <pre>
+         * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+         * @return The fsyncAfterInsert.
+         */
+        public com.google.protobuf.BoolValue getFsyncAfterInsert() {
+          if (fsyncAfterInsertBuilder_ == null) {
+            return fsyncAfterInsert_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : fsyncAfterInsert_;
+          } else {
+            return fsyncAfterInsertBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+         */
+        public Builder setFsyncAfterInsert(com.google.protobuf.BoolValue value) {
+          if (fsyncAfterInsertBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            fsyncAfterInsert_ = value;
+            onChanged();
+          } else {
+            fsyncAfterInsertBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+         */
+        public Builder setFsyncAfterInsert(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (fsyncAfterInsertBuilder_ == null) {
+            fsyncAfterInsert_ = builderForValue.build();
+            onChanged();
+          } else {
+            fsyncAfterInsertBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+         */
+        public Builder mergeFsyncAfterInsert(com.google.protobuf.BoolValue value) {
+          if (fsyncAfterInsertBuilder_ == null) {
+            if (fsyncAfterInsert_ != null) {
+              fsyncAfterInsert_ =
+                com.google.protobuf.BoolValue.newBuilder(fsyncAfterInsert_).mergeFrom(value).buildPartial();
+            } else {
+              fsyncAfterInsert_ = value;
+            }
+            onChanged();
+          } else {
+            fsyncAfterInsertBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+         */
+        public Builder clearFsyncAfterInsert() {
+          if (fsyncAfterInsertBuilder_ == null) {
+            fsyncAfterInsert_ = null;
+            onChanged();
+          } else {
+            fsyncAfterInsert_ = null;
+            fsyncAfterInsertBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getFsyncAfterInsertBuilder() {
+          
+          onChanged();
+          return getFsyncAfterInsertFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getFsyncAfterInsertOrBuilder() {
+          if (fsyncAfterInsertBuilder_ != null) {
+            return fsyncAfterInsertBuilder_.getMessageOrBuilder();
+          } else {
+            return fsyncAfterInsert_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : fsyncAfterInsert_;
+          }
+        }
+        /**
+         * <pre>
+         * Do fsync for every inserted part. Significantly decreases performance of inserts, not recommended to use with wide parts.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_after_insert = 32;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getFsyncAfterInsertFieldBuilder() {
+          if (fsyncAfterInsertBuilder_ == null) {
+            fsyncAfterInsertBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getFsyncAfterInsert(),
+                    getParentForChildren(),
+                    isClean());
+            fsyncAfterInsert_ = null;
+          }
+          return fsyncAfterInsertBuilder_;
+        }
+
+        private com.google.protobuf.BoolValue fsyncPartDirectory_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> fsyncPartDirectoryBuilder_;
+        /**
+         * <pre>
+         * Do fsync for part directory after all part operations (writes, renames, etc.).
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+         * @return Whether the fsyncPartDirectory field is set.
+         */
+        public boolean hasFsyncPartDirectory() {
+          return fsyncPartDirectoryBuilder_ != null || fsyncPartDirectory_ != null;
+        }
+        /**
+         * <pre>
+         * Do fsync for part directory after all part operations (writes, renames, etc.).
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+         * @return The fsyncPartDirectory.
+         */
+        public com.google.protobuf.BoolValue getFsyncPartDirectory() {
+          if (fsyncPartDirectoryBuilder_ == null) {
+            return fsyncPartDirectory_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : fsyncPartDirectory_;
+          } else {
+            return fsyncPartDirectoryBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Do fsync for part directory after all part operations (writes, renames, etc.).
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+         */
+        public Builder setFsyncPartDirectory(com.google.protobuf.BoolValue value) {
+          if (fsyncPartDirectoryBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            fsyncPartDirectory_ = value;
+            onChanged();
+          } else {
+            fsyncPartDirectoryBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Do fsync for part directory after all part operations (writes, renames, etc.).
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+         */
+        public Builder setFsyncPartDirectory(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (fsyncPartDirectoryBuilder_ == null) {
+            fsyncPartDirectory_ = builderForValue.build();
+            onChanged();
+          } else {
+            fsyncPartDirectoryBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Do fsync for part directory after all part operations (writes, renames, etc.).
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+         */
+        public Builder mergeFsyncPartDirectory(com.google.protobuf.BoolValue value) {
+          if (fsyncPartDirectoryBuilder_ == null) {
+            if (fsyncPartDirectory_ != null) {
+              fsyncPartDirectory_ =
+                com.google.protobuf.BoolValue.newBuilder(fsyncPartDirectory_).mergeFrom(value).buildPartial();
+            } else {
+              fsyncPartDirectory_ = value;
+            }
+            onChanged();
+          } else {
+            fsyncPartDirectoryBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Do fsync for part directory after all part operations (writes, renames, etc.).
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+         */
+        public Builder clearFsyncPartDirectory() {
+          if (fsyncPartDirectoryBuilder_ == null) {
+            fsyncPartDirectory_ = null;
+            onChanged();
+          } else {
+            fsyncPartDirectory_ = null;
+            fsyncPartDirectoryBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Do fsync for part directory after all part operations (writes, renames, etc.).
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getFsyncPartDirectoryBuilder() {
+          
+          onChanged();
+          return getFsyncPartDirectoryFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Do fsync for part directory after all part operations (writes, renames, etc.).
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getFsyncPartDirectoryOrBuilder() {
+          if (fsyncPartDirectoryBuilder_ != null) {
+            return fsyncPartDirectoryBuilder_.getMessageOrBuilder();
+          } else {
+            return fsyncPartDirectory_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : fsyncPartDirectory_;
+          }
+        }
+        /**
+         * <pre>
+         * Do fsync for part directory after all part operations (writes, renames, etc.).
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue fsync_part_directory = 33;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getFsyncPartDirectoryFieldBuilder() {
+          if (fsyncPartDirectoryBuilder_ == null) {
+            fsyncPartDirectoryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getFsyncPartDirectory(),
+                    getParentForChildren(),
+                    isClean());
+            fsyncPartDirectory_ = null;
+          }
+          return fsyncPartDirectoryBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value minCompressedBytesToFsyncAfterFetch_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCompressedBytesToFsyncAfterFetchBuilder_;
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+         * @return Whether the minCompressedBytesToFsyncAfterFetch field is set.
+         */
+        public boolean hasMinCompressedBytesToFsyncAfterFetch() {
+          return minCompressedBytesToFsyncAfterFetchBuilder_ != null || minCompressedBytesToFsyncAfterFetch_ != null;
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+         * @return The minCompressedBytesToFsyncAfterFetch.
+         */
+        public com.google.protobuf.Int64Value getMinCompressedBytesToFsyncAfterFetch() {
+          if (minCompressedBytesToFsyncAfterFetchBuilder_ == null) {
+            return minCompressedBytesToFsyncAfterFetch_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCompressedBytesToFsyncAfterFetch_;
+          } else {
+            return minCompressedBytesToFsyncAfterFetchBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+         */
+        public Builder setMinCompressedBytesToFsyncAfterFetch(com.google.protobuf.Int64Value value) {
+          if (minCompressedBytesToFsyncAfterFetchBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            minCompressedBytesToFsyncAfterFetch_ = value;
+            onChanged();
+          } else {
+            minCompressedBytesToFsyncAfterFetchBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+         */
+        public Builder setMinCompressedBytesToFsyncAfterFetch(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (minCompressedBytesToFsyncAfterFetchBuilder_ == null) {
+            minCompressedBytesToFsyncAfterFetch_ = builderForValue.build();
+            onChanged();
+          } else {
+            minCompressedBytesToFsyncAfterFetchBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+         */
+        public Builder mergeMinCompressedBytesToFsyncAfterFetch(com.google.protobuf.Int64Value value) {
+          if (minCompressedBytesToFsyncAfterFetchBuilder_ == null) {
+            if (minCompressedBytesToFsyncAfterFetch_ != null) {
+              minCompressedBytesToFsyncAfterFetch_ =
+                com.google.protobuf.Int64Value.newBuilder(minCompressedBytesToFsyncAfterFetch_).mergeFrom(value).buildPartial();
+            } else {
+              minCompressedBytesToFsyncAfterFetch_ = value;
+            }
+            onChanged();
+          } else {
+            minCompressedBytesToFsyncAfterFetchBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+         */
+        public Builder clearMinCompressedBytesToFsyncAfterFetch() {
+          if (minCompressedBytesToFsyncAfterFetchBuilder_ == null) {
+            minCompressedBytesToFsyncAfterFetch_ = null;
+            onChanged();
+          } else {
+            minCompressedBytesToFsyncAfterFetch_ = null;
+            minCompressedBytesToFsyncAfterFetchBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMinCompressedBytesToFsyncAfterFetchBuilder() {
+          
+          onChanged();
+          return getMinCompressedBytesToFsyncAfterFetchFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMinCompressedBytesToFsyncAfterFetchOrBuilder() {
+          if (minCompressedBytesToFsyncAfterFetchBuilder_ != null) {
+            return minCompressedBytesToFsyncAfterFetchBuilder_.getMessageOrBuilder();
+          } else {
+            return minCompressedBytesToFsyncAfterFetch_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : minCompressedBytesToFsyncAfterFetch_;
+          }
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after fetch. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_fetch = 34;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMinCompressedBytesToFsyncAfterFetchFieldBuilder() {
+          if (minCompressedBytesToFsyncAfterFetchBuilder_ == null) {
+            minCompressedBytesToFsyncAfterFetchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMinCompressedBytesToFsyncAfterFetch(),
+                    getParentForChildren(),
+                    isClean());
+            minCompressedBytesToFsyncAfterFetch_ = null;
+          }
+          return minCompressedBytesToFsyncAfterFetchBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value minCompressedBytesToFsyncAfterMerge_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCompressedBytesToFsyncAfterMergeBuilder_;
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+         * @return Whether the minCompressedBytesToFsyncAfterMerge field is set.
+         */
+        public boolean hasMinCompressedBytesToFsyncAfterMerge() {
+          return minCompressedBytesToFsyncAfterMergeBuilder_ != null || minCompressedBytesToFsyncAfterMerge_ != null;
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+         * @return The minCompressedBytesToFsyncAfterMerge.
+         */
+        public com.google.protobuf.Int64Value getMinCompressedBytesToFsyncAfterMerge() {
+          if (minCompressedBytesToFsyncAfterMergeBuilder_ == null) {
+            return minCompressedBytesToFsyncAfterMerge_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCompressedBytesToFsyncAfterMerge_;
+          } else {
+            return minCompressedBytesToFsyncAfterMergeBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+         */
+        public Builder setMinCompressedBytesToFsyncAfterMerge(com.google.protobuf.Int64Value value) {
+          if (minCompressedBytesToFsyncAfterMergeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            minCompressedBytesToFsyncAfterMerge_ = value;
+            onChanged();
+          } else {
+            minCompressedBytesToFsyncAfterMergeBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+         */
+        public Builder setMinCompressedBytesToFsyncAfterMerge(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (minCompressedBytesToFsyncAfterMergeBuilder_ == null) {
+            minCompressedBytesToFsyncAfterMerge_ = builderForValue.build();
+            onChanged();
+          } else {
+            minCompressedBytesToFsyncAfterMergeBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+         */
+        public Builder mergeMinCompressedBytesToFsyncAfterMerge(com.google.protobuf.Int64Value value) {
+          if (minCompressedBytesToFsyncAfterMergeBuilder_ == null) {
+            if (minCompressedBytesToFsyncAfterMerge_ != null) {
+              minCompressedBytesToFsyncAfterMerge_ =
+                com.google.protobuf.Int64Value.newBuilder(minCompressedBytesToFsyncAfterMerge_).mergeFrom(value).buildPartial();
+            } else {
+              minCompressedBytesToFsyncAfterMerge_ = value;
+            }
+            onChanged();
+          } else {
+            minCompressedBytesToFsyncAfterMergeBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+         */
+        public Builder clearMinCompressedBytesToFsyncAfterMerge() {
+          if (minCompressedBytesToFsyncAfterMergeBuilder_ == null) {
+            minCompressedBytesToFsyncAfterMerge_ = null;
+            onChanged();
+          } else {
+            minCompressedBytesToFsyncAfterMerge_ = null;
+            minCompressedBytesToFsyncAfterMergeBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMinCompressedBytesToFsyncAfterMergeBuilder() {
+          
+          onChanged();
+          return getMinCompressedBytesToFsyncAfterMergeFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMinCompressedBytesToFsyncAfterMergeOrBuilder() {
+          if (minCompressedBytesToFsyncAfterMergeBuilder_ != null) {
+            return minCompressedBytesToFsyncAfterMergeBuilder_.getMessageOrBuilder();
+          } else {
+            return minCompressedBytesToFsyncAfterMerge_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : minCompressedBytesToFsyncAfterMerge_;
+          }
+        }
+        /**
+         * <pre>
+         * Minimal number of compressed bytes to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_compressed_bytes_to_fsync_after_merge = 35;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMinCompressedBytesToFsyncAfterMergeFieldBuilder() {
+          if (minCompressedBytesToFsyncAfterMergeBuilder_ == null) {
+            minCompressedBytesToFsyncAfterMergeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMinCompressedBytesToFsyncAfterMerge(),
+                    getParentForChildren(),
+                    isClean());
+            minCompressedBytesToFsyncAfterMerge_ = null;
+          }
+          return minCompressedBytesToFsyncAfterMergeBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value minRowsToFsyncAfterMerge_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minRowsToFsyncAfterMergeBuilder_;
+        /**
+         * <pre>
+         * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+         * @return Whether the minRowsToFsyncAfterMerge field is set.
+         */
+        public boolean hasMinRowsToFsyncAfterMerge() {
+          return minRowsToFsyncAfterMergeBuilder_ != null || minRowsToFsyncAfterMerge_ != null;
+        }
+        /**
+         * <pre>
+         * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+         * @return The minRowsToFsyncAfterMerge.
+         */
+        public com.google.protobuf.Int64Value getMinRowsToFsyncAfterMerge() {
+          if (minRowsToFsyncAfterMergeBuilder_ == null) {
+            return minRowsToFsyncAfterMerge_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minRowsToFsyncAfterMerge_;
+          } else {
+            return minRowsToFsyncAfterMergeBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+         */
+        public Builder setMinRowsToFsyncAfterMerge(com.google.protobuf.Int64Value value) {
+          if (minRowsToFsyncAfterMergeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            minRowsToFsyncAfterMerge_ = value;
+            onChanged();
+          } else {
+            minRowsToFsyncAfterMergeBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+         */
+        public Builder setMinRowsToFsyncAfterMerge(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (minRowsToFsyncAfterMergeBuilder_ == null) {
+            minRowsToFsyncAfterMerge_ = builderForValue.build();
+            onChanged();
+          } else {
+            minRowsToFsyncAfterMergeBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+         */
+        public Builder mergeMinRowsToFsyncAfterMerge(com.google.protobuf.Int64Value value) {
+          if (minRowsToFsyncAfterMergeBuilder_ == null) {
+            if (minRowsToFsyncAfterMerge_ != null) {
+              minRowsToFsyncAfterMerge_ =
+                com.google.protobuf.Int64Value.newBuilder(minRowsToFsyncAfterMerge_).mergeFrom(value).buildPartial();
+            } else {
+              minRowsToFsyncAfterMerge_ = value;
+            }
+            onChanged();
+          } else {
+            minRowsToFsyncAfterMergeBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+         */
+        public Builder clearMinRowsToFsyncAfterMerge() {
+          if (minRowsToFsyncAfterMergeBuilder_ == null) {
+            minRowsToFsyncAfterMerge_ = null;
+            onChanged();
+          } else {
+            minRowsToFsyncAfterMerge_ = null;
+            minRowsToFsyncAfterMergeBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMinRowsToFsyncAfterMergeBuilder() {
+          
+          onChanged();
+          return getMinRowsToFsyncAfterMergeFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMinRowsToFsyncAfterMergeOrBuilder() {
+          if (minRowsToFsyncAfterMergeBuilder_ != null) {
+            return minRowsToFsyncAfterMergeBuilder_.getMessageOrBuilder();
+          } else {
+            return minRowsToFsyncAfterMerge_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : minRowsToFsyncAfterMerge_;
+          }
+        }
+        /**
+         * <pre>
+         * Minimal number of rows to do fsync for part after merge. 0 - disabled.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_rows_to_fsync_after_merge = 36;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMinRowsToFsyncAfterMergeFieldBuilder() {
+          if (minRowsToFsyncAfterMergeBuilder_ == null) {
+            minRowsToFsyncAfterMergeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMinRowsToFsyncAfterMerge(),
+                    getParentForChildren(),
+                    isClean());
+            minRowsToFsyncAfterMerge_ = null;
+          }
+          return minRowsToFsyncAfterMergeBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -46293,6 +47774,988 @@ public final class Clickhouse {
 
     }
 
+    public interface AccessControlImprovementsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+       * @return Whether the selectFromSystemDbRequiresGrant field is set.
+       */
+      boolean hasSelectFromSystemDbRequiresGrant();
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+       * @return The selectFromSystemDbRequiresGrant.
+       */
+      com.google.protobuf.BoolValue getSelectFromSystemDbRequiresGrant();
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getSelectFromSystemDbRequiresGrantOrBuilder();
+
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+       * @return Whether the selectFromInformationSchemaRequiresGrant field is set.
+       */
+      boolean hasSelectFromInformationSchemaRequiresGrant();
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+       * @return The selectFromInformationSchemaRequiresGrant.
+       */
+      com.google.protobuf.BoolValue getSelectFromInformationSchemaRequiresGrant();
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getSelectFromInformationSchemaRequiresGrantOrBuilder();
+    }
+    /**
+     * <pre>
+     * Access control settings.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements}
+     */
+    public static final class AccessControlImprovements extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements)
+        AccessControlImprovementsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AccessControlImprovements.newBuilder() to construct.
+      private AccessControlImprovements(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AccessControlImprovements() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AccessControlImprovements();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AccessControlImprovements(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (selectFromSystemDbRequiresGrant_ != null) {
+                  subBuilder = selectFromSystemDbRequiresGrant_.toBuilder();
+                }
+                selectFromSystemDbRequiresGrant_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(selectFromSystemDbRequiresGrant_);
+                  selectFromSystemDbRequiresGrant_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (selectFromInformationSchemaRequiresGrant_ != null) {
+                  subBuilder = selectFromInformationSchemaRequiresGrant_.toBuilder();
+                }
+                selectFromInformationSchemaRequiresGrant_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(selectFromInformationSchemaRequiresGrant_);
+                  selectFromInformationSchemaRequiresGrant_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.class, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.Builder.class);
+      }
+
+      public static final int SELECT_FROM_SYSTEM_DB_REQUIRES_GRANT_FIELD_NUMBER = 1;
+      private com.google.protobuf.BoolValue selectFromSystemDbRequiresGrant_;
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+       * @return Whether the selectFromSystemDbRequiresGrant field is set.
+       */
+      @java.lang.Override
+      public boolean hasSelectFromSystemDbRequiresGrant() {
+        return selectFromSystemDbRequiresGrant_ != null;
+      }
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+       * @return The selectFromSystemDbRequiresGrant.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getSelectFromSystemDbRequiresGrant() {
+        return selectFromSystemDbRequiresGrant_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : selectFromSystemDbRequiresGrant_;
+      }
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getSelectFromSystemDbRequiresGrantOrBuilder() {
+        return getSelectFromSystemDbRequiresGrant();
+      }
+
+      public static final int SELECT_FROM_INFORMATION_SCHEMA_REQUIRES_GRANT_FIELD_NUMBER = 2;
+      private com.google.protobuf.BoolValue selectFromInformationSchemaRequiresGrant_;
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+       * @return Whether the selectFromInformationSchemaRequiresGrant field is set.
+       */
+      @java.lang.Override
+      public boolean hasSelectFromInformationSchemaRequiresGrant() {
+        return selectFromInformationSchemaRequiresGrant_ != null;
+      }
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+       * @return The selectFromInformationSchemaRequiresGrant.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getSelectFromInformationSchemaRequiresGrant() {
+        return selectFromInformationSchemaRequiresGrant_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : selectFromInformationSchemaRequiresGrant_;
+      }
+      /**
+       * <pre>
+       * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+       * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getSelectFromInformationSchemaRequiresGrantOrBuilder() {
+        return getSelectFromInformationSchemaRequiresGrant();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (selectFromSystemDbRequiresGrant_ != null) {
+          output.writeMessage(1, getSelectFromSystemDbRequiresGrant());
+        }
+        if (selectFromInformationSchemaRequiresGrant_ != null) {
+          output.writeMessage(2, getSelectFromInformationSchemaRequiresGrant());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (selectFromSystemDbRequiresGrant_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getSelectFromSystemDbRequiresGrant());
+        }
+        if (selectFromInformationSchemaRequiresGrant_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getSelectFromInformationSchemaRequiresGrant());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements) obj;
+
+        if (hasSelectFromSystemDbRequiresGrant() != other.hasSelectFromSystemDbRequiresGrant()) return false;
+        if (hasSelectFromSystemDbRequiresGrant()) {
+          if (!getSelectFromSystemDbRequiresGrant()
+              .equals(other.getSelectFromSystemDbRequiresGrant())) return false;
+        }
+        if (hasSelectFromInformationSchemaRequiresGrant() != other.hasSelectFromInformationSchemaRequiresGrant()) return false;
+        if (hasSelectFromInformationSchemaRequiresGrant()) {
+          if (!getSelectFromInformationSchemaRequiresGrant()
+              .equals(other.getSelectFromInformationSchemaRequiresGrant())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasSelectFromSystemDbRequiresGrant()) {
+          hash = (37 * hash) + SELECT_FROM_SYSTEM_DB_REQUIRES_GRANT_FIELD_NUMBER;
+          hash = (53 * hash) + getSelectFromSystemDbRequiresGrant().hashCode();
+        }
+        if (hasSelectFromInformationSchemaRequiresGrant()) {
+          hash = (37 * hash) + SELECT_FROM_INFORMATION_SCHEMA_REQUIRES_GRANT_FIELD_NUMBER;
+          hash = (53 * hash) + getSelectFromInformationSchemaRequiresGrant().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Access control settings.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements)
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovementsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.class, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (selectFromSystemDbRequiresGrantBuilder_ == null) {
+            selectFromSystemDbRequiresGrant_ = null;
+          } else {
+            selectFromSystemDbRequiresGrant_ = null;
+            selectFromSystemDbRequiresGrantBuilder_ = null;
+          }
+          if (selectFromInformationSchemaRequiresGrantBuilder_ == null) {
+            selectFromInformationSchemaRequiresGrant_ = null;
+          } else {
+            selectFromInformationSchemaRequiresGrant_ = null;
+            selectFromInformationSchemaRequiresGrantBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements build() {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements buildPartial() {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements(this);
+          if (selectFromSystemDbRequiresGrantBuilder_ == null) {
+            result.selectFromSystemDbRequiresGrant_ = selectFromSystemDbRequiresGrant_;
+          } else {
+            result.selectFromSystemDbRequiresGrant_ = selectFromSystemDbRequiresGrantBuilder_.build();
+          }
+          if (selectFromInformationSchemaRequiresGrantBuilder_ == null) {
+            result.selectFromInformationSchemaRequiresGrant_ = selectFromInformationSchemaRequiresGrant_;
+          } else {
+            result.selectFromInformationSchemaRequiresGrant_ = selectFromInformationSchemaRequiresGrantBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements) {
+            return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements other) {
+          if (other == yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.getDefaultInstance()) return this;
+          if (other.hasSelectFromSystemDbRequiresGrant()) {
+            mergeSelectFromSystemDbRequiresGrant(other.getSelectFromSystemDbRequiresGrant());
+          }
+          if (other.hasSelectFromInformationSchemaRequiresGrant()) {
+            mergeSelectFromInformationSchemaRequiresGrant(other.getSelectFromInformationSchemaRequiresGrant());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.BoolValue selectFromSystemDbRequiresGrant_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> selectFromSystemDbRequiresGrantBuilder_;
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+         * @return Whether the selectFromSystemDbRequiresGrant field is set.
+         */
+        public boolean hasSelectFromSystemDbRequiresGrant() {
+          return selectFromSystemDbRequiresGrantBuilder_ != null || selectFromSystemDbRequiresGrant_ != null;
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+         * @return The selectFromSystemDbRequiresGrant.
+         */
+        public com.google.protobuf.BoolValue getSelectFromSystemDbRequiresGrant() {
+          if (selectFromSystemDbRequiresGrantBuilder_ == null) {
+            return selectFromSystemDbRequiresGrant_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : selectFromSystemDbRequiresGrant_;
+          } else {
+            return selectFromSystemDbRequiresGrantBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+         */
+        public Builder setSelectFromSystemDbRequiresGrant(com.google.protobuf.BoolValue value) {
+          if (selectFromSystemDbRequiresGrantBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            selectFromSystemDbRequiresGrant_ = value;
+            onChanged();
+          } else {
+            selectFromSystemDbRequiresGrantBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+         */
+        public Builder setSelectFromSystemDbRequiresGrant(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (selectFromSystemDbRequiresGrantBuilder_ == null) {
+            selectFromSystemDbRequiresGrant_ = builderForValue.build();
+            onChanged();
+          } else {
+            selectFromSystemDbRequiresGrantBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+         */
+        public Builder mergeSelectFromSystemDbRequiresGrant(com.google.protobuf.BoolValue value) {
+          if (selectFromSystemDbRequiresGrantBuilder_ == null) {
+            if (selectFromSystemDbRequiresGrant_ != null) {
+              selectFromSystemDbRequiresGrant_ =
+                com.google.protobuf.BoolValue.newBuilder(selectFromSystemDbRequiresGrant_).mergeFrom(value).buildPartial();
+            } else {
+              selectFromSystemDbRequiresGrant_ = value;
+            }
+            onChanged();
+          } else {
+            selectFromSystemDbRequiresGrantBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+         */
+        public Builder clearSelectFromSystemDbRequiresGrant() {
+          if (selectFromSystemDbRequiresGrantBuilder_ == null) {
+            selectFromSystemDbRequiresGrant_ = null;
+            onChanged();
+          } else {
+            selectFromSystemDbRequiresGrant_ = null;
+            selectFromSystemDbRequiresGrantBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getSelectFromSystemDbRequiresGrantBuilder() {
+          
+          onChanged();
+          return getSelectFromSystemDbRequiresGrantFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getSelectFromSystemDbRequiresGrantOrBuilder() {
+          if (selectFromSystemDbRequiresGrantBuilder_ != null) {
+            return selectFromSystemDbRequiresGrantBuilder_.getMessageOrBuilder();
+          } else {
+            return selectFromSystemDbRequiresGrant_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : selectFromSystemDbRequiresGrant_;
+          }
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM system.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true then this query requires GRANT SELECT ON system.&lt;table&gt; just as for non-system tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_system_db_requires_grant = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getSelectFromSystemDbRequiresGrantFieldBuilder() {
+          if (selectFromSystemDbRequiresGrantBuilder_ == null) {
+            selectFromSystemDbRequiresGrantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getSelectFromSystemDbRequiresGrant(),
+                    getParentForChildren(),
+                    isClean());
+            selectFromSystemDbRequiresGrant_ = null;
+          }
+          return selectFromSystemDbRequiresGrantBuilder_;
+        }
+
+        private com.google.protobuf.BoolValue selectFromInformationSchemaRequiresGrant_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> selectFromInformationSchemaRequiresGrantBuilder_;
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+         * @return Whether the selectFromInformationSchemaRequiresGrant field is set.
+         */
+        public boolean hasSelectFromInformationSchemaRequiresGrant() {
+          return selectFromInformationSchemaRequiresGrantBuilder_ != null || selectFromInformationSchemaRequiresGrant_ != null;
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+         * @return The selectFromInformationSchemaRequiresGrant.
+         */
+        public com.google.protobuf.BoolValue getSelectFromInformationSchemaRequiresGrant() {
+          if (selectFromInformationSchemaRequiresGrantBuilder_ == null) {
+            return selectFromInformationSchemaRequiresGrant_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : selectFromInformationSchemaRequiresGrant_;
+          } else {
+            return selectFromInformationSchemaRequiresGrantBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+         */
+        public Builder setSelectFromInformationSchemaRequiresGrant(com.google.protobuf.BoolValue value) {
+          if (selectFromInformationSchemaRequiresGrantBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            selectFromInformationSchemaRequiresGrant_ = value;
+            onChanged();
+          } else {
+            selectFromInformationSchemaRequiresGrantBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+         */
+        public Builder setSelectFromInformationSchemaRequiresGrant(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (selectFromInformationSchemaRequiresGrantBuilder_ == null) {
+            selectFromInformationSchemaRequiresGrant_ = builderForValue.build();
+            onChanged();
+          } else {
+            selectFromInformationSchemaRequiresGrantBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+         */
+        public Builder mergeSelectFromInformationSchemaRequiresGrant(com.google.protobuf.BoolValue value) {
+          if (selectFromInformationSchemaRequiresGrantBuilder_ == null) {
+            if (selectFromInformationSchemaRequiresGrant_ != null) {
+              selectFromInformationSchemaRequiresGrant_ =
+                com.google.protobuf.BoolValue.newBuilder(selectFromInformationSchemaRequiresGrant_).mergeFrom(value).buildPartial();
+            } else {
+              selectFromInformationSchemaRequiresGrant_ = value;
+            }
+            onChanged();
+          } else {
+            selectFromInformationSchemaRequiresGrantBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+         */
+        public Builder clearSelectFromInformationSchemaRequiresGrant() {
+          if (selectFromInformationSchemaRequiresGrantBuilder_ == null) {
+            selectFromInformationSchemaRequiresGrant_ = null;
+            onChanged();
+          } else {
+            selectFromInformationSchemaRequiresGrant_ = null;
+            selectFromInformationSchemaRequiresGrantBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getSelectFromInformationSchemaRequiresGrantBuilder() {
+          
+          onChanged();
+          return getSelectFromInformationSchemaRequiresGrantFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getSelectFromInformationSchemaRequiresGrantOrBuilder() {
+          if (selectFromInformationSchemaRequiresGrantBuilder_ != null) {
+            return selectFromInformationSchemaRequiresGrantBuilder_.getMessageOrBuilder();
+          } else {
+            return selectFromInformationSchemaRequiresGrant_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : selectFromInformationSchemaRequiresGrant_;
+          }
+        }
+        /**
+         * <pre>
+         * Sets whether SELECT * FROM information_schema.&lt;table&gt; requires any grants and can be executed by any user.
+         * If set to true, then this query requires GRANT SELECT ON information_schema.&lt;table&gt;, just as for ordinary tables.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue select_from_information_schema_requires_grant = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getSelectFromInformationSchemaRequiresGrantFieldBuilder() {
+          if (selectFromInformationSchemaRequiresGrantBuilder_ == null) {
+            selectFromInformationSchemaRequiresGrantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getSelectFromInformationSchemaRequiresGrant(),
+                    getParentForChildren(),
+                    isClean());
+            selectFromInformationSchemaRequiresGrant_ = null;
+          }
+          return selectFromInformationSchemaRequiresGrantBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements)
+      private static final yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements();
+      }
+
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AccessControlImprovements>
+          PARSER = new com.google.protobuf.AbstractParser<AccessControlImprovements>() {
+        @java.lang.Override
+        public AccessControlImprovements parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AccessControlImprovements(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AccessControlImprovements> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AccessControlImprovements> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int LOG_LEVEL_FIELD_NUMBER = 1;
     private int logLevel_;
     /**
@@ -48598,6 +51061,164 @@ public final class Clickhouse {
       return getProcessorsProfileLogRetentionTime();
     }
 
+    public static final int ERROR_LOG_ENABLED_FIELD_NUMBER = 75;
+    private com.google.protobuf.BoolValue errorLogEnabled_;
+    /**
+     * <pre>
+     * Enable or disable error_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+     * @return Whether the errorLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasErrorLogEnabled() {
+      return errorLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Enable or disable error_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+     * @return The errorLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getErrorLogEnabled() {
+      return errorLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : errorLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Enable or disable error_log system table.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getErrorLogEnabledOrBuilder() {
+      return getErrorLogEnabled();
+    }
+
+    public static final int ERROR_LOG_RETENTION_SIZE_FIELD_NUMBER = 76;
+    private com.google.protobuf.Int64Value errorLogRetentionSize_;
+    /**
+     * <pre>
+     * The maximum size that error_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+     * @return Whether the errorLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasErrorLogRetentionSize() {
+      return errorLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size that error_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+     * @return The errorLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getErrorLogRetentionSize() {
+      return errorLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : errorLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * The maximum size that error_log can grow to before old data will be removed.
+     * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getErrorLogRetentionSizeOrBuilder() {
+      return getErrorLogRetentionSize();
+    }
+
+    public static final int ERROR_LOG_RETENTION_TIME_FIELD_NUMBER = 77;
+    private com.google.protobuf.Int64Value errorLogRetentionTime_;
+    /**
+     * <pre>
+     * The maximum time that error_log records will be retained before removal.
+     * If set to 0, automatic removal of error_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+     * @return Whether the errorLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasErrorLogRetentionTime() {
+      return errorLogRetentionTime_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time that error_log records will be retained before removal.
+     * If set to 0, automatic removal of error_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+     * @return The errorLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getErrorLogRetentionTime() {
+      return errorLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : errorLogRetentionTime_;
+    }
+    /**
+     * <pre>
+     * The maximum time that error_log records will be retained before removal.
+     * If set to 0, automatic removal of error_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getErrorLogRetentionTimeOrBuilder() {
+      return getErrorLogRetentionTime();
+    }
+
+    public static final int ACCESS_CONTROL_IMPROVEMENTS_FIELD_NUMBER = 74;
+    private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements accessControlImprovements_;
+    /**
+     * <pre>
+     * Access control settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+     * @return Whether the accessControlImprovements field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessControlImprovements() {
+      return accessControlImprovements_ != null;
+    }
+    /**
+     * <pre>
+     * Access control settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+     * @return The accessControlImprovements.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements getAccessControlImprovements() {
+      return accessControlImprovements_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.getDefaultInstance() : accessControlImprovements_;
+    }
+    /**
+     * <pre>
+     * Access control settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovementsOrBuilder getAccessControlImprovementsOrBuilder() {
+      return getAccessControlImprovements();
+    }
+
     public static final int BACKGROUND_POOL_SIZE_FIELD_NUMBER = 33;
     private com.google.protobuf.Int64Value backgroundPoolSize_;
     /**
@@ -49423,6 +52044,18 @@ public final class Clickhouse {
       if (processorsProfileLogRetentionTime_ != null) {
         output.writeMessage(73, getProcessorsProfileLogRetentionTime());
       }
+      if (accessControlImprovements_ != null) {
+        output.writeMessage(74, getAccessControlImprovements());
+      }
+      if (errorLogEnabled_ != null) {
+        output.writeMessage(75, getErrorLogEnabled());
+      }
+      if (errorLogRetentionSize_ != null) {
+        output.writeMessage(76, getErrorLogRetentionSize());
+      }
+      if (errorLogRetentionTime_ != null) {
+        output.writeMessage(77, getErrorLogRetentionTime());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -49722,6 +52355,22 @@ public final class Clickhouse {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(73, getProcessorsProfileLogRetentionTime());
       }
+      if (accessControlImprovements_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(74, getAccessControlImprovements());
+      }
+      if (errorLogEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(75, getErrorLogEnabled());
+      }
+      if (errorLogRetentionSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(76, getErrorLogRetentionSize());
+      }
+      if (errorLogRetentionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(77, getErrorLogRetentionTime());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -49995,6 +52644,26 @@ public final class Clickhouse {
       if (hasProcessorsProfileLogRetentionTime()) {
         if (!getProcessorsProfileLogRetentionTime()
             .equals(other.getProcessorsProfileLogRetentionTime())) return false;
+      }
+      if (hasErrorLogEnabled() != other.hasErrorLogEnabled()) return false;
+      if (hasErrorLogEnabled()) {
+        if (!getErrorLogEnabled()
+            .equals(other.getErrorLogEnabled())) return false;
+      }
+      if (hasErrorLogRetentionSize() != other.hasErrorLogRetentionSize()) return false;
+      if (hasErrorLogRetentionSize()) {
+        if (!getErrorLogRetentionSize()
+            .equals(other.getErrorLogRetentionSize())) return false;
+      }
+      if (hasErrorLogRetentionTime() != other.hasErrorLogRetentionTime()) return false;
+      if (hasErrorLogRetentionTime()) {
+        if (!getErrorLogRetentionTime()
+            .equals(other.getErrorLogRetentionTime())) return false;
+      }
+      if (hasAccessControlImprovements() != other.hasAccessControlImprovements()) return false;
+      if (hasAccessControlImprovements()) {
+        if (!getAccessControlImprovements()
+            .equals(other.getAccessControlImprovements())) return false;
       }
       if (hasBackgroundPoolSize() != other.hasBackgroundPoolSize()) return false;
       if (hasBackgroundPoolSize()) {
@@ -50303,6 +52972,22 @@ public final class Clickhouse {
       if (hasProcessorsProfileLogRetentionTime()) {
         hash = (37 * hash) + PROCESSORS_PROFILE_LOG_RETENTION_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getProcessorsProfileLogRetentionTime().hashCode();
+      }
+      if (hasErrorLogEnabled()) {
+        hash = (37 * hash) + ERROR_LOG_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getErrorLogEnabled().hashCode();
+      }
+      if (hasErrorLogRetentionSize()) {
+        hash = (37 * hash) + ERROR_LOG_RETENTION_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getErrorLogRetentionSize().hashCode();
+      }
+      if (hasErrorLogRetentionTime()) {
+        hash = (37 * hash) + ERROR_LOG_RETENTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getErrorLogRetentionTime().hashCode();
+      }
+      if (hasAccessControlImprovements()) {
+        hash = (37 * hash) + ACCESS_CONTROL_IMPROVEMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessControlImprovements().hashCode();
       }
       if (hasBackgroundPoolSize()) {
         hash = (37 * hash) + BACKGROUND_POOL_SIZE_FIELD_NUMBER;
@@ -50838,6 +53523,30 @@ public final class Clickhouse {
           processorsProfileLogRetentionTime_ = null;
           processorsProfileLogRetentionTimeBuilder_ = null;
         }
+        if (errorLogEnabledBuilder_ == null) {
+          errorLogEnabled_ = null;
+        } else {
+          errorLogEnabled_ = null;
+          errorLogEnabledBuilder_ = null;
+        }
+        if (errorLogRetentionSizeBuilder_ == null) {
+          errorLogRetentionSize_ = null;
+        } else {
+          errorLogRetentionSize_ = null;
+          errorLogRetentionSizeBuilder_ = null;
+        }
+        if (errorLogRetentionTimeBuilder_ == null) {
+          errorLogRetentionTime_ = null;
+        } else {
+          errorLogRetentionTime_ = null;
+          errorLogRetentionTimeBuilder_ = null;
+        }
+        if (accessControlImprovementsBuilder_ == null) {
+          accessControlImprovements_ = null;
+        } else {
+          accessControlImprovements_ = null;
+          accessControlImprovementsBuilder_ = null;
+        }
         if (backgroundPoolSizeBuilder_ == null) {
           backgroundPoolSize_ = null;
         } else {
@@ -51246,6 +53955,26 @@ public final class Clickhouse {
         } else {
           result.processorsProfileLogRetentionTime_ = processorsProfileLogRetentionTimeBuilder_.build();
         }
+        if (errorLogEnabledBuilder_ == null) {
+          result.errorLogEnabled_ = errorLogEnabled_;
+        } else {
+          result.errorLogEnabled_ = errorLogEnabledBuilder_.build();
+        }
+        if (errorLogRetentionSizeBuilder_ == null) {
+          result.errorLogRetentionSize_ = errorLogRetentionSize_;
+        } else {
+          result.errorLogRetentionSize_ = errorLogRetentionSizeBuilder_.build();
+        }
+        if (errorLogRetentionTimeBuilder_ == null) {
+          result.errorLogRetentionTime_ = errorLogRetentionTime_;
+        } else {
+          result.errorLogRetentionTime_ = errorLogRetentionTimeBuilder_.build();
+        }
+        if (accessControlImprovementsBuilder_ == null) {
+          result.accessControlImprovements_ = accessControlImprovements_;
+        } else {
+          result.accessControlImprovements_ = accessControlImprovementsBuilder_.build();
+        }
         if (backgroundPoolSizeBuilder_ == null) {
           result.backgroundPoolSize_ = backgroundPoolSize_;
         } else {
@@ -51642,6 +54371,18 @@ public final class Clickhouse {
         }
         if (other.hasProcessorsProfileLogRetentionTime()) {
           mergeProcessorsProfileLogRetentionTime(other.getProcessorsProfileLogRetentionTime());
+        }
+        if (other.hasErrorLogEnabled()) {
+          mergeErrorLogEnabled(other.getErrorLogEnabled());
+        }
+        if (other.hasErrorLogRetentionSize()) {
+          mergeErrorLogRetentionSize(other.getErrorLogRetentionSize());
+        }
+        if (other.hasErrorLogRetentionTime()) {
+          mergeErrorLogRetentionTime(other.getErrorLogRetentionTime());
+        }
+        if (other.hasAccessControlImprovements()) {
+          mergeAccessControlImprovements(other.getAccessControlImprovements());
         }
         if (other.hasBackgroundPoolSize()) {
           mergeBackgroundPoolSize(other.getBackgroundPoolSize());
@@ -61091,6 +63832,644 @@ public final class Clickhouse {
         return processorsProfileLogRetentionTimeBuilder_;
       }
 
+      private com.google.protobuf.BoolValue errorLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> errorLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Enable or disable error_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+       * @return Whether the errorLogEnabled field is set.
+       */
+      public boolean hasErrorLogEnabled() {
+        return errorLogEnabledBuilder_ != null || errorLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Enable or disable error_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+       * @return The errorLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getErrorLogEnabled() {
+        if (errorLogEnabledBuilder_ == null) {
+          return errorLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : errorLogEnabled_;
+        } else {
+          return errorLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable error_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+       */
+      public Builder setErrorLogEnabled(com.google.protobuf.BoolValue value) {
+        if (errorLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errorLogEnabled_ = value;
+          onChanged();
+        } else {
+          errorLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable error_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+       */
+      public Builder setErrorLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (errorLogEnabledBuilder_ == null) {
+          errorLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          errorLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable error_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+       */
+      public Builder mergeErrorLogEnabled(com.google.protobuf.BoolValue value) {
+        if (errorLogEnabledBuilder_ == null) {
+          if (errorLogEnabled_ != null) {
+            errorLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(errorLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            errorLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          errorLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable error_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+       */
+      public Builder clearErrorLogEnabled() {
+        if (errorLogEnabledBuilder_ == null) {
+          errorLogEnabled_ = null;
+          onChanged();
+        } else {
+          errorLogEnabled_ = null;
+          errorLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable error_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getErrorLogEnabledBuilder() {
+        
+        onChanged();
+        return getErrorLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable or disable error_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getErrorLogEnabledOrBuilder() {
+        if (errorLogEnabledBuilder_ != null) {
+          return errorLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return errorLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : errorLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable error_log system table.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue error_log_enabled = 75;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getErrorLogEnabledFieldBuilder() {
+        if (errorLogEnabledBuilder_ == null) {
+          errorLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getErrorLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          errorLogEnabled_ = null;
+        }
+        return errorLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value errorLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> errorLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum size that error_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+       * @return Whether the errorLogRetentionSize field is set.
+       */
+      public boolean hasErrorLogRetentionSize() {
+        return errorLogRetentionSizeBuilder_ != null || errorLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size that error_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+       * @return The errorLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getErrorLogRetentionSize() {
+        if (errorLogRetentionSizeBuilder_ == null) {
+          return errorLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : errorLogRetentionSize_;
+        } else {
+          return errorLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that error_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+       */
+      public Builder setErrorLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (errorLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errorLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          errorLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that error_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+       */
+      public Builder setErrorLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (errorLogRetentionSizeBuilder_ == null) {
+          errorLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          errorLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that error_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+       */
+      public Builder mergeErrorLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (errorLogRetentionSizeBuilder_ == null) {
+          if (errorLogRetentionSize_ != null) {
+            errorLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(errorLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            errorLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          errorLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that error_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+       */
+      public Builder clearErrorLogRetentionSize() {
+        if (errorLogRetentionSizeBuilder_ == null) {
+          errorLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          errorLogRetentionSize_ = null;
+          errorLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that error_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getErrorLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getErrorLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size that error_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getErrorLogRetentionSizeOrBuilder() {
+        if (errorLogRetentionSizeBuilder_ != null) {
+          return errorLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return errorLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : errorLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that error_log can grow to before old data will be removed.
+       * If set to 0 (default), automatic removal of error_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_size = 76;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getErrorLogRetentionSizeFieldBuilder() {
+        if (errorLogRetentionSizeBuilder_ == null) {
+          errorLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getErrorLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          errorLogRetentionSize_ = null;
+        }
+        return errorLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value errorLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> errorLogRetentionTimeBuilder_;
+      /**
+       * <pre>
+       * The maximum time that error_log records will be retained before removal.
+       * If set to 0, automatic removal of error_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+       * @return Whether the errorLogRetentionTime field is set.
+       */
+      public boolean hasErrorLogRetentionTime() {
+        return errorLogRetentionTimeBuilder_ != null || errorLogRetentionTime_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time that error_log records will be retained before removal.
+       * If set to 0, automatic removal of error_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+       * @return The errorLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getErrorLogRetentionTime() {
+        if (errorLogRetentionTimeBuilder_ == null) {
+          return errorLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : errorLogRetentionTime_;
+        } else {
+          return errorLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that error_log records will be retained before removal.
+       * If set to 0, automatic removal of error_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+       */
+      public Builder setErrorLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (errorLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errorLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          errorLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that error_log records will be retained before removal.
+       * If set to 0, automatic removal of error_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+       */
+      public Builder setErrorLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (errorLogRetentionTimeBuilder_ == null) {
+          errorLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          errorLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that error_log records will be retained before removal.
+       * If set to 0, automatic removal of error_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+       */
+      public Builder mergeErrorLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (errorLogRetentionTimeBuilder_ == null) {
+          if (errorLogRetentionTime_ != null) {
+            errorLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(errorLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            errorLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          errorLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that error_log records will be retained before removal.
+       * If set to 0, automatic removal of error_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+       */
+      public Builder clearErrorLogRetentionTime() {
+        if (errorLogRetentionTimeBuilder_ == null) {
+          errorLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          errorLogRetentionTime_ = null;
+          errorLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that error_log records will be retained before removal.
+       * If set to 0, automatic removal of error_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getErrorLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getErrorLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time that error_log records will be retained before removal.
+       * If set to 0, automatic removal of error_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getErrorLogRetentionTimeOrBuilder() {
+        if (errorLogRetentionTimeBuilder_ != null) {
+          return errorLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return errorLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : errorLogRetentionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that error_log records will be retained before removal.
+       * If set to 0, automatic removal of error_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value error_log_retention_time = 77;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getErrorLogRetentionTimeFieldBuilder() {
+        if (errorLogRetentionTimeBuilder_ == null) {
+          errorLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getErrorLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          errorLogRetentionTime_ = null;
+        }
+        return errorLogRetentionTimeBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements accessControlImprovements_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovementsOrBuilder> accessControlImprovementsBuilder_;
+      /**
+       * <pre>
+       * Access control settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+       * @return Whether the accessControlImprovements field is set.
+       */
+      public boolean hasAccessControlImprovements() {
+        return accessControlImprovementsBuilder_ != null || accessControlImprovements_ != null;
+      }
+      /**
+       * <pre>
+       * Access control settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+       * @return The accessControlImprovements.
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements getAccessControlImprovements() {
+        if (accessControlImprovementsBuilder_ == null) {
+          return accessControlImprovements_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.getDefaultInstance() : accessControlImprovements_;
+        } else {
+          return accessControlImprovementsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Access control settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+       */
+      public Builder setAccessControlImprovements(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements value) {
+        if (accessControlImprovementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessControlImprovements_ = value;
+          onChanged();
+        } else {
+          accessControlImprovementsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access control settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+       */
+      public Builder setAccessControlImprovements(
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.Builder builderForValue) {
+        if (accessControlImprovementsBuilder_ == null) {
+          accessControlImprovements_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessControlImprovementsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access control settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+       */
+      public Builder mergeAccessControlImprovements(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements value) {
+        if (accessControlImprovementsBuilder_ == null) {
+          if (accessControlImprovements_ != null) {
+            accessControlImprovements_ =
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.newBuilder(accessControlImprovements_).mergeFrom(value).buildPartial();
+          } else {
+            accessControlImprovements_ = value;
+          }
+          onChanged();
+        } else {
+          accessControlImprovementsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access control settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+       */
+      public Builder clearAccessControlImprovements() {
+        if (accessControlImprovementsBuilder_ == null) {
+          accessControlImprovements_ = null;
+          onChanged();
+        } else {
+          accessControlImprovements_ = null;
+          accessControlImprovementsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access control settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.Builder getAccessControlImprovementsBuilder() {
+        
+        onChanged();
+        return getAccessControlImprovementsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Access control settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovementsOrBuilder getAccessControlImprovementsOrBuilder() {
+        if (accessControlImprovementsBuilder_ != null) {
+          return accessControlImprovementsBuilder_.getMessageOrBuilder();
+        } else {
+          return accessControlImprovements_ == null ?
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.getDefaultInstance() : accessControlImprovements_;
+        }
+      }
+      /**
+       * <pre>
+       * Access control settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.AccessControlImprovements access_control_improvements = 74;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovementsOrBuilder> 
+          getAccessControlImprovementsFieldBuilder() {
+        if (accessControlImprovementsBuilder_ == null) {
+          accessControlImprovementsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovementsOrBuilder>(
+                  getAccessControlImprovements(),
+                  getParentForChildren(),
+                  isClean());
+          accessControlImprovements_ = null;
+        }
+        return accessControlImprovementsBuilder_;
+      }
+
       private com.google.protobuf.Int64Value backgroundPoolSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundPoolSizeBuilder_;
@@ -65025,6 +68404,11 @@ public final class Clickhouse {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfigSet_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -65041,8 +68425,8 @@ public final class Clickhouse {
       "\n6yandex/cloud/mdb/clickhouse/v1/config/" +
       "clickhouse.proto\022%yandex.cloud.mdb.click" +
       "house.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\353" +
-      "x\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\251" +
+      "\177\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
       "lickhouseConfig.LogLevel\022U\n\nmerge_tree\030\002" +
       " \001(\0132A.yandex.cloud.mdb.clickhouse.v1.co" +
@@ -65142,303 +68526,324 @@ public final class Clickhouse {
       "ion_size\030H \001(\0132\033.google.protobuf.Int64Va" +
       "lue\022J\n%processors_profile_log_retention_" +
       "time\030I \001(\0132\033.google.protobuf.Int64Value\022" +
-      "A\n\024background_pool_size\030! \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\006\372\3071\002>0\022Z\n-background" +
-      "_merges_mutations_concurrency_ratio\0300 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022J" +
-      "\n\035background_schedule_pool_size\030\" \001(\0132\033." +
-      "google.protobuf.Int64ValueB\006\372\3071\002>0\022I\n\034ba" +
-      "ckground_fetches_pool_size\030& \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\006\372\3071\002>0\022F\n\031backgro" +
-      "und_move_pool_size\030\' \001(\0132\033.google.protob" +
-      "uf.Int64ValueB\006\372\3071\002>0\022V\n)background_dist" +
-      "ributed_schedule_pool_size\030( \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\006\372\3071\002>0\022W\n*backgro" +
-      "und_buffer_flush_schedule_pool_size\030) \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022Y" +
-      "\n,background_message_broker_schedule_poo" +
-      "l_size\030. \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\006\372\3071\002>0\022H\n\033background_common_pool_size" +
-      "\030/ \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071" +
-      "\002>0\0226\n\020default_database\030+ \001(\0132\034.google.p" +
-      "rotobuf.StringValue\022?\n\032total_memory_prof" +
-      "iler_step\030, \001(\0132\033.google.protobuf.Int64V" +
-      "alue\022M\n\'total_memory_tracker_sample_prob" +
-      "ability\030- \001(\0132\034.google.protobuf.DoubleVa" +
-      "lue\022m\n\023query_masking_rules\030C \003(\0132H.yande" +
-      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfig.QueryMaskingRuleB\006\202\3101\002>0\022:\n\026di" +
-      "ctionaries_lazy_load\030D \001(\0132\032.google.prot" +
-      "obuf.BoolValue\022W\n\013query_cache\030E \001(\0132B.ya" +
-      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
-      "khouseConfig.QueryCache\022W\n\013jdbc_bridge\030F" +
-      " \001(\0132B.yandex.cloud.mdb.clickhouse.v1.co" +
-      "nfig.ClickhouseConfig.JdbcBridge\032\265\026\n\tMer" +
-      "geTree\022D\n\037replicated_deduplication_windo" +
-      "w\030\001 \001(\0132\033.google.protobuf.Int64Value\022L\n\'" +
-      "replicated_deduplication_window_seconds\030" +
-      "\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025pa" +
-      "rts_to_delay_insert\030\003 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022:\n\025parts_to_throw_insert\030" +
-      "\004 \001(\0132\033.google.protobuf.Int64Value\022C\n\036in" +
-      "active_parts_to_delay_insert\030\t \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022C\n\036inactive_part" +
-      "s_to_throw_insert\030\n \001(\0132\033.google.protobu" +
-      "f.Int64Value\022C\n\036max_replicated_merges_in" +
-      "_queue\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022^\n9number_of_free_entries_in_pool_to_l" +
-      "ower_max_size_of_merge\030\006 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022L\n\'max_bytes_to_merge_" +
-      "at_min_space_in_pool\030\007 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022L\n\'max_bytes_to_merge_at" +
-      "_max_space_in_pool\030\010 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022<\n\027min_bytes_for_wide_part" +
-      "\030\013 \001(\0132\033.google.protobuf.Int64Value\022;\n\026m" +
-      "in_rows_for_wide_part\030\014 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0227\n\023ttl_only_drop_parts\030" +
-      "\r \001(\0132\032.google.protobuf.BoolValue\022I\n%all" +
-      "ow_remote_fs_zero_copy_replication\030\016 \001(\013" +
-      "2\032.google.protobuf.BoolValue\022;\n\026merge_wi" +
-      "th_ttl_timeout\030\017 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022I\n$merge_with_recompression_tt" +
-      "l_timeout\030\020 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0227\n\022max_parts_in_total\030\021 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022J\n%max_number_of_m" +
-      "erges_with_ttl_in_pool\030\022 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\0229\n\024cleanup_delay_perio" +
-      "d\030\023 \001(\0132\033.google.protobuf.Int64Value\022W\n2" +
-      "number_of_free_entries_in_pool_to_execut" +
-      "e_mutation\030\024 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022R\n$max_avg_part_size_for_too_many_" +
-      "parts\030\025 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\007\372\3071\003>=0\022L\n\036min_age_to_force_merge_seco" +
-      "nds\030\026 \001(\0132\033.google.protobuf.Int64ValueB\007" +
-      "\372\3071\003>=0\022L\n(min_age_to_force_merge_on_par" +
-      "tition_only\030\027 \001(\0132\032.google.protobuf.Bool" +
-      "Value\022E\n\030merge_selecting_sleep_ms\030\030 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022A\n\024" +
-      "merge_max_block_size\030\031 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\006\372\3071\002>0\022B\n\036check_sample_" +
-      "column_is_correct\030\032 \001(\0132\032.google.protobu" +
-      "f.BoolValue\022J\n\034max_merge_selecting_sleep" +
-      "_ms\030\033 \001(\0132\033.google.protobuf.Int64ValueB\007" +
-      "\372\3071\003>=0\022F\n\030max_cleanup_delay_period\030\034 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
-      "\213\001\n!deduplicate_merge_projection_mode\030\035 " +
-      "\001(\0162`.yandex.cloud.mdb.clickhouse.v1.con" +
-      "fig.ClickhouseConfig.MergeTree.Deduplica" +
-      "teMergeProjectionMode\022\221\001\n$lightweight_mu" +
-      "tation_projection_mode\030\036 \001(\0162c.yandex.cl" +
-      "oud.mdb.clickhouse.v1.config.ClickhouseC" +
-      "onfig.MergeTree.LightweightMutationProje" +
-      "ctionMode\022D\n materialize_ttl_recalculate" +
-      "_only\030\037 \001(\0132\032.google.protobuf.BoolValue\"" +
-      "\211\002\n\036DeduplicateMergeProjectionMode\0221\n-DE" +
-      "DUPLICATE_MERGE_PROJECTION_MODE_UNSPECIF" +
-      "IED\020\000\022,\n(DEDUPLICATE_MERGE_PROJECTION_MO" +
-      "DE_IGNORE\020\001\022+\n\'DEDUPLICATE_MERGE_PROJECT" +
-      "ION_MODE_THROW\020\002\022*\n&DEDUPLICATE_MERGE_PR" +
-      "OJECTION_MODE_DROP\020\003\022-\n)DEDUPLICATE_MERG" +
-      "E_PROJECTION_MODE_REBUILD\020\004\"\352\001\n!Lightwei" +
-      "ghtMutationProjectionMode\0224\n0LIGHTWEIGHT" +
-      "_MUTATION_PROJECTION_MODE_UNSPECIFIED\020\000\022" +
-      ".\n*LIGHTWEIGHT_MUTATION_PROJECTION_MODE_" +
-      "THROW\020\001\022-\n)LIGHTWEIGHT_MUTATION_PROJECTI" +
-      "ON_MODE_DROP\020\002\0220\n,LIGHTWEIGHT_MUTATION_P" +
-      "ROJECTION_MODE_REBUILD\020\003\032\240\r\n\005Kafka\022i\n\021se" +
-      "curity_protocol\030\001 \001(\0162N.yandex.cloud.mdb" +
-      ".clickhouse.v1.config.ClickhouseConfig.K" +
-      "afka.SecurityProtocol\022c\n\016sasl_mechanism\030" +
-      "\002 \001(\0162K.yandex.cloud.mdb.clickhouse.v1.c" +
-      "onfig.ClickhouseConfig.Kafka.SaslMechani" +
-      "sm\022\025\n\rsasl_username\030\003 \001(\t\022\025\n\rsasl_passwo" +
-      "rd\030\004 \001(\t\022G\n#enable_ssl_certificate_verif" +
-      "ication\030\005 \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022B\n\024max_poll_interval_ms\030\006 \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\007\372\3071\003>=0\022@\n\022session" +
-      "_timeout_ms\030\007 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\007\372\3071\003>=0\022R\n\005debug\030\010 \001(\0162C.yandex." +
-      "cloud.mdb.clickhouse.v1.config.Clickhous" +
-      "eConfig.Kafka.Debug\022h\n\021auto_offset_reset" +
-      "\030\t \001(\0162M.yandex.cloud.mdb.clickhouse.v1." +
-      "config.ClickhouseConfig.Kafka.AutoOffset" +
-      "Reset\"\267\001\n\020SecurityProtocol\022!\n\035SECURITY_P" +
-      "ROTOCOL_UNSPECIFIED\020\000\022\037\n\033SECURITY_PROTOC" +
-      "OL_PLAINTEXT\020\001\022\031\n\025SECURITY_PROTOCOL_SSL\020" +
-      "\002\022$\n SECURITY_PROTOCOL_SASL_PLAINTEXT\020\003\022" +
-      "\036\n\032SECURITY_PROTOCOL_SASL_SSL\020\004\"\250\001\n\rSasl" +
-      "Mechanism\022\036\n\032SASL_MECHANISM_UNSPECIFIED\020" +
-      "\000\022\031\n\025SASL_MECHANISM_GSSAPI\020\001\022\030\n\024SASL_MEC" +
-      "HANISM_PLAIN\020\002\022 \n\034SASL_MECHANISM_SCRAM_S" +
-      "HA_256\020\003\022 \n\034SASL_MECHANISM_SCRAM_SHA_512" +
-      "\020\004\"\231\003\n\005Debug\022\025\n\021DEBUG_UNSPECIFIED\020\000\022\021\n\rD" +
-      "EBUG_GENERIC\020\001\022\020\n\014DEBUG_BROKER\020\002\022\017\n\013DEBU" +
-      "G_TOPIC\020\003\022\022\n\016DEBUG_METADATA\020\004\022\021\n\rDEBUG_F" +
-      "EATURE\020\005\022\017\n\013DEBUG_QUEUE\020\006\022\r\n\tDEBUG_MSG\020\007" +
-      "\022\022\n\016DEBUG_PROTOCOL\020\010\022\016\n\nDEBUG_CGRP\020\t\022\022\n\016" +
-      "DEBUG_SECURITY\020\n\022\017\n\013DEBUG_FETCH\020\013\022\025\n\021DEB" +
-      "UG_INTERCEPTOR\020\014\022\020\n\014DEBUG_PLUGIN\020\r\022\022\n\016DE" +
-      "BUG_CONSUMER\020\016\022\017\n\013DEBUG_ADMIN\020\017\022\r\n\tDEBUG" +
-      "_EOS\020\020\022\016\n\nDEBUG_MOCK\020\021\022\022\n\016DEBUG_ASSIGNOR" +
-      "\020\022\022\016\n\nDEBUG_CONF\020\023\022\023\n\017DEBUG_TELEMETRY\020\024\022" +
-      "\r\n\tDEBUG_ALL\020\025\"\212\002\n\017AutoOffsetReset\022!\n\035AU" +
-      "TO_OFFSET_RESET_UNSPECIFIED\020\000\022\036\n\032AUTO_OF" +
-      "FSET_RESET_SMALLEST\020\001\022\036\n\032AUTO_OFFSET_RES" +
-      "ET_EARLIEST\020\002\022\037\n\033AUTO_OFFSET_RESET_BEGIN" +
-      "NING\020\003\022\035\n\031AUTO_OFFSET_RESET_LARGEST\020\004\022\034\n" +
-      "\030AUTO_OFFSET_RESET_LATEST\020\005\022\031\n\025AUTO_OFFS" +
-      "ET_RESET_END\020\006\022\033\n\027AUTO_OFFSET_RESET_ERRO" +
-      "R\020\007\032w\n\nKafkaTopic\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022U\n" +
-      "\010settings\030\002 \001(\0132=.yandex.cloud.mdb.click" +
-      "house.v1.config.ClickhouseConfig.KafkaB\004" +
-      "\350\3071\001\032=\n\010Rabbitmq\022\020\n\010username\030\001 \001(\t\022\020\n\010pa" +
-      "ssword\030\002 \001(\t\022\r\n\005vhost\030\003 \001(\t\032\220\002\n\013Compress" +
-      "ion\022Z\n\006method\030\001 \001(\0162J.yandex.cloud.mdb.c" +
-      "lickhouse.v1.config.ClickhouseConfig.Com" +
-      "pression.Method\022\036\n\rmin_part_size\030\002 \001(\003B\007" +
-      "\372\3071\003>=1\022\033\n\023min_part_size_ratio\030\003 \001(\001\0223\n\005" +
-      "level\030\004 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\007\372\3071\003>=0\"3\n\006Method\022\026\n\022METHOD_UNSPECIFIE" +
-      "D\020\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032\263 \n\022ExternalDicti" +
-      "onary\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002" +
-      " \001(\0132T.yandex.cloud.mdb.clickhouse.v1.co" +
-      "nfig.ClickhouseConfig.ExternalDictionary" +
-      ".StructureB\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.yande" +
-      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfig.ExternalDictionary.LayoutB\004\350\3071" +
-      "\001\022\030\n\016fixed_lifetime\030\004 \001(\003H\000\022j\n\016lifetime_" +
-      "range\030\005 \001(\0132P.yandex.cloud.mdb.clickhous" +
-      "e.v1.config.ClickhouseConfig.ExternalDic" +
-      "tionary.RangeH\000\022l\n\013http_source\030\006 \001(\0132U.y" +
-      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
-      "ckhouseConfig.ExternalDictionary.HttpSou" +
-      "rceH\001\022n\n\014mysql_source\030\007 \001(\0132V.yandex.clo" +
-      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
-      "nfig.ExternalDictionary.MysqlSourceH\001\022x\n" +
-      "\021clickhouse_source\030\010 \001(\0132[.yandex.cloud." +
+      "5\n\021error_log_enabled\030K \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022=\n\030error_log_retention_si" +
+      "ze\030L \001(\0132\033.google.protobuf.Int64Value\022=\n" +
+      "\030error_log_retention_time\030M \001(\0132\033.google" +
+      ".protobuf.Int64Value\022v\n\033access_control_i" +
+      "mprovements\030J \001(\0132Q.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.config.ClickhouseConfig.Acces" +
+      "sControlImprovements\022A\n\024background_pool_" +
+      "size\030! \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\006\372\3071\002>0\022Z\n-background_merges_mutations_c" +
+      "oncurrency_ratio\0300 \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\006\372\3071\002>0\022J\n\035background_schedu" +
+      "le_pool_size\030\" \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\006\372\3071\002>0\022I\n\034background_fetches_po" +
+      "ol_size\030& \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\006\372\3071\002>0\022F\n\031background_move_pool_size\030" +
+      "\' \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002" +
+      ">0\022V\n)background_distributed_schedule_po" +
+      "ol_size\030( \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\006\372\3071\002>0\022W\n*background_buffer_flush_sc" +
+      "hedule_pool_size\030) \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\006\372\3071\002>0\022Y\n,background_messag" +
+      "e_broker_schedule_pool_size\030. \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\006\372\3071\002>0\022H\n\033backgr" +
+      "ound_common_pool_size\030/ \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\006\372\3071\002>0\0226\n\020default_data" +
+      "base\030+ \001(\0132\034.google.protobuf.StringValue" +
+      "\022?\n\032total_memory_profiler_step\030, \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022M\n\'total_memor" +
+      "y_tracker_sample_probability\030- \001(\0132\034.goo" +
+      "gle.protobuf.DoubleValue\022m\n\023query_maskin" +
+      "g_rules\030C \003(\0132H.yandex.cloud.mdb.clickho" +
+      "use.v1.config.ClickhouseConfig.QueryMask" +
+      "ingRuleB\006\202\3101\002>0\022:\n\026dictionaries_lazy_loa" +
+      "d\030D \001(\0132\032.google.protobuf.BoolValue\022W\n\013q" +
+      "uery_cache\030E \001(\0132B.yandex.cloud.mdb.clic" +
+      "khouse.v1.config.ClickhouseConfig.QueryC" +
+      "ache\022W\n\013jdbc_bridge\030F \001(\0132B.yandex.cloud" +
+      ".mdb.clickhouse.v1.config.ClickhouseConf" +
+      "ig.JdbcBridge\032\213\031\n\tMergeTree\022D\n\037replicate" +
+      "d_deduplication_window\030\001 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022L\n\'replicated_deduplic" +
+      "ation_window_seconds\030\002 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022:\n\025parts_to_delay_insert" +
+      "\030\003 \001(\0132\033.google.protobuf.Int64Value\022:\n\025p" +
+      "arts_to_throw_insert\030\004 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022C\n\036inactive_parts_to_del" +
+      "ay_insert\030\t \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022C\n\036inactive_parts_to_throw_insert\030\n" +
+      " \001(\0132\033.google.protobuf.Int64Value\022C\n\036max" +
+      "_replicated_merges_in_queue\030\005 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022^\n9number_of_free" +
+      "_entries_in_pool_to_lower_max_size_of_me" +
+      "rge\030\006 \001(\0132\033.google.protobuf.Int64Value\022L" +
+      "\n\'max_bytes_to_merge_at_min_space_in_poo" +
+      "l\030\007 \001(\0132\033.google.protobuf.Int64Value\022L\n\'" +
+      "max_bytes_to_merge_at_max_space_in_pool\030" +
+      "\010 \001(\0132\033.google.protobuf.Int64Value\022<\n\027mi" +
+      "n_bytes_for_wide_part\030\013 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022;\n\026min_rows_for_wide_pa" +
+      "rt\030\014 \001(\0132\033.google.protobuf.Int64Value\0227\n" +
+      "\023ttl_only_drop_parts\030\r \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022I\n%allow_remote_fs_zero_c" +
+      "opy_replication\030\016 \001(\0132\032.google.protobuf." +
+      "BoolValue\022;\n\026merge_with_ttl_timeout\030\017 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022I\n$merge_" +
+      "with_recompression_ttl_timeout\030\020 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\0227\n\022max_parts_i" +
+      "n_total\030\021 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022J\n%max_number_of_merges_with_ttl_in_p" +
+      "ool\030\022 \001(\0132\033.google.protobuf.Int64Value\0229" +
+      "\n\024cleanup_delay_period\030\023 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022W\n2number_of_free_entr" +
+      "ies_in_pool_to_execute_mutation\030\024 \001(\0132\033." +
+      "google.protobuf.Int64Value\022R\n$max_avg_pa" +
+      "rt_size_for_too_many_parts\030\025 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\007\372\3071\003>=0\022L\n\036min_ag" +
+      "e_to_force_merge_seconds\030\026 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\007\372\3071\003>=0\022L\n(min_age_" +
+      "to_force_merge_on_partition_only\030\027 \001(\0132\032" +
+      ".google.protobuf.BoolValue\022E\n\030merge_sele" +
+      "cting_sleep_ms\030\030 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\006\372\3071\002>0\022A\n\024merge_max_block_siz" +
+      "e\030\031 \001(\0132\033.google.protobuf.Int64ValueB\006\372\307" +
+      "1\002>0\022B\n\036check_sample_column_is_correct\030\032" +
+      " \001(\0132\032.google.protobuf.BoolValue\022J\n\034max_" +
+      "merge_selecting_sleep_ms\030\033 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\007\372\3071\003>=0\022F\n\030max_clea" +
+      "nup_delay_period\030\034 \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\007\372\3071\003>=0\022\213\001\n!deduplicate_mer" +
+      "ge_projection_mode\030\035 \001(\0162`.yandex.cloud." +
       "mdb.clickhouse.v1.config.ClickhouseConfi" +
-      "g.ExternalDictionary.ClickhouseSourceH\001\022" +
-      "r\n\016mongodb_source\030\t \001(\0132X.yandex.cloud.m" +
-      "db.clickhouse.v1.config.ClickhouseConfig" +
-      ".ExternalDictionary.MongodbSourceH\001\022x\n\021p" +
-      "ostgresql_source\030\n \001(\0132[.yandex.cloud.md" +
-      "b.clickhouse.v1.config.ClickhouseConfig." +
-      "ExternalDictionary.PostgresqlSourceH\001\032\327\001" +
-      "\n\nHttpSource\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006forma" +
-      "t\030\002 \001(\tB\004\350\3071\001\022m\n\007headers\030\003 \003(\0132\\.yandex." +
-      "cloud.mdb.clickhouse.v1.config.Clickhous" +
-      "eConfig.ExternalDictionary.HttpSource.He" +
-      "ader\0321\n\006Header\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\023\n\005va" +
-      "lue\030\002 \001(\tB\004\350\3071\001\032\377\003\n\013MysqlSource\022\020\n\002db\030\001 " +
-      "\001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003" +
-      " \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010passw" +
-      "ord\030\005 \001(\t\022x\n\010replicas\030\006 \003(\0132^.yandex.clo" +
-      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
-      "nfig.ExternalDictionary.MysqlSource.Repl" +
-      "icaB\006\202\3101\002>0\022\r\n\005where\030\007 \001(\t\022\030\n\020invalidate" +
-      "_query\030\010 \001(\t\0224\n\020close_connection\030\t \001(\0132\032" +
-      ".google.protobuf.BoolValue\0224\n\020share_conn" +
-      "ection\030\n \001(\0132\032.google.protobuf.BoolValue" +
-      "\032\177\n\007Replica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253" +
-      "\022\034\n\010priority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003" +
-      " \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010passw" +
-      "ord\030\005 \001(\t\032\316\001\n\020ClickhouseSource\022\020\n\002db\030\001 \001" +
-      "(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\027\n\004host\030\003 " +
-      "\001(\tB\t\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-6553" +
-      "5\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022" +
-      "\r\n\005where\030\007 \001(\t\022*\n\006secure\030\010 \001(\0132\032.google." +
-      "protobuf.BoolValue\032\246\001\n\rMongodbSource\022\020\n\002" +
-      "db\030\001 \001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001" +
-      "\022\027\n\004host\030\003 \001(\tB\t\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B" +
-      "\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010pass" +
-      "word\030\006 \001(\t\022\017\n\007options\030\007 \001(\t\032\213\003\n\020Postgres" +
-      "qlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(" +
-      "\tB\004\350\3071\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004" +
-      " \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n" +
-      "\010password\030\006 \001(\t\022\030\n\020invalidate_query\030\007 \001(" +
-      "\t\022u\n\010ssl_mode\030\010 \001(\0162c.yandex.cloud.mdb.c" +
-      "lickhouse.v1.config.ClickhouseConfig.Ext" +
-      "ernalDictionary.PostgresqlSource.SslMode" +
-      "\"g\n\007SslMode\022\030\n\024SSL_MODE_UNSPECIFIED\020\000\022\013\n" +
-      "\007DISABLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVER" +
-      "IFY_CA\020\004\022\017\n\013VERIFY_FULL\020\005\032\336\006\n\tStructure\022" +
-      "c\n\002id\030\001 \001(\0132W.yandex.cloud.mdb.clickhous" +
-      "e.v1.config.ClickhouseConfig.ExternalDic" +
-      "tionary.Structure.Id\022e\n\003key\030\003 \001(\0132X.yand" +
+      "g.MergeTree.DeduplicateMergeProjectionMo" +
+      "de\022\221\001\n$lightweight_mutation_projection_m" +
+      "ode\030\036 \001(\0162c.yandex.cloud.mdb.clickhouse." +
+      "v1.config.ClickhouseConfig.MergeTree.Lig" +
+      "htweightMutationProjectionMode\022D\n materi" +
+      "alize_ttl_recalculate_only\030\037 \001(\0132\032.googl" +
+      "e.protobuf.BoolValue\0226\n\022fsync_after_inse" +
+      "rt\030  \001(\0132\032.google.protobuf.BoolValue\0228\n\024" +
+      "fsync_part_directory\030! \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022N\n)min_compressed_bytes_t" +
+      "o_fsync_after_fetch\030\" \001(\0132\033.google.proto" +
+      "buf.Int64Value\022N\n)min_compressed_bytes_t" +
+      "o_fsync_after_merge\030# \001(\0132\033.google.proto" +
+      "buf.Int64Value\022B\n\035min_rows_to_fsync_afte" +
+      "r_merge\030$ \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\"\211\002\n\036DeduplicateMergeProjectionMode\0221\n" +
+      "-DEDUPLICATE_MERGE_PROJECTION_MODE_UNSPE" +
+      "CIFIED\020\000\022,\n(DEDUPLICATE_MERGE_PROJECTION" +
+      "_MODE_IGNORE\020\001\022+\n\'DEDUPLICATE_MERGE_PROJ" +
+      "ECTION_MODE_THROW\020\002\022*\n&DEDUPLICATE_MERGE" +
+      "_PROJECTION_MODE_DROP\020\003\022-\n)DEDUPLICATE_M" +
+      "ERGE_PROJECTION_MODE_REBUILD\020\004\"\352\001\n!Light" +
+      "weightMutationProjectionMode\0224\n0LIGHTWEI" +
+      "GHT_MUTATION_PROJECTION_MODE_UNSPECIFIED" +
+      "\020\000\022.\n*LIGHTWEIGHT_MUTATION_PROJECTION_MO" +
+      "DE_THROW\020\001\022-\n)LIGHTWEIGHT_MUTATION_PROJE" +
+      "CTION_MODE_DROP\020\002\0220\n,LIGHTWEIGHT_MUTATIO" +
+      "N_PROJECTION_MODE_REBUILD\020\003\032\240\r\n\005Kafka\022i\n" +
+      "\021security_protocol\030\001 \001(\0162N.yandex.cloud." +
+      "mdb.clickhouse.v1.config.ClickhouseConfi" +
+      "g.Kafka.SecurityProtocol\022c\n\016sasl_mechani" +
+      "sm\030\002 \001(\0162K.yandex.cloud.mdb.clickhouse.v" +
+      "1.config.ClickhouseConfig.Kafka.SaslMech" +
+      "anism\022\025\n\rsasl_username\030\003 \001(\t\022\025\n\rsasl_pas" +
+      "sword\030\004 \001(\t\022G\n#enable_ssl_certificate_ve" +
+      "rification\030\005 \001(\0132\032.google.protobuf.BoolV" +
+      "alue\022B\n\024max_poll_interval_ms\030\006 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022@\n\022sess" +
+      "ion_timeout_ms\030\007 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0\022R\n\005debug\030\010 \001(\0162C.yand" +
       "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
-      "ouseConfig.ExternalDictionary.Structure." +
-      "Key\022q\n\trange_min\030\004 \001(\0132^.yandex.cloud.md" +
+      "ouseConfig.Kafka.Debug\022h\n\021auto_offset_re" +
+      "set\030\t \001(\0162M.yandex.cloud.mdb.clickhouse." +
+      "v1.config.ClickhouseConfig.Kafka.AutoOff" +
+      "setReset\"\267\001\n\020SecurityProtocol\022!\n\035SECURIT" +
+      "Y_PROTOCOL_UNSPECIFIED\020\000\022\037\n\033SECURITY_PRO" +
+      "TOCOL_PLAINTEXT\020\001\022\031\n\025SECURITY_PROTOCOL_S" +
+      "SL\020\002\022$\n SECURITY_PROTOCOL_SASL_PLAINTEXT" +
+      "\020\003\022\036\n\032SECURITY_PROTOCOL_SASL_SSL\020\004\"\250\001\n\rS" +
+      "aslMechanism\022\036\n\032SASL_MECHANISM_UNSPECIFI" +
+      "ED\020\000\022\031\n\025SASL_MECHANISM_GSSAPI\020\001\022\030\n\024SASL_" +
+      "MECHANISM_PLAIN\020\002\022 \n\034SASL_MECHANISM_SCRA" +
+      "M_SHA_256\020\003\022 \n\034SASL_MECHANISM_SCRAM_SHA_" +
+      "512\020\004\"\231\003\n\005Debug\022\025\n\021DEBUG_UNSPECIFIED\020\000\022\021" +
+      "\n\rDEBUG_GENERIC\020\001\022\020\n\014DEBUG_BROKER\020\002\022\017\n\013D" +
+      "EBUG_TOPIC\020\003\022\022\n\016DEBUG_METADATA\020\004\022\021\n\rDEBU" +
+      "G_FEATURE\020\005\022\017\n\013DEBUG_QUEUE\020\006\022\r\n\tDEBUG_MS" +
+      "G\020\007\022\022\n\016DEBUG_PROTOCOL\020\010\022\016\n\nDEBUG_CGRP\020\t\022" +
+      "\022\n\016DEBUG_SECURITY\020\n\022\017\n\013DEBUG_FETCH\020\013\022\025\n\021" +
+      "DEBUG_INTERCEPTOR\020\014\022\020\n\014DEBUG_PLUGIN\020\r\022\022\n" +
+      "\016DEBUG_CONSUMER\020\016\022\017\n\013DEBUG_ADMIN\020\017\022\r\n\tDE" +
+      "BUG_EOS\020\020\022\016\n\nDEBUG_MOCK\020\021\022\022\n\016DEBUG_ASSIG" +
+      "NOR\020\022\022\016\n\nDEBUG_CONF\020\023\022\023\n\017DEBUG_TELEMETRY" +
+      "\020\024\022\r\n\tDEBUG_ALL\020\025\"\212\002\n\017AutoOffsetReset\022!\n" +
+      "\035AUTO_OFFSET_RESET_UNSPECIFIED\020\000\022\036\n\032AUTO" +
+      "_OFFSET_RESET_SMALLEST\020\001\022\036\n\032AUTO_OFFSET_" +
+      "RESET_EARLIEST\020\002\022\037\n\033AUTO_OFFSET_RESET_BE" +
+      "GINNING\020\003\022\035\n\031AUTO_OFFSET_RESET_LARGEST\020\004" +
+      "\022\034\n\030AUTO_OFFSET_RESET_LATEST\020\005\022\031\n\025AUTO_O" +
+      "FFSET_RESET_END\020\006\022\033\n\027AUTO_OFFSET_RESET_E" +
+      "RROR\020\007\032w\n\nKafkaTopic\022\022\n\004name\030\001 \001(\tB\004\350\3071\001" +
+      "\022U\n\010settings\030\002 \001(\0132=.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.config.ClickhouseConfig.Kafk" +
+      "aB\004\350\3071\001\032=\n\010Rabbitmq\022\020\n\010username\030\001 \001(\t\022\020\n" +
+      "\010password\030\002 \001(\t\022\r\n\005vhost\030\003 \001(\t\032\220\002\n\013Compr" +
+      "ession\022Z\n\006method\030\001 \001(\0162J.yandex.cloud.md" +
       "b.clickhouse.v1.config.ClickhouseConfig." +
-      "ExternalDictionary.Structure.Attribute\022q" +
-      "\n\trange_max\030\005 \001(\0132^.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.config.ClickhouseConfig.Exter" +
-      "nalDictionary.Structure.Attribute\022z\n\natt" +
-      "ributes\030\002 \003(\0132^.yandex.cloud.mdb.clickho" +
-      "use.v1.config.ClickhouseConfig.ExternalD" +
-      "ictionary.Structure.AttributeB\006\202\3101\002>0\032\204\001" +
-      "\n\tAttribute\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030" +
-      "\002 \001(\tB\004\350\3071\001\022\022\n\nnull_value\030\003 \001(\t\022\022\n\nexpre" +
-      "ssion\030\004 \001(\t\022\024\n\014hierarchical\030\005 \001(\010\022\021\n\tinj" +
-      "ective\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201" +
-      "\001\n\003Key\022z\n\nattributes\030\001 \003(\0132^.yandex.clou" +
-      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
-      "fig.ExternalDictionary.Structure.Attribu" +
-      "teB\006\202\3101\002>0\032\332\005\n\006Layout\022j\n\004type\030\001 \001(\0162V.ya" +
+      "Compression.Method\022\036\n\rmin_part_size\030\002 \001(" +
+      "\003B\007\372\3071\003>=1\022\033\n\023min_part_size_ratio\030\003 \001(\001\022" +
+      "3\n\005level\030\004 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\007\372\3071\003>=0\"3\n\006Method\022\026\n\022METHOD_UNSPECI" +
+      "FIED\020\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032\263 \n\022ExternalDi" +
+      "ctionary\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022m\n\tstructur" +
+      "e\030\002 \001(\0132T.yandex.cloud.mdb.clickhouse.v1" +
+      ".config.ClickhouseConfig.ExternalDiction" +
+      "ary.StructureB\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.ya" +
       "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
-      "khouseConfig.ExternalDictionary.Layout.T" +
-      "ypeB\004\350\3071\001\022\025\n\rsize_in_cells\030\002 \001(\003\022;\n\027allo" +
-      "w_read_expired_keys\030\005 \001(\0132\032.google.proto" +
-      "buf.BoolValue\022\035\n\025max_update_queue_size\030\006" +
-      " \001(\003\022.\n&update_queue_push_timeout_millis" +
-      "econds\030\007 \001(\003\022\'\n\037query_wait_timeout_milli" +
-      "seconds\030\010 \001(\003\022\037\n\027max_threads_for_updates" +
-      "\030\t \001(\003\022\032\n\022initial_array_size\030\n \001(\003\022\026\n\016ma" +
-      "x_array_size\030\003 \001(\003\022A\n\035access_to_key_from" +
-      "_attributes\030\004 \001(\0132\032.google.protobuf.Bool" +
-      "Value\"\377\001\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\010\n\004" +
-      "FLAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX_KEY_HASHED" +
-      "\020\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE\020\005\022\025\n\021COMPL" +
-      "EX_KEY_CACHE\020\006\022\021\n\rSPARSE_HASHED\020\007\022\035\n\031COM" +
-      "PLEX_KEY_SPARSE_HASHED\020\010\022\034\n\030COMPLEX_KEY_" +
-      "RANGE_HASHED\020\t\022\n\n\006DIRECT\020\n\022\026\n\022COMPLEX_KE" +
-      "Y_DIRECT\020\013\022\013\n\007IP_TRIE\020\014\032!\n\005Range\022\013\n\003min\030" +
-      "\001 \001(\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016\n\006" +
-      "source\022\004\300\3011\001\032\341\003\n\016GraphiteRollup\022\022\n\004name\030" +
-      "\001 \001(\tB\004\350\3071\001\022h\n\010patterns\030\002 \003(\0132N.yandex.c" +
+      "khouseConfig.ExternalDictionary.LayoutB\004" +
+      "\350\3071\001\022\030\n\016fixed_lifetime\030\004 \001(\003H\000\022j\n\016lifeti" +
+      "me_range\030\005 \001(\0132P.yandex.cloud.mdb.clickh" +
+      "ouse.v1.config.ClickhouseConfig.External" +
+      "Dictionary.RangeH\000\022l\n\013http_source\030\006 \001(\0132" +
+      "U.yandex.cloud.mdb.clickhouse.v1.config." +
+      "ClickhouseConfig.ExternalDictionary.Http" +
+      "SourceH\001\022n\n\014mysql_source\030\007 \001(\0132V.yandex." +
+      "cloud.mdb.clickhouse.v1.config.Clickhous" +
+      "eConfig.ExternalDictionary.MysqlSourceH\001" +
+      "\022x\n\021clickhouse_source\030\010 \001(\0132[.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfig.ExternalDictionary.ClickhouseSource" +
+      "H\001\022r\n\016mongodb_source\030\t \001(\0132X.yandex.clou" +
+      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
+      "fig.ExternalDictionary.MongodbSourceH\001\022x" +
+      "\n\021postgresql_source\030\n \001(\0132[.yandex.cloud" +
+      ".mdb.clickhouse.v1.config.ClickhouseConf" +
+      "ig.ExternalDictionary.PostgresqlSourceH\001" +
+      "\032\327\001\n\nHttpSource\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006fo" +
+      "rmat\030\002 \001(\tB\004\350\3071\001\022m\n\007headers\030\003 \003(\0132\\.yand" +
+      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
+      "ouseConfig.ExternalDictionary.HttpSource" +
+      ".Header\0321\n\006Header\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\023\n" +
+      "\005value\030\002 \001(\tB\004\350\3071\001\032\377\003\n\013MysqlSource\022\020\n\002db" +
+      "\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\031\n\004por" +
+      "t\030\003 \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010pa" +
+      "ssword\030\005 \001(\t\022x\n\010replicas\030\006 \003(\0132^.yandex." +
+      "cloud.mdb.clickhouse.v1.config.Clickhous" +
+      "eConfig.ExternalDictionary.MysqlSource.R" +
+      "eplicaB\006\202\3101\002>0\022\r\n\005where\030\007 \001(\t\022\030\n\020invalid" +
+      "ate_query\030\010 \001(\t\0224\n\020close_connection\030\t \001(" +
+      "\0132\032.google.protobuf.BoolValue\0224\n\020share_c" +
+      "onnection\030\n \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\032\177\n\007Replica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=" +
+      "253\022\034\n\010priority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004por" +
+      "t\030\003 \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010pa" +
+      "ssword\030\005 \001(\t\032\316\001\n\020ClickhouseSource\022\020\n\002db\030" +
+      "\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\027\n\004host" +
+      "\030\003 \001(\tB\t\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-6" +
+      "5535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001" +
+      "(\t\022\r\n\005where\030\007 \001(\t\022*\n\006secure\030\010 \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\032\246\001\n\rMongodbSource\022" +
+      "\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 \001(\tB\004\350" +
+      "\3071\001\022\027\n\004host\030\003 \001(\tB\t\212\3101\005<=253\022\031\n\004port\030\004 \001" +
+      "(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010p" +
+      "assword\030\006 \001(\t\022\017\n\007options\030\007 \001(\t\032\213\003\n\020Postg" +
+      "resqlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002" +
+      " \001(\tB\004\350\3071\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004por" +
+      "t\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001" +
+      "\022\020\n\010password\030\006 \001(\t\022\030\n\020invalidate_query\030\007" +
+      " \001(\t\022u\n\010ssl_mode\030\010 \001(\0162c.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfig." +
+      "ExternalDictionary.PostgresqlSource.SslM" +
+      "ode\"g\n\007SslMode\022\030\n\024SSL_MODE_UNSPECIFIED\020\000" +
+      "\022\013\n\007DISABLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\t" +
+      "VERIFY_CA\020\004\022\017\n\013VERIFY_FULL\020\005\032\336\006\n\tStructu" +
+      "re\022c\n\002id\030\001 \001(\0132W.yandex.cloud.mdb.clickh" +
+      "ouse.v1.config.ClickhouseConfig.External" +
+      "Dictionary.Structure.Id\022e\n\003key\030\003 \001(\0132X.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfig.ExternalDictionary.Structu" +
+      "re.Key\022q\n\trange_min\030\004 \001(\0132^.yandex.cloud" +
+      ".mdb.clickhouse.v1.config.ClickhouseConf" +
+      "ig.ExternalDictionary.Structure.Attribut" +
+      "e\022q\n\trange_max\030\005 \001(\0132^.yandex.cloud.mdb." +
+      "clickhouse.v1.config.ClickhouseConfig.Ex" +
+      "ternalDictionary.Structure.Attribute\022z\n\n" +
+      "attributes\030\002 \003(\0132^.yandex.cloud.mdb.clic" +
+      "khouse.v1.config.ClickhouseConfig.Extern" +
+      "alDictionary.Structure.AttributeB\006\202\3101\002>0" +
+      "\032\204\001\n\tAttribute\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004ty" +
+      "pe\030\002 \001(\tB\004\350\3071\001\022\022\n\nnull_value\030\003 \001(\t\022\022\n\nex" +
+      "pression\030\004 \001(\t\022\024\n\014hierarchical\030\005 \001(\010\022\021\n\t" +
+      "injective\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071" +
+      "\001\032\201\001\n\003Key\022z\n\nattributes\030\001 \003(\0132^.yandex.c" +
       "loud.mdb.clickhouse.v1.config.Clickhouse" +
-      "Config.GraphiteRollup.PatternB\006\202\3101\002>0\022\030\n" +
-      "\020path_column_name\030\003 \001(\t\022\030\n\020time_column_n" +
-      "ame\030\004 \001(\t\022\031\n\021value_column_name\030\005 \001(\t\022\033\n\023" +
-      "version_column_name\030\006 \001(\t\032\344\001\n\007Pattern\022\016\n" +
-      "\006regexp\030\001 \001(\t\022\026\n\010function\030\002 \001(\tB\004\350\3071\001\022s\n" +
-      "\tretention\030\003 \003(\0132X.yandex.cloud.mdb.clic" +
-      "khouse.v1.config.ClickhouseConfig.Graphi" +
-      "teRollup.Pattern.RetentionB\006\202\3101\002>0\032<\n\tRe" +
-      "tention\022\024\n\003age\030\001 \001(\003B\007\372\3071\003>=0\022\031\n\tprecisi" +
-      "on\030\002 \001(\003B\006\372\3071\002>0\032G\n\020QueryMaskingRule\022\014\n\004" +
-      "name\030\001 \001(\t\022\024\n\006regexp\030\002 \001(\tB\004\350\3071\001\022\017\n\007repl" +
-      "ace\030\003 \001(\t\032\225\002\n\nQueryCache\022?\n\021max_size_in_" +
-      "bytes\030\001 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\007\372\3071\003>=0\0229\n\013max_entries\030\002 \001(\0132\033.google." +
-      "protobuf.Int64ValueB\007\372\3071\003>=0\022E\n\027max_entr" +
-      "y_size_in_bytes\030\003 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0\022D\n\026max_entry_size_in" +
-      "_rows\030\004 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\007\372\3071\003>=0\032K\n\nJdbcBridge\022\022\n\004host\030\001 \001(\tB\004\350" +
-      "\3071\001\022)\n\004port\030\002 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\"d\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIF" +
-      "IED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATI" +
-      "ON\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"\215\002\n\023Clickho" +
-      "useConfigSet\022W\n\020effective_config\030\001 \001(\01327" +
+      "Config.ExternalDictionary.Structure.Attr" +
+      "ibuteB\006\202\3101\002>0\032\332\005\n\006Layout\022j\n\004type\030\001 \001(\0162V" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
-      "lickhouseConfigB\004\350\3071\001\022L\n\013user_config\030\002 \001" +
-      "(\01327.yandex.cloud.mdb.clickhouse.v1.conf" +
-      "ig.ClickhouseConfig\022O\n\016default_config\030\003 " +
-      "\001(\01327.yandex.cloud.mdb.clickhouse.v1.con" +
-      "fig.ClickhouseConfigB\201\001\n)yandex.cloud.ap" +
-      "i.mdb.clickhouse.v1.configZTgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/mdb",
-      "/clickhouse/v1/config;clickhouseb\006proto3"
+      "lickhouseConfig.ExternalDictionary.Layou" +
+      "t.TypeB\004\350\3071\001\022\025\n\rsize_in_cells\030\002 \001(\003\022;\n\027a" +
+      "llow_read_expired_keys\030\005 \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\022\035\n\025max_update_queue_siz" +
+      "e\030\006 \001(\003\022.\n&update_queue_push_timeout_mil" +
+      "liseconds\030\007 \001(\003\022\'\n\037query_wait_timeout_mi" +
+      "lliseconds\030\010 \001(\003\022\037\n\027max_threads_for_upda" +
+      "tes\030\t \001(\003\022\032\n\022initial_array_size\030\n \001(\003\022\026\n" +
+      "\016max_array_size\030\003 \001(\003\022A\n\035access_to_key_f" +
+      "rom_attributes\030\004 \001(\0132\032.google.protobuf.B" +
+      "oolValue\"\377\001\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022" +
+      "\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX_KEY_HAS" +
+      "HED\020\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE\020\005\022\025\n\021CO" +
+      "MPLEX_KEY_CACHE\020\006\022\021\n\rSPARSE_HASHED\020\007\022\035\n\031" +
+      "COMPLEX_KEY_SPARSE_HASHED\020\010\022\034\n\030COMPLEX_K" +
+      "EY_RANGE_HASHED\020\t\022\n\n\006DIRECT\020\n\022\026\n\022COMPLEX" +
+      "_KEY_DIRECT\020\013\022\013\n\007IP_TRIE\020\014\032!\n\005Range\022\013\n\003m" +
+      "in\030\001 \001(\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B" +
+      "\016\n\006source\022\004\300\3011\001\032\341\003\n\016GraphiteRollup\022\022\n\004na" +
+      "me\030\001 \001(\tB\004\350\3071\001\022h\n\010patterns\030\002 \003(\0132N.yande" +
+      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
+      "useConfig.GraphiteRollup.PatternB\006\202\3101\002>0" +
+      "\022\030\n\020path_column_name\030\003 \001(\t\022\030\n\020time_colum" +
+      "n_name\030\004 \001(\t\022\031\n\021value_column_name\030\005 \001(\t\022" +
+      "\033\n\023version_column_name\030\006 \001(\t\032\344\001\n\007Pattern" +
+      "\022\016\n\006regexp\030\001 \001(\t\022\026\n\010function\030\002 \001(\tB\004\350\3071\001" +
+      "\022s\n\tretention\030\003 \003(\0132X.yandex.cloud.mdb.c" +
+      "lickhouse.v1.config.ClickhouseConfig.Gra" +
+      "phiteRollup.Pattern.RetentionB\006\202\3101\002>0\032<\n" +
+      "\tRetention\022\024\n\003age\030\001 \001(\003B\007\372\3071\003>=0\022\031\n\tprec" +
+      "ision\030\002 \001(\003B\006\372\3071\002>0\032G\n\020QueryMaskingRule\022" +
+      "\014\n\004name\030\001 \001(\t\022\024\n\006regexp\030\002 \001(\tB\004\350\3071\001\022\017\n\007r" +
+      "eplace\030\003 \001(\t\032\225\002\n\nQueryCache\022?\n\021max_size_" +
+      "in_bytes\030\001 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\007\372\3071\003>=0\0229\n\013max_entries\030\002 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\022E\n\027max_e" +
+      "ntry_size_in_bytes\030\003 \001(\0132\033.google.protob",
+      "uf.Int64ValueB\007\372\3071\003>=0\022D\n\026max_entry_size" +
+      "_in_rows\030\004 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\007\372\3071\003>=0\032K\n\nJdbcBridge\022\022\n\004host\030\001 \001(\t" +
+      "B\004\350\3071\001\022)\n\004port\030\002 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\032\270\001\n\031AccessControlImprovements\022" +
+      "H\n$select_from_system_db_requires_grant\030" +
+      "\001 \001(\0132\032.google.protobuf.BoolValue\022Q\n-sel" +
+      "ect_from_information_schema_requires_gra" +
+      "nt\030\002 \001(\0132\032.google.protobuf.BoolValue\"d\n\010" +
+      "LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\t\n\005T" +
+      "RACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013\n\007WA" +
+      "RNING\020\004\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseConfigS" +
+      "et\022W\n\020effective_config\030\001 \001(\01327.yandex.cl" +
+      "oud.mdb.clickhouse.v1.config.ClickhouseC" +
+      "onfigB\004\350\3071\001\022L\n\013user_config\030\002 \001(\01327.yande" +
+      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
+      "useConfig\022O\n\016default_config\030\003 \001(\01327.yand" +
+      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
+      "ouseConfigB\201\001\n)yandex.cloud.api.mdb.clic" +
+      "khouse.v1.configZTgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/mdb/clickhous" +
+      "e/v1/config;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -65451,13 +68856,13 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor,
-        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseEnabled", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "OpentelemetrySpanLogRetentionSize", "OpentelemetrySpanLogRetentionTime", "QueryViewsLogEnabled", "QueryViewsLogRetentionSize", "QueryViewsLogRetentionTime", "AsynchronousMetricLogEnabled", "AsynchronousMetricLogRetentionSize", "AsynchronousMetricLogRetentionTime", "SessionLogEnabled", "SessionLogRetentionSize", "SessionLogRetentionTime", "ZookeeperLogEnabled", "ZookeeperLogRetentionSize", "ZookeeperLogRetentionTime", "AsynchronousInsertLogEnabled", "AsynchronousInsertLogRetentionSize", "AsynchronousInsertLogRetentionTime", "ProcessorsProfileLogEnabled", "ProcessorsProfileLogRetentionSize", "ProcessorsProfileLogRetentionTime", "BackgroundPoolSize", "BackgroundMergesMutationsConcurrencyRatio", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "BackgroundCommonPoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", "QueryMaskingRules", "DictionariesLazyLoad", "QueryCache", "JdbcBridge", });
+        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseEnabled", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "OpentelemetrySpanLogRetentionSize", "OpentelemetrySpanLogRetentionTime", "QueryViewsLogEnabled", "QueryViewsLogRetentionSize", "QueryViewsLogRetentionTime", "AsynchronousMetricLogEnabled", "AsynchronousMetricLogRetentionSize", "AsynchronousMetricLogRetentionTime", "SessionLogEnabled", "SessionLogRetentionSize", "SessionLogRetentionTime", "ZookeeperLogEnabled", "ZookeeperLogRetentionSize", "ZookeeperLogRetentionTime", "AsynchronousInsertLogEnabled", "AsynchronousInsertLogRetentionSize", "AsynchronousInsertLogRetentionTime", "ProcessorsProfileLogEnabled", "ProcessorsProfileLogRetentionSize", "ProcessorsProfileLogRetentionTime", "ErrorLogEnabled", "ErrorLogRetentionSize", "ErrorLogRetentionTime", "AccessControlImprovements", "BackgroundPoolSize", "BackgroundMergesMutationsConcurrencyRatio", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "BackgroundCommonPoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", "QueryMaskingRules", "DictionariesLazyLoad", "QueryCache", "JdbcBridge", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor,
-        new java.lang.String[] { "ReplicatedDeduplicationWindow", "ReplicatedDeduplicationWindowSeconds", "PartsToDelayInsert", "PartsToThrowInsert", "InactivePartsToDelayInsert", "InactivePartsToThrowInsert", "MaxReplicatedMergesInQueue", "NumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge", "MaxBytesToMergeAtMinSpaceInPool", "MaxBytesToMergeAtMaxSpaceInPool", "MinBytesForWidePart", "MinRowsForWidePart", "TtlOnlyDropParts", "AllowRemoteFsZeroCopyReplication", "MergeWithTtlTimeout", "MergeWithRecompressionTtlTimeout", "MaxPartsInTotal", "MaxNumberOfMergesWithTtlInPool", "CleanupDelayPeriod", "NumberOfFreeEntriesInPoolToExecuteMutation", "MaxAvgPartSizeForTooManyParts", "MinAgeToForceMergeSeconds", "MinAgeToForceMergeOnPartitionOnly", "MergeSelectingSleepMs", "MergeMaxBlockSize", "CheckSampleColumnIsCorrect", "MaxMergeSelectingSleepMs", "MaxCleanupDelayPeriod", "DeduplicateMergeProjectionMode", "LightweightMutationProjectionMode", "MaterializeTtlRecalculateOnly", });
+        new java.lang.String[] { "ReplicatedDeduplicationWindow", "ReplicatedDeduplicationWindowSeconds", "PartsToDelayInsert", "PartsToThrowInsert", "InactivePartsToDelayInsert", "InactivePartsToThrowInsert", "MaxReplicatedMergesInQueue", "NumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge", "MaxBytesToMergeAtMinSpaceInPool", "MaxBytesToMergeAtMaxSpaceInPool", "MinBytesForWidePart", "MinRowsForWidePart", "TtlOnlyDropParts", "AllowRemoteFsZeroCopyReplication", "MergeWithTtlTimeout", "MergeWithRecompressionTtlTimeout", "MaxPartsInTotal", "MaxNumberOfMergesWithTtlInPool", "CleanupDelayPeriod", "NumberOfFreeEntriesInPoolToExecuteMutation", "MaxAvgPartSizeForTooManyParts", "MinAgeToForceMergeSeconds", "MinAgeToForceMergeOnPartitionOnly", "MergeSelectingSleepMs", "MergeMaxBlockSize", "CheckSampleColumnIsCorrect", "MaxMergeSelectingSleepMs", "MaxCleanupDelayPeriod", "DeduplicateMergeProjectionMode", "LightweightMutationProjectionMode", "MaterializeTtlRecalculateOnly", "FsyncAfterInsert", "FsyncPartDirectory", "MinCompressedBytesToFsyncAfterFetch", "MinCompressedBytesToFsyncAfterMerge", "MinRowsToFsyncAfterMerge", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_fieldAccessorTable = new
@@ -65602,6 +69007,12 @@ public final class Clickhouse {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_JdbcBridge_descriptor,
         new java.lang.String[] { "Host", "Port", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_descriptor =
+      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(10);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_descriptor,
+        new java.lang.String[] { "SelectFromSystemDbRequiresGrant", "SelectFromInformationSchemaRequiresGrant", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfigSet_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfigSet_fieldAccessorTable = new

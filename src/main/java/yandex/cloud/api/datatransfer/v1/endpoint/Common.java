@@ -9003,26 +9003,6 @@ public final class Common {
      */
     com.google.protobuf.ByteString
         getConnectionIdBytes();
-
-    /**
-     * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
-     * </pre>
-     *
-     * <code>string subnet_id = 2;</code>
-     * @return The subnetId.
-     */
-    java.lang.String getSubnetId();
-    /**
-     * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
-     * </pre>
-     *
-     * <code>string subnet_id = 2;</code>
-     * @return The bytes for subnetId.
-     */
-    com.google.protobuf.ByteString
-        getSubnetIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection}
@@ -9038,7 +9018,6 @@ public final class Common {
     }
     private ConnectionManagerConnection() {
       connectionId_ = "";
-      subnetId_ = "";
     }
 
     @java.lang.Override
@@ -9075,12 +9054,6 @@ public final class Common {
               java.lang.String s = input.readStringRequireUtf8();
 
               connectionId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              subnetId_ = s;
               break;
             }
             default: {
@@ -9153,52 +9126,6 @@ public final class Common {
       }
     }
 
-    public static final int SUBNET_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object subnetId_;
-    /**
-     * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
-     * </pre>
-     *
-     * <code>string subnet_id = 2;</code>
-     * @return The subnetId.
-     */
-    @java.lang.Override
-    public java.lang.String getSubnetId() {
-      java.lang.Object ref = subnetId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        subnetId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
-     * </pre>
-     *
-     * <code>string subnet_id = 2;</code>
-     * @return The bytes for subnetId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSubnetIdBytes() {
-      java.lang.Object ref = subnetId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        subnetId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9216,9 +9143,6 @@ public final class Common {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subnetId_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -9230,9 +9154,6 @@ public final class Common {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subnetId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9251,8 +9172,6 @@ public final class Common {
 
       if (!getConnectionId()
           .equals(other.getConnectionId())) return false;
-      if (!getSubnetId()
-          .equals(other.getSubnetId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9266,8 +9185,6 @@ public final class Common {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getConnectionId().hashCode();
-      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSubnetId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9403,8 +9320,6 @@ public final class Common {
         super.clear();
         connectionId_ = "";
 
-        subnetId_ = "";
-
         return this;
       }
 
@@ -9432,7 +9347,6 @@ public final class Common {
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection result = new yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection(this);
         result.connectionId_ = connectionId_;
-        result.subnetId_ = subnetId_;
         onBuilt();
         return result;
       }
@@ -9483,10 +9397,6 @@ public final class Common {
         if (other == yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance()) return this;
         if (!other.getConnectionId().isEmpty()) {
           connectionId_ = other.connectionId_;
-          onChanged();
-        }
-        if (!other.getSubnetId().isEmpty()) {
-          subnetId_ = other.subnetId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -9590,102 +9500,6 @@ public final class Common {
   checkByteStringIsUtf8(value);
         
         connectionId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object subnetId_ = "";
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 2;</code>
-       * @return The subnetId.
-       */
-      public java.lang.String getSubnetId() {
-        java.lang.Object ref = subnetId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          subnetId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 2;</code>
-       * @return The bytes for subnetId.
-       */
-      public com.google.protobuf.ByteString
-          getSubnetIdBytes() {
-        java.lang.Object ref = subnetId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          subnetId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 2;</code>
-       * @param value The subnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubnetId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        subnetId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSubnetId() {
-        
-        subnetId_ = getDefaultInstance().getSubnetId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 2;</code>
-       * @param value The bytes for subnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubnetIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        subnetId_ = value;
         onChanged();
         return this;
       }
@@ -9830,23 +9644,22 @@ public final class Common {
       "\002\"q\n\nDataSchema\022\025\n\013json_fields\030\001 \001(\tH\000\022B" +
       "\n\006fields\030\002 \001(\01320.yandex.cloud.datatransf" +
       "er.v1.endpoint.FieldListH\000B\010\n\006schema\"\010\n\006" +
-      "NoAuth\"G\n\033ConnectionManagerConnection\022\025\n" +
-      "\rconnection_id\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t*" +
-      "h\n\023ObjectTransferStage\022%\n!OBJECT_TRANSFE" +
-      "R_STAGE_UNSPECIFIED\020\000\022\017\n\013BEFORE_DATA\020\001\022\016" +
-      "\n\nAFTER_DATA\020\002\022\t\n\005NEVER\020\003*U\n\rCleanupPoli" +
-      "cy\022\036\n\032CLEANUP_POLICY_UNSPECIFIED\020\000\022\014\n\010DI" +
-      "SABLED\020\001\022\010\n\004DROP\020\002\022\014\n\010TRUNCATE\020\003*\311\001\n\nCol" +
-      "umnType\022\033\n\027COLUMN_TYPE_UNSPECIFIED\020\000\022\t\n\005" +
-      "INT32\020\001\022\t\n\005INT16\020\002\022\010\n\004INT8\020\003\022\n\n\006UINT64\020\004" +
-      "\022\n\n\006UINT32\020\005\022\n\n\006UINT16\020\006\022\t\n\005UINT8\020\007\022\n\n\006D" +
-      "OUBLE\020\010\022\013\n\007BOOLEAN\020\t\022\n\n\006STRING\020\n\022\010\n\004UTF8" +
-      "\020\013\022\007\n\003ANY\020\014\022\014\n\010DATETIME\020\r\022\t\n\005INT64\020\016B\247\001\n" +
-      ")yandex.cloud.api.datatransfer.v1.endpoi" +
-      "ntZRgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/datatransfer/v1/endpoint;en" +
-      "dpoint\252\002%Yandex.Cloud.Datatransfer.V1.En" +
-      "dPointb\006proto3"
+      "NoAuth\"4\n\033ConnectionManagerConnection\022\025\n" +
+      "\rconnection_id\030\001 \001(\t*h\n\023ObjectTransferSt" +
+      "age\022%\n!OBJECT_TRANSFER_STAGE_UNSPECIFIED" +
+      "\020\000\022\017\n\013BEFORE_DATA\020\001\022\016\n\nAFTER_DATA\020\002\022\t\n\005N" +
+      "EVER\020\003*U\n\rCleanupPolicy\022\036\n\032CLEANUP_POLIC" +
+      "Y_UNSPECIFIED\020\000\022\014\n\010DISABLED\020\001\022\010\n\004DROP\020\002\022" +
+      "\014\n\010TRUNCATE\020\003*\311\001\n\nColumnType\022\033\n\027COLUMN_T" +
+      "YPE_UNSPECIFIED\020\000\022\t\n\005INT32\020\001\022\t\n\005INT16\020\002\022" +
+      "\010\n\004INT8\020\003\022\n\n\006UINT64\020\004\022\n\n\006UINT32\020\005\022\n\n\006UIN" +
+      "T16\020\006\022\t\n\005UINT8\020\007\022\n\n\006DOUBLE\020\010\022\013\n\007BOOLEAN\020" +
+      "\t\022\n\n\006STRING\020\n\022\010\n\004UTF8\020\013\022\007\n\003ANY\020\014\022\014\n\010DATE" +
+      "TIME\020\r\022\t\n\005INT64\020\016B\247\001\n)yandex.cloud.api.d" +
+      "atatransfer.v1.endpointZRgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/datatr" +
+      "ansfer/v1/endpoint;endpoint\252\002%Yandex.Clo" +
+      "ud.Datatransfer.V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9918,7 +9731,7 @@ public final class Common {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_descriptor,
-        new java.lang.String[] { "ConnectionId", "SubnetId", });
+        new java.lang.String[] { "ConnectionId", });
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 

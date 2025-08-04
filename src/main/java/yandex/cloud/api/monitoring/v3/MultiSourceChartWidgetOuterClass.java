@@ -554,6 +554,123 @@ public final class MultiSourceChartWidgetOuterClass {
     }
 
     /**
+     * Protobuf enum {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValuesType}
+     */
+    public enum ValuesType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>VALUES_TYPE_UNSPECIFIED = 0;</code>
+       */
+      VALUES_TYPE_UNSPECIFIED(0),
+      /**
+       * <code>VALUES_TYPE_ALL_ZEROS = 1;</code>
+       */
+      VALUES_TYPE_ALL_ZEROS(1),
+      /**
+       * <code>VALUES_TYPE_ALL_NULL = 2;</code>
+       */
+      VALUES_TYPE_ALL_NULL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>VALUES_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int VALUES_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>VALUES_TYPE_ALL_ZEROS = 1;</code>
+       */
+      public static final int VALUES_TYPE_ALL_ZEROS_VALUE = 1;
+      /**
+       * <code>VALUES_TYPE_ALL_NULL = 2;</code>
+       */
+      public static final int VALUES_TYPE_ALL_NULL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ValuesType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ValuesType forNumber(int value) {
+        switch (value) {
+          case 0: return VALUES_TYPE_UNSPECIFIED;
+          case 1: return VALUES_TYPE_ALL_ZEROS;
+          case 2: return VALUES_TYPE_ALL_NULL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ValuesType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ValuesType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ValuesType>() {
+              public ValuesType findValueByNumber(int number) {
+                return ValuesType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ValuesType[] VALUES = values();
+
+      public static ValuesType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ValuesType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValuesType)
+    }
+
+    /**
      * Protobuf enum {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.FreezeDuration}
      */
     public enum FreezeDuration
@@ -694,7 +811,7 @@ public final class MultiSourceChartWidgetOuterClass {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.getDescriptor().getEnumTypes().get(0);
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.getDescriptor().getEnumTypes().get(1);
       }
 
       private static final FreezeDuration[] VALUES = values();
@@ -2150,6 +2267,26 @@ public final class MultiSourceChartWidgetOuterClass {
          */
         com.google.protobuf.ByteString
             getNameBytes();
+
+        /**
+         * <pre>
+         * Minimal step as raw string.
+         * </pre>
+         *
+         * <code>string step = 7;</code>
+         * @return The step.
+         */
+        java.lang.String getStep();
+        /**
+         * <pre>
+         * Minimal step as raw string.
+         * </pre>
+         *
+         * <code>string step = 7;</code>
+         * @return The bytes for step.
+         */
+        com.google.protobuf.ByteString
+            getStepBytes();
       }
       /**
        * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.Target.PrometheusTarget}
@@ -2168,6 +2305,7 @@ public final class MultiSourceChartWidgetOuterClass {
           workspaceId_ = "";
           query_ = "";
           name_ = "";
+          step_ = "";
         }
 
         @java.lang.Override
@@ -2232,6 +2370,12 @@ public final class MultiSourceChartWidgetOuterClass {
                   java.lang.String s = input.readStringRequireUtf8();
 
                   name_ = s;
+                  break;
+                }
+                case 58: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  step_ = s;
                   break;
                 }
                 default: {
@@ -2480,6 +2624,52 @@ public final class MultiSourceChartWidgetOuterClass {
           }
         }
 
+        public static final int STEP_FIELD_NUMBER = 7;
+        private volatile java.lang.Object step_;
+        /**
+         * <pre>
+         * Minimal step as raw string.
+         * </pre>
+         *
+         * <code>string step = 7;</code>
+         * @return The step.
+         */
+        @java.lang.Override
+        public java.lang.String getStep() {
+          java.lang.Object ref = step_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            step_ = s;
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * Minimal step as raw string.
+         * </pre>
+         *
+         * <code>string step = 7;</code>
+         * @return The bytes for step.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getStepBytes() {
+          java.lang.Object ref = step_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            step_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -2512,6 +2702,9 @@ public final class MultiSourceChartWidgetOuterClass {
           if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 6, name_);
           }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(step_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 7, step_);
+          }
           unknownFields.writeTo(output);
         }
 
@@ -2541,6 +2734,9 @@ public final class MultiSourceChartWidgetOuterClass {
           if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, name_);
           }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(step_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, step_);
+          }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
           return size;
@@ -2568,6 +2764,8 @@ public final class MultiSourceChartWidgetOuterClass {
               != other.getHidden()) return false;
           if (!getName()
               .equals(other.getName())) return false;
+          if (!getStep()
+              .equals(other.getStep())) return false;
           if (!unknownFields.equals(other.unknownFields)) return false;
           return true;
         }
@@ -2593,6 +2791,8 @@ public final class MultiSourceChartWidgetOuterClass {
               getHidden());
           hash = (37 * hash) + NAME_FIELD_NUMBER;
           hash = (53 * hash) + getName().hashCode();
+          hash = (37 * hash) + STEP_FIELD_NUMBER;
+          hash = (53 * hash) + getStep().hashCode();
           hash = (29 * hash) + unknownFields.hashCode();
           memoizedHashCode = hash;
           return hash;
@@ -2738,6 +2938,8 @@ public final class MultiSourceChartWidgetOuterClass {
 
             name_ = "";
 
+            step_ = "";
+
             return this;
           }
 
@@ -2770,6 +2972,7 @@ public final class MultiSourceChartWidgetOuterClass {
             result.textMode_ = textMode_;
             result.hidden_ = hidden_;
             result.name_ = name_;
+            result.step_ = step_;
             onBuilt();
             return result;
           }
@@ -2838,6 +3041,10 @@ public final class MultiSourceChartWidgetOuterClass {
             }
             if (!other.getName().isEmpty()) {
               name_ = other.name_;
+              onChanged();
+            }
+            if (!other.getStep().isEmpty()) {
+              step_ = other.step_;
               onChanged();
             }
             this.mergeUnknownFields(other.unknownFields);
@@ -3335,6 +3542,102 @@ public final class MultiSourceChartWidgetOuterClass {
   checkByteStringIsUtf8(value);
             
             name_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object step_ = "";
+          /**
+           * <pre>
+           * Minimal step as raw string.
+           * </pre>
+           *
+           * <code>string step = 7;</code>
+           * @return The step.
+           */
+          public java.lang.String getStep() {
+            java.lang.Object ref = step_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              step_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Minimal step as raw string.
+           * </pre>
+           *
+           * <code>string step = 7;</code>
+           * @return The bytes for step.
+           */
+          public com.google.protobuf.ByteString
+              getStepBytes() {
+            java.lang.Object ref = step_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              step_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Minimal step as raw string.
+           * </pre>
+           *
+           * <code>string step = 7;</code>
+           * @param value The step to set.
+           * @return This builder for chaining.
+           */
+          public Builder setStep(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            step_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Minimal step as raw string.
+           * </pre>
+           *
+           * <code>string step = 7;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearStep() {
+            
+            step_ = getDefaultInstance().getStep();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Minimal step as raw string.
+           * </pre>
+           *
+           * <code>string step = 7;</code>
+           * @param value The bytes for step to set.
+           * @return This builder for chaining.
+           */
+          public Builder setStepBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            step_ = value;
             onChanged();
             return this;
           }
@@ -8156,6 +8459,21 @@ public final class MultiSourceChartWidgetOuterClass {
          */
         yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorSchemeOrBuilder getThresholdsOrBuilder();
 
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+         * @return Whether the constant field is set.
+         */
+        boolean hasConstant();
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+         * @return The constant.
+         */
+        yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme getConstant();
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+         */
+        yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorSchemeOrBuilder getConstantOrBuilder();
+
         public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.SchemeCase getSchemeCase();
       }
       /**
@@ -8271,6 +8589,20 @@ public final class MultiSourceChartWidgetOuterClass {
                     scheme_ = subBuilder.buildPartial();
                   }
                   schemeCase_ = 5;
+                  break;
+                }
+                case 50: {
+                  yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.Builder subBuilder = null;
+                  if (schemeCase_ == 6) {
+                    subBuilder = ((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) scheme_).toBuilder();
+                  }
+                  scheme_ =
+                      input.readMessage(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) scheme_);
+                    scheme_ = subBuilder.buildPartial();
+                  }
+                  schemeCase_ = 6;
                   break;
                 }
                 default: {
@@ -10721,6 +11053,574 @@ public final class MultiSourceChartWidgetOuterClass {
 
         }
 
+        public interface ConstantColorSchemeOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme)
+            com.google.protobuf.MessageOrBuilder {
+
+          /**
+           * <code>string color = 1;</code>
+           * @return The color.
+           */
+          java.lang.String getColor();
+          /**
+           * <code>string color = 1;</code>
+           * @return The bytes for color.
+           */
+          com.google.protobuf.ByteString
+              getColorBytes();
+        }
+        /**
+         * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme}
+         */
+        public static final class ConstantColorScheme extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme)
+            ConstantColorSchemeOrBuilder {
+        private static final long serialVersionUID = 0L;
+          // Use ConstantColorScheme.newBuilder() to construct.
+          private ConstantColorScheme(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+          }
+          private ConstantColorScheme() {
+            color_ = "";
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new ConstantColorScheme();
+          }
+
+          @java.lang.Override
+          public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+            return this.unknownFields;
+          }
+          private ConstantColorScheme(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 10: {
+                    java.lang.String s = input.readStringRequireUtf8();
+
+                    color_ = s;
+                    break;
+                  }
+                  default: {
+                    if (!parseUnknownField(
+                        input, unknownFields, extensionRegistry, tag)) {
+                      done = true;
+                    }
+                    break;
+                  }
+                }
+              }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(
+                  e).setUnfinishedMessage(this);
+            } finally {
+              this.unknownFields = unknownFields.build();
+              makeExtensionsImmutable();
+            }
+          }
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ConstantColorScheme_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ConstantColorScheme_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.Builder.class);
+          }
+
+          public static final int COLOR_FIELD_NUMBER = 1;
+          private volatile java.lang.Object color_;
+          /**
+           * <code>string color = 1;</code>
+           * @return The color.
+           */
+          @java.lang.Override
+          public java.lang.String getColor() {
+            java.lang.Object ref = color_;
+            if (ref instanceof java.lang.String) {
+              return (java.lang.String) ref;
+            } else {
+              com.google.protobuf.ByteString bs = 
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              color_ = s;
+              return s;
+            }
+          }
+          /**
+           * <code>string color = 1;</code>
+           * @return The bytes for color.
+           */
+          @java.lang.Override
+          public com.google.protobuf.ByteString
+              getColorBytes() {
+            java.lang.Object ref = color_;
+            if (ref instanceof java.lang.String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              color_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+
+          private byte memoizedIsInitialized = -1;
+          @java.lang.Override
+          public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+          }
+
+          @java.lang.Override
+          public void writeTo(com.google.protobuf.CodedOutputStream output)
+                              throws java.io.IOException {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(color_)) {
+              com.google.protobuf.GeneratedMessageV3.writeString(output, 1, color_);
+            }
+            unknownFields.writeTo(output);
+          }
+
+          @java.lang.Override
+          public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(color_)) {
+              size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, color_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+          }
+
+          @java.lang.Override
+          public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+             return true;
+            }
+            if (!(obj instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme)) {
+              return super.equals(obj);
+            }
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme other = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) obj;
+
+            if (!getColor()
+                .equals(other.getColor())) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+          }
+
+          @java.lang.Override
+          public int hashCode() {
+            if (memoizedHashCode != 0) {
+              return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + COLOR_FIELD_NUMBER;
+            hash = (53 * hash) + getColor().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+          }
+
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseFrom(
+              java.nio.ByteBuffer data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseFrom(
+              java.nio.ByteBuffer data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseFrom(
+              com.google.protobuf.ByteString data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseFrom(
+              com.google.protobuf.ByteString data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseFrom(byte[] data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseFrom(
+              byte[] data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseDelimitedFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseDelimitedWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseDelimitedFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseFrom(
+              com.google.protobuf.CodedInputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parseFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input, extensionRegistry);
+          }
+
+          @java.lang.Override
+          public Builder newBuilderForType() { return newBuilder(); }
+          public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+          }
+          public static Builder newBuilder(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+          }
+          @java.lang.Override
+          public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                ? new Builder() : new Builder().mergeFrom(this);
+          }
+
+          @java.lang.Override
+          protected Builder newBuilderForType(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+          }
+          /**
+           * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme}
+           */
+          public static final class Builder extends
+              com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+              // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme)
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorSchemeOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+                getDescriptor() {
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ConstantColorScheme_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+                internalGetFieldAccessorTable() {
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ConstantColorScheme_fieldAccessorTable
+                  .ensureFieldAccessorsInitialized(
+                      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.Builder.class);
+            }
+
+            // Construct using yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.newBuilder()
+            private Builder() {
+              maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+              super(parent);
+              maybeForceBuilderInitialization();
+            }
+            private void maybeForceBuilderInitialization() {
+              if (com.google.protobuf.GeneratedMessageV3
+                      .alwaysUseFieldBuilders) {
+              }
+            }
+            @java.lang.Override
+            public Builder clear() {
+              super.clear();
+              color_ = "";
+
+              return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+                getDescriptorForType() {
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ConstantColorScheme_descriptor;
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme getDefaultInstanceForType() {
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme build() {
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme result = buildPartial();
+              if (!result.isInitialized()) {
+                throw newUninitializedMessageException(result);
+              }
+              return result;
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme buildPartial() {
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme result = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme(this);
+              result.color_ = color_;
+              onBuilt();
+              return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+              return super.clone();
+            }
+            @java.lang.Override
+            public Builder setField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                java.lang.Object value) {
+              return super.setField(field, value);
+            }
+            @java.lang.Override
+            public Builder clearField(
+                com.google.protobuf.Descriptors.FieldDescriptor field) {
+              return super.clearField(field);
+            }
+            @java.lang.Override
+            public Builder clearOneof(
+                com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              return super.clearOneof(oneof);
+            }
+            @java.lang.Override
+            public Builder setRepeatedField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                int index, java.lang.Object value) {
+              return super.setRepeatedField(field, index, value);
+            }
+            @java.lang.Override
+            public Builder addRepeatedField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                java.lang.Object value) {
+              return super.addRepeatedField(field, value);
+            }
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+              if (other instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) {
+                return mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme)other);
+              } else {
+                super.mergeFrom(other);
+                return this;
+              }
+            }
+
+            public Builder mergeFrom(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme other) {
+              if (other == yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.getDefaultInstance()) return this;
+              if (!other.getColor().isEmpty()) {
+                color_ = other.color_;
+                onChanged();
+              }
+              this.mergeUnknownFields(other.unknownFields);
+              onChanged();
+              return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+              return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme parsedMessage = null;
+              try {
+                parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                parsedMessage = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) e.getUnfinishedMessage();
+                throw e.unwrapIOException();
+              } finally {
+                if (parsedMessage != null) {
+                  mergeFrom(parsedMessage);
+                }
+              }
+              return this;
+            }
+
+            private java.lang.Object color_ = "";
+            /**
+             * <code>string color = 1;</code>
+             * @return The color.
+             */
+            public java.lang.String getColor() {
+              java.lang.Object ref = color_;
+              if (!(ref instanceof java.lang.String)) {
+                com.google.protobuf.ByteString bs =
+                    (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                color_ = s;
+                return s;
+              } else {
+                return (java.lang.String) ref;
+              }
+            }
+            /**
+             * <code>string color = 1;</code>
+             * @return The bytes for color.
+             */
+            public com.google.protobuf.ByteString
+                getColorBytes() {
+              java.lang.Object ref = color_;
+              if (ref instanceof String) {
+                com.google.protobuf.ByteString b = 
+                    com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+                color_ = b;
+                return b;
+              } else {
+                return (com.google.protobuf.ByteString) ref;
+              }
+            }
+            /**
+             * <code>string color = 1;</code>
+             * @param value The color to set.
+             * @return This builder for chaining.
+             */
+            public Builder setColor(
+                java.lang.String value) {
+              if (value == null) {
+    throw new NullPointerException();
+  }
+  
+              color_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>string color = 1;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearColor() {
+              
+              color_ = getDefaultInstance().getColor();
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>string color = 1;</code>
+             * @param value The bytes for color to set.
+             * @return This builder for chaining.
+             */
+            public Builder setColorBytes(
+                com.google.protobuf.ByteString value) {
+              if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+              
+              color_ = value;
+              onChanged();
+              return this;
+            }
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                final com.google.protobuf.UnknownFieldSet unknownFields) {
+              return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                final com.google.protobuf.UnknownFieldSet unknownFields) {
+              return super.mergeUnknownFields(unknownFields);
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme)
+          }
+
+          // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme)
+          private static final yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme DEFAULT_INSTANCE;
+          static {
+            DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme();
+          }
+
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+          }
+
+          private static final com.google.protobuf.Parser<ConstantColorScheme>
+              PARSER = new com.google.protobuf.AbstractParser<ConstantColorScheme>() {
+            @java.lang.Override
+            public ConstantColorScheme parsePartialFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return new ConstantColorScheme(input, extensionRegistry);
+            }
+          };
+
+          public static com.google.protobuf.Parser<ConstantColorScheme> parser() {
+            return PARSER;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Parser<ConstantColorScheme> getParserForType() {
+            return PARSER;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+          }
+
+        }
+
         public interface ThresholdsColorSchemeOrBuilder extends
             // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme)
             com.google.protobuf.MessageOrBuilder {
@@ -11400,6 +12300,7 @@ public final class MultiSourceChartWidgetOuterClass {
           GRADIENT(3),
           HASH(4),
           THRESHOLDS(5),
+          CONSTANT(6),
           SCHEME_NOT_SET(0);
           private final int value;
           private SchemeCase(int value) {
@@ -11422,6 +12323,7 @@ public final class MultiSourceChartWidgetOuterClass {
               case 3: return GRADIENT;
               case 4: return HASH;
               case 5: return THRESHOLDS;
+              case 6: return CONSTANT;
               case 0: return SCHEME_NOT_SET;
               default: return null;
             }
@@ -11652,6 +12554,37 @@ public final class MultiSourceChartWidgetOuterClass {
           return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.getDefaultInstance();
         }
 
+        public static final int CONSTANT_FIELD_NUMBER = 6;
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+         * @return Whether the constant field is set.
+         */
+        @java.lang.Override
+        public boolean hasConstant() {
+          return schemeCase_ == 6;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+         * @return The constant.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme getConstant() {
+          if (schemeCase_ == 6) {
+             return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) scheme_;
+          }
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.getDefaultInstance();
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorSchemeOrBuilder getConstantOrBuilder() {
+          if (schemeCase_ == 6) {
+             return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) scheme_;
+          }
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.getDefaultInstance();
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -11681,6 +12614,9 @@ public final class MultiSourceChartWidgetOuterClass {
           if (schemeCase_ == 5) {
             output.writeMessage(5, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_);
           }
+          if (schemeCase_ == 6) {
+            output.writeMessage(6, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) scheme_);
+          }
           unknownFields.writeTo(output);
         }
 
@@ -11709,6 +12645,10 @@ public final class MultiSourceChartWidgetOuterClass {
           if (schemeCase_ == 5) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(5, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_);
+          }
+          if (schemeCase_ == 6) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(6, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) scheme_);
           }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
@@ -11747,6 +12687,10 @@ public final class MultiSourceChartWidgetOuterClass {
               if (!getThresholds()
                   .equals(other.getThresholds())) return false;
               break;
+            case 6:
+              if (!getConstant()
+                  .equals(other.getConstant())) return false;
+              break;
             case 0:
             default:
           }
@@ -11781,6 +12725,10 @@ public final class MultiSourceChartWidgetOuterClass {
             case 5:
               hash = (37 * hash) + THRESHOLDS_FIELD_NUMBER;
               hash = (53 * hash) + getThresholds().hashCode();
+              break;
+            case 6:
+              hash = (37 * hash) + CONSTANT_FIELD_NUMBER;
+              hash = (53 * hash) + getConstant().hashCode();
               break;
             case 0:
             default:
@@ -11981,6 +12929,13 @@ public final class MultiSourceChartWidgetOuterClass {
                 result.scheme_ = thresholdsBuilder_.build();
               }
             }
+            if (schemeCase_ == 6) {
+              if (constantBuilder_ == null) {
+                result.scheme_ = scheme_;
+              } else {
+                result.scheme_ = constantBuilder_.build();
+              }
+            }
             result.schemeCase_ = schemeCase_;
             onBuilt();
             return result;
@@ -12049,6 +13004,10 @@ public final class MultiSourceChartWidgetOuterClass {
               }
               case THRESHOLDS: {
                 mergeThresholds(other.getThresholds());
+                break;
+              }
+              case CONSTANT: {
+                mergeConstant(other.getConstant());
                 break;
               }
               case SCHEME_NOT_SET: {
@@ -12982,6 +13941,147 @@ public final class MultiSourceChartWidgetOuterClass {
             schemeCase_ = 5;
             onChanged();;
             return thresholdsBuilder_;
+          }
+
+          private com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorSchemeOrBuilder> constantBuilder_;
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+           * @return Whether the constant field is set.
+           */
+          @java.lang.Override
+          public boolean hasConstant() {
+            return schemeCase_ == 6;
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+           * @return The constant.
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme getConstant() {
+            if (constantBuilder_ == null) {
+              if (schemeCase_ == 6) {
+                return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) scheme_;
+              }
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.getDefaultInstance();
+            } else {
+              if (schemeCase_ == 6) {
+                return constantBuilder_.getMessage();
+              }
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.getDefaultInstance();
+            }
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+           */
+          public Builder setConstant(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme value) {
+            if (constantBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              scheme_ = value;
+              onChanged();
+            } else {
+              constantBuilder_.setMessage(value);
+            }
+            schemeCase_ = 6;
+            return this;
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+           */
+          public Builder setConstant(
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.Builder builderForValue) {
+            if (constantBuilder_ == null) {
+              scheme_ = builderForValue.build();
+              onChanged();
+            } else {
+              constantBuilder_.setMessage(builderForValue.build());
+            }
+            schemeCase_ = 6;
+            return this;
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+           */
+          public Builder mergeConstant(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme value) {
+            if (constantBuilder_ == null) {
+              if (schemeCase_ == 6 &&
+                  scheme_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.getDefaultInstance()) {
+                scheme_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.newBuilder((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) scheme_)
+                    .mergeFrom(value).buildPartial();
+              } else {
+                scheme_ = value;
+              }
+              onChanged();
+            } else {
+              if (schemeCase_ == 6) {
+                constantBuilder_.mergeFrom(value);
+              }
+              constantBuilder_.setMessage(value);
+            }
+            schemeCase_ = 6;
+            return this;
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+           */
+          public Builder clearConstant() {
+            if (constantBuilder_ == null) {
+              if (schemeCase_ == 6) {
+                schemeCase_ = 0;
+                scheme_ = null;
+                onChanged();
+              }
+            } else {
+              if (schemeCase_ == 6) {
+                schemeCase_ = 0;
+                scheme_ = null;
+              }
+              constantBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+           */
+          public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.Builder getConstantBuilder() {
+            return getConstantFieldBuilder().getBuilder();
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorSchemeOrBuilder getConstantOrBuilder() {
+            if ((schemeCase_ == 6) && (constantBuilder_ != null)) {
+              return constantBuilder_.getMessageOrBuilder();
+            } else {
+              if (schemeCase_ == 6) {
+                return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) scheme_;
+              }
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.getDefaultInstance();
+            }
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorSchemeOrBuilder> 
+              getConstantFieldBuilder() {
+            if (constantBuilder_ == null) {
+              if (!(schemeCase_ == 6)) {
+                scheme_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.getDefaultInstance();
+              }
+              constantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorSchemeOrBuilder>(
+                      (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme) scheme_,
+                      getParentForChildren(),
+                      isClean());
+              scheme_ = null;
+            }
+            schemeCase_ = 6;
+            onChanged();;
+            return constantBuilder_;
           }
           @java.lang.Override
           public final Builder setUnknownFields(
@@ -18436,6 +19536,33 @@ public final class MultiSourceChartWidgetOuterClass {
        */
       yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettingsOrBuilder getSettingsOrBuilder();
 
+      /**
+       * <code>string override_name = 4;</code>
+       * @return The overrideName.
+       */
+      java.lang.String getOverrideName();
+      /**
+       * <code>string override_name = 4;</code>
+       * @return The bytes for overrideName.
+       */
+      com.google.protobuf.ByteString
+          getOverrideNameBytes();
+
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+       * @return Whether the matcher field is set.
+       */
+      boolean hasMatcher();
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+       * @return The matcher.
+       */
+      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher getMatcher();
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+       */
+      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcherOrBuilder getMatcherOrBuilder();
+
       public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.TypeCase getTypeCase();
     }
     /**
@@ -18455,6 +19582,7 @@ public final class MultiSourceChartWidgetOuterClass {
         super(builder);
       }
       private SeriesOverrides() {
+        overrideName_ = "";
       }
 
       @java.lang.Override
@@ -18508,6 +19636,25 @@ public final class MultiSourceChartWidgetOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(settings_);
                   settings_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                overrideName_ = s;
+                break;
+              }
+              case 42: {
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.Builder subBuilder = null;
+                if (matcher_ != null) {
+                  subBuilder = matcher_.toBuilder();
+                }
+                matcher_ = input.readMessage(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(matcher_);
+                  matcher_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -18971,6 +20118,27 @@ public final class MultiSourceChartWidgetOuterClass {
          * @return The yaxisPosition.
          */
         yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.YaxisPosition getYaxisPosition();
+
+        /**
+         * <pre>
+         * Line Border Width
+         * </pre>
+         *
+         * <code>int64 line_width = 7;</code>
+         * @return The lineWidth.
+         */
+        long getLineWidth();
+
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
+         * @return The enum numeric value on the wire for lineStyle.
+         */
+        int getLineStyleValue();
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
+         * @return The lineStyle.
+         */
+        yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle getLineStyle();
       }
       /**
        * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings}
@@ -18990,6 +20158,7 @@ public final class MultiSourceChartWidgetOuterClass {
           type_ = 0;
           stackName_ = "";
           yaxisPosition_ = 0;
+          lineStyle_ = 0;
         }
 
         @java.lang.Override
@@ -19057,6 +20226,17 @@ public final class MultiSourceChartWidgetOuterClass {
                   yaxisPosition_ = rawValue;
                   break;
                 }
+                case 56: {
+
+                  lineWidth_ = input.readInt64();
+                  break;
+                }
+                case 64: {
+                  int rawValue = input.readEnum();
+
+                  lineStyle_ = rawValue;
+                  break;
+                }
                 default: {
                   if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
@@ -19087,6 +20267,132 @@ public final class MultiSourceChartWidgetOuterClass {
           return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_SeriesOverrides_SeriesOverrideSettings_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.Builder.class);
+        }
+
+        /**
+         * Protobuf enum {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle}
+         */
+        public enum LineStyle
+            implements com.google.protobuf.ProtocolMessageEnum {
+          /**
+           * <code>LINE_STYLE_UNSPECIFIED = 0;</code>
+           */
+          LINE_STYLE_UNSPECIFIED(0),
+          /**
+           * <code>LINE_STYLE_SOLID = 1;</code>
+           */
+          LINE_STYLE_SOLID(1),
+          /**
+           * <code>LINE_STYLE_DASH = 2;</code>
+           */
+          LINE_STYLE_DASH(2),
+          /**
+           * <code>LINE_STYLE_DOTS = 3;</code>
+           */
+          LINE_STYLE_DOTS(3),
+          UNRECOGNIZED(-1),
+          ;
+
+          /**
+           * <code>LINE_STYLE_UNSPECIFIED = 0;</code>
+           */
+          public static final int LINE_STYLE_UNSPECIFIED_VALUE = 0;
+          /**
+           * <code>LINE_STYLE_SOLID = 1;</code>
+           */
+          public static final int LINE_STYLE_SOLID_VALUE = 1;
+          /**
+           * <code>LINE_STYLE_DASH = 2;</code>
+           */
+          public static final int LINE_STYLE_DASH_VALUE = 2;
+          /**
+           * <code>LINE_STYLE_DOTS = 3;</code>
+           */
+          public static final int LINE_STYLE_DOTS_VALUE = 3;
+
+
+          public final int getNumber() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalArgumentException(
+                  "Can't get the number of an unknown enum value.");
+            }
+            return value;
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           * @deprecated Use {@link #forNumber(int)} instead.
+           */
+          @java.lang.Deprecated
+          public static LineStyle valueOf(int value) {
+            return forNumber(value);
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           */
+          public static LineStyle forNumber(int value) {
+            switch (value) {
+              case 0: return LINE_STYLE_UNSPECIFIED;
+              case 1: return LINE_STYLE_SOLID;
+              case 2: return LINE_STYLE_DASH;
+              case 3: return LINE_STYLE_DOTS;
+              default: return null;
+            }
+          }
+
+          public static com.google.protobuf.Internal.EnumLiteMap<LineStyle>
+              internalGetValueMap() {
+            return internalValueMap;
+          }
+          private static final com.google.protobuf.Internal.EnumLiteMap<
+              LineStyle> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<LineStyle>() {
+                  public LineStyle findValueByNumber(int number) {
+                    return LineStyle.forNumber(number);
+                  }
+                };
+
+          public final com.google.protobuf.Descriptors.EnumValueDescriptor
+              getValueDescriptor() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalStateException(
+                  "Can't get the descriptor of an unrecognized enum value.");
+            }
+            return getDescriptor().getValues().get(ordinal());
+          }
+          public final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptorForType() {
+            return getDescriptor();
+          }
+          public static final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptor() {
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.getDescriptor().getEnumTypes().get(0);
+          }
+
+          private static final LineStyle[] VALUES = values();
+
+          public static LineStyle valueOf(
+              com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+            if (desc.getType() != getDescriptor()) {
+              throw new java.lang.IllegalArgumentException(
+                "EnumValueDescriptor is not for this type.");
+            }
+            if (desc.getIndex() == -1) {
+              return UNRECOGNIZED;
+            }
+            return VALUES[desc.getIndex()];
+          }
+
+          private final int value;
+
+          private LineStyle(int value) {
+            this.value = value;
+          }
+
+          // @@protoc_insertion_point(enum_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle)
         }
 
         public static final int NAME_FIELD_NUMBER = 1;
@@ -19296,6 +20602,40 @@ public final class MultiSourceChartWidgetOuterClass {
           return result == null ? yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.YaxisPosition.UNRECOGNIZED : result;
         }
 
+        public static final int LINE_WIDTH_FIELD_NUMBER = 7;
+        private long lineWidth_;
+        /**
+         * <pre>
+         * Line Border Width
+         * </pre>
+         *
+         * <code>int64 line_width = 7;</code>
+         * @return The lineWidth.
+         */
+        @java.lang.Override
+        public long getLineWidth() {
+          return lineWidth_;
+        }
+
+        public static final int LINE_STYLE_FIELD_NUMBER = 8;
+        private int lineStyle_;
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
+         * @return The enum numeric value on the wire for lineStyle.
+         */
+        @java.lang.Override public int getLineStyleValue() {
+          return lineStyle_;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
+         * @return The lineStyle.
+         */
+        @java.lang.Override public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle getLineStyle() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle result = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle.valueOf(lineStyle_);
+          return result == null ? yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle.UNRECOGNIZED : result;
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -19328,6 +20668,12 @@ public final class MultiSourceChartWidgetOuterClass {
           if (yaxisPosition_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.YaxisPosition.YAXIS_POSITION_UNSPECIFIED.getNumber()) {
             output.writeEnum(6, yaxisPosition_);
           }
+          if (lineWidth_ != 0L) {
+            output.writeInt64(7, lineWidth_);
+          }
+          if (lineStyle_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle.LINE_STYLE_UNSPECIFIED.getNumber()) {
+            output.writeEnum(8, lineStyle_);
+          }
           unknownFields.writeTo(output);
         }
 
@@ -19358,6 +20704,14 @@ public final class MultiSourceChartWidgetOuterClass {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(6, yaxisPosition_);
           }
+          if (lineWidth_ != 0L) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt64Size(7, lineWidth_);
+          }
+          if (lineStyle_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle.LINE_STYLE_UNSPECIFIED.getNumber()) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(8, lineStyle_);
+          }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
           return size;
@@ -19383,6 +20737,9 @@ public final class MultiSourceChartWidgetOuterClass {
           if (getGrowDown()
               != other.getGrowDown()) return false;
           if (yaxisPosition_ != other.yaxisPosition_) return false;
+          if (getLineWidth()
+              != other.getLineWidth()) return false;
+          if (lineStyle_ != other.lineStyle_) return false;
           if (!unknownFields.equals(other.unknownFields)) return false;
           return true;
         }
@@ -19407,6 +20764,11 @@ public final class MultiSourceChartWidgetOuterClass {
               getGrowDown());
           hash = (37 * hash) + YAXIS_POSITION_FIELD_NUMBER;
           hash = (53 * hash) + yaxisPosition_;
+          hash = (37 * hash) + LINE_WIDTH_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getLineWidth());
+          hash = (37 * hash) + LINE_STYLE_FIELD_NUMBER;
+          hash = (53 * hash) + lineStyle_;
           hash = (29 * hash) + unknownFields.hashCode();
           memoizedHashCode = hash;
           return hash;
@@ -19552,6 +20914,10 @@ public final class MultiSourceChartWidgetOuterClass {
 
             yaxisPosition_ = 0;
 
+            lineWidth_ = 0L;
+
+            lineStyle_ = 0;
+
             return this;
           }
 
@@ -19584,6 +20950,8 @@ public final class MultiSourceChartWidgetOuterClass {
             result.stackName_ = stackName_;
             result.growDown_ = growDown_;
             result.yaxisPosition_ = yaxisPosition_;
+            result.lineWidth_ = lineWidth_;
+            result.lineStyle_ = lineStyle_;
             onBuilt();
             return result;
           }
@@ -19652,6 +21020,12 @@ public final class MultiSourceChartWidgetOuterClass {
             }
             if (other.yaxisPosition_ != 0) {
               setYaxisPositionValue(other.getYaxisPositionValue());
+            }
+            if (other.getLineWidth() != 0L) {
+              setLineWidth(other.getLineWidth());
+            }
+            if (other.lineStyle_ != 0) {
+              setLineStyleValue(other.getLineStyleValue());
             }
             this.mergeUnknownFields(other.unknownFields);
             onChanged();
@@ -20160,6 +21534,103 @@ public final class MultiSourceChartWidgetOuterClass {
             onChanged();
             return this;
           }
+
+          private long lineWidth_ ;
+          /**
+           * <pre>
+           * Line Border Width
+           * </pre>
+           *
+           * <code>int64 line_width = 7;</code>
+           * @return The lineWidth.
+           */
+          @java.lang.Override
+          public long getLineWidth() {
+            return lineWidth_;
+          }
+          /**
+           * <pre>
+           * Line Border Width
+           * </pre>
+           *
+           * <code>int64 line_width = 7;</code>
+           * @param value The lineWidth to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineWidth(long value) {
+            
+            lineWidth_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Line Border Width
+           * </pre>
+           *
+           * <code>int64 line_width = 7;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearLineWidth() {
+            
+            lineWidth_ = 0L;
+            onChanged();
+            return this;
+          }
+
+          private int lineStyle_ = 0;
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
+           * @return The enum numeric value on the wire for lineStyle.
+           */
+          @java.lang.Override public int getLineStyleValue() {
+            return lineStyle_;
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
+           * @param value The enum numeric value on the wire for lineStyle to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineStyleValue(int value) {
+            
+            lineStyle_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
+           * @return The lineStyle.
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle getLineStyle() {
+            @SuppressWarnings("deprecation")
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle result = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle.valueOf(lineStyle_);
+            return result == null ? yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle.UNRECOGNIZED : result;
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
+           * @param value The lineStyle to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineStyle(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            
+            lineStyle_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearLineStyle() {
+            
+            lineStyle_ = 0;
+            onChanged();
+            return this;
+          }
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -20420,6 +21891,70 @@ public final class MultiSourceChartWidgetOuterClass {
         return getSettings();
       }
 
+      public static final int OVERRIDE_NAME_FIELD_NUMBER = 4;
+      private volatile java.lang.Object overrideName_;
+      /**
+       * <code>string override_name = 4;</code>
+       * @return The overrideName.
+       */
+      @java.lang.Override
+      public java.lang.String getOverrideName() {
+        java.lang.Object ref = overrideName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          overrideName_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string override_name = 4;</code>
+       * @return The bytes for overrideName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOverrideNameBytes() {
+        java.lang.Object ref = overrideName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          overrideName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int MATCHER_FIELD_NUMBER = 5;
+      private yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher matcher_;
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+       * @return Whether the matcher field is set.
+       */
+      @java.lang.Override
+      public boolean hasMatcher() {
+        return matcher_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+       * @return The matcher.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher getMatcher() {
+        return matcher_ == null ? yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.getDefaultInstance() : matcher_;
+      }
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcherOrBuilder getMatcherOrBuilder() {
+        return getMatcher();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -20443,6 +21978,12 @@ public final class MultiSourceChartWidgetOuterClass {
         if (settings_ != null) {
           output.writeMessage(3, getSettings());
         }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(overrideName_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, overrideName_);
+        }
+        if (matcher_ != null) {
+          output.writeMessage(5, getMatcher());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -20461,6 +22002,13 @@ public final class MultiSourceChartWidgetOuterClass {
         if (settings_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getSettings());
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(overrideName_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, overrideName_);
+        }
+        if (matcher_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, getMatcher());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -20481,6 +22029,13 @@ public final class MultiSourceChartWidgetOuterClass {
         if (hasSettings()) {
           if (!getSettings()
               .equals(other.getSettings())) return false;
+        }
+        if (!getOverrideName()
+            .equals(other.getOverrideName())) return false;
+        if (hasMatcher() != other.hasMatcher()) return false;
+        if (hasMatcher()) {
+          if (!getMatcher()
+              .equals(other.getMatcher())) return false;
         }
         if (!getTypeCase().equals(other.getTypeCase())) return false;
         switch (typeCase_) {
@@ -20509,6 +22064,12 @@ public final class MultiSourceChartWidgetOuterClass {
         if (hasSettings()) {
           hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
           hash = (53 * hash) + getSettings().hashCode();
+        }
+        hash = (37 * hash) + OVERRIDE_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getOverrideName().hashCode();
+        if (hasMatcher()) {
+          hash = (37 * hash) + MATCHER_FIELD_NUMBER;
+          hash = (53 * hash) + getMatcher().hashCode();
         }
         switch (typeCase_) {
           case 1:
@@ -20665,6 +22226,14 @@ public final class MultiSourceChartWidgetOuterClass {
             settings_ = null;
             settingsBuilder_ = null;
           }
+          overrideName_ = "";
+
+          if (matcherBuilder_ == null) {
+            matcher_ = null;
+          } else {
+            matcher_ = null;
+            matcherBuilder_ = null;
+          }
           typeCase_ = 0;
           type_ = null;
           return this;
@@ -20703,6 +22272,12 @@ public final class MultiSourceChartWidgetOuterClass {
             result.settings_ = settings_;
           } else {
             result.settings_ = settingsBuilder_.build();
+          }
+          result.overrideName_ = overrideName_;
+          if (matcherBuilder_ == null) {
+            result.matcher_ = matcher_;
+          } else {
+            result.matcher_ = matcherBuilder_.build();
           }
           result.typeCase_ = typeCase_;
           onBuilt();
@@ -20755,6 +22330,13 @@ public final class MultiSourceChartWidgetOuterClass {
           if (other == yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides.getDefaultInstance()) return this;
           if (other.hasSettings()) {
             mergeSettings(other.getSettings());
+          }
+          if (!other.getOverrideName().isEmpty()) {
+            overrideName_ = other.overrideName_;
+            onChanged();
+          }
+          if (other.hasMatcher()) {
+            mergeMatcher(other.getMatcher());
           }
           switch (other.getTypeCase()) {
             case NAME: {
@@ -21213,6 +22795,201 @@ public final class MultiSourceChartWidgetOuterClass {
           }
           return settingsBuilder_;
         }
+
+        private java.lang.Object overrideName_ = "";
+        /**
+         * <code>string override_name = 4;</code>
+         * @return The overrideName.
+         */
+        public java.lang.String getOverrideName() {
+          java.lang.Object ref = overrideName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            overrideName_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string override_name = 4;</code>
+         * @return The bytes for overrideName.
+         */
+        public com.google.protobuf.ByteString
+            getOverrideNameBytes() {
+          java.lang.Object ref = overrideName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            overrideName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string override_name = 4;</code>
+         * @param value The overrideName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOverrideName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          overrideName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string override_name = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearOverrideName() {
+          
+          overrideName_ = getDefaultInstance().getOverrideName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string override_name = 4;</code>
+         * @param value The bytes for overrideName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOverrideNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          overrideName_ = value;
+          onChanged();
+          return this;
+        }
+
+        private yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher matcher_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcherOrBuilder> matcherBuilder_;
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+         * @return Whether the matcher field is set.
+         */
+        public boolean hasMatcher() {
+          return matcherBuilder_ != null || matcher_ != null;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+         * @return The matcher.
+         */
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher getMatcher() {
+          if (matcherBuilder_ == null) {
+            return matcher_ == null ? yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.getDefaultInstance() : matcher_;
+          } else {
+            return matcherBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+         */
+        public Builder setMatcher(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher value) {
+          if (matcherBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            matcher_ = value;
+            onChanged();
+          } else {
+            matcherBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+         */
+        public Builder setMatcher(
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.Builder builderForValue) {
+          if (matcherBuilder_ == null) {
+            matcher_ = builderForValue.build();
+            onChanged();
+          } else {
+            matcherBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+         */
+        public Builder mergeMatcher(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher value) {
+          if (matcherBuilder_ == null) {
+            if (matcher_ != null) {
+              matcher_ =
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.newBuilder(matcher_).mergeFrom(value).buildPartial();
+            } else {
+              matcher_ = value;
+            }
+            onChanged();
+          } else {
+            matcherBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+         */
+        public Builder clearMatcher() {
+          if (matcherBuilder_ == null) {
+            matcher_ = null;
+            onChanged();
+          } else {
+            matcher_ = null;
+            matcherBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+         */
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.Builder getMatcherBuilder() {
+          
+          onChanged();
+          return getMatcherFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+         */
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcherOrBuilder getMatcherOrBuilder() {
+          if (matcherBuilder_ != null) {
+            return matcherBuilder_.getMessageOrBuilder();
+          } else {
+            return matcher_ == null ?
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.getDefaultInstance() : matcher_;
+          }
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher matcher = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcherOrBuilder> 
+            getMatcherFieldBuilder() {
+          if (matcherBuilder_ == null) {
+            matcherBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcherOrBuilder>(
+                    getMatcher(),
+                    getParentForChildren(),
+                    isClean());
+            matcher_ = null;
+          }
+          return matcherBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -21261,6 +23038,3780 @@ public final class MultiSourceChartWidgetOuterClass {
 
       @java.lang.Override
       public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.SeriesOverrides getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface OverrideMatcherOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+       * @return Whether the query field is set.
+       */
+      boolean hasQuery();
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+       * @return The query.
+       */
+      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher getQuery();
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+       */
+      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcherOrBuilder getQueryOrBuilder();
+
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+       * @return Whether the line field is set.
+       */
+      boolean hasLine();
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+       * @return The line.
+       */
+      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher getLine();
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+       */
+      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcherOrBuilder getLineOrBuilder();
+
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+       * @return Whether the regexp field is set.
+       */
+      boolean hasRegexp();
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+       * @return The regexp.
+       */
+      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher getRegexp();
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+       */
+      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcherOrBuilder getRegexpOrBuilder();
+
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+       * @return Whether the values field is set.
+       */
+      boolean hasValues();
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+       * @return The values.
+       */
+      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher getValues();
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+       */
+      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcherOrBuilder getValuesOrBuilder();
+
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.TypeCase getTypeCase();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher}
+     */
+    public static final class OverrideMatcher extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher)
+        OverrideMatcherOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use OverrideMatcher.newBuilder() to construct.
+      private OverrideMatcher(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private OverrideMatcher() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new OverrideMatcher();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private OverrideMatcher(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.Builder subBuilder = null;
+                if (typeCase_ == 1) {
+                  subBuilder = ((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 1;
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.Builder subBuilder = null;
+                if (typeCase_ == 2) {
+                  subBuilder = ((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 2;
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.Builder subBuilder = null;
+                if (typeCase_ == 3) {
+                  subBuilder = ((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 3;
+                break;
+              }
+              case 34: {
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.Builder subBuilder = null;
+                if (typeCase_ == 4) {
+                  subBuilder = ((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 4;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_OverrideMatcher_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_OverrideMatcher_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.Builder.class);
+      }
+
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public enum TypeCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        QUERY(1),
+        LINE(2),
+        REGEXP(3),
+        VALUES(4),
+        TYPE_NOT_SET(0);
+        private final int value;
+        private TypeCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static TypeCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static TypeCase forNumber(int value) {
+          switch (value) {
+            case 1: return QUERY;
+            case 2: return LINE;
+            case 3: return REGEXP;
+            case 4: return VALUES;
+            case 0: return TYPE_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public TypeCase
+      getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public static final int QUERY_FIELD_NUMBER = 1;
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+       * @return Whether the query field is set.
+       */
+      @java.lang.Override
+      public boolean hasQuery() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+       * @return The query.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher getQuery() {
+        if (typeCase_ == 1) {
+           return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) type_;
+        }
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcherOrBuilder getQueryOrBuilder() {
+        if (typeCase_ == 1) {
+           return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) type_;
+        }
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.getDefaultInstance();
+      }
+
+      public static final int LINE_FIELD_NUMBER = 2;
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+       * @return Whether the line field is set.
+       */
+      @java.lang.Override
+      public boolean hasLine() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+       * @return The line.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher getLine() {
+        if (typeCase_ == 2) {
+           return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) type_;
+        }
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcherOrBuilder getLineOrBuilder() {
+        if (typeCase_ == 2) {
+           return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) type_;
+        }
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.getDefaultInstance();
+      }
+
+      public static final int REGEXP_FIELD_NUMBER = 3;
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+       * @return Whether the regexp field is set.
+       */
+      @java.lang.Override
+      public boolean hasRegexp() {
+        return typeCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+       * @return The regexp.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher getRegexp() {
+        if (typeCase_ == 3) {
+           return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) type_;
+        }
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcherOrBuilder getRegexpOrBuilder() {
+        if (typeCase_ == 3) {
+           return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) type_;
+        }
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.getDefaultInstance();
+      }
+
+      public static final int VALUES_FIELD_NUMBER = 4;
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+       * @return Whether the values field is set.
+       */
+      @java.lang.Override
+      public boolean hasValues() {
+        return typeCase_ == 4;
+      }
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+       * @return The values.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher getValues() {
+        if (typeCase_ == 4) {
+           return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) type_;
+        }
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcherOrBuilder getValuesOrBuilder() {
+        if (typeCase_ == 4) {
+           return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) type_;
+        }
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.getDefaultInstance();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (typeCase_ == 1) {
+          output.writeMessage(1, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) type_);
+        }
+        if (typeCase_ == 2) {
+          output.writeMessage(2, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) type_);
+        }
+        if (typeCase_ == 3) {
+          output.writeMessage(3, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) type_);
+        }
+        if (typeCase_ == 4) {
+          output.writeMessage(4, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) type_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (typeCase_ == 1) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) type_);
+        }
+        if (typeCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) type_);
+        }
+        if (typeCase_ == 3) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) type_);
+        }
+        if (typeCase_ == 4) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) type_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher other = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher) obj;
+
+        if (!getTypeCase().equals(other.getTypeCase())) return false;
+        switch (typeCase_) {
+          case 1:
+            if (!getQuery()
+                .equals(other.getQuery())) return false;
+            break;
+          case 2:
+            if (!getLine()
+                .equals(other.getLine())) return false;
+            break;
+          case 3:
+            if (!getRegexp()
+                .equals(other.getRegexp())) return false;
+            break;
+          case 4:
+            if (!getValues()
+                .equals(other.getValues())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        switch (typeCase_) {
+          case 1:
+            hash = (37 * hash) + QUERY_FIELD_NUMBER;
+            hash = (53 * hash) + getQuery().hashCode();
+            break;
+          case 2:
+            hash = (37 * hash) + LINE_FIELD_NUMBER;
+            hash = (53 * hash) + getLine().hashCode();
+            break;
+          case 3:
+            hash = (37 * hash) + REGEXP_FIELD_NUMBER;
+            hash = (53 * hash) + getRegexp().hashCode();
+            break;
+          case 4:
+            hash = (37 * hash) + VALUES_FIELD_NUMBER;
+            hash = (53 * hash) + getValues().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher)
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcherOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_OverrideMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_OverrideMatcher_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          typeCase_ = 0;
+          type_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_OverrideMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher build() {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher buildPartial() {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher result = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher(this);
+          if (typeCase_ == 1) {
+            if (queryBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = queryBuilder_.build();
+            }
+          }
+          if (typeCase_ == 2) {
+            if (lineBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = lineBuilder_.build();
+            }
+          }
+          if (typeCase_ == 3) {
+            if (regexpBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = regexpBuilder_.build();
+            }
+          }
+          if (typeCase_ == 4) {
+            if (valuesBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = valuesBuilder_.build();
+            }
+          }
+          result.typeCase_ = typeCase_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher) {
+            return mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher other) {
+          if (other == yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher.getDefaultInstance()) return this;
+          switch (other.getTypeCase()) {
+            case QUERY: {
+              mergeQuery(other.getQuery());
+              break;
+            }
+            case LINE: {
+              mergeLine(other.getLine());
+              break;
+            }
+            case REGEXP: {
+              mergeRegexp(other.getRegexp());
+              break;
+            }
+            case VALUES: {
+              mergeValues(other.getValues());
+              break;
+            }
+            case TYPE_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int typeCase_ = 0;
+        private java.lang.Object type_;
+        public TypeCase
+            getTypeCase() {
+          return TypeCase.forNumber(
+              typeCase_);
+        }
+
+        public Builder clearType() {
+          typeCase_ = 0;
+          type_ = null;
+          onChanged();
+          return this;
+        }
+
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcherOrBuilder> queryBuilder_;
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+         * @return Whether the query field is set.
+         */
+        @java.lang.Override
+        public boolean hasQuery() {
+          return typeCase_ == 1;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+         * @return The query.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher getQuery() {
+          if (queryBuilder_ == null) {
+            if (typeCase_ == 1) {
+              return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) type_;
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.getDefaultInstance();
+          } else {
+            if (typeCase_ == 1) {
+              return queryBuilder_.getMessage();
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+         */
+        public Builder setQuery(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher value) {
+          if (queryBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            queryBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+         */
+        public Builder setQuery(
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.Builder builderForValue) {
+          if (queryBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            queryBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+         */
+        public Builder mergeQuery(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher value) {
+          if (queryBuilder_ == null) {
+            if (typeCase_ == 1 &&
+                type_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.getDefaultInstance()) {
+              type_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.newBuilder((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 1) {
+              queryBuilder_.mergeFrom(value);
+            }
+            queryBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+         */
+        public Builder clearQuery() {
+          if (queryBuilder_ == null) {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            queryBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+         */
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.Builder getQueryBuilder() {
+          return getQueryFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcherOrBuilder getQueryOrBuilder() {
+          if ((typeCase_ == 1) && (queryBuilder_ != null)) {
+            return queryBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 1) {
+              return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) type_;
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher query = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcherOrBuilder> 
+            getQueryFieldBuilder() {
+          if (queryBuilder_ == null) {
+            if (!(typeCase_ == 1)) {
+              type_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.getDefaultInstance();
+            }
+            queryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcherOrBuilder>(
+                    (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 1;
+          onChanged();;
+          return queryBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcherOrBuilder> lineBuilder_;
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+         * @return Whether the line field is set.
+         */
+        @java.lang.Override
+        public boolean hasLine() {
+          return typeCase_ == 2;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+         * @return The line.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher getLine() {
+          if (lineBuilder_ == null) {
+            if (typeCase_ == 2) {
+              return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) type_;
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.getDefaultInstance();
+          } else {
+            if (typeCase_ == 2) {
+              return lineBuilder_.getMessage();
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+         */
+        public Builder setLine(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher value) {
+          if (lineBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            lineBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+         */
+        public Builder setLine(
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.Builder builderForValue) {
+          if (lineBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            lineBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+         */
+        public Builder mergeLine(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher value) {
+          if (lineBuilder_ == null) {
+            if (typeCase_ == 2 &&
+                type_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.getDefaultInstance()) {
+              type_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.newBuilder((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 2) {
+              lineBuilder_.mergeFrom(value);
+            }
+            lineBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+         */
+        public Builder clearLine() {
+          if (lineBuilder_ == null) {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            lineBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+         */
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.Builder getLineBuilder() {
+          return getLineFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcherOrBuilder getLineOrBuilder() {
+          if ((typeCase_ == 2) && (lineBuilder_ != null)) {
+            return lineBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 2) {
+              return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) type_;
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher line = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcherOrBuilder> 
+            getLineFieldBuilder() {
+          if (lineBuilder_ == null) {
+            if (!(typeCase_ == 2)) {
+              type_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.getDefaultInstance();
+            }
+            lineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcherOrBuilder>(
+                    (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 2;
+          onChanged();;
+          return lineBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcherOrBuilder> regexpBuilder_;
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+         * @return Whether the regexp field is set.
+         */
+        @java.lang.Override
+        public boolean hasRegexp() {
+          return typeCase_ == 3;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+         * @return The regexp.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher getRegexp() {
+          if (regexpBuilder_ == null) {
+            if (typeCase_ == 3) {
+              return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) type_;
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.getDefaultInstance();
+          } else {
+            if (typeCase_ == 3) {
+              return regexpBuilder_.getMessage();
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+         */
+        public Builder setRegexp(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher value) {
+          if (regexpBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            regexpBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+         */
+        public Builder setRegexp(
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.Builder builderForValue) {
+          if (regexpBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            regexpBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+         */
+        public Builder mergeRegexp(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher value) {
+          if (regexpBuilder_ == null) {
+            if (typeCase_ == 3 &&
+                type_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.getDefaultInstance()) {
+              type_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.newBuilder((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 3) {
+              regexpBuilder_.mergeFrom(value);
+            }
+            regexpBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+         */
+        public Builder clearRegexp() {
+          if (regexpBuilder_ == null) {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            regexpBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+         */
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.Builder getRegexpBuilder() {
+          return getRegexpFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcherOrBuilder getRegexpOrBuilder() {
+          if ((typeCase_ == 3) && (regexpBuilder_ != null)) {
+            return regexpBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 3) {
+              return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) type_;
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher regexp = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcherOrBuilder> 
+            getRegexpFieldBuilder() {
+          if (regexpBuilder_ == null) {
+            if (!(typeCase_ == 3)) {
+              type_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.getDefaultInstance();
+            }
+            regexpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcherOrBuilder>(
+                    (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 3;
+          onChanged();;
+          return regexpBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcherOrBuilder> valuesBuilder_;
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+         * @return Whether the values field is set.
+         */
+        @java.lang.Override
+        public boolean hasValues() {
+          return typeCase_ == 4;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+         * @return The values.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher getValues() {
+          if (valuesBuilder_ == null) {
+            if (typeCase_ == 4) {
+              return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) type_;
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.getDefaultInstance();
+          } else {
+            if (typeCase_ == 4) {
+              return valuesBuilder_.getMessage();
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+         */
+        public Builder setValues(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher value) {
+          if (valuesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            valuesBuilder_.setMessage(value);
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+         */
+        public Builder setValues(
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.Builder builderForValue) {
+          if (valuesBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            valuesBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+         */
+        public Builder mergeValues(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher value) {
+          if (valuesBuilder_ == null) {
+            if (typeCase_ == 4 &&
+                type_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.getDefaultInstance()) {
+              type_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.newBuilder((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 4) {
+              valuesBuilder_.mergeFrom(value);
+            }
+            valuesBuilder_.setMessage(value);
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+         */
+        public Builder clearValues() {
+          if (valuesBuilder_ == null) {
+            if (typeCase_ == 4) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 4) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            valuesBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+         */
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.Builder getValuesBuilder() {
+          return getValuesFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcherOrBuilder getValuesOrBuilder() {
+          if ((typeCase_ == 4) && (valuesBuilder_ != null)) {
+            return valuesBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 4) {
+              return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) type_;
+            }
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher values = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcherOrBuilder> 
+            getValuesFieldBuilder() {
+          if (valuesBuilder_ == null) {
+            if (!(typeCase_ == 4)) {
+              type_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.getDefaultInstance();
+            }
+            valuesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcherOrBuilder>(
+                    (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 4;
+          onChanged();;
+          return valuesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.OverrideMatcher)
+      private static final yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher();
+      }
+
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<OverrideMatcher>
+          PARSER = new com.google.protobuf.AbstractParser<OverrideMatcher>() {
+        @java.lang.Override
+        public OverrideMatcher parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new OverrideMatcher(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<OverrideMatcher> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<OverrideMatcher> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.OverrideMatcher getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface QueryMatcherOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated string names = 1;</code>
+       * @return A list containing the names.
+       */
+      java.util.List<java.lang.String>
+          getNamesList();
+      /**
+       * <code>repeated string names = 1;</code>
+       * @return The count of names.
+       */
+      int getNamesCount();
+      /**
+       * <code>repeated string names = 1;</code>
+       * @param index The index of the element to return.
+       * @return The names at the given index.
+       */
+      java.lang.String getNames(int index);
+      /**
+       * <code>repeated string names = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the names at the given index.
+       */
+      com.google.protobuf.ByteString
+          getNamesBytes(int index);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher}
+     */
+    public static final class QueryMatcher extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher)
+        QueryMatcherOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use QueryMatcher.newBuilder() to construct.
+      private QueryMatcher(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private QueryMatcher() {
+        names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new QueryMatcher();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private QueryMatcher(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  names_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                names_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            names_ = names_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_QueryMatcher_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_QueryMatcher_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.Builder.class);
+      }
+
+      public static final int NAMES_FIELD_NUMBER = 1;
+      private com.google.protobuf.LazyStringList names_;
+      /**
+       * <code>repeated string names = 1;</code>
+       * @return A list containing the names.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNamesList() {
+        return names_;
+      }
+      /**
+       * <code>repeated string names = 1;</code>
+       * @return The count of names.
+       */
+      public int getNamesCount() {
+        return names_.size();
+      }
+      /**
+       * <code>repeated string names = 1;</code>
+       * @param index The index of the element to return.
+       * @return The names at the given index.
+       */
+      public java.lang.String getNames(int index) {
+        return names_.get(index);
+      }
+      /**
+       * <code>repeated string names = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the names at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getNamesBytes(int index) {
+        return names_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < names_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, names_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < names_.size(); i++) {
+            dataSize += computeStringSizeNoTag(names_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getNamesList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher other = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) obj;
+
+        if (!getNamesList()
+            .equals(other.getNamesList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getNamesCount() > 0) {
+          hash = (37 * hash) + NAMES_FIELD_NUMBER;
+          hash = (53 * hash) + getNamesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher)
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcherOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_QueryMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_QueryMatcher_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_QueryMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher build() {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher buildPartial() {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher result = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            names_ = names_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.names_ = names_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) {
+            return mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher other) {
+          if (other == yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher.getDefaultInstance()) return this;
+          if (!other.names_.isEmpty()) {
+            if (names_.isEmpty()) {
+              names_ = other.names_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureNamesIsMutable();
+              names_.addAll(other.names_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringList names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureNamesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            names_ = new com.google.protobuf.LazyStringArrayList(names_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated string names = 1;</code>
+         * @return A list containing the names.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getNamesList() {
+          return names_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string names = 1;</code>
+         * @return The count of names.
+         */
+        public int getNamesCount() {
+          return names_.size();
+        }
+        /**
+         * <code>repeated string names = 1;</code>
+         * @param index The index of the element to return.
+         * @return The names at the given index.
+         */
+        public java.lang.String getNames(int index) {
+          return names_.get(index);
+        }
+        /**
+         * <code>repeated string names = 1;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the names at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getNamesBytes(int index) {
+          return names_.getByteString(index);
+        }
+        /**
+         * <code>repeated string names = 1;</code>
+         * @param index The index to set the value at.
+         * @param value The names to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNames(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNamesIsMutable();
+          names_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string names = 1;</code>
+         * @param value The names to add.
+         * @return This builder for chaining.
+         */
+        public Builder addNames(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNamesIsMutable();
+          names_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string names = 1;</code>
+         * @param values The names to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllNames(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureNamesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, names_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string names = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNames() {
+          names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string names = 1;</code>
+         * @param value The bytes of the names to add.
+         * @return This builder for chaining.
+         */
+        public Builder addNamesBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureNamesIsMutable();
+          names_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.QueryMatcher)
+      private static final yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher();
+      }
+
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<QueryMatcher>
+          PARSER = new com.google.protobuf.AbstractParser<QueryMatcher>() {
+        @java.lang.Override
+        public QueryMatcher parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new QueryMatcher(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<QueryMatcher> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<QueryMatcher> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.QueryMatcher getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface LineMatcherOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated string line_ids = 1;</code>
+       * @return A list containing the lineIds.
+       */
+      java.util.List<java.lang.String>
+          getLineIdsList();
+      /**
+       * <code>repeated string line_ids = 1;</code>
+       * @return The count of lineIds.
+       */
+      int getLineIdsCount();
+      /**
+       * <code>repeated string line_ids = 1;</code>
+       * @param index The index of the element to return.
+       * @return The lineIds at the given index.
+       */
+      java.lang.String getLineIds(int index);
+      /**
+       * <code>repeated string line_ids = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the lineIds at the given index.
+       */
+      com.google.protobuf.ByteString
+          getLineIdsBytes(int index);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher}
+     */
+    public static final class LineMatcher extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher)
+        LineMatcherOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use LineMatcher.newBuilder() to construct.
+      private LineMatcher(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private LineMatcher() {
+        lineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new LineMatcher();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private LineMatcher(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  lineIds_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                lineIds_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            lineIds_ = lineIds_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_LineMatcher_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_LineMatcher_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.Builder.class);
+      }
+
+      public static final int LINE_IDS_FIELD_NUMBER = 1;
+      private com.google.protobuf.LazyStringList lineIds_;
+      /**
+       * <code>repeated string line_ids = 1;</code>
+       * @return A list containing the lineIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getLineIdsList() {
+        return lineIds_;
+      }
+      /**
+       * <code>repeated string line_ids = 1;</code>
+       * @return The count of lineIds.
+       */
+      public int getLineIdsCount() {
+        return lineIds_.size();
+      }
+      /**
+       * <code>repeated string line_ids = 1;</code>
+       * @param index The index of the element to return.
+       * @return The lineIds at the given index.
+       */
+      public java.lang.String getLineIds(int index) {
+        return lineIds_.get(index);
+      }
+      /**
+       * <code>repeated string line_ids = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the lineIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getLineIdsBytes(int index) {
+        return lineIds_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < lineIds_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lineIds_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < lineIds_.size(); i++) {
+            dataSize += computeStringSizeNoTag(lineIds_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getLineIdsList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher other = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) obj;
+
+        if (!getLineIdsList()
+            .equals(other.getLineIdsList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getLineIdsCount() > 0) {
+          hash = (37 * hash) + LINE_IDS_FIELD_NUMBER;
+          hash = (53 * hash) + getLineIdsList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher)
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcherOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_LineMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_LineMatcher_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          lineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_LineMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher build() {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher buildPartial() {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher result = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            lineIds_ = lineIds_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.lineIds_ = lineIds_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) {
+            return mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher other) {
+          if (other == yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher.getDefaultInstance()) return this;
+          if (!other.lineIds_.isEmpty()) {
+            if (lineIds_.isEmpty()) {
+              lineIds_ = other.lineIds_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLineIdsIsMutable();
+              lineIds_.addAll(other.lineIds_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringList lineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureLineIdsIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            lineIds_ = new com.google.protobuf.LazyStringArrayList(lineIds_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated string line_ids = 1;</code>
+         * @return A list containing the lineIds.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getLineIdsList() {
+          return lineIds_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string line_ids = 1;</code>
+         * @return The count of lineIds.
+         */
+        public int getLineIdsCount() {
+          return lineIds_.size();
+        }
+        /**
+         * <code>repeated string line_ids = 1;</code>
+         * @param index The index of the element to return.
+         * @return The lineIds at the given index.
+         */
+        public java.lang.String getLineIds(int index) {
+          return lineIds_.get(index);
+        }
+        /**
+         * <code>repeated string line_ids = 1;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the lineIds at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getLineIdsBytes(int index) {
+          return lineIds_.getByteString(index);
+        }
+        /**
+         * <code>repeated string line_ids = 1;</code>
+         * @param index The index to set the value at.
+         * @param value The lineIds to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLineIds(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLineIdsIsMutable();
+          lineIds_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string line_ids = 1;</code>
+         * @param value The lineIds to add.
+         * @return This builder for chaining.
+         */
+        public Builder addLineIds(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLineIdsIsMutable();
+          lineIds_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string line_ids = 1;</code>
+         * @param values The lineIds to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllLineIds(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureLineIdsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, lineIds_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string line_ids = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLineIds() {
+          lineIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string line_ids = 1;</code>
+         * @param value The bytes of the lineIds to add.
+         * @return This builder for chaining.
+         */
+        public Builder addLineIdsBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureLineIdsIsMutable();
+          lineIds_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.LineMatcher)
+      private static final yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher();
+      }
+
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<LineMatcher>
+          PARSER = new com.google.protobuf.AbstractParser<LineMatcher>() {
+        @java.lang.Override
+        public LineMatcher parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new LineMatcher(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<LineMatcher> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<LineMatcher> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.LineMatcher getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface RegExpMatcherOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string reg_exp = 1;</code>
+       * @return The regExp.
+       */
+      java.lang.String getRegExp();
+      /**
+       * <code>string reg_exp = 1;</code>
+       * @return The bytes for regExp.
+       */
+      com.google.protobuf.ByteString
+          getRegExpBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher}
+     */
+    public static final class RegExpMatcher extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher)
+        RegExpMatcherOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use RegExpMatcher.newBuilder() to construct.
+      private RegExpMatcher(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private RegExpMatcher() {
+        regExp_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new RegExpMatcher();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private RegExpMatcher(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                regExp_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RegExpMatcher_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RegExpMatcher_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.Builder.class);
+      }
+
+      public static final int REG_EXP_FIELD_NUMBER = 1;
+      private volatile java.lang.Object regExp_;
+      /**
+       * <code>string reg_exp = 1;</code>
+       * @return The regExp.
+       */
+      @java.lang.Override
+      public java.lang.String getRegExp() {
+        java.lang.Object ref = regExp_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          regExp_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string reg_exp = 1;</code>
+       * @return The bytes for regExp.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRegExpBytes() {
+        java.lang.Object ref = regExp_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          regExp_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regExp_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, regExp_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regExp_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, regExp_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher other = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) obj;
+
+        if (!getRegExp()
+            .equals(other.getRegExp())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + REG_EXP_FIELD_NUMBER;
+        hash = (53 * hash) + getRegExp().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher)
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcherOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RegExpMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RegExpMatcher_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          regExp_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RegExpMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher build() {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher buildPartial() {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher result = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher(this);
+          result.regExp_ = regExp_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) {
+            return mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher other) {
+          if (other == yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher.getDefaultInstance()) return this;
+          if (!other.getRegExp().isEmpty()) {
+            regExp_ = other.regExp_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object regExp_ = "";
+        /**
+         * <code>string reg_exp = 1;</code>
+         * @return The regExp.
+         */
+        public java.lang.String getRegExp() {
+          java.lang.Object ref = regExp_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            regExp_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string reg_exp = 1;</code>
+         * @return The bytes for regExp.
+         */
+        public com.google.protobuf.ByteString
+            getRegExpBytes() {
+          java.lang.Object ref = regExp_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            regExp_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string reg_exp = 1;</code>
+         * @param value The regExp to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRegExp(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          regExp_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string reg_exp = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearRegExp() {
+          
+          regExp_ = getDefaultInstance().getRegExp();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string reg_exp = 1;</code>
+         * @param value The bytes for regExp to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRegExpBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          regExp_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.RegExpMatcher)
+      private static final yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher();
+      }
+
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<RegExpMatcher>
+          PARSER = new com.google.protobuf.AbstractParser<RegExpMatcher>() {
+        @java.lang.Override
+        public RegExpMatcher parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RegExpMatcher(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<RegExpMatcher> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<RegExpMatcher> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RegExpMatcher getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ValueMatcherOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValuesType value_type = 1;</code>
+       * @return The enum numeric value on the wire for valueType.
+       */
+      int getValueTypeValue();
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValuesType value_type = 1;</code>
+       * @return The valueType.
+       */
+      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType getValueType();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher}
+     */
+    public static final class ValueMatcher extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher)
+        ValueMatcherOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ValueMatcher.newBuilder() to construct.
+      private ValueMatcher(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ValueMatcher() {
+        valueType_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ValueMatcher();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ValueMatcher(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int rawValue = input.readEnum();
+
+                valueType_ = rawValue;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_ValueMatcher_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_ValueMatcher_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.Builder.class);
+      }
+
+      public static final int VALUE_TYPE_FIELD_NUMBER = 1;
+      private int valueType_;
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValuesType value_type = 1;</code>
+       * @return The enum numeric value on the wire for valueType.
+       */
+      @java.lang.Override public int getValueTypeValue() {
+        return valueType_;
+      }
+      /**
+       * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValuesType value_type = 1;</code>
+       * @return The valueType.
+       */
+      @java.lang.Override public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType getValueType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType result = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType.valueOf(valueType_);
+        return result == null ? yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType.UNRECOGNIZED : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (valueType_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType.VALUES_TYPE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(1, valueType_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (valueType_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType.VALUES_TYPE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, valueType_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher other = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) obj;
+
+        if (valueType_ != other.valueType_) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + VALUE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + valueType_;
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher)
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcherOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_ValueMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_ValueMatcher_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          valueType_ = 0;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_ValueMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher build() {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher buildPartial() {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher result = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher(this);
+          result.valueType_ = valueType_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) {
+            return mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher other) {
+          if (other == yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher.getDefaultInstance()) return this;
+          if (other.valueType_ != 0) {
+            setValueTypeValue(other.getValueTypeValue());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private int valueType_ = 0;
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValuesType value_type = 1;</code>
+         * @return The enum numeric value on the wire for valueType.
+         */
+        @java.lang.Override public int getValueTypeValue() {
+          return valueType_;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValuesType value_type = 1;</code>
+         * @param value The enum numeric value on the wire for valueType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValueTypeValue(int value) {
+          
+          valueType_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValuesType value_type = 1;</code>
+         * @return The valueType.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType getValueType() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType result = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType.valueOf(valueType_);
+          return result == null ? yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType.UNRECOGNIZED : result;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValuesType value_type = 1;</code>
+         * @param value The valueType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValueType(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValuesType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          valueType_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValuesType value_type = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearValueType() {
+          
+          valueType_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.ValueMatcher)
+      private static final yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher();
+      }
+
+      public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ValueMatcher>
+          PARSER = new com.google.protobuf.AbstractParser<ValueMatcher>() {
+        @java.lang.Override
+        public ValueMatcher parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ValueMatcher(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ValueMatcher> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ValueMatcher> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.ValueMatcher getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -26120,6 +31671,11 @@ public final class MultiSourceChartWidgetOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ConstantColorScheme_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ConstantColorScheme_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -26150,6 +31706,31 @@ public final class MultiSourceChartWidgetOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_SeriesOverrides_SeriesOverrideSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_OverrideMatcher_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_OverrideMatcher_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_QueryMatcher_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_QueryMatcher_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_LineMatcher_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_LineMatcher_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RegExpMatcher_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RegExpMatcher_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_ValueMatcher_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_ValueMatcher_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_NameHidingSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -26174,7 +31755,7 @@ public final class MultiSourceChartWidgetOuterClass {
       "\032-yandex/cloud/monitoring/v3/downsamplin" +
       "g.proto\032,yandex/cloud/monitoring/v3/unit" +
       "_format.proto\032+yandex/cloud/monitoring/v" +
-      "3/thresholds.proto\"\350.\n\026MultiSourceChartW" +
+      "3/thresholds.proto\"\2178\n\026MultiSourceChartW" +
       "idget\022\n\n\002id\030\001 \001(\t\022J\n\007targets\030\002 \003(\01329.yan" +
       "dex.cloud.monitoring.v3.MultiSourceChart" +
       "Widget.Target\022S\n\014data_sources\030\003 \003(\0132=.ya" +
@@ -26194,7 +31775,7 @@ public final class MultiSourceChartWidgetOuterClass {
       ".yandex.cloud.monitoring.v3.MultiSourceC" +
       "hartWidget.RepeatSettings\022:\n\nthresholds\030" +
       "\014 \001(\0132&.yandex.cloud.monitoring.v3.Thres" +
-      "holds\032\323\003\n\006Target\022g\n\021monitoring_target\030\001 " +
+      "holds\032\341\003\n\006Target\022g\n\021monitoring_target\030\001 " +
       "\001(\0132J.yandex.cloud.monitoring.v3.MultiSo" +
       "urceChartWidget.Target.MonitoringTargetH" +
       "\000\022g\n\021prometheus_target\030\002 \001(\0132J.yandex.cl" +
@@ -26202,132 +31783,162 @@ public final class MultiSourceChartWidgetOuterClass {
       ".Target.PrometheusTargetH\000\032j\n\020Monitoring" +
       "Target\022\026\n\016data_source_id\030\001 \001(\t\022\r\n\005query\030" +
       "\002 \001(\t\022\021\n\ttext_mode\030\003 \001(\010\022\016\n\006hidden\030\004 \001(\010" +
-      "\022\014\n\004name\030\005 \001(\t\032\200\001\n\020PrometheusTarget\022\026\n\016d" +
+      "\022\014\n\004name\030\005 \001(\t\032\216\001\n\020PrometheusTarget\022\026\n\016d" +
       "ata_source_id\030\001 \001(\t\022\024\n\014workspace_id\030\002 \001(" +
       "\t\022\r\n\005query\030\003 \001(\t\022\021\n\ttext_mode\030\004 \001(\010\022\016\n\006h" +
-      "idden\030\005 \001(\010\022\014\n\004name\030\006 \001(\tB\010\n\006target\032\235\003\n\n" +
-      "DataSource\022t\n\026monitoring_data_source\030\001 \001" +
-      "(\0132R.yandex.cloud.monitoring.v3.MultiSou" +
-      "rceChartWidget.DataSource.MonitoringData" +
-      "SourceH\000\022t\n\026prometheus_data_source\030\002 \001(\013" +
-      "2R.yandex.cloud.monitoring.v3.MultiSourc" +
-      "eChartWidget.DataSource.PrometheusDataSo" +
-      "urceH\000\032b\n\024MonitoringDataSource\022\n\n\002id\030\001 \001" +
-      "(\t\022>\n\014downsampling\030\002 \001(\0132(.yandex.cloud." +
-      "monitoring.v3.Downsampling\0320\n\024Prometheus" +
-      "DataSource\022\n\n\002id\030\001 \001(\t\022\014\n\004step\030\002 \001(\003B\r\n\013" +
-      "data_source\032\250\031\n\025VisualizationSettings\022h\n" +
-      "\004type\030\001 \001(\0162Z.yandex.cloud.monitoring.v3" +
-      ".MultiSourceChartWidget.VisualizationSet" +
-      "tings.VisualizationType\022\021\n\tnormalize\030\002 \001" +
-      "(\010\022i\n\013interpolate\030\003 \001(\0162T.yandex.cloud.m" +
-      "onitoring.v3.MultiSourceChartWidget.Visu" +
-      "alizationSettings.Interpolate\022o\n\013aggrega" +
-      "tion\030\004 \001(\0162Z.yandex.cloud.monitoring.v3." +
-      "MultiSourceChartWidget.VisualizationSett" +
-      "ings.SeriesAggregation\022{\n\025color_scheme_s" +
-      "ettings\030\005 \001(\0132\\.yandex.cloud.monitoring." +
-      "v3.MultiSourceChartWidget.VisualizationS" +
-      "ettings.ColorSchemeSettings\022r\n\020heatmap_s" +
-      "ettings\030\006 \001(\0132X.yandex.cloud.monitoring." +
-      "v3.MultiSourceChartWidget.VisualizationS" +
-      "ettings.HeatmapSettings\022n\n\016yaxis_setting" +
-      "s\030\007 \001(\0132V.yandex.cloud.monitoring.v3.Mul" +
-      "tiSourceChartWidget.VisualizationSetting" +
-      "s.YaxisSettings\022\r\n\005title\030\010 \001(\t\022\023\n\013show_l" +
-      "abels\030\t \001(\010\032\263\t\n\023ColorSchemeSettings\022\206\001\n\t" +
-      "automatic\030\001 \001(\0132q.yandex.cloud.monitorin" +
-      "g.v3.MultiSourceChartWidget.Visualizatio" +
-      "nSettings.ColorSchemeSettings.AutomaticC" +
-      "olorSchemeH\000\022\204\001\n\010standard\030\002 \001(\0132p.yandex" +
-      ".cloud.monitoring.v3.MultiSourceChartWid" +
-      "get.VisualizationSettings.ColorSchemeSet" +
-      "tings.StandardColorSchemeH\000\022\204\001\n\010gradient" +
-      "\030\003 \001(\0132p.yandex.cloud.monitoring.v3.Mult" +
-      "iSourceChartWidget.VisualizationSettings" +
-      ".ColorSchemeSettings.GradientColorScheme" +
-      "H\000\022|\n\004hash\030\004 \001(\0132l.yandex.cloud.monitori" +
-      "ng.v3.MultiSourceChartWidget.Visualizati" +
-      "onSettings.ColorSchemeSettings.HashColor" +
-      "SchemeH\000\022\210\001\n\nthresholds\030\005 \001(\0132r.yandex.c" +
+      "idden\030\005 \001(\010\022\014\n\004name\030\006 \001(\t\022\014\n\004step\030\007 \001(\tB" +
+      "\010\n\006target\032\235\003\n\nDataSource\022t\n\026monitoring_d" +
+      "ata_source\030\001 \001(\0132R.yandex.cloud.monitori" +
+      "ng.v3.MultiSourceChartWidget.DataSource." +
+      "MonitoringDataSourceH\000\022t\n\026prometheus_dat" +
+      "a_source\030\002 \001(\0132R.yandex.cloud.monitoring" +
+      ".v3.MultiSourceChartWidget.DataSource.Pr" +
+      "ometheusDataSourceH\000\032b\n\024MonitoringDataSo" +
+      "urce\022\n\n\002id\030\001 \001(\t\022>\n\014downsampling\030\002 \001(\0132(" +
+      ".yandex.cloud.monitoring.v3.Downsampling" +
+      "\0320\n\024PrometheusDataSource\022\n\n\002id\030\001 \001(\t\022\014\n\004" +
+      "step\030\002 \001(\003B\r\n\013data_source\032\325\032\n\025Visualizat" +
+      "ionSettings\022h\n\004type\030\001 \001(\0162Z.yandex.cloud" +
+      ".monitoring.v3.MultiSourceChartWidget.Vi" +
+      "sualizationSettings.VisualizationType\022\021\n" +
+      "\tnormalize\030\002 \001(\010\022i\n\013interpolate\030\003 \001(\0162T." +
+      "yandex.cloud.monitoring.v3.MultiSourceCh" +
+      "artWidget.VisualizationSettings.Interpol" +
+      "ate\022o\n\013aggregation\030\004 \001(\0162Z.yandex.cloud." +
+      "monitoring.v3.MultiSourceChartWidget.Vis" +
+      "ualizationSettings.SeriesAggregation\022{\n\025" +
+      "color_scheme_settings\030\005 \001(\0132\\.yandex.clo" +
+      "ud.monitoring.v3.MultiSourceChartWidget." +
+      "VisualizationSettings.ColorSchemeSetting" +
+      "s\022r\n\020heatmap_settings\030\006 \001(\0132X.yandex.clo" +
+      "ud.monitoring.v3.MultiSourceChartWidget." +
+      "VisualizationSettings.HeatmapSettings\022n\n" +
+      "\016yaxis_settings\030\007 \001(\0132V.yandex.cloud.mon" +
+      "itoring.v3.MultiSourceChartWidget.Visual" +
+      "izationSettings.YaxisSettings\022\r\n\005title\030\010" +
+      " \001(\t\022\023\n\013show_labels\030\t \001(\010\032\340\n\n\023ColorSchem" +
+      "eSettings\022\206\001\n\tautomatic\030\001 \001(\0132q.yandex.c" +
       "loud.monitoring.v3.MultiSourceChartWidge" +
       "t.VisualizationSettings.ColorSchemeSetti" +
-      "ngs.ThresholdsColorSchemeH\000\032\026\n\024Automatic" +
-      "ColorScheme\032\025\n\023StandardColorScheme\032i\n\023Gr" +
-      "adientColorScheme\022\023\n\013green_value\030\002 \001(\t\022\024" +
-      "\n\014yellow_value\030\003 \001(\t\022\021\n\tred_value\030\004 \001(\t\022" +
-      "\024\n\014violet_value\030\005 \001(\t\032\021\n\017HashColorScheme" +
-      "\032\304\002\n\025ThresholdsColorScheme\022\223\001\n\013aggregati" +
-      "on\030\001 \001(\0162~.yandex.cloud.monitoring.v3.Mu" +
-      "ltiSourceChartWidget.VisualizationSettin" +
-      "gs.ColorSchemeSettings.ThresholdsColorSc" +
-      "heme.Aggregation\"\224\001\n\013Aggregation\022\033\n\027AGGR" +
-      "EGATION_UNSPECIFIED\020\000\022\024\n\020AGGREGATION_LAS" +
-      "T\020\001\022\023\n\017AGGREGATION_MIN\020\002\022\023\n\017AGGREGATION_" +
-      "MAX\020\003\022\023\n\017AGGREGATION_AVG\020\004\022\023\n\017AGGREGATIO" +
-      "N_SUM\020\005B\010\n\006scheme\032e\n\017HeatmapSettings\022\023\n\013" +
-      "green_value\030\002 \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022" +
-      "\021\n\tred_value\030\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t" +
-      "\032\377\001\n\005Yaxis\022`\n\004type\030\001 \001(\0162R.yandex.cloud." +
-      "monitoring.v3.MultiSourceChartWidget.Vis" +
-      "ualizationSettings.YaxisType\022\r\n\005title\030\002 " +
-      "\001(\t\022\013\n\003min\030\003 \001(\t\022\013\n\003max\030\004 \001(\t\022;\n\013unit_fo" +
-      "rmat\030\005 \001(\0162&.yandex.cloud.monitoring.v3." +
-      "UnitFormat\022.\n\tprecision\030\006 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\032\314\001\n\rYaxisSettings\022\\\n\004" +
-      "left\030\001 \001(\0132N.yandex.cloud.monitoring.v3." +
-      "MultiSourceChartWidget.VisualizationSett" +
-      "ings.Yaxis\022]\n\005right\030\002 \001(\0132N.yandex.cloud" +
-      ".monitoring.v3.MultiSourceChartWidget.Vi" +
-      "sualizationSettings.Yaxis\"\256\002\n\021Visualizat" +
-      "ionType\022\"\n\036VISUALIZATION_TYPE_UNSPECIFIE" +
-      "D\020\000\022\033\n\027VISUALIZATION_TYPE_LINE\020\001\022\034\n\030VISU" +
-      "ALIZATION_TYPE_STACK\020\002\022\035\n\031VISUALIZATION_" +
-      "TYPE_COLUMN\020\003\022\035\n\031VISUALIZATION_TYPE_POIN" +
-      "TS\020\004\022\032\n\026VISUALIZATION_TYPE_PIE\020\005\022\033\n\027VISU" +
-      "ALIZATION_TYPE_BARS\020\006\022#\n\037VISUALIZATION_T" +
-      "YPE_DISTRIBUTION\020\007\022\036\n\032VISUALIZATION_TYPE" +
-      "_HEATMAP\020\010\"o\n\013Interpolate\022\033\n\027INTERPOLATE" +
-      "_UNSPECIFIED\020\000\022\026\n\022INTERPOLATE_LINEAR\020\001\022\024" +
-      "\n\020INTERPOLATE_LEFT\020\002\022\025\n\021INTERPOLATE_RIGH" +
-      "T\020\003\"Z\n\tYaxisType\022\032\n\026YAXIS_TYPE_UNSPECIFI" +
-      "ED\020\000\022\025\n\021YAXIS_TYPE_LINEAR\020\001\022\032\n\026YAXIS_TYP" +
-      "E_LOGARITHMIC\020\002\"\304\001\n\021SeriesAggregation\022\"\n" +
-      "\036SERIES_AGGREGATION_UNSPECIFIED\020\000\022\032\n\026SER" +
-      "IES_AGGREGATION_AVG\020\001\022\032\n\026SERIES_AGGREGAT" +
-      "ION_MIN\020\002\022\032\n\026SERIES_AGGREGATION_MAX\020\003\022\033\n" +
-      "\027SERIES_AGGREGATION_LAST\020\004\022\032\n\026SERIES_AGG" +
-      "REGATION_SUM\020\005\032\241\006\n\017SeriesOverrides\022\016\n\004na" +
-      "me\030\001 \001(\tH\000\022\026\n\014target_index\030\002 \001(\tH\000\022k\n\010se" +
-      "ttings\030\003 \001(\0132Y.yandex.cloud.monitoring.v" +
-      "3.MultiSourceChartWidget.SeriesOverrides" +
-      ".SeriesOverrideSettings\032\260\002\n\026SeriesOverri" +
-      "deSettings\022\014\n\004name\030\001 \001(\t\022\r\n\005color\030\002 \001(\t\022" +
-      "h\n\004type\030\003 \001(\0162Z.yandex.cloud.monitoring." +
-      "v3.MultiSourceChartWidget.SeriesOverride" +
-      "s.SeriesVisualizationType\022\022\n\nstack_name\030" +
-      "\004 \001(\t\022\021\n\tgrow_down\030\005 \001(\010\022h\n\016yaxis_positi" +
-      "on\030\006 \001(\0162P.yandex.cloud.monitoring.v3.Mu" +
-      "ltiSourceChartWidget.SeriesOverrides.Yax" +
-      "isPosition\"b\n\rYaxisPosition\022\036\n\032YAXIS_POS" +
-      "ITION_UNSPECIFIED\020\000\022\027\n\023YAXIS_POSITION_LE" +
-      "FT\020\001\022\030\n\024YAXIS_POSITION_RIGHT\020\002\"\331\001\n\027Serie" +
-      "sVisualizationType\022)\n%SERIES_VISUALIZATI" +
-      "ON_TYPE_UNSPECIFIED\020\000\022\"\n\036SERIES_VISUALIZ" +
-      "ATION_TYPE_LINE\020\001\022#\n\037SERIES_VISUALIZATIO" +
-      "N_TYPE_STACK\020\002\022$\n SERIES_VISUALIZATION_T" +
-      "YPE_COLUMN\020\003\022$\n SERIES_VISUALIZATION_TYP" +
-      "E_POINTS\020\004B\006\n\004type\0325\n\022NameHidingSettings" +
-      "\022\020\n\010positive\030\001 \001(\010\022\r\n\005names\030\002 \003(\t\032>\n\016Rep" +
-      "eatSettings\022\021\n\trepeat_by\030\001 \003(\t\022\031\n\021max_ch" +
-      "arts_in_row\030\002 \001(\003\"\231\001\n\016FreezeDuration\022\037\n\033" +
-      "FREEZE_DURATION_UNSPECIFIED\020\000\022\030\n\024FREEZE_" +
-      "DURATION_HOUR\020\001\022\027\n\023FREEZE_DURATION_DAY\020\002" +
-      "\022\030\n\024FREEZE_DURATION_WEEK\020\003\022\031\n\025FREEZE_DUR" +
-      "ATION_MONTH\020\004Bk\n\036yandex.cloud.api.monito" +
-      "ring.v3ZIgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/monitoring/v3;monitori" +
-      "ngb\006proto3"
+      "ngs.AutomaticColorSchemeH\000\022\204\001\n\010standard\030" +
+      "\002 \001(\0132p.yandex.cloud.monitoring.v3.Multi" +
+      "SourceChartWidget.VisualizationSettings." +
+      "ColorSchemeSettings.StandardColorSchemeH" +
+      "\000\022\204\001\n\010gradient\030\003 \001(\0132p.yandex.cloud.moni" +
+      "toring.v3.MultiSourceChartWidget.Visuali" +
+      "zationSettings.ColorSchemeSettings.Gradi" +
+      "entColorSchemeH\000\022|\n\004hash\030\004 \001(\0132l.yandex." +
+      "cloud.monitoring.v3.MultiSourceChartWidg" +
+      "et.VisualizationSettings.ColorSchemeSett" +
+      "ings.HashColorSchemeH\000\022\210\001\n\nthresholds\030\005 " +
+      "\001(\0132r.yandex.cloud.monitoring.v3.MultiSo" +
+      "urceChartWidget.VisualizationSettings.Co" +
+      "lorSchemeSettings.ThresholdsColorSchemeH" +
+      "\000\022\204\001\n\010constant\030\006 \001(\0132p.yandex.cloud.moni" +
+      "toring.v3.MultiSourceChartWidget.Visuali" +
+      "zationSettings.ColorSchemeSettings.Const" +
+      "antColorSchemeH\000\032\026\n\024AutomaticColorScheme" +
+      "\032\025\n\023StandardColorScheme\032i\n\023GradientColor" +
+      "Scheme\022\023\n\013green_value\030\002 \001(\t\022\024\n\014yellow_va" +
+      "lue\030\003 \001(\t\022\021\n\tred_value\030\004 \001(\t\022\024\n\014violet_v" +
+      "alue\030\005 \001(\t\032\021\n\017HashColorScheme\032$\n\023Constan" +
+      "tColorScheme\022\r\n\005color\030\001 \001(\t\032\304\002\n\025Threshol" +
+      "dsColorScheme\022\223\001\n\013aggregation\030\001 \001(\0162~.ya" +
+      "ndex.cloud.monitoring.v3.MultiSourceChar" +
+      "tWidget.VisualizationSettings.ColorSchem" +
+      "eSettings.ThresholdsColorScheme.Aggregat" +
+      "ion\"\224\001\n\013Aggregation\022\033\n\027AGGREGATION_UNSPE" +
+      "CIFIED\020\000\022\024\n\020AGGREGATION_LAST\020\001\022\023\n\017AGGREG" +
+      "ATION_MIN\020\002\022\023\n\017AGGREGATION_MAX\020\003\022\023\n\017AGGR" +
+      "EGATION_AVG\020\004\022\023\n\017AGGREGATION_SUM\020\005B\010\n\006sc" +
+      "heme\032e\n\017HeatmapSettings\022\023\n\013green_value\030\002" +
+      " \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022\021\n\tred_value\030" +
+      "\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t\032\377\001\n\005Yaxis\022`\n" +
+      "\004type\030\001 \001(\0162R.yandex.cloud.monitoring.v3" +
+      ".MultiSourceChartWidget.VisualizationSet" +
+      "tings.YaxisType\022\r\n\005title\030\002 \001(\t\022\013\n\003min\030\003 " +
+      "\001(\t\022\013\n\003max\030\004 \001(\t\022;\n\013unit_format\030\005 \001(\0162&." +
+      "yandex.cloud.monitoring.v3.UnitFormat\022.\n" +
+      "\tprecision\030\006 \001(\0132\033.google.protobuf.Int64" +
+      "Value\032\314\001\n\rYaxisSettings\022\\\n\004left\030\001 \001(\0132N." +
+      "yandex.cloud.monitoring.v3.MultiSourceCh" +
+      "artWidget.VisualizationSettings.Yaxis\022]\n" +
+      "\005right\030\002 \001(\0132N.yandex.cloud.monitoring.v" +
+      "3.MultiSourceChartWidget.VisualizationSe" +
+      "ttings.Yaxis\"\256\002\n\021VisualizationType\022\"\n\036VI" +
+      "SUALIZATION_TYPE_UNSPECIFIED\020\000\022\033\n\027VISUAL" +
+      "IZATION_TYPE_LINE\020\001\022\034\n\030VISUALIZATION_TYP" +
+      "E_STACK\020\002\022\035\n\031VISUALIZATION_TYPE_COLUMN\020\003" +
+      "\022\035\n\031VISUALIZATION_TYPE_POINTS\020\004\022\032\n\026VISUA" +
+      "LIZATION_TYPE_PIE\020\005\022\033\n\027VISUALIZATION_TYP" +
+      "E_BARS\020\006\022#\n\037VISUALIZATION_TYPE_DISTRIBUT" +
+      "ION\020\007\022\036\n\032VISUALIZATION_TYPE_HEATMAP\020\010\"o\n" +
+      "\013Interpolate\022\033\n\027INTERPOLATE_UNSPECIFIED\020" +
+      "\000\022\026\n\022INTERPOLATE_LINEAR\020\001\022\024\n\020INTERPOLATE" +
+      "_LEFT\020\002\022\025\n\021INTERPOLATE_RIGHT\020\003\"Z\n\tYaxisT" +
+      "ype\022\032\n\026YAXIS_TYPE_UNSPECIFIED\020\000\022\025\n\021YAXIS" +
+      "_TYPE_LINEAR\020\001\022\032\n\026YAXIS_TYPE_LOGARITHMIC" +
+      "\020\002\"\304\001\n\021SeriesAggregation\022\"\n\036SERIES_AGGRE" +
+      "GATION_UNSPECIFIED\020\000\022\032\n\026SERIES_AGGREGATI" +
+      "ON_AVG\020\001\022\032\n\026SERIES_AGGREGATION_MIN\020\002\022\032\n\026" +
+      "SERIES_AGGREGATION_MAX\020\003\022\033\n\027SERIES_AGGRE" +
+      "GATION_LAST\020\004\022\032\n\026SERIES_AGGREGATION_SUM\020" +
+      "\005\032\203\t\n\017SeriesOverrides\022\016\n\004name\030\001 \001(\tH\000\022\026\n" +
+      "\014target_index\030\002 \001(\tH\000\022k\n\010settings\030\003 \001(\0132" +
+      "Y.yandex.cloud.monitoring.v3.MultiSource" +
+      "ChartWidget.SeriesOverrides.SeriesOverri" +
+      "deSettings\022\025\n\roverride_name\030\004 \001(\t\022S\n\007mat" +
+      "cher\030\005 \001(\0132B.yandex.cloud.monitoring.v3." +
+      "MultiSourceChartWidget.OverrideMatcher\032\246" +
+      "\004\n\026SeriesOverrideSettings\022\014\n\004name\030\001 \001(\t\022" +
+      "\r\n\005color\030\002 \001(\t\022h\n\004type\030\003 \001(\0162Z.yandex.cl" +
+      "oud.monitoring.v3.MultiSourceChartWidget" +
+      ".SeriesOverrides.SeriesVisualizationType" +
+      "\022\022\n\nstack_name\030\004 \001(\t\022\021\n\tgrow_down\030\005 \001(\010\022" +
+      "h\n\016yaxis_position\030\006 \001(\0162P.yandex.cloud.m" +
+      "onitoring.v3.MultiSourceChartWidget.Seri" +
+      "esOverrides.YaxisPosition\022\022\n\nline_width\030" +
+      "\007 \001(\003\022w\n\nline_style\030\010 \001(\0162c.yandex.cloud" +
+      ".monitoring.v3.MultiSourceChartWidget.Se" +
+      "riesOverrides.SeriesOverrideSettings.Lin" +
+      "eStyle\"g\n\tLineStyle\022\032\n\026LINE_STYLE_UNSPEC" +
+      "IFIED\020\000\022\024\n\020LINE_STYLE_SOLID\020\001\022\023\n\017LINE_ST" +
+      "YLE_DASH\020\002\022\023\n\017LINE_STYLE_DOTS\020\003\"b\n\rYaxis" +
+      "Position\022\036\n\032YAXIS_POSITION_UNSPECIFIED\020\000" +
+      "\022\027\n\023YAXIS_POSITION_LEFT\020\001\022\030\n\024YAXIS_POSIT" +
+      "ION_RIGHT\020\002\"\331\001\n\027SeriesVisualizationType\022" +
+      ")\n%SERIES_VISUALIZATION_TYPE_UNSPECIFIED" +
+      "\020\000\022\"\n\036SERIES_VISUALIZATION_TYPE_LINE\020\001\022#" +
+      "\n\037SERIES_VISUALIZATION_TYPE_STACK\020\002\022$\n S" +
+      "ERIES_VISUALIZATION_TYPE_COLUMN\020\003\022$\n SER" +
+      "IES_VISUALIZATION_TYPE_POINTS\020\004B\006\n\004type\032" +
+      "\342\002\n\017OverrideMatcher\022P\n\005query\030\001 \001(\0132?.yan" +
+      "dex.cloud.monitoring.v3.MultiSourceChart" +
+      "Widget.QueryMatcherH\000\022N\n\004line\030\002 \001(\0132>.ya" +
+      "ndex.cloud.monitoring.v3.MultiSourceChar" +
+      "tWidget.LineMatcherH\000\022R\n\006regexp\030\003 \001(\0132@." +
+      "yandex.cloud.monitoring.v3.MultiSourceCh" +
+      "artWidget.RegExpMatcherH\000\022Q\n\006values\030\004 \001(" +
+      "\0132?.yandex.cloud.monitoring.v3.MultiSour" +
+      "ceChartWidget.ValueMatcherH\000B\006\n\004type\032\035\n\014" +
+      "QueryMatcher\022\r\n\005names\030\001 \003(\t\032\037\n\013LineMatch" +
+      "er\022\020\n\010line_ids\030\001 \003(\t\032 \n\rRegExpMatcher\022\017\n" +
+      "\007reg_exp\030\001 \001(\t\032a\n\014ValueMatcher\022Q\n\nvalue_" +
+      "type\030\001 \001(\0162=.yandex.cloud.monitoring.v3." +
+      "MultiSourceChartWidget.ValuesType\0325\n\022Nam" +
+      "eHidingSettings\022\020\n\010positive\030\001 \001(\010\022\r\n\005nam" +
+      "es\030\002 \003(\t\032>\n\016RepeatSettings\022\021\n\trepeat_by\030" +
+      "\001 \003(\t\022\031\n\021max_charts_in_row\030\002 \001(\003\"^\n\nValu" +
+      "esType\022\033\n\027VALUES_TYPE_UNSPECIFIED\020\000\022\031\n\025V" +
+      "ALUES_TYPE_ALL_ZEROS\020\001\022\030\n\024VALUES_TYPE_AL" +
+      "L_NULL\020\002\"\231\001\n\016FreezeDuration\022\037\n\033FREEZE_DU" +
+      "RATION_UNSPECIFIED\020\000\022\030\n\024FREEZE_DURATION_" +
+      "HOUR\020\001\022\027\n\023FREEZE_DURATION_DAY\020\002\022\030\n\024FREEZ" +
+      "E_DURATION_WEEK\020\003\022\031\n\025FREEZE_DURATION_MON" +
+      "TH\020\004Bk\n\036yandex.cloud.api.monitoring.v3ZI" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/monitoring/v3;monitoringb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26360,7 +31971,7 @@ public final class MultiSourceChartWidgetOuterClass {
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_Target_PrometheusTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_Target_PrometheusTarget_descriptor,
-        new java.lang.String[] { "DataSourceId", "WorkspaceId", "Query", "TextMode", "Hidden", "Name", });
+        new java.lang.String[] { "DataSourceId", "WorkspaceId", "Query", "TextMode", "Hidden", "Name", "Step", });
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_DataSource_descriptor =
       internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_DataSource_fieldAccessorTable = new
@@ -26390,7 +32001,7 @@ public final class MultiSourceChartWidgetOuterClass {
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_descriptor,
-        new java.lang.String[] { "Automatic", "Standard", "Gradient", "Hash", "Thresholds", "Scheme", });
+        new java.lang.String[] { "Automatic", "Standard", "Gradient", "Hash", "Thresholds", "Constant", "Scheme", });
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_AutomaticColorScheme_descriptor =
       internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_AutomaticColorScheme_fieldAccessorTable = new
@@ -26415,8 +32026,14 @@ public final class MultiSourceChartWidgetOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_descriptor,
         new java.lang.String[] { });
-    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_descriptor =
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ConstantColorScheme_descriptor =
       internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_descriptor.getNestedTypes().get(4);
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ConstantColorScheme_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ConstantColorScheme_descriptor,
+        new java.lang.String[] { "Color", });
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_descriptor =
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_descriptor.getNestedTypes().get(5);
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_descriptor,
@@ -26444,21 +32061,51 @@ public final class MultiSourceChartWidgetOuterClass {
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_SeriesOverrides_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_SeriesOverrides_descriptor,
-        new java.lang.String[] { "Name", "TargetIndex", "Settings", "Type", });
+        new java.lang.String[] { "Name", "TargetIndex", "Settings", "OverrideName", "Matcher", "Type", });
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_SeriesOverrides_SeriesOverrideSettings_descriptor =
       internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_SeriesOverrides_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_SeriesOverrides_SeriesOverrideSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_SeriesOverrides_SeriesOverrideSettings_descriptor,
-        new java.lang.String[] { "Name", "Color", "Type", "StackName", "GrowDown", "YaxisPosition", });
-    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_NameHidingSettings_descriptor =
+        new java.lang.String[] { "Name", "Color", "Type", "StackName", "GrowDown", "YaxisPosition", "LineWidth", "LineStyle", });
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_OverrideMatcher_descriptor =
       internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor.getNestedTypes().get(4);
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_OverrideMatcher_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_OverrideMatcher_descriptor,
+        new java.lang.String[] { "Query", "Line", "Regexp", "Values", "Type", });
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_QueryMatcher_descriptor =
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor.getNestedTypes().get(5);
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_QueryMatcher_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_QueryMatcher_descriptor,
+        new java.lang.String[] { "Names", });
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_LineMatcher_descriptor =
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor.getNestedTypes().get(6);
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_LineMatcher_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_LineMatcher_descriptor,
+        new java.lang.String[] { "LineIds", });
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RegExpMatcher_descriptor =
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor.getNestedTypes().get(7);
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RegExpMatcher_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RegExpMatcher_descriptor,
+        new java.lang.String[] { "RegExp", });
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_ValueMatcher_descriptor =
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor.getNestedTypes().get(8);
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_ValueMatcher_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_ValueMatcher_descriptor,
+        new java.lang.String[] { "ValueType", });
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_NameHidingSettings_descriptor =
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor.getNestedTypes().get(9);
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_NameHidingSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_NameHidingSettings_descriptor,
         new java.lang.String[] { "Positive", "Names", });
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RepeatSettings_descriptor =
-      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor.getNestedTypes().get(5);
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor.getNestedTypes().get(10);
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RepeatSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_RepeatSettings_descriptor,

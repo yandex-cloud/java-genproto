@@ -2886,6 +2886,26 @@ public final class OriginGroupServiceOuterClass {
      */
     yandex.cloud.api.cdn.v1.OriginOuterClass.OriginParamsOrBuilder getOriginsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 5;</code>
+     * @return The providerType.
+     */
+    java.lang.String getProviderType();
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 5;</code>
+     * @return The bytes for providerType.
+     */
+    com.google.protobuf.ByteString
+        getProviderTypeBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.CreateOriginGroupRequest}
@@ -2903,6 +2923,7 @@ public final class OriginGroupServiceOuterClass {
       folderId_ = "";
       name_ = "";
       origins_ = java.util.Collections.emptyList();
+      providerType_ = "";
     }
 
     @java.lang.Override
@@ -2968,6 +2989,12 @@ public final class OriginGroupServiceOuterClass {
               }
               origins_.add(
                   input.readMessage(yandex.cloud.api.cdn.v1.OriginOuterClass.OriginParams.parser(), extensionRegistry));
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              providerType_ = s;
               break;
             }
             default: {
@@ -3212,6 +3239,52 @@ public final class OriginGroupServiceOuterClass {
       return origins_.get(index);
     }
 
+    public static final int PROVIDER_TYPE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object providerType_;
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 5;</code>
+     * @return The providerType.
+     */
+    @java.lang.Override
+    public java.lang.String getProviderType() {
+      java.lang.Object ref = providerType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 5;</code>
+     * @return The bytes for providerType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderTypeBytes() {
+      java.lang.Object ref = providerType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3238,6 +3311,9 @@ public final class OriginGroupServiceOuterClass {
       for (int i = 0; i < origins_.size(); i++) {
         output.writeMessage(4, origins_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, providerType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3260,6 +3336,9 @@ public final class OriginGroupServiceOuterClass {
       for (int i = 0; i < origins_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, origins_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, providerType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3287,6 +3366,8 @@ public final class OriginGroupServiceOuterClass {
       }
       if (!getOriginsList()
           .equals(other.getOriginsList())) return false;
+      if (!getProviderType()
+          .equals(other.getProviderType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3310,6 +3391,8 @@ public final class OriginGroupServiceOuterClass {
         hash = (37 * hash) + ORIGINS_FIELD_NUMBER;
         hash = (53 * hash) + getOriginsList().hashCode();
       }
+      hash = (37 * hash) + PROVIDER_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getProviderType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3460,6 +3543,8 @@ public final class OriginGroupServiceOuterClass {
         } else {
           originsBuilder_.clear();
         }
+        providerType_ = "";
+
         return this;
       }
 
@@ -3503,6 +3588,7 @@ public final class OriginGroupServiceOuterClass {
         } else {
           result.origins_ = originsBuilder_.build();
         }
+        result.providerType_ = providerType_;
         onBuilt();
         return result;
       }
@@ -3587,6 +3673,10 @@ public final class OriginGroupServiceOuterClass {
               originsBuilder_.addAllMessages(other.origins_);
             }
           }
+        }
+        if (!other.getProviderType().isEmpty()) {
+          providerType_ = other.providerType_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4329,6 +4419,102 @@ public final class OriginGroupServiceOuterClass {
           origins_ = null;
         }
         return originsBuilder_;
+      }
+
+      private java.lang.Object providerType_ = "";
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 5;</code>
+       * @return The providerType.
+       */
+      public java.lang.String getProviderType() {
+        java.lang.Object ref = providerType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 5;</code>
+       * @return The bytes for providerType.
+       */
+      public com.google.protobuf.ByteString
+          getProviderTypeBytes() {
+        java.lang.Object ref = providerType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 5;</code>
+       * @param value The providerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        providerType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderType() {
+        
+        providerType_ = getDefaultInstance().getProviderType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 5;</code>
+       * @param value The bytes for providerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        providerType_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8455,48 +8641,48 @@ public final class OriginGroupServiceOuterClass {
       "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
       "100\"l\n\030ListOriginGroupsResponse\0227\n\rorigi" +
       "n_groups\030\001 \003(\0132 .yandex.cloud.cdn.v1.Ori" +
-      "ginGroup\022\027\n\017next_page_token\030\002 \001(\t\"\253\001\n\030Cr" +
+      "ginGroup\022\027\n\017next_page_token\030\002 \001(\t\"\302\001\n\030Cr" +
       "eateOriginGroupRequest\022\037\n\tfolder_id\030\001 \001(" +
       "\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004name\030\002 \001(\t\022,\n\010use_nex" +
       "t\030\003 \001(\0132\032.google.protobuf.BoolValue\0222\n\007o" +
       "rigins\030\004 \003(\0132!.yandex.cloud.cdn.v1.Origi" +
-      "nParams\"<\n\031CreateOriginGroupMetadata\022\037\n\017" +
-      "origin_group_id\030\001 \001(\003B\006\372\3071\002>0\"\360\001\n\030Update" +
-      "OriginGroupRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\037\n\017origin_group_id\030\002 \001(\003B\006\372\307" +
-      "1\002>0\0220\n\ngroup_name\030\003 \001(\0132\034.google.protob" +
-      "uf.StringValue\022,\n\010use_next\030\004 \001(\0132\032.googl" +
-      "e.protobuf.BoolValue\0222\n\007origins\030\005 \003(\0132!." +
-      "yandex.cloud.cdn.v1.OriginParams\"<\n\031Upda" +
-      "teOriginGroupMetadata\022\037\n\017origin_group_id" +
-      "\030\001 \001(\003B\006\372\3071\002>0\"\\\n\030DeleteOriginGroupReque" +
-      "st\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n\017o" +
-      "rigin_group_id\030\002 \001(\003B\006\372\3071\002>0\"<\n\031DeleteOr" +
-      "iginGroupMetadata\022\037\n\017origin_group_id\030\001 \001" +
-      "(\003B\006\372\3071\002>02\265\006\n\022OriginGroupService\022\203\001\n\003Ge" +
-      "t\022*.yandex.cloud.cdn.v1.GetOriginGroupRe" +
-      "quest\032 .yandex.cloud.cdn.v1.OriginGroup\"" +
-      ".\202\323\344\223\002(\022&/cdn/v1/originGroups/{origin_gr" +
-      "oup_id}\022\201\001\n\004List\022,.yandex.cloud.cdn.v1.L" +
-      "istOriginGroupsRequest\032-.yandex.cloud.cd" +
-      "n.v1.ListOriginGroupsResponse\"\034\202\323\344\223\002\026\022\024/" +
-      "cdn/v1/originGroups\022\247\001\n\006Create\022-.yandex." +
-      "cloud.cdn.v1.CreateOriginGroupRequest\032!." +
-      "yandex.cloud.operation.Operation\"K\202\323\344\223\002\031" +
-      "\"\024/cdn/v1/originGroups:\001*\262\322*(\n\031CreateOri" +
-      "ginGroupMetadata\022\013OriginGroup\022\247\001\n\006Update" +
-      "\022-.yandex.cloud.cdn.v1.UpdateOriginGroup" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"K\202\323\344\223\002\0312\024/cdn/v1/originGroups:\001*\262\322*(\n" +
-      "\031UpdateOriginGroupMetadata\022\013OriginGroup\022" +
-      "\300\001\n\006Delete\022-.yandex.cloud.cdn.v1.DeleteO" +
-      "riginGroupRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"d\202\323\344\223\002(*&/cdn/v1/originGrou" +
-      "ps/{origin_group_id}\262\322*2\n\031DeleteOriginGr" +
-      "oupMetadata\022\025google.protobuf.EmptyBV\n\027ya" +
-      "ndex.cloud.api.cdn.v1Z;github.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/cdn/v1;c" +
-      "dnb\006proto3"
+      "nParams\022\025\n\rprovider_type\030\005 \001(\t\"<\n\031Create" +
+      "OriginGroupMetadata\022\037\n\017origin_group_id\030\001" +
+      " \001(\003B\006\372\3071\002>0\"\360\001\n\030UpdateOriginGroupReques" +
+      "t\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n\017or" +
+      "igin_group_id\030\002 \001(\003B\006\372\3071\002>0\0220\n\ngroup_nam" +
+      "e\030\003 \001(\0132\034.google.protobuf.StringValue\022,\n" +
+      "\010use_next\030\004 \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\0222\n\007origins\030\005 \003(\0132!.yandex.cloud.cdn." +
+      "v1.OriginParams\"<\n\031UpdateOriginGroupMeta" +
+      "data\022\037\n\017origin_group_id\030\001 \001(\003B\006\372\3071\002>0\"\\\n" +
+      "\030DeleteOriginGroupRequest\022\037\n\tfolder_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n\017origin_group_id\030\002 " +
+      "\001(\003B\006\372\3071\002>0\"<\n\031DeleteOriginGroupMetadata" +
+      "\022\037\n\017origin_group_id\030\001 \001(\003B\006\372\3071\002>02\265\006\n\022Or" +
+      "iginGroupService\022\203\001\n\003Get\022*.yandex.cloud." +
+      "cdn.v1.GetOriginGroupRequest\032 .yandex.cl" +
+      "oud.cdn.v1.OriginGroup\".\202\323\344\223\002(\022&/cdn/v1/" +
+      "originGroups/{origin_group_id}\022\201\001\n\004List\022" +
+      ",.yandex.cloud.cdn.v1.ListOriginGroupsRe" +
+      "quest\032-.yandex.cloud.cdn.v1.ListOriginGr" +
+      "oupsResponse\"\034\202\323\344\223\002\026\022\024/cdn/v1/originGrou" +
+      "ps\022\247\001\n\006Create\022-.yandex.cloud.cdn.v1.Crea" +
+      "teOriginGroupRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"K\202\323\344\223\002\031\"\024/cdn/v1/originG" +
+      "roups:\001*\262\322*(\n\031CreateOriginGroupMetadata\022" +
+      "\013OriginGroup\022\247\001\n\006Update\022-.yandex.cloud.c" +
+      "dn.v1.UpdateOriginGroupRequest\032!.yandex." +
+      "cloud.operation.Operation\"K\202\323\344\223\002\0312\024/cdn/" +
+      "v1/originGroups:\001*\262\322*(\n\031UpdateOriginGrou" +
+      "pMetadata\022\013OriginGroup\022\300\001\n\006Delete\022-.yand" +
+      "ex.cloud.cdn.v1.DeleteOriginGroupRequest" +
+      "\032!.yandex.cloud.operation.Operation\"d\202\323\344" +
+      "\223\002(*&/cdn/v1/originGroups/{origin_group_" +
+      "id}\262\322*2\n\031DeleteOriginGroupMetadata\022\025goog" +
+      "le.protobuf.EmptyBV\n\027yandex.cloud.api.cd" +
+      "n.v1Z;github.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/cdn/v1;cdnb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8532,7 +8718,7 @@ public final class OriginGroupServiceOuterClass {
     internal_static_yandex_cloud_cdn_v1_CreateOriginGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_CreateOriginGroupRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "UseNext", "Origins", });
+        new java.lang.String[] { "FolderId", "Name", "UseNext", "Origins", "ProviderType", });
     internal_static_yandex_cloud_cdn_v1_CreateOriginGroupMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_cdn_v1_CreateOriginGroupMetadata_fieldAccessorTable = new

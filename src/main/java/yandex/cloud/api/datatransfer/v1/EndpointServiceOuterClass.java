@@ -668,7 +668,7 @@ public final class EndpointServiceOuterClass {
      * in the response message. Include it into the subsequent `ListEndpointRequest` to
      * fetch the next page. Defaults to `100` if not specified. The maximum allowed
      * value
-     * for this field is `500`.
+     * for this field is `1000`.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -854,7 +854,7 @@ public final class EndpointServiceOuterClass {
      * in the response message. Include it into the subsequent `ListEndpointRequest` to
      * fetch the next page. Defaults to `100` if not specified. The maximum allowed
      * value
-     * for this field is `500`.
+     * for this field is `1000`.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -1359,7 +1359,7 @@ public final class EndpointServiceOuterClass {
        * in the response message. Include it into the subsequent `ListEndpointRequest` to
        * fetch the next page. Defaults to `100` if not specified. The maximum allowed
        * value
-       * for this field is `500`.
+       * for this field is `1000`.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -1377,7 +1377,7 @@ public final class EndpointServiceOuterClass {
        * in the response message. Include it into the subsequent `ListEndpointRequest` to
        * fetch the next page. Defaults to `100` if not specified. The maximum allowed
        * value
-       * for this field is `500`.
+       * for this field is `1000`.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -1398,7 +1398,7 @@ public final class EndpointServiceOuterClass {
        * in the response message. Include it into the subsequent `ListEndpointRequest` to
        * fetch the next page. Defaults to `100` if not specified. The maximum allowed
        * value
-       * for this field is `500`.
+       * for this field is `1000`.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>

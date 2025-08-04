@@ -44639,6 +44639,3114 @@ public final class TuningServiceOuterClass {
 
   }
 
+  public interface ArchiveTuningRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.ArchiveTuningRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The tuningTaskId.
+     */
+    java.lang.String getTuningTaskId();
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for tuningTaskId.
+     */
+    com.google.protobuf.ByteString
+        getTuningTaskIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.ArchiveTuningRequest}
+   */
+  public static final class ArchiveTuningRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.ArchiveTuningRequest)
+      ArchiveTuningRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ArchiveTuningRequest.newBuilder() to construct.
+    private ArchiveTuningRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ArchiveTuningRequest() {
+      tuningTaskId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ArchiveTuningRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ArchiveTuningRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tuningTaskId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest.Builder.class);
+    }
+
+    public static final int TUNING_TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tuningTaskId_;
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The tuningTaskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTuningTaskId() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tuningTaskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for tuningTaskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTuningTaskIdBytes() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tuningTaskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tuningTaskId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tuningTaskId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest) obj;
+
+      if (!getTuningTaskId()
+          .equals(other.getTuningTaskId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TUNING_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTuningTaskId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.ArchiveTuningRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.ArchiveTuningRequest)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tuningTaskId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest(this);
+        result.tuningTaskId_ = tuningTaskId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest.getDefaultInstance()) return this;
+        if (!other.getTuningTaskId().isEmpty()) {
+          tuningTaskId_ = other.tuningTaskId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object tuningTaskId_ = "";
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The tuningTaskId.
+       */
+      public java.lang.String getTuningTaskId() {
+        java.lang.Object ref = tuningTaskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tuningTaskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for tuningTaskId.
+       */
+      public com.google.protobuf.ByteString
+          getTuningTaskIdBytes() {
+        java.lang.Object ref = tuningTaskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tuningTaskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTuningTaskId() {
+        
+        tuningTaskId_ = getDefaultInstance().getTuningTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.ArchiveTuningRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.ArchiveTuningRequest)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ArchiveTuningRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ArchiveTuningRequest>() {
+      @java.lang.Override
+      public ArchiveTuningRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ArchiveTuningRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ArchiveTuningRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ArchiveTuningRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ArchiveTuningMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.ArchiveTuningMetadata)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.ArchiveTuningMetadata}
+   */
+  public static final class ArchiveTuningMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.ArchiveTuningMetadata)
+      ArchiveTuningMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ArchiveTuningMetadata.newBuilder() to construct.
+    private ArchiveTuningMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ArchiveTuningMetadata() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ArchiveTuningMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ArchiveTuningMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.ArchiveTuningMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.ArchiveTuningMetadata)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.ArchiveTuningMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.ArchiveTuningMetadata)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ArchiveTuningMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<ArchiveTuningMetadata>() {
+      @java.lang.Override
+      public ArchiveTuningMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ArchiveTuningMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ArchiveTuningMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ArchiveTuningMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ArchiveTuningResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.ArchiveTuningResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The tuningTaskId.
+     */
+    java.lang.String getTuningTaskId();
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The bytes for tuningTaskId.
+     */
+    com.google.protobuf.ByteString
+        getTuningTaskIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.ArchiveTuningResponse}
+   */
+  public static final class ArchiveTuningResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.ArchiveTuningResponse)
+      ArchiveTuningResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ArchiveTuningResponse.newBuilder() to construct.
+    private ArchiveTuningResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ArchiveTuningResponse() {
+      tuningTaskId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ArchiveTuningResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ArchiveTuningResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tuningTaskId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse.Builder.class);
+    }
+
+    public static final int TUNING_TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tuningTaskId_;
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The tuningTaskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTuningTaskId() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tuningTaskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The bytes for tuningTaskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTuningTaskIdBytes() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tuningTaskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tuningTaskId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tuningTaskId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse) obj;
+
+      if (!getTuningTaskId()
+          .equals(other.getTuningTaskId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TUNING_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTuningTaskId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.ArchiveTuningResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.ArchiveTuningResponse)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tuningTaskId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse(this);
+        result.tuningTaskId_ = tuningTaskId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse.getDefaultInstance()) return this;
+        if (!other.getTuningTaskId().isEmpty()) {
+          tuningTaskId_ = other.tuningTaskId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object tuningTaskId_ = "";
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return The tuningTaskId.
+       */
+      public java.lang.String getTuningTaskId() {
+        java.lang.Object ref = tuningTaskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tuningTaskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return The bytes for tuningTaskId.
+       */
+      public com.google.protobuf.ByteString
+          getTuningTaskIdBytes() {
+        java.lang.Object ref = tuningTaskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tuningTaskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @param value The tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTuningTaskId() {
+        
+        tuningTaskId_ = getDefaultInstance().getTuningTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @param value The bytes for tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.ArchiveTuningResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.ArchiveTuningResponse)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ArchiveTuningResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ArchiveTuningResponse>() {
+      @java.lang.Override
+      public ArchiveTuningResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ArchiveTuningResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ArchiveTuningResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ArchiveTuningResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnableBillingRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.EnableBillingRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The tuningTaskId.
+     */
+    java.lang.String getTuningTaskId();
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for tuningTaskId.
+     */
+    com.google.protobuf.ByteString
+        getTuningTaskIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.EnableBillingRequest}
+   */
+  public static final class EnableBillingRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.EnableBillingRequest)
+      EnableBillingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnableBillingRequest.newBuilder() to construct.
+    private EnableBillingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnableBillingRequest() {
+      tuningTaskId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnableBillingRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnableBillingRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tuningTaskId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest.Builder.class);
+    }
+
+    public static final int TUNING_TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tuningTaskId_;
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The tuningTaskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTuningTaskId() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tuningTaskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for tuningTaskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTuningTaskIdBytes() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tuningTaskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tuningTaskId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tuningTaskId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest) obj;
+
+      if (!getTuningTaskId()
+          .equals(other.getTuningTaskId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TUNING_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTuningTaskId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.EnableBillingRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.EnableBillingRequest)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tuningTaskId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest(this);
+        result.tuningTaskId_ = tuningTaskId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest.getDefaultInstance()) return this;
+        if (!other.getTuningTaskId().isEmpty()) {
+          tuningTaskId_ = other.tuningTaskId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object tuningTaskId_ = "";
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The tuningTaskId.
+       */
+      public java.lang.String getTuningTaskId() {
+        java.lang.Object ref = tuningTaskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tuningTaskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for tuningTaskId.
+       */
+      public com.google.protobuf.ByteString
+          getTuningTaskIdBytes() {
+        java.lang.Object ref = tuningTaskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tuningTaskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTuningTaskId() {
+        
+        tuningTaskId_ = getDefaultInstance().getTuningTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.EnableBillingRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.EnableBillingRequest)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnableBillingRequest>
+        PARSER = new com.google.protobuf.AbstractParser<EnableBillingRequest>() {
+      @java.lang.Override
+      public EnableBillingRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnableBillingRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnableBillingRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnableBillingRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnableBillingResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.EnableBillingResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The tuningTaskId.
+     */
+    java.lang.String getTuningTaskId();
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The bytes for tuningTaskId.
+     */
+    com.google.protobuf.ByteString
+        getTuningTaskIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.EnableBillingResponse}
+   */
+  public static final class EnableBillingResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.EnableBillingResponse)
+      EnableBillingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnableBillingResponse.newBuilder() to construct.
+    private EnableBillingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnableBillingResponse() {
+      tuningTaskId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnableBillingResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnableBillingResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tuningTaskId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse.Builder.class);
+    }
+
+    public static final int TUNING_TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tuningTaskId_;
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The tuningTaskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTuningTaskId() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tuningTaskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The bytes for tuningTaskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTuningTaskIdBytes() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tuningTaskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tuningTaskId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tuningTaskId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse) obj;
+
+      if (!getTuningTaskId()
+          .equals(other.getTuningTaskId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TUNING_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTuningTaskId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.EnableBillingResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.EnableBillingResponse)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tuningTaskId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse(this);
+        result.tuningTaskId_ = tuningTaskId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse.getDefaultInstance()) return this;
+        if (!other.getTuningTaskId().isEmpty()) {
+          tuningTaskId_ = other.tuningTaskId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object tuningTaskId_ = "";
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return The tuningTaskId.
+       */
+      public java.lang.String getTuningTaskId() {
+        java.lang.Object ref = tuningTaskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tuningTaskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return The bytes for tuningTaskId.
+       */
+      public com.google.protobuf.ByteString
+          getTuningTaskIdBytes() {
+        java.lang.Object ref = tuningTaskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tuningTaskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @param value The tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTuningTaskId() {
+        
+        tuningTaskId_ = getDefaultInstance().getTuningTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @param value The bytes for tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.EnableBillingResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.EnableBillingResponse)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnableBillingResponse>
+        PARSER = new com.google.protobuf.AbstractParser<EnableBillingResponse>() {
+      @java.lang.Override
+      public EnableBillingResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnableBillingResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnableBillingResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnableBillingResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnableBillingMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.EnableBillingMetadata)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.EnableBillingMetadata}
+   */
+  public static final class EnableBillingMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.EnableBillingMetadata)
+      EnableBillingMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnableBillingMetadata.newBuilder() to construct.
+    private EnableBillingMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnableBillingMetadata() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnableBillingMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnableBillingMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.EnableBillingMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.EnableBillingMetadata)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_EnableBillingMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.EnableBillingMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.EnableBillingMetadata)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnableBillingMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<EnableBillingMetadata>() {
+      @java.lang.Override
+      public EnableBillingMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnableBillingMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnableBillingMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnableBillingMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_tuning_v1_ListTuningsRequest_descriptor;
   private static final 
@@ -44844,6 +47952,36 @@ public final class TuningServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_EnableBillingRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_EnableBillingRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_EnableBillingResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_EnableBillingResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_EnableBillingMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_EnableBillingMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45090,42 +48228,56 @@ public final class TuningServiceOuterClass {
       "g_task_id\030\001 \001(\tB\004\350\3071\001\"3\n\031DeleteTuningDra" +
       "ftResponse\022\026\n\016tuning_task_id\030\001 \001(\t\"0\n\020Tu" +
       "neDraftRequest\022\034\n\016tuning_task_id\030\001 \001(\tB\004" +
-      "\350\3071\0012\211\n\n\rTuningService\022y\n\004Tune\022(.yandex." +
-      "cloud.ai.tuning.v1.TuningRequest\032!.yande" +
-      "x.cloud.operation.Operation\"$\262\322* \n\016Tunin" +
-      "gMetadata\022\016TuningResponse\022e\n\004List\022-.yand" +
-      "ex.cloud.ai.tuning.v1.ListTuningsRequest" +
-      "\032..yandex.cloud.ai.tuning.v1.ListTunings" +
-      "Response\022o\n\010Describe\0220.yandex.cloud.ai.t" +
-      "uning.v1.DescribeTuningRequest\0321.yandex." +
-      "cloud.ai.tuning.v1.DescribeTuningRespons" +
-      "e\022i\n\006Cancel\022..yandex.cloud.ai.tuning.v1." +
-      "CancelTuningRequest\032/.yandex.cloud.ai.tu" +
-      "ning.v1.CancelTuningResponse\022r\n\rGetMetri" +
-      "csUrl\022/.yandex.cloud.ai.tuning.v1.GetMet" +
-      "ricsUrlRequest\0320.yandex.cloud.ai.tuning." +
-      "v1.GetMetricsUrlResponse\022i\n\nGetOptions\022," +
-      ".yandex.cloud.ai.tuning.v1.GetOptionsReq" +
-      "uest\032-.yandex.cloud.ai.tuning.v1.GetOpti" +
-      "onsResponse\022i\n\nListErrors\022,.yandex.cloud" +
-      ".ai.tuning.v1.ListErrorsRequest\032-.yandex" +
-      ".cloud.ai.tuning.v1.ListErrorsResponse\022x" +
-      "\n\013CreateDraft\0223.yandex.cloud.ai.tuning.v" +
-      "1.CreateTuningDraftRequest\0324.yandex.clou" +
-      "d.ai.tuning.v1.CreateTuningDraftResponse" +
-      "\022x\n\013UpdateDraft\0223.yandex.cloud.ai.tuning" +
-      ".v1.UpdateTuningDraftRequest\0324.yandex.cl" +
-      "oud.ai.tuning.v1.UpdateTuningDraftRespon" +
-      "se\022x\n\013DeleteDraft\0223.yandex.cloud.ai.tuni" +
-      "ng.v1.DeleteTuningDraftRequest\0324.yandex." +
-      "cloud.ai.tuning.v1.DeleteTuningDraftResp" +
-      "onse\022\201\001\n\tTuneDraft\022+.yandex.cloud.ai.tun" +
-      "ing.v1.TuneDraftRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"$\262\322* \n\016TuningMetadata" +
-      "\022\016TuningResponseBc\n\035yandex.cloud.api.ai." +
-      "tuning.v1ZBgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/ai/tuning/v1;fomob\006p" +
-      "roto3"
+      "\350\3071\001\"4\n\024ArchiveTuningRequest\022\034\n\016tuning_t" +
+      "ask_id\030\001 \001(\tB\004\350\3071\001\"\027\n\025ArchiveTuningMetad" +
+      "ata\"/\n\025ArchiveTuningResponse\022\026\n\016tuning_t" +
+      "ask_id\030\001 \001(\t\"4\n\024EnableBillingRequest\022\034\n\016" +
+      "tuning_task_id\030\001 \001(\tB\004\350\3071\001\"/\n\025EnableBill" +
+      "ingResponse\022\026\n\016tuning_task_id\030\001 \001(\t\"\027\n\025E" +
+      "nableBillingMetadata2\267\014\n\rTuningService\022y" +
+      "\n\004Tune\022(.yandex.cloud.ai.tuning.v1.Tunin" +
+      "gRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"$\262\322* \n\016TuningMetadata\022\016TuningRespons" +
+      "e\022e\n\004List\022-.yandex.cloud.ai.tuning.v1.Li" +
+      "stTuningsRequest\032..yandex.cloud.ai.tunin" +
+      "g.v1.ListTuningsResponse\022o\n\010Describe\0220.y" +
+      "andex.cloud.ai.tuning.v1.DescribeTuningR" +
+      "equest\0321.yandex.cloud.ai.tuning.v1.Descr" +
+      "ibeTuningResponse\022i\n\006Cancel\022..yandex.clo" +
+      "ud.ai.tuning.v1.CancelTuningRequest\032/.ya" +
+      "ndex.cloud.ai.tuning.v1.CancelTuningResp" +
+      "onse\022r\n\rGetMetricsUrl\022/.yandex.cloud.ai." +
+      "tuning.v1.GetMetricsUrlRequest\0320.yandex." +
+      "cloud.ai.tuning.v1.GetMetricsUrlResponse" +
+      "\022i\n\nGetOptions\022,.yandex.cloud.ai.tuning." +
+      "v1.GetOptionsRequest\032-.yandex.cloud.ai.t" +
+      "uning.v1.GetOptionsResponse\022i\n\nListError" +
+      "s\022,.yandex.cloud.ai.tuning.v1.ListErrors" +
+      "Request\032-.yandex.cloud.ai.tuning.v1.List" +
+      "ErrorsResponse\022x\n\013CreateDraft\0223.yandex.c" +
+      "loud.ai.tuning.v1.CreateTuningDraftReque" +
+      "st\0324.yandex.cloud.ai.tuning.v1.CreateTun" +
+      "ingDraftResponse\022x\n\013UpdateDraft\0223.yandex" +
+      ".cloud.ai.tuning.v1.UpdateTuningDraftReq" +
+      "uest\0324.yandex.cloud.ai.tuning.v1.UpdateT" +
+      "uningDraftResponse\022x\n\013DeleteDraft\0223.yand" +
+      "ex.cloud.ai.tuning.v1.DeleteTuningDraftR" +
+      "equest\0324.yandex.cloud.ai.tuning.v1.Delet" +
+      "eTuningDraftResponse\022\201\001\n\tTuneDraft\022+.yan" +
+      "dex.cloud.ai.tuning.v1.TuneDraftRequest\032" +
+      "!.yandex.cloud.operation.Operation\"$\262\322* " +
+      "\n\016TuningMetadata\022\016TuningResponse\022\221\001\n\007Arc" +
+      "hive\022/.yandex.cloud.ai.tuning.v1.Archive" +
+      "TuningRequest\032!.yandex.cloud.operation.O" +
+      "peration\"2\262\322*.\n\025ArchiveTuningMetadata\022\025A" +
+      "rchiveTuningResponse\022\227\001\n\rEnableBilling\022/" +
+      ".yandex.cloud.ai.tuning.v1.EnableBilling" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"2\262\322*.\n\025EnableBillingMetadata\022\025EnableB" +
+      "illingResponseBc\n\035yandex.cloud.api.ai.tu" +
+      "ning.v1ZBgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/ai/tuning/v1;fomob\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -45385,6 +48537,42 @@ public final class TuningServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_descriptor,
         new java.lang.String[] { "TuningTaskId", });
+    internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningRequest_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningRequest_descriptor,
+        new java.lang.String[] { "TuningTaskId", });
+    internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningMetadata_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningResponse_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_ArchiveTuningResponse_descriptor,
+        new java.lang.String[] { "TuningTaskId", });
+    internal_static_yandex_cloud_ai_tuning_v1_EnableBillingRequest_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_yandex_cloud_ai_tuning_v1_EnableBillingRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_EnableBillingRequest_descriptor,
+        new java.lang.String[] { "TuningTaskId", });
+    internal_static_yandex_cloud_ai_tuning_v1_EnableBillingResponse_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_yandex_cloud_ai_tuning_v1_EnableBillingResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_EnableBillingResponse_descriptor,
+        new java.lang.String[] { "TuningTaskId", });
+    internal_static_yandex_cloud_ai_tuning_v1_EnableBillingMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_yandex_cloud_ai_tuning_v1_EnableBillingMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_EnableBillingMetadata_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.OperationOuterClass.operation);

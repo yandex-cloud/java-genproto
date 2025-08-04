@@ -3903,6 +3903,5113 @@ public final class FederationOuterClass {
 
   }
 
+  public interface DomainOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.Domain)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain name
+     * </pre>
+     *
+     * <code>string domain = 1;</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain name
+     * </pre>
+     *
+     * <code>string domain = 1;</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Current status of the domain.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.Domain.Status status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Current status of the domain.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.Domain.Status status = 2;</code>
+     * @return The status.
+     */
+    yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status getStatus();
+
+    /**
+     * <pre>
+     * Optional code providing details about validation errors.
+     * </pre>
+     *
+     * <code>string status_code = 3;</code>
+     * @return The statusCode.
+     */
+    java.lang.String getStatusCode();
+    /**
+     * <pre>
+     * Optional code providing details about validation errors.
+     * </pre>
+     *
+     * <code>string status_code = 3;</code>
+     * @return The bytes for statusCode.
+     */
+    com.google.protobuf.ByteString
+        getStatusCodeBytes();
+
+    /**
+     * <pre>
+     * Timestamp of domain creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * Timestamp of domain creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * Timestamp of domain creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Timestamp when the domain was successfully validated.
+     * Not set if validation hasn't been completed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+     * @return Whether the validatedAt field is set.
+     */
+    boolean hasValidatedAt();
+    /**
+     * <pre>
+     * Timestamp when the domain was successfully validated.
+     * Not set if validation hasn't been completed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+     * @return The validatedAt.
+     */
+    com.google.protobuf.Timestamp getValidatedAt();
+    /**
+     * <pre>
+     * Timestamp when the domain was successfully validated.
+     * Not set if validation hasn't been completed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getValidatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * List of challenges to confirm domain ownership.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+     */
+    java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge> 
+        getChallengesList();
+    /**
+     * <pre>
+     * List of challenges to confirm domain ownership.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge getChallenges(int index);
+    /**
+     * <pre>
+     * List of challenges to confirm domain ownership.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+     */
+    int getChallengesCount();
+    /**
+     * <pre>
+     * List of challenges to confirm domain ownership.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallengeOrBuilder> 
+        getChallengesOrBuilderList();
+    /**
+     * <pre>
+     * List of challenges to confirm domain ownership.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallengeOrBuilder getChallengesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * A domain.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.Domain}
+   */
+  public static final class Domain extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.Domain)
+      DomainOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Domain.newBuilder() to construct.
+    private Domain(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Domain() {
+      domain_ = "";
+      status_ = 0;
+      statusCode_ = "";
+      challenges_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Domain();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Domain(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domain_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              statusCode_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (validatedAt_ != null) {
+                subBuilder = validatedAt_.toBuilder();
+              }
+              validatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(validatedAt_);
+                validatedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                challenges_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              challenges_.add(
+                  input.readMessage(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          challenges_ = java.util.Collections.unmodifiableList(challenges_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_Domain_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_Domain_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.class, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Status of the domain.
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.organizationmanager.v1.saml.Domain.Status}
+     */
+    public enum Status
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      STATUS_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Domain requires ownership validation.
+       * </pre>
+       *
+       * <code>NEED_TO_VALIDATE = 1;</code>
+       */
+      NEED_TO_VALIDATE(1),
+      /**
+       * <pre>
+       * Domain validation is in progress.
+       * </pre>
+       *
+       * <code>VALIDATING = 2;</code>
+       */
+      VALIDATING(2),
+      /**
+       * <pre>
+       * Domain has been successfully validated and is active.
+       * </pre>
+       *
+       * <code>VALID = 3;</code>
+       */
+      VALID(3),
+      /**
+       * <pre>
+       * Domain validation failed (check status_code for details).
+       * </pre>
+       *
+       * <code>INVALID = 4;</code>
+       */
+      INVALID(4),
+      /**
+       * <pre>
+       * Domain is being deleted.
+       * </pre>
+       *
+       * <code>DELETING = 5;</code>
+       */
+      DELETING(5),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Domain requires ownership validation.
+       * </pre>
+       *
+       * <code>NEED_TO_VALIDATE = 1;</code>
+       */
+      public static final int NEED_TO_VALIDATE_VALUE = 1;
+      /**
+       * <pre>
+       * Domain validation is in progress.
+       * </pre>
+       *
+       * <code>VALIDATING = 2;</code>
+       */
+      public static final int VALIDATING_VALUE = 2;
+      /**
+       * <pre>
+       * Domain has been successfully validated and is active.
+       * </pre>
+       *
+       * <code>VALID = 3;</code>
+       */
+      public static final int VALID_VALUE = 3;
+      /**
+       * <pre>
+       * Domain validation failed (check status_code for details).
+       * </pre>
+       *
+       * <code>INVALID = 4;</code>
+       */
+      public static final int INVALID_VALUE = 4;
+      /**
+       * <pre>
+       * Domain is being deleted.
+       * </pre>
+       *
+       * <code>DELETING = 5;</code>
+       */
+      public static final int DELETING_VALUE = 5;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Status valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Status forNumber(int value) {
+        switch (value) {
+          case 0: return STATUS_UNSPECIFIED;
+          case 1: return NEED_TO_VALIDATE;
+          case 2: return VALIDATING;
+          case 3: return VALID;
+          case 4: return INVALID;
+          case 5: return DELETING;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Status[] VALUES = values();
+
+      public static Status valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Status(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.organizationmanager.v1.saml.Domain.Status)
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    private volatile java.lang.Object domain_;
+    /**
+     * <pre>
+     * Domain name
+     * </pre>
+     *
+     * <code>string domain = 1;</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain name
+     * </pre>
+     *
+     * <code>string domain = 1;</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_;
+    /**
+     * <pre>
+     * Current status of the domain.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.Domain.Status status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Current status of the domain.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.Domain.Status status = 2;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status result = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status.valueOf(status_);
+      return result == null ? yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int STATUS_CODE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object statusCode_;
+    /**
+     * <pre>
+     * Optional code providing details about validation errors.
+     * </pre>
+     *
+     * <code>string status_code = 3;</code>
+     * @return The statusCode.
+     */
+    @java.lang.Override
+    public java.lang.String getStatusCode() {
+      java.lang.Object ref = statusCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        statusCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional code providing details about validation errors.
+     * </pre>
+     *
+     * <code>string status_code = 3;</code>
+     * @return The bytes for statusCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusCodeBytes() {
+      java.lang.Object ref = statusCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        statusCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * Timestamp of domain creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp of domain creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * Timestamp of domain creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    public static final int VALIDATED_AT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp validatedAt_;
+    /**
+     * <pre>
+     * Timestamp when the domain was successfully validated.
+     * Not set if validation hasn't been completed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+     * @return Whether the validatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasValidatedAt() {
+      return validatedAt_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp when the domain was successfully validated.
+     * Not set if validation hasn't been completed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+     * @return The validatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getValidatedAt() {
+      return validatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : validatedAt_;
+    }
+    /**
+     * <pre>
+     * Timestamp when the domain was successfully validated.
+     * Not set if validation hasn't been completed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getValidatedAtOrBuilder() {
+      return getValidatedAt();
+    }
+
+    public static final int CHALLENGES_FIELD_NUMBER = 6;
+    private java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge> challenges_;
+    /**
+     * <pre>
+     * List of challenges to confirm domain ownership.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge> getChallengesList() {
+      return challenges_;
+    }
+    /**
+     * <pre>
+     * List of challenges to confirm domain ownership.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallengeOrBuilder> 
+        getChallengesOrBuilderList() {
+      return challenges_;
+    }
+    /**
+     * <pre>
+     * List of challenges to confirm domain ownership.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+     */
+    @java.lang.Override
+    public int getChallengesCount() {
+      return challenges_.size();
+    }
+    /**
+     * <pre>
+     * List of challenges to confirm domain ownership.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge getChallenges(int index) {
+      return challenges_.get(index);
+    }
+    /**
+     * <pre>
+     * List of challenges to confirm domain ownership.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallengeOrBuilder getChallengesOrBuilder(
+        int index) {
+      return challenges_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (status_ != yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusCode_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, statusCode_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(4, getCreatedAt());
+      }
+      if (validatedAt_ != null) {
+        output.writeMessage(5, getValidatedAt());
+      }
+      for (int i = 0; i < challenges_.size(); i++) {
+        output.writeMessage(6, challenges_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (status_ != yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusCode_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, statusCode_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCreatedAt());
+      }
+      if (validatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getValidatedAt());
+      }
+      for (int i = 0; i < challenges_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, challenges_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain other = (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (status_ != other.status_) return false;
+      if (!getStatusCode()
+          .equals(other.getStatusCode())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (hasValidatedAt() != other.hasValidatedAt()) return false;
+      if (hasValidatedAt()) {
+        if (!getValidatedAt()
+            .equals(other.getValidatedAt())) return false;
+      }
+      if (!getChallengesList()
+          .equals(other.getChallengesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + STATUS_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getStatusCode().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasValidatedAt()) {
+        hash = (37 * hash) + VALIDATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getValidatedAt().hashCode();
+      }
+      if (getChallengesCount() > 0) {
+        hash = (37 * hash) + CHALLENGES_FIELD_NUMBER;
+        hash = (53 * hash) + getChallengesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A domain.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.Domain}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.Domain)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_Domain_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_Domain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.class, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChallengesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        domain_ = "";
+
+        status_ = 0;
+
+        statusCode_ = "";
+
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        if (validatedAtBuilder_ == null) {
+          validatedAt_ = null;
+        } else {
+          validatedAt_ = null;
+          validatedAtBuilder_ = null;
+        }
+        if (challengesBuilder_ == null) {
+          challenges_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          challengesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_Domain_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain result = new yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain(this);
+        int from_bitField0_ = bitField0_;
+        result.domain_ = domain_;
+        result.status_ = status_;
+        result.statusCode_ = statusCode_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        if (validatedAtBuilder_ == null) {
+          result.validatedAt_ = validatedAt_;
+        } else {
+          result.validatedAt_ = validatedAtBuilder_.build();
+        }
+        if (challengesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            challenges_ = java.util.Collections.unmodifiableList(challenges_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.challenges_ = challenges_;
+        } else {
+          result.challenges_ = challengesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (!other.getStatusCode().isEmpty()) {
+          statusCode_ = other.statusCode_;
+          onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasValidatedAt()) {
+          mergeValidatedAt(other.getValidatedAt());
+        }
+        if (challengesBuilder_ == null) {
+          if (!other.challenges_.isEmpty()) {
+            if (challenges_.isEmpty()) {
+              challenges_ = other.challenges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureChallengesIsMutable();
+              challenges_.addAll(other.challenges_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.challenges_.isEmpty()) {
+            if (challengesBuilder_.isEmpty()) {
+              challengesBuilder_.dispose();
+              challengesBuilder_ = null;
+              challenges_ = other.challenges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              challengesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getChallengesFieldBuilder() : null;
+            } else {
+              challengesBuilder_.addAllMessages(other.challenges_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain name
+       * </pre>
+       *
+       * <code>string domain = 1;</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name
+       * </pre>
+       *
+       * <code>string domain = 1;</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain name
+       * </pre>
+       *
+       * <code>string domain = 1;</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name
+       * </pre>
+       *
+       * <code>string domain = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain name
+       * </pre>
+       *
+       * <code>string domain = 1;</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Current status of the domain.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.Domain.Status status = 2;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Current status of the domain.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.Domain.Status status = 2;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Current status of the domain.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.Domain.Status status = 2;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status result = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status.valueOf(status_);
+        return result == null ? yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Current status of the domain.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.Domain.Status status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Current status of the domain.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.Domain.Status status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object statusCode_ = "";
+      /**
+       * <pre>
+       * Optional code providing details about validation errors.
+       * </pre>
+       *
+       * <code>string status_code = 3;</code>
+       * @return The statusCode.
+       */
+      public java.lang.String getStatusCode() {
+        java.lang.Object ref = statusCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          statusCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional code providing details about validation errors.
+       * </pre>
+       *
+       * <code>string status_code = 3;</code>
+       * @return The bytes for statusCode.
+       */
+      public com.google.protobuf.ByteString
+          getStatusCodeBytes() {
+        java.lang.Object ref = statusCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          statusCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional code providing details about validation errors.
+       * </pre>
+       *
+       * <code>string status_code = 3;</code>
+       * @param value The statusCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        statusCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional code providing details about validation errors.
+       * </pre>
+       *
+       * <code>string status_code = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatusCode() {
+        
+        statusCode_ = getDefaultInstance().getStatusCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional code providing details about validation errors.
+       * </pre>
+       *
+       * <code>string status_code = 3;</code>
+       * @param value The bytes for statusCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        statusCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * Timestamp of domain creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp of domain creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp of domain creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of domain creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of domain creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of domain creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of domain creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp of domain creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp of domain creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp validatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> validatedAtBuilder_;
+      /**
+       * <pre>
+       * Timestamp when the domain was successfully validated.
+       * Not set if validation hasn't been completed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+       * @return Whether the validatedAt field is set.
+       */
+      public boolean hasValidatedAt() {
+        return validatedAtBuilder_ != null || validatedAt_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp when the domain was successfully validated.
+       * Not set if validation hasn't been completed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+       * @return The validatedAt.
+       */
+      public com.google.protobuf.Timestamp getValidatedAt() {
+        if (validatedAtBuilder_ == null) {
+          return validatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : validatedAt_;
+        } else {
+          return validatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp when the domain was successfully validated.
+       * Not set if validation hasn't been completed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+       */
+      public Builder setValidatedAt(com.google.protobuf.Timestamp value) {
+        if (validatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          validatedAt_ = value;
+          onChanged();
+        } else {
+          validatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp when the domain was successfully validated.
+       * Not set if validation hasn't been completed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+       */
+      public Builder setValidatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (validatedAtBuilder_ == null) {
+          validatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          validatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp when the domain was successfully validated.
+       * Not set if validation hasn't been completed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+       */
+      public Builder mergeValidatedAt(com.google.protobuf.Timestamp value) {
+        if (validatedAtBuilder_ == null) {
+          if (validatedAt_ != null) {
+            validatedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(validatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            validatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          validatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp when the domain was successfully validated.
+       * Not set if validation hasn't been completed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+       */
+      public Builder clearValidatedAt() {
+        if (validatedAtBuilder_ == null) {
+          validatedAt_ = null;
+          onChanged();
+        } else {
+          validatedAt_ = null;
+          validatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp when the domain was successfully validated.
+       * Not set if validation hasn't been completed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getValidatedAtBuilder() {
+        
+        onChanged();
+        return getValidatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp when the domain was successfully validated.
+       * Not set if validation hasn't been completed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getValidatedAtOrBuilder() {
+        if (validatedAtBuilder_ != null) {
+          return validatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return validatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : validatedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp when the domain was successfully validated.
+       * Not set if validation hasn't been completed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp validated_at = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getValidatedAtFieldBuilder() {
+        if (validatedAtBuilder_ == null) {
+          validatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getValidatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          validatedAt_ = null;
+        }
+        return validatedAtBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge> challenges_ =
+        java.util.Collections.emptyList();
+      private void ensureChallengesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          challenges_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge>(challenges_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallengeOrBuilder> challengesBuilder_;
+
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge> getChallengesList() {
+        if (challengesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(challenges_);
+        } else {
+          return challengesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public int getChallengesCount() {
+        if (challengesBuilder_ == null) {
+          return challenges_.size();
+        } else {
+          return challengesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge getChallenges(int index) {
+        if (challengesBuilder_ == null) {
+          return challenges_.get(index);
+        } else {
+          return challengesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public Builder setChallenges(
+          int index, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge value) {
+        if (challengesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChallengesIsMutable();
+          challenges_.set(index, value);
+          onChanged();
+        } else {
+          challengesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public Builder setChallenges(
+          int index, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder builderForValue) {
+        if (challengesBuilder_ == null) {
+          ensureChallengesIsMutable();
+          challenges_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          challengesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public Builder addChallenges(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge value) {
+        if (challengesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChallengesIsMutable();
+          challenges_.add(value);
+          onChanged();
+        } else {
+          challengesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public Builder addChallenges(
+          int index, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge value) {
+        if (challengesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChallengesIsMutable();
+          challenges_.add(index, value);
+          onChanged();
+        } else {
+          challengesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public Builder addChallenges(
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder builderForValue) {
+        if (challengesBuilder_ == null) {
+          ensureChallengesIsMutable();
+          challenges_.add(builderForValue.build());
+          onChanged();
+        } else {
+          challengesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public Builder addChallenges(
+          int index, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder builderForValue) {
+        if (challengesBuilder_ == null) {
+          ensureChallengesIsMutable();
+          challenges_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          challengesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public Builder addAllChallenges(
+          java.lang.Iterable<? extends yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge> values) {
+        if (challengesBuilder_ == null) {
+          ensureChallengesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, challenges_);
+          onChanged();
+        } else {
+          challengesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public Builder clearChallenges() {
+        if (challengesBuilder_ == null) {
+          challenges_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          challengesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public Builder removeChallenges(int index) {
+        if (challengesBuilder_ == null) {
+          ensureChallengesIsMutable();
+          challenges_.remove(index);
+          onChanged();
+        } else {
+          challengesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder getChallengesBuilder(
+          int index) {
+        return getChallengesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallengeOrBuilder getChallengesOrBuilder(
+          int index) {
+        if (challengesBuilder_ == null) {
+          return challenges_.get(index);  } else {
+          return challengesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallengeOrBuilder> 
+           getChallengesOrBuilderList() {
+        if (challengesBuilder_ != null) {
+          return challengesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(challenges_);
+        }
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder addChallengesBuilder() {
+        return getChallengesFieldBuilder().addBuilder(
+            yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder addChallengesBuilder(
+          int index) {
+        return getChallengesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of challenges to confirm domain ownership.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.saml.DomainChallenge challenges = 6;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder> 
+           getChallengesBuilderList() {
+        return getChallengesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallengeOrBuilder> 
+          getChallengesFieldBuilder() {
+        if (challengesBuilder_ == null) {
+          challengesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallengeOrBuilder>(
+                  challenges_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          challenges_ = null;
+        }
+        return challengesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.Domain)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.Domain)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Domain>
+        PARSER = new com.google.protobuf.AbstractParser<Domain>() {
+      @java.lang.Override
+      public Domain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Domain(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Domain> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Domain> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Domain getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DomainChallengeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.DomainChallenge)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Timestamp of challenge creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * Timestamp of challenge creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * Timestamp of challenge creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Timestamp of the last challenge status update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+     * @return Whether the updatedAt field is set.
+     */
+    boolean hasUpdatedAt();
+    /**
+     * <pre>
+     * Timestamp of the last challenge status update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+     * @return The updatedAt.
+     */
+    com.google.protobuf.Timestamp getUpdatedAt();
+    /**
+     * <pre>
+     * Timestamp of the last challenge status update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Type of the validation challenge.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Type type = 3;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Type of the validation challenge.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Type type = 3;</code>
+     * @return The type.
+     */
+    yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type getType();
+
+    /**
+     * <pre>
+     * Current status of the challenge.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Status status = 4;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Current status of the challenge.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Status status = 4;</code>
+     * @return The status.
+     */
+    yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status getStatus();
+
+    /**
+     * <pre>
+     * DNS record configuration for domain verification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+     * @return Whether the dnsChallenge field is set.
+     */
+    boolean hasDnsChallenge();
+    /**
+     * <pre>
+     * DNS record configuration for domain verification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+     * @return The dnsChallenge.
+     */
+    yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord getDnsChallenge();
+    /**
+     * <pre>
+     * DNS record configuration for domain verification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecordOrBuilder getDnsChallengeOrBuilder();
+
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.ChallengeCase getChallengeCase();
+  }
+  /**
+   * <pre>
+   * A domain validation challenge.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DomainChallenge}
+   */
+  public static final class DomainChallenge extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.DomainChallenge)
+      DomainChallengeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DomainChallenge.newBuilder() to construct.
+    private DomainChallenge(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DomainChallenge() {
+      type_ = 0;
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DomainChallenge();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DomainChallenge(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (updatedAt_ != null) {
+                subBuilder = updatedAt_.toBuilder();
+              }
+              updatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updatedAt_);
+                updatedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Builder subBuilder = null;
+              if (challengeCase_ == 5) {
+                subBuilder = ((yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) challenge_).toBuilder();
+              }
+              challenge_ =
+                  input.readMessage(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) challenge_);
+                challenge_ = subBuilder.buildPartial();
+              }
+              challengeCase_ = 5;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.class, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Type of validation challenge.
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Type}
+     */
+    public enum Type
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>TYPE_UNSPECIFIED = 0;</code>
+       */
+      TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * DNS TXT record validation method.
+       * </pre>
+       *
+       * <code>DNS_TXT = 1;</code>
+       */
+      DNS_TXT(1),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * DNS TXT record validation method.
+       * </pre>
+       *
+       * <code>DNS_TXT = 1;</code>
+       */
+      public static final int DNS_TXT_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Type valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Type forNumber(int value) {
+        switch (value) {
+          case 0: return TYPE_UNSPECIFIED;
+          case 1: return DNS_TXT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Type> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Type[] VALUES = values();
+
+      public static Type valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Type(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Type)
+    }
+
+    /**
+     * <pre>
+     * Status of the validation challenge.
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Status}
+     */
+    public enum Status
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      STATUS_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Challenge is awaiting completion.
+       * </pre>
+       *
+       * <code>PENDING = 1;</code>
+       */
+      PENDING(1),
+      /**
+       * <pre>
+       * Challenge verification is in progress.
+       * </pre>
+       *
+       * <code>PROCESSING = 2;</code>
+       */
+      PROCESSING(2),
+      /**
+       * <pre>
+       * Challenge has been completed successfully.
+       * </pre>
+       *
+       * <code>VALID = 3;</code>
+       */
+      VALID(3),
+      /**
+       * <pre>
+       * Challenge verification failed.
+       * </pre>
+       *
+       * <code>INVALID = 4;</code>
+       */
+      INVALID(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Challenge is awaiting completion.
+       * </pre>
+       *
+       * <code>PENDING = 1;</code>
+       */
+      public static final int PENDING_VALUE = 1;
+      /**
+       * <pre>
+       * Challenge verification is in progress.
+       * </pre>
+       *
+       * <code>PROCESSING = 2;</code>
+       */
+      public static final int PROCESSING_VALUE = 2;
+      /**
+       * <pre>
+       * Challenge has been completed successfully.
+       * </pre>
+       *
+       * <code>VALID = 3;</code>
+       */
+      public static final int VALID_VALUE = 3;
+      /**
+       * <pre>
+       * Challenge verification failed.
+       * </pre>
+       *
+       * <code>INVALID = 4;</code>
+       */
+      public static final int INVALID_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Status valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Status forNumber(int value) {
+        switch (value) {
+          case 0: return STATUS_UNSPECIFIED;
+          case 1: return PENDING;
+          case 2: return PROCESSING;
+          case 3: return VALID;
+          case 4: return INVALID;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final Status[] VALUES = values();
+
+      public static Status valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Status(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Status)
+    }
+
+    public interface DnsRecordOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Fully qualified domain name for the record.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      java.lang.String getName();
+      /**
+       * <pre>
+       * Fully qualified domain name for the record.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <pre>
+       * DNS record type (always TXT for current implementation).
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord.Type type = 2;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      int getTypeValue();
+      /**
+       * <pre>
+       * DNS record type (always TXT for current implementation).
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord.Type type = 2;</code>
+       * @return The type.
+       */
+      yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type getType();
+
+      /**
+       * <pre>
+       * Value to set in the DNS record for verification.
+       * </pre>
+       *
+       * <code>string value = 3;</code>
+       * @return The value.
+       */
+      java.lang.String getValue();
+      /**
+       * <pre>
+       * Value to set in the DNS record for verification.
+       * </pre>
+       *
+       * <code>string value = 3;</code>
+       * @return The bytes for value.
+       */
+      com.google.protobuf.ByteString
+          getValueBytes();
+    }
+    /**
+     * <pre>
+     * DNS record data for validation challenges.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord}
+     */
+    public static final class DnsRecord extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord)
+        DnsRecordOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DnsRecord.newBuilder() to construct.
+      private DnsRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DnsRecord() {
+        name_ = "";
+        type_ = 0;
+        value_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DnsRecord();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private DnsRecord(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+
+                type_ = rawValue;
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                value_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_DnsRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_DnsRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.class, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Builder.class);
+      }
+
+      /**
+       * <pre>
+       * Type of DNS record.
+       * </pre>
+       *
+       * Protobuf enum {@code yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord.Type}
+       */
+      public enum Type
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>TYPE_UNSPECIFIED = 0;</code>
+         */
+        TYPE_UNSPECIFIED(0),
+        /**
+         * <pre>
+         * TXT record type.
+         * </pre>
+         *
+         * <code>TXT = 1;</code>
+         */
+        TXT(1),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>TYPE_UNSPECIFIED = 0;</code>
+         */
+        public static final int TYPE_UNSPECIFIED_VALUE = 0;
+        /**
+         * <pre>
+         * TXT record type.
+         * </pre>
+         *
+         * <code>TXT = 1;</code>
+         */
+        public static final int TXT_VALUE = 1;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Type valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static Type forNumber(int value) {
+          switch (value) {
+            case 0: return TYPE_UNSPECIFIED;
+            case 1: return TXT;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Type>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Type> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+                public Type findValueByNumber(int number) {
+                  return Type.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final Type[] VALUES = values();
+
+        public static Type valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Type(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord.Type)
+      }
+
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <pre>
+       * Fully qualified domain name for the record.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Fully qualified domain name for the record.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TYPE_FIELD_NUMBER = 2;
+      private int type_;
+      /**
+       * <pre>
+       * DNS record type (always TXT for current implementation).
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord.Type type = 2;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * DNS record type (always TXT for current implementation).
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord.Type type = 2;</code>
+       * @return The type.
+       */
+      @java.lang.Override public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type result = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type.valueOf(type_);
+        return result == null ? yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type.UNRECOGNIZED : result;
+      }
+
+      public static final int VALUE_FIELD_NUMBER = 3;
+      private volatile java.lang.Object value_;
+      /**
+       * <pre>
+       * Value to set in the DNS record for verification.
+       * </pre>
+       *
+       * <code>string value = 3;</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Value to set in the DNS record for verification.
+       * </pre>
+       *
+       * <code>string value = 3;</code>
+       * @return The bytes for value.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (type_ != yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type.TYPE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(2, type_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (type_ != yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type.TYPE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, type_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord other = (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) obj;
+
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (type_ != other.type_) return false;
+        if (!getValue()
+            .equals(other.getValue())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + type_;
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * DNS record data for validation challenges.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord)
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecordOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_DnsRecord_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_DnsRecord_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.class, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          type_ = 0;
+
+          value_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_DnsRecord_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord getDefaultInstanceForType() {
+          return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord build() {
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord buildPartial() {
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord result = new yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord(this);
+          result.name_ = name_;
+          result.type_ = type_;
+          result.value_ = value_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) {
+            return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord other) {
+          if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.type_ != 0) {
+            setTypeValue(other.getTypeValue());
+          }
+          if (!other.getValue().isEmpty()) {
+            value_ = other.value_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <pre>
+         * Fully qualified domain name for the record.
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         * @return The name.
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Fully qualified domain name for the record.
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Fully qualified domain name for the record.
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Fully qualified domain name for the record.
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Fully qualified domain name for the record.
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int type_ = 0;
+        /**
+         * <pre>
+         * DNS record type (always TXT for current implementation).
+         * </pre>
+         *
+         * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord.Type type = 2;</code>
+         * @return The enum numeric value on the wire for type.
+         */
+        @java.lang.Override public int getTypeValue() {
+          return type_;
+        }
+        /**
+         * <pre>
+         * DNS record type (always TXT for current implementation).
+         * </pre>
+         *
+         * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord.Type type = 2;</code>
+         * @param value The enum numeric value on the wire for type to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTypeValue(int value) {
+          
+          type_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * DNS record type (always TXT for current implementation).
+         * </pre>
+         *
+         * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord.Type type = 2;</code>
+         * @return The type.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type getType() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type result = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type.valueOf(type_);
+          return result == null ? yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * DNS record type (always TXT for current implementation).
+         * </pre>
+         *
+         * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord.Type type = 2;</code>
+         * @param value The type to set.
+         * @return This builder for chaining.
+         */
+        public Builder setType(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Type value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          type_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * DNS record type (always TXT for current implementation).
+         * </pre>
+         *
+         * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord.Type type = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearType() {
+          
+          type_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object value_ = "";
+        /**
+         * <pre>
+         * Value to set in the DNS record for verification.
+         * </pre>
+         *
+         * <code>string value = 3;</code>
+         * @return The value.
+         */
+        public java.lang.String getValue() {
+          java.lang.Object ref = value_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            value_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Value to set in the DNS record for verification.
+         * </pre>
+         *
+         * <code>string value = 3;</code>
+         * @return The bytes for value.
+         */
+        public com.google.protobuf.ByteString
+            getValueBytes() {
+          java.lang.Object ref = value_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            value_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Value to set in the DNS record for verification.
+         * </pre>
+         *
+         * <code>string value = 3;</code>
+         * @param value The value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValue(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Value to set in the DNS record for verification.
+         * </pre>
+         *
+         * <code>string value = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearValue() {
+          
+          value_ = getDefaultInstance().getValue();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Value to set in the DNS record for verification.
+         * </pre>
+         *
+         * <code>string value = 3;</code>
+         * @param value The bytes for value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValueBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord)
+      private static final yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord();
+      }
+
+      public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<DnsRecord>
+          PARSER = new com.google.protobuf.AbstractParser<DnsRecord>() {
+        @java.lang.Override
+        public DnsRecord parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DnsRecord(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<DnsRecord> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DnsRecord> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int challengeCase_ = 0;
+    private java.lang.Object challenge_;
+    public enum ChallengeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      DNS_CHALLENGE(5),
+      CHALLENGE_NOT_SET(0);
+      private final int value;
+      private ChallengeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ChallengeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ChallengeCase forNumber(int value) {
+        switch (value) {
+          case 5: return DNS_CHALLENGE;
+          case 0: return CHALLENGE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ChallengeCase
+    getChallengeCase() {
+      return ChallengeCase.forNumber(
+          challengeCase_);
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * Timestamp of challenge creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp of challenge creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * Timestamp of challenge creation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    public static final int UPDATED_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp updatedAt_;
+    /**
+     * <pre>
+     * Timestamp of the last challenge status update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+     * @return Whether the updatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdatedAt() {
+      return updatedAt_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp of the last challenge status update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+     * @return The updatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdatedAt() {
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    }
+    /**
+     * <pre>
+     * Timestamp of the last challenge status update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+      return getUpdatedAt();
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private int type_;
+    /**
+     * <pre>
+     * Type of the validation challenge.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Type type = 3;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of the validation challenge.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Type type = 3;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type result = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type.valueOf(type_);
+      return result == null ? yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type.UNRECOGNIZED : result;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 4;
+    private int status_;
+    /**
+     * <pre>
+     * Current status of the challenge.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Status status = 4;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Current status of the challenge.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Status status = 4;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status result = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status.valueOf(status_);
+      return result == null ? yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int DNS_CHALLENGE_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * DNS record configuration for domain verification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+     * @return Whether the dnsChallenge field is set.
+     */
+    @java.lang.Override
+    public boolean hasDnsChallenge() {
+      return challengeCase_ == 5;
+    }
+    /**
+     * <pre>
+     * DNS record configuration for domain verification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+     * @return The dnsChallenge.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord getDnsChallenge() {
+      if (challengeCase_ == 5) {
+         return (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) challenge_;
+      }
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * DNS record configuration for domain verification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecordOrBuilder getDnsChallengeOrBuilder() {
+      if (challengeCase_ == 5) {
+         return (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) challenge_;
+      }
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (createdAt_ != null) {
+        output.writeMessage(1, getCreatedAt());
+      }
+      if (updatedAt_ != null) {
+        output.writeMessage(2, getUpdatedAt());
+      }
+      if (type_ != yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type.TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, type_);
+      }
+      if (status_ != yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, status_);
+      }
+      if (challengeCase_ == 5) {
+        output.writeMessage(5, (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) challenge_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCreatedAt());
+      }
+      if (updatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUpdatedAt());
+      }
+      if (type_ != yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type.TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, type_);
+      }
+      if (status_ != yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, status_);
+      }
+      if (challengeCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) challenge_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge other = (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge) obj;
+
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
+      if (hasUpdatedAt()) {
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
+      }
+      if (type_ != other.type_) return false;
+      if (status_ != other.status_) return false;
+      if (!getChallengeCase().equals(other.getChallengeCase())) return false;
+      switch (challengeCase_) {
+        case 5:
+          if (!getDnsChallenge()
+              .equals(other.getDnsChallenge())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasUpdatedAt()) {
+        hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatedAt().hashCode();
+      }
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      switch (challengeCase_) {
+        case 5:
+          hash = (37 * hash) + DNS_CHALLENGE_FIELD_NUMBER;
+          hash = (53 * hash) + getDnsChallenge().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A domain validation challenge.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DomainChallenge}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.DomainChallenge)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallengeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.class, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
+        type_ = 0;
+
+        status_ = 0;
+
+        challengeCase_ = 0;
+        challenge_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge result = new yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge(this);
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        if (updatedAtBuilder_ == null) {
+          result.updatedAt_ = updatedAt_;
+        } else {
+          result.updatedAt_ = updatedAtBuilder_.build();
+        }
+        result.type_ = type_;
+        result.status_ = status_;
+        if (challengeCase_ == 5) {
+          if (dnsChallengeBuilder_ == null) {
+            result.challenge_ = challenge_;
+          } else {
+            result.challenge_ = dnsChallengeBuilder_.build();
+          }
+        }
+        result.challengeCase_ = challengeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.getDefaultInstance()) return this;
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasUpdatedAt()) {
+          mergeUpdatedAt(other.getUpdatedAt());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        switch (other.getChallengeCase()) {
+          case DNS_CHALLENGE: {
+            mergeDnsChallenge(other.getDnsChallenge());
+            break;
+          }
+          case CHALLENGE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int challengeCase_ = 0;
+      private java.lang.Object challenge_;
+      public ChallengeCase
+          getChallengeCase() {
+        return ChallengeCase.forNumber(
+            challengeCase_);
+      }
+
+      public Builder clearChallenge() {
+        challengeCase_ = 0;
+        challenge_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * Timestamp of challenge creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp of challenge creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp of challenge creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of challenge creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of challenge creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of challenge creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of challenge creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp of challenge creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp of challenge creation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp updatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
+      /**
+       * <pre>
+       * Timestamp of the last challenge status update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+       * @return Whether the updatedAt field is set.
+       */
+      public boolean hasUpdatedAt() {
+        return updatedAtBuilder_ != null || updatedAt_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp of the last challenge status update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+       * @return The updatedAt.
+       */
+      public com.google.protobuf.Timestamp getUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        } else {
+          return updatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp of the last challenge status update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+       */
+      public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatedAt_ = value;
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of the last challenge status update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+       */
+      public Builder setUpdatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of the last challenge status update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+       */
+      public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (updatedAt_ != null) {
+            updatedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(updatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            updatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          updatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of the last challenge status update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+       */
+      public Builder clearUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+          onChanged();
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of the last challenge status update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
+        
+        onChanged();
+        return getUpdatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp of the last challenge status update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+        if (updatedAtBuilder_ != null) {
+          return updatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return updatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp of the last challenge status update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getUpdatedAtFieldBuilder() {
+        if (updatedAtBuilder_ == null) {
+          updatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getUpdatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          updatedAt_ = null;
+        }
+        return updatedAtBuilder_;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Type of the validation challenge.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Type type = 3;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of the validation challenge.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Type type = 3;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the validation challenge.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Type type = 3;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type result = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type.valueOf(type_);
+        return result == null ? yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of the validation challenge.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Type type = 3;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the validation challenge.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Type type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Current status of the challenge.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Status status = 4;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Current status of the challenge.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Status status = 4;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Current status of the challenge.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Status status = 4;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status result = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status.valueOf(status_);
+        return result == null ? yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Current status of the challenge.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Status status = 4;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Current status of the challenge.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.Status status = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Builder, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecordOrBuilder> dnsChallengeBuilder_;
+      /**
+       * <pre>
+       * DNS record configuration for domain verification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+       * @return Whether the dnsChallenge field is set.
+       */
+      @java.lang.Override
+      public boolean hasDnsChallenge() {
+        return challengeCase_ == 5;
+      }
+      /**
+       * <pre>
+       * DNS record configuration for domain verification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+       * @return The dnsChallenge.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord getDnsChallenge() {
+        if (dnsChallengeBuilder_ == null) {
+          if (challengeCase_ == 5) {
+            return (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) challenge_;
+          }
+          return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.getDefaultInstance();
+        } else {
+          if (challengeCase_ == 5) {
+            return dnsChallengeBuilder_.getMessage();
+          }
+          return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * DNS record configuration for domain verification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+       */
+      public Builder setDnsChallenge(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord value) {
+        if (dnsChallengeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          challenge_ = value;
+          onChanged();
+        } else {
+          dnsChallengeBuilder_.setMessage(value);
+        }
+        challengeCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * DNS record configuration for domain verification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+       */
+      public Builder setDnsChallenge(
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Builder builderForValue) {
+        if (dnsChallengeBuilder_ == null) {
+          challenge_ = builderForValue.build();
+          onChanged();
+        } else {
+          dnsChallengeBuilder_.setMessage(builderForValue.build());
+        }
+        challengeCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * DNS record configuration for domain verification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+       */
+      public Builder mergeDnsChallenge(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord value) {
+        if (dnsChallengeBuilder_ == null) {
+          if (challengeCase_ == 5 &&
+              challenge_ != yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.getDefaultInstance()) {
+            challenge_ = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.newBuilder((yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) challenge_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            challenge_ = value;
+          }
+          onChanged();
+        } else {
+          if (challengeCase_ == 5) {
+            dnsChallengeBuilder_.mergeFrom(value);
+          }
+          dnsChallengeBuilder_.setMessage(value);
+        }
+        challengeCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * DNS record configuration for domain verification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+       */
+      public Builder clearDnsChallenge() {
+        if (dnsChallengeBuilder_ == null) {
+          if (challengeCase_ == 5) {
+            challengeCase_ = 0;
+            challenge_ = null;
+            onChanged();
+          }
+        } else {
+          if (challengeCase_ == 5) {
+            challengeCase_ = 0;
+            challenge_ = null;
+          }
+          dnsChallengeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DNS record configuration for domain verification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Builder getDnsChallengeBuilder() {
+        return getDnsChallengeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DNS record configuration for domain verification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecordOrBuilder getDnsChallengeOrBuilder() {
+        if ((challengeCase_ == 5) && (dnsChallengeBuilder_ != null)) {
+          return dnsChallengeBuilder_.getMessageOrBuilder();
+        } else {
+          if (challengeCase_ == 5) {
+            return (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) challenge_;
+          }
+          return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * DNS record configuration for domain verification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.saml.DomainChallenge.DnsRecord dns_challenge = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Builder, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecordOrBuilder> 
+          getDnsChallengeFieldBuilder() {
+        if (dnsChallengeBuilder_ == null) {
+          if (!(challengeCase_ == 5)) {
+            challenge_ = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.getDefaultInstance();
+          }
+          dnsChallengeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord.Builder, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecordOrBuilder>(
+                  (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge.DnsRecord) challenge_,
+                  getParentForChildren(),
+                  isClean());
+          challenge_ = null;
+        }
+        challengeCase_ = 5;
+        onChanged();;
+        return dnsChallengeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.DomainChallenge)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.DomainChallenge)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DomainChallenge>
+        PARSER = new com.google.protobuf.AbstractParser<DomainChallenge>() {
+      @java.lang.Override
+      public DomainChallenge parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DomainChallenge(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DomainChallenge> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DomainChallenge> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.DomainChallenge getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_descriptor;
   private static final 
@@ -3918,6 +9025,21 @@ public final class FederationOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_saml_FederationSecuritySettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_Domain_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_Domain_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_DnsRecord_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_DnsRecord_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3951,13 +9073,40 @@ public final class FederationOuterClass {
       "n.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
       "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"O\n\032FederationSecuri" +
       "tySettings\022\034\n\024encrypted_assertions\030\001 \001(\010" +
-      "\022\023\n\013force_authn\030\002 \001(\010*Q\n\013BindingType\022\034\n\030" +
-      "BINDING_TYPE_UNSPECIFIED\020\000\022\010\n\004POST\020\001\022\014\n\010" +
-      "REDIRECT\020\002\022\014\n\010ARTIFACT\020\003B\201\001\n,yandex.clou" +
-      "d.api.organizationmanager.v1.samlZQgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/organizationmanager/v1/saml;samlb\006pr" +
-      "oto3"
+      "\022\023\n\013force_authn\030\002 \001(\010\"\225\003\n\006Domain\022\016\n\006doma" +
+      "in\030\001 \001(\t\022G\n\006status\030\002 \001(\01627.yandex.cloud." +
+      "organizationmanager.v1.saml.Domain.Statu" +
+      "s\022\023\n\013status_code\030\003 \001(\t\022.\n\ncreated_at\030\004 \001" +
+      "(\0132\032.google.protobuf.Timestamp\0220\n\014valida" +
+      "ted_at\030\005 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022M\n\nchallenges\030\006 \003(\01329.yandex.cloud.orga" +
+      "nizationmanager.v1.saml.DomainChallenge\"" +
+      "l\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\024\n\020NEE" +
+      "D_TO_VALIDATE\020\001\022\016\n\nVALIDATING\020\002\022\t\n\005VALID" +
+      "\020\003\022\013\n\007INVALID\020\004\022\014\n\010DELETING\020\005\"\250\005\n\017Domain" +
+      "Challenge\022.\n\ncreated_at\030\001 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022.\n\nupdated_at\030\002 \001(\0132\032." +
+      "google.protobuf.Timestamp\022L\n\004type\030\003 \001(\0162" +
+      ">.yandex.cloud.organizationmanager.v1.sa" +
+      "ml.DomainChallenge.Type\022P\n\006status\030\004 \001(\0162" +
+      "@.yandex.cloud.organizationmanager.v1.sa" +
+      "ml.DomainChallenge.Status\022\\\n\rdns_challen" +
+      "ge\030\005 \001(\0132C.yandex.cloud.organizationmana" +
+      "ger.v1.saml.DomainChallenge.DnsRecordH\000\032" +
+      "\247\001\n\tDnsRecord\022\014\n\004name\030\001 \001(\t\022V\n\004type\030\002 \001(" +
+      "\0162H.yandex.cloud.organizationmanager.v1." +
+      "saml.DomainChallenge.DnsRecord.Type\022\r\n\005v" +
+      "alue\030\003 \001(\t\"%\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000" +
+      "\022\007\n\003TXT\020\001\")\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022" +
+      "\013\n\007DNS_TXT\020\001\"U\n\006Status\022\026\n\022STATUS_UNSPECI" +
+      "FIED\020\000\022\013\n\007PENDING\020\001\022\016\n\nPROCESSING\020\002\022\t\n\005V" +
+      "ALID\020\003\022\013\n\007INVALID\020\004B\013\n\tchallenge*Q\n\013Bind" +
+      "ingType\022\034\n\030BINDING_TYPE_UNSPECIFIED\020\000\022\010\n" +
+      "\004POST\020\001\022\014\n\010REDIRECT\020\002\022\014\n\010ARTIFACT\020\003B\201\001\n," +
+      "yandex.cloud.api.organizationmanager.v1." +
+      "samlZQgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/organizationmanager/v1/sa" +
+      "ml;samlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3984,6 +9133,24 @@ public final class FederationOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_FederationSecuritySettings_descriptor,
         new java.lang.String[] { "EncryptedAssertions", "ForceAuthn", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_Domain_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_Domain_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_Domain_descriptor,
+        new java.lang.String[] { "Domain", "Status", "StatusCode", "CreatedAt", "ValidatedAt", "Challenges", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_descriptor,
+        new java.lang.String[] { "CreatedAt", "UpdatedAt", "Type", "Status", "DnsChallenge", "Challenge", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_DnsRecord_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_DnsRecord_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_DomainChallenge_DnsRecord_descriptor,
+        new java.lang.String[] { "Name", "Type", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

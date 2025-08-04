@@ -291,6 +291,16 @@ public final class WorkflowOuterClass {
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * Express execution mode.
+     * </pre>
+     *
+     * <code>bool express = 12;</code>
+     * @return The express.
+     */
+    boolean getExpress();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.workflows.v1.Workflow}
@@ -437,6 +447,11 @@ public final class WorkflowOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               serviceAccountId_ = s;
+              break;
+            }
+            case 96: {
+
+              express_ = input.readBool();
               break;
             }
             default: {
@@ -1181,6 +1196,21 @@ public final class WorkflowOuterClass {
       }
     }
 
+    public static final int EXPRESS_FIELD_NUMBER = 12;
+    private boolean express_;
+    /**
+     * <pre>
+     * Express execution mode.
+     * </pre>
+     *
+     * <code>bool express = 12;</code>
+     * @return The express.
+     */
+    @java.lang.Override
+    public boolean getExpress() {
+      return express_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1230,6 +1260,9 @@ public final class WorkflowOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, serviceAccountId_);
+      }
+      if (express_ != false) {
+        output.writeBool(12, express_);
       }
       unknownFields.writeTo(output);
     }
@@ -1284,6 +1317,10 @@ public final class WorkflowOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, serviceAccountId_);
       }
+      if (express_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, express_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1329,6 +1366,8 @@ public final class WorkflowOuterClass {
           .equals(other.getNetworkId())) return false;
       if (!getServiceAccountId()
           .equals(other.getServiceAccountId())) return false;
+      if (getExpress()
+          != other.getExpress()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1370,6 +1409,9 @@ public final class WorkflowOuterClass {
       hash = (53 * hash) + getNetworkId().hashCode();
       hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (37 * hash) + EXPRESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getExpress());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1558,6 +1600,8 @@ public final class WorkflowOuterClass {
 
         serviceAccountId_ = "";
 
+        express_ = false;
+
         return this;
       }
 
@@ -1609,6 +1653,7 @@ public final class WorkflowOuterClass {
         }
         result.networkId_ = networkId_;
         result.serviceAccountId_ = serviceAccountId_;
+        result.express_ = express_;
         onBuilt();
         return result;
       }
@@ -1694,6 +1739,9 @@ public final class WorkflowOuterClass {
         if (!other.getServiceAccountId().isEmpty()) {
           serviceAccountId_ = other.serviceAccountId_;
           onChanged();
+        }
+        if (other.getExpress() != false) {
+          setExpress(other.getExpress());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2998,6 +3046,49 @@ public final class WorkflowOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean express_ ;
+      /**
+       * <pre>
+       * Express execution mode.
+       * </pre>
+       *
+       * <code>bool express = 12;</code>
+       * @return The express.
+       */
+      @java.lang.Override
+      public boolean getExpress() {
+        return express_;
+      }
+      /**
+       * <pre>
+       * Express execution mode.
+       * </pre>
+       *
+       * <code>bool express = 12;</code>
+       * @param value The express to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpress(boolean value) {
+        
+        express_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Express execution mode.
+       * </pre>
+       *
+       * <code>bool express = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExpress() {
+        
+        express_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3301,6 +3392,16 @@ public final class WorkflowOuterClass {
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * Express execution mode.
+     * </pre>
+     *
+     * <code>bool express = 11;</code>
+     * @return The express.
+     */
+    boolean getExpress();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.workflows.v1.WorkflowPreview}
@@ -3434,6 +3535,11 @@ public final class WorkflowOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               serviceAccountId_ = s;
+              break;
+            }
+            case 88: {
+
+              express_ = input.readBool();
               break;
             }
             default: {
@@ -3956,6 +4062,21 @@ public final class WorkflowOuterClass {
       }
     }
 
+    public static final int EXPRESS_FIELD_NUMBER = 11;
+    private boolean express_;
+    /**
+     * <pre>
+     * Express execution mode.
+     * </pre>
+     *
+     * <code>bool express = 11;</code>
+     * @return The express.
+     */
+    @java.lang.Override
+    public boolean getExpress() {
+      return express_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4002,6 +4123,9 @@ public final class WorkflowOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, serviceAccountId_);
+      }
+      if (express_ != false) {
+        output.writeBool(11, express_);
       }
       unknownFields.writeTo(output);
     }
@@ -4052,6 +4176,10 @@ public final class WorkflowOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, serviceAccountId_);
       }
+      if (express_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, express_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4092,6 +4220,8 @@ public final class WorkflowOuterClass {
           .equals(other.getNetworkId())) return false;
       if (!getServiceAccountId()
           .equals(other.getServiceAccountId())) return false;
+      if (getExpress()
+          != other.getExpress()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4129,6 +4259,9 @@ public final class WorkflowOuterClass {
       hash = (53 * hash) + getNetworkId().hashCode();
       hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (37 * hash) + EXPRESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getExpress());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4311,6 +4444,8 @@ public final class WorkflowOuterClass {
 
         serviceAccountId_ = "";
 
+        express_ = false;
+
         return this;
       }
 
@@ -4357,6 +4492,7 @@ public final class WorkflowOuterClass {
         }
         result.networkId_ = networkId_;
         result.serviceAccountId_ = serviceAccountId_;
+        result.express_ = express_;
         onBuilt();
         return result;
       }
@@ -4439,6 +4575,9 @@ public final class WorkflowOuterClass {
         if (!other.getServiceAccountId().isEmpty()) {
           serviceAccountId_ = other.serviceAccountId_;
           onChanged();
+        }
+        if (other.getExpress() != false) {
+          setExpress(other.getExpress());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5585,6 +5724,49 @@ public final class WorkflowOuterClass {
   checkByteStringIsUtf8(value);
         
         serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean express_ ;
+      /**
+       * <pre>
+       * Express execution mode.
+       * </pre>
+       *
+       * <code>bool express = 11;</code>
+       * @return The express.
+       */
+      @java.lang.Override
+      public boolean getExpress() {
+        return express_;
+      }
+      /**
+       * <pre>
+       * Express execution mode.
+       * </pre>
+       *
+       * <code>bool express = 11;</code>
+       * @param value The express to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpress(boolean value) {
+        
+        express_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Express execution mode.
+       * </pre>
+       *
+       * <code>bool express = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExpress() {
+        
+        express_ = false;
         onChanged();
         return this;
       }
@@ -7640,7 +7822,7 @@ public final class WorkflowOuterClass {
       "orkflow.proto\022$yandex.cloud.serverless.w" +
       "orkflows.v1\032\037google/protobuf/timestamp.p" +
       "roto\032\'yandex/cloud/logging/v1/log_entry." +
-      "proto\032\035yandex/cloud/validation.proto\"\354\004\n" +
+      "proto\032\035yandex/cloud/validation.proto\"\375\004\n" +
       "\010Workflow\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t" +
       "\022R\n\rspecification\030\003 \001(\0132;.yandex.cloud.s" +
       "erverless.workflows.v1.WorkflowSpecifica" +
@@ -7652,31 +7834,32 @@ public final class WorkflowOuterClass {
       "rless.workflows.v1.Workflow.Status\022E\n\013lo" +
       "g_options\030\t \001(\01320.yandex.cloud.serverles" +
       "s.workflows.v1.LogOptions\022\022\n\nnetwork_id\030" +
-      "\n \001(\t\022\032\n\022service_account_id\030\013 \001(\t\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CR" +
-      "EATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010UPDATING\020\003\022\014\n\010DE" +
-      "LETING\020\004\022\t\n\005ERROR\020\005\"\303\003\n\017WorkflowPreview\022" +
-      "\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreate" +
-      "d_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014" +
-      "\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022Q\n\006lab" +
-      "els\030\006 \003(\0132A.yandex.cloud.serverless.work" +
-      "flows.v1.WorkflowPreview.LabelsEntry\022E\n\006" +
-      "status\030\007 \001(\01625.yandex.cloud.serverless.w" +
-      "orkflows.v1.Workflow.Status\022E\n\013log_optio" +
-      "ns\030\010 \001(\01320.yandex.cloud.serverless.workf" +
-      "lows.v1.LogOptions\022\022\n\nnetwork_id\030\t \001(\t\022\032" +
-      "\n\022service_account_id\030\n \001(\t\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\025Wor" +
-      "kflowSpecification\022\023\n\tspec_yaml\030\001 \001(\tH\000B" +
-      "\014\n\004spec\022\004\300\3011\001\"\226\001\n\nLogOptions\022\020\n\010disabled" +
-      "\030\001 \001(\010\022\026\n\014log_group_id\030\002 \001(\tH\000\022\023\n\tfolder" +
-      "_id\030\003 \001(\tH\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex." +
-      "cloud.logging.v1.LogLevel.LevelB\r\n\013desti" +
-      "nationB~\n(yandex.cloud.api.serverless.wo" +
-      "rkflows.v1ZRgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/serverless/workflow" +
-      "s/v1;workflowsb\006proto3"
+      "\n \001(\t\022\032\n\022service_account_id\030\013 \001(\t\022\017\n\007exp" +
+      "ress\030\014 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\"a\n\006Status\022\026\n\022STATUS_UN" +
+      "SPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n" +
+      "\010UPDATING\020\003\022\014\n\010DELETING\020\004\022\t\n\005ERROR\020\005\"\324\003\n" +
+      "\017WorkflowPreview\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_i" +
+      "d\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descrip" +
+      "tion\030\005 \001(\t\022Q\n\006labels\030\006 \003(\0132A.yandex.clou" +
+      "d.serverless.workflows.v1.WorkflowPrevie" +
+      "w.LabelsEntry\022E\n\006status\030\007 \001(\01625.yandex.c" +
+      "loud.serverless.workflows.v1.Workflow.St" +
+      "atus\022E\n\013log_options\030\010 \001(\01320.yandex.cloud" +
+      ".serverless.workflows.v1.LogOptions\022\022\n\nn" +
+      "etwork_id\030\t \001(\t\022\032\n\022service_account_id\030\n " +
+      "\001(\t\022\017\n\007express\030\013 \001(\010\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\025WorkflowS" +
+      "pecification\022\023\n\tspec_yaml\030\001 \001(\tH\000B\014\n\004spe" +
+      "c\022\004\300\3011\001\"\226\001\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010" +
+      "\022\026\n\014log_group_id\030\002 \001(\tH\000\022\023\n\tfolder_id\030\003 " +
+      "\001(\tH\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cloud." +
+      "logging.v1.LogLevel.LevelB\r\n\013destination" +
+      "B~\n(yandex.cloud.api.serverless.workflow" +
+      "s.v1ZRgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/serverless/workflows/v1;w" +
+      "orkflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7690,7 +7873,7 @@ public final class WorkflowOuterClass {
     internal_static_yandex_cloud_serverless_workflows_v1_Workflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_Workflow_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Specification", "CreatedAt", "Name", "Description", "Labels", "Status", "LogOptions", "NetworkId", "ServiceAccountId", });
+        new java.lang.String[] { "Id", "FolderId", "Specification", "CreatedAt", "Name", "Description", "Labels", "Status", "LogOptions", "NetworkId", "ServiceAccountId", "Express", });
     internal_static_yandex_cloud_serverless_workflows_v1_Workflow_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_workflows_v1_Workflow_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_workflows_v1_Workflow_LabelsEntry_fieldAccessorTable = new
@@ -7702,7 +7885,7 @@ public final class WorkflowOuterClass {
     internal_static_yandex_cloud_serverless_workflows_v1_WorkflowPreview_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_WorkflowPreview_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "LogOptions", "NetworkId", "ServiceAccountId", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "LogOptions", "NetworkId", "ServiceAccountId", "Express", });
     internal_static_yandex_cloud_serverless_workflows_v1_WorkflowPreview_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_workflows_v1_WorkflowPreview_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_workflows_v1_WorkflowPreview_LabelsEntry_fieldAccessorTable = new

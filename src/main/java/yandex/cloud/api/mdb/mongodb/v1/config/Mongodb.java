@@ -179,6 +179,33 @@ public final class Mongodb {
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter set_parameter = 6;</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameterOrBuilder getSetParameterOrBuilder();
+
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+     * @return Whether the oplog field is set.
+     */
+    boolean hasOplog();
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+     * @return The oplog.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog getOplog();
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.OplogOrBuilder getOplogOrBuilder();
   }
   /**
    * <pre>
@@ -304,6 +331,19 @@ public final class Mongodb {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(setParameter_);
                 setParameter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.Builder subBuilder = null;
+              if (oplog_ != null) {
+                subBuilder = oplog_.toBuilder();
+              }
+              oplog_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(oplog_);
+                oplog_ = subBuilder.buildPartial();
               }
 
               break;
@@ -736,6 +776,33 @@ public final class Mongodb {
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
            */
           com.google.protobuf.DoubleValueOrBuilder getCacheSizeGbOrBuilder();
+
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           * @return Whether the cacheSize field is set.
+           */
+          boolean hasCacheSize();
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           * @return The cacheSize.
+           */
+          com.google.protobuf.DoubleValue getCacheSize();
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           */
+          com.google.protobuf.DoubleValueOrBuilder getCacheSizeOrBuilder();
         }
         /**
          * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Storage.WiredTiger.EngineConfig}
@@ -791,6 +858,19 @@ public final class Mongodb {
                     if (subBuilder != null) {
                       subBuilder.mergeFrom(cacheSizeGb_);
                       cacheSizeGb_ = subBuilder.buildPartial();
+                    }
+
+                    break;
+                  }
+                  case 18: {
+                    com.google.protobuf.DoubleValue.Builder subBuilder = null;
+                    if (cacheSize_ != null) {
+                      subBuilder = cacheSize_.toBuilder();
+                    }
+                    cacheSize_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+                    if (subBuilder != null) {
+                      subBuilder.mergeFrom(cacheSize_);
+                      cacheSize_ = subBuilder.buildPartial();
                     }
 
                     break;
@@ -865,6 +945,44 @@ public final class Mongodb {
             return getCacheSizeGb();
           }
 
+          public static final int CACHE_SIZE_FIELD_NUMBER = 2;
+          private com.google.protobuf.DoubleValue cacheSize_;
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           * @return Whether the cacheSize field is set.
+           */
+          @java.lang.Override
+          public boolean hasCacheSize() {
+            return cacheSize_ != null;
+          }
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           * @return The cacheSize.
+           */
+          @java.lang.Override
+          public com.google.protobuf.DoubleValue getCacheSize() {
+            return cacheSize_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : cacheSize_;
+          }
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           */
+          @java.lang.Override
+          public com.google.protobuf.DoubleValueOrBuilder getCacheSizeOrBuilder() {
+            return getCacheSize();
+          }
+
           private byte memoizedIsInitialized = -1;
           @java.lang.Override
           public final boolean isInitialized() {
@@ -882,6 +1000,9 @@ public final class Mongodb {
             if (cacheSizeGb_ != null) {
               output.writeMessage(1, getCacheSizeGb());
             }
+            if (cacheSize_ != null) {
+              output.writeMessage(2, getCacheSize());
+            }
             unknownFields.writeTo(output);
           }
 
@@ -894,6 +1015,10 @@ public final class Mongodb {
             if (cacheSizeGb_ != null) {
               size += com.google.protobuf.CodedOutputStream
                 .computeMessageSize(1, getCacheSizeGb());
+            }
+            if (cacheSize_ != null) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(2, getCacheSize());
             }
             size += unknownFields.getSerializedSize();
             memoizedSize = size;
@@ -915,6 +1040,11 @@ public final class Mongodb {
               if (!getCacheSizeGb()
                   .equals(other.getCacheSizeGb())) return false;
             }
+            if (hasCacheSize() != other.hasCacheSize()) return false;
+            if (hasCacheSize()) {
+              if (!getCacheSize()
+                  .equals(other.getCacheSize())) return false;
+            }
             if (!unknownFields.equals(other.unknownFields)) return false;
             return true;
           }
@@ -929,6 +1059,10 @@ public final class Mongodb {
             if (hasCacheSizeGb()) {
               hash = (37 * hash) + CACHE_SIZE_GB_FIELD_NUMBER;
               hash = (53 * hash) + getCacheSizeGb().hashCode();
+            }
+            if (hasCacheSize()) {
+              hash = (37 * hash) + CACHE_SIZE_FIELD_NUMBER;
+              hash = (53 * hash) + getCacheSize().hashCode();
             }
             hash = (29 * hash) + unknownFields.hashCode();
             memoizedHashCode = hash;
@@ -1069,6 +1203,12 @@ public final class Mongodb {
                 cacheSizeGb_ = null;
                 cacheSizeGbBuilder_ = null;
               }
+              if (cacheSizeBuilder_ == null) {
+                cacheSize_ = null;
+              } else {
+                cacheSize_ = null;
+                cacheSizeBuilder_ = null;
+              }
               return this;
             }
 
@@ -1099,6 +1239,11 @@ public final class Mongodb {
                 result.cacheSizeGb_ = cacheSizeGb_;
               } else {
                 result.cacheSizeGb_ = cacheSizeGbBuilder_.build();
+              }
+              if (cacheSizeBuilder_ == null) {
+                result.cacheSize_ = cacheSize_;
+              } else {
+                result.cacheSize_ = cacheSizeBuilder_.build();
               }
               onBuilt();
               return result;
@@ -1150,6 +1295,9 @@ public final class Mongodb {
               if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Storage.WiredTiger.EngineConfig.getDefaultInstance()) return this;
               if (other.hasCacheSizeGb()) {
                 mergeCacheSizeGb(other.getCacheSizeGb());
+              }
+              if (other.hasCacheSize()) {
+                mergeCacheSize(other.getCacheSize());
               }
               this.mergeUnknownFields(other.unknownFields);
               onChanged();
@@ -1333,6 +1481,161 @@ public final class Mongodb {
                 cacheSizeGb_ = null;
               }
               return cacheSizeGbBuilder_;
+            }
+
+            private com.google.protobuf.DoubleValue cacheSize_;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> cacheSizeBuilder_;
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             * @return Whether the cacheSize field is set.
+             */
+            public boolean hasCacheSize() {
+              return cacheSizeBuilder_ != null || cacheSize_ != null;
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             * @return The cacheSize.
+             */
+            public com.google.protobuf.DoubleValue getCacheSize() {
+              if (cacheSizeBuilder_ == null) {
+                return cacheSize_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : cacheSize_;
+              } else {
+                return cacheSizeBuilder_.getMessage();
+              }
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public Builder setCacheSize(com.google.protobuf.DoubleValue value) {
+              if (cacheSizeBuilder_ == null) {
+                if (value == null) {
+                  throw new NullPointerException();
+                }
+                cacheSize_ = value;
+                onChanged();
+              } else {
+                cacheSizeBuilder_.setMessage(value);
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public Builder setCacheSize(
+                com.google.protobuf.DoubleValue.Builder builderForValue) {
+              if (cacheSizeBuilder_ == null) {
+                cacheSize_ = builderForValue.build();
+                onChanged();
+              } else {
+                cacheSizeBuilder_.setMessage(builderForValue.build());
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public Builder mergeCacheSize(com.google.protobuf.DoubleValue value) {
+              if (cacheSizeBuilder_ == null) {
+                if (cacheSize_ != null) {
+                  cacheSize_ =
+                    com.google.protobuf.DoubleValue.newBuilder(cacheSize_).mergeFrom(value).buildPartial();
+                } else {
+                  cacheSize_ = value;
+                }
+                onChanged();
+              } else {
+                cacheSizeBuilder_.mergeFrom(value);
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public Builder clearCacheSize() {
+              if (cacheSizeBuilder_ == null) {
+                cacheSize_ = null;
+                onChanged();
+              } else {
+                cacheSize_ = null;
+                cacheSizeBuilder_ = null;
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public com.google.protobuf.DoubleValue.Builder getCacheSizeBuilder() {
+              
+              onChanged();
+              return getCacheSizeFieldBuilder().getBuilder();
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public com.google.protobuf.DoubleValueOrBuilder getCacheSizeOrBuilder() {
+              if (cacheSizeBuilder_ != null) {
+                return cacheSizeBuilder_.getMessageOrBuilder();
+              } else {
+                return cacheSize_ == null ?
+                    com.google.protobuf.DoubleValue.getDefaultInstance() : cacheSize_;
+              }
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+                getCacheSizeFieldBuilder() {
+              if (cacheSizeBuilder_ == null) {
+                cacheSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                    com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                        getCacheSize(),
+                        getParentForChildren(),
+                        isClean());
+                cacheSize_ = null;
+              }
+              return cacheSizeBuilder_;
             }
             @java.lang.Override
             public final Builder setUnknownFields(
@@ -11915,6 +12218,249 @@ public final class Mongodb {
        * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMinSnapshotHistoryWindowInSecondsOrBuilder();
+
+      /**
+       * <pre>
+       * The target maximum majority committed lag when running with flow control
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the flowControlTargetLagSeconds field is set.
+       */
+      boolean hasFlowControlTargetLagSeconds();
+      /**
+       * <pre>
+       * The target maximum majority committed lag when running with flow control
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The flowControlTargetLagSeconds.
+       */
+      com.google.protobuf.Int64Value getFlowControlTargetLagSeconds();
+      /**
+       * <pre>
+       * The target maximum majority committed lag when running with flow control
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getFlowControlTargetLagSecondsOrBuilder();
+
+      /**
+       * <pre>
+       * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the flowControlWarnThresholdSeconds field is set.
+       */
+      boolean hasFlowControlWarnThresholdSeconds();
+      /**
+       * <pre>
+       * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The flowControlWarnThresholdSeconds.
+       */
+      com.google.protobuf.Int64Value getFlowControlWarnThresholdSeconds();
+      /**
+       * <pre>
+       * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getFlowControlWarnThresholdSecondsOrBuilder();
+
+      /**
+       * <pre>
+       * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the migrateCloneInsertionBatchDelayMs field is set.
+       */
+      boolean hasMigrateCloneInsertionBatchDelayMs();
+      /**
+       * <pre>
+       * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The migrateCloneInsertionBatchDelayMs.
+       */
+      com.google.protobuf.Int64Value getMigrateCloneInsertionBatchDelayMs();
+      /**
+       * <pre>
+       * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMigrateCloneInsertionBatchDelayMsOrBuilder();
+
+      /**
+       * <pre>
+       * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the migrateCloneInsertionBatchSize field is set.
+       */
+      boolean hasMigrateCloneInsertionBatchSize();
+      /**
+       * <pre>
+       * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The migrateCloneInsertionBatchSize.
+       */
+      com.google.protobuf.Int64Value getMigrateCloneInsertionBatchSize();
+      /**
+       * <pre>
+       * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMigrateCloneInsertionBatchSizeOrBuilder();
+
+      /**
+       * <pre>
+       * Minimum delay before a migrated chunk is deleted from the source shard.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+       * @return Whether the orphanCleanupDelaySecs field is set.
+       */
+      boolean hasOrphanCleanupDelaySecs();
+      /**
+       * <pre>
+       * Minimum delay before a migrated chunk is deleted from the source shard.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+       * @return The orphanCleanupDelaySecs.
+       */
+      com.google.protobuf.Int64Value getOrphanCleanupDelaySecs();
+      /**
+       * <pre>
+       * Minimum delay before a migrated chunk is deleted from the source shard.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getOrphanCleanupDelaySecsOrBuilder();
+
+      /**
+       * <pre>
+       * Specifies the maximum batch size used for updating the persisted chunk cache.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+       * @return Whether the persistedChunkCacheUpdateMaxBatchSize field is set.
+       */
+      boolean hasPersistedChunkCacheUpdateMaxBatchSize();
+      /**
+       * <pre>
+       * Specifies the maximum batch size used for updating the persisted chunk cache.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+       * @return The persistedChunkCacheUpdateMaxBatchSize.
+       */
+      com.google.protobuf.Int64Value getPersistedChunkCacheUpdateMaxBatchSize();
+      /**
+       * <pre>
+       * Specifies the maximum batch size used for updating the persisted chunk cache.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getPersistedChunkCacheUpdateMaxBatchSizeOrBuilder();
+
+      /**
+       * <pre>
+       * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the rangeDeleterBatchDelayMs field is set.
+       */
+      boolean hasRangeDeleterBatchDelayMs();
+      /**
+       * <pre>
+       * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The rangeDeleterBatchDelayMs.
+       */
+      com.google.protobuf.Int64Value getRangeDeleterBatchDelayMs();
+      /**
+       * <pre>
+       * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getRangeDeleterBatchDelayMsOrBuilder();
+
+      /**
+       * <pre>
+       * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the rangeDeleterBatchSize field is set.
+       */
+      boolean hasRangeDeleterBatchSize();
+      /**
+       * <pre>
+       * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The rangeDeleterBatchSize.
+       */
+      com.google.protobuf.Int64Value getRangeDeleterBatchSize();
+      /**
+       * <pre>
+       * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getRangeDeleterBatchSizeOrBuilder();
+
+      /**
+       * <pre>
+       * Specifies the settings for mirrored reads for the mongod instance
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+       * @return Whether the mirrorReads field is set.
+       */
+      boolean hasMirrorReads();
+      /**
+       * <pre>
+       * Specifies the settings for mirrored reads for the mongod instance
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+       * @return The mirrorReads.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads getMirrorReads();
+      /**
+       * <pre>
+       * Specifies the settings for mirrored reads for the mongod instance
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReadsOrBuilder getMirrorReadsOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter}
@@ -12000,6 +12546,123 @@ public final class Mongodb {
 
                 break;
               }
+              case 34: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (flowControlTargetLagSeconds_ != null) {
+                  subBuilder = flowControlTargetLagSeconds_.toBuilder();
+                }
+                flowControlTargetLagSeconds_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(flowControlTargetLagSeconds_);
+                  flowControlTargetLagSeconds_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 42: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (flowControlWarnThresholdSeconds_ != null) {
+                  subBuilder = flowControlWarnThresholdSeconds_.toBuilder();
+                }
+                flowControlWarnThresholdSeconds_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(flowControlWarnThresholdSeconds_);
+                  flowControlWarnThresholdSeconds_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 50: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (migrateCloneInsertionBatchDelayMs_ != null) {
+                  subBuilder = migrateCloneInsertionBatchDelayMs_.toBuilder();
+                }
+                migrateCloneInsertionBatchDelayMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(migrateCloneInsertionBatchDelayMs_);
+                  migrateCloneInsertionBatchDelayMs_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 58: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (migrateCloneInsertionBatchSize_ != null) {
+                  subBuilder = migrateCloneInsertionBatchSize_.toBuilder();
+                }
+                migrateCloneInsertionBatchSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(migrateCloneInsertionBatchSize_);
+                  migrateCloneInsertionBatchSize_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 66: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (orphanCleanupDelaySecs_ != null) {
+                  subBuilder = orphanCleanupDelaySecs_.toBuilder();
+                }
+                orphanCleanupDelaySecs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(orphanCleanupDelaySecs_);
+                  orphanCleanupDelaySecs_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 74: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (persistedChunkCacheUpdateMaxBatchSize_ != null) {
+                  subBuilder = persistedChunkCacheUpdateMaxBatchSize_.toBuilder();
+                }
+                persistedChunkCacheUpdateMaxBatchSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(persistedChunkCacheUpdateMaxBatchSize_);
+                  persistedChunkCacheUpdateMaxBatchSize_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 82: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (rangeDeleterBatchDelayMs_ != null) {
+                  subBuilder = rangeDeleterBatchDelayMs_.toBuilder();
+                }
+                rangeDeleterBatchDelayMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(rangeDeleterBatchDelayMs_);
+                  rangeDeleterBatchDelayMs_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 90: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (rangeDeleterBatchSize_ != null) {
+                  subBuilder = rangeDeleterBatchSize_.toBuilder();
+                }
+                rangeDeleterBatchSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(rangeDeleterBatchSize_);
+                  rangeDeleterBatchSize_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 98: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.Builder subBuilder = null;
+                if (mirrorReads_ != null) {
+                  subBuilder = mirrorReads_.toBuilder();
+                }
+                mirrorReads_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(mirrorReads_);
+                  mirrorReads_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -12030,6 +12693,950 @@ public final class Mongodb {
         return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.Builder.class);
+      }
+
+      public interface MirrorReadsOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+         * @return Whether the samplingRate field is set.
+         */
+        boolean hasSamplingRate();
+        /**
+         * <pre>
+         * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+         * @return The samplingRate.
+         */
+        com.google.protobuf.DoubleValue getSamplingRate();
+        /**
+         * <pre>
+         * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+         */
+        com.google.protobuf.DoubleValueOrBuilder getSamplingRateOrBuilder();
+
+        /**
+         * <pre>
+         * The maximum time in milliseconds for the mirrored reads
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+         * @return Whether the maxTimeMs field is set.
+         */
+        boolean hasMaxTimeMs();
+        /**
+         * <pre>
+         * The maximum time in milliseconds for the mirrored reads
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+         * @return The maxTimeMs.
+         */
+        com.google.protobuf.Int64Value getMaxTimeMs();
+        /**
+         * <pre>
+         * The maximum time in milliseconds for the mirrored reads
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+         */
+        com.google.protobuf.Int64ValueOrBuilder getMaxTimeMsOrBuilder();
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads}
+       */
+      public static final class MirrorReads extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads)
+          MirrorReadsOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use MirrorReads.newBuilder() to construct.
+        private MirrorReads(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private MirrorReads() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new MirrorReads();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private MirrorReads(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  com.google.protobuf.DoubleValue.Builder subBuilder = null;
+                  if (samplingRate_ != null) {
+                    subBuilder = samplingRate_.toBuilder();
+                  }
+                  samplingRate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(samplingRate_);
+                    samplingRate_ = subBuilder.buildPartial();
+                  }
+
+                  break;
+                }
+                case 18: {
+                  com.google.protobuf.Int64Value.Builder subBuilder = null;
+                  if (maxTimeMs_ != null) {
+                    subBuilder = maxTimeMs_.toBuilder();
+                  }
+                  maxTimeMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(maxTimeMs_);
+                    maxTimeMs_ = subBuilder.buildPartial();
+                  }
+
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.Builder.class);
+        }
+
+        public static final int SAMPLING_RATE_FIELD_NUMBER = 1;
+        private com.google.protobuf.DoubleValue samplingRate_;
+        /**
+         * <pre>
+         * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+         * @return Whether the samplingRate field is set.
+         */
+        @java.lang.Override
+        public boolean hasSamplingRate() {
+          return samplingRate_ != null;
+        }
+        /**
+         * <pre>
+         * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+         * @return The samplingRate.
+         */
+        @java.lang.Override
+        public com.google.protobuf.DoubleValue getSamplingRate() {
+          return samplingRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : samplingRate_;
+        }
+        /**
+         * <pre>
+         * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+         */
+        @java.lang.Override
+        public com.google.protobuf.DoubleValueOrBuilder getSamplingRateOrBuilder() {
+          return getSamplingRate();
+        }
+
+        public static final int MAX_TIME_MS_FIELD_NUMBER = 2;
+        private com.google.protobuf.Int64Value maxTimeMs_;
+        /**
+         * <pre>
+         * The maximum time in milliseconds for the mirrored reads
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+         * @return Whether the maxTimeMs field is set.
+         */
+        @java.lang.Override
+        public boolean hasMaxTimeMs() {
+          return maxTimeMs_ != null;
+        }
+        /**
+         * <pre>
+         * The maximum time in milliseconds for the mirrored reads
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+         * @return The maxTimeMs.
+         */
+        @java.lang.Override
+        public com.google.protobuf.Int64Value getMaxTimeMs() {
+          return maxTimeMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxTimeMs_;
+        }
+        /**
+         * <pre>
+         * The maximum time in milliseconds for the mirrored reads
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+         */
+        @java.lang.Override
+        public com.google.protobuf.Int64ValueOrBuilder getMaxTimeMsOrBuilder() {
+          return getMaxTimeMs();
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (samplingRate_ != null) {
+            output.writeMessage(1, getSamplingRate());
+          }
+          if (maxTimeMs_ != null) {
+            output.writeMessage(2, getMaxTimeMs());
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (samplingRate_ != null) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(1, getSamplingRate());
+          }
+          if (maxTimeMs_ != null) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(2, getMaxTimeMs());
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads)) {
+            return super.equals(obj);
+          }
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads) obj;
+
+          if (hasSamplingRate() != other.hasSamplingRate()) return false;
+          if (hasSamplingRate()) {
+            if (!getSamplingRate()
+                .equals(other.getSamplingRate())) return false;
+          }
+          if (hasMaxTimeMs() != other.hasMaxTimeMs()) return false;
+          if (hasMaxTimeMs()) {
+            if (!getMaxTimeMs()
+                .equals(other.getMaxTimeMs())) return false;
+          }
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasSamplingRate()) {
+            hash = (37 * hash) + SAMPLING_RATE_FIELD_NUMBER;
+            hash = (53 * hash) + getSamplingRate().hashCode();
+          }
+          if (hasMaxTimeMs()) {
+            hash = (37 * hash) + MAX_TIME_MS_FIELD_NUMBER;
+            hash = (53 * hash) + getMaxTimeMs().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads)
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReadsOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.Builder.class);
+          }
+
+          // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            if (samplingRateBuilder_ == null) {
+              samplingRate_ = null;
+            } else {
+              samplingRate_ = null;
+              samplingRateBuilder_ = null;
+            }
+            if (maxTimeMsBuilder_ == null) {
+              maxTimeMs_ = null;
+            } else {
+              maxTimeMs_ = null;
+              maxTimeMsBuilder_ = null;
+            }
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_descriptor;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads getDefaultInstanceForType() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads build() {
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads buildPartial() {
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads(this);
+            if (samplingRateBuilder_ == null) {
+              result.samplingRate_ = samplingRate_;
+            } else {
+              result.samplingRate_ = samplingRateBuilder_.build();
+            }
+            if (maxTimeMsBuilder_ == null) {
+              result.maxTimeMs_ = maxTimeMs_;
+            } else {
+              result.maxTimeMs_ = maxTimeMsBuilder_.build();
+            }
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads) {
+              return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads other) {
+            if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.getDefaultInstance()) return this;
+            if (other.hasSamplingRate()) {
+              mergeSamplingRate(other.getSamplingRate());
+            }
+            if (other.hasMaxTimeMs()) {
+              mergeMaxTimeMs(other.getMaxTimeMs());
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+
+          private com.google.protobuf.DoubleValue samplingRate_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> samplingRateBuilder_;
+          /**
+           * <pre>
+           * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+           * @return Whether the samplingRate field is set.
+           */
+          public boolean hasSamplingRate() {
+            return samplingRateBuilder_ != null || samplingRate_ != null;
+          }
+          /**
+           * <pre>
+           * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+           * @return The samplingRate.
+           */
+          public com.google.protobuf.DoubleValue getSamplingRate() {
+            if (samplingRateBuilder_ == null) {
+              return samplingRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : samplingRate_;
+            } else {
+              return samplingRateBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+           */
+          public Builder setSamplingRate(com.google.protobuf.DoubleValue value) {
+            if (samplingRateBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              samplingRate_ = value;
+              onChanged();
+            } else {
+              samplingRateBuilder_.setMessage(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+           */
+          public Builder setSamplingRate(
+              com.google.protobuf.DoubleValue.Builder builderForValue) {
+            if (samplingRateBuilder_ == null) {
+              samplingRate_ = builderForValue.build();
+              onChanged();
+            } else {
+              samplingRateBuilder_.setMessage(builderForValue.build());
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+           */
+          public Builder mergeSamplingRate(com.google.protobuf.DoubleValue value) {
+            if (samplingRateBuilder_ == null) {
+              if (samplingRate_ != null) {
+                samplingRate_ =
+                  com.google.protobuf.DoubleValue.newBuilder(samplingRate_).mergeFrom(value).buildPartial();
+              } else {
+                samplingRate_ = value;
+              }
+              onChanged();
+            } else {
+              samplingRateBuilder_.mergeFrom(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+           */
+          public Builder clearSamplingRate() {
+            if (samplingRateBuilder_ == null) {
+              samplingRate_ = null;
+              onChanged();
+            } else {
+              samplingRate_ = null;
+              samplingRateBuilder_ = null;
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+           */
+          public com.google.protobuf.DoubleValue.Builder getSamplingRateBuilder() {
+            
+            onChanged();
+            return getSamplingRateFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+           */
+          public com.google.protobuf.DoubleValueOrBuilder getSamplingRateOrBuilder() {
+            if (samplingRateBuilder_ != null) {
+              return samplingRateBuilder_.getMessageOrBuilder();
+            } else {
+              return samplingRate_ == null ?
+                  com.google.protobuf.DoubleValue.getDefaultInstance() : samplingRate_;
+            }
+          }
+          /**
+           * <pre>
+           * The sampling rate used to mirror a subset of operations that support mirroring to a subset of electable secondaries
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue sampling_rate = 1;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+              getSamplingRateFieldBuilder() {
+            if (samplingRateBuilder_ == null) {
+              samplingRateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                      getSamplingRate(),
+                      getParentForChildren(),
+                      isClean());
+              samplingRate_ = null;
+            }
+            return samplingRateBuilder_;
+          }
+
+          private com.google.protobuf.Int64Value maxTimeMs_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxTimeMsBuilder_;
+          /**
+           * <pre>
+           * The maximum time in milliseconds for the mirrored reads
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+           * @return Whether the maxTimeMs field is set.
+           */
+          public boolean hasMaxTimeMs() {
+            return maxTimeMsBuilder_ != null || maxTimeMs_ != null;
+          }
+          /**
+           * <pre>
+           * The maximum time in milliseconds for the mirrored reads
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+           * @return The maxTimeMs.
+           */
+          public com.google.protobuf.Int64Value getMaxTimeMs() {
+            if (maxTimeMsBuilder_ == null) {
+              return maxTimeMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxTimeMs_;
+            } else {
+              return maxTimeMsBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * The maximum time in milliseconds for the mirrored reads
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+           */
+          public Builder setMaxTimeMs(com.google.protobuf.Int64Value value) {
+            if (maxTimeMsBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              maxTimeMs_ = value;
+              onChanged();
+            } else {
+              maxTimeMsBuilder_.setMessage(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * The maximum time in milliseconds for the mirrored reads
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+           */
+          public Builder setMaxTimeMs(
+              com.google.protobuf.Int64Value.Builder builderForValue) {
+            if (maxTimeMsBuilder_ == null) {
+              maxTimeMs_ = builderForValue.build();
+              onChanged();
+            } else {
+              maxTimeMsBuilder_.setMessage(builderForValue.build());
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * The maximum time in milliseconds for the mirrored reads
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+           */
+          public Builder mergeMaxTimeMs(com.google.protobuf.Int64Value value) {
+            if (maxTimeMsBuilder_ == null) {
+              if (maxTimeMs_ != null) {
+                maxTimeMs_ =
+                  com.google.protobuf.Int64Value.newBuilder(maxTimeMs_).mergeFrom(value).buildPartial();
+              } else {
+                maxTimeMs_ = value;
+              }
+              onChanged();
+            } else {
+              maxTimeMsBuilder_.mergeFrom(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * The maximum time in milliseconds for the mirrored reads
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+           */
+          public Builder clearMaxTimeMs() {
+            if (maxTimeMsBuilder_ == null) {
+              maxTimeMs_ = null;
+              onChanged();
+            } else {
+              maxTimeMs_ = null;
+              maxTimeMsBuilder_ = null;
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * The maximum time in milliseconds for the mirrored reads
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+           */
+          public com.google.protobuf.Int64Value.Builder getMaxTimeMsBuilder() {
+            
+            onChanged();
+            return getMaxTimeMsFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * The maximum time in milliseconds for the mirrored reads
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+           */
+          public com.google.protobuf.Int64ValueOrBuilder getMaxTimeMsOrBuilder() {
+            if (maxTimeMsBuilder_ != null) {
+              return maxTimeMsBuilder_.getMessageOrBuilder();
+            } else {
+              return maxTimeMs_ == null ?
+                  com.google.protobuf.Int64Value.getDefaultInstance() : maxTimeMs_;
+            }
+          }
+          /**
+           * <pre>
+           * The maximum time in milliseconds for the mirrored reads
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value max_time_ms = 2;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+              getMaxTimeMsFieldBuilder() {
+            if (maxTimeMsBuilder_ == null) {
+              maxTimeMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                      getMaxTimeMs(),
+                      getParentForChildren(),
+                      isClean());
+              maxTimeMs_ = null;
+            }
+            return maxTimeMsBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads)
+        }
+
+        // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads)
+        private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads();
+        }
+
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<MirrorReads>
+            PARSER = new com.google.protobuf.AbstractParser<MirrorReads>() {
+          @java.lang.Override
+          public MirrorReads parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new MirrorReads(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<MirrorReads> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<MirrorReads> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
       }
 
       public static final int AUDIT_AUTHORIZATION_SUCCESS_FIELD_NUMBER = 1;
@@ -12155,6 +13762,348 @@ public final class Mongodb {
         return getMinSnapshotHistoryWindowInSeconds();
       }
 
+      public static final int FLOW_CONTROL_TARGET_LAG_SECONDS_FIELD_NUMBER = 4;
+      private com.google.protobuf.Int64Value flowControlTargetLagSeconds_;
+      /**
+       * <pre>
+       * The target maximum majority committed lag when running with flow control
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the flowControlTargetLagSeconds field is set.
+       */
+      @java.lang.Override
+      public boolean hasFlowControlTargetLagSeconds() {
+        return flowControlTargetLagSeconds_ != null;
+      }
+      /**
+       * <pre>
+       * The target maximum majority committed lag when running with flow control
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The flowControlTargetLagSeconds.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getFlowControlTargetLagSeconds() {
+        return flowControlTargetLagSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flowControlTargetLagSeconds_;
+      }
+      /**
+       * <pre>
+       * The target maximum majority committed lag when running with flow control
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getFlowControlTargetLagSecondsOrBuilder() {
+        return getFlowControlTargetLagSeconds();
+      }
+
+      public static final int FLOW_CONTROL_WARN_THRESHOLD_SECONDS_FIELD_NUMBER = 5;
+      private com.google.protobuf.Int64Value flowControlWarnThresholdSeconds_;
+      /**
+       * <pre>
+       * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the flowControlWarnThresholdSeconds field is set.
+       */
+      @java.lang.Override
+      public boolean hasFlowControlWarnThresholdSeconds() {
+        return flowControlWarnThresholdSeconds_ != null;
+      }
+      /**
+       * <pre>
+       * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The flowControlWarnThresholdSeconds.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getFlowControlWarnThresholdSeconds() {
+        return flowControlWarnThresholdSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flowControlWarnThresholdSeconds_;
+      }
+      /**
+       * <pre>
+       * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getFlowControlWarnThresholdSecondsOrBuilder() {
+        return getFlowControlWarnThresholdSeconds();
+      }
+
+      public static final int MIGRATE_CLONE_INSERTION_BATCH_DELAY_MS_FIELD_NUMBER = 6;
+      private com.google.protobuf.Int64Value migrateCloneInsertionBatchDelayMs_;
+      /**
+       * <pre>
+       * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the migrateCloneInsertionBatchDelayMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasMigrateCloneInsertionBatchDelayMs() {
+        return migrateCloneInsertionBatchDelayMs_ != null;
+      }
+      /**
+       * <pre>
+       * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The migrateCloneInsertionBatchDelayMs.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMigrateCloneInsertionBatchDelayMs() {
+        return migrateCloneInsertionBatchDelayMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : migrateCloneInsertionBatchDelayMs_;
+      }
+      /**
+       * <pre>
+       * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMigrateCloneInsertionBatchDelayMsOrBuilder() {
+        return getMigrateCloneInsertionBatchDelayMs();
+      }
+
+      public static final int MIGRATE_CLONE_INSERTION_BATCH_SIZE_FIELD_NUMBER = 7;
+      private com.google.protobuf.Int64Value migrateCloneInsertionBatchSize_;
+      /**
+       * <pre>
+       * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the migrateCloneInsertionBatchSize field is set.
+       */
+      @java.lang.Override
+      public boolean hasMigrateCloneInsertionBatchSize() {
+        return migrateCloneInsertionBatchSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The migrateCloneInsertionBatchSize.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMigrateCloneInsertionBatchSize() {
+        return migrateCloneInsertionBatchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : migrateCloneInsertionBatchSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMigrateCloneInsertionBatchSizeOrBuilder() {
+        return getMigrateCloneInsertionBatchSize();
+      }
+
+      public static final int ORPHAN_CLEANUP_DELAY_SECS_FIELD_NUMBER = 8;
+      private com.google.protobuf.Int64Value orphanCleanupDelaySecs_;
+      /**
+       * <pre>
+       * Minimum delay before a migrated chunk is deleted from the source shard.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+       * @return Whether the orphanCleanupDelaySecs field is set.
+       */
+      @java.lang.Override
+      public boolean hasOrphanCleanupDelaySecs() {
+        return orphanCleanupDelaySecs_ != null;
+      }
+      /**
+       * <pre>
+       * Minimum delay before a migrated chunk is deleted from the source shard.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+       * @return The orphanCleanupDelaySecs.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getOrphanCleanupDelaySecs() {
+        return orphanCleanupDelaySecs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : orphanCleanupDelaySecs_;
+      }
+      /**
+       * <pre>
+       * Minimum delay before a migrated chunk is deleted from the source shard.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getOrphanCleanupDelaySecsOrBuilder() {
+        return getOrphanCleanupDelaySecs();
+      }
+
+      public static final int PERSISTED_CHUNK_CACHE_UPDATE_MAX_BATCH_SIZE_FIELD_NUMBER = 9;
+      private com.google.protobuf.Int64Value persistedChunkCacheUpdateMaxBatchSize_;
+      /**
+       * <pre>
+       * Specifies the maximum batch size used for updating the persisted chunk cache.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+       * @return Whether the persistedChunkCacheUpdateMaxBatchSize field is set.
+       */
+      @java.lang.Override
+      public boolean hasPersistedChunkCacheUpdateMaxBatchSize() {
+        return persistedChunkCacheUpdateMaxBatchSize_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the maximum batch size used for updating the persisted chunk cache.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+       * @return The persistedChunkCacheUpdateMaxBatchSize.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getPersistedChunkCacheUpdateMaxBatchSize() {
+        return persistedChunkCacheUpdateMaxBatchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : persistedChunkCacheUpdateMaxBatchSize_;
+      }
+      /**
+       * <pre>
+       * Specifies the maximum batch size used for updating the persisted chunk cache.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getPersistedChunkCacheUpdateMaxBatchSizeOrBuilder() {
+        return getPersistedChunkCacheUpdateMaxBatchSize();
+      }
+
+      public static final int RANGE_DELETER_BATCH_DELAY_MS_FIELD_NUMBER = 10;
+      private com.google.protobuf.Int64Value rangeDeleterBatchDelayMs_;
+      /**
+       * <pre>
+       * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the rangeDeleterBatchDelayMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasRangeDeleterBatchDelayMs() {
+        return rangeDeleterBatchDelayMs_ != null;
+      }
+      /**
+       * <pre>
+       * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The rangeDeleterBatchDelayMs.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getRangeDeleterBatchDelayMs() {
+        return rangeDeleterBatchDelayMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : rangeDeleterBatchDelayMs_;
+      }
+      /**
+       * <pre>
+       * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getRangeDeleterBatchDelayMsOrBuilder() {
+        return getRangeDeleterBatchDelayMs();
+      }
+
+      public static final int RANGE_DELETER_BATCH_SIZE_FIELD_NUMBER = 11;
+      private com.google.protobuf.Int64Value rangeDeleterBatchSize_;
+      /**
+       * <pre>
+       * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the rangeDeleterBatchSize field is set.
+       */
+      @java.lang.Override
+      public boolean hasRangeDeleterBatchSize() {
+        return rangeDeleterBatchSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The rangeDeleterBatchSize.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getRangeDeleterBatchSize() {
+        return rangeDeleterBatchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : rangeDeleterBatchSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getRangeDeleterBatchSizeOrBuilder() {
+        return getRangeDeleterBatchSize();
+      }
+
+      public static final int MIRROR_READS_FIELD_NUMBER = 12;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads mirrorReads_;
+      /**
+       * <pre>
+       * Specifies the settings for mirrored reads for the mongod instance
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+       * @return Whether the mirrorReads field is set.
+       */
+      @java.lang.Override
+      public boolean hasMirrorReads() {
+        return mirrorReads_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the settings for mirrored reads for the mongod instance
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+       * @return The mirrorReads.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads getMirrorReads() {
+        return mirrorReads_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.getDefaultInstance() : mirrorReads_;
+      }
+      /**
+       * <pre>
+       * Specifies the settings for mirrored reads for the mongod instance
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReadsOrBuilder getMirrorReadsOrBuilder() {
+        return getMirrorReads();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -12178,6 +14127,33 @@ public final class Mongodb {
         if (minSnapshotHistoryWindowInSeconds_ != null) {
           output.writeMessage(3, getMinSnapshotHistoryWindowInSeconds());
         }
+        if (flowControlTargetLagSeconds_ != null) {
+          output.writeMessage(4, getFlowControlTargetLagSeconds());
+        }
+        if (flowControlWarnThresholdSeconds_ != null) {
+          output.writeMessage(5, getFlowControlWarnThresholdSeconds());
+        }
+        if (migrateCloneInsertionBatchDelayMs_ != null) {
+          output.writeMessage(6, getMigrateCloneInsertionBatchDelayMs());
+        }
+        if (migrateCloneInsertionBatchSize_ != null) {
+          output.writeMessage(7, getMigrateCloneInsertionBatchSize());
+        }
+        if (orphanCleanupDelaySecs_ != null) {
+          output.writeMessage(8, getOrphanCleanupDelaySecs());
+        }
+        if (persistedChunkCacheUpdateMaxBatchSize_ != null) {
+          output.writeMessage(9, getPersistedChunkCacheUpdateMaxBatchSize());
+        }
+        if (rangeDeleterBatchDelayMs_ != null) {
+          output.writeMessage(10, getRangeDeleterBatchDelayMs());
+        }
+        if (rangeDeleterBatchSize_ != null) {
+          output.writeMessage(11, getRangeDeleterBatchSize());
+        }
+        if (mirrorReads_ != null) {
+          output.writeMessage(12, getMirrorReads());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -12198,6 +14174,42 @@ public final class Mongodb {
         if (minSnapshotHistoryWindowInSeconds_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getMinSnapshotHistoryWindowInSeconds());
+        }
+        if (flowControlTargetLagSeconds_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getFlowControlTargetLagSeconds());
+        }
+        if (flowControlWarnThresholdSeconds_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, getFlowControlWarnThresholdSeconds());
+        }
+        if (migrateCloneInsertionBatchDelayMs_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, getMigrateCloneInsertionBatchDelayMs());
+        }
+        if (migrateCloneInsertionBatchSize_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, getMigrateCloneInsertionBatchSize());
+        }
+        if (orphanCleanupDelaySecs_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(8, getOrphanCleanupDelaySecs());
+        }
+        if (persistedChunkCacheUpdateMaxBatchSize_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(9, getPersistedChunkCacheUpdateMaxBatchSize());
+        }
+        if (rangeDeleterBatchDelayMs_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(10, getRangeDeleterBatchDelayMs());
+        }
+        if (rangeDeleterBatchSize_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(11, getRangeDeleterBatchSize());
+        }
+        if (mirrorReads_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(12, getMirrorReads());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -12229,6 +14241,51 @@ public final class Mongodb {
           if (!getMinSnapshotHistoryWindowInSeconds()
               .equals(other.getMinSnapshotHistoryWindowInSeconds())) return false;
         }
+        if (hasFlowControlTargetLagSeconds() != other.hasFlowControlTargetLagSeconds()) return false;
+        if (hasFlowControlTargetLagSeconds()) {
+          if (!getFlowControlTargetLagSeconds()
+              .equals(other.getFlowControlTargetLagSeconds())) return false;
+        }
+        if (hasFlowControlWarnThresholdSeconds() != other.hasFlowControlWarnThresholdSeconds()) return false;
+        if (hasFlowControlWarnThresholdSeconds()) {
+          if (!getFlowControlWarnThresholdSeconds()
+              .equals(other.getFlowControlWarnThresholdSeconds())) return false;
+        }
+        if (hasMigrateCloneInsertionBatchDelayMs() != other.hasMigrateCloneInsertionBatchDelayMs()) return false;
+        if (hasMigrateCloneInsertionBatchDelayMs()) {
+          if (!getMigrateCloneInsertionBatchDelayMs()
+              .equals(other.getMigrateCloneInsertionBatchDelayMs())) return false;
+        }
+        if (hasMigrateCloneInsertionBatchSize() != other.hasMigrateCloneInsertionBatchSize()) return false;
+        if (hasMigrateCloneInsertionBatchSize()) {
+          if (!getMigrateCloneInsertionBatchSize()
+              .equals(other.getMigrateCloneInsertionBatchSize())) return false;
+        }
+        if (hasOrphanCleanupDelaySecs() != other.hasOrphanCleanupDelaySecs()) return false;
+        if (hasOrphanCleanupDelaySecs()) {
+          if (!getOrphanCleanupDelaySecs()
+              .equals(other.getOrphanCleanupDelaySecs())) return false;
+        }
+        if (hasPersistedChunkCacheUpdateMaxBatchSize() != other.hasPersistedChunkCacheUpdateMaxBatchSize()) return false;
+        if (hasPersistedChunkCacheUpdateMaxBatchSize()) {
+          if (!getPersistedChunkCacheUpdateMaxBatchSize()
+              .equals(other.getPersistedChunkCacheUpdateMaxBatchSize())) return false;
+        }
+        if (hasRangeDeleterBatchDelayMs() != other.hasRangeDeleterBatchDelayMs()) return false;
+        if (hasRangeDeleterBatchDelayMs()) {
+          if (!getRangeDeleterBatchDelayMs()
+              .equals(other.getRangeDeleterBatchDelayMs())) return false;
+        }
+        if (hasRangeDeleterBatchSize() != other.hasRangeDeleterBatchSize()) return false;
+        if (hasRangeDeleterBatchSize()) {
+          if (!getRangeDeleterBatchSize()
+              .equals(other.getRangeDeleterBatchSize())) return false;
+        }
+        if (hasMirrorReads() != other.hasMirrorReads()) return false;
+        if (hasMirrorReads()) {
+          if (!getMirrorReads()
+              .equals(other.getMirrorReads())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -12251,6 +14308,42 @@ public final class Mongodb {
         if (hasMinSnapshotHistoryWindowInSeconds()) {
           hash = (37 * hash) + MIN_SNAPSHOT_HISTORY_WINDOW_IN_SECONDS_FIELD_NUMBER;
           hash = (53 * hash) + getMinSnapshotHistoryWindowInSeconds().hashCode();
+        }
+        if (hasFlowControlTargetLagSeconds()) {
+          hash = (37 * hash) + FLOW_CONTROL_TARGET_LAG_SECONDS_FIELD_NUMBER;
+          hash = (53 * hash) + getFlowControlTargetLagSeconds().hashCode();
+        }
+        if (hasFlowControlWarnThresholdSeconds()) {
+          hash = (37 * hash) + FLOW_CONTROL_WARN_THRESHOLD_SECONDS_FIELD_NUMBER;
+          hash = (53 * hash) + getFlowControlWarnThresholdSeconds().hashCode();
+        }
+        if (hasMigrateCloneInsertionBatchDelayMs()) {
+          hash = (37 * hash) + MIGRATE_CLONE_INSERTION_BATCH_DELAY_MS_FIELD_NUMBER;
+          hash = (53 * hash) + getMigrateCloneInsertionBatchDelayMs().hashCode();
+        }
+        if (hasMigrateCloneInsertionBatchSize()) {
+          hash = (37 * hash) + MIGRATE_CLONE_INSERTION_BATCH_SIZE_FIELD_NUMBER;
+          hash = (53 * hash) + getMigrateCloneInsertionBatchSize().hashCode();
+        }
+        if (hasOrphanCleanupDelaySecs()) {
+          hash = (37 * hash) + ORPHAN_CLEANUP_DELAY_SECS_FIELD_NUMBER;
+          hash = (53 * hash) + getOrphanCleanupDelaySecs().hashCode();
+        }
+        if (hasPersistedChunkCacheUpdateMaxBatchSize()) {
+          hash = (37 * hash) + PERSISTED_CHUNK_CACHE_UPDATE_MAX_BATCH_SIZE_FIELD_NUMBER;
+          hash = (53 * hash) + getPersistedChunkCacheUpdateMaxBatchSize().hashCode();
+        }
+        if (hasRangeDeleterBatchDelayMs()) {
+          hash = (37 * hash) + RANGE_DELETER_BATCH_DELAY_MS_FIELD_NUMBER;
+          hash = (53 * hash) + getRangeDeleterBatchDelayMs().hashCode();
+        }
+        if (hasRangeDeleterBatchSize()) {
+          hash = (37 * hash) + RANGE_DELETER_BATCH_SIZE_FIELD_NUMBER;
+          hash = (53 * hash) + getRangeDeleterBatchSize().hashCode();
+        }
+        if (hasMirrorReads()) {
+          hash = (37 * hash) + MIRROR_READS_FIELD_NUMBER;
+          hash = (53 * hash) + getMirrorReads().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -12403,6 +14496,60 @@ public final class Mongodb {
             minSnapshotHistoryWindowInSeconds_ = null;
             minSnapshotHistoryWindowInSecondsBuilder_ = null;
           }
+          if (flowControlTargetLagSecondsBuilder_ == null) {
+            flowControlTargetLagSeconds_ = null;
+          } else {
+            flowControlTargetLagSeconds_ = null;
+            flowControlTargetLagSecondsBuilder_ = null;
+          }
+          if (flowControlWarnThresholdSecondsBuilder_ == null) {
+            flowControlWarnThresholdSeconds_ = null;
+          } else {
+            flowControlWarnThresholdSeconds_ = null;
+            flowControlWarnThresholdSecondsBuilder_ = null;
+          }
+          if (migrateCloneInsertionBatchDelayMsBuilder_ == null) {
+            migrateCloneInsertionBatchDelayMs_ = null;
+          } else {
+            migrateCloneInsertionBatchDelayMs_ = null;
+            migrateCloneInsertionBatchDelayMsBuilder_ = null;
+          }
+          if (migrateCloneInsertionBatchSizeBuilder_ == null) {
+            migrateCloneInsertionBatchSize_ = null;
+          } else {
+            migrateCloneInsertionBatchSize_ = null;
+            migrateCloneInsertionBatchSizeBuilder_ = null;
+          }
+          if (orphanCleanupDelaySecsBuilder_ == null) {
+            orphanCleanupDelaySecs_ = null;
+          } else {
+            orphanCleanupDelaySecs_ = null;
+            orphanCleanupDelaySecsBuilder_ = null;
+          }
+          if (persistedChunkCacheUpdateMaxBatchSizeBuilder_ == null) {
+            persistedChunkCacheUpdateMaxBatchSize_ = null;
+          } else {
+            persistedChunkCacheUpdateMaxBatchSize_ = null;
+            persistedChunkCacheUpdateMaxBatchSizeBuilder_ = null;
+          }
+          if (rangeDeleterBatchDelayMsBuilder_ == null) {
+            rangeDeleterBatchDelayMs_ = null;
+          } else {
+            rangeDeleterBatchDelayMs_ = null;
+            rangeDeleterBatchDelayMsBuilder_ = null;
+          }
+          if (rangeDeleterBatchSizeBuilder_ == null) {
+            rangeDeleterBatchSize_ = null;
+          } else {
+            rangeDeleterBatchSize_ = null;
+            rangeDeleterBatchSizeBuilder_ = null;
+          }
+          if (mirrorReadsBuilder_ == null) {
+            mirrorReads_ = null;
+          } else {
+            mirrorReads_ = null;
+            mirrorReadsBuilder_ = null;
+          }
           return this;
         }
 
@@ -12443,6 +14590,51 @@ public final class Mongodb {
             result.minSnapshotHistoryWindowInSeconds_ = minSnapshotHistoryWindowInSeconds_;
           } else {
             result.minSnapshotHistoryWindowInSeconds_ = minSnapshotHistoryWindowInSecondsBuilder_.build();
+          }
+          if (flowControlTargetLagSecondsBuilder_ == null) {
+            result.flowControlTargetLagSeconds_ = flowControlTargetLagSeconds_;
+          } else {
+            result.flowControlTargetLagSeconds_ = flowControlTargetLagSecondsBuilder_.build();
+          }
+          if (flowControlWarnThresholdSecondsBuilder_ == null) {
+            result.flowControlWarnThresholdSeconds_ = flowControlWarnThresholdSeconds_;
+          } else {
+            result.flowControlWarnThresholdSeconds_ = flowControlWarnThresholdSecondsBuilder_.build();
+          }
+          if (migrateCloneInsertionBatchDelayMsBuilder_ == null) {
+            result.migrateCloneInsertionBatchDelayMs_ = migrateCloneInsertionBatchDelayMs_;
+          } else {
+            result.migrateCloneInsertionBatchDelayMs_ = migrateCloneInsertionBatchDelayMsBuilder_.build();
+          }
+          if (migrateCloneInsertionBatchSizeBuilder_ == null) {
+            result.migrateCloneInsertionBatchSize_ = migrateCloneInsertionBatchSize_;
+          } else {
+            result.migrateCloneInsertionBatchSize_ = migrateCloneInsertionBatchSizeBuilder_.build();
+          }
+          if (orphanCleanupDelaySecsBuilder_ == null) {
+            result.orphanCleanupDelaySecs_ = orphanCleanupDelaySecs_;
+          } else {
+            result.orphanCleanupDelaySecs_ = orphanCleanupDelaySecsBuilder_.build();
+          }
+          if (persistedChunkCacheUpdateMaxBatchSizeBuilder_ == null) {
+            result.persistedChunkCacheUpdateMaxBatchSize_ = persistedChunkCacheUpdateMaxBatchSize_;
+          } else {
+            result.persistedChunkCacheUpdateMaxBatchSize_ = persistedChunkCacheUpdateMaxBatchSizeBuilder_.build();
+          }
+          if (rangeDeleterBatchDelayMsBuilder_ == null) {
+            result.rangeDeleterBatchDelayMs_ = rangeDeleterBatchDelayMs_;
+          } else {
+            result.rangeDeleterBatchDelayMs_ = rangeDeleterBatchDelayMsBuilder_.build();
+          }
+          if (rangeDeleterBatchSizeBuilder_ == null) {
+            result.rangeDeleterBatchSize_ = rangeDeleterBatchSize_;
+          } else {
+            result.rangeDeleterBatchSize_ = rangeDeleterBatchSizeBuilder_.build();
+          }
+          if (mirrorReadsBuilder_ == null) {
+            result.mirrorReads_ = mirrorReads_;
+          } else {
+            result.mirrorReads_ = mirrorReadsBuilder_.build();
           }
           onBuilt();
           return result;
@@ -12500,6 +14692,33 @@ public final class Mongodb {
           }
           if (other.hasMinSnapshotHistoryWindowInSeconds()) {
             mergeMinSnapshotHistoryWindowInSeconds(other.getMinSnapshotHistoryWindowInSeconds());
+          }
+          if (other.hasFlowControlTargetLagSeconds()) {
+            mergeFlowControlTargetLagSeconds(other.getFlowControlTargetLagSeconds());
+          }
+          if (other.hasFlowControlWarnThresholdSeconds()) {
+            mergeFlowControlWarnThresholdSeconds(other.getFlowControlWarnThresholdSeconds());
+          }
+          if (other.hasMigrateCloneInsertionBatchDelayMs()) {
+            mergeMigrateCloneInsertionBatchDelayMs(other.getMigrateCloneInsertionBatchDelayMs());
+          }
+          if (other.hasMigrateCloneInsertionBatchSize()) {
+            mergeMigrateCloneInsertionBatchSize(other.getMigrateCloneInsertionBatchSize());
+          }
+          if (other.hasOrphanCleanupDelaySecs()) {
+            mergeOrphanCleanupDelaySecs(other.getOrphanCleanupDelaySecs());
+          }
+          if (other.hasPersistedChunkCacheUpdateMaxBatchSize()) {
+            mergePersistedChunkCacheUpdateMaxBatchSize(other.getPersistedChunkCacheUpdateMaxBatchSize());
+          }
+          if (other.hasRangeDeleterBatchDelayMs()) {
+            mergeRangeDeleterBatchDelayMs(other.getRangeDeleterBatchDelayMs());
+          }
+          if (other.hasRangeDeleterBatchSize()) {
+            mergeRangeDeleterBatchSize(other.getRangeDeleterBatchSize());
+          }
+          if (other.hasMirrorReads()) {
+            mergeMirrorReads(other.getMirrorReads());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -13021,6 +15240,1401 @@ public final class Mongodb {
           }
           return minSnapshotHistoryWindowInSecondsBuilder_;
         }
+
+        private com.google.protobuf.Int64Value flowControlTargetLagSeconds_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> flowControlTargetLagSecondsBuilder_;
+        /**
+         * <pre>
+         * The target maximum majority committed lag when running with flow control
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return Whether the flowControlTargetLagSeconds field is set.
+         */
+        public boolean hasFlowControlTargetLagSeconds() {
+          return flowControlTargetLagSecondsBuilder_ != null || flowControlTargetLagSeconds_ != null;
+        }
+        /**
+         * <pre>
+         * The target maximum majority committed lag when running with flow control
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return The flowControlTargetLagSeconds.
+         */
+        public com.google.protobuf.Int64Value getFlowControlTargetLagSeconds() {
+          if (flowControlTargetLagSecondsBuilder_ == null) {
+            return flowControlTargetLagSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flowControlTargetLagSeconds_;
+          } else {
+            return flowControlTargetLagSecondsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The target maximum majority committed lag when running with flow control
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder setFlowControlTargetLagSeconds(com.google.protobuf.Int64Value value) {
+          if (flowControlTargetLagSecondsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            flowControlTargetLagSeconds_ = value;
+            onChanged();
+          } else {
+            flowControlTargetLagSecondsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The target maximum majority committed lag when running with flow control
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder setFlowControlTargetLagSeconds(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (flowControlTargetLagSecondsBuilder_ == null) {
+            flowControlTargetLagSeconds_ = builderForValue.build();
+            onChanged();
+          } else {
+            flowControlTargetLagSecondsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The target maximum majority committed lag when running with flow control
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder mergeFlowControlTargetLagSeconds(com.google.protobuf.Int64Value value) {
+          if (flowControlTargetLagSecondsBuilder_ == null) {
+            if (flowControlTargetLagSeconds_ != null) {
+              flowControlTargetLagSeconds_ =
+                com.google.protobuf.Int64Value.newBuilder(flowControlTargetLagSeconds_).mergeFrom(value).buildPartial();
+            } else {
+              flowControlTargetLagSeconds_ = value;
+            }
+            onChanged();
+          } else {
+            flowControlTargetLagSecondsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The target maximum majority committed lag when running with flow control
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder clearFlowControlTargetLagSeconds() {
+          if (flowControlTargetLagSecondsBuilder_ == null) {
+            flowControlTargetLagSeconds_ = null;
+            onChanged();
+          } else {
+            flowControlTargetLagSeconds_ = null;
+            flowControlTargetLagSecondsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The target maximum majority committed lag when running with flow control
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getFlowControlTargetLagSecondsBuilder() {
+          
+          onChanged();
+          return getFlowControlTargetLagSecondsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The target maximum majority committed lag when running with flow control
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getFlowControlTargetLagSecondsOrBuilder() {
+          if (flowControlTargetLagSecondsBuilder_ != null) {
+            return flowControlTargetLagSecondsBuilder_.getMessageOrBuilder();
+          } else {
+            return flowControlTargetLagSeconds_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : flowControlTargetLagSeconds_;
+          }
+        }
+        /**
+         * <pre>
+         * The target maximum majority committed lag when running with flow control
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_target_lag_seconds = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getFlowControlTargetLagSecondsFieldBuilder() {
+          if (flowControlTargetLagSecondsBuilder_ == null) {
+            flowControlTargetLagSecondsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getFlowControlTargetLagSeconds(),
+                    getParentForChildren(),
+                    isClean());
+            flowControlTargetLagSeconds_ = null;
+          }
+          return flowControlTargetLagSecondsBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value flowControlWarnThresholdSeconds_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> flowControlWarnThresholdSecondsBuilder_;
+        /**
+         * <pre>
+         * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the flowControlWarnThresholdSeconds field is set.
+         */
+        public boolean hasFlowControlWarnThresholdSeconds() {
+          return flowControlWarnThresholdSecondsBuilder_ != null || flowControlWarnThresholdSeconds_ != null;
+        }
+        /**
+         * <pre>
+         * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The flowControlWarnThresholdSeconds.
+         */
+        public com.google.protobuf.Int64Value getFlowControlWarnThresholdSeconds() {
+          if (flowControlWarnThresholdSecondsBuilder_ == null) {
+            return flowControlWarnThresholdSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flowControlWarnThresholdSeconds_;
+          } else {
+            return flowControlWarnThresholdSecondsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setFlowControlWarnThresholdSeconds(com.google.protobuf.Int64Value value) {
+          if (flowControlWarnThresholdSecondsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            flowControlWarnThresholdSeconds_ = value;
+            onChanged();
+          } else {
+            flowControlWarnThresholdSecondsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setFlowControlWarnThresholdSeconds(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (flowControlWarnThresholdSecondsBuilder_ == null) {
+            flowControlWarnThresholdSeconds_ = builderForValue.build();
+            onChanged();
+          } else {
+            flowControlWarnThresholdSecondsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeFlowControlWarnThresholdSeconds(com.google.protobuf.Int64Value value) {
+          if (flowControlWarnThresholdSecondsBuilder_ == null) {
+            if (flowControlWarnThresholdSeconds_ != null) {
+              flowControlWarnThresholdSeconds_ =
+                com.google.protobuf.Int64Value.newBuilder(flowControlWarnThresholdSeconds_).mergeFrom(value).buildPartial();
+            } else {
+              flowControlWarnThresholdSeconds_ = value;
+            }
+            onChanged();
+          } else {
+            flowControlWarnThresholdSecondsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearFlowControlWarnThresholdSeconds() {
+          if (flowControlWarnThresholdSecondsBuilder_ == null) {
+            flowControlWarnThresholdSeconds_ = null;
+            onChanged();
+          } else {
+            flowControlWarnThresholdSeconds_ = null;
+            flowControlWarnThresholdSecondsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getFlowControlWarnThresholdSecondsBuilder() {
+          
+          onChanged();
+          return getFlowControlWarnThresholdSecondsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getFlowControlWarnThresholdSecondsOrBuilder() {
+          if (flowControlWarnThresholdSecondsBuilder_ != null) {
+            return flowControlWarnThresholdSecondsBuilder_.getMessageOrBuilder();
+          } else {
+            return flowControlWarnThresholdSeconds_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : flowControlWarnThresholdSeconds_;
+          }
+        }
+        /**
+         * <pre>
+         * The amount of time to wait to log a warning once the flow control mechanism detects the majority commit point has not moved.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value flow_control_warn_threshold_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getFlowControlWarnThresholdSecondsFieldBuilder() {
+          if (flowControlWarnThresholdSecondsBuilder_ == null) {
+            flowControlWarnThresholdSecondsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getFlowControlWarnThresholdSeconds(),
+                    getParentForChildren(),
+                    isClean());
+            flowControlWarnThresholdSeconds_ = null;
+          }
+          return flowControlWarnThresholdSecondsBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value migrateCloneInsertionBatchDelayMs_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> migrateCloneInsertionBatchDelayMsBuilder_;
+        /**
+         * <pre>
+         * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the migrateCloneInsertionBatchDelayMs field is set.
+         */
+        public boolean hasMigrateCloneInsertionBatchDelayMs() {
+          return migrateCloneInsertionBatchDelayMsBuilder_ != null || migrateCloneInsertionBatchDelayMs_ != null;
+        }
+        /**
+         * <pre>
+         * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The migrateCloneInsertionBatchDelayMs.
+         */
+        public com.google.protobuf.Int64Value getMigrateCloneInsertionBatchDelayMs() {
+          if (migrateCloneInsertionBatchDelayMsBuilder_ == null) {
+            return migrateCloneInsertionBatchDelayMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : migrateCloneInsertionBatchDelayMs_;
+          } else {
+            return migrateCloneInsertionBatchDelayMsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setMigrateCloneInsertionBatchDelayMs(com.google.protobuf.Int64Value value) {
+          if (migrateCloneInsertionBatchDelayMsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            migrateCloneInsertionBatchDelayMs_ = value;
+            onChanged();
+          } else {
+            migrateCloneInsertionBatchDelayMsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setMigrateCloneInsertionBatchDelayMs(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (migrateCloneInsertionBatchDelayMsBuilder_ == null) {
+            migrateCloneInsertionBatchDelayMs_ = builderForValue.build();
+            onChanged();
+          } else {
+            migrateCloneInsertionBatchDelayMsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeMigrateCloneInsertionBatchDelayMs(com.google.protobuf.Int64Value value) {
+          if (migrateCloneInsertionBatchDelayMsBuilder_ == null) {
+            if (migrateCloneInsertionBatchDelayMs_ != null) {
+              migrateCloneInsertionBatchDelayMs_ =
+                com.google.protobuf.Int64Value.newBuilder(migrateCloneInsertionBatchDelayMs_).mergeFrom(value).buildPartial();
+            } else {
+              migrateCloneInsertionBatchDelayMs_ = value;
+            }
+            onChanged();
+          } else {
+            migrateCloneInsertionBatchDelayMsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearMigrateCloneInsertionBatchDelayMs() {
+          if (migrateCloneInsertionBatchDelayMsBuilder_ == null) {
+            migrateCloneInsertionBatchDelayMs_ = null;
+            onChanged();
+          } else {
+            migrateCloneInsertionBatchDelayMs_ = null;
+            migrateCloneInsertionBatchDelayMsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMigrateCloneInsertionBatchDelayMsBuilder() {
+          
+          onChanged();
+          return getMigrateCloneInsertionBatchDelayMsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMigrateCloneInsertionBatchDelayMsOrBuilder() {
+          if (migrateCloneInsertionBatchDelayMsBuilder_ != null) {
+            return migrateCloneInsertionBatchDelayMsBuilder_.getMessageOrBuilder();
+          } else {
+            return migrateCloneInsertionBatchDelayMs_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : migrateCloneInsertionBatchDelayMs_;
+          }
+        }
+        /**
+         * <pre>
+         * Time in milliseconds to wait between batches of insertions during cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_delay_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMigrateCloneInsertionBatchDelayMsFieldBuilder() {
+          if (migrateCloneInsertionBatchDelayMsBuilder_ == null) {
+            migrateCloneInsertionBatchDelayMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMigrateCloneInsertionBatchDelayMs(),
+                    getParentForChildren(),
+                    isClean());
+            migrateCloneInsertionBatchDelayMs_ = null;
+          }
+          return migrateCloneInsertionBatchDelayMsBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value migrateCloneInsertionBatchSize_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> migrateCloneInsertionBatchSizeBuilder_;
+        /**
+         * <pre>
+         * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the migrateCloneInsertionBatchSize field is set.
+         */
+        public boolean hasMigrateCloneInsertionBatchSize() {
+          return migrateCloneInsertionBatchSizeBuilder_ != null || migrateCloneInsertionBatchSize_ != null;
+        }
+        /**
+         * <pre>
+         * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The migrateCloneInsertionBatchSize.
+         */
+        public com.google.protobuf.Int64Value getMigrateCloneInsertionBatchSize() {
+          if (migrateCloneInsertionBatchSizeBuilder_ == null) {
+            return migrateCloneInsertionBatchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : migrateCloneInsertionBatchSize_;
+          } else {
+            return migrateCloneInsertionBatchSizeBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setMigrateCloneInsertionBatchSize(com.google.protobuf.Int64Value value) {
+          if (migrateCloneInsertionBatchSizeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            migrateCloneInsertionBatchSize_ = value;
+            onChanged();
+          } else {
+            migrateCloneInsertionBatchSizeBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setMigrateCloneInsertionBatchSize(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (migrateCloneInsertionBatchSizeBuilder_ == null) {
+            migrateCloneInsertionBatchSize_ = builderForValue.build();
+            onChanged();
+          } else {
+            migrateCloneInsertionBatchSizeBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeMigrateCloneInsertionBatchSize(com.google.protobuf.Int64Value value) {
+          if (migrateCloneInsertionBatchSizeBuilder_ == null) {
+            if (migrateCloneInsertionBatchSize_ != null) {
+              migrateCloneInsertionBatchSize_ =
+                com.google.protobuf.Int64Value.newBuilder(migrateCloneInsertionBatchSize_).mergeFrom(value).buildPartial();
+            } else {
+              migrateCloneInsertionBatchSize_ = value;
+            }
+            onChanged();
+          } else {
+            migrateCloneInsertionBatchSizeBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearMigrateCloneInsertionBatchSize() {
+          if (migrateCloneInsertionBatchSizeBuilder_ == null) {
+            migrateCloneInsertionBatchSize_ = null;
+            onChanged();
+          } else {
+            migrateCloneInsertionBatchSize_ = null;
+            migrateCloneInsertionBatchSizeBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMigrateCloneInsertionBatchSizeBuilder() {
+          
+          onChanged();
+          return getMigrateCloneInsertionBatchSizeFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMigrateCloneInsertionBatchSizeOrBuilder() {
+          if (migrateCloneInsertionBatchSizeBuilder_ != null) {
+            return migrateCloneInsertionBatchSizeBuilder_.getMessageOrBuilder();
+          } else {
+            return migrateCloneInsertionBatchSize_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : migrateCloneInsertionBatchSize_;
+          }
+        }
+        /**
+         * <pre>
+         * The maximum number of documents to insert in a single batch during the cloning step of the migration process.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value migrate_clone_insertion_batch_size = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMigrateCloneInsertionBatchSizeFieldBuilder() {
+          if (migrateCloneInsertionBatchSizeBuilder_ == null) {
+            migrateCloneInsertionBatchSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMigrateCloneInsertionBatchSize(),
+                    getParentForChildren(),
+                    isClean());
+            migrateCloneInsertionBatchSize_ = null;
+          }
+          return migrateCloneInsertionBatchSizeBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value orphanCleanupDelaySecs_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> orphanCleanupDelaySecsBuilder_;
+        /**
+         * <pre>
+         * Minimum delay before a migrated chunk is deleted from the source shard.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+         * @return Whether the orphanCleanupDelaySecs field is set.
+         */
+        public boolean hasOrphanCleanupDelaySecs() {
+          return orphanCleanupDelaySecsBuilder_ != null || orphanCleanupDelaySecs_ != null;
+        }
+        /**
+         * <pre>
+         * Minimum delay before a migrated chunk is deleted from the source shard.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+         * @return The orphanCleanupDelaySecs.
+         */
+        public com.google.protobuf.Int64Value getOrphanCleanupDelaySecs() {
+          if (orphanCleanupDelaySecsBuilder_ == null) {
+            return orphanCleanupDelaySecs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : orphanCleanupDelaySecs_;
+          } else {
+            return orphanCleanupDelaySecsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Minimum delay before a migrated chunk is deleted from the source shard.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+         */
+        public Builder setOrphanCleanupDelaySecs(com.google.protobuf.Int64Value value) {
+          if (orphanCleanupDelaySecsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            orphanCleanupDelaySecs_ = value;
+            onChanged();
+          } else {
+            orphanCleanupDelaySecsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimum delay before a migrated chunk is deleted from the source shard.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+         */
+        public Builder setOrphanCleanupDelaySecs(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (orphanCleanupDelaySecsBuilder_ == null) {
+            orphanCleanupDelaySecs_ = builderForValue.build();
+            onChanged();
+          } else {
+            orphanCleanupDelaySecsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimum delay before a migrated chunk is deleted from the source shard.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+         */
+        public Builder mergeOrphanCleanupDelaySecs(com.google.protobuf.Int64Value value) {
+          if (orphanCleanupDelaySecsBuilder_ == null) {
+            if (orphanCleanupDelaySecs_ != null) {
+              orphanCleanupDelaySecs_ =
+                com.google.protobuf.Int64Value.newBuilder(orphanCleanupDelaySecs_).mergeFrom(value).buildPartial();
+            } else {
+              orphanCleanupDelaySecs_ = value;
+            }
+            onChanged();
+          } else {
+            orphanCleanupDelaySecsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimum delay before a migrated chunk is deleted from the source shard.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+         */
+        public Builder clearOrphanCleanupDelaySecs() {
+          if (orphanCleanupDelaySecsBuilder_ == null) {
+            orphanCleanupDelaySecs_ = null;
+            onChanged();
+          } else {
+            orphanCleanupDelaySecs_ = null;
+            orphanCleanupDelaySecsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimum delay before a migrated chunk is deleted from the source shard.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getOrphanCleanupDelaySecsBuilder() {
+          
+          onChanged();
+          return getOrphanCleanupDelaySecsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Minimum delay before a migrated chunk is deleted from the source shard.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getOrphanCleanupDelaySecsOrBuilder() {
+          if (orphanCleanupDelaySecsBuilder_ != null) {
+            return orphanCleanupDelaySecsBuilder_.getMessageOrBuilder();
+          } else {
+            return orphanCleanupDelaySecs_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : orphanCleanupDelaySecs_;
+          }
+        }
+        /**
+         * <pre>
+         * Minimum delay before a migrated chunk is deleted from the source shard.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value orphan_cleanup_delay_secs = 8;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getOrphanCleanupDelaySecsFieldBuilder() {
+          if (orphanCleanupDelaySecsBuilder_ == null) {
+            orphanCleanupDelaySecsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getOrphanCleanupDelaySecs(),
+                    getParentForChildren(),
+                    isClean());
+            orphanCleanupDelaySecs_ = null;
+          }
+          return orphanCleanupDelaySecsBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value persistedChunkCacheUpdateMaxBatchSize_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> persistedChunkCacheUpdateMaxBatchSizeBuilder_;
+        /**
+         * <pre>
+         * Specifies the maximum batch size used for updating the persisted chunk cache.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+         * @return Whether the persistedChunkCacheUpdateMaxBatchSize field is set.
+         */
+        public boolean hasPersistedChunkCacheUpdateMaxBatchSize() {
+          return persistedChunkCacheUpdateMaxBatchSizeBuilder_ != null || persistedChunkCacheUpdateMaxBatchSize_ != null;
+        }
+        /**
+         * <pre>
+         * Specifies the maximum batch size used for updating the persisted chunk cache.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+         * @return The persistedChunkCacheUpdateMaxBatchSize.
+         */
+        public com.google.protobuf.Int64Value getPersistedChunkCacheUpdateMaxBatchSize() {
+          if (persistedChunkCacheUpdateMaxBatchSizeBuilder_ == null) {
+            return persistedChunkCacheUpdateMaxBatchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : persistedChunkCacheUpdateMaxBatchSize_;
+          } else {
+            return persistedChunkCacheUpdateMaxBatchSizeBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Specifies the maximum batch size used for updating the persisted chunk cache.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+         */
+        public Builder setPersistedChunkCacheUpdateMaxBatchSize(com.google.protobuf.Int64Value value) {
+          if (persistedChunkCacheUpdateMaxBatchSizeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            persistedChunkCacheUpdateMaxBatchSize_ = value;
+            onChanged();
+          } else {
+            persistedChunkCacheUpdateMaxBatchSizeBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the maximum batch size used for updating the persisted chunk cache.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+         */
+        public Builder setPersistedChunkCacheUpdateMaxBatchSize(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (persistedChunkCacheUpdateMaxBatchSizeBuilder_ == null) {
+            persistedChunkCacheUpdateMaxBatchSize_ = builderForValue.build();
+            onChanged();
+          } else {
+            persistedChunkCacheUpdateMaxBatchSizeBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the maximum batch size used for updating the persisted chunk cache.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+         */
+        public Builder mergePersistedChunkCacheUpdateMaxBatchSize(com.google.protobuf.Int64Value value) {
+          if (persistedChunkCacheUpdateMaxBatchSizeBuilder_ == null) {
+            if (persistedChunkCacheUpdateMaxBatchSize_ != null) {
+              persistedChunkCacheUpdateMaxBatchSize_ =
+                com.google.protobuf.Int64Value.newBuilder(persistedChunkCacheUpdateMaxBatchSize_).mergeFrom(value).buildPartial();
+            } else {
+              persistedChunkCacheUpdateMaxBatchSize_ = value;
+            }
+            onChanged();
+          } else {
+            persistedChunkCacheUpdateMaxBatchSizeBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the maximum batch size used for updating the persisted chunk cache.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+         */
+        public Builder clearPersistedChunkCacheUpdateMaxBatchSize() {
+          if (persistedChunkCacheUpdateMaxBatchSizeBuilder_ == null) {
+            persistedChunkCacheUpdateMaxBatchSize_ = null;
+            onChanged();
+          } else {
+            persistedChunkCacheUpdateMaxBatchSize_ = null;
+            persistedChunkCacheUpdateMaxBatchSizeBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the maximum batch size used for updating the persisted chunk cache.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getPersistedChunkCacheUpdateMaxBatchSizeBuilder() {
+          
+          onChanged();
+          return getPersistedChunkCacheUpdateMaxBatchSizeFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Specifies the maximum batch size used for updating the persisted chunk cache.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getPersistedChunkCacheUpdateMaxBatchSizeOrBuilder() {
+          if (persistedChunkCacheUpdateMaxBatchSizeBuilder_ != null) {
+            return persistedChunkCacheUpdateMaxBatchSizeBuilder_.getMessageOrBuilder();
+          } else {
+            return persistedChunkCacheUpdateMaxBatchSize_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : persistedChunkCacheUpdateMaxBatchSize_;
+          }
+        }
+        /**
+         * <pre>
+         * Specifies the maximum batch size used for updating the persisted chunk cache.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value persisted_chunk_cache_update_max_batch_size = 9;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getPersistedChunkCacheUpdateMaxBatchSizeFieldBuilder() {
+          if (persistedChunkCacheUpdateMaxBatchSizeBuilder_ == null) {
+            persistedChunkCacheUpdateMaxBatchSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getPersistedChunkCacheUpdateMaxBatchSize(),
+                    getParentForChildren(),
+                    isClean());
+            persistedChunkCacheUpdateMaxBatchSize_ = null;
+          }
+          return persistedChunkCacheUpdateMaxBatchSizeBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value rangeDeleterBatchDelayMs_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> rangeDeleterBatchDelayMsBuilder_;
+        /**
+         * <pre>
+         * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the rangeDeleterBatchDelayMs field is set.
+         */
+        public boolean hasRangeDeleterBatchDelayMs() {
+          return rangeDeleterBatchDelayMsBuilder_ != null || rangeDeleterBatchDelayMs_ != null;
+        }
+        /**
+         * <pre>
+         * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The rangeDeleterBatchDelayMs.
+         */
+        public com.google.protobuf.Int64Value getRangeDeleterBatchDelayMs() {
+          if (rangeDeleterBatchDelayMsBuilder_ == null) {
+            return rangeDeleterBatchDelayMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : rangeDeleterBatchDelayMs_;
+          } else {
+            return rangeDeleterBatchDelayMsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setRangeDeleterBatchDelayMs(com.google.protobuf.Int64Value value) {
+          if (rangeDeleterBatchDelayMsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            rangeDeleterBatchDelayMs_ = value;
+            onChanged();
+          } else {
+            rangeDeleterBatchDelayMsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setRangeDeleterBatchDelayMs(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (rangeDeleterBatchDelayMsBuilder_ == null) {
+            rangeDeleterBatchDelayMs_ = builderForValue.build();
+            onChanged();
+          } else {
+            rangeDeleterBatchDelayMsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeRangeDeleterBatchDelayMs(com.google.protobuf.Int64Value value) {
+          if (rangeDeleterBatchDelayMsBuilder_ == null) {
+            if (rangeDeleterBatchDelayMs_ != null) {
+              rangeDeleterBatchDelayMs_ =
+                com.google.protobuf.Int64Value.newBuilder(rangeDeleterBatchDelayMs_).mergeFrom(value).buildPartial();
+            } else {
+              rangeDeleterBatchDelayMs_ = value;
+            }
+            onChanged();
+          } else {
+            rangeDeleterBatchDelayMsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearRangeDeleterBatchDelayMs() {
+          if (rangeDeleterBatchDelayMsBuilder_ == null) {
+            rangeDeleterBatchDelayMs_ = null;
+            onChanged();
+          } else {
+            rangeDeleterBatchDelayMs_ = null;
+            rangeDeleterBatchDelayMsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getRangeDeleterBatchDelayMsBuilder() {
+          
+          onChanged();
+          return getRangeDeleterBatchDelayMsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getRangeDeleterBatchDelayMsOrBuilder() {
+          if (rangeDeleterBatchDelayMsBuilder_ != null) {
+            return rangeDeleterBatchDelayMsBuilder_.getMessageOrBuilder();
+          } else {
+            return rangeDeleterBatchDelayMs_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : rangeDeleterBatchDelayMs_;
+          }
+        }
+        /**
+         * <pre>
+         * The amount of time in milliseconds to wait before the next batch of deletion during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_delay_ms = 10 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getRangeDeleterBatchDelayMsFieldBuilder() {
+          if (rangeDeleterBatchDelayMsBuilder_ == null) {
+            rangeDeleterBatchDelayMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getRangeDeleterBatchDelayMs(),
+                    getParentForChildren(),
+                    isClean());
+            rangeDeleterBatchDelayMs_ = null;
+          }
+          return rangeDeleterBatchDelayMsBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value rangeDeleterBatchSize_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> rangeDeleterBatchSizeBuilder_;
+        /**
+         * <pre>
+         * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the rangeDeleterBatchSize field is set.
+         */
+        public boolean hasRangeDeleterBatchSize() {
+          return rangeDeleterBatchSizeBuilder_ != null || rangeDeleterBatchSize_ != null;
+        }
+        /**
+         * <pre>
+         * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The rangeDeleterBatchSize.
+         */
+        public com.google.protobuf.Int64Value getRangeDeleterBatchSize() {
+          if (rangeDeleterBatchSizeBuilder_ == null) {
+            return rangeDeleterBatchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : rangeDeleterBatchSize_;
+          } else {
+            return rangeDeleterBatchSizeBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setRangeDeleterBatchSize(com.google.protobuf.Int64Value value) {
+          if (rangeDeleterBatchSizeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            rangeDeleterBatchSize_ = value;
+            onChanged();
+          } else {
+            rangeDeleterBatchSizeBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setRangeDeleterBatchSize(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (rangeDeleterBatchSizeBuilder_ == null) {
+            rangeDeleterBatchSize_ = builderForValue.build();
+            onChanged();
+          } else {
+            rangeDeleterBatchSizeBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeRangeDeleterBatchSize(com.google.protobuf.Int64Value value) {
+          if (rangeDeleterBatchSizeBuilder_ == null) {
+            if (rangeDeleterBatchSize_ != null) {
+              rangeDeleterBatchSize_ =
+                com.google.protobuf.Int64Value.newBuilder(rangeDeleterBatchSize_).mergeFrom(value).buildPartial();
+            } else {
+              rangeDeleterBatchSize_ = value;
+            }
+            onChanged();
+          } else {
+            rangeDeleterBatchSizeBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearRangeDeleterBatchSize() {
+          if (rangeDeleterBatchSizeBuilder_ == null) {
+            rangeDeleterBatchSize_ = null;
+            onChanged();
+          } else {
+            rangeDeleterBatchSize_ = null;
+            rangeDeleterBatchSizeBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getRangeDeleterBatchSizeBuilder() {
+          
+          onChanged();
+          return getRangeDeleterBatchSizeFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getRangeDeleterBatchSizeOrBuilder() {
+          if (rangeDeleterBatchSizeBuilder_ != null) {
+            return rangeDeleterBatchSizeBuilder_.getMessageOrBuilder();
+          } else {
+            return rangeDeleterBatchSize_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : rangeDeleterBatchSize_;
+          }
+        }
+        /**
+         * <pre>
+         * The maximum number of documents in each batch to delete during the cleanup stage of chunk migration (or the cleanupOrphaned command).
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value range_deleter_batch_size = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getRangeDeleterBatchSizeFieldBuilder() {
+          if (rangeDeleterBatchSizeBuilder_ == null) {
+            rangeDeleterBatchSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getRangeDeleterBatchSize(),
+                    getParentForChildren(),
+                    isClean());
+            rangeDeleterBatchSize_ = null;
+          }
+          return rangeDeleterBatchSizeBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads mirrorReads_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReadsOrBuilder> mirrorReadsBuilder_;
+        /**
+         * <pre>
+         * Specifies the settings for mirrored reads for the mongod instance
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+         * @return Whether the mirrorReads field is set.
+         */
+        public boolean hasMirrorReads() {
+          return mirrorReadsBuilder_ != null || mirrorReads_ != null;
+        }
+        /**
+         * <pre>
+         * Specifies the settings for mirrored reads for the mongod instance
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+         * @return The mirrorReads.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads getMirrorReads() {
+          if (mirrorReadsBuilder_ == null) {
+            return mirrorReads_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.getDefaultInstance() : mirrorReads_;
+          } else {
+            return mirrorReadsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Specifies the settings for mirrored reads for the mongod instance
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+         */
+        public Builder setMirrorReads(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads value) {
+          if (mirrorReadsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            mirrorReads_ = value;
+            onChanged();
+          } else {
+            mirrorReadsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the settings for mirrored reads for the mongod instance
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+         */
+        public Builder setMirrorReads(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.Builder builderForValue) {
+          if (mirrorReadsBuilder_ == null) {
+            mirrorReads_ = builderForValue.build();
+            onChanged();
+          } else {
+            mirrorReadsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the settings for mirrored reads for the mongod instance
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+         */
+        public Builder mergeMirrorReads(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads value) {
+          if (mirrorReadsBuilder_ == null) {
+            if (mirrorReads_ != null) {
+              mirrorReads_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.newBuilder(mirrorReads_).mergeFrom(value).buildPartial();
+            } else {
+              mirrorReads_ = value;
+            }
+            onChanged();
+          } else {
+            mirrorReadsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the settings for mirrored reads for the mongod instance
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+         */
+        public Builder clearMirrorReads() {
+          if (mirrorReadsBuilder_ == null) {
+            mirrorReads_ = null;
+            onChanged();
+          } else {
+            mirrorReads_ = null;
+            mirrorReadsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the settings for mirrored reads for the mongod instance
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.Builder getMirrorReadsBuilder() {
+          
+          onChanged();
+          return getMirrorReadsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Specifies the settings for mirrored reads for the mongod instance
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReadsOrBuilder getMirrorReadsOrBuilder() {
+          if (mirrorReadsBuilder_ != null) {
+            return mirrorReadsBuilder_.getMessageOrBuilder();
+          } else {
+            return mirrorReads_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.getDefaultInstance() : mirrorReads_;
+          }
+        }
+        /**
+         * <pre>
+         * Specifies the settings for mirrored reads for the mongod instance
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReadsOrBuilder> 
+            getMirrorReadsFieldBuilder() {
+          if (mirrorReadsBuilder_ == null) {
+            mirrorReadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReads.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReadsOrBuilder>(
+                    getMirrorReads(),
+                    getParentForChildren(),
+                    isClean());
+            mirrorReads_ = null;
+          }
+          return mirrorReadsBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13069,6 +16683,950 @@ public final class Mongodb {
 
       @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface OplogOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       * @return Whether the maxSizePercent field is set.
+       */
+      boolean hasMaxSizePercent();
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       * @return The maxSizePercent.
+       */
+      com.google.protobuf.Int64Value getMaxSizePercent();
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMaxSizePercentOrBuilder();
+
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       * @return Whether the minRetentionHours field is set.
+       */
+      boolean hasMinRetentionHours();
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       * @return The minRetentionHours.
+       */
+      com.google.protobuf.DoubleValue getMinRetentionHours();
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       */
+      com.google.protobuf.DoubleValueOrBuilder getMinRetentionHoursOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog}
+     */
+    public static final class Oplog extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog)
+        OplogOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Oplog.newBuilder() to construct.
+      private Oplog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Oplog() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Oplog();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Oplog(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (maxSizePercent_ != null) {
+                  subBuilder = maxSizePercent_.toBuilder();
+                }
+                maxSizePercent_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(maxSizePercent_);
+                  maxSizePercent_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                com.google.protobuf.DoubleValue.Builder subBuilder = null;
+                if (minRetentionHours_ != null) {
+                  subBuilder = minRetentionHours_.toBuilder();
+                }
+                minRetentionHours_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(minRetentionHours_);
+                  minRetentionHours_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Oplog_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Oplog_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.Builder.class);
+      }
+
+      public static final int MAX_SIZE_PERCENT_FIELD_NUMBER = 1;
+      private com.google.protobuf.Int64Value maxSizePercent_;
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       * @return Whether the maxSizePercent field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxSizePercent() {
+        return maxSizePercent_ != null;
+      }
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       * @return The maxSizePercent.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMaxSizePercent() {
+        return maxSizePercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxSizePercent_;
+      }
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMaxSizePercentOrBuilder() {
+        return getMaxSizePercent();
+      }
+
+      public static final int MIN_RETENTION_HOURS_FIELD_NUMBER = 2;
+      private com.google.protobuf.DoubleValue minRetentionHours_;
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       * @return Whether the minRetentionHours field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinRetentionHours() {
+        return minRetentionHours_ != null;
+      }
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       * @return The minRetentionHours.
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValue getMinRetentionHours() {
+        return minRetentionHours_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : minRetentionHours_;
+      }
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValueOrBuilder getMinRetentionHoursOrBuilder() {
+        return getMinRetentionHours();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (maxSizePercent_ != null) {
+          output.writeMessage(1, getMaxSizePercent());
+        }
+        if (minRetentionHours_ != null) {
+          output.writeMessage(2, getMinRetentionHours());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (maxSizePercent_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getMaxSizePercent());
+        }
+        if (minRetentionHours_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getMinRetentionHours());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog) obj;
+
+        if (hasMaxSizePercent() != other.hasMaxSizePercent()) return false;
+        if (hasMaxSizePercent()) {
+          if (!getMaxSizePercent()
+              .equals(other.getMaxSizePercent())) return false;
+        }
+        if (hasMinRetentionHours() != other.hasMinRetentionHours()) return false;
+        if (hasMinRetentionHours()) {
+          if (!getMinRetentionHours()
+              .equals(other.getMinRetentionHours())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasMaxSizePercent()) {
+          hash = (37 * hash) + MAX_SIZE_PERCENT_FIELD_NUMBER;
+          hash = (53 * hash) + getMaxSizePercent().hashCode();
+        }
+        if (hasMinRetentionHours()) {
+          hash = (37 * hash) + MIN_RETENTION_HOURS_FIELD_NUMBER;
+          hash = (53 * hash) + getMinRetentionHours().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog)
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.OplogOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Oplog_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Oplog_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (maxSizePercentBuilder_ == null) {
+            maxSizePercent_ = null;
+          } else {
+            maxSizePercent_ = null;
+            maxSizePercentBuilder_ = null;
+          }
+          if (minRetentionHoursBuilder_ == null) {
+            minRetentionHours_ = null;
+          } else {
+            minRetentionHours_ = null;
+            minRetentionHoursBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Oplog_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog build() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog(this);
+          if (maxSizePercentBuilder_ == null) {
+            result.maxSizePercent_ = maxSizePercent_;
+          } else {
+            result.maxSizePercent_ = maxSizePercentBuilder_.build();
+          }
+          if (minRetentionHoursBuilder_ == null) {
+            result.minRetentionHours_ = minRetentionHours_;
+          } else {
+            result.minRetentionHours_ = minRetentionHoursBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.getDefaultInstance()) return this;
+          if (other.hasMaxSizePercent()) {
+            mergeMaxSizePercent(other.getMaxSizePercent());
+          }
+          if (other.hasMinRetentionHours()) {
+            mergeMinRetentionHours(other.getMinRetentionHours());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.Int64Value maxSizePercent_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxSizePercentBuilder_;
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         * @return Whether the maxSizePercent field is set.
+         */
+        public boolean hasMaxSizePercent() {
+          return maxSizePercentBuilder_ != null || maxSizePercent_ != null;
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         * @return The maxSizePercent.
+         */
+        public com.google.protobuf.Int64Value getMaxSizePercent() {
+          if (maxSizePercentBuilder_ == null) {
+            return maxSizePercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxSizePercent_;
+          } else {
+            return maxSizePercentBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public Builder setMaxSizePercent(com.google.protobuf.Int64Value value) {
+          if (maxSizePercentBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            maxSizePercent_ = value;
+            onChanged();
+          } else {
+            maxSizePercentBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public Builder setMaxSizePercent(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (maxSizePercentBuilder_ == null) {
+            maxSizePercent_ = builderForValue.build();
+            onChanged();
+          } else {
+            maxSizePercentBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public Builder mergeMaxSizePercent(com.google.protobuf.Int64Value value) {
+          if (maxSizePercentBuilder_ == null) {
+            if (maxSizePercent_ != null) {
+              maxSizePercent_ =
+                com.google.protobuf.Int64Value.newBuilder(maxSizePercent_).mergeFrom(value).buildPartial();
+            } else {
+              maxSizePercent_ = value;
+            }
+            onChanged();
+          } else {
+            maxSizePercentBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public Builder clearMaxSizePercent() {
+          if (maxSizePercentBuilder_ == null) {
+            maxSizePercent_ = null;
+            onChanged();
+          } else {
+            maxSizePercent_ = null;
+            maxSizePercentBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMaxSizePercentBuilder() {
+          
+          onChanged();
+          return getMaxSizePercentFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMaxSizePercentOrBuilder() {
+          if (maxSizePercentBuilder_ != null) {
+            return maxSizePercentBuilder_.getMessageOrBuilder();
+          } else {
+            return maxSizePercent_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : maxSizePercent_;
+          }
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMaxSizePercentFieldBuilder() {
+          if (maxSizePercentBuilder_ == null) {
+            maxSizePercentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMaxSizePercent(),
+                    getParentForChildren(),
+                    isClean());
+            maxSizePercent_ = null;
+          }
+          return maxSizePercentBuilder_;
+        }
+
+        private com.google.protobuf.DoubleValue minRetentionHours_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> minRetentionHoursBuilder_;
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         * @return Whether the minRetentionHours field is set.
+         */
+        public boolean hasMinRetentionHours() {
+          return minRetentionHoursBuilder_ != null || minRetentionHours_ != null;
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         * @return The minRetentionHours.
+         */
+        public com.google.protobuf.DoubleValue getMinRetentionHours() {
+          if (minRetentionHoursBuilder_ == null) {
+            return minRetentionHours_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : minRetentionHours_;
+          } else {
+            return minRetentionHoursBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public Builder setMinRetentionHours(com.google.protobuf.DoubleValue value) {
+          if (minRetentionHoursBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            minRetentionHours_ = value;
+            onChanged();
+          } else {
+            minRetentionHoursBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public Builder setMinRetentionHours(
+            com.google.protobuf.DoubleValue.Builder builderForValue) {
+          if (minRetentionHoursBuilder_ == null) {
+            minRetentionHours_ = builderForValue.build();
+            onChanged();
+          } else {
+            minRetentionHoursBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public Builder mergeMinRetentionHours(com.google.protobuf.DoubleValue value) {
+          if (minRetentionHoursBuilder_ == null) {
+            if (minRetentionHours_ != null) {
+              minRetentionHours_ =
+                com.google.protobuf.DoubleValue.newBuilder(minRetentionHours_).mergeFrom(value).buildPartial();
+            } else {
+              minRetentionHours_ = value;
+            }
+            onChanged();
+          } else {
+            minRetentionHoursBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public Builder clearMinRetentionHours() {
+          if (minRetentionHoursBuilder_ == null) {
+            minRetentionHours_ = null;
+            onChanged();
+          } else {
+            minRetentionHours_ = null;
+            minRetentionHoursBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public com.google.protobuf.DoubleValue.Builder getMinRetentionHoursBuilder() {
+          
+          onChanged();
+          return getMinRetentionHoursFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public com.google.protobuf.DoubleValueOrBuilder getMinRetentionHoursOrBuilder() {
+          if (minRetentionHoursBuilder_ != null) {
+            return minRetentionHoursBuilder_.getMessageOrBuilder();
+          } else {
+            return minRetentionHours_ == null ?
+                com.google.protobuf.DoubleValue.getDefaultInstance() : minRetentionHours_;
+          }
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+            getMinRetentionHoursFieldBuilder() {
+          if (minRetentionHoursBuilder_ == null) {
+            minRetentionHoursBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                    getMinRetentionHours(),
+                    getParentForChildren(),
+                    isClean());
+            minRetentionHours_ = null;
+          }
+          return minRetentionHoursBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog)
+      private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Oplog>
+          PARSER = new com.google.protobuf.AbstractParser<Oplog>() {
+        @java.lang.Override
+        public Oplog parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Oplog(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Oplog> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Oplog> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -13302,6 +17860,44 @@ public final class Mongodb {
       return getSetParameter();
     }
 
+    public static final int OPLOG_FIELD_NUMBER = 7;
+    private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog oplog_;
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+     * @return Whether the oplog field is set.
+     */
+    @java.lang.Override
+    public boolean hasOplog() {
+      return oplog_ != null;
+    }
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+     * @return The oplog.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog getOplog() {
+      return oplog_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.getDefaultInstance() : oplog_;
+    }
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.OplogOrBuilder getOplogOrBuilder() {
+      return getOplog();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13333,6 +17929,9 @@ public final class Mongodb {
       }
       if (setParameter_ != null) {
         output.writeMessage(6, getSetParameter());
+      }
+      if (oplog_ != null) {
+        output.writeMessage(7, getOplog());
       }
       unknownFields.writeTo(output);
     }
@@ -13366,6 +17965,10 @@ public final class Mongodb {
       if (setParameter_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSetParameter());
+      }
+      if (oplog_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getOplog());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13412,6 +18015,11 @@ public final class Mongodb {
         if (!getSetParameter()
             .equals(other.getSetParameter())) return false;
       }
+      if (hasOplog() != other.hasOplog()) return false;
+      if (hasOplog()) {
+        if (!getOplog()
+            .equals(other.getOplog())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13446,6 +18054,10 @@ public final class Mongodb {
       if (hasSetParameter()) {
         hash = (37 * hash) + SET_PARAMETER_FIELD_NUMBER;
         hash = (53 * hash) + getSetParameter().hashCode();
+      }
+      if (hasOplog()) {
+        hash = (37 * hash) + OPLOG_FIELD_NUMBER;
+        hash = (53 * hash) + getOplog().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -13621,6 +18233,12 @@ public final class Mongodb {
           setParameter_ = null;
           setParameterBuilder_ = null;
         }
+        if (oplogBuilder_ == null) {
+          oplog_ = null;
+        } else {
+          oplog_ = null;
+          oplogBuilder_ = null;
+        }
         return this;
       }
 
@@ -13676,6 +18294,11 @@ public final class Mongodb {
           result.setParameter_ = setParameter_;
         } else {
           result.setParameter_ = setParameterBuilder_.build();
+        }
+        if (oplogBuilder_ == null) {
+          result.oplog_ = oplog_;
+        } else {
+          result.oplog_ = oplogBuilder_.build();
         }
         onBuilt();
         return result;
@@ -13742,6 +18365,9 @@ public final class Mongodb {
         }
         if (other.hasSetParameter()) {
           mergeSetParameter(other.getSetParameter());
+        }
+        if (other.hasOplog()) {
+          mergeOplog(other.getOplog());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14701,6 +19327,161 @@ public final class Mongodb {
         }
         return setParameterBuilder_;
       }
+
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog oplog_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.OplogOrBuilder> oplogBuilder_;
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+       * @return Whether the oplog field is set.
+       */
+      public boolean hasOplog() {
+        return oplogBuilder_ != null || oplog_ != null;
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+       * @return The oplog.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog getOplog() {
+        if (oplogBuilder_ == null) {
+          return oplog_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.getDefaultInstance() : oplog_;
+        } else {
+          return oplogBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+       */
+      public Builder setOplog(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog value) {
+        if (oplogBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oplog_ = value;
+          onChanged();
+        } else {
+          oplogBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+       */
+      public Builder setOplog(
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.Builder builderForValue) {
+        if (oplogBuilder_ == null) {
+          oplog_ = builderForValue.build();
+          onChanged();
+        } else {
+          oplogBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+       */
+      public Builder mergeOplog(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog value) {
+        if (oplogBuilder_ == null) {
+          if (oplog_ != null) {
+            oplog_ =
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.newBuilder(oplog_).mergeFrom(value).buildPartial();
+          } else {
+            oplog_ = value;
+          }
+          onChanged();
+        } else {
+          oplogBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+       */
+      public Builder clearOplog() {
+        if (oplogBuilder_ == null) {
+          oplog_ = null;
+          onChanged();
+        } else {
+          oplog_ = null;
+          oplogBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.Builder getOplogBuilder() {
+        
+        onChanged();
+        return getOplogFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.OplogOrBuilder getOplogOrBuilder() {
+        if (oplogBuilder_ != null) {
+          return oplogBuilder_.getMessageOrBuilder();
+        } else {
+          return oplog_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.getDefaultInstance() : oplog_;
+        }
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.Oplog oplog = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.OplogOrBuilder> 
+          getOplogFieldBuilder() {
+        if (oplogBuilder_ == null) {
+          oplogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.Oplog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.OplogOrBuilder>(
+                  getOplog(),
+                  getParentForChildren(),
+                  isClean());
+          oplog_ = null;
+        }
+        return oplogBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14892,6 +19673,33 @@ public final class Mongodb {
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.AuditLog audit_log = 5;</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.AuditLogOrBuilder getAuditLogOrBuilder();
+
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+     * @return Whether the oplog field is set.
+     */
+    boolean hasOplog();
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+     * @return The oplog.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog getOplog();
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.OplogOrBuilder getOplogOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig}
@@ -14999,6 +19807,19 @@ public final class Mongodb {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(auditLog_);
                 auditLog_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.Builder subBuilder = null;
+              if (oplog_ != null) {
+                subBuilder = oplog_.toBuilder();
+              }
+              oplog_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(oplog_);
+                oplog_ = subBuilder.buildPartial();
               }
 
               break;
@@ -15351,6 +20172,33 @@ public final class Mongodb {
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
            */
           com.google.protobuf.DoubleValueOrBuilder getCacheSizeGbOrBuilder();
+
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           * @return Whether the cacheSize field is set.
+           */
+          boolean hasCacheSize();
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           * @return The cacheSize.
+           */
+          com.google.protobuf.DoubleValue getCacheSize();
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           */
+          com.google.protobuf.DoubleValueOrBuilder getCacheSizeOrBuilder();
         }
         /**
          * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Storage.WiredTiger.EngineConfig}
@@ -15406,6 +20254,19 @@ public final class Mongodb {
                     if (subBuilder != null) {
                       subBuilder.mergeFrom(cacheSizeGb_);
                       cacheSizeGb_ = subBuilder.buildPartial();
+                    }
+
+                    break;
+                  }
+                  case 18: {
+                    com.google.protobuf.DoubleValue.Builder subBuilder = null;
+                    if (cacheSize_ != null) {
+                      subBuilder = cacheSize_.toBuilder();
+                    }
+                    cacheSize_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+                    if (subBuilder != null) {
+                      subBuilder.mergeFrom(cacheSize_);
+                      cacheSize_ = subBuilder.buildPartial();
                     }
 
                     break;
@@ -15480,6 +20341,44 @@ public final class Mongodb {
             return getCacheSizeGb();
           }
 
+          public static final int CACHE_SIZE_FIELD_NUMBER = 2;
+          private com.google.protobuf.DoubleValue cacheSize_;
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           * @return Whether the cacheSize field is set.
+           */
+          @java.lang.Override
+          public boolean hasCacheSize() {
+            return cacheSize_ != null;
+          }
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           * @return The cacheSize.
+           */
+          @java.lang.Override
+          public com.google.protobuf.DoubleValue getCacheSize() {
+            return cacheSize_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : cacheSize_;
+          }
+          /**
+           * <pre>
+           * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+           * </pre>
+           *
+           * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+           */
+          @java.lang.Override
+          public com.google.protobuf.DoubleValueOrBuilder getCacheSizeOrBuilder() {
+            return getCacheSize();
+          }
+
           private byte memoizedIsInitialized = -1;
           @java.lang.Override
           public final boolean isInitialized() {
@@ -15497,6 +20396,9 @@ public final class Mongodb {
             if (cacheSizeGb_ != null) {
               output.writeMessage(1, getCacheSizeGb());
             }
+            if (cacheSize_ != null) {
+              output.writeMessage(2, getCacheSize());
+            }
             unknownFields.writeTo(output);
           }
 
@@ -15509,6 +20411,10 @@ public final class Mongodb {
             if (cacheSizeGb_ != null) {
               size += com.google.protobuf.CodedOutputStream
                 .computeMessageSize(1, getCacheSizeGb());
+            }
+            if (cacheSize_ != null) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(2, getCacheSize());
             }
             size += unknownFields.getSerializedSize();
             memoizedSize = size;
@@ -15530,6 +20436,11 @@ public final class Mongodb {
               if (!getCacheSizeGb()
                   .equals(other.getCacheSizeGb())) return false;
             }
+            if (hasCacheSize() != other.hasCacheSize()) return false;
+            if (hasCacheSize()) {
+              if (!getCacheSize()
+                  .equals(other.getCacheSize())) return false;
+            }
             if (!unknownFields.equals(other.unknownFields)) return false;
             return true;
           }
@@ -15544,6 +20455,10 @@ public final class Mongodb {
             if (hasCacheSizeGb()) {
               hash = (37 * hash) + CACHE_SIZE_GB_FIELD_NUMBER;
               hash = (53 * hash) + getCacheSizeGb().hashCode();
+            }
+            if (hasCacheSize()) {
+              hash = (37 * hash) + CACHE_SIZE_FIELD_NUMBER;
+              hash = (53 * hash) + getCacheSize().hashCode();
             }
             hash = (29 * hash) + unknownFields.hashCode();
             memoizedHashCode = hash;
@@ -15684,6 +20599,12 @@ public final class Mongodb {
                 cacheSizeGb_ = null;
                 cacheSizeGbBuilder_ = null;
               }
+              if (cacheSizeBuilder_ == null) {
+                cacheSize_ = null;
+              } else {
+                cacheSize_ = null;
+                cacheSizeBuilder_ = null;
+              }
               return this;
             }
 
@@ -15714,6 +20635,11 @@ public final class Mongodb {
                 result.cacheSizeGb_ = cacheSizeGb_;
               } else {
                 result.cacheSizeGb_ = cacheSizeGbBuilder_.build();
+              }
+              if (cacheSizeBuilder_ == null) {
+                result.cacheSize_ = cacheSize_;
+              } else {
+                result.cacheSize_ = cacheSizeBuilder_.build();
               }
               onBuilt();
               return result;
@@ -15765,6 +20691,9 @@ public final class Mongodb {
               if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage.WiredTiger.EngineConfig.getDefaultInstance()) return this;
               if (other.hasCacheSizeGb()) {
                 mergeCacheSizeGb(other.getCacheSizeGb());
+              }
+              if (other.hasCacheSize()) {
+                mergeCacheSize(other.getCacheSize());
               }
               this.mergeUnknownFields(other.unknownFields);
               onChanged();
@@ -15948,6 +20877,161 @@ public final class Mongodb {
                 cacheSizeGb_ = null;
               }
               return cacheSizeGbBuilder_;
+            }
+
+            private com.google.protobuf.DoubleValue cacheSize_;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> cacheSizeBuilder_;
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             * @return Whether the cacheSize field is set.
+             */
+            public boolean hasCacheSize() {
+              return cacheSizeBuilder_ != null || cacheSize_ != null;
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             * @return The cacheSize.
+             */
+            public com.google.protobuf.DoubleValue getCacheSize() {
+              if (cacheSizeBuilder_ == null) {
+                return cacheSize_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : cacheSize_;
+              } else {
+                return cacheSizeBuilder_.getMessage();
+              }
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public Builder setCacheSize(com.google.protobuf.DoubleValue value) {
+              if (cacheSizeBuilder_ == null) {
+                if (value == null) {
+                  throw new NullPointerException();
+                }
+                cacheSize_ = value;
+                onChanged();
+              } else {
+                cacheSizeBuilder_.setMessage(value);
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public Builder setCacheSize(
+                com.google.protobuf.DoubleValue.Builder builderForValue) {
+              if (cacheSizeBuilder_ == null) {
+                cacheSize_ = builderForValue.build();
+                onChanged();
+              } else {
+                cacheSizeBuilder_.setMessage(builderForValue.build());
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public Builder mergeCacheSize(com.google.protobuf.DoubleValue value) {
+              if (cacheSizeBuilder_ == null) {
+                if (cacheSize_ != null) {
+                  cacheSize_ =
+                    com.google.protobuf.DoubleValue.newBuilder(cacheSize_).mergeFrom(value).buildPartial();
+                } else {
+                  cacheSize_ = value;
+                }
+                onChanged();
+              } else {
+                cacheSizeBuilder_.mergeFrom(value);
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public Builder clearCacheSize() {
+              if (cacheSizeBuilder_ == null) {
+                cacheSize_ = null;
+                onChanged();
+              } else {
+                cacheSize_ = null;
+                cacheSizeBuilder_ = null;
+              }
+
+              return this;
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public com.google.protobuf.DoubleValue.Builder getCacheSizeBuilder() {
+              
+              onChanged();
+              return getCacheSizeFieldBuilder().getBuilder();
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            public com.google.protobuf.DoubleValueOrBuilder getCacheSizeOrBuilder() {
+              if (cacheSizeBuilder_ != null) {
+                return cacheSizeBuilder_.getMessageOrBuilder();
+              } else {
+                return cacheSize_ == null ?
+                    com.google.protobuf.DoubleValue.getDefaultInstance() : cacheSize_;
+              }
+            }
+            /**
+             * <pre>
+             * The maximum size of the internal cache that WiredTiger will use for all data in percents.
+             * </pre>
+             *
+             * <code>.google.protobuf.DoubleValue cache_size = 2;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+                getCacheSizeFieldBuilder() {
+              if (cacheSizeBuilder_ == null) {
+                cacheSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                    com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                        getCacheSize(),
+                        getParentForChildren(),
+                        isClean());
+                cacheSize_ = null;
+              }
+              return cacheSizeBuilder_;
             }
             @java.lang.Override
             public final Builder setUnknownFields(
@@ -22631,6 +27715,950 @@ public final class Mongodb {
 
     }
 
+    public interface OplogOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       * @return Whether the maxSizePercent field is set.
+       */
+      boolean hasMaxSizePercent();
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       * @return The maxSizePercent.
+       */
+      com.google.protobuf.Int64Value getMaxSizePercent();
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMaxSizePercentOrBuilder();
+
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       * @return Whether the minRetentionHours field is set.
+       */
+      boolean hasMinRetentionHours();
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       * @return The minRetentionHours.
+       */
+      com.google.protobuf.DoubleValue getMinRetentionHours();
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       */
+      com.google.protobuf.DoubleValueOrBuilder getMinRetentionHoursOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog}
+     */
+    public static final class Oplog extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog)
+        OplogOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Oplog.newBuilder() to construct.
+      private Oplog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Oplog() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Oplog();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Oplog(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (maxSizePercent_ != null) {
+                  subBuilder = maxSizePercent_.toBuilder();
+                }
+                maxSizePercent_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(maxSizePercent_);
+                  maxSizePercent_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                com.google.protobuf.DoubleValue.Builder subBuilder = null;
+                if (minRetentionHours_ != null) {
+                  subBuilder = minRetentionHours_.toBuilder();
+                }
+                minRetentionHours_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(minRetentionHours_);
+                  minRetentionHours_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Oplog_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Oplog_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.Builder.class);
+      }
+
+      public static final int MAX_SIZE_PERCENT_FIELD_NUMBER = 1;
+      private com.google.protobuf.Int64Value maxSizePercent_;
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       * @return Whether the maxSizePercent field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxSizePercent() {
+        return maxSizePercent_ != null;
+      }
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       * @return The maxSizePercent.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMaxSizePercent() {
+        return maxSizePercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxSizePercent_;
+      }
+      /**
+       * <pre>
+       * Oplog maxsize in percents.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMaxSizePercentOrBuilder() {
+        return getMaxSizePercent();
+      }
+
+      public static final int MIN_RETENTION_HOURS_FIELD_NUMBER = 2;
+      private com.google.protobuf.DoubleValue minRetentionHours_;
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       * @return Whether the minRetentionHours field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinRetentionHours() {
+        return minRetentionHours_ != null;
+      }
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       * @return The minRetentionHours.
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValue getMinRetentionHours() {
+        return minRetentionHours_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : minRetentionHours_;
+      }
+      /**
+       * <pre>
+       * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValueOrBuilder getMinRetentionHoursOrBuilder() {
+        return getMinRetentionHours();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (maxSizePercent_ != null) {
+          output.writeMessage(1, getMaxSizePercent());
+        }
+        if (minRetentionHours_ != null) {
+          output.writeMessage(2, getMinRetentionHours());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (maxSizePercent_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getMaxSizePercent());
+        }
+        if (minRetentionHours_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getMinRetentionHours());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog) obj;
+
+        if (hasMaxSizePercent() != other.hasMaxSizePercent()) return false;
+        if (hasMaxSizePercent()) {
+          if (!getMaxSizePercent()
+              .equals(other.getMaxSizePercent())) return false;
+        }
+        if (hasMinRetentionHours() != other.hasMinRetentionHours()) return false;
+        if (hasMinRetentionHours()) {
+          if (!getMinRetentionHours()
+              .equals(other.getMinRetentionHours())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasMaxSizePercent()) {
+          hash = (37 * hash) + MAX_SIZE_PERCENT_FIELD_NUMBER;
+          hash = (53 * hash) + getMaxSizePercent().hashCode();
+        }
+        if (hasMinRetentionHours()) {
+          hash = (37 * hash) + MIN_RETENTION_HOURS_FIELD_NUMBER;
+          hash = (53 * hash) + getMinRetentionHours().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog)
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.OplogOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Oplog_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Oplog_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (maxSizePercentBuilder_ == null) {
+            maxSizePercent_ = null;
+          } else {
+            maxSizePercent_ = null;
+            maxSizePercentBuilder_ = null;
+          }
+          if (minRetentionHoursBuilder_ == null) {
+            minRetentionHours_ = null;
+          } else {
+            minRetentionHours_ = null;
+            minRetentionHoursBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Oplog_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog build() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog(this);
+          if (maxSizePercentBuilder_ == null) {
+            result.maxSizePercent_ = maxSizePercent_;
+          } else {
+            result.maxSizePercent_ = maxSizePercentBuilder_.build();
+          }
+          if (minRetentionHoursBuilder_ == null) {
+            result.minRetentionHours_ = minRetentionHours_;
+          } else {
+            result.minRetentionHours_ = minRetentionHoursBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.getDefaultInstance()) return this;
+          if (other.hasMaxSizePercent()) {
+            mergeMaxSizePercent(other.getMaxSizePercent());
+          }
+          if (other.hasMinRetentionHours()) {
+            mergeMinRetentionHours(other.getMinRetentionHours());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.Int64Value maxSizePercent_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxSizePercentBuilder_;
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         * @return Whether the maxSizePercent field is set.
+         */
+        public boolean hasMaxSizePercent() {
+          return maxSizePercentBuilder_ != null || maxSizePercent_ != null;
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         * @return The maxSizePercent.
+         */
+        public com.google.protobuf.Int64Value getMaxSizePercent() {
+          if (maxSizePercentBuilder_ == null) {
+            return maxSizePercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxSizePercent_;
+          } else {
+            return maxSizePercentBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public Builder setMaxSizePercent(com.google.protobuf.Int64Value value) {
+          if (maxSizePercentBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            maxSizePercent_ = value;
+            onChanged();
+          } else {
+            maxSizePercentBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public Builder setMaxSizePercent(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (maxSizePercentBuilder_ == null) {
+            maxSizePercent_ = builderForValue.build();
+            onChanged();
+          } else {
+            maxSizePercentBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public Builder mergeMaxSizePercent(com.google.protobuf.Int64Value value) {
+          if (maxSizePercentBuilder_ == null) {
+            if (maxSizePercent_ != null) {
+              maxSizePercent_ =
+                com.google.protobuf.Int64Value.newBuilder(maxSizePercent_).mergeFrom(value).buildPartial();
+            } else {
+              maxSizePercent_ = value;
+            }
+            onChanged();
+          } else {
+            maxSizePercentBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public Builder clearMaxSizePercent() {
+          if (maxSizePercentBuilder_ == null) {
+            maxSizePercent_ = null;
+            onChanged();
+          } else {
+            maxSizePercent_ = null;
+            maxSizePercentBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMaxSizePercentBuilder() {
+          
+          onChanged();
+          return getMaxSizePercentFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMaxSizePercentOrBuilder() {
+          if (maxSizePercentBuilder_ != null) {
+            return maxSizePercentBuilder_.getMessageOrBuilder();
+          } else {
+            return maxSizePercent_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : maxSizePercent_;
+          }
+        }
+        /**
+         * <pre>
+         * Oplog maxsize in percents.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_size_percent = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMaxSizePercentFieldBuilder() {
+          if (maxSizePercentBuilder_ == null) {
+            maxSizePercentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMaxSizePercent(),
+                    getParentForChildren(),
+                    isClean());
+            maxSizePercent_ = null;
+          }
+          return maxSizePercentBuilder_;
+        }
+
+        private com.google.protobuf.DoubleValue minRetentionHours_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> minRetentionHoursBuilder_;
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         * @return Whether the minRetentionHours field is set.
+         */
+        public boolean hasMinRetentionHours() {
+          return minRetentionHoursBuilder_ != null || minRetentionHours_ != null;
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         * @return The minRetentionHours.
+         */
+        public com.google.protobuf.DoubleValue getMinRetentionHours() {
+          if (minRetentionHoursBuilder_ == null) {
+            return minRetentionHours_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : minRetentionHours_;
+          } else {
+            return minRetentionHoursBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public Builder setMinRetentionHours(com.google.protobuf.DoubleValue value) {
+          if (minRetentionHoursBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            minRetentionHours_ = value;
+            onChanged();
+          } else {
+            minRetentionHoursBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public Builder setMinRetentionHours(
+            com.google.protobuf.DoubleValue.Builder builderForValue) {
+          if (minRetentionHoursBuilder_ == null) {
+            minRetentionHours_ = builderForValue.build();
+            onChanged();
+          } else {
+            minRetentionHoursBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public Builder mergeMinRetentionHours(com.google.protobuf.DoubleValue value) {
+          if (minRetentionHoursBuilder_ == null) {
+            if (minRetentionHours_ != null) {
+              minRetentionHours_ =
+                com.google.protobuf.DoubleValue.newBuilder(minRetentionHours_).mergeFrom(value).buildPartial();
+            } else {
+              minRetentionHours_ = value;
+            }
+            onChanged();
+          } else {
+            minRetentionHoursBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public Builder clearMinRetentionHours() {
+          if (minRetentionHoursBuilder_ == null) {
+            minRetentionHours_ = null;
+            onChanged();
+          } else {
+            minRetentionHours_ = null;
+            minRetentionHoursBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public com.google.protobuf.DoubleValue.Builder getMinRetentionHoursBuilder() {
+          
+          onChanged();
+          return getMinRetentionHoursFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        public com.google.protobuf.DoubleValueOrBuilder getMinRetentionHoursOrBuilder() {
+          if (minRetentionHoursBuilder_ != null) {
+            return minRetentionHoursBuilder_.getMessageOrBuilder();
+          } else {
+            return minRetentionHours_ == null ?
+                com.google.protobuf.DoubleValue.getDefaultInstance() : minRetentionHours_;
+          }
+        }
+        /**
+         * <pre>
+         * The minimum number of hours to preserve an oplog entry, where decimal values represent the fractions of an hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue min_retention_hours = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+            getMinRetentionHoursFieldBuilder() {
+          if (minRetentionHoursBuilder_ == null) {
+            minRetentionHoursBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                    getMinRetentionHours(),
+                    getParentForChildren(),
+                    isClean());
+            minRetentionHours_ = null;
+          }
+          return minRetentionHoursBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog)
+      private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Oplog>
+          PARSER = new com.google.protobuf.AbstractParser<Oplog>() {
+        @java.lang.Override
+        public Oplog parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Oplog(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Oplog> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Oplog> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int STORAGE_FIELD_NUMBER = 1;
     private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Storage storage_;
     /**
@@ -22821,6 +28849,44 @@ public final class Mongodb {
       return getAuditLog();
     }
 
+    public static final int OPLOG_FIELD_NUMBER = 6;
+    private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog oplog_;
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+     * @return Whether the oplog field is set.
+     */
+    @java.lang.Override
+    public boolean hasOplog() {
+      return oplog_ != null;
+    }
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+     * @return The oplog.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog getOplog() {
+      return oplog_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.getDefaultInstance() : oplog_;
+    }
+    /**
+     * <pre>
+     * `Oplog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.OplogOrBuilder getOplogOrBuilder() {
+      return getOplog();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -22850,6 +28916,9 @@ public final class Mongodb {
       if (auditLog_ != null) {
         output.writeMessage(5, getAuditLog());
       }
+      if (oplog_ != null) {
+        output.writeMessage(6, getOplog());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -22878,6 +28947,10 @@ public final class Mongodb {
       if (auditLog_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getAuditLog());
+      }
+      if (oplog_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getOplog());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -22919,6 +28992,11 @@ public final class Mongodb {
         if (!getAuditLog()
             .equals(other.getAuditLog())) return false;
       }
+      if (hasOplog() != other.hasOplog()) return false;
+      if (hasOplog()) {
+        if (!getOplog()
+            .equals(other.getOplog())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -22949,6 +29027,10 @@ public final class Mongodb {
       if (hasAuditLog()) {
         hash = (37 * hash) + AUDIT_LOG_FIELD_NUMBER;
         hash = (53 * hash) + getAuditLog().hashCode();
+      }
+      if (hasOplog()) {
+        hash = (37 * hash) + OPLOG_FIELD_NUMBER;
+        hash = (53 * hash) + getOplog().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -23113,6 +29195,12 @@ public final class Mongodb {
           auditLog_ = null;
           auditLogBuilder_ = null;
         }
+        if (oplogBuilder_ == null) {
+          oplog_ = null;
+        } else {
+          oplog_ = null;
+          oplogBuilder_ = null;
+        }
         return this;
       }
 
@@ -23163,6 +29251,11 @@ public final class Mongodb {
           result.auditLog_ = auditLog_;
         } else {
           result.auditLog_ = auditLogBuilder_.build();
+        }
+        if (oplogBuilder_ == null) {
+          result.oplog_ = oplog_;
+        } else {
+          result.oplog_ = oplogBuilder_.build();
         }
         onBuilt();
         return result;
@@ -23226,6 +29319,9 @@ public final class Mongodb {
         }
         if (other.hasAuditLog()) {
           mergeAuditLog(other.getAuditLog());
+        }
+        if (other.hasOplog()) {
+          mergeOplog(other.getOplog());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -24030,6 +30126,161 @@ public final class Mongodb {
         }
         return auditLogBuilder_;
       }
+
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog oplog_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.OplogOrBuilder> oplogBuilder_;
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+       * @return Whether the oplog field is set.
+       */
+      public boolean hasOplog() {
+        return oplogBuilder_ != null || oplog_ != null;
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+       * @return The oplog.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog getOplog() {
+        if (oplogBuilder_ == null) {
+          return oplog_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.getDefaultInstance() : oplog_;
+        } else {
+          return oplogBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+       */
+      public Builder setOplog(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog value) {
+        if (oplogBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oplog_ = value;
+          onChanged();
+        } else {
+          oplogBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+       */
+      public Builder setOplog(
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.Builder builderForValue) {
+        if (oplogBuilder_ == null) {
+          oplog_ = builderForValue.build();
+          onChanged();
+        } else {
+          oplogBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+       */
+      public Builder mergeOplog(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog value) {
+        if (oplogBuilder_ == null) {
+          if (oplog_ != null) {
+            oplog_ =
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.newBuilder(oplog_).mergeFrom(value).buildPartial();
+          } else {
+            oplog_ = value;
+          }
+          onChanged();
+        } else {
+          oplogBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+       */
+      public Builder clearOplog() {
+        if (oplogBuilder_ == null) {
+          oplog_ = null;
+          onChanged();
+        } else {
+          oplog_ = null;
+          oplogBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.Builder getOplogBuilder() {
+        
+        onChanged();
+        return getOplogFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.OplogOrBuilder getOplogOrBuilder() {
+        if (oplogBuilder_ != null) {
+          return oplogBuilder_.getMessageOrBuilder();
+        } else {
+          return oplog_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.getDefaultInstance() : oplog_;
+        }
+      }
+      /**
+       * <pre>
+       * `Oplog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.Oplog oplog = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.OplogOrBuilder> 
+          getOplogFieldBuilder() {
+        if (oplogBuilder_ == null) {
+          oplogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.Oplog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongoCfgConfig.OplogOrBuilder>(
+                  getOplog(),
+                  getParentForChildren(),
+                  isClean());
+          oplog_ = null;
+        }
+        return oplogBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -24167,6 +30418,33 @@ public final class Mongodb {
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig.AuditLog audit_log = 5;</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.AuditLogOrBuilder getAuditLogOrBuilder();
+
+    /**
+     * <pre>
+     * `ChunkSize` parameter of mongos configuration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+     * @return Whether the chunkSize field is set.
+     */
+    boolean hasChunkSize();
+    /**
+     * <pre>
+     * `ChunkSize` parameter of mongos configuration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+     * @return The chunkSize.
+     */
+    com.google.protobuf.Int64Value getChunkSize();
+    /**
+     * <pre>
+     * `ChunkSize` parameter of mongos configuration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getChunkSizeOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongosConfig}
@@ -24248,6 +30526,19 @@ public final class Mongodb {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(auditLog_);
                 auditLog_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (chunkSize_ != null) {
+                subBuilder = chunkSize_.toBuilder();
+              }
+              chunkSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(chunkSize_);
+                chunkSize_ = subBuilder.buildPartial();
               }
 
               break;
@@ -26321,6 +32612,330 @@ public final class Mongodb {
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
        */
       com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder();
+
+      /**
+       * <pre>
+       * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+       * @return Whether the readHedgingMode field is set.
+       */
+      boolean hasReadHedgingMode();
+      /**
+       * <pre>
+       * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+       * @return The readHedgingMode.
+       */
+      com.google.protobuf.StringValue getReadHedgingMode();
+      /**
+       * <pre>
+       * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+       */
+      com.google.protobuf.StringValueOrBuilder getReadHedgingModeOrBuilder();
+
+      /**
+       * <pre>
+       *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+       * @return Whether the shardingTaskExecutorPoolMaxSize field is set.
+       */
+      boolean hasShardingTaskExecutorPoolMaxSize();
+      /**
+       * <pre>
+       *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+       * @return The shardingTaskExecutorPoolMaxSize.
+       */
+      com.google.protobuf.Int64Value getShardingTaskExecutorPoolMaxSize();
+      /**
+       * <pre>
+       *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMaxSizeOrBuilder();
+
+      /**
+       * <pre>
+       * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+       * @return Whether the shardingTaskExecutorPoolMaxConnecting field is set.
+       */
+      boolean hasShardingTaskExecutorPoolMaxConnecting();
+      /**
+       * <pre>
+       * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+       * @return The shardingTaskExecutorPoolMaxConnecting.
+       */
+      com.google.protobuf.Int64Value getShardingTaskExecutorPoolMaxConnecting();
+      /**
+       * <pre>
+       * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMaxConnectingOrBuilder();
+
+      /**
+       * <pre>
+       * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+       * @return Whether the shardingTaskExecutorPoolMinSize field is set.
+       */
+      boolean hasShardingTaskExecutorPoolMinSize();
+      /**
+       * <pre>
+       * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+       * @return The shardingTaskExecutorPoolMinSize.
+       */
+      com.google.protobuf.Int64Value getShardingTaskExecutorPoolMinSize();
+      /**
+       * <pre>
+       * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMinSizeOrBuilder();
+
+      /**
+       * <pre>
+       * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+       * @return Whether the shardingTaskExecutorPoolReplicaSetMatching field is set.
+       */
+      boolean hasShardingTaskExecutorPoolReplicaSetMatching();
+      /**
+       * <pre>
+       * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+       * @return The shardingTaskExecutorPoolReplicaSetMatching.
+       */
+      com.google.protobuf.StringValue getShardingTaskExecutorPoolReplicaSetMatching();
+      /**
+       * <pre>
+       * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+       */
+      com.google.protobuf.StringValueOrBuilder getShardingTaskExecutorPoolReplicaSetMatchingOrBuilder();
+
+      /**
+       * <pre>
+       * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+       * @return Whether the shardingTaskExecutorPoolHostTimeoutMs field is set.
+       */
+      boolean hasShardingTaskExecutorPoolHostTimeoutMs();
+      /**
+       * <pre>
+       * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+       * @return The shardingTaskExecutorPoolHostTimeoutMs.
+       */
+      com.google.protobuf.Int64Value getShardingTaskExecutorPoolHostTimeoutMs();
+      /**
+       * <pre>
+       * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolHostTimeoutMsOrBuilder();
+
+      /**
+       * <pre>
+       * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+       * @return Whether the shardingTaskExecutorPoolRefreshRequirementMs field is set.
+       */
+      boolean hasShardingTaskExecutorPoolRefreshRequirementMs();
+      /**
+       * <pre>
+       * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+       * @return The shardingTaskExecutorPoolRefreshRequirementMs.
+       */
+      com.google.protobuf.Int64Value getShardingTaskExecutorPoolRefreshRequirementMs();
+      /**
+       * <pre>
+       * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolRefreshRequirementMsOrBuilder();
+
+      /**
+       * <pre>
+       * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+       * @return Whether the shardingTaskExecutorPoolRefreshTimeoutMs field is set.
+       */
+      boolean hasShardingTaskExecutorPoolRefreshTimeoutMs();
+      /**
+       * <pre>
+       * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+       * @return The shardingTaskExecutorPoolRefreshTimeoutMs.
+       */
+      com.google.protobuf.Int64Value getShardingTaskExecutorPoolRefreshTimeoutMs();
+      /**
+       * <pre>
+       * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolRefreshTimeoutMsOrBuilder();
+
+      /**
+       * <pre>
+       * Configures a mongos instance to prewarm its connection pool on startup.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+       * @return Whether the warmMinConnectionsInShardingTaskExecutorPoolOnStartup field is set.
+       */
+      boolean hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartup();
+      /**
+       * <pre>
+       * Configures a mongos instance to prewarm its connection pool on startup.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+       * @return The warmMinConnectionsInShardingTaskExecutorPoolOnStartup.
+       */
+      com.google.protobuf.BoolValue getWarmMinConnectionsInShardingTaskExecutorPoolOnStartup();
+      /**
+       * <pre>
+       * Configures a mongos instance to prewarm its connection pool on startup.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupOrBuilder();
+
+      /**
+       * <pre>
+       * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+       * @return Whether the warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs field is set.
+       */
+      boolean hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs();
+      /**
+       * <pre>
+       * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+       * @return The warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs.
+       */
+      com.google.protobuf.Int64Value getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs();
+      /**
+       * <pre>
+       * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsOrBuilder();
+
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+       * @return Whether the shardingTaskExecutorPoolMaxSizeForConfigServers field is set.
+       */
+      boolean hasShardingTaskExecutorPoolMaxSizeForConfigServers();
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+       * @return The shardingTaskExecutorPoolMaxSizeForConfigServers.
+       */
+      com.google.protobuf.Int64Value getShardingTaskExecutorPoolMaxSizeForConfigServers();
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMaxSizeForConfigServersOrBuilder();
+
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+       * @return Whether the shardingTaskExecutorPoolMinSizeForConfigServers field is set.
+       */
+      boolean hasShardingTaskExecutorPoolMinSizeForConfigServers();
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+       * @return The shardingTaskExecutorPoolMinSizeForConfigServers.
+       */
+      com.google.protobuf.Int64Value getShardingTaskExecutorPoolMinSizeForConfigServers();
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMinSizeForConfigServersOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter}
@@ -26376,6 +32991,162 @@ public final class Mongodb {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(auditAuthorizationSuccess_);
                   auditAuthorizationSuccess_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                com.google.protobuf.StringValue.Builder subBuilder = null;
+                if (readHedgingMode_ != null) {
+                  subBuilder = readHedgingMode_.toBuilder();
+                }
+                readHedgingMode_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(readHedgingMode_);
+                  readHedgingMode_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (shardingTaskExecutorPoolMaxSize_ != null) {
+                  subBuilder = shardingTaskExecutorPoolMaxSize_.toBuilder();
+                }
+                shardingTaskExecutorPoolMaxSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(shardingTaskExecutorPoolMaxSize_);
+                  shardingTaskExecutorPoolMaxSize_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (shardingTaskExecutorPoolMaxConnecting_ != null) {
+                  subBuilder = shardingTaskExecutorPoolMaxConnecting_.toBuilder();
+                }
+                shardingTaskExecutorPoolMaxConnecting_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(shardingTaskExecutorPoolMaxConnecting_);
+                  shardingTaskExecutorPoolMaxConnecting_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 42: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (shardingTaskExecutorPoolMinSize_ != null) {
+                  subBuilder = shardingTaskExecutorPoolMinSize_.toBuilder();
+                }
+                shardingTaskExecutorPoolMinSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(shardingTaskExecutorPoolMinSize_);
+                  shardingTaskExecutorPoolMinSize_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 50: {
+                com.google.protobuf.StringValue.Builder subBuilder = null;
+                if (shardingTaskExecutorPoolReplicaSetMatching_ != null) {
+                  subBuilder = shardingTaskExecutorPoolReplicaSetMatching_.toBuilder();
+                }
+                shardingTaskExecutorPoolReplicaSetMatching_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(shardingTaskExecutorPoolReplicaSetMatching_);
+                  shardingTaskExecutorPoolReplicaSetMatching_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 58: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (shardingTaskExecutorPoolHostTimeoutMs_ != null) {
+                  subBuilder = shardingTaskExecutorPoolHostTimeoutMs_.toBuilder();
+                }
+                shardingTaskExecutorPoolHostTimeoutMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(shardingTaskExecutorPoolHostTimeoutMs_);
+                  shardingTaskExecutorPoolHostTimeoutMs_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 66: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (shardingTaskExecutorPoolRefreshRequirementMs_ != null) {
+                  subBuilder = shardingTaskExecutorPoolRefreshRequirementMs_.toBuilder();
+                }
+                shardingTaskExecutorPoolRefreshRequirementMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(shardingTaskExecutorPoolRefreshRequirementMs_);
+                  shardingTaskExecutorPoolRefreshRequirementMs_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 74: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (shardingTaskExecutorPoolRefreshTimeoutMs_ != null) {
+                  subBuilder = shardingTaskExecutorPoolRefreshTimeoutMs_.toBuilder();
+                }
+                shardingTaskExecutorPoolRefreshTimeoutMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(shardingTaskExecutorPoolRefreshTimeoutMs_);
+                  shardingTaskExecutorPoolRefreshTimeoutMs_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 82: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ != null) {
+                  subBuilder = warmMinConnectionsInShardingTaskExecutorPoolOnStartup_.toBuilder();
+                }
+                warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(warmMinConnectionsInShardingTaskExecutorPoolOnStartup_);
+                  warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 90: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ != null) {
+                  subBuilder = warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_.toBuilder();
+                }
+                warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_);
+                  warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 98: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (shardingTaskExecutorPoolMaxSizeForConfigServers_ != null) {
+                  subBuilder = shardingTaskExecutorPoolMaxSizeForConfigServers_.toBuilder();
+                }
+                shardingTaskExecutorPoolMaxSizeForConfigServers_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(shardingTaskExecutorPoolMaxSizeForConfigServers_);
+                  shardingTaskExecutorPoolMaxSizeForConfigServers_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 106: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (shardingTaskExecutorPoolMinSizeForConfigServers_ != null) {
+                  subBuilder = shardingTaskExecutorPoolMinSizeForConfigServers_.toBuilder();
+                }
+                shardingTaskExecutorPoolMinSizeForConfigServers_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(shardingTaskExecutorPoolMinSizeForConfigServers_);
+                  shardingTaskExecutorPoolMinSizeForConfigServers_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -26453,6 +33224,462 @@ public final class Mongodb {
         return getAuditAuthorizationSuccess();
       }
 
+      public static final int READ_HEDGING_MODE_FIELD_NUMBER = 2;
+      private com.google.protobuf.StringValue readHedgingMode_;
+      /**
+       * <pre>
+       * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+       * @return Whether the readHedgingMode field is set.
+       */
+      @java.lang.Override
+      public boolean hasReadHedgingMode() {
+        return readHedgingMode_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+       * @return The readHedgingMode.
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getReadHedgingMode() {
+        return readHedgingMode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : readHedgingMode_;
+      }
+      /**
+       * <pre>
+       * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValueOrBuilder getReadHedgingModeOrBuilder() {
+        return getReadHedgingMode();
+      }
+
+      public static final int SHARDING_TASK_EXECUTOR_POOL_MAX_SIZE_FIELD_NUMBER = 3;
+      private com.google.protobuf.Int64Value shardingTaskExecutorPoolMaxSize_;
+      /**
+       * <pre>
+       *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+       * @return Whether the shardingTaskExecutorPoolMaxSize field is set.
+       */
+      @java.lang.Override
+      public boolean hasShardingTaskExecutorPoolMaxSize() {
+        return shardingTaskExecutorPoolMaxSize_ != null;
+      }
+      /**
+       * <pre>
+       *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+       * @return The shardingTaskExecutorPoolMaxSize.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getShardingTaskExecutorPoolMaxSize() {
+        return shardingTaskExecutorPoolMaxSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMaxSize_;
+      }
+      /**
+       * <pre>
+       *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMaxSizeOrBuilder() {
+        return getShardingTaskExecutorPoolMaxSize();
+      }
+
+      public static final int SHARDING_TASK_EXECUTOR_POOL_MAX_CONNECTING_FIELD_NUMBER = 4;
+      private com.google.protobuf.Int64Value shardingTaskExecutorPoolMaxConnecting_;
+      /**
+       * <pre>
+       * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+       * @return Whether the shardingTaskExecutorPoolMaxConnecting field is set.
+       */
+      @java.lang.Override
+      public boolean hasShardingTaskExecutorPoolMaxConnecting() {
+        return shardingTaskExecutorPoolMaxConnecting_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+       * @return The shardingTaskExecutorPoolMaxConnecting.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getShardingTaskExecutorPoolMaxConnecting() {
+        return shardingTaskExecutorPoolMaxConnecting_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMaxConnecting_;
+      }
+      /**
+       * <pre>
+       * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMaxConnectingOrBuilder() {
+        return getShardingTaskExecutorPoolMaxConnecting();
+      }
+
+      public static final int SHARDING_TASK_EXECUTOR_POOL_MIN_SIZE_FIELD_NUMBER = 5;
+      private com.google.protobuf.Int64Value shardingTaskExecutorPoolMinSize_;
+      /**
+       * <pre>
+       * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+       * @return Whether the shardingTaskExecutorPoolMinSize field is set.
+       */
+      @java.lang.Override
+      public boolean hasShardingTaskExecutorPoolMinSize() {
+        return shardingTaskExecutorPoolMinSize_ != null;
+      }
+      /**
+       * <pre>
+       * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+       * @return The shardingTaskExecutorPoolMinSize.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getShardingTaskExecutorPoolMinSize() {
+        return shardingTaskExecutorPoolMinSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMinSize_;
+      }
+      /**
+       * <pre>
+       * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMinSizeOrBuilder() {
+        return getShardingTaskExecutorPoolMinSize();
+      }
+
+      public static final int SHARDING_TASK_EXECUTOR_POOL_REPLICA_SET_MATCHING_FIELD_NUMBER = 6;
+      private com.google.protobuf.StringValue shardingTaskExecutorPoolReplicaSetMatching_;
+      /**
+       * <pre>
+       * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+       * @return Whether the shardingTaskExecutorPoolReplicaSetMatching field is set.
+       */
+      @java.lang.Override
+      public boolean hasShardingTaskExecutorPoolReplicaSetMatching() {
+        return shardingTaskExecutorPoolReplicaSetMatching_ != null;
+      }
+      /**
+       * <pre>
+       * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+       * @return The shardingTaskExecutorPoolReplicaSetMatching.
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getShardingTaskExecutorPoolReplicaSetMatching() {
+        return shardingTaskExecutorPoolReplicaSetMatching_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : shardingTaskExecutorPoolReplicaSetMatching_;
+      }
+      /**
+       * <pre>
+       * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValueOrBuilder getShardingTaskExecutorPoolReplicaSetMatchingOrBuilder() {
+        return getShardingTaskExecutorPoolReplicaSetMatching();
+      }
+
+      public static final int SHARDING_TASK_EXECUTOR_POOL_HOST_TIMEOUT_MS_FIELD_NUMBER = 7;
+      private com.google.protobuf.Int64Value shardingTaskExecutorPoolHostTimeoutMs_;
+      /**
+       * <pre>
+       * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+       * @return Whether the shardingTaskExecutorPoolHostTimeoutMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasShardingTaskExecutorPoolHostTimeoutMs() {
+        return shardingTaskExecutorPoolHostTimeoutMs_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+       * @return The shardingTaskExecutorPoolHostTimeoutMs.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getShardingTaskExecutorPoolHostTimeoutMs() {
+        return shardingTaskExecutorPoolHostTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolHostTimeoutMs_;
+      }
+      /**
+       * <pre>
+       * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolHostTimeoutMsOrBuilder() {
+        return getShardingTaskExecutorPoolHostTimeoutMs();
+      }
+
+      public static final int SHARDING_TASK_EXECUTOR_POOL_REFRESH_REQUIREMENT_MS_FIELD_NUMBER = 8;
+      private com.google.protobuf.Int64Value shardingTaskExecutorPoolRefreshRequirementMs_;
+      /**
+       * <pre>
+       * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+       * @return Whether the shardingTaskExecutorPoolRefreshRequirementMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasShardingTaskExecutorPoolRefreshRequirementMs() {
+        return shardingTaskExecutorPoolRefreshRequirementMs_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+       * @return The shardingTaskExecutorPoolRefreshRequirementMs.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getShardingTaskExecutorPoolRefreshRequirementMs() {
+        return shardingTaskExecutorPoolRefreshRequirementMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolRefreshRequirementMs_;
+      }
+      /**
+       * <pre>
+       * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolRefreshRequirementMsOrBuilder() {
+        return getShardingTaskExecutorPoolRefreshRequirementMs();
+      }
+
+      public static final int SHARDING_TASK_EXECUTOR_POOL_REFRESH_TIMEOUT_MS_FIELD_NUMBER = 9;
+      private com.google.protobuf.Int64Value shardingTaskExecutorPoolRefreshTimeoutMs_;
+      /**
+       * <pre>
+       * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+       * @return Whether the shardingTaskExecutorPoolRefreshTimeoutMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasShardingTaskExecutorPoolRefreshTimeoutMs() {
+        return shardingTaskExecutorPoolRefreshTimeoutMs_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+       * @return The shardingTaskExecutorPoolRefreshTimeoutMs.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getShardingTaskExecutorPoolRefreshTimeoutMs() {
+        return shardingTaskExecutorPoolRefreshTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolRefreshTimeoutMs_;
+      }
+      /**
+       * <pre>
+       * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolRefreshTimeoutMsOrBuilder() {
+        return getShardingTaskExecutorPoolRefreshTimeoutMs();
+      }
+
+      public static final int WARM_MIN_CONNECTIONS_IN_SHARDING_TASK_EXECUTOR_POOL_ON_STARTUP_FIELD_NUMBER = 10;
+      private com.google.protobuf.BoolValue warmMinConnectionsInShardingTaskExecutorPoolOnStartup_;
+      /**
+       * <pre>
+       * Configures a mongos instance to prewarm its connection pool on startup.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+       * @return Whether the warmMinConnectionsInShardingTaskExecutorPoolOnStartup field is set.
+       */
+      @java.lang.Override
+      public boolean hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartup() {
+        return warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ != null;
+      }
+      /**
+       * <pre>
+       * Configures a mongos instance to prewarm its connection pool on startup.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+       * @return The warmMinConnectionsInShardingTaskExecutorPoolOnStartup.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getWarmMinConnectionsInShardingTaskExecutorPoolOnStartup() {
+        return warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : warmMinConnectionsInShardingTaskExecutorPoolOnStartup_;
+      }
+      /**
+       * <pre>
+       * Configures a mongos instance to prewarm its connection pool on startup.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupOrBuilder() {
+        return getWarmMinConnectionsInShardingTaskExecutorPoolOnStartup();
+      }
+
+      public static final int WARM_MIN_CONNECTIONS_IN_SHARDING_TASK_EXECUTOR_POOL_ON_STARTUP_WAIT_MS_FIELD_NUMBER = 11;
+      private com.google.protobuf.Int64Value warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_;
+      /**
+       * <pre>
+       * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+       * @return Whether the warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs() {
+        return warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+       * @return The warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs() {
+        return warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_;
+      }
+      /**
+       * <pre>
+       * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsOrBuilder() {
+        return getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs();
+      }
+
+      public static final int SHARDING_TASK_EXECUTOR_POOL_MAX_SIZE_FOR_CONFIG_SERVERS_FIELD_NUMBER = 12;
+      private com.google.protobuf.Int64Value shardingTaskExecutorPoolMaxSizeForConfigServers_;
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+       * @return Whether the shardingTaskExecutorPoolMaxSizeForConfigServers field is set.
+       */
+      @java.lang.Override
+      public boolean hasShardingTaskExecutorPoolMaxSizeForConfigServers() {
+        return shardingTaskExecutorPoolMaxSizeForConfigServers_ != null;
+      }
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+       * @return The shardingTaskExecutorPoolMaxSizeForConfigServers.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getShardingTaskExecutorPoolMaxSizeForConfigServers() {
+        return shardingTaskExecutorPoolMaxSizeForConfigServers_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMaxSizeForConfigServers_;
+      }
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMaxSizeForConfigServersOrBuilder() {
+        return getShardingTaskExecutorPoolMaxSizeForConfigServers();
+      }
+
+      public static final int SHARDING_TASK_EXECUTOR_POOL_MIN_SIZE_FOR_CONFIG_SERVERS_FIELD_NUMBER = 13;
+      private com.google.protobuf.Int64Value shardingTaskExecutorPoolMinSizeForConfigServers_;
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+       * @return Whether the shardingTaskExecutorPoolMinSizeForConfigServers field is set.
+       */
+      @java.lang.Override
+      public boolean hasShardingTaskExecutorPoolMinSizeForConfigServers() {
+        return shardingTaskExecutorPoolMinSizeForConfigServers_ != null;
+      }
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+       * @return The shardingTaskExecutorPoolMinSizeForConfigServers.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getShardingTaskExecutorPoolMinSizeForConfigServers() {
+        return shardingTaskExecutorPoolMinSizeForConfigServers_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMinSizeForConfigServers_;
+      }
+      /**
+       * <pre>
+       * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMinSizeForConfigServersOrBuilder() {
+        return getShardingTaskExecutorPoolMinSizeForConfigServers();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -26470,6 +33697,42 @@ public final class Mongodb {
         if (auditAuthorizationSuccess_ != null) {
           output.writeMessage(1, getAuditAuthorizationSuccess());
         }
+        if (readHedgingMode_ != null) {
+          output.writeMessage(2, getReadHedgingMode());
+        }
+        if (shardingTaskExecutorPoolMaxSize_ != null) {
+          output.writeMessage(3, getShardingTaskExecutorPoolMaxSize());
+        }
+        if (shardingTaskExecutorPoolMaxConnecting_ != null) {
+          output.writeMessage(4, getShardingTaskExecutorPoolMaxConnecting());
+        }
+        if (shardingTaskExecutorPoolMinSize_ != null) {
+          output.writeMessage(5, getShardingTaskExecutorPoolMinSize());
+        }
+        if (shardingTaskExecutorPoolReplicaSetMatching_ != null) {
+          output.writeMessage(6, getShardingTaskExecutorPoolReplicaSetMatching());
+        }
+        if (shardingTaskExecutorPoolHostTimeoutMs_ != null) {
+          output.writeMessage(7, getShardingTaskExecutorPoolHostTimeoutMs());
+        }
+        if (shardingTaskExecutorPoolRefreshRequirementMs_ != null) {
+          output.writeMessage(8, getShardingTaskExecutorPoolRefreshRequirementMs());
+        }
+        if (shardingTaskExecutorPoolRefreshTimeoutMs_ != null) {
+          output.writeMessage(9, getShardingTaskExecutorPoolRefreshTimeoutMs());
+        }
+        if (warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ != null) {
+          output.writeMessage(10, getWarmMinConnectionsInShardingTaskExecutorPoolOnStartup());
+        }
+        if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ != null) {
+          output.writeMessage(11, getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs());
+        }
+        if (shardingTaskExecutorPoolMaxSizeForConfigServers_ != null) {
+          output.writeMessage(12, getShardingTaskExecutorPoolMaxSizeForConfigServers());
+        }
+        if (shardingTaskExecutorPoolMinSizeForConfigServers_ != null) {
+          output.writeMessage(13, getShardingTaskExecutorPoolMinSizeForConfigServers());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -26482,6 +33745,54 @@ public final class Mongodb {
         if (auditAuthorizationSuccess_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getAuditAuthorizationSuccess());
+        }
+        if (readHedgingMode_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getReadHedgingMode());
+        }
+        if (shardingTaskExecutorPoolMaxSize_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getShardingTaskExecutorPoolMaxSize());
+        }
+        if (shardingTaskExecutorPoolMaxConnecting_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getShardingTaskExecutorPoolMaxConnecting());
+        }
+        if (shardingTaskExecutorPoolMinSize_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, getShardingTaskExecutorPoolMinSize());
+        }
+        if (shardingTaskExecutorPoolReplicaSetMatching_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, getShardingTaskExecutorPoolReplicaSetMatching());
+        }
+        if (shardingTaskExecutorPoolHostTimeoutMs_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, getShardingTaskExecutorPoolHostTimeoutMs());
+        }
+        if (shardingTaskExecutorPoolRefreshRequirementMs_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(8, getShardingTaskExecutorPoolRefreshRequirementMs());
+        }
+        if (shardingTaskExecutorPoolRefreshTimeoutMs_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(9, getShardingTaskExecutorPoolRefreshTimeoutMs());
+        }
+        if (warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(10, getWarmMinConnectionsInShardingTaskExecutorPoolOnStartup());
+        }
+        if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(11, getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs());
+        }
+        if (shardingTaskExecutorPoolMaxSizeForConfigServers_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(12, getShardingTaskExecutorPoolMaxSizeForConfigServers());
+        }
+        if (shardingTaskExecutorPoolMinSizeForConfigServers_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(13, getShardingTaskExecutorPoolMinSizeForConfigServers());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -26503,6 +33814,66 @@ public final class Mongodb {
           if (!getAuditAuthorizationSuccess()
               .equals(other.getAuditAuthorizationSuccess())) return false;
         }
+        if (hasReadHedgingMode() != other.hasReadHedgingMode()) return false;
+        if (hasReadHedgingMode()) {
+          if (!getReadHedgingMode()
+              .equals(other.getReadHedgingMode())) return false;
+        }
+        if (hasShardingTaskExecutorPoolMaxSize() != other.hasShardingTaskExecutorPoolMaxSize()) return false;
+        if (hasShardingTaskExecutorPoolMaxSize()) {
+          if (!getShardingTaskExecutorPoolMaxSize()
+              .equals(other.getShardingTaskExecutorPoolMaxSize())) return false;
+        }
+        if (hasShardingTaskExecutorPoolMaxConnecting() != other.hasShardingTaskExecutorPoolMaxConnecting()) return false;
+        if (hasShardingTaskExecutorPoolMaxConnecting()) {
+          if (!getShardingTaskExecutorPoolMaxConnecting()
+              .equals(other.getShardingTaskExecutorPoolMaxConnecting())) return false;
+        }
+        if (hasShardingTaskExecutorPoolMinSize() != other.hasShardingTaskExecutorPoolMinSize()) return false;
+        if (hasShardingTaskExecutorPoolMinSize()) {
+          if (!getShardingTaskExecutorPoolMinSize()
+              .equals(other.getShardingTaskExecutorPoolMinSize())) return false;
+        }
+        if (hasShardingTaskExecutorPoolReplicaSetMatching() != other.hasShardingTaskExecutorPoolReplicaSetMatching()) return false;
+        if (hasShardingTaskExecutorPoolReplicaSetMatching()) {
+          if (!getShardingTaskExecutorPoolReplicaSetMatching()
+              .equals(other.getShardingTaskExecutorPoolReplicaSetMatching())) return false;
+        }
+        if (hasShardingTaskExecutorPoolHostTimeoutMs() != other.hasShardingTaskExecutorPoolHostTimeoutMs()) return false;
+        if (hasShardingTaskExecutorPoolHostTimeoutMs()) {
+          if (!getShardingTaskExecutorPoolHostTimeoutMs()
+              .equals(other.getShardingTaskExecutorPoolHostTimeoutMs())) return false;
+        }
+        if (hasShardingTaskExecutorPoolRefreshRequirementMs() != other.hasShardingTaskExecutorPoolRefreshRequirementMs()) return false;
+        if (hasShardingTaskExecutorPoolRefreshRequirementMs()) {
+          if (!getShardingTaskExecutorPoolRefreshRequirementMs()
+              .equals(other.getShardingTaskExecutorPoolRefreshRequirementMs())) return false;
+        }
+        if (hasShardingTaskExecutorPoolRefreshTimeoutMs() != other.hasShardingTaskExecutorPoolRefreshTimeoutMs()) return false;
+        if (hasShardingTaskExecutorPoolRefreshTimeoutMs()) {
+          if (!getShardingTaskExecutorPoolRefreshTimeoutMs()
+              .equals(other.getShardingTaskExecutorPoolRefreshTimeoutMs())) return false;
+        }
+        if (hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartup() != other.hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartup()) return false;
+        if (hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartup()) {
+          if (!getWarmMinConnectionsInShardingTaskExecutorPoolOnStartup()
+              .equals(other.getWarmMinConnectionsInShardingTaskExecutorPoolOnStartup())) return false;
+        }
+        if (hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs() != other.hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs()) return false;
+        if (hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs()) {
+          if (!getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs()
+              .equals(other.getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs())) return false;
+        }
+        if (hasShardingTaskExecutorPoolMaxSizeForConfigServers() != other.hasShardingTaskExecutorPoolMaxSizeForConfigServers()) return false;
+        if (hasShardingTaskExecutorPoolMaxSizeForConfigServers()) {
+          if (!getShardingTaskExecutorPoolMaxSizeForConfigServers()
+              .equals(other.getShardingTaskExecutorPoolMaxSizeForConfigServers())) return false;
+        }
+        if (hasShardingTaskExecutorPoolMinSizeForConfigServers() != other.hasShardingTaskExecutorPoolMinSizeForConfigServers()) return false;
+        if (hasShardingTaskExecutorPoolMinSizeForConfigServers()) {
+          if (!getShardingTaskExecutorPoolMinSizeForConfigServers()
+              .equals(other.getShardingTaskExecutorPoolMinSizeForConfigServers())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -26517,6 +33888,54 @@ public final class Mongodb {
         if (hasAuditAuthorizationSuccess()) {
           hash = (37 * hash) + AUDIT_AUTHORIZATION_SUCCESS_FIELD_NUMBER;
           hash = (53 * hash) + getAuditAuthorizationSuccess().hashCode();
+        }
+        if (hasReadHedgingMode()) {
+          hash = (37 * hash) + READ_HEDGING_MODE_FIELD_NUMBER;
+          hash = (53 * hash) + getReadHedgingMode().hashCode();
+        }
+        if (hasShardingTaskExecutorPoolMaxSize()) {
+          hash = (37 * hash) + SHARDING_TASK_EXECUTOR_POOL_MAX_SIZE_FIELD_NUMBER;
+          hash = (53 * hash) + getShardingTaskExecutorPoolMaxSize().hashCode();
+        }
+        if (hasShardingTaskExecutorPoolMaxConnecting()) {
+          hash = (37 * hash) + SHARDING_TASK_EXECUTOR_POOL_MAX_CONNECTING_FIELD_NUMBER;
+          hash = (53 * hash) + getShardingTaskExecutorPoolMaxConnecting().hashCode();
+        }
+        if (hasShardingTaskExecutorPoolMinSize()) {
+          hash = (37 * hash) + SHARDING_TASK_EXECUTOR_POOL_MIN_SIZE_FIELD_NUMBER;
+          hash = (53 * hash) + getShardingTaskExecutorPoolMinSize().hashCode();
+        }
+        if (hasShardingTaskExecutorPoolReplicaSetMatching()) {
+          hash = (37 * hash) + SHARDING_TASK_EXECUTOR_POOL_REPLICA_SET_MATCHING_FIELD_NUMBER;
+          hash = (53 * hash) + getShardingTaskExecutorPoolReplicaSetMatching().hashCode();
+        }
+        if (hasShardingTaskExecutorPoolHostTimeoutMs()) {
+          hash = (37 * hash) + SHARDING_TASK_EXECUTOR_POOL_HOST_TIMEOUT_MS_FIELD_NUMBER;
+          hash = (53 * hash) + getShardingTaskExecutorPoolHostTimeoutMs().hashCode();
+        }
+        if (hasShardingTaskExecutorPoolRefreshRequirementMs()) {
+          hash = (37 * hash) + SHARDING_TASK_EXECUTOR_POOL_REFRESH_REQUIREMENT_MS_FIELD_NUMBER;
+          hash = (53 * hash) + getShardingTaskExecutorPoolRefreshRequirementMs().hashCode();
+        }
+        if (hasShardingTaskExecutorPoolRefreshTimeoutMs()) {
+          hash = (37 * hash) + SHARDING_TASK_EXECUTOR_POOL_REFRESH_TIMEOUT_MS_FIELD_NUMBER;
+          hash = (53 * hash) + getShardingTaskExecutorPoolRefreshTimeoutMs().hashCode();
+        }
+        if (hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartup()) {
+          hash = (37 * hash) + WARM_MIN_CONNECTIONS_IN_SHARDING_TASK_EXECUTOR_POOL_ON_STARTUP_FIELD_NUMBER;
+          hash = (53 * hash) + getWarmMinConnectionsInShardingTaskExecutorPoolOnStartup().hashCode();
+        }
+        if (hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs()) {
+          hash = (37 * hash) + WARM_MIN_CONNECTIONS_IN_SHARDING_TASK_EXECUTOR_POOL_ON_STARTUP_WAIT_MS_FIELD_NUMBER;
+          hash = (53 * hash) + getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs().hashCode();
+        }
+        if (hasShardingTaskExecutorPoolMaxSizeForConfigServers()) {
+          hash = (37 * hash) + SHARDING_TASK_EXECUTOR_POOL_MAX_SIZE_FOR_CONFIG_SERVERS_FIELD_NUMBER;
+          hash = (53 * hash) + getShardingTaskExecutorPoolMaxSizeForConfigServers().hashCode();
+        }
+        if (hasShardingTaskExecutorPoolMinSizeForConfigServers()) {
+          hash = (37 * hash) + SHARDING_TASK_EXECUTOR_POOL_MIN_SIZE_FOR_CONFIG_SERVERS_FIELD_NUMBER;
+          hash = (53 * hash) + getShardingTaskExecutorPoolMinSizeForConfigServers().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -26657,6 +34076,78 @@ public final class Mongodb {
             auditAuthorizationSuccess_ = null;
             auditAuthorizationSuccessBuilder_ = null;
           }
+          if (readHedgingModeBuilder_ == null) {
+            readHedgingMode_ = null;
+          } else {
+            readHedgingMode_ = null;
+            readHedgingModeBuilder_ = null;
+          }
+          if (shardingTaskExecutorPoolMaxSizeBuilder_ == null) {
+            shardingTaskExecutorPoolMaxSize_ = null;
+          } else {
+            shardingTaskExecutorPoolMaxSize_ = null;
+            shardingTaskExecutorPoolMaxSizeBuilder_ = null;
+          }
+          if (shardingTaskExecutorPoolMaxConnectingBuilder_ == null) {
+            shardingTaskExecutorPoolMaxConnecting_ = null;
+          } else {
+            shardingTaskExecutorPoolMaxConnecting_ = null;
+            shardingTaskExecutorPoolMaxConnectingBuilder_ = null;
+          }
+          if (shardingTaskExecutorPoolMinSizeBuilder_ == null) {
+            shardingTaskExecutorPoolMinSize_ = null;
+          } else {
+            shardingTaskExecutorPoolMinSize_ = null;
+            shardingTaskExecutorPoolMinSizeBuilder_ = null;
+          }
+          if (shardingTaskExecutorPoolReplicaSetMatchingBuilder_ == null) {
+            shardingTaskExecutorPoolReplicaSetMatching_ = null;
+          } else {
+            shardingTaskExecutorPoolReplicaSetMatching_ = null;
+            shardingTaskExecutorPoolReplicaSetMatchingBuilder_ = null;
+          }
+          if (shardingTaskExecutorPoolHostTimeoutMsBuilder_ == null) {
+            shardingTaskExecutorPoolHostTimeoutMs_ = null;
+          } else {
+            shardingTaskExecutorPoolHostTimeoutMs_ = null;
+            shardingTaskExecutorPoolHostTimeoutMsBuilder_ = null;
+          }
+          if (shardingTaskExecutorPoolRefreshRequirementMsBuilder_ == null) {
+            shardingTaskExecutorPoolRefreshRequirementMs_ = null;
+          } else {
+            shardingTaskExecutorPoolRefreshRequirementMs_ = null;
+            shardingTaskExecutorPoolRefreshRequirementMsBuilder_ = null;
+          }
+          if (shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ == null) {
+            shardingTaskExecutorPoolRefreshTimeoutMs_ = null;
+          } else {
+            shardingTaskExecutorPoolRefreshTimeoutMs_ = null;
+            shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ = null;
+          }
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ == null) {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = null;
+          } else {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = null;
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ = null;
+          }
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ == null) {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = null;
+          } else {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = null;
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ = null;
+          }
+          if (shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ == null) {
+            shardingTaskExecutorPoolMaxSizeForConfigServers_ = null;
+          } else {
+            shardingTaskExecutorPoolMaxSizeForConfigServers_ = null;
+            shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ = null;
+          }
+          if (shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ == null) {
+            shardingTaskExecutorPoolMinSizeForConfigServers_ = null;
+          } else {
+            shardingTaskExecutorPoolMinSizeForConfigServers_ = null;
+            shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ = null;
+          }
           return this;
         }
 
@@ -26687,6 +34178,66 @@ public final class Mongodb {
             result.auditAuthorizationSuccess_ = auditAuthorizationSuccess_;
           } else {
             result.auditAuthorizationSuccess_ = auditAuthorizationSuccessBuilder_.build();
+          }
+          if (readHedgingModeBuilder_ == null) {
+            result.readHedgingMode_ = readHedgingMode_;
+          } else {
+            result.readHedgingMode_ = readHedgingModeBuilder_.build();
+          }
+          if (shardingTaskExecutorPoolMaxSizeBuilder_ == null) {
+            result.shardingTaskExecutorPoolMaxSize_ = shardingTaskExecutorPoolMaxSize_;
+          } else {
+            result.shardingTaskExecutorPoolMaxSize_ = shardingTaskExecutorPoolMaxSizeBuilder_.build();
+          }
+          if (shardingTaskExecutorPoolMaxConnectingBuilder_ == null) {
+            result.shardingTaskExecutorPoolMaxConnecting_ = shardingTaskExecutorPoolMaxConnecting_;
+          } else {
+            result.shardingTaskExecutorPoolMaxConnecting_ = shardingTaskExecutorPoolMaxConnectingBuilder_.build();
+          }
+          if (shardingTaskExecutorPoolMinSizeBuilder_ == null) {
+            result.shardingTaskExecutorPoolMinSize_ = shardingTaskExecutorPoolMinSize_;
+          } else {
+            result.shardingTaskExecutorPoolMinSize_ = shardingTaskExecutorPoolMinSizeBuilder_.build();
+          }
+          if (shardingTaskExecutorPoolReplicaSetMatchingBuilder_ == null) {
+            result.shardingTaskExecutorPoolReplicaSetMatching_ = shardingTaskExecutorPoolReplicaSetMatching_;
+          } else {
+            result.shardingTaskExecutorPoolReplicaSetMatching_ = shardingTaskExecutorPoolReplicaSetMatchingBuilder_.build();
+          }
+          if (shardingTaskExecutorPoolHostTimeoutMsBuilder_ == null) {
+            result.shardingTaskExecutorPoolHostTimeoutMs_ = shardingTaskExecutorPoolHostTimeoutMs_;
+          } else {
+            result.shardingTaskExecutorPoolHostTimeoutMs_ = shardingTaskExecutorPoolHostTimeoutMsBuilder_.build();
+          }
+          if (shardingTaskExecutorPoolRefreshRequirementMsBuilder_ == null) {
+            result.shardingTaskExecutorPoolRefreshRequirementMs_ = shardingTaskExecutorPoolRefreshRequirementMs_;
+          } else {
+            result.shardingTaskExecutorPoolRefreshRequirementMs_ = shardingTaskExecutorPoolRefreshRequirementMsBuilder_.build();
+          }
+          if (shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ == null) {
+            result.shardingTaskExecutorPoolRefreshTimeoutMs_ = shardingTaskExecutorPoolRefreshTimeoutMs_;
+          } else {
+            result.shardingTaskExecutorPoolRefreshTimeoutMs_ = shardingTaskExecutorPoolRefreshTimeoutMsBuilder_.build();
+          }
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ == null) {
+            result.warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = warmMinConnectionsInShardingTaskExecutorPoolOnStartup_;
+          } else {
+            result.warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_.build();
+          }
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ == null) {
+            result.warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_;
+          } else {
+            result.warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_.build();
+          }
+          if (shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ == null) {
+            result.shardingTaskExecutorPoolMaxSizeForConfigServers_ = shardingTaskExecutorPoolMaxSizeForConfigServers_;
+          } else {
+            result.shardingTaskExecutorPoolMaxSizeForConfigServers_ = shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_.build();
+          }
+          if (shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ == null) {
+            result.shardingTaskExecutorPoolMinSizeForConfigServers_ = shardingTaskExecutorPoolMinSizeForConfigServers_;
+          } else {
+            result.shardingTaskExecutorPoolMinSizeForConfigServers_ = shardingTaskExecutorPoolMinSizeForConfigServersBuilder_.build();
           }
           onBuilt();
           return result;
@@ -26738,6 +34289,42 @@ public final class Mongodb {
           if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongosConfig.SetParameter.getDefaultInstance()) return this;
           if (other.hasAuditAuthorizationSuccess()) {
             mergeAuditAuthorizationSuccess(other.getAuditAuthorizationSuccess());
+          }
+          if (other.hasReadHedgingMode()) {
+            mergeReadHedgingMode(other.getReadHedgingMode());
+          }
+          if (other.hasShardingTaskExecutorPoolMaxSize()) {
+            mergeShardingTaskExecutorPoolMaxSize(other.getShardingTaskExecutorPoolMaxSize());
+          }
+          if (other.hasShardingTaskExecutorPoolMaxConnecting()) {
+            mergeShardingTaskExecutorPoolMaxConnecting(other.getShardingTaskExecutorPoolMaxConnecting());
+          }
+          if (other.hasShardingTaskExecutorPoolMinSize()) {
+            mergeShardingTaskExecutorPoolMinSize(other.getShardingTaskExecutorPoolMinSize());
+          }
+          if (other.hasShardingTaskExecutorPoolReplicaSetMatching()) {
+            mergeShardingTaskExecutorPoolReplicaSetMatching(other.getShardingTaskExecutorPoolReplicaSetMatching());
+          }
+          if (other.hasShardingTaskExecutorPoolHostTimeoutMs()) {
+            mergeShardingTaskExecutorPoolHostTimeoutMs(other.getShardingTaskExecutorPoolHostTimeoutMs());
+          }
+          if (other.hasShardingTaskExecutorPoolRefreshRequirementMs()) {
+            mergeShardingTaskExecutorPoolRefreshRequirementMs(other.getShardingTaskExecutorPoolRefreshRequirementMs());
+          }
+          if (other.hasShardingTaskExecutorPoolRefreshTimeoutMs()) {
+            mergeShardingTaskExecutorPoolRefreshTimeoutMs(other.getShardingTaskExecutorPoolRefreshTimeoutMs());
+          }
+          if (other.hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartup()) {
+            mergeWarmMinConnectionsInShardingTaskExecutorPoolOnStartup(other.getWarmMinConnectionsInShardingTaskExecutorPoolOnStartup());
+          }
+          if (other.hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs()) {
+            mergeWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs(other.getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs());
+          }
+          if (other.hasShardingTaskExecutorPoolMaxSizeForConfigServers()) {
+            mergeShardingTaskExecutorPoolMaxSizeForConfigServers(other.getShardingTaskExecutorPoolMaxSizeForConfigServers());
+          }
+          if (other.hasShardingTaskExecutorPoolMinSizeForConfigServers()) {
+            mergeShardingTaskExecutorPoolMinSizeForConfigServers(other.getShardingTaskExecutorPoolMinSizeForConfigServers());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -26930,6 +34517,1866 @@ public final class Mongodb {
             auditAuthorizationSuccess_ = null;
           }
           return auditAuthorizationSuccessBuilder_;
+        }
+
+        private com.google.protobuf.StringValue readHedgingMode_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> readHedgingModeBuilder_;
+        /**
+         * <pre>
+         * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+         * @return Whether the readHedgingMode field is set.
+         */
+        public boolean hasReadHedgingMode() {
+          return readHedgingModeBuilder_ != null || readHedgingMode_ != null;
+        }
+        /**
+         * <pre>
+         * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+         * @return The readHedgingMode.
+         */
+        public com.google.protobuf.StringValue getReadHedgingMode() {
+          if (readHedgingModeBuilder_ == null) {
+            return readHedgingMode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : readHedgingMode_;
+          } else {
+            return readHedgingModeBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+         */
+        public Builder setReadHedgingMode(com.google.protobuf.StringValue value) {
+          if (readHedgingModeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            readHedgingMode_ = value;
+            onChanged();
+          } else {
+            readHedgingModeBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+         */
+        public Builder setReadHedgingMode(
+            com.google.protobuf.StringValue.Builder builderForValue) {
+          if (readHedgingModeBuilder_ == null) {
+            readHedgingMode_ = builderForValue.build();
+            onChanged();
+          } else {
+            readHedgingModeBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+         */
+        public Builder mergeReadHedgingMode(com.google.protobuf.StringValue value) {
+          if (readHedgingModeBuilder_ == null) {
+            if (readHedgingMode_ != null) {
+              readHedgingMode_ =
+                com.google.protobuf.StringValue.newBuilder(readHedgingMode_).mergeFrom(value).buildPartial();
+            } else {
+              readHedgingMode_ = value;
+            }
+            onChanged();
+          } else {
+            readHedgingModeBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+         */
+        public Builder clearReadHedgingMode() {
+          if (readHedgingModeBuilder_ == null) {
+            readHedgingMode_ = null;
+            onChanged();
+          } else {
+            readHedgingMode_ = null;
+            readHedgingModeBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+         */
+        public com.google.protobuf.StringValue.Builder getReadHedgingModeBuilder() {
+          
+          onChanged();
+          return getReadHedgingModeFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+         */
+        public com.google.protobuf.StringValueOrBuilder getReadHedgingModeOrBuilder() {
+          if (readHedgingModeBuilder_ != null) {
+            return readHedgingModeBuilder_.getMessageOrBuilder();
+          } else {
+            return readHedgingMode_ == null ?
+                com.google.protobuf.StringValue.getDefaultInstance() : readHedgingMode_;
+          }
+        }
+        /**
+         * <pre>
+         * Specifies whether mongos supports hedged reads for those read operations whose read preference have enabled the hedged read option.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue read_hedging_mode = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+            getReadHedgingModeFieldBuilder() {
+          if (readHedgingModeBuilder_ == null) {
+            readHedgingModeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                    getReadHedgingMode(),
+                    getParentForChildren(),
+                    isClean());
+            readHedgingMode_ = null;
+          }
+          return readHedgingModeBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value shardingTaskExecutorPoolMaxSize_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> shardingTaskExecutorPoolMaxSizeBuilder_;
+        /**
+         * <pre>
+         *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+         * @return Whether the shardingTaskExecutorPoolMaxSize field is set.
+         */
+        public boolean hasShardingTaskExecutorPoolMaxSize() {
+          return shardingTaskExecutorPoolMaxSizeBuilder_ != null || shardingTaskExecutorPoolMaxSize_ != null;
+        }
+        /**
+         * <pre>
+         *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+         * @return The shardingTaskExecutorPoolMaxSize.
+         */
+        public com.google.protobuf.Int64Value getShardingTaskExecutorPoolMaxSize() {
+          if (shardingTaskExecutorPoolMaxSizeBuilder_ == null) {
+            return shardingTaskExecutorPoolMaxSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMaxSize_;
+          } else {
+            return shardingTaskExecutorPoolMaxSizeBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+         */
+        public Builder setShardingTaskExecutorPoolMaxSize(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolMaxSizeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            shardingTaskExecutorPoolMaxSize_ = value;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxSizeBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+         */
+        public Builder setShardingTaskExecutorPoolMaxSize(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (shardingTaskExecutorPoolMaxSizeBuilder_ == null) {
+            shardingTaskExecutorPoolMaxSize_ = builderForValue.build();
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxSizeBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+         */
+        public Builder mergeShardingTaskExecutorPoolMaxSize(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolMaxSizeBuilder_ == null) {
+            if (shardingTaskExecutorPoolMaxSize_ != null) {
+              shardingTaskExecutorPoolMaxSize_ =
+                com.google.protobuf.Int64Value.newBuilder(shardingTaskExecutorPoolMaxSize_).mergeFrom(value).buildPartial();
+            } else {
+              shardingTaskExecutorPoolMaxSize_ = value;
+            }
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxSizeBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+         */
+        public Builder clearShardingTaskExecutorPoolMaxSize() {
+          if (shardingTaskExecutorPoolMaxSizeBuilder_ == null) {
+            shardingTaskExecutorPoolMaxSize_ = null;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxSize_ = null;
+            shardingTaskExecutorPoolMaxSizeBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getShardingTaskExecutorPoolMaxSizeBuilder() {
+          
+          onChanged();
+          return getShardingTaskExecutorPoolMaxSizeFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMaxSizeOrBuilder() {
+          if (shardingTaskExecutorPoolMaxSizeBuilder_ != null) {
+            return shardingTaskExecutorPoolMaxSizeBuilder_.getMessageOrBuilder();
+          } else {
+            return shardingTaskExecutorPoolMaxSize_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMaxSize_;
+          }
+        }
+        /**
+         * <pre>
+         *Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getShardingTaskExecutorPoolMaxSizeFieldBuilder() {
+          if (shardingTaskExecutorPoolMaxSizeBuilder_ == null) {
+            shardingTaskExecutorPoolMaxSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getShardingTaskExecutorPoolMaxSize(),
+                    getParentForChildren(),
+                    isClean());
+            shardingTaskExecutorPoolMaxSize_ = null;
+          }
+          return shardingTaskExecutorPoolMaxSizeBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value shardingTaskExecutorPoolMaxConnecting_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> shardingTaskExecutorPoolMaxConnectingBuilder_;
+        /**
+         * <pre>
+         * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+         * @return Whether the shardingTaskExecutorPoolMaxConnecting field is set.
+         */
+        public boolean hasShardingTaskExecutorPoolMaxConnecting() {
+          return shardingTaskExecutorPoolMaxConnectingBuilder_ != null || shardingTaskExecutorPoolMaxConnecting_ != null;
+        }
+        /**
+         * <pre>
+         * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+         * @return The shardingTaskExecutorPoolMaxConnecting.
+         */
+        public com.google.protobuf.Int64Value getShardingTaskExecutorPoolMaxConnecting() {
+          if (shardingTaskExecutorPoolMaxConnectingBuilder_ == null) {
+            return shardingTaskExecutorPoolMaxConnecting_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMaxConnecting_;
+          } else {
+            return shardingTaskExecutorPoolMaxConnectingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+         */
+        public Builder setShardingTaskExecutorPoolMaxConnecting(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolMaxConnectingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            shardingTaskExecutorPoolMaxConnecting_ = value;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxConnectingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+         */
+        public Builder setShardingTaskExecutorPoolMaxConnecting(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (shardingTaskExecutorPoolMaxConnectingBuilder_ == null) {
+            shardingTaskExecutorPoolMaxConnecting_ = builderForValue.build();
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxConnectingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+         */
+        public Builder mergeShardingTaskExecutorPoolMaxConnecting(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolMaxConnectingBuilder_ == null) {
+            if (shardingTaskExecutorPoolMaxConnecting_ != null) {
+              shardingTaskExecutorPoolMaxConnecting_ =
+                com.google.protobuf.Int64Value.newBuilder(shardingTaskExecutorPoolMaxConnecting_).mergeFrom(value).buildPartial();
+            } else {
+              shardingTaskExecutorPoolMaxConnecting_ = value;
+            }
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxConnectingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+         */
+        public Builder clearShardingTaskExecutorPoolMaxConnecting() {
+          if (shardingTaskExecutorPoolMaxConnectingBuilder_ == null) {
+            shardingTaskExecutorPoolMaxConnecting_ = null;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxConnecting_ = null;
+            shardingTaskExecutorPoolMaxConnectingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getShardingTaskExecutorPoolMaxConnectingBuilder() {
+          
+          onChanged();
+          return getShardingTaskExecutorPoolMaxConnectingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMaxConnectingOrBuilder() {
+          if (shardingTaskExecutorPoolMaxConnectingBuilder_ != null) {
+            return shardingTaskExecutorPoolMaxConnectingBuilder_.getMessageOrBuilder();
+          } else {
+            return shardingTaskExecutorPoolMaxConnecting_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMaxConnecting_;
+          }
+        }
+        /**
+         * <pre>
+         * Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_connecting = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getShardingTaskExecutorPoolMaxConnectingFieldBuilder() {
+          if (shardingTaskExecutorPoolMaxConnectingBuilder_ == null) {
+            shardingTaskExecutorPoolMaxConnectingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getShardingTaskExecutorPoolMaxConnecting(),
+                    getParentForChildren(),
+                    isClean());
+            shardingTaskExecutorPoolMaxConnecting_ = null;
+          }
+          return shardingTaskExecutorPoolMaxConnectingBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value shardingTaskExecutorPoolMinSize_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> shardingTaskExecutorPoolMinSizeBuilder_;
+        /**
+         * <pre>
+         * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+         * @return Whether the shardingTaskExecutorPoolMinSize field is set.
+         */
+        public boolean hasShardingTaskExecutorPoolMinSize() {
+          return shardingTaskExecutorPoolMinSizeBuilder_ != null || shardingTaskExecutorPoolMinSize_ != null;
+        }
+        /**
+         * <pre>
+         * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+         * @return The shardingTaskExecutorPoolMinSize.
+         */
+        public com.google.protobuf.Int64Value getShardingTaskExecutorPoolMinSize() {
+          if (shardingTaskExecutorPoolMinSizeBuilder_ == null) {
+            return shardingTaskExecutorPoolMinSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMinSize_;
+          } else {
+            return shardingTaskExecutorPoolMinSizeBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+         */
+        public Builder setShardingTaskExecutorPoolMinSize(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolMinSizeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            shardingTaskExecutorPoolMinSize_ = value;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMinSizeBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+         */
+        public Builder setShardingTaskExecutorPoolMinSize(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (shardingTaskExecutorPoolMinSizeBuilder_ == null) {
+            shardingTaskExecutorPoolMinSize_ = builderForValue.build();
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMinSizeBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+         */
+        public Builder mergeShardingTaskExecutorPoolMinSize(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolMinSizeBuilder_ == null) {
+            if (shardingTaskExecutorPoolMinSize_ != null) {
+              shardingTaskExecutorPoolMinSize_ =
+                com.google.protobuf.Int64Value.newBuilder(shardingTaskExecutorPoolMinSize_).mergeFrom(value).buildPartial();
+            } else {
+              shardingTaskExecutorPoolMinSize_ = value;
+            }
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMinSizeBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+         */
+        public Builder clearShardingTaskExecutorPoolMinSize() {
+          if (shardingTaskExecutorPoolMinSizeBuilder_ == null) {
+            shardingTaskExecutorPoolMinSize_ = null;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMinSize_ = null;
+            shardingTaskExecutorPoolMinSizeBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getShardingTaskExecutorPoolMinSizeBuilder() {
+          
+          onChanged();
+          return getShardingTaskExecutorPoolMinSizeFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMinSizeOrBuilder() {
+          if (shardingTaskExecutorPoolMinSizeBuilder_ != null) {
+            return shardingTaskExecutorPoolMinSizeBuilder_.getMessageOrBuilder();
+          } else {
+            return shardingTaskExecutorPoolMinSize_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMinSize_;
+          }
+        }
+        /**
+         * <pre>
+         * Minimum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getShardingTaskExecutorPoolMinSizeFieldBuilder() {
+          if (shardingTaskExecutorPoolMinSizeBuilder_ == null) {
+            shardingTaskExecutorPoolMinSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getShardingTaskExecutorPoolMinSize(),
+                    getParentForChildren(),
+                    isClean());
+            shardingTaskExecutorPoolMinSize_ = null;
+          }
+          return shardingTaskExecutorPoolMinSizeBuilder_;
+        }
+
+        private com.google.protobuf.StringValue shardingTaskExecutorPoolReplicaSetMatching_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> shardingTaskExecutorPoolReplicaSetMatchingBuilder_;
+        /**
+         * <pre>
+         * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+         * @return Whether the shardingTaskExecutorPoolReplicaSetMatching field is set.
+         */
+        public boolean hasShardingTaskExecutorPoolReplicaSetMatching() {
+          return shardingTaskExecutorPoolReplicaSetMatchingBuilder_ != null || shardingTaskExecutorPoolReplicaSetMatching_ != null;
+        }
+        /**
+         * <pre>
+         * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+         * @return The shardingTaskExecutorPoolReplicaSetMatching.
+         */
+        public com.google.protobuf.StringValue getShardingTaskExecutorPoolReplicaSetMatching() {
+          if (shardingTaskExecutorPoolReplicaSetMatchingBuilder_ == null) {
+            return shardingTaskExecutorPoolReplicaSetMatching_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : shardingTaskExecutorPoolReplicaSetMatching_;
+          } else {
+            return shardingTaskExecutorPoolReplicaSetMatchingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+         */
+        public Builder setShardingTaskExecutorPoolReplicaSetMatching(com.google.protobuf.StringValue value) {
+          if (shardingTaskExecutorPoolReplicaSetMatchingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            shardingTaskExecutorPoolReplicaSetMatching_ = value;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolReplicaSetMatchingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+         */
+        public Builder setShardingTaskExecutorPoolReplicaSetMatching(
+            com.google.protobuf.StringValue.Builder builderForValue) {
+          if (shardingTaskExecutorPoolReplicaSetMatchingBuilder_ == null) {
+            shardingTaskExecutorPoolReplicaSetMatching_ = builderForValue.build();
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolReplicaSetMatchingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+         */
+        public Builder mergeShardingTaskExecutorPoolReplicaSetMatching(com.google.protobuf.StringValue value) {
+          if (shardingTaskExecutorPoolReplicaSetMatchingBuilder_ == null) {
+            if (shardingTaskExecutorPoolReplicaSetMatching_ != null) {
+              shardingTaskExecutorPoolReplicaSetMatching_ =
+                com.google.protobuf.StringValue.newBuilder(shardingTaskExecutorPoolReplicaSetMatching_).mergeFrom(value).buildPartial();
+            } else {
+              shardingTaskExecutorPoolReplicaSetMatching_ = value;
+            }
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolReplicaSetMatchingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+         */
+        public Builder clearShardingTaskExecutorPoolReplicaSetMatching() {
+          if (shardingTaskExecutorPoolReplicaSetMatchingBuilder_ == null) {
+            shardingTaskExecutorPoolReplicaSetMatching_ = null;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolReplicaSetMatching_ = null;
+            shardingTaskExecutorPoolReplicaSetMatchingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+         */
+        public com.google.protobuf.StringValue.Builder getShardingTaskExecutorPoolReplicaSetMatchingBuilder() {
+          
+          onChanged();
+          return getShardingTaskExecutorPoolReplicaSetMatchingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+         */
+        public com.google.protobuf.StringValueOrBuilder getShardingTaskExecutorPoolReplicaSetMatchingOrBuilder() {
+          if (shardingTaskExecutorPoolReplicaSetMatchingBuilder_ != null) {
+            return shardingTaskExecutorPoolReplicaSetMatchingBuilder_.getMessageOrBuilder();
+          } else {
+            return shardingTaskExecutorPoolReplicaSetMatching_ == null ?
+                com.google.protobuf.StringValue.getDefaultInstance() : shardingTaskExecutorPoolReplicaSetMatching_;
+          }
+        }
+        /**
+         * <pre>
+         * On a mongos instance, this parameter sets the policy that determines the minimum size limit of its connection pools to nodes within replica sets.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue sharding_task_executor_pool_replica_set_matching = 6;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+            getShardingTaskExecutorPoolReplicaSetMatchingFieldBuilder() {
+          if (shardingTaskExecutorPoolReplicaSetMatchingBuilder_ == null) {
+            shardingTaskExecutorPoolReplicaSetMatchingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                    getShardingTaskExecutorPoolReplicaSetMatching(),
+                    getParentForChildren(),
+                    isClean());
+            shardingTaskExecutorPoolReplicaSetMatching_ = null;
+          }
+          return shardingTaskExecutorPoolReplicaSetMatchingBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value shardingTaskExecutorPoolHostTimeoutMs_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> shardingTaskExecutorPoolHostTimeoutMsBuilder_;
+        /**
+         * <pre>
+         * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+         * @return Whether the shardingTaskExecutorPoolHostTimeoutMs field is set.
+         */
+        public boolean hasShardingTaskExecutorPoolHostTimeoutMs() {
+          return shardingTaskExecutorPoolHostTimeoutMsBuilder_ != null || shardingTaskExecutorPoolHostTimeoutMs_ != null;
+        }
+        /**
+         * <pre>
+         * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+         * @return The shardingTaskExecutorPoolHostTimeoutMs.
+         */
+        public com.google.protobuf.Int64Value getShardingTaskExecutorPoolHostTimeoutMs() {
+          if (shardingTaskExecutorPoolHostTimeoutMsBuilder_ == null) {
+            return shardingTaskExecutorPoolHostTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolHostTimeoutMs_;
+          } else {
+            return shardingTaskExecutorPoolHostTimeoutMsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+         */
+        public Builder setShardingTaskExecutorPoolHostTimeoutMs(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolHostTimeoutMsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            shardingTaskExecutorPoolHostTimeoutMs_ = value;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolHostTimeoutMsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+         */
+        public Builder setShardingTaskExecutorPoolHostTimeoutMs(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (shardingTaskExecutorPoolHostTimeoutMsBuilder_ == null) {
+            shardingTaskExecutorPoolHostTimeoutMs_ = builderForValue.build();
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolHostTimeoutMsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+         */
+        public Builder mergeShardingTaskExecutorPoolHostTimeoutMs(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolHostTimeoutMsBuilder_ == null) {
+            if (shardingTaskExecutorPoolHostTimeoutMs_ != null) {
+              shardingTaskExecutorPoolHostTimeoutMs_ =
+                com.google.protobuf.Int64Value.newBuilder(shardingTaskExecutorPoolHostTimeoutMs_).mergeFrom(value).buildPartial();
+            } else {
+              shardingTaskExecutorPoolHostTimeoutMs_ = value;
+            }
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolHostTimeoutMsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+         */
+        public Builder clearShardingTaskExecutorPoolHostTimeoutMs() {
+          if (shardingTaskExecutorPoolHostTimeoutMsBuilder_ == null) {
+            shardingTaskExecutorPoolHostTimeoutMs_ = null;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolHostTimeoutMs_ = null;
+            shardingTaskExecutorPoolHostTimeoutMsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getShardingTaskExecutorPoolHostTimeoutMsBuilder() {
+          
+          onChanged();
+          return getShardingTaskExecutorPoolHostTimeoutMsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolHostTimeoutMsOrBuilder() {
+          if (shardingTaskExecutorPoolHostTimeoutMsBuilder_ != null) {
+            return shardingTaskExecutorPoolHostTimeoutMsBuilder_.getMessageOrBuilder();
+          } else {
+            return shardingTaskExecutorPoolHostTimeoutMs_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolHostTimeoutMs_;
+          }
+        }
+        /**
+         * <pre>
+         * Maximum time that mongos goes without communication to a host before mongos drops all connections to the host.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_host_timeout_ms = 7;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getShardingTaskExecutorPoolHostTimeoutMsFieldBuilder() {
+          if (shardingTaskExecutorPoolHostTimeoutMsBuilder_ == null) {
+            shardingTaskExecutorPoolHostTimeoutMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getShardingTaskExecutorPoolHostTimeoutMs(),
+                    getParentForChildren(),
+                    isClean());
+            shardingTaskExecutorPoolHostTimeoutMs_ = null;
+          }
+          return shardingTaskExecutorPoolHostTimeoutMsBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value shardingTaskExecutorPoolRefreshRequirementMs_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> shardingTaskExecutorPoolRefreshRequirementMsBuilder_;
+        /**
+         * <pre>
+         * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+         * @return Whether the shardingTaskExecutorPoolRefreshRequirementMs field is set.
+         */
+        public boolean hasShardingTaskExecutorPoolRefreshRequirementMs() {
+          return shardingTaskExecutorPoolRefreshRequirementMsBuilder_ != null || shardingTaskExecutorPoolRefreshRequirementMs_ != null;
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+         * @return The shardingTaskExecutorPoolRefreshRequirementMs.
+         */
+        public com.google.protobuf.Int64Value getShardingTaskExecutorPoolRefreshRequirementMs() {
+          if (shardingTaskExecutorPoolRefreshRequirementMsBuilder_ == null) {
+            return shardingTaskExecutorPoolRefreshRequirementMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolRefreshRequirementMs_;
+          } else {
+            return shardingTaskExecutorPoolRefreshRequirementMsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+         */
+        public Builder setShardingTaskExecutorPoolRefreshRequirementMs(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolRefreshRequirementMsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            shardingTaskExecutorPoolRefreshRequirementMs_ = value;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolRefreshRequirementMsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+         */
+        public Builder setShardingTaskExecutorPoolRefreshRequirementMs(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (shardingTaskExecutorPoolRefreshRequirementMsBuilder_ == null) {
+            shardingTaskExecutorPoolRefreshRequirementMs_ = builderForValue.build();
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolRefreshRequirementMsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+         */
+        public Builder mergeShardingTaskExecutorPoolRefreshRequirementMs(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolRefreshRequirementMsBuilder_ == null) {
+            if (shardingTaskExecutorPoolRefreshRequirementMs_ != null) {
+              shardingTaskExecutorPoolRefreshRequirementMs_ =
+                com.google.protobuf.Int64Value.newBuilder(shardingTaskExecutorPoolRefreshRequirementMs_).mergeFrom(value).buildPartial();
+            } else {
+              shardingTaskExecutorPoolRefreshRequirementMs_ = value;
+            }
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolRefreshRequirementMsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+         */
+        public Builder clearShardingTaskExecutorPoolRefreshRequirementMs() {
+          if (shardingTaskExecutorPoolRefreshRequirementMsBuilder_ == null) {
+            shardingTaskExecutorPoolRefreshRequirementMs_ = null;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolRefreshRequirementMs_ = null;
+            shardingTaskExecutorPoolRefreshRequirementMsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getShardingTaskExecutorPoolRefreshRequirementMsBuilder() {
+          
+          onChanged();
+          return getShardingTaskExecutorPoolRefreshRequirementMsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolRefreshRequirementMsOrBuilder() {
+          if (shardingTaskExecutorPoolRefreshRequirementMsBuilder_ != null) {
+            return shardingTaskExecutorPoolRefreshRequirementMsBuilder_.getMessageOrBuilder();
+          } else {
+            return shardingTaskExecutorPoolRefreshRequirementMs_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolRefreshRequirementMs_;
+          }
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits before attempting to heartbeat an idle connection in the pool.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_requirement_ms = 8;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getShardingTaskExecutorPoolRefreshRequirementMsFieldBuilder() {
+          if (shardingTaskExecutorPoolRefreshRequirementMsBuilder_ == null) {
+            shardingTaskExecutorPoolRefreshRequirementMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getShardingTaskExecutorPoolRefreshRequirementMs(),
+                    getParentForChildren(),
+                    isClean());
+            shardingTaskExecutorPoolRefreshRequirementMs_ = null;
+          }
+          return shardingTaskExecutorPoolRefreshRequirementMsBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value shardingTaskExecutorPoolRefreshTimeoutMs_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> shardingTaskExecutorPoolRefreshTimeoutMsBuilder_;
+        /**
+         * <pre>
+         * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+         * @return Whether the shardingTaskExecutorPoolRefreshTimeoutMs field is set.
+         */
+        public boolean hasShardingTaskExecutorPoolRefreshTimeoutMs() {
+          return shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ != null || shardingTaskExecutorPoolRefreshTimeoutMs_ != null;
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+         * @return The shardingTaskExecutorPoolRefreshTimeoutMs.
+         */
+        public com.google.protobuf.Int64Value getShardingTaskExecutorPoolRefreshTimeoutMs() {
+          if (shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ == null) {
+            return shardingTaskExecutorPoolRefreshTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolRefreshTimeoutMs_;
+          } else {
+            return shardingTaskExecutorPoolRefreshTimeoutMsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+         */
+        public Builder setShardingTaskExecutorPoolRefreshTimeoutMs(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            shardingTaskExecutorPoolRefreshTimeoutMs_ = value;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolRefreshTimeoutMsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+         */
+        public Builder setShardingTaskExecutorPoolRefreshTimeoutMs(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ == null) {
+            shardingTaskExecutorPoolRefreshTimeoutMs_ = builderForValue.build();
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolRefreshTimeoutMsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+         */
+        public Builder mergeShardingTaskExecutorPoolRefreshTimeoutMs(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ == null) {
+            if (shardingTaskExecutorPoolRefreshTimeoutMs_ != null) {
+              shardingTaskExecutorPoolRefreshTimeoutMs_ =
+                com.google.protobuf.Int64Value.newBuilder(shardingTaskExecutorPoolRefreshTimeoutMs_).mergeFrom(value).buildPartial();
+            } else {
+              shardingTaskExecutorPoolRefreshTimeoutMs_ = value;
+            }
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolRefreshTimeoutMsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+         */
+        public Builder clearShardingTaskExecutorPoolRefreshTimeoutMs() {
+          if (shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ == null) {
+            shardingTaskExecutorPoolRefreshTimeoutMs_ = null;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolRefreshTimeoutMs_ = null;
+            shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getShardingTaskExecutorPoolRefreshTimeoutMsBuilder() {
+          
+          onChanged();
+          return getShardingTaskExecutorPoolRefreshTimeoutMsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolRefreshTimeoutMsOrBuilder() {
+          if (shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ != null) {
+            return shardingTaskExecutorPoolRefreshTimeoutMsBuilder_.getMessageOrBuilder();
+          } else {
+            return shardingTaskExecutorPoolRefreshTimeoutMs_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolRefreshTimeoutMs_;
+          }
+        }
+        /**
+         * <pre>
+         * Maximum time the mongos waits for a heartbeat before timing out the heartbeat.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_refresh_timeout_ms = 9;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getShardingTaskExecutorPoolRefreshTimeoutMsFieldBuilder() {
+          if (shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ == null) {
+            shardingTaskExecutorPoolRefreshTimeoutMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getShardingTaskExecutorPoolRefreshTimeoutMs(),
+                    getParentForChildren(),
+                    isClean());
+            shardingTaskExecutorPoolRefreshTimeoutMs_ = null;
+          }
+          return shardingTaskExecutorPoolRefreshTimeoutMsBuilder_;
+        }
+
+        private com.google.protobuf.BoolValue warmMinConnectionsInShardingTaskExecutorPoolOnStartup_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_;
+        /**
+         * <pre>
+         * Configures a mongos instance to prewarm its connection pool on startup.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+         * @return Whether the warmMinConnectionsInShardingTaskExecutorPoolOnStartup field is set.
+         */
+        public boolean hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartup() {
+          return warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ != null || warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ != null;
+        }
+        /**
+         * <pre>
+         * Configures a mongos instance to prewarm its connection pool on startup.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+         * @return The warmMinConnectionsInShardingTaskExecutorPoolOnStartup.
+         */
+        public com.google.protobuf.BoolValue getWarmMinConnectionsInShardingTaskExecutorPoolOnStartup() {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ == null) {
+            return warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : warmMinConnectionsInShardingTaskExecutorPoolOnStartup_;
+          } else {
+            return warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Configures a mongos instance to prewarm its connection pool on startup.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+         */
+        public Builder setWarmMinConnectionsInShardingTaskExecutorPoolOnStartup(com.google.protobuf.BoolValue value) {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = value;
+            onChanged();
+          } else {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configures a mongos instance to prewarm its connection pool on startup.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+         */
+        public Builder setWarmMinConnectionsInShardingTaskExecutorPoolOnStartup(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ == null) {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = builderForValue.build();
+            onChanged();
+          } else {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configures a mongos instance to prewarm its connection pool on startup.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+         */
+        public Builder mergeWarmMinConnectionsInShardingTaskExecutorPoolOnStartup(com.google.protobuf.BoolValue value) {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ == null) {
+            if (warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ != null) {
+              warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ =
+                com.google.protobuf.BoolValue.newBuilder(warmMinConnectionsInShardingTaskExecutorPoolOnStartup_).mergeFrom(value).buildPartial();
+            } else {
+              warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = value;
+            }
+            onChanged();
+          } else {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configures a mongos instance to prewarm its connection pool on startup.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+         */
+        public Builder clearWarmMinConnectionsInShardingTaskExecutorPoolOnStartup() {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ == null) {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = null;
+            onChanged();
+          } else {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = null;
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configures a mongos instance to prewarm its connection pool on startup.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder() {
+          
+          onChanged();
+          return getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Configures a mongos instance to prewarm its connection pool on startup.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupOrBuilder() {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ != null) {
+            return warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_.getMessageOrBuilder();
+          } else {
+            return warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : warmMinConnectionsInShardingTaskExecutorPoolOnStartup_;
+          }
+        }
+        /**
+         * <pre>
+         * Configures a mongos instance to prewarm its connection pool on startup.
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue warm_min_connections_in_sharding_task_executor_pool_on_startup = 10;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupFieldBuilder() {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ == null) {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getWarmMinConnectionsInShardingTaskExecutorPoolOnStartup(),
+                    getParentForChildren(),
+                    isClean());
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartup_ = null;
+          }
+          return warmMinConnectionsInShardingTaskExecutorPoolOnStartupBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_;
+        /**
+         * <pre>
+         * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+         * @return Whether the warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs field is set.
+         */
+        public boolean hasWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs() {
+          return warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ != null || warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ != null;
+        }
+        /**
+         * <pre>
+         * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+         * @return The warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs.
+         */
+        public com.google.protobuf.Int64Value getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs() {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ == null) {
+            return warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_;
+          } else {
+            return warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+         */
+        public Builder setWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs(com.google.protobuf.Int64Value value) {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = value;
+            onChanged();
+          } else {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+         */
+        public Builder setWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ == null) {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = builderForValue.build();
+            onChanged();
+          } else {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+         */
+        public Builder mergeWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs(com.google.protobuf.Int64Value value) {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ == null) {
+            if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ != null) {
+              warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ =
+                com.google.protobuf.Int64Value.newBuilder(warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_).mergeFrom(value).buildPartial();
+            } else {
+              warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = value;
+            }
+            onChanged();
+          } else {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+         */
+        public Builder clearWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs() {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ == null) {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = null;
+            onChanged();
+          } else {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = null;
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder() {
+          
+          onChanged();
+          return getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsOrBuilder() {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ != null) {
+            return warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_.getMessageOrBuilder();
+          } else {
+            return warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_;
+          }
+        }
+        /**
+         * <pre>
+         * Sets the timeout threshold in milliseconds for a mongos to wait for ShardingTaskExecutorPoolMinSize connections to be established per shard host when using the warmMinConnectionsInShardingTaskExecutorPoolOnStartup parameter.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value warm_min_connections_in_sharding_task_executor_pool_on_startup_wait_ms = 11;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsFieldBuilder() {
+          if (warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ == null) {
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getWarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs(),
+                    getParentForChildren(),
+                    isClean());
+            warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs_ = null;
+          }
+          return warmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMsBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value shardingTaskExecutorPoolMaxSizeForConfigServers_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_;
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+         * @return Whether the shardingTaskExecutorPoolMaxSizeForConfigServers field is set.
+         */
+        public boolean hasShardingTaskExecutorPoolMaxSizeForConfigServers() {
+          return shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ != null || shardingTaskExecutorPoolMaxSizeForConfigServers_ != null;
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+         * @return The shardingTaskExecutorPoolMaxSizeForConfigServers.
+         */
+        public com.google.protobuf.Int64Value getShardingTaskExecutorPoolMaxSizeForConfigServers() {
+          if (shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ == null) {
+            return shardingTaskExecutorPoolMaxSizeForConfigServers_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMaxSizeForConfigServers_;
+          } else {
+            return shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+         */
+        public Builder setShardingTaskExecutorPoolMaxSizeForConfigServers(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            shardingTaskExecutorPoolMaxSizeForConfigServers_ = value;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+         */
+        public Builder setShardingTaskExecutorPoolMaxSizeForConfigServers(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ == null) {
+            shardingTaskExecutorPoolMaxSizeForConfigServers_ = builderForValue.build();
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+         */
+        public Builder mergeShardingTaskExecutorPoolMaxSizeForConfigServers(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ == null) {
+            if (shardingTaskExecutorPoolMaxSizeForConfigServers_ != null) {
+              shardingTaskExecutorPoolMaxSizeForConfigServers_ =
+                com.google.protobuf.Int64Value.newBuilder(shardingTaskExecutorPoolMaxSizeForConfigServers_).mergeFrom(value).buildPartial();
+            } else {
+              shardingTaskExecutorPoolMaxSizeForConfigServers_ = value;
+            }
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+         */
+        public Builder clearShardingTaskExecutorPoolMaxSizeForConfigServers() {
+          if (shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ == null) {
+            shardingTaskExecutorPoolMaxSizeForConfigServers_ = null;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMaxSizeForConfigServers_ = null;
+            shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getShardingTaskExecutorPoolMaxSizeForConfigServersBuilder() {
+          
+          onChanged();
+          return getShardingTaskExecutorPoolMaxSizeForConfigServersFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMaxSizeForConfigServersOrBuilder() {
+          if (shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ != null) {
+            return shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_.getMessageOrBuilder();
+          } else {
+            return shardingTaskExecutorPoolMaxSizeForConfigServers_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMaxSizeForConfigServers_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMaxSize to set the maximum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_max_size_for_config_servers = 12;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getShardingTaskExecutorPoolMaxSizeForConfigServersFieldBuilder() {
+          if (shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ == null) {
+            shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getShardingTaskExecutorPoolMaxSizeForConfigServers(),
+                    getParentForChildren(),
+                    isClean());
+            shardingTaskExecutorPoolMaxSizeForConfigServers_ = null;
+          }
+          return shardingTaskExecutorPoolMaxSizeForConfigServersBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value shardingTaskExecutorPoolMinSizeForConfigServers_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> shardingTaskExecutorPoolMinSizeForConfigServersBuilder_;
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+         * @return Whether the shardingTaskExecutorPoolMinSizeForConfigServers field is set.
+         */
+        public boolean hasShardingTaskExecutorPoolMinSizeForConfigServers() {
+          return shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ != null || shardingTaskExecutorPoolMinSizeForConfigServers_ != null;
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+         * @return The shardingTaskExecutorPoolMinSizeForConfigServers.
+         */
+        public com.google.protobuf.Int64Value getShardingTaskExecutorPoolMinSizeForConfigServers() {
+          if (shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ == null) {
+            return shardingTaskExecutorPoolMinSizeForConfigServers_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMinSizeForConfigServers_;
+          } else {
+            return shardingTaskExecutorPoolMinSizeForConfigServersBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+         */
+        public Builder setShardingTaskExecutorPoolMinSizeForConfigServers(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            shardingTaskExecutorPoolMinSizeForConfigServers_ = value;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMinSizeForConfigServersBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+         */
+        public Builder setShardingTaskExecutorPoolMinSizeForConfigServers(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ == null) {
+            shardingTaskExecutorPoolMinSizeForConfigServers_ = builderForValue.build();
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMinSizeForConfigServersBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+         */
+        public Builder mergeShardingTaskExecutorPoolMinSizeForConfigServers(com.google.protobuf.Int64Value value) {
+          if (shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ == null) {
+            if (shardingTaskExecutorPoolMinSizeForConfigServers_ != null) {
+              shardingTaskExecutorPoolMinSizeForConfigServers_ =
+                com.google.protobuf.Int64Value.newBuilder(shardingTaskExecutorPoolMinSizeForConfigServers_).mergeFrom(value).buildPartial();
+            } else {
+              shardingTaskExecutorPoolMinSizeForConfigServers_ = value;
+            }
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMinSizeForConfigServersBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+         */
+        public Builder clearShardingTaskExecutorPoolMinSizeForConfigServers() {
+          if (shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ == null) {
+            shardingTaskExecutorPoolMinSizeForConfigServers_ = null;
+            onChanged();
+          } else {
+            shardingTaskExecutorPoolMinSizeForConfigServers_ = null;
+            shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getShardingTaskExecutorPoolMinSizeForConfigServersBuilder() {
+          
+          onChanged();
+          return getShardingTaskExecutorPoolMinSizeForConfigServersFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMinSizeForConfigServersOrBuilder() {
+          if (shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ != null) {
+            return shardingTaskExecutorPoolMinSizeForConfigServersBuilder_.getMessageOrBuilder();
+          } else {
+            return shardingTaskExecutorPoolMinSizeForConfigServers_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : shardingTaskExecutorPoolMinSizeForConfigServers_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional override for ShardingTaskExecutorPoolMinSize to set the minimum number of outbound connections each TaskExecutor connection pool can open to a configuration server.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getShardingTaskExecutorPoolMinSizeForConfigServersFieldBuilder() {
+          if (shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ == null) {
+            shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getShardingTaskExecutorPoolMinSizeForConfigServers(),
+                    getParentForChildren(),
+                    isClean());
+            shardingTaskExecutorPoolMinSizeForConfigServers_ = null;
+          }
+          return shardingTaskExecutorPoolMinSizeForConfigServersBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -27702,6 +37149,44 @@ public final class Mongodb {
       return getAuditLog();
     }
 
+    public static final int CHUNK_SIZE_FIELD_NUMBER = 6;
+    private com.google.protobuf.Int64Value chunkSize_;
+    /**
+     * <pre>
+     * `ChunkSize` parameter of mongos configuration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+     * @return Whether the chunkSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasChunkSize() {
+      return chunkSize_ != null;
+    }
+    /**
+     * <pre>
+     * `ChunkSize` parameter of mongos configuration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+     * @return The chunkSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getChunkSize() {
+      return chunkSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : chunkSize_;
+    }
+    /**
+     * <pre>
+     * `ChunkSize` parameter of mongos configuration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getChunkSizeOrBuilder() {
+      return getChunkSize();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -27725,6 +37210,9 @@ public final class Mongodb {
       if (auditLog_ != null) {
         output.writeMessage(5, getAuditLog());
       }
+      if (chunkSize_ != null) {
+        output.writeMessage(6, getChunkSize());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -27745,6 +37233,10 @@ public final class Mongodb {
       if (auditLog_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getAuditLog());
+      }
+      if (chunkSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getChunkSize());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -27776,6 +37268,11 @@ public final class Mongodb {
         if (!getAuditLog()
             .equals(other.getAuditLog())) return false;
       }
+      if (hasChunkSize() != other.hasChunkSize()) return false;
+      if (hasChunkSize()) {
+        if (!getChunkSize()
+            .equals(other.getChunkSize())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -27798,6 +37295,10 @@ public final class Mongodb {
       if (hasAuditLog()) {
         hash = (37 * hash) + AUDIT_LOG_FIELD_NUMBER;
         hash = (53 * hash) + getAuditLog().hashCode();
+      }
+      if (hasChunkSize()) {
+        hash = (37 * hash) + CHUNK_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getChunkSize().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -27950,6 +37451,12 @@ public final class Mongodb {
           auditLog_ = null;
           auditLogBuilder_ = null;
         }
+        if (chunkSizeBuilder_ == null) {
+          chunkSize_ = null;
+        } else {
+          chunkSize_ = null;
+          chunkSizeBuilder_ = null;
+        }
         return this;
       }
 
@@ -27990,6 +37497,11 @@ public final class Mongodb {
           result.auditLog_ = auditLog_;
         } else {
           result.auditLog_ = auditLogBuilder_.build();
+        }
+        if (chunkSizeBuilder_ == null) {
+          result.chunkSize_ = chunkSize_;
+        } else {
+          result.chunkSize_ = chunkSizeBuilder_.build();
         }
         onBuilt();
         return result;
@@ -28047,6 +37559,9 @@ public final class Mongodb {
         }
         if (other.hasAuditLog()) {
           mergeAuditLog(other.getAuditLog());
+        }
+        if (other.hasChunkSize()) {
+          mergeChunkSize(other.getChunkSize());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -28540,6 +38055,161 @@ public final class Mongodb {
           auditLog_ = null;
         }
         return auditLogBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value chunkSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> chunkSizeBuilder_;
+      /**
+       * <pre>
+       * `ChunkSize` parameter of mongos configuration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+       * @return Whether the chunkSize field is set.
+       */
+      public boolean hasChunkSize() {
+        return chunkSizeBuilder_ != null || chunkSize_ != null;
+      }
+      /**
+       * <pre>
+       * `ChunkSize` parameter of mongos configuration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+       * @return The chunkSize.
+       */
+      public com.google.protobuf.Int64Value getChunkSize() {
+        if (chunkSizeBuilder_ == null) {
+          return chunkSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : chunkSize_;
+        } else {
+          return chunkSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * `ChunkSize` parameter of mongos configuration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+       */
+      public Builder setChunkSize(com.google.protobuf.Int64Value value) {
+        if (chunkSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          chunkSize_ = value;
+          onChanged();
+        } else {
+          chunkSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `ChunkSize` parameter of mongos configuration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+       */
+      public Builder setChunkSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (chunkSizeBuilder_ == null) {
+          chunkSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          chunkSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `ChunkSize` parameter of mongos configuration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+       */
+      public Builder mergeChunkSize(com.google.protobuf.Int64Value value) {
+        if (chunkSizeBuilder_ == null) {
+          if (chunkSize_ != null) {
+            chunkSize_ =
+              com.google.protobuf.Int64Value.newBuilder(chunkSize_).mergeFrom(value).buildPartial();
+          } else {
+            chunkSize_ = value;
+          }
+          onChanged();
+        } else {
+          chunkSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `ChunkSize` parameter of mongos configuration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+       */
+      public Builder clearChunkSize() {
+        if (chunkSizeBuilder_ == null) {
+          chunkSize_ = null;
+          onChanged();
+        } else {
+          chunkSize_ = null;
+          chunkSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `ChunkSize` parameter of mongos configuration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getChunkSizeBuilder() {
+        
+        onChanged();
+        return getChunkSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * `ChunkSize` parameter of mongos configuration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getChunkSizeOrBuilder() {
+        if (chunkSizeBuilder_ != null) {
+          return chunkSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return chunkSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : chunkSize_;
+        }
+      }
+      /**
+       * <pre>
+       * `ChunkSize` parameter of mongos configuration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value chunk_size = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getChunkSizeFieldBuilder() {
+        if (chunkSizeBuilder_ == null) {
+          chunkSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getChunkSize(),
+                  getParentForChildren(),
+                  isClean());
+          chunkSize_ = null;
+        }
+        return chunkSizeBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -32331,6 +42001,16 @@ public final class Mongodb {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Oplog_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Oplog_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -32380,6 +42060,11 @@ public final class Mongodb {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Oplog_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Oplog_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor;
   private static final 
@@ -32432,7 +42117,7 @@ public final class Mongodb {
       "\n0yandex/cloud/mdb/mongodb/v1/config/mon" +
       "godb.proto\022\"yandex.cloud.mdb.mongodb.v1." +
       "config\032\036google/protobuf/wrappers.proto\032\035" +
-      "yandex/cloud/validation.proto\"\315\025\n\014Mongod" +
+      "yandex/cloud/validation.proto\"\207\036\n\014Mongod" +
       "Config\022I\n\007storage\030\001 \001(\01328.yandex.cloud.m" +
       "db.mongodb.v1.config.MongodConfig.Storag" +
       "e\022`\n\023operation_profiling\030\002 \001(\0132C.yandex." +
@@ -32445,147 +42130,207 @@ public final class Mongodb {
       "d.mdb.mongodb.v1.config.MongodConfig.Aud" +
       "itLog\022T\n\rset_parameter\030\006 \001(\0132=.yandex.cl" +
       "oud.mdb.mongodb.v1.config.MongodConfig.S" +
-      "etParameter\032\302\007\n\007Storage\022X\n\013wired_tiger\030\001" +
-      " \001(\0132C.yandex.cloud.mdb.mongodb.v1.confi" +
-      "g.MongodConfig.Storage.WiredTiger\022Q\n\007jou" +
-      "rnal\030\002 \001(\0132@.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongodConfig.Storage.Journal\032\275\005\n" +
-      "\nWiredTiger\022g\n\rengine_config\030\001 \001(\0132P.yan" +
-      "dex.cloud.mdb.mongodb.v1.config.MongodCo" +
-      "nfig.Storage.WiredTiger.EngineConfig\022o\n\021" +
-      "collection_config\030\002 \001(\0132T.yandex.cloud.m" +
-      "db.mongodb.v1.config.MongodConfig.Storag" +
-      "e.WiredTiger.CollectionConfig\022e\n\014index_c" +
-      "onfig\030\003 \001(\0132O.yandex.cloud.mdb.mongodb.v" +
-      "1.config.MongodConfig.Storage.WiredTiger" +
-      ".IndexConfig\032C\n\014EngineConfig\0223\n\rcache_si" +
-      "ze_gb\030\001 \001(\0132\034.google.protobuf.DoubleValu" +
-      "e\032\341\001\n\020CollectionConfig\022y\n\020block_compress" +
-      "or\030\001 \001(\0162_.yandex.cloud.mdb.mongodb.v1.c" +
-      "onfig.MongodConfig.Storage.WiredTiger.Co" +
-      "llectionConfig.Compressor\"R\n\nCompressor\022" +
-      "\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\n\n" +
-      "\006SNAPPY\020\002\022\010\n\004ZLIB\020\003\022\010\n\004ZSTD\020\004\032E\n\013IndexCo" +
-      "nfig\0226\n\022prefix_compression\030\001 \001(\0132\032.googl" +
-      "e.protobuf.BoolValue\032J\n\007Journal\022?\n\017commi" +
-      "t_interval\030\002 \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\t\372\3071\0051-500\032\255\002\n\022OperationProfiling\022" +
-      "V\n\004mode\030\001 \001(\0162H.yandex.cloud.mdb.mongodb" +
-      ".v1.config.MongodConfig.OperationProfili" +
-      "ng.Mode\022>\n\021slow_op_threshold\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\006\372\3071\002>0\022B\n\023slow_" +
-      "op_sample_rate\030\003 \001(\0132\034.google.protobuf.D" +
-      "oubleValueB\007\372\3071\0030-1\";\n\004Mode\022\024\n\020MODE_UNSP" +
-      "ECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003" +
-      "\032\210\003\n\007Network\022K\n\030max_incoming_connections" +
-      "\030\001 \001(\0132\033.google.protobuf.Int64ValueB\014\372\3071" +
-      "\01010-16384\022Y\n\013compression\030\002 \001(\0132D.yandex." +
-      "cloud.mdb.mongodb.v1.config.MongodConfig" +
-      ".Network.Compression\032\324\001\n\013Compression\022m\n\013" +
-      "compressors\030\001 \003(\0162O.yandex.cloud.mdb.mon" +
-      "godb.v1.config.MongodConfig.Network.Comp" +
-      "ression.CompressorB\007\202\3101\0031-3\"V\n\nCompresso" +
-      "r\022\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022\n\n\006SNAPPY\020" +
-      "\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\022\014\n\010DISABLED\020\004\032\237\002\n\010" +
-      "Security\0225\n\021enable_encryption\030\001 \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022L\n\004kmip\030\002 \001(\0132>." +
-      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
-      "dConfig.Security.KMIP\032\215\001\n\004KMIP\022\023\n\013server" +
-      "_name\030\001 \001(\t\022)\n\004port\030\002 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022\021\n\tserver_ca\030\003 \001(\t\022\032\n\022cli" +
-      "ent_certificate\030\004 \001(\t\022\026\n\016key_identifier\030" +
-      "\005 \001(\t\032U\n\010AuditLog\022\016\n\006filter\030\001 \001(\t\0229\n\025run" +
-      "time_configuration\030\002 \001(\0132\032.google.protob" +
-      "uf.BoolValue\032\336\001\n\014SetParameter\022?\n\033audit_a" +
-      "uthorization_success\030\001 \001(\0132\032.google.prot" +
-      "obuf.BoolValue\0227\n\023enable_flow_control\030\002 " +
-      "\001(\0132\032.google.protobuf.BoolValue\022T\n&min_s" +
-      "napshot_history_window_in_seconds\030\003 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\"\255\r" +
-      "\n\016MongoCfgConfig\022K\n\007storage\030\001 \001(\0132:.yand" +
-      "ex.cloud.mdb.mongodb.v1.config.MongoCfgC" +
-      "onfig.Storage\022b\n\023operation_profiling\030\002 \001" +
-      "(\0132E.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongoCfgConfig.OperationProfiling\022G\n\003net" +
-      "\030\003 \001(\0132:.yandex.cloud.mdb.mongodb.v1.con" +
-      "fig.MongoCfgConfig.Network\022V\n\rset_parame" +
-      "ter\030\004 \001(\0132?.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongoCfgConfig.SetParameter\022N\n\tau" +
-      "dit_log\030\005 \001(\0132;.yandex.cloud.mdb.mongodb" +
-      ".v1.config.MongoCfgConfig.AuditLog\032\324\003\n\007S" +
-      "torage\022Z\n\013wired_tiger\030\001 \001(\0132E.yandex.clo" +
-      "ud.mdb.mongodb.v1.config.MongoCfgConfig." +
-      "Storage.WiredTiger\032\354\002\n\nWiredTiger\022i\n\reng" +
-      "ine_config\030\001 \001(\0132R.yandex.cloud.mdb.mong" +
-      "odb.v1.config.MongoCfgConfig.Storage.Wir" +
-      "edTiger.EngineConfig\022g\n\014index_config\030\002 \001" +
-      "(\0132Q.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongoCfgConfig.Storage.WiredTiger.IndexC" +
-      "onfig\032C\n\014EngineConfig\0223\n\rcache_size_gb\030\001" +
-      " \001(\0132\034.google.protobuf.DoubleValue\032E\n\013In" +
-      "dexConfig\0226\n\022prefix_compression\030\001 \001(\0132\032." +
-      "google.protobuf.BoolValue\032\353\001\n\022OperationP" +
-      "rofiling\022X\n\004mode\030\001 \001(\0162J.yandex.cloud.md" +
-      "b.mongodb.v1.config.MongoCfgConfig.Opera" +
-      "tionProfiling.Mode\022>\n\021slow_op_threshold\030" +
-      "\002 \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002" +
-      ">0\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\007\n\003OFF\020" +
-      "\001\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032\214\003\n\007Network\022K\n\030m" +
-      "ax_incoming_connections\030\001 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\014\372\3071\01010-16384\022[\n\013comp" +
-      "ression\030\002 \001(\0132F.yandex.cloud.mdb.mongodb" +
-      ".v1.config.MongoCfgConfig.Network.Compre" +
-      "ssion\032\326\001\n\013Compression\022o\n\013compressors\030\001 \003" +
-      "(\0162Q.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongoCfgConfig.Network.Compression.Compr" +
-      "essorB\007\202\3101\0031-3\"V\n\nCompressor\022\032\n\026COMPRESS" +
-      "OR_UNSPECIFIED\020\000\022\n\n\006SNAPPY\020\001\022\010\n\004ZLIB\020\002\022\010" +
-      "\n\004ZSTD\020\003\022\014\n\010DISABLED\020\004\032\210\001\n\014SetParameter\022" +
-      "7\n\023enable_flow_control\030\001 \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\022?\n\033audit_authorization_" +
-      "success\030\002 \001(\0132\032.google.protobuf.BoolValu" +
-      "e\032\032\n\010AuditLog\022\016\n\006filter\030\001 \001(\t\"\361\005\n\014Mongos" +
-      "Config\022E\n\003net\030\003 \001(\01328.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongosConfig.Network\022T\n" +
-      "\rset_parameter\030\004 \001(\0132=.yandex.cloud.mdb." +
-      "mongodb.v1.config.MongosConfig.SetParame" +
-      "ter\022L\n\taudit_log\030\005 \001(\01329.yandex.cloud.md" +
-      "b.mongodb.v1.config.MongosConfig.AuditLo" +
-      "g\032\210\003\n\007Network\022K\n\030max_incoming_connection" +
+      "etParameter\022E\n\005oplog\030\007 \001(\01326.yandex.clou" +
+      "d.mdb.mongodb.v1.config.MongodConfig.Opl" +
+      "og\032\364\007\n\007Storage\022X\n\013wired_tiger\030\001 \001(\0132C.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongodC" +
+      "onfig.Storage.WiredTiger\022Q\n\007journal\030\002 \001(" +
+      "\0132@.yandex.cloud.mdb.mongodb.v1.config.M" +
+      "ongodConfig.Storage.Journal\032\357\005\n\nWiredTig" +
+      "er\022g\n\rengine_config\030\001 \001(\0132P.yandex.cloud" +
+      ".mdb.mongodb.v1.config.MongodConfig.Stor" +
+      "age.WiredTiger.EngineConfig\022o\n\021collectio" +
+      "n_config\030\002 \001(\0132T.yandex.cloud.mdb.mongod" +
+      "b.v1.config.MongodConfig.Storage.WiredTi" +
+      "ger.CollectionConfig\022e\n\014index_config\030\003 \001" +
+      "(\0132O.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongodConfig.Storage.WiredTiger.IndexCon" +
+      "fig\032u\n\014EngineConfig\0223\n\rcache_size_gb\030\001 \001" +
+      "(\0132\034.google.protobuf.DoubleValue\0220\n\ncach" +
+      "e_size\030\002 \001(\0132\034.google.protobuf.DoubleVal" +
+      "ue\032\341\001\n\020CollectionConfig\022y\n\020block_compres" +
+      "sor\030\001 \001(\0162_.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongodConfig.Storage.WiredTiger.C" +
+      "ollectionConfig.Compressor\"R\n\nCompressor" +
+      "\022\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\n" +
+      "\n\006SNAPPY\020\002\022\010\n\004ZLIB\020\003\022\010\n\004ZSTD\020\004\032E\n\013IndexC" +
+      "onfig\0226\n\022prefix_compression\030\001 \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\032J\n\007Journal\022?\n\017comm" +
+      "it_interval\030\002 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\t\372\3071\0051-500\032\255\002\n\022OperationProfiling" +
+      "\022V\n\004mode\030\001 \001(\0162H.yandex.cloud.mdb.mongod" +
+      "b.v1.config.MongodConfig.OperationProfil" +
+      "ing.Mode\022>\n\021slow_op_threshold\030\002 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\006\372\3071\002>0\022B\n\023slow" +
+      "_op_sample_rate\030\003 \001(\0132\034.google.protobuf." +
+      "DoubleValueB\007\372\3071\0030-1\";\n\004Mode\022\024\n\020MODE_UNS" +
+      "PECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020" +
+      "\003\032\210\003\n\007Network\022K\n\030max_incoming_connection" +
       "s\030\001 \001(\0132\033.google.protobuf.Int64ValueB\014\372\307" +
       "1\01010-16384\022Y\n\013compression\030\002 \001(\0132D.yandex" +
-      ".cloud.mdb.mongodb.v1.config.MongosConfi" +
+      ".cloud.mdb.mongodb.v1.config.MongodConfi" +
       "g.Network.Compression\032\324\001\n\013Compression\022m\n" +
       "\013compressors\030\001 \003(\0162O.yandex.cloud.mdb.mo" +
-      "ngodb.v1.config.MongosConfig.Network.Com" +
+      "ngodb.v1.config.MongodConfig.Network.Com" +
       "pression.CompressorB\007\202\3101\0031-3\"V\n\nCompress" +
       "or\022\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022\n\n\006SNAPPY" +
-      "\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\022\014\n\010DISABLED\020\004\032O\n\014" +
-      "SetParameter\022?\n\033audit_authorization_succ" +
-      "ess\030\001 \001(\0132\032.google.protobuf.BoolValue\032\032\n" +
-      "\010AuditLog\022\016\n\006filter\030\001 \001(\t\"\356\001\n\017MongodConf" +
-      "igSet\022J\n\020effective_config\030\001 \001(\01320.yandex" +
-      ".cloud.mdb.mongodb.v1.config.MongodConfi" +
-      "g\022E\n\013user_config\030\002 \001(\01320.yandex.cloud.md" +
-      "b.mongodb.v1.config.MongodConfig\022H\n\016defa" +
-      "ult_config\030\003 \001(\01320.yandex.cloud.mdb.mong" +
-      "odb.v1.config.MongodConfig\"\366\001\n\021MongoCfgC" +
-      "onfigSet\022L\n\020effective_config\030\001 \001(\01322.yan" +
+      "\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\022\014\n\010DISABLED\020\004\032\237\002\n" +
+      "\010Security\0225\n\021enable_encryption\030\001 \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022L\n\004kmip\030\002 \001(\0132>" +
+      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
+      "odConfig.Security.KMIP\032\215\001\n\004KMIP\022\023\n\013serve" +
+      "r_name\030\001 \001(\t\022)\n\004port\030\002 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022\021\n\tserver_ca\030\003 \001(\t\022\032\n\022cl" +
+      "ient_certificate\030\004 \001(\t\022\026\n\016key_identifier" +
+      "\030\005 \001(\t\032U\n\010AuditLog\022\016\n\006filter\030\001 \001(\t\0229\n\025ru" +
+      "ntime_configuration\030\002 \001(\0132\032.google.proto" +
+      "buf.BoolValue\032\244\010\n\014SetParameter\022?\n\033audit_" +
+      "authorization_success\030\001 \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\0227\n\023enable_flow_control\030\002" +
+      " \001(\0132\032.google.protobuf.BoolValue\022T\n&min_" +
+      "snapshot_history_window_in_seconds\030\003 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022L" +
+      "\n\037flow_control_target_lag_seconds\030\004 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022Q\n#" +
+      "flow_control_warn_threshold_seconds\030\005 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
+      "T\n&migrate_clone_insertion_batch_delay_m" +
+      "s\030\006 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\022P\n\"migrate_clone_insertion_batch_s" +
+      "ize\030\007 \001(\0132\033.google.protobuf.Int64ValueB\007" +
+      "\372\3071\003>=0\022>\n\031orphan_cleanup_delay_secs\030\010 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022P\n+persi" +
+      "sted_chunk_cache_update_max_batch_size\030\t" +
+      " \001(\0132\033.google.protobuf.Int64Value\022J\n\034ran" +
+      "ge_deleter_batch_delay_ms\030\n \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\007\372\3071\003>=0\022F\n\030range_d" +
+      "eleter_batch_size\030\013 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\007\372\3071\003>=0\022_\n\014mirror_reads\030\014 " +
+      "\001(\0132I.yandex.cloud.mdb.mongodb.v1.config" +
+      ".MongodConfig.SetParameter.MirrorReads\032t" +
+      "\n\013MirrorReads\0223\n\rsampling_rate\030\001 \001(\0132\034.g" +
+      "oogle.protobuf.DoubleValue\0220\n\013max_time_m" +
+      "s\030\002 \001(\0132\033.google.protobuf.Int64Value\032y\n\005" +
+      "Oplog\0225\n\020max_size_percent\030\001 \001(\0132\033.google" +
+      ".protobuf.Int64Value\0229\n\023min_retention_ho" +
+      "urs\030\002 \001(\0132\034.google.protobuf.DoubleValue\"" +
+      "\243\017\n\016MongoCfgConfig\022K\n\007storage\030\001 \001(\0132:.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongoCf" +
+      "gConfig.Storage\022b\n\023operation_profiling\030\002" +
+      " \001(\0132E.yandex.cloud.mdb.mongodb.v1.confi" +
+      "g.MongoCfgConfig.OperationProfiling\022G\n\003n" +
+      "et\030\003 \001(\0132:.yandex.cloud.mdb.mongodb.v1.c" +
+      "onfig.MongoCfgConfig.Network\022V\n\rset_para" +
+      "meter\030\004 \001(\0132?.yandex.cloud.mdb.mongodb.v" +
+      "1.config.MongoCfgConfig.SetParameter\022N\n\t" +
+      "audit_log\030\005 \001(\0132;.yandex.cloud.mdb.mongo" +
+      "db.v1.config.MongoCfgConfig.AuditLog\022G\n\005" +
+      "oplog\030\006 \001(\01328.yandex.cloud.mdb.mongodb.v" +
+      "1.config.MongoCfgConfig.Oplog\032\206\004\n\007Storag" +
+      "e\022Z\n\013wired_tiger\030\001 \001(\0132E.yandex.cloud.md" +
+      "b.mongodb.v1.config.MongoCfgConfig.Stora" +
+      "ge.WiredTiger\032\236\003\n\nWiredTiger\022i\n\rengine_c" +
+      "onfig\030\001 \001(\0132R.yandex.cloud.mdb.mongodb.v" +
+      "1.config.MongoCfgConfig.Storage.WiredTig" +
+      "er.EngineConfig\022g\n\014index_config\030\002 \001(\0132Q." +
+      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
+      "CfgConfig.Storage.WiredTiger.IndexConfig" +
+      "\032u\n\014EngineConfig\0223\n\rcache_size_gb\030\001 \001(\0132" +
+      "\034.google.protobuf.DoubleValue\0220\n\ncache_s" +
+      "ize\030\002 \001(\0132\034.google.protobuf.DoubleValue\032" +
+      "E\n\013IndexConfig\0226\n\022prefix_compression\030\001 \001" +
+      "(\0132\032.google.protobuf.BoolValue\032\353\001\n\022Opera" +
+      "tionProfiling\022X\n\004mode\030\001 \001(\0162J.yandex.clo" +
+      "ud.mdb.mongodb.v1.config.MongoCfgConfig." +
+      "OperationProfiling.Mode\022>\n\021slow_op_thres" +
+      "hold\030\002 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\006\372\3071\002>0\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\007\n" +
+      "\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032\214\003\n\007Network" +
+      "\022K\n\030max_incoming_connections\030\001 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\014\372\3071\01010-16384\022[\n" +
+      "\013compression\030\002 \001(\0132F.yandex.cloud.mdb.mo" +
+      "ngodb.v1.config.MongoCfgConfig.Network.C" +
+      "ompression\032\326\001\n\013Compression\022o\n\013compressor" +
+      "s\030\001 \003(\0162Q.yandex.cloud.mdb.mongodb.v1.co" +
+      "nfig.MongoCfgConfig.Network.Compression." +
+      "CompressorB\007\202\3101\0031-3\"V\n\nCompressor\022\032\n\026COM" +
+      "PRESSOR_UNSPECIFIED\020\000\022\n\n\006SNAPPY\020\001\022\010\n\004ZLI" +
+      "B\020\002\022\010\n\004ZSTD\020\003\022\014\n\010DISABLED\020\004\032\210\001\n\014SetParam" +
+      "eter\0227\n\023enable_flow_control\030\001 \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022?\n\033audit_authoriza" +
+      "tion_success\030\002 \001(\0132\032.google.protobuf.Boo" +
+      "lValue\032\032\n\010AuditLog\022\016\n\006filter\030\001 \001(\t\032y\n\005Op" +
+      "log\0225\n\020max_size_percent\030\001 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\0229\n\023min_retention_hour" +
+      "s\030\002 \001(\0132\034.google.protobuf.DoubleValue\"\250\016" +
+      "\n\014MongosConfig\022E\n\003net\030\003 \001(\01328.yandex.clo" +
+      "ud.mdb.mongodb.v1.config.MongosConfig.Ne" +
+      "twork\022T\n\rset_parameter\030\004 \001(\0132=.yandex.cl" +
+      "oud.mdb.mongodb.v1.config.MongosConfig.S" +
+      "etParameter\022L\n\taudit_log\030\005 \001(\01329.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongosConfig" +
+      ".AuditLog\022/\n\nchunk_size\030\006 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\032\210\003\n\007Network\022K\n\030max_in" +
+      "coming_connections\030\001 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\014\372\3071\01010-16384\022Y\n\013compressi" +
+      "on\030\002 \001(\0132D.yandex.cloud.mdb.mongodb.v1.c" +
+      "onfig.MongosConfig.Network.Compression\032\324" +
+      "\001\n\013Compression\022m\n\013compressors\030\001 \003(\0162O.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongosC" +
+      "onfig.Network.Compression.CompressorB\007\202\310" +
+      "1\0031-3\"V\n\nCompressor\022\032\n\026COMPRESSOR_UNSPEC" +
+      "IFIED\020\000\022\n\n\006SNAPPY\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\022" +
+      "\014\n\010DISABLED\020\004\032\324\010\n\014SetParameter\022?\n\033audit_" +
+      "authorization_success\030\001 \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\0227\n\021read_hedging_mode\030\002 \001" +
+      "(\0132\034.google.protobuf.StringValue\022I\n$shar" +
+      "ding_task_executor_pool_max_size\030\003 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022O\n*sharding_" +
+      "task_executor_pool_max_connecting\030\004 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022I\n$sharding" +
+      "_task_executor_pool_min_size\030\005 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022V\n0sharding_task" +
+      "_executor_pool_replica_set_matching\030\006 \001(" +
+      "\0132\034.google.protobuf.StringValue\022P\n+shard" +
+      "ing_task_executor_pool_host_timeout_ms\030\007" +
+      " \001(\0132\033.google.protobuf.Int64Value\022W\n2sha" +
+      "rding_task_executor_pool_refresh_require" +
+      "ment_ms\030\010 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022S\n.sharding_task_executor_pool_refres" +
+      "h_timeout_ms\030\t \001(\0132\033.google.protobuf.Int" +
+      "64Value\022b\n>warm_min_connections_in_shard" +
+      "ing_task_executor_pool_on_startup\030\n \001(\0132" +
+      "\032.google.protobuf.BoolValue\022k\nFwarm_min_" +
+      "connections_in_sharding_task_executor_po" +
+      "ol_on_startup_wait_ms\030\013 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022\\\n7sharding_task_execut" +
+      "or_pool_max_size_for_config_servers\030\014 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022\\\n7shardi" +
+      "ng_task_executor_pool_min_size_for_confi" +
+      "g_servers\030\r \001(\0132\033.google.protobuf.Int64V" +
+      "alue\032\032\n\010AuditLog\022\016\n\006filter\030\001 \001(\t\"\356\001\n\017Mon" +
+      "godConfigSet\022J\n\020effective_config\030\001 \001(\01320" +
+      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
+      "odConfig\022E\n\013user_config\030\002 \001(\01320.yandex.c" +
+      "loud.mdb.mongodb.v1.config.MongodConfig\022" +
+      "H\n\016default_config\030\003 \001(\01320.yandex.cloud.m" +
+      "db.mongodb.v1.config.MongodConfig\"\366\001\n\021Mo" +
+      "ngoCfgConfigSet\022L\n\020effective_config\030\001 \001(" +
+      "\01322.yandex.cloud.mdb.mongodb.v1.config.M" +
+      "ongoCfgConfig\022G\n\013user_config\030\002 \001(\01322.yan" +
       "dex.cloud.mdb.mongodb.v1.config.MongoCfg" +
-      "Config\022G\n\013user_config\030\002 \001(\01322.yandex.clo" +
-      "ud.mdb.mongodb.v1.config.MongoCfgConfig\022" +
-      "J\n\016default_config\030\003 \001(\01322.yandex.cloud.m" +
-      "db.mongodb.v1.config.MongoCfgConfig\"\356\001\n\017" +
-      "MongosConfigSet\022J\n\020effective_config\030\001 \001(" +
-      "\01320.yandex.cloud.mdb.mongodb.v1.config.M" +
-      "ongosConfig\022E\n\013user_config\030\002 \001(\01320.yande" +
-      "x.cloud.mdb.mongodb.v1.config.MongosConf" +
-      "ig\022H\n\016default_config\030\003 \001(\01320.yandex.clou" +
-      "d.mdb.mongodb.v1.config.MongosConfigBx\n&" +
-      "yandex.cloud.api.mdb.mongodb.v1.configZN" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/mdb/mongodb/v1/config;mongodbb\006" +
-      "proto3"
+      "Config\022J\n\016default_config\030\003 \001(\01322.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongoCfgConf" +
+      "ig\"\356\001\n\017MongosConfigSet\022J\n\020effective_conf" +
+      "ig\030\001 \001(\01320.yandex.cloud.mdb.mongodb.v1.c" +
+      "onfig.MongosConfig\022E\n\013user_config\030\002 \001(\0132" +
+      "0.yandex.cloud.mdb.mongodb.v1.config.Mon" +
+      "gosConfig\022H\n\016default_config\030\003 \001(\01320.yand" +
+      "ex.cloud.mdb.mongodb.v1.config.MongosCon" +
+      "figBx\n&yandex.cloud.api.mdb.mongodb.v1.c" +
+      "onfigZNgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/mdb/mongodb/v1/config;mo" +
+      "ngodbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -32598,7 +42343,7 @@ public final class Mongodb {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_descriptor,
-        new java.lang.String[] { "Storage", "OperationProfiling", "Net", "Security", "AuditLog", "SetParameter", });
+        new java.lang.String[] { "Storage", "OperationProfiling", "Net", "Security", "AuditLog", "SetParameter", "Oplog", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Storage_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Storage_fieldAccessorTable = new
@@ -32616,7 +42361,7 @@ public final class Mongodb {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Storage_WiredTiger_EngineConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Storage_WiredTiger_EngineConfig_descriptor,
-        new java.lang.String[] { "CacheSizeGb", });
+        new java.lang.String[] { "CacheSizeGb", "CacheSize", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Storage_WiredTiger_CollectionConfig_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Storage_WiredTiger_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Storage_WiredTiger_CollectionConfig_fieldAccessorTable = new
@@ -32676,13 +42421,25 @@ public final class Mongodb {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_descriptor,
-        new java.lang.String[] { "AuditAuthorizationSuccess", "EnableFlowControl", "MinSnapshotHistoryWindowInSeconds", });
+        new java.lang.String[] { "AuditAuthorizationSuccess", "EnableFlowControl", "MinSnapshotHistoryWindowInSeconds", "FlowControlTargetLagSeconds", "FlowControlWarnThresholdSeconds", "MigrateCloneInsertionBatchDelayMs", "MigrateCloneInsertionBatchSize", "OrphanCleanupDelaySecs", "PersistedChunkCacheUpdateMaxBatchSize", "RangeDeleterBatchDelayMs", "RangeDeleterBatchSize", "MirrorReads", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_descriptor,
+        new java.lang.String[] { "SamplingRate", "MaxTimeMs", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Oplog_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_descriptor.getNestedTypes().get(6);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Oplog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_Oplog_descriptor,
+        new java.lang.String[] { "MaxSizePercent", "MinRetentionHours", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_descriptor,
-        new java.lang.String[] { "Storage", "OperationProfiling", "Net", "SetParameter", "AuditLog", });
+        new java.lang.String[] { "Storage", "OperationProfiling", "Net", "SetParameter", "AuditLog", "Oplog", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_fieldAccessorTable = new
@@ -32700,7 +42457,7 @@ public final class Mongodb {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_EngineConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_EngineConfig_descriptor,
-        new java.lang.String[] { "CacheSizeGb", });
+        new java.lang.String[] { "CacheSizeGb", "CacheSize", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Storage_WiredTiger_IndexConfig_fieldAccessorTable = new
@@ -32737,12 +42494,18 @@ public final class Mongodb {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_descriptor,
         new java.lang.String[] { "Filter", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Oplog_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_descriptor.getNestedTypes().get(5);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Oplog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_Oplog_descriptor,
+        new java.lang.String[] { "MaxSizePercent", "MinRetentionHours", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor,
-        new java.lang.String[] { "Net", "SetParameter", "AuditLog", });
+        new java.lang.String[] { "Net", "SetParameter", "AuditLog", "ChunkSize", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_Network_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_Network_fieldAccessorTable = new
@@ -32760,7 +42523,7 @@ public final class Mongodb {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_descriptor,
-        new java.lang.String[] { "AuditAuthorizationSuccess", });
+        new java.lang.String[] { "AuditAuthorizationSuccess", "ReadHedgingMode", "ShardingTaskExecutorPoolMaxSize", "ShardingTaskExecutorPoolMaxConnecting", "ShardingTaskExecutorPoolMinSize", "ShardingTaskExecutorPoolReplicaSetMatching", "ShardingTaskExecutorPoolHostTimeoutMs", "ShardingTaskExecutorPoolRefreshRequirementMs", "ShardingTaskExecutorPoolRefreshTimeoutMs", "WarmMinConnectionsInShardingTaskExecutorPoolOnStartup", "WarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs", "ShardingTaskExecutorPoolMaxSizeForConfigServers", "ShardingTaskExecutorPoolMinSizeForConfigServers", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_fieldAccessorTable = new

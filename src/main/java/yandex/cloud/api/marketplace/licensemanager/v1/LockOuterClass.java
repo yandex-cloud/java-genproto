@@ -224,6 +224,36 @@ public final class LockOuterClass {
      */
     com.google.protobuf.ByteString
         getTemplateIdBytes();
+
+    /**
+     * <pre>
+     * External subscription instance (optional), for usage convenience propagated
+     * from parent subscription instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+     * @return Whether the externalInstance field is set.
+     */
+    boolean hasExternalInstance();
+    /**
+     * <pre>
+     * External subscription instance (optional), for usage convenience propagated
+     * from parent subscription instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+     * @return The externalInstance.
+     */
+    yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance getExternalInstance();
+    /**
+     * <pre>
+     * External subscription instance (optional), for usage convenience propagated
+     * from parent subscription instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+     */
+    yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstanceOrBuilder getExternalInstanceOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.marketplace.licensemanager.v1.Lock}
@@ -355,6 +385,19 @@ public final class LockOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               templateId_ = s;
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance.Builder subBuilder = null;
+              if (externalInstance_ != null) {
+                subBuilder = externalInstance_.toBuilder();
+              }
+              externalInstance_ = input.readMessage(yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(externalInstance_);
+                externalInstance_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -902,6 +945,47 @@ public final class LockOuterClass {
       }
     }
 
+    public static final int EXTERNAL_INSTANCE_FIELD_NUMBER = 10;
+    private yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance externalInstance_;
+    /**
+     * <pre>
+     * External subscription instance (optional), for usage convenience propagated
+     * from parent subscription instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+     * @return Whether the externalInstance field is set.
+     */
+    @java.lang.Override
+    public boolean hasExternalInstance() {
+      return externalInstance_ != null;
+    }
+    /**
+     * <pre>
+     * External subscription instance (optional), for usage convenience propagated
+     * from parent subscription instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+     * @return The externalInstance.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance getExternalInstance() {
+      return externalInstance_ == null ? yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance.getDefaultInstance() : externalInstance_;
+    }
+    /**
+     * <pre>
+     * External subscription instance (optional), for usage convenience propagated
+     * from parent subscription instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstanceOrBuilder getExternalInstanceOrBuilder() {
+      return getExternalInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -943,6 +1027,9 @@ public final class LockOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, templateId_);
       }
+      if (externalInstance_ != null) {
+        output.writeMessage(10, getExternalInstance());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -983,6 +1070,10 @@ public final class LockOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, templateId_);
+      }
+      if (externalInstance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getExternalInstance());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1028,6 +1119,11 @@ public final class LockOuterClass {
       if (state_ != other.state_) return false;
       if (!getTemplateId()
           .equals(other.getTemplateId())) return false;
+      if (hasExternalInstance() != other.hasExternalInstance()) return false;
+      if (hasExternalInstance()) {
+        if (!getExternalInstance()
+            .equals(other.getExternalInstance())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1065,6 +1161,10 @@ public final class LockOuterClass {
       hash = (53 * hash) + state_;
       hash = (37 * hash) + TEMPLATE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getTemplateId().hashCode();
+      if (hasExternalInstance()) {
+        hash = (37 * hash) + EXTERNAL_INSTANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getExternalInstance().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1232,6 +1332,12 @@ public final class LockOuterClass {
 
         templateId_ = "";
 
+        if (externalInstanceBuilder_ == null) {
+          externalInstance_ = null;
+        } else {
+          externalInstance_ = null;
+          externalInstanceBuilder_ = null;
+        }
         return this;
       }
 
@@ -1283,6 +1389,11 @@ public final class LockOuterClass {
         }
         result.state_ = state_;
         result.templateId_ = templateId_;
+        if (externalInstanceBuilder_ == null) {
+          result.externalInstance_ = externalInstance_;
+        } else {
+          result.externalInstance_ = externalInstanceBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1361,6 +1472,9 @@ public final class LockOuterClass {
         if (!other.getTemplateId().isEmpty()) {
           templateId_ = other.templateId_;
           onChanged();
+        }
+        if (other.hasExternalInstance()) {
+          mergeExternalInstance(other.getExternalInstance());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2468,6 +2582,170 @@ public final class LockOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance externalInstance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance, yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance.Builder, yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstanceOrBuilder> externalInstanceBuilder_;
+      /**
+       * <pre>
+       * External subscription instance (optional), for usage convenience propagated
+       * from parent subscription instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+       * @return Whether the externalInstance field is set.
+       */
+      public boolean hasExternalInstance() {
+        return externalInstanceBuilder_ != null || externalInstance_ != null;
+      }
+      /**
+       * <pre>
+       * External subscription instance (optional), for usage convenience propagated
+       * from parent subscription instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+       * @return The externalInstance.
+       */
+      public yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance getExternalInstance() {
+        if (externalInstanceBuilder_ == null) {
+          return externalInstance_ == null ? yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance.getDefaultInstance() : externalInstance_;
+        } else {
+          return externalInstanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * External subscription instance (optional), for usage convenience propagated
+       * from parent subscription instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+       */
+      public Builder setExternalInstance(yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance value) {
+        if (externalInstanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          externalInstance_ = value;
+          onChanged();
+        } else {
+          externalInstanceBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * External subscription instance (optional), for usage convenience propagated
+       * from parent subscription instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+       */
+      public Builder setExternalInstance(
+          yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance.Builder builderForValue) {
+        if (externalInstanceBuilder_ == null) {
+          externalInstance_ = builderForValue.build();
+          onChanged();
+        } else {
+          externalInstanceBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * External subscription instance (optional), for usage convenience propagated
+       * from parent subscription instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+       */
+      public Builder mergeExternalInstance(yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance value) {
+        if (externalInstanceBuilder_ == null) {
+          if (externalInstance_ != null) {
+            externalInstance_ =
+              yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance.newBuilder(externalInstance_).mergeFrom(value).buildPartial();
+          } else {
+            externalInstance_ = value;
+          }
+          onChanged();
+        } else {
+          externalInstanceBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * External subscription instance (optional), for usage convenience propagated
+       * from parent subscription instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+       */
+      public Builder clearExternalInstance() {
+        if (externalInstanceBuilder_ == null) {
+          externalInstance_ = null;
+          onChanged();
+        } else {
+          externalInstance_ = null;
+          externalInstanceBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * External subscription instance (optional), for usage convenience propagated
+       * from parent subscription instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+       */
+      public yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance.Builder getExternalInstanceBuilder() {
+        
+        onChanged();
+        return getExternalInstanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * External subscription instance (optional), for usage convenience propagated
+       * from parent subscription instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+       */
+      public yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstanceOrBuilder getExternalInstanceOrBuilder() {
+        if (externalInstanceBuilder_ != null) {
+          return externalInstanceBuilder_.getMessageOrBuilder();
+        } else {
+          return externalInstance_ == null ?
+              yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance.getDefaultInstance() : externalInstance_;
+        }
+      }
+      /**
+       * <pre>
+       * External subscription instance (optional), for usage convenience propagated
+       * from parent subscription instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance, yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance.Builder, yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstanceOrBuilder> 
+          getExternalInstanceFieldBuilder() {
+        if (externalInstanceBuilder_ == null) {
+          externalInstanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance, yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstance.Builder, yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstanceOrBuilder>(
+                  getExternalInstance(),
+                  getParentForChildren(),
+                  isClean());
+          externalInstance_ = null;
+        }
+        return externalInstanceBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2538,34 +2816,40 @@ public final class LockOuterClass {
       "\n5yandex/cloud/marketplace/licensemanage" +
       "r/v1/lock.proto\022*yandex.cloud.marketplac" +
       "e.licensemanager.v1\032\037google/protobuf/tim" +
-      "estamp.proto\"\235\003\n\004Lock\022\n\n\002id\030\001 \001(\t\022\023\n\013ins" +
-      "tance_id\030\002 \001(\t\022\023\n\013resource_id\030\003 \001(\t\022.\n\ns" +
-      "tart_time\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022,\n\010end_time\030\005 \001(\0132\032.google.protobuf." +
-      "Timestamp\022.\n\ncreated_at\030\006 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022.\n\nupdated_at\030\007 \001(\0132\032." +
-      "google.protobuf.Timestamp\022E\n\005state\030\010 \001(\016" +
-      "26.yandex.cloud.marketplace.licensemanag" +
-      "er.v1.Lock.State\022\023\n\013template_id\030\t \001(\t\"E\n" +
-      "\005State\022\025\n\021STATE_UNSPECIFIED\020\000\022\014\n\010UNLOCKE" +
-      "D\020\001\022\n\n\006LOCKED\020\002\022\013\n\007DELETED\020\003B\217\001\n.yandex." +
-      "cloud.api.marketplace.licensemanager.v1Z" +
-      "]github.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/marketplace/licensemanager/v1;" +
-      "licensemanagerb\006proto3"
+      "estamp.proto\032Byandex/cloud/marketplace/l" +
+      "icensemanager/v1/external_instance.proto" +
+      "\"\366\003\n\004Lock\022\n\n\002id\030\001 \001(\t\022\023\n\013instance_id\030\002 \001" +
+      "(\t\022\023\n\013resource_id\030\003 \001(\t\022.\n\nstart_time\030\004 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022,\n\010end_t" +
+      "ime\030\005 \001(\0132\032.google.protobuf.Timestamp\022.\n" +
+      "\ncreated_at\030\006 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022.\n\nupdated_at\030\007 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022E\n\005state\030\010 \001(\01626.yandex.cl" +
+      "oud.marketplace.licensemanager.v1.Lock.S" +
+      "tate\022\023\n\013template_id\030\t \001(\t\022W\n\021external_in" +
+      "stance\030\n \001(\0132<.yandex.cloud.marketplace." +
+      "licensemanager.v1.ExternalInstance\"E\n\005St" +
+      "ate\022\025\n\021STATE_UNSPECIFIED\020\000\022\014\n\010UNLOCKED\020\001" +
+      "\022\n\n\006LOCKED\020\002\022\013\n\007DELETED\020\003B\217\001\n.yandex.clo" +
+      "ud.api.marketplace.licensemanager.v1Z]gi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/marketplace/licensemanager/v1;lic" +
+      "ensemanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_marketplace_licensemanager_v1_Lock_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_marketplace_licensemanager_v1_Lock_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_marketplace_licensemanager_v1_Lock_descriptor,
-        new java.lang.String[] { "Id", "InstanceId", "ResourceId", "StartTime", "EndTime", "CreatedAt", "UpdatedAt", "State", "TemplateId", });
+        new java.lang.String[] { "Id", "InstanceId", "ResourceId", "StartTime", "EndTime", "CreatedAt", "UpdatedAt", "State", "TemplateId", "ExternalInstance", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

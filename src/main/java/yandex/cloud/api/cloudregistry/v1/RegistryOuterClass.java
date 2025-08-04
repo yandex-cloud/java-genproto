@@ -713,6 +713,14 @@ public final class RegistryOuterClass {
        * <code>DEBIAN = 5;</code>
        */
       DEBIAN(5),
+      /**
+       * <pre>
+       * Registry kind is pypi.
+       * </pre>
+       *
+       * <code>PYPI = 6;</code>
+       */
+      PYPI(6),
       UNRECOGNIZED(-1),
       ;
 
@@ -760,6 +768,14 @@ public final class RegistryOuterClass {
        * <code>DEBIAN = 5;</code>
        */
       public static final int DEBIAN_VALUE = 5;
+      /**
+       * <pre>
+       * Registry kind is pypi.
+       * </pre>
+       *
+       * <code>PYPI = 6;</code>
+       */
+      public static final int PYPI_VALUE = 6;
 
 
       public final int getNumber() {
@@ -792,6 +808,7 @@ public final class RegistryOuterClass {
           case 3: return DOCKER;
           case 4: return NUGET;
           case 5: return DEBIAN;
+          case 6: return PYPI;
           default: return null;
         }
       }
@@ -3376,7 +3393,7 @@ public final class RegistryOuterClass {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/cloudregistry/v1/registry" +
       ".proto\022\035yandex.cloud.cloudregistry.v1\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\272\006\n\010Regis" +
+      "oogle/protobuf/timestamp.proto\"\304\006\n\010Regis" +
       "try\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014\n\004na" +
       "me\030\003 \001(\t\022:\n\004kind\030\004 \001(\0162,.yandex.cloud.cl" +
       "oudregistry.v1.Registry.Kind\022:\n\004type\030\005 \001" +
@@ -3393,14 +3410,14 @@ public final class RegistryOuterClass {
       " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0321\n\017PropertiesEnt" +
       "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"H\n\006St" +
       "atus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING" +
-      "\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\"S\n\004Kind\022\024\n\020" +
+      "\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\"]\n\004Kind\022\024\n\020" +
       "KIND_UNSPECIFIED\020\000\022\t\n\005MAVEN\020\001\022\007\n\003NPM\020\002\022\n" +
-      "\n\006DOCKER\020\003\022\t\n\005NUGET\020\004\022\n\n\006DEBIAN\020\005\"@\n\004Typ" +
-      "e\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005LOCAL\020\001\022\n\n\006RE" +
-      "MOTE\020\002\022\013\n\007VIRTUAL\020\003Bt\n!yandex.cloud.api." +
-      "cloudregistry.v1ZOgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/cloudregistry" +
-      "/v1;cloudregistryb\006proto3"
+      "\n\006DOCKER\020\003\022\t\n\005NUGET\020\004\022\n\n\006DEBIAN\020\005\022\010\n\004PYP" +
+      "I\020\006\"@\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005LOC" +
+      "AL\020\001\022\n\n\006REMOTE\020\002\022\013\n\007VIRTUAL\020\003Bt\n!yandex." +
+      "cloud.api.cloudregistry.v1ZOgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/clo" +
+      "udregistry/v1;cloudregistryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

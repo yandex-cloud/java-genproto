@@ -8442,57 +8442,67 @@ public final class CatalogServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/trino/v1/catalog_service." +
-      "proto\022\025yandex.cloud.trino.v1\032 google/pro" +
-      "tobuf/field_mask.proto\032 yandex/cloud/api" +
-      "/operation.proto\032&yandex/cloud/operation" +
-      "/operation.proto\032#yandex/cloud/trino/v1/" +
-      "catalog.proto\032\035yandex/cloud/validation.p" +
-      "roto\"W\n\021GetCatalogRequest\022 \n\ncluster_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\ncatalog_id\030\002 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"\221\001\n\023ListCatalogsRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=100" +
-      "0\"a\n\024ListCatalogsResponse\0220\n\010catalogs\030\001 " +
-      "\003(\0132\036.yandex.cloud.trino.v1.Catalog\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t\"s\n\024CreateCatalogReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0229" +
-      "\n\007catalog\030\002 \001(\0132\".yandex.cloud.trino.v1." +
-      "CatalogSpecB\004\350\3071\001\"?\n\025CreateCatalogMetada" +
-      "ta\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\ncatalog_id\030\002 \001" +
-      "(\t\"\322\001\n\024UpdateCatalogRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\ncatalog_id\030\002 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\0225\n\013update_mask\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.FieldMaskB\004\350\3071\001\022?\n\007catalo" +
-      "g\030\004 \001(\0132(.yandex.cloud.trino.v1.CatalogU" +
-      "pdateSpecB\004\350\3071\001\"?\n\025UpdateCatalogMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\ncatalog_id\030\002 \001(\t" +
-      "\"Z\n\024DeleteCatalogRequest\022 \n\ncluster_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\ncatalog_id\030\002 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"?\n\025DeleteCatalogMetadata\022\022\n" +
-      "\ncluster_id\030\001 \001(\t\022\022\n\ncatalog_id\030\002 \001(\t2\325\004" +
-      "\n\016CatalogService\022Q\n\003Get\022(.yandex.cloud.t" +
-      "rino.v1.GetCatalogRequest\032\036.yandex.cloud" +
-      ".trino.v1.Catalog\"\000\022a\n\004List\022*.yandex.clo" +
-      "ud.trino.v1.ListCatalogsRequest\032+.yandex" +
-      ".cloud.trino.v1.ListCatalogsResponse\"\000\022~" +
-      "\n\006Create\022+.yandex.cloud.trino.v1.CreateC" +
-      "atalogRequest\032!.yandex.cloud.operation.O" +
-      "peration\"$\262\322* \n\025CreateCatalogMetadata\022\007C" +
-      "atalog\022~\n\006Update\022+.yandex.cloud.trino.v1" +
-      ".UpdateCatalogRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"$\262\322* \n\025UpdateCatalogMet" +
-      "adata\022\007Catalog\022\214\001\n\006Delete\022+.yandex.cloud" +
-      ".trino.v1.DeleteCatalogRequest\032!.yandex." +
-      "cloud.operation.Operation\"2\262\322*.\n\025DeleteC" +
-      "atalogMetadata\022\025google.protobuf.EmptyB\\\n" +
-      "\031yandex.cloud.api.trino.v1Z?github.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/tri" +
-      "no/v1;trinob\006proto3"
+      "proto\022\025yandex.cloud.trino.v1\032\034google/api" +
+      "/annotations.proto\032 google/protobuf/fiel" +
+      "d_mask.proto\032 yandex/cloud/api/operation" +
+      ".proto\032&yandex/cloud/operation/operation" +
+      ".proto\032#yandex/cloud/trino/v1/catalog.pr" +
+      "oto\032\035yandex/cloud/validation.proto\"W\n\021Ge" +
+      "tCatalogRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022 \n\ncatalog_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\"\221\001\n\023ListCatalogsRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
+      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
+      "100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"a\n\024ListC" +
+      "atalogsResponse\0220\n\010catalogs\030\001 \003(\0132\036.yand" +
+      "ex.cloud.trino.v1.Catalog\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t\"s\n\024CreateCatalogRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0229\n\007catalog\030" +
+      "\002 \001(\0132\".yandex.cloud.trino.v1.CatalogSpe" +
+      "cB\004\350\3071\001\"?\n\025CreateCatalogMetadata\022\022\n\nclus" +
+      "ter_id\030\001 \001(\t\022\022\n\ncatalog_id\030\002 \001(\t\"\322\001\n\024Upd" +
+      "ateCatalogRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022 \n\ncatalog_id\030\002 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\0225\n\013update_mask\030\003 \001(\0132\032.google.prot" +
+      "obuf.FieldMaskB\004\350\3071\001\022?\n\007catalog\030\004 \001(\0132(." +
+      "yandex.cloud.trino.v1.CatalogUpdateSpecB" +
+      "\004\350\3071\001\"?\n\025UpdateCatalogMetadata\022\022\n\ncluste" +
+      "r_id\030\001 \001(\t\022\022\n\ncatalog_id\030\002 \001(\t\"Z\n\024Delete" +
+      "CatalogRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022 \n\ncatalog_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\"?\n\025DeleteCatalogMetadata\022\022\n\ncluster_i" +
+      "d\030\001 \001(\t\022\022\n\ncatalog_id\030\002 \001(\t2\236\007\n\016CatalogS" +
+      "ervice\022\226\001\n\003Get\022(.yandex.cloud.trino.v1.G" +
+      "etCatalogRequest\032\036.yandex.cloud.trino.v1" +
+      ".Catalog\"E\202\323\344\223\002?\022=/managed-trino/v1/clus" +
+      "ters/{cluster_id}/catalogs/{catalog_id}\022" +
+      "\231\001\n\004List\022*.yandex.cloud.trino.v1.ListCat" +
+      "alogsRequest\032+.yandex.cloud.trino.v1.Lis" +
+      "tCatalogsResponse\"8\202\323\344\223\0022\0220/managed-trin" +
+      "o/v1/clusters/{cluster_id}/catalogs\022\271\001\n\006" +
+      "Create\022+.yandex.cloud.trino.v1.CreateCat" +
+      "alogRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"_\202\323\344\223\0025\"0/managed-trino/v1/cluste" +
+      "rs/{cluster_id}/catalogs:\001*\262\322* \n\025CreateC" +
+      "atalogMetadata\022\007Catalog\022\306\001\n\006Update\022+.yan" +
+      "dex.cloud.trino.v1.UpdateCatalogRequest\032" +
+      "!.yandex.cloud.operation.Operation\"l\202\323\344\223" +
+      "\002B2=/managed-trino/v1/clusters/{cluster_" +
+      "id}/catalogs/{catalog_id}:\001*\262\322* \n\025Update" +
+      "CatalogMetadata\022\007Catalog\022\321\001\n\006Delete\022+.ya" +
+      "ndex.cloud.trino.v1.DeleteCatalogRequest" +
+      "\032!.yandex.cloud.operation.Operation\"w\202\323\344" +
+      "\223\002?*=/managed-trino/v1/clusters/{cluster" +
+      "_id}/catalogs/{catalog_id}\262\322*.\n\025DeleteCa" +
+      "talogMetadata\022\025google.protobuf.EmptyB\\\n\031" +
+      "yandex.cloud.api.trino.v1Z?github.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/trin" +
+      "o/v1;trinob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -8555,12 +8565,14 @@ public final class CatalogServiceOuterClass {
         new java.lang.String[] { "ClusterId", "CatalogId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

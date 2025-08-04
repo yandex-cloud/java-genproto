@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for managing Hive Metastore Cluster resources.
+ * A set of methods for managing Metastore Cluster resources.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -78,37 +78,6 @@ public final class ClusterServiceGrpc {
       }
     }
     return getListMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
-      yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> getListOperationsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListOperations",
-      requestType = yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest.class,
-      responseType = yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
-      yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> getListOperationsMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest, yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> getListOperationsMethod;
-    if ((getListOperationsMethod = ClusterServiceGrpc.getListOperationsMethod) == null) {
-      synchronized (ClusterServiceGrpc.class) {
-        if ((getListOperationsMethod = ClusterServiceGrpc.getListOperationsMethod) == null) {
-          ClusterServiceGrpc.getListOperationsMethod = getListOperationsMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest, yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListOperations"))
-              .build();
-        }
-      }
-    }
-    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.CreateClusterRequest,
@@ -204,37 +173,6 @@ public final class ClusterServiceGrpc {
     return getDeleteMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Stop",
-      requestType = yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest.class,
-      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod;
-    if ((getStopMethod = ClusterServiceGrpc.getStopMethod) == null) {
-      synchronized (ClusterServiceGrpc.class) {
-        if ((getStopMethod = ClusterServiceGrpc.getStopMethod) == null) {
-          ClusterServiceGrpc.getStopMethod = getStopMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Stop"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Stop"))
-              .build();
-        }
-      }
-    }
-    return getStopMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StartClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getStartMethod;
 
@@ -264,6 +202,37 @@ public final class ClusterServiceGrpc {
       }
     }
     return getStartMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Stop",
+      requestType = yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod;
+    if ((getStopMethod = ClusterServiceGrpc.getStopMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getStopMethod = ClusterServiceGrpc.getStopMethod) == null) {
+          ClusterServiceGrpc.getStopMethod = getStopMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Stop"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Stop"))
+              .build();
+        }
+      }
+    }
+    return getStopMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ImportDataRequest,
@@ -328,6 +297,37 @@ public final class ClusterServiceGrpc {
     return getExportDataMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
+      yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> getListOperationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOperations",
+      requestType = yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest.class,
+      responseType = yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
+      yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> getListOperationsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest, yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> getListOperationsMethod;
+    if ((getListOperationsMethod = ClusterServiceGrpc.getListOperationsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getListOperationsMethod = ClusterServiceGrpc.getListOperationsMethod) == null) {
+          ClusterServiceGrpc.getListOperationsMethod = getListOperationsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest, yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
+        }
+      }
+    }
+    return getListOperationsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -374,15 +374,14 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Hive Metastore Cluster resources.
+   * A set of methods for managing Metastore Cluster resources.
    * </pre>
    */
   public static abstract class ClusterServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified Hive Metastore Cluster resource.
-     * To get the list of available Hive Metastore Cluster resources, make a [List] request.
+     * Returns the specified Metastore Cluster.
      * </pre>
      */
     public void get(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.GetClusterRequest request,
@@ -392,13 +391,82 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Hive Metastore Cluster resources that belong
-     * to the specified folder.
+     * Retrieves a list of Metastore Clusters.
      * </pre>
      */
     public void list(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a Metastore Cluster.
+     * </pre>
+     */
+    public void create(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.CreateClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the configuration of the specified Metastore Cluster.
+     * </pre>
+     */
+    public void update(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified Metastore Cluster.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Starts the specified Metastore Cluster.
+     * </pre>
+     */
+    public void start(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StartClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStartMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Stops the specified Metastore Cluster.
+     * </pre>
+     */
+    public void stop(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Imports data to the specified Metastore Cluster.
+     * </pre>
+     */
+    public void importData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ImportDataRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getImportDataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Exports data from the specified Metastore Cluster.
+     * </pre>
+     */
+    public void exportData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ExportDataRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportDataMethod(), responseObserver);
     }
 
     /**
@@ -409,76 +477,6 @@ public final class ClusterServiceGrpc {
     public void listOperations(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Creates a Hive Metastore Cluster in the specified folder.
-     * </pre>
-     */
-    public void create(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.CreateClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Updates configuration of the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public void update(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Deletes the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public void delete(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Stop the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public void stop(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Start the specified Hive a Metastore Cluster.
-     * </pre>
-     */
-    public void start(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StartClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStartMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Import data to the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public void importData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ImportDataRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getImportDataMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Export data from the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public void exportData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ExportDataRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportDataMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -497,13 +495,6 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersRequest,
                 yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersResponse>(
                   this, METHODID_LIST)))
-          .addMethod(
-            getListOperationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
-                yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>(
-                  this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getCreateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -526,19 +517,19 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
-            getStopMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest,
-                yandex.cloud.api.operation.OperationOuterClass.Operation>(
-                  this, METHODID_STOP)))
-          .addMethod(
             getStartMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StartClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_START)))
+          .addMethod(
+            getStopMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_STOP)))
           .addMethod(
             getImportDataMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -553,13 +544,20 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ExportDataRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_EXPORT_DATA)))
+          .addMethod(
+            getListOperationsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
+                yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>(
+                  this, METHODID_LIST_OPERATIONS)))
           .build();
     }
   }
 
   /**
    * <pre>
-   * A set of methods for managing Hive Metastore Cluster resources.
+   * A set of methods for managing Metastore Cluster resources.
    * </pre>
    */
   public static final class ClusterServiceStub extends io.grpc.stub.AbstractAsyncStub<ClusterServiceStub> {
@@ -576,8 +574,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Hive Metastore Cluster resource.
-     * To get the list of available Hive Metastore Cluster resources, make a [List] request.
+     * Returns the specified Metastore Cluster.
      * </pre>
      */
     public void get(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.GetClusterRequest request,
@@ -588,14 +585,90 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Hive Metastore Cluster resources that belong
-     * to the specified folder.
+     * Retrieves a list of Metastore Clusters.
      * </pre>
      */
     public void list(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a Metastore Cluster.
+     * </pre>
+     */
+    public void create(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.CreateClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the configuration of the specified Metastore Cluster.
+     * </pre>
+     */
+    public void update(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified Metastore Cluster.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Starts the specified Metastore Cluster.
+     * </pre>
+     */
+    public void start(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StartClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getStartMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Stops the specified Metastore Cluster.
+     * </pre>
+     */
+    public void stop(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Imports data to the specified Metastore Cluster.
+     * </pre>
+     */
+    public void importData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ImportDataRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getImportDataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Exports data from the specified Metastore Cluster.
+     * </pre>
+     */
+    public void exportData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ExportDataRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getExportDataMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -608,88 +681,11 @@ public final class ClusterServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * Creates a Hive Metastore Cluster in the specified folder.
-     * </pre>
-     */
-    public void create(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.CreateClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Updates configuration of the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public void update(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Deletes the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public void delete(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Stop the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public void stop(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Start the specified Hive a Metastore Cluster.
-     * </pre>
-     */
-    public void start(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StartClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getStartMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Import data to the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public void importData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ImportDataRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getImportDataMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Export data from the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public void exportData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ExportDataRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getExportDataMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
    * <pre>
-   * A set of methods for managing Hive Metastore Cluster resources.
+   * A set of methods for managing Metastore Cluster resources.
    * </pre>
    */
   public static final class ClusterServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ClusterServiceBlockingStub> {
@@ -706,8 +702,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Hive Metastore Cluster resource.
-     * To get the list of available Hive Metastore Cluster resources, make a [List] request.
+     * Returns the specified Metastore Cluster.
      * </pre>
      */
     public yandex.cloud.api.metastore.v1.ClusterOuterClass.Cluster get(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.GetClusterRequest request) {
@@ -717,13 +712,82 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Hive Metastore Cluster resources that belong
-     * to the specified folder.
+     * Retrieves a list of Metastore Clusters.
      * </pre>
      */
     public yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersResponse list(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a Metastore Cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.CreateClusterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the configuration of the specified Metastore Cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.UpdateClusterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified Metastore Cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.DeleteClusterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Starts the specified Metastore Cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StartClusterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getStartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stops the specified Metastore Cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getStopMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Imports data to the specified Metastore Cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation importData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ImportDataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getImportDataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Exports data from the specified Metastore Cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation exportData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ExportDataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getExportDataMethod(), getCallOptions(), request);
     }
 
     /**
@@ -735,81 +799,11 @@ public final class ClusterServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
-
-    /**
-     * <pre>
-     * Creates a Hive Metastore Cluster in the specified folder.
-     * </pre>
-     */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.CreateClusterRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Updates configuration of the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.UpdateClusterRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Deletes the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.DeleteClusterRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Stop the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getStopMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Start the specified Hive a Metastore Cluster.
-     * </pre>
-     */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StartClusterRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getStartMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Import data to the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation importData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ImportDataRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getImportDataMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Export data from the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation exportData(yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ExportDataRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getExportDataMethod(), getCallOptions(), request);
-    }
   }
 
   /**
    * <pre>
-   * A set of methods for managing Hive Metastore Cluster resources.
+   * A set of methods for managing Metastore Cluster resources.
    * </pre>
    */
   public static final class ClusterServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ClusterServiceFutureStub> {
@@ -826,8 +820,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Hive Metastore Cluster resource.
-     * To get the list of available Hive Metastore Cluster resources, make a [List] request.
+     * Returns the specified Metastore Cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.metastore.v1.ClusterOuterClass.Cluster> get(
@@ -838,14 +831,90 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Hive Metastore Cluster resources that belong
-     * to the specified folder.
+     * Retrieves a list of Metastore Clusters.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersResponse> list(
         yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a Metastore Cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
+        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.CreateClusterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the configuration of the specified Metastore Cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
+        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.UpdateClusterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified Metastore Cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
+        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.DeleteClusterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Starts the specified Metastore Cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> start(
+        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StartClusterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getStartMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Stops the specified Metastore Cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
+        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getStopMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Imports data to the specified Metastore Cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> importData(
+        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ImportDataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getImportDataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Exports data from the specified Metastore Cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> exportData(
+        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ExportDataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getExportDataMethod(), getCallOptions()), request);
     }
 
     /**
@@ -858,95 +927,18 @@ public final class ClusterServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * Creates a Hive Metastore Cluster in the specified folder.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
-        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.CreateClusterRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCreateMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Updates configuration of the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
-        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.UpdateClusterRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Deletes the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
-        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.DeleteClusterRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Stop the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
-        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getStopMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Start the specified Hive a Metastore Cluster.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> start(
-        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StartClusterRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getStartMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Import data to the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> importData(
-        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ImportDataRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getImportDataMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Export data from the specified Hive Metastore Cluster.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> exportData(
-        yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ExportDataRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getExportDataMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
-  private static final int METHODID_LIST_OPERATIONS = 2;
-  private static final int METHODID_CREATE = 3;
-  private static final int METHODID_UPDATE = 4;
-  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_CREATE = 2;
+  private static final int METHODID_UPDATE = 3;
+  private static final int METHODID_DELETE = 4;
+  private static final int METHODID_START = 5;
   private static final int METHODID_STOP = 6;
-  private static final int METHODID_START = 7;
-  private static final int METHODID_IMPORT_DATA = 8;
-  private static final int METHODID_EXPORT_DATA = 9;
+  private static final int METHODID_IMPORT_DATA = 7;
+  private static final int METHODID_EXPORT_DATA = 8;
+  private static final int METHODID_LIST_OPERATIONS = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -973,10 +965,6 @@ public final class ClusterServiceGrpc {
           serviceImpl.list((yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClustersResponse>) responseObserver);
           break;
-        case METHODID_LIST_OPERATIONS:
-          serviceImpl.listOperations((yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>) responseObserver);
-          break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.CreateClusterRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
@@ -989,12 +977,12 @@ public final class ClusterServiceGrpc {
           serviceImpl.delete((yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.DeleteClusterRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
-        case METHODID_STOP:
-          serviceImpl.stop((yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
-          break;
         case METHODID_START:
           serviceImpl.start((yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StartClusterRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_STOP:
+          serviceImpl.stop((yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.StopClusterRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_IMPORT_DATA:
@@ -1004,6 +992,10 @@ public final class ClusterServiceGrpc {
         case METHODID_EXPORT_DATA:
           serviceImpl.exportData((yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ExportDataRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_OPERATIONS:
+          serviceImpl.listOperations((yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1068,14 +1060,14 @@ public final class ClusterServiceGrpc {
               .setSchemaDescriptor(new ClusterServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
-              .addMethod(getListOperationsMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
-              .addMethod(getStopMethod())
               .addMethod(getStartMethod())
+              .addMethod(getStopMethod())
               .addMethod(getImportDataMethod())
               .addMethod(getExportDataMethod())
+              .addMethod(getListOperationsMethod())
               .build();
         }
       }

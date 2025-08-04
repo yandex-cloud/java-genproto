@@ -5,6 +5,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Video management service.
+ * Provides methods for creating, retrieving, updating, and deleting videos,
+ * as well as managing video-related operations such as transcoding, publishing,
+ * and generating playback URLs.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -437,13 +440,17 @@ public final class VideoServiceGrpc {
   /**
    * <pre>
    * Video management service.
+   * Provides methods for creating, retrieving, updating, and deleting videos,
+   * as well as managing video-related operations such as transcoding, publishing,
+   * and generating playback URLs.
    * </pre>
    */
   public static abstract class VideoServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Get the specific video.
+     * Retrieves detailed information about a specific video by its ID.
+     * Returns all video metadata, status, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoRequest request,
@@ -453,7 +460,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * List videos for channel.
+     * Lists all videos in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.VideoServiceOuterClass.ListVideoRequest request,
@@ -463,7 +471,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get videos in specific channel.
+     * Retrieves multiple videos by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several videos.
      * </pre>
      */
     public void batchGet(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest request,
@@ -473,7 +482,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Create video.
+     * Creates a new video in the specified channel.
+     * The video can be created from different sources: TUS upload, direct link, or S3 storage.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.VideoServiceOuterClass.CreateVideoRequest request,
@@ -483,7 +493,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Update video.
+     * Updates an existing video's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.VideoServiceOuterClass.UpdateVideoRequest request,
@@ -493,7 +504,10 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Transcode video.
+     * Initiates or updates video transcoding with specified parameters.
+     * Can be used to start transcoding for videos with auto_transcode=DISABLE,
+     * or to re-process a completed video with new transcoding settings.
+     * Supports additional features like subtitle processing, translation, and summarization.
      * </pre>
      */
     public void transcode(yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest request,
@@ -503,7 +517,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Delete video.
+     * Deletes a specific video by its ID.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.VideoServiceOuterClass.DeleteVideoRequest request,
@@ -513,7 +527,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete videos.
+     * Deletes multiple videos in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several videos.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest request,
@@ -523,7 +538,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the video.
+     * Performs a specific action on a video, such as publishing or unpublishing.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.VideoServiceOuterClass.PerformVideoActionRequest request,
@@ -533,7 +548,9 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a standard player URL for watching the video.
+     * The URL respects the video's access rights and can include custom player parameters.
+     * For videos with signed URL access, an expiration duration can be specified.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLRequest request,
@@ -543,7 +560,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get player urls.
+     * Generates multiple player URLs for a list of videos in a specific channel in a single request.
+     * This is more efficient than making multiple GetPlayerURL requests when retrieving several URLs.
      * </pre>
      */
     public void batchGetPlayerURLs(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest request,
@@ -553,7 +571,9 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Get manifest urls.
+     * Retrieves the manifest URLs for a specific video.
+     * Manifests are used by video players to access the video content with adaptive bitrate streaming.
+     * Supports different manifest types (HLS, DASH) and configuration parameters.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest request,
@@ -654,6 +674,9 @@ public final class VideoServiceGrpc {
   /**
    * <pre>
    * Video management service.
+   * Provides methods for creating, retrieving, updating, and deleting videos,
+   * as well as managing video-related operations such as transcoding, publishing,
+   * and generating playback URLs.
    * </pre>
    */
   public static final class VideoServiceStub extends io.grpc.stub.AbstractAsyncStub<VideoServiceStub> {
@@ -670,7 +693,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific video.
+     * Retrieves detailed information about a specific video by its ID.
+     * Returns all video metadata, status, and related information.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoRequest request,
@@ -681,7 +705,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * List videos for channel.
+     * Lists all videos in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public void list(yandex.cloud.api.video.v1.VideoServiceOuterClass.ListVideoRequest request,
@@ -692,7 +717,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get videos in specific channel.
+     * Retrieves multiple videos by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several videos.
      * </pre>
      */
     public void batchGet(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest request,
@@ -703,7 +729,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Create video.
+     * Creates a new video in the specified channel.
+     * The video can be created from different sources: TUS upload, direct link, or S3 storage.
      * </pre>
      */
     public void create(yandex.cloud.api.video.v1.VideoServiceOuterClass.CreateVideoRequest request,
@@ -714,7 +741,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Update video.
+     * Updates an existing video's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public void update(yandex.cloud.api.video.v1.VideoServiceOuterClass.UpdateVideoRequest request,
@@ -725,7 +753,10 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Transcode video.
+     * Initiates or updates video transcoding with specified parameters.
+     * Can be used to start transcoding for videos with auto_transcode=DISABLE,
+     * or to re-process a completed video with new transcoding settings.
+     * Supports additional features like subtitle processing, translation, and summarization.
      * </pre>
      */
     public void transcode(yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest request,
@@ -736,7 +767,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Delete video.
+     * Deletes a specific video by its ID.
      * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.VideoServiceOuterClass.DeleteVideoRequest request,
@@ -747,7 +778,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete videos.
+     * Deletes multiple videos in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several videos.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest request,
@@ -758,7 +790,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the video.
+     * Performs a specific action on a video, such as publishing or unpublishing.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.VideoServiceOuterClass.PerformVideoActionRequest request,
@@ -769,7 +801,9 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a standard player URL for watching the video.
+     * The URL respects the video's access rights and can include custom player parameters.
+     * For videos with signed URL access, an expiration duration can be specified.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLRequest request,
@@ -780,7 +814,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get player urls.
+     * Generates multiple player URLs for a list of videos in a specific channel in a single request.
+     * This is more efficient than making multiple GetPlayerURL requests when retrieving several URLs.
      * </pre>
      */
     public void batchGetPlayerURLs(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest request,
@@ -791,7 +826,9 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Get manifest urls.
+     * Retrieves the manifest URLs for a specific video.
+     * Manifests are used by video players to access the video content with adaptive bitrate streaming.
+     * Supports different manifest types (HLS, DASH) and configuration parameters.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest request,
@@ -804,6 +841,9 @@ public final class VideoServiceGrpc {
   /**
    * <pre>
    * Video management service.
+   * Provides methods for creating, retrieving, updating, and deleting videos,
+   * as well as managing video-related operations such as transcoding, publishing,
+   * and generating playback URLs.
    * </pre>
    */
   public static final class VideoServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<VideoServiceBlockingStub> {
@@ -820,7 +860,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific video.
+     * Retrieves detailed information about a specific video by its ID.
+     * Returns all video metadata, status, and related information.
      * </pre>
      */
     public yandex.cloud.api.video.v1.VideoOuterClass.Video get(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoRequest request) {
@@ -830,7 +871,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * List videos for channel.
+     * Lists all videos in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public yandex.cloud.api.video.v1.VideoServiceOuterClass.ListVideoResponse list(yandex.cloud.api.video.v1.VideoServiceOuterClass.ListVideoRequest request) {
@@ -840,7 +882,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get videos in specific channel.
+     * Retrieves multiple videos by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several videos.
      * </pre>
      */
     public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse batchGet(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest request) {
@@ -850,7 +893,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Create video.
+     * Creates a new video in the specified channel.
+     * The video can be created from different sources: TUS upload, direct link, or S3 storage.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.VideoServiceOuterClass.CreateVideoRequest request) {
@@ -860,7 +904,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Update video.
+     * Updates an existing video's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.video.v1.VideoServiceOuterClass.UpdateVideoRequest request) {
@@ -870,7 +915,10 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Transcode video.
+     * Initiates or updates video transcoding with specified parameters.
+     * Can be used to start transcoding for videos with auto_transcode=DISABLE,
+     * or to re-process a completed video with new transcoding settings.
+     * Supports additional features like subtitle processing, translation, and summarization.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation transcode(yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest request) {
@@ -880,7 +928,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Delete video.
+     * Deletes a specific video by its ID.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.VideoServiceOuterClass.DeleteVideoRequest request) {
@@ -890,7 +938,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete videos.
+     * Deletes multiple videos in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several videos.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest request) {
@@ -900,7 +949,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the video.
+     * Performs a specific action on a video, such as publishing or unpublishing.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation performAction(yandex.cloud.api.video.v1.VideoServiceOuterClass.PerformVideoActionRequest request) {
@@ -910,7 +959,9 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a standard player URL for watching the video.
+     * The URL respects the video's access rights and can include custom player parameters.
+     * For videos with signed URL access, an expiration duration can be specified.
      * </pre>
      */
     public yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLResponse getPlayerURL(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLRequest request) {
@@ -920,7 +971,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get player urls.
+     * Generates multiple player URLs for a list of videos in a specific channel in a single request.
+     * This is more efficient than making multiple GetPlayerURL requests when retrieving several URLs.
      * </pre>
      */
     public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse batchGetPlayerURLs(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest request) {
@@ -930,7 +982,9 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Get manifest urls.
+     * Retrieves the manifest URLs for a specific video.
+     * Manifests are used by video players to access the video content with adaptive bitrate streaming.
+     * Supports different manifest types (HLS, DASH) and configuration parameters.
      * </pre>
      */
     public yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsResponse getManifests(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest request) {
@@ -942,6 +996,9 @@ public final class VideoServiceGrpc {
   /**
    * <pre>
    * Video management service.
+   * Provides methods for creating, retrieving, updating, and deleting videos,
+   * as well as managing video-related operations such as transcoding, publishing,
+   * and generating playback URLs.
    * </pre>
    */
   public static final class VideoServiceFutureStub extends io.grpc.stub.AbstractFutureStub<VideoServiceFutureStub> {
@@ -958,7 +1015,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Get the specific video.
+     * Retrieves detailed information about a specific video by its ID.
+     * Returns all video metadata, status, and related information.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoOuterClass.Video> get(
@@ -969,7 +1027,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * List videos for channel.
+     * Lists all videos in a specific channel with pagination support.
+     * Results can be filtered and sorted using the provided parameters.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.ListVideoResponse> list(
@@ -980,7 +1039,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get videos in specific channel.
+     * Retrieves multiple videos by their IDs in a specific channel in a single request.
+     * This is more efficient than making multiple Get requests when retrieving several videos.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse> batchGet(
@@ -991,7 +1051,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Create video.
+     * Creates a new video in the specified channel.
+     * The video can be created from different sources: TUS upload, direct link, or S3 storage.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -1002,7 +1063,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Update video.
+     * Updates an existing video's metadata and settings.
+     * Only fields specified in the field_mask will be updated.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -1013,7 +1075,10 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Transcode video.
+     * Initiates or updates video transcoding with specified parameters.
+     * Can be used to start transcoding for videos with auto_transcode=DISABLE,
+     * or to re-process a completed video with new transcoding settings.
+     * Supports additional features like subtitle processing, translation, and summarization.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> transcode(
@@ -1024,7 +1089,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Delete video.
+     * Deletes a specific video by its ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -1035,7 +1100,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete videos.
+     * Deletes multiple videos in a specific channel in a single request.
+     * This is more efficient than making multiple Delete requests when removing several videos.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
@@ -1046,7 +1112,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the video.
+     * Performs a specific action on a video, such as publishing or unpublishing.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> performAction(
@@ -1057,7 +1123,9 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Get player url.
+     * Generates a standard player URL for watching the video.
+     * The URL respects the video's access rights and can include custom player parameters.
+     * For videos with signed URL access, an expiration duration can be specified.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLResponse> getPlayerURL(
@@ -1068,7 +1136,8 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get player urls.
+     * Generates multiple player URLs for a list of videos in a specific channel in a single request.
+     * This is more efficient than making multiple GetPlayerURL requests when retrieving several URLs.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse> batchGetPlayerURLs(
@@ -1079,7 +1148,9 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Get manifest urls.
+     * Retrieves the manifest URLs for a specific video.
+     * Manifests are used by video players to access the video content with adaptive bitrate streaming.
+     * Supports different manifest types (HLS, DASH) and configuration parameters.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsResponse> getManifests(

@@ -1971,6 +1971,46 @@ public final class ResourceOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 14;</code>
+     * @return The providerType.
+     */
+    java.lang.String getProviderType();
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 14;</code>
+     * @return The bytes for providerType.
+     */
+    com.google.protobuf.ByteString
+        getProviderTypeBytes();
+
+    /**
+     * <pre>
+     * RESERVED: Provider CNAME.
+     * </pre>
+     *
+     * <code>string provider_cname = 15;</code>
+     * @return The providerCname.
+     */
+    java.lang.String getProviderCname();
+    /**
+     * <pre>
+     * RESERVED: Provider CNAME.
+     * </pre>
+     *
+     * <code>string provider_cname = 15;</code>
+     * @return The bytes for providerCname.
+     */
+    com.google.protobuf.ByteString
+        getProviderCnameBytes();
   }
   /**
    * <pre>
@@ -1995,6 +2035,8 @@ public final class ResourceOuterClass {
       secondaryHostnames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       originGroupName_ = "";
       originProtocol_ = 0;
+      providerType_ = "";
+      providerCname_ = "";
     }
 
     @java.lang.Override
@@ -2140,6 +2182,18 @@ public final class ResourceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              providerType_ = s;
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              providerCname_ = s;
               break;
             }
             default: {
@@ -2732,6 +2786,98 @@ public final class ResourceOuterClass {
       return map.get(key);
     }
 
+    public static final int PROVIDER_TYPE_FIELD_NUMBER = 14;
+    private volatile java.lang.Object providerType_;
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 14;</code>
+     * @return The providerType.
+     */
+    @java.lang.Override
+    public java.lang.String getProviderType() {
+      java.lang.Object ref = providerType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * </pre>
+     *
+     * <code>string provider_type = 14;</code>
+     * @return The bytes for providerType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderTypeBytes() {
+      java.lang.Object ref = providerType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROVIDER_CNAME_FIELD_NUMBER = 15;
+    private volatile java.lang.Object providerCname_;
+    /**
+     * <pre>
+     * RESERVED: Provider CNAME.
+     * </pre>
+     *
+     * <code>string provider_cname = 15;</code>
+     * @return The providerCname.
+     */
+    @java.lang.Override
+    public java.lang.String getProviderCname() {
+      java.lang.Object ref = providerCname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerCname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RESERVED: Provider CNAME.
+     * </pre>
+     *
+     * <code>string provider_cname = 15;</code>
+     * @return The bytes for providerCname.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderCnameBytes() {
+      java.lang.Object ref = providerCname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerCname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2788,6 +2934,12 @@ public final class ResourceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           13);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, providerType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerCname_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, providerCname_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2855,6 +3007,12 @@ public final class ResourceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(13, labels__);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, providerType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerCname_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, providerCname_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2907,6 +3065,10 @@ public final class ResourceOuterClass {
       }
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (!getProviderType()
+          .equals(other.getProviderType())) return false;
+      if (!getProviderCname()
+          .equals(other.getProviderCname())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2958,6 +3120,10 @@ public final class ResourceOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + PROVIDER_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getProviderType().hashCode();
+      hash = (37 * hash) + PROVIDER_CNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getProviderCname().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3158,6 +3324,10 @@ public final class ResourceOuterClass {
           sslCertificateBuilder_ = null;
         }
         internalGetMutableLabels().clear();
+        providerType_ = "";
+
+        providerCname_ = "";
+
         return this;
       }
 
@@ -3219,6 +3389,8 @@ public final class ResourceOuterClass {
         }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.providerType_ = providerType_;
+        result.providerCname_ = providerCname_;
         onBuilt();
         return result;
       }
@@ -3316,6 +3488,14 @@ public final class ResourceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (!other.getProviderType().isEmpty()) {
+          providerType_ = other.providerType_;
+          onChanged();
+        }
+        if (!other.getProviderCname().isEmpty()) {
+          providerCname_ = other.providerCname_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4818,6 +4998,198 @@ public final class ResourceOuterClass {
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object providerType_ = "";
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 14;</code>
+       * @return The providerType.
+       */
+      public java.lang.String getProviderType() {
+        java.lang.Object ref = providerType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 14;</code>
+       * @return The bytes for providerType.
+       */
+      public com.google.protobuf.ByteString
+          getProviderTypeBytes() {
+        java.lang.Object ref = providerType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 14;</code>
+       * @param value The providerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        providerType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderType() {
+        
+        providerType_ = getDefaultInstance().getProviderType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * </pre>
+       *
+       * <code>string provider_type = 14;</code>
+       * @param value The bytes for providerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        providerType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object providerCname_ = "";
+      /**
+       * <pre>
+       * RESERVED: Provider CNAME.
+       * </pre>
+       *
+       * <code>string provider_cname = 15;</code>
+       * @return The providerCname.
+       */
+      public java.lang.String getProviderCname() {
+        java.lang.Object ref = providerCname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerCname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RESERVED: Provider CNAME.
+       * </pre>
+       *
+       * <code>string provider_cname = 15;</code>
+       * @return The bytes for providerCname.
+       */
+      public com.google.protobuf.ByteString
+          getProviderCnameBytes() {
+        java.lang.Object ref = providerCname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerCname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RESERVED: Provider CNAME.
+       * </pre>
+       *
+       * <code>string provider_cname = 15;</code>
+       * @param value The providerCname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderCname(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        providerCname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RESERVED: Provider CNAME.
+       * </pre>
+       *
+       * <code>string provider_cname = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderCname() {
+        
+        providerCname_ = getDefaultInstance().getProviderCname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RESERVED: Provider CNAME.
+       * </pre>
+       *
+       * <code>string provider_cname = 15;</code>
+       * @param value The bytes for providerCname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderCnameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        providerCname_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -29789,7 +30161,7 @@ public final class ResourceOuterClass {
       "\n\"yandex/cloud/cdn/v1/resource.proto\022\023ya" +
       "ndex.cloud.cdn.v1\032\037google/protobuf/times" +
       "tamp.proto\"$\n\022SecondaryHostnames\022\016\n\006valu" +
-      "es\030\001 \003(\t\"\226\004\n\010Resource\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
+      "es\030\001 \003(\t\"\305\004\n\010Resource\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
       "der_id\030\002 \001(\t\022\r\n\005cname\030\003 \001(\t\022.\n\ncreated_a" +
       "t\030\004 \001(\0132\032.google.protobuf.Timestamp\022.\n\nu" +
       "pdated_at\030\005 \001(\0132\032.google.protobuf.Timest" +
@@ -29801,138 +30173,140 @@ public final class ResourceOuterClass {
       "v1.OriginProtocol\022<\n\017ssl_certificate\030\014 \001" +
       "(\0132#.yandex.cloud.cdn.v1.SSLCertificate\022" +
       "9\n\006labels\030\r \003(\0132).yandex.cloud.cdn.v1.Re" +
-      "source.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\346\037\n\017ResourceOp" +
-      "tions\022F\n\rdisable_cache\030\001 \001(\0132/.yandex.cl" +
-      "oud.cdn.v1.ResourceOptions.BoolOption\022S\n" +
-      "\023edge_cache_settings\030\002 \001(\01326.yandex.clou" +
-      "d.cdn.v1.ResourceOptions.EdgeCacheSettin" +
-      "gs\022P\n\026browser_cache_settings\030\003 \001(\01320.yan" +
-      "dex.cloud.cdn.v1.ResourceOptions.Int64Op" +
-      "tion\022R\n\022cache_http_headers\030\004 \001(\01326.yande" +
-      "x.cloud.cdn.v1.ResourceOptions.StringsLi" +
-      "stOption\022U\n\024query_params_options\030\005 \001(\01327" +
-      ".yandex.cloud.cdn.v1.ResourceOptions.Que" +
-      "ryParamsOptions\022>\n\005slice\030\006 \001(\0132/.yandex." +
-      "cloud.cdn.v1.ResourceOptions.BoolOption\022" +
-      "T\n\023compression_options\030\007 \001(\01327.yandex.cl" +
-      "oud.cdn.v1.ResourceOptions.CompressionOp" +
-      "tions\022N\n\020redirect_options\030\010 \001(\01324.yandex" +
-      ".cloud.cdn.v1.ResourceOptions.RedirectOp" +
-      "tions\022F\n\014host_options\030\t \001(\01320.yandex.clo" +
-      "ud.cdn.v1.ResourceOptions.HostOptions\022M\n" +
-      "\016static_headers\030\n \001(\01325.yandex.cloud.cdn" +
-      ".v1.ResourceOptions.StringsMapOption\022D\n\004" +
-      "cors\030\013 \001(\01326.yandex.cloud.cdn.v1.Resourc" +
-      "eOptions.StringsListOption\022E\n\005stale\030\014 \001(" +
-      "\01326.yandex.cloud.cdn.v1.ResourceOptions." +
-      "StringsListOption\022T\n\024allowed_http_method" +
-      "s\030\r \001(\01326.yandex.cloud.cdn.v1.ResourceOp" +
-      "tions.StringsListOption\022P\n\027proxy_cache_m" +
-      "ethods_set\030\016 \001(\0132/.yandex.cloud.cdn.v1.R" +
-      "esourceOptions.BoolOption\022S\n\032disable_pro" +
-      "xy_force_ranges\030\017 \001(\0132/.yandex.cloud.cdn" +
-      ".v1.ResourceOptions.BoolOption\022U\n\026static" +
-      "_request_headers\030\020 \001(\01325.yandex.cloud.cd" +
-      "n.v1.ResourceOptions.StringsMapOption\022M\n" +
-      "\022custom_server_name\030\021 \001(\01321.yandex.cloud" +
-      ".cdn.v1.ResourceOptions.StringOption\022F\n\r" +
-      "ignore_cookie\030\022 \001(\0132/.yandex.cloud.cdn.v" +
-      "1.ResourceOptions.BoolOption\022C\n\007rewrite\030" +
-      "\023 \001(\01322.yandex.cloud.cdn.v1.ResourceOpti" +
-      "ons.RewriteOption\022H\n\nsecure_key\030\024 \001(\01324." +
-      "yandex.cloud.cdn.v1.ResourceOptions.Secu" +
-      "reKeyOption\022O\n\016ip_address_acl\030\025 \001(\01327.ya" +
-      "ndex.cloud.cdn.v1.ResourceOptions.IPAddr" +
-      "essACLOption\032,\n\nBoolOption\022\017\n\007enabled\030\001 " +
-      "\001(\010\022\r\n\005value\030\002 \001(\010\032.\n\014StringOption\022\017\n\007en" +
-      "abled\030\001 \001(\010\022\r\n\005value\030\002 \001(\t\032-\n\013Int64Optio" +
-      "n\022\017\n\007enabled\030\001 \001(\010\022\r\n\005value\030\002 \001(\003\0323\n\021Str" +
-      "ingsListOption\022\017\n\007enabled\030\001 \001(\010\022\r\n\005value" +
-      "\030\002 \003(\t\032\242\001\n\020StringsMapOption\022\017\n\007enabled\030\001" +
-      " \001(\010\022O\n\005value\030\002 \003(\0132@.yandex.cloud.cdn.v" +
-      "1.ResourceOptions.StringsMapOption.Value" +
-      "Entry\032,\n\nValueEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\032\265\001\n\014CachingTimes\022\024\n\014simple_v" +
-      "alue\030\001 \001(\003\022Z\n\rcustom_values\030\002 \003(\0132C.yand" +
-      "ex.cloud.cdn.v1.ResourceOptions.CachingT" +
-      "imes.CustomValuesEntry\0323\n\021CustomValuesEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\003:\0028\001\032\223\001\n\021" +
-      "EdgeCacheSettings\022\017\n\007enabled\030\001 \001(\010\022B\n\005va" +
-      "lue\030\002 \001(\01321.yandex.cloud.cdn.v1.Resource" +
-      "Options.CachingTimesH\000\022\027\n\rdefault_value\030" +
-      "\003 \001(\003H\000B\020\n\016values_variant\032\251\003\n\027StringVari" +
-      "ableMapOption\022\017\n\007enabled\030\001 \001(\010\022V\n\005value\030" +
-      "\002 \003(\0132G.yandex.cloud.cdn.v1.ResourceOpti" +
-      "ons.StringVariableMapOption.ValueEntry\032\254" +
-      "\001\n\013OneofString\022B\n\005value\030\001 \001(\01321.yandex.c" +
-      "loud.cdn.v1.ResourceOptions.StringOption" +
-      "H\000\022H\n\006values\030\002 \001(\01326.yandex.cloud.cdn.v1" +
-      ".ResourceOptions.StringsListOptionH\000B\017\n\r" +
-      "string_option\032v\n\nValueEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022W\n\005value\030\002 \001(\0132H.yandex.cloud.cdn.v1.Re" +
-      "sourceOptions.StringVariableMapOption.On" +
-      "eofString:\0028\001\032\260\002\n\022QueryParamsOptions\022N\n\023" +
-      "ignore_query_string\030\001 \001(\0132/.yandex.cloud" +
-      ".cdn.v1.ResourceOptions.BoolOptionH\000\022X\n\026" +
-      "query_params_whitelist\030\002 \001(\01326.yandex.cl" +
-      "oud.cdn.v1.ResourceOptions.StringsListOp" +
-      "tionH\000\022X\n\026query_params_blacklist\030\003 \001(\01326" +
-      ".yandex.cloud.cdn.v1.ResourceOptions.Str" +
-      "ingsListOptionH\000B\026\n\024query_params_variant" +
-      "\032\313\001\n\017RedirectOptions\022Q\n\026redirect_http_to" +
-      "_https\030\001 \001(\0132/.yandex.cloud.cdn.v1.Resou" +
-      "rceOptions.BoolOptionH\000\022Q\n\026redirect_http" +
-      "s_to_http\030\002 \001(\0132/.yandex.cloud.cdn.v1.Re" +
-      "sourceOptions.BoolOptionH\000B\022\n\020redirect_v" +
-      "ariant\032\260\001\n\013HostOptions\022A\n\004host\030\001 \001(\01321.y" +
+      "source.LabelsEntry\022\025\n\rprovider_type\030\016 \001(" +
+      "\t\022\026\n\016provider_cname\030\017 \001(\t\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\346\037\n\017Res" +
+      "ourceOptions\022F\n\rdisable_cache\030\001 \001(\0132/.ya" +
+      "ndex.cloud.cdn.v1.ResourceOptions.BoolOp" +
+      "tion\022S\n\023edge_cache_settings\030\002 \001(\01326.yand" +
+      "ex.cloud.cdn.v1.ResourceOptions.EdgeCach" +
+      "eSettings\022P\n\026browser_cache_settings\030\003 \001(" +
+      "\01320.yandex.cloud.cdn.v1.ResourceOptions." +
+      "Int64Option\022R\n\022cache_http_headers\030\004 \001(\0132" +
+      "6.yandex.cloud.cdn.v1.ResourceOptions.St" +
+      "ringsListOption\022U\n\024query_params_options\030" +
+      "\005 \001(\01327.yandex.cloud.cdn.v1.ResourceOpti" +
+      "ons.QueryParamsOptions\022>\n\005slice\030\006 \001(\0132/." +
+      "yandex.cloud.cdn.v1.ResourceOptions.Bool" +
+      "Option\022T\n\023compression_options\030\007 \001(\01327.ya" +
+      "ndex.cloud.cdn.v1.ResourceOptions.Compre" +
+      "ssionOptions\022N\n\020redirect_options\030\010 \001(\01324" +
+      ".yandex.cloud.cdn.v1.ResourceOptions.Red" +
+      "irectOptions\022F\n\014host_options\030\t \001(\01320.yan" +
+      "dex.cloud.cdn.v1.ResourceOptions.HostOpt" +
+      "ions\022M\n\016static_headers\030\n \001(\01325.yandex.cl" +
+      "oud.cdn.v1.ResourceOptions.StringsMapOpt" +
+      "ion\022D\n\004cors\030\013 \001(\01326.yandex.cloud.cdn.v1." +
+      "ResourceOptions.StringsListOption\022E\n\005sta" +
+      "le\030\014 \001(\01326.yandex.cloud.cdn.v1.ResourceO" +
+      "ptions.StringsListOption\022T\n\024allowed_http" +
+      "_methods\030\r \001(\01326.yandex.cloud.cdn.v1.Res" +
+      "ourceOptions.StringsListOption\022P\n\027proxy_" +
+      "cache_methods_set\030\016 \001(\0132/.yandex.cloud.c" +
+      "dn.v1.ResourceOptions.BoolOption\022S\n\032disa" +
+      "ble_proxy_force_ranges\030\017 \001(\0132/.yandex.cl" +
+      "oud.cdn.v1.ResourceOptions.BoolOption\022U\n" +
+      "\026static_request_headers\030\020 \001(\01325.yandex.c" +
+      "loud.cdn.v1.ResourceOptions.StringsMapOp" +
+      "tion\022M\n\022custom_server_name\030\021 \001(\01321.yande" +
+      "x.cloud.cdn.v1.ResourceOptions.StringOpt" +
+      "ion\022F\n\rignore_cookie\030\022 \001(\0132/.yandex.clou" +
+      "d.cdn.v1.ResourceOptions.BoolOption\022C\n\007r" +
+      "ewrite\030\023 \001(\01322.yandex.cloud.cdn.v1.Resou" +
+      "rceOptions.RewriteOption\022H\n\nsecure_key\030\024" +
+      " \001(\01324.yandex.cloud.cdn.v1.ResourceOptio" +
+      "ns.SecureKeyOption\022O\n\016ip_address_acl\030\025 \001" +
+      "(\01327.yandex.cloud.cdn.v1.ResourceOptions" +
+      ".IPAddressACLOption\032,\n\nBoolOption\022\017\n\007ena" +
+      "bled\030\001 \001(\010\022\r\n\005value\030\002 \001(\010\032.\n\014StringOptio" +
+      "n\022\017\n\007enabled\030\001 \001(\010\022\r\n\005value\030\002 \001(\t\032-\n\013Int" +
+      "64Option\022\017\n\007enabled\030\001 \001(\010\022\r\n\005value\030\002 \001(\003" +
+      "\0323\n\021StringsListOption\022\017\n\007enabled\030\001 \001(\010\022\r" +
+      "\n\005value\030\002 \003(\t\032\242\001\n\020StringsMapOption\022\017\n\007en" +
+      "abled\030\001 \001(\010\022O\n\005value\030\002 \003(\0132@.yandex.clou" +
+      "d.cdn.v1.ResourceOptions.StringsMapOptio" +
+      "n.ValueEntry\032,\n\nValueEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\032\265\001\n\014CachingTimes\022\024\n\014s" +
+      "imple_value\030\001 \001(\003\022Z\n\rcustom_values\030\002 \003(\013" +
+      "2C.yandex.cloud.cdn.v1.ResourceOptions.C" +
+      "achingTimes.CustomValuesEntry\0323\n\021CustomV" +
+      "aluesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\003:\002" +
+      "8\001\032\223\001\n\021EdgeCacheSettings\022\017\n\007enabled\030\001 \001(" +
+      "\010\022B\n\005value\030\002 \001(\01321.yandex.cloud.cdn.v1.R" +
+      "esourceOptions.CachingTimesH\000\022\027\n\rdefault" +
+      "_value\030\003 \001(\003H\000B\020\n\016values_variant\032\251\003\n\027Str" +
+      "ingVariableMapOption\022\017\n\007enabled\030\001 \001(\010\022V\n" +
+      "\005value\030\002 \003(\0132G.yandex.cloud.cdn.v1.Resou" +
+      "rceOptions.StringVariableMapOption.Value" +
+      "Entry\032\254\001\n\013OneofString\022B\n\005value\030\001 \001(\01321.y" +
       "andex.cloud.cdn.v1.ResourceOptions.Strin" +
-      "gOptionH\000\022N\n\023forward_host_header\030\002 \001(\0132/" +
-      ".yandex.cloud.cdn.v1.ResourceOptions.Boo" +
-      "lOptionH\000B\016\n\014host_variant\032\222\002\n\022Compressio" +
-      "nOptions\022K\n\020fetch_compressed\030\001 \001(\0132/.yan" +
-      "dex.cloud.cdn.v1.ResourceOptions.BoolOpt" +
-      "ionH\000\022B\n\007gzip_on\030\002 \001(\0132/.yandex.cloud.cd" +
-      "n.v1.ResourceOptions.BoolOptionH\000\022T\n\022bro" +
-      "tli_compression\030\003 \001(\01326.yandex.cloud.cdn" +
-      ".v1.ResourceOptions.StringsListOptionH\000B" +
-      "\025\n\023compression_variant\032^\n\rRewriteOption\022" +
-      "\017\n\007enabled\030\001 \001(\010\022\014\n\004body\030\002 \001(\t\022.\n\004flag\030\003" +
-      " \001(\0162 .yandex.cloud.cdn.v1.RewriteFlag\032d" +
-      "\n\017SecureKeyOption\022\017\n\007enabled\030\001 \001(\010\022\013\n\003ke" +
-      "y\030\002 \001(\t\0223\n\004type\030\003 \001(\0162%.yandex.cloud.cdn" +
-      ".v1.SecureKeyURLType\032t\n\022IPAddressACLOpti" +
-      "on\022\017\n\007enabled\030\001 \001(\010\0224\n\013policy_type\030\002 \001(\016" +
-      "2\037.yandex.cloud.cdn.v1.PolicyType\022\027\n\017exc" +
-      "epted_values\030\003 \003(\t\"\204\001\n\024SSLTargetCertific" +
-      "ate\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.cdn.v1." +
-      "SSLCertificateType\0225\n\004data\030\002 \001(\0132\'.yande" +
-      "x.cloud.cdn.v1.SSLCertificateData\"\271\001\n\016SS" +
-      "LCertificate\0225\n\004type\030\001 \001(\0162\'.yandex.clou" +
-      "d.cdn.v1.SSLCertificateType\0229\n\006status\030\002 " +
-      "\001(\0162).yandex.cloud.cdn.v1.SSLCertificate" +
-      "Status\0225\n\004data\030\003 \001(\0132\'.yandex.cloud.cdn." +
-      "v1.SSLCertificateData\"m\n\022SSLCertificateD" +
-      "ata\0227\n\002cm\030\001 \001(\0132).yandex.cloud.cdn.v1.SS" +
-      "LCertificateCMDataH\000B\036\n\034ssl_certificate_" +
-      "data_variant\"\"\n\024SSLCertificateCMData\022\n\n\002" +
-      "id\030\001 \001(\t*Q\n\016OriginProtocol\022\037\n\033ORIGIN_PRO" +
-      "TOCOL_UNSPECIFIED\020\000\022\010\n\004HTTP\020\001\022\t\n\005HTTPS\020\002" +
-      "\022\t\n\005MATCH\020\003*]\n\013RewriteFlag\022\034\n\030REWRITE_FL" +
-      "AG_UNSPECIFIED\020\000\022\010\n\004LAST\020\001\022\t\n\005BREAK\020\002\022\014\n" +
-      "\010REDIRECT\020\003\022\r\n\tPERMANENT\020\004*f\n\020SecureKeyU" +
-      "RLType\022#\n\037SECURE_KEY_URL_TYPE_UNSPECIFIE" +
-      "D\020\000\022\025\n\021ENABLE_IP_SIGNING\020\001\022\026\n\022DISABLE_IP" +
-      "_SIGNING\020\002*V\n\nPolicyType\022\033\n\027POLICY_TYPE_" +
-      "UNSPECIFIED\020\000\022\025\n\021POLICY_TYPE_ALLOW\020\001\022\024\n\020" +
-      "POLICY_TYPE_DENY\020\002*l\n\022SSLCertificateType" +
-      "\022$\n SSL_CERTIFICATE_TYPE_UNSPECIFIED\020\000\022\014" +
-      "\n\010DONT_USE\020\001\022\032\n\022LETS_ENCRYPT_GCORE\020\002\032\002\010\001" +
-      "\022\006\n\002CM\020\003*[\n\024SSLCertificateStatus\022&\n\"SSL_" +
-      "CERTIFICATE_STATUS_UNSPECIFIED\020\000\022\t\n\005READ" +
-      "Y\020\001\022\020\n\010CREATING\020\002\032\002\010\001BV\n\027yandex.cloud.ap" +
-      "i.cdn.v1Z;github.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/cdn/v1;cdnb\006proto3"
+      "gOptionH\000\022H\n\006values\030\002 \001(\01326.yandex.cloud" +
+      ".cdn.v1.ResourceOptions.StringsListOptio" +
+      "nH\000B\017\n\rstring_option\032v\n\nValueEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022W\n\005value\030\002 \001(\0132H.yandex.cloud.cd" +
+      "n.v1.ResourceOptions.StringVariableMapOp" +
+      "tion.OneofString:\0028\001\032\260\002\n\022QueryParamsOpti" +
+      "ons\022N\n\023ignore_query_string\030\001 \001(\0132/.yande" +
+      "x.cloud.cdn.v1.ResourceOptions.BoolOptio" +
+      "nH\000\022X\n\026query_params_whitelist\030\002 \001(\01326.ya" +
+      "ndex.cloud.cdn.v1.ResourceOptions.String" +
+      "sListOptionH\000\022X\n\026query_params_blacklist\030" +
+      "\003 \001(\01326.yandex.cloud.cdn.v1.ResourceOpti" +
+      "ons.StringsListOptionH\000B\026\n\024query_params_" +
+      "variant\032\313\001\n\017RedirectOptions\022Q\n\026redirect_" +
+      "http_to_https\030\001 \001(\0132/.yandex.cloud.cdn.v" +
+      "1.ResourceOptions.BoolOptionH\000\022Q\n\026redire" +
+      "ct_https_to_http\030\002 \001(\0132/.yandex.cloud.cd" +
+      "n.v1.ResourceOptions.BoolOptionH\000B\022\n\020red" +
+      "irect_variant\032\260\001\n\013HostOptions\022A\n\004host\030\001 " +
+      "\001(\01321.yandex.cloud.cdn.v1.ResourceOption" +
+      "s.StringOptionH\000\022N\n\023forward_host_header\030" +
+      "\002 \001(\0132/.yandex.cloud.cdn.v1.ResourceOpti" +
+      "ons.BoolOptionH\000B\016\n\014host_variant\032\222\002\n\022Com" +
+      "pressionOptions\022K\n\020fetch_compressed\030\001 \001(" +
+      "\0132/.yandex.cloud.cdn.v1.ResourceOptions." +
+      "BoolOptionH\000\022B\n\007gzip_on\030\002 \001(\0132/.yandex.c" +
+      "loud.cdn.v1.ResourceOptions.BoolOptionH\000" +
+      "\022T\n\022brotli_compression\030\003 \001(\01326.yandex.cl" +
+      "oud.cdn.v1.ResourceOptions.StringsListOp" +
+      "tionH\000B\025\n\023compression_variant\032^\n\rRewrite" +
+      "Option\022\017\n\007enabled\030\001 \001(\010\022\014\n\004body\030\002 \001(\t\022.\n" +
+      "\004flag\030\003 \001(\0162 .yandex.cloud.cdn.v1.Rewrit" +
+      "eFlag\032d\n\017SecureKeyOption\022\017\n\007enabled\030\001 \001(" +
+      "\010\022\013\n\003key\030\002 \001(\t\0223\n\004type\030\003 \001(\0162%.yandex.cl" +
+      "oud.cdn.v1.SecureKeyURLType\032t\n\022IPAddress" +
+      "ACLOption\022\017\n\007enabled\030\001 \001(\010\0224\n\013policy_typ" +
+      "e\030\002 \001(\0162\037.yandex.cloud.cdn.v1.PolicyType" +
+      "\022\027\n\017excepted_values\030\003 \003(\t\"\204\001\n\024SSLTargetC" +
+      "ertificate\0225\n\004type\030\001 \001(\0162\'.yandex.cloud." +
+      "cdn.v1.SSLCertificateType\0225\n\004data\030\002 \001(\0132" +
+      "\'.yandex.cloud.cdn.v1.SSLCertificateData" +
+      "\"\271\001\n\016SSLCertificate\0225\n\004type\030\001 \001(\0162\'.yand" +
+      "ex.cloud.cdn.v1.SSLCertificateType\0229\n\006st" +
+      "atus\030\002 \001(\0162).yandex.cloud.cdn.v1.SSLCert" +
+      "ificateStatus\0225\n\004data\030\003 \001(\0132\'.yandex.clo" +
+      "ud.cdn.v1.SSLCertificateData\"m\n\022SSLCerti" +
+      "ficateData\0227\n\002cm\030\001 \001(\0132).yandex.cloud.cd" +
+      "n.v1.SSLCertificateCMDataH\000B\036\n\034ssl_certi" +
+      "ficate_data_variant\"\"\n\024SSLCertificateCMD" +
+      "ata\022\n\n\002id\030\001 \001(\t*Q\n\016OriginProtocol\022\037\n\033ORI" +
+      "GIN_PROTOCOL_UNSPECIFIED\020\000\022\010\n\004HTTP\020\001\022\t\n\005" +
+      "HTTPS\020\002\022\t\n\005MATCH\020\003*]\n\013RewriteFlag\022\034\n\030REW" +
+      "RITE_FLAG_UNSPECIFIED\020\000\022\010\n\004LAST\020\001\022\t\n\005BRE" +
+      "AK\020\002\022\014\n\010REDIRECT\020\003\022\r\n\tPERMANENT\020\004*f\n\020Sec" +
+      "ureKeyURLType\022#\n\037SECURE_KEY_URL_TYPE_UNS" +
+      "PECIFIED\020\000\022\025\n\021ENABLE_IP_SIGNING\020\001\022\026\n\022DIS" +
+      "ABLE_IP_SIGNING\020\002*V\n\nPolicyType\022\033\n\027POLIC" +
+      "Y_TYPE_UNSPECIFIED\020\000\022\025\n\021POLICY_TYPE_ALLO" +
+      "W\020\001\022\024\n\020POLICY_TYPE_DENY\020\002*l\n\022SSLCertific" +
+      "ateType\022$\n SSL_CERTIFICATE_TYPE_UNSPECIF" +
+      "IED\020\000\022\014\n\010DONT_USE\020\001\022\032\n\022LETS_ENCRYPT_GCOR" +
+      "E\020\002\032\002\010\001\022\006\n\002CM\020\003*[\n\024SSLCertificateStatus\022" +
+      "&\n\"SSL_CERTIFICATE_STATUS_UNSPECIFIED\020\000\022" +
+      "\t\n\005READY\020\001\022\020\n\010CREATING\020\002\032\002\010\001BV\n\027yandex.c" +
+      "loud.api.cdn.v1Z;github.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/cdn/v1;cdnb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29950,7 +30324,7 @@ public final class ResourceOuterClass {
     internal_static_yandex_cloud_cdn_v1_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_Resource_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Cname", "CreatedAt", "UpdatedAt", "Active", "Options", "SecondaryHostnames", "OriginGroupId", "OriginGroupName", "OriginProtocol", "SslCertificate", "Labels", });
+        new java.lang.String[] { "Id", "FolderId", "Cname", "CreatedAt", "UpdatedAt", "Active", "Options", "SecondaryHostnames", "OriginGroupId", "OriginGroupName", "OriginProtocol", "SslCertificate", "Labels", "ProviderType", "ProviderCname", });
     internal_static_yandex_cloud_cdn_v1_Resource_LabelsEntry_descriptor =
       internal_static_yandex_cloud_cdn_v1_Resource_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cdn_v1_Resource_LabelsEntry_fieldAccessorTable = new

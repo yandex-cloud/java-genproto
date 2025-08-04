@@ -356,6 +356,68 @@ public final class TuningServiceGrpc {
     return getTuneDraftMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getArchiveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Archive",
+      requestType = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getArchiveMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getArchiveMethod;
+    if ((getArchiveMethod = TuningServiceGrpc.getArchiveMethod) == null) {
+      synchronized (TuningServiceGrpc.class) {
+        if ((getArchiveMethod = TuningServiceGrpc.getArchiveMethod) == null) {
+          TuningServiceGrpc.getArchiveMethod = getArchiveMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Archive"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new TuningServiceMethodDescriptorSupplier("Archive"))
+              .build();
+        }
+      }
+    }
+    return getArchiveMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableBillingMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EnableBilling",
+      requestType = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableBillingMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableBillingMethod;
+    if ((getEnableBillingMethod = TuningServiceGrpc.getEnableBillingMethod) == null) {
+      synchronized (TuningServiceGrpc.class) {
+        if ((getEnableBillingMethod = TuningServiceGrpc.getEnableBillingMethod) == null) {
+          TuningServiceGrpc.getEnableBillingMethod = getEnableBillingMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableBilling"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new TuningServiceMethodDescriptorSupplier("EnableBilling"))
+              .build();
+        }
+      }
+    }
+    return getEnableBillingMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -493,6 +555,20 @@ public final class TuningServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTuneDraftMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void archive(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getArchiveMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void enableBilling(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableBillingMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -572,6 +648,20 @@ public final class TuningServiceGrpc {
                 yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_TUNE_DRAFT)))
+          .addMethod(
+            getArchiveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ARCHIVE)))
+          .addMethod(
+            getEnableBillingMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ENABLE_BILLING)))
           .build();
     }
   }
@@ -689,6 +779,22 @@ public final class TuningServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTuneDraftMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void archive(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getArchiveMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void enableBilling(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEnableBillingMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -792,6 +898,20 @@ public final class TuningServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation tuneDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTuneDraftMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation archive(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getArchiveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation enableBilling(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEnableBillingMethod(), getCallOptions(), request);
     }
   }
 
@@ -908,6 +1028,22 @@ public final class TuningServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTuneDraftMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> archive(
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getArchiveMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> enableBilling(
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEnableBillingMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TUNE = 0;
@@ -921,6 +1057,8 @@ public final class TuningServiceGrpc {
   private static final int METHODID_UPDATE_DRAFT = 8;
   private static final int METHODID_DELETE_DRAFT = 9;
   private static final int METHODID_TUNE_DRAFT = 10;
+  private static final int METHODID_ARCHIVE = 11;
+  private static final int METHODID_ENABLE_BILLING = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -981,6 +1119,14 @@ public final class TuningServiceGrpc {
           break;
         case METHODID_TUNE_DRAFT:
           serviceImpl.tuneDraft((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ARCHIVE:
+          serviceImpl.archive((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ArchiveTuningRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ENABLE_BILLING:
+          serviceImpl.enableBilling((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.EnableBillingRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
@@ -1055,6 +1201,8 @@ public final class TuningServiceGrpc {
               .addMethod(getUpdateDraftMethod())
               .addMethod(getDeleteDraftMethod())
               .addMethod(getTuneDraftMethod())
+              .addMethod(getArchiveMethod())
+              .addMethod(getEnableBillingMethod())
               .build();
         }
       }

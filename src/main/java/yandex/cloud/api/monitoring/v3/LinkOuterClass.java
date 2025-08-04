@@ -271,6 +271,65 @@ public final class LinkOuterClass {
        */
       boolean getApplyTimeRange();
 
+      /**
+       * <pre>
+       * What parameter values to pass to dashboard when opening link
+       * See Parametrization field in dashboard.proto
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; parameters = 5;</code>
+       */
+      int getParametersCount();
+      /**
+       * <pre>
+       * What parameter values to pass to dashboard when opening link
+       * See Parametrization field in dashboard.proto
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; parameters = 5;</code>
+       */
+      boolean containsParameters(
+          java.lang.String key);
+      /**
+       * Use {@link #getParametersMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getParameters();
+      /**
+       * <pre>
+       * What parameter values to pass to dashboard when opening link
+       * See Parametrization field in dashboard.proto
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; parameters = 5;</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getParametersMap();
+      /**
+       * <pre>
+       * What parameter values to pass to dashboard when opening link
+       * See Parametrization field in dashboard.proto
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; parameters = 5;</code>
+       */
+
+      java.lang.String getParametersOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <pre>
+       * What parameter values to pass to dashboard when opening link
+       * See Parametrization field in dashboard.proto
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; parameters = 5;</code>
+       */
+
+      java.lang.String getParametersOrThrow(
+          java.lang.String key);
+
       public yandex.cloud.api.monitoring.v3.LinkOuterClass.Link.Dashboard.ContainerCase getContainerCase();
     }
     /**
@@ -309,6 +368,7 @@ public final class LinkOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
+        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -342,6 +402,19 @@ public final class LinkOuterClass {
                 applyTimeRange_ = input.readBool();
                 break;
               }
+              case 42: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  parameters_ = com.google.protobuf.MapField.newMapField(
+                      ParametersDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                parameters__ = input.readMessage(
+                    ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                parameters_.getMutableMap().put(
+                    parameters__.getKey(), parameters__.getValue());
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -366,6 +439,18 @@ public final class LinkOuterClass {
         return yandex.cloud.api.monitoring.v3.LinkOuterClass.internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetParameters();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -568,6 +653,107 @@ public final class LinkOuterClass {
         return applyTimeRange_;
       }
 
+      public static final int PARAMETERS_FIELD_NUMBER = 5;
+      private static final class ParametersDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    yandex.cloud.api.monitoring.v3.LinkOuterClass.internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_ParametersEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> parameters_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetParameters() {
+        if (parameters_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ParametersDefaultEntryHolder.defaultEntry);
+        }
+        return parameters_;
+      }
+
+      public int getParametersCount() {
+        return internalGetParameters().getMap().size();
+      }
+      /**
+       * <pre>
+       * What parameter values to pass to dashboard when opening link
+       * See Parametrization field in dashboard.proto
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; parameters = 5;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsParameters(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetParameters().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getParametersMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getParameters() {
+        return getParametersMap();
+      }
+      /**
+       * <pre>
+       * What parameter values to pass to dashboard when opening link
+       * See Parametrization field in dashboard.proto
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; parameters = 5;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getParametersMap() {
+        return internalGetParameters().getMap();
+      }
+      /**
+       * <pre>
+       * What parameter values to pass to dashboard when opening link
+       * See Parametrization field in dashboard.proto
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; parameters = 5;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getParametersOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetParameters().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * What parameter values to pass to dashboard when opening link
+       * See Parametrization field in dashboard.proto
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; parameters = 5;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getParametersOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetParameters().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -594,6 +780,12 @@ public final class LinkOuterClass {
         if (applyTimeRange_ != false) {
           output.writeBool(4, applyTimeRange_);
         }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetParameters(),
+            ParametersDefaultEntryHolder.defaultEntry,
+            5);
         unknownFields.writeTo(output);
       }
 
@@ -616,6 +808,16 @@ public final class LinkOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(4, applyTimeRange_);
         }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetParameters().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          parameters__ = ParametersDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(5, parameters__);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -635,6 +837,8 @@ public final class LinkOuterClass {
             .equals(other.getDashboardName())) return false;
         if (getApplyTimeRange()
             != other.getApplyTimeRange()) return false;
+        if (!internalGetParameters().equals(
+            other.internalGetParameters())) return false;
         if (!getContainerCase().equals(other.getContainerCase())) return false;
         switch (containerCase_) {
           case 1:
@@ -664,6 +868,10 @@ public final class LinkOuterClass {
         hash = (37 * hash) + APPLY_TIME_RANGE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getApplyTimeRange());
+        if (!internalGetParameters().getMap().isEmpty()) {
+          hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetParameters().hashCode();
+        }
         switch (containerCase_) {
           case 1:
             hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
@@ -783,6 +991,28 @@ public final class LinkOuterClass {
           return yandex.cloud.api.monitoring.v3.LinkOuterClass.internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_descriptor;
         }
 
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 5:
+              return internalGetParameters();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 5:
+              return internalGetMutableParameters();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
@@ -813,6 +1043,7 @@ public final class LinkOuterClass {
 
           applyTimeRange_ = false;
 
+          internalGetMutableParameters().clear();
           containerCase_ = 0;
           container_ = null;
           return this;
@@ -841,6 +1072,7 @@ public final class LinkOuterClass {
         @java.lang.Override
         public yandex.cloud.api.monitoring.v3.LinkOuterClass.Link.Dashboard buildPartial() {
           yandex.cloud.api.monitoring.v3.LinkOuterClass.Link.Dashboard result = new yandex.cloud.api.monitoring.v3.LinkOuterClass.Link.Dashboard(this);
+          int from_bitField0_ = bitField0_;
           if (containerCase_ == 1) {
             result.container_ = container_;
           }
@@ -849,6 +1081,8 @@ public final class LinkOuterClass {
           }
           result.dashboardName_ = dashboardName_;
           result.applyTimeRange_ = applyTimeRange_;
+          result.parameters_ = internalGetParameters();
+          result.parameters_.makeImmutable();
           result.containerCase_ = containerCase_;
           onBuilt();
           return result;
@@ -905,6 +1139,8 @@ public final class LinkOuterClass {
           if (other.getApplyTimeRange() != false) {
             setApplyTimeRange(other.getApplyTimeRange());
           }
+          internalGetMutableParameters().mergeFrom(
+              other.internalGetParameters());
           switch (other.getContainerCase()) {
             case PROJECT_ID: {
               containerCase_ = 1;
@@ -965,6 +1201,7 @@ public final class LinkOuterClass {
           return this;
         }
 
+        private int bitField0_;
 
         /**
          * <code>string project_id = 1;</code>
@@ -1264,6 +1501,172 @@ public final class LinkOuterClass {
           
           applyTimeRange_ = false;
           onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> parameters_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetParameters() {
+          if (parameters_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                ParametersDefaultEntryHolder.defaultEntry);
+          }
+          return parameters_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableParameters() {
+          onChanged();;
+          if (parameters_ == null) {
+            parameters_ = com.google.protobuf.MapField.newMapField(
+                ParametersDefaultEntryHolder.defaultEntry);
+          }
+          if (!parameters_.isMutable()) {
+            parameters_ = parameters_.copy();
+          }
+          return parameters_;
+        }
+
+        public int getParametersCount() {
+          return internalGetParameters().getMap().size();
+        }
+        /**
+         * <pre>
+         * What parameter values to pass to dashboard when opening link
+         * See Parametrization field in dashboard.proto
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; parameters = 5;</code>
+         */
+
+        @java.lang.Override
+        public boolean containsParameters(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          return internalGetParameters().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getParametersMap()} instead.
+         */
+        @java.lang.Override
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getParameters() {
+          return getParametersMap();
+        }
+        /**
+         * <pre>
+         * What parameter values to pass to dashboard when opening link
+         * See Parametrization field in dashboard.proto
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; parameters = 5;</code>
+         */
+        @java.lang.Override
+
+        public java.util.Map<java.lang.String, java.lang.String> getParametersMap() {
+          return internalGetParameters().getMap();
+        }
+        /**
+         * <pre>
+         * What parameter values to pass to dashboard when opening link
+         * See Parametrization field in dashboard.proto
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; parameters = 5;</code>
+         */
+        @java.lang.Override
+
+        public java.lang.String getParametersOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetParameters().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * What parameter values to pass to dashboard when opening link
+         * See Parametrization field in dashboard.proto
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; parameters = 5;</code>
+         */
+        @java.lang.Override
+
+        public java.lang.String getParametersOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetParameters().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearParameters() {
+          internalGetMutableParameters().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * What parameter values to pass to dashboard when opening link
+         * See Parametrization field in dashboard.proto
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; parameters = 5;</code>
+         */
+
+        public Builder removeParameters(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          internalGetMutableParameters().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableParameters() {
+          return internalGetMutableParameters().getMutableMap();
+        }
+        /**
+         * <pre>
+         * What parameter values to pass to dashboard when opening link
+         * See Parametrization field in dashboard.proto
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; parameters = 5;</code>
+         */
+        public Builder putParameters(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+          internalGetMutableParameters().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * What parameter values to pass to dashboard when opening link
+         * See Parametrization field in dashboard.proto
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; parameters = 5;</code>
+         */
+
+        public Builder putAllParameters(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableParameters().getMutableMap()
+              .putAll(values);
           return this;
         }
         @java.lang.Override
@@ -2416,6 +2819,11 @@ public final class LinkOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_ParametersEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_ParametersEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2426,16 +2834,20 @@ public final class LinkOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n%yandex/cloud/monitoring/v3/link.proto\022" +
-      "\032yandex.cloud.monitoring.v3\"\375\001\n\004Link\022\r\n\005" +
+      "\032yandex.cloud.monitoring.v3\"\201\003\n\004Link\022\r\n\005" +
       "title\030\001 \001(\t\022\027\n\017open_in_new_tab\030\002 \001(\010\022\r\n\003" +
       "url\030\003 \001(\tH\000\022?\n\tdashboard\030\004 \001(\0132*.yandex." +
-      "cloud.monitoring.v3.Link.DashboardH\000\032u\n\t" +
-      "Dashboard\022\024\n\nproject_id\030\001 \001(\tH\000\022\023\n\tfolde" +
-      "r_id\030\002 \001(\tH\000\022\026\n\016dashboard_name\030\003 \001(\t\022\030\n\020" +
-      "apply_time_range\030\004 \001(\010B\013\n\tcontainerB\006\n\004t" +
-      "ypeBk\n\036yandex.cloud.api.monitoring.v3ZIg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/monitoring/v3;monitoringb\006proto3"
+      "cloud.monitoring.v3.Link.DashboardH\000\032\370\001\n" +
+      "\tDashboard\022\024\n\nproject_id\030\001 \001(\tH\000\022\023\n\tfold" +
+      "er_id\030\002 \001(\tH\000\022\026\n\016dashboard_name\030\003 \001(\t\022\030\n" +
+      "\020apply_time_range\030\004 \001(\010\022N\n\nparameters\030\005 " +
+      "\003(\0132:.yandex.cloud.monitoring.v3.Link.Da" +
+      "shboard.ParametersEntry\0321\n\017ParametersEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\013\n\tco" +
+      "ntainerB\006\n\004typeBk\n\036yandex.cloud.api.moni" +
+      "toring.v3ZIgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/monitoring/v3;monito" +
+      "ringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2452,7 +2864,13 @@ public final class LinkOuterClass {
     internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_descriptor,
-        new java.lang.String[] { "ProjectId", "FolderId", "DashboardName", "ApplyTimeRange", "Container", });
+        new java.lang.String[] { "ProjectId", "FolderId", "DashboardName", "ApplyTimeRange", "Parameters", "Container", });
+    internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_ParametersEntry_descriptor =
+      internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_ParametersEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_Link_Dashboard_ParametersEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

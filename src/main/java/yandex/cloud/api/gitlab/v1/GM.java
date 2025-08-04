@@ -19,11 +19,19 @@ public final class GM {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The description of the operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The info.
      */
     java.lang.String getInfo();
     /**
+     * <pre>
+     * The description of the operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for info.
      */
@@ -31,46 +39,82 @@ public final class GM {
         getInfoBytes();
 
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      * @return Whether the delayedUntil field is set.
      */
     boolean hasDelayedUntil();
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      * @return The delayedUntil.
      */
     com.google.protobuf.Timestamp getDelayedUntil();
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
 
     /**
+     * <pre>
+     * Time of the last maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      * @return Whether the latestMaintenanceTime field is set.
      */
     boolean hasLatestMaintenanceTime();
     /**
+     * <pre>
+     * Time of the last maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      * @return The latestMaintenanceTime.
      */
     com.google.protobuf.Timestamp getLatestMaintenanceTime();
     /**
+     * <pre>
+     * Time of the last maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getLatestMaintenanceTimeOrBuilder();
 
     /**
+     * <pre>
+     * Time of the next maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      * @return Whether the nextMaintenanceWindowTime field is set.
      */
     boolean hasNextMaintenanceWindowTime();
     /**
+     * <pre>
+     * Time of the next maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      * @return The nextMaintenanceWindowTime.
      */
     com.google.protobuf.Timestamp getNextMaintenanceWindowTime();
     /**
+     * <pre>
+     * Time of the next maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getNextMaintenanceWindowTimeOrBuilder();
@@ -201,6 +245,10 @@ public final class GM {
     public static final int INFO_FIELD_NUMBER = 1;
     private volatile java.lang.Object info_;
     /**
+     * <pre>
+     * The description of the operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The info.
      */
@@ -218,6 +266,10 @@ public final class GM {
       }
     }
     /**
+     * <pre>
+     * The description of the operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for info.
      */
@@ -239,6 +291,10 @@ public final class GM {
     public static final int DELAYED_UNTIL_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp delayedUntil_;
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      * @return Whether the delayedUntil field is set.
      */
@@ -247,6 +303,10 @@ public final class GM {
       return delayedUntil_ != null;
     }
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      * @return The delayedUntil.
      */
@@ -255,6 +315,10 @@ public final class GM {
       return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
     }
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     @java.lang.Override
@@ -265,6 +329,10 @@ public final class GM {
     public static final int LATEST_MAINTENANCE_TIME_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp latestMaintenanceTime_;
     /**
+     * <pre>
+     * Time of the last maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      * @return Whether the latestMaintenanceTime field is set.
      */
@@ -273,6 +341,10 @@ public final class GM {
       return latestMaintenanceTime_ != null;
     }
     /**
+     * <pre>
+     * Time of the last maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      * @return The latestMaintenanceTime.
      */
@@ -281,6 +353,10 @@ public final class GM {
       return latestMaintenanceTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : latestMaintenanceTime_;
     }
     /**
+     * <pre>
+     * Time of the last maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      */
     @java.lang.Override
@@ -291,6 +367,10 @@ public final class GM {
     public static final int NEXT_MAINTENANCE_WINDOW_TIME_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp nextMaintenanceWindowTime_;
     /**
+     * <pre>
+     * Time of the next maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      * @return Whether the nextMaintenanceWindowTime field is set.
      */
@@ -299,6 +379,10 @@ public final class GM {
       return nextMaintenanceWindowTime_ != null;
     }
     /**
+     * <pre>
+     * Time of the next maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      * @return The nextMaintenanceWindowTime.
      */
@@ -307,6 +391,10 @@ public final class GM {
       return nextMaintenanceWindowTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : nextMaintenanceWindowTime_;
     }
     /**
+     * <pre>
+     * Time of the next maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      */
     @java.lang.Override
@@ -708,6 +796,10 @@ public final class GM {
 
       private java.lang.Object info_ = "";
       /**
+       * <pre>
+       * The description of the operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The info.
        */
@@ -724,6 +816,10 @@ public final class GM {
         }
       }
       /**
+       * <pre>
+       * The description of the operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for info.
        */
@@ -741,6 +837,10 @@ public final class GM {
         }
       }
       /**
+       * <pre>
+       * The description of the operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The info to set.
        * @return This builder for chaining.
@@ -756,6 +856,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * The description of the operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
@@ -766,6 +870,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * The description of the operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for info to set.
        * @return This builder for chaining.
@@ -786,6 +894,10 @@ public final class GM {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        * @return Whether the delayedUntil field is set.
        */
@@ -793,6 +905,10 @@ public final class GM {
         return delayedUntilBuilder_ != null || delayedUntil_ != null;
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        * @return The delayedUntil.
        */
@@ -804,6 +920,10 @@ public final class GM {
         }
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
@@ -820,6 +940,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder setDelayedUntil(
@@ -834,6 +958,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
@@ -852,6 +980,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder clearDelayedUntil() {
@@ -866,6 +998,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
@@ -874,6 +1010,10 @@ public final class GM {
         return getDelayedUntilFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
@@ -885,6 +1025,10 @@ public final class GM {
         }
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -905,6 +1049,10 @@ public final class GM {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> latestMaintenanceTimeBuilder_;
       /**
+       * <pre>
+       * Time of the last maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        * @return Whether the latestMaintenanceTime field is set.
        */
@@ -912,6 +1060,10 @@ public final class GM {
         return latestMaintenanceTimeBuilder_ != null || latestMaintenanceTime_ != null;
       }
       /**
+       * <pre>
+       * Time of the last maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        * @return The latestMaintenanceTime.
        */
@@ -923,6 +1075,10 @@ public final class GM {
         }
       }
       /**
+       * <pre>
+       * Time of the last maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public Builder setLatestMaintenanceTime(com.google.protobuf.Timestamp value) {
@@ -939,6 +1095,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Time of the last maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public Builder setLatestMaintenanceTime(
@@ -953,6 +1113,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Time of the last maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public Builder mergeLatestMaintenanceTime(com.google.protobuf.Timestamp value) {
@@ -971,6 +1135,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Time of the last maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public Builder clearLatestMaintenanceTime() {
@@ -985,6 +1153,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Time of the last maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getLatestMaintenanceTimeBuilder() {
@@ -993,6 +1165,10 @@ public final class GM {
         return getLatestMaintenanceTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time of the last maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getLatestMaintenanceTimeOrBuilder() {
@@ -1004,6 +1180,10 @@ public final class GM {
         }
       }
       /**
+       * <pre>
+       * Time of the last maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1024,6 +1204,10 @@ public final class GM {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> nextMaintenanceWindowTimeBuilder_;
       /**
+       * <pre>
+       * Time of the next maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        * @return Whether the nextMaintenanceWindowTime field is set.
        */
@@ -1031,6 +1215,10 @@ public final class GM {
         return nextMaintenanceWindowTimeBuilder_ != null || nextMaintenanceWindowTime_ != null;
       }
       /**
+       * <pre>
+       * Time of the next maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        * @return The nextMaintenanceWindowTime.
        */
@@ -1042,6 +1230,10 @@ public final class GM {
         }
       }
       /**
+       * <pre>
+       * Time of the next maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public Builder setNextMaintenanceWindowTime(com.google.protobuf.Timestamp value) {
@@ -1058,6 +1250,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Time of the next maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public Builder setNextMaintenanceWindowTime(
@@ -1072,6 +1268,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Time of the next maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public Builder mergeNextMaintenanceWindowTime(com.google.protobuf.Timestamp value) {
@@ -1090,6 +1290,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Time of the next maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public Builder clearNextMaintenanceWindowTime() {
@@ -1104,6 +1308,10 @@ public final class GM {
         return this;
       }
       /**
+       * <pre>
+       * Time of the next maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getNextMaintenanceWindowTimeBuilder() {
@@ -1112,6 +1320,10 @@ public final class GM {
         return getNextMaintenanceWindowTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time of the next maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getNextMaintenanceWindowTimeOrBuilder() {
@@ -1123,6 +1335,10 @@ public final class GM {
         }
       }
       /**
+       * <pre>
+       * Time of the next maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

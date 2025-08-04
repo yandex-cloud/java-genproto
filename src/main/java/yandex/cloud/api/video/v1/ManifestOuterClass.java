@@ -19,11 +19,19 @@ public final class ManifestOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * URL where the manifest file can be accessed.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
+     * <pre>
+     * URL where the manifest file can be accessed.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
@@ -31,17 +39,31 @@ public final class ManifestOuterClass {
         getUrlBytes();
 
     /**
+     * <pre>
+     * Format of the manifest file.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.Manifest.ManifestType type = 2;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
+     * <pre>
+     * Format of the manifest file.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.Manifest.ManifestType type = 2;</code>
      * @return The type.
      */
     yandex.cloud.api.video.v1.ManifestOuterClass.Manifest.ManifestType getType();
   }
   /**
+   * <pre>
+   * Represents a streaming manifest file that defines how video content is delivered.
+   * Manifests contain information about available video qualities, audio tracks,
+   * and other metadata needed by video players to stream content efficiently.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.Manifest}
    */
   public static final class Manifest extends
@@ -133,19 +155,37 @@ public final class ManifestOuterClass {
     }
 
     /**
+     * <pre>
+     * Manifest format supported by the platform.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.video.v1.Manifest.ManifestType}
      */
     public enum ManifestType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * The manifest type is not specified.
+       * </pre>
+       *
        * <code>MANIFEST_TYPE_UNSPECIFIED = 0;</code>
        */
       MANIFEST_TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Dynamic Adaptive Streaming over HTTP (DASH) format.
+       * &#64;see https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP
+       * </pre>
+       *
        * <code>DASH = 1;</code>
        */
       DASH(1),
       /**
+       * <pre>
+       * HTTP Live Streaming (HLS) format.
+       * &#64;see https://en.wikipedia.org/wiki/HTTP_Live_Streaming
+       * </pre>
+       *
        * <code>HLS = 2;</code>
        */
       HLS(2),
@@ -153,14 +193,28 @@ public final class ManifestOuterClass {
       ;
 
       /**
+       * <pre>
+       * The manifest type is not specified.
+       * </pre>
+       *
        * <code>MANIFEST_TYPE_UNSPECIFIED = 0;</code>
        */
       public static final int MANIFEST_TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Dynamic Adaptive Streaming over HTTP (DASH) format.
+       * &#64;see https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP
+       * </pre>
+       *
        * <code>DASH = 1;</code>
        */
       public static final int DASH_VALUE = 1;
       /**
+       * <pre>
+       * HTTP Live Streaming (HLS) format.
+       * &#64;see https://en.wikipedia.org/wiki/HTTP_Live_Streaming
+       * </pre>
+       *
        * <code>HLS = 2;</code>
        */
       public static final int HLS_VALUE = 2;
@@ -252,6 +306,10 @@ public final class ManifestOuterClass {
     public static final int URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object url_;
     /**
+     * <pre>
+     * URL where the manifest file can be accessed.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The url.
      */
@@ -269,6 +327,10 @@ public final class ManifestOuterClass {
       }
     }
     /**
+     * <pre>
+     * URL where the manifest file can be accessed.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
@@ -290,6 +352,10 @@ public final class ManifestOuterClass {
     public static final int TYPE_FIELD_NUMBER = 2;
     private int type_;
     /**
+     * <pre>
+     * Format of the manifest file.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.Manifest.ManifestType type = 2;</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -297,6 +363,10 @@ public final class ManifestOuterClass {
       return type_;
     }
     /**
+     * <pre>
+     * Format of the manifest file.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.Manifest.ManifestType type = 2;</code>
      * @return The type.
      */
@@ -471,6 +541,12 @@ public final class ManifestOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Represents a streaming manifest file that defines how video content is delivered.
+     * Manifests contain information about available video qualities, audio tracks,
+     * and other metadata needed by video players to stream content efficiently.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.Manifest}
      */
     public static final class Builder extends
@@ -626,6 +702,10 @@ public final class ManifestOuterClass {
 
       private java.lang.Object url_ = "";
       /**
+       * <pre>
+       * URL where the manifest file can be accessed.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return The url.
        */
@@ -642,6 +722,10 @@ public final class ManifestOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL where the manifest file can be accessed.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return The bytes for url.
        */
@@ -659,6 +743,10 @@ public final class ManifestOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL where the manifest file can be accessed.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @param value The url to set.
        * @return This builder for chaining.
@@ -674,6 +762,10 @@ public final class ManifestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL where the manifest file can be accessed.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return This builder for chaining.
        */
@@ -684,6 +776,10 @@ public final class ManifestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL where the manifest file can be accessed.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
@@ -702,6 +798,10 @@ public final class ManifestOuterClass {
 
       private int type_ = 0;
       /**
+       * <pre>
+       * Format of the manifest file.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.Manifest.ManifestType type = 2;</code>
        * @return The enum numeric value on the wire for type.
        */
@@ -709,6 +809,10 @@ public final class ManifestOuterClass {
         return type_;
       }
       /**
+       * <pre>
+       * Format of the manifest file.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.Manifest.ManifestType type = 2;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
@@ -720,6 +824,10 @@ public final class ManifestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format of the manifest file.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.Manifest.ManifestType type = 2;</code>
        * @return The type.
        */
@@ -730,6 +838,10 @@ public final class ManifestOuterClass {
         return result == null ? yandex.cloud.api.video.v1.ManifestOuterClass.Manifest.ManifestType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Format of the manifest file.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.Manifest.ManifestType type = 2;</code>
        * @param value The type to set.
        * @return This builder for chaining.
@@ -744,6 +856,10 @@ public final class ManifestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format of the manifest file.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.Manifest.ManifestType type = 2;</code>
        * @return This builder for chaining.
        */

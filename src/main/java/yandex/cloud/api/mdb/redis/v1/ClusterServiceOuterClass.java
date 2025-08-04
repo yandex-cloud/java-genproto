@@ -4478,6 +4478,33 @@ public final class ClusterServiceOuterClass {
      * @return The authSentinel.
      */
     boolean getAuthSentinel();
+
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+     * @return Whether the diskEncryptionKeyId field is set.
+     */
+    boolean hasDiskEncryptionKeyId();
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+     * @return The diskEncryptionKeyId.
+     */
+    com.google.protobuf.StringValue getDiskEncryptionKeyId();
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.redis.v1.CreateClusterRequest}
@@ -4667,6 +4694,19 @@ public final class ClusterServiceOuterClass {
             case 152: {
 
               authSentinel_ = input.readBool();
+              break;
+            }
+            case 162: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (diskEncryptionKeyId_ != null) {
+                subBuilder = diskEncryptionKeyId_.toBuilder();
+              }
+              diskEncryptionKeyId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskEncryptionKeyId_);
+                diskEncryptionKeyId_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5406,6 +5446,44 @@ public final class ClusterServiceOuterClass {
       return authSentinel_;
     }
 
+    public static final int DISK_ENCRYPTION_KEY_ID_FIELD_NUMBER = 20;
+    private com.google.protobuf.StringValue diskEncryptionKeyId_;
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+     * @return Whether the diskEncryptionKeyId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskEncryptionKeyId() {
+      return diskEncryptionKeyId_ != null;
+    }
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+     * @return The diskEncryptionKeyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDiskEncryptionKeyId() {
+      return diskEncryptionKeyId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+    }
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder() {
+      return getDiskEncryptionKeyId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5473,6 +5551,9 @@ public final class ClusterServiceOuterClass {
       }
       if (authSentinel_ != false) {
         output.writeBool(19, authSentinel_);
+      }
+      if (diskEncryptionKeyId_ != null) {
+        output.writeMessage(20, getDiskEncryptionKeyId());
       }
       unknownFields.writeTo(output);
     }
@@ -5557,6 +5638,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(19, authSentinel_);
       }
+      if (diskEncryptionKeyId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, getDiskEncryptionKeyId());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5613,6 +5698,11 @@ public final class ClusterServiceOuterClass {
           .equals(other.getUserSpecsList())) return false;
       if (getAuthSentinel()
           != other.getAuthSentinel()) return false;
+      if (hasDiskEncryptionKeyId() != other.hasDiskEncryptionKeyId()) return false;
+      if (hasDiskEncryptionKeyId()) {
+        if (!getDiskEncryptionKeyId()
+            .equals(other.getDiskEncryptionKeyId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5676,6 +5766,10 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + AUTH_SENTINEL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAuthSentinel());
+      if (hasDiskEncryptionKeyId()) {
+        hash = (37 * hash) + DISK_ENCRYPTION_KEY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskEncryptionKeyId().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5886,6 +5980,12 @@ public final class ClusterServiceOuterClass {
         }
         authSentinel_ = false;
 
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = null;
+        } else {
+          diskEncryptionKeyId_ = null;
+          diskEncryptionKeyIdBuilder_ = null;
+        }
         return this;
       }
 
@@ -5963,6 +6063,11 @@ public final class ClusterServiceOuterClass {
           result.userSpecs_ = userSpecsBuilder_.build();
         }
         result.authSentinel_ = authSentinel_;
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          result.diskEncryptionKeyId_ = diskEncryptionKeyId_;
+        } else {
+          result.diskEncryptionKeyId_ = diskEncryptionKeyIdBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6117,6 +6222,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.getAuthSentinel() != false) {
           setAuthSentinel(other.getAuthSentinel());
+        }
+        if (other.hasDiskEncryptionKeyId()) {
+          mergeDiskEncryptionKeyId(other.getDiskEncryptionKeyId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8251,6 +8359,161 @@ public final class ClusterServiceOuterClass {
         authSentinel_ = false;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.StringValue diskEncryptionKeyId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> diskEncryptionKeyIdBuilder_;
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+       * @return Whether the diskEncryptionKeyId field is set.
+       */
+      public boolean hasDiskEncryptionKeyId() {
+        return diskEncryptionKeyIdBuilder_ != null || diskEncryptionKeyId_ != null;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+       * @return The diskEncryptionKeyId.
+       */
+      public com.google.protobuf.StringValue getDiskEncryptionKeyId() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          return diskEncryptionKeyId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+        } else {
+          return diskEncryptionKeyIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+       */
+      public Builder setDiskEncryptionKeyId(com.google.protobuf.StringValue value) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskEncryptionKeyId_ = value;
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+       */
+      public Builder setDiskEncryptionKeyId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+       */
+      public Builder mergeDiskEncryptionKeyId(com.google.protobuf.StringValue value) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          if (diskEncryptionKeyId_ != null) {
+            diskEncryptionKeyId_ =
+              com.google.protobuf.StringValue.newBuilder(diskEncryptionKeyId_).mergeFrom(value).buildPartial();
+          } else {
+            diskEncryptionKeyId_ = value;
+          }
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+       */
+      public Builder clearDiskEncryptionKeyId() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = null;
+          onChanged();
+        } else {
+          diskEncryptionKeyId_ = null;
+          diskEncryptionKeyIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDiskEncryptionKeyIdBuilder() {
+        
+        onChanged();
+        return getDiskEncryptionKeyIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder() {
+        if (diskEncryptionKeyIdBuilder_ != null) {
+          return diskEncryptionKeyIdBuilder_.getMessageOrBuilder();
+        } else {
+          return diskEncryptionKeyId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDiskEncryptionKeyIdFieldBuilder() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getDiskEncryptionKeyId(),
+                  getParentForChildren(),
+                  isClean());
+          diskEncryptionKeyId_ = null;
+        }
+        return diskEncryptionKeyIdBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21620,6 +21883,33 @@ public final class ClusterServiceOuterClass {
      * @return The authSentinel.
      */
     boolean getAuthSentinel();
+
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     * @return Whether the diskEncryptionKeyId field is set.
+     */
+    boolean hasDiskEncryptionKeyId();
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     * @return The diskEncryptionKeyId.
+     */
+    com.google.protobuf.StringValue getDiskEncryptionKeyId();
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.redis.v1.RestoreClusterRequest}
@@ -21801,6 +22091,19 @@ public final class ClusterServiceOuterClass {
             case 128: {
 
               authSentinel_ = input.readBool();
+              break;
+            }
+            case 146: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (diskEncryptionKeyId_ != null) {
+                subBuilder = diskEncryptionKeyId_.toBuilder();
+              }
+              diskEncryptionKeyId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskEncryptionKeyId_);
+                diskEncryptionKeyId_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -22515,6 +22818,44 @@ public final class ClusterServiceOuterClass {
       return authSentinel_;
     }
 
+    public static final int DISK_ENCRYPTION_KEY_ID_FIELD_NUMBER = 18;
+    private com.google.protobuf.StringValue diskEncryptionKeyId_;
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     * @return Whether the diskEncryptionKeyId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskEncryptionKeyId() {
+      return diskEncryptionKeyId_ != null;
+    }
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     * @return The diskEncryptionKeyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDiskEncryptionKeyId() {
+      return diskEncryptionKeyId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+    }
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder() {
+      return getDiskEncryptionKeyId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -22579,6 +22920,9 @@ public final class ClusterServiceOuterClass {
       }
       if (authSentinel_ != false) {
         output.writeBool(16, authSentinel_);
+      }
+      if (diskEncryptionKeyId_ != null) {
+        output.writeMessage(18, getDiskEncryptionKeyId());
       }
       unknownFields.writeTo(output);
     }
@@ -22658,6 +23002,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(16, authSentinel_);
       }
+      if (diskEncryptionKeyId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getDiskEncryptionKeyId());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -22712,6 +23060,11 @@ public final class ClusterServiceOuterClass {
       }
       if (getAuthSentinel()
           != other.getAuthSentinel()) return false;
+      if (hasDiskEncryptionKeyId() != other.hasDiskEncryptionKeyId()) return false;
+      if (hasDiskEncryptionKeyId()) {
+        if (!getDiskEncryptionKeyId()
+            .equals(other.getDiskEncryptionKeyId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -22770,6 +23123,10 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + AUTH_SENTINEL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAuthSentinel());
+      if (hasDiskEncryptionKeyId()) {
+        hash = (37 * hash) + DISK_ENCRYPTION_KEY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskEncryptionKeyId().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -22973,6 +23330,12 @@ public final class ClusterServiceOuterClass {
         }
         authSentinel_ = false;
 
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = null;
+        } else {
+          diskEncryptionKeyId_ = null;
+          diskEncryptionKeyIdBuilder_ = null;
+        }
         return this;
       }
 
@@ -23041,6 +23404,11 @@ public final class ClusterServiceOuterClass {
           result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
         }
         result.authSentinel_ = authSentinel_;
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          result.diskEncryptionKeyId_ = diskEncryptionKeyId_;
+        } else {
+          result.diskEncryptionKeyId_ = diskEncryptionKeyIdBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -23170,6 +23538,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.getAuthSentinel() != false) {
           setAuthSentinel(other.getAuthSentinel());
+        }
+        if (other.hasDiskEncryptionKeyId()) {
+          mergeDiskEncryptionKeyId(other.getDiskEncryptionKeyId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -25068,6 +25439,161 @@ public final class ClusterServiceOuterClass {
         authSentinel_ = false;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.StringValue diskEncryptionKeyId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> diskEncryptionKeyIdBuilder_;
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       * @return Whether the diskEncryptionKeyId field is set.
+       */
+      public boolean hasDiskEncryptionKeyId() {
+        return diskEncryptionKeyIdBuilder_ != null || diskEncryptionKeyId_ != null;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       * @return The diskEncryptionKeyId.
+       */
+      public com.google.protobuf.StringValue getDiskEncryptionKeyId() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          return diskEncryptionKeyId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+        } else {
+          return diskEncryptionKeyIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public Builder setDiskEncryptionKeyId(com.google.protobuf.StringValue value) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskEncryptionKeyId_ = value;
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public Builder setDiskEncryptionKeyId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public Builder mergeDiskEncryptionKeyId(com.google.protobuf.StringValue value) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          if (diskEncryptionKeyId_ != null) {
+            diskEncryptionKeyId_ =
+              com.google.protobuf.StringValue.newBuilder(diskEncryptionKeyId_).mergeFrom(value).buildPartial();
+          } else {
+            diskEncryptionKeyId_ = value;
+          }
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public Builder clearDiskEncryptionKeyId() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = null;
+          onChanged();
+        } else {
+          diskEncryptionKeyId_ = null;
+          diskEncryptionKeyIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDiskEncryptionKeyIdBuilder() {
+        
+        onChanged();
+        return getDiskEncryptionKeyIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder() {
+        if (diskEncryptionKeyIdBuilder_ != null) {
+          return diskEncryptionKeyIdBuilder_.getMessageOrBuilder();
+        } else {
+          return diskEncryptionKeyId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDiskEncryptionKeyIdFieldBuilder() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getDiskEncryptionKeyId(),
+                  getParentForChildren(),
+                  isClean());
+          diskEncryptionKeyId_ = null;
+        }
+        return diskEncryptionKeyIdBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -60688,7 +61214,7 @@ public final class ClusterServiceOuterClass {
       "\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"e\n\024ListCluste" +
       "rsResponse\0224\n\010clusters\030\001 \003(\0132\".yandex.cl" +
       "oud.mdb.redis.v1.Cluster\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"\301\007\n\024CreateClusterRequest\022\037\n\tfo" +
+      "ken\030\002 \001(\t\"\377\007\n\024CreateClusterRequest\022\037\n\tfo" +
       "lder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(" +
       "\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013des" +
       "cription\030\003 \001(\tB\t\212\3101\005<=256\022\214\001\n\006labels\030\004 \003" +
@@ -60711,321 +61237,324 @@ public final class ClusterServiceOuterClass {
       ".mdb.redis.v1.MaintenanceWindow\022@\n\nuser_" +
       "specs\030\022 \003(\0132#.yandex.cloud.mdb.redis.v1." +
       "UserSpecB\007\202\3101\003>=0\022\025\n\rauth_sentinel\030\023 \001(\010" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001J\004\010\010\020\n\"+\n\025CreateClusterMetadata\022\022" +
-      "\n\ncluster_id\030\001 \001(\t\"\317\005\n\024UpdateClusterRequ" +
-      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n" +
-      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\214" +
-      "\001\n\006labels\030\004 \003(\0132;.yandex.cloud.mdb.redis" +
-      ".v1.UpdateClusterRequest.LabelsEntryB?\202\310" +
-      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262" +
-      "\3101\022\022\020[a-z][-_0-9a-z]*\022:\n\013config_spec\030\005 \001" +
-      "(\0132%.yandex.cloud.mdb.redis.v1.ConfigSpe" +
-      "c\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_" +
-      "-]*\022H\n\022maintenance_window\030\007 \001(\0132,.yandex" +
-      ".cloud.mdb.redis.v1.MaintenanceWindow\022\032\n" +
-      "\022security_group_ids\030\010 \003(\t\022\033\n\023deletion_pr" +
-      "otection\030\t \001(\010\022L\n\020persistence_mode\030\n \001(\016" +
-      "22.yandex.cloud.mdb.redis.v1.Cluster.Per" +
-      "sistenceMode\022\034\n\nnetwork_id\030\013 \001(\tB\010\212\3101\004<=" +
-      "50\022\032\n\022announce_hostnames\030\014 \001(\010\022\025\n\rauth_s" +
-      "entinel\030\r \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMet" +
-      "adata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteClust" +
-      "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"+\n\025DeleteClusterMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartCluste" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClu" +
-      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\")\n\023StopClusterMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\"c\n\022MoveClusterRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_" +
-      "folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveClu" +
-      "sterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020sour" +
-      "ce_folder_id\030\002 \001(\t\022\035\n\025destination_folder" +
-      "_id\030\003 \001(\t\"\213\001\n\031UpdateClusterHostsRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022L\n\021upd" +
-      "ate_host_specs\030\002 \003(\0132).yandex.cloud.mdb." +
-      "redis.v1.UpdateHostSpecB\006\202\3101\002>0\"D\n\032Updat" +
-      "eClusterHostsMetadata\022\022\n\ncluster_id\030\001 \001(" +
-      "\t\022\022\n\nhost_names\030\002 \003(\t\"8\n\024BackupClusterRe" +
-      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
-      "+\n\025BackupClusterMetadata\022\022\n\ncluster_id\030\001" +
-      " \001(\t\"\377\006\n\025RestoreClusterRequest\022\027\n\tbackup" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<" +
-      "=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001" +
-      "(\tB\t\212\3101\005<=256\022\215\001\n\006labels\030\004 \003(\0132<.yandex." +
-      "cloud.mdb.redis.v1.RestoreClusterRequest" +
-      ".LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9" +
-      "a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022I\n" +
-      "\013environment\030\005 \001(\0162..yandex.cloud.mdb.re" +
-      "dis.v1.Cluster.EnvironmentB\004\350\3071\001\022@\n\013conf" +
-      "ig_spec\030\006 \001(\0132%.yandex.cloud.mdb.redis.v" +
-      "1.ConfigSpecB\004\350\3071\001\022?\n\nhost_specs\030\007 \003(\0132#" +
-      ".yandex.cloud.mdb.redis.v1.HostSpecB\006\202\3101" +
-      "\002>0\022 \n\nnetwork_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n" +
-      "\tfolder_id\030\t \001(\tB\010\212\3101\004<=50\022\032\n\022security_g" +
-      "roup_ids\030\n \003(\t\022/\n\013tls_enabled\030\013 \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022L\n\020persistence_m" +
-      "ode\030\014 \001(\01622.yandex.cloud.mdb.redis.v1.Cl" +
-      "uster.PersistenceMode\022\033\n\023deletion_protec" +
-      "tion\030\r \001(\010\022\032\n\022announce_hostnames\030\016 \001(\010\022H" +
-      "\n\022maintenance_window\030\017 \001(\0132,.yandex.clou" +
-      "d.mdb.redis.v1.MaintenanceWindow\022\025\n\rauth" +
-      "_sentinel\030\020 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026RestoreCluster" +
-      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_i" +
-      "d\030\002 \001(\t\"^\n\033StartClusterFailoverRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\nhost" +
-      "_names\030\002 \003(\tB\t\212\3101\005<=253\"F\n\034StartClusterF" +
-      "ailoverMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nh" +
-      "ost_names\030\002 \003(\t\"\312\002\n\034RescheduleMaintenanc" +
-      "eRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022e\n\017reschedule_type\030\002 \001(\0162F.yandex.clo" +
-      "ud.mdb.redis.v1.RescheduleMaintenanceReq" +
-      "uest.RescheduleTypeB\004\350\3071\001\0221\n\rdelayed_unt" +
-      "il\030\003 \001(\0132\032.google.protobuf.Timestamp\"n\n\016" +
-      "RescheduleType\022\037\n\033RESCHEDULE_TYPE_UNSPEC" +
-      "IFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAILABLE" +
-      "_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"l\n\035Reschedu" +
-      "leMaintenanceMetadata\022\022\n\ncluster_id\030\001 \001(" +
-      "\t\0221\n\rdelayed_until\030\004 \001(\0132\032.google.protob" +
-      "uf.TimestampJ\004\010\002\020\004\"\256\001\n\tLogRecord\022-\n\ttime" +
-      "stamp\030\001 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "B\n\007message\030\002 \003(\01321.yandex.cloud.mdb.redi" +
-      "s.v1.LogRecord.MessageEntry\032.\n\014MessageEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\370\002\n\026" +
-      "ListClusterLogsRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022" +
-      "S\n\014service_type\030\003 \001(\0162=.yandex.cloud.mdb" +
-      ".redis.v1.ListClusterLogsRequest.Service" +
-      "Type\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071" +
-      "\0060-1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\"6" +
-      "\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIFIE" +
-      "D\020\000\022\t\n\005REDIS\020\001\"f\n\027ListClusterLogsRespons" +
-      "e\0222\n\004logs\030\001 \003(\0132$.yandex.cloud.mdb.redis" +
-      ".v1.LogRecord\022\027\n\017next_page_token\030\002 \001(\t\"b" +
-      "\n\017StreamLogRecord\0224\n\006record\030\001 \001(\0132$.yand" +
-      "ex.cloud.mdb.redis.v1.LogRecord\022\031\n\021next_" +
-      "record_token\030\002 \001(\t\"\373\002\n\030StreamClusterLogs" +
-      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022\025\n\rcolumn_filter\030\002 \003(\t\022U\n\014service_type" +
-      "\030\003 \001(\0162?.yandex.cloud.mdb.redis.v1.Strea" +
-      "mClusterLogsRequest.ServiceType\022-\n\tfrom_" +
-      "time\030\004 \001(\0132\032.google.protobuf.Timestamp\022+" +
-      "\n\007to_time\030\005 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022\037\n\014record_token\030\006 \001(\tB\t\212\3101\005<=100\022\032\n\006" +
-      "filter\030\007 \001(\tB\n\212\3101\006<=1000\"6\n\013ServiceType\022" +
-      "\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001" +
-      "\"~\n\034ListClusterOperationsRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
-      "\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
-      "\3101\005<=100\"o\n\035ListClusterOperationsRespons" +
-      "e\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.ope" +
-      "ration.Operation\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"{\n\031ListClusterBackupsRequest\022 \n\ncluste" +
+      "\022<\n\026disk_encryption_key_id\030\024 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\010\020\n\"+\n\025C" +
+      "reateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\"\317\005\n\024UpdateClusterRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\013" +
+      "2\032.google.protobuf.FieldMask\022\036\n\013descript" +
+      "ion\030\003 \001(\tB\t\212\3101\005<=256\022\214\001\n\006labels\030\004 \003(\0132;." +
+      "yandex.cloud.mdb.redis.v1.UpdateClusterR" +
+      "equest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013" +
+      "[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-" +
+      "z]*\022:\n\013config_spec\030\005 \001(\0132%.yandex.cloud." +
+      "mdb.redis.v1.ConfigSpec\022(\n\004name\030\006 \001(\tB\032\212" +
+      "\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022H\n\022maintenance" +
+      "_window\030\007 \001(\0132,.yandex.cloud.mdb.redis.v" +
+      "1.MaintenanceWindow\022\032\n\022security_group_id" +
+      "s\030\010 \003(\t\022\033\n\023deletion_protection\030\t \001(\010\022L\n\020" +
+      "persistence_mode\030\n \001(\01622.yandex.cloud.md" +
+      "b.redis.v1.Cluster.PersistenceMode\022\034\n\nne" +
+      "twork_id\030\013 \001(\tB\010\212\3101\004<=50\022\032\n\022announce_hos" +
+      "tnames\030\014 \001(\010\022\025\n\rauth_sentinel\030\r \001(\010\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\"+\n\025UpdateClusterMetadata\022\022\n\ncluster_i" +
+      "d\030\001 \001(\t\"8\n\024DeleteClusterRequest\022 \n\nclust" +
+      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClust" +
+      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023StartC" +
+      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\"*\n\024StartClusterMetadata\022\022\n\nclust" +
+      "er_id\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClust" +
+      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\"c\n\022MoveCl" +
+      "usterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\"b\n\023MoveClusterMetadata\022\022\n\ncl" +
+      "uster_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t" +
+      "\022\035\n\025destination_folder_id\030\003 \001(\t\"\213\001\n\031Upda" +
+      "teClusterHostsRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022L\n\021update_host_specs\030\002 \003" +
+      "(\0132).yandex.cloud.mdb.redis.v1.UpdateHos" +
+      "tSpecB\006\202\3101\002>0\"D\n\032UpdateClusterHostsMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 " +
+      "\003(\t\"8\n\024BackupClusterRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupClusterMe" +
+      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"\303\007\n\025RestoreCl" +
+      "usterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022,\n" +
+      "\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_" +
+      "-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\215\001\n\006" +
+      "labels\030\004 \003(\0132<.yandex.cloud.mdb.redis.v1" +
+      ".RestoreClusterRequest.LabelsEntryB?\202\3101\004" +
+      "<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101" +
+      "\022\022\020[a-z][-_0-9a-z]*\022I\n\013environment\030\005 \001(\016" +
+      "2..yandex.cloud.mdb.redis.v1.Cluster.Env" +
+      "ironmentB\004\350\3071\001\022@\n\013config_spec\030\006 \001(\0132%.ya" +
+      "ndex.cloud.mdb.redis.v1.ConfigSpecB\004\350\3071\001" +
+      "\022?\n\nhost_specs\030\007 \003(\0132#.yandex.cloud.mdb." +
+      "redis.v1.HostSpecB\006\202\3101\002>0\022 \n\nnetwork_id\030" +
+      "\010 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tfolder_id\030\t \001(\tB\010" +
+      "\212\3101\004<=50\022\032\n\022security_group_ids\030\n \003(\t\022/\n\013" +
+      "tls_enabled\030\013 \001(\0132\032.google.protobuf.Bool" +
+      "Value\022L\n\020persistence_mode\030\014 \001(\01622.yandex" +
+      ".cloud.mdb.redis.v1.Cluster.PersistenceM" +
+      "ode\022\033\n\023deletion_protection\030\r \001(\010\022\032\n\022anno" +
+      "unce_hostnames\030\016 \001(\010\022H\n\022maintenance_wind" +
+      "ow\030\017 \001(\0132,.yandex.cloud.mdb.redis.v1.Mai" +
+      "ntenanceWindow\022\025\n\rauth_sentinel\030\020 \001(\010\022<\n" +
+      "\026disk_encryption_key_id\030\022 \001(\0132\034.google.p" +
+      "rotobuf.StringValue\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\021\020\022\"?\n\026Rest" +
+      "oreClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021" +
+      "\n\tbackup_id\030\002 \001(\t\"^\n\033StartClusterFailove" +
+      "rRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\035\n\nhost_names\030\002 \003(\tB\t\212\3101\005<=253\"F\n\034Sta" +
+      "rtClusterFailoverMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\312\002\n\034Reschedule" +
+      "MaintenanceRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022e\n\017reschedule_type\030\002 \001(\0162F." +
+      "yandex.cloud.mdb.redis.v1.RescheduleMain" +
+      "tenanceRequest.RescheduleTypeB\004\350\3071\001\0221\n\rd" +
+      "elayed_until\030\003 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\"n\n\016RescheduleType\022\037\n\033RESCHEDULE_T" +
+      "YPE_UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT" +
+      "_AVAILABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"l" +
+      "\n\035RescheduleMaintenanceMetadata\022\022\n\nclust" +
+      "er_id\030\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampJ\004\010\002\020\004\"\256\001\n\tLogReco" +
+      "rd\022-\n\ttimestamp\030\001 \001(\0132\032.google.protobuf." +
+      "Timestamp\022B\n\007message\030\002 \003(\01321.yandex.clou" +
+      "d.mdb.redis.v1.LogRecord.MessageEntry\032.\n" +
+      "\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\"\370\002\n\026ListClusterLogsRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_fil" +
+      "ter\030\002 \003(\t\022S\n\014service_type\030\003 \001(\0162=.yandex" +
+      ".cloud.mdb.redis.v1.ListClusterLogsReque" +
+      "st.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022\035\n\tpage_size\030" +
+      "\006 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\007 \001(\tB\t\212" +
+      "\3101\005<=100\"6\n\013ServiceType\022\034\n\030SERVICE_TYPE_" +
+      "UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\"f\n\027ListClusterL" +
+      "ogsResponse\0222\n\004logs\030\001 \003(\0132$.yandex.cloud" +
+      ".mdb.redis.v1.LogRecord\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"b\n\017StreamLogRecord\0224\n\006record\030\001 " +
+      "\001(\0132$.yandex.cloud.mdb.redis.v1.LogRecor" +
+      "d\022\031\n\021next_record_token\030\002 \001(\t\"\373\002\n\030StreamC" +
+      "lusterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022U\n\014se" +
+      "rvice_type\030\003 \001(\0162?.yandex.cloud.mdb.redi" +
+      "s.v1.StreamClusterLogsRequest.ServiceTyp" +
+      "e\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022+\n\007to_time\030\005 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022\037\n\014record_token\030\006 \001(\tB\t\212\3101" +
+      "\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\"6\n\013Se" +
+      "rviceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022" +
+      "\t\n\005REDIS\020\001\"~\n\034ListClusterOperationsReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
+      "page_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_toke" +
+      "n\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperati" +
+      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
+      ".cloud.operation.Operation\022\027\n\017next_page_" +
+      "token\030\002 \001(\t\"{\n\031ListClusterBackupsRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
+      "ge_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030" +
+      "\003 \001(\tB\t\212\3101\005<=100\"i\n\032ListClusterBackupsRe" +
+      "sponse\0222\n\007backups\030\001 \003(\0132!.yandex.cloud.m" +
+      "db.redis.v1.Backup\022\027\n\017next_page_token\030\002 " +
+      "\001(\t\"y\n\027ListClusterHostsRequest\022 \n\ncluste" +
       "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
       "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"i\n\032ListClusterBackupsResponse\0222\n\007" +
-      "backups\030\001 \003(\0132!.yandex.cloud.mdb.redis.v" +
-      "1.Backup\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027Lis" +
-      "tClusterHostsRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060" +
-      "-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\030" +
-      "ListClusterHostsResponse\022.\n\005hosts\030\001 \003(\0132" +
-      "\037.yandex.cloud.mdb.redis.v1.Host\022\027\n\017next" +
-      "_page_token\030\002 \001(\t\"{\n\026AddClusterHostsRequ" +
-      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n" +
-      "\nhost_specs\030\002 \003(\0132#.yandex.cloud.mdb.red" +
-      "is.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddClusterHost" +
-      "sMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_na" +
-      "mes\030\002 \003(\t\"b\n\031DeleteClusterHostsRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost" +
-      "_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032DeleteC" +
+      "\005<=100\"c\n\030ListClusterHostsResponse\022.\n\005ho" +
+      "sts\030\001 \003(\0132\037.yandex.cloud.mdb.redis.v1.Ho" +
+      "st\022\027\n\017next_page_token\030\002 \001(\t\"{\n\026AddCluste" +
+      "rHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022?\n\nhost_specs\030\002 \003(\0132#.yandex.clo" +
+      "ud.mdb.redis.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddC" +
       "lusterHostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022" +
-      "\022\n\nhost_names\030\002 \003(\t\"n\n\026GetClusterShardRe" +
-      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "2\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-" +
-      "zA-Z0-9_-]*\"z\n\030ListClusterShardsRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
-      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003" +
-      " \001(\tB\t\212\3101\005<=100\"f\n\031ListClusterShardsResp" +
-      "onse\0220\n\006shards\030\001 \003(\0132 .yandex.cloud.mdb." +
-      "redis.v1.Shard\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\265\001\n\026AddClusterShardRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\t" +
-      "B\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022?\n\nhost" +
-      "_specs\030\004 \003(\0132#.yandex.cloud.mdb.redis.v1" +
-      ".HostSpecB\006\202\3101\002>0J\004\010\003\020\004\"A\n\027AddClusterSha" +
-      "rdMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_" +
-      "name\030\002 \001(\t\"q\n\031DeleteClusterShardRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nsha" +
-      "rd_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-" +
-      "9_-]*\"D\n\032DeleteClusterShardMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\022\022\n\nshard_name\030\002 \001(\t\";\n\027R" +
-      "ebalanceClusterRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\".\n\030RebalanceClusterMeta" +
-      "data\022\022\n\ncluster_id\030\001 \001(\t\"\253\001\n\016UpdateHostS" +
-      "pec\022\027\n\thost_name\030\001 \001(\tB\004\350\3071\001\0225\n\020replica_" +
-      "priority\030\002 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022\030\n\020assign_public_ip\030\003 \001(\010\022/\n\013update_" +
-      "mask\030\004 \001(\0132\032.google.protobuf.FieldMask\"\257" +
-      "\001\n\010HostSpec\022\017\n\007zone_id\030\001 \001(\t\022\021\n\tsubnet_i" +
-      "d\030\002 \001(\t\022.\n\nshard_name\030\003 \001(\tB\032\212\3101\004<=63\362\3071" +
-      "\016[a-zA-Z0-9_-]*\0225\n\020replica_priority\030\004 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022\030\n\020assign" +
-      "_public_ip\030\005 \001(\010\"\233\006\n\nConfigSpec\022\017\n\007versi" +
-      "on\030\001 \001(\t\022]\n\020redis_config_5_0\030\002 \001(\01320.yan" +
+      "\022\n\nhost_names\030\002 \003(\t\"b\n\031DeleteClusterHost" +
+      "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"" +
+      "D\n\032DeleteClusterHostsMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"n\n\026GetClus" +
+      "terShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<" +
+      "=63\362\3071\016[a-zA-Z0-9_-]*\"z\n\030ListClusterShar" +
+      "dsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"f\n\031ListCluster" +
+      "ShardsResponse\0220\n\006shards\030\001 \003(\0132 .yandex." +
+      "cloud.mdb.redis.v1.Shard\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"\265\001\n\026AddClusterShardRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_" +
+      "name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-" +
+      "]*\022?\n\nhost_specs\030\004 \003(\0132#.yandex.cloud.md" +
+      "b.redis.v1.HostSpecB\006\202\3101\002>0J\004\010\003\020\004\"A\n\027Add" +
+      "ClusterShardMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\022\022\n\nshard_name\030\002 \001(\t\"q\n\031DeleteClusterSha" +
+      "rdRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071" +
+      "\016[a-zA-Z0-9_-]*\"D\n\032DeleteClusterShardMet" +
+      "adata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_name\030" +
+      "\002 \001(\t\";\n\027RebalanceClusterRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\".\n\030RebalanceC" +
+      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\253\001\n\016U" +
+      "pdateHostSpec\022\027\n\thost_name\030\001 \001(\tB\004\350\3071\001\0225" +
+      "\n\020replica_priority\030\002 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022\030\n\020assign_public_ip\030\003 \001(\010\022" +
+      "/\n\013update_mask\030\004 \001(\0132\032.google.protobuf.F" +
+      "ieldMask\"\257\001\n\010HostSpec\022\017\n\007zone_id\030\001 \001(\t\022\021" +
+      "\n\tsubnet_id\030\002 \001(\t\022.\n\nshard_name\030\003 \001(\tB\032\212" +
+      "\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\0225\n\020replica_pri" +
+      "ority\030\004 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022\030\n\020assign_public_ip\030\005 \001(\010\"\233\006\n\nConfigSpe" +
+      "c\022\017\n\007version\030\001 \001(\t\022]\n\020redis_config_5_0\030\002" +
+      " \001(\01320.yandex.cloud.mdb.redis.v1.config." +
+      "RedisConfig5_0H\000R\017redisConfig_5_0\022]\n\020red" +
+      "is_config_6_0\030\006 \001(\01320.yandex.cloud.mdb.r" +
+      "edis.v1.config.RedisConfig6_0H\000R\017redisCo" +
+      "nfig_6_0\022]\n\020redis_config_6_2\030\007 \001(\01320.yan" +
       "dex.cloud.mdb.redis.v1.config.RedisConfi" +
-      "g5_0H\000R\017redisConfig_5_0\022]\n\020redis_config_" +
-      "6_0\030\006 \001(\01320.yandex.cloud.mdb.redis.v1.co" +
-      "nfig.RedisConfig6_0H\000R\017redisConfig_6_0\022]" +
-      "\n\020redis_config_6_2\030\007 \001(\01320.yandex.cloud." +
-      "mdb.redis.v1.config.RedisConfig6_2H\000R\017re" +
-      "disConfig_6_2\022]\n\020redis_config_7_0\030\010 \001(\0132" +
-      "0.yandex.cloud.mdb.redis.v1.config.Redis" +
-      "Config7_0H\000R\017redisConfig_7_0\0227\n\tresource" +
-      "s\030\003 \001(\0132$.yandex.cloud.mdb.redis.v1.Reso" +
-      "urces\0223\n\023backup_window_start\030\004 \001(\0132\026.goo" +
-      "gle.type.TimeOfDay\0221\n\006access\030\005 \001(\0132!.yan" +
-      "dex.cloud.mdb.redis.v1.Access\022<\n\005redis\030\013" +
-      " \001(\0132-.yandex.cloud.mdb.redis.v1.config." +
-      "RedisConfig\022M\n\025disk_size_autoscaling\030\014 \001" +
-      "(\0132..yandex.cloud.mdb.redis.v1.DiskSizeA" +
-      "utoscaling\022>\n\031backup_retain_period_days\030" +
-      "\r \001(\0132\033.google.protobuf.Int64ValueB\014\n\nre" +
-      "dis_specJ\004\010\t\020\0132\355&\n\016ClusterService\022\210\001\n\003Ge" +
-      "t\022,.yandex.cloud.mdb.redis.v1.GetCluster" +
-      "Request\032\".yandex.cloud.mdb.redis.v1.Clus" +
-      "ter\"/\202\323\344\223\002)\022\'/managed-redis/v1/clusters/" +
-      "{cluster_id}\022\213\001\n\004List\022..yandex.cloud.mdb" +
-      ".redis.v1.ListClustersRequest\032/.yandex.c" +
-      "loud.mdb.redis.v1.ListClustersResponse\"\"" +
-      "\202\323\344\223\002\034\022\032/managed-redis/v1/clusters\022\247\001\n\006C" +
-      "reate\022/.yandex.cloud.mdb.redis.v1.Create" +
-      "ClusterRequest\032!.yandex.cloud.operation." +
-      "Operation\"I\202\323\344\223\002\037\"\032/managed-redis/v1/clu" +
-      "sters:\001*\262\322* \n\025CreateClusterMetadata\022\007Clu" +
-      "ster\022\264\001\n\006Update\022/.yandex.cloud.mdb.redis" +
-      ".v1.UpdateClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"V\202\323\344\223\002,2\'/managed-re" +
-      "dis/v1/clusters/{cluster_id}:\001*\262\322* \n\025Upd" +
-      "ateClusterMetadata\022\007Cluster\022\277\001\n\006Delete\022/" +
-      ".yandex.cloud.mdb.redis.v1.DeleteCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"a\202\323\344\223\002)*\'/managed-redis/v1/clusters/{" +
-      "cluster_id}\262\322*.\n\025DeleteClusterMetadata\022\025" +
-      "google.protobuf.Empty\022\264\001\n\005Start\022..yandex" +
-      ".cloud.mdb.redis.v1.StartClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"X\202\323\344\223" +
-      "\002/\"-/managed-redis/v1/clusters/{cluster_" +
-      "id}:start\262\322*\037\n\024StartClusterMetadata\022\007Clu" +
-      "ster\022\260\001\n\004Stop\022-.yandex.cloud.mdb.redis.v" +
-      "1.StopClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"V\202\323\344\223\002.\",/managed-redis/" +
-      "v1/clusters/{cluster_id}:stop\262\322*\036\n\023StopC" +
-      "lusterMetadata\022\007Cluster\022\263\001\n\004Move\022-.yande" +
-      "x.cloud.mdb.redis.v1.MoveClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"Y\202\323\344\223" +
-      "\0021\",/managed-redis/v1/clusters/{cluster_" +
-      "id}:move:\001*\262\322*\036\n\023MoveClusterMetadata\022\007Cl" +
-      "uster\022\270\001\n\006Backup\022/.yandex.cloud.mdb.redi" +
-      "s.v1.BackupClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"Z\202\323\344\223\0020\"./managed-r" +
-      "edis/v1/clusters/{cluster_id}:backup\262\322* " +
-      "\n\025BackupClusterMetadata\022\007Cluster\022\262\001\n\007Res" +
-      "tore\0220.yandex.cloud.mdb.redis.v1.Restore" +
-      "ClusterRequest\032!.yandex.cloud.operation." +
-      "Operation\"R\202\323\344\223\002\'\"\"/managed-redis/v1/clu" +
-      "sters:restore:\001*\262\322*!\n\026RestoreClusterMeta" +
-      "data\022\007Cluster\022\351\001\n\025RescheduleMaintenance\022" +
-      "7.yandex.cloud.mdb.redis.v1.RescheduleMa" +
-      "intenanceRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"t\202\323\344\223\002B\"=/managed-redis/v1/c" +
-      "lusters/{cluster_id}:rescheduleMaintenan" +
-      "ce:\001*\262\322*(\n\035RescheduleMaintenanceMetadata" +
-      "\022\007Cluster\022\327\001\n\rStartFailover\0226.yandex.clo" +
-      "ud.mdb.redis.v1.StartClusterFailoverRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"k" +
-      "\202\323\344\223\002:\"5/managed-redis/v1/clusters/{clus" +
-      "ter_id}:startFailover:\001*\262\322*\'\n\034StartClust" +
-      "erFailoverMetadata\022\007Cluster\022\247\001\n\010ListLogs" +
-      "\0221.yandex.cloud.mdb.redis.v1.ListCluster" +
-      "LogsRequest\0322.yandex.cloud.mdb.redis.v1." +
-      "ListClusterLogsResponse\"4\202\323\344\223\002.\022,/manage" +
-      "d-redis/v1/clusters/{cluster_id}:logs\022\254\001" +
-      "\n\nStreamLogs\0223.yandex.cloud.mdb.redis.v1" +
-      ".StreamClusterLogsRequest\032*.yandex.cloud" +
-      ".mdb.redis.v1.StreamLogRecord\";\202\323\344\223\0025\0223/" +
-      "managed-redis/v1/clusters/{cluster_id}:s" +
-      "tream_logs0\001\022\277\001\n\016ListOperations\0227.yandex" +
-      ".cloud.mdb.redis.v1.ListClusterOperation" +
-      "sRequest\0328.yandex.cloud.mdb.redis.v1.Lis" +
-      "tClusterOperationsResponse\":\202\323\344\223\0024\0222/man" +
-      "aged-redis/v1/clusters/{cluster_id}/oper" +
-      "ations\022\263\001\n\013ListBackups\0224.yandex.cloud.md" +
-      "b.redis.v1.ListClusterBackupsRequest\0325.y" +
-      "andex.cloud.mdb.redis.v1.ListClusterBack" +
-      "upsResponse\"7\202\323\344\223\0021\022//managed-redis/v1/c" +
-      "lusters/{cluster_id}/backups\022\253\001\n\tListHos" +
-      "ts\0222.yandex.cloud.mdb.redis.v1.ListClust" +
-      "erHostsRequest\0323.yandex.cloud.mdb.redis." +
-      "v1.ListClusterHostsResponse\"5\202\323\344\223\002/\022-/ma" +
-      "naged-redis/v1/clusters/{cluster_id}/hos" +
-      "ts\022\332\001\n\010AddHosts\0221.yandex.cloud.mdb.redis" +
-      ".v1.AddClusterHostsRequest\032!.yandex.clou" +
-      "d.operation.Operation\"x\202\323\344\223\002>\"9/managed-" +
-      "redis/v1/clusters/{cluster_id}/hosts:bat" +
-      "chCreate:\001*\262\322*0\n\027AddClusterHostsMetadata" +
-      "\022\025google.protobuf.Empty\022\343\001\n\013DeleteHosts\022" +
-      "4.yandex.cloud.mdb.redis.v1.DeleteCluste" +
+      "g6_2H\000R\017redisConfig_6_2\022]\n\020redis_config_" +
+      "7_0\030\010 \001(\01320.yandex.cloud.mdb.redis.v1.co" +
+      "nfig.RedisConfig7_0H\000R\017redisConfig_7_0\0227" +
+      "\n\tresources\030\003 \001(\0132$.yandex.cloud.mdb.red" +
+      "is.v1.Resources\0223\n\023backup_window_start\030\004" +
+      " \001(\0132\026.google.type.TimeOfDay\0221\n\006access\030\005" +
+      " \001(\0132!.yandex.cloud.mdb.redis.v1.Access\022" +
+      "<\n\005redis\030\013 \001(\0132-.yandex.cloud.mdb.redis." +
+      "v1.config.RedisConfig\022M\n\025disk_size_autos" +
+      "caling\030\014 \001(\0132..yandex.cloud.mdb.redis.v1" +
+      ".DiskSizeAutoscaling\022>\n\031backup_retain_pe" +
+      "riod_days\030\r \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\014\n\nredis_specJ\004\010\t\020\0132\355&\n\016ClusterServ" +
+      "ice\022\210\001\n\003Get\022,.yandex.cloud.mdb.redis.v1." +
+      "GetClusterRequest\032\".yandex.cloud.mdb.red" +
+      "is.v1.Cluster\"/\202\323\344\223\002)\022\'/managed-redis/v1" +
+      "/clusters/{cluster_id}\022\213\001\n\004List\022..yandex" +
+      ".cloud.mdb.redis.v1.ListClustersRequest\032" +
+      "/.yandex.cloud.mdb.redis.v1.ListClusters" +
+      "Response\"\"\202\323\344\223\002\034\022\032/managed-redis/v1/clus" +
+      "ters\022\247\001\n\006Create\022/.yandex.cloud.mdb.redis" +
+      ".v1.CreateClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"I\202\323\344\223\002\037\"\032/managed-re" +
+      "dis/v1/clusters:\001*\262\322* \n\025CreateClusterMet" +
+      "adata\022\007Cluster\022\264\001\n\006Update\022/.yandex.cloud" +
+      ".mdb.redis.v1.UpdateClusterRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"V\202\323\344\223\002,2\'/" +
+      "managed-redis/v1/clusters/{cluster_id}:\001" +
+      "*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022\277\001" +
+      "\n\006Delete\022/.yandex.cloud.mdb.redis.v1.Del" +
+      "eteClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"a\202\323\344\223\002)*\'/managed-redis/v1/" +
+      "clusters/{cluster_id}\262\322*.\n\025DeleteCluster" +
+      "Metadata\022\025google.protobuf.Empty\022\264\001\n\005Star" +
+      "t\022..yandex.cloud.mdb.redis.v1.StartClust" +
+      "erRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"X\202\323\344\223\002/\"-/managed-redis/v1/clusters" +
+      "/{cluster_id}:start\262\322*\037\n\024StartClusterMet" +
+      "adata\022\007Cluster\022\260\001\n\004Stop\022-.yandex.cloud.m" +
+      "db.redis.v1.StopClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"V\202\323\344\223\002.\",/mana" +
+      "ged-redis/v1/clusters/{cluster_id}:stop\262" +
+      "\322*\036\n\023StopClusterMetadata\022\007Cluster\022\263\001\n\004Mo" +
+      "ve\022-.yandex.cloud.mdb.redis.v1.MoveClust" +
+      "erRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"Y\202\323\344\223\0021\",/managed-redis/v1/clusters" +
+      "/{cluster_id}:move:\001*\262\322*\036\n\023MoveClusterMe" +
+      "tadata\022\007Cluster\022\270\001\n\006Backup\022/.yandex.clou" +
+      "d.mdb.redis.v1.BackupClusterRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"Z\202\323\344\223\0020\"." +
+      "/managed-redis/v1/clusters/{cluster_id}:" +
+      "backup\262\322* \n\025BackupClusterMetadata\022\007Clust" +
+      "er\022\262\001\n\007Restore\0220.yandex.cloud.mdb.redis." +
+      "v1.RestoreClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"R\202\323\344\223\002\'\"\"/managed-re" +
+      "dis/v1/clusters:restore:\001*\262\322*!\n\026RestoreC" +
+      "lusterMetadata\022\007Cluster\022\351\001\n\025RescheduleMa" +
+      "intenance\0227.yandex.cloud.mdb.redis.v1.Re" +
+      "scheduleMaintenanceRequest\032!.yandex.clou" +
+      "d.operation.Operation\"t\202\323\344\223\002B\"=/managed-" +
+      "redis/v1/clusters/{cluster_id}:reschedul" +
+      "eMaintenance:\001*\262\322*(\n\035RescheduleMaintenan" +
+      "ceMetadata\022\007Cluster\022\327\001\n\rStartFailover\0226." +
+      "yandex.cloud.mdb.redis.v1.StartClusterFa" +
+      "iloverRequest\032!.yandex.cloud.operation.O" +
+      "peration\"k\202\323\344\223\002:\"5/managed-redis/v1/clus" +
+      "ters/{cluster_id}:startFailover:\001*\262\322*\'\n\034" +
+      "StartClusterFailoverMetadata\022\007Cluster\022\247\001" +
+      "\n\010ListLogs\0221.yandex.cloud.mdb.redis.v1.L" +
+      "istClusterLogsRequest\0322.yandex.cloud.mdb" +
+      ".redis.v1.ListClusterLogsResponse\"4\202\323\344\223\002" +
+      ".\022,/managed-redis/v1/clusters/{cluster_i" +
+      "d}:logs\022\254\001\n\nStreamLogs\0223.yandex.cloud.md" +
+      "b.redis.v1.StreamClusterLogsRequest\032*.ya" +
+      "ndex.cloud.mdb.redis.v1.StreamLogRecord\"" +
+      ";\202\323\344\223\0025\0223/managed-redis/v1/clusters/{clu" +
+      "ster_id}:stream_logs0\001\022\277\001\n\016ListOperation" +
+      "s\0227.yandex.cloud.mdb.redis.v1.ListCluste" +
+      "rOperationsRequest\0328.yandex.cloud.mdb.re" +
+      "dis.v1.ListClusterOperationsResponse\":\202\323" +
+      "\344\223\0024\0222/managed-redis/v1/clusters/{cluste" +
+      "r_id}/operations\022\263\001\n\013ListBackups\0224.yande" +
+      "x.cloud.mdb.redis.v1.ListClusterBackupsR" +
+      "equest\0325.yandex.cloud.mdb.redis.v1.ListC" +
+      "lusterBackupsResponse\"7\202\323\344\223\0021\022//managed-" +
+      "redis/v1/clusters/{cluster_id}/backups\022\253" +
+      "\001\n\tListHosts\0222.yandex.cloud.mdb.redis.v1" +
+      ".ListClusterHostsRequest\0323.yandex.cloud." +
+      "mdb.redis.v1.ListClusterHostsResponse\"5\202" +
+      "\323\344\223\002/\022-/managed-redis/v1/clusters/{clust" +
+      "er_id}/hosts\022\332\001\n\010AddHosts\0221.yandex.cloud" +
+      ".mdb.redis.v1.AddClusterHostsRequest\032!.y" +
+      "andex.cloud.operation.Operation\"x\202\323\344\223\002>\"" +
+      "9/managed-redis/v1/clusters/{cluster_id}" +
+      "/hosts:batchCreate:\001*\262\322*0\n\027AddClusterHos" +
+      "tsMetadata\022\025google.protobuf.Empty\022\343\001\n\013De" +
+      "leteHosts\0224.yandex.cloud.mdb.redis.v1.De" +
+      "leteClusterHostsRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"{\202\323\344\223\002>\"9/managed-red" +
+      "is/v1/clusters/{cluster_id}/hosts:batchD" +
+      "elete:\001*\262\322*3\n\032DeleteClusterHostsMetadata" +
+      "\022\025google.protobuf.Empty\022\343\001\n\013UpdateHosts\022" +
+      "4.yandex.cloud.mdb.redis.v1.UpdateCluste" +
       "rHostsRequest\032!.yandex.cloud.operation.O" +
       "peration\"{\202\323\344\223\002>\"9/managed-redis/v1/clus" +
-      "ters/{cluster_id}/hosts:batchDelete:\001*\262\322" +
-      "*3\n\032DeleteClusterHostsMetadata\022\025google.p" +
-      "rotobuf.Empty\022\343\001\n\013UpdateHosts\0224.yandex.c" +
-      "loud.mdb.redis.v1.UpdateClusterHostsRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"{" +
-      "\202\323\344\223\002>\"9/managed-redis/v1/clusters/{clus" +
-      "ter_id}/hosts:batchUpdate:\001*\262\322*3\n\032Update" +
-      "ClusterHostsMetadata\022\025google.protobuf.Em" +
-      "pty\022\244\001\n\010GetShard\0221.yandex.cloud.mdb.redi" +
-      "s.v1.GetClusterShardRequest\032 .yandex.clo" +
-      "ud.mdb.redis.v1.Shard\"C\202\323\344\223\002=\022;/managed-" +
-      "redis/v1/clusters/{cluster_id}/shards/{s" +
-      "hard_name}\022\257\001\n\nListShards\0223.yandex.cloud" +
-      ".mdb.redis.v1.ListClusterShardsRequest\0324" +
-      ".yandex.cloud.mdb.redis.v1.ListClusterSh" +
-      "ardsResponse\"6\202\323\344\223\0020\022./managed-redis/v1/" +
-      "clusters/{cluster_id}/shards\022\277\001\n\010AddShar" +
-      "d\0221.yandex.cloud.mdb.redis.v1.AddCluster" +
-      "ShardRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"]\202\323\344\223\0023\"./managed-redis/v1/clust" +
-      "ers/{cluster_id}/shards:\001*\262\322* \n\027AddClust" +
-      "erShardMetadata\022\005Shard\022\342\001\n\013DeleteShard\0224" +
-      ".yandex.cloud.mdb.redis.v1.DeleteCluster" +
-      "ShardRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"z\202\323\344\223\002=*;/managed-redis/v1/clust" +
-      "ers/{cluster_id}/shards/{shard_name}\262\322*3" +
-      "\n\032DeleteClusterShardMetadata\022\025google.pro" +
-      "tobuf.Empty\022\304\001\n\tRebalance\0222.yandex.cloud" +
-      ".mdb.redis.v1.RebalanceClusterRequest\032!." +
-      "yandex.cloud.operation.Operation\"`\202\323\344\223\0023" +
-      "\"1/managed-redis/v1/clusters/{cluster_id" +
-      "}:rebalance\262\322*#\n\030RebalanceClusterMetadat" +
-      "a\022\007Cluster\022\331\001\n\016EnableSharding\0227.yandex.c" +
-      "loud.mdb.redis.v1.EnableShardingClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"k\202\323\344\223\0029\"7/managed-redis/v1/clusters/{c" +
-      "luster_id}:enable_sharding\262\322*(\n\035EnableSh" +
-      "ardingClusterMetadata\022\007ClusterBd\n\035yandex" +
-      ".cloud.api.mdb.redis.v1ZCgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/mdb/re" +
-      "dis/v1;redisb\006proto3"
+      "ters/{cluster_id}/hosts:batchUpdate:\001*\262\322" +
+      "*3\n\032UpdateClusterHostsMetadata\022\025google.p" +
+      "rotobuf.Empty\022\244\001\n\010GetShard\0221.yandex.clou" +
+      "d.mdb.redis.v1.GetClusterShardRequest\032 ." +
+      "yandex.cloud.mdb.redis.v1.Shard\"C\202\323\344\223\002=\022" +
+      ";/managed-redis/v1/clusters/{cluster_id}" +
+      "/shards/{shard_name}\022\257\001\n\nListShards\0223.ya" +
+      "ndex.cloud.mdb.redis.v1.ListClusterShard" +
+      "sRequest\0324.yandex.cloud.mdb.redis.v1.Lis" +
+      "tClusterShardsResponse\"6\202\323\344\223\0020\022./managed" +
+      "-redis/v1/clusters/{cluster_id}/shards\022\277" +
+      "\001\n\010AddShard\0221.yandex.cloud.mdb.redis.v1." +
+      "AddClusterShardRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"]\202\323\344\223\0023\"./managed-redi" +
+      "s/v1/clusters/{cluster_id}/shards:\001*\262\322* " +
+      "\n\027AddClusterShardMetadata\022\005Shard\022\342\001\n\013Del" +
+      "eteShard\0224.yandex.cloud.mdb.redis.v1.Del" +
+      "eteClusterShardRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"z\202\323\344\223\002=*;/managed-redi" +
+      "s/v1/clusters/{cluster_id}/shards/{shard" +
+      "_name}\262\322*3\n\032DeleteClusterShardMetadata\022\025" +
+      "google.protobuf.Empty\022\304\001\n\tRebalance\0222.ya" +
+      "ndex.cloud.mdb.redis.v1.RebalanceCluster" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"`\202\323\344\223\0023\"1/managed-redis/v1/clusters/{" +
+      "cluster_id}:rebalance\262\322*#\n\030RebalanceClus" +
+      "terMetadata\022\007Cluster\022\331\001\n\016EnableSharding\022" +
+      "7.yandex.cloud.mdb.redis.v1.EnableShardi" +
+      "ngClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"k\202\323\344\223\0029\"7/managed-redis/v1/c" +
+      "lusters/{cluster_id}:enable_sharding\262\322*(" +
+      "\n\035EnableShardingClusterMetadata\022\007Cluster" +
+      "Bd\n\035yandex.cloud.api.mdb.redis.v1ZCgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/mdb/redis/v1;redisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -61083,7 +61612,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "Sharded", "SecurityGroupIds", "TlsEnabled", "DeletionProtection", "PersistenceMode", "AnnounceHostnames", "MaintenanceWindow", "UserSpecs", "AuthSentinel", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "Sharded", "SecurityGroupIds", "TlsEnabled", "DeletionProtection", "PersistenceMode", "AnnounceHostnames", "MaintenanceWindow", "UserSpecs", "AuthSentinel", "DiskEncryptionKeyId", });
     internal_static_yandex_cloud_mdb_redis_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_redis_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -61191,7 +61720,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterRequest_descriptor,
-        new java.lang.String[] { "BackupId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", "SecurityGroupIds", "TlsEnabled", "PersistenceMode", "DeletionProtection", "AnnounceHostnames", "MaintenanceWindow", "AuthSentinel", });
+        new java.lang.String[] { "BackupId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", "SecurityGroupIds", "TlsEnabled", "PersistenceMode", "DeletionProtection", "AnnounceHostnames", "MaintenanceWindow", "AuthSentinel", "DiskEncryptionKeyId", });
     internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable = new

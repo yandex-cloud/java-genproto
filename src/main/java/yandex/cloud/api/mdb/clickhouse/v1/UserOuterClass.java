@@ -10477,6 +10477,27 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * Controls how the query cache handles SELECT queries against system tables.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#query_cache_system_table_handling)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheSystemTableHandling query_cache_system_table_handling = 168;</code>
+     * @return The enum numeric value on the wire for queryCacheSystemTableHandling.
+     */
+    int getQueryCacheSystemTableHandlingValue();
+    /**
+     * <pre>
+     * Controls how the query cache handles SELECT queries against system tables.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#query_cache_system_table_handling)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheSystemTableHandling query_cache_system_table_handling = 168;</code>
+     * @return The queryCacheSystemTableHandling.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling getQueryCacheSystemTableHandling();
+
+    /**
+     * <pre>
      * The maximum number of threads to execute the INSERT SELECT query.
      * Default: 0
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
@@ -10728,6 +10749,36 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * Enable new query analyzer.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+     * @return Whether the enableAnalyzer field is set.
+     */
+    boolean hasEnableAnalyzer();
+    /**
+     * <pre>
+     * Enable new query analyzer.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+     * @return The enableAnalyzer.
+     */
+    com.google.protobuf.BoolValue getEnableAnalyzer();
+    /**
+     * <pre>
+     * Enable new query analyzer.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getEnableAnalyzerOrBuilder();
+
+    /**
+     * <pre>
      * The setting is deprecated and has no effect.
      * </pre>
      *
@@ -10853,6 +10904,7 @@ public final class UserOuterClass {
       remoteFilesystemReadMethod_ = 0;
       queryCacheTag_ = "";
       queryCacheNondeterministicFunctionHandling_ = 0;
+      queryCacheSystemTableHandling_ = 0;
       loadBalancing_ = 0;
     }
 
@@ -12875,6 +12927,25 @@ public final class UserOuterClass {
 
               break;
             }
+            case 1338: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (enableAnalyzer_ != null) {
+                subBuilder = enableAnalyzer_.toBuilder();
+              }
+              enableAnalyzer_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(enableAnalyzer_);
+                enableAnalyzer_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1344: {
+              int rawValue = input.readEnum();
+
+              queryCacheSystemTableHandling_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -14706,6 +14777,161 @@ public final class UserOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheNondeterministicFunctionHandling)
+    }
+
+    /**
+     * <pre>
+     * Controls how the query cache handles SELECT queries against system tables.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#query_cache_system_table_handling)
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheSystemTableHandling}
+     */
+    public enum QueryCacheSystemTableHandling
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>QUERY_CACHE_SYSTEM_TABLE_HANDLING_UNSPECIFIED = 0;</code>
+       */
+      QUERY_CACHE_SYSTEM_TABLE_HANDLING_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Throw an exception and don't cache the query result.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_SYSTEM_TABLE_HANDLING_THROW = 1;</code>
+       */
+      QUERY_CACHE_SYSTEM_TABLE_HANDLING_THROW(1),
+      /**
+       * <pre>
+       * Cache the query result.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_SYSTEM_TABLE_HANDLING_SAVE = 2;</code>
+       */
+      QUERY_CACHE_SYSTEM_TABLE_HANDLING_SAVE(2),
+      /**
+       * <pre>
+       * Don't cache the query result and don't throw an exception.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_SYSTEM_TABLE_HANDLING_IGNORE = 3;</code>
+       */
+      QUERY_CACHE_SYSTEM_TABLE_HANDLING_IGNORE(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>QUERY_CACHE_SYSTEM_TABLE_HANDLING_UNSPECIFIED = 0;</code>
+       */
+      public static final int QUERY_CACHE_SYSTEM_TABLE_HANDLING_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Throw an exception and don't cache the query result.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_SYSTEM_TABLE_HANDLING_THROW = 1;</code>
+       */
+      public static final int QUERY_CACHE_SYSTEM_TABLE_HANDLING_THROW_VALUE = 1;
+      /**
+       * <pre>
+       * Cache the query result.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_SYSTEM_TABLE_HANDLING_SAVE = 2;</code>
+       */
+      public static final int QUERY_CACHE_SYSTEM_TABLE_HANDLING_SAVE_VALUE = 2;
+      /**
+       * <pre>
+       * Don't cache the query result and don't throw an exception.
+       * </pre>
+       *
+       * <code>QUERY_CACHE_SYSTEM_TABLE_HANDLING_IGNORE = 3;</code>
+       */
+      public static final int QUERY_CACHE_SYSTEM_TABLE_HANDLING_IGNORE_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static QueryCacheSystemTableHandling valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static QueryCacheSystemTableHandling forNumber(int value) {
+        switch (value) {
+          case 0: return QUERY_CACHE_SYSTEM_TABLE_HANDLING_UNSPECIFIED;
+          case 1: return QUERY_CACHE_SYSTEM_TABLE_HANDLING_THROW;
+          case 2: return QUERY_CACHE_SYSTEM_TABLE_HANDLING_SAVE;
+          case 3: return QUERY_CACHE_SYSTEM_TABLE_HANDLING_IGNORE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<QueryCacheSystemTableHandling>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          QueryCacheSystemTableHandling> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<QueryCacheSystemTableHandling>() {
+              public QueryCacheSystemTableHandling findValueByNumber(int number) {
+                return QueryCacheSystemTableHandling.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(13);
+      }
+
+      private static final QueryCacheSystemTableHandling[] VALUES = values();
+
+      public static QueryCacheSystemTableHandling valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private QueryCacheSystemTableHandling(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheSystemTableHandling)
     }
 
     public static final int READONLY_FIELD_NUMBER = 1;
@@ -21177,6 +21403,35 @@ public final class UserOuterClass {
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheNondeterministicFunctionHandling.UNRECOGNIZED : result;
     }
 
+    public static final int QUERY_CACHE_SYSTEM_TABLE_HANDLING_FIELD_NUMBER = 168;
+    private int queryCacheSystemTableHandling_;
+    /**
+     * <pre>
+     * Controls how the query cache handles SELECT queries against system tables.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#query_cache_system_table_handling)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheSystemTableHandling query_cache_system_table_handling = 168;</code>
+     * @return The enum numeric value on the wire for queryCacheSystemTableHandling.
+     */
+    @java.lang.Override public int getQueryCacheSystemTableHandlingValue() {
+      return queryCacheSystemTableHandling_;
+    }
+    /**
+     * <pre>
+     * Controls how the query cache handles SELECT queries against system tables.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#query_cache_system_table_handling)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheSystemTableHandling query_cache_system_table_handling = 168;</code>
+     * @return The queryCacheSystemTableHandling.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling getQueryCacheSystemTableHandling() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling.valueOf(queryCacheSystemTableHandling_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling.UNRECOGNIZED : result;
+    }
+
     public static final int MAX_INSERT_THREADS_FIELD_NUMBER = 140;
     private com.google.protobuf.Int64Value maxInsertThreads_;
     /**
@@ -21511,6 +21766,47 @@ public final class UserOuterClass {
     @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getIgnoreMaterializedViewsWithDroppedTargetTableOrBuilder() {
       return getIgnoreMaterializedViewsWithDroppedTargetTable();
+    }
+
+    public static final int ENABLE_ANALYZER_FIELD_NUMBER = 167;
+    private com.google.protobuf.BoolValue enableAnalyzer_;
+    /**
+     * <pre>
+     * Enable new query analyzer.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+     * @return Whether the enableAnalyzer field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnableAnalyzer() {
+      return enableAnalyzer_ != null;
+    }
+    /**
+     * <pre>
+     * Enable new query analyzer.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+     * @return The enableAnalyzer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getEnableAnalyzer() {
+      return enableAnalyzer_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableAnalyzer_;
+    }
+    /**
+     * <pre>
+     * Enable new query analyzer.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getEnableAnalyzerOrBuilder() {
+      return getEnableAnalyzer();
     }
 
     public static final int COMPILE_FIELD_NUMBER = 44;
@@ -22143,6 +22439,12 @@ public final class UserOuterClass {
       }
       if (ignoreMaterializedViewsWithDroppedTargetTable_ != null) {
         output.writeMessage(166, getIgnoreMaterializedViewsWithDroppedTargetTable());
+      }
+      if (enableAnalyzer_ != null) {
+        output.writeMessage(167, getEnableAnalyzer());
+      }
+      if (queryCacheSystemTableHandling_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling.QUERY_CACHE_SYSTEM_TABLE_HANDLING_UNSPECIFIED.getNumber()) {
+        output.writeEnum(168, queryCacheSystemTableHandling_);
       }
       unknownFields.writeTo(output);
     }
@@ -22813,6 +23115,14 @@ public final class UserOuterClass {
       if (ignoreMaterializedViewsWithDroppedTargetTable_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(166, getIgnoreMaterializedViewsWithDroppedTargetTable());
+      }
+      if (enableAnalyzer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(167, getEnableAnalyzer());
+      }
+      if (queryCacheSystemTableHandling_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling.QUERY_CACHE_SYSTEM_TABLE_HANDLING_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(168, queryCacheSystemTableHandling_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -23509,6 +23819,7 @@ public final class UserOuterClass {
             .equals(other.getQueryCacheShareBetweenUsers())) return false;
       }
       if (queryCacheNondeterministicFunctionHandling_ != other.queryCacheNondeterministicFunctionHandling_) return false;
+      if (queryCacheSystemTableHandling_ != other.queryCacheSystemTableHandling_) return false;
       if (hasMaxInsertThreads() != other.hasMaxInsertThreads()) return false;
       if (hasMaxInsertThreads()) {
         if (!getMaxInsertThreads()
@@ -23544,6 +23855,11 @@ public final class UserOuterClass {
       if (hasIgnoreMaterializedViewsWithDroppedTargetTable()) {
         if (!getIgnoreMaterializedViewsWithDroppedTargetTable()
             .equals(other.getIgnoreMaterializedViewsWithDroppedTargetTable())) return false;
+      }
+      if (hasEnableAnalyzer() != other.hasEnableAnalyzer()) return false;
+      if (hasEnableAnalyzer()) {
+        if (!getEnableAnalyzer()
+            .equals(other.getEnableAnalyzer())) return false;
       }
       if (hasCompile() != other.hasCompile()) return false;
       if (hasCompile()) {
@@ -24141,6 +24457,8 @@ public final class UserOuterClass {
       }
       hash = (37 * hash) + QUERY_CACHE_NONDETERMINISTIC_FUNCTION_HANDLING_FIELD_NUMBER;
       hash = (53 * hash) + queryCacheNondeterministicFunctionHandling_;
+      hash = (37 * hash) + QUERY_CACHE_SYSTEM_TABLE_HANDLING_FIELD_NUMBER;
+      hash = (53 * hash) + queryCacheSystemTableHandling_;
       if (hasMaxInsertThreads()) {
         hash = (37 * hash) + MAX_INSERT_THREADS_FIELD_NUMBER;
         hash = (53 * hash) + getMaxInsertThreads().hashCode();
@@ -24170,6 +24488,10 @@ public final class UserOuterClass {
       if (hasIgnoreMaterializedViewsWithDroppedTargetTable()) {
         hash = (37 * hash) + IGNORE_MATERIALIZED_VIEWS_WITH_DROPPED_TARGET_TABLE_FIELD_NUMBER;
         hash = (53 * hash) + getIgnoreMaterializedViewsWithDroppedTargetTable().hashCode();
+      }
+      if (hasEnableAnalyzer()) {
+        hash = (37 * hash) + ENABLE_ANALYZER_FIELD_NUMBER;
+        hash = (53 * hash) + getEnableAnalyzer().hashCode();
       }
       if (hasCompile()) {
         hash = (37 * hash) + COMPILE_FIELD_NUMBER;
@@ -25151,6 +25473,8 @@ public final class UserOuterClass {
         }
         queryCacheNondeterministicFunctionHandling_ = 0;
 
+        queryCacheSystemTableHandling_ = 0;
+
         if (maxInsertThreadsBuilder_ == null) {
           maxInsertThreads_ = null;
         } else {
@@ -25194,6 +25518,12 @@ public final class UserOuterClass {
         } else {
           ignoreMaterializedViewsWithDroppedTargetTable_ = null;
           ignoreMaterializedViewsWithDroppedTargetTableBuilder_ = null;
+        }
+        if (enableAnalyzerBuilder_ == null) {
+          enableAnalyzer_ = null;
+        } else {
+          enableAnalyzer_ = null;
+          enableAnalyzerBuilder_ = null;
         }
         if (compileBuilder_ == null) {
           compile_ = null;
@@ -25921,6 +26251,7 @@ public final class UserOuterClass {
           result.queryCacheShareBetweenUsers_ = queryCacheShareBetweenUsersBuilder_.build();
         }
         result.queryCacheNondeterministicFunctionHandling_ = queryCacheNondeterministicFunctionHandling_;
+        result.queryCacheSystemTableHandling_ = queryCacheSystemTableHandling_;
         if (maxInsertThreadsBuilder_ == null) {
           result.maxInsertThreads_ = maxInsertThreads_;
         } else {
@@ -25956,6 +26287,11 @@ public final class UserOuterClass {
           result.ignoreMaterializedViewsWithDroppedTargetTable_ = ignoreMaterializedViewsWithDroppedTargetTable_;
         } else {
           result.ignoreMaterializedViewsWithDroppedTargetTable_ = ignoreMaterializedViewsWithDroppedTargetTableBuilder_.build();
+        }
+        if (enableAnalyzerBuilder_ == null) {
+          result.enableAnalyzer_ = enableAnalyzer_;
+        } else {
+          result.enableAnalyzer_ = enableAnalyzerBuilder_.build();
         }
         if (compileBuilder_ == null) {
           result.compile_ = compile_;
@@ -26489,6 +26825,9 @@ public final class UserOuterClass {
         if (other.queryCacheNondeterministicFunctionHandling_ != 0) {
           setQueryCacheNondeterministicFunctionHandlingValue(other.getQueryCacheNondeterministicFunctionHandlingValue());
         }
+        if (other.queryCacheSystemTableHandling_ != 0) {
+          setQueryCacheSystemTableHandlingValue(other.getQueryCacheSystemTableHandlingValue());
+        }
         if (other.hasMaxInsertThreads()) {
           mergeMaxInsertThreads(other.getMaxInsertThreads());
         }
@@ -26512,6 +26851,9 @@ public final class UserOuterClass {
         }
         if (other.hasIgnoreMaterializedViewsWithDroppedTargetTable()) {
           mergeIgnoreMaterializedViewsWithDroppedTargetTable(other.getIgnoreMaterializedViewsWithDroppedTargetTable());
+        }
+        if (other.hasEnableAnalyzer()) {
+          mergeEnableAnalyzer(other.getEnableAnalyzer());
         }
         if (other.hasCompile()) {
           mergeCompile(other.getCompile());
@@ -51008,6 +51350,85 @@ public final class UserOuterClass {
         return this;
       }
 
+      private int queryCacheSystemTableHandling_ = 0;
+      /**
+       * <pre>
+       * Controls how the query cache handles SELECT queries against system tables.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#query_cache_system_table_handling)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheSystemTableHandling query_cache_system_table_handling = 168;</code>
+       * @return The enum numeric value on the wire for queryCacheSystemTableHandling.
+       */
+      @java.lang.Override public int getQueryCacheSystemTableHandlingValue() {
+        return queryCacheSystemTableHandling_;
+      }
+      /**
+       * <pre>
+       * Controls how the query cache handles SELECT queries against system tables.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#query_cache_system_table_handling)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheSystemTableHandling query_cache_system_table_handling = 168;</code>
+       * @param value The enum numeric value on the wire for queryCacheSystemTableHandling to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryCacheSystemTableHandlingValue(int value) {
+        
+        queryCacheSystemTableHandling_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how the query cache handles SELECT queries against system tables.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#query_cache_system_table_handling)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheSystemTableHandling query_cache_system_table_handling = 168;</code>
+       * @return The queryCacheSystemTableHandling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling getQueryCacheSystemTableHandling() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling.valueOf(queryCacheSystemTableHandling_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Controls how the query cache handles SELECT queries against system tables.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#query_cache_system_table_handling)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheSystemTableHandling query_cache_system_table_handling = 168;</code>
+       * @param value The queryCacheSystemTableHandling to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryCacheSystemTableHandling(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QueryCacheSystemTableHandling value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        queryCacheSystemTableHandling_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how the query cache handles SELECT queries against system tables.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#query_cache_system_table_handling)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QueryCacheSystemTableHandling query_cache_system_table_handling = 168;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryCacheSystemTableHandling() {
+        
+        queryCacheSystemTableHandling_ = 0;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.Int64Value maxInsertThreads_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxInsertThreadsBuilder_;
@@ -52292,6 +52713,170 @@ public final class UserOuterClass {
           ignoreMaterializedViewsWithDroppedTargetTable_ = null;
         }
         return ignoreMaterializedViewsWithDroppedTargetTableBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue enableAnalyzer_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableAnalyzerBuilder_;
+      /**
+       * <pre>
+       * Enable new query analyzer.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+       * @return Whether the enableAnalyzer field is set.
+       */
+      public boolean hasEnableAnalyzer() {
+        return enableAnalyzerBuilder_ != null || enableAnalyzer_ != null;
+      }
+      /**
+       * <pre>
+       * Enable new query analyzer.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+       * @return The enableAnalyzer.
+       */
+      public com.google.protobuf.BoolValue getEnableAnalyzer() {
+        if (enableAnalyzerBuilder_ == null) {
+          return enableAnalyzer_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableAnalyzer_;
+        } else {
+          return enableAnalyzerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable new query analyzer.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+       */
+      public Builder setEnableAnalyzer(com.google.protobuf.BoolValue value) {
+        if (enableAnalyzerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          enableAnalyzer_ = value;
+          onChanged();
+        } else {
+          enableAnalyzerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable new query analyzer.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+       */
+      public Builder setEnableAnalyzer(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (enableAnalyzerBuilder_ == null) {
+          enableAnalyzer_ = builderForValue.build();
+          onChanged();
+        } else {
+          enableAnalyzerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable new query analyzer.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+       */
+      public Builder mergeEnableAnalyzer(com.google.protobuf.BoolValue value) {
+        if (enableAnalyzerBuilder_ == null) {
+          if (enableAnalyzer_ != null) {
+            enableAnalyzer_ =
+              com.google.protobuf.BoolValue.newBuilder(enableAnalyzer_).mergeFrom(value).buildPartial();
+          } else {
+            enableAnalyzer_ = value;
+          }
+          onChanged();
+        } else {
+          enableAnalyzerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable new query analyzer.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+       */
+      public Builder clearEnableAnalyzer() {
+        if (enableAnalyzerBuilder_ == null) {
+          enableAnalyzer_ = null;
+          onChanged();
+        } else {
+          enableAnalyzer_ = null;
+          enableAnalyzerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable new query analyzer.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getEnableAnalyzerBuilder() {
+        
+        onChanged();
+        return getEnableAnalyzerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable new query analyzer.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getEnableAnalyzerOrBuilder() {
+        if (enableAnalyzerBuilder_ != null) {
+          return enableAnalyzerBuilder_.getMessageOrBuilder();
+        } else {
+          return enableAnalyzer_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : enableAnalyzer_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable new query analyzer.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_analyzer = 167;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getEnableAnalyzerFieldBuilder() {
+        if (enableAnalyzerBuilder_ == null) {
+          enableAnalyzerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getEnableAnalyzer(),
+                  getParentForChildren(),
+                  isClean());
+          enableAnalyzer_ = null;
+        }
+        return enableAnalyzerBuilder_;
       }
 
       private com.google.protobuf.BoolValue compile_;
@@ -54974,7 +55559,7 @@ public final class UserOuterClass {
       "Settings\0229\n\006quotas\030\005 \003(\0132).yandex.cloud." +
       "mdb.clickhouse.v1.UserQuota\0225\n\021generate_" +
       "password\030\006 \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\"\331p\n\014UserSettings\0226\n\010readonly\030\001 \001(\0132\033." +
+      "ue\"\343s\n\014UserSettings\0226\n\010readonly\030\001 \001(\0132\033." +
       "google.protobuf.Int64ValueB\007\372\3071\0030-2\022-\n\ta" +
       "llow_ddl\030\002 \001(\0132\032.google.protobuf.BoolVal" +
       "ue\022A\n\035allow_introspection_functions\030` \001(" +
@@ -55246,7 +55831,10 @@ public final class UserOuterClass {
       ".query_cache_nondeterministic_function_h" +
       "andling\030\245\001 \001(\0162W.yandex.cloud.mdb.clickh" +
       "ouse.v1.UserSettings.QueryCacheNondeterm" +
-      "inisticFunctionHandling\022A\n\022max_insert_th" +
+      "inisticFunctionHandling\022v\n!query_cache_s" +
+      "ystem_table_handling\030\250\001 \001(\0162J.yandex.clo" +
+      "ud.mdb.clickhouse.v1.UserSettings.QueryC" +
+      "acheSystemTableHandling\022A\n\022max_insert_th" +
       "reads\030\214\001 \001(\0132\033.google.protobuf.Int64Valu" +
       "eB\007\372\3071\003>=0\0228\n\023use_hedged_requests\030\215\001 \001(\013" +
       "2\032.google.protobuf.BoolValue\022F\n\027idle_con" +
@@ -55261,93 +55849,99 @@ public final class UserOuterClass {
       "select_final\030\223\001 \001(\0132\032.google.protobuf.Bo" +
       "olValue\022X\n3ignore_materialized_views_wit" +
       "h_dropped_target_table\030\246\001 \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\022/\n\007compile\030, \001(\0132\032.goo" +
-      "gle.protobuf.BoolValueB\002\030\001\022=\n\024min_count_" +
-      "to_compile\030- \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\002\030\001\022C\n\032async_insert_stale_timeout\030" +
-      "{ \001(\0132\033.google.protobuf.Int64ValueB\002\030\001\"_" +
-      "\n\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPECIF" +
-      "IED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVERFL" +
-      "OW_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMode\022" +
-      "&\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED\020\000\022" +
-      " \n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034GRO" +
-      "UP_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_BY_" +
-      "OVERFLOW_MODE_ANY\020\003\"\322\001\n\026DistributedProdu" +
-      "ctMode\022(\n$DISTRIBUTED_PRODUCT_MODE_UNSPE" +
-      "CIFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_DEN" +
-      "Y\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL\020\002\022" +
-      "#\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022\"\n\036" +
-      "DISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"q\n\tQuot" +
-      "aMode\022\032\n\026QUOTA_MODE_UNSPECIFIED\020\000\022\026\n\022QUO" +
-      "TA_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022" +
-      "\032\n\026QUOTA_MODE_KEYED_BY_IP\020\003\"\266\002\n\033CountDis" +
-      "tinctImplementation\022-\n)COUNT_DISTINCT_IM" +
-      "PLEMENTATION_UNSPECIFIED\020\000\022&\n\"COUNT_DIST" +
-      "INCT_IMPLEMENTATION_UNIQ\020\001\022/\n+COUNT_DIST" +
-      "INCT_IMPLEMENTATION_UNIQ_COMBINED\020\002\0222\n.C" +
-      "OUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBIN" +
-      "ED_64\020\003\022-\n)COUNT_DISTINCT_IMPLEMENTATION" +
-      "_UNIQ_HLL_12\020\004\022,\n(COUNT_DISTINCT_IMPLEME" +
-      "NTATION_UNIQ_EXACT\020\005\"\220\002\n\rJoinAlgorithm\022\036" +
-      "\n\032JOIN_ALGORITHM_UNSPECIFIED\020\000\022\027\n\023JOIN_A" +
-      "LGORITHM_HASH\020\001\022 \n\034JOIN_ALGORITHM_PARALL" +
-      "EL_HASH\020\002\022 \n\034JOIN_ALGORITHM_PARTIAL_MERG" +
-      "E\020\003\022\031\n\025JOIN_ALGORITHM_DIRECT\020\004\022\027\n\023JOIN_A" +
-      "LGORITHM_AUTO\020\005\022%\n!JOIN_ALGORITHM_FULL_S" +
-      "ORTING_MERGE\020\006\022\'\n#JOIN_ALGORITHM_PREFER_" +
-      "PARTIAL_MERGE\020\007\"\255\002\n\030FormatRegexpEscaping" +
-      "Rule\022+\n\'FORMAT_REGEXP_ESCAPING_RULE_UNSP" +
-      "ECIFIED\020\000\022\'\n#FORMAT_REGEXP_ESCAPING_RULE" +
-      "_ESCAPED\020\001\022&\n\"FORMAT_REGEXP_ESCAPING_RUL" +
-      "E_QUOTED\020\002\022#\n\037FORMAT_REGEXP_ESCAPING_RUL" +
-      "E_CSV\020\003\022$\n FORMAT_REGEXP_ESCAPING_RULE_J" +
-      "SON\020\004\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_XML" +
-      "\020\005\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_RAW\020\006\"" +
-      "\262\001\n\023DateTimeInputFormat\022&\n\"DATE_TIME_INP" +
-      "UT_FORMAT_UNSPECIFIED\020\000\022&\n\"DATE_TIME_INP" +
-      "UT_FORMAT_BEST_EFFORT\020\001\022 \n\034DATE_TIME_INP" +
-      "UT_FORMAT_BASIC\020\002\022)\n%DATE_TIME_INPUT_FOR" +
-      "MAT_BEST_EFFORT_US\020\003\"\260\001\n\024DateTimeOutputF" +
-      "ormat\022\'\n#DATE_TIME_OUTPUT_FORMAT_UNSPECI" +
-      "FIED\020\000\022\"\n\036DATE_TIME_OUTPUT_FORMAT_SIMPLE" +
-      "\020\001\022\037\n\033DATE_TIME_OUTPUT_FORMAT_ISO\020\002\022*\n&D" +
-      "ATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTAMP\020\003\"" +
-      "\362\001\n\031LocalFilesystemReadMethod\022,\n(LOCAL_F" +
-      "ILESYSTEM_READ_METHOD_UNSPECIFIED\020\000\022%\n!L" +
-      "OCAL_FILESYSTEM_READ_METHOD_READ\020\001\0221\n-LO" +
-      "CAL_FILESYSTEM_READ_METHOD_PREAD_THREADP" +
-      "OOL\020\002\022&\n\"LOCAL_FILESYSTEM_READ_METHOD_PR" +
-      "EAD\020\003\022%\n!LOCAL_FILESYSTEM_READ_METHOD_NM" +
-      "AP\020\004\"\241\001\n\032RemoteFilesystemReadMethod\022-\n)R" +
-      "EMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED" +
-      "\020\000\022&\n\"REMOTE_FILESYSTEM_READ_METHOD_READ" +
-      "\020\001\022,\n(REMOTE_FILESYSTEM_READ_METHOD_THRE" +
-      "ADPOOL\020\002\"\320\001\n\rLoadBalancing\022\036\n\032LOAD_BALAN" +
-      "CING_UNSPECIFIED\020\000\022\031\n\025LOAD_BALANCING_RAN" +
-      "DOM\020\001\022#\n\037LOAD_BALANCING_NEAREST_HOSTNAME" +
-      "\020\002\022\033\n\027LOAD_BALANCING_IN_ORDER\020\003\022\"\n\036LOAD_" +
-      "BALANCING_FIRST_OR_RANDOM\020\004\022\036\n\032LOAD_BALA" +
-      "NCING_ROUND_ROBIN\020\005\"\232\002\n*QueryCacheNondet" +
-      "erministicFunctionHandling\022>\n:QUERY_CACH" +
-      "E_NONDETERMINISTIC_FUNCTION_HANDLING_UNS" +
-      "PECIFIED\020\000\0228\n4QUERY_CACHE_NONDETERMINIST" +
-      "IC_FUNCTION_HANDLING_THROW\020\001\0227\n3QUERY_CA" +
-      "CHE_NONDETERMINISTIC_FUNCTION_HANDLING_S" +
-      "AVE\020\002\0229\n5QUERY_CACHE_NONDETERMINISTIC_FU" +
-      "NCTION_HANDLING_IGNORE\020\003J\004\010R\020T\"\356\002\n\tUserQ" +
-      "uota\022B\n\021interval_duration\030\001 \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\n\372\3071\006>=1000\0225\n\007quer" +
-      "ies\030\002 \001(\0132\033.google.protobuf.Int64ValueB\007" +
-      "\372\3071\003>=0\0224\n\006errors\030\003 \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
-      "\0227\n\tread_rows\030\005 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0\022<\n\016execution_time\030\006 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0B" +
-      "s\n\"yandex.cloud.api.mdb.clickhouse.v1ZMg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/mdb/clickhouse/v1;clickhouseb\006pr" +
-      "oto3"
+      "rotobuf.BoolValue\0224\n\017enable_analyzer\030\247\001 " +
+      "\001(\0132\032.google.protobuf.BoolValue\022/\n\007compi" +
+      "le\030, \001(\0132\032.google.protobuf.BoolValueB\002\030\001" +
+      "\022=\n\024min_count_to_compile\030- \001(\0132\033.google." +
+      "protobuf.Int64ValueB\002\030\001\022C\n\032async_insert_" +
+      "stale_timeout\030{ \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\002\030\001\"_\n\014OverflowMode\022\035\n\031OVERFLOW" +
+      "_MODE_UNSPECIFIED\020\000\022\027\n\023OVERFLOW_MODE_THR" +
+      "OW\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020\002\"\241\001\n\023GroupB" +
+      "yOverflowMode\022&\n\"GROUP_BY_OVERFLOW_MODE_" +
+      "UNSPECIFIED\020\000\022 \n\034GROUP_BY_OVERFLOW_MODE_" +
+      "THROW\020\001\022 \n\034GROUP_BY_OVERFLOW_MODE_BREAK\020" +
+      "\002\022\036\n\032GROUP_BY_OVERFLOW_MODE_ANY\020\003\"\322\001\n\026Di" +
+      "stributedProductMode\022(\n$DISTRIBUTED_PROD" +
+      "UCT_MODE_UNSPECIFIED\020\000\022!\n\035DISTRIBUTED_PR" +
+      "ODUCT_MODE_DENY\020\001\022\"\n\036DISTRIBUTED_PRODUCT" +
+      "_MODE_LOCAL\020\002\022#\n\037DISTRIBUTED_PRODUCT_MOD" +
+      "E_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PRODUCT_MODE_A" +
+      "LLOW\020\004\"q\n\tQuotaMode\022\032\n\026QUOTA_MODE_UNSPEC" +
+      "IFIED\020\000\022\026\n\022QUOTA_MODE_DEFAULT\020\001\022\024\n\020QUOTA" +
+      "_MODE_KEYED\020\002\022\032\n\026QUOTA_MODE_KEYED_BY_IP\020" +
+      "\003\"\266\002\n\033CountDistinctImplementation\022-\n)COU" +
+      "NT_DISTINCT_IMPLEMENTATION_UNSPECIFIED\020\000" +
+      "\022&\n\"COUNT_DISTINCT_IMPLEMENTATION_UNIQ\020\001" +
+      "\022/\n+COUNT_DISTINCT_IMPLEMENTATION_UNIQ_C" +
+      "OMBINED\020\002\0222\n.COUNT_DISTINCT_IMPLEMENTATI" +
+      "ON_UNIQ_COMBINED_64\020\003\022-\n)COUNT_DISTINCT_" +
+      "IMPLEMENTATION_UNIQ_HLL_12\020\004\022,\n(COUNT_DI" +
+      "STINCT_IMPLEMENTATION_UNIQ_EXACT\020\005\"\220\002\n\rJ" +
+      "oinAlgorithm\022\036\n\032JOIN_ALGORITHM_UNSPECIFI" +
+      "ED\020\000\022\027\n\023JOIN_ALGORITHM_HASH\020\001\022 \n\034JOIN_AL" +
+      "GORITHM_PARALLEL_HASH\020\002\022 \n\034JOIN_ALGORITH" +
+      "M_PARTIAL_MERGE\020\003\022\031\n\025JOIN_ALGORITHM_DIRE" +
+      "CT\020\004\022\027\n\023JOIN_ALGORITHM_AUTO\020\005\022%\n!JOIN_AL" +
+      "GORITHM_FULL_SORTING_MERGE\020\006\022\'\n#JOIN_ALG" +
+      "ORITHM_PREFER_PARTIAL_MERGE\020\007\"\255\002\n\030Format" +
+      "RegexpEscapingRule\022+\n\'FORMAT_REGEXP_ESCA" +
+      "PING_RULE_UNSPECIFIED\020\000\022\'\n#FORMAT_REGEXP" +
+      "_ESCAPING_RULE_ESCAPED\020\001\022&\n\"FORMAT_REGEX" +
+      "P_ESCAPING_RULE_QUOTED\020\002\022#\n\037FORMAT_REGEX" +
+      "P_ESCAPING_RULE_CSV\020\003\022$\n FORMAT_REGEXP_E" +
+      "SCAPING_RULE_JSON\020\004\022#\n\037FORMAT_REGEXP_ESC" +
+      "APING_RULE_XML\020\005\022#\n\037FORMAT_REGEXP_ESCAPI" +
+      "NG_RULE_RAW\020\006\"\262\001\n\023DateTimeInputFormat\022&\n" +
+      "\"DATE_TIME_INPUT_FORMAT_UNSPECIFIED\020\000\022&\n" +
+      "\"DATE_TIME_INPUT_FORMAT_BEST_EFFORT\020\001\022 \n" +
+      "\034DATE_TIME_INPUT_FORMAT_BASIC\020\002\022)\n%DATE_" +
+      "TIME_INPUT_FORMAT_BEST_EFFORT_US\020\003\"\260\001\n\024D" +
+      "ateTimeOutputFormat\022\'\n#DATE_TIME_OUTPUT_" +
+      "FORMAT_UNSPECIFIED\020\000\022\"\n\036DATE_TIME_OUTPUT" +
+      "_FORMAT_SIMPLE\020\001\022\037\n\033DATE_TIME_OUTPUT_FOR" +
+      "MAT_ISO\020\002\022*\n&DATE_TIME_OUTPUT_FORMAT_UNI" +
+      "X_TIMESTAMP\020\003\"\362\001\n\031LocalFilesystemReadMet" +
+      "hod\022,\n(LOCAL_FILESYSTEM_READ_METHOD_UNSP" +
+      "ECIFIED\020\000\022%\n!LOCAL_FILESYSTEM_READ_METHO" +
+      "D_READ\020\001\0221\n-LOCAL_FILESYSTEM_READ_METHOD" +
+      "_PREAD_THREADPOOL\020\002\022&\n\"LOCAL_FILESYSTEM_" +
+      "READ_METHOD_PREAD\020\003\022%\n!LOCAL_FILESYSTEM_" +
+      "READ_METHOD_NMAP\020\004\"\241\001\n\032RemoteFilesystemR" +
+      "eadMethod\022-\n)REMOTE_FILESYSTEM_READ_METH" +
+      "OD_UNSPECIFIED\020\000\022&\n\"REMOTE_FILESYSTEM_RE" +
+      "AD_METHOD_READ\020\001\022,\n(REMOTE_FILESYSTEM_RE" +
+      "AD_METHOD_THREADPOOL\020\002\"\320\001\n\rLoadBalancing" +
+      "\022\036\n\032LOAD_BALANCING_UNSPECIFIED\020\000\022\031\n\025LOAD" +
+      "_BALANCING_RANDOM\020\001\022#\n\037LOAD_BALANCING_NE" +
+      "AREST_HOSTNAME\020\002\022\033\n\027LOAD_BALANCING_IN_OR" +
+      "DER\020\003\022\"\n\036LOAD_BALANCING_FIRST_OR_RANDOM\020" +
+      "\004\022\036\n\032LOAD_BALANCING_ROUND_ROBIN\020\005\"\232\002\n*Qu" +
+      "eryCacheNondeterministicFunctionHandling" +
+      "\022>\n:QUERY_CACHE_NONDETERMINISTIC_FUNCTIO" +
+      "N_HANDLING_UNSPECIFIED\020\000\0228\n4QUERY_CACHE_" +
+      "NONDETERMINISTIC_FUNCTION_HANDLING_THROW" +
+      "\020\001\0227\n3QUERY_CACHE_NONDETERMINISTIC_FUNCT" +
+      "ION_HANDLING_SAVE\020\002\0229\n5QUERY_CACHE_NONDE" +
+      "TERMINISTIC_FUNCTION_HANDLING_IGNORE\020\003\"\331" +
+      "\001\n\035QueryCacheSystemTableHandling\0221\n-QUER" +
+      "Y_CACHE_SYSTEM_TABLE_HANDLING_UNSPECIFIE" +
+      "D\020\000\022+\n\'QUERY_CACHE_SYSTEM_TABLE_HANDLING" +
+      "_THROW\020\001\022*\n&QUERY_CACHE_SYSTEM_TABLE_HAN" +
+      "DLING_SAVE\020\002\022,\n(QUERY_CACHE_SYSTEM_TABLE" +
+      "_HANDLING_IGNORE\020\003J\004\010R\020T\"\356\002\n\tUserQuota\022B" +
+      "\n\021interval_duration\030\001 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\n\372\3071\006>=1000\0225\n\007queries\030\002 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
+      "0\0224\n\006errors\030\003 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\tre" +
+      "ad_rows\030\005 \001(\0132\033.google.protobuf.Int64Val",
+      "ueB\007\372\3071\003>=0\022<\n\016execution_time\030\006 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0Bs\n\"yan" +
+      "dex.cloud.api.mdb.clickhouse.v1ZMgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/clickhouse/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -55384,7 +55978,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
-        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "InsertNullAsDefault", "SelectSequentialConsistency", "DeduplicateBlocksInDependentMaterializedViews", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxPartitionsPerInsertBlock", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "DateTimeInputFormat", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "AllowSuspiciousLowCardinalityTypes", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "HttpMaxFieldNameSize", "HttpMaxFieldValueSize", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "QuotaMode", "FlattenNested", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "AsyncInsert", "AsyncInsertThreads", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertUseAdaptiveBusyTimeout", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "MaxFinalThreads", "InputFormatParallelParsing", "InputFormatImportNestedJson", "FormatAvroSchemaRegistryUrl", "DataTypeDefaultNullable", "LocalFilesystemReadMethod", "MaxReadBufferSize", "InsertKeeperMaxRetries", "MaxTemporaryDataOnDiskSizeForUser", "MaxTemporaryDataOnDiskSizeForQuery", "MaxParserDepth", "RemoteFilesystemReadMethod", "MemoryOvercommitRatioDenominator", "MemoryOvercommitRatioDenominatorForUser", "MemoryUsageOvercommitMaxWaitMicroseconds", "LogQueryThreads", "LogQueryViews", "LogQueriesProbability", "LogProcessorsProfiles", "UseQueryCache", "EnableReadsFromQueryCache", "EnableWritesToQueryCache", "QueryCacheMinQueryRuns", "QueryCacheMinQueryDuration", "QueryCacheTtl", "QueryCacheMaxEntries", "QueryCacheMaxSizeInBytes", "QueryCacheTag", "QueryCacheShareBetweenUsers", "QueryCacheNondeterministicFunctionHandling", "MaxInsertThreads", "UseHedgedRequests", "IdleConnectionTimeout", "HedgedConnectionTimeoutMs", "LoadBalancing", "PreferLocalhostReplica", "DoNotMergeAcrossPartitionsSelectFinal", "IgnoreMaterializedViewsWithDroppedTargetTable", "Compile", "MinCountToCompile", "AsyncInsertStaleTimeout", });
+        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "InsertNullAsDefault", "SelectSequentialConsistency", "DeduplicateBlocksInDependentMaterializedViews", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxPartitionsPerInsertBlock", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "DateTimeInputFormat", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "AllowSuspiciousLowCardinalityTypes", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "HttpMaxFieldNameSize", "HttpMaxFieldValueSize", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "QuotaMode", "FlattenNested", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "AsyncInsert", "AsyncInsertThreads", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertUseAdaptiveBusyTimeout", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "MaxFinalThreads", "InputFormatParallelParsing", "InputFormatImportNestedJson", "FormatAvroSchemaRegistryUrl", "DataTypeDefaultNullable", "LocalFilesystemReadMethod", "MaxReadBufferSize", "InsertKeeperMaxRetries", "MaxTemporaryDataOnDiskSizeForUser", "MaxTemporaryDataOnDiskSizeForQuery", "MaxParserDepth", "RemoteFilesystemReadMethod", "MemoryOvercommitRatioDenominator", "MemoryOvercommitRatioDenominatorForUser", "MemoryUsageOvercommitMaxWaitMicroseconds", "LogQueryThreads", "LogQueryViews", "LogQueriesProbability", "LogProcessorsProfiles", "UseQueryCache", "EnableReadsFromQueryCache", "EnableWritesToQueryCache", "QueryCacheMinQueryRuns", "QueryCacheMinQueryDuration", "QueryCacheTtl", "QueryCacheMaxEntries", "QueryCacheMaxSizeInBytes", "QueryCacheTag", "QueryCacheShareBetweenUsers", "QueryCacheNondeterministicFunctionHandling", "QueryCacheSystemTableHandling", "MaxInsertThreads", "UseHedgedRequests", "IdleConnectionTimeout", "HedgedConnectionTimeoutMs", "LoadBalancing", "PreferLocalhostReplica", "DoNotMergeAcrossPartitionsSelectFinal", "IgnoreMaterializedViewsWithDroppedTargetTable", "EnableAnalyzer", "Compile", "MinCountToCompile", "AsyncInsertStaleTimeout", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new

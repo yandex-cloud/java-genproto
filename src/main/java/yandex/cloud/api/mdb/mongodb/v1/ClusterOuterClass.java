@@ -445,6 +445,33 @@ public final class ClusterOuterClass {
      * @return The deletionProtection.
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     * @return Whether the diskEncryptionKeyId field is set.
+     */
+    boolean hasDiskEncryptionKeyId();
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     * @return The diskEncryptionKeyId.
+     */
+    com.google.protobuf.StringValue getDiskEncryptionKeyId();
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder();
   }
   /**
    * <pre>
@@ -645,6 +672,19 @@ public final class ClusterOuterClass {
             case 136: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 146: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (diskEncryptionKeyId_ != null) {
+                subBuilder = diskEncryptionKeyId_.toBuilder();
+              }
+              diskEncryptionKeyId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskEncryptionKeyId_);
+                diskEncryptionKeyId_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1923,6 +1963,44 @@ public final class ClusterOuterClass {
       return deletionProtection_;
     }
 
+    public static final int DISK_ENCRYPTION_KEY_ID_FIELD_NUMBER = 18;
+    private com.google.protobuf.StringValue diskEncryptionKeyId_;
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     * @return Whether the diskEncryptionKeyId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskEncryptionKeyId() {
+      return diskEncryptionKeyId_ != null;
+    }
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     * @return The diskEncryptionKeyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDiskEncryptionKeyId() {
+      return diskEncryptionKeyId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+    }
+    /**
+     * <pre>
+     * ID of the key to encrypt cluster disks.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder() {
+      return getDiskEncryptionKeyId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1990,6 +2068,9 @@ public final class ClusterOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(17, deletionProtection_);
+      }
+      if (diskEncryptionKeyId_ != null) {
+        output.writeMessage(18, getDiskEncryptionKeyId());
       }
       unknownFields.writeTo(output);
     }
@@ -2073,6 +2154,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(17, deletionProtection_);
       }
+      if (diskEncryptionKeyId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getDiskEncryptionKeyId());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2131,6 +2216,11 @@ public final class ClusterOuterClass {
           .equals(other.getSecurityGroupIdsList())) return false;
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
+      if (hasDiskEncryptionKeyId() != other.hasDiskEncryptionKeyId()) return false;
+      if (hasDiskEncryptionKeyId()) {
+        if (!getDiskEncryptionKeyId()
+            .equals(other.getDiskEncryptionKeyId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2192,6 +2282,10 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      if (hasDiskEncryptionKeyId()) {
+        hash = (37 * hash) + DISK_ENCRYPTION_KEY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskEncryptionKeyId().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2405,6 +2499,12 @@ public final class ClusterOuterClass {
         bitField0_ = (bitField0_ & ~0x00000004);
         deletionProtection_ = false;
 
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = null;
+        } else {
+          diskEncryptionKeyId_ = null;
+          diskEncryptionKeyIdBuilder_ = null;
+        }
         return this;
       }
 
@@ -2478,6 +2578,11 @@ public final class ClusterOuterClass {
         }
         result.securityGroupIds_ = securityGroupIds_;
         result.deletionProtection_ = deletionProtection_;
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          result.diskEncryptionKeyId_ = diskEncryptionKeyId_;
+        } else {
+          result.diskEncryptionKeyId_ = diskEncryptionKeyIdBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -2610,6 +2715,9 @@ public final class ClusterOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.hasDiskEncryptionKeyId()) {
+          mergeDiskEncryptionKeyId(other.getDiskEncryptionKeyId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4674,6 +4782,161 @@ public final class ClusterOuterClass {
         deletionProtection_ = false;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.StringValue diskEncryptionKeyId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> diskEncryptionKeyIdBuilder_;
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       * @return Whether the diskEncryptionKeyId field is set.
+       */
+      public boolean hasDiskEncryptionKeyId() {
+        return diskEncryptionKeyIdBuilder_ != null || diskEncryptionKeyId_ != null;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       * @return The diskEncryptionKeyId.
+       */
+      public com.google.protobuf.StringValue getDiskEncryptionKeyId() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          return diskEncryptionKeyId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+        } else {
+          return diskEncryptionKeyIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public Builder setDiskEncryptionKeyId(com.google.protobuf.StringValue value) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskEncryptionKeyId_ = value;
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public Builder setDiskEncryptionKeyId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public Builder mergeDiskEncryptionKeyId(com.google.protobuf.StringValue value) {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          if (diskEncryptionKeyId_ != null) {
+            diskEncryptionKeyId_ =
+              com.google.protobuf.StringValue.newBuilder(diskEncryptionKeyId_).mergeFrom(value).buildPartial();
+          } else {
+            diskEncryptionKeyId_ = value;
+          }
+          onChanged();
+        } else {
+          diskEncryptionKeyIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public Builder clearDiskEncryptionKeyId() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyId_ = null;
+          onChanged();
+        } else {
+          diskEncryptionKeyId_ = null;
+          diskEncryptionKeyIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDiskEncryptionKeyIdBuilder() {
+        
+        onChanged();
+        return getDiskEncryptionKeyIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDiskEncryptionKeyIdOrBuilder() {
+        if (diskEncryptionKeyIdBuilder_ != null) {
+          return diskEncryptionKeyIdBuilder_.getMessageOrBuilder();
+        } else {
+          return diskEncryptionKeyId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : diskEncryptionKeyId_;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to encrypt cluster disks.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue disk_encryption_key_id = 18;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDiskEncryptionKeyIdFieldBuilder() {
+        if (diskEncryptionKeyIdBuilder_ == null) {
+          diskEncryptionKeyIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getDiskEncryptionKeyId(),
+                  getParentForChildren(),
+                  isClean());
+          diskEncryptionKeyId_ = null;
+        }
+        return diskEncryptionKeyIdBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -84620,7 +84883,7 @@ public final class ClusterOuterClass {
       "/mongodb/v1/config/mongodb6_0_enterprise" +
       ".proto\032-yandex/cloud/mdb/mongodb/v1/main" +
       "tenance.proto\032\035yandex/cloud/validation.p" +
-      "roto\"\245\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_i" +
+      "roto\"\343\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_i" +
       "d\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.pro" +
       "tobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descrip" +
       "tion\030\005 \001(\t\022@\n\006labels\030\006 \003(\01320.yandex.clou" +
@@ -84638,416 +84901,418 @@ public final class ClusterOuterClass {
       "db.v1.MaintenanceWindow\022L\n\021planned_opera" +
       "tion\030\017 \001(\01321.yandex.cloud.mdb.mongodb.v1" +
       ".MaintenanceOperation\022\032\n\022security_group_" +
-      "ids\030\020 \003(\t\022\033\n\023deletion_protection\030\021 \001(\010\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSP" +
-      "ECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002" +
-      "\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020" +
-      "\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016S" +
-      "TATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING" +
-      "\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020" +
-      "\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitori" +
-      "ng\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n" +
-      "\004link\030\003 \001(\t\"\264\t\n\rClusterConfig\022\017\n\007version" +
-      "\030\001 \001(\t\022%\n\035feature_compatibility_version\030" +
-      "\005 \001(\t\022K\n\013mongodb_3_6\030\002 \001(\0132\'.yandex.clou" +
-      "d.mdb.mongodb.v1.Mongodb3_6H\000R\013mongodb_3" +
-      "_6\022K\n\013mongodb_4_0\030\004 \001(\0132\'.yandex.cloud.m" +
-      "db.mongodb.v1.Mongodb4_0H\000R\013mongodb_4_0\022" +
-      "K\n\013mongodb_4_2\030\007 \001(\0132\'.yandex.cloud.mdb." +
-      "mongodb.v1.Mongodb4_2H\000R\013mongodb_4_2\022K\n\013" +
-      "mongodb_4_4\030\010 \001(\0132\'.yandex.cloud.mdb.mon" +
-      "godb.v1.Mongodb4_4H\000R\013mongodb_4_4\022K\n\013mon" +
-      "godb_5_0\030\n \001(\0132\'.yandex.cloud.mdb.mongod" +
-      "b.v1.Mongodb5_0H\000R\013mongodb_5_0\022K\n\013mongod" +
-      "b_6_0\030\016 \001(\0132\'.yandex.cloud.mdb.mongodb.v" +
-      "1.Mongodb6_0H\000R\013mongodb_6_0\022l\n\026mongodb_4" +
-      "_4_enterprise\030\013 \001(\01322.yandex.cloud.mdb.m" +
-      "ongodb.v1.Mongodb4_4_enterpriseH\000R\026mongo" +
-      "db_4_4_enterprise\022l\n\026mongodb_5_0_enterpr" +
-      "ise\030\014 \001(\01322.yandex.cloud.mdb.mongodb.v1." +
-      "Mongodb5_0_enterpriseH\000R\026mongodb_5_0_ent" +
-      "erprise\022l\n\026mongodb_6_0_enterprise\030\017 \001(\0132" +
-      "2.yandex.cloud.mdb.mongodb.v1.Mongodb6_0" +
-      "_enterpriseH\000R\026mongodb_6_0_enterprise\0223\n" +
-      "\023backup_window_start\030\003 \001(\0132\026.google.type" +
-      ".TimeOfDay\022>\n\031backup_retain_period_days\030" +
-      "\t \001(\0132\033.google.protobuf.Int64Value\022Z\n\027pe" +
-      "rformance_diagnostics\030\r \001(\01329.yandex.clo" +
-      "ud.mdb.mongodb.v1.PerformanceDiagnostics" +
-      "Config\0223\n\006access\030\006 \001(\0132#.yandex.cloud.md" +
-      "b.mongodb.v1.Access\022<\n\016mongodb_config\030\023 " +
-      "\001(\0132$.yandex.cloud.mdb.mongodb.v1.Mongod" +
-      "bB\t\n\007mongodbJ\004\010\020\020\023\"\366\t\n\nMongodb3_6\022>\n\006mon" +
-      "god\030\001 \001(\0132..yandex.cloud.mdb.mongodb.v1." +
-      "Mongodb3_6.Mongod\022B\n\010mongocfg\030\002 \001(\01320.ya" +
-      "ndex.cloud.mdb.mongodb.v1.Mongodb3_6.Mon" +
-      "goCfg\022>\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb" +
-      ".mongodb.v1.Mongodb3_6.Mongos\022F\n\nmongoin" +
-      "fra\030\004 \001(\01322.yandex.cloud.mdb.mongodb.v1." +
-      "Mongodb3_6.MongoInfra\032\334\001\n\006Mongod\022F\n\006conf" +
-      "ig\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.c" +
-      "onfig.MongodConfigSet3_6\0229\n\tresources\030\002 " +
-      "\001(\0132&.yandex.cloud.mdb.mongodb.v1.Resour" +
-      "ces\022O\n\025disk_size_autoscaling\030\003 \001(\01320.yan" +
-      "dex.cloud.mdb.mongodb.v1.DiskSizeAutosca" +
-      "ling\032\340\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yand" +
-      "ex.cloud.mdb.mongodb.v1.config.MongoCfgC" +
-      "onfigSet3_6\0229\n\tresources\030\002 \001(\0132&.yandex." +
+      "ids\030\020 \003(\t\022\033\n\023deletion_protection\030\021 \001(\010\022<" +
+      "\n\026disk_encryption_key_id\030\022 \001(\0132\034.google." +
+      "protobuf.StringValue\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Environme" +
+      "nt\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\nPRODU" +
+      "CTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016HEAL" +
+      "TH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEG" +
+      "RADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n" +
+      "\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010U" +
+      "PDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010" +
+      "STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023" +
+      "\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\264\t\n\rCl" +
+      "usterConfig\022\017\n\007version\030\001 \001(\t\022%\n\035feature_" +
+      "compatibility_version\030\005 \001(\t\022K\n\013mongodb_3" +
+      "_6\030\002 \001(\0132\'.yandex.cloud.mdb.mongodb.v1.M" +
+      "ongodb3_6H\000R\013mongodb_3_6\022K\n\013mongodb_4_0\030" +
+      "\004 \001(\0132\'.yandex.cloud.mdb.mongodb.v1.Mong" +
+      "odb4_0H\000R\013mongodb_4_0\022K\n\013mongodb_4_2\030\007 \001" +
+      "(\0132\'.yandex.cloud.mdb.mongodb.v1.Mongodb" +
+      "4_2H\000R\013mongodb_4_2\022K\n\013mongodb_4_4\030\010 \001(\0132" +
+      "\'.yandex.cloud.mdb.mongodb.v1.Mongodb4_4" +
+      "H\000R\013mongodb_4_4\022K\n\013mongodb_5_0\030\n \001(\0132\'.y" +
+      "andex.cloud.mdb.mongodb.v1.Mongodb5_0H\000R" +
+      "\013mongodb_5_0\022K\n\013mongodb_6_0\030\016 \001(\0132\'.yand" +
+      "ex.cloud.mdb.mongodb.v1.Mongodb6_0H\000R\013mo" +
+      "ngodb_6_0\022l\n\026mongodb_4_4_enterprise\030\013 \001(" +
+      "\01322.yandex.cloud.mdb.mongodb.v1.Mongodb4" +
+      "_4_enterpriseH\000R\026mongodb_4_4_enterprise\022" +
+      "l\n\026mongodb_5_0_enterprise\030\014 \001(\01322.yandex" +
+      ".cloud.mdb.mongodb.v1.Mongodb5_0_enterpr" +
+      "iseH\000R\026mongodb_5_0_enterprise\022l\n\026mongodb" +
+      "_6_0_enterprise\030\017 \001(\01322.yandex.cloud.mdb" +
+      ".mongodb.v1.Mongodb6_0_enterpriseH\000R\026mon" +
+      "godb_6_0_enterprise\0223\n\023backup_window_sta" +
+      "rt\030\003 \001(\0132\026.google.type.TimeOfDay\022>\n\031back" +
+      "up_retain_period_days\030\t \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022Z\n\027performance_diagnost" +
+      "ics\030\r \001(\01329.yandex.cloud.mdb.mongodb.v1." +
+      "PerformanceDiagnosticsConfig\0223\n\006access\030\006" +
+      " \001(\0132#.yandex.cloud.mdb.mongodb.v1.Acces" +
+      "s\022<\n\016mongodb_config\030\023 \001(\0132$.yandex.cloud" +
+      ".mdb.mongodb.v1.MongodbB\t\n\007mongodbJ\004\010\020\020\023" +
+      "\"\366\t\n\nMongodb3_6\022>\n\006mongod\030\001 \001(\0132..yandex" +
+      ".cloud.mdb.mongodb.v1.Mongodb3_6.Mongod\022" +
+      "B\n\010mongocfg\030\002 \001(\01320.yandex.cloud.mdb.mon" +
+      "godb.v1.Mongodb3_6.MongoCfg\022>\n\006mongos\030\003 " +
+      "\001(\0132..yandex.cloud.mdb.mongodb.v1.Mongod" +
+      "b3_6.Mongos\022F\n\nmongoinfra\030\004 \001(\01322.yandex" +
+      ".cloud.mdb.mongodb.v1.Mongodb3_6.MongoIn" +
+      "fra\032\334\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongodConfig" +
+      "Set3_6\0229\n\tresources\030\002 \001(\0132&.yandex.cloud" +
+      ".mdb.mongodb.v1.Resources\022O\n\025disk_size_a" +
+      "utoscaling\030\003 \001(\01320.yandex.cloud.mdb.mong" +
+      "odb.v1.DiskSizeAutoscaling\032\340\001\n\010MongoCfg\022" +
+      "H\n\006config\030\001 \001(\01328.yandex.cloud.mdb.mongo" +
+      "db.v1.config.MongoCfgConfigSet3_6\0229\n\tres" +
+      "ources\030\002 \001(\0132&.yandex.cloud.mdb.mongodb." +
+      "v1.Resources\022O\n\025disk_size_autoscaling\030\003 " +
+      "\001(\01320.yandex.cloud.mdb.mongodb.v1.DiskSi" +
+      "zeAutoscaling\032\334\001\n\006Mongos\022F\n\006config\030\001 \001(\013" +
+      "26.yandex.cloud.mdb.mongodb.v1.config.Mo" +
+      "ngosConfigSet3_6\0229\n\tresources\030\002 \001(\0132&.ya" +
+      "ndex.cloud.mdb.mongodb.v1.Resources\022O\n\025d" +
+      "isk_size_autoscaling\030\003 \001(\01320.yandex.clou" +
+      "d.mdb.mongodb.v1.DiskSizeAutoscaling\032\272\002\n" +
+      "\nMongoInfra\022M\n\rconfig_mongos\030\001 \001(\01326.yan" +
+      "dex.cloud.mdb.mongodb.v1.config.MongosCo" +
+      "nfigSet3_6\022Q\n\017config_mongocfg\030\002 \001(\01328.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongoCf" +
+      "gConfigSet3_6\0229\n\tresources\030\003 \001(\0132&.yande" +
+      "x.cloud.mdb.mongodb.v1.Resources\022O\n\025disk" +
+      "_size_autoscaling\030\004 \001(\01320.yandex.cloud.m" +
+      "db.mongodb.v1.DiskSizeAutoscaling\"\366\t\n\nMo" +
+      "ngodb4_0\022>\n\006mongod\030\001 \001(\0132..yandex.cloud." +
+      "mdb.mongodb.v1.Mongodb4_0.Mongod\022B\n\010mong" +
+      "ocfg\030\002 \001(\01320.yandex.cloud.mdb.mongodb.v1" +
+      ".Mongodb4_0.MongoCfg\022>\n\006mongos\030\003 \001(\0132..y" +
+      "andex.cloud.mdb.mongodb.v1.Mongodb4_0.Mo" +
+      "ngos\022F\n\nmongoinfra\030\004 \001(\01322.yandex.cloud." +
+      "mdb.mongodb.v1.Mongodb4_0.MongoInfra\032\334\001\n" +
+      "\006Mongod\022F\n\006config\030\001 \001(\01326.yandex.cloud.m" +
+      "db.mongodb.v1.config.MongodConfigSet4_0\022" +
+      "9\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mo" +
+      "ngodb.v1.Resources\022O\n\025disk_size_autoscal" +
+      "ing\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1." +
+      "DiskSizeAutoscaling\032\340\001\n\010MongoCfg\022H\n\006conf" +
+      "ig\030\001 \001(\01328.yandex.cloud.mdb.mongodb.v1.c" +
+      "onfig.MongoCfgConfigSet4_0\0229\n\tresources\030" +
+      "\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Reso" +
+      "urces\022O\n\025disk_size_autoscaling\030\003 \001(\01320.y" +
+      "andex.cloud.mdb.mongodb.v1.DiskSizeAutos" +
+      "caling\032\334\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.yand" +
+      "ex.cloud.mdb.mongodb.v1.config.MongosCon" +
+      "figSet4_0\0229\n\tresources\030\002 \001(\0132&.yandex.cl" +
+      "oud.mdb.mongodb.v1.Resources\022O\n\025disk_siz" +
+      "e_autoscaling\030\003 \001(\01320.yandex.cloud.mdb.m" +
+      "ongodb.v1.DiskSizeAutoscaling\032\272\002\n\nMongoI" +
+      "nfra\022M\n\rconfig_mongos\030\001 \001(\01326.yandex.clo" +
+      "ud.mdb.mongodb.v1.config.MongosConfigSet" +
+      "4_0\022Q\n\017config_mongocfg\030\002 \001(\01328.yandex.cl" +
+      "oud.mdb.mongodb.v1.config.MongoCfgConfig" +
+      "Set4_0\0229\n\tresources\030\003 \001(\0132&.yandex.cloud" +
+      ".mdb.mongodb.v1.Resources\022O\n\025disk_size_a" +
+      "utoscaling\030\004 \001(\01320.yandex.cloud.mdb.mong" +
+      "odb.v1.DiskSizeAutoscaling\"\366\t\n\nMongodb4_" +
+      "2\022>\n\006mongod\030\001 \001(\0132..yandex.cloud.mdb.mon" +
+      "godb.v1.Mongodb4_2.Mongod\022B\n\010mongocfg\030\002 " +
+      "\001(\01320.yandex.cloud.mdb.mongodb.v1.Mongod" +
+      "b4_2.MongoCfg\022>\n\006mongos\030\003 \001(\0132..yandex.c" +
+      "loud.mdb.mongodb.v1.Mongodb4_2.Mongos\022F\n" +
+      "\nmongoinfra\030\004 \001(\01322.yandex.cloud.mdb.mon" +
+      "godb.v1.Mongodb4_2.MongoInfra\032\334\001\n\006Mongod" +
+      "\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongodConfigSet4_2\0229\n\treso" +
+      "urces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v" +
+      "1.Resources\022O\n\025disk_size_autoscaling\030\003 \001" +
+      "(\01320.yandex.cloud.mdb.mongodb.v1.DiskSiz" +
+      "eAutoscaling\032\340\001\n\010MongoCfg\022H\n\006config\030\001 \001(" +
+      "\01328.yandex.cloud.mdb.mongodb.v1.config.M" +
+      "ongoCfgConfigSet4_2\0229\n\tresources\030\002 \001(\0132&" +
+      ".yandex.cloud.mdb.mongodb.v1.Resources\022O" +
+      "\n\025disk_size_autoscaling\030\003 \001(\01320.yandex.c" +
+      "loud.mdb.mongodb.v1.DiskSizeAutoscaling\032" +
+      "\334\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.yandex.clou" +
+      "d.mdb.mongodb.v1.config.MongosConfigSet4" +
+      "_2\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb" +
+      ".mongodb.v1.Resources\022O\n\025disk_size_autos" +
+      "caling\030\003 \001(\01320.yandex.cloud.mdb.mongodb." +
+      "v1.DiskSizeAutoscaling\032\272\002\n\nMongoInfra\022M\n" +
+      "\rconfig_mongos\030\001 \001(\01326.yandex.cloud.mdb." +
+      "mongodb.v1.config.MongosConfigSet4_2\022Q\n\017" +
+      "config_mongocfg\030\002 \001(\01328.yandex.cloud.mdb" +
+      ".mongodb.v1.config.MongoCfgConfigSet4_2\022" +
+      "9\n\tresources\030\003 \001(\0132&.yandex.cloud.mdb.mo" +
+      "ngodb.v1.Resources\022O\n\025disk_size_autoscal" +
+      "ing\030\004 \001(\01320.yandex.cloud.mdb.mongodb.v1." +
+      "DiskSizeAutoscaling\"\366\t\n\nMongodb4_4\022>\n\006mo" +
+      "ngod\030\001 \001(\0132..yandex.cloud.mdb.mongodb.v1" +
+      ".Mongodb4_4.Mongod\022B\n\010mongocfg\030\002 \001(\01320.y" +
+      "andex.cloud.mdb.mongodb.v1.Mongodb4_4.Mo" +
+      "ngoCfg\022>\n\006mongos\030\003 \001(\0132..yandex.cloud.md" +
+      "b.mongodb.v1.Mongodb4_4.Mongos\022F\n\nmongoi" +
+      "nfra\030\004 \001(\01322.yandex.cloud.mdb.mongodb.v1" +
+      ".Mongodb4_4.MongoInfra\032\334\001\n\006Mongod\022F\n\006con" +
+      "fig\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongodConfigSet4_4\0229\n\tresources\030\002" +
+      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
+      "rces\022O\n\025disk_size_autoscaling\030\003 \001(\01320.ya" +
+      "ndex.cloud.mdb.mongodb.v1.DiskSizeAutosc" +
+      "aling\032\340\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yan" +
+      "dex.cloud.mdb.mongodb.v1.config.MongoCfg" +
+      "ConfigSet4_4\0229\n\tresources\030\002 \001(\0132&.yandex" +
+      ".cloud.mdb.mongodb.v1.Resources\022O\n\025disk_" +
+      "size_autoscaling\030\003 \001(\01320.yandex.cloud.md" +
+      "b.mongodb.v1.DiskSizeAutoscaling\032\334\001\n\006Mon" +
+      "gos\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb.m" +
+      "ongodb.v1.config.MongosConfigSet4_4\0229\n\tr" +
+      "esources\030\002 \001(\0132&.yandex.cloud.mdb.mongod" +
+      "b.v1.Resources\022O\n\025disk_size_autoscaling\030" +
+      "\003 \001(\01320.yandex.cloud.mdb.mongodb.v1.Disk" +
+      "SizeAutoscaling\032\272\002\n\nMongoInfra\022M\n\rconfig" +
+      "_mongos\030\001 \001(\01326.yandex.cloud.mdb.mongodb" +
+      ".v1.config.MongosConfigSet4_4\022Q\n\017config_" +
+      "mongocfg\030\002 \001(\01328.yandex.cloud.mdb.mongod" +
+      "b.v1.config.MongoCfgConfigSet4_4\0229\n\treso" +
+      "urces\030\003 \001(\0132&.yandex.cloud.mdb.mongodb.v" +
+      "1.Resources\022O\n\025disk_size_autoscaling\030\004 \001" +
+      "(\01320.yandex.cloud.mdb.mongodb.v1.DiskSiz" +
+      "eAutoscaling\"\344\n\n\025Mongodb4_4_enterprise\022I" +
+      "\n\006mongod\030\001 \001(\01329.yandex.cloud.mdb.mongod" +
+      "b.v1.Mongodb4_4_enterprise.Mongod\022M\n\010mon" +
+      "gocfg\030\002 \001(\0132;.yandex.cloud.mdb.mongodb.v" +
+      "1.Mongodb4_4_enterprise.MongoCfg\022I\n\006mong" +
+      "os\030\003 \001(\01329.yandex.cloud.mdb.mongodb.v1.M" +
+      "ongodb4_4_enterprise.Mongos\022Q\n\nmongoinfr" +
+      "a\030\004 \001(\0132=.yandex.cloud.mdb.mongodb.v1.Mo" +
+      "ngodb4_4_enterprise.MongoInfra\032\347\001\n\006Mongo" +
+      "d\022Q\n\006config\030\001 \001(\0132A.yandex.cloud.mdb.mon" +
+      "godb.v1.config.MongodConfigSet4_4_enterp" +
+      "rise\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.m" +
+      "db.mongodb.v1.Resources\022O\n\025disk_size_aut" +
+      "oscaling\030\003 \001(\01320.yandex.cloud.mdb.mongod" +
+      "b.v1.DiskSizeAutoscaling\032\353\001\n\010MongoCfg\022S\n" +
+      "\006config\030\001 \001(\0132C.yandex.cloud.mdb.mongodb" +
+      ".v1.config.MongoCfgConfigSet4_4_enterpri" +
+      "se\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb" +
+      ".mongodb.v1.Resources\022O\n\025disk_size_autos" +
+      "caling\030\003 \001(\01320.yandex.cloud.mdb.mongodb." +
+      "v1.DiskSizeAutoscaling\032\347\001\n\006Mongos\022Q\n\006con" +
+      "fig\030\001 \001(\0132A.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongosConfigSet4_4_enterprise\0229\n\t" +
+      "resources\030\002 \001(\0132&.yandex.cloud.mdb.mongo" +
+      "db.v1.Resources\022O\n\025disk_size_autoscaling" +
+      "\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1.Dis" +
+      "kSizeAutoscaling\032\320\002\n\nMongoInfra\022X\n\rconfi" +
+      "g_mongos\030\001 \001(\0132A.yandex.cloud.mdb.mongod" +
+      "b.v1.config.MongosConfigSet4_4_enterpris" +
+      "e\022\\\n\017config_mongocfg\030\002 \001(\0132C.yandex.clou" +
+      "d.mdb.mongodb.v1.config.MongoCfgConfigSe" +
+      "t4_4_enterprise\0229\n\tresources\030\003 \001(\0132&.yan" +
+      "dex.cloud.mdb.mongodb.v1.Resources\022O\n\025di" +
+      "sk_size_autoscaling\030\004 \001(\01320.yandex.cloud" +
+      ".mdb.mongodb.v1.DiskSizeAutoscaling\"\366\t\n\n" +
+      "Mongodb5_0\022>\n\006mongod\030\001 \001(\0132..yandex.clou" +
+      "d.mdb.mongodb.v1.Mongodb5_0.Mongod\022B\n\010mo" +
+      "ngocfg\030\002 \001(\01320.yandex.cloud.mdb.mongodb." +
+      "v1.Mongodb5_0.MongoCfg\022>\n\006mongos\030\003 \001(\0132." +
+      ".yandex.cloud.mdb.mongodb.v1.Mongodb5_0." +
+      "Mongos\022F\n\nmongoinfra\030\004 \001(\01322.yandex.clou" +
+      "d.mdb.mongodb.v1.Mongodb5_0.MongoInfra\032\334" +
+      "\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yandex.cloud" +
+      ".mdb.mongodb.v1.config.MongodConfigSet5_" +
+      "0\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb." +
+      "mongodb.v1.Resources\022O\n\025disk_size_autosc" +
+      "aling\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v" +
+      "1.DiskSizeAutoscaling\032\340\001\n\010MongoCfg\022H\n\006co" +
+      "nfig\030\001 \001(\01328.yandex.cloud.mdb.mongodb.v1" +
+      ".config.MongoCfgConfigSet5_0\0229\n\tresource" +
+      "s\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
+      "sources\022O\n\025disk_size_autoscaling\030\003 \001(\01320" +
+      ".yandex.cloud.mdb.mongodb.v1.DiskSizeAut" +
+      "oscaling\032\334\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongosC" +
+      "onfigSet5_0\0229\n\tresources\030\002 \001(\0132&.yandex." +
       "cloud.mdb.mongodb.v1.Resources\022O\n\025disk_s" +
       "ize_autoscaling\030\003 \001(\01320.yandex.cloud.mdb" +
-      ".mongodb.v1.DiskSizeAutoscaling\032\334\001\n\006Mong" +
-      "os\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb.mo" +
-      "ngodb.v1.config.MongosConfigSet3_6\0229\n\tre" +
-      "sources\030\002 \001(\0132&.yandex.cloud.mdb.mongodb" +
-      ".v1.Resources\022O\n\025disk_size_autoscaling\030\003" +
-      " \001(\01320.yandex.cloud.mdb.mongodb.v1.DiskS" +
-      "izeAutoscaling\032\272\002\n\nMongoInfra\022M\n\rconfig_" +
-      "mongos\030\001 \001(\01326.yandex.cloud.mdb.mongodb." +
-      "v1.config.MongosConfigSet3_6\022Q\n\017config_m" +
-      "ongocfg\030\002 \001(\01328.yandex.cloud.mdb.mongodb" +
-      ".v1.config.MongoCfgConfigSet3_6\0229\n\tresou" +
+      ".mongodb.v1.DiskSizeAutoscaling\032\272\002\n\nMong" +
+      "oInfra\022M\n\rconfig_mongos\030\001 \001(\01326.yandex.c" +
+      "loud.mdb.mongodb.v1.config.MongosConfigS" +
+      "et5_0\022Q\n\017config_mongocfg\030\002 \001(\01328.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongoCfgConf" +
+      "igSet5_0\0229\n\tresources\030\003 \001(\0132&.yandex.clo" +
+      "ud.mdb.mongodb.v1.Resources\022O\n\025disk_size" +
+      "_autoscaling\030\004 \001(\01320.yandex.cloud.mdb.mo" +
+      "ngodb.v1.DiskSizeAutoscaling\"\344\n\n\025Mongodb" +
+      "5_0_enterprise\022I\n\006mongod\030\001 \001(\01329.yandex." +
+      "cloud.mdb.mongodb.v1.Mongodb5_0_enterpri" +
+      "se.Mongod\022M\n\010mongocfg\030\002 \001(\0132;.yandex.clo" +
+      "ud.mdb.mongodb.v1.Mongodb5_0_enterprise." +
+      "MongoCfg\022I\n\006mongos\030\003 \001(\01329.yandex.cloud." +
+      "mdb.mongodb.v1.Mongodb5_0_enterprise.Mon" +
+      "gos\022Q\n\nmongoinfra\030\004 \001(\0132=.yandex.cloud.m" +
+      "db.mongodb.v1.Mongodb5_0_enterprise.Mong" +
+      "oInfra\032\347\001\n\006Mongod\022Q\n\006config\030\001 \001(\0132A.yand" +
+      "ex.cloud.mdb.mongodb.v1.config.MongodCon" +
+      "figSet5_0_enterprise\0229\n\tresources\030\002 \001(\0132" +
+      "&.yandex.cloud.mdb.mongodb.v1.Resources\022" +
+      "O\n\025disk_size_autoscaling\030\003 \001(\01320.yandex." +
+      "cloud.mdb.mongodb.v1.DiskSizeAutoscaling" +
+      "\032\353\001\n\010MongoCfg\022S\n\006config\030\001 \001(\0132C.yandex.c" +
+      "loud.mdb.mongodb.v1.config.MongoCfgConfi" +
+      "gSet5_0_enterprise\0229\n\tresources\030\002 \001(\0132&." +
+      "yandex.cloud.mdb.mongodb.v1.Resources\022O\n" +
+      "\025disk_size_autoscaling\030\003 \001(\01320.yandex.cl" +
+      "oud.mdb.mongodb.v1.DiskSizeAutoscaling\032\347" +
+      "\001\n\006Mongos\022Q\n\006config\030\001 \001(\0132A.yandex.cloud" +
+      ".mdb.mongodb.v1.config.MongosConfigSet5_" +
+      "0_enterprise\0229\n\tresources\030\002 \001(\0132&.yandex" +
+      ".cloud.mdb.mongodb.v1.Resources\022O\n\025disk_" +
+      "size_autoscaling\030\003 \001(\01320.yandex.cloud.md" +
+      "b.mongodb.v1.DiskSizeAutoscaling\032\320\002\n\nMon" +
+      "goInfra\022X\n\rconfig_mongos\030\001 \001(\0132A.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongosConfig" +
+      "Set5_0_enterprise\022\\\n\017config_mongocfg\030\002 \001" +
+      "(\0132C.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongoCfgConfigSet5_0_enterprise\0229\n\tresou" +
       "rces\030\003 \001(\0132&.yandex.cloud.mdb.mongodb.v1" +
       ".Resources\022O\n\025disk_size_autoscaling\030\004 \001(" +
       "\01320.yandex.cloud.mdb.mongodb.v1.DiskSize" +
-      "Autoscaling\"\366\t\n\nMongodb4_0\022>\n\006mongod\030\001 \001" +
+      "Autoscaling\"\366\t\n\nMongodb6_0\022>\n\006mongod\030\001 \001" +
       "(\0132..yandex.cloud.mdb.mongodb.v1.Mongodb" +
-      "4_0.Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex.cl" +
-      "oud.mdb.mongodb.v1.Mongodb4_0.MongoCfg\022>" +
+      "6_0.Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex.cl" +
+      "oud.mdb.mongodb.v1.Mongodb6_0.MongoCfg\022>" +
       "\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb.mongod" +
-      "b.v1.Mongodb4_0.Mongos\022F\n\nmongoinfra\030\004 \001" +
+      "b.v1.Mongodb6_0.Mongos\022F\n\nmongoinfra\030\004 \001" +
       "(\01322.yandex.cloud.mdb.mongodb.v1.Mongodb" +
-      "4_0.MongoInfra\032\334\001\n\006Mongod\022F\n\006config\030\001 \001(" +
+      "6_0.MongoInfra\032\334\001\n\006Mongod\022F\n\006config\030\001 \001(" +
       "\01326.yandex.cloud.mdb.mongodb.v1.config.M" +
-      "ongodConfigSet4_0\0229\n\tresources\030\002 \001(\0132&.y" +
+      "ongodConfigSet6_0\0229\n\tresources\030\002 \001(\0132&.y" +
       "andex.cloud.mdb.mongodb.v1.Resources\022O\n\025" +
       "disk_size_autoscaling\030\003 \001(\01320.yandex.clo" +
       "ud.mdb.mongodb.v1.DiskSizeAutoscaling\032\340\001" +
       "\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yandex.clou" +
       "d.mdb.mongodb.v1.config.MongoCfgConfigSe" +
-      "t4_0\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.m" +
+      "t6_0\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.m" +
       "db.mongodb.v1.Resources\022O\n\025disk_size_aut" +
       "oscaling\030\003 \001(\01320.yandex.cloud.mdb.mongod" +
       "b.v1.DiskSizeAutoscaling\032\334\001\n\006Mongos\022F\n\006c" +
       "onfig\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v" +
-      "1.config.MongosConfigSet4_0\0229\n\tresources" +
+      "1.config.MongosConfigSet6_0\0229\n\tresources" +
       "\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Res" +
       "ources\022O\n\025disk_size_autoscaling\030\003 \001(\01320." +
       "yandex.cloud.mdb.mongodb.v1.DiskSizeAuto" +
       "scaling\032\272\002\n\nMongoInfra\022M\n\rconfig_mongos\030" +
       "\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.conf" +
-      "ig.MongosConfigSet4_0\022Q\n\017config_mongocfg" +
+      "ig.MongosConfigSet6_0\022Q\n\017config_mongocfg" +
       "\030\002 \001(\01328.yandex.cloud.mdb.mongodb.v1.con" +
-      "fig.MongoCfgConfigSet4_0\0229\n\tresources\030\003 " +
+      "fig.MongoCfgConfigSet6_0\0229\n\tresources\030\003 " +
       "\001(\0132&.yandex.cloud.mdb.mongodb.v1.Resour" +
       "ces\022O\n\025disk_size_autoscaling\030\004 \001(\01320.yan" +
       "dex.cloud.mdb.mongodb.v1.DiskSizeAutosca" +
-      "ling\"\366\t\n\nMongodb4_2\022>\n\006mongod\030\001 \001(\0132..ya" +
-      "ndex.cloud.mdb.mongodb.v1.Mongodb4_2.Mon" +
-      "god\022B\n\010mongocfg\030\002 \001(\01320.yandex.cloud.mdb" +
-      ".mongodb.v1.Mongodb4_2.MongoCfg\022>\n\006mongo" +
-      "s\030\003 \001(\0132..yandex.cloud.mdb.mongodb.v1.Mo" +
-      "ngodb4_2.Mongos\022F\n\nmongoinfra\030\004 \001(\01322.ya" +
-      "ndex.cloud.mdb.mongodb.v1.Mongodb4_2.Mon" +
-      "goInfra\032\334\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yan" +
-      "dex.cloud.mdb.mongodb.v1.config.MongodCo" +
-      "nfigSet4_2\0229\n\tresources\030\002 \001(\0132&.yandex.c" +
-      "loud.mdb.mongodb.v1.Resources\022O\n\025disk_si" +
-      "ze_autoscaling\030\003 \001(\01320.yandex.cloud.mdb." +
-      "mongodb.v1.DiskSizeAutoscaling\032\340\001\n\010Mongo" +
-      "Cfg\022H\n\006config\030\001 \001(\01328.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongoCfgConfigSet4_2\0229\n" +
-      "\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mong" +
-      "odb.v1.Resources\022O\n\025disk_size_autoscalin" +
-      "g\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1.Di" +
-      "skSizeAutoscaling\032\334\001\n\006Mongos\022F\n\006config\030\001" +
-      " \001(\01326.yandex.cloud.mdb.mongodb.v1.confi" +
-      "g.MongosConfigSet4_2\0229\n\tresources\030\002 \001(\0132" +
-      "&.yandex.cloud.mdb.mongodb.v1.Resources\022" +
-      "O\n\025disk_size_autoscaling\030\003 \001(\01320.yandex." +
-      "cloud.mdb.mongodb.v1.DiskSizeAutoscaling" +
-      "\032\272\002\n\nMongoInfra\022M\n\rconfig_mongos\030\001 \001(\01326" +
-      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "osConfigSet4_2\022Q\n\017config_mongocfg\030\002 \001(\0132" +
-      "8.yandex.cloud.mdb.mongodb.v1.config.Mon" +
-      "goCfgConfigSet4_2\0229\n\tresources\030\003 \001(\0132&.y" +
-      "andex.cloud.mdb.mongodb.v1.Resources\022O\n\025" +
-      "disk_size_autoscaling\030\004 \001(\01320.yandex.clo" +
-      "ud.mdb.mongodb.v1.DiskSizeAutoscaling\"\366\t" +
-      "\n\nMongodb4_4\022>\n\006mongod\030\001 \001(\0132..yandex.cl" +
-      "oud.mdb.mongodb.v1.Mongodb4_4.Mongod\022B\n\010" +
-      "mongocfg\030\002 \001(\01320.yandex.cloud.mdb.mongod" +
-      "b.v1.Mongodb4_4.MongoCfg\022>\n\006mongos\030\003 \001(\013" +
-      "2..yandex.cloud.mdb.mongodb.v1.Mongodb4_" +
-      "4.Mongos\022F\n\nmongoinfra\030\004 \001(\01322.yandex.cl" +
-      "oud.mdb.mongodb.v1.Mongodb4_4.MongoInfra" +
-      "\032\334\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yandex.clo" +
-      "ud.mdb.mongodb.v1.config.MongodConfigSet" +
-      "4_4\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.md" +
-      "b.mongodb.v1.Resources\022O\n\025disk_size_auto" +
-      "scaling\030\003 \001(\01320.yandex.cloud.mdb.mongodb" +
-      ".v1.DiskSizeAutoscaling\032\340\001\n\010MongoCfg\022H\n\006" +
-      "config\030\001 \001(\01328.yandex.cloud.mdb.mongodb." +
-      "v1.config.MongoCfgConfigSet4_4\0229\n\tresour" +
-      "ces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1." +
-      "Resources\022O\n\025disk_size_autoscaling\030\003 \001(\013" +
-      "20.yandex.cloud.mdb.mongodb.v1.DiskSizeA" +
-      "utoscaling\032\334\001\n\006Mongos\022F\n\006config\030\001 \001(\01326." +
-      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
-      "sConfigSet4_4\0229\n\tresources\030\002 \001(\0132&.yande" +
-      "x.cloud.mdb.mongodb.v1.Resources\022O\n\025disk" +
-      "_size_autoscaling\030\003 \001(\01320.yandex.cloud.m" +
-      "db.mongodb.v1.DiskSizeAutoscaling\032\272\002\n\nMo" +
-      "ngoInfra\022M\n\rconfig_mongos\030\001 \001(\01326.yandex" +
-      ".cloud.mdb.mongodb.v1.config.MongosConfi" +
-      "gSet4_4\022Q\n\017config_mongocfg\030\002 \001(\01328.yande" +
-      "x.cloud.mdb.mongodb.v1.config.MongoCfgCo" +
-      "nfigSet4_4\0229\n\tresources\030\003 \001(\0132&.yandex.c" +
-      "loud.mdb.mongodb.v1.Resources\022O\n\025disk_si" +
-      "ze_autoscaling\030\004 \001(\01320.yandex.cloud.mdb." +
-      "mongodb.v1.DiskSizeAutoscaling\"\344\n\n\025Mongo" +
-      "db4_4_enterprise\022I\n\006mongod\030\001 \001(\01329.yande" +
-      "x.cloud.mdb.mongodb.v1.Mongodb4_4_enterp" +
-      "rise.Mongod\022M\n\010mongocfg\030\002 \001(\0132;.yandex.c" +
-      "loud.mdb.mongodb.v1.Mongodb4_4_enterpris" +
-      "e.MongoCfg\022I\n\006mongos\030\003 \001(\01329.yandex.clou" +
-      "d.mdb.mongodb.v1.Mongodb4_4_enterprise.M" +
-      "ongos\022Q\n\nmongoinfra\030\004 \001(\0132=.yandex.cloud" +
-      ".mdb.mongodb.v1.Mongodb4_4_enterprise.Mo" +
-      "ngoInfra\032\347\001\n\006Mongod\022Q\n\006config\030\001 \001(\0132A.ya" +
-      "ndex.cloud.mdb.mongodb.v1.config.MongodC" +
-      "onfigSet4_4_enterprise\0229\n\tresources\030\002 \001(" +
-      "\0132&.yandex.cloud.mdb.mongodb.v1.Resource" +
-      "s\022O\n\025disk_size_autoscaling\030\003 \001(\01320.yande" +
-      "x.cloud.mdb.mongodb.v1.DiskSizeAutoscali" +
-      "ng\032\353\001\n\010MongoCfg\022S\n\006config\030\001 \001(\0132C.yandex" +
-      ".cloud.mdb.mongodb.v1.config.MongoCfgCon" +
-      "figSet4_4_enterprise\0229\n\tresources\030\002 \001(\0132" +
-      "&.yandex.cloud.mdb.mongodb.v1.Resources\022" +
-      "O\n\025disk_size_autoscaling\030\003 \001(\01320.yandex." +
-      "cloud.mdb.mongodb.v1.DiskSizeAutoscaling" +
-      "\032\347\001\n\006Mongos\022Q\n\006config\030\001 \001(\0132A.yandex.clo" +
-      "ud.mdb.mongodb.v1.config.MongosConfigSet" +
-      "4_4_enterprise\0229\n\tresources\030\002 \001(\0132&.yand" +
-      "ex.cloud.mdb.mongodb.v1.Resources\022O\n\025dis" +
-      "k_size_autoscaling\030\003 \001(\01320.yandex.cloud." +
-      "mdb.mongodb.v1.DiskSizeAutoscaling\032\320\002\n\nM" +
-      "ongoInfra\022X\n\rconfig_mongos\030\001 \001(\0132A.yande" +
-      "x.cloud.mdb.mongodb.v1.config.MongosConf" +
-      "igSet4_4_enterprise\022\\\n\017config_mongocfg\030\002" +
-      " \001(\0132C.yandex.cloud.mdb.mongodb.v1.confi" +
-      "g.MongoCfgConfigSet4_4_enterprise\0229\n\tres" +
-      "ources\030\003 \001(\0132&.yandex.cloud.mdb.mongodb." +
-      "v1.Resources\022O\n\025disk_size_autoscaling\030\004 " +
-      "\001(\01320.yandex.cloud.mdb.mongodb.v1.DiskSi" +
-      "zeAutoscaling\"\366\t\n\nMongodb5_0\022>\n\006mongod\030\001" +
-      " \001(\0132..yandex.cloud.mdb.mongodb.v1.Mongo" +
-      "db5_0.Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex." +
-      "cloud.mdb.mongodb.v1.Mongodb5_0.MongoCfg" +
-      "\022>\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb.mong" +
-      "odb.v1.Mongodb5_0.Mongos\022F\n\nmongoinfra\030\004" +
-      " \001(\01322.yandex.cloud.mdb.mongodb.v1.Mongo" +
-      "db5_0.MongoInfra\032\334\001\n\006Mongod\022F\n\006config\030\001 " +
-      "\001(\01326.yandex.cloud.mdb.mongodb.v1.config" +
-      ".MongodConfigSet5_0\0229\n\tresources\030\002 \001(\0132&" +
-      ".yandex.cloud.mdb.mongodb.v1.Resources\022O" +
-      "\n\025disk_size_autoscaling\030\003 \001(\01320.yandex.c" +
-      "loud.mdb.mongodb.v1.DiskSizeAutoscaling\032" +
-      "\340\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yandex.cl" +
-      "oud.mdb.mongodb.v1.config.MongoCfgConfig" +
-      "Set5_0\0229\n\tresources\030\002 \001(\0132&.yandex.cloud" +
-      ".mdb.mongodb.v1.Resources\022O\n\025disk_size_a" +
-      "utoscaling\030\003 \001(\01320.yandex.cloud.mdb.mong" +
-      "odb.v1.DiskSizeAutoscaling\032\334\001\n\006Mongos\022F\n" +
-      "\006config\030\001 \001(\01326.yandex.cloud.mdb.mongodb" +
-      ".v1.config.MongosConfigSet5_0\0229\n\tresourc" +
-      "es\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.R" +
-      "esources\022O\n\025disk_size_autoscaling\030\003 \001(\0132" +
-      "0.yandex.cloud.mdb.mongodb.v1.DiskSizeAu" +
-      "toscaling\032\272\002\n\nMongoInfra\022M\n\rconfig_mongo" +
-      "s\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.co" +
-      "nfig.MongosConfigSet5_0\022Q\n\017config_mongoc" +
-      "fg\030\002 \001(\01328.yandex.cloud.mdb.mongodb.v1.c" +
-      "onfig.MongoCfgConfigSet5_0\0229\n\tresources\030" +
-      "\003 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Reso" +
-      "urces\022O\n\025disk_size_autoscaling\030\004 \001(\01320.y" +
-      "andex.cloud.mdb.mongodb.v1.DiskSizeAutos" +
-      "caling\"\344\n\n\025Mongodb5_0_enterprise\022I\n\006mong" +
-      "od\030\001 \001(\01329.yandex.cloud.mdb.mongodb.v1.M" +
-      "ongodb5_0_enterprise.Mongod\022M\n\010mongocfg\030" +
-      "\002 \001(\0132;.yandex.cloud.mdb.mongodb.v1.Mong" +
-      "odb5_0_enterprise.MongoCfg\022I\n\006mongos\030\003 \001" +
-      "(\01329.yandex.cloud.mdb.mongodb.v1.Mongodb" +
-      "5_0_enterprise.Mongos\022Q\n\nmongoinfra\030\004 \001(" +
-      "\0132=.yandex.cloud.mdb.mongodb.v1.Mongodb5" +
-      "_0_enterprise.MongoInfra\032\347\001\n\006Mongod\022Q\n\006c" +
-      "onfig\030\001 \001(\0132A.yandex.cloud.mdb.mongodb.v" +
-      "1.config.MongodConfigSet5_0_enterprise\0229" +
-      "\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mon" +
-      "godb.v1.Resources\022O\n\025disk_size_autoscali" +
-      "ng\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1.D" +
-      "iskSizeAutoscaling\032\353\001\n\010MongoCfg\022S\n\006confi" +
-      "g\030\001 \001(\0132C.yandex.cloud.mdb.mongodb.v1.co" +
-      "nfig.MongoCfgConfigSet5_0_enterprise\0229\n\t" +
+      "ling\"\344\n\n\025Mongodb6_0_enterprise\022I\n\006mongod" +
+      "\030\001 \001(\01329.yandex.cloud.mdb.mongodb.v1.Mon" +
+      "godb6_0_enterprise.Mongod\022M\n\010mongocfg\030\002 " +
+      "\001(\0132;.yandex.cloud.mdb.mongodb.v1.Mongod" +
+      "b6_0_enterprise.MongoCfg\022I\n\006mongos\030\003 \001(\013" +
+      "29.yandex.cloud.mdb.mongodb.v1.Mongodb6_" +
+      "0_enterprise.Mongos\022Q\n\nmongoinfra\030\004 \001(\0132" +
+      "=.yandex.cloud.mdb.mongodb.v1.Mongodb6_0" +
+      "_enterprise.MongoInfra\032\347\001\n\006Mongod\022Q\n\006con" +
+      "fig\030\001 \001(\0132A.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongodConfigSet6_0_enterprise\0229\n\t" +
       "resources\030\002 \001(\0132&.yandex.cloud.mdb.mongo" +
       "db.v1.Resources\022O\n\025disk_size_autoscaling" +
       "\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1.Dis" +
-      "kSizeAutoscaling\032\347\001\n\006Mongos\022Q\n\006config\030\001 " +
-      "\001(\0132A.yandex.cloud.mdb.mongodb.v1.config" +
-      ".MongosConfigSet5_0_enterprise\0229\n\tresour" +
-      "ces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1." +
-      "Resources\022O\n\025disk_size_autoscaling\030\003 \001(\013" +
-      "20.yandex.cloud.mdb.mongodb.v1.DiskSizeA" +
-      "utoscaling\032\320\002\n\nMongoInfra\022X\n\rconfig_mong" +
-      "os\030\001 \001(\0132A.yandex.cloud.mdb.mongodb.v1.c" +
-      "onfig.MongosConfigSet5_0_enterprise\022\\\n\017c" +
-      "onfig_mongocfg\030\002 \001(\0132C.yandex.cloud.mdb." +
-      "mongodb.v1.config.MongoCfgConfigSet5_0_e" +
-      "nterprise\0229\n\tresources\030\003 \001(\0132&.yandex.cl" +
-      "oud.mdb.mongodb.v1.Resources\022O\n\025disk_siz" +
-      "e_autoscaling\030\004 \001(\01320.yandex.cloud.mdb.m" +
-      "ongodb.v1.DiskSizeAutoscaling\"\366\t\n\nMongod" +
-      "b6_0\022>\n\006mongod\030\001 \001(\0132..yandex.cloud.mdb." +
-      "mongodb.v1.Mongodb6_0.Mongod\022B\n\010mongocfg" +
-      "\030\002 \001(\01320.yandex.cloud.mdb.mongodb.v1.Mon" +
-      "godb6_0.MongoCfg\022>\n\006mongos\030\003 \001(\0132..yande" +
-      "x.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos" +
-      "\022F\n\nmongoinfra\030\004 \001(\01322.yandex.cloud.mdb." +
-      "mongodb.v1.Mongodb6_0.MongoInfra\032\334\001\n\006Mon" +
-      "god\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongodConfigSet6_0\0229\n\tr" +
-      "esources\030\002 \001(\0132&.yandex.cloud.mdb.mongod" +
-      "b.v1.Resources\022O\n\025disk_size_autoscaling\030" +
-      "\003 \001(\01320.yandex.cloud.mdb.mongodb.v1.Disk" +
-      "SizeAutoscaling\032\340\001\n\010MongoCfg\022H\n\006config\030\001" +
-      " \001(\01328.yandex.cloud.mdb.mongodb.v1.confi" +
-      "g.MongoCfgConfigSet6_0\0229\n\tresources\030\002 \001(" +
-      "\0132&.yandex.cloud.mdb.mongodb.v1.Resource" +
-      "s\022O\n\025disk_size_autoscaling\030\003 \001(\01320.yande" +
-      "x.cloud.mdb.mongodb.v1.DiskSizeAutoscali" +
-      "ng\032\334\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.yandex.c" +
-      "loud.mdb.mongodb.v1.config.MongosConfigS" +
-      "et6_0\0229\n\tresources\030\002 \001(\0132&.yandex.cloud." +
-      "mdb.mongodb.v1.Resources\022O\n\025disk_size_au" +
-      "toscaling\030\003 \001(\01320.yandex.cloud.mdb.mongo" +
-      "db.v1.DiskSizeAutoscaling\032\272\002\n\nMongoInfra" +
-      "\022M\n\rconfig_mongos\030\001 \001(\01326.yandex.cloud.m" +
-      "db.mongodb.v1.config.MongosConfigSet6_0\022" +
-      "Q\n\017config_mongocfg\030\002 \001(\01328.yandex.cloud." +
-      "mdb.mongodb.v1.config.MongoCfgConfigSet6" +
-      "_0\0229\n\tresources\030\003 \001(\0132&.yandex.cloud.mdb" +
-      ".mongodb.v1.Resources\022O\n\025disk_size_autos" +
-      "caling\030\004 \001(\01320.yandex.cloud.mdb.mongodb." +
-      "v1.DiskSizeAutoscaling\"\344\n\n\025Mongodb6_0_en" +
-      "terprise\022I\n\006mongod\030\001 \001(\01329.yandex.cloud." +
-      "mdb.mongodb.v1.Mongodb6_0_enterprise.Mon" +
-      "god\022M\n\010mongocfg\030\002 \001(\0132;.yandex.cloud.mdb" +
-      ".mongodb.v1.Mongodb6_0_enterprise.MongoC" +
-      "fg\022I\n\006mongos\030\003 \001(\01329.yandex.cloud.mdb.mo" +
-      "ngodb.v1.Mongodb6_0_enterprise.Mongos\022Q\n" +
-      "\nmongoinfra\030\004 \001(\0132=.yandex.cloud.mdb.mon" +
-      "godb.v1.Mongodb6_0_enterprise.MongoInfra" +
-      "\032\347\001\n\006Mongod\022Q\n\006config\030\001 \001(\0132A.yandex.clo" +
-      "ud.mdb.mongodb.v1.config.MongodConfigSet" +
-      "6_0_enterprise\0229\n\tresources\030\002 \001(\0132&.yand" +
-      "ex.cloud.mdb.mongodb.v1.Resources\022O\n\025dis" +
-      "k_size_autoscaling\030\003 \001(\01320.yandex.cloud." +
-      "mdb.mongodb.v1.DiskSizeAutoscaling\032\353\001\n\010M" +
-      "ongoCfg\022S\n\006config\030\001 \001(\0132C.yandex.cloud.m" +
-      "db.mongodb.v1.config.MongoCfgConfigSet6_" +
-      "0_enterprise\0229\n\tresources\030\002 \001(\0132&.yandex" +
-      ".cloud.mdb.mongodb.v1.Resources\022O\n\025disk_" +
-      "size_autoscaling\030\003 \001(\01320.yandex.cloud.md" +
-      "b.mongodb.v1.DiskSizeAutoscaling\032\347\001\n\006Mon" +
-      "gos\022Q\n\006config\030\001 \001(\0132A.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongosConfigSet6_0_ente" +
-      "rprise\0229\n\tresources\030\002 \001(\0132&.yandex.cloud" +
-      ".mdb.mongodb.v1.Resources\022O\n\025disk_size_a" +
-      "utoscaling\030\003 \001(\01320.yandex.cloud.mdb.mong" +
-      "odb.v1.DiskSizeAutoscaling\032\320\002\n\nMongoInfr" +
-      "a\022X\n\rconfig_mongos\030\001 \001(\0132A.yandex.cloud." +
-      "mdb.mongodb.v1.config.MongosConfigSet6_0" +
-      "_enterprise\022\\\n\017config_mongocfg\030\002 \001(\0132C.y" +
-      "andex.cloud.mdb.mongodb.v1.config.MongoC" +
-      "fgConfigSet6_0_enterprise\0229\n\tresources\030\003" +
-      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
-      "rces\022O\n\025disk_size_autoscaling\030\004 \001(\01320.ya" +
-      "ndex.cloud.mdb.mongodb.v1.DiskSizeAutosc" +
-      "aling\"\330\t\n\007Mongodb\022;\n\006mongod\030\001 \001(\0132+.yand" +
-      "ex.cloud.mdb.mongodb.v1.Mongodb.Mongod\022?" +
-      "\n\010mongocfg\030\002 \001(\0132-.yandex.cloud.mdb.mong" +
-      "odb.v1.Mongodb.MongoCfg\022;\n\006mongos\030\003 \001(\0132" +
-      "+.yandex.cloud.mdb.mongodb.v1.Mongodb.Mo" +
-      "ngos\022C\n\nmongoinfra\030\004 \001(\0132/.yandex.cloud." +
-      "mdb.mongodb.v1.Mongodb.MongoInfra\032\331\001\n\006Mo" +
-      "ngod\022C\n\006config\030\001 \001(\01323.yandex.cloud.mdb." +
-      "mongodb.v1.config.MongodConfigSet\0229\n\tres" +
-      "ources\030\002 \001(\0132&.yandex.cloud.mdb.mongodb." +
-      "v1.Resources\022O\n\025disk_size_autoscaling\030\003 " +
-      "\001(\01320.yandex.cloud.mdb.mongodb.v1.DiskSi" +
-      "zeAutoscaling\032\335\001\n\010MongoCfg\022E\n\006config\030\001 \001" +
-      "(\01325.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongoCfgConfigSet\0229\n\tresources\030\002 \001(\0132&.y" +
-      "andex.cloud.mdb.mongodb.v1.Resources\022O\n\025" +
-      "disk_size_autoscaling\030\003 \001(\01320.yandex.clo" +
-      "ud.mdb.mongodb.v1.DiskSizeAutoscaling\032\331\001" +
-      "\n\006Mongos\022C\n\006config\030\001 \001(\01323.yandex.cloud." +
-      "mdb.mongodb.v1.config.MongosConfigSet\0229\n" +
-      "\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mong" +
-      "odb.v1.Resources\022O\n\025disk_size_autoscalin" +
-      "g\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1.Di" +
-      "skSizeAutoscaling\032\264\002\n\nMongoInfra\022J\n\rconf" +
-      "ig_mongos\030\001 \001(\01323.yandex.cloud.mdb.mongo" +
-      "db.v1.config.MongosConfigSet\022N\n\017config_m" +
-      "ongocfg\030\002 \001(\01325.yandex.cloud.mdb.mongodb",
-      ".v1.config.MongoCfgConfigSet\0229\n\tresource" +
-      "s\030\003 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
-      "sources\022O\n\025disk_size_autoscaling\030\004 \001(\01320" +
+      "kSizeAutoscaling\032\353\001\n\010MongoCfg\022S\n\006config\030" +
+      "\001 \001(\0132C.yandex.cloud.mdb.mongodb.v1.conf" +
+      "ig.MongoCfgConfigSet6_0_enterprise\0229\n\tre" +
+      "sources\030\002 \001(\0132&.yandex.cloud.mdb.mongodb" +
+      ".v1.Resources\022O\n\025disk_size_autoscaling\030\003" +
+      " \001(\01320.yandex.cloud.mdb.mongodb.v1.DiskS" +
+      "izeAutoscaling\032\347\001\n\006Mongos\022Q\n\006config\030\001 \001(" +
+      "\0132A.yandex.cloud.mdb.mongodb.v1.config.M" +
+      "ongosConfigSet6_0_enterprise\0229\n\tresource" +
+      "s\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
+      "sources\022O\n\025disk_size_autoscaling\030\003 \001(\01320" +
       ".yandex.cloud.mdb.mongodb.v1.DiskSizeAut" +
-      "oscaling\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\nclust" +
-      "er_id\030\002 \001(\t\"\363\006\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncl" +
-      "uster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0229\n\tresou" +
-      "rces\030\004 \001(\0132&.yandex.cloud.mdb.mongodb.v1" +
-      ".Resources\0224\n\004role\030\005 \001(\0162&.yandex.cloud." +
-      "mdb.mongodb.v1.Host.Role\0228\n\006health\030\006 \001(\016" +
-      "2(.yandex.cloud.mdb.mongodb.v1.Host.Heal" +
-      "th\0226\n\010services\030\007 \003(\0132$.yandex.cloud.mdb." +
-      "mongodb.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n" +
-      "\020assign_public_ip\030\t \001(\010\022\022\n\nshard_name\030\n " +
-      "\001(\t\0224\n\004type\030\013 \001(\0162&.yandex.cloud.mdb.mon" +
-      "godb.v1.Host.Type\022I\n\017host_parameters\030\014 \001" +
-      "(\01320.yandex.cloud.mdb.mongodb.v1.Host.Ho" +
-      "stParameters\032\307\001\n\016HostParameters\022\016\n\006hidde" +
-      "n\030\001 \001(\010\022\034\n\024secondary_delay_secs\030\002 \001(\003\022\020\n" +
-      "\010priority\030\003 \001(\001\022H\n\004tags\030\004 \003(\0132:.yandex.c" +
-      "loud.mdb.mongodb.v1.Host.HostParameters." +
-      "TagsEntry\032+\n\tTagsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"R\n\004Type\022\024\n\020TYPE_UNSPECIFI" +
-      "ED\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGOS\020\002\022\014\n\010MONGOCFG" +
-      "\020\003\022\016\n\nMONGOINFRA\020\004\"4\n\004Role\022\020\n\014ROLE_UNKNO" +
-      "WN\020\000\022\013\n\007PRIMARY\020\001\022\r\n\tSECONDARY\020\002\"?\n\006Heal" +
-      "th\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEA" +
-      "D\020\002\022\014\n\010DEGRADED\020\003\"\366\001\n\007Service\0227\n\004type\030\001 " +
-      "\001(\0162).yandex.cloud.mdb.mongodb.v1.Servic" +
-      "e.Type\022;\n\006health\030\002 \001(\0162+.yandex.cloud.md" +
-      "b.mongodb.v1.Service.Health\"B\n\004Type\022\024\n\020T" +
-      "YPE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGOS\020" +
-      "\002\022\014\n\010MONGOCFG\020\003\"1\n\006Health\022\022\n\016HEALTH_UNKN" +
-      "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022" +
-      "\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size" +
-      "\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"C\n\006Access\022\021" +
-      "\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n\rda" +
-      "ta_transfer\030\003 \001(\010\"9\n\034PerformanceDiagnost" +
-      "icsConfig\022\031\n\021profiling_enabled\030\001 \001(\010\"\347\001\n" +
-      "\023DiskSizeAutoscaling\022K\n\027planned_usage_th" +
-      "reshold\030\001 \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\r\350\3071\000\372\3071\0050-100\022M\n\031emergency_usage_thr" +
-      "eshold\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\r\350\3071\000\372\3071\0050-100\0224\n\017disk_size_limit\030\003 \001(" +
-      "\0132\033.google.protobuf.Int64ValueBj\n\037yandex" +
-      ".cloud.api.mdb.mongodb.v1ZGgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
-      "mongodb/v1;mongodbb\006proto3"
+      "oscaling\032\320\002\n\nMongoInfra\022X\n\rconfig_mongos" +
+      "\030\001 \001(\0132A.yandex.cloud.mdb.mongodb.v1.con" +
+      "fig.MongosConfigSet6_0_enterprise\022\\\n\017con" +
+      "fig_mongocfg\030\002 \001(\0132C.yandex.cloud.mdb.mo" +
+      "ngodb.v1.config.MongoCfgConfigSet6_0_ent" +
+      "erprise\0229\n\tresources\030\003 \001(\0132&.yandex.clou" +
+      "d.mdb.mongodb.v1.Resources\022O\n\025disk_size_" +
+      "autoscaling\030\004 \001(\01320.yandex.cloud.mdb.mon" +
+      "godb.v1.DiskSizeAutoscaling\"\330\t\n\007Mongodb\022" +
+      ";\n\006mongod\030\001 \001(\0132+.yandex.cloud.mdb.mongo" +
+      "db.v1.Mongodb.Mongod\022?\n\010mongocfg\030\002 \001(\0132-" +
+      ".yandex.cloud.mdb.mongodb.v1.Mongodb.Mon" +
+      "goCfg\022;\n\006mongos\030\003 \001(\0132+.yandex.cloud.mdb" +
+      ".mongodb.v1.Mongodb.Mongos\022C\n\nmongoinfra" +
+      "\030\004 \001(\0132/.yandex.cloud.mdb.mongodb.v1.Mon" +
+      "godb.MongoInfra\032\331\001\n\006Mongod\022C\n\006config\030\001 \001" +
+      "(\01323.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongodConfigSet\0229\n\tresources\030\002 \001(\0132&.yan" +
+      "dex.cloud.mdb.mongodb.v1.Resources\022O\n\025di" +
+      "sk_size_autoscaling\030\003 \001(\01320.yandex.cloud" +
+      ".mdb.mongodb.v1.DiskSizeAutoscaling\032\335\001\n\010" +
+      "MongoCfg\022E\n\006config\030\001 \001(\01325.yandex.cloud." +
+      "mdb.mongodb.v1.config.MongoCfgConfigSet\022" +
+      "9\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mo" +
+      "ngodb.v1.Resources\022O\n\025disk_size_autoscal" +
+      "ing\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1." +
+      "DiskSizeAutoscaling\032\331\001\n\006Mongos\022C\n\006config" +
+      "\030\001 \001(\01323.yandex.cloud.mdb.mongodb.v1.con" +
+      "fig.MongosConfigSet\0229\n\tresources\030\002 \001(\0132&" +
+      ".yandex.cloud.mdb.mongodb.v1.Resources\022O" +
+      "\n\025disk_size_autoscaling\030\003 \001(\01320.yandex.c" +
+      "loud.mdb.mongodb.v1.DiskSizeAutoscaling\032" +
+      "\264\002\n\nMongoInfra\022J\n\rconfig_mongos\030\001 \001(\01323." +
+      "yandex.cloud.mdb.mongodb.v1.config.Mongo",
+      "sConfigSet\022N\n\017config_mongocfg\030\002 \001(\01325.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongoCf" +
+      "gConfigSet\0229\n\tresources\030\003 \001(\0132&.yandex.c" +
+      "loud.mdb.mongodb.v1.Resources\022O\n\025disk_si" +
+      "ze_autoscaling\030\004 \001(\01320.yandex.cloud.mdb." +
+      "mongodb.v1.DiskSizeAutoscaling\")\n\005Shard\022" +
+      "\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\363\006\n\004Ho" +
+      "st\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007" +
+      "zone_id\030\003 \001(\t\0229\n\tresources\030\004 \001(\0132&.yande" +
+      "x.cloud.mdb.mongodb.v1.Resources\0224\n\004role" +
+      "\030\005 \001(\0162&.yandex.cloud.mdb.mongodb.v1.Hos" +
+      "t.Role\0228\n\006health\030\006 \001(\0162(.yandex.cloud.md" +
+      "b.mongodb.v1.Host.Health\0226\n\010services\030\007 \003" +
+      "(\0132$.yandex.cloud.mdb.mongodb.v1.Service" +
+      "\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public_ip\030" +
+      "\t \001(\010\022\022\n\nshard_name\030\n \001(\t\0224\n\004type\030\013 \001(\0162" +
+      "&.yandex.cloud.mdb.mongodb.v1.Host.Type\022" +
+      "I\n\017host_parameters\030\014 \001(\01320.yandex.cloud." +
+      "mdb.mongodb.v1.Host.HostParameters\032\307\001\n\016H" +
+      "ostParameters\022\016\n\006hidden\030\001 \001(\010\022\034\n\024seconda" +
+      "ry_delay_secs\030\002 \001(\003\022\020\n\010priority\030\003 \001(\001\022H\n" +
+      "\004tags\030\004 \003(\0132:.yandex.cloud.mdb.mongodb.v" +
+      "1.Host.HostParameters.TagsEntry\032+\n\tTagsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"R\n\004" +
+      "Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n" +
+      "\n\006MONGOS\020\002\022\014\n\010MONGOCFG\020\003\022\016\n\nMONGOINFRA\020\004" +
+      "\"4\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\013\n\007PRIMARY\020\001\022" +
+      "\r\n\tSECONDARY\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNO" +
+      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"" +
+      "\366\001\n\007Service\0227\n\004type\030\001 \001(\0162).yandex.cloud" +
+      ".mdb.mongodb.v1.Service.Type\022;\n\006health\030\002" +
+      " \001(\0162+.yandex.cloud.mdb.mongodb.v1.Servi" +
+      "ce.Health\"B\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022" +
+      "\n\n\006MONGOD\020\001\022\n\n\006MONGOS\020\002\022\014\n\010MONGOCFG\020\003\"1\n" +
+      "\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010" +
+      "\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_preset" +
+      "_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_typ" +
+      "e_id\030\003 \001(\t\"C\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022" +
+      "\017\n\007web_sql\030\002 \001(\010\022\025\n\rdata_transfer\030\003 \001(\010\"" +
+      "9\n\034PerformanceDiagnosticsConfig\022\031\n\021profi" +
+      "ling_enabled\030\001 \001(\010\"\347\001\n\023DiskSizeAutoscali" +
+      "ng\022K\n\027planned_usage_threshold\030\001 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\022" +
+      "M\n\031emergency_usage_threshold\030\002 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\0224" +
+      "\n\017disk_size_limit\030\003 \001(\0132\033.google.protobu" +
+      "f.Int64ValueBj\n\037yandex.cloud.api.mdb.mon" +
+      "godb.v1ZGgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/mdb/mongodb/v1;mongodb" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -85073,7 +85338,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "DeletionProtection", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "DeletionProtection", "DiskEncryptionKeyId", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_LabelsEntry_fieldAccessorTable = new

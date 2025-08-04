@@ -2684,6 +2684,39 @@ public final class Mysql57 {
      * @return The innodbChangeBuffering.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering getInnodbChangeBuffering();
+
+    /**
+     * <pre>
+     * Permit some pending read lock requests interval
+     * P.S. Should be UInt64, but java fails to handle UInt64 limits
+     * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+     * @return Whether the maxWriteLockCount field is set.
+     */
+    boolean hasMaxWriteLockCount();
+    /**
+     * <pre>
+     * Permit some pending read lock requests interval
+     * P.S. Should be UInt64, but java fails to handle UInt64 limits
+     * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+     * @return The maxWriteLockCount.
+     */
+    com.google.protobuf.Int64Value getMaxWriteLockCount();
+    /**
+     * <pre>
+     * Permit some pending read lock requests interval
+     * P.S. Should be UInt64, but java fails to handle UInt64 limits
+     * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxWriteLockCountOrBuilder();
   }
   /**
    * <pre>
@@ -3866,6 +3899,19 @@ public final class Mysql57 {
               int rawValue = input.readEnum();
 
               innodbChangeBuffering_ = rawValue;
+              break;
+            }
+            case 738: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxWriteLockCount_ != null) {
+                subBuilder = maxWriteLockCount_.toBuilder();
+              }
+              maxWriteLockCount_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxWriteLockCount_);
+                maxWriteLockCount_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -9254,6 +9300,50 @@ public final class Mysql57 {
       return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering.UNRECOGNIZED : result;
     }
 
+    public static final int MAX_WRITE_LOCK_COUNT_FIELD_NUMBER = 92;
+    private com.google.protobuf.Int64Value maxWriteLockCount_;
+    /**
+     * <pre>
+     * Permit some pending read lock requests interval
+     * P.S. Should be UInt64, but java fails to handle UInt64 limits
+     * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+     * @return Whether the maxWriteLockCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxWriteLockCount() {
+      return maxWriteLockCount_ != null;
+    }
+    /**
+     * <pre>
+     * Permit some pending read lock requests interval
+     * P.S. Should be UInt64, but java fails to handle UInt64 limits
+     * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+     * @return The maxWriteLockCount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxWriteLockCount() {
+      return maxWriteLockCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxWriteLockCount_;
+    }
+    /**
+     * <pre>
+     * Permit some pending read lock requests interval
+     * P.S. Should be UInt64, but java fails to handle UInt64 limits
+     * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxWriteLockCountOrBuilder() {
+      return getMaxWriteLockCount();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9549,6 +9639,9 @@ public final class Mysql57 {
       }
       if (innodbChangeBuffering_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering.INNODB_CHANGE_BUFFERING_UNSPECIFIED.getNumber()) {
         output.writeEnum(91, innodbChangeBuffering_);
+      }
+      if (maxWriteLockCount_ != null) {
+        output.writeMessage(92, getMaxWriteLockCount());
       }
       unknownFields.writeTo(output);
     }
@@ -9934,6 +10027,10 @@ public final class Mysql57 {
       if (innodbChangeBuffering_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering.INNODB_CHANGE_BUFFERING_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(91, innodbChangeBuffering_);
+      }
+      if (maxWriteLockCount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(92, getMaxWriteLockCount());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10353,6 +10450,11 @@ public final class Mysql57 {
             .equals(other.getMdbForceSsl())) return false;
       }
       if (innodbChangeBuffering_ != other.innodbChangeBuffering_) return false;
+      if (hasMaxWriteLockCount() != other.hasMaxWriteLockCount()) return false;
+      if (hasMaxWriteLockCount()) {
+        if (!getMaxWriteLockCount()
+            .equals(other.getMaxWriteLockCount())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10704,6 +10806,10 @@ public final class Mysql57 {
       }
       hash = (37 * hash) + INNODB_CHANGE_BUFFERING_FIELD_NUMBER;
       hash = (53 * hash) + innodbChangeBuffering_;
+      if (hasMaxWriteLockCount()) {
+        hash = (37 * hash) + MAX_WRITE_LOCK_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxWriteLockCount().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11331,6 +11437,12 @@ public final class Mysql57 {
         }
         innodbChangeBuffering_ = 0;
 
+        if (maxWriteLockCountBuilder_ == null) {
+          maxWriteLockCount_ = null;
+        } else {
+          maxWriteLockCount_ = null;
+          maxWriteLockCountBuilder_ = null;
+        }
         return this;
       }
 
@@ -11765,6 +11877,11 @@ public final class Mysql57 {
           result.mdbForceSsl_ = mdbForceSslBuilder_.build();
         }
         result.innodbChangeBuffering_ = innodbChangeBuffering_;
+        if (maxWriteLockCountBuilder_ == null) {
+          result.maxWriteLockCount_ = maxWriteLockCount_;
+        } else {
+          result.maxWriteLockCount_ = maxWriteLockCountBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -12103,6 +12220,9 @@ public final class Mysql57 {
         }
         if (other.innodbChangeBuffering_ != 0) {
           setInnodbChangeBufferingValue(other.getInnodbChangeBufferingValue());
+        }
+        if (other.hasMaxWriteLockCount()) {
+          mergeMaxWriteLockCount(other.getMaxWriteLockCount());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -26175,6 +26295,179 @@ public final class Mysql57 {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Int64Value maxWriteLockCount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxWriteLockCountBuilder_;
+      /**
+       * <pre>
+       * Permit some pending read lock requests interval
+       * P.S. Should be UInt64, but java fails to handle UInt64 limits
+       * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return Whether the maxWriteLockCount field is set.
+       */
+      public boolean hasMaxWriteLockCount() {
+        return maxWriteLockCountBuilder_ != null || maxWriteLockCount_ != null;
+      }
+      /**
+       * <pre>
+       * Permit some pending read lock requests interval
+       * P.S. Should be UInt64, but java fails to handle UInt64 limits
+       * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The maxWriteLockCount.
+       */
+      public com.google.protobuf.Int64Value getMaxWriteLockCount() {
+        if (maxWriteLockCountBuilder_ == null) {
+          return maxWriteLockCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxWriteLockCount_;
+        } else {
+          return maxWriteLockCountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Permit some pending read lock requests interval
+       * P.S. Should be UInt64, but java fails to handle UInt64 limits
+       * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       */
+      public Builder setMaxWriteLockCount(com.google.protobuf.Int64Value value) {
+        if (maxWriteLockCountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxWriteLockCount_ = value;
+          onChanged();
+        } else {
+          maxWriteLockCountBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permit some pending read lock requests interval
+       * P.S. Should be UInt64, but java fails to handle UInt64 limits
+       * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       */
+      public Builder setMaxWriteLockCount(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxWriteLockCountBuilder_ == null) {
+          maxWriteLockCount_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxWriteLockCountBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permit some pending read lock requests interval
+       * P.S. Should be UInt64, but java fails to handle UInt64 limits
+       * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       */
+      public Builder mergeMaxWriteLockCount(com.google.protobuf.Int64Value value) {
+        if (maxWriteLockCountBuilder_ == null) {
+          if (maxWriteLockCount_ != null) {
+            maxWriteLockCount_ =
+              com.google.protobuf.Int64Value.newBuilder(maxWriteLockCount_).mergeFrom(value).buildPartial();
+          } else {
+            maxWriteLockCount_ = value;
+          }
+          onChanged();
+        } else {
+          maxWriteLockCountBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permit some pending read lock requests interval
+       * P.S. Should be UInt64, but java fails to handle UInt64 limits
+       * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       */
+      public Builder clearMaxWriteLockCount() {
+        if (maxWriteLockCountBuilder_ == null) {
+          maxWriteLockCount_ = null;
+          onChanged();
+        } else {
+          maxWriteLockCount_ = null;
+          maxWriteLockCountBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permit some pending read lock requests interval
+       * P.S. Should be UInt64, but java fails to handle UInt64 limits
+       * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxWriteLockCountBuilder() {
+        
+        onChanged();
+        return getMaxWriteLockCountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Permit some pending read lock requests interval
+       * P.S. Should be UInt64, but java fails to handle UInt64 limits
+       * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxWriteLockCountOrBuilder() {
+        if (maxWriteLockCountBuilder_ != null) {
+          return maxWriteLockCountBuilder_.getMessageOrBuilder();
+        } else {
+          return maxWriteLockCount_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxWriteLockCount_;
+        }
+      }
+      /**
+       * <pre>
+       * Permit some pending read lock requests interval
+       * P.S. Should be UInt64, but java fails to handle UInt64 limits
+       * For details, see [Percona documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_write_lock_count = 92 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxWriteLockCountFieldBuilder() {
+        if (maxWriteLockCountBuilder_ == null) {
+          maxWriteLockCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxWriteLockCount(),
+                  getParentForChildren(),
+                  isClean());
+          maxWriteLockCount_ = null;
+        }
+        return maxWriteLockCountBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -27472,7 +27765,7 @@ public final class Mysql57 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "5_7.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\245B\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\351B\n\016MysqlConf" +
       "ig5_7\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -27637,64 +27930,65 @@ public final class Mysql57 {
       "google.protobuf.BoolValue\022g\n\027innodb_chan" +
       "ge_buffering\030[ \001(\0162F.yandex.cloud.mdb.my" +
       "sql.v1.config.MysqlConfig5_7.InnodbChang" +
-      "eBuffering\"\231\005\n\007SQLMode\022\027\n\023SQLMODE_UNSPEC" +
-      "IFIED\020\000\022\027\n\023ALLOW_INVALID_DATES\020\001\022\017\n\013ANSI" +
-      "_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISION_BY_ZERO\020" +
-      "\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014IGNORE_SPA" +
-      "CE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BA" +
-      "CKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE_SUBSTITUT" +
-      "ION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO" +
-      "_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022\024\n\020NO_" +
-      "FIELD_OPTIONS\020\014\022\022\n\016NO_KEY_OPTIONS\020\r\022\024\n\020N" +
-      "O_TABLE_OPTIONS\020\016\022\026\n\022ONLY_FULL_GROUP_BY\020" +
-      "\017\022\033\n\027PAD_CHAR_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_" +
-      "AS_CONCAT\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT" +
-      "_ALL_TABLES\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\010" +
-      "\n\004ANSI\020\025\022\017\n\013TRADITIONAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MA" +
-      "XDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010MYSQL323\020\032\022\013\n\007MYSQL4" +
-      "0\020\033\022\n\n\006ORACLE\020\034\022\016\n\nPOSTGRESQL\020\035\022\027\n\023NO_AU" +
-      "TO_CREATE_USER\020\036\022\024\n\020NO_DIR_IN_CREATE\020\037\"\243" +
-      "\001\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIED" +
-      "\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\035\n\025CACHING" +
-      "_SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017SHA256_PASSWORD\020" +
-      "\003\022\022\n\016MYSQL_NO_LOGIN\020\004\022\025\n\021MDB_IAMPROXY_AU" +
-      "TH\020\005\"x\n\024TransactionIsolation\022%\n!TRANSACT" +
-      "ION_ISOLATION_UNSPECIFIED\020\000\022\022\n\016READ_COMM" +
-      "ITTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014SERIALIZ" +
-      "ABLE\020\003\"U\n\016BinlogRowImage\022 \n\034BINLOG_ROW_I" +
-      "MAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020" +
-      "\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParallelType\022#\n\037SL" +
-      "AVE_PARALLEL_TYPE_UNSPECIFIED\020\000\022\014\n\010DATAB" +
-      "ASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017LogSlowRateT" +
-      "ype\022\"\n\036LOG_SLOW_RATE_TYPE_UNSPECIFIED\020\000\022" +
-      "\013\n\007SESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilte" +
-      "rType\022$\n LOG_SLOW_FILTER_TYPE_UNSPECIFIE" +
-      "D\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP" +
-      "_TABLE\020\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022\014\n\010FILES" +
-      "ORT\020\005\022\024\n\020FILESORT_ON_DISK\020\006\"\223\001\n#BinlogTr" +
-      "ansactionDependencyTracking\0226\n2BINLOG_TR" +
-      "ANSACTION_DEPENDENCY_TRACKING_UNSPECIFIE" +
-      "D\020\000\022\020\n\014COMMIT_ORDER\020\001\022\014\n\010WRITESET\020\002\022\024\n\020W" +
-      "RITESET_SESSION\020\003\"^\n\016AuditLogPolicy\022 \n\034A" +
-      "UDIT_LOG_POLICY_UNSPECIFIED\020\000\022\007\n\003ALL\020\001\022\n" +
-      "\n\006LOGINS\020\002\022\013\n\007QUERIES\020\003\022\010\n\004NONE\020\004\"\226\002\n\025In" +
-      "nodbChangeBuffering\022\'\n#INNODB_CHANGE_BUF" +
-      "FERING_UNSPECIFIED\020\000\022 \n\034INNODB_CHANGE_BU" +
-      "FFERING_NONE\020\001\022#\n\037INNODB_CHANGE_BUFFERIN" +
-      "G_INSERTS\020\002\022#\n\037INNODB_CHANGE_BUFFERING_D" +
-      "ELETES\020\003\022#\n\037INNODB_CHANGE_BUFFERING_CHAN" +
-      "GES\020\004\022\"\n\036INNODB_CHANGE_BUFFERING_PURGES\020" +
-      "\005\022\037\n\033INNODB_CHANGE_BUFFERING_ALL\020\006\"\360\001\n\021M" +
-      "ysqlConfigSet5_7\022J\n\020effective_config\030\001 \001" +
-      "(\01320.yandex.cloud.mdb.mysql.v1.config.My" +
-      "sqlConfig5_7\022E\n\013user_config\030\002 \001(\01320.yand" +
-      "ex.cloud.mdb.mysql.v1.config.MysqlConfig" +
-      "5_7\022H\n\016default_config\030\003 \001(\01320.yandex.clo" +
-      "ud.mdb.mysql.v1.config.MysqlConfig5_7Br\n" +
-      "$yandex.cloud.api.mdb.mysql.v1.configZJg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/mdb/mysql/v1/config;mysqlb\006proto" +
-      "3"
+      "eBuffering\022B\n\024max_write_lock_count\030\\ \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=1\"\231" +
+      "\005\n\007SQLMode\022\027\n\023SQLMODE_UNSPECIFIED\020\000\022\027\n\023A" +
+      "LLOW_INVALID_DATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n" +
+      "\032ERROR_FOR_DIVISION_BY_ZERO\020\003\022\027\n\023HIGH_NO" +
+      "T_PRECEDENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_A" +
+      "UTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BACKSLASH_ESCA" +
+      "PES\020\007\022\032\n\026NO_ENGINE_SUBSTITUTION\020\010\022\033\n\027NO_" +
+      "UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n" +
+      "\022\023\n\017NO_ZERO_IN_DATE\020\013\022\024\n\020NO_FIELD_OPTION" +
+      "S\020\014\022\022\n\016NO_KEY_OPTIONS\020\r\022\024\n\020NO_TABLE_OPTI" +
+      "ONS\020\016\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHA" +
+      "R_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022" +
+      "\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020" +
+      "\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\010\n\004ANSI\020\025\022\017\n\013" +
+      "TRADITIONAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MSS" +
+      "QL\020\031\022\014\n\010MYSQL323\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006ORACL" +
+      "E\020\034\022\016\n\nPOSTGRESQL\020\035\022\027\n\023NO_AUTO_CREATE_US" +
+      "ER\020\036\022\024\n\020NO_DIR_IN_CREATE\020\037\"\243\001\n\nAuthPlugi" +
+      "n\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_" +
+      "NATIVE_PASSWORD\020\001\022\035\n\025CACHING_SHA2_PASSWO" +
+      "RD\020\002\032\002\010\001\022\023\n\017SHA256_PASSWORD\020\003\022\022\n\016MYSQL_N" +
+      "O_LOGIN\020\004\022\025\n\021MDB_IAMPROXY_AUTH\020\005\"x\n\024Tran" +
+      "sactionIsolation\022%\n!TRANSACTION_ISOLATIO" +
+      "N_UNSPECIFIED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017R" +
+      "EPEATABLE_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016Bi" +
+      "nlogRowImage\022 \n\034BINLOG_ROW_IMAGE_UNSPECI" +
+      "FIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020" +
+      "\003\"Y\n\021SlaveParallelType\022#\n\037SLAVE_PARALLEL" +
+      "_TYPE_UNSPECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOG" +
+      "ICAL_CLOCK\020\002\"M\n\017LogSlowRateType\022\"\n\036LOG_S" +
+      "LOW_RATE_TYPE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001" +
+      "\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilterType\022$\n LOG" +
+      "_SLOW_FILTER_TYPE_UNSPECIFIED\020\000\022\r\n\tFULL_" +
+      "SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP_TABLE\020\003\022\025\n\021" +
+      "TMP_TABLE_ON_DISK\020\004\022\014\n\010FILESORT\020\005\022\024\n\020FIL" +
+      "ESORT_ON_DISK\020\006\"\223\001\n#BinlogTransactionDep" +
+      "endencyTracking\0226\n2BINLOG_TRANSACTION_DE" +
+      "PENDENCY_TRACKING_UNSPECIFIED\020\000\022\020\n\014COMMI" +
+      "T_ORDER\020\001\022\014\n\010WRITESET\020\002\022\024\n\020WRITESET_SESS" +
+      "ION\020\003\"^\n\016AuditLogPolicy\022 \n\034AUDIT_LOG_POL" +
+      "ICY_UNSPECIFIED\020\000\022\007\n\003ALL\020\001\022\n\n\006LOGINS\020\002\022\013" +
+      "\n\007QUERIES\020\003\022\010\n\004NONE\020\004\"\226\002\n\025InnodbChangeBu" +
+      "ffering\022\'\n#INNODB_CHANGE_BUFFERING_UNSPE" +
+      "CIFIED\020\000\022 \n\034INNODB_CHANGE_BUFFERING_NONE" +
+      "\020\001\022#\n\037INNODB_CHANGE_BUFFERING_INSERTS\020\002\022" +
+      "#\n\037INNODB_CHANGE_BUFFERING_DELETES\020\003\022#\n\037" +
+      "INNODB_CHANGE_BUFFERING_CHANGES\020\004\022\"\n\036INN" +
+      "ODB_CHANGE_BUFFERING_PURGES\020\005\022\037\n\033INNODB_" +
+      "CHANGE_BUFFERING_ALL\020\006\"\360\001\n\021MysqlConfigSe" +
+      "t5_7\022J\n\020effective_config\030\001 \001(\01320.yandex." +
+      "cloud.mdb.mysql.v1.config.MysqlConfig5_7" +
+      "\022E\n\013user_config\030\002 \001(\01320.yandex.cloud.mdb" +
+      ".mysql.v1.config.MysqlConfig5_7\022H\n\016defau" +
+      "lt_config\030\003 \001(\01320.yandex.cloud.mdb.mysql" +
+      ".v1.config.MysqlConfig5_7Br\n$yandex.clou" +
+      "d.api.mdb.mysql.v1.configZJgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
+      "mysql/v1/config;mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -27707,7 +28001,7 @@ public final class Mysql57 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "ShowCompatibility56", "MaxSpRecursionDepth", "InnodbCompressionLevel", "BinlogTransactionDependencyTracking", "Autocommit", "InnodbStatusOutput", "InnodbStrictMode", "InnodbPrintLockWaitTimeoutInfo", "LogErrorVerbosity", "MaxDigestLength", "QueryCacheLimit", "QueryCacheSize", "QueryCacheType", "LockWaitTimeout", "MaxPreparedStmtCount", "OptimizerSwitch", "OptimizerSearchDepth", "QueryResponseTimeStats", "Userstat", "MaxExecutionTime", "AuditLogPolicy", "InnodbLruScanDepth", "MdbForceSsl", "InnodbChangeBuffering", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "ShowCompatibility56", "MaxSpRecursionDepth", "InnodbCompressionLevel", "BinlogTransactionDependencyTracking", "Autocommit", "InnodbStatusOutput", "InnodbStrictMode", "InnodbPrintLockWaitTimeoutInfo", "LogErrorVerbosity", "MaxDigestLength", "QueryCacheLimit", "QueryCacheSize", "QueryCacheType", "LockWaitTimeout", "MaxPreparedStmtCount", "OptimizerSwitch", "OptimizerSearchDepth", "QueryResponseTimeStats", "Userstat", "MaxExecutionTime", "AuditLogPolicy", "InnodbLruScanDepth", "MdbForceSsl", "InnodbChangeBuffering", "MaxWriteLockCount", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_fieldAccessorTable = new

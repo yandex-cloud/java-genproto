@@ -421,6 +421,68 @@ public final class NetworkLoadBalancerServiceGrpc {
     return getListOperationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableZonesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DisableZones",
+      requestType = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableZonesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableZonesMethod;
+    if ((getDisableZonesMethod = NetworkLoadBalancerServiceGrpc.getDisableZonesMethod) == null) {
+      synchronized (NetworkLoadBalancerServiceGrpc.class) {
+        if ((getDisableZonesMethod = NetworkLoadBalancerServiceGrpc.getDisableZonesMethod) == null) {
+          NetworkLoadBalancerServiceGrpc.getDisableZonesMethod = getDisableZonesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisableZones"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("DisableZones"))
+              .build();
+        }
+      }
+    }
+    return getDisableZonesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableZonesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EnableZones",
+      requestType = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableZonesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableZonesMethod;
+    if ((getEnableZonesMethod = NetworkLoadBalancerServiceGrpc.getEnableZonesMethod) == null) {
+      synchronized (NetworkLoadBalancerServiceGrpc.class) {
+        if ((getEnableZonesMethod = NetworkLoadBalancerServiceGrpc.getEnableZonesMethod) == null) {
+          NetworkLoadBalancerServiceGrpc.getEnableZonesMethod = getEnableZonesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableZones"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("EnableZones"))
+              .build();
+        }
+      }
+    }
+    return getEnableZonesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -605,6 +667,26 @@ public final class NetworkLoadBalancerServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Disable zones for the specified network load balancer.
+     * </pre>
+     */
+    public void disableZones(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableZonesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Enable zones for the specified network load balancer.
+     * </pre>
+     */
+    public void enableZones(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableZonesMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -698,6 +780,20 @@ public final class NetworkLoadBalancerServiceGrpc {
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsRequest,
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
+          .addMethod(
+            getDisableZonesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DISABLE_ZONES)))
+          .addMethod(
+            getEnableZonesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ENABLE_ZONES)))
           .build();
     }
   }
@@ -864,6 +960,28 @@ public final class NetworkLoadBalancerServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Disable zones for the specified network load balancer.
+     * </pre>
+     */
+    public void disableZones(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDisableZonesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Enable zones for the specified network load balancer.
+     * </pre>
+     */
+    public void enableZones(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEnableZonesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1014,6 +1132,26 @@ public final class NetworkLoadBalancerServiceGrpc {
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsResponse listOperations(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Disable zones for the specified network load balancer.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation disableZones(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDisableZonesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Enable zones for the specified network load balancer.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation enableZones(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEnableZonesMethod(), getCallOptions(), request);
     }
   }
 
@@ -1179,6 +1317,28 @@ public final class NetworkLoadBalancerServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Disable zones for the specified network load balancer.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> disableZones(
+        yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDisableZonesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Enable zones for the specified network load balancer.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> enableZones(
+        yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEnableZonesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1194,6 +1354,8 @@ public final class NetworkLoadBalancerServiceGrpc {
   private static final int METHODID_ADD_LISTENER = 10;
   private static final int METHODID_REMOVE_LISTENER = 11;
   private static final int METHODID_LIST_OPERATIONS = 12;
+  private static final int METHODID_DISABLE_ZONES = 13;
+  private static final int METHODID_ENABLE_ZONES = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1263,6 +1425,14 @@ public final class NetworkLoadBalancerServiceGrpc {
         case METHODID_LIST_OPERATIONS:
           serviceImpl.listOperations((yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsResponse>) responseObserver);
+          break;
+        case METHODID_DISABLE_ZONES:
+          serviceImpl.disableZones((yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DisableZonesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ENABLE_ZONES:
+          serviceImpl.enableZones((yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.EnableZonesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1338,6 +1508,8 @@ public final class NetworkLoadBalancerServiceGrpc {
               .addMethod(getAddListenerMethod())
               .addMethod(getRemoveListenerMethod())
               .addMethod(getListOperationsMethod())
+              .addMethod(getDisableZonesMethod())
+              .addMethod(getEnableZonesMethod())
               .build();
         }
       }

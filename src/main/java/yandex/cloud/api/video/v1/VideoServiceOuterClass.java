@@ -20,7 +20,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to retrieve.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,7 +29,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to retrieve.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -126,7 +126,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object videoId_;
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to retrieve.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -147,7 +147,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to retrieve.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -473,7 +473,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object videoId_ = "";
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to retrieve.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -493,7 +493,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to retrieve.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -514,7 +514,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to retrieve.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -533,7 +533,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to retrieve.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -547,7 +547,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to retrieve.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -624,7 +624,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -633,7 +633,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -644,8 +644,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of the results per page to return.
-     * Default value: 100.
+     * The maximum number of videos to return per page.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -655,7 +654,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListVideoResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -664,7 +664,8 @@ public final class VideoServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListVideoResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -675,27 +676,27 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The orderBy.
      */
     java.lang.String getOrderBy();
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for orderBy.
      */
     com.google.protobuf.ByteString
@@ -703,17 +704,16 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned videos.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title", "status", "visibilityStatus"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'sample' AND (status='READY' OR visibilityStatus='PUBLISHED')`
+     * Filterable fields: ["id", "title", "status", "visibilityStatus"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -722,17 +722,16 @@ public final class VideoServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned videos.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title", "status", "visibilityStatus"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'sample' AND (status='READY' OR visibilityStatus='PUBLISHED')`
+     * Filterable fields: ["id", "title", "status", "visibilityStatus"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -855,7 +854,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -876,7 +875,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to list.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -901,8 +900,7 @@ public final class VideoServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of the results per page to return.
-     * Default value: 100.
+     * The maximum number of videos to return per page.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -917,7 +915,8 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListVideoResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -938,7 +937,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token for getting the next page of the result.
+     * Page token for retrieving the next page of results.
+     * This token is obtained from the next_page_token field in the previous ListVideoResponse.
      * </pre>
      *
      * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -963,14 +963,14 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object orderBy_;
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The orderBy.
      */
     @java.lang.Override
@@ -988,14 +988,14 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Specifies the ordering of results.
+     * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
      * Default: "id asc".
-     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
-     * <code>string order_by = 102;</code>
+     * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for orderBy.
      */
     @java.lang.Override
@@ -1017,17 +1017,16 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned videos.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title", "status", "visibilityStatus"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'sample' AND (status='READY' OR visibilityStatus='PUBLISHED')`
+     * Filterable fields: ["id", "title", "status", "visibilityStatus"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1048,17 +1047,16 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Filter expression that filters resources listed in the response.
-     * Expressions are composed of terms connected by logic operators.
-     * If value contains spaces or quotes,
-     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Filter expression to narrow down the list of returned videos.
+     * Expressions consist of terms connected by logical operators.
+     * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+     * with inner quotes being backslash-escaped.
      * Supported logical operators: ["AND", "OR"].
-     * Supported string match operators: ["=", "!=", ":"].
-     * Operator ":" stands for substring matching.
-     * Filter expressions may also contain parentheses to group logical operands.
-     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-     * Supported fields: ["id", "title", "status", "visibilityStatus"].
-     * Both snake_case and camelCase are supported for fields.
+     * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+     * Parentheses can be used to group logical expressions.
+     * Example: `title:'sample' AND (status='READY' OR visibilityStatus='PUBLISHED')`
+     * Filterable fields: ["id", "title", "status", "visibilityStatus"].
+     * Both snake_case and camelCase field names are supported.
      * </pre>
      *
      * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1453,7 +1451,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1473,7 +1471,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1494,7 +1492,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1513,7 +1511,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1527,7 +1525,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to list.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1549,8 +1547,7 @@ public final class VideoServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of videos to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1562,8 +1559,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of videos to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1578,8 +1574,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return.
-       * Default value: 100.
+       * The maximum number of videos to return per page.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1595,7 +1590,8 @@ public final class VideoServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListVideoResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1615,7 +1611,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListVideoResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1636,7 +1633,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListVideoResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1655,7 +1653,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListVideoResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1669,7 +1668,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token for getting the next page of the result.
+       * Page token for retrieving the next page of results.
+       * This token is obtained from the next_page_token field in the previous ListVideoResponse.
        * </pre>
        *
        * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
@@ -1691,14 +1691,14 @@ public final class VideoServiceOuterClass {
       private java.lang.Object orderBy_ = "";
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The orderBy.
        */
       public java.lang.String getOrderBy() {
@@ -1715,14 +1715,14 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for orderBy.
        */
       public com.google.protobuf.ByteString
@@ -1740,14 +1740,14 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The orderBy to set.
        * @return This builder for chaining.
        */
@@ -1763,14 +1763,14 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
@@ -1781,14 +1781,14 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Specifies the ordering of results.
+       * Format is "&lt;field&gt; &lt;order&gt;" (e.g., "createdAt desc").
        * Default: "id asc".
-       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported fields: ["id", "title", "createdAt", "updatedAt"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
-       * <code>string order_by = 102;</code>
+       * <code>string order_by = 102 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for orderBy to set.
        * @return This builder for chaining.
        */
@@ -1807,17 +1807,16 @@ public final class VideoServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned videos.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title", "status", "visibilityStatus"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'sample' AND (status='READY' OR visibilityStatus='PUBLISHED')`
+       * Filterable fields: ["id", "title", "status", "visibilityStatus"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1837,17 +1836,16 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned videos.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title", "status", "visibilityStatus"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'sample' AND (status='READY' OR visibilityStatus='PUBLISHED')`
+       * Filterable fields: ["id", "title", "status", "visibilityStatus"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1868,17 +1866,16 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned videos.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title", "status", "visibilityStatus"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'sample' AND (status='READY' OR visibilityStatus='PUBLISHED')`
+       * Filterable fields: ["id", "title", "status", "visibilityStatus"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1897,17 +1894,16 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned videos.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title", "status", "visibilityStatus"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'sample' AND (status='READY' OR visibilityStatus='PUBLISHED')`
+       * Filterable fields: ["id", "title", "status", "visibilityStatus"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1921,17 +1917,16 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression that filters resources listed in the response.
-       * Expressions are composed of terms connected by logic operators.
-       * If value contains spaces or quotes,
-       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Filter expression to narrow down the list of returned videos.
+       * Expressions consist of terms connected by logical operators.
+       * Values containing spaces or quotes must be enclosed in quotes (`'` or `"`)
+       * with inner quotes being backslash-escaped.
        * Supported logical operators: ["AND", "OR"].
-       * Supported string match operators: ["=", "!=", ":"].
-       * Operator ":" stands for substring matching.
-       * Filter expressions may also contain parentheses to group logical operands.
-       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
-       * Supported fields: ["id", "title", "status", "visibilityStatus"].
-       * Both snake_case and camelCase are supported for fields.
+       * Supported comparison operators: ["=", "!=", ":"] where ":" enables substring matching.
+       * Parentheses can be used to group logical expressions.
+       * Example: `title:'sample' AND (status='READY' OR visibilityStatus='PUBLISHED')`
+       * Filterable fields: ["id", "title", "status", "visibilityStatus"].
+       * Both snake_case and camelCase field names are supported.
        * </pre>
        *
        * <code>string filter = 103 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -2007,24 +2002,49 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of videos matching the request criteria.
+     * May be empty if no videos match the criteria or if the channel is empty.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
      */
     java.util.List<yandex.cloud.api.video.v1.VideoOuterClass.Video> 
         getVideosList();
     /**
+     * <pre>
+     * List of videos matching the request criteria.
+     * May be empty if no videos match the criteria or if the channel is empty.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
      */
     yandex.cloud.api.video.v1.VideoOuterClass.Video getVideos(int index);
     /**
+     * <pre>
+     * List of videos matching the request criteria.
+     * May be empty if no videos match the criteria or if the channel is empty.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
      */
     int getVideosCount();
     /**
+     * <pre>
+     * List of videos matching the request criteria.
+     * May be empty if no videos match the criteria or if the channel is empty.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.video.v1.VideoOuterClass.VideoOrBuilder> 
         getVideosOrBuilderList();
     /**
+     * <pre>
+     * List of videos matching the request criteria.
+     * May be empty if no videos match the criteria or if the channel is empty.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
      */
     yandex.cloud.api.video.v1.VideoOuterClass.VideoOrBuilder getVideosOrBuilder(
@@ -2032,7 +2052,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2041,7 +2062,8 @@ public final class VideoServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2151,6 +2173,11 @@ public final class VideoServiceOuterClass {
     public static final int VIDEOS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.video.v1.VideoOuterClass.Video> videos_;
     /**
+     * <pre>
+     * List of videos matching the request criteria.
+     * May be empty if no videos match the criteria or if the channel is empty.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
      */
     @java.lang.Override
@@ -2158,6 +2185,11 @@ public final class VideoServiceOuterClass {
       return videos_;
     }
     /**
+     * <pre>
+     * List of videos matching the request criteria.
+     * May be empty if no videos match the criteria or if the channel is empty.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
      */
     @java.lang.Override
@@ -2166,6 +2198,11 @@ public final class VideoServiceOuterClass {
       return videos_;
     }
     /**
+     * <pre>
+     * List of videos matching the request criteria.
+     * May be empty if no videos match the criteria or if the channel is empty.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
      */
     @java.lang.Override
@@ -2173,6 +2210,11 @@ public final class VideoServiceOuterClass {
       return videos_.size();
     }
     /**
+     * <pre>
+     * List of videos matching the request criteria.
+     * May be empty if no videos match the criteria or if the channel is empty.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
      */
     @java.lang.Override
@@ -2180,6 +2222,11 @@ public final class VideoServiceOuterClass {
       return videos_.get(index);
     }
     /**
+     * <pre>
+     * List of videos matching the request criteria.
+     * May be empty if no videos match the criteria or if the channel is empty.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
      */
     @java.lang.Override
@@ -2192,7 +2239,8 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2213,7 +2261,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Token for getting the next page.
+     * Token for retrieving the next page of results.
+     * Empty if there are no more results available.
      * </pre>
      *
      * <code>string next_page_token = 100;</code>
@@ -2606,6 +2655,11 @@ public final class VideoServiceOuterClass {
           yandex.cloud.api.video.v1.VideoOuterClass.Video, yandex.cloud.api.video.v1.VideoOuterClass.Video.Builder, yandex.cloud.api.video.v1.VideoOuterClass.VideoOrBuilder> videosBuilder_;
 
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.VideoOuterClass.Video> getVideosList() {
@@ -2616,6 +2670,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public int getVideosCount() {
@@ -2626,6 +2685,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public yandex.cloud.api.video.v1.VideoOuterClass.Video getVideos(int index) {
@@ -2636,6 +2700,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public Builder setVideos(
@@ -2653,6 +2722,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public Builder setVideos(
@@ -2667,6 +2741,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public Builder addVideos(yandex.cloud.api.video.v1.VideoOuterClass.Video value) {
@@ -2683,6 +2762,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public Builder addVideos(
@@ -2700,6 +2784,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public Builder addVideos(
@@ -2714,6 +2803,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public Builder addVideos(
@@ -2728,6 +2822,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public Builder addAllVideos(
@@ -2743,6 +2842,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public Builder clearVideos() {
@@ -2756,6 +2860,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public Builder removeVideos(int index) {
@@ -2769,6 +2878,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public yandex.cloud.api.video.v1.VideoOuterClass.Video.Builder getVideosBuilder(
@@ -2776,6 +2890,11 @@ public final class VideoServiceOuterClass {
         return getVideosFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public yandex.cloud.api.video.v1.VideoOuterClass.VideoOrBuilder getVideosOrBuilder(
@@ -2786,6 +2905,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.video.v1.VideoOuterClass.VideoOrBuilder> 
@@ -2797,6 +2921,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public yandex.cloud.api.video.v1.VideoOuterClass.Video.Builder addVideosBuilder() {
@@ -2804,6 +2933,11 @@ public final class VideoServiceOuterClass {
             yandex.cloud.api.video.v1.VideoOuterClass.Video.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public yandex.cloud.api.video.v1.VideoOuterClass.Video.Builder addVideosBuilder(
@@ -2812,6 +2946,11 @@ public final class VideoServiceOuterClass {
             index, yandex.cloud.api.video.v1.VideoOuterClass.Video.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of videos matching the request criteria.
+       * May be empty if no videos match the criteria or if the channel is empty.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.VideoOuterClass.Video.Builder> 
@@ -2836,7 +2975,8 @@ public final class VideoServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2856,7 +2996,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2877,7 +3018,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2896,7 +3038,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2910,7 +3053,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Token for getting the next page.
+       * Token for retrieving the next page of results.
+       * Empty if there are no more results available.
        * </pre>
        *
        * <code>string next_page_token = 100;</code>
@@ -2987,7 +3131,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to retrieve.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2996,7 +3140,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to retrieve.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3007,7 +3151,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs to retrieve.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3017,7 +3161,7 @@ public final class VideoServiceOuterClass {
         getVideoIdsList();
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs to retrieve.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3026,7 +3170,7 @@ public final class VideoServiceOuterClass {
     int getVideoIdsCount();
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs to retrieve.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3036,7 +3180,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoIds(int index);
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs to retrieve.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3148,7 +3292,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to retrieve.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3169,7 +3313,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to retrieve.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3194,7 +3338,7 @@ public final class VideoServiceOuterClass {
     private com.google.protobuf.LazyStringList videoIds_;
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs to retrieve.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3206,7 +3350,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs to retrieve.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3217,7 +3361,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs to retrieve.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3229,7 +3373,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs to retrieve.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3582,7 +3726,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to retrieve.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3602,7 +3746,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to retrieve.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3623,7 +3767,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to retrieve.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3642,7 +3786,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to retrieve.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3656,7 +3800,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to retrieve.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3684,7 +3828,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs to retrieve.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3696,7 +3840,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs to retrieve.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3707,7 +3851,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs to retrieve.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3719,7 +3863,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs to retrieve.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3732,7 +3876,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs to retrieve.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3752,7 +3896,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs to retrieve.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3771,7 +3915,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs to retrieve.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3788,7 +3932,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs to retrieve.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3802,7 +3946,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs to retrieve.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3879,7 +4023,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * List of videos for channel.
+     * List of videos matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -3888,7 +4032,7 @@ public final class VideoServiceOuterClass {
         getVideosList();
     /**
      * <pre>
-     * List of videos for channel.
+     * List of videos matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -3896,7 +4040,7 @@ public final class VideoServiceOuterClass {
     yandex.cloud.api.video.v1.VideoOuterClass.Video getVideos(int index);
     /**
      * <pre>
-     * List of videos for channel.
+     * List of videos matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -3904,7 +4048,7 @@ public final class VideoServiceOuterClass {
     int getVideosCount();
     /**
      * <pre>
-     * List of videos for channel.
+     * List of videos matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -3913,7 +4057,7 @@ public final class VideoServiceOuterClass {
         getVideosOrBuilderList();
     /**
      * <pre>
-     * List of videos for channel.
+     * List of videos matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4016,7 +4160,7 @@ public final class VideoServiceOuterClass {
     private java.util.List<yandex.cloud.api.video.v1.VideoOuterClass.Video> videos_;
     /**
      * <pre>
-     * List of videos for channel.
+     * List of videos matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4027,7 +4171,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of videos for channel.
+     * List of videos matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4039,7 +4183,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of videos for channel.
+     * List of videos matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4050,7 +4194,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of videos for channel.
+     * List of videos matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4061,7 +4205,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of videos for channel.
+     * List of videos matching the requested IDs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4428,7 +4572,7 @@ public final class VideoServiceOuterClass {
 
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4442,7 +4586,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4456,7 +4600,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4470,7 +4614,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4491,7 +4635,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4509,7 +4653,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4529,7 +4673,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4550,7 +4694,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4568,7 +4712,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4586,7 +4730,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4605,7 +4749,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4622,7 +4766,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4639,7 +4783,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4650,7 +4794,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4664,7 +4808,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4679,7 +4823,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4690,7 +4834,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4702,7 +4846,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of videos for channel.
+       * List of videos matching the requested IDs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.video.v1.Video videos = 1;</code>
@@ -4784,7 +4928,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the video will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4793,7 +4937,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the video will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4804,19 +4948,19 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Video title.
+     * Title of the video to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
      * <pre>
-     * Video title.
+     * Title of the video to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -4824,19 +4968,21 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Video description.
+     * Detailed description of the video content and context.
+     * Optional field that can provide additional information about the video.
      * </pre>
      *
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <pre>
-     * Video description.
+     * Detailed description of the video content and context.
+     * Optional field that can provide additional information about the video.
      * </pre>
      *
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -4844,7 +4990,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image to be used for the video.
+     * If not provided, a thumbnail may be automatically generated during transcoding.
      * </pre>
      *
      * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4853,7 +5000,8 @@ public final class VideoServiceOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image to be used for the video.
+     * If not provided, a thumbnail may be automatically generated during transcoding.
      * </pre>
      *
      * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4864,7 +5012,9 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Auto start transcoding.
+     * Controls whether transcoding starts automatically after upload.
+     * Set to ENABLE to automatically initiate transcoding after upload,
+     * or DISABLE for manual initiation via the Transcode() method.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 5;</code>
@@ -4873,7 +5023,9 @@ public final class VideoServiceOuterClass {
     int getAutoTranscodeValue();
     /**
      * <pre>
-     * Auto start transcoding.
+     * Controls whether transcoding starts automatically after upload.
+     * Set to ENABLE to automatically initiate transcoding after upload,
+     * or DISABLE for manual initiation via the Transcode() method.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 5;</code>
@@ -4883,8 +5035,31 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Automatically publish video after transcoding.
-     * Switches visibility status to PUBLISHED.
+     * ID of the style preset to apply to the video during processing.
+     * Style presets define visual appearance settings for the video player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The stylePresetId.
+     */
+    java.lang.String getStylePresetId();
+    /**
+     * <pre>
+     * ID of the style preset to apply to the video during processing.
+     * Style presets define visual appearance settings for the video player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for stylePresetId.
+     */
+    com.google.protobuf.ByteString
+        getStylePresetIdBytes();
+
+    /**
+     * <pre>
+     * Controls whether the video is automatically published after transcoding.
+     * When set to true, the video's visibility status will be set to PUBLISHED
+     * once transcoding is complete, making it available for watching.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -4893,8 +5068,9 @@ public final class VideoServiceOuterClass {
     boolean hasAutoPublish();
     /**
      * <pre>
-     * Automatically publish video after transcoding.
-     * Switches visibility status to PUBLISHED.
+     * Controls whether the video is automatically published after transcoding.
+     * When set to true, the video's visibility status will be set to PUBLISHED
+     * once transcoding is complete, making it available for watching.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -4903,8 +5079,9 @@ public final class VideoServiceOuterClass {
     com.google.protobuf.BoolValue getAutoPublish();
     /**
      * <pre>
-     * Automatically publish video after transcoding.
-     * Switches visibility status to PUBLISHED.
+     * Controls whether the video is automatically published after transcoding.
+     * When set to true, the video's visibility status will be set to PUBLISHED
+     * once transcoding is complete, making it available for watching.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -4913,9 +5090,9 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Set explicitly to false to disable advertisements for a specific video.
+     * Controls the ability to display advertisements for this video.
+     * Default: true
+     * Set explicitly to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -4924,9 +5101,9 @@ public final class VideoServiceOuterClass {
     boolean hasEnableAd();
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Set explicitly to false to disable advertisements for a specific video.
+     * Controls the ability to display advertisements for this video.
+     * Default: true
+     * Set explicitly to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -4935,9 +5112,9 @@ public final class VideoServiceOuterClass {
     com.google.protobuf.BoolValue getEnableAd();
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Set explicitly to false to disable advertisements for a specific video.
+     * Controls the ability to display advertisements for this video.
+     * Default: true
+     * Set explicitly to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -4946,7 +5123,10 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4954,7 +5134,10 @@ public final class VideoServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4969,7 +5152,10 @@ public final class VideoServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4978,7 +5164,10 @@ public final class VideoServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4989,7 +5178,10 @@ public final class VideoServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5000,7 +5192,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * This is a push-based upload method where the client pushes data to the server.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -5009,7 +5202,8 @@ public final class VideoServiceOuterClass {
     boolean hasTusd();
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * This is a push-based upload method where the client pushes data to the server.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -5018,7 +5212,8 @@ public final class VideoServiceOuterClass {
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams getTusd();
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * This is a push-based upload method where the client pushes data to the server.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -5027,8 +5222,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Video is publicly available.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -5037,8 +5231,7 @@ public final class VideoServiceOuterClass {
     boolean hasPublicAccess();
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Video is publicly available.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -5047,8 +5240,7 @@ public final class VideoServiceOuterClass {
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams getPublicAccess();
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Video is publicly available.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -5057,7 +5249,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Access to the video is restricted by temporarily signed links.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -5066,7 +5258,7 @@ public final class VideoServiceOuterClass {
     boolean hasSignUrlAccess();
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Access to the video is restricted by temporarily signed links.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -5075,7 +5267,7 @@ public final class VideoServiceOuterClass {
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams getSignUrlAccess();
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Access to the video is restricted by temporarily signed links.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -5104,6 +5296,7 @@ public final class VideoServiceOuterClass {
       description_ = "";
       thumbnailId_ = "";
       autoTranscode_ = 0;
+      stylePresetId_ = "";
     }
 
     @java.lang.Override
@@ -5165,6 +5358,12 @@ public final class VideoServiceOuterClass {
               int rawValue = input.readEnum();
 
               autoTranscode_ = rawValue;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stylePresetId_ = s;
               break;
             }
             case 58: {
@@ -5376,7 +5575,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the video will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5397,7 +5596,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel where the video will be created.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5422,10 +5621,10 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Video title.
+     * Title of the video to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -5443,10 +5642,10 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Video title.
+     * Title of the video to be displayed in interfaces and players.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -5468,10 +5667,11 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Video description.
+     * Detailed description of the video content and context.
+     * Optional field that can provide additional information about the video.
      * </pre>
      *
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -5489,10 +5689,11 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Video description.
+     * Detailed description of the video content and context.
+     * Optional field that can provide additional information about the video.
      * </pre>
      *
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -5514,7 +5715,8 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image to be used for the video.
+     * If not provided, a thumbnail may be automatically generated during transcoding.
      * </pre>
      *
      * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5535,7 +5737,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image to be used for the video.
+     * If not provided, a thumbnail may be automatically generated during transcoding.
      * </pre>
      *
      * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5560,7 +5763,9 @@ public final class VideoServiceOuterClass {
     private int autoTranscode_;
     /**
      * <pre>
-     * Auto start transcoding.
+     * Controls whether transcoding starts automatically after upload.
+     * Set to ENABLE to automatically initiate transcoding after upload,
+     * or DISABLE for manual initiation via the Transcode() method.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 5;</code>
@@ -5571,7 +5776,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Auto start transcoding.
+     * Controls whether transcoding starts automatically after upload.
+     * Set to ENABLE to automatically initiate transcoding after upload,
+     * or DISABLE for manual initiation via the Transcode() method.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 5;</code>
@@ -5583,12 +5790,61 @@ public final class VideoServiceOuterClass {
       return result == null ? yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.UNRECOGNIZED : result;
     }
 
+    public static final int STYLE_PRESET_ID_FIELD_NUMBER = 6;
+    private volatile java.lang.Object stylePresetId_;
+    /**
+     * <pre>
+     * ID of the style preset to apply to the video during processing.
+     * Style presets define visual appearance settings for the video player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The stylePresetId.
+     */
+    @java.lang.Override
+    public java.lang.String getStylePresetId() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stylePresetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the style preset to apply to the video during processing.
+     * Style presets define visual appearance settings for the video player.
+     * </pre>
+     *
+     * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for stylePresetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStylePresetIdBytes() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stylePresetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int AUTO_PUBLISH_FIELD_NUMBER = 7;
     private com.google.protobuf.BoolValue autoPublish_;
     /**
      * <pre>
-     * Automatically publish video after transcoding.
-     * Switches visibility status to PUBLISHED.
+     * Controls whether the video is automatically published after transcoding.
+     * When set to true, the video's visibility status will be set to PUBLISHED
+     * once transcoding is complete, making it available for watching.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -5600,8 +5856,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Automatically publish video after transcoding.
-     * Switches visibility status to PUBLISHED.
+     * Controls whether the video is automatically published after transcoding.
+     * When set to true, the video's visibility status will be set to PUBLISHED
+     * once transcoding is complete, making it available for watching.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -5613,8 +5870,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Automatically publish video after transcoding.
-     * Switches visibility status to PUBLISHED.
+     * Controls whether the video is automatically published after transcoding.
+     * When set to true, the video's visibility status will be set to PUBLISHED
+     * once transcoding is complete, making it available for watching.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -5628,9 +5886,9 @@ public final class VideoServiceOuterClass {
     private com.google.protobuf.BoolValue enableAd_;
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Set explicitly to false to disable advertisements for a specific video.
+     * Controls the ability to display advertisements for this video.
+     * Default: true
+     * Set explicitly to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -5642,9 +5900,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Set explicitly to false to disable advertisements for a specific video.
+     * Controls the ability to display advertisements for this video.
+     * Default: true
+     * Set explicitly to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -5656,9 +5914,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Set explicitly to false to disable advertisements for a specific video.
+     * Controls the ability to display advertisements for this video.
+     * Default: true
+     * Set explicitly to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -5696,7 +5954,10 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5718,7 +5979,10 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5730,7 +5994,10 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5747,7 +6014,10 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom user-defined labels as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+     * Values can contain alphanumeric characters and various symbols.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5768,7 +6038,8 @@ public final class VideoServiceOuterClass {
     public static final int TUSD_FIELD_NUMBER = 1000;
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * This is a push-based upload method where the client pushes data to the server.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -5780,7 +6051,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * This is a push-based upload method where the client pushes data to the server.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -5795,7 +6067,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Upload video using the tus protocol.
+     * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+     * This is a push-based upload method where the client pushes data to the server.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -5811,8 +6084,7 @@ public final class VideoServiceOuterClass {
     public static final int PUBLIC_ACCESS_FIELD_NUMBER = 2000;
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Video is publicly available.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -5824,8 +6096,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Video is publicly available.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -5840,8 +6111,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Video is publicly available.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -5857,7 +6127,7 @@ public final class VideoServiceOuterClass {
     public static final int SIGN_URL_ACCESS_FIELD_NUMBER = 2003;
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Access to the video is restricted by temporarily signed links.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -5869,7 +6139,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Access to the video is restricted by temporarily signed links.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -5884,7 +6154,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Access to the video is restricted by temporarily signed links.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -5925,6 +6195,9 @@ public final class VideoServiceOuterClass {
       }
       if (autoTranscode_ != yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.AUTO_TRANSCODE_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, autoTranscode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, stylePresetId_);
       }
       if (autoPublish_ != null) {
         output.writeMessage(7, getAutoPublish());
@@ -5971,6 +6244,9 @@ public final class VideoServiceOuterClass {
       if (autoTranscode_ != yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.AUTO_TRANSCODE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, autoTranscode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, stylePresetId_);
       }
       if (autoPublish_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -6026,6 +6302,8 @@ public final class VideoServiceOuterClass {
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
       if (autoTranscode_ != other.autoTranscode_) return false;
+      if (!getStylePresetId()
+          .equals(other.getStylePresetId())) return false;
       if (hasAutoPublish() != other.hasAutoPublish()) return false;
       if (hasAutoPublish()) {
         if (!getAutoPublish()
@@ -6081,6 +6359,8 @@ public final class VideoServiceOuterClass {
       hash = (53 * hash) + getThumbnailId().hashCode();
       hash = (37 * hash) + AUTO_TRANSCODE_FIELD_NUMBER;
       hash = (53 * hash) + autoTranscode_;
+      hash = (37 * hash) + STYLE_PRESET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStylePresetId().hashCode();
       if (hasAutoPublish()) {
         hash = (37 * hash) + AUTO_PUBLISH_FIELD_NUMBER;
         hash = (53 * hash) + getAutoPublish().hashCode();
@@ -6278,6 +6558,8 @@ public final class VideoServiceOuterClass {
 
         autoTranscode_ = 0;
 
+        stylePresetId_ = "";
+
         if (autoPublishBuilder_ == null) {
           autoPublish_ = null;
         } else {
@@ -6327,6 +6609,7 @@ public final class VideoServiceOuterClass {
         result.description_ = description_;
         result.thumbnailId_ = thumbnailId_;
         result.autoTranscode_ = autoTranscode_;
+        result.stylePresetId_ = stylePresetId_;
         if (autoPublishBuilder_ == null) {
           result.autoPublish_ = autoPublish_;
         } else {
@@ -6429,6 +6712,10 @@ public final class VideoServiceOuterClass {
         if (other.autoTranscode_ != 0) {
           setAutoTranscodeValue(other.getAutoTranscodeValue());
         }
+        if (!other.getStylePresetId().isEmpty()) {
+          stylePresetId_ = other.stylePresetId_;
+          onChanged();
+        }
         if (other.hasAutoPublish()) {
           mergeAutoPublish(other.getAutoPublish());
         }
@@ -6522,7 +6809,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the video will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6542,7 +6829,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the video will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6563,7 +6850,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the video will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6582,7 +6869,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the video will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6596,7 +6883,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel where the video will be created.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6618,10 +6905,10 @@ public final class VideoServiceOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Video title.
+       * Title of the video to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -6638,10 +6925,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video title.
+       * Title of the video to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -6659,10 +6946,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video title.
+       * Title of the video to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -6678,10 +6965,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video title.
+       * Title of the video to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -6692,10 +6979,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video title.
+       * Title of the video to be displayed in interfaces and players.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -6714,10 +7001,11 @@ public final class VideoServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Video description.
+       * Detailed description of the video content and context.
+       * Optional field that can provide additional information about the video.
        * </pre>
        *
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -6734,10 +7022,11 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video description.
+       * Detailed description of the video content and context.
+       * Optional field that can provide additional information about the video.
        * </pre>
        *
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -6755,10 +7044,11 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video description.
+       * Detailed description of the video content and context.
+       * Optional field that can provide additional information about the video.
        * </pre>
        *
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -6774,10 +7064,11 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video description.
+       * Detailed description of the video content and context.
+       * Optional field that can provide additional information about the video.
        * </pre>
        *
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -6788,10 +7079,11 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video description.
+       * Detailed description of the video content and context.
+       * Optional field that can provide additional information about the video.
        * </pre>
        *
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -6810,7 +7102,8 @@ public final class VideoServiceOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image to be used for the video.
+       * If not provided, a thumbnail may be automatically generated during transcoding.
        * </pre>
        *
        * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6830,7 +7123,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image to be used for the video.
+       * If not provided, a thumbnail may be automatically generated during transcoding.
        * </pre>
        *
        * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6851,7 +7145,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image to be used for the video.
+       * If not provided, a thumbnail may be automatically generated during transcoding.
        * </pre>
        *
        * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6870,7 +7165,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image to be used for the video.
+       * If not provided, a thumbnail may be automatically generated during transcoding.
        * </pre>
        *
        * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6884,7 +7180,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image to be used for the video.
+       * If not provided, a thumbnail may be automatically generated during transcoding.
        * </pre>
        *
        * <code>string thumbnail_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6906,7 +7203,9 @@ public final class VideoServiceOuterClass {
       private int autoTranscode_ = 0;
       /**
        * <pre>
-       * Auto start transcoding.
+       * Controls whether transcoding starts automatically after upload.
+       * Set to ENABLE to automatically initiate transcoding after upload,
+       * or DISABLE for manual initiation via the Transcode() method.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 5;</code>
@@ -6917,7 +7216,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Auto start transcoding.
+       * Controls whether transcoding starts automatically after upload.
+       * Set to ENABLE to automatically initiate transcoding after upload,
+       * or DISABLE for manual initiation via the Transcode() method.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 5;</code>
@@ -6932,7 +7233,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Auto start transcoding.
+       * Controls whether transcoding starts automatically after upload.
+       * Set to ENABLE to automatically initiate transcoding after upload,
+       * or DISABLE for manual initiation via the Transcode() method.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 5;</code>
@@ -6946,7 +7249,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Auto start transcoding.
+       * Controls whether transcoding starts automatically after upload.
+       * Set to ENABLE to automatically initiate transcoding after upload,
+       * or DISABLE for manual initiation via the Transcode() method.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 5;</code>
@@ -6964,7 +7269,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Auto start transcoding.
+       * Controls whether transcoding starts automatically after upload.
+       * Set to ENABLE to automatically initiate transcoding after upload,
+       * or DISABLE for manual initiation via the Transcode() method.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 5;</code>
@@ -6977,13 +7284,115 @@ public final class VideoServiceOuterClass {
         return this;
       }
 
+      private java.lang.Object stylePresetId_ = "";
+      /**
+       * <pre>
+       * ID of the style preset to apply to the video during processing.
+       * Style presets define visual appearance settings for the video player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The stylePresetId.
+       */
+      public java.lang.String getStylePresetId() {
+        java.lang.Object ref = stylePresetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stylePresetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the style preset to apply to the video during processing.
+       * Style presets define visual appearance settings for the video player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for stylePresetId.
+       */
+      public com.google.protobuf.ByteString
+          getStylePresetIdBytes() {
+        java.lang.Object ref = stylePresetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stylePresetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the style preset to apply to the video during processing.
+       * Style presets define visual appearance settings for the video player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the style preset to apply to the video during processing.
+       * Style presets define visual appearance settings for the video player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStylePresetId() {
+        
+        stylePresetId_ = getDefaultInstance().getStylePresetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the style preset to apply to the video during processing.
+       * Style presets define visual appearance settings for the video player.
+       * </pre>
+       *
+       * <code>string style_preset_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.BoolValue autoPublish_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> autoPublishBuilder_;
       /**
        * <pre>
-       * Automatically publish video after transcoding.
-       * Switches visibility status to PUBLISHED.
+       * Controls whether the video is automatically published after transcoding.
+       * When set to true, the video's visibility status will be set to PUBLISHED
+       * once transcoding is complete, making it available for watching.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -6994,8 +7403,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish video after transcoding.
-       * Switches visibility status to PUBLISHED.
+       * Controls whether the video is automatically published after transcoding.
+       * When set to true, the video's visibility status will be set to PUBLISHED
+       * once transcoding is complete, making it available for watching.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -7010,8 +7420,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish video after transcoding.
-       * Switches visibility status to PUBLISHED.
+       * Controls whether the video is automatically published after transcoding.
+       * When set to true, the video's visibility status will be set to PUBLISHED
+       * once transcoding is complete, making it available for watching.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -7031,8 +7442,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish video after transcoding.
-       * Switches visibility status to PUBLISHED.
+       * Controls whether the video is automatically published after transcoding.
+       * When set to true, the video's visibility status will be set to PUBLISHED
+       * once transcoding is complete, making it available for watching.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -7050,8 +7462,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish video after transcoding.
-       * Switches visibility status to PUBLISHED.
+       * Controls whether the video is automatically published after transcoding.
+       * When set to true, the video's visibility status will be set to PUBLISHED
+       * once transcoding is complete, making it available for watching.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -7073,8 +7486,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish video after transcoding.
-       * Switches visibility status to PUBLISHED.
+       * Controls whether the video is automatically published after transcoding.
+       * When set to true, the video's visibility status will be set to PUBLISHED
+       * once transcoding is complete, making it available for watching.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -7092,8 +7506,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish video after transcoding.
-       * Switches visibility status to PUBLISHED.
+       * Controls whether the video is automatically published after transcoding.
+       * When set to true, the video's visibility status will be set to PUBLISHED
+       * once transcoding is complete, making it available for watching.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -7105,8 +7520,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish video after transcoding.
-       * Switches visibility status to PUBLISHED.
+       * Controls whether the video is automatically published after transcoding.
+       * When set to true, the video's visibility status will be set to PUBLISHED
+       * once transcoding is complete, making it available for watching.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -7121,8 +7537,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Automatically publish video after transcoding.
-       * Switches visibility status to PUBLISHED.
+       * Controls whether the video is automatically published after transcoding.
+       * When set to true, the video's visibility status will be set to PUBLISHED
+       * once transcoding is complete, making it available for watching.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
@@ -7146,9 +7563,9 @@ public final class VideoServiceOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableAdBuilder_;
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Set explicitly to false to disable advertisements for a specific video.
+       * Controls the ability to display advertisements for this video.
+       * Default: true
+       * Set explicitly to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7159,9 +7576,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Set explicitly to false to disable advertisements for a specific video.
+       * Controls the ability to display advertisements for this video.
+       * Default: true
+       * Set explicitly to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7176,9 +7593,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Set explicitly to false to disable advertisements for a specific video.
+       * Controls the ability to display advertisements for this video.
+       * Default: true
+       * Set explicitly to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7198,9 +7615,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Set explicitly to false to disable advertisements for a specific video.
+       * Controls the ability to display advertisements for this video.
+       * Default: true
+       * Set explicitly to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7218,9 +7635,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Set explicitly to false to disable advertisements for a specific video.
+       * Controls the ability to display advertisements for this video.
+       * Default: true
+       * Set explicitly to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7242,9 +7659,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Set explicitly to false to disable advertisements for a specific video.
+       * Controls the ability to display advertisements for this video.
+       * Default: true
+       * Set explicitly to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7262,9 +7679,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Set explicitly to false to disable advertisements for a specific video.
+       * Controls the ability to display advertisements for this video.
+       * Default: true
+       * Set explicitly to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7276,9 +7693,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Set explicitly to false to disable advertisements for a specific video.
+       * Controls the ability to display advertisements for this video.
+       * Default: true
+       * Set explicitly to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7293,9 +7710,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Set explicitly to false to disable advertisements for a specific video.
+       * Controls the ability to display advertisements for this video.
+       * Default: true
+       * Set explicitly to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7342,7 +7759,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7364,7 +7784,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7376,7 +7799,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7393,7 +7819,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7418,7 +7847,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7441,7 +7873,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7460,7 +7895,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom user-defined labels as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * Keys must be lowercase alphanumeric strings with optional hyphens/underscores.
+       * Values can contain alphanumeric characters and various symbols.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7477,7 +7915,8 @@ public final class VideoServiceOuterClass {
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParamsOrBuilder> tusdBuilder_;
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * This is a push-based upload method where the client pushes data to the server.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -7489,7 +7928,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * This is a push-based upload method where the client pushes data to the server.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -7511,7 +7951,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * This is a push-based upload method where the client pushes data to the server.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -7531,7 +7972,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * This is a push-based upload method where the client pushes data to the server.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -7549,7 +7991,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * This is a push-based upload method where the client pushes data to the server.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -7575,7 +8018,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * This is a push-based upload method where the client pushes data to the server.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -7598,7 +8042,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * This is a push-based upload method where the client pushes data to the server.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -7608,7 +8053,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * This is a push-based upload method where the client pushes data to the server.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -7626,7 +8072,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Upload video using the tus protocol.
+       * Upload video using the TUS (Tus Resumable Upload Protocol) protocol.
+       * This is a push-based upload method where the client pushes data to the server.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
@@ -7654,8 +8101,7 @@ public final class VideoServiceOuterClass {
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParamsOrBuilder> publicAccessBuilder_;
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7667,8 +8113,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7690,8 +8135,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7711,8 +8155,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7730,8 +8173,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7757,8 +8199,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7781,8 +8222,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7792,8 +8232,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7811,8 +8250,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Video is publicly available.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7840,7 +8278,7 @@ public final class VideoServiceOuterClass {
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParamsOrBuilder> signUrlAccessBuilder_;
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Access to the video is restricted by temporarily signed links.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -7852,7 +8290,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Access to the video is restricted by temporarily signed links.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -7874,7 +8312,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Access to the video is restricted by temporarily signed links.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -7894,7 +8332,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Access to the video is restricted by temporarily signed links.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -7912,7 +8350,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Access to the video is restricted by temporarily signed links.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -7938,7 +8376,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Access to the video is restricted by temporarily signed links.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -7961,7 +8399,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Access to the video is restricted by temporarily signed links.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -7971,7 +8409,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Access to the video is restricted by temporarily signed links.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -7989,7 +8427,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Access to the video is restricted by temporarily signed links.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -8071,7 +8509,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * File size.
+     * Total size of the file to be uploaded, in bytes.
      * </pre>
      *
      * <code>int64 file_size = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8081,7 +8519,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * File name.
+     * Original name of the file being uploaded.
+     * This is used for reference and does not affect the upload process.
      * </pre>
      *
      * <code>string file_name = 2;</code>
@@ -8090,7 +8529,8 @@ public final class VideoServiceOuterClass {
     java.lang.String getFileName();
     /**
      * <pre>
-     * File name.
+     * Original name of the file being uploaded.
+     * This is used for reference and does not affect the upload process.
      * </pre>
      *
      * <code>string file_name = 2;</code>
@@ -8192,7 +8632,7 @@ public final class VideoServiceOuterClass {
     private long fileSize_;
     /**
      * <pre>
-     * File size.
+     * Total size of the file to be uploaded, in bytes.
      * </pre>
      *
      * <code>int64 file_size = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8207,7 +8647,8 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object fileName_;
     /**
      * <pre>
-     * File name.
+     * Original name of the file being uploaded.
+     * This is used for reference and does not affect the upload process.
      * </pre>
      *
      * <code>string file_name = 2;</code>
@@ -8228,7 +8669,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * File name.
+     * Original name of the file being uploaded.
+     * This is used for reference and does not affect the upload process.
      * </pre>
      *
      * <code>string file_name = 2;</code>
@@ -8572,7 +9014,7 @@ public final class VideoServiceOuterClass {
       private long fileSize_ ;
       /**
        * <pre>
-       * File size.
+       * Total size of the file to be uploaded, in bytes.
        * </pre>
        *
        * <code>int64 file_size = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8584,7 +9026,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * File size.
+       * Total size of the file to be uploaded, in bytes.
        * </pre>
        *
        * <code>int64 file_size = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8599,7 +9041,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * File size.
+       * Total size of the file to be uploaded, in bytes.
        * </pre>
        *
        * <code>int64 file_size = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8615,7 +9057,8 @@ public final class VideoServiceOuterClass {
       private java.lang.Object fileName_ = "";
       /**
        * <pre>
-       * File name.
+       * Original name of the file being uploaded.
+       * This is used for reference and does not affect the upload process.
        * </pre>
        *
        * <code>string file_name = 2;</code>
@@ -8635,7 +9078,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * File name.
+       * Original name of the file being uploaded.
+       * This is used for reference and does not affect the upload process.
        * </pre>
        *
        * <code>string file_name = 2;</code>
@@ -8656,7 +9100,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * File name.
+       * Original name of the file being uploaded.
+       * This is used for reference and does not affect the upload process.
        * </pre>
        *
        * <code>string file_name = 2;</code>
@@ -8675,7 +9120,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * File name.
+       * Original name of the file being uploaded.
+       * This is used for reference and does not affect the upload process.
        * </pre>
        *
        * <code>string file_name = 2;</code>
@@ -8689,7 +9135,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * File name.
+       * Original name of the file being uploaded.
+       * This is used for reference and does not affect the upload process.
        * </pre>
        *
        * <code>string file_name = 2;</code>
@@ -8765,6 +9212,10 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Parameters for video public access rights.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.VideoPublicAccessParams}
    */
   public static final class VideoPublicAccessParams extends
@@ -8986,6 +9437,10 @@ public final class VideoServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Parameters for video public access rights.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.VideoPublicAccessParams}
      */
     public static final class Builder extends
@@ -9183,6 +9638,10 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Parameters for video access restrictions based on temporary signed links.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.VideoSignURLAccessParams}
    */
   public static final class VideoSignURLAccessParams extends
@@ -9404,6 +9863,10 @@ public final class VideoServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Parameters for video access restrictions based on temporary signed links.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.VideoSignURLAccessParams}
      */
     public static final class Builder extends
@@ -9602,7 +10065,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * Unique identifier of the video.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -9611,7 +10074,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * Unique identifier of the video.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -9708,7 +10171,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object videoId_;
     /**
      * <pre>
-     * ID of the video.
+     * Unique identifier of the video.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -9729,7 +10192,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * Unique identifier of the video.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -10055,7 +10518,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object videoId_ = "";
       /**
        * <pre>
-       * ID of the video.
+       * Unique identifier of the video.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -10075,7 +10538,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Unique identifier of the video.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -10096,7 +10559,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Unique identifier of the video.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -10115,7 +10578,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Unique identifier of the video.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -10129,7 +10592,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * Unique identifier of the video.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -10206,7 +10669,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to update.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10215,7 +10678,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to update.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10226,7 +10689,10 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the video are going to be updated.
+     * Field mask specifying which fields of the video should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -10235,7 +10701,10 @@ public final class VideoServiceOuterClass {
     boolean hasFieldMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the video are going to be updated.
+     * Field mask specifying which fields of the video should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -10244,7 +10713,10 @@ public final class VideoServiceOuterClass {
     com.google.protobuf.FieldMask getFieldMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the video are going to be updated.
+     * Field mask specifying which fields of the video should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -10253,19 +10725,19 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Video title.
+     * New title for the video.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
      * <pre>
-     * Video title.
+     * New title for the video.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -10273,19 +10745,19 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Video description.
+     * New description for the video.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <pre>
-     * Video description.
+     * New description for the video.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -10293,7 +10765,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * New thumbnail ID for the video.
      * </pre>
      *
      * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10302,7 +10774,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * New thumbnail ID for the video.
      * </pre>
      *
      * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10313,7 +10785,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Auto start transcoding.
+     * New auto-transcoding setting for the video.
+     * Controls whether transcoding starts automatically after upload.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 6;</code>
@@ -10322,7 +10795,8 @@ public final class VideoServiceOuterClass {
     int getAutoTranscodeValue();
     /**
      * <pre>
-     * Auto start transcoding.
+     * New auto-transcoding setting for the video.
+     * Controls whether transcoding starts automatically after upload.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 6;</code>
@@ -10332,9 +10806,28 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * New style preset ID for the video.
+     * </pre>
+     *
+     * <code>string style_preset_id = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The stylePresetId.
+     */
+    java.lang.String getStylePresetId();
+    /**
+     * <pre>
+     * New style preset ID for the video.
+     * </pre>
+     *
+     * <code>string style_preset_id = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for stylePresetId.
+     */
+    com.google.protobuf.ByteString
+        getStylePresetIdBytes();
+
+    /**
+     * <pre>
+     * New advertisement setting for the video.
+     * Set to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -10343,9 +10836,8 @@ public final class VideoServiceOuterClass {
     boolean hasEnableAd();
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * New advertisement setting for the video.
+     * Set to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -10354,9 +10846,8 @@ public final class VideoServiceOuterClass {
     com.google.protobuf.BoolValue getEnableAd();
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * New advertisement setting for the video.
+     * Set to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -10365,7 +10856,9 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the video as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10373,7 +10866,9 @@ public final class VideoServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the video as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10388,7 +10883,9 @@ public final class VideoServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the video as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10397,7 +10894,9 @@ public final class VideoServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the video as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10408,7 +10907,9 @@ public final class VideoServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the video as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10419,8 +10920,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Makes the video publicly accessible to anyone with the direct link.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -10429,8 +10929,7 @@ public final class VideoServiceOuterClass {
     boolean hasPublicAccess();
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Makes the video publicly accessible to anyone with the direct link.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -10439,8 +10938,7 @@ public final class VideoServiceOuterClass {
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams getPublicAccess();
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Makes the video publicly accessible to anyone with the direct link.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -10449,7 +10947,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -10458,7 +10956,7 @@ public final class VideoServiceOuterClass {
     boolean hasSignUrlAccess();
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -10467,7 +10965,7 @@ public final class VideoServiceOuterClass {
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams getSignUrlAccess();
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -10494,6 +10992,7 @@ public final class VideoServiceOuterClass {
       description_ = "";
       thumbnailId_ = "";
       autoTranscode_ = 0;
+      stylePresetId_ = "";
     }
 
     @java.lang.Override
@@ -10568,6 +11067,12 @@ public final class VideoServiceOuterClass {
               int rawValue = input.readEnum();
 
               autoTranscode_ = rawValue;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stylePresetId_ = s;
               break;
             }
             case 66: {
@@ -10713,7 +11218,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object videoId_;
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to update.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10734,7 +11239,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to update.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10759,7 +11264,10 @@ public final class VideoServiceOuterClass {
     private com.google.protobuf.FieldMask fieldMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the video are going to be updated.
+     * Field mask specifying which fields of the video should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -10771,7 +11279,10 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the video are going to be updated.
+     * Field mask specifying which fields of the video should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -10783,7 +11294,10 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the video are going to be updated.
+     * Field mask specifying which fields of the video should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -10797,10 +11311,10 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Video title.
+     * New title for the video.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -10818,10 +11332,10 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Video title.
+     * New title for the video.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -10843,10 +11357,10 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Video description.
+     * New description for the video.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -10864,10 +11378,10 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Video description.
+     * New description for the video.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -10889,7 +11403,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * New thumbnail ID for the video.
      * </pre>
      *
      * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10910,7 +11424,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * New thumbnail ID for the video.
      * </pre>
      *
      * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10935,7 +11449,8 @@ public final class VideoServiceOuterClass {
     private int autoTranscode_;
     /**
      * <pre>
-     * Auto start transcoding.
+     * New auto-transcoding setting for the video.
+     * Controls whether transcoding starts automatically after upload.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 6;</code>
@@ -10946,7 +11461,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Auto start transcoding.
+     * New auto-transcoding setting for the video.
+     * Controls whether transcoding starts automatically after upload.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 6;</code>
@@ -10958,13 +11474,58 @@ public final class VideoServiceOuterClass {
       return result == null ? yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.UNRECOGNIZED : result;
     }
 
+    public static final int STYLE_PRESET_ID_FIELD_NUMBER = 7;
+    private volatile java.lang.Object stylePresetId_;
+    /**
+     * <pre>
+     * New style preset ID for the video.
+     * </pre>
+     *
+     * <code>string style_preset_id = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The stylePresetId.
+     */
+    @java.lang.Override
+    public java.lang.String getStylePresetId() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stylePresetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New style preset ID for the video.
+     * </pre>
+     *
+     * <code>string style_preset_id = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for stylePresetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStylePresetIdBytes() {
+      java.lang.Object ref = stylePresetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stylePresetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int ENABLE_AD_FIELD_NUMBER = 8;
     private com.google.protobuf.BoolValue enableAd_;
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * New advertisement setting for the video.
+     * Set to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -10976,9 +11537,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * New advertisement setting for the video.
+     * Set to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -10990,9 +11550,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Enable advertisement for this video.
-     * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * New advertisement setting for the video.
+     * Set to false to disable advertisements for this specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -11030,7 +11589,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the video as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11052,7 +11613,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the video as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11064,7 +11627,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the video as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11081,7 +11646,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * New custom labels for the video as `key:value` pairs.
+     * Maximum 64 labels per video.
+     * If provided, replaces all existing labels.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11102,8 +11669,7 @@ public final class VideoServiceOuterClass {
     public static final int PUBLIC_ACCESS_FIELD_NUMBER = 2000;
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Makes the video publicly accessible to anyone with the direct link.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -11115,8 +11681,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Makes the video publicly accessible to anyone with the direct link.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -11131,8 +11696,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Publicly accessible video available for viewing by anyone with the direct link.
-     * No additional authorization or access control is applied.
+     * Makes the video publicly accessible to anyone with the direct link.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -11148,7 +11712,7 @@ public final class VideoServiceOuterClass {
     public static final int SIGN_URL_ACCESS_FIELD_NUMBER = 2003;
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -11160,7 +11724,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -11175,7 +11739,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Checking access rights using url's signature.
+     * Restricts video access using URL signatures for secure time-limited access.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -11220,6 +11784,9 @@ public final class VideoServiceOuterClass {
       if (autoTranscode_ != yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.AUTO_TRANSCODE_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, autoTranscode_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, stylePresetId_);
+      }
       if (enableAd_ != null) {
         output.writeMessage(8, getEnableAd());
       }
@@ -11263,6 +11830,9 @@ public final class VideoServiceOuterClass {
       if (autoTranscode_ != yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.AUTO_TRANSCODE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, autoTranscode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stylePresetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, stylePresetId_);
       }
       if (enableAd_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -11315,6 +11885,8 @@ public final class VideoServiceOuterClass {
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
       if (autoTranscode_ != other.autoTranscode_) return false;
+      if (!getStylePresetId()
+          .equals(other.getStylePresetId())) return false;
       if (hasEnableAd() != other.hasEnableAd()) return false;
       if (hasEnableAd()) {
         if (!getEnableAd()
@@ -11360,6 +11932,8 @@ public final class VideoServiceOuterClass {
       hash = (53 * hash) + getThumbnailId().hashCode();
       hash = (37 * hash) + AUTO_TRANSCODE_FIELD_NUMBER;
       hash = (53 * hash) + autoTranscode_;
+      hash = (37 * hash) + STYLE_PRESET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStylePresetId().hashCode();
       if (hasEnableAd()) {
         hash = (37 * hash) + ENABLE_AD_FIELD_NUMBER;
         hash = (53 * hash) + getEnableAd().hashCode();
@@ -11551,6 +12125,8 @@ public final class VideoServiceOuterClass {
 
         autoTranscode_ = 0;
 
+        stylePresetId_ = "";
+
         if (enableAdBuilder_ == null) {
           enableAd_ = null;
         } else {
@@ -11597,6 +12173,7 @@ public final class VideoServiceOuterClass {
         result.description_ = description_;
         result.thumbnailId_ = thumbnailId_;
         result.autoTranscode_ = autoTranscode_;
+        result.stylePresetId_ = stylePresetId_;
         if (enableAdBuilder_ == null) {
           result.enableAd_ = enableAd_;
         } else {
@@ -11689,6 +12266,10 @@ public final class VideoServiceOuterClass {
         if (other.autoTranscode_ != 0) {
           setAutoTranscodeValue(other.getAutoTranscodeValue());
         }
+        if (!other.getStylePresetId().isEmpty()) {
+          stylePresetId_ = other.stylePresetId_;
+          onChanged();
+        }
         if (other.hasEnableAd()) {
           mergeEnableAd(other.getEnableAd());
         }
@@ -11755,7 +12336,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object videoId_ = "";
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to update.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11775,7 +12356,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to update.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11796,7 +12377,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to update.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11815,7 +12396,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to update.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11829,7 +12410,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to update.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11853,7 +12434,10 @@ public final class VideoServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the video are going to be updated.
+       * Field mask specifying which fields of the video should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11864,7 +12448,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the video are going to be updated.
+       * Field mask specifying which fields of the video should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11879,7 +12466,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the video are going to be updated.
+       * Field mask specifying which fields of the video should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11899,7 +12489,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the video are going to be updated.
+       * Field mask specifying which fields of the video should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11917,7 +12510,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the video are going to be updated.
+       * Field mask specifying which fields of the video should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11939,7 +12535,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the video are going to be updated.
+       * Field mask specifying which fields of the video should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11957,7 +12556,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the video are going to be updated.
+       * Field mask specifying which fields of the video should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11969,7 +12571,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the video are going to be updated.
+       * Field mask specifying which fields of the video should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -11984,7 +12589,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the video are going to be updated.
+       * Field mask specifying which fields of the video should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -12006,10 +12614,10 @@ public final class VideoServiceOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Video title.
+       * New title for the video.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -12026,10 +12634,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video title.
+       * New title for the video.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -12047,10 +12655,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video title.
+       * New title for the video.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -12066,10 +12674,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video title.
+       * New title for the video.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -12080,10 +12688,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video title.
+       * New title for the video.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -12102,10 +12710,10 @@ public final class VideoServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Video description.
+       * New description for the video.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -12122,10 +12730,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video description.
+       * New description for the video.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -12143,10 +12751,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video description.
+       * New description for the video.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -12162,10 +12770,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video description.
+       * New description for the video.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -12176,10 +12784,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video description.
+       * New description for the video.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -12198,7 +12806,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * New thumbnail ID for the video.
        * </pre>
        *
        * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12218,7 +12826,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * New thumbnail ID for the video.
        * </pre>
        *
        * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12239,7 +12847,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * New thumbnail ID for the video.
        * </pre>
        *
        * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12258,7 +12866,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * New thumbnail ID for the video.
        * </pre>
        *
        * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12272,7 +12880,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * New thumbnail ID for the video.
        * </pre>
        *
        * <code>string thumbnail_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12294,7 +12902,8 @@ public final class VideoServiceOuterClass {
       private int autoTranscode_ = 0;
       /**
        * <pre>
-       * Auto start transcoding.
+       * New auto-transcoding setting for the video.
+       * Controls whether transcoding starts automatically after upload.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 6;</code>
@@ -12305,7 +12914,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Auto start transcoding.
+       * New auto-transcoding setting for the video.
+       * Controls whether transcoding starts automatically after upload.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 6;</code>
@@ -12320,7 +12930,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Auto start transcoding.
+       * New auto-transcoding setting for the video.
+       * Controls whether transcoding starts automatically after upload.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 6;</code>
@@ -12334,7 +12945,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Auto start transcoding.
+       * New auto-transcoding setting for the video.
+       * Controls whether transcoding starts automatically after upload.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 6;</code>
@@ -12352,7 +12964,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Auto start transcoding.
+       * New auto-transcoding setting for the video.
+       * Controls whether transcoding starts automatically after upload.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoTranscode auto_transcode = 6;</code>
@@ -12365,14 +12978,109 @@ public final class VideoServiceOuterClass {
         return this;
       }
 
+      private java.lang.Object stylePresetId_ = "";
+      /**
+       * <pre>
+       * New style preset ID for the video.
+       * </pre>
+       *
+       * <code>string style_preset_id = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The stylePresetId.
+       */
+      public java.lang.String getStylePresetId() {
+        java.lang.Object ref = stylePresetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stylePresetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New style preset ID for the video.
+       * </pre>
+       *
+       * <code>string style_preset_id = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for stylePresetId.
+       */
+      public com.google.protobuf.ByteString
+          getStylePresetIdBytes() {
+        java.lang.Object ref = stylePresetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stylePresetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New style preset ID for the video.
+       * </pre>
+       *
+       * <code>string style_preset_id = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New style preset ID for the video.
+       * </pre>
+       *
+       * <code>string style_preset_id = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStylePresetId() {
+        
+        stylePresetId_ = getDefaultInstance().getStylePresetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New style preset ID for the video.
+       * </pre>
+       *
+       * <code>string style_preset_id = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for stylePresetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStylePresetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stylePresetId_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.BoolValue enableAd_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableAdBuilder_;
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * New advertisement setting for the video.
+       * Set to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -12383,9 +13091,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * New advertisement setting for the video.
+       * Set to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -12400,9 +13107,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * New advertisement setting for the video.
+       * Set to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -12422,9 +13128,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * New advertisement setting for the video.
+       * Set to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -12442,9 +13147,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * New advertisement setting for the video.
+       * Set to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -12466,9 +13170,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * New advertisement setting for the video.
+       * Set to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -12486,9 +13189,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * New advertisement setting for the video.
+       * Set to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -12500,9 +13202,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * New advertisement setting for the video.
+       * Set to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -12517,9 +13218,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Enable advertisement for this video.
-       * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * New advertisement setting for the video.
+       * Set to false to disable advertisements for this specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -12566,7 +13266,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the video as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12588,7 +13290,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the video as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12600,7 +13304,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the video as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12617,7 +13323,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the video as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12642,7 +13350,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the video as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12665,7 +13375,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the video as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12684,7 +13396,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * New custom labels for the video as `key:value` pairs.
+       * Maximum 64 labels per video.
+       * If provided, replaces all existing labels.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12701,8 +13415,7 @@ public final class VideoServiceOuterClass {
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParamsOrBuilder> publicAccessBuilder_;
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Makes the video publicly accessible to anyone with the direct link.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -12714,8 +13427,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Makes the video publicly accessible to anyone with the direct link.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -12737,8 +13449,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Makes the video publicly accessible to anyone with the direct link.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -12758,8 +13469,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Makes the video publicly accessible to anyone with the direct link.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -12777,8 +13487,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Makes the video publicly accessible to anyone with the direct link.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -12804,8 +13513,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Makes the video publicly accessible to anyone with the direct link.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -12828,8 +13536,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Makes the video publicly accessible to anyone with the direct link.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -12839,8 +13546,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Makes the video publicly accessible to anyone with the direct link.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -12858,8 +13564,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Publicly accessible video available for viewing by anyone with the direct link.
-       * No additional authorization or access control is applied.
+       * Makes the video publicly accessible to anyone with the direct link.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -12887,7 +13592,7 @@ public final class VideoServiceOuterClass {
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParamsOrBuilder> signUrlAccessBuilder_;
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -12899,7 +13604,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -12921,7 +13626,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -12941,7 +13646,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -12959,7 +13664,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -12985,7 +13690,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -13008,7 +13713,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -13018,7 +13723,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -13036,7 +13741,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Checking access rights using url's signature.
+       * Restricts video access using URL signatures for secure time-limited access.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
@@ -13722,7 +14427,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to transcode.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -13731,7 +14436,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to transcode.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -13742,8 +14447,10 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which transcoding specific fields of the video
-     * are going to be updated.
+     * Field mask specifying which transcoding-specific fields should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -13752,8 +14459,10 @@ public final class VideoServiceOuterClass {
     boolean hasFieldMask();
     /**
      * <pre>
-     * Field mask that specifies which transcoding specific fields of the video
-     * are going to be updated.
+     * Field mask specifying which transcoding-specific fields should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -13762,8 +14471,10 @@ public final class VideoServiceOuterClass {
     com.google.protobuf.FieldMask getFieldMask();
     /**
      * <pre>
-     * Field mask that specifies which transcoding specific fields of the video
-     * are going to be updated.
+     * Field mask specifying which transcoding-specific fields should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -13772,7 +14483,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * IDs of active manually uploaded video subtitles.
+     * IDs of manually uploaded subtitle files to include in the transcoding process.
+     * These subtitles will be embedded in the video output.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -13782,7 +14494,8 @@ public final class VideoServiceOuterClass {
         getSubtitleIdsList();
     /**
      * <pre>
-     * IDs of active manually uploaded video subtitles.
+     * IDs of manually uploaded subtitle files to include in the transcoding process.
+     * These subtitles will be embedded in the video output.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -13791,7 +14504,8 @@ public final class VideoServiceOuterClass {
     int getSubtitleIdsCount();
     /**
      * <pre>
-     * IDs of active manually uploaded video subtitles.
+     * IDs of manually uploaded subtitle files to include in the transcoding process.
+     * These subtitles will be embedded in the video output.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -13801,7 +14515,8 @@ public final class VideoServiceOuterClass {
     java.lang.String getSubtitleIds(int index);
     /**
      * <pre>
-     * IDs of active manually uploaded video subtitles.
+     * IDs of manually uploaded subtitle files to include in the transcoding process.
+     * These subtitles will be embedded in the video output.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -13813,7 +14528,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Video translation settings.
+     * Settings for automatic translation of audio tracks.
+     * Defines source tracks and target languages for subtitle and audio translation.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -13822,7 +14538,8 @@ public final class VideoServiceOuterClass {
     boolean hasTranslationSettings();
     /**
      * <pre>
-     * Video translation settings.
+     * Settings for automatic translation of audio tracks.
+     * Defines source tracks and target languages for subtitle and audio translation.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -13831,7 +14548,8 @@ public final class VideoServiceOuterClass {
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings getTranslationSettings();
     /**
      * <pre>
-     * Video translation settings.
+     * Settings for automatic translation of audio tracks.
+     * Defines source tracks and target languages for subtitle and audio translation.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -13840,7 +14558,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Video summarization settings.
+     * Settings for automatic video content summarization.
+     * Defines which audio tracks should be processed to generate text summaries.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -13849,7 +14568,8 @@ public final class VideoServiceOuterClass {
     boolean hasSummarizationSettings();
     /**
      * <pre>
-     * Video summarization settings.
+     * Settings for automatic video content summarization.
+     * Defines which audio tracks should be processed to generate text summaries.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -13858,7 +14578,8 @@ public final class VideoServiceOuterClass {
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings getSummarizationSettings();
     /**
      * <pre>
-     * Video summarization settings.
+     * Settings for automatic video content summarization.
+     * Defines which audio tracks should be processed to generate text summaries.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -14006,7 +14727,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object videoId_;
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to transcode.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -14027,7 +14748,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to transcode.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -14052,8 +14773,10 @@ public final class VideoServiceOuterClass {
     private com.google.protobuf.FieldMask fieldMask_;
     /**
      * <pre>
-     * Field mask that specifies which transcoding specific fields of the video
-     * are going to be updated.
+     * Field mask specifying which transcoding-specific fields should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14065,8 +14788,10 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which transcoding specific fields of the video
-     * are going to be updated.
+     * Field mask specifying which transcoding-specific fields should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14078,8 +14803,10 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which transcoding specific fields of the video
-     * are going to be updated.
+     * Field mask specifying which transcoding-specific fields should be updated.
+     * Only fields specified in this mask will be modified;
+     * all other fields will retain their current values.
+     * This allows for partial updates.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14093,7 +14820,8 @@ public final class VideoServiceOuterClass {
     private com.google.protobuf.LazyStringList subtitleIds_;
     /**
      * <pre>
-     * IDs of active manually uploaded video subtitles.
+     * IDs of manually uploaded subtitle files to include in the transcoding process.
+     * These subtitles will be embedded in the video output.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14105,7 +14833,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of active manually uploaded video subtitles.
+     * IDs of manually uploaded subtitle files to include in the transcoding process.
+     * These subtitles will be embedded in the video output.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14116,7 +14845,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of active manually uploaded video subtitles.
+     * IDs of manually uploaded subtitle files to include in the transcoding process.
+     * These subtitles will be embedded in the video output.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14128,7 +14858,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of active manually uploaded video subtitles.
+     * IDs of manually uploaded subtitle files to include in the transcoding process.
+     * These subtitles will be embedded in the video output.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14144,7 +14875,8 @@ public final class VideoServiceOuterClass {
     private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings translationSettings_;
     /**
      * <pre>
-     * Video translation settings.
+     * Settings for automatic translation of audio tracks.
+     * Defines source tracks and target languages for subtitle and audio translation.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -14156,7 +14888,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Video translation settings.
+     * Settings for automatic translation of audio tracks.
+     * Defines source tracks and target languages for subtitle and audio translation.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -14168,7 +14901,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Video translation settings.
+     * Settings for automatic translation of audio tracks.
+     * Defines source tracks and target languages for subtitle and audio translation.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -14182,7 +14916,8 @@ public final class VideoServiceOuterClass {
     private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings summarizationSettings_;
     /**
      * <pre>
-     * Video summarization settings.
+     * Settings for automatic video content summarization.
+     * Defines which audio tracks should be processed to generate text summaries.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -14194,7 +14929,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Video summarization settings.
+     * Settings for automatic video content summarization.
+     * Defines which audio tracks should be processed to generate text summaries.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -14206,7 +14942,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Video summarization settings.
+     * Settings for automatic video content summarization.
+     * Defines which audio tracks should be processed to generate text summaries.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -14647,7 +15384,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object videoId_ = "";
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to transcode.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -14667,7 +15404,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to transcode.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -14688,7 +15425,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to transcode.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -14707,7 +15444,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to transcode.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -14721,7 +15458,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to transcode.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -14745,8 +15482,10 @@ public final class VideoServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which transcoding specific fields of the video
-       * are going to be updated.
+       * Field mask specifying which transcoding-specific fields should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14757,8 +15496,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which transcoding specific fields of the video
-       * are going to be updated.
+       * Field mask specifying which transcoding-specific fields should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14773,8 +15514,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which transcoding specific fields of the video
-       * are going to be updated.
+       * Field mask specifying which transcoding-specific fields should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14794,8 +15537,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which transcoding specific fields of the video
-       * are going to be updated.
+       * Field mask specifying which transcoding-specific fields should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14813,8 +15558,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which transcoding specific fields of the video
-       * are going to be updated.
+       * Field mask specifying which transcoding-specific fields should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14836,8 +15583,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which transcoding specific fields of the video
-       * are going to be updated.
+       * Field mask specifying which transcoding-specific fields should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14855,8 +15604,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which transcoding specific fields of the video
-       * are going to be updated.
+       * Field mask specifying which transcoding-specific fields should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14868,8 +15619,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which transcoding specific fields of the video
-       * are going to be updated.
+       * Field mask specifying which transcoding-specific fields should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14884,8 +15637,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which transcoding specific fields of the video
-       * are going to be updated.
+       * Field mask specifying which transcoding-specific fields should be updated.
+       * Only fields specified in this mask will be modified;
+       * all other fields will retain their current values.
+       * This allows for partial updates.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
@@ -14913,7 +15668,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active manually uploaded video subtitles.
+       * IDs of manually uploaded subtitle files to include in the transcoding process.
+       * These subtitles will be embedded in the video output.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -14925,7 +15681,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active manually uploaded video subtitles.
+       * IDs of manually uploaded subtitle files to include in the transcoding process.
+       * These subtitles will be embedded in the video output.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -14936,7 +15693,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active manually uploaded video subtitles.
+       * IDs of manually uploaded subtitle files to include in the transcoding process.
+       * These subtitles will be embedded in the video output.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -14948,7 +15706,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active manually uploaded video subtitles.
+       * IDs of manually uploaded subtitle files to include in the transcoding process.
+       * These subtitles will be embedded in the video output.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -14961,7 +15720,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active manually uploaded video subtitles.
+       * IDs of manually uploaded subtitle files to include in the transcoding process.
+       * These subtitles will be embedded in the video output.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -14981,7 +15741,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active manually uploaded video subtitles.
+       * IDs of manually uploaded subtitle files to include in the transcoding process.
+       * These subtitles will be embedded in the video output.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15000,7 +15761,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active manually uploaded video subtitles.
+       * IDs of manually uploaded subtitle files to include in the transcoding process.
+       * These subtitles will be embedded in the video output.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15017,7 +15779,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active manually uploaded video subtitles.
+       * IDs of manually uploaded subtitle files to include in the transcoding process.
+       * These subtitles will be embedded in the video output.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15031,7 +15794,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active manually uploaded video subtitles.
+       * IDs of manually uploaded subtitle files to include in the transcoding process.
+       * These subtitles will be embedded in the video output.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15055,7 +15819,8 @@ public final class VideoServiceOuterClass {
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettingsOrBuilder> translationSettingsBuilder_;
       /**
        * <pre>
-       * Video translation settings.
+       * Settings for automatic translation of audio tracks.
+       * Defines source tracks and target languages for subtitle and audio translation.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -15066,7 +15831,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video translation settings.
+       * Settings for automatic translation of audio tracks.
+       * Defines source tracks and target languages for subtitle and audio translation.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -15081,7 +15847,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video translation settings.
+       * Settings for automatic translation of audio tracks.
+       * Defines source tracks and target languages for subtitle and audio translation.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -15101,7 +15868,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video translation settings.
+       * Settings for automatic translation of audio tracks.
+       * Defines source tracks and target languages for subtitle and audio translation.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -15119,7 +15887,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video translation settings.
+       * Settings for automatic translation of audio tracks.
+       * Defines source tracks and target languages for subtitle and audio translation.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -15141,7 +15910,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video translation settings.
+       * Settings for automatic translation of audio tracks.
+       * Defines source tracks and target languages for subtitle and audio translation.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -15159,7 +15929,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video translation settings.
+       * Settings for automatic translation of audio tracks.
+       * Defines source tracks and target languages for subtitle and audio translation.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -15171,7 +15942,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video translation settings.
+       * Settings for automatic translation of audio tracks.
+       * Defines source tracks and target languages for subtitle and audio translation.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -15186,7 +15958,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video translation settings.
+       * Settings for automatic translation of audio tracks.
+       * Defines source tracks and target languages for subtitle and audio translation.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
@@ -15210,7 +15983,8 @@ public final class VideoServiceOuterClass {
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettingsOrBuilder> summarizationSettingsBuilder_;
       /**
        * <pre>
-       * Video summarization settings.
+       * Settings for automatic video content summarization.
+       * Defines which audio tracks should be processed to generate text summaries.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -15221,7 +15995,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video summarization settings.
+       * Settings for automatic video content summarization.
+       * Defines which audio tracks should be processed to generate text summaries.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -15236,7 +16011,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video summarization settings.
+       * Settings for automatic video content summarization.
+       * Defines which audio tracks should be processed to generate text summaries.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -15256,7 +16032,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video summarization settings.
+       * Settings for automatic video content summarization.
+       * Defines which audio tracks should be processed to generate text summaries.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -15274,7 +16051,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video summarization settings.
+       * Settings for automatic video content summarization.
+       * Defines which audio tracks should be processed to generate text summaries.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -15296,7 +16074,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video summarization settings.
+       * Settings for automatic video content summarization.
+       * Defines which audio tracks should be processed to generate text summaries.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -15314,7 +16093,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video summarization settings.
+       * Settings for automatic video content summarization.
+       * Defines which audio tracks should be processed to generate text summaries.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -15326,7 +16106,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video summarization settings.
+       * Settings for automatic video content summarization.
+       * Defines which audio tracks should be processed to generate text summaries.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -15341,7 +16122,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video summarization settings.
+       * Settings for automatic video content summarization.
+       * Defines which audio tracks should be processed to generate text summaries.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
@@ -17219,29 +18001,25 @@ public final class VideoServiceOuterClass {
 
       /**
        * <pre>
-       * Source track language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Source track language represented as a three-letter code according to ISO 639-2/T.
        * Track language will be deduced automatically if not provided.
        * In the latter case the deduction accuracy is not guaranteed.
        * For better performance please do specify the source track language when possible.
        * </pre>
        *
-       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
        * @return The srcLang.
        */
       java.lang.String getSrcLang();
       /**
        * <pre>
-       * Source track language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Source track language represented as a three-letter code according to ISO 639-2/T.
        * Track language will be deduced automatically if not provided.
        * In the latter case the deduction accuracy is not guaranteed.
        * For better performance please do specify the source track language when possible.
        * </pre>
        *
-       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
        * @return The bytes for srcLang.
        */
       com.google.protobuf.ByteString
@@ -17355,15 +18133,13 @@ public final class VideoServiceOuterClass {
       private volatile java.lang.Object srcLang_;
       /**
        * <pre>
-       * Source track language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Source track language represented as a three-letter code according to ISO 639-2/T.
        * Track language will be deduced automatically if not provided.
        * In the latter case the deduction accuracy is not guaranteed.
        * For better performance please do specify the source track language when possible.
        * </pre>
        *
-       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
        * @return The srcLang.
        */
       @java.lang.Override
@@ -17381,15 +18157,13 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Source track language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Source track language represented as a three-letter code according to ISO 639-2/T.
        * Track language will be deduced automatically if not provided.
        * In the latter case the deduction accuracy is not guaranteed.
        * For better performance please do specify the source track language when possible.
        * </pre>
        *
-       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
        * @return The bytes for srcLang.
        */
       @java.lang.Override
@@ -17773,15 +18547,13 @@ public final class VideoServiceOuterClass {
         private java.lang.Object srcLang_ = "";
         /**
          * <pre>
-         * Source track language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * Track language will be deduced automatically if not provided.
          * In the latter case the deduction accuracy is not guaranteed.
          * For better performance please do specify the source track language when possible.
          * </pre>
          *
-         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
          * @return The srcLang.
          */
         public java.lang.String getSrcLang() {
@@ -17798,15 +18570,13 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Source track language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * Track language will be deduced automatically if not provided.
          * In the latter case the deduction accuracy is not guaranteed.
          * For better performance please do specify the source track language when possible.
          * </pre>
          *
-         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
          * @return The bytes for srcLang.
          */
         public com.google.protobuf.ByteString
@@ -17824,15 +18594,13 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Source track language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * Track language will be deduced automatically if not provided.
          * In the latter case the deduction accuracy is not guaranteed.
          * For better performance please do specify the source track language when possible.
          * </pre>
          *
-         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
          * @param value The srcLang to set.
          * @return This builder for chaining.
          */
@@ -17848,15 +18616,13 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Source track language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * Track language will be deduced automatically if not provided.
          * In the latter case the deduction accuracy is not guaranteed.
          * For better performance please do specify the source track language when possible.
          * </pre>
          *
-         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSrcLang() {
@@ -17867,15 +18633,13 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Source track language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * Track language will be deduced automatically if not provided.
          * In the latter case the deduction accuracy is not guaranteed.
          * For better performance please do specify the source track language when possible.
          * </pre>
          *
-         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
          * @param value The bytes for srcLang to set.
          * @return This builder for chaining.
          */
@@ -17949,23 +18713,19 @@ public final class VideoServiceOuterClass {
 
       /**
        * <pre>
-       * Target language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Target language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
        * @return The dstLang.
        */
       java.lang.String getDstLang();
       /**
        * <pre>
-       * Target language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Target language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
        * @return The bytes for dstLang.
        */
       com.google.protobuf.ByteString
@@ -18086,12 +18846,10 @@ public final class VideoServiceOuterClass {
       private volatile java.lang.Object dstLang_;
       /**
        * <pre>
-       * Target language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Target language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
        * @return The dstLang.
        */
       @java.lang.Override
@@ -18109,12 +18867,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Target language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Target language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
        * @return The bytes for dstLang.
        */
       @java.lang.Override
@@ -18500,12 +19256,10 @@ public final class VideoServiceOuterClass {
         private java.lang.Object dstLang_ = "";
         /**
          * <pre>
-         * Target language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Target language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
-         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
          * @return The dstLang.
          */
         public java.lang.String getDstLang() {
@@ -18522,12 +19276,10 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Target language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Target language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
-         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
          * @return The bytes for dstLang.
          */
         public com.google.protobuf.ByteString
@@ -18545,12 +19297,10 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Target language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Target language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
-         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
          * @param value The dstLang to set.
          * @return This builder for chaining.
          */
@@ -18566,12 +19316,10 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Target language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Target language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
-         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
          * @return This builder for chaining.
          */
         public Builder clearDstLang() {
@@ -18582,12 +19330,10 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Target language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Target language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
-         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "ara|deu|eng|fra|ita|jpn|kaz|kor|rus|spa|tur|ukr|zho", (.yandex.cloud.length) = "3"];</code>
          * @param value The bytes for dstLang to set.
          * @return This builder for chaining.
          */
@@ -18757,23 +19503,19 @@ public final class VideoServiceOuterClass {
 
       /**
        * <pre>
-       * Target language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Target language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "eng|kaz|rus", (.yandex.cloud.length) = "3"];</code>
        * @return The dstLang.
        */
       java.lang.String getDstLang();
       /**
        * <pre>
-       * Target language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Target language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "eng|kaz|rus", (.yandex.cloud.length) = "3"];</code>
        * @return The bytes for dstLang.
        */
       com.google.protobuf.ByteString
@@ -18894,12 +19636,10 @@ public final class VideoServiceOuterClass {
       private volatile java.lang.Object dstLang_;
       /**
        * <pre>
-       * Target language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Target language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "eng|kaz|rus", (.yandex.cloud.length) = "3"];</code>
        * @return The dstLang.
        */
       @java.lang.Override
@@ -18917,12 +19657,10 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Target language in any of the following formats:
-       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-       * * two-letter code according to ISO 639-1                          
+       * Target language represented as a three-letter code according to ISO 639-2/T.
        * </pre>
        *
-       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "eng|kaz|rus", (.yandex.cloud.length) = "3"];</code>
        * @return The bytes for dstLang.
        */
       @java.lang.Override
@@ -19308,12 +20046,10 @@ public final class VideoServiceOuterClass {
         private java.lang.Object dstLang_ = "";
         /**
          * <pre>
-         * Target language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Target language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
-         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "eng|kaz|rus", (.yandex.cloud.length) = "3"];</code>
          * @return The dstLang.
          */
         public java.lang.String getDstLang() {
@@ -19330,12 +20066,10 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Target language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Target language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
-         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "eng|kaz|rus", (.yandex.cloud.length) = "3"];</code>
          * @return The bytes for dstLang.
          */
         public com.google.protobuf.ByteString
@@ -19353,12 +20087,10 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Target language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Target language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
-         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "eng|kaz|rus", (.yandex.cloud.length) = "3"];</code>
          * @param value The dstLang to set.
          * @return This builder for chaining.
          */
@@ -19374,12 +20106,10 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Target language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Target language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
-         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "eng|kaz|rus", (.yandex.cloud.length) = "3"];</code>
          * @return This builder for chaining.
          */
         public Builder clearDstLang() {
@@ -19390,12 +20120,10 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Target language in any of the following formats:
-         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
-         * * two-letter code according to ISO 639-1                          
+         * Target language represented as a three-letter code according to ISO 639-2/T.
          * </pre>
          *
-         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "eng|kaz|rus", (.yandex.cloud.length) = "3"];</code>
          * @param value The bytes for dstLang to set.
          * @return This builder for chaining.
          */
@@ -21179,25 +21907,25 @@ public final class VideoServiceOuterClass {
 
       /**
        * <pre>
-       * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+       * Source track language represented as a three-letter code according to ISO 639-2/T.
        * It will be deduced automatically if not provided.
        * In the latter case the deduction accuracy is not guaranteed.
        * For better performance please do specify the source track language when possible.
        * </pre>
        *
-       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
        * @return The srcLang.
        */
       java.lang.String getSrcLang();
       /**
        * <pre>
-       * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+       * Source track language represented as a three-letter code according to ISO 639-2/T.
        * It will be deduced automatically if not provided.
        * In the latter case the deduction accuracy is not guaranteed.
        * For better performance please do specify the source track language when possible.
        * </pre>
        *
-       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
        * @return The bytes for srcLang.
        */
       com.google.protobuf.ByteString
@@ -21311,13 +22039,13 @@ public final class VideoServiceOuterClass {
       private volatile java.lang.Object srcLang_;
       /**
        * <pre>
-       * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+       * Source track language represented as a three-letter code according to ISO 639-2/T.
        * It will be deduced automatically if not provided.
        * In the latter case the deduction accuracy is not guaranteed.
        * For better performance please do specify the source track language when possible.
        * </pre>
        *
-       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
        * @return The srcLang.
        */
       @java.lang.Override
@@ -21335,13 +22063,13 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+       * Source track language represented as a three-letter code according to ISO 639-2/T.
        * It will be deduced automatically if not provided.
        * In the latter case the deduction accuracy is not guaranteed.
        * For better performance please do specify the source track language when possible.
        * </pre>
        *
-       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
        * @return The bytes for srcLang.
        */
       @java.lang.Override
@@ -21725,13 +22453,13 @@ public final class VideoServiceOuterClass {
         private java.lang.Object srcLang_ = "";
         /**
          * <pre>
-         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * It will be deduced automatically if not provided.
          * In the latter case the deduction accuracy is not guaranteed.
          * For better performance please do specify the source track language when possible.
          * </pre>
          *
-         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
          * @return The srcLang.
          */
         public java.lang.String getSrcLang() {
@@ -21748,13 +22476,13 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * It will be deduced automatically if not provided.
          * In the latter case the deduction accuracy is not guaranteed.
          * For better performance please do specify the source track language when possible.
          * </pre>
          *
-         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
          * @return The bytes for srcLang.
          */
         public com.google.protobuf.ByteString
@@ -21772,13 +22500,13 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * It will be deduced automatically if not provided.
          * In the latter case the deduction accuracy is not guaranteed.
          * For better performance please do specify the source track language when possible.
          * </pre>
          *
-         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
          * @param value The srcLang to set.
          * @return This builder for chaining.
          */
@@ -21794,13 +22522,13 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * It will be deduced automatically if not provided.
          * In the latter case the deduction accuracy is not guaranteed.
          * For better performance please do specify the source track language when possible.
          * </pre>
          *
-         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSrcLang() {
@@ -21811,13 +22539,13 @@ public final class VideoServiceOuterClass {
         }
         /**
          * <pre>
-         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+         * Source track language represented as a three-letter code according to ISO 639-2/T.
          * It will be deduced automatically if not provided.
          * In the latter case the deduction accuracy is not guaranteed.
          * For better performance please do specify the source track language when possible.
          * </pre>
          *
-         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * <code>string src_lang = 2 [(.yandex.cloud.pattern) = "|ara|deu|eng|fra|ita|jpn|kor|rus|spa|tur|zho", (.yandex.cloud.length) = "0,3"];</code>
          * @param value The bytes for srcLang to set.
          * @return This builder for chaining.
          */
@@ -23349,7 +24077,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to delete.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23358,7 +24086,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to delete.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23455,7 +24183,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object videoId_;
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to delete.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23476,7 +24204,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video to delete.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23802,7 +24530,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object videoId_ = "";
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to delete.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23822,7 +24550,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to delete.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23843,7 +24571,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to delete.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23862,7 +24590,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to delete.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23876,7 +24604,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video to delete.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23954,6 +24682,7 @@ public final class VideoServiceOuterClass {
     /**
      * <pre>
      * ID of the video.
+     * This identifier can be used to track the video deletion operation.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -23963,6 +24692,7 @@ public final class VideoServiceOuterClass {
     /**
      * <pre>
      * ID of the video.
+     * This identifier can be used to track the video deletion operation.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -24060,6 +24790,7 @@ public final class VideoServiceOuterClass {
     /**
      * <pre>
      * ID of the video.
+     * This identifier can be used to track the video deletion operation.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -24081,6 +24812,7 @@ public final class VideoServiceOuterClass {
     /**
      * <pre>
      * ID of the video.
+     * This identifier can be used to track the video deletion operation.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -24407,6 +25139,7 @@ public final class VideoServiceOuterClass {
       /**
        * <pre>
        * ID of the video.
+       * This identifier can be used to track the video deletion operation.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -24427,6 +25160,7 @@ public final class VideoServiceOuterClass {
       /**
        * <pre>
        * ID of the video.
+       * This identifier can be used to track the video deletion operation.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -24448,6 +25182,7 @@ public final class VideoServiceOuterClass {
       /**
        * <pre>
        * ID of the video.
+       * This identifier can be used to track the video deletion operation.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -24467,6 +25202,7 @@ public final class VideoServiceOuterClass {
       /**
        * <pre>
        * ID of the video.
+       * This identifier can be used to track the video deletion operation.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -24481,6 +25217,7 @@ public final class VideoServiceOuterClass {
       /**
        * <pre>
        * ID of the video.
+       * This identifier can be used to track the video deletion operation.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -24557,7 +25294,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24566,7 +25303,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24577,7 +25314,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs to delete.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24587,7 +25324,7 @@ public final class VideoServiceOuterClass {
         getVideoIdsList();
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs to delete.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24596,7 +25333,7 @@ public final class VideoServiceOuterClass {
     int getVideoIdsCount();
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs to delete.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24606,7 +25343,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoIds(int index);
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs to delete.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24718,7 +25455,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24739,7 +25476,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos to delete.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24764,7 +25501,7 @@ public final class VideoServiceOuterClass {
     private com.google.protobuf.LazyStringList videoIds_;
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs to delete.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24776,7 +25513,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs to delete.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24787,7 +25524,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs to delete.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24799,7 +25536,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs to delete.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25152,7 +25889,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25172,7 +25909,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25193,7 +25930,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25212,7 +25949,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25226,7 +25963,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos to delete.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25254,7 +25991,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs to delete.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25266,7 +26003,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs to delete.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25277,7 +26014,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs to delete.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25289,7 +26026,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs to delete.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25302,7 +26039,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs to delete.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25322,7 +26059,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs to delete.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25341,7 +26078,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs to delete.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25358,7 +26095,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs to delete.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25372,7 +26109,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs to delete.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25449,7 +26186,9 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs being deleted.
+     * This list can be used to track which videos are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string video_ids = 1;</code>
@@ -25459,7 +26198,9 @@ public final class VideoServiceOuterClass {
         getVideoIdsList();
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs being deleted.
+     * This list can be used to track which videos are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string video_ids = 1;</code>
@@ -25468,7 +26209,9 @@ public final class VideoServiceOuterClass {
     int getVideoIdsCount();
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs being deleted.
+     * This list can be used to track which videos are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string video_ids = 1;</code>
@@ -25478,7 +26221,9 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoIds(int index);
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs being deleted.
+     * This list can be used to track which videos are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string video_ids = 1;</code>
@@ -25583,7 +26328,9 @@ public final class VideoServiceOuterClass {
     private com.google.protobuf.LazyStringList videoIds_;
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs being deleted.
+     * This list can be used to track which videos are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string video_ids = 1;</code>
@@ -25595,7 +26342,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs being deleted.
+     * This list can be used to track which videos are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string video_ids = 1;</code>
@@ -25606,7 +26355,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs being deleted.
+     * This list can be used to track which videos are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string video_ids = 1;</code>
@@ -25618,7 +26369,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of video IDs.
+     * List of video IDs being deleted.
+     * This list can be used to track which videos are included
+     * in the batch deletion operation.
      * </pre>
      *
      * <code>repeated string video_ids = 1;</code>
@@ -25960,7 +26713,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs being deleted.
+       * This list can be used to track which videos are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string video_ids = 1;</code>
@@ -25972,7 +26727,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs being deleted.
+       * This list can be used to track which videos are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string video_ids = 1;</code>
@@ -25983,7 +26740,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs being deleted.
+       * This list can be used to track which videos are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string video_ids = 1;</code>
@@ -25995,7 +26754,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs being deleted.
+       * This list can be used to track which videos are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string video_ids = 1;</code>
@@ -26008,7 +26769,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs being deleted.
+       * This list can be used to track which videos are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string video_ids = 1;</code>
@@ -26028,7 +26791,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs being deleted.
+       * This list can be used to track which videos are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string video_ids = 1;</code>
@@ -26047,7 +26812,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs being deleted.
+       * This list can be used to track which videos are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string video_ids = 1;</code>
@@ -26064,7 +26831,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs being deleted.
+       * This list can be used to track which videos are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string video_ids = 1;</code>
@@ -26078,7 +26847,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of video IDs.
+       * List of video IDs being deleted.
+       * This list can be used to track which videos are included
+       * in the batch deletion operation.
        * </pre>
        *
        * <code>repeated string video_ids = 1;</code>
@@ -26155,7 +26926,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video on which to perform the action.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26164,7 +26935,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video on which to perform the action.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26174,31 +26945,61 @@ public final class VideoServiceOuterClass {
         getVideoIdBytes();
 
     /**
+     * <pre>
+     * Publish the video, making it available for watching.
+     * Changes the video's visibility status to PUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
      * @return Whether the publish field is set.
      */
     boolean hasPublish();
     /**
+     * <pre>
+     * Publish the video, making it available for watching.
+     * Changes the video's visibility status to PUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
      * @return The publish.
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.PublishVideoAction getPublish();
     /**
+     * <pre>
+     * Publish the video, making it available for watching.
+     * Changes the video's visibility status to PUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.PublishVideoActionOrBuilder getPublishOrBuilder();
 
     /**
+     * <pre>
+     * Unpublish the video, making it unavailable for watching.
+     * Changes the video's visibility status to UNPUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
      * @return Whether the unpublish field is set.
      */
     boolean hasUnpublish();
     /**
+     * <pre>
+     * Unpublish the video, making it unavailable for watching.
+     * Changes the video's visibility status to UNPUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
      * @return The unpublish.
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.UnpublishVideoAction getUnpublish();
     /**
+     * <pre>
+     * Unpublish the video, making it unavailable for watching.
+     * Changes the video's visibility status to UNPUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.UnpublishVideoActionOrBuilder getUnpublishOrBuilder();
@@ -26362,7 +27163,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object videoId_;
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video on which to perform the action.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26383,7 +27184,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video on which to perform the action.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26406,6 +27207,11 @@ public final class VideoServiceOuterClass {
 
     public static final int PUBLISH_FIELD_NUMBER = 1000;
     /**
+     * <pre>
+     * Publish the video, making it available for watching.
+     * Changes the video's visibility status to PUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
      * @return Whether the publish field is set.
      */
@@ -26414,6 +27220,11 @@ public final class VideoServiceOuterClass {
       return actionCase_ == 1000;
     }
     /**
+     * <pre>
+     * Publish the video, making it available for watching.
+     * Changes the video's visibility status to PUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
      * @return The publish.
      */
@@ -26425,6 +27236,11 @@ public final class VideoServiceOuterClass {
       return yandex.cloud.api.video.v1.VideoServiceOuterClass.PublishVideoAction.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Publish the video, making it available for watching.
+     * Changes the video's visibility status to PUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
      */
     @java.lang.Override
@@ -26437,6 +27253,11 @@ public final class VideoServiceOuterClass {
 
     public static final int UNPUBLISH_FIELD_NUMBER = 1001;
     /**
+     * <pre>
+     * Unpublish the video, making it unavailable for watching.
+     * Changes the video's visibility status to UNPUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
      * @return Whether the unpublish field is set.
      */
@@ -26445,6 +27266,11 @@ public final class VideoServiceOuterClass {
       return actionCase_ == 1001;
     }
     /**
+     * <pre>
+     * Unpublish the video, making it unavailable for watching.
+     * Changes the video's visibility status to UNPUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
      * @return The unpublish.
      */
@@ -26456,6 +27282,11 @@ public final class VideoServiceOuterClass {
       return yandex.cloud.api.video.v1.VideoServiceOuterClass.UnpublishVideoAction.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Unpublish the video, making it unavailable for watching.
+     * Changes the video's visibility status to UNPUBLISHED.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
      */
     @java.lang.Override
@@ -26855,7 +27686,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object videoId_ = "";
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video on which to perform the action.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26875,7 +27706,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video on which to perform the action.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26896,7 +27727,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video on which to perform the action.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26915,7 +27746,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video on which to perform the action.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26929,7 +27760,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video on which to perform the action.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26951,6 +27782,11 @@ public final class VideoServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.VideoServiceOuterClass.PublishVideoAction, yandex.cloud.api.video.v1.VideoServiceOuterClass.PublishVideoAction.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.PublishVideoActionOrBuilder> publishBuilder_;
       /**
+       * <pre>
+       * Publish the video, making it available for watching.
+       * Changes the video's visibility status to PUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
        * @return Whether the publish field is set.
        */
@@ -26959,6 +27795,11 @@ public final class VideoServiceOuterClass {
         return actionCase_ == 1000;
       }
       /**
+       * <pre>
+       * Publish the video, making it available for watching.
+       * Changes the video's visibility status to PUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
        * @return The publish.
        */
@@ -26977,6 +27818,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Publish the video, making it available for watching.
+       * Changes the video's visibility status to PUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
        */
       public Builder setPublish(yandex.cloud.api.video.v1.VideoServiceOuterClass.PublishVideoAction value) {
@@ -26993,6 +27839,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publish the video, making it available for watching.
+       * Changes the video's visibility status to PUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
        */
       public Builder setPublish(
@@ -27007,6 +27858,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publish the video, making it available for watching.
+       * Changes the video's visibility status to PUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
        */
       public Builder mergePublish(yandex.cloud.api.video.v1.VideoServiceOuterClass.PublishVideoAction value) {
@@ -27029,6 +27885,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publish the video, making it available for watching.
+       * Changes the video's visibility status to PUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
        */
       public Builder clearPublish() {
@@ -27048,12 +27909,22 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publish the video, making it available for watching.
+       * Changes the video's visibility status to PUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
        */
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.PublishVideoAction.Builder getPublishBuilder() {
         return getPublishFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Publish the video, making it available for watching.
+       * Changes the video's visibility status to PUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
        */
       @java.lang.Override
@@ -27068,6 +27939,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Publish the video, making it available for watching.
+       * Changes the video's visibility status to PUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.PublishVideoAction publish = 1000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -27092,6 +27968,11 @@ public final class VideoServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.VideoServiceOuterClass.UnpublishVideoAction, yandex.cloud.api.video.v1.VideoServiceOuterClass.UnpublishVideoAction.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.UnpublishVideoActionOrBuilder> unpublishBuilder_;
       /**
+       * <pre>
+       * Unpublish the video, making it unavailable for watching.
+       * Changes the video's visibility status to UNPUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
        * @return Whether the unpublish field is set.
        */
@@ -27100,6 +27981,11 @@ public final class VideoServiceOuterClass {
         return actionCase_ == 1001;
       }
       /**
+       * <pre>
+       * Unpublish the video, making it unavailable for watching.
+       * Changes the video's visibility status to UNPUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
        * @return The unpublish.
        */
@@ -27118,6 +28004,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unpublish the video, making it unavailable for watching.
+       * Changes the video's visibility status to UNPUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
        */
       public Builder setUnpublish(yandex.cloud.api.video.v1.VideoServiceOuterClass.UnpublishVideoAction value) {
@@ -27134,6 +28025,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unpublish the video, making it unavailable for watching.
+       * Changes the video's visibility status to UNPUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
        */
       public Builder setUnpublish(
@@ -27148,6 +28044,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unpublish the video, making it unavailable for watching.
+       * Changes the video's visibility status to UNPUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
        */
       public Builder mergeUnpublish(yandex.cloud.api.video.v1.VideoServiceOuterClass.UnpublishVideoAction value) {
@@ -27170,6 +28071,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unpublish the video, making it unavailable for watching.
+       * Changes the video's visibility status to UNPUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
        */
       public Builder clearUnpublish() {
@@ -27189,12 +28095,22 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unpublish the video, making it unavailable for watching.
+       * Changes the video's visibility status to UNPUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
        */
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.UnpublishVideoAction.Builder getUnpublishBuilder() {
         return getUnpublishFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Unpublish the video, making it unavailable for watching.
+       * Changes the video's visibility status to UNPUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
        */
       @java.lang.Override
@@ -27209,6 +28125,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unpublish the video, making it unavailable for watching.
+       * Changes the video's visibility status to UNPUBLISHED.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.UnpublishVideoAction unpublish = 1001;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -27287,6 +28208,10 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Parameters for the publish action.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.PublishVideoAction}
    */
   public static final class PublishVideoAction extends
@@ -27508,6 +28433,10 @@ public final class VideoServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Parameters for the publish action.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.PublishVideoAction}
      */
     public static final class Builder extends
@@ -27705,6 +28634,10 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Parameters for the unpublish action.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.UnpublishVideoAction}
    */
   public static final class UnpublishVideoAction extends
@@ -27926,6 +28859,10 @@ public final class VideoServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Parameters for the unpublish action.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.UnpublishVideoAction}
      */
     public static final class Builder extends
@@ -28124,7 +29061,9 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video on which the action is being performed.
+     * This identifier can be used to track the action operation
+     * and to verify that the action is being applied to the correct video.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -28133,7 +29072,9 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video on which the action is being performed.
+     * This identifier can be used to track the action operation
+     * and to verify that the action is being applied to the correct video.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -28230,7 +29171,9 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object videoId_;
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video on which the action is being performed.
+     * This identifier can be used to track the action operation
+     * and to verify that the action is being applied to the correct video.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -28251,7 +29194,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video on which the action is being performed.
+     * This identifier can be used to track the action operation
+     * and to verify that the action is being applied to the correct video.
      * </pre>
      *
      * <code>string video_id = 1;</code>
@@ -28577,7 +29522,9 @@ public final class VideoServiceOuterClass {
       private java.lang.Object videoId_ = "";
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video on which the action is being performed.
+       * This identifier can be used to track the action operation
+       * and to verify that the action is being applied to the correct video.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -28597,7 +29544,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video on which the action is being performed.
+       * This identifier can be used to track the action operation
+       * and to verify that the action is being applied to the correct video.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -28618,7 +29567,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video on which the action is being performed.
+       * This identifier can be used to track the action operation
+       * and to verify that the action is being applied to the correct video.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -28637,7 +29588,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video on which the action is being performed.
+       * This identifier can be used to track the action operation
+       * and to verify that the action is being applied to the correct video.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -28651,7 +29604,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video on which the action is being performed.
+       * This identifier can be used to track the action operation
+       * and to verify that the action is being applied to the correct video.
        * </pre>
        *
        * <code>string video_id = 1;</code>
@@ -28728,7 +29683,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video for which to generate a player URL.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28737,7 +29692,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video for which to generate a player URL.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28747,23 +29702,39 @@ public final class VideoServiceOuterClass {
         getVideoIdBytes();
 
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
      * @return Whether the params field is set.
      */
     boolean hasParams();
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
      * @return The params.
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams getParams();
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder getParamsOrBuilder();
 
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -28772,7 +29743,8 @@ public final class VideoServiceOuterClass {
     boolean hasSignedUrlExpirationDuration();
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -28781,7 +29753,8 @@ public final class VideoServiceOuterClass {
     com.google.protobuf.Duration getSignedUrlExpirationDuration();
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -28902,7 +29875,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object videoId_;
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video for which to generate a player URL.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28923,7 +29896,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video for which to generate a player URL.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28947,6 +29920,11 @@ public final class VideoServiceOuterClass {
     public static final int PARAMS_FIELD_NUMBER = 2;
     private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams params_;
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
      * @return Whether the params field is set.
      */
@@ -28955,6 +29933,11 @@ public final class VideoServiceOuterClass {
       return params_ != null;
     }
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
      * @return The params.
      */
@@ -28963,6 +29946,11 @@ public final class VideoServiceOuterClass {
       return params_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.getDefaultInstance() : params_;
     }
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
      */
     @java.lang.Override
@@ -28974,7 +29962,8 @@ public final class VideoServiceOuterClass {
     private com.google.protobuf.Duration signedUrlExpirationDuration_;
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -28986,7 +29975,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -28998,7 +29988,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -29373,7 +30364,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object videoId_ = "";
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video for which to generate a player URL.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29393,7 +30384,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video for which to generate a player URL.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29414,7 +30405,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video for which to generate a player URL.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29433,7 +30424,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video for which to generate a player URL.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29447,7 +30438,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video for which to generate a player URL.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29470,6 +30461,11 @@ public final class VideoServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder> paramsBuilder_;
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
        * @return Whether the params field is set.
        */
@@ -29477,6 +30473,11 @@ public final class VideoServiceOuterClass {
         return paramsBuilder_ != null || params_ != null;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
        * @return The params.
        */
@@ -29488,6 +30489,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
        */
       public Builder setParams(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams value) {
@@ -29504,6 +30510,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
        */
       public Builder setParams(
@@ -29518,6 +30529,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
        */
       public Builder mergeParams(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams value) {
@@ -29536,6 +30552,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
        */
       public Builder clearParams() {
@@ -29550,6 +30571,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
        */
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.Builder getParamsBuilder() {
@@ -29558,6 +30584,11 @@ public final class VideoServiceOuterClass {
         return getParamsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
        */
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder getParamsOrBuilder() {
@@ -29569,6 +30600,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -29590,7 +30626,8 @@ public final class VideoServiceOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> signedUrlExpirationDurationBuilder_;
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -29601,7 +30638,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -29616,7 +30654,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -29636,7 +30675,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -29654,7 +30694,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -29676,7 +30717,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -29694,7 +30736,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -29706,7 +30749,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -29721,7 +30765,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 3;</code>
@@ -29798,7 +30843,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * If true, a player will be muted by default.
+     * If true, the player will start with audio muted.
+     * Users can unmute the audio manually after playback starts.
      * </pre>
      *
      * <code>bool mute = 1;</code>
@@ -29808,7 +30854,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * If true, playback will start automatically.
+     * If true, the video will start playing automatically when the player loads.
+     * This may be subject to browser autoplay policies that restrict autoplay with sound.
      * </pre>
      *
      * <code>bool autoplay = 2;</code>
@@ -29818,7 +30865,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * If true, a player interface will be hidden by default.
+     * If true, the player interface controls will be hidden initially.
+     * Users can typically reveal the controls by moving the mouse over the player.
      * </pre>
      *
      * <code>bool hidden = 3;</code>
@@ -29922,7 +30970,8 @@ public final class VideoServiceOuterClass {
     private boolean mute_;
     /**
      * <pre>
-     * If true, a player will be muted by default.
+     * If true, the player will start with audio muted.
+     * Users can unmute the audio manually after playback starts.
      * </pre>
      *
      * <code>bool mute = 1;</code>
@@ -29937,7 +30986,8 @@ public final class VideoServiceOuterClass {
     private boolean autoplay_;
     /**
      * <pre>
-     * If true, playback will start automatically.
+     * If true, the video will start playing automatically when the player loads.
+     * This may be subject to browser autoplay policies that restrict autoplay with sound.
      * </pre>
      *
      * <code>bool autoplay = 2;</code>
@@ -29952,7 +31002,8 @@ public final class VideoServiceOuterClass {
     private boolean hidden_;
     /**
      * <pre>
-     * If true, a player interface will be hidden by default.
+     * If true, the player interface controls will be hidden initially.
+     * Users can typically reveal the controls by moving the mouse over the player.
      * </pre>
      *
      * <code>bool hidden = 3;</code>
@@ -30305,7 +31356,8 @@ public final class VideoServiceOuterClass {
       private boolean mute_ ;
       /**
        * <pre>
-       * If true, a player will be muted by default.
+       * If true, the player will start with audio muted.
+       * Users can unmute the audio manually after playback starts.
        * </pre>
        *
        * <code>bool mute = 1;</code>
@@ -30317,7 +31369,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, a player will be muted by default.
+       * If true, the player will start with audio muted.
+       * Users can unmute the audio manually after playback starts.
        * </pre>
        *
        * <code>bool mute = 1;</code>
@@ -30332,7 +31385,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, a player will be muted by default.
+       * If true, the player will start with audio muted.
+       * Users can unmute the audio manually after playback starts.
        * </pre>
        *
        * <code>bool mute = 1;</code>
@@ -30348,7 +31402,8 @@ public final class VideoServiceOuterClass {
       private boolean autoplay_ ;
       /**
        * <pre>
-       * If true, playback will start automatically.
+       * If true, the video will start playing automatically when the player loads.
+       * This may be subject to browser autoplay policies that restrict autoplay with sound.
        * </pre>
        *
        * <code>bool autoplay = 2;</code>
@@ -30360,7 +31415,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, playback will start automatically.
+       * If true, the video will start playing automatically when the player loads.
+       * This may be subject to browser autoplay policies that restrict autoplay with sound.
        * </pre>
        *
        * <code>bool autoplay = 2;</code>
@@ -30375,7 +31431,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, playback will start automatically.
+       * If true, the video will start playing automatically when the player loads.
+       * This may be subject to browser autoplay policies that restrict autoplay with sound.
        * </pre>
        *
        * <code>bool autoplay = 2;</code>
@@ -30391,7 +31448,8 @@ public final class VideoServiceOuterClass {
       private boolean hidden_ ;
       /**
        * <pre>
-       * If true, a player interface will be hidden by default.
+       * If true, the player interface controls will be hidden initially.
+       * Users can typically reveal the controls by moving the mouse over the player.
        * </pre>
        *
        * <code>bool hidden = 3;</code>
@@ -30403,7 +31461,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, a player interface will be hidden by default.
+       * If true, the player interface controls will be hidden initially.
+       * Users can typically reveal the controls by moving the mouse over the player.
        * </pre>
        *
        * <code>bool hidden = 3;</code>
@@ -30418,7 +31477,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * If true, a player interface will be hidden by default.
+       * If true, the player interface controls will be hidden initially.
+       * Users can typically reveal the controls by moving the mouse over the player.
        * </pre>
        *
        * <code>bool hidden = 3;</code>
@@ -30489,7 +31549,9 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Direct link to the video.
+     * Direct URL to the video player.
+     * This URL can be used to access the video in a web browser
+     * or shared with users who have appropriate permissions.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -30498,7 +31560,9 @@ public final class VideoServiceOuterClass {
     java.lang.String getPlayerUrl();
     /**
      * <pre>
-     * Direct link to the video.
+     * Direct URL to the video player.
+     * This URL can be used to access the video in a web browser
+     * or shared with users who have appropriate permissions.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -30509,7 +31573,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * HTML embed code in Iframe format.
+     * HTML embed code in iframe format that can be inserted into web pages.
+     * This code allows the video to be embedded directly in third-party websites.
      * </pre>
      *
      * <code>string html = 2;</code>
@@ -30518,7 +31583,8 @@ public final class VideoServiceOuterClass {
     java.lang.String getHtml();
     /**
      * <pre>
-     * HTML embed code in Iframe format.
+     * HTML embed code in iframe format that can be inserted into web pages.
+     * This code allows the video to be embedded directly in third-party websites.
      * </pre>
      *
      * <code>string html = 2;</code>
@@ -30622,7 +31688,9 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object playerUrl_;
     /**
      * <pre>
-     * Direct link to the video.
+     * Direct URL to the video player.
+     * This URL can be used to access the video in a web browser
+     * or shared with users who have appropriate permissions.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -30643,7 +31711,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Direct link to the video.
+     * Direct URL to the video player.
+     * This URL can be used to access the video in a web browser
+     * or shared with users who have appropriate permissions.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -30668,7 +31738,8 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object html_;
     /**
      * <pre>
-     * HTML embed code in Iframe format.
+     * HTML embed code in iframe format that can be inserted into web pages.
+     * This code allows the video to be embedded directly in third-party websites.
      * </pre>
      *
      * <code>string html = 2;</code>
@@ -30689,7 +31760,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * HTML embed code in Iframe format.
+     * HTML embed code in iframe format that can be inserted into web pages.
+     * This code allows the video to be embedded directly in third-party websites.
      * </pre>
      *
      * <code>string html = 2;</code>
@@ -31032,7 +32104,9 @@ public final class VideoServiceOuterClass {
       private java.lang.Object playerUrl_ = "";
       /**
        * <pre>
-       * Direct link to the video.
+       * Direct URL to the video player.
+       * This URL can be used to access the video in a web browser
+       * or shared with users who have appropriate permissions.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -31052,7 +32126,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the video.
+       * Direct URL to the video player.
+       * This URL can be used to access the video in a web browser
+       * or shared with users who have appropriate permissions.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -31073,7 +32149,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the video.
+       * Direct URL to the video player.
+       * This URL can be used to access the video in a web browser
+       * or shared with users who have appropriate permissions.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -31092,7 +32170,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the video.
+       * Direct URL to the video player.
+       * This URL can be used to access the video in a web browser
+       * or shared with users who have appropriate permissions.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -31106,7 +32186,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the video.
+       * Direct URL to the video player.
+       * This URL can be used to access the video in a web browser
+       * or shared with users who have appropriate permissions.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -31128,7 +32210,8 @@ public final class VideoServiceOuterClass {
       private java.lang.Object html_ = "";
       /**
        * <pre>
-       * HTML embed code in Iframe format.
+       * HTML embed code in iframe format that can be inserted into web pages.
+       * This code allows the video to be embedded directly in third-party websites.
        * </pre>
        *
        * <code>string html = 2;</code>
@@ -31148,7 +32231,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * HTML embed code in Iframe format.
+       * HTML embed code in iframe format that can be inserted into web pages.
+       * This code allows the video to be embedded directly in third-party websites.
        * </pre>
        *
        * <code>string html = 2;</code>
@@ -31169,7 +32253,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * HTML embed code in Iframe format.
+       * HTML embed code in iframe format that can be inserted into web pages.
+       * This code allows the video to be embedded directly in third-party websites.
        * </pre>
        *
        * <code>string html = 2;</code>
@@ -31188,7 +32273,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * HTML embed code in Iframe format.
+       * HTML embed code in iframe format that can be inserted into web pages.
+       * This code allows the video to be embedded directly in third-party websites.
        * </pre>
        *
        * <code>string html = 2;</code>
@@ -31202,7 +32288,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * HTML embed code in Iframe format.
+       * HTML embed code in iframe format that can be inserted into web pages.
+       * This code allows the video to be embedded directly in third-party websites.
        * </pre>
        *
        * <code>string html = 2;</code>
@@ -31279,7 +32366,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos for which to generate player URLs.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31288,7 +32375,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos for which to generate player URLs.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31299,7 +32386,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs for which to generate player URLs.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31309,7 +32396,7 @@ public final class VideoServiceOuterClass {
         getVideoIdsList();
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs for which to generate player URLs.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31318,7 +32405,7 @@ public final class VideoServiceOuterClass {
     int getVideoIdsCount();
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs for which to generate player URLs.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31328,7 +32415,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoIds(int index);
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs for which to generate player URLs.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31339,23 +32426,43 @@ public final class VideoServiceOuterClass {
         getVideoIdsBytes(int index);
 
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * These parameters will be applied to all generated player URLs.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
      * @return Whether the params field is set.
      */
     boolean hasParams();
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * These parameters will be applied to all generated player URLs.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
      * @return The params.
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams getParams();
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * These parameters will be applied to all generated player URLs.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder getParamsOrBuilder();
 
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
+     * This setting applies to all videos in the batch that use sign_url_access.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -31364,7 +32471,9 @@ public final class VideoServiceOuterClass {
     boolean hasSignedUrlExpirationDuration();
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
+     * This setting applies to all videos in the batch that use sign_url_access.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -31373,7 +32482,9 @@ public final class VideoServiceOuterClass {
     com.google.protobuf.Duration getSignedUrlExpirationDuration();
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
+     * This setting applies to all videos in the batch that use sign_url_access.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -31508,7 +32619,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos for which to generate player URLs.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31529,7 +32640,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel.
+     * ID of the channel containing the videos for which to generate player URLs.
      * </pre>
      *
      * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31554,7 +32665,7 @@ public final class VideoServiceOuterClass {
     private com.google.protobuf.LazyStringList videoIds_;
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs for which to generate player URLs.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31566,7 +32677,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs for which to generate player URLs.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31577,7 +32688,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs for which to generate player URLs.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31589,7 +32700,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * List of requested video IDs.
+     * List of video IDs for which to generate player URLs.
      * </pre>
      *
      * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31604,6 +32715,12 @@ public final class VideoServiceOuterClass {
     public static final int PARAMS_FIELD_NUMBER = 3;
     private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams params_;
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * These parameters will be applied to all generated player URLs.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
      * @return Whether the params field is set.
      */
@@ -31612,6 +32729,12 @@ public final class VideoServiceOuterClass {
       return params_ != null;
     }
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * These parameters will be applied to all generated player URLs.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
      * @return The params.
      */
@@ -31620,6 +32743,12 @@ public final class VideoServiceOuterClass {
       return params_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.getDefaultInstance() : params_;
     }
     /**
+     * <pre>
+     * Optional player parameters to customize the playback experience.
+     * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+     * These parameters will be applied to all generated player URLs.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
      */
     @java.lang.Override
@@ -31631,7 +32760,9 @@ public final class VideoServiceOuterClass {
     private com.google.protobuf.Duration signedUrlExpirationDuration_;
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
+     * This setting applies to all videos in the batch that use sign_url_access.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -31643,7 +32774,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
+     * This setting applies to all videos in the batch that use sign_url_access.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -31655,7 +32788,9 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * For episodes with signed URL access, specifies how long the generated URL will be valid.
+     * If not provided, a default expiration duration will be used.
+     * This setting applies to all videos in the batch that use sign_url_access.
      * </pre>
      *
      * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -32066,7 +33201,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos for which to generate player URLs.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32086,7 +33221,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos for which to generate player URLs.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32107,7 +33242,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos for which to generate player URLs.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32126,7 +33261,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos for which to generate player URLs.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32140,7 +33275,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel.
+       * ID of the channel containing the videos for which to generate player URLs.
        * </pre>
        *
        * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32168,7 +33303,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs for which to generate player URLs.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32180,7 +33315,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs for which to generate player URLs.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32191,7 +33326,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs for which to generate player URLs.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32203,7 +33338,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs for which to generate player URLs.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32216,7 +33351,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs for which to generate player URLs.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32236,7 +33371,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs for which to generate player URLs.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32255,7 +33390,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs for which to generate player URLs.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32272,7 +33407,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs for which to generate player URLs.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32286,7 +33421,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * List of requested video IDs.
+       * List of video IDs for which to generate player URLs.
        * </pre>
        *
        * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32309,6 +33444,12 @@ public final class VideoServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder> paramsBuilder_;
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * These parameters will be applied to all generated player URLs.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
        * @return Whether the params field is set.
        */
@@ -32316,6 +33457,12 @@ public final class VideoServiceOuterClass {
         return paramsBuilder_ != null || params_ != null;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * These parameters will be applied to all generated player URLs.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
        * @return The params.
        */
@@ -32327,6 +33474,12 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * These parameters will be applied to all generated player URLs.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
        */
       public Builder setParams(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams value) {
@@ -32343,6 +33496,12 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * These parameters will be applied to all generated player URLs.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
        */
       public Builder setParams(
@@ -32357,6 +33516,12 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * These parameters will be applied to all generated player URLs.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
        */
       public Builder mergeParams(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams value) {
@@ -32375,6 +33540,12 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * These parameters will be applied to all generated player URLs.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
        */
       public Builder clearParams() {
@@ -32389,6 +33560,12 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * These parameters will be applied to all generated player URLs.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
        */
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.Builder getParamsBuilder() {
@@ -32397,6 +33574,12 @@ public final class VideoServiceOuterClass {
         return getParamsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * These parameters will be applied to all generated player URLs.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
        */
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder getParamsOrBuilder() {
@@ -32408,6 +33591,12 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Optional player parameters to customize the playback experience.
+       * These parameters control initial player state such as mute, autoplay, and visibility of interface controls.
+       * These parameters will be applied to all generated player URLs.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -32429,7 +33618,9 @@ public final class VideoServiceOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> signedUrlExpirationDurationBuilder_;
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
+       * This setting applies to all videos in the batch that use sign_url_access.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -32440,7 +33631,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
+       * This setting applies to all videos in the batch that use sign_url_access.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -32455,7 +33648,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
+       * This setting applies to all videos in the batch that use sign_url_access.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -32475,7 +33670,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
+       * This setting applies to all videos in the batch that use sign_url_access.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -32493,7 +33690,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
+       * This setting applies to all videos in the batch that use sign_url_access.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -32515,7 +33714,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
+       * This setting applies to all videos in the batch that use sign_url_access.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -32533,7 +33734,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
+       * This setting applies to all videos in the batch that use sign_url_access.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -32545,7 +33748,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
+       * This setting applies to all videos in the batch that use sign_url_access.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -32560,7 +33765,9 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * For episodes with signed URL access, specifies how long the generated URL will be valid.
+       * If not provided, a default expiration duration will be used.
+       * This setting applies to all videos in the batch that use sign_url_access.
        * </pre>
        *
        * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
@@ -32636,23 +33843,43 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of player URLs corresponding to the requested video IDs.
+     * The order of URLs matches the order of video IDs in the request.
+     * </pre>
+     *
      * <code>repeated string player_urls = 1;</code>
      * @return A list containing the playerUrls.
      */
     java.util.List<java.lang.String>
         getPlayerUrlsList();
     /**
+     * <pre>
+     * List of player URLs corresponding to the requested video IDs.
+     * The order of URLs matches the order of video IDs in the request.
+     * </pre>
+     *
      * <code>repeated string player_urls = 1;</code>
      * @return The count of playerUrls.
      */
     int getPlayerUrlsCount();
     /**
+     * <pre>
+     * List of player URLs corresponding to the requested video IDs.
+     * The order of URLs matches the order of video IDs in the request.
+     * </pre>
+     *
      * <code>repeated string player_urls = 1;</code>
      * @param index The index of the element to return.
      * @return The playerUrls at the given index.
      */
     java.lang.String getPlayerUrls(int index);
     /**
+     * <pre>
+     * List of player URLs corresponding to the requested video IDs.
+     * The order of URLs matches the order of video IDs in the request.
+     * </pre>
+     *
      * <code>repeated string player_urls = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the playerUrls at the given index.
@@ -32754,6 +33981,11 @@ public final class VideoServiceOuterClass {
     public static final int PLAYER_URLS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList playerUrls_;
     /**
+     * <pre>
+     * List of player URLs corresponding to the requested video IDs.
+     * The order of URLs matches the order of video IDs in the request.
+     * </pre>
+     *
      * <code>repeated string player_urls = 1;</code>
      * @return A list containing the playerUrls.
      */
@@ -32762,6 +33994,11 @@ public final class VideoServiceOuterClass {
       return playerUrls_;
     }
     /**
+     * <pre>
+     * List of player URLs corresponding to the requested video IDs.
+     * The order of URLs matches the order of video IDs in the request.
+     * </pre>
+     *
      * <code>repeated string player_urls = 1;</code>
      * @return The count of playerUrls.
      */
@@ -32769,6 +34006,11 @@ public final class VideoServiceOuterClass {
       return playerUrls_.size();
     }
     /**
+     * <pre>
+     * List of player URLs corresponding to the requested video IDs.
+     * The order of URLs matches the order of video IDs in the request.
+     * </pre>
+     *
      * <code>repeated string player_urls = 1;</code>
      * @param index The index of the element to return.
      * @return The playerUrls at the given index.
@@ -32777,6 +34019,11 @@ public final class VideoServiceOuterClass {
       return playerUrls_.get(index);
     }
     /**
+     * <pre>
+     * List of player URLs corresponding to the requested video IDs.
+     * The order of URLs matches the order of video IDs in the request.
+     * </pre>
+     *
      * <code>repeated string player_urls = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the playerUrls at the given index.
@@ -33115,6 +34362,11 @@ public final class VideoServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of player URLs corresponding to the requested video IDs.
+       * The order of URLs matches the order of video IDs in the request.
+       * </pre>
+       *
        * <code>repeated string player_urls = 1;</code>
        * @return A list containing the playerUrls.
        */
@@ -33123,6 +34375,11 @@ public final class VideoServiceOuterClass {
         return playerUrls_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of player URLs corresponding to the requested video IDs.
+       * The order of URLs matches the order of video IDs in the request.
+       * </pre>
+       *
        * <code>repeated string player_urls = 1;</code>
        * @return The count of playerUrls.
        */
@@ -33130,6 +34387,11 @@ public final class VideoServiceOuterClass {
         return playerUrls_.size();
       }
       /**
+       * <pre>
+       * List of player URLs corresponding to the requested video IDs.
+       * The order of URLs matches the order of video IDs in the request.
+       * </pre>
+       *
        * <code>repeated string player_urls = 1;</code>
        * @param index The index of the element to return.
        * @return The playerUrls at the given index.
@@ -33138,6 +34400,11 @@ public final class VideoServiceOuterClass {
         return playerUrls_.get(index);
       }
       /**
+       * <pre>
+       * List of player URLs corresponding to the requested video IDs.
+       * The order of URLs matches the order of video IDs in the request.
+       * </pre>
+       *
        * <code>repeated string player_urls = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the playerUrls at the given index.
@@ -33147,6 +34414,11 @@ public final class VideoServiceOuterClass {
         return playerUrls_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of player URLs corresponding to the requested video IDs.
+       * The order of URLs matches the order of video IDs in the request.
+       * </pre>
+       *
        * <code>repeated string player_urls = 1;</code>
        * @param index The index to set the value at.
        * @param value The playerUrls to set.
@@ -33163,6 +34435,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of player URLs corresponding to the requested video IDs.
+       * The order of URLs matches the order of video IDs in the request.
+       * </pre>
+       *
        * <code>repeated string player_urls = 1;</code>
        * @param value The playerUrls to add.
        * @return This builder for chaining.
@@ -33178,6 +34455,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of player URLs corresponding to the requested video IDs.
+       * The order of URLs matches the order of video IDs in the request.
+       * </pre>
+       *
        * <code>repeated string player_urls = 1;</code>
        * @param values The playerUrls to add.
        * @return This builder for chaining.
@@ -33191,6 +34473,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of player URLs corresponding to the requested video IDs.
+       * The order of URLs matches the order of video IDs in the request.
+       * </pre>
+       *
        * <code>repeated string player_urls = 1;</code>
        * @return This builder for chaining.
        */
@@ -33201,6 +34488,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of player URLs corresponding to the requested video IDs.
+       * The order of URLs matches the order of video IDs in the request.
+       * </pre>
+       *
        * <code>repeated string player_urls = 1;</code>
        * @param value The bytes of the playerUrls to add.
        * @return This builder for chaining.
@@ -33275,7 +34567,7 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video for which to retrieve manifest URLs.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33284,7 +34576,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getVideoId();
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video for which to retrieve manifest URLs.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33381,7 +34673,7 @@ public final class VideoServiceOuterClass {
     private volatile java.lang.Object videoId_;
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video for which to retrieve manifest URLs.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33402,7 +34694,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the video.
+     * ID of the video for which to retrieve manifest URLs.
      * </pre>
      *
      * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33728,7 +35020,7 @@ public final class VideoServiceOuterClass {
       private java.lang.Object videoId_ = "";
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video for which to retrieve manifest URLs.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33748,7 +35040,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video for which to retrieve manifest URLs.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33769,7 +35061,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video for which to retrieve manifest URLs.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33788,7 +35080,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video for which to retrieve manifest URLs.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33802,7 +35094,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the video.
+       * ID of the video for which to retrieve manifest URLs.
        * </pre>
        *
        * <code>string video_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33878,24 +35170,49 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of manifests available for the video.
+     * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
      */
     java.util.List<yandex.cloud.api.video.v1.ManifestOuterClass.Manifest> 
         getManifestsList();
     /**
+     * <pre>
+     * List of manifests available for the video.
+     * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
      */
     yandex.cloud.api.video.v1.ManifestOuterClass.Manifest getManifests(int index);
     /**
+     * <pre>
+     * List of manifests available for the video.
+     * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
      */
     int getManifestsCount();
     /**
+     * <pre>
+     * List of manifests available for the video.
+     * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.video.v1.ManifestOuterClass.ManifestOrBuilder> 
         getManifestsOrBuilderList();
     /**
+     * <pre>
+     * List of manifests available for the video.
+     * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
      */
     yandex.cloud.api.video.v1.ManifestOuterClass.ManifestOrBuilder getManifestsOrBuilder(
@@ -33995,6 +35312,11 @@ public final class VideoServiceOuterClass {
     public static final int MANIFESTS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.video.v1.ManifestOuterClass.Manifest> manifests_;
     /**
+     * <pre>
+     * List of manifests available for the video.
+     * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
      */
     @java.lang.Override
@@ -34002,6 +35324,11 @@ public final class VideoServiceOuterClass {
       return manifests_;
     }
     /**
+     * <pre>
+     * List of manifests available for the video.
+     * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
      */
     @java.lang.Override
@@ -34010,6 +35337,11 @@ public final class VideoServiceOuterClass {
       return manifests_;
     }
     /**
+     * <pre>
+     * List of manifests available for the video.
+     * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
      */
     @java.lang.Override
@@ -34017,6 +35349,11 @@ public final class VideoServiceOuterClass {
       return manifests_.size();
     }
     /**
+     * <pre>
+     * List of manifests available for the video.
+     * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
      */
     @java.lang.Override
@@ -34024,6 +35361,11 @@ public final class VideoServiceOuterClass {
       return manifests_.get(index);
     }
     /**
+     * <pre>
+     * List of manifests available for the video.
+     * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
      */
     @java.lang.Override
@@ -34387,6 +35729,11 @@ public final class VideoServiceOuterClass {
           yandex.cloud.api.video.v1.ManifestOuterClass.Manifest, yandex.cloud.api.video.v1.ManifestOuterClass.Manifest.Builder, yandex.cloud.api.video.v1.ManifestOuterClass.ManifestOrBuilder> manifestsBuilder_;
 
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.ManifestOuterClass.Manifest> getManifestsList() {
@@ -34397,6 +35744,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public int getManifestsCount() {
@@ -34407,6 +35759,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public yandex.cloud.api.video.v1.ManifestOuterClass.Manifest getManifests(int index) {
@@ -34417,6 +35774,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public Builder setManifests(
@@ -34434,6 +35796,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public Builder setManifests(
@@ -34448,6 +35815,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public Builder addManifests(yandex.cloud.api.video.v1.ManifestOuterClass.Manifest value) {
@@ -34464,6 +35836,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public Builder addManifests(
@@ -34481,6 +35858,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public Builder addManifests(
@@ -34495,6 +35877,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public Builder addManifests(
@@ -34509,6 +35896,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public Builder addAllManifests(
@@ -34524,6 +35916,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public Builder clearManifests() {
@@ -34537,6 +35934,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public Builder removeManifests(int index) {
@@ -34550,6 +35952,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public yandex.cloud.api.video.v1.ManifestOuterClass.Manifest.Builder getManifestsBuilder(
@@ -34557,6 +35964,11 @@ public final class VideoServiceOuterClass {
         return getManifestsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public yandex.cloud.api.video.v1.ManifestOuterClass.ManifestOrBuilder getManifestsOrBuilder(
@@ -34567,6 +35979,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.video.v1.ManifestOuterClass.ManifestOrBuilder> 
@@ -34578,6 +35995,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public yandex.cloud.api.video.v1.ManifestOuterClass.Manifest.Builder addManifestsBuilder() {
@@ -34585,6 +36007,11 @@ public final class VideoServiceOuterClass {
             yandex.cloud.api.video.v1.ManifestOuterClass.Manifest.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public yandex.cloud.api.video.v1.ManifestOuterClass.Manifest.Builder addManifestsBuilder(
@@ -34593,6 +36020,11 @@ public final class VideoServiceOuterClass {
             index, yandex.cloud.api.video.v1.ManifestOuterClass.Manifest.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of manifests available for the video.
+       * Different manifests may represent different streaming formats (e.g., HLS, DASH)
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Manifest manifests = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.ManifestOuterClass.Manifest.Builder> 
@@ -34880,59 +36312,62 @@ public final class VideoServiceOuterClass {
       "ud/validation.proto\032$yandex/cloud/video/" +
       "v1/manifest.proto\032!yandex/cloud/video/v1" +
       "/video.proto\"1\n\017GetVideoRequest\022\036\n\010video" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\247\001\n\020ListVideoReq" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\261\001\n\020ListVideoReq" +
       "uest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034" +
       "\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\037\n\npage_tok" +
-      "en\030e \001(\tB\013\212\3101\007<=15000\022\020\n\010order_by\030f \001(\t\022" +
-      "\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"`\n\021Lis" +
-      "tVideoResponse\022,\n\006videos\030\001 \003(\0132\034.yandex." +
-      "cloud.video.v1.Video\022\027\n\017next_page_token\030" +
-      "d \001(\tJ\004\010\002\020d\"_\n\025BatchGetVideosRequest\022 \n\n" +
-      "channel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\tvideo_" +
-      "ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"F\n\026BatchGet" +
-      "VideosResponse\022,\n\006videos\030\001 \003(\0132\034.yandex." +
-      "cloud.video.v1.Video\"\207\006\n\022CreateVideoRequ" +
-      "est\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
-      "\005title\030\002 \001(\tB\016\350\3071\001\212\3101\006<=2500\022\023\n\013descript" +
-      "ion\030\003 \001(\t\022\036\n\014thumbnail_id\030\004 \001(\tB\010\212\3101\004<=5" +
-      "0\022<\n\016auto_transcode\030\005 \001(\0162$.yandex.cloud" +
-      ".video.v1.AutoTranscode\0220\n\014auto_publish\030" +
-      "\007 \001(\0132\032.google.protobuf.BoolValue\022-\n\tena" +
-      "ble_ad\030\010 \001(\0132\032.google.protobuf.BoolValue" +
-      "\022\216\001\n\006labels\030\310\001 \003(\01325.yandex.cloud.video." +
-      "v1.CreateVideoRequest.LabelsEntryBF\202\3101\004<" +
-      "=64\212\3101\004<=63\362\3071\022[-_.@:/0-9a-zA-Z]*\262\3101\006\032\004<" +
-      "=63\262\3101\022\022\020[a-z][-_0-9a-z]*\0227\n\004tusd\030\350\007 \001(\013" +
-      "2&.yandex.cloud.video.v1.VideoTUSDParams" +
-      "H\000\022H\n\rpublic_access\030\320\017 \001(\0132..yandex.clou" +
-      "d.video.v1.VideoPublicAccessParamsH\001\022K\n\017" +
-      "sign_url_access\030\323\017 \001(\0132/.yandex.cloud.vi" +
-      "deo.v1.VideoSignURLAccessParamsH\001\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "B\016\n\006source\022\004\300\3011\001B\017\n\raccess_rightsJ\006\010\321\017\020\322" +
-      "\017J\006\010\322\017\020\323\017J\004\010\006\020\007J\005\010\t\020\310\001J\006\010\311\001\020\350\007J\006\010\351\007\020\320\017\"?" +
-      "\n\017VideoTUSDParams\022\031\n\tfile_size\030\001 \001(\003B\006\372\307" +
-      "1\002>0\022\021\n\tfile_name\030\002 \001(\t\"\031\n\027VideoPublicAc" +
-      "cessParams\"\032\n\030VideoSignURLAccessParams\"\'" +
-      "\n\023CreateVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"" +
-      "\264\005\n\022UpdateVideoRequest\022\036\n\010video_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\0224\n\nfield_mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMaskB\004\350\3071\001\022\031\n\005title\030\003 " +
-      "\001(\tB\n\212\3101\006<=2500\022\023\n\013description\030\004 \001(\t\022\036\n\014" +
-      "thumbnail_id\030\005 \001(\tB\010\212\3101\004<=50\022<\n\016auto_tra" +
-      "nscode\030\006 \001(\0162$.yandex.cloud.video.v1.Aut" +
-      "oTranscode\022-\n\tenable_ad\030\010 \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\022\216\001\n\006labels\030\310\001 \003(\01325.ya" +
-      "ndex.cloud.video.v1.UpdateVideoRequest.L" +
-      "abelsEntryBF\202\3101\004<=64\212\3101\004<=63\362\3071\022[-_.@:/0" +
-      "-9a-zA-Z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z" +
-      "]*\022H\n\rpublic_access\030\320\017 \001(\0132..yandex.clou" +
-      "d.video.v1.VideoPublicAccessParamsH\000\022K\n\017" +
-      "sign_url_access\030\323\017 \001(\0132/.yandex.cloud.vi" +
-      "deo.v1.VideoSignURLAccessParamsH\000\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "B\017\n\raccess_rightsJ\006\010\321\017\020\322\017J\006\010\322\017\020\323\017J\004\010\007\020\010J" +
-      "\005\010\t\020\310\001J\006\010\311\001\020\320\017\"\'\n\023UpdateVideoMetadata\022\020\n" +
+      "en\030e \001(\tB\013\212\3101\007<=15000\022\032\n\010order_by\030f \001(\tB" +
+      "\010\212\3101\004<=50\022\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010" +
+      "\002\020d\"`\n\021ListVideoResponse\022,\n\006videos\030\001 \003(\013" +
+      "2\034.yandex.cloud.video.v1.Video\022\027\n\017next_p" +
+      "age_token\030d \001(\tJ\004\010\002\020d\"_\n\025BatchGetVideosR" +
+      "equest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022$\n\tvideo_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"F" +
+      "\n\026BatchGetVideosResponse\022,\n\006videos\030\001 \003(\013" +
+      "2\034.yandex.cloud.video.v1.Video\"\301\006\n\022Creat" +
+      "eVideoRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\034\n\005title\030\002 \001(\tB\r\350\3071\001\212\3101\005<=300\022\037\n" +
+      "\013description\030\003 \001(\tB\n\212\3101\006<=4000\022\036\n\014thumbn" +
+      "ail_id\030\004 \001(\tB\010\212\3101\004<=50\022<\n\016auto_transcode" +
+      "\030\005 \001(\0162$.yandex.cloud.video.v1.AutoTrans" +
+      "code\022!\n\017style_preset_id\030\006 \001(\tB\010\212\3101\004<=50\022" +
+      "0\n\014auto_publish\030\007 \001(\0132\032.google.protobuf." +
+      "BoolValue\022-\n\tenable_ad\030\010 \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\022\216\001\n\006labels\030\310\001 \003(\01325.yan" +
+      "dex.cloud.video.v1.CreateVideoRequest.La" +
+      "belsEntryBF\202\3101\004<=64\212\3101\004<=63\362\3071\022[-_.@:/0-" +
+      "9a-zA-Z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]" +
+      "*\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud.video.v1" +
+      ".VideoTUSDParamsH\000\022H\n\rpublic_access\030\320\017 \001" +
+      "(\0132..yandex.cloud.video.v1.VideoPublicAc" +
+      "cessParamsH\001\022K\n\017sign_url_access\030\323\017 \001(\0132/" +
+      ".yandex.cloud.video.v1.VideoSignURLAcces" +
+      "sParamsH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001B\016\n\006source\022\004\300\3011\001B\025\n\racce" +
+      "ss_rights\022\004\300\3011\001J\004\010\n\020\013J\006\010\321\017\020\322\017J\006\010\322\017\020\323\017J\004\010" +
+      "\t\020\nJ\005\010\013\020\310\001J\006\010\311\001\020\350\007J\006\010\351\007\020\320\017\"?\n\017VideoTUSDP" +
+      "arams\022\031\n\tfile_size\030\001 \001(\003B\006\372\3071\002>0\022\021\n\tfile" +
+      "_name\030\002 \001(\t\"\031\n\027VideoPublicAccessParams\"\032" +
+      "\n\030VideoSignURLAccessParams\"\'\n\023CreateVide" +
+      "oMetadata\022\020\n\010video_id\030\001 \001(\t\"\350\005\n\022UpdateVi" +
+      "deoRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\0224\n\nfield_mask\030\002 \001(\0132\032.google.protobuf" +
+      ".FieldMaskB\004\350\3071\001\022\030\n\005title\030\003 \001(\tB\t\212\3101\005<=3" +
+      "00\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=4000\022\036\n\014t" +
+      "humbnail_id\030\005 \001(\tB\010\212\3101\004<=50\022<\n\016auto_tran" +
+      "scode\030\006 \001(\0162$.yandex.cloud.video.v1.Auto" +
+      "Transcode\022!\n\017style_preset_id\030\007 \001(\tB\010\212\3101\004" +
+      "<=50\022-\n\tenable_ad\030\010 \001(\0132\032.google.protobu" +
+      "f.BoolValue\022\216\001\n\006labels\030\310\001 \003(\01325.yandex.c" +
+      "loud.video.v1.UpdateVideoRequest.LabelsE" +
+      "ntryBF\202\3101\004<=64\212\3101\004<=63\362\3071\022[-_.@:/0-9a-zA" +
+      "-Z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022H\n\r" +
+      "public_access\030\320\017 \001(\0132..yandex.cloud.vide" +
+      "o.v1.VideoPublicAccessParamsH\000\022K\n\017sign_u" +
+      "rl_access\030\323\017 \001(\0132/.yandex.cloud.video.v1" +
+      ".VideoSignURLAccessParamsH\000\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\rac" +
+      "cess_rightsJ\004\010\n\020\013J\006\010\321\017\020\322\017J\006\010\322\017\020\323\017J\004\010\t\020\nJ" +
+      "\005\010\013\020\310\001J\006\010\311\001\020\320\017\"\'\n\023UpdateVideoMetadata\022\020\n" +
       "\010video_id\030\001 \001(\t\"\227\002\n\025TranscodeVideoReques" +
       "t\022\020\n\010video_id\030\001 \001(\t\0224\n\nfield_mask\030\002 \001(\0132" +
       "\032.google.protobuf.FieldMaskB\004\350\3071\001\022\024\n\014sub" +
@@ -34940,7 +36375,7 @@ public final class VideoServiceOuterClass {
       "\004 \001(\0132/.yandex.cloud.video.v1.VideoTrans" +
       "lationSettings\022Q\n\026summarization_settings" +
       "\030\005 \001(\01321.yandex.cloud.video.v1.VideoSumm" +
-      "arizationSettings\"\323\004\n\030VideoTranslationSe" +
+      "arizationSettings\"\306\005\n\030VideoTranslationSe" +
       "ttings\022P\n\006tracks\030\001 \003(\0132@.yandex.cloud.vi" +
       "deo.v1.VideoTranslationSettings.Translat" +
       "ionTrack\032\206\002\n\020TranslationTrack\022U\n\013input_t" +
@@ -34949,106 +36384,110 @@ public final class VideoServiceOuterClass {
       "subtitles\030\002 \003(\0132=.yandex.cloud.video.v1." +
       "VideoTranslationSettings.SubtitleTrack\022I" +
       "\n\005audio\030\003 \003(\0132:.yandex.cloud.video.v1.Vi" +
-      "deoTranslationSettings.AudioTrack\032E\n\nInp" +
-      "utTrack\022\034\n\013track_index\030\001 \001(\003B\007\372\3071\003>=1\022\031\n" +
-      "\010src_lang\030\002 \001(\tB\007\212\3101\003<=3\032K\n\rSubtitleTrac" +
-      "k\022\035\n\010dst_lang\030\001 \001(\tB\013\350\3071\001\212\3101\0032-3\022\033\n\005labe" +
-      "l\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\032H\n\nAudioTrack\022\035\n\010d" +
-      "st_lang\030\001 \001(\tB\013\350\3071\001\212\3101\0032-3\022\033\n\005label\030\002 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"\312\002\n\032VideoSummarizationSe" +
-      "ttings\022T\n\006tracks\030\002 \003(\0132D.yandex.cloud.vi" +
-      "deo.v1.VideoSummarizationSettings.Summar" +
-      "izationTrack\022\032\n\022process_all_tracks\030\003 \001(\010" +
-      "\032m\n\022SummarizationTrack\022W\n\013input_track\030\001 " +
-      "\001(\0132<.yandex.cloud.video.v1.VideoSummari" +
-      "zationSettings.InputTrackB\004\350\3071\001\032E\n\nInput" +
-      "Track\022\034\n\013track_index\030\001 \001(\003B\007\372\3071\003>=1\022\031\n\010s" +
-      "rc_lang\030\002 \001(\tB\007\212\3101\003<=3J\004\010\001\020\002\"*\n\026Transcod" +
-      "eVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"4\n\022Dele" +
-      "teVideoRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\"\'\n\023DeleteVideoMetadata\022\020\n\010video_i" +
-      "d\030\001 \001(\t\"b\n\030BatchDeleteVideosRequest\022 \n\nc" +
-      "hannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\tvideo_i" +
-      "ds\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\".\n\031BatchDele" +
-      "teVideosMetadata\022\021\n\tvideo_ids\030\001 \003(\t\"\324\001\n\031" +
-      "PerformVideoActionRequest\022\036\n\010video_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022=\n\007publish\030\350\007 \001(\0132).ya" +
-      "ndex.cloud.video.v1.PublishVideoActionH\000" +
-      "\022A\n\tunpublish\030\351\007 \001(\0132+.yandex.cloud.vide" +
-      "o.v1.UnpublishVideoActionH\000B\016\n\006action\022\004\300" +
-      "\3011\001J\005\010\002\020\350\007\"\024\n\022PublishVideoAction\"\026\n\024Unpu" +
-      "blishVideoAction\".\n\032PerformVideoActionMe" +
-      "tadata\022\020\n\010video_id\030\001 \001(\t\"\267\001\n\030GetVideoPla" +
-      "yerURLRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\0228\n\006params\030\002 \001(\0132(.yandex.cloud.vid" +
-      "eo.v1.VideoPlayerParams\022A\n\036signed_url_ex" +
-      "piration_duration\030\003 \001(\0132\031.google.protobu" +
-      "f.Duration\"C\n\021VideoPlayerParams\022\014\n\004mute\030" +
-      "\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"" +
-      "=\n\031GetVideoPlayerURLResponse\022\022\n\nplayer_u" +
-      "rl\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\"\345\001\n\036BatchGetVideo" +
-      "PlayerURLsRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022$\n\tvideo_ids\030\002 \003(\tB\021\202\3101\0051-10" +
-      "0\212\3101\004<=50\0228\n\006params\030\003 \001(\0132(.yandex.cloud" +
-      ".video.v1.VideoPlayerParams\022A\n\036signed_ur" +
-      "l_expiration_duration\030\004 \001(\0132\031.google.pro" +
-      "tobuf.Duration\"6\n\037BatchGetVideoPlayerURL" +
-      "sResponse\022\023\n\013player_urls\030\001 \003(\t\":\n\030GetVid" +
-      "eoManifestsRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"O\n\031GetVideoManifestsResponse\022" +
-      "2\n\tmanifests\030\001 \003(\0132\037.yandex.cloud.video." +
-      "v1.Manifest2\247\017\n\014VideoService\022p\n\003Get\022&.ya" +
-      "ndex.cloud.video.v1.GetVideoRequest\032\034.ya" +
-      "ndex.cloud.video.v1.Video\"#\202\323\344\223\002\035\022\033/vide" +
-      "o/v1/videos/{video_id}\022s\n\004List\022\'.yandex." +
-      "cloud.video.v1.ListVideoRequest\032(.yandex" +
-      ".cloud.video.v1.ListVideoResponse\"\030\202\323\344\223\002" +
-      "\022\022\020/video/v1/videos\022\215\001\n\010BatchGet\022,.yande" +
-      "x.cloud.video.v1.BatchGetVideosRequest\032-" +
-      ".yandex.cloud.video.v1.BatchGetVideosRes" +
-      "ponse\"$\202\323\344\223\002\036\"\031/video/v1/videos:batchGet" +
-      ":\001*\022\223\001\n\006Create\022).yandex.cloud.video.v1.C" +
-      "reateVideoRequest\032!.yandex.cloud.operati" +
-      "on.Operation\";\202\323\344\223\002\025\"\020/video/v1/videos:\001" +
-      "*\262\322*\034\n\023CreateVideoMetadata\022\005Video\022\236\001\n\006Up" +
-      "date\022).yandex.cloud.video.v1.UpdateVideo" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"F\202\323\344\223\002 2\033/video/v1/videos/{video_id}:" +
-      "\001*\262\322*\034\n\023UpdateVideoMetadata\022\005Video\022\261\001\n\tT" +
-      "ranscode\022,.yandex.cloud.video.v1.Transco" +
-      "deVideoRequest\032!.yandex.cloud.operation." +
-      "Operation\"S\202\323\344\223\002*\"%/video/v1/videos/{vid" +
-      "eo_id}:transcode:\001*\262\322*\037\n\026TranscodeVideoM" +
-      "etadata\022\005Video\022\253\001\n\006Delete\022).yandex.cloud" +
-      ".video.v1.DeleteVideoRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"S\202\323\344\223\002\035*\033/video/" +
-      "v1/videos/{video_id}\262\322*,\n\023DeleteVideoMet" +
-      "adata\022\025google.protobuf.Empty\022\300\001\n\013BatchDe" +
-      "lete\022/.yandex.cloud.video.v1.BatchDelete" +
-      "VideosRequest\032!.yandex.cloud.operation.O" +
-      "peration\"]\202\323\344\223\002!\"\034/video/v1/videos:batch" +
-      "Delete:\001*\262\322*2\n\031BatchDeleteVideosMetadata" +
-      "\022\025google.protobuf.Empty\022\301\001\n\rPerformActio" +
-      "n\0220.yandex.cloud.video.v1.PerformVideoAc" +
-      "tionRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"[\202\323\344\223\002.\")/video/v1/videos/{video_" +
-      "id}:performAction:\001*\262\322*#\n\032PerformVideoAc" +
-      "tionMetadata\022\005Video\022\243\001\n\014GetPlayerURL\022/.y" +
-      "andex.cloud.video.v1.GetVideoPlayerURLRe" +
-      "quest\0320.yandex.cloud.video.v1.GetVideoPl" +
-      "ayerURLResponse\"0\202\323\344\223\002*\022(/video/v1/video" +
-      "s/{video_id}:getPlayerURL\022\263\001\n\022BatchGetPl" +
-      "ayerURLs\0225.yandex.cloud.video.v1.BatchGe" +
-      "tVideoPlayerURLsRequest\0326.yandex.cloud.v" +
-      "ideo.v1.BatchGetVideoPlayerURLsResponse\"" +
-      ".\202\323\344\223\002(\"#/video/v1/videos:batchGetPlayer" +
-      "URLs:\001*\022\243\001\n\014GetManifests\022/.yandex.cloud." +
-      "video.v1.GetVideoManifestsRequest\0320.yand" +
-      "ex.cloud.video.v1.GetVideoManifestsRespo" +
-      "nse\"0\202\323\344\223\002*\022(/video/v1/videos/{video_id}" +
-      ":getManifestsB\\\n\031yandex.cloud.api.video." +
-      "v1Z?github.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/video/v1;videob\006proto3"
+      "deoTranslationSettings.AudioTrack\032u\n\nInp" +
+      "utTrack\022\034\n\013track_index\030\001 \001(\003B\007\372\3071\003>=1\022I\n" +
+      "\010src_lang\030\002 \001(\tB7\212\3101\0030,3\362\3071,|ara|deu|eng" +
+      "|fra|ita|jpn|kor|rus|spa|tur|zho\032\200\001\n\rSub" +
+      "titleTrack\022R\n\010dst_lang\030\001 \001(\tB@\350\3071\001\212\3101\0013\362" +
+      "\30713ara|deu|eng|fra|ita|jpn|kaz|kor|rus|s" +
+      "pa|tur|ukr|zho\022\033\n\005label\030\002 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\032U\n\nAudioTrack\022*\n\010dst_lang\030\001 \001(\tB\030\350\3071" +
+      "\001\212\3101\0013\362\3071\013eng|kaz|rus\022\033\n\005label\030\002 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\"\372\002\n\032VideoSummarizationSetting" +
+      "s\022T\n\006tracks\030\002 \003(\0132D.yandex.cloud.video.v" +
+      "1.VideoSummarizationSettings.Summarizati" +
+      "onTrack\022\032\n\022process_all_tracks\030\003 \001(\010\032m\n\022S" +
+      "ummarizationTrack\022W\n\013input_track\030\001 \001(\0132<" +
+      ".yandex.cloud.video.v1.VideoSummarizatio" +
+      "nSettings.InputTrackB\004\350\3071\001\032u\n\nInputTrack" +
+      "\022\034\n\013track_index\030\001 \001(\003B\007\372\3071\003>=1\022I\n\010src_la" +
+      "ng\030\002 \001(\tB7\212\3101\0030,3\362\3071,|ara|deu|eng|fra|it" +
+      "a|jpn|kor|rus|spa|tur|zhoJ\004\010\001\020\002\"*\n\026Trans" +
+      "codeVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"4\n\022D" +
+      "eleteVideoRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\"\'\n\023DeleteVideoMetadata\022\020\n\010vide" +
+      "o_id\030\001 \001(\t\"b\n\030BatchDeleteVideosRequest\022 " +
+      "\n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\tvide" +
+      "o_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\".\n\031BatchD" +
+      "eleteVideosMetadata\022\021\n\tvideo_ids\030\001 \003(\t\"\324" +
+      "\001\n\031PerformVideoActionRequest\022\036\n\010video_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022=\n\007publish\030\350\007 \001(\0132)" +
+      ".yandex.cloud.video.v1.PublishVideoActio" +
+      "nH\000\022A\n\tunpublish\030\351\007 \001(\0132+.yandex.cloud.v" +
+      "ideo.v1.UnpublishVideoActionH\000B\016\n\006action" +
+      "\022\004\300\3011\001J\005\010\002\020\350\007\"\024\n\022PublishVideoAction\"\026\n\024U" +
+      "npublishVideoAction\".\n\032PerformVideoActio" +
+      "nMetadata\022\020\n\010video_id\030\001 \001(\t\"\267\001\n\030GetVideo" +
+      "PlayerURLRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\0228\n\006params\030\002 \001(\0132(.yandex.cloud." +
+      "video.v1.VideoPlayerParams\022A\n\036signed_url" +
+      "_expiration_duration\030\003 \001(\0132\031.google.prot" +
+      "obuf.Duration\"C\n\021VideoPlayerParams\022\014\n\004mu" +
+      "te\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001" +
+      "(\010\"=\n\031GetVideoPlayerURLResponse\022\022\n\nplaye" +
+      "r_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\"\345\001\n\036BatchGetVi" +
+      "deoPlayerURLsRequest\022 \n\nchannel_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022$\n\tvideo_ids\030\002 \003(\tB\021\202\3101\0051" +
+      "-100\212\3101\004<=50\0228\n\006params\030\003 \001(\0132(.yandex.cl" +
+      "oud.video.v1.VideoPlayerParams\022A\n\036signed" +
+      "_url_expiration_duration\030\004 \001(\0132\031.google." +
+      "protobuf.Duration\"6\n\037BatchGetVideoPlayer" +
+      "URLsResponse\022\023\n\013player_urls\030\001 \003(\t\":\n\030Get" +
+      "VideoManifestsRequest\022\036\n\010video_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\"O\n\031GetVideoManifestsRespon" +
+      "se\0222\n\tmanifests\030\001 \003(\0132\037.yandex.cloud.vid" +
+      "eo.v1.Manifest2\247\017\n\014VideoService\022p\n\003Get\022&" +
+      ".yandex.cloud.video.v1.GetVideoRequest\032\034" +
+      ".yandex.cloud.video.v1.Video\"#\202\323\344\223\002\035\022\033/v" +
+      "ideo/v1/videos/{video_id}\022s\n\004List\022\'.yand" +
+      "ex.cloud.video.v1.ListVideoRequest\032(.yan" +
+      "dex.cloud.video.v1.ListVideoResponse\"\030\202\323" +
+      "\344\223\002\022\022\020/video/v1/videos\022\215\001\n\010BatchGet\022,.ya" +
+      "ndex.cloud.video.v1.BatchGetVideosReques" +
+      "t\032-.yandex.cloud.video.v1.BatchGetVideos" +
+      "Response\"$\202\323\344\223\002\036\"\031/video/v1/videos:batch" +
+      "Get:\001*\022\223\001\n\006Create\022).yandex.cloud.video.v" +
+      "1.CreateVideoRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\";\202\323\344\223\002\025\"\020/video/v1/video" +
+      "s:\001*\262\322*\034\n\023CreateVideoMetadata\022\005Video\022\236\001\n" +
+      "\006Update\022).yandex.cloud.video.v1.UpdateVi" +
+      "deoRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"F\202\323\344\223\002 2\033/video/v1/videos/{video_i" +
+      "d}:\001*\262\322*\034\n\023UpdateVideoMetadata\022\005Video\022\261\001" +
+      "\n\tTranscode\022,.yandex.cloud.video.v1.Tran" +
+      "scodeVideoRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"S\202\323\344\223\002*\"%/video/v1/videos/{" +
+      "video_id}:transcode:\001*\262\322*\037\n\026TranscodeVid" +
+      "eoMetadata\022\005Video\022\253\001\n\006Delete\022).yandex.cl" +
+      "oud.video.v1.DeleteVideoRequest\032!.yandex" +
+      ".cloud.operation.Operation\"S\202\323\344\223\002\035*\033/vid" +
+      "eo/v1/videos/{video_id}\262\322*,\n\023DeleteVideo" +
+      "Metadata\022\025google.protobuf.Empty\022\300\001\n\013Batc" +
+      "hDelete\022/.yandex.cloud.video.v1.BatchDel" +
+      "eteVideosRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"]\202\323\344\223\002!\"\034/video/v1/videos:ba" +
+      "tchDelete:\001*\262\322*2\n\031BatchDeleteVideosMetad" +
+      "ata\022\025google.protobuf.Empty\022\301\001\n\rPerformAc" +
+      "tion\0220.yandex.cloud.video.v1.PerformVide" +
+      "oActionRequest\032!.yandex.cloud.operation." +
+      "Operation\"[\202\323\344\223\002.\")/video/v1/videos/{vid" +
+      "eo_id}:performAction:\001*\262\322*#\n\032PerformVide" +
+      "oActionMetadata\022\005Video\022\243\001\n\014GetPlayerURL\022" +
+      "/.yandex.cloud.video.v1.GetVideoPlayerUR" +
+      "LRequest\0320.yandex.cloud.video.v1.GetVide" +
+      "oPlayerURLResponse\"0\202\323\344\223\002*\022(/video/v1/vi" +
+      "deos/{video_id}:getPlayerURL\022\263\001\n\022BatchGe" +
+      "tPlayerURLs\0225.yandex.cloud.video.v1.Batc" +
+      "hGetVideoPlayerURLsRequest\0326.yandex.clou" +
+      "d.video.v1.BatchGetVideoPlayerURLsRespon" +
+      "se\".\202\323\344\223\002(\"#/video/v1/videos:batchGetPla" +
+      "yerURLs:\001*\022\243\001\n\014GetManifests\022/.yandex.clo" +
+      "ud.video.v1.GetVideoManifestsRequest\0320.y" +
+      "andex.cloud.video.v1.GetVideoManifestsRe" +
+      "sponse\"0\202\323\344\223\002*\022(/video/v1/videos/{video_" +
+      "id}:getManifestsB\\\n\031yandex.cloud.api.vid" +
+      "eo.v1Z?github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -35098,7 +36537,7 @@ public final class VideoServiceOuterClass {
     internal_static_yandex_cloud_video_v1_CreateVideoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateVideoRequest_descriptor,
-        new java.lang.String[] { "ChannelId", "Title", "Description", "ThumbnailId", "AutoTranscode", "AutoPublish", "EnableAd", "Labels", "Tusd", "PublicAccess", "SignUrlAccess", "Source", "AccessRights", });
+        new java.lang.String[] { "ChannelId", "Title", "Description", "ThumbnailId", "AutoTranscode", "StylePresetId", "AutoPublish", "EnableAd", "Labels", "Tusd", "PublicAccess", "SignUrlAccess", "Source", "AccessRights", });
     internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_CreateVideoRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_fieldAccessorTable = new
@@ -35134,7 +36573,7 @@ public final class VideoServiceOuterClass {
     internal_static_yandex_cloud_video_v1_UpdateVideoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateVideoRequest_descriptor,
-        new java.lang.String[] { "VideoId", "FieldMask", "Title", "Description", "ThumbnailId", "AutoTranscode", "EnableAd", "Labels", "PublicAccess", "SignUrlAccess", "AccessRights", });
+        new java.lang.String[] { "VideoId", "FieldMask", "Title", "Description", "ThumbnailId", "AutoTranscode", "StylePresetId", "EnableAd", "Labels", "PublicAccess", "SignUrlAccess", "AccessRights", });
     internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_UpdateVideoRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_fieldAccessorTable = new
