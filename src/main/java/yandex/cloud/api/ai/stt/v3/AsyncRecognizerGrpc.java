@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for async voice recognition.
+ * A set of methods for asynchronous speech recognition: recognize pre-recorded audio and receive results by request.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -157,12 +157,15 @@ public final class AsyncRecognizerGrpc {
 
   /**
    * <pre>
-   * A set of methods for async voice recognition.
+   * A set of methods for asynchronous speech recognition: recognize pre-recorded audio and receive results by request.
    * </pre>
    */
   public static abstract class AsyncRecognizerImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Performs asynchronous speech recognition.
+     * </pre>
      */
     public void recognizeFile(yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -170,6 +173,9 @@ public final class AsyncRecognizerGrpc {
     }
 
     /**
+     * <pre>
+     * Gets results of asynchronous recognition after finishing the operation.
+     * </pre>
      */
     public void getRecognition(yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse> responseObserver) {
@@ -177,6 +183,9 @@ public final class AsyncRecognizerGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes results of asynchronous recognition by operation ID.
+     * </pre>
      */
     public void deleteRecognition(yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -212,7 +221,7 @@ public final class AsyncRecognizerGrpc {
 
   /**
    * <pre>
-   * A set of methods for async voice recognition.
+   * A set of methods for asynchronous speech recognition: recognize pre-recorded audio and receive results by request.
    * </pre>
    */
   public static final class AsyncRecognizerStub extends io.grpc.stub.AbstractAsyncStub<AsyncRecognizerStub> {
@@ -228,6 +237,9 @@ public final class AsyncRecognizerGrpc {
     }
 
     /**
+     * <pre>
+     * Performs asynchronous speech recognition.
+     * </pre>
      */
     public void recognizeFile(yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -236,6 +248,9 @@ public final class AsyncRecognizerGrpc {
     }
 
     /**
+     * <pre>
+     * Gets results of asynchronous recognition after finishing the operation.
+     * </pre>
      */
     public void getRecognition(yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse> responseObserver) {
@@ -244,6 +259,9 @@ public final class AsyncRecognizerGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes results of asynchronous recognition by operation ID.
+     * </pre>
      */
     public void deleteRecognition(yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -254,7 +272,7 @@ public final class AsyncRecognizerGrpc {
 
   /**
    * <pre>
-   * A set of methods for async voice recognition.
+   * A set of methods for asynchronous speech recognition: recognize pre-recorded audio and receive results by request.
    * </pre>
    */
   public static final class AsyncRecognizerBlockingStub extends io.grpc.stub.AbstractBlockingStub<AsyncRecognizerBlockingStub> {
@@ -270,6 +288,9 @@ public final class AsyncRecognizerGrpc {
     }
 
     /**
+     * <pre>
+     * Performs asynchronous speech recognition.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation recognizeFile(yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -277,6 +298,9 @@ public final class AsyncRecognizerGrpc {
     }
 
     /**
+     * <pre>
+     * Gets results of asynchronous recognition after finishing the operation.
+     * </pre>
      */
     public java.util.Iterator<yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse> getRecognition(
         yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest request) {
@@ -285,6 +309,9 @@ public final class AsyncRecognizerGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes results of asynchronous recognition by operation ID.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteRecognition(yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -294,7 +321,7 @@ public final class AsyncRecognizerGrpc {
 
   /**
    * <pre>
-   * A set of methods for async voice recognition.
+   * A set of methods for asynchronous speech recognition: recognize pre-recorded audio and receive results by request.
    * </pre>
    */
   public static final class AsyncRecognizerFutureStub extends io.grpc.stub.AbstractFutureStub<AsyncRecognizerFutureStub> {
@@ -310,6 +337,9 @@ public final class AsyncRecognizerGrpc {
     }
 
     /**
+     * <pre>
+     * Performs asynchronous speech recognition.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> recognizeFile(
         yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest request) {
@@ -318,6 +348,9 @@ public final class AsyncRecognizerGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes results of asynchronous recognition by operation ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteRecognition(
         yandex.cloud.api.ai.stt.v3.Stt.DeleteRecognitionRequest request) {

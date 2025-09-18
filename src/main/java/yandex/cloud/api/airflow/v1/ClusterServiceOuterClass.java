@@ -6844,6 +6844,33 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPythonVersionBytes();
+
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     * @return Whether the dagProcessor field is set.
+     */
+    boolean hasDagProcessor();
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     * @return The dagProcessor.
+     */
+    yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig getDagProcessor();
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     */
+    yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder getDagProcessorOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.airflow.v1.UpdateClusterConfigSpec}
@@ -6993,6 +7020,19 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               pythonVersion_ = s;
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder subBuilder = null;
+              if (dagProcessor_ != null) {
+                subBuilder = dagProcessor_.toBuilder();
+              }
+              dagProcessor_ = input.readMessage(yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dagProcessor_);
+                dagProcessor_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7385,6 +7425,44 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int DAG_PROCESSOR_FIELD_NUMBER = 11;
+    private yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig dagProcessor_;
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     * @return Whether the dagProcessor field is set.
+     */
+    @java.lang.Override
+    public boolean hasDagProcessor() {
+      return dagProcessor_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     * @return The dagProcessor.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig getDagProcessor() {
+      return dagProcessor_ == null ? yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.getDefaultInstance() : dagProcessor_;
+    }
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder getDagProcessorOrBuilder() {
+      return getDagProcessor();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7425,6 +7503,9 @@ public final class ClusterServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pythonVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, pythonVersion_);
+      }
+      if (dagProcessor_ != null) {
+        output.writeMessage(11, getDagProcessor());
       }
       unknownFields.writeTo(output);
     }
@@ -7468,6 +7549,10 @@ public final class ClusterServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pythonVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, pythonVersion_);
+      }
+      if (dagProcessor_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getDagProcessor());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7523,6 +7608,11 @@ public final class ClusterServiceOuterClass {
           .equals(other.getAirflowVersion())) return false;
       if (!getPythonVersion()
           .equals(other.getPythonVersion())) return false;
+      if (hasDagProcessor() != other.hasDagProcessor()) return false;
+      if (hasDagProcessor()) {
+        if (!getDagProcessor()
+            .equals(other.getDagProcessor())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7566,6 +7656,10 @@ public final class ClusterServiceOuterClass {
       hash = (53 * hash) + getAirflowVersion().hashCode();
       hash = (37 * hash) + PYTHON_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getPythonVersion().hashCode();
+      if (hasDagProcessor()) {
+        hash = (37 * hash) + DAG_PROCESSOR_FIELD_NUMBER;
+        hash = (53 * hash) + getDagProcessor().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7745,6 +7839,12 @@ public final class ClusterServiceOuterClass {
 
         pythonVersion_ = "";
 
+        if (dagProcessorBuilder_ == null) {
+          dagProcessor_ = null;
+        } else {
+          dagProcessor_ = null;
+          dagProcessorBuilder_ = null;
+        }
         return this;
       }
 
@@ -7808,6 +7908,11 @@ public final class ClusterServiceOuterClass {
         }
         result.airflowVersion_ = airflowVersion_;
         result.pythonVersion_ = pythonVersion_;
+        if (dagProcessorBuilder_ == null) {
+          result.dagProcessor_ = dagProcessor_;
+        } else {
+          result.dagProcessor_ = dagProcessorBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -7884,6 +7989,9 @@ public final class ClusterServiceOuterClass {
         if (!other.getPythonVersion().isEmpty()) {
           pythonVersion_ = other.pythonVersion_;
           onChanged();
+        }
+        if (other.hasDagProcessor()) {
+          mergeDagProcessor(other.getDagProcessor());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9189,6 +9297,161 @@ public final class ClusterServiceOuterClass {
         pythonVersion_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig dagProcessor_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder> dagProcessorBuilder_;
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       * @return Whether the dagProcessor field is set.
+       */
+      public boolean hasDagProcessor() {
+        return dagProcessorBuilder_ != null || dagProcessor_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       * @return The dagProcessor.
+       */
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig getDagProcessor() {
+        if (dagProcessorBuilder_ == null) {
+          return dagProcessor_ == null ? yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.getDefaultInstance() : dagProcessor_;
+        } else {
+          return dagProcessorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public Builder setDagProcessor(yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig value) {
+        if (dagProcessorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dagProcessor_ = value;
+          onChanged();
+        } else {
+          dagProcessorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public Builder setDagProcessor(
+          yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder builderForValue) {
+        if (dagProcessorBuilder_ == null) {
+          dagProcessor_ = builderForValue.build();
+          onChanged();
+        } else {
+          dagProcessorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public Builder mergeDagProcessor(yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig value) {
+        if (dagProcessorBuilder_ == null) {
+          if (dagProcessor_ != null) {
+            dagProcessor_ =
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.newBuilder(dagProcessor_).mergeFrom(value).buildPartial();
+          } else {
+            dagProcessor_ = value;
+          }
+          onChanged();
+        } else {
+          dagProcessorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public Builder clearDagProcessor() {
+        if (dagProcessorBuilder_ == null) {
+          dagProcessor_ = null;
+          onChanged();
+        } else {
+          dagProcessor_ = null;
+          dagProcessorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder getDagProcessorBuilder() {
+        
+        onChanged();
+        return getDagProcessorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder getDagProcessorOrBuilder() {
+        if (dagProcessorBuilder_ != null) {
+          return dagProcessorBuilder_.getMessageOrBuilder();
+        } else {
+          return dagProcessor_ == null ?
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.getDefaultInstance() : dagProcessor_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder> 
+          getDagProcessorFieldBuilder() {
+        if (dagProcessorBuilder_ == null) {
+          dagProcessorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder>(
+                  getDagProcessor(),
+                  getParentForChildren(),
+                  isClean());
+          dagProcessor_ = null;
+        }
+        return dagProcessorBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19593,7 +19856,7 @@ public final class ClusterServiceOuterClass {
       "ex.cloud.airflow.v1.MaintenanceWindow\032-\n" +
       "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
       ":\0028\001J\004\010\005\020\006\"+\n\025CreateClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"\355\003\n\027UpdateClusterConfigS" +
+      "luster_id\030\001 \001(\t\"\261\004\n\027UpdateClusterConfigS" +
       "pec\0227\n\007airflow\030\002 \001(\0132&.yandex.cloud.airf" +
       "low.v1.AirflowConfig\022;\n\twebserver\030\003 \001(\0132" +
       "(.yandex.cloud.airflow.v1.WebserverConfi" +
@@ -19605,80 +19868,82 @@ public final class ClusterServiceOuterClass {
       "2%.yandex.cloud.airflow.v1.Dependencies\022" +
       "7\n\007lockbox\030\010 \001(\0132&.yandex.cloud.airflow." +
       "v1.LockboxConfig\022\027\n\017airflow_version\030\t \001(" +
-      "\t\022\026\n\016python_version\030\n \001(\tJ\004\010\001\020\002\"5\n\027Updat" +
-      "eNetworkConfigSpec\022\032\n\022security_group_ids" +
-      "\030\001 \003(\t\"\205\006\n\024UpdateClusterRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask" +
-      "\030\002 \001(\0132\032.google.protobuf.FieldMask\022/\n\004na" +
-      "me\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0" +
-      "-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\212\001\n\006" +
-      "labels\030\005 \003(\01329.yandex.cloud.airflow.v1.U" +
-      "pdateClusterRequest.LabelsEntryB?\202\3101\004<=6" +
-      "4\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020" +
-      "[a-z][-_0-9a-z]*\022E\n\013config_spec\030\006 \001(\01320." +
-      "yandex.cloud.airflow.v1.UpdateClusterCon" +
-      "figSpec\022:\n\tcode_sync\030\007 \001(\0132\'.yandex.clou" +
-      "d.airflow.v1.CodeSyncConfig\022F\n\014network_s" +
-      "pec\030\010 \001(\01320.yandex.cloud.airflow.v1.Upda" +
-      "teNetworkConfigSpec\022\033\n\023deletion_protecti" +
-      "on\030\t \001(\010\022$\n\022service_account_id\030\n \001(\tB\010\212\310" +
-      "1\004<=50\0227\n\007logging\030\013 \001(\0132&.yandex.cloud.a" +
-      "irflow.v1.LoggingConfig\022F\n\022maintenance_w" +
-      "indow\030\014 \001(\0132*.yandex.cloud.airflow.v1.Ma" +
-      "intenanceWindow\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterM" +
-      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteClu" +
-      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopC" +
-      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\"~\n\034ListClusterOperationsReque" +
-      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperati" +
-      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
-      ".cloud.operation.Operation\022\027\n\017next_page_" +
-      "token\030\002 \001(\t2\362\n\n\016ClusterService\022\206\001\n\003Get\022*" +
-      ".yandex.cloud.airflow.v1.GetClusterReque" +
-      "st\032 .yandex.cloud.airflow.v1.Cluster\"1\202\323" +
-      "\344\223\002+\022)/managed-airflow/v1/clusters/{clus" +
-      "ter_id}\022\211\001\n\004List\022,.yandex.cloud.airflow." +
-      "v1.ListClustersRequest\032-.yandex.cloud.ai" +
-      "rflow.v1.ListClustersResponse\"$\202\323\344\223\002\036\022\034/" +
-      "managed-airflow/v1/clusters\022\247\001\n\006Create\022-" +
-      ".yandex.cloud.airflow.v1.CreateClusterRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"K\202\323\344\223\002!\"\034/managed-airflow/v1/clusters:\001" +
-      "*\262\322* \n\025CreateClusterMetadata\022\007Cluster\022\264\001" +
-      "\n\006Update\022-.yandex.cloud.airflow.v1.Updat" +
-      "eClusterRequest\032!.yandex.cloud.operation" +
-      ".Operation\"X\202\323\344\223\002.2)/managed-airflow/v1/" +
-      "clusters/{cluster_id}:\001*\262\322* \n\025UpdateClus" +
-      "terMetadata\022\007Cluster\022\277\001\n\006Delete\022-.yandex" +
-      ".cloud.airflow.v1.DeleteClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"c\202\323\344\223\002" +
-      "+*)/managed-airflow/v1/clusters/{cluster" +
-      "_id}\262\322*.\n\025DeleteClusterMetadata\022\025google." +
-      "protobuf.Empty\022\264\001\n\005Start\022,.yandex.cloud." +
-      "airflow.v1.StartClusterRequest\032!.yandex." +
-      "cloud.operation.Operation\"Z\202\323\344\223\0021\"//mana" +
-      "ged-airflow/v1/clusters/{cluster_id}:sta" +
-      "rt\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022\260\001" +
-      "\n\004Stop\022+.yandex.cloud.airflow.v1.StopClu" +
-      "sterRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"X\202\323\344\223\0020\"./managed-airflow/v1/clus" +
-      "ters/{cluster_id}:stop\262\322*\036\n\023StopClusterM" +
-      "etadata\022\007Cluster\022\275\001\n\016ListOperations\0225.ya" +
-      "ndex.cloud.airflow.v1.ListClusterOperati" +
-      "onsRequest\0326.yandex.cloud.airflow.v1.Lis" +
-      "tClusterOperationsResponse\"<\202\323\344\223\0026\0224/man" +
-      "aged-airflow/v1/clusters/{cluster_id}/op" +
-      "erationsBb\n\033yandex.cloud.api.airflow.v1Z" +
-      "Cgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/airflow/v1;airflowb\006proto3"
+      "\t\022\026\n\016python_version\030\n \001(\t\022B\n\rdag_process" +
+      "or\030\013 \001(\0132+.yandex.cloud.airflow.v1.DagPr" +
+      "ocessorConfigJ\004\010\001\020\002\"5\n\027UpdateNetworkConf" +
+      "igSpec\022\032\n\022security_group_ids\030\001 \003(\t\"\205\006\n\024U" +
+      "pdateClusterRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\307" +
+      "1\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descr" +
+      "iption\030\004 \001(\tB\t\212\3101\005<=256\022\212\001\n\006labels\030\005 \003(\013" +
+      "29.yandex.cloud.airflow.v1.UpdateCluster" +
+      "Request.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071" +
+      "\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a" +
+      "-z]*\022E\n\013config_spec\030\006 \001(\01320.yandex.cloud" +
+      ".airflow.v1.UpdateClusterConfigSpec\022:\n\tc" +
+      "ode_sync\030\007 \001(\0132\'.yandex.cloud.airflow.v1" +
+      ".CodeSyncConfig\022F\n\014network_spec\030\010 \001(\01320." +
+      "yandex.cloud.airflow.v1.UpdateNetworkCon" +
+      "figSpec\022\033\n\023deletion_protection\030\t \001(\010\022$\n\022" +
+      "service_account_id\030\n \001(\tB\010\212\3101\004<=50\0227\n\007lo" +
+      "gging\030\013 \001(\0132&.yandex.cloud.airflow.v1.Lo" +
+      "ggingConfig\022F\n\022maintenance_window\030\014 \001(\0132" +
+      "*.yandex.cloud.airflow.v1.MaintenanceWin" +
+      "dow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Del" +
+      "eteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"7" +
+      "\n\023StartClusterRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023S" +
+      "topClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"~" +
+      "\n\034ListClusterOperationsRequest\022 \n\ncluste" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\"o\n\035ListClusterOperationsResponse\022" +
+      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
+      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t2" +
+      "\362\n\n\016ClusterService\022\206\001\n\003Get\022*.yandex.clou" +
+      "d.airflow.v1.GetClusterRequest\032 .yandex." +
+      "cloud.airflow.v1.Cluster\"1\202\323\344\223\002+\022)/manag" +
+      "ed-airflow/v1/clusters/{cluster_id}\022\211\001\n\004" +
+      "List\022,.yandex.cloud.airflow.v1.ListClust" +
+      "ersRequest\032-.yandex.cloud.airflow.v1.Lis" +
+      "tClustersResponse\"$\202\323\344\223\002\036\022\034/managed-airf" +
+      "low/v1/clusters\022\247\001\n\006Create\022-.yandex.clou" +
+      "d.airflow.v1.CreateClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"K\202\323\344\223\002!\"\034/m" +
+      "anaged-airflow/v1/clusters:\001*\262\322* \n\025Creat" +
+      "eClusterMetadata\022\007Cluster\022\264\001\n\006Update\022-.y" +
+      "andex.cloud.airflow.v1.UpdateClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"X" +
+      "\202\323\344\223\002.2)/managed-airflow/v1/clusters/{cl" +
+      "uster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022" +
+      "\007Cluster\022\277\001\n\006Delete\022-.yandex.cloud.airfl" +
+      "ow.v1.DeleteClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"c\202\323\344\223\002+*)/managed-" +
+      "airflow/v1/clusters/{cluster_id}\262\322*.\n\025De" +
+      "leteClusterMetadata\022\025google.protobuf.Emp" +
+      "ty\022\264\001\n\005Start\022,.yandex.cloud.airflow.v1.S" +
+      "tartClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"Z\202\323\344\223\0021\"//managed-airflow/" +
+      "v1/clusters/{cluster_id}:start\262\322*\037\n\024Star" +
+      "tClusterMetadata\022\007Cluster\022\260\001\n\004Stop\022+.yan" +
+      "dex.cloud.airflow.v1.StopClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"X\202\323\344\223" +
+      "\0020\"./managed-airflow/v1/clusters/{cluste" +
+      "r_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007Clu" +
+      "ster\022\275\001\n\016ListOperations\0225.yandex.cloud.a" +
+      "irflow.v1.ListClusterOperationsRequest\0326" +
+      ".yandex.cloud.airflow.v1.ListClusterOper" +
+      "ationsResponse\"<\202\323\344\223\0026\0224/managed-airflow" +
+      "/v1/clusters/{cluster_id}/operationsBb\n\033" +
+      "yandex.cloud.api.airflow.v1ZCgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/ai" +
+      "rflow/v1;airflowb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19732,7 +19997,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_airflow_v1_UpdateClusterConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_UpdateClusterConfigSpec_descriptor,
-        new java.lang.String[] { "Airflow", "Webserver", "Scheduler", "Triggerer", "Worker", "Dependencies", "Lockbox", "AirflowVersion", "PythonVersion", });
+        new java.lang.String[] { "Airflow", "Webserver", "Scheduler", "Triggerer", "Worker", "Dependencies", "Lockbox", "AirflowVersion", "PythonVersion", "DagProcessor", });
     internal_static_yandex_cloud_airflow_v1_UpdateNetworkConfigSpec_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_airflow_v1_UpdateNetworkConfigSpec_fieldAccessorTable = new

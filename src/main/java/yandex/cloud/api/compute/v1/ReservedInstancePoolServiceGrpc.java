@@ -173,6 +173,68 @@ public final class ReservedInstancePoolServiceGrpc {
     return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest,
+      yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse> getListOperationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOperations",
+      requestType = yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest.class,
+      responseType = yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest,
+      yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse> getListOperationsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse> getListOperationsMethod;
+    if ((getListOperationsMethod = ReservedInstancePoolServiceGrpc.getListOperationsMethod) == null) {
+      synchronized (ReservedInstancePoolServiceGrpc.class) {
+        if ((getListOperationsMethod = ReservedInstancePoolServiceGrpc.getListOperationsMethod) == null) {
+          ReservedInstancePoolServiceGrpc.getListOperationsMethod = getListOperationsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ReservedInstancePoolServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
+        }
+      }
+    }
+    return getListOperationsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest,
+      yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse> getListInstancesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListInstances",
+      requestType = yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest.class,
+      responseType = yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest,
+      yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse> getListInstancesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse> getListInstancesMethod;
+    if ((getListInstancesMethod = ReservedInstancePoolServiceGrpc.getListInstancesMethod) == null) {
+      synchronized (ReservedInstancePoolServiceGrpc.class) {
+        if ((getListInstancesMethod = ReservedInstancePoolServiceGrpc.getListInstancesMethod) == null) {
+          ReservedInstancePoolServiceGrpc.getListInstancesMethod = getListInstancesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInstances"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ReservedInstancePoolServiceMethodDescriptorSupplier("ListInstances"))
+              .build();
+        }
+      }
+    }
+    return getListInstancesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -276,6 +338,26 @@ public final class ReservedInstancePoolServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Lists operations for the specified reserved instance pool.
+     * </pre>
+     */
+    public void listOperations(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of instances, using the specified reserved instance pool.
+     * </pre>
+     */
+    public void listInstances(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInstancesMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -313,6 +395,20 @@ public final class ReservedInstancePoolServiceGrpc {
                 yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.DeleteReservedInstancePoolRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getListOperationsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest,
+                yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse>(
+                  this, METHODID_LIST_OPERATIONS)))
+          .addMethod(
+            getListInstancesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest,
+                yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse>(
+                  this, METHODID_LIST_INSTANCES)))
           .build();
     }
   }
@@ -390,6 +486,28 @@ public final class ReservedInstancePoolServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists operations for the specified reserved instance pool.
+     * </pre>
+     */
+    public void listOperations(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of instances, using the specified reserved instance pool.
+     * </pre>
+     */
+    public void listInstances(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListInstancesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -459,6 +577,26 @@ public final class ReservedInstancePoolServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.DeleteReservedInstancePoolRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists operations for the specified reserved instance pool.
+     * </pre>
+     */
+    public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse listOperations(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListOperationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of instances, using the specified reserved instance pool.
+     * </pre>
+     */
+    public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse listInstances(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListInstancesMethod(), getCallOptions(), request);
     }
   }
 
@@ -535,6 +673,28 @@ public final class ReservedInstancePoolServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Lists operations for the specified reserved instance pool.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse> listOperations(
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of instances, using the specified reserved instance pool.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse> listInstances(
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListInstancesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -542,6 +702,8 @@ public final class ReservedInstancePoolServiceGrpc {
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
+  private static final int METHODID_LIST_OPERATIONS = 5;
+  private static final int METHODID_LIST_INSTANCES = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -579,6 +741,14 @@ public final class ReservedInstancePoolServiceGrpc {
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.DeleteReservedInstancePoolRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_OPERATIONS:
+          serviceImpl.listOperations((yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_INSTANCES:
+          serviceImpl.listInstances((yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -646,6 +816,8 @@ public final class ReservedInstancePoolServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getListOperationsMethod())
+              .addMethod(getListInstancesMethod())
               .build();
         }
       }

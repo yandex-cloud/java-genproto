@@ -16965,6 +16965,22 @@ public final class ClusterOuterClass {
        * <code>DEGRADED = 3;</code>
        */
       DEGRADED(3),
+      /**
+       * <pre>
+       * The host is read-only and cannot perform write requests.
+       * </pre>
+       *
+       * <code>READONLY = 4;</code>
+       */
+      READONLY(4),
+      /**
+       * <pre>
+       * The host is restoring from backup or syncronzing from other replica.
+       * </pre>
+       *
+       * <code>RESTORING = 5;</code>
+       */
+      RESTORING(5),
       UNRECOGNIZED(-1),
       ;
 
@@ -17000,6 +17016,22 @@ public final class ClusterOuterClass {
        * <code>DEGRADED = 3;</code>
        */
       public static final int DEGRADED_VALUE = 3;
+      /**
+       * <pre>
+       * The host is read-only and cannot perform write requests.
+       * </pre>
+       *
+       * <code>READONLY = 4;</code>
+       */
+      public static final int READONLY_VALUE = 4;
+      /**
+       * <pre>
+       * The host is restoring from backup or syncronzing from other replica.
+       * </pre>
+       *
+       * <code>RESTORING = 5;</code>
+       */
+      public static final int RESTORING_VALUE = 5;
 
 
       public final int getNumber() {
@@ -17030,6 +17062,8 @@ public final class ClusterOuterClass {
           case 1: return ALIVE;
           case 2: return DEAD;
           case 3: return DEGRADED;
+          case 4: return READONLY;
+          case 5: return RESTORING;
           default: return null;
         }
       }
@@ -19469,6 +19503,22 @@ public final class ClusterOuterClass {
        * <code>DEAD = 2;</code>
        */
       DEAD(2),
+      /**
+       * <pre>
+       * The service is read-only.
+       * </pre>
+       *
+       * <code>READONLY = 3;</code>
+       */
+      READONLY(3),
+      /**
+       * <pre>
+       * The service is restoring from backup or syncronzing from other replica.
+       * </pre>
+       *
+       * <code>RESTORING = 4;</code>
+       */
+      RESTORING(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -19496,6 +19546,22 @@ public final class ClusterOuterClass {
        * <code>DEAD = 2;</code>
        */
       public static final int DEAD_VALUE = 2;
+      /**
+       * <pre>
+       * The service is read-only.
+       * </pre>
+       *
+       * <code>READONLY = 3;</code>
+       */
+      public static final int READONLY_VALUE = 3;
+      /**
+       * <pre>
+       * The service is restoring from backup or syncronzing from other replica.
+       * </pre>
+       *
+       * <code>RESTORING = 4;</code>
+       */
+      public static final int RESTORING_VALUE = 4;
 
 
       public final int getNumber() {
@@ -19525,6 +19591,8 @@ public final class ClusterOuterClass {
           case 0: return UNKNOWN;
           case 1: return ALIVE;
           case 2: return DEAD;
+          case 3: return READONLY;
+          case 4: return RESTORING;
           default: return null;
         }
       }
@@ -24753,7 +24821,7 @@ public final class ClusterOuterClass {
       "es\022+\n\006weight\030\003 \001(\0132\033.google.protobuf.Int" +
       "64Value\022R\n\025disk_size_autoscaling\030\004 \001(\01323" +
       ".yandex.cloud.mdb.clickhouse.v1.DiskSize" +
-      "Autoscaling\"\340\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncl" +
+      "Autoscaling\"\375\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncl" +
       "uster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\004type\030" +
       "\004 \001(\0162).yandex.cloud.mdb.clickhouse.v1.H" +
       "ost.Type\022<\n\tresources\030\005 \001(\0132).yandex.clo" +
@@ -24763,36 +24831,37 @@ public final class ClusterOuterClass {
       "loud.mdb.clickhouse.v1.Service\022\021\n\tsubnet" +
       "_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022\022\n\ns" +
       "hard_name\030\n \001(\t\";\n\004Type\022\024\n\020TYPE_UNSPECIF" +
-      "IED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006" +
+      "IED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"U\n\006" +
       "Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002" +
-      "\022\014\n\010DEGRADED\020\003\"\356\001\n\007Service\022:\n\004type\030\001 \001(\016" +
-      "2,.yandex.cloud.mdb.clickhouse.v1.Servic" +
-      "e.Type\022>\n\006health\030\002 \001(\0162..yandex.cloud.md" +
-      "b.clickhouse.v1.Service.Health\";\n\004Type\022\024" +
-      "\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\t" +
-      "ZOOKEEPER\020\002\"*\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005AL" +
-      "IVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource" +
-      "_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014d" +
-      "isk_type_id\030\003 \001(\t\"~\n\006Access\022\021\n\tdata_lens" +
-      "\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\017\n\007metrika\030\003 \001(\010" +
-      "\022\022\n\nserverless\030\004 \001(\010\022\025\n\rdata_transfer\030\005 " +
-      "\001(\010\022\024\n\014yandex_query\030\006 \001(\010\"\206\002\n\014CloudStora" +
-      "ge\022\017\n\007enabled\030\001 \001(\010\022:\n\013move_factor\030\002 \001(\013" +
-      "2\034.google.protobuf.DoubleValueB\007\372\3071\0030-1\022" +
-      "6\n\022data_cache_enabled\030\003 \001(\0132\032.google.pro" +
-      "tobuf.BoolValue\0228\n\023data_cache_max_size\030\004" +
-      " \001(\0132\033.google.protobuf.Int64Value\0227\n\023pre" +
-      "fer_not_to_merge\030\005 \001(\0132\032.google.protobuf" +
-      ".BoolValue\"\347\001\n\023DiskSizeAutoscaling\022K\n\027pl" +
-      "anned_usage_threshold\030\001 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\022M\n\031emerg" +
-      "ency_usage_threshold\030\002 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\0224\n\017disk_s" +
-      "ize_limit\030\003 \001(\0132\033.google.protobuf.Int64V" +
-      "alueBs\n\"yandex.cloud.api.mdb.clickhouse." +
-      "v1ZMgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/mdb/clickhouse/v1;clickhous" +
-      "eb\006proto3"
+      "\022\014\n\010DEGRADED\020\003\022\014\n\010READONLY\020\004\022\r\n\tRESTORIN" +
+      "G\020\005\"\213\002\n\007Service\022:\n\004type\030\001 \001(\0162,.yandex.c" +
+      "loud.mdb.clickhouse.v1.Service.Type\022>\n\006h" +
+      "ealth\030\002 \001(\0162..yandex.cloud.mdb.clickhous" +
+      "e.v1.Service.Health\";\n\004Type\022\024\n\020TYPE_UNSP" +
+      "ECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002" +
+      "\"G\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DE" +
+      "AD\020\002\022\014\n\010READONLY\020\003\022\r\n\tRESTORING\020\004\"P\n\tRes" +
+      "ources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdi" +
+      "sk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"~\n\006A" +
+      "ccess\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(" +
+      "\010\022\017\n\007metrika\030\003 \001(\010\022\022\n\nserverless\030\004 \001(\010\022\025" +
+      "\n\rdata_transfer\030\005 \001(\010\022\024\n\014yandex_query\030\006 " +
+      "\001(\010\"\206\002\n\014CloudStorage\022\017\n\007enabled\030\001 \001(\010\022:\n" +
+      "\013move_factor\030\002 \001(\0132\034.google.protobuf.Dou" +
+      "bleValueB\007\372\3071\0030-1\0226\n\022data_cache_enabled\030" +
+      "\003 \001(\0132\032.google.protobuf.BoolValue\0228\n\023dat" +
+      "a_cache_max_size\030\004 \001(\0132\033.google.protobuf" +
+      ".Int64Value\0227\n\023prefer_not_to_merge\030\005 \001(\013" +
+      "2\032.google.protobuf.BoolValue\"\347\001\n\023DiskSiz" +
+      "eAutoscaling\022K\n\027planned_usage_threshold\030" +
+      "\001 \001(\0132\033.google.protobuf.Int64ValueB\r\350\3071\000" +
+      "\372\3071\0050-100\022M\n\031emergency_usage_threshold\030\002" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\r\350\3071\000\372" +
+      "\3071\0050-100\0224\n\017disk_size_limit\030\003 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueBs\n\"yandex.cloud.a" +
+      "pi.mdb.clickhouse.v1ZMgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/mdb/click" +
+      "house/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

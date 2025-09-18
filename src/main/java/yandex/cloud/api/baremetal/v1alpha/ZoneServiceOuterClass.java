@@ -2495,27 +2495,30 @@ public final class ZoneServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n1yandex/cloud/baremetal/v1alpha/zone_se" +
       "rvice.proto\022\036yandex.cloud.baremetal.v1al" +
-      "pha\032)yandex/cloud/baremetal/v1alpha/zone" +
-      ".proto\032\035yandex/cloud/validation.proto\"+\n" +
-      "\016GetZoneRequest\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=" +
-      "20\"J\n\020ListZonesRequest\022\034\n\tpage_size\030d \001(" +
-      "\003B\t\372\3071\005<=100\022\022\n\npage_token\030e \001(\tJ\004\010\001\020d\"g" +
-      "\n\021ListZonesResponse\0223\n\005zones\030\001 \003(\0132$.yan" +
-      "dex.cloud.baremetal.v1alpha.Zone\022\027\n\017next" +
-      "_page_token\030d \001(\tJ\004\010\002\020d2\333\001\n\013ZoneService\022" +
-      "]\n\003Get\022..yandex.cloud.baremetal.v1alpha." +
-      "GetZoneRequest\032$.yandex.cloud.baremetal." +
-      "v1alpha.Zone\"\000\022m\n\004List\0220.yandex.cloud.ba" +
-      "remetal.v1alpha.ListZonesRequest\0321.yande" +
-      "x.cloud.baremetal.v1alpha.ListZonesRespo" +
-      "nse\"\000Br\n\"yandex.cloud.api.baremetal.v1al" +
-      "phaZLgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/baremetal/v1alpha;baremeta" +
-      "lb\006proto3"
+      "pha\032\034google/api/annotations.proto\032)yande" +
+      "x/cloud/baremetal/v1alpha/zone.proto\032\035ya" +
+      "ndex/cloud/validation.proto\"+\n\016GetZoneRe" +
+      "quest\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=20\"J\n\020List" +
+      "ZonesRequest\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=1" +
+      "00\022\022\n\npage_token\030e \001(\tJ\004\010\001\020d\"g\n\021ListZone" +
+      "sResponse\0223\n\005zones\030\001 \003(\0132$.yandex.cloud." +
+      "baremetal.v1alpha.Zone\022\027\n\017next_page_toke" +
+      "n\030d \001(\tJ\004\010\002\020d2\247\002\n\013ZoneService\022\207\001\n\003Get\022.." +
+      "yandex.cloud.baremetal.v1alpha.GetZoneRe" +
+      "quest\032$.yandex.cloud.baremetal.v1alpha.Z" +
+      "one\"*\202\323\344\223\002$\022\"/baremetal/v1alpha/zones/{z" +
+      "one_id}\022\215\001\n\004List\0220.yandex.cloud.baremeta" +
+      "l.v1alpha.ListZonesRequest\0321.yandex.clou" +
+      "d.baremetal.v1alpha.ListZonesResponse\" \202" +
+      "\323\344\223\002\032\022\030/baremetal/v1alpha/zonesBr\n\"yande" +
+      "x.cloud.api.baremetal.v1alphaZLgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "baremetal/v1alpha;baremetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.baremetal.v1alpha.ZoneOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -2539,10 +2542,12 @@ public final class ZoneServiceOuterClass {
         new java.lang.String[] { "Zones", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.baremetal.v1alpha.ZoneOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

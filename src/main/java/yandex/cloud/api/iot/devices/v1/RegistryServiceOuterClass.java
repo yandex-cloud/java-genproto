@@ -659,7 +659,7 @@ public final class RegistryServiceOuterClass {
      * To get a registry Name make a [RegistryService.List] request.
      * </pre>
      *
-     * <code>string registry_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+     * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The registryName.
      */
     java.lang.String getRegistryName();
@@ -669,7 +669,7 @@ public final class RegistryServiceOuterClass {
      * To get a registry Name make a [RegistryService.List] request.
      * </pre>
      *
-     * <code>string registry_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+     * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for registryName.
      */
     com.google.protobuf.ByteString
@@ -822,7 +822,7 @@ public final class RegistryServiceOuterClass {
      * To get a registry Name make a [RegistryService.List] request.
      * </pre>
      *
-     * <code>string registry_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+     * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The registryName.
      */
     @java.lang.Override
@@ -844,7 +844,7 @@ public final class RegistryServiceOuterClass {
      * To get a registry Name make a [RegistryService.List] request.
      * </pre>
      *
-     * <code>string registry_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+     * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for registryName.
      */
     @java.lang.Override
@@ -1289,7 +1289,7 @@ public final class RegistryServiceOuterClass {
        * To get a registry Name make a [RegistryService.List] request.
        * </pre>
        *
-       * <code>string registry_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+       * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The registryName.
        */
       public java.lang.String getRegistryName() {
@@ -1310,7 +1310,7 @@ public final class RegistryServiceOuterClass {
        * To get a registry Name make a [RegistryService.List] request.
        * </pre>
        *
-       * <code>string registry_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+       * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for registryName.
        */
       public com.google.protobuf.ByteString
@@ -1332,7 +1332,7 @@ public final class RegistryServiceOuterClass {
        * To get a registry Name make a [RegistryService.List] request.
        * </pre>
        *
-       * <code>string registry_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+       * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The registryName to set.
        * @return This builder for chaining.
        */
@@ -1352,7 +1352,7 @@ public final class RegistryServiceOuterClass {
        * To get a registry Name make a [RegistryService.List] request.
        * </pre>
        *
-       * <code>string registry_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+       * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearRegistryName() {
@@ -1367,7 +1367,7 @@ public final class RegistryServiceOuterClass {
        * To get a registry Name make a [RegistryService.List] request.
        * </pre>
        *
-       * <code>string registry_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+       * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for registryName to set.
        * @return This builder for chaining.
        */
@@ -3498,7 +3498,7 @@ public final class RegistryServiceOuterClass {
      * Name of the registry. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -3507,7 +3507,7 @@ public final class RegistryServiceOuterClass {
      * Name of the registry. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -4504,7 +4504,7 @@ public final class RegistryServiceOuterClass {
      * Name of the registry. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -4525,7 +4525,7 @@ public final class RegistryServiceOuterClass {
      * Name of the registry. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -5428,7 +5428,7 @@ public final class RegistryServiceOuterClass {
        * Name of the registry. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -5448,7 +5448,7 @@ public final class RegistryServiceOuterClass {
        * Name of the registry. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -5469,7 +5469,7 @@ public final class RegistryServiceOuterClass {
        * Name of the registry. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -5488,7 +5488,7 @@ public final class RegistryServiceOuterClass {
        * Name of the registry. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -5502,7 +5502,7 @@ public final class RegistryServiceOuterClass {
        * Name of the registry. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -7055,7 +7055,7 @@ public final class RegistryServiceOuterClass {
      * Name of the registry. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -7064,7 +7064,7 @@ public final class RegistryServiceOuterClass {
      * Name of the registry. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -7419,7 +7419,7 @@ public final class RegistryServiceOuterClass {
      * Name of the registry. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -7440,7 +7440,7 @@ public final class RegistryServiceOuterClass {
      * Name of the registry. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -8352,7 +8352,7 @@ public final class RegistryServiceOuterClass {
        * Name of the registry. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -8372,7 +8372,7 @@ public final class RegistryServiceOuterClass {
        * Name of the registry. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -8393,7 +8393,7 @@ public final class RegistryServiceOuterClass {
        * Name of the registry. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -8412,7 +8412,7 @@ public final class RegistryServiceOuterClass {
        * Name of the registry. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -8426,7 +8426,7 @@ public final class RegistryServiceOuterClass {
        * Name of the registry. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -24401,7 +24401,7 @@ public final class RegistryServiceOuterClass {
      * Name of the YDS export. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -24410,7 +24410,7 @@ public final class RegistryServiceOuterClass {
      * Name of the YDS export. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -24644,7 +24644,7 @@ public final class RegistryServiceOuterClass {
      * Name of the YDS export. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -24665,7 +24665,7 @@ public final class RegistryServiceOuterClass {
      * Name of the YDS export. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -25308,7 +25308,7 @@ public final class RegistryServiceOuterClass {
        * Name of the YDS export. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -25328,7 +25328,7 @@ public final class RegistryServiceOuterClass {
        * Name of the YDS export. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -25349,7 +25349,7 @@ public final class RegistryServiceOuterClass {
        * Name of the YDS export. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -25368,7 +25368,7 @@ public final class RegistryServiceOuterClass {
        * Name of the YDS export. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -25382,7 +25382,7 @@ public final class RegistryServiceOuterClass {
        * Name of the YDS export. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -32451,206 +32451,205 @@ public final class RegistryServiceOuterClass {
       "vices/v1/registry.proto\032&yandex/cloud/op" +
       "eration/operation.proto\032\035yandex/cloud/va" +
       "lidation.proto\"7\n\022GetRegistryRequest\022!\n\013" +
-      "registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"k\n\030GetBy" +
+      "registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"r\n\030GetBy" +
       "NameRegistryRequest\022\037\n\tfolder_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022.\n\rregistry_name\030\002 \001(\tB\027\362\3071" +
-      "\023[a-zA-Z0-9_-]{0,63}\"v\n\025ListRegistriesRe" +
-      "quest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\"l\n\026ListRegistriesRe" +
-      "sponse\0229\n\nregistries\030\001 \003(\0132%.yandex.clou" +
-      "d.iot.devices.v1.Registry\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\"\234\004\n\025CreateRegistryRequest\022\037\n\t" +
-      "folder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 " +
-      "\001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
-      "?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\217\001\n\006la" +
-      "bels\030\004 \003(\0132>.yandex.cloud.iot.devices.v1" +
-      ".CreateRegistryRequest.LabelsEntryB?\202\3101\004" +
-      "<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101" +
-      "\022\022\020[a-z][-_0-9a-z]*\022T\n\014certificates\030\005 \003(" +
-      "\0132>.yandex.cloud.iot.devices.v1.CreateRe" +
-      "gistryRequest.Certificate\022\020\n\010password\030\006 " +
-      "\001(\t\022<\n\013log_options\030\007 \001(\0132\'.yandex.cloud." +
-      "iot.devices.v1.LogOptions\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\'\n\013Cert" +
-      "ificate\022\030\n\020certificate_data\030\001 \001(\t\"-\n\026Cre" +
-      "ateRegistryMetadata\022\023\n\013registry_id\030\001 \001(\t" +
-      "\"\276\003\n\025UpdateRegistryRequest\022!\n\013registry_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001" +
-      "(\0132\032.google.protobuf.FieldMask\0222\n\004name\030\003" +
-      " \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9]" +
-      ")?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\217\001\n\006l" +
-      "abels\030\005 \003(\0132>.yandex.cloud.iot.devices.v" +
-      "1.UpdateRegistryRequest.LabelsEntryB?\202\3101" +
-      "\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\310" +
-      "1\022\022\020[a-z][-_0-9a-z]*\022<\n\013log_options\030\006 \001(" +
-      "\0132\'.yandex.cloud.iot.devices.v1.LogOptio" +
-      "ns\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"-\n\026UpdateRegistryMetadata\022\023\n\013r" +
-      "egistry_id\030\001 \001(\t\":\n\025DeleteRegistryReques" +
-      "t\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026" +
-      "DeleteRegistryMetadata\022\023\n\013registry_id\030\001 " +
-      "\001(\t\"D\n\037ListRegistryCertificatesRequest\022!" +
-      "\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"j\n Lis" +
-      "tRegistryCertificatesResponse\022F\n\014certifi" +
-      "cates\030\001 \003(\01320.yandex.cloud.iot.devices.v" +
-      "1.RegistryCertificate\"b\n\035AddRegistryCert" +
-      "ificateRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022\030\n\020certificate_data\030\003 \001(\tJ\004\010\002\020" +
-      "\003\"J\n\036AddRegistryCertificateMetadata\022\023\n\013r" +
-      "egistry_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\"h\n" +
-      " DeleteRegistryCertificateRequest\022!\n\013reg" +
-      "istry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerpr" +
-      "int\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"i\n!DeleteRegistr" +
-      "yCertificateMetadata\022!\n\013registry_id\030\001 \001(" +
+      "\350\3071\001\212\3101\004<=50\0225\n\rregistry_name\030\002 \001(\tB\036\350\3071" +
+      "\001\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*\"v\n\025ListRegis" +
+      "triesRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\n" +
+      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"l\n\026ListRegis" +
+      "triesResponse\0229\n\nregistries\030\001 \003(\0132%.yand" +
+      "ex.cloud.iot.devices.v1.Registry\022\027\n\017next" +
+      "_page_token\030\002 \001(\t\"\222\004\n\025CreateRegistryRequ" +
+      "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022(\n\004" +
+      "name\030\002 \001(\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*\022\036" +
+      "\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\217\001\n\006label" +
+      "s\030\004 \003(\0132>.yandex.cloud.iot.devices.v1.Cr" +
+      "eateRegistryRequest.LabelsEntryB?\202\3101\004<=6" +
+      "4\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020" +
+      "[a-z][-_0-9a-z]*\022T\n\014certificates\030\005 \003(\0132>" +
+      ".yandex.cloud.iot.devices.v1.CreateRegis" +
+      "tryRequest.Certificate\022\020\n\010password\030\006 \001(\t" +
+      "\022<\n\013log_options\030\007 \001(\0132\'.yandex.cloud.iot" +
+      ".devices.v1.LogOptions\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\'\n\013Certifi" +
+      "cate\022\030\n\020certificate_data\030\001 \001(\t\"-\n\026Create" +
+      "RegistryMetadata\022\023\n\013registry_id\030\001 \001(\t\"\264\003" +
+      "\n\025UpdateRegistryRequest\022!\n\013registry_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132" +
+      "\032.google.protobuf.FieldMask\022(\n\004name\030\003 \001(" +
+      "\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013descrip" +
+      "tion\030\004 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\005 \003(\0132>" +
+      ".yandex.cloud.iot.devices.v1.UpdateRegis" +
+      "tryRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
+      "\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0" +
+      "-9a-z]*\022<\n\013log_options\030\006 \001(\0132\'.yandex.cl" +
+      "oud.iot.devices.v1.LogOptions\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026" +
+      "UpdateRegistryMetadata\022\023\n\013registry_id\030\001 " +
+      "\001(\t\":\n\025DeleteRegistryRequest\022!\n\013registry" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteRegistr" +
+      "yMetadata\022\023\n\013registry_id\030\001 \001(\t\"D\n\037ListRe" +
+      "gistryCertificatesRequest\022!\n\013registry_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"j\n ListRegistryCert" +
+      "ificatesResponse\022F\n\014certificates\030\001 \003(\01320" +
+      ".yandex.cloud.iot.devices.v1.RegistryCer" +
+      "tificate\"b\n\035AddRegistryCertificateReques" +
+      "t\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020" +
+      "certificate_data\030\003 \001(\tJ\004\010\002\020\003\"J\n\036AddRegis" +
+      "tryCertificateMetadata\022\023\n\013registry_id\030\001 " +
+      "\001(\t\022\023\n\013fingerprint\030\002 \001(\t\"h\n DeleteRegist" +
+      "ryCertificateRequest\022!\n\013registry_id\030\001 \001(" +
       "\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"A\n\034ListRegistryPasswordsReque" +
-      "st\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"a\n" +
-      "\035ListRegistryPasswordsResponse\022@\n\tpasswo" +
-      "rds\030\001 \003(\0132-.yandex.cloud.iot.devices.v1." +
-      "RegistryPassword\"[\n\032AddRegistryPasswordR" +
-      "equest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022\032\n\010password\030\002 \001(\tB\010\212\3101\004>=14\"G\n\033AddRegi" +
-      "stryPasswordMetadata\022\023\n\013registry_id\030\001 \001(" +
-      "\t\022\023\n\013password_id\030\002 \001(\t\"e\n\035DeleteRegistry" +
-      "PasswordRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022!\n\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\"f\n\036DeleteRegistryPasswordMetadata\022" +
-      "!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013pa" +
-      "ssword_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\200\001\n\035ListDe" +
-      "viceTopicAliasesRequest\022!\n\013registry_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\"t\n\036ListDeviceTopicAliasesResponse\0229\n\007al" +
-      "iases\030\001 \003(\0132(.yandex.cloud.iot.devices.v" +
-      "1.DeviceAlias\022\027\n\017next_page_token\030\002 \001(\t\"\224" +
-      "\001\n\035ListRegistryOperationsRequest\022\031\n\013regi" +
-      "stry_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n" +
-      "\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=10" +
-      "0\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"p\n\036ListReg" +
-      "istryOperationsResponse\0225\n\noperations\030\001 " +
-      "\003(\0132!.yandex.cloud.operation.Operation\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"\212\002\n\032AddDataStrea" +
-      "mExportRequest\0222\n\004name\030\001 \001(\tB$\362\3071 |[a-z]" +
-      "([-a-z0-9]{0,61}[a-z0-9])?\022!\n\013registry_i" +
-      "d\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022%\n\021mqtt_topic_filt" +
-      "er\030\004 \001(\tB\n\212\3101\006<=1024\022\037\n\010database\030\005 \001(\tB\r" +
-      "\350\3071\001\212\3101\005<=512\022\035\n\006stream\030\006 \001(\tB\r\350\3071\001\212\3101\005<" +
-      "=512\022(\n\022service_account_id\030\007 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50J\004\010\003\020\004\"Q\n\033AddDataStreamExportMetad" +
-      "ata\022\023\n\013registry_id\030\001 \001(\t\022\035\n\025data_stream_" +
-      "export_id\030\002 \001(\t\"o\n\035DeleteDataStreamExpor" +
-      "tRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022+\n\025data_stream_export_id\030\002 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"`\n\036DeleteDataStreamExportMetada" +
-      "ta\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071\001\022#\n\025data_st" +
-      "ream_export_id\030\002 \001(\tB\004\350\3071\001\"A\n\034ListDataSt" +
-      "reamExportsRequest\022!\n\013registry_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"k\n\035ListDataStreamExportsRe" +
-      "sponse\022J\n\023data_stream_exports\030\001 \003(\0132-.ya" +
-      "ndex.cloud.iot.devices.v1.DataStreamExpo" +
-      "rt\"3\n\026DisableRegistryRequest\022\031\n\013registry" +
-      "_id\030\001 \001(\tB\004\350\3071\001\"4\n\027DisableRegistryMetada" +
-      "ta\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071\001\"2\n\025EnableR" +
-      "egistryRequest\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071" +
-      "\001\"3\n\026EnableRegistryMetadata\022\031\n\013registry_" +
-      "id\030\001 \001(\tB\004\350\3071\0012\200\035\n\017RegistryService\022\217\001\n\003G" +
-      "et\022/.yandex.cloud.iot.devices.v1.GetRegi" +
-      "stryRequest\032%.yandex.cloud.iot.devices.v" +
-      "1.Registry\"0\202\323\344\223\002*\022(/iot-devices/v1/regi" +
-      "stries/{registry_id}\022\227\001\n\tGetByName\0225.yan" +
-      "dex.cloud.iot.devices.v1.GetByNameRegist" +
-      "ryRequest\032%.yandex.cloud.iot.devices.v1." +
-      "Registry\",\202\323\344\223\002&\022$/iot-devices/v1/regist" +
-      "ries:getByName\022\223\001\n\004List\0222.yandex.cloud.i" +
-      "ot.devices.v1.ListRegistriesRequest\0323.ya" +
-      "ndex.cloud.iot.devices.v1.ListRegistries" +
-      "Response\"\"\202\323\344\223\002\034\022\032/iot-devices/v1/regist" +
-      "ries\022\254\001\n\006Create\0222.yandex.cloud.iot.devic" +
-      "es.v1.CreateRegistryRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"K\202\323\344\223\002\037\"\032/iot-dev" +
-      "ices/v1/registries:\001*\262\322*\"\n\026CreateRegistr" +
-      "yMetadata\022\010Registry\022\272\001\n\006Update\0222.yandex." +
-      "cloud.iot.devices.v1.UpdateRegistryReque" +
-      "st\032!.yandex.cloud.operation.Operation\"Y\202" +
-      "\323\344\223\002-2(/iot-devices/v1/registries/{regis" +
-      "try_id}:\001*\262\322*\"\n\026UpdateRegistryMetadata\022\010" +
-      "Registry\022\304\001\n\006Delete\0222.yandex.cloud.iot.d" +
-      "evices.v1.DeleteRegistryRequest\032!.yandex" +
-      ".cloud.operation.Operation\"c\202\323\344\223\002**(/iot" +
-      "-devices/v1/registries/{registry_id}\262\322*/" +
-      "\n\026DeleteRegistryMetadata\022\025google.protobu" +
-      "f.Empty\022\316\001\n\020ListCertificates\022<.yandex.cl" +
-      "oud.iot.devices.v1.ListRegistryCertifica" +
-      "tesRequest\032=.yandex.cloud.iot.devices.v1" +
-      ".ListRegistryCertificatesResponse\"=\202\323\344\223\002" +
-      "7\0225/iot-devices/v1/registries/{registry_" +
-      "id}/certificates\022\352\001\n\016AddCertificate\022:.ya" +
-      "ndex.cloud.iot.devices.v1.AddRegistryCer" +
-      "tificateRequest\032!.yandex.cloud.operation" +
-      ".Operation\"y\202\323\344\223\002:\"5/iot-devices/v1/regi" +
-      "stries/{registry_id}/certificates:\001*\262\322*5" +
-      "\n\036AddRegistryCertificateMetadata\022\023Regist" +
-      "ryCertificate\022\201\002\n\021DeleteCertificate\022=.ya" +
-      "ndex.cloud.iot.devices.v1.DeleteRegistry" +
-      "CertificateRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"\211\001\202\323\344\223\002E*C/iot-devices/v1/" +
-      "registries/{registry_id}/certificates/{f" +
-      "ingerprint}\262\322*:\n!DeleteRegistryCertifica" +
-      "teMetadata\022\025google.protobuf.Empty\022\302\001\n\rLi" +
-      "stPasswords\0229.yandex.cloud.iot.devices.v" +
-      "1.ListRegistryPasswordsRequest\032:.yandex." +
-      "cloud.iot.devices.v1.ListRegistryPasswor" +
-      "dsResponse\":\202\323\344\223\0024\0222/iot-devices/v1/regi" +
-      "stries/{registry_id}/passwords\022\333\001\n\013AddPa" +
-      "ssword\0227.yandex.cloud.iot.devices.v1.Add" +
-      "RegistryPasswordRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"p\202\323\344\223\0027\"2/iot-devices" +
-      "/v1/registries/{registry_id}/passwords:\001" +
-      "*\262\322*/\n\033AddRegistryPasswordMetadata\022\020Regi" +
-      "stryPassword\022\365\001\n\016DeletePassword\022:.yandex" +
-      ".cloud.iot.devices.v1.DeleteRegistryPass" +
-      "wordRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"\203\001\202\323\344\223\002B*@/iot-devices/v1/registr" +
-      "ies/{registry_id}/passwords/{password_id" +
-      "}\262\322*7\n\036DeleteRegistryPasswordMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\332\001\n\026ListDeviceTopic" +
-      "Aliases\022:.yandex.cloud.iot.devices.v1.Li" +
-      "stDeviceTopicAliasesRequest\032;.yandex.clo" +
-      "ud.iot.devices.v1.ListDeviceTopicAliases" +
-      "Response\"G\202\323\344\223\002A\022?/iot-devices/v1/regist" +
-      "ries/{registry_id}:listDeviceTopicAliase" +
-      "s\022\216\001\n\025ListDataStreamExports\0229.yandex.clo" +
-      "ud.iot.devices.v1.ListDataStreamExportsR" +
-      "equest\032:.yandex.cloud.iot.devices.v1.Lis" +
-      "tDataStreamExportsResponse\022\246\001\n\023AddDataSt" +
-      "reamExport\0227.yandex.cloud.iot.devices.v1" +
-      ".AddDataStreamExportRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"3\262\322*/\n\033AddDataStr" +
-      "eamExportMetadata\022\020DataStreamExport\022\264\001\n\026" +
-      "DeleteDataStreamExport\022:.yandex.cloud.io" +
-      "t.devices.v1.DeleteDataStreamExportReque" +
-      "st\032!.yandex.cloud.operation.Operation\";\262" +
-      "\322*7\n\036DeleteDataStreamExportMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\306\001\n\016ListOperations\022:." +
-      "yandex.cloud.iot.devices.v1.ListRegistry" +
-      "OperationsRequest\032;.yandex.cloud.iot.dev" +
-      "ices.v1.ListRegistryOperationsResponse\";" +
-      "\202\323\344\223\0025\0223/iot-devices/v1/registries/{regi" +
-      "stry_id}/operations\022\302\001\n\007Disable\0223.yandex" +
-      ".cloud.iot.devices.v1.DisableRegistryReq" +
+      "1\001\212\3101\004<=50\"i\n!DeleteRegistryCertificateM" +
+      "etadata\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"A\n" +
+      "\034ListRegistryPasswordsRequest\022!\n\013registr" +
+      "y_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"a\n\035ListRegistry" +
+      "PasswordsResponse\022@\n\tpasswords\030\001 \003(\0132-.y" +
+      "andex.cloud.iot.devices.v1.RegistryPassw" +
+      "ord\"[\n\032AddRegistryPasswordRequest\022!\n\013reg" +
+      "istry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010password" +
+      "\030\002 \001(\tB\010\212\3101\004>=14\"G\n\033AddRegistryPasswordM" +
+      "etadata\022\023\n\013registry_id\030\001 \001(\t\022\023\n\013password" +
+      "_id\030\002 \001(\t\"e\n\035DeleteRegistryPasswordReque" +
+      "st\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n" +
+      "\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"f\n\036Dele" +
+      "teRegistryPasswordMetadata\022!\n\013registry_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"\200\001\n\035ListDeviceTopicAlia" +
+      "sesRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\n" +
+      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"t\n\036ListDevic" +
+      "eTopicAliasesResponse\0229\n\007aliases\030\001 \003(\0132(" +
+      ".yandex.cloud.iot.devices.v1.DeviceAlias" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"\224\001\n\035ListRegist" +
+      "ryOperationsRequest\022\031\n\013registry_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004" +
+      " \001(\tB\n\212\3101\006<=1000\"p\n\036ListRegistryOperatio" +
+      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
+      "cloud.operation.Operation\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t\"\200\002\n\032AddDataStreamExportReques" +
+      "t\022(\n\004name\030\001 \001(\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z0-9_" +
+      "-]*\022!\n\013registry_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022%" +
+      "\n\021mqtt_topic_filter\030\004 \001(\tB\n\212\3101\006<=1024\022\037\n" +
+      "\010database\030\005 \001(\tB\r\350\3071\001\212\3101\005<=512\022\035\n\006stream" +
+      "\030\006 \001(\tB\r\350\3071\001\212\3101\005<=512\022(\n\022service_account" +
+      "_id\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50J\004\010\003\020\004\"Q\n\033AddData" +
+      "StreamExportMetadata\022\023\n\013registry_id\030\001 \001(" +
+      "\t\022\035\n\025data_stream_export_id\030\002 \001(\t\"o\n\035Dele" +
+      "teDataStreamExportRequest\022!\n\013registry_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025data_stream_expo" +
+      "rt_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"`\n\036DeleteDataS" +
+      "treamExportMetadata\022\031\n\013registry_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022#\n\025data_stream_export_id\030\002 \001(\tB\004\350" +
+      "\3071\001\"A\n\034ListDataStreamExportsRequest\022!\n\013r" +
+      "egistry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"k\n\035ListDa" +
+      "taStreamExportsResponse\022J\n\023data_stream_e" +
+      "xports\030\001 \003(\0132-.yandex.cloud.iot.devices." +
+      "v1.DataStreamExport\"3\n\026DisableRegistryRe" +
+      "quest\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071\001\"4\n\027Disa" +
+      "bleRegistryMetadata\022\031\n\013registry_id\030\001 \001(\t" +
+      "B\004\350\3071\001\"2\n\025EnableRegistryRequest\022\031\n\013regis" +
+      "try_id\030\001 \001(\tB\004\350\3071\001\"3\n\026EnableRegistryMeta" +
+      "data\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071\0012\200\035\n\017Regi" +
+      "stryService\022\217\001\n\003Get\022/.yandex.cloud.iot.d" +
+      "evices.v1.GetRegistryRequest\032%.yandex.cl" +
+      "oud.iot.devices.v1.Registry\"0\202\323\344\223\002*\022(/io" +
+      "t-devices/v1/registries/{registry_id}\022\227\001" +
+      "\n\tGetByName\0225.yandex.cloud.iot.devices.v" +
+      "1.GetByNameRegistryRequest\032%.yandex.clou" +
+      "d.iot.devices.v1.Registry\",\202\323\344\223\002&\022$/iot-" +
+      "devices/v1/registries:getByName\022\223\001\n\004List" +
+      "\0222.yandex.cloud.iot.devices.v1.ListRegis" +
+      "triesRequest\0323.yandex.cloud.iot.devices." +
+      "v1.ListRegistriesResponse\"\"\202\323\344\223\002\034\022\032/iot-" +
+      "devices/v1/registries\022\254\001\n\006Create\0222.yande" +
+      "x.cloud.iot.devices.v1.CreateRegistryReq" +
       "uest\032!.yandex.cloud.operation.Operation\"" +
-      "_\202\323\344\223\0022\"0/iot-devices/v1/registries/{reg" +
-      "istry_id}:disable\262\322*#\n\027DisableRegistryMe" +
-      "tadata\022\010Registry\022\276\001\n\006Enable\0222.yandex.clo" +
-      "ud.iot.devices.v1.EnableRegistryRequest\032" +
-      "!.yandex.cloud.operation.Operation\"]\202\323\344\223" +
-      "\0021\"//iot-devices/v1/registries/{registry" +
-      "_id}:enable\262\322*\"\n\026EnableRegistryMetadata\022" +
-      "\010RegistryBj\n\037yandex.cloud.api.iot.device" +
-      "s.v1ZGgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/iot/devices/v1;devicesb\006p" +
-      "roto3"
+      "K\202\323\344\223\002\037\"\032/iot-devices/v1/registries:\001*\262\322" +
+      "*\"\n\026CreateRegistryMetadata\022\010Registry\022\272\001\n" +
+      "\006Update\0222.yandex.cloud.iot.devices.v1.Up" +
+      "dateRegistryRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"Y\202\323\344\223\002-2(/iot-devices/v1/" +
+      "registries/{registry_id}:\001*\262\322*\"\n\026UpdateR" +
+      "egistryMetadata\022\010Registry\022\304\001\n\006Delete\0222.y" +
+      "andex.cloud.iot.devices.v1.DeleteRegistr" +
+      "yRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"c\202\323\344\223\002**(/iot-devices/v1/registries/" +
+      "{registry_id}\262\322*/\n\026DeleteRegistryMetadat" +
+      "a\022\025google.protobuf.Empty\022\316\001\n\020ListCertifi" +
+      "cates\022<.yandex.cloud.iot.devices.v1.List" +
+      "RegistryCertificatesRequest\032=.yandex.clo" +
+      "ud.iot.devices.v1.ListRegistryCertificat" +
+      "esResponse\"=\202\323\344\223\0027\0225/iot-devices/v1/regi" +
+      "stries/{registry_id}/certificates\022\352\001\n\016Ad" +
+      "dCertificate\022:.yandex.cloud.iot.devices." +
+      "v1.AddRegistryCertificateRequest\032!.yande" +
+      "x.cloud.operation.Operation\"y\202\323\344\223\002:\"5/io" +
+      "t-devices/v1/registries/{registry_id}/ce" +
+      "rtificates:\001*\262\322*5\n\036AddRegistryCertificat" +
+      "eMetadata\022\023RegistryCertificate\022\201\002\n\021Delet" +
+      "eCertificate\022=.yandex.cloud.iot.devices." +
+      "v1.DeleteRegistryCertificateRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\211\001\202\323\344\223\002E*" +
+      "C/iot-devices/v1/registries/{registry_id" +
+      "}/certificates/{fingerprint}\262\322*:\n!Delete" +
+      "RegistryCertificateMetadata\022\025google.prot" +
+      "obuf.Empty\022\302\001\n\rListPasswords\0229.yandex.cl" +
+      "oud.iot.devices.v1.ListRegistryPasswords" +
+      "Request\032:.yandex.cloud.iot.devices.v1.Li" +
+      "stRegistryPasswordsResponse\":\202\323\344\223\0024\0222/io" +
+      "t-devices/v1/registries/{registry_id}/pa" +
+      "sswords\022\333\001\n\013AddPassword\0227.yandex.cloud.i" +
+      "ot.devices.v1.AddRegistryPasswordRequest" +
+      "\032!.yandex.cloud.operation.Operation\"p\202\323\344" +
+      "\223\0027\"2/iot-devices/v1/registries/{registr" +
+      "y_id}/passwords:\001*\262\322*/\n\033AddRegistryPassw" +
+      "ordMetadata\022\020RegistryPassword\022\365\001\n\016Delete" +
+      "Password\022:.yandex.cloud.iot.devices.v1.D" +
+      "eleteRegistryPasswordRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"\203\001\202\323\344\223\002B*@/iot-d" +
+      "evices/v1/registries/{registry_id}/passw" +
+      "ords/{password_id}\262\322*7\n\036DeleteRegistryPa" +
+      "sswordMetadata\022\025google.protobuf.Empty\022\332\001" +
+      "\n\026ListDeviceTopicAliases\022:.yandex.cloud." +
+      "iot.devices.v1.ListDeviceTopicAliasesReq" +
+      "uest\032;.yandex.cloud.iot.devices.v1.ListD" +
+      "eviceTopicAliasesResponse\"G\202\323\344\223\002A\022?/iot-" +
+      "devices/v1/registries/{registry_id}:list" +
+      "DeviceTopicAliases\022\216\001\n\025ListDataStreamExp" +
+      "orts\0229.yandex.cloud.iot.devices.v1.ListD" +
+      "ataStreamExportsRequest\032:.yandex.cloud.i" +
+      "ot.devices.v1.ListDataStreamExportsRespo" +
+      "nse\022\246\001\n\023AddDataStreamExport\0227.yandex.clo" +
+      "ud.iot.devices.v1.AddDataStreamExportReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "3\262\322*/\n\033AddDataStreamExportMetadata\022\020Data" +
+      "StreamExport\022\264\001\n\026DeleteDataStreamExport\022" +
+      ":.yandex.cloud.iot.devices.v1.DeleteData" +
+      "StreamExportRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\";\262\322*7\n\036DeleteDataStreamEx" +
+      "portMetadata\022\025google.protobuf.Empty\022\306\001\n\016" +
+      "ListOperations\022:.yandex.cloud.iot.device" +
+      "s.v1.ListRegistryOperationsRequest\032;.yan" +
+      "dex.cloud.iot.devices.v1.ListRegistryOpe" +
+      "rationsResponse\";\202\323\344\223\0025\0223/iot-devices/v1" +
+      "/registries/{registry_id}/operations\022\302\001\n" +
+      "\007Disable\0223.yandex.cloud.iot.devices.v1.D" +
+      "isableRegistryRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"_\202\323\344\223\0022\"0/iot-devices/v" +
+      "1/registries/{registry_id}:disable\262\322*#\n\027" +
+      "DisableRegistryMetadata\022\010Registry\022\276\001\n\006En" +
+      "able\0222.yandex.cloud.iot.devices.v1.Enabl" +
+      "eRegistryRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"]\202\323\344\223\0021\"//iot-devices/v1/reg" +
+      "istries/{registry_id}:enable\262\322*\"\n\026Enable" +
+      "RegistryMetadata\022\010RegistryBj\n\037yandex.clo" +
+      "ud.api.iot.devices.v1ZGgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/iot/devi" +
+      "ces/v1;devicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

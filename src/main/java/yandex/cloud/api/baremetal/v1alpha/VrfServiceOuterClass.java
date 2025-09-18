@@ -10723,74 +10723,82 @@ public final class VrfServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n0yandex/cloud/baremetal/v1alpha/vrf_ser" +
       "vice.proto\022\036yandex.cloud.baremetal.v1alp" +
-      "ha\032 google/protobuf/field_mask.proto\032 ya" +
-      "ndex/cloud/api/operation.proto\032(yandex/c" +
-      "loud/baremetal/v1alpha/vrf.proto\032&yandex" +
-      "/cloud/operation/operation.proto\032\035yandex" +
-      "/cloud/validation.proto\"9\n\rGetVrfRequest" +
-      "\022(\n\006vrf_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\002" +
-      "20\"\233\001\n\016ListVrfRequest\022/\n\tfolder_id\030\001 \001(\t" +
-      "B\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=50\022\034\n\tpage_s" +
-      "ize\030d \001(\003B\t\372\3071\005<=100\022\022\n\npage_token\030e \001(\t" +
-      "\022\020\n\010order_by\030f \001(\t\022\016\n\006filter\030g \001(\tJ\004\010\002\020d" +
-      "\"c\n\017ListVrfResponse\0221\n\004vrfs\030\001 \003(\0132#.yand" +
-      "ex.cloud.baremetal.v1alpha.Vrf\022\027\n\017next_p" +
-      "age_token\030d \001(\tJ\004\010\002\020d\"\341\002\n\020CreateVrfReque" +
-      "st\022/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9." +
-      "-]*\212\3101\004<=50\0224\n\004name\030\002 \001(\tB&\362\3071\032[a-z]([-a" +
-      "-z0-9]*[a-z0-9])?\212\3101\0042-63\022\037\n\013description" +
-      "\030\003 \001(\tB\n\212\3101\006<=1024\022\216\001\n\006labels\030\310\001 \003(\0132<.y" +
-      "andex.cloud.baremetal.v1alpha.CreateVrfR" +
-      "equest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013" +
-      "[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
-      "z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001J\005\010\004\020\310\001\"#\n\021CreateVrfMetadata\022\016" +
-      "\n\006vrf_id\030\001 \001(\t\"\213\003\n\020UpdateVrfRequest\022(\n\006v" +
-      "rf_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022/\n" +
-      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMask\0224\n\004name\030\003 \001(\tB&\362\3071\032[a-z]([-a-z0-9" +
-      "]*[a-z0-9])?\212\3101\0042-63\022\037\n\013description\030\004 \001(" +
-      "\tB\n\212\3101\006<=1024\022\216\001\n\006labels\030\310\001 \003(\0132<.yandex" +
-      ".cloud.baremetal.v1alpha.UpdateVrfReques" +
-      "t.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-" +
-      "9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001J\005\010\005\020\310\001\"#\n\021UpdateVrfMetadata\022\016\n\006vrf" +
-      "_id\030\001 \001(\t\"<\n\020DeleteVrfRequest\022(\n\006vrf_id\030" +
-      "\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"#\n\021Delet" +
-      "eVrfMetadata\022\016\n\006vrf_id\030\001 \001(\t\"|\n\030ListVrfO" +
-      "perationsRequest\022(\n\006vrf_id\030\001 \001(\tB\030\362\3071\016[a" +
-      "-z][a-z0-9]*\212\3101\00220\022\034\n\tpage_size\030d \001(\003B\t\372" +
-      "\3071\005<=100\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"q\n\031Li" +
-      "stVrfOperationsResponse\0225\n\noperations\030\001 " +
-      "\003(\0132!.yandex.cloud.operation.Operation\022\027" +
-      "\n\017next_page_token\030d \001(\tJ\004\010\002\020d2\350\005\n\nVrfSer" +
-      "vice\022[\n\003Get\022-.yandex.cloud.baremetal.v1a" +
-      "lpha.GetVrfRequest\032#.yandex.cloud.bareme" +
-      "tal.v1alpha.Vrf\"\000\022i\n\004List\022..yandex.cloud" +
-      ".baremetal.v1alpha.ListVrfRequest\032/.yand" +
-      "ex.cloud.baremetal.v1alpha.ListVrfRespon" +
-      "se\"\000\022{\n\006Create\0220.yandex.cloud.baremetal." +
-      "v1alpha.CreateVrfRequest\032!.yandex.cloud." +
-      "operation.Operation\"\034\262\322*\030\n\021CreateVrfMeta" +
-      "data\022\003Vrf\022{\n\006Update\0220.yandex.cloud.barem" +
-      "etal.v1alpha.UpdateVrfRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\034\262\322*\030\n\021UpdateVr" +
-      "fMetadata\022\003Vrf\022\215\001\n\006Delete\0220.yandex.cloud" +
-      ".baremetal.v1alpha.DeleteVrfRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\".\262\322**\n\021De" +
-      "leteVrfMetadata\022\025google.protobuf.Empty\022\207" +
-      "\001\n\016ListOperations\0228.yandex.cloud.baremet" +
-      "al.v1alpha.ListVrfOperationsRequest\0329.ya" +
-      "ndex.cloud.baremetal.v1alpha.ListVrfOper" +
-      "ationsResponse\"\000Br\n\"yandex.cloud.api.bar" +
-      "emetal.v1alphaZLgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/baremetal/v1alp" +
-      "ha;baremetalb\006proto3"
+      "ha\032\034google/api/annotations.proto\032 google" +
+      "/protobuf/field_mask.proto\032 yandex/cloud" +
+      "/api/operation.proto\032(yandex/cloud/barem" +
+      "etal/v1alpha/vrf.proto\032&yandex/cloud/ope" +
+      "ration/operation.proto\032\035yandex/cloud/val" +
+      "idation.proto\"9\n\rGetVrfRequest\022(\n\006vrf_id" +
+      "\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"\233\001\n\016Lis" +
+      "tVrfRequest\022/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020[a-z" +
+      "][a-z0-9.-]*\212\3101\004<=50\022\034\n\tpage_size\030d \001(\003B" +
+      "\t\372\3071\005<=100\022\022\n\npage_token\030e \001(\t\022\020\n\010order_" +
+      "by\030f \001(\t\022\016\n\006filter\030g \001(\tJ\004\010\002\020d\"c\n\017ListVr" +
+      "fResponse\0221\n\004vrfs\030\001 \003(\0132#.yandex.cloud.b" +
+      "aremetal.v1alpha.Vrf\022\027\n\017next_page_token\030" +
+      "d \001(\tJ\004\010\002\020d\"\341\002\n\020CreateVrfRequest\022/\n\tfold" +
+      "er_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=5" +
+      "0\0224\n\004name\030\002 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-" +
+      "z0-9])?\212\3101\0042-63\022\037\n\013description\030\003 \001(\tB\n\212\310" +
+      "1\006<=1024\022\216\001\n\006labels\030\310\001 \003(\0132<.yandex.clou" +
+      "d.baremetal.v1alpha.CreateVrfRequest.Lab" +
+      "elsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]" +
+      "*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "J\005\010\004\020\310\001\"#\n\021CreateVrfMetadata\022\016\n\006vrf_id\030\001" +
+      " \001(\t\"\213\003\n\020UpdateVrfRequest\022(\n\006vrf_id\030\001 \001(" +
+      "\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022/\n\013update_ma" +
+      "sk\030\002 \001(\0132\032.google.protobuf.FieldMask\0224\n\004" +
+      "name\030\003 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9]" +
+      ")?\212\3101\0042-63\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=1" +
+      "024\022\216\001\n\006labels\030\310\001 \003(\0132<.yandex.cloud.bar" +
+      "emetal.v1alpha.UpdateVrfRequest.LabelsEn" +
+      "tryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006" +
+      "\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\005\020" +
+      "\310\001\"#\n\021UpdateVrfMetadata\022\016\n\006vrf_id\030\001 \001(\t\"" +
+      "<\n\020DeleteVrfRequest\022(\n\006vrf_id\030\001 \001(\tB\030\362\3071" +
+      "\016[a-z][a-z0-9]*\212\3101\00220\"#\n\021DeleteVrfMetada" +
+      "ta\022\016\n\006vrf_id\030\001 \001(\t\"|\n\030ListVrfOperationsR" +
+      "equest\022(\n\006vrf_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9" +
+      "]*\212\3101\00220\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\022" +
+      "\n\npage_token\030e \001(\tJ\004\010\002\020d\"q\n\031ListVrfOpera" +
+      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
+      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
+      "e_token\030d \001(\tJ\004\010\002\020d2\333\007\n\nVrfService\022\203\001\n\003G" +
+      "et\022-.yandex.cloud.baremetal.v1alpha.GetV" +
+      "rfRequest\032#.yandex.cloud.baremetal.v1alp" +
+      "ha.Vrf\"(\202\323\344\223\002\"\022 /baremetal/v1alpha/vrfs/" +
+      "{vrf_id}\022\210\001\n\004List\022..yandex.cloud.baremet" +
+      "al.v1alpha.ListVrfRequest\032/.yandex.cloud" +
+      ".baremetal.v1alpha.ListVrfResponse\"\037\202\323\344\223" +
+      "\002\031\022\027/baremetal/v1alpha/vrfs\022\235\001\n\006Create\0220" +
+      ".yandex.cloud.baremetal.v1alpha.CreateVr" +
+      "fRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\">\202\323\344\223\002\034\"\027/baremetal/v1alpha/vrfs:\001*\262" +
+      "\322*\030\n\021CreateVrfMetadata\022\003Vrf\022\246\001\n\006Update\0220" +
+      ".yandex.cloud.baremetal.v1alpha.UpdateVr" +
+      "fRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"G\202\323\344\223\002%2 /baremetal/v1alpha/vrfs/{vr" +
+      "f_id}:\001*\262\322*\030\n\021UpdateVrfMetadata\022\003Vrf\022\265\001\n" +
+      "\006Delete\0220.yandex.cloud.baremetal.v1alpha" +
+      ".DeleteVrfRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"V\202\323\344\223\002\"* /baremetal/v1alpha" +
+      "/vrfs/{vrf_id}\262\322**\n\021DeleteVrfMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\272\001\n\016ListOperations\022" +
+      "8.yandex.cloud.baremetal.v1alpha.ListVrf" +
+      "OperationsRequest\0329.yandex.cloud.baremet" +
+      "al.v1alpha.ListVrfOperationsResponse\"3\202\323" +
+      "\344\223\002-\022+/baremetal/v1alpha/vrfs/{vrf_id}/o" +
+      "perationsBr\n\"yandex.cloud.api.baremetal." +
+      "v1alphaZLgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/baremetal/v1alpha;bare" +
+      "metalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.getDescriptor(),
@@ -10877,6 +10885,7 @@ public final class VrfServiceOuterClass {
         new java.lang.String[] { "Operations", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.mapKey);
@@ -10885,6 +10894,7 @@ public final class VrfServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.getDescriptor();

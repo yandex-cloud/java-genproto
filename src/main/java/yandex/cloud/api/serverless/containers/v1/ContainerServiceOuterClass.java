@@ -12044,7 +12044,7 @@ public final class ContainerServiceOuterClass {
 
     /**
      * <pre>
-     * The container's execution mode
+     * The container's execution mode.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -12053,7 +12053,7 @@ public final class ContainerServiceOuterClass {
     boolean hasRuntime();
     /**
      * <pre>
-     * The container's execution mode
+     * The container's execution mode.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -12062,7 +12062,7 @@ public final class ContainerServiceOuterClass {
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime getRuntime();
     /**
      * <pre>
-     * The container's execution mode
+     * The container's execution mode.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -12095,6 +12095,33 @@ public final class ContainerServiceOuterClass {
      * <code>.yandex.cloud.serverless.containers.v1.MetadataOptions metadata_options = 18;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.MetadataOptionsOrBuilder getMetadataOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * Config for asynchronous invocations of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+     * @return Whether the asyncInvocationConfig field is set.
+     */
+    boolean hasAsyncInvocationConfig();
+    /**
+     * <pre>
+     * Config for asynchronous invocations of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+     * @return The asyncInvocationConfig.
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig getAsyncInvocationConfig();
+    /**
+     * <pre>
+     * Config for asynchronous invocations of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfigOrBuilder getAsyncInvocationConfigOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.DeployContainerRevisionRequest}
@@ -12311,6 +12338,19 @@ public final class ContainerServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(metadataOptions_);
                 metadataOptions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 154: {
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig.Builder subBuilder = null;
+              if (asyncInvocationConfig_ != null) {
+                subBuilder = asyncInvocationConfig_.toBuilder();
+              }
+              asyncInvocationConfig_ = input.readMessage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asyncInvocationConfig_);
+                asyncInvocationConfig_ = subBuilder.buildPartial();
               }
 
               break;
@@ -12968,7 +13008,7 @@ public final class ContainerServiceOuterClass {
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime runtime_;
     /**
      * <pre>
-     * The container's execution mode
+     * The container's execution mode.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -12980,7 +13020,7 @@ public final class ContainerServiceOuterClass {
     }
     /**
      * <pre>
-     * The container's execution mode
+     * The container's execution mode.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -12992,7 +13032,7 @@ public final class ContainerServiceOuterClass {
     }
     /**
      * <pre>
-     * The container's execution mode
+     * The container's execution mode.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -13038,6 +13078,44 @@ public final class ContainerServiceOuterClass {
     @java.lang.Override
     public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.MetadataOptionsOrBuilder getMetadataOptionsOrBuilder() {
       return getMetadataOptions();
+    }
+
+    public static final int ASYNC_INVOCATION_CONFIG_FIELD_NUMBER = 19;
+    private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig asyncInvocationConfig_;
+    /**
+     * <pre>
+     * Config for asynchronous invocations of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+     * @return Whether the asyncInvocationConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsyncInvocationConfig() {
+      return asyncInvocationConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Config for asynchronous invocations of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+     * @return The asyncInvocationConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig getAsyncInvocationConfig() {
+      return asyncInvocationConfig_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig.getDefaultInstance() : asyncInvocationConfig_;
+    }
+    /**
+     * <pre>
+     * Config for asynchronous invocations of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfigOrBuilder getAsyncInvocationConfigOrBuilder() {
+      return getAsyncInvocationConfig();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -13101,6 +13179,9 @@ public final class ContainerServiceOuterClass {
       }
       if (metadataOptions_ != null) {
         output.writeMessage(18, getMetadataOptions());
+      }
+      if (asyncInvocationConfig_ != null) {
+        output.writeMessage(19, getAsyncInvocationConfig());
       }
       unknownFields.writeTo(output);
     }
@@ -13171,6 +13252,10 @@ public final class ContainerServiceOuterClass {
       if (metadataOptions_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getMetadataOptions());
+      }
+      if (asyncInvocationConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getAsyncInvocationConfig());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13246,6 +13331,11 @@ public final class ContainerServiceOuterClass {
         if (!getMetadataOptions()
             .equals(other.getMetadataOptions())) return false;
       }
+      if (hasAsyncInvocationConfig() != other.hasAsyncInvocationConfig()) return false;
+      if (hasAsyncInvocationConfig()) {
+        if (!getAsyncInvocationConfig()
+            .equals(other.getAsyncInvocationConfig())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13313,6 +13403,10 @@ public final class ContainerServiceOuterClass {
       if (hasMetadataOptions()) {
         hash = (37 * hash) + METADATA_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getMetadataOptions().hashCode();
+      }
+      if (hasAsyncInvocationConfig()) {
+        hash = (37 * hash) + ASYNC_INVOCATION_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getAsyncInvocationConfig().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -13530,6 +13624,12 @@ public final class ContainerServiceOuterClass {
           metadataOptions_ = null;
           metadataOptionsBuilder_ = null;
         }
+        if (asyncInvocationConfigBuilder_ == null) {
+          asyncInvocationConfig_ = null;
+        } else {
+          asyncInvocationConfig_ = null;
+          asyncInvocationConfigBuilder_ = null;
+        }
         return this;
       }
 
@@ -13632,6 +13732,11 @@ public final class ContainerServiceOuterClass {
           result.metadataOptions_ = metadataOptions_;
         } else {
           result.metadataOptions_ = metadataOptionsBuilder_.build();
+        }
+        if (asyncInvocationConfigBuilder_ == null) {
+          result.asyncInvocationConfig_ = asyncInvocationConfig_;
+        } else {
+          result.asyncInvocationConfig_ = asyncInvocationConfigBuilder_.build();
         }
         onBuilt();
         return result;
@@ -13800,6 +13905,9 @@ public final class ContainerServiceOuterClass {
         }
         if (other.hasMetadataOptions()) {
           mergeMetadataOptions(other.getMetadataOptions());
+        }
+        if (other.hasAsyncInvocationConfig()) {
+          mergeAsyncInvocationConfig(other.getAsyncInvocationConfig());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -16214,7 +16322,7 @@ public final class ContainerServiceOuterClass {
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Runtime.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RuntimeOrBuilder> runtimeBuilder_;
       /**
        * <pre>
-       * The container's execution mode
+       * The container's execution mode.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -16225,7 +16333,7 @@ public final class ContainerServiceOuterClass {
       }
       /**
        * <pre>
-       * The container's execution mode
+       * The container's execution mode.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -16240,7 +16348,7 @@ public final class ContainerServiceOuterClass {
       }
       /**
        * <pre>
-       * The container's execution mode
+       * The container's execution mode.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -16260,7 +16368,7 @@ public final class ContainerServiceOuterClass {
       }
       /**
        * <pre>
-       * The container's execution mode
+       * The container's execution mode.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -16278,7 +16386,7 @@ public final class ContainerServiceOuterClass {
       }
       /**
        * <pre>
-       * The container's execution mode
+       * The container's execution mode.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -16300,7 +16408,7 @@ public final class ContainerServiceOuterClass {
       }
       /**
        * <pre>
-       * The container's execution mode
+       * The container's execution mode.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -16318,7 +16426,7 @@ public final class ContainerServiceOuterClass {
       }
       /**
        * <pre>
-       * The container's execution mode
+       * The container's execution mode.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -16330,7 +16438,7 @@ public final class ContainerServiceOuterClass {
       }
       /**
        * <pre>
-       * The container's execution mode
+       * The container's execution mode.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -16345,7 +16453,7 @@ public final class ContainerServiceOuterClass {
       }
       /**
        * <pre>
-       * The container's execution mode
+       * The container's execution mode.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.containers.v1.Runtime runtime = 17;</code>
@@ -16517,6 +16625,161 @@ public final class ContainerServiceOuterClass {
           metadataOptions_ = null;
         }
         return metadataOptionsBuilder_;
+      }
+
+      private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig asyncInvocationConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfigOrBuilder> asyncInvocationConfigBuilder_;
+      /**
+       * <pre>
+       * Config for asynchronous invocations of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+       * @return Whether the asyncInvocationConfig field is set.
+       */
+      public boolean hasAsyncInvocationConfig() {
+        return asyncInvocationConfigBuilder_ != null || asyncInvocationConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Config for asynchronous invocations of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+       * @return The asyncInvocationConfig.
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig getAsyncInvocationConfig() {
+        if (asyncInvocationConfigBuilder_ == null) {
+          return asyncInvocationConfig_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig.getDefaultInstance() : asyncInvocationConfig_;
+        } else {
+          return asyncInvocationConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Config for asynchronous invocations of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+       */
+      public Builder setAsyncInvocationConfig(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig value) {
+        if (asyncInvocationConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asyncInvocationConfig_ = value;
+          onChanged();
+        } else {
+          asyncInvocationConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Config for asynchronous invocations of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+       */
+      public Builder setAsyncInvocationConfig(
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig.Builder builderForValue) {
+        if (asyncInvocationConfigBuilder_ == null) {
+          asyncInvocationConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          asyncInvocationConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Config for asynchronous invocations of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+       */
+      public Builder mergeAsyncInvocationConfig(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig value) {
+        if (asyncInvocationConfigBuilder_ == null) {
+          if (asyncInvocationConfig_ != null) {
+            asyncInvocationConfig_ =
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig.newBuilder(asyncInvocationConfig_).mergeFrom(value).buildPartial();
+          } else {
+            asyncInvocationConfig_ = value;
+          }
+          onChanged();
+        } else {
+          asyncInvocationConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Config for asynchronous invocations of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+       */
+      public Builder clearAsyncInvocationConfig() {
+        if (asyncInvocationConfigBuilder_ == null) {
+          asyncInvocationConfig_ = null;
+          onChanged();
+        } else {
+          asyncInvocationConfig_ = null;
+          asyncInvocationConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Config for asynchronous invocations of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig.Builder getAsyncInvocationConfigBuilder() {
+        
+        onChanged();
+        return getAsyncInvocationConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Config for asynchronous invocations of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfigOrBuilder getAsyncInvocationConfigOrBuilder() {
+        if (asyncInvocationConfigBuilder_ != null) {
+          return asyncInvocationConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return asyncInvocationConfig_ == null ?
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig.getDefaultInstance() : asyncInvocationConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Config for asynchronous invocations of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.AsyncInvocationConfig async_invocation_config = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfigOrBuilder> 
+          getAsyncInvocationConfigFieldBuilder() {
+        if (asyncInvocationConfigBuilder_ == null) {
+          asyncInvocationConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfig.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.AsyncInvocationConfigOrBuilder>(
+                  getAsyncInvocationConfig(),
+                  getParentForChildren(),
+                  isClean());
+          asyncInvocationConfig_ = null;
+        }
+        return asyncInvocationConfigBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -22906,7 +23169,7 @@ public final class ContainerServiceOuterClass {
       "\212\3101\006<=1000B\n\n\002id\022\004\300\3011\001\"~\n\037ListContainers" +
       "RevisionsResponse\022B\n\trevisions\030\001 \003(\0132/.y" +
       "andex.cloud.serverless.containers.v1.Rev" +
-      "ision\022\027\n\017next_page_token\030\002 \001(\t\"\372\007\n\036Deplo" +
+      "ision\022\027\n\017next_page_token\030\002 \001(\t\"\331\010\n\036Deplo" +
       "yContainerRevisionRequest\022\032\n\014container_i" +
       "d\030\001 \001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022I\n\tre" +
       "sources\030\005 \001(\01320.yandex.cloud.serverless." +
@@ -22931,99 +23194,102 @@ public final class ContainerServiceOuterClass {
       "ers.v1.Mount\022?\n\007runtime\030\021 \001(\0132..yandex.c" +
       "loud.serverless.containers.v1.Runtime\022P\n" +
       "\020metadata_options\030\022 \001(\01326.yandex.cloud.s" +
-      "erverless.containers.v1.MetadataOptionsJ" +
-      "\004\010\004\020\005J\004\010\002\020\003\"\350\002\n\tImageSpec\022\027\n\timage_url\030\001" +
-      " \001(\tB\004\350\3071\001\022?\n\007command\030\002 \001(\0132..yandex.clo" +
-      "ud.serverless.containers.v1.Command\0229\n\004a" +
-      "rgs\030\003 \001(\0132+.yandex.cloud.serverless.cont" +
-      "ainers.v1.Args\022}\n\013environment\030\004 \003(\0132A.ya" +
-      "ndex.cloud.serverless.containers.v1.Imag" +
-      "eSpec.EnvironmentEntryB%\212\3101\006<=4096\262\3101\027\022\025" +
-      "[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013working_dir\030\005 \001" +
-      "(\t\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"@\n\037DeployContainerRevisio" +
-      "nMetadata\022\035\n\025container_revision_id\030\001 \001(\t" +
-      "\"Q\n\030RollbackContainerRequest\022\032\n\014containe" +
-      "r_id\030\001 \001(\tB\004\350\3071\001\022\031\n\013revision_id\030\002 \001(\tB\004\350" +
-      "\3071\001\"F\n\031RollbackContainerMetadata\022\024\n\014cont" +
-      "ainer_id\030\001 \001(\t\022\023\n\013revision_id\030\002 \001(\t\"\226\001\n\036" +
-      "ListContainerOperationsRequest\022\032\n\014contai" +
-      "ner_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"q\n\037ListCont" +
-      "ainerOperationsResponse\0225\n\noperations\030\001 " +
-      "\003(\0132!.yandex.cloud.operation.Operation\022\027" +
-      "\n\017next_page_token\030\002 \001(\t2\355\024\n\020ContainerSer" +
-      "vice\022\245\001\n\003Get\022:.yandex.cloud.serverless.c" +
-      "ontainers.v1.GetContainerRequest\0320.yande" +
-      "x.cloud.serverless.containers.v1.Contain" +
-      "er\"0\202\323\344\223\002*\022(/containers/v1/containers/{c" +
-      "ontainer_id}\022\246\001\n\004List\022<.yandex.cloud.ser" +
-      "verless.containers.v1.ListContainersRequ" +
-      "est\032=.yandex.cloud.serverless.containers" +
-      ".v1.ListContainersResponse\"!\202\323\344\223\002\033\022\031/con" +
-      "tainers/v1/containers\022\270\001\n\006Create\022=.yande" +
-      "x.cloud.serverless.containers.v1.CreateC" +
-      "ontainerRequest\032!.yandex.cloud.operation" +
-      ".Operation\"L\202\323\344\223\002\036\"\031/containers/v1/conta" +
-      "iners:\001*\262\322*$\n\027CreateContainerMetadata\022\tC" +
-      "ontainer\022\307\001\n\006Update\022=.yandex.cloud.serve" +
-      "rless.containers.v1.UpdateContainerReque" +
-      "st\032!.yandex.cloud.operation.Operation\"[\202" +
-      "\323\344\223\002-2(/containers/v1/containers/{contai" +
-      "ner_id}:\001*\262\322*$\n\027UpdateContainerMetadata\022" +
-      "\tContainer\022\320\001\n\006Delete\022=.yandex.cloud.ser" +
-      "verless.containers.v1.DeleteContainerReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "d\202\323\344\223\002**(/containers/v1/containers/{cont" +
-      "ainer_id}\262\322*0\n\027DeleteContainerMetadata\022\025" +
-      "google.protobuf.Empty\022\325\001\n\016DeployRevision" +
-      "\022E.yandex.cloud.serverless.containers.v1" +
-      ".DeployContainerRevisionRequest\032!.yandex" +
-      ".cloud.operation.Operation\"Y\202\323\344\223\002$\"\037/con" +
-      "tainers/v1/revisions:deploy:\001*\262\322*+\n\037Depl" +
-      "oyContainerRevisionMetadata\022\010Revision\022\326\001" +
-      "\n\010Rollback\022?.yandex.cloud.serverless.con" +
-      "tainers.v1.RollbackContainerRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"f\202\323\344\223\0026\"1" +
-      "/containers/v1/containers/{container_id}" +
-      ":rollback:\001*\262\322*&\n\031RollbackContainerMetad" +
-      "ata\022\tContainer\022\274\001\n\013GetRevision\022B.yandex." +
-      "cloud.serverless.containers.v1.GetContai" +
-      "nerRevisionRequest\032/.yandex.cloud.server" +
-      "less.containers.v1.Revision\"8\202\323\344\223\0022\0220/co" +
-      "ntainers/v1/revisions/{container_revisio" +
-      "n_id}\022\300\001\n\rListRevisions\022E.yandex.cloud.s" +
-      "erverless.containers.v1.ListContainersRe" +
-      "visionsRequest\032F.yandex.cloud.serverless" +
-      ".containers.v1.ListContainersRevisionsRe" +
-      "sponse\" \202\323\344\223\002\032\022\030/containers/v1/revisions" +
-      "\022\334\001\n\016ListOperations\022E.yandex.cloud.serve" +
-      "rless.containers.v1.ListContainerOperati" +
-      "onsRequest\032F.yandex.cloud.serverless.con" +
-      "tainers.v1.ListContainerOperationsRespon" +
-      "se\";\202\323\344\223\0025\0223/containers/v1/containers/{c" +
-      "ontainer_id}/operations\022\271\001\n\022ListAccessBi" +
-      "ndings\022..yandex.cloud.access.ListAccessB" +
-      "indingsRequest\032/.yandex.cloud.access.Lis" +
-      "tAccessBindingsResponse\"B\202\323\344\223\002<\022:/contai" +
-      "ners/v1/containers/{resource_id}:listAcc" +
-      "essBindings\022\351\001\n\021SetAccessBindings\022-.yand" +
-      "ex.cloud.access.SetAccessBindingsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\201\001\202\323" +
-      "\344\223\002>\"9/containers/v1/containers/{resourc" +
-      "e_id}:setAccessBindings:\001*\262\322*9\n access.S" +
-      "etAccessBindingsMetadata\022\025google.protobu" +
-      "f.Empty\022\365\001\n\024UpdateAccessBindings\0220.yande" +
-      "x.cloud.access.UpdateAccessBindingsReque" +
-      "st\032!.yandex.cloud.operation.Operation\"\207\001" +
-      "\202\323\344\223\002A\"</containers/v1/containers/{resou" +
-      "rce_id}:updateAccessBindings:\001*\262\322*<\n#acc" +
-      "ess.UpdateAccessBindingsMetadata\022\025google" +
-      ".protobuf.EmptyB\201\001\n)yandex.cloud.api.ser" +
-      "verless.containers.v1ZTgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/serverle" +
-      "ss/containers/v1;containersb\006proto3"
+      "erverless.containers.v1.MetadataOptions\022" +
+      "]\n\027async_invocation_config\030\023 \001(\0132<.yande" +
+      "x.cloud.serverless.containers.v1.AsyncIn" +
+      "vocationConfigJ\004\010\004\020\005J\004\010\002\020\003\"\350\002\n\tImageSpec" +
+      "\022\027\n\timage_url\030\001 \001(\tB\004\350\3071\001\022?\n\007command\030\002 \001" +
+      "(\0132..yandex.cloud.serverless.containers." +
+      "v1.Command\0229\n\004args\030\003 \001(\0132+.yandex.cloud." +
+      "serverless.containers.v1.Args\022}\n\013environ" +
+      "ment\030\004 \003(\0132A.yandex.cloud.serverless.con" +
+      "tainers.v1.ImageSpec.EnvironmentEntryB%\212" +
+      "\3101\006<=4096\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013" +
+      "working_dir\030\005 \001(\t\0322\n\020EnvironmentEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"@\n\037DeployC" +
+      "ontainerRevisionMetadata\022\035\n\025container_re" +
+      "vision_id\030\001 \001(\t\"Q\n\030RollbackContainerRequ" +
+      "est\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\031\n\013revis" +
+      "ion_id\030\002 \001(\tB\004\350\3071\001\"F\n\031RollbackContainerM" +
+      "etadata\022\024\n\014container_id\030\001 \001(\t\022\023\n\013revisio" +
+      "n_id\030\002 \001(\t\"\226\001\n\036ListContainerOperationsRe" +
+      "quest\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpag" +
+      "e_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003" +
+      " \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1" +
+      "000\"q\n\037ListContainerOperationsResponse\0225" +
+      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
+      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t2\355" +
+      "\024\n\020ContainerService\022\245\001\n\003Get\022:.yandex.clo" +
+      "ud.serverless.containers.v1.GetContainer" +
+      "Request\0320.yandex.cloud.serverless.contai" +
+      "ners.v1.Container\"0\202\323\344\223\002*\022(/containers/v" +
+      "1/containers/{container_id}\022\246\001\n\004List\022<.y" +
+      "andex.cloud.serverless.containers.v1.Lis" +
+      "tContainersRequest\032=.yandex.cloud.server" +
+      "less.containers.v1.ListContainersRespons" +
+      "e\"!\202\323\344\223\002\033\022\031/containers/v1/containers\022\270\001\n" +
+      "\006Create\022=.yandex.cloud.serverless.contai" +
+      "ners.v1.CreateContainerRequest\032!.yandex." +
+      "cloud.operation.Operation\"L\202\323\344\223\002\036\"\031/cont" +
+      "ainers/v1/containers:\001*\262\322*$\n\027CreateConta" +
+      "inerMetadata\022\tContainer\022\307\001\n\006Update\022=.yan" +
+      "dex.cloud.serverless.containers.v1.Updat" +
+      "eContainerRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"[\202\323\344\223\002-2(/containers/v1/con" +
+      "tainers/{container_id}:\001*\262\322*$\n\027UpdateCon" +
+      "tainerMetadata\022\tContainer\022\320\001\n\006Delete\022=.y" +
+      "andex.cloud.serverless.containers.v1.Del" +
+      "eteContainerRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"d\202\323\344\223\002**(/containers/v1/c" +
+      "ontainers/{container_id}\262\322*0\n\027DeleteCont" +
+      "ainerMetadata\022\025google.protobuf.Empty\022\325\001\n" +
+      "\016DeployRevision\022E.yandex.cloud.serverles" +
+      "s.containers.v1.DeployContainerRevisionR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"Y\202\323\344\223\002$\"\037/containers/v1/revisions:depl" +
+      "oy:\001*\262\322*+\n\037DeployContainerRevisionMetada" +
+      "ta\022\010Revision\022\326\001\n\010Rollback\022?.yandex.cloud" +
+      ".serverless.containers.v1.RollbackContai" +
+      "nerRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"f\202\323\344\223\0026\"1/containers/v1/containers" +
+      "/{container_id}:rollback:\001*\262\322*&\n\031Rollbac" +
+      "kContainerMetadata\022\tContainer\022\274\001\n\013GetRev" +
+      "ision\022B.yandex.cloud.serverless.containe" +
+      "rs.v1.GetContainerRevisionRequest\032/.yand" +
+      "ex.cloud.serverless.containers.v1.Revisi" +
+      "on\"8\202\323\344\223\0022\0220/containers/v1/revisions/{co" +
+      "ntainer_revision_id}\022\300\001\n\rListRevisions\022E" +
+      ".yandex.cloud.serverless.containers.v1.L" +
+      "istContainersRevisionsRequest\032F.yandex.c" +
+      "loud.serverless.containers.v1.ListContai" +
+      "nersRevisionsResponse\" \202\323\344\223\002\032\022\030/containe" +
+      "rs/v1/revisions\022\334\001\n\016ListOperations\022E.yan" +
+      "dex.cloud.serverless.containers.v1.ListC" +
+      "ontainerOperationsRequest\032F.yandex.cloud" +
+      ".serverless.containers.v1.ListContainerO" +
+      "perationsResponse\";\202\323\344\223\0025\0223/containers/v" +
+      "1/containers/{container_id}/operations\022\271" +
+      "\001\n\022ListAccessBindings\022..yandex.cloud.acc" +
+      "ess.ListAccessBindingsRequest\032/.yandex.c" +
+      "loud.access.ListAccessBindingsResponse\"B" +
+      "\202\323\344\223\002<\022:/containers/v1/containers/{resou" +
+      "rce_id}:listAccessBindings\022\351\001\n\021SetAccess" +
+      "Bindings\022-.yandex.cloud.access.SetAccess" +
+      "BindingsRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\201\001\202\323\344\223\002>\"9/containers/v1/cont" +
+      "ainers/{resource_id}:setAccessBindings:\001" +
+      "*\262\322*9\n access.SetAccessBindingsMetadata\022" +
+      "\025google.protobuf.Empty\022\365\001\n\024UpdateAccessB" +
+      "indings\0220.yandex.cloud.access.UpdateAcce" +
+      "ssBindingsRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"\207\001\202\323\344\223\002A\"</containers/v1/co" +
+      "ntainers/{resource_id}:updateAccessBindi" +
+      "ngs:\001*\262\322*<\n#access.UpdateAccessBindingsM" +
+      "etadata\022\025google.protobuf.EmptyB\201\001\n)yande" +
+      "x.cloud.api.serverless.containers.v1ZTgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/serverless/containers/v1;containe" +
+      "rsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23126,7 +23392,7 @@ public final class ContainerServiceOuterClass {
     internal_static_yandex_cloud_serverless_containers_v1_DeployContainerRevisionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_DeployContainerRevisionRequest_descriptor,
-        new java.lang.String[] { "ContainerId", "Description", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSpec", "Concurrency", "Secrets", "Connectivity", "ProvisionPolicy", "ScalingPolicy", "LogOptions", "StorageMounts", "Mounts", "Runtime", "MetadataOptions", });
+        new java.lang.String[] { "ContainerId", "Description", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSpec", "Concurrency", "Secrets", "Connectivity", "ProvisionPolicy", "ScalingPolicy", "LogOptions", "StorageMounts", "Mounts", "Runtime", "MetadataOptions", "AsyncInvocationConfig", });
     internal_static_yandex_cloud_serverless_containers_v1_ImageSpec_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_serverless_containers_v1_ImageSpec_fieldAccessorTable = new

@@ -1601,6 +1601,17 @@ public final class RuleService {
      * <code>.yandex.cloud.cdn.v1.ResourceOptions options = 4;</code>
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptionsOrBuilder getOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * Rules are ordered by weight in ascending order (lower weights execute first)
+     * Weight must be between 0 and 9999 inclusive
+     * </pre>
+     *
+     * <code>int64 weight = 5;</code>
+     * @return The weight.
+     */
+    long getWeight();
   }
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.CreateResourceRuleRequest}
@@ -1679,6 +1690,11 @@ public final class RuleService {
                 options_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 40: {
+
+              weight_ = input.readInt64();
               break;
             }
             default: {
@@ -1877,6 +1893,22 @@ public final class RuleService {
       return getOptions();
     }
 
+    public static final int WEIGHT_FIELD_NUMBER = 5;
+    private long weight_;
+    /**
+     * <pre>
+     * Rules are ordered by weight in ascending order (lower weights execute first)
+     * Weight must be between 0 and 9999 inclusive
+     * </pre>
+     *
+     * <code>int64 weight = 5;</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public long getWeight() {
+      return weight_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1903,6 +1935,9 @@ public final class RuleService {
       if (options_ != null) {
         output.writeMessage(4, getOptions());
       }
+      if (weight_ != 0L) {
+        output.writeInt64(5, weight_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1924,6 +1959,10 @@ public final class RuleService {
       if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getOptions());
+      }
+      if (weight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, weight_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1951,6 +1990,8 @@ public final class RuleService {
         if (!getOptions()
             .equals(other.getOptions())) return false;
       }
+      if (getWeight()
+          != other.getWeight()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1972,6 +2013,9 @@ public final class RuleService {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
       }
+      hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getWeight());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2117,6 +2161,8 @@ public final class RuleService {
           options_ = null;
           optionsBuilder_ = null;
         }
+        weight_ = 0L;
+
         return this;
       }
 
@@ -2151,6 +2197,7 @@ public final class RuleService {
         } else {
           result.options_ = optionsBuilder_.build();
         }
+        result.weight_ = weight_;
         onBuilt();
         return result;
       }
@@ -2213,6 +2260,9 @@ public final class RuleService {
         }
         if (other.hasOptions()) {
           mergeOptions(other.getOptions());
+        }
+        if (other.getWeight() != 0L) {
+          setWeight(other.getWeight());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2648,6 +2698,52 @@ public final class RuleService {
           options_ = null;
         }
         return optionsBuilder_;
+      }
+
+      private long weight_ ;
+      /**
+       * <pre>
+       * Rules are ordered by weight in ascending order (lower weights execute first)
+       * Weight must be between 0 and 9999 inclusive
+       * </pre>
+       *
+       * <code>int64 weight = 5;</code>
+       * @return The weight.
+       */
+      @java.lang.Override
+      public long getWeight() {
+        return weight_;
+      }
+      /**
+       * <pre>
+       * Rules are ordered by weight in ascending order (lower weights execute first)
+       * Weight must be between 0 and 9999 inclusive
+       * </pre>
+       *
+       * <code>int64 weight = 5;</code>
+       * @param value The weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeight(long value) {
+        
+        weight_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Rules are ordered by weight in ascending order (lower weights execute first)
+       * Weight must be between 0 and 9999 inclusive
+       * </pre>
+       *
+       * <code>int64 weight = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeight() {
+        
+        weight_ = 0L;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4180,6 +4276,27 @@ public final class RuleService {
      * <code>.yandex.cloud.cdn.v1.ResourceOptions options = 5;</code>
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptionsOrBuilder getOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * Rules are ordered by weight in ascending order (lower weights execute first)
+     * Weight must be between 0 and 9999 inclusive
+     * </pre>
+     *
+     * <code>optional int64 weight = 6;</code>
+     * @return Whether the weight field is set.
+     */
+    boolean hasWeight();
+    /**
+     * <pre>
+     * Rules are ordered by weight in ascending order (lower weights execute first)
+     * Weight must be between 0 and 9999 inclusive
+     * </pre>
+     *
+     * <code>optional int64 weight = 6;</code>
+     * @return The weight.
+     */
+    long getWeight();
   }
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.UpdateResourceRuleRequest}
@@ -4219,6 +4336,7 @@ public final class RuleService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4265,6 +4383,11 @@ public final class RuleService {
 
               break;
             }
+            case 48: {
+              bitField0_ |= 0x00000001;
+              weight_ = input.readInt64();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4297,6 +4420,7 @@ public final class RuleService {
               yandex.cloud.api.cdn.v1.RuleService.UpdateResourceRuleRequest.class, yandex.cloud.api.cdn.v1.RuleService.UpdateResourceRuleRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RESOURCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object resourceId_;
     /**
@@ -4476,6 +4600,35 @@ public final class RuleService {
       return getOptions();
     }
 
+    public static final int WEIGHT_FIELD_NUMBER = 6;
+    private long weight_;
+    /**
+     * <pre>
+     * Rules are ordered by weight in ascending order (lower weights execute first)
+     * Weight must be between 0 and 9999 inclusive
+     * </pre>
+     *
+     * <code>optional int64 weight = 6;</code>
+     * @return Whether the weight field is set.
+     */
+    @java.lang.Override
+    public boolean hasWeight() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Rules are ordered by weight in ascending order (lower weights execute first)
+     * Weight must be between 0 and 9999 inclusive
+     * </pre>
+     *
+     * <code>optional int64 weight = 6;</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public long getWeight() {
+      return weight_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4505,6 +4658,9 @@ public final class RuleService {
       if (options_ != null) {
         output.writeMessage(5, getOptions());
       }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt64(6, weight_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4530,6 +4686,10 @@ public final class RuleService {
       if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getOptions());
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, weight_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4559,6 +4719,11 @@ public final class RuleService {
         if (!getOptions()
             .equals(other.getOptions())) return false;
       }
+      if (hasWeight() != other.hasWeight()) return false;
+      if (hasWeight()) {
+        if (getWeight()
+            != other.getWeight()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4582,6 +4747,11 @@ public final class RuleService {
       if (hasOptions()) {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
+      }
+      if (hasWeight()) {
+        hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getWeight());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4730,6 +4900,8 @@ public final class RuleService {
           options_ = null;
           optionsBuilder_ = null;
         }
+        weight_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -4756,6 +4928,8 @@ public final class RuleService {
       @java.lang.Override
       public yandex.cloud.api.cdn.v1.RuleService.UpdateResourceRuleRequest buildPartial() {
         yandex.cloud.api.cdn.v1.RuleService.UpdateResourceRuleRequest result = new yandex.cloud.api.cdn.v1.RuleService.UpdateResourceRuleRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.resourceId_ = resourceId_;
         result.ruleId_ = ruleId_;
         result.name_ = name_;
@@ -4765,6 +4939,11 @@ public final class RuleService {
         } else {
           result.options_ = optionsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.weight_ = weight_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -4831,6 +5010,9 @@ public final class RuleService {
         if (other.hasOptions()) {
           mergeOptions(other.getOptions());
         }
+        if (other.hasWeight()) {
+          setWeight(other.getWeight());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4859,6 +5041,7 @@ public final class RuleService {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object resourceId_ = "";
       /**
@@ -5308,6 +5491,65 @@ public final class RuleService {
           options_ = null;
         }
         return optionsBuilder_;
+      }
+
+      private long weight_ ;
+      /**
+       * <pre>
+       * Rules are ordered by weight in ascending order (lower weights execute first)
+       * Weight must be between 0 and 9999 inclusive
+       * </pre>
+       *
+       * <code>optional int64 weight = 6;</code>
+       * @return Whether the weight field is set.
+       */
+      @java.lang.Override
+      public boolean hasWeight() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Rules are ordered by weight in ascending order (lower weights execute first)
+       * Weight must be between 0 and 9999 inclusive
+       * </pre>
+       *
+       * <code>optional int64 weight = 6;</code>
+       * @return The weight.
+       */
+      @java.lang.Override
+      public long getWeight() {
+        return weight_;
+      }
+      /**
+       * <pre>
+       * Rules are ordered by weight in ascending order (lower weights execute first)
+       * Weight must be between 0 and 9999 inclusive
+       * </pre>
+       *
+       * <code>optional int64 weight = 6;</code>
+       * @param value The weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeight(long value) {
+        bitField0_ |= 0x00000001;
+        weight_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Rules are ordered by weight in ascending order (lower weights execute first)
+       * Weight must be between 0 and 9999 inclusive
+       * </pre>
+       *
+       * <code>optional int64 weight = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        weight_ = 0L;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7510,50 +7752,51 @@ public final class RuleService {
       "x/cloud/validation.proto\"=\n\030ListResource" +
       "RulesRequest\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212" +
       "\3101\004<=50\"E\n\031ListResourceRulesResponse\022(\n\005" +
-      "rules\030\001 \003(\0132\031.yandex.cloud.cdn.v1.Rule\"\266" +
+      "rules\030\001 \003(\0132\031.yandex.cloud.cdn.v1.Rule\"\306" +
       "\001\n\031CreateResourceRuleRequest\022!\n\013resource" +
       "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\004name\030\002 \001(\tB\014\350" +
       "\3071\001\212\3101\004<=50\022#\n\014rule_pattern\030\003 \001(\tB\r\350\3071\001\212" +
       "\3101\005<=100\0225\n\007options\030\004 \001(\0132$.yandex.cloud" +
-      ".cdn.v1.ResourceOptions\"X\n\032CreateResourc" +
-      "eRuleMetadata\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\027\n\007rule_id\030\002 \001(\003B\006\372\3071\002>0\"T\n\026Get" +
-      "ResourceRuleRequest\022!\n\013resource_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\027\n\007rule_id\030\002 \001(\003B\006\372\3071\002>0\"" +
-      "\307\001\n\031UpdateResourceRuleRequest\022!\n\013resourc" +
+      ".cdn.v1.ResourceOptions\022\016\n\006weight\030\005 \001(\003\"" +
+      "X\n\032CreateResourceRuleMetadata\022!\n\013resourc" +
       "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\007rule_id\030\002 \001(" +
-      "\003B\006\372\3071\002>0\022\026\n\004name\030\003 \001(\tB\010\212\3101\004<=50\022\037\n\014rul" +
-      "e_pattern\030\004 \001(\tB\t\212\3101\005<=100\0225\n\007options\030\005 " +
-      "\001(\0132$.yandex.cloud.cdn.v1.ResourceOption" +
-      "s\"X\n\032UpdateResourceRuleMetadata\022!\n\013resou" +
-      "rce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\007rule_id\030\002 " +
-      "\001(\003B\006\372\3071\002>0\"W\n\031DeleteResourceRuleRequest" +
-      "\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\007r" +
-      "ule_id\030\002 \001(\003B\006\372\3071\002>0\"X\n\032DeleteResourceRu" +
-      "leMetadata\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\027\n\007rule_id\030\002 \001(\003B\006\372\3071\002>02\200\006\n\024Resou" +
-      "rceRulesService\022|\n\004List\022-.yandex.cloud.c" +
-      "dn.v1.ListResourceRulesRequest\032..yandex." +
-      "cloud.cdn.v1.ListResourceRulesResponse\"\025" +
-      "\202\323\344\223\002\017\022\r/cdn/v1/rules\022\233\001\n\006Create\022..yande" +
-      "x.cloud.cdn.v1.CreateResourceRuleRequest" +
-      "\032!.yandex.cloud.operation.Operation\">\202\323\344" +
-      "\223\002\022\"\r/cdn/v1/rules:\001*\262\322*\"\n\032CreateResourc" +
-      "eRuleMetadata\022\004Rule\022n\n\003Get\022+.yandex.clou" +
-      "d.cdn.v1.GetResourceRuleRequest\032\031.yandex" +
-      ".cloud.cdn.v1.Rule\"\037\202\323\344\223\002\031\022\027/cdn/v1/rule" +
-      "s/{rule_id}\022\245\001\n\006Update\022..yandex.cloud.cd" +
-      "n.v1.UpdateResourceRuleRequest\032!.yandex." +
-      "cloud.operation.Operation\"H\202\323\344\223\002\0342\027/cdn/" +
-      "v1/rules/{rule_id}:\001*\262\322*\"\n\032UpdateResourc" +
-      "eRuleMetadata\022\004Rule\022\263\001\n\006Delete\022..yandex." +
-      "cloud.cdn.v1.DeleteResourceRuleRequest\032!" +
-      ".yandex.cloud.operation.Operation\"V\202\323\344\223\002" +
-      "\031*\027/cdn/v1/rules/{rule_id}\262\322*3\n\032DeleteRe" +
-      "sourceRuleMetadata\022\025google.protobuf.Empt" +
-      "yBV\n\027yandex.cloud.api.cdn.v1Z;github.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/c" +
-      "dn/v1;cdnb\006proto3"
+      "\003B\006\372\3071\002>0\"T\n\026GetResourceRuleRequest\022!\n\013r" +
+      "esource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\007rule_i" +
+      "d\030\002 \001(\003B\006\372\3071\002>0\"\347\001\n\031UpdateResourceRuleRe" +
+      "quest\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\027\n\007rule_id\030\002 \001(\003B\006\372\3071\002>0\022\026\n\004name\030\003 \001(\tB" +
+      "\010\212\3101\004<=50\022\037\n\014rule_pattern\030\004 \001(\tB\t\212\3101\005<=1" +
+      "00\0225\n\007options\030\005 \001(\0132$.yandex.cloud.cdn.v" +
+      "1.ResourceOptions\022\023\n\006weight\030\006 \001(\003H\000\210\001\001B\t" +
+      "\n\007_weight\"X\n\032UpdateResourceRuleMetadata\022" +
+      "!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\007ru" +
+      "le_id\030\002 \001(\003B\006\372\3071\002>0\"W\n\031DeleteResourceRul" +
+      "eRequest\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\027\n\007rule_id\030\002 \001(\003B\006\372\3071\002>0\"X\n\032DeleteRe" +
+      "sourceRuleMetadata\022!\n\013resource_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\027\n\007rule_id\030\002 \001(\003B\006\372\3071\002>02\200" +
+      "\006\n\024ResourceRulesService\022|\n\004List\022-.yandex" +
+      ".cloud.cdn.v1.ListResourceRulesRequest\032." +
+      ".yandex.cloud.cdn.v1.ListResourceRulesRe" +
+      "sponse\"\025\202\323\344\223\002\017\022\r/cdn/v1/rules\022\233\001\n\006Create" +
+      "\022..yandex.cloud.cdn.v1.CreateResourceRul" +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\">\202\323\344\223\002\022\"\r/cdn/v1/rules:\001*\262\322*\"\n\032Creat" +
+      "eResourceRuleMetadata\022\004Rule\022n\n\003Get\022+.yan" +
+      "dex.cloud.cdn.v1.GetResourceRuleRequest\032" +
+      "\031.yandex.cloud.cdn.v1.Rule\"\037\202\323\344\223\002\031\022\027/cdn" +
+      "/v1/rules/{rule_id}\022\245\001\n\006Update\022..yandex." +
+      "cloud.cdn.v1.UpdateResourceRuleRequest\032!" +
+      ".yandex.cloud.operation.Operation\"H\202\323\344\223\002" +
+      "\0342\027/cdn/v1/rules/{rule_id}:\001*\262\322*\"\n\032Updat" +
+      "eResourceRuleMetadata\022\004Rule\022\263\001\n\006Delete\022." +
+      ".yandex.cloud.cdn.v1.DeleteResourceRuleR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"V\202\323\344\223\002\031*\027/cdn/v1/rules/{rule_id}\262\322*3\n\032" +
+      "DeleteResourceRuleMetadata\022\025google.proto" +
+      "buf.EmptyBV\n\027yandex.cloud.api.cdn.v1Z;gi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/cdn/v1;cdnb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7582,7 +7825,7 @@ public final class RuleService {
     internal_static_yandex_cloud_cdn_v1_CreateResourceRuleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_CreateResourceRuleRequest_descriptor,
-        new java.lang.String[] { "ResourceId", "Name", "RulePattern", "Options", });
+        new java.lang.String[] { "ResourceId", "Name", "RulePattern", "Options", "Weight", });
     internal_static_yandex_cloud_cdn_v1_CreateResourceRuleMetadata_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_cdn_v1_CreateResourceRuleMetadata_fieldAccessorTable = new
@@ -7600,7 +7843,7 @@ public final class RuleService {
     internal_static_yandex_cloud_cdn_v1_UpdateResourceRuleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_UpdateResourceRuleRequest_descriptor,
-        new java.lang.String[] { "ResourceId", "RuleId", "Name", "RulePattern", "Options", });
+        new java.lang.String[] { "ResourceId", "RuleId", "Name", "RulePattern", "Options", "Weight", "Weight", });
     internal_static_yandex_cloud_cdn_v1_UpdateResourceRuleMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_cdn_v1_UpdateResourceRuleMetadata_fieldAccessorTable = new

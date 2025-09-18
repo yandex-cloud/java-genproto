@@ -2038,7 +2038,7 @@ public final class SearchService {
      * User-Agent request header value.
      * </pre>
      *
-     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The userAgent.
      */
     java.lang.String getUserAgent();
@@ -2047,11 +2047,38 @@ public final class SearchService {
      * User-Agent request header value.
      * </pre>
      *
-     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for userAgent.
      */
     com.google.protobuf.ByteString
         getUserAgentBytes();
+
+    /**
+     * <pre>
+     * Search flags
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <pre>
+     * Search flags
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+     * @return The metadata.
+     */
+    yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata getMetadata();
+    /**
+     * <pre>
+     * Search flags
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+     */
+    yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadataOrBuilder getMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.searchapi.v2.WebSearchRequest}
@@ -2175,6 +2202,19 @@ public final class SearchService {
               java.lang.String s = input.readStringRequireUtf8();
 
               userAgent_ = s;
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.Builder subBuilder = null;
+              if (metadata_ != null) {
+                subBuilder = metadata_.toBuilder();
+              }
+              metadata_ = input.readMessage(yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -2825,7 +2865,7 @@ public final class SearchService {
      * User-Agent request header value.
      * </pre>
      *
-     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The userAgent.
      */
     @java.lang.Override
@@ -2846,7 +2886,7 @@ public final class SearchService {
      * User-Agent request header value.
      * </pre>
      *
-     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for userAgent.
      */
     @java.lang.Override
@@ -2862,6 +2902,44 @@ public final class SearchService {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 10;
+    private yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata metadata_;
+    /**
+     * <pre>
+     * Search flags
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <pre>
+     * Search flags
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata getMetadata() {
+      return metadata_ == null ? yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <pre>
+     * Search flags
+     * </pre>
+     *
+     * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadataOrBuilder getMetadataOrBuilder() {
+      return getMetadata();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2905,6 +2983,9 @@ public final class SearchService {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAgent_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, userAgent_);
       }
+      if (metadata_ != null) {
+        output.writeMessage(10, getMetadata());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2947,6 +3028,10 @@ public final class SearchService {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAgent_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, userAgent_);
       }
+      if (metadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getMetadata());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2987,6 +3072,11 @@ public final class SearchService {
       if (responseFormat_ != other.responseFormat_) return false;
       if (!getUserAgent()
           .equals(other.getUserAgent())) return false;
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3023,6 +3113,10 @@ public final class SearchService {
       hash = (53 * hash) + responseFormat_;
       hash = (37 * hash) + USER_AGENT_FIELD_NUMBER;
       hash = (53 * hash) + getUserAgent().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3186,6 +3280,12 @@ public final class SearchService {
 
         userAgent_ = "";
 
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
         return this;
       }
 
@@ -3233,6 +3333,11 @@ public final class SearchService {
         result.folderId_ = folderId_;
         result.responseFormat_ = responseFormat_;
         result.userAgent_ = userAgent_;
+        if (metadataBuilder_ == null) {
+          result.metadata_ = metadata_;
+        } else {
+          result.metadata_ = metadataBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3310,6 +3415,9 @@ public final class SearchService {
         if (!other.getUserAgent().isEmpty()) {
           userAgent_ = other.userAgent_;
           onChanged();
+        }
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4194,7 +4302,7 @@ public final class SearchService {
        * User-Agent request header value.
        * </pre>
        *
-       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The userAgent.
        */
       public java.lang.String getUserAgent() {
@@ -4214,7 +4322,7 @@ public final class SearchService {
        * User-Agent request header value.
        * </pre>
        *
-       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The bytes for userAgent.
        */
       public com.google.protobuf.ByteString
@@ -4235,7 +4343,7 @@ public final class SearchService {
        * User-Agent request header value.
        * </pre>
        *
-       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The userAgent to set.
        * @return This builder for chaining.
        */
@@ -4254,7 +4362,7 @@ public final class SearchService {
        * User-Agent request header value.
        * </pre>
        *
-       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserAgent() {
@@ -4268,7 +4376,7 @@ public final class SearchService {
        * User-Agent request header value.
        * </pre>
        *
-       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string user_agent = 9 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The bytes for userAgent to set.
        * @return This builder for chaining.
        */
@@ -4282,6 +4390,161 @@ public final class SearchService {
         userAgent_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata, yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.Builder, yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <pre>
+       * Search flags
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return metadataBuilder_ != null || metadata_ != null;
+      }
+      /**
+       * <pre>
+       * Search flags
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+       * @return The metadata.
+       */
+      public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Search flags
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+       */
+      public Builder setMetadata(yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search flags
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+       */
+      public Builder setMetadata(
+          yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search flags
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+       */
+      public Builder mergeMetadata(yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (metadata_ != null) {
+            metadata_ =
+              yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search flags
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+          onChanged();
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search flags
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+       */
+      public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.Builder getMetadataBuilder() {
+        
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Search flags
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+       */
+      public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <pre>
+       * Search flags
+       * </pre>
+       *
+       * <code>.yandex.cloud.searchapi.v2.SearchMetadata metadata = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata, yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.Builder, yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata, yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.Builder, yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4897,7 +5160,7 @@ public final class SearchService {
       "\t\372\3071\0051-100\022\036\n\rdocs_in_group\030\003 \001(\003B\007\372\3071\0031" +
       "-3\"Q\n\tGroupMode\022\032\n\026GROUP_MODE_UNSPECIFIE" +
       "D\020\000\022\023\n\017GROUP_MODE_FLAT\020\001\022\023\n\017GROUP_MODE_D" +
-      "EEP\020\002\"\274\005\n\020WebSearchRequest\022;\n\005query\030\001 \001(" +
+      "EEP\020\002\"\371\005\n\020WebSearchRequest\022;\n\005query\030\001 \001(" +
       "\0132&.yandex.cloud.searchapi.v2.SearchQuer" +
       "yB\004\350\3071\001\0226\n\tsort_spec\030\002 \001(\0132#.yandex.clou" +
       "d.searchapi.v2.SortSpec\0228\n\ngroup_spec\030\003 " +
@@ -4908,25 +5171,27 @@ public final class SearchService {
       "ocalization\022\033\n\tfolder_id\030\007 \001(\tB\010\212\3101\004<=50" +
       "\022K\n\017response_format\030\010 \001(\01622.yandex.cloud" +
       ".searchapi.v2.WebSearchRequest.Format\022\035\n" +
-      "\nuser_agent\030\t \001(\tB\t\212\3101\005<=200\"\252\001\n\014Localiz" +
-      "ation\022\034\n\030LOCALIZATION_UNSPECIFIED\020\000\022\023\n\017L" +
-      "OCALIZATION_RU\020\001\022\023\n\017LOCALIZATION_UK\020\002\022\023\n" +
-      "\017LOCALIZATION_BE\020\003\022\023\n\017LOCALIZATION_KK\020\004\022" +
-      "\023\n\017LOCALIZATION_TR\020\005\022\023\n\017LOCALIZATION_EN\020" +
-      "\006\"A\n\006Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\016\n\nF" +
-      "ORMAT_XML\020\001\022\017\n\013FORMAT_HTML\020\002\"+\n\021WebSearc" +
-      "hResponse\022\026\n\010raw_data\030\001 \001(\014B\004\350\3071\0012\251\001\n\025We" +
-      "bSearchAsyncService\022\217\001\n\006Search\022+.yandex." +
-      "cloud.searchapi.v2.WebSearchRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"5\262\322*\023\022\021We" +
-      "bSearchResponse\202\323\344\223\002\030\"\023/v2/web/searchAsy" +
-      "nc:\001*2\222\001\n\020WebSearchService\022~\n\006Search\022+.y" +
-      "andex.cloud.searchapi.v2.WebSearchReques" +
-      "t\032,.yandex.cloud.searchapi.v2.WebSearchR" +
-      "esponse\"\031\202\323\344\223\002\023\"\016/v2/web/search:\001*Be\n\032ya" +
-      "ndex.cloud.api.search.v2ZGgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/searc" +
-      "hapi/v2;searchapib\006proto3"
+      "\nuser_agent\030\t \001(\tB\t\212\3101\005<=300\022;\n\010metadata" +
+      "\030\n \001(\0132).yandex.cloud.searchapi.v2.Searc" +
+      "hMetadata\"\252\001\n\014Localization\022\034\n\030LOCALIZATI" +
+      "ON_UNSPECIFIED\020\000\022\023\n\017LOCALIZATION_RU\020\001\022\023\n" +
+      "\017LOCALIZATION_UK\020\002\022\023\n\017LOCALIZATION_BE\020\003\022" +
+      "\023\n\017LOCALIZATION_KK\020\004\022\023\n\017LOCALIZATION_TR\020" +
+      "\005\022\023\n\017LOCALIZATION_EN\020\006\"A\n\006Format\022\026\n\022FORM" +
+      "AT_UNSPECIFIED\020\000\022\016\n\nFORMAT_XML\020\001\022\017\n\013FORM" +
+      "AT_HTML\020\002\"+\n\021WebSearchResponse\022\026\n\010raw_da" +
+      "ta\030\001 \001(\014B\004\350\3071\0012\251\001\n\025WebSearchAsyncService" +
+      "\022\217\001\n\006Search\022+.yandex.cloud.searchapi.v2." +
+      "WebSearchRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"5\262\322*\023\022\021WebSearchResponse\202\323\344\223" +
+      "\002\030\"\023/v2/web/searchAsync:\001*2\222\001\n\020WebSearch" +
+      "Service\022~\n\006Search\022+.yandex.cloud.searcha" +
+      "pi.v2.WebSearchRequest\032,.yandex.cloud.se" +
+      "archapi.v2.WebSearchResponse\"\031\202\323\344\223\002\023\"\016/v" +
+      "2/web/search:\001*Be\n\032yandex.cloud.api.sear" +
+      "ch.v2ZGgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/searchapi/v2;searchapib\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4954,7 +5219,7 @@ public final class SearchService {
     internal_static_yandex_cloud_searchapi_v2_WebSearchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_searchapi_v2_WebSearchRequest_descriptor,
-        new java.lang.String[] { "Query", "SortSpec", "GroupSpec", "MaxPassages", "Region", "L10N", "FolderId", "ResponseFormat", "UserAgent", });
+        new java.lang.String[] { "Query", "SortSpec", "GroupSpec", "MaxPassages", "Region", "L10N", "FolderId", "ResponseFormat", "UserAgent", "Metadata", });
     internal_static_yandex_cloud_searchapi_v2_WebSearchResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_searchapi_v2_WebSearchResponse_fieldAccessorTable = new

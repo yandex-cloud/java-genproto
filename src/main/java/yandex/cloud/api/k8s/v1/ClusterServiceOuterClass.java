@@ -6820,6 +6820,21 @@ public final class ClusterServiceOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicyOrBuilder getIpAllocationPolicyOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+     * @return Whether the workloadIdentityFederation field is set.
+     */
+    boolean hasWorkloadIdentityFederation();
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+     * @return The workloadIdentityFederation.
+     */
+    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec getWorkloadIdentityFederation();
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder getWorkloadIdentityFederationOrBuilder();
+
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterRequest.InternetGatewayCase getInternetGatewayCase();
   }
   /**
@@ -6970,6 +6985,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(ipAllocationPolicy_);
                 ipAllocationPolicy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder subBuilder = null;
+              if (workloadIdentityFederation_ != null) {
+                subBuilder = workloadIdentityFederation_.toBuilder();
+              }
+              workloadIdentityFederation_ = input.readMessage(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(workloadIdentityFederation_);
+                workloadIdentityFederation_ = subBuilder.buildPartial();
               }
 
               break;
@@ -7578,6 +7606,32 @@ public final class ClusterServiceOuterClass {
       return getIpAllocationPolicy();
     }
 
+    public static final int WORKLOAD_IDENTITY_FEDERATION_FIELD_NUMBER = 12;
+    private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec workloadIdentityFederation_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+     * @return Whether the workloadIdentityFederation field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkloadIdentityFederation() {
+      return workloadIdentityFederation_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+     * @return The workloadIdentityFederation.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec getWorkloadIdentityFederation() {
+      return workloadIdentityFederation_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.getDefaultInstance() : workloadIdentityFederation_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder getWorkloadIdentityFederationOrBuilder() {
+      return getWorkloadIdentityFederation();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7627,6 +7681,9 @@ public final class ClusterServiceOuterClass {
       }
       if (ipAllocationPolicy_ != null) {
         output.writeMessage(11, getIpAllocationPolicy());
+      }
+      if (workloadIdentityFederation_ != null) {
+        output.writeMessage(12, getWorkloadIdentityFederation());
       }
       unknownFields.writeTo(output);
     }
@@ -7681,6 +7738,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getIpAllocationPolicy());
       }
+      if (workloadIdentityFederation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getWorkloadIdentityFederation());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7727,6 +7788,11 @@ public final class ClusterServiceOuterClass {
       if (hasIpAllocationPolicy()) {
         if (!getIpAllocationPolicy()
             .equals(other.getIpAllocationPolicy())) return false;
+      }
+      if (hasWorkloadIdentityFederation() != other.hasWorkloadIdentityFederation()) return false;
+      if (hasWorkloadIdentityFederation()) {
+        if (!getWorkloadIdentityFederation()
+            .equals(other.getWorkloadIdentityFederation())) return false;
       }
       if (!getInternetGatewayCase().equals(other.getInternetGatewayCase())) return false;
       switch (internetGatewayCase_) {
@@ -7777,6 +7843,10 @@ public final class ClusterServiceOuterClass {
       if (hasIpAllocationPolicy()) {
         hash = (37 * hash) + IP_ALLOCATION_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getIpAllocationPolicy().hashCode();
+      }
+      if (hasWorkloadIdentityFederation()) {
+        hash = (37 * hash) + WORKLOAD_IDENTITY_FEDERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkloadIdentityFederation().hashCode();
       }
       switch (internetGatewayCase_) {
         case 6:
@@ -7976,6 +8046,12 @@ public final class ClusterServiceOuterClass {
           ipAllocationPolicy_ = null;
           ipAllocationPolicyBuilder_ = null;
         }
+        if (workloadIdentityFederationBuilder_ == null) {
+          workloadIdentityFederation_ = null;
+        } else {
+          workloadIdentityFederation_ = null;
+          workloadIdentityFederationBuilder_ = null;
+        }
         internetGatewayCase_ = 0;
         internetGateway_ = null;
         return this;
@@ -8034,6 +8110,11 @@ public final class ClusterServiceOuterClass {
           result.ipAllocationPolicy_ = ipAllocationPolicy_;
         } else {
           result.ipAllocationPolicy_ = ipAllocationPolicyBuilder_.build();
+        }
+        if (workloadIdentityFederationBuilder_ == null) {
+          result.workloadIdentityFederation_ = workloadIdentityFederation_;
+        } else {
+          result.workloadIdentityFederation_ = workloadIdentityFederationBuilder_.build();
         }
         result.internetGatewayCase_ = internetGatewayCase_;
         onBuilt();
@@ -8117,6 +8198,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasIpAllocationPolicy()) {
           mergeIpAllocationPolicy(other.getIpAllocationPolicy());
+        }
+        if (other.hasWorkloadIdentityFederation()) {
+          mergeWorkloadIdentityFederation(other.getWorkloadIdentityFederation());
         }
         switch (other.getInternetGatewayCase()) {
           case GATEWAY_IPV4_ADDRESS: {
@@ -9476,6 +9560,125 @@ public final class ClusterServiceOuterClass {
           ipAllocationPolicy_ = null;
         }
         return ipAllocationPolicyBuilder_;
+      }
+
+      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec workloadIdentityFederation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder> workloadIdentityFederationBuilder_;
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+       * @return Whether the workloadIdentityFederation field is set.
+       */
+      public boolean hasWorkloadIdentityFederation() {
+        return workloadIdentityFederationBuilder_ != null || workloadIdentityFederation_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+       * @return The workloadIdentityFederation.
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec getWorkloadIdentityFederation() {
+        if (workloadIdentityFederationBuilder_ == null) {
+          return workloadIdentityFederation_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.getDefaultInstance() : workloadIdentityFederation_;
+        } else {
+          return workloadIdentityFederationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+       */
+      public Builder setWorkloadIdentityFederation(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec value) {
+        if (workloadIdentityFederationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          workloadIdentityFederation_ = value;
+          onChanged();
+        } else {
+          workloadIdentityFederationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+       */
+      public Builder setWorkloadIdentityFederation(
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder builderForValue) {
+        if (workloadIdentityFederationBuilder_ == null) {
+          workloadIdentityFederation_ = builderForValue.build();
+          onChanged();
+        } else {
+          workloadIdentityFederationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+       */
+      public Builder mergeWorkloadIdentityFederation(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec value) {
+        if (workloadIdentityFederationBuilder_ == null) {
+          if (workloadIdentityFederation_ != null) {
+            workloadIdentityFederation_ =
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.newBuilder(workloadIdentityFederation_).mergeFrom(value).buildPartial();
+          } else {
+            workloadIdentityFederation_ = value;
+          }
+          onChanged();
+        } else {
+          workloadIdentityFederationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+       */
+      public Builder clearWorkloadIdentityFederation() {
+        if (workloadIdentityFederationBuilder_ == null) {
+          workloadIdentityFederation_ = null;
+          onChanged();
+        } else {
+          workloadIdentityFederation_ = null;
+          workloadIdentityFederationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder getWorkloadIdentityFederationBuilder() {
+        
+        onChanged();
+        return getWorkloadIdentityFederationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder getWorkloadIdentityFederationOrBuilder() {
+        if (workloadIdentityFederationBuilder_ != null) {
+          return workloadIdentityFederationBuilder_.getMessageOrBuilder();
+        } else {
+          return workloadIdentityFederation_ == null ?
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.getDefaultInstance() : workloadIdentityFederation_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder> 
+          getWorkloadIdentityFederationFieldBuilder() {
+        if (workloadIdentityFederationBuilder_ == null) {
+          workloadIdentityFederationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder>(
+                  getWorkloadIdentityFederation(),
+                  getParentForChildren(),
+                  isClean());
+          workloadIdentityFederation_ = null;
+        }
+        return workloadIdentityFederationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12984,6 +13187,21 @@ public final class ClusterServiceOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder getCiliumOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+     * @return Whether the workloadIdentityFederation field is set.
+     */
+    boolean hasWorkloadIdentityFederation();
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+     * @return The workloadIdentityFederation.
+     */
+    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec getWorkloadIdentityFederation();
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder getWorkloadIdentityFederationOrBuilder();
+
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterRequest.InternetGatewayCase getInternetGatewayCase();
 
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterRequest.NetworkImplementationCase getNetworkImplementationCase();
@@ -13166,6 +13384,19 @@ public final class ClusterServiceOuterClass {
                 networkImplementation_ = subBuilder.buildPartial();
               }
               networkImplementationCase_ = 14;
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder subBuilder = null;
+              if (workloadIdentityFederation_ != null) {
+                subBuilder = workloadIdentityFederation_.toBuilder();
+              }
+              workloadIdentityFederation_ = input.readMessage(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(workloadIdentityFederation_);
+                workloadIdentityFederation_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -13933,6 +14164,32 @@ public final class ClusterServiceOuterClass {
       return yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDefaultInstance();
     }
 
+    public static final int WORKLOAD_IDENTITY_FEDERATION_FIELD_NUMBER = 15;
+    private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec workloadIdentityFederation_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+     * @return Whether the workloadIdentityFederation field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkloadIdentityFederation() {
+      return workloadIdentityFederation_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+     * @return The workloadIdentityFederation.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec getWorkloadIdentityFederation() {
+      return workloadIdentityFederation_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.getDefaultInstance() : workloadIdentityFederation_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder getWorkloadIdentityFederationOrBuilder() {
+      return getWorkloadIdentityFederation();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13991,6 +14248,9 @@ public final class ClusterServiceOuterClass {
       }
       if (networkImplementationCase_ == 14) {
         output.writeMessage(14, (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_);
+      }
+      if (workloadIdentityFederation_ != null) {
+        output.writeMessage(15, getWorkloadIdentityFederation());
       }
       unknownFields.writeTo(output);
     }
@@ -14056,6 +14316,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_);
       }
+      if (workloadIdentityFederation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getWorkloadIdentityFederation());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -14105,6 +14369,11 @@ public final class ClusterServiceOuterClass {
       if (hasKmsProvider()) {
         if (!getKmsProvider()
             .equals(other.getKmsProvider())) return false;
+      }
+      if (hasWorkloadIdentityFederation() != other.hasWorkloadIdentityFederation()) return false;
+      if (hasWorkloadIdentityFederation()) {
+        if (!getWorkloadIdentityFederation()
+            .equals(other.getWorkloadIdentityFederation())) return false;
       }
       if (!getInternetGatewayCase().equals(other.getInternetGatewayCase())) return false;
       switch (internetGatewayCase_) {
@@ -14168,6 +14437,10 @@ public final class ClusterServiceOuterClass {
       if (hasKmsProvider()) {
         hash = (37 * hash) + KMS_PROVIDER_FIELD_NUMBER;
         hash = (53 * hash) + getKmsProvider().hashCode();
+      }
+      if (hasWorkloadIdentityFederation()) {
+        hash = (37 * hash) + WORKLOAD_IDENTITY_FEDERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkloadIdentityFederation().hashCode();
       }
       switch (internetGatewayCase_) {
         case 8:
@@ -14379,6 +14652,12 @@ public final class ClusterServiceOuterClass {
           kmsProvider_ = null;
           kmsProviderBuilder_ = null;
         }
+        if (workloadIdentityFederationBuilder_ == null) {
+          workloadIdentityFederation_ = null;
+        } else {
+          workloadIdentityFederation_ = null;
+          workloadIdentityFederationBuilder_ = null;
+        }
         internetGatewayCase_ = 0;
         internetGateway_ = null;
         networkImplementationCase_ = 0;
@@ -14448,6 +14727,11 @@ public final class ClusterServiceOuterClass {
           } else {
             result.networkImplementation_ = ciliumBuilder_.build();
           }
+        }
+        if (workloadIdentityFederationBuilder_ == null) {
+          result.workloadIdentityFederation_ = workloadIdentityFederation_;
+        } else {
+          result.workloadIdentityFederation_ = workloadIdentityFederationBuilder_.build();
         }
         result.internetGatewayCase_ = internetGatewayCase_;
         result.networkImplementationCase_ = networkImplementationCase_;
@@ -14539,6 +14823,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasKmsProvider()) {
           mergeKmsProvider(other.getKmsProvider());
+        }
+        if (other.hasWorkloadIdentityFederation()) {
+          mergeWorkloadIdentityFederation(other.getWorkloadIdentityFederation());
         }
         switch (other.getInternetGatewayCase()) {
           case GATEWAY_IPV4_ADDRESS: {
@@ -16293,6 +16580,125 @@ public final class ClusterServiceOuterClass {
         networkImplementationCase_ = 14;
         onChanged();;
         return ciliumBuilder_;
+      }
+
+      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec workloadIdentityFederation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder> workloadIdentityFederationBuilder_;
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+       * @return Whether the workloadIdentityFederation field is set.
+       */
+      public boolean hasWorkloadIdentityFederation() {
+        return workloadIdentityFederationBuilder_ != null || workloadIdentityFederation_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+       * @return The workloadIdentityFederation.
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec getWorkloadIdentityFederation() {
+        if (workloadIdentityFederationBuilder_ == null) {
+          return workloadIdentityFederation_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.getDefaultInstance() : workloadIdentityFederation_;
+        } else {
+          return workloadIdentityFederationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+       */
+      public Builder setWorkloadIdentityFederation(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec value) {
+        if (workloadIdentityFederationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          workloadIdentityFederation_ = value;
+          onChanged();
+        } else {
+          workloadIdentityFederationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+       */
+      public Builder setWorkloadIdentityFederation(
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder builderForValue) {
+        if (workloadIdentityFederationBuilder_ == null) {
+          workloadIdentityFederation_ = builderForValue.build();
+          onChanged();
+        } else {
+          workloadIdentityFederationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+       */
+      public Builder mergeWorkloadIdentityFederation(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec value) {
+        if (workloadIdentityFederationBuilder_ == null) {
+          if (workloadIdentityFederation_ != null) {
+            workloadIdentityFederation_ =
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.newBuilder(workloadIdentityFederation_).mergeFrom(value).buildPartial();
+          } else {
+            workloadIdentityFederation_ = value;
+          }
+          onChanged();
+        } else {
+          workloadIdentityFederationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+       */
+      public Builder clearWorkloadIdentityFederation() {
+        if (workloadIdentityFederationBuilder_ == null) {
+          workloadIdentityFederation_ = null;
+          onChanged();
+        } else {
+          workloadIdentityFederation_ = null;
+          workloadIdentityFederationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder getWorkloadIdentityFederationBuilder() {
+        
+        onChanged();
+        return getWorkloadIdentityFederationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder getWorkloadIdentityFederationOrBuilder() {
+        if (workloadIdentityFederationBuilder_ != null) {
+          return workloadIdentityFederationBuilder_.getMessageOrBuilder();
+        } else {
+          return workloadIdentityFederation_ == null ?
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.getDefaultInstance() : workloadIdentityFederation_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec workload_identity_federation = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder> 
+          getWorkloadIdentityFederationFieldBuilder() {
+        if (workloadIdentityFederationBuilder_ == null) {
+          workloadIdentityFederationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder>(
+                  getWorkloadIdentityFederation(),
+                  getParentForChildren(),
+                  isClean());
+          workloadIdentityFederation_ = null;
+        }
+        return workloadIdentityFederationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -36060,6 +36466,515 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface WorkloadIdentityFederationSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Identifies whether Workload Identity Federation is enabled.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec}
+   */
+  public static final class WorkloadIdentityFederationSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec)
+      WorkloadIdentityFederationSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkloadIdentityFederationSpec.newBuilder() to construct.
+    private WorkloadIdentityFederationSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkloadIdentityFederationSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkloadIdentityFederationSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkloadIdentityFederationSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_WorkloadIdentityFederationSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_WorkloadIdentityFederationSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Identifies whether Workload Identity Federation is enabled.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec) obj;
+
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec)
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_WorkloadIdentityFederationSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_WorkloadIdentityFederationSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_WorkloadIdentityFederationSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec build() {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec buildPartial() {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec(this);
+        result.enabled_ = enabled_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec other) {
+        if (other == yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Identifies whether Workload Identity Federation is enabled.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Identifies whether Workload Identity Federation is enabled.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies whether Workload Identity Federation is enabled.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.WorkloadIdentityFederationSpec)
+    private static final yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec();
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkloadIdentityFederationSpec>
+        PARSER = new com.google.protobuf.AbstractParser<WorkloadIdentityFederationSpec>() {
+      @java.lang.Override
+      public WorkloadIdentityFederationSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkloadIdentityFederationSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkloadIdentityFederationSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkloadIdentityFederationSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.WorkloadIdentityFederationSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_GetClusterRequest_descriptor;
   private static final 
@@ -36230,6 +37145,11 @@ public final class ClusterServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_AutoScale_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_WorkloadIdentityFederationSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_WorkloadIdentityFederationSpec_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -36264,7 +37184,7 @@ public final class ClusterServiceOuterClass {
       "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"/\n\023StartCl" +
       "usterRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\"*" +
       "\n\024StartClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\"\257\005\n\024UpdateClusterRequest\022\030\n\ncluster_i" +
+      "(\t\"\212\006\n\024UpdateClusterRequest\022\030\n\ncluster_i" +
       "d\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.goo" +
       "gle.protobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\307" +
       "1 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013de" +
@@ -36279,176 +37199,182 @@ public final class ClusterServiceOuterClass {
       "count_id\030\010 \001(\t\022:\n\016network_policy\030\n \001(\0132\"" +
       ".yandex.cloud.k8s.v1.NetworkPolicy\022E\n\024ip" +
       "_allocation_policy\030\013 \001(\0132\'.yandex.cloud." +
-      "k8s.v1.IPAllocationPolicy\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020inte" +
-      "rnet_gateway\"\261\003\n\020MasterUpdateSpec\0227\n\007ver" +
-      "sion\030\001 \001(\0132&.yandex.cloud.k8s.v1.UpdateV" +
-      "ersionSpec\022H\n\022maintenance_policy\030\002 \001(\0132," +
-      ".yandex.cloud.k8s.v1.MasterMaintenancePo" +
-      "licy\022\032\n\022security_group_ids\030\003 \003(\t\022:\n\016mast" +
-      "er_logging\030\004 \001(\0132\".yandex.cloud.k8s.v1.M" +
-      "asterLogging\0224\n\tlocations\030\005 \003(\0132!.yandex" +
-      ".cloud.k8s.v1.LocationSpec\022J\n\030external_v" +
-      "6_address_spec\030\006 \001(\0132(.yandex.cloud.k8s." +
-      "v1.ExternalAddressSpec\022@\n\014scale_policy\030\007" +
-      " \001(\0132*.yandex.cloud.k8s.v1.MasterScalePo" +
-      "licySpec\"+\n\025UpdateClusterMetadata\022\022\n\nclu" +
-      "ster_id\030\001 \001(\t\"\330\006\n\024CreateClusterRequest\022\027" +
-      "\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362" +
-      "\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013d" +
-      "escription\030\003 \001(\tB\t\212\3101\005<=256\022\216\001\n\006labels\030\004" +
-      " \003(\01325.yandex.cloud.k8s.v1.CreateCluster" +
-      "Request.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071" +
-      "\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_" +
-      "./\\@0-9a-z]*\022\030\n\nnetwork_id\030\005 \001(\tB\004\350\3071\001\022:" +
-      "\n\013master_spec\030\006 \001(\0132\037.yandex.cloud.k8s.v" +
-      "1.MasterSpecB\004\350\3071\001\022E\n\024ip_allocation_poli" +
-      "cy\030\007 \001(\0132\'.yandex.cloud.k8s.v1.IPAllocat" +
-      "ionPolicy\022\036\n\024gateway_ipv4_address\030\010 \001(\tH" +
-      "\000\022 \n\022service_account_id\030\t \001(\tB\004\350\3071\001\022%\n\027n" +
-      "ode_service_account_id\030\n \001(\tB\004\350\3071\001\022<\n\017re" +
-      "lease_channel\030\013 \001(\0162#.yandex.cloud.k8s.v" +
-      "1.ReleaseChannel\022:\n\016network_policy\030\014 \001(\013" +
-      "2\".yandex.cloud.k8s.v1.NetworkPolicy\0226\n\014" +
-      "kms_provider\030\r \001(\0132 .yandex.cloud.k8s.v1" +
-      ".KMSProvider\022-\n\006cilium\030\016 \001(\0132\033.yandex.cl" +
-      "oud.k8s.v1.CiliumH\001\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020internet_g" +
-      "atewayB\030\n\026network_implementation\"+\n\025Crea" +
-      "teClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"/\n" +
-      "\031AutoUpgradeMasterMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\"\222\001\n\034ListClusterOperationsRequest\022" +
-      "\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002" +
-      " \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\310" +
-      "1\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035L" +
-      "istClusterOperationsResponse\0225\n\noperatio" +
-      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
-      "ion\022\027\n\017next_page_token\030\002 \001(\t\"\222\001\n\034ListClu" +
-      "sterNodeGroupsRequest\022\030\n\ncluster_id\030\001 \001(" +
+      "k8s.v1.IPAllocationPolicy\022Y\n\034workload_id" +
+      "entity_federation\030\014 \001(\01323.yandex.cloud.k" +
+      "8s.v1.WorkloadIdentityFederationSpec\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001B\022\n\020internet_gateway\"\261\003\n\020MasterUpdate" +
+      "Spec\0227\n\007version\030\001 \001(\0132&.yandex.cloud.k8s" +
+      ".v1.UpdateVersionSpec\022H\n\022maintenance_pol" +
+      "icy\030\002 \001(\0132,.yandex.cloud.k8s.v1.MasterMa" +
+      "intenancePolicy\022\032\n\022security_group_ids\030\003 " +
+      "\003(\t\022:\n\016master_logging\030\004 \001(\0132\".yandex.clo" +
+      "ud.k8s.v1.MasterLogging\0224\n\tlocations\030\005 \003" +
+      "(\0132!.yandex.cloud.k8s.v1.LocationSpec\022J\n" +
+      "\030external_v6_address_spec\030\006 \001(\0132(.yandex" +
+      ".cloud.k8s.v1.ExternalAddressSpec\022@\n\014sca" +
+      "le_policy\030\007 \001(\0132*.yandex.cloud.k8s.v1.Ma" +
+      "sterScalePolicySpec\"+\n\025UpdateClusterMeta" +
+      "data\022\022\n\ncluster_id\030\001 \001(\t\"\263\007\n\024CreateClust" +
+      "erRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0222\n\004na" +
+      "me\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z" +
+      "0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\216" +
+      "\001\n\006labels\030\004 \003(\01325.yandex.cloud.k8s.v1.Cr" +
+      "eateClusterRequest.LabelsEntryBG\202\3101\004<=64" +
+      "\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101" +
+      "\026\022\024[a-z][-_./\\@0-9a-z]*\022\030\n\nnetwork_id\030\005 " +
+      "\001(\tB\004\350\3071\001\022:\n\013master_spec\030\006 \001(\0132\037.yandex." +
+      "cloud.k8s.v1.MasterSpecB\004\350\3071\001\022E\n\024ip_allo" +
+      "cation_policy\030\007 \001(\0132\'.yandex.cloud.k8s.v" +
+      "1.IPAllocationPolicy\022\036\n\024gateway_ipv4_add" +
+      "ress\030\010 \001(\tH\000\022 \n\022service_account_id\030\t \001(\t" +
+      "B\004\350\3071\001\022%\n\027node_service_account_id\030\n \001(\tB" +
+      "\004\350\3071\001\022<\n\017release_channel\030\013 \001(\0162#.yandex." +
+      "cloud.k8s.v1.ReleaseChannel\022:\n\016network_p" +
+      "olicy\030\014 \001(\0132\".yandex.cloud.k8s.v1.Networ" +
+      "kPolicy\0226\n\014kms_provider\030\r \001(\0132 .yandex.c" +
+      "loud.k8s.v1.KMSProvider\022-\n\006cilium\030\016 \001(\0132" +
+      "\033.yandex.cloud.k8s.v1.CiliumH\001\022Y\n\034worklo" +
+      "ad_identity_federation\030\017 \001(\01323.yandex.cl" +
+      "oud.k8s.v1.WorkloadIdentityFederationSpe" +
+      "c\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001B\022\n\020internet_gatewayB\030\n\026network_" +
+      "implementation\"+\n\025CreateClusterMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgradeMaster" +
+      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001\n\034ListClu" +
+      "sterOperationsRequest\022\030\n\ncluster_id\030\001 \001(" +
       "\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035" +
       "\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030" +
-      "\004 \001(\tB\n\212\3101\006<=1000\"m\n\035ListClusterNodeGrou" +
-      "psResponse\0223\n\013node_groups\030\001 \003(\0132\036.yandex" +
-      ".cloud.k8s.v1.NodeGroup\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"q\n\027ListClusterNodesRequest\022\030\n\nc" +
-      "luster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003" +
-      "B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
-      "100\"]\n\030ListClusterNodesResponse\022(\n\005nodes" +
-      "\030\001 \003(\0132\031.yandex.cloud.k8s.v1.Node\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\"\226\005\n\nMasterSpec\022A\n\021zon" +
-      "al_master_spec\030\001 \001(\0132$.yandex.cloud.k8s." +
-      "v1.ZonalMasterSpecH\000\022G\n\024regional_master_" +
-      "spec\030\002 \001(\0132\'.yandex.cloud.k8s.v1.Regiona" +
-      "lMasterSpecH\000\0224\n\tlocations\030\010 \003(\0132!.yande" +
-      "x.cloud.k8s.v1.LocationSpec\022$\n\021etcd_clus" +
-      "ter_size\030\t \001(\003B\t\372\3071\0050,1,3\022J\n\030external_v4" +
-      "_address_spec\030\n \001(\0132(.yandex.cloud.k8s.v" +
-      "1.ExternalAddressSpec\022J\n\030external_v6_add" +
-      "ress_spec\030\013 \001(\0132(.yandex.cloud.k8s.v1.Ex" +
-      "ternalAddressSpec\022\017\n\007version\030\003 \001(\t\022H\n\022ma" +
-      "intenance_policy\030\004 \001(\0132,.yandex.cloud.k8" +
-      "s.v1.MasterMaintenancePolicy\022\032\n\022security" +
-      "_group_ids\030\006 \003(\t\022:\n\016master_logging\030\007 \001(\013" +
-      "2\".yandex.cloud.k8s.v1.MasterLogging\022@\n\014" +
-      "scale_policy\030\014 \001(\0132*.yandex.cloud.k8s.v1" +
-      ".MasterScalePolicySpecB\r\n\013master_typeJ\004\010" +
-      "\005\020\006\"\300\001\n\017ZonalMasterSpec\022\025\n\007zone_id\030\001 \001(\t" +
-      "B\004\350\3071\001\022J\n\030internal_v4_address_spec\030\002 \001(\013" +
-      "2(.yandex.cloud.k8s.v1.InternalAddressSp" +
-      "ec\022J\n\030external_v4_address_spec\030\003 \001(\0132(.y" +
-      "andex.cloud.k8s.v1.ExternalAddressSpec\"\375" +
-      "\001\n\022RegionalMasterSpec\022\027\n\tregion_id\030\001 \001(\t" +
-      "B\004\350\3071\001\0226\n\tlocations\030\002 \003(\0132#.yandex.cloud" +
-      ".k8s.v1.MasterLocation\022J\n\030external_v4_ad" +
-      "dress_spec\030\003 \001(\0132(.yandex.cloud.k8s.v1.E" +
-      "xternalAddressSpec\022J\n\030external_v6_addres" +
-      "s_spec\030\004 \001(\0132(.yandex.cloud.k8s.v1.Exter" +
-      "nalAddressSpec\"(\n\023InternalAddressSpec\022\021\n" +
-      "\tsubnet_id\030\002 \001(\t\"&\n\023ExternalAddressSpec\022" +
-      "\017\n\007address\030\001 \001(\t\"s\n\016MasterLocation\022\025\n\007zo" +
-      "ne_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_address" +
-      "_spec\030\002 \001(\0132(.yandex.cloud.k8s.v1.Intern" +
-      "alAddressSpec\"8\n\014LocationSpec\022\025\n\007zone_id" +
-      "\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(\t\"q\n\034Resch" +
-      "eduleMaintenanceRequest\022\030\n\ncluster_id\030\001 " +
-      "\001(\tB\004\350\3071\001\0227\n\rdelayed_until\030\002 \001(\0132\032.googl" +
-      "e.protobuf.TimestampB\004\350\3071\001\"3\n\035Reschedule" +
-      "MaintenanceMetadata\022\022\n\ncluster_id\030\001 \001(\t\"" +
-      "\260\001\n\025MasterScalePolicySpec\022J\n\nauto_scale\030" +
-      "\002 \001(\01324.yandex.cloud.k8s.v1.MasterScaleP" +
-      "olicySpec.AutoScaleH\000\0321\n\tAutoScale\022$\n\026mi" +
-      "n_resource_preset_id\030\001 \001(\tB\004\350\3071\001B\022\n\nscal" +
-      "e_type\022\004\300\3011\001J\004\010\001\020\0022\221\025\n\016ClusterService\022\201\001" +
-      "\n\003Get\022&.yandex.cloud.k8s.v1.GetClusterRe" +
-      "quest\032\034.yandex.cloud.k8s.v1.Cluster\"4\202\323\344" +
-      "\223\002.\022,/managed-kubernetes/v1/clusters/{cl" +
-      "uster_id}\022\204\001\n\004List\022(.yandex.cloud.k8s.v1" +
-      ".ListClustersRequest\032).yandex.cloud.k8s." +
-      "v1.ListClustersResponse\"\'\202\323\344\223\002!\022\037/manage" +
-      "d-kubernetes/v1/clusters\022\246\001\n\006Create\022).ya" +
-      "ndex.cloud.k8s.v1.CreateClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"N\202\323\344\223\002" +
-      "$\"\037/managed-kubernetes/v1/clusters:\001*\262\322*" +
-      " \n\025CreateClusterMetadata\022\007Cluster\022\263\001\n\006Up" +
-      "date\022).yandex.cloud.k8s.v1.UpdateCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"[\202\323\344\223\00212,/managed-kubernetes/v1/clust" +
-      "ers/{cluster_id}:\001*\262\322* \n\025UpdateClusterMe" +
-      "tadata\022\007Cluster\022\276\001\n\006Delete\022).yandex.clou" +
-      "d.k8s.v1.DeleteClusterRequest\032!.yandex.c" +
-      "loud.operation.Operation\"f\202\323\344\223\002.*,/manag" +
-      "ed-kubernetes/v1/clusters/{cluster_id}\262\322" +
-      "*.\n\025DeleteClusterMetadata\022\025google.protob" +
-      "uf.Empty\022\262\001\n\004Stop\022\'.yandex.cloud.k8s.v1." +
-      "StopClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"^\202\323\344\223\0026\"1/managed-kubernet" +
-      "es/v1/clusters/{cluster_id}:stop:\001*\262\322*\036\n" +
-      "\023StopClusterMetadata\022\007Cluster\022\266\001\n\005Start\022" +
-      "(.yandex.cloud.k8s.v1.StartClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"`\202\323" +
-      "\344\223\0027\"2/managed-kubernetes/v1/clusters/{c" +
-      "luster_id}:start:\001*\262\322*\037\n\024StartClusterMet" +
-      "adata\022\007Cluster\022\370\001\n\025RescheduleMaintenance" +
-      "\0221.yandex.cloud.k8s.v1.RescheduleMainten" +
-      "anceRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"\210\001\202\323\344\223\002H\"C/managed-kubernetes/v1/" +
-      "clusters/{cluster_id}:reschedule-mainten" +
-      "ance:\001*\262\322*6\n\035RescheduleMaintenanceMetada" +
-      "ta\022\025google.protobuf.Empty\022\270\001\n\016ListNodeGr" +
-      "oups\0221.yandex.cloud.k8s.v1.ListClusterNo" +
-      "deGroupsRequest\0322.yandex.cloud.k8s.v1.Li" +
-      "stClusterNodeGroupsResponse\"?\202\323\344\223\0029\0227/ma" +
-      "naged-kubernetes/v1/clusters/{cluster_id" +
-      "}/nodeGroups\022\270\001\n\016ListOperations\0221.yandex" +
-      ".cloud.k8s.v1.ListClusterOperationsReque" +
-      "st\0322.yandex.cloud.k8s.v1.ListClusterOper" +
-      "ationsResponse\"?\202\323\344\223\0029\0227/managed-kuberne" +
-      "tes/v1/clusters/{cluster_id}/operations\022" +
-      "\244\001\n\tListNodes\022,.yandex.cloud.k8s.v1.List" +
-      "ClusterNodesRequest\032-.yandex.cloud.k8s.v" +
-      "1.ListClusterNodesResponse\":\202\323\344\223\0024\0222/man" +
-      "aged-kubernetes/v1/clusters/{cluster_id}" +
-      "/nodes\022\277\001\n\022ListAccessBindings\022..yandex.c" +
-      "loud.access.ListAccessBindingsRequest\032/." +
-      "yandex.cloud.access.ListAccessBindingsRe" +
-      "sponse\"H\202\323\344\223\002B\022@/managed-kubernetes/v1/c" +
-      "lusters/{resource_id}:listAccessBindings" +
-      "\022\376\001\n\021SetAccessBindings\022-.yandex.cloud.ac" +
-      "cess.SetAccessBindingsRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\226\001\202\323\344\223\002D\"?/mana" +
-      "ged-kubernetes/v1/clusters/{resource_id}" +
-      ":setAccessBindings:\001*\262\322*H\n access.SetAcc" +
-      "essBindingsMetadata\022$access.AccessBindin" +
-      "gsOperationResult\022\212\002\n\024UpdateAccessBindin" +
-      "gs\0220.yandex.cloud.access.UpdateAccessBin" +
-      "dingsRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\234\001\202\323\344\223\002G2B/managed-kubernetes/v1" +
-      "/clusters/{resource_id}:updateAccessBind" +
-      "ings:\001*\262\322*K\n#access.UpdateAccessBindings" +
-      "Metadata\022$access.AccessBindingsOperation" +
-      "ResultBV\n\027yandex.cloud.api.k8s.v1Z;githu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/k8s/v1;k8sb\006proto3"
+      "\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListClusterOperatio" +
+      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
+      "cloud.operation.Operation\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t\"\222\001\n\034ListClusterNodeGroupsRequ" +
+      "est\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_si" +
+      "ze\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\t" +
+      "B\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"" +
+      "m\n\035ListClusterNodeGroupsResponse\0223\n\013node" +
+      "_groups\030\001 \003(\0132\036.yandex.cloud.k8s.v1.Node" +
+      "Group\022\027\n\017next_page_token\030\002 \001(\t\"q\n\027ListCl" +
+      "usterNodesRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350" +
+      "\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030ListCluster" +
+      "NodesResponse\022(\n\005nodes\030\001 \003(\0132\031.yandex.cl" +
+      "oud.k8s.v1.Node\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\"\226\005\n\nMasterSpec\022A\n\021zonal_master_spec\030\001 \001" +
+      "(\0132$.yandex.cloud.k8s.v1.ZonalMasterSpec" +
+      "H\000\022G\n\024regional_master_spec\030\002 \001(\0132\'.yande" +
+      "x.cloud.k8s.v1.RegionalMasterSpecH\000\0224\n\tl" +
+      "ocations\030\010 \003(\0132!.yandex.cloud.k8s.v1.Loc" +
+      "ationSpec\022$\n\021etcd_cluster_size\030\t \001(\003B\t\372\307" +
+      "1\0050,1,3\022J\n\030external_v4_address_spec\030\n \001(" +
+      "\0132(.yandex.cloud.k8s.v1.ExternalAddressS" +
+      "pec\022J\n\030external_v6_address_spec\030\013 \001(\0132(." +
+      "yandex.cloud.k8s.v1.ExternalAddressSpec\022" +
+      "\017\n\007version\030\003 \001(\t\022H\n\022maintenance_policy\030\004" +
+      " \001(\0132,.yandex.cloud.k8s.v1.MasterMainten" +
+      "ancePolicy\022\032\n\022security_group_ids\030\006 \003(\t\022:" +
+      "\n\016master_logging\030\007 \001(\0132\".yandex.cloud.k8" +
+      "s.v1.MasterLogging\022@\n\014scale_policy\030\014 \001(\013" +
+      "2*.yandex.cloud.k8s.v1.MasterScalePolicy" +
+      "SpecB\r\n\013master_typeJ\004\010\005\020\006\"\300\001\n\017ZonalMaste" +
+      "rSpec\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal" +
+      "_v4_address_spec\030\002 \001(\0132(.yandex.cloud.k8" +
+      "s.v1.InternalAddressSpec\022J\n\030external_v4_" +
+      "address_spec\030\003 \001(\0132(.yandex.cloud.k8s.v1" +
+      ".ExternalAddressSpec\"\375\001\n\022RegionalMasterS" +
+      "pec\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\0226\n\tlocation" +
+      "s\030\002 \003(\0132#.yandex.cloud.k8s.v1.MasterLoca" +
+      "tion\022J\n\030external_v4_address_spec\030\003 \001(\0132(" +
+      ".yandex.cloud.k8s.v1.ExternalAddressSpec" +
+      "\022J\n\030external_v6_address_spec\030\004 \001(\0132(.yan" +
+      "dex.cloud.k8s.v1.ExternalAddressSpec\"(\n\023" +
+      "InternalAddressSpec\022\021\n\tsubnet_id\030\002 \001(\t\"&" +
+      "\n\023ExternalAddressSpec\022\017\n\007address\030\001 \001(\t\"s" +
+      "\n\016MasterLocation\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "J\n\030internal_v4_address_spec\030\002 \001(\0132(.yand" +
+      "ex.cloud.k8s.v1.InternalAddressSpec\"8\n\014L" +
+      "ocationSpec\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tsu" +
+      "bnet_id\030\002 \001(\t\"q\n\034RescheduleMaintenanceRe" +
+      "quest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\0227\n\rdelay" +
+      "ed_until\030\002 \001(\0132\032.google.protobuf.Timesta" +
+      "mpB\004\350\3071\001\"3\n\035RescheduleMaintenanceMetadat" +
+      "a\022\022\n\ncluster_id\030\001 \001(\t\"\260\001\n\025MasterScalePol" +
+      "icySpec\022J\n\nauto_scale\030\002 \001(\01324.yandex.clo" +
+      "ud.k8s.v1.MasterScalePolicySpec.AutoScal" +
+      "eH\000\0321\n\tAutoScale\022$\n\026min_resource_preset_" +
+      "id\030\001 \001(\tB\004\350\3071\001B\022\n\nscale_type\022\004\300\3011\001J\004\010\001\020\002" +
+      "\"1\n\036WorkloadIdentityFederationSpec\022\017\n\007en" +
+      "abled\030\001 \001(\0102\221\025\n\016ClusterService\022\201\001\n\003Get\022&" +
+      ".yandex.cloud.k8s.v1.GetClusterRequest\032\034" +
+      ".yandex.cloud.k8s.v1.Cluster\"4\202\323\344\223\002.\022,/m" +
+      "anaged-kubernetes/v1/clusters/{cluster_i" +
+      "d}\022\204\001\n\004List\022(.yandex.cloud.k8s.v1.ListCl" +
+      "ustersRequest\032).yandex.cloud.k8s.v1.List" +
+      "ClustersResponse\"\'\202\323\344\223\002!\022\037/managed-kuber" +
+      "netes/v1/clusters\022\246\001\n\006Create\022).yandex.cl" +
+      "oud.k8s.v1.CreateClusterRequest\032!.yandex" +
+      ".cloud.operation.Operation\"N\202\323\344\223\002$\"\037/man" +
+      "aged-kubernetes/v1/clusters:\001*\262\322* \n\025Crea" +
+      "teClusterMetadata\022\007Cluster\022\263\001\n\006Update\022)." +
+      "yandex.cloud.k8s.v1.UpdateClusterRequest" +
+      "\032!.yandex.cloud.operation.Operation\"[\202\323\344" +
+      "\223\00212,/managed-kubernetes/v1/clusters/{cl" +
+      "uster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022" +
+      "\007Cluster\022\276\001\n\006Delete\022).yandex.cloud.k8s.v" +
+      "1.DeleteClusterRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"f\202\323\344\223\002.*,/managed-kube" +
+      "rnetes/v1/clusters/{cluster_id}\262\322*.\n\025Del" +
+      "eteClusterMetadata\022\025google.protobuf.Empt" +
+      "y\022\262\001\n\004Stop\022\'.yandex.cloud.k8s.v1.StopClu" +
+      "sterRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"^\202\323\344\223\0026\"1/managed-kubernetes/v1/c" +
+      "lusters/{cluster_id}:stop:\001*\262\322*\036\n\023StopCl" +
+      "usterMetadata\022\007Cluster\022\266\001\n\005Start\022(.yande" +
+      "x.cloud.k8s.v1.StartClusterRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"`\202\323\344\223\0027\"2/" +
+      "managed-kubernetes/v1/clusters/{cluster_" +
+      "id}:start:\001*\262\322*\037\n\024StartClusterMetadata\022\007" +
+      "Cluster\022\370\001\n\025RescheduleMaintenance\0221.yand" +
+      "ex.cloud.k8s.v1.RescheduleMaintenanceReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "\210\001\202\323\344\223\002H\"C/managed-kubernetes/v1/cluster" +
+      "s/{cluster_id}:reschedule-maintenance:\001*" +
+      "\262\322*6\n\035RescheduleMaintenanceMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\270\001\n\016ListNodeGroups\0221." +
+      "yandex.cloud.k8s.v1.ListClusterNodeGroup" +
+      "sRequest\0322.yandex.cloud.k8s.v1.ListClust" +
+      "erNodeGroupsResponse\"?\202\323\344\223\0029\0227/managed-k" +
+      "ubernetes/v1/clusters/{cluster_id}/nodeG" +
+      "roups\022\270\001\n\016ListOperations\0221.yandex.cloud." +
+      "k8s.v1.ListClusterOperationsRequest\0322.ya" +
+      "ndex.cloud.k8s.v1.ListClusterOperationsR" +
+      "esponse\"?\202\323\344\223\0029\0227/managed-kubernetes/v1/" +
+      "clusters/{cluster_id}/operations\022\244\001\n\tLis" +
+      "tNodes\022,.yandex.cloud.k8s.v1.ListCluster" +
+      "NodesRequest\032-.yandex.cloud.k8s.v1.ListC" +
+      "lusterNodesResponse\":\202\323\344\223\0024\0222/managed-ku" +
+      "bernetes/v1/clusters/{cluster_id}/nodes\022" +
+      "\277\001\n\022ListAccessBindings\022..yandex.cloud.ac" +
+      "cess.ListAccessBindingsRequest\032/.yandex." +
+      "cloud.access.ListAccessBindingsResponse\"" +
+      "H\202\323\344\223\002B\022@/managed-kubernetes/v1/clusters" +
+      "/{resource_id}:listAccessBindings\022\376\001\n\021Se" +
+      "tAccessBindings\022-.yandex.cloud.access.Se" +
+      "tAccessBindingsRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"\226\001\202\323\344\223\002D\"?/managed-kub" +
+      "ernetes/v1/clusters/{resource_id}:setAcc" +
+      "essBindings:\001*\262\322*H\n access.SetAccessBind" +
+      "ingsMetadata\022$access.AccessBindingsOpera" +
+      "tionResult\022\212\002\n\024UpdateAccessBindings\0220.ya" +
+      "ndex.cloud.access.UpdateAccessBindingsRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\234\001\202\323\344\223\002G2B/managed-kubernetes/v1/cluste" +
+      "rs/{resource_id}:updateAccessBindings:\001*" +
+      "\262\322*K\n#access.UpdateAccessBindingsMetadat" +
+      "a\022$access.AccessBindingsOperationResultB" +
+      "V\n\027yandex.cloud.api.k8s.v1Z;github.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/k8s" +
+      "/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -36524,7 +37450,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Name", "Description", "Labels", "GatewayIpv4Address", "MasterSpec", "ServiceAccountId", "NodeServiceAccountId", "NetworkPolicy", "IpAllocationPolicy", "InternetGateway", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Name", "Description", "Labels", "GatewayIpv4Address", "MasterSpec", "ServiceAccountId", "NodeServiceAccountId", "NetworkPolicy", "IpAllocationPolicy", "WorkloadIdentityFederation", "InternetGateway", });
     internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -36548,7 +37474,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "NetworkId", "MasterSpec", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "KmsProvider", "Cilium", "InternetGateway", "NetworkImplementation", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "NetworkId", "MasterSpec", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "KmsProvider", "Cilium", "WorkloadIdentityFederation", "InternetGateway", "NetworkImplementation", });
     internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -36669,6 +37595,12 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterScalePolicySpec_AutoScale_descriptor,
         new java.lang.String[] { "MinResourcePresetId", });
+    internal_static_yandex_cloud_k8s_v1_WorkloadIdentityFederationSpec_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_yandex_cloud_k8s_v1_WorkloadIdentityFederationSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_WorkloadIdentityFederationSpec_descriptor,
+        new java.lang.String[] { "Enabled", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

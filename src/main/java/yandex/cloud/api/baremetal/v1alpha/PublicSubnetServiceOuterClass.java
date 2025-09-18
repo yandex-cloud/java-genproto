@@ -721,12 +721,13 @@ public final class PublicSubnetServiceOuterClass {
      * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
      * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
      * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
-     * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring).
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring), `&#64;&gt;` (contains).
      * 3. `&lt;value&gt;` represents a value.
      * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
-     * Supported fields: ["id", "name", "zoneId", "hardwarePoolId"].
+     * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
+     * Deprecated fields: ["hardwarePoolId"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -740,12 +741,13 @@ public final class PublicSubnetServiceOuterClass {
      * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
      * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
      * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
-     * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring).
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring), `&#64;&gt;` (contains).
      * 3. `&lt;value&gt;` represents a value.
      * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
-     * Supported fields: ["id", "name", "zoneId", "hardwarePoolId"].
+     * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
+     * Deprecated fields: ["hardwarePoolId"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1040,12 +1042,13 @@ public final class PublicSubnetServiceOuterClass {
      * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
      * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
      * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
-     * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring).
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring), `&#64;&gt;` (contains).
      * 3. `&lt;value&gt;` represents a value.
      * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
-     * Supported fields: ["id", "name", "zoneId", "hardwarePoolId"].
+     * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
+     * Deprecated fields: ["hardwarePoolId"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1071,12 +1074,13 @@ public final class PublicSubnetServiceOuterClass {
      * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
      * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
      * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
-     * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring).
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring), `&#64;&gt;` (contains).
      * 3. `&lt;value&gt;` represents a value.
      * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
-     * Supported fields: ["id", "name", "zoneId", "hardwarePoolId"].
+     * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
+     * Deprecated fields: ["hardwarePoolId"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1844,12 +1848,13 @@ public final class PublicSubnetServiceOuterClass {
        * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
        * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
        * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
-       * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring).
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring), `&#64;&gt;` (contains).
        * 3. `&lt;value&gt;` represents a value.
        * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
-       * Supported fields: ["id", "name", "zoneId", "hardwarePoolId"].
+       * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
+       * Deprecated fields: ["hardwarePoolId"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1874,12 +1879,13 @@ public final class PublicSubnetServiceOuterClass {
        * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
        * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
        * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
-       * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring).
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring), `&#64;&gt;` (contains).
        * 3. `&lt;value&gt;` represents a value.
        * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
-       * Supported fields: ["id", "name", "zoneId", "hardwarePoolId"].
+       * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
+       * Deprecated fields: ["hardwarePoolId"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1905,12 +1911,13 @@ public final class PublicSubnetServiceOuterClass {
        * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
        * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
        * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
-       * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring).
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring), `&#64;&gt;` (contains).
        * 3. `&lt;value&gt;` represents a value.
        * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
-       * Supported fields: ["id", "name", "zoneId", "hardwarePoolId"].
+       * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
+       * Deprecated fields: ["hardwarePoolId"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1934,12 +1941,13 @@ public final class PublicSubnetServiceOuterClass {
        * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
        * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
        * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
-       * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring).
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring), `&#64;&gt;` (contains).
        * 3. `&lt;value&gt;` represents a value.
        * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
-       * Supported fields: ["id", "name", "zoneId", "hardwarePoolId"].
+       * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
+       * Deprecated fields: ["hardwarePoolId"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1958,12 +1966,13 @@ public final class PublicSubnetServiceOuterClass {
        * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
        * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
        * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
-       * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring).
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=` (equal), `:` (substring), `&#64;&gt;` (contains).
        * 3. `&lt;value&gt;` represents a value.
        * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
-       * Supported fields: ["id", "name", "zoneId", "hardwarePoolId"].
+       * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
+       * Deprecated fields: ["hardwarePoolId"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -11525,85 +11534,95 @@ public final class PublicSubnetServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n:yandex/cloud/baremetal/v1alpha/public_" +
       "subnet_service.proto\022\036yandex.cloud.barem" +
-      "etal.v1alpha\032 google/protobuf/field_mask" +
-      ".proto\032 yandex/cloud/api/operation.proto" +
-      "\0322yandex/cloud/baremetal/v1alpha/public_" +
-      "subnet.proto\032&yandex/cloud/operation/ope" +
-      "ration.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"8\n\026GetPublicSubnetRequest\022\036\n\020public_" +
-      "subnet_id\030\001 \001(\tB\004\350\3071\001\"\244\001\n\027ListPublicSubn" +
-      "etRequest\022/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020[a-z][" +
-      "a-z0-9.-]*\212\3101\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372" +
-      "\3071\005<=100\022\022\n\npage_token\030e \001(\t\022\020\n\010order_by" +
-      "\030f \001(\t\022\016\n\006filter\030g \001(\tJ\004\010\002\020d\"\177\n\030ListPubl" +
-      "icSubnetResponse\022D\n\016public_subnets\030\001 \003(\013" +
-      "2,.yandex.cloud.baremetal.v1alpha.Public" +
-      "Subnet\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\257\003" +
-      "\n\031CreatePublicSubnetRequest\022/\n\tfolder_id" +
-      "\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=50\0224\n\004" +
-      "name\030\002 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9]" +
-      ")?\212\3101\0042-63\022\037\n\013description\030\003 \001(\tB\n\212\3101\006<=1" +
-      "024\022\031\n\021hardware_pool_ids\030\004 \003(\t\022\037\n\rprefix" +
-      "_length\030\005 \001(\003B\010\372\3071\0041-31\022\227\001\n\006labels\030\310\001 \003(" +
-      "\0132E.yandex.cloud.baremetal.v1alpha.Creat" +
-      "ePublicSubnetRequest.LabelsEntryB?\202\3101\004<=" +
-      "64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022" +
-      "\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\006\020\310\001\"6\n\032Creat" +
-      "ePublicSubnetMetadata\022\030\n\020public_subnet_i" +
-      "d\030\001 \001(\t\"\356\003\n\031UpdatePublicSubnetRequest\022\036\n" +
-      "\020public_subnet_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_" +
-      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\0224" +
-      "\n\004name\030\003 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-" +
-      "9])?\212\3101\0042-63\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<" +
-      "=1024\022\031\n\021hardware_pool_ids\030\005 \003(\t\022>\n\004type" +
-      "\030\006 \001(\01620.yandex.cloud.baremetal.v1alpha." +
-      "PublicSubnetType\022\227\001\n\006labels\030\310\001 \003(\0132E.yan" +
-      "dex.cloud.baremetal.v1alpha.UpdatePublic" +
-      "SubnetRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<" +
-      "=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][" +
-      "-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001J\005\010\007\020\310\001\"6\n\032UpdatePublic" +
-      "SubnetMetadata\022\030\n\020public_subnet_id\030\001 \001(\t" +
-      "\";\n\031DeletePublicSubnetRequest\022\036\n\020public_" +
-      "subnet_id\030\001 \001(\tB\004\350\3071\001\"6\n\032DeletePublicSub" +
-      "netMetadata\022\030\n\020public_subnet_id\030\001 \001(\t\"u\n" +
-      "!ListPublicSubnetOperationsRequest\022\030\n\020pu" +
-      "blic_subnet_id\030\001 \001(\t\022\034\n\tpage_size\030d \001(\003B" +
-      "\t\372\3071\005<=100\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"z\n\"" +
-      "ListPublicSubnetOperationsResponse\0225\n\nop" +
-      "erations\030\001 \003(\0132!.yandex.cloud.operation." +
-      "Operation\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d" +
-      "2\361\006\n\023PublicSubnetService\022m\n\003Get\0226.yandex" +
-      ".cloud.baremetal.v1alpha.GetPublicSubnet" +
-      "Request\032,.yandex.cloud.baremetal.v1alpha" +
-      ".PublicSubnet\"\000\022{\n\004List\0227.yandex.cloud.b" +
-      "aremetal.v1alpha.ListPublicSubnetRequest" +
-      "\0328.yandex.cloud.baremetal.v1alpha.ListPu" +
-      "blicSubnetResponse\"\000\022\226\001\n\006Create\0229.yandex" +
+      "etal.v1alpha\032\034google/api/annotations.pro" +
+      "to\032 google/protobuf/field_mask.proto\032 ya" +
+      "ndex/cloud/api/operation.proto\0322yandex/c" +
+      "loud/baremetal/v1alpha/public_subnet.pro" +
+      "to\032&yandex/cloud/operation/operation.pro" +
+      "to\032\035yandex/cloud/validation.proto\"8\n\026Get" +
+      "PublicSubnetRequest\022\036\n\020public_subnet_id\030" +
+      "\001 \001(\tB\004\350\3071\001\"\244\001\n\027ListPublicSubnetRequest\022" +
+      "/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*" +
+      "\212\3101\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\022" +
+      "\n\npage_token\030e \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006" +
+      "filter\030g \001(\tJ\004\010\002\020d\"\177\n\030ListPublicSubnetRe" +
+      "sponse\022D\n\016public_subnets\030\001 \003(\0132,.yandex." +
+      "cloud.baremetal.v1alpha.PublicSubnet\022\027\n\017" +
+      "next_page_token\030d \001(\tJ\004\010\002\020d\"\257\003\n\031CreatePu" +
+      "blicSubnetRequest\022/\n\tfolder_id\030\001 \001(\tB\034\362\307" +
+      "1\020[a-z][a-z0-9.-]*\212\3101\004<=50\0224\n\004name\030\002 \001(\t" +
+      "B&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-63" +
+      "\022\037\n\013description\030\003 \001(\tB\n\212\3101\006<=1024\022\031\n\021har" +
+      "dware_pool_ids\030\004 \003(\t\022\037\n\rprefix_length\030\005 " +
+      "\001(\003B\010\372\3071\0041-31\022\227\001\n\006labels\030\310\001 \003(\0132E.yandex" +
       ".cloud.baremetal.v1alpha.CreatePublicSub" +
-      "netRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\".\262\322**\n\032CreatePublicSubnetMetadata\022" +
-      "\014PublicSubnet\022\226\001\n\006Update\0229.yandex.cloud." +
+      "netRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
+      "\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0" +
+      "-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001J\005\010\006\020\310\001\"6\n\032CreatePublicSub" +
+      "netMetadata\022\030\n\020public_subnet_id\030\001 \001(\t\"\356\003" +
+      "\n\031UpdatePublicSubnetRequest\022\036\n\020public_su" +
+      "bnet_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\013" +
+      "2\032.google.protobuf.FieldMask\0224\n\004name\030\003 \001" +
+      "(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-" +
+      "63\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=1024\022\031\n\021h" +
+      "ardware_pool_ids\030\005 \003(\t\022>\n\004type\030\006 \001(\01620.y" +
+      "andex.cloud.baremetal.v1alpha.PublicSubn" +
+      "etType\022\227\001\n\006labels\030\310\001 \003(\0132E.yandex.cloud." +
       "baremetal.v1alpha.UpdatePublicSubnetRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"." +
-      "\262\322**\n\032UpdatePublicSubnetMetadata\022\014Public" +
-      "Subnet\022\237\001\n\006Delete\0229.yandex.cloud.baremet" +
-      "al.v1alpha.DeletePublicSubnetRequest\032!.y" +
-      "andex.cloud.operation.Operation\"7\262\322*3\n\032D" +
-      "eletePublicSubnetMetadata\022\025google.protob" +
-      "uf.Empty\022\231\001\n\016ListOperations\022A.yandex.clo" +
-      "ud.baremetal.v1alpha.ListPublicSubnetOpe" +
-      "rationsRequest\032B.yandex.cloud.baremetal." +
-      "v1alpha.ListPublicSubnetOperationsRespon" +
-      "se\"\000Br\n\"yandex.cloud.api.baremetal.v1alp" +
-      "haZLgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/baremetal/v1alpha;baremetal" +
-      "b\006proto3"
+      "est.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_" +
+      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001J\005\010\007\020\310\001\"6\n\032UpdatePublicSubnetMeta" +
+      "data\022\030\n\020public_subnet_id\030\001 \001(\t\";\n\031Delete" +
+      "PublicSubnetRequest\022\036\n\020public_subnet_id\030" +
+      "\001 \001(\tB\004\350\3071\001\"6\n\032DeletePublicSubnetMetadat" +
+      "a\022\030\n\020public_subnet_id\030\001 \001(\t\"u\n!ListPubli" +
+      "cSubnetOperationsRequest\022\030\n\020public_subne" +
+      "t_id\030\001 \001(\t\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100" +
+      "\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"z\n\"ListPublic" +
+      "SubnetOperationsResponse\0225\n\noperations\030\001" +
+      " \003(\0132!.yandex.cloud.operation.Operation\022" +
+      "\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d2\300\t\n\023Publi" +
+      "cSubnetService\022\250\001\n\003Get\0226.yandex.cloud.ba" +
+      "remetal.v1alpha.GetPublicSubnetRequest\032," +
+      ".yandex.cloud.baremetal.v1alpha.PublicSu" +
+      "bnet\";\202\323\344\223\0025\0223/baremetal/v1alpha/publicS" +
+      "ubnets/{public_subnet_id}\022\243\001\n\004List\0227.yan" +
+      "dex.cloud.baremetal.v1alpha.ListPublicSu" +
+      "bnetRequest\0328.yandex.cloud.baremetal.v1a" +
+      "lpha.ListPublicSubnetResponse\"(\202\323\344\223\002\"\022 /" +
+      "baremetal/v1alpha/publicSubnets\022\301\001\n\006Crea" +
+      "te\0229.yandex.cloud.baremetal.v1alpha.Crea" +
+      "tePublicSubnetRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"Y\202\323\344\223\002%\" /baremetal/v1a" +
+      "lpha/publicSubnets:\001*\262\322**\n\032CreatePublicS" +
+      "ubnetMetadata\022\014PublicSubnet\022\324\001\n\006Update\0229" +
+      ".yandex.cloud.baremetal.v1alpha.UpdatePu" +
+      "blicSubnetRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"l\202\323\344\223\002823/baremetal/v1alpha" +
+      "/publicSubnets/{public_subnet_id}:\001*\262\322**" +
+      "\n\032UpdatePublicSubnetMetadata\022\014PublicSubn" +
+      "et\022\332\001\n\006Delete\0229.yandex.cloud.baremetal.v" +
+      "1alpha.DeletePublicSubnetRequest\032!.yande" +
+      "x.cloud.operation.Operation\"r\202\323\344\223\0025*3/ba" +
+      "remetal/v1alpha/publicSubnets/{public_su" +
+      "bnet_id}\262\322*3\n\032DeletePublicSubnetMetadata" +
+      "\022\025google.protobuf.Empty\022\337\001\n\016ListOperatio" +
+      "ns\022A.yandex.cloud.baremetal.v1alpha.List" +
+      "PublicSubnetOperationsRequest\032B.yandex.c" +
+      "loud.baremetal.v1alpha.ListPublicSubnetO" +
+      "perationsResponse\"F\202\323\344\223\002@\022>/baremetal/v1" +
+      "alpha/publicSubnets/{public_subnet_id}/o" +
+      "perationsBr\n\"yandex.cloud.api.baremetal." +
+      "v1alphaZLgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/baremetal/v1alpha;bare" +
+      "metalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.baremetal.v1alpha.PublicSubnetOuterClass.getDescriptor(),
@@ -11690,6 +11709,7 @@ public final class PublicSubnetServiceOuterClass {
         new java.lang.String[] { "Operations", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.mapKey);
@@ -11699,6 +11719,7 @@ public final class PublicSubnetServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.baremetal.v1alpha.PublicSubnetOuterClass.getDescriptor();

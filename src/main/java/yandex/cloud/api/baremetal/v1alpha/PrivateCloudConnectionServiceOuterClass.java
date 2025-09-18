@@ -7495,68 +7495,79 @@ public final class PrivateCloudConnectionServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\nEyandex/cloud/baremetal/v1alpha/private" +
       "_cloud_connection_service.proto\022\036yandex." +
-      "cloud.baremetal.v1alpha\032 google/protobuf" +
-      "/field_mask.proto\032 yandex/cloud/api/oper" +
-      "ation.proto\032&yandex/cloud/operation/oper" +
-      "ation.proto\032\035yandex/cloud/validation.pro" +
-      "to\032=yandex/cloud/baremetal/v1alpha/priva" +
-      "te_cloud_connection.proto\"e\n GetPrivateC" +
-      "loudConnectionRequest\022A\n\033private_cloud_c" +
-      "onnection_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*" +
-      "\212\3101\004<=20\"\256\001\n!ListPrivateCloudConnectionR" +
-      "equest\022/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z" +
-      "0-9.-]*\212\3101\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005" +
-      "<=100\022\022\n\npage_token\030e \001(\t\022\020\n\010order_by\030f " +
-      "\001(\t\022\016\n\006filter\030g \001(\tJ\004\010\002\020d\"\236\001\n\"ListPrivat" +
-      "eCloudConnectionResponse\022Y\n\031private_clou" +
-      "d_connections\030\001 \003(\01326.yandex.cloud.barem" +
-      "etal.v1alpha.PrivateCloudConnection\022\027\n\017n" +
-      "ext_page_token\030d \001(\tJ\004\010\002\020d\"\211\001\n#CreatePri" +
-      "vateCloudConnectionRequest\022\033\n\023routing_in" +
-      "stance_id\030\004 \001(\t\022,\n\006vrf_id\030\005 \001(\tB\034\362\3071\020[a-" +
-      "z][a-z0-9.-]*\212\3101\004<=20J\004\010\001\020\002J\004\010\002\020\003J\004\010\003\020\004J" +
-      "\005\010\006\020\311\001\"K\n$CreatePrivateCloudConnectionMe" +
-      "tadata\022#\n\033private_cloud_connection_id\030\001 " +
-      "\001(\t\"\266\001\n#UpdatePrivateCloudConnectionRequ" +
-      "est\022A\n\033private_cloud_connection_id\030\001 \001(\t" +
-      "B\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=20\022/\n\013update" +
-      "_mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022" +
-      "\033\n\023routing_instance_id\030\003 \001(\t\"K\n$UpdatePr" +
-      "ivateCloudConnectionMetadata\022#\n\033private_" +
-      "cloud_connection_id\030\001 \001(\t\"h\n#DeletePriva" +
-      "teCloudConnectionRequest\022A\n\033private_clou" +
-      "d_connection_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9." +
-      "-]*\212\3101\004<=20\"K\n$DeletePrivateCloudConnect" +
-      "ionMetadata\022#\n\033private_cloud_connection_" +
-      "id\030\001 \001(\t2\331\006\n\035PrivateCloudConnectionServi" +
-      "ce\022\201\001\n\003Get\022@.yandex.cloud.baremetal.v1al" +
-      "pha.GetPrivateCloudConnectionRequest\0326.y" +
-      "andex.cloud.baremetal.v1alpha.PrivateClo" +
-      "udConnection\"\000\022\217\001\n\004List\022A.yandex.cloud.b" +
-      "aremetal.v1alpha.ListPrivateCloudConnect" +
-      "ionRequest\032B.yandex.cloud.baremetal.v1al" +
-      "pha.ListPrivateCloudConnectionResponse\"\000" +
-      "\022\264\001\n\006Create\022C.yandex.cloud.baremetal.v1a" +
+      "cloud.baremetal.v1alpha\032\034google/api/anno" +
+      "tations.proto\032 google/protobuf/field_mas" +
+      "k.proto\032 yandex/cloud/api/operation.prot" +
+      "o\032&yandex/cloud/operation/operation.prot" +
+      "o\032\035yandex/cloud/validation.proto\032=yandex" +
+      "/cloud/baremetal/v1alpha/private_cloud_c" +
+      "onnection.proto\"e\n GetPrivateCloudConnec" +
+      "tionRequest\022A\n\033private_cloud_connection_" +
+      "id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=20\"\256" +
+      "\001\n!ListPrivateCloudConnectionRequest\022/\n\t" +
+      "folder_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101" +
+      "\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\022\n\np" +
+      "age_token\030e \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006fil" +
+      "ter\030g \001(\tJ\004\010\002\020d\"\236\001\n\"ListPrivateCloudConn" +
+      "ectionResponse\022Y\n\031private_cloud_connecti" +
+      "ons\030\001 \003(\01326.yandex.cloud.baremetal.v1alp" +
+      "ha.PrivateCloudConnection\022\027\n\017next_page_t" +
+      "oken\030d \001(\tJ\004\010\002\020d\"\211\001\n#CreatePrivateCloudC" +
+      "onnectionRequest\022\033\n\023routing_instance_id\030" +
+      "\004 \001(\t\022,\n\006vrf_id\030\005 \001(\tB\034\362\3071\020[a-z][a-z0-9." +
+      "-]*\212\3101\004<=20J\004\010\001\020\002J\004\010\002\020\003J\004\010\003\020\004J\005\010\006\020\311\001\"K\n$" +
+      "CreatePrivateCloudConnectionMetadata\022#\n\033" +
+      "private_cloud_connection_id\030\001 \001(\t\"\266\001\n#Up" +
+      "datePrivateCloudConnectionRequest\022A\n\033pri" +
+      "vate_cloud_connection_id\030\001 \001(\tB\034\362\3071\020[a-z" +
+      "][a-z0-9.-]*\212\3101\004<=20\022/\n\013update_mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMask\022\033\n\023routing" +
+      "_instance_id\030\003 \001(\t\"K\n$UpdatePrivateCloud" +
+      "ConnectionMetadata\022#\n\033private_cloud_conn" +
+      "ection_id\030\001 \001(\t\"h\n#DeletePrivateCloudCon" +
+      "nectionRequest\022A\n\033private_cloud_connecti" +
+      "on_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=2" +
+      "0\"K\n$DeletePrivateCloudConnectionMetadat" +
+      "a\022#\n\033private_cloud_connection_id\030\001 \001(\t2\265" +
+      "\t\n\035PrivateCloudConnectionService\022\321\001\n\003Get" +
+      "\022@.yandex.cloud.baremetal.v1alpha.GetPri" +
+      "vateCloudConnectionRequest\0326.yandex.clou" +
+      "d.baremetal.v1alpha.PrivateCloudConnecti" +
+      "on\"P\202\323\344\223\002J\022H/baremetal/v1alpha/privateCl" +
+      "oudConnections/{private_cloud_connection" +
+      "_id}\022\301\001\n\004List\022A.yandex.cloud.baremetal.v" +
+      "1alpha.ListPrivateCloudConnectionRequest" +
+      "\032B.yandex.cloud.baremetal.v1alpha.ListPr" +
+      "ivateCloudConnectionResponse\"2\202\323\344\223\002,\022*/b" +
+      "aremetal/v1alpha/privateCloudConnections" +
+      "\022\351\001\n\006Create\022C.yandex.cloud.baremetal.v1a" +
       "lpha.CreatePrivateCloudConnectionRequest" +
-      "\032!.yandex.cloud.operation.Operation\"B\262\322*" +
-      ">\n$CreatePrivateCloudConnectionMetadata\022" +
-      "\026PrivateCloudConnection\022\264\001\n\006Update\022C.yan" +
-      "dex.cloud.baremetal.v1alpha.UpdatePrivat" +
+      "\032!.yandex.cloud.operation.Operation\"w\202\323\344" +
+      "\223\002/\"*/baremetal/v1alpha/privateCloudConn" +
+      "ections:\001*\262\322*>\n$CreatePrivateCloudConnec" +
+      "tionMetadata\022\026PrivateCloudConnection\022\210\002\n" +
+      "\006Update\022C.yandex.cloud.baremetal.v1alpha" +
+      ".UpdatePrivateCloudConnectionRequest\032!.y" +
+      "andex.cloud.operation.Operation\"\225\001\202\323\344\223\002M" +
+      "2H/baremetal/v1alpha/privateCloudConnect" +
+      "ions/{private_cloud_connection_id}:\001*\262\322*" +
+      ">\n$UpdatePrivateCloudConnectionMetadata\022" +
+      "\026PrivateCloudConnection\022\204\002\n\006Delete\022C.yan" +
+      "dex.cloud.baremetal.v1alpha.DeletePrivat" +
       "eCloudConnectionRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"B\262\322*>\n$UpdatePrivateC" +
-      "loudConnectionMetadata\022\026PrivateCloudConn" +
-      "ection\022\263\001\n\006Delete\022C.yandex.cloud.baremet" +
-      "al.v1alpha.DeletePrivateCloudConnectionR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"A\262\322*=\n$DeletePrivateCloudConnectionMet" +
-      "adata\022\025google.protobuf.EmptyBr\n\"yandex.c" +
-      "loud.api.baremetal.v1alphaZLgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/bar" +
-      "emetal/v1alpha;baremetalb\006proto3"
+      "peration.Operation\"\221\001\202\323\344\223\002J*H/baremetal/" +
+      "v1alpha/privateCloudConnections/{private" +
+      "_cloud_connection_id}\262\322*=\n$DeletePrivate" +
+      "CloudConnectionMetadata\022\025google.protobuf" +
+      ".EmptyBr\n\"yandex.cloud.api.baremetal.v1a" +
+      "lphaZLgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/baremetal/v1alpha;baremet" +
+      "alb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -7619,12 +7630,14 @@ public final class PrivateCloudConnectionServiceOuterClass {
         new java.lang.String[] { "PrivateCloudConnectionId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

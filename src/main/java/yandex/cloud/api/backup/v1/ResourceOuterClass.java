@@ -39,6 +39,22 @@ public final class ResourceOuterClass {
      * <code>BMS = 2;</code>
      */
     BMS(2),
+    /**
+     * <pre>
+     * Resource is VM
+     * </pre>
+     *
+     * <code>EXTERNAL_VM = 3;</code>
+     */
+    EXTERNAL_VM(3),
+    /**
+     * <pre>
+     * Resource is server
+     * </pre>
+     *
+     * <code>EXTERNAL_SERVER = 4;</code>
+     */
+    EXTERNAL_SERVER(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -62,6 +78,22 @@ public final class ResourceOuterClass {
      * <code>BMS = 2;</code>
      */
     public static final int BMS_VALUE = 2;
+    /**
+     * <pre>
+     * Resource is VM
+     * </pre>
+     *
+     * <code>EXTERNAL_VM = 3;</code>
+     */
+    public static final int EXTERNAL_VM_VALUE = 3;
+    /**
+     * <pre>
+     * Resource is server
+     * </pre>
+     *
+     * <code>EXTERNAL_SERVER = 4;</code>
+     */
+    public static final int EXTERNAL_SERVER_VALUE = 4;
 
 
     public final int getNumber() {
@@ -91,6 +123,8 @@ public final class ResourceOuterClass {
         case 0: return RESOURCE_TYPE_UNSPECIFIED;
         case 1: return COMPUTE;
         case 2: return BMS;
+        case 3: return EXTERNAL_VM;
+        case 4: return EXTERNAL_SERVER;
         default: return null;
       }
     }
@@ -9317,11 +9351,12 @@ public final class ResourceOuterClass {
       "D\020\003\022\n\n\006PAUSED\020\004\022\r\n\tCOMPLETED\020\005\"h\n\004Code\022\024" +
       "\n\020CODE_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022" +
       "\013\n\007WARNING\020\003\022\r\n\tCANCELLED\020\004\022\r\n\tABANDONED" +
-      "\020\005\022\014\n\010TIMEDOUT\020\006*C\n\014ResourceType\022\035\n\031RESO" +
+      "\020\005\022\014\n\010TIMEDOUT\020\006*i\n\014ResourceType\022\035\n\031RESO" +
       "URCE_TYPE_UNSPECIFIED\020\000\022\013\n\007COMPUTE\020\001\022\007\n\003" +
-      "BMS\020\002B_\n\032yandex.cloud.api.backup.v1ZAgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/backup/v1;backupb\006proto3"
+      "BMS\020\002\022\017\n\013EXTERNAL_VM\020\003\022\023\n\017EXTERNAL_SERVE" +
+      "R\020\004B_\n\032yandex.cloud.api.backup.v1ZAgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/backup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

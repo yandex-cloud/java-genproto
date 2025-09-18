@@ -2406,7 +2406,7 @@ public final class OriginServiceOuterClass {
 
     /**
      * <pre>
-     * Specifies whether the origin is used in its origin group as backup. 
+     * Specifies whether the origin is used in its origin group as backup.
      * A backup origin is used when one of active origins becomes unavailable.
      * Default value: False.
      * </pre>
@@ -2417,7 +2417,7 @@ public final class OriginServiceOuterClass {
     boolean hasBackup();
     /**
      * <pre>
-     * Specifies whether the origin is used in its origin group as backup. 
+     * Specifies whether the origin is used in its origin group as backup.
      * A backup origin is used when one of active origins becomes unavailable.
      * Default value: False.
      * </pre>
@@ -2428,7 +2428,7 @@ public final class OriginServiceOuterClass {
     com.google.protobuf.BoolValue getBackup();
     /**
      * <pre>
-     * Specifies whether the origin is used in its origin group as backup. 
+     * Specifies whether the origin is used in its origin group as backup.
      * A backup origin is used when one of active origins becomes unavailable.
      * Default value: False.
      * </pre>
@@ -2466,7 +2466,11 @@ public final class OriginServiceOuterClass {
 
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Set up origin provider
+     * It has two possible values:
+     * ourcdn - Based on Yandex technologies
+     * gcore - Based on an external partner infrastructure
+     * Default value: ourcdn
      * </pre>
      *
      * <code>string provider_type = 7;</code>
@@ -2475,7 +2479,11 @@ public final class OriginServiceOuterClass {
     java.lang.String getProviderType();
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Set up origin provider
+     * It has two possible values:
+     * ourcdn - Based on Yandex technologies
+     * gcore - Based on an external partner infrastructure
+     * Default value: ourcdn
      * </pre>
      *
      * <code>string provider_type = 7;</code>
@@ -2789,7 +2797,7 @@ public final class OriginServiceOuterClass {
     private com.google.protobuf.BoolValue backup_;
     /**
      * <pre>
-     * Specifies whether the origin is used in its origin group as backup. 
+     * Specifies whether the origin is used in its origin group as backup.
      * A backup origin is used when one of active origins becomes unavailable.
      * Default value: False.
      * </pre>
@@ -2803,7 +2811,7 @@ public final class OriginServiceOuterClass {
     }
     /**
      * <pre>
-     * Specifies whether the origin is used in its origin group as backup. 
+     * Specifies whether the origin is used in its origin group as backup.
      * A backup origin is used when one of active origins becomes unavailable.
      * Default value: False.
      * </pre>
@@ -2817,7 +2825,7 @@ public final class OriginServiceOuterClass {
     }
     /**
      * <pre>
-     * Specifies whether the origin is used in its origin group as backup. 
+     * Specifies whether the origin is used in its origin group as backup.
      * A backup origin is used when one of active origins becomes unavailable.
      * Default value: False.
      * </pre>
@@ -2871,7 +2879,11 @@ public final class OriginServiceOuterClass {
     private volatile java.lang.Object providerType_;
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Set up origin provider
+     * It has two possible values:
+     * ourcdn - Based on Yandex technologies
+     * gcore - Based on an external partner infrastructure
+     * Default value: ourcdn
      * </pre>
      *
      * <code>string provider_type = 7;</code>
@@ -2892,7 +2904,11 @@ public final class OriginServiceOuterClass {
     }
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Set up origin provider
+     * It has two possible values:
+     * ourcdn - Based on Yandex technologies
+     * gcore - Based on an external partner infrastructure
+     * Default value: ourcdn
      * </pre>
      *
      * <code>string provider_type = 7;</code>
@@ -3793,7 +3809,7 @@ public final class OriginServiceOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> backupBuilder_;
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Default value: False.
        * </pre>
@@ -3806,7 +3822,7 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Default value: False.
        * </pre>
@@ -3823,7 +3839,7 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Default value: False.
        * </pre>
@@ -3845,7 +3861,7 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Default value: False.
        * </pre>
@@ -3865,7 +3881,7 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Default value: False.
        * </pre>
@@ -3889,7 +3905,7 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Default value: False.
        * </pre>
@@ -3909,7 +3925,7 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Default value: False.
        * </pre>
@@ -3923,7 +3939,7 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Default value: False.
        * </pre>
@@ -3940,7 +3956,7 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Default value: False.
        * </pre>
@@ -4119,7 +4135,11 @@ public final class OriginServiceOuterClass {
       private java.lang.Object providerType_ = "";
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Set up origin provider
+       * It has two possible values:
+       * ourcdn - Based on Yandex technologies
+       * gcore - Based on an external partner infrastructure
+       * Default value: ourcdn
        * </pre>
        *
        * <code>string provider_type = 7;</code>
@@ -4139,7 +4159,11 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Set up origin provider
+       * It has two possible values:
+       * ourcdn - Based on Yandex technologies
+       * gcore - Based on an external partner infrastructure
+       * Default value: ourcdn
        * </pre>
        *
        * <code>string provider_type = 7;</code>
@@ -4160,7 +4184,11 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Set up origin provider
+       * It has two possible values:
+       * ourcdn - Based on Yandex technologies
+       * gcore - Based on an external partner infrastructure
+       * Default value: ourcdn
        * </pre>
        *
        * <code>string provider_type = 7;</code>
@@ -4179,7 +4207,11 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Set up origin provider
+       * It has two possible values:
+       * ourcdn - Based on Yandex technologies
+       * gcore - Based on an external partner infrastructure
+       * Default value: ourcdn
        * </pre>
        *
        * <code>string provider_type = 7;</code>
@@ -4193,7 +4225,11 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Set up origin provider
+       * It has two possible values:
+       * ourcdn - Based on Yandex technologies
+       * gcore - Based on an external partner infrastructure
+       * Default value: ourcdn
        * </pre>
        *
        * <code>string provider_type = 7;</code>
@@ -4929,7 +4965,7 @@ public final class OriginServiceOuterClass {
      * True - The origin is enabled and used as a source for the CDN. An origins
      * group must contain at least one enabled origin. Default value.
      * False - The origin is disabled and the CDN is not using it to pull content.
-     * Required. 
+     * Required.
      * </pre>
      *
      * <code>bool enabled = 4;</code>
@@ -4939,7 +4975,7 @@ public final class OriginServiceOuterClass {
 
     /**
      * <pre>
-     * Specifies whether the origin is used in its origin group as backup. 
+     * Specifies whether the origin is used in its origin group as backup.
      * A backup origin is used when one of active origins becomes unavailable.
      * Required.
      * </pre>
@@ -5215,7 +5251,7 @@ public final class OriginServiceOuterClass {
      * True - The origin is enabled and used as a source for the CDN. An origins
      * group must contain at least one enabled origin. Default value.
      * False - The origin is disabled and the CDN is not using it to pull content.
-     * Required. 
+     * Required.
      * </pre>
      *
      * <code>bool enabled = 4;</code>
@@ -5230,7 +5266,7 @@ public final class OriginServiceOuterClass {
     private boolean backup_;
     /**
      * <pre>
-     * Specifies whether the origin is used in its origin group as backup. 
+     * Specifies whether the origin is used in its origin group as backup.
      * A backup origin is used when one of active origins becomes unavailable.
      * Required.
      * </pre>
@@ -5937,7 +5973,7 @@ public final class OriginServiceOuterClass {
        * True - The origin is enabled and used as a source for the CDN. An origins
        * group must contain at least one enabled origin. Default value.
        * False - The origin is disabled and the CDN is not using it to pull content.
-       * Required. 
+       * Required.
        * </pre>
        *
        * <code>bool enabled = 4;</code>
@@ -5954,7 +5990,7 @@ public final class OriginServiceOuterClass {
        * True - The origin is enabled and used as a source for the CDN. An origins
        * group must contain at least one enabled origin. Default value.
        * False - The origin is disabled and the CDN is not using it to pull content.
-       * Required. 
+       * Required.
        * </pre>
        *
        * <code>bool enabled = 4;</code>
@@ -5974,7 +6010,7 @@ public final class OriginServiceOuterClass {
        * True - The origin is enabled and used as a source for the CDN. An origins
        * group must contain at least one enabled origin. Default value.
        * False - The origin is disabled and the CDN is not using it to pull content.
-       * Required. 
+       * Required.
        * </pre>
        *
        * <code>bool enabled = 4;</code>
@@ -5990,7 +6026,7 @@ public final class OriginServiceOuterClass {
       private boolean backup_ ;
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Required.
        * </pre>
@@ -6004,7 +6040,7 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Required.
        * </pre>
@@ -6021,7 +6057,7 @@ public final class OriginServiceOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * Required.
        * </pre>

@@ -49,6 +49,37 @@ public final class GroupServiceGrpc {
     return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest,
+      yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> getResolveExternalMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ResolveExternal",
+      requestType = yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest.class,
+      responseType = yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest,
+      yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> getResolveExternalMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> getResolveExternalMethod;
+    if ((getResolveExternalMethod = GroupServiceGrpc.getResolveExternalMethod) == null) {
+      synchronized (GroupServiceGrpc.class) {
+        if ((getResolveExternalMethod = GroupServiceGrpc.getResolveExternalMethod) == null) {
+          GroupServiceGrpc.getResolveExternalMethod = getResolveExternalMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResolveExternal"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.getDefaultInstance()))
+              .setSchemaDescriptor(new GroupServiceMethodDescriptorSupplier("ResolveExternal"))
+              .build();
+        }
+      }
+    }
+    return getResolveExternalMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsRequest,
       yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsResponse> getListMethod;
 
@@ -78,6 +109,37 @@ public final class GroupServiceGrpc {
       }
     }
     return getListMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest,
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse> getListExternalMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListExternal",
+      requestType = yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest.class,
+      responseType = yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest,
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse> getListExternalMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse> getListExternalMethod;
+    if ((getListExternalMethod = GroupServiceGrpc.getListExternalMethod) == null) {
+      synchronized (GroupServiceGrpc.class) {
+        if ((getListExternalMethod = GroupServiceGrpc.getListExternalMethod) == null) {
+          GroupServiceGrpc.getListExternalMethod = getListExternalMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListExternal"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GroupServiceMethodDescriptorSupplier("ListExternal"))
+              .build();
+        }
+      }
+    }
+    return getListExternalMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateGroupRequest,
@@ -111,6 +173,37 @@ public final class GroupServiceGrpc {
     return getCreateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateExternalMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateExternal",
+      requestType = yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateExternalMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateExternalMethod;
+    if ((getCreateExternalMethod = GroupServiceGrpc.getCreateExternalMethod) == null) {
+      synchronized (GroupServiceGrpc.class) {
+        if ((getCreateExternalMethod = GroupServiceGrpc.getCreateExternalMethod) == null) {
+          GroupServiceGrpc.getCreateExternalMethod = getCreateExternalMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateExternal"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new GroupServiceMethodDescriptorSupplier("CreateExternal"))
+              .build();
+        }
+      }
+    }
+    return getCreateExternalMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.UpdateGroupRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
 
@@ -140,6 +233,68 @@ public final class GroupServiceGrpc {
       }
     }
     return getUpdateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getConvertToExternalMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ConvertToExternal",
+      requestType = yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getConvertToExternalMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getConvertToExternalMethod;
+    if ((getConvertToExternalMethod = GroupServiceGrpc.getConvertToExternalMethod) == null) {
+      synchronized (GroupServiceGrpc.class) {
+        if ((getConvertToExternalMethod = GroupServiceGrpc.getConvertToExternalMethod) == null) {
+          GroupServiceGrpc.getConvertToExternalMethod = getConvertToExternalMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ConvertToExternal"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new GroupServiceMethodDescriptorSupplier("ConvertToExternal"))
+              .build();
+        }
+      }
+    }
+    return getConvertToExternalMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getConvertAllToBasicMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ConvertAllToBasic",
+      requestType = yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getConvertAllToBasicMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getConvertAllToBasicMethod;
+    if ((getConvertAllToBasicMethod = GroupServiceGrpc.getConvertAllToBasicMethod) == null) {
+      synchronized (GroupServiceGrpc.class) {
+        if ((getConvertAllToBasicMethod = GroupServiceGrpc.getConvertAllToBasicMethod) == null) {
+          GroupServiceGrpc.getConvertAllToBasicMethod = getConvertAllToBasicMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ConvertAllToBasic"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new GroupServiceMethodDescriptorSupplier("ConvertAllToBasic"))
+              .build();
+        }
+      }
+    }
+    return getConvertAllToBasicMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.DeleteGroupRequest,
@@ -423,12 +578,32 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
+     * Returns external group by subject container and external id
+     * </pre>
+     */
+    public void resolveExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResolveExternalMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of group resources.
      * </pre>
      */
     public void list(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of external group linked subject container
+     * </pre>
+     */
+    public void listExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListExternalMethod(), responseObserver);
     }
 
     /**
@@ -443,12 +618,42 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
+     * Creates an external group.
+     * </pre>
+     */
+    public void createExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateExternalMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Updates the specified group.
      * </pre>
      */
     public void update(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.UpdateGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Converts single basic (not external) group to external. Precondition: group must be basic. 
+     * </pre>
+     */
+    public void convertToExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getConvertToExternalMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Converts all groups that belongs to subject container from external to basic (not external).
+     * </pre>
+     */
+    public void convertAllToBasic(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getConvertAllToBasicMethod(), responseObserver);
     }
 
     /**
@@ -531,12 +736,26 @@ public final class GroupServiceGrpc {
                 yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group>(
                   this, METHODID_GET)))
           .addMethod(
+            getResolveExternalMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest,
+                yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group>(
+                  this, METHODID_RESOLVE_EXTERNAL)))
+          .addMethod(
             getListMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsRequest,
                 yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsResponse>(
                   this, METHODID_LIST)))
+          .addMethod(
+            getListExternalMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest,
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse>(
+                  this, METHODID_LIST_EXTERNAL)))
           .addMethod(
             getCreateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -545,12 +764,33 @@ public final class GroupServiceGrpc {
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
+            getCreateExternalMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_CREATE_EXTERNAL)))
+          .addMethod(
             getUpdateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.UpdateGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
+          .addMethod(
+            getConvertToExternalMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_CONVERT_TO_EXTERNAL)))
+          .addMethod(
+            getConvertAllToBasicMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_CONVERT_ALL_TO_BASIC)))
           .addMethod(
             getDeleteMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -635,6 +875,17 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
+     * Returns external group by subject container and external id
+     * </pre>
+     */
+    public void resolveExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getResolveExternalMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of group resources.
      * </pre>
      */
@@ -642,6 +893,17 @@ public final class GroupServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of external group linked subject container
+     * </pre>
+     */
+    public void listExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListExternalMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -657,6 +919,17 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
+     * Creates an external group.
+     * </pre>
+     */
+    public void createExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateExternalMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Updates the specified group.
      * </pre>
      */
@@ -664,6 +937,28 @@ public final class GroupServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Converts single basic (not external) group to external. Precondition: group must be basic. 
+     * </pre>
+     */
+    public void convertToExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getConvertToExternalMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Converts all groups that belongs to subject container from external to basic (not external).
+     * </pre>
+     */
+    public void convertAllToBasic(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getConvertAllToBasicMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -774,12 +1069,32 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
+     * Returns external group by subject container and external id
+     * </pre>
+     */
+    public yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group resolveExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getResolveExternalMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of group resources.
      * </pre>
      */
     public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsResponse list(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of external group linked subject container
+     * </pre>
+     */
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse listExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListExternalMethod(), getCallOptions(), request);
     }
 
     /**
@@ -794,12 +1109,42 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
+     * Creates an external group.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation createExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateExternalMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Updates the specified group.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.UpdateGroupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Converts single basic (not external) group to external. Precondition: group must be basic. 
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation convertToExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getConvertToExternalMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Converts all groups that belongs to subject container from external to basic (not external).
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation convertAllToBasic(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getConvertAllToBasicMethod(), getCallOptions(), request);
     }
 
     /**
@@ -904,6 +1249,17 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
+     * Returns external group by subject container and external id
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> resolveExternal(
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getResolveExternalMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of group resources.
      * </pre>
      */
@@ -911,6 +1267,17 @@ public final class GroupServiceGrpc {
         yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of external group linked subject container
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse> listExternal(
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListExternalMethod(), getCallOptions()), request);
     }
 
     /**
@@ -926,6 +1293,17 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
+     * Creates an external group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> createExternal(
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateExternalMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Updates the specified group.
      * </pre>
      */
@@ -933,6 +1311,28 @@ public final class GroupServiceGrpc {
         yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.UpdateGroupRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Converts single basic (not external) group to external. Precondition: group must be basic. 
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> convertToExternal(
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getConvertToExternalMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Converts all groups that belongs to subject container from external to basic (not external).
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> convertAllToBasic(
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getConvertAllToBasicMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1014,16 +1414,21 @@ public final class GroupServiceGrpc {
   }
 
   private static final int METHODID_GET = 0;
-  private static final int METHODID_LIST = 1;
-  private static final int METHODID_CREATE = 2;
-  private static final int METHODID_UPDATE = 3;
-  private static final int METHODID_DELETE = 4;
-  private static final int METHODID_LIST_OPERATIONS = 5;
-  private static final int METHODID_LIST_MEMBERS = 6;
-  private static final int METHODID_UPDATE_MEMBERS = 7;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 8;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 9;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 10;
+  private static final int METHODID_RESOLVE_EXTERNAL = 1;
+  private static final int METHODID_LIST = 2;
+  private static final int METHODID_LIST_EXTERNAL = 3;
+  private static final int METHODID_CREATE = 4;
+  private static final int METHODID_CREATE_EXTERNAL = 5;
+  private static final int METHODID_UPDATE = 6;
+  private static final int METHODID_CONVERT_TO_EXTERNAL = 7;
+  private static final int METHODID_CONVERT_ALL_TO_BASIC = 8;
+  private static final int METHODID_DELETE = 9;
+  private static final int METHODID_LIST_OPERATIONS = 10;
+  private static final int METHODID_LIST_MEMBERS = 11;
+  private static final int METHODID_UPDATE_MEMBERS = 12;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 13;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 14;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1046,16 +1451,36 @@ public final class GroupServiceGrpc {
           serviceImpl.get((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GetGroupRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group>) responseObserver);
           break;
+        case METHODID_RESOLVE_EXTERNAL:
+          serviceImpl.resolveExternal((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group>) responseObserver);
+          break;
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListGroupsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_EXTERNAL:
+          serviceImpl.listExternal((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse>) responseObserver);
           break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateGroupRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_CREATE_EXTERNAL:
+          serviceImpl.createExternal((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         case METHODID_UPDATE:
           serviceImpl.update((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.UpdateGroupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_CONVERT_TO_EXTERNAL:
+          serviceImpl.convertToExternal((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_CONVERT_ALL_TO_BASIC:
+          serviceImpl.convertAllToBasic((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
@@ -1148,9 +1573,14 @@ public final class GroupServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GroupServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
+              .addMethod(getResolveExternalMethod())
               .addMethod(getListMethod())
+              .addMethod(getListExternalMethod())
               .addMethod(getCreateMethod())
+              .addMethod(getCreateExternalMethod())
               .addMethod(getUpdateMethod())
+              .addMethod(getConvertToExternalMethod())
+              .addMethod(getConvertAllToBasicMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getListMembersMethod())

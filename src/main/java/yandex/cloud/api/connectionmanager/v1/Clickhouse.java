@@ -737,6 +737,21 @@ public final class Clickhouse {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+     * @return Whether the tlsParams field is set.
+     */
+    boolean hasTlsParams();
+    /**
+     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+     * @return The tlsParams.
+     */
+    yandex.cloud.api.connectionmanager.v1.Common.TLSParams getTlsParams();
+    /**
+     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+     */
+    yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder getTlsParamsOrBuilder();
+
+    /**
      * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.Host hosts = 6;</code>
      */
     java.util.List<yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.Host> 
@@ -761,19 +776,28 @@ public final class Clickhouse {
         int index);
 
     /**
-     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
-     * @return Whether the tlsParams field is set.
+     * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
      */
-    boolean hasTlsParams();
+    java.util.List<yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup> 
+        getShardGroupsList();
     /**
-     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
-     * @return The tlsParams.
+     * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
      */
-    yandex.cloud.api.connectionmanager.v1.Common.TLSParams getTlsParams();
+    yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup getShardGroups(int index);
     /**
-     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+     * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
      */
-    yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder getTlsParamsOrBuilder();
+    int getShardGroupsCount();
+    /**
+     * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroupOrBuilder> 
+        getShardGroupsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+     */
+    yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroupOrBuilder getShardGroupsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.ClickHouseCluster}
@@ -789,6 +813,7 @@ public final class Clickhouse {
     }
     private ClickHouseCluster() {
       hosts_ = java.util.Collections.emptyList();
+      shardGroups_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -844,6 +869,15 @@ public final class Clickhouse {
                   input.readMessage(yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.Host.parser(), extensionRegistry));
               break;
             }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                shardGroups_ = new java.util.ArrayList<yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              shardGroups_.add(
+                  input.readMessage(yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -861,6 +895,9 @@ public final class Clickhouse {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           hosts_ = java.util.Collections.unmodifiableList(hosts_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          shardGroups_ = java.util.Collections.unmodifiableList(shardGroups_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1992,6 +2029,820 @@ public final class Clickhouse {
 
     }
 
+    public interface ShardGroupOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      java.lang.String getName();
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <code>repeated string shard_names = 2;</code>
+       * @return A list containing the shardNames.
+       */
+      java.util.List<java.lang.String>
+          getShardNamesList();
+      /**
+       * <code>repeated string shard_names = 2;</code>
+       * @return The count of shardNames.
+       */
+      int getShardNamesCount();
+      /**
+       * <code>repeated string shard_names = 2;</code>
+       * @param index The index of the element to return.
+       * @return The shardNames at the given index.
+       */
+      java.lang.String getShardNames(int index);
+      /**
+       * <code>repeated string shard_names = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the shardNames at the given index.
+       */
+      com.google.protobuf.ByteString
+          getShardNamesBytes(int index);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup}
+     */
+    public static final class ShardGroup extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup)
+        ShardGroupOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ShardGroup.newBuilder() to construct.
+      private ShardGroup(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ShardGroup() {
+        name_ = "";
+        shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ShardGroup();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ShardGroup(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  shardNames_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                shardNames_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            shardNames_ = shardNames_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.connectionmanager.v1.Clickhouse.internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_ShardGroup_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.connectionmanager.v1.Clickhouse.internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_ShardGroup_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.class, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder.class);
+      }
+
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int SHARD_NAMES_FIELD_NUMBER = 2;
+      private com.google.protobuf.LazyStringList shardNames_;
+      /**
+       * <code>repeated string shard_names = 2;</code>
+       * @return A list containing the shardNames.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getShardNamesList() {
+        return shardNames_;
+      }
+      /**
+       * <code>repeated string shard_names = 2;</code>
+       * @return The count of shardNames.
+       */
+      public int getShardNamesCount() {
+        return shardNames_.size();
+      }
+      /**
+       * <code>repeated string shard_names = 2;</code>
+       * @param index The index of the element to return.
+       * @return The shardNames at the given index.
+       */
+      public java.lang.String getShardNames(int index) {
+        return shardNames_.get(index);
+      }
+      /**
+       * <code>repeated string shard_names = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the shardNames at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getShardNamesBytes(int index) {
+        return shardNames_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        for (int i = 0; i < shardNames_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shardNames_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < shardNames_.size(); i++) {
+            dataSize += computeStringSizeNoTag(shardNames_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getShardNamesList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup other = (yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup) obj;
+
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (!getShardNamesList()
+            .equals(other.getShardNamesList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        if (getShardNamesCount() > 0) {
+          hash = (37 * hash) + SHARD_NAMES_FIELD_NUMBER;
+          hash = (53 * hash) + getShardNamesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup)
+          yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroupOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.connectionmanager.v1.Clickhouse.internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_ShardGroup_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.connectionmanager.v1.Clickhouse.internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_ShardGroup_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.class, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.connectionmanager.v1.Clickhouse.internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_ShardGroup_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup getDefaultInstanceForType() {
+          return yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup build() {
+          yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup buildPartial() {
+          yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup result = new yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup(this);
+          int from_bitField0_ = bitField0_;
+          result.name_ = name_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            shardNames_ = shardNames_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.shardNames_ = shardNames_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup) {
+            return mergeFrom((yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup other) {
+          if (other == yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (!other.shardNames_.isEmpty()) {
+            if (shardNames_.isEmpty()) {
+              shardNames_ = other.shardNames_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureShardNamesIsMutable();
+              shardNames_.addAll(other.shardNames_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>string name = 1;</code>
+         * @return The name.
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringList shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureShardNamesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            shardNames_ = new com.google.protobuf.LazyStringArrayList(shardNames_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated string shard_names = 2;</code>
+         * @return A list containing the shardNames.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getShardNamesList() {
+          return shardNames_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string shard_names = 2;</code>
+         * @return The count of shardNames.
+         */
+        public int getShardNamesCount() {
+          return shardNames_.size();
+        }
+        /**
+         * <code>repeated string shard_names = 2;</code>
+         * @param index The index of the element to return.
+         * @return The shardNames at the given index.
+         */
+        public java.lang.String getShardNames(int index) {
+          return shardNames_.get(index);
+        }
+        /**
+         * <code>repeated string shard_names = 2;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the shardNames at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getShardNamesBytes(int index) {
+          return shardNames_.getByteString(index);
+        }
+        /**
+         * <code>repeated string shard_names = 2;</code>
+         * @param index The index to set the value at.
+         * @param value The shardNames to set.
+         * @return This builder for chaining.
+         */
+        public Builder setShardNames(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureShardNamesIsMutable();
+          shardNames_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string shard_names = 2;</code>
+         * @param value The shardNames to add.
+         * @return This builder for chaining.
+         */
+        public Builder addShardNames(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureShardNamesIsMutable();
+          shardNames_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string shard_names = 2;</code>
+         * @param values The shardNames to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllShardNames(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureShardNamesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, shardNames_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string shard_names = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearShardNames() {
+          shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string shard_names = 2;</code>
+         * @param value The bytes of the shardNames to add.
+         * @return This builder for chaining.
+         */
+        public Builder addShardNamesBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureShardNamesIsMutable();
+          shardNames_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup)
+      private static final yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup();
+      }
+
+      public static yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ShardGroup>
+          PARSER = new com.google.protobuf.AbstractParser<ShardGroup>() {
+        @java.lang.Override
+        public ShardGroup parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ShardGroup(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ShardGroup> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ShardGroup> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int TLS_PARAMS_FIELD_NUMBER = 4;
+    private yandex.cloud.api.connectionmanager.v1.Common.TLSParams tlsParams_;
+    /**
+     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+     * @return Whether the tlsParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTlsParams() {
+      return tlsParams_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+     * @return The tlsParams.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.Common.TLSParams getTlsParams() {
+      return tlsParams_ == null ? yandex.cloud.api.connectionmanager.v1.Common.TLSParams.getDefaultInstance() : tlsParams_;
+    }
+    /**
+     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder getTlsParamsOrBuilder() {
+      return getTlsParams();
+    }
+
     public static final int HOSTS_FIELD_NUMBER = 6;
     private java.util.List<yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.Host> hosts_;
     /**
@@ -2032,30 +2883,44 @@ public final class Clickhouse {
       return hosts_.get(index);
     }
 
-    public static final int TLS_PARAMS_FIELD_NUMBER = 4;
-    private yandex.cloud.api.connectionmanager.v1.Common.TLSParams tlsParams_;
+    public static final int SHARD_GROUPS_FIELD_NUMBER = 7;
+    private java.util.List<yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup> shardGroups_;
     /**
-     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
-     * @return Whether the tlsParams field is set.
+     * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
      */
     @java.lang.Override
-    public boolean hasTlsParams() {
-      return tlsParams_ != null;
+    public java.util.List<yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup> getShardGroupsList() {
+      return shardGroups_;
     }
     /**
-     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
-     * @return The tlsParams.
+     * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.connectionmanager.v1.Common.TLSParams getTlsParams() {
-      return tlsParams_ == null ? yandex.cloud.api.connectionmanager.v1.Common.TLSParams.getDefaultInstance() : tlsParams_;
+    public java.util.List<? extends yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroupOrBuilder> 
+        getShardGroupsOrBuilderList() {
+      return shardGroups_;
     }
     /**
-     * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+     * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder getTlsParamsOrBuilder() {
-      return getTlsParams();
+    public int getShardGroupsCount() {
+      return shardGroups_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup getShardGroups(int index) {
+      return shardGroups_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroupOrBuilder getShardGroupsOrBuilder(
+        int index) {
+      return shardGroups_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2078,6 +2943,9 @@ public final class Clickhouse {
       for (int i = 0; i < hosts_.size(); i++) {
         output.writeMessage(6, hosts_.get(i));
       }
+      for (int i = 0; i < shardGroups_.size(); i++) {
+        output.writeMessage(7, shardGroups_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2095,6 +2963,10 @@ public final class Clickhouse {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, hosts_.get(i));
       }
+      for (int i = 0; i < shardGroups_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, shardGroups_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2110,13 +2982,15 @@ public final class Clickhouse {
       }
       yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster other = (yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster) obj;
 
-      if (!getHostsList()
-          .equals(other.getHostsList())) return false;
       if (hasTlsParams() != other.hasTlsParams()) return false;
       if (hasTlsParams()) {
         if (!getTlsParams()
             .equals(other.getTlsParams())) return false;
       }
+      if (!getHostsList()
+          .equals(other.getHostsList())) return false;
+      if (!getShardGroupsList()
+          .equals(other.getShardGroupsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2128,13 +3002,17 @@ public final class Clickhouse {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTlsParams()) {
+        hash = (37 * hash) + TLS_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getTlsParams().hashCode();
+      }
       if (getHostsCount() > 0) {
         hash = (37 * hash) + HOSTS_FIELD_NUMBER;
         hash = (53 * hash) + getHostsList().hashCode();
       }
-      if (hasTlsParams()) {
-        hash = (37 * hash) + TLS_PARAMS_FIELD_NUMBER;
-        hash = (53 * hash) + getTlsParams().hashCode();
+      if (getShardGroupsCount() > 0) {
+        hash = (37 * hash) + SHARD_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getShardGroupsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2265,22 +3143,29 @@ public final class Clickhouse {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getHostsFieldBuilder();
+          getShardGroupsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (tlsParamsBuilder_ == null) {
+          tlsParams_ = null;
+        } else {
+          tlsParams_ = null;
+          tlsParamsBuilder_ = null;
+        }
         if (hostsBuilder_ == null) {
           hosts_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           hostsBuilder_.clear();
         }
-        if (tlsParamsBuilder_ == null) {
-          tlsParams_ = null;
+        if (shardGroupsBuilder_ == null) {
+          shardGroups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          tlsParams_ = null;
-          tlsParamsBuilder_ = null;
+          shardGroupsBuilder_.clear();
         }
         return this;
       }
@@ -2309,6 +3194,11 @@ public final class Clickhouse {
       public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster buildPartial() {
         yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster result = new yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster(this);
         int from_bitField0_ = bitField0_;
+        if (tlsParamsBuilder_ == null) {
+          result.tlsParams_ = tlsParams_;
+        } else {
+          result.tlsParams_ = tlsParamsBuilder_.build();
+        }
         if (hostsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             hosts_ = java.util.Collections.unmodifiableList(hosts_);
@@ -2318,10 +3208,14 @@ public final class Clickhouse {
         } else {
           result.hosts_ = hostsBuilder_.build();
         }
-        if (tlsParamsBuilder_ == null) {
-          result.tlsParams_ = tlsParams_;
+        if (shardGroupsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            shardGroups_ = java.util.Collections.unmodifiableList(shardGroups_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.shardGroups_ = shardGroups_;
         } else {
-          result.tlsParams_ = tlsParamsBuilder_.build();
+          result.shardGroups_ = shardGroupsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2371,6 +3265,9 @@ public final class Clickhouse {
 
       public Builder mergeFrom(yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster other) {
         if (other == yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.getDefaultInstance()) return this;
+        if (other.hasTlsParams()) {
+          mergeTlsParams(other.getTlsParams());
+        }
         if (hostsBuilder_ == null) {
           if (!other.hosts_.isEmpty()) {
             if (hosts_.isEmpty()) {
@@ -2397,8 +3294,31 @@ public final class Clickhouse {
             }
           }
         }
-        if (other.hasTlsParams()) {
-          mergeTlsParams(other.getTlsParams());
+        if (shardGroupsBuilder_ == null) {
+          if (!other.shardGroups_.isEmpty()) {
+            if (shardGroups_.isEmpty()) {
+              shardGroups_ = other.shardGroups_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureShardGroupsIsMutable();
+              shardGroups_.addAll(other.shardGroups_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.shardGroups_.isEmpty()) {
+            if (shardGroupsBuilder_.isEmpty()) {
+              shardGroupsBuilder_.dispose();
+              shardGroupsBuilder_ = null;
+              shardGroups_ = other.shardGroups_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              shardGroupsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getShardGroupsFieldBuilder() : null;
+            } else {
+              shardGroupsBuilder_.addAllMessages(other.shardGroups_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2429,6 +3349,125 @@ public final class Clickhouse {
         return this;
       }
       private int bitField0_;
+
+      private yandex.cloud.api.connectionmanager.v1.Common.TLSParams tlsParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.Common.TLSParams, yandex.cloud.api.connectionmanager.v1.Common.TLSParams.Builder, yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder> tlsParamsBuilder_;
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       * @return Whether the tlsParams field is set.
+       */
+      public boolean hasTlsParams() {
+        return tlsParamsBuilder_ != null || tlsParams_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       * @return The tlsParams.
+       */
+      public yandex.cloud.api.connectionmanager.v1.Common.TLSParams getTlsParams() {
+        if (tlsParamsBuilder_ == null) {
+          return tlsParams_ == null ? yandex.cloud.api.connectionmanager.v1.Common.TLSParams.getDefaultInstance() : tlsParams_;
+        } else {
+          return tlsParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       */
+      public Builder setTlsParams(yandex.cloud.api.connectionmanager.v1.Common.TLSParams value) {
+        if (tlsParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tlsParams_ = value;
+          onChanged();
+        } else {
+          tlsParamsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       */
+      public Builder setTlsParams(
+          yandex.cloud.api.connectionmanager.v1.Common.TLSParams.Builder builderForValue) {
+        if (tlsParamsBuilder_ == null) {
+          tlsParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          tlsParamsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       */
+      public Builder mergeTlsParams(yandex.cloud.api.connectionmanager.v1.Common.TLSParams value) {
+        if (tlsParamsBuilder_ == null) {
+          if (tlsParams_ != null) {
+            tlsParams_ =
+              yandex.cloud.api.connectionmanager.v1.Common.TLSParams.newBuilder(tlsParams_).mergeFrom(value).buildPartial();
+          } else {
+            tlsParams_ = value;
+          }
+          onChanged();
+        } else {
+          tlsParamsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       */
+      public Builder clearTlsParams() {
+        if (tlsParamsBuilder_ == null) {
+          tlsParams_ = null;
+          onChanged();
+        } else {
+          tlsParams_ = null;
+          tlsParamsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       */
+      public yandex.cloud.api.connectionmanager.v1.Common.TLSParams.Builder getTlsParamsBuilder() {
+        
+        onChanged();
+        return getTlsParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       */
+      public yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder getTlsParamsOrBuilder() {
+        if (tlsParamsBuilder_ != null) {
+          return tlsParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return tlsParams_ == null ?
+              yandex.cloud.api.connectionmanager.v1.Common.TLSParams.getDefaultInstance() : tlsParams_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.Common.TLSParams, yandex.cloud.api.connectionmanager.v1.Common.TLSParams.Builder, yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder> 
+          getTlsParamsFieldBuilder() {
+        if (tlsParamsBuilder_ == null) {
+          tlsParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.connectionmanager.v1.Common.TLSParams, yandex.cloud.api.connectionmanager.v1.Common.TLSParams.Builder, yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder>(
+                  getTlsParams(),
+                  getParentForChildren(),
+                  isClean());
+          tlsParams_ = null;
+        }
+        return tlsParamsBuilder_;
+      }
 
       private java.util.List<yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.Host> hosts_ =
         java.util.Collections.emptyList();
@@ -2670,123 +3709,244 @@ public final class Clickhouse {
         return hostsBuilder_;
       }
 
-      private yandex.cloud.api.connectionmanager.v1.Common.TLSParams tlsParams_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.connectionmanager.v1.Common.TLSParams, yandex.cloud.api.connectionmanager.v1.Common.TLSParams.Builder, yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder> tlsParamsBuilder_;
-      /**
-       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
-       * @return Whether the tlsParams field is set.
-       */
-      public boolean hasTlsParams() {
-        return tlsParamsBuilder_ != null || tlsParams_ != null;
+      private java.util.List<yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup> shardGroups_ =
+        java.util.Collections.emptyList();
+      private void ensureShardGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          shardGroups_ = new java.util.ArrayList<yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup>(shardGroups_);
+          bitField0_ |= 0x00000002;
+         }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroupOrBuilder> shardGroupsBuilder_;
+
       /**
-       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
-       * @return The tlsParams.
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
        */
-      public yandex.cloud.api.connectionmanager.v1.Common.TLSParams getTlsParams() {
-        if (tlsParamsBuilder_ == null) {
-          return tlsParams_ == null ? yandex.cloud.api.connectionmanager.v1.Common.TLSParams.getDefaultInstance() : tlsParams_;
+      public java.util.List<yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup> getShardGroupsList() {
+        if (shardGroupsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(shardGroups_);
         } else {
-          return tlsParamsBuilder_.getMessage();
+          return shardGroupsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
        */
-      public Builder setTlsParams(yandex.cloud.api.connectionmanager.v1.Common.TLSParams value) {
-        if (tlsParamsBuilder_ == null) {
+      public int getShardGroupsCount() {
+        if (shardGroupsBuilder_ == null) {
+          return shardGroups_.size();
+        } else {
+          return shardGroupsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+       */
+      public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup getShardGroups(int index) {
+        if (shardGroupsBuilder_ == null) {
+          return shardGroups_.get(index);
+        } else {
+          return shardGroupsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+       */
+      public Builder setShardGroups(
+          int index, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup value) {
+        if (shardGroupsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          tlsParams_ = value;
+          ensureShardGroupsIsMutable();
+          shardGroups_.set(index, value);
           onChanged();
         } else {
-          tlsParamsBuilder_.setMessage(value);
+          shardGroupsBuilder_.setMessage(index, value);
         }
-
         return this;
       }
       /**
-       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
        */
-      public Builder setTlsParams(
-          yandex.cloud.api.connectionmanager.v1.Common.TLSParams.Builder builderForValue) {
-        if (tlsParamsBuilder_ == null) {
-          tlsParams_ = builderForValue.build();
+      public Builder setShardGroups(
+          int index, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder builderForValue) {
+        if (shardGroupsBuilder_ == null) {
+          ensureShardGroupsIsMutable();
+          shardGroups_.set(index, builderForValue.build());
           onChanged();
         } else {
-          tlsParamsBuilder_.setMessage(builderForValue.build());
+          shardGroupsBuilder_.setMessage(index, builderForValue.build());
         }
-
         return this;
       }
       /**
-       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
        */
-      public Builder mergeTlsParams(yandex.cloud.api.connectionmanager.v1.Common.TLSParams value) {
-        if (tlsParamsBuilder_ == null) {
-          if (tlsParams_ != null) {
-            tlsParams_ =
-              yandex.cloud.api.connectionmanager.v1.Common.TLSParams.newBuilder(tlsParams_).mergeFrom(value).buildPartial();
-          } else {
-            tlsParams_ = value;
+      public Builder addShardGroups(yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup value) {
+        if (shardGroupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
           }
+          ensureShardGroupsIsMutable();
+          shardGroups_.add(value);
           onChanged();
         } else {
-          tlsParamsBuilder_.mergeFrom(value);
+          shardGroupsBuilder_.addMessage(value);
         }
-
         return this;
       }
       /**
-       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
        */
-      public Builder clearTlsParams() {
-        if (tlsParamsBuilder_ == null) {
-          tlsParams_ = null;
+      public Builder addShardGroups(
+          int index, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup value) {
+        if (shardGroupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShardGroupsIsMutable();
+          shardGroups_.add(index, value);
           onChanged();
         } else {
-          tlsParams_ = null;
-          tlsParamsBuilder_ = null;
+          shardGroupsBuilder_.addMessage(index, value);
         }
-
         return this;
       }
       /**
-       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
        */
-      public yandex.cloud.api.connectionmanager.v1.Common.TLSParams.Builder getTlsParamsBuilder() {
-        
-        onChanged();
-        return getTlsParamsFieldBuilder().getBuilder();
+      public Builder addShardGroups(
+          yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder builderForValue) {
+        if (shardGroupsBuilder_ == null) {
+          ensureShardGroupsIsMutable();
+          shardGroups_.add(builderForValue.build());
+          onChanged();
+        } else {
+          shardGroupsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
       }
       /**
-       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
        */
-      public yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder getTlsParamsOrBuilder() {
-        if (tlsParamsBuilder_ != null) {
-          return tlsParamsBuilder_.getMessageOrBuilder();
+      public Builder addShardGroups(
+          int index, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder builderForValue) {
+        if (shardGroupsBuilder_ == null) {
+          ensureShardGroupsIsMutable();
+          shardGroups_.add(index, builderForValue.build());
+          onChanged();
         } else {
-          return tlsParams_ == null ?
-              yandex.cloud.api.connectionmanager.v1.Common.TLSParams.getDefaultInstance() : tlsParams_;
+          shardGroupsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+       */
+      public Builder addAllShardGroups(
+          java.lang.Iterable<? extends yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup> values) {
+        if (shardGroupsBuilder_ == null) {
+          ensureShardGroupsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, shardGroups_);
+          onChanged();
+        } else {
+          shardGroupsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+       */
+      public Builder clearShardGroups() {
+        if (shardGroupsBuilder_ == null) {
+          shardGroups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          shardGroupsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+       */
+      public Builder removeShardGroups(int index) {
+        if (shardGroupsBuilder_ == null) {
+          ensureShardGroupsIsMutable();
+          shardGroups_.remove(index);
+          onChanged();
+        } else {
+          shardGroupsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+       */
+      public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder getShardGroupsBuilder(
+          int index) {
+        return getShardGroupsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+       */
+      public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroupOrBuilder getShardGroupsOrBuilder(
+          int index) {
+        if (shardGroupsBuilder_ == null) {
+          return shardGroups_.get(index);  } else {
+          return shardGroupsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>.yandex.cloud.connectionmanager.v1.TLSParams tls_params = 4;</code>
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.connectionmanager.v1.Common.TLSParams, yandex.cloud.api.connectionmanager.v1.Common.TLSParams.Builder, yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder> 
-          getTlsParamsFieldBuilder() {
-        if (tlsParamsBuilder_ == null) {
-          tlsParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.connectionmanager.v1.Common.TLSParams, yandex.cloud.api.connectionmanager.v1.Common.TLSParams.Builder, yandex.cloud.api.connectionmanager.v1.Common.TLSParamsOrBuilder>(
-                  getTlsParams(),
+      public java.util.List<? extends yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroupOrBuilder> 
+           getShardGroupsOrBuilderList() {
+        if (shardGroupsBuilder_ != null) {
+          return shardGroupsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(shardGroups_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+       */
+      public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder addShardGroupsBuilder() {
+        return getShardGroupsFieldBuilder().addBuilder(
+            yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+       */
+      public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder addShardGroupsBuilder(
+          int index) {
+        return getShardGroupsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.connectionmanager.v1.ClickHouseCluster.ShardGroup shard_groups = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder> 
+           getShardGroupsBuilderList() {
+        return getShardGroupsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroupOrBuilder> 
+          getShardGroupsFieldBuilder() {
+        if (shardGroupsBuilder_ == null) {
+          shardGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroup.Builder, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseCluster.ShardGroupOrBuilder>(
+                  shardGroups_,
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
-          tlsParams_ = null;
+          shardGroups_ = null;
         }
-        return tlsParamsBuilder_;
+        return shardGroupsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4171,6 +5331,11 @@ public final class Clickhouse {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_Host_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_ShardGroup_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_ShardGroup_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_connectionmanager_v1_ClickHouseConnection_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4190,25 +5355,29 @@ public final class Clickhouse {
       "v1/common.proto\"j\n\016ClickHouseAuth\022L\n\ruse" +
       "r_password\030\001 \001(\01323.yandex.cloud.connecti" +
       "onmanager.v1.UserPasswordAuthH\000B\n\n\010secur" +
-      "ity\"\216\003\n\021ClickHouseCluster\022H\n\005hosts\030\006 \003(\013" +
-      "29.yandex.cloud.connectionmanager.v1.Cli" +
-      "ckHouseCluster.Host\022@\n\ntls_params\030\004 \001(\0132" +
-      ",.yandex.cloud.connectionmanager.v1.TLSP" +
-      "arams\032\340\001\n\004Host\022\014\n\004host\030\001 \001(\t\022\021\n\thttp_por" +
-      "t\030\002 \001(\003\022\020\n\010tcp_port\030\003 \001(\003\022\022\n\nshard_name\030" +
-      "\004 \001(\t\022P\n\006health\030\005 \001(\0162@.yandex.cloud.con" +
-      "nectionmanager.v1.ClickHouseCluster.Host" +
-      ".Health\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n" +
-      "\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003J\004\010\001\020\004J\004" +
-      "\010\005\020\006\"\315\001\n\024ClickHouseConnection\022E\n\007cluster" +
-      "\030\001 \001(\01324.yandex.cloud.connectionmanager." +
-      "v1.ClickHouseCluster\022\032\n\022managed_cluster_" +
-      "id\030\002 \001(\t\022?\n\004auth\030\003 \001(\01321.yandex.cloud.co" +
-      "nnectionmanager.v1.ClickHouseAuth\022\021\n\tdat" +
-      "abases\030\004 \003(\tB\200\001\n%yandex.cloud.api.connec" +
-      "tionmanager.v1ZWgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/connectionmanag" +
-      "er/v1;connectionmanagerb\006proto3"
+      "ity\"\226\004\n\021ClickHouseCluster\022@\n\ntls_params\030" +
+      "\004 \001(\0132,.yandex.cloud.connectionmanager.v" +
+      "1.TLSParams\022H\n\005hosts\030\006 \003(\01329.yandex.clou" +
+      "d.connectionmanager.v1.ClickHouseCluster" +
+      ".Host\022U\n\014shard_groups\030\007 \003(\0132?.yandex.clo" +
+      "ud.connectionmanager.v1.ClickHouseCluste" +
+      "r.ShardGroup\032\340\001\n\004Host\022\014\n\004host\030\001 \001(\t\022\021\n\th" +
+      "ttp_port\030\002 \001(\003\022\020\n\010tcp_port\030\003 \001(\003\022\022\n\nshar" +
+      "d_name\030\004 \001(\t\022P\n\006health\030\005 \001(\0162@.yandex.cl" +
+      "oud.connectionmanager.v1.ClickHouseClust" +
+      "er.Host.Health\"?\n\006Health\022\022\n\016HEALTH_UNKNO" +
+      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\032" +
+      "/\n\nShardGroup\022\014\n\004name\030\001 \001(\t\022\023\n\013shard_nam" +
+      "es\030\002 \003(\tJ\004\010\001\020\004J\004\010\005\020\006\"\315\001\n\024ClickHouseConne" +
+      "ction\022E\n\007cluster\030\001 \001(\01324.yandex.cloud.co" +
+      "nnectionmanager.v1.ClickHouseCluster\022\032\n\022" +
+      "managed_cluster_id\030\002 \001(\t\022?\n\004auth\030\003 \001(\01321" +
+      ".yandex.cloud.connectionmanager.v1.Click" +
+      "HouseAuth\022\021\n\tdatabases\030\004 \003(\tB\200\001\n%yandex." +
+      "cloud.api.connectionmanager.v1ZWgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/connectionmanager/v1;connectionmanagerb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4226,13 +5395,19 @@ public final class Clickhouse {
     internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_descriptor,
-        new java.lang.String[] { "Hosts", "TlsParams", });
+        new java.lang.String[] { "TlsParams", "Hosts", "ShardGroups", });
     internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_Host_descriptor =
       internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_Host_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_Host_descriptor,
         new java.lang.String[] { "Host", "HttpPort", "TcpPort", "ShardName", "Health", });
+    internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_ShardGroup_descriptor =
+      internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_ShardGroup_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_connectionmanager_v1_ClickHouseCluster_ShardGroup_descriptor,
+        new java.lang.String[] { "Name", "ShardNames", });
     internal_static_yandex_cloud_connectionmanager_v1_ClickHouseConnection_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_connectionmanager_v1_ClickHouseConnection_fieldAccessorTable = new

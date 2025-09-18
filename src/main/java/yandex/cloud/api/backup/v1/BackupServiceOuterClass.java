@@ -1962,6 +1962,33 @@ public final class BackupServiceOuterClass {
 
     /**
      * <pre>
+     * List backups by specific backup ID.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+     * @return Whether the backup field is set.
+     */
+    boolean hasBackup();
+    /**
+     * <pre>
+     * List backups by specific backup ID.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+     * @return The backup.
+     */
+    yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters getBackup();
+    /**
+     * <pre>
+     * List backups by specific backup ID.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+     */
+    yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParametersOrBuilder getBackupOrBuilder();
+
+    /**
+     * <pre>
      * By which column the listing should be ordered and in which direction,
      * format is "createdAt desc". "createdAt desc" if omitted.
      * </pre>
@@ -2031,7 +2058,7 @@ public final class BackupServiceOuterClass {
 
     /**
      * <pre>
-     * Number of results per page. 
+     * Number of results per page.
      * </pre>
      *
      * <code>int64 page_size = 10 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -2189,6 +2216,20 @@ public final class BackupServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               pageToken_ = s;
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.Builder subBuilder = null;
+              if (idCase_ == 12) {
+                subBuilder = ((yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) id_).toBuilder();
+              }
+              id_ =
+                  input.readMessage(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) id_);
+                id_ = subBuilder.buildPartial();
+              }
+              idCase_ = 12;
               break;
             }
             default: {
@@ -3803,6 +3844,724 @@ public final class BackupServiceOuterClass {
 
     }
 
+    public interface BackupParametersOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The backupId.
+       */
+      java.lang.String getBackupId();
+      /**
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for backupId.
+       */
+      com.google.protobuf.ByteString
+          getBackupIdBytes();
+
+      /**
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
+       */
+      java.lang.String getFolderId();
+      /**
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
+       */
+      com.google.protobuf.ByteString
+          getFolderIdBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters}
+     */
+    public static final class BackupParameters extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters)
+        BackupParametersOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use BackupParameters.newBuilder() to construct.
+      private BackupParameters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private BackupParameters() {
+        backupId_ = "";
+        folderId_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new BackupParameters();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private BackupParameters(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                backupId_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                folderId_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_ListBackupsRequest_BackupParameters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_ListBackupsRequest_BackupParameters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.Builder.class);
+      }
+
+      public static final int BACKUP_ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object backupId_;
+      /**
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The backupId.
+       */
+      @java.lang.Override
+      public java.lang.String getBackupId() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backupId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for backupId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBackupIdBytes() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int FOLDER_ID_FIELD_NUMBER = 2;
+      private volatile java.lang.Object folderId_;
+      /**
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
+       */
+      @java.lang.Override
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, backupId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, backupId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) obj;
+
+        if (!getBackupId()
+            .equals(other.getBackupId())) return false;
+        if (!getFolderId()
+            .equals(other.getFolderId())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getBackupId().hashCode();
+        hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getFolderId().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters)
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParametersOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_ListBackupsRequest_BackupParameters_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_ListBackupsRequest_BackupParameters_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          backupId_ = "";
+
+          folderId_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_ListBackupsRequest_BackupParameters_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters getDefaultInstanceForType() {
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters build() {
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters buildPartial() {
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters(this);
+          result.backupId_ = backupId_;
+          result.folderId_ = folderId_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) {
+            return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters other) {
+          if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.getDefaultInstance()) return this;
+          if (!other.getBackupId().isEmpty()) {
+            backupId_ = other.backupId_;
+            onChanged();
+          }
+          if (!other.getFolderId().isEmpty()) {
+            folderId_ = other.folderId_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object backupId_ = "";
+        /**
+         * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The backupId.
+         */
+        public java.lang.String getBackupId() {
+          java.lang.Object ref = backupId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            backupId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for backupId.
+         */
+        public com.google.protobuf.ByteString
+            getBackupIdBytes() {
+          java.lang.Object ref = backupId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            backupId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The backupId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBackupId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          backupId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBackupId() {
+          
+          backupId_ = getDefaultInstance().getBackupId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for backupId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBackupIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          backupId_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object folderId_ = "";
+        /**
+         * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The folderId.
+         */
+        public java.lang.String getFolderId() {
+          java.lang.Object ref = folderId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            folderId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for folderId.
+         */
+        public com.google.protobuf.ByteString
+            getFolderIdBytes() {
+          java.lang.Object ref = folderId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            folderId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+         * @param value The folderId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFolderId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          folderId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFolderId() {
+          
+          folderId_ = getDefaultInstance().getFolderId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for folderId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFolderIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          folderId_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters)
+      private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters();
+      }
+
+      public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<BackupParameters>
+          PARSER = new com.google.protobuf.AbstractParser<BackupParameters>() {
+        @java.lang.Override
+        public BackupParameters parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new BackupParameters(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<BackupParameters> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<BackupParameters> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int idCase_ = 0;
     private java.lang.Object id_;
     public enum IdCase
@@ -3814,6 +4573,7 @@ public final class BackupServiceOuterClass {
       INSTANCE_POLICY(4),
       RESOURCE_ID(6),
       POLICY_ID(7),
+      BACKUP(12),
       ID_NOT_SET(0);
       private final int value;
       private IdCase(int value) {
@@ -3837,6 +4597,7 @@ public final class BackupServiceOuterClass {
           case 4: return INSTANCE_POLICY;
           case 6: return RESOURCE_ID;
           case 7: return POLICY_ID;
+          case 12: return BACKUP;
           case 0: return ID_NOT_SET;
           default: return null;
         }
@@ -4194,6 +4955,49 @@ public final class BackupServiceOuterClass {
       }
     }
 
+    public static final int BACKUP_FIELD_NUMBER = 12;
+    /**
+     * <pre>
+     * List backups by specific backup ID.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+     * @return Whether the backup field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackup() {
+      return idCase_ == 12;
+    }
+    /**
+     * <pre>
+     * List backups by specific backup ID.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+     * @return The backup.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters getBackup() {
+      if (idCase_ == 12) {
+         return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) id_;
+      }
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * List backups by specific backup ID.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParametersOrBuilder getBackupOrBuilder() {
+      if (idCase_ == 12) {
+         return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) id_;
+      }
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.getDefaultInstance();
+    }
+
     public static final int ORDER_BY_FIELD_NUMBER = 5;
     private volatile java.lang.Object orderBy_;
     /**
@@ -4327,7 +5131,7 @@ public final class BackupServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * Number of results per page. 
+     * Number of results per page.
      * </pre>
      *
      * <code>int64 page_size = 10 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -4431,6 +5235,9 @@ public final class BackupServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, pageToken_);
       }
+      if (idCase_ == 12) {
+        output.writeMessage(12, (yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) id_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4476,6 +5283,10 @@ public final class BackupServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, pageToken_);
+      }
+      if (idCase_ == 12) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, (yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) id_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4527,6 +5338,10 @@ public final class BackupServiceOuterClass {
           if (!getPolicyId()
               .equals(other.getPolicyId())) return false;
           break;
+        case 12:
+          if (!getBackup()
+              .equals(other.getBackup())) return false;
+          break;
         case 0:
         default:
       }
@@ -4576,6 +5391,10 @@ public final class BackupServiceOuterClass {
         case 7:
           hash = (37 * hash) + POLICY_ID_FIELD_NUMBER;
           hash = (53 * hash) + getPolicyId().hashCode();
+          break;
+        case 12:
+          hash = (37 * hash) + BACKUP_FIELD_NUMBER;
+          hash = (53 * hash) + getBackup().hashCode();
           break;
         case 0:
         default:
@@ -4777,6 +5596,13 @@ public final class BackupServiceOuterClass {
         if (idCase_ == 7) {
           result.id_ = id_;
         }
+        if (idCase_ == 12) {
+          if (backupBuilder_ == null) {
+            result.id_ = id_;
+          } else {
+            result.id_ = backupBuilder_.build();
+          }
+        }
         result.orderBy_ = orderBy_;
         result.filter_ = filter_;
         result.type_ = type_;
@@ -4880,6 +5706,10 @@ public final class BackupServiceOuterClass {
             idCase_ = 7;
             id_ = other.id_;
             onChanged();
+            break;
+          }
+          case BACKUP: {
+            mergeBackup(other.getBackup());
             break;
           }
           case ID_NOT_SET: {
@@ -5768,6 +6598,183 @@ public final class BackupServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParametersOrBuilder> backupBuilder_;
+      /**
+       * <pre>
+       * List backups by specific backup ID.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+       * @return Whether the backup field is set.
+       */
+      @java.lang.Override
+      public boolean hasBackup() {
+        return idCase_ == 12;
+      }
+      /**
+       * <pre>
+       * List backups by specific backup ID.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+       * @return The backup.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters getBackup() {
+        if (backupBuilder_ == null) {
+          if (idCase_ == 12) {
+            return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) id_;
+          }
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.getDefaultInstance();
+        } else {
+          if (idCase_ == 12) {
+            return backupBuilder_.getMessage();
+          }
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * List backups by specific backup ID.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+       */
+      public Builder setBackup(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters value) {
+        if (backupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+          onChanged();
+        } else {
+          backupBuilder_.setMessage(value);
+        }
+        idCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * List backups by specific backup ID.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+       */
+      public Builder setBackup(
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.Builder builderForValue) {
+        if (backupBuilder_ == null) {
+          id_ = builderForValue.build();
+          onChanged();
+        } else {
+          backupBuilder_.setMessage(builderForValue.build());
+        }
+        idCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * List backups by specific backup ID.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+       */
+      public Builder mergeBackup(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters value) {
+        if (backupBuilder_ == null) {
+          if (idCase_ == 12 &&
+              id_ != yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.getDefaultInstance()) {
+            id_ = yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.newBuilder((yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) id_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            id_ = value;
+          }
+          onChanged();
+        } else {
+          if (idCase_ == 12) {
+            backupBuilder_.mergeFrom(value);
+          }
+          backupBuilder_.setMessage(value);
+        }
+        idCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * List backups by specific backup ID.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+       */
+      public Builder clearBackup() {
+        if (backupBuilder_ == null) {
+          if (idCase_ == 12) {
+            idCase_ = 0;
+            id_ = null;
+            onChanged();
+          }
+        } else {
+          if (idCase_ == 12) {
+            idCase_ = 0;
+            id_ = null;
+          }
+          backupBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List backups by specific backup ID.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+       */
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.Builder getBackupBuilder() {
+        return getBackupFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * List backups by specific backup ID.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParametersOrBuilder getBackupOrBuilder() {
+        if ((idCase_ == 12) && (backupBuilder_ != null)) {
+          return backupBuilder_.getMessageOrBuilder();
+        } else {
+          if (idCase_ == 12) {
+            return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) id_;
+          }
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * List backups by specific backup ID.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ListBackupsRequest.BackupParameters backup = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParametersOrBuilder> 
+          getBackupFieldBuilder() {
+        if (backupBuilder_ == null) {
+          if (!(idCase_ == 12)) {
+            id_ = yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.getDefaultInstance();
+          }
+          backupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParametersOrBuilder>(
+                  (yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.BackupParameters) id_,
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        idCase_ = 12;
+        onChanged();;
+        return backupBuilder_;
+      }
+
       private java.lang.Object orderBy_ = "";
       /**
        * <pre>
@@ -6062,7 +7069,7 @@ public final class BackupServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * Number of results per page. 
+       * Number of results per page.
        * </pre>
        *
        * <code>int64 page_size = 10 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -6074,7 +7081,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of results per page. 
+       * Number of results per page.
        * </pre>
        *
        * <code>int64 page_size = 10 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -6089,7 +7096,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of results per page. 
+       * Number of results per page.
        * </pre>
        *
        * <code>int64 page_size = 10 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -17902,7 +18909,7 @@ public final class BackupServiceOuterClass {
   }
   /**
    * <pre>
-   * must be specified archive_id and folder/instance_id 
+   * must be specified archive_id and folder/instance_id
    * or pair of policy id and instance_id
    * </pre>
    *
@@ -18380,7 +19387,7 @@ public final class BackupServiceOuterClass {
     }
     /**
      * <pre>
-     * must be specified archive_id and folder/instance_id 
+     * must be specified archive_id and folder/instance_id
      * or pair of policy id and instance_id
      * </pre>
      *
@@ -19804,6 +20811,11 @@ public final class BackupServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_backup_v1_ListBackupsRequest_InstancePolicy_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_ListBackupsRequest_BackupParameters_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_ListBackupsRequest_BackupParameters_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_backup_v1_ListBackupsResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -19898,98 +20910,102 @@ public final class BackupServiceOuterClass {
       "(\tH\000\022\035\n\023compute_instance_id\030\002 \001(\tH\000B\n\n\002i" +
       "d\022\004\300\3011\001\"I\n\024ListArchivesResponse\0221\n\010archi" +
       "ves\030\001 \003(\0132\037.yandex.cloud.backup.v1.Archi" +
-      "ve\"\305\004\n\022ListBackupsRequest\022\035\n\023compute_ins" +
+      "ve\"\332\005\n\022ListBackupsRequest\022\035\n\023compute_ins" +
       "tance_id\030\001 \001(\tH\000\022O\n\007archive\030\002 \001(\0132<.yand" +
       "ex.cloud.backup.v1.ListBackupsRequest.Ar" +
       "chiveParametersH\000\022\023\n\tfolder_id\030\003 \001(\tH\000\022T" +
       "\n\017instance_policy\030\004 \001(\01329.yandex.cloud.b" +
       "ackup.v1.ListBackupsRequest.InstancePoli" +
       "cyH\000\022\025\n\013resource_id\030\006 \001(\tH\000\022\023\n\tpolicy_id" +
-      "\030\007 \001(\tH\000\022\020\n\010order_by\030\005 \001(\t\022\016\n\006filter\030\010 \001" +
-      "(\t\0222\n\004type\030\t \001(\0162$.yandex.cloud.backup.v" +
-      "1.ResourceType\022\035\n\tpage_size\030\n \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030\013 \001(\tB\t\212\3101\005<=100\032F\n\021" +
-      "ArchiveParameters\022\030\n\narchive_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\032@\n\016Instance" +
-      "Policy\022\033\n\023compute_instance_id\030\001 \001(\t\022\021\n\tp" +
-      "olicy_id\030\002 \001(\tB\n\n\002id\022\004\300\3011\001\"_\n\023ListBackup" +
-      "sResponse\022/\n\007backups\030\001 \003(\0132\036.yandex.clou" +
-      "d.backup.v1.Backup\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"]\n\020ListFilesRequest\022\027\n\tfolder_id\030\001 \001" +
-      "(\tB\004\350\3071\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tsou" +
-      "rce_id\030\003 \001(\tB\004\350\3071\000\"F\n\021ListFilesResponse\022" +
-      "1\n\005files\030\001 \003(\0132\".yandex.cloud.backup.v1." +
-      "BackupFile\"D\n\020GetBackupRequest\022\027\n\tbackup" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001" +
-      "\"Z\n\024StartRecoveryRequest\022)\n\023compute_inst" +
+      "\030\007 \001(\tH\000\022M\n\006backup\030\014 \001(\0132;.yandex.cloud." +
+      "backup.v1.ListBackupsRequest.BackupParam" +
+      "etersH\000\022\020\n\010order_by\030\005 \001(\t\022\016\n\006filter\030\010 \001(" +
+      "\t\0222\n\004type\030\t \001(\0162$.yandex.cloud.backup.v1" +
+      ".ResourceType\022\035\n\tpage_size\030\n \001(\003B\n\372\3071\006<=" +
+      "1000\022\035\n\npage_token\030\013 \001(\tB\t\212\3101\005<=100\032F\n\021A" +
+      "rchiveParameters\022\030\n\narchive_id\030\001 \001(\tB\004\350\307" +
+      "1\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\032@\n\016InstanceP" +
+      "olicy\022\033\n\023compute_instance_id\030\001 \001(\t\022\021\n\tpo" +
+      "licy_id\030\002 \001(\t\032D\n\020BackupParameters\022\027\n\tbac" +
+      "kup_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350" +
+      "\3071\001B\n\n\002id\022\004\300\3011\001\"_\n\023ListBackupsResponse\022/" +
+      "\n\007backups\030\001 \003(\0132\036.yandex.cloud.backup.v1" +
+      ".Backup\022\027\n\017next_page_token\030\002 \001(\t\"]\n\020List" +
+      "FilesRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\027\n" +
+      "\tbackup_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tsource_id\030\003 \001(" +
+      "\tB\004\350\3071\000\"F\n\021ListFilesResponse\0221\n\005files\030\001 " +
+      "\003(\0132\".yandex.cloud.backup.v1.BackupFile\"" +
+      "D\n\020GetBackupRequest\022\027\n\tbackup_id\030\001 \001(\tB\004" +
+      "\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\"Z\n\024StartRe" +
+      "coveryRequest\022)\n\023compute_instance_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071" +
+      "\001\"l\n\025StartRecoveryMetadata\022\033\n\023progress_p" +
+      "ercentage\030\001 \001(\001\022\025\n\rsrc_backup_id\030\002 \001(\t\022\037" +
+      "\n\027dst_compute_instance_id\030\003 \001(\t\"\024\n\022Targe" +
+      "tPathOriginal\" \n\020TargetPathCustom\022\014\n\004pat" +
+      "h\030\001 \001(\t\"\373\002\n\024FilesRecoveryOptions\022O\n\tover" +
+      "write\030\001 \001(\01626.yandex.cloud.backup.v1.Fil" +
+      "esRecoveryOptions.OverwriteB\004\350\3071\000\022\036\n\020reb" +
+      "oot_if_needed\030\002 \001(\010B\004\350\3071\000\022>\n\010original\030d " +
+      "\001(\0132*.yandex.cloud.backup.v1.TargetPathO" +
+      "riginalH\000\022:\n\006custom\030e \001(\0132(.yandex.cloud" +
+      ".backup.v1.TargetPathCustomH\000\"b\n\tOverwri" +
+      "te\022\031\n\025OVERWRITE_UNSPECIFIED\020\000\022\021\n\rOVERWRI" +
+      "TE_ALL\020\001\022\023\n\017OVERWRITE_OLDER\020\002\022\022\n\016OVERWRI" +
+      "TE_NONE\020\003B\014\n\004type\022\004\300\3011\001J\004\010\003\020d\"\265\001\n\031StartF" +
+      "ilesRecoveryRequest\022!\n\023compute_instance_" +
+      "id\030\001 \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\022" +
+      "@\n\004opts\030\003 \001(\0132,.yandex.cloud.backup.v1.F" +
+      "ilesRecoveryOptionsB\004\350\3071\001\022\032\n\nsource_ids\030" +
+      "\004 \003(\tB\006\202\3101\002>0\"\221\001\n\032StartFilesRecoveryMeta" +
+      "data\022\033\n\023progress_percentage\030\001 \001(\001\022!\n\023com" +
+      "pute_instance_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tbackup_i" +
+      "d\030\003 \001(\tB\004\350\3071\001\022\032\n\nsource_ids\030\004 \003(\tB\006\202\3101\002>" +
+      "0\"Y\n\023DeleteBackupRequest\022)\n\023compute_inst" +
       "ance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\tbackup_id" +
-      "\030\002 \001(\tB\004\350\3071\001\"l\n\025StartRecoveryMetadata\022\033\n" +
-      "\023progress_percentage\030\001 \001(\001\022\025\n\rsrc_backup" +
-      "_id\030\002 \001(\t\022\037\n\027dst_compute_instance_id\030\003 \001" +
-      "(\t\"\024\n\022TargetPathOriginal\" \n\020TargetPathCu" +
-      "stom\022\014\n\004path\030\001 \001(\t\"\373\002\n\024FilesRecoveryOpti" +
-      "ons\022O\n\toverwrite\030\001 \001(\01626.yandex.cloud.ba" +
-      "ckup.v1.FilesRecoveryOptions.OverwriteB\004" +
-      "\350\3071\000\022\036\n\020reboot_if_needed\030\002 \001(\010B\004\350\3071\000\022>\n\010" +
-      "original\030d \001(\0132*.yandex.cloud.backup.v1." +
-      "TargetPathOriginalH\000\022:\n\006custom\030e \001(\0132(.y" +
-      "andex.cloud.backup.v1.TargetPathCustomH\000" +
-      "\"b\n\tOverwrite\022\031\n\025OVERWRITE_UNSPECIFIED\020\000" +
-      "\022\021\n\rOVERWRITE_ALL\020\001\022\023\n\017OVERWRITE_OLDER\020\002" +
-      "\022\022\n\016OVERWRITE_NONE\020\003B\014\n\004type\022\004\300\3011\001J\004\010\003\020d" +
-      "\"\265\001\n\031StartFilesRecoveryRequest\022!\n\023comput" +
-      "e_instance_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\002" +
-      " \001(\tB\004\350\3071\001\022@\n\004opts\030\003 \001(\0132,.yandex.cloud." +
-      "backup.v1.FilesRecoveryOptionsB\004\350\3071\001\022\032\n\n" +
-      "source_ids\030\004 \003(\tB\006\202\3101\002>0\"\221\001\n\032StartFilesR" +
-      "ecoveryMetadata\022\033\n\023progress_percentage\030\001" +
-      " \001(\001\022!\n\023compute_instance_id\030\002 \001(\tB\004\350\3071\001\022" +
-      "\027\n\tbackup_id\030\003 \001(\tB\004\350\3071\001\022\032\n\nsource_ids\030\004" +
-      " \003(\tB\006\202\3101\002>0\"Y\n\023DeleteBackupRequest\022)\n\023c" +
-      "ompute_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027" +
-      "\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\"F\n\024DeleteBackupM" +
-      "etadata\022\033\n\023compute_instance_id\030\001 \001(\t\022\021\n\t" +
-      "backup_id\030\002 \001(\t\"\225\001\n\024DeleteArchiveRequest" +
-      "\022\030\n\narchive_id\030\001 \001(\tB\004\350\3071\000\022\037\n\tfolder_id\030" +
-      "\002 \001(\tB\014\350\3071\000\212\3101\004<=50\022!\n\013instance_id\030\003 \001(\t" +
-      "B\014\350\3071\000\212\3101\004<=50\022\037\n\tpolicy_id\030\004 \001(\tB\014\350\3071\000\212" +
-      "\3101\004<=50\">\n\025DeleteArchiveMetadata\022\022\n\narch" +
-      "ive_id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t2\222\n\n\rBack" +
-      "upService\022{\n\004List\022*.yandex.cloud.backup." +
-      "v1.ListBackupsRequest\032+.yandex.cloud.bac" +
-      "kup.v1.ListBackupsResponse\"\032\202\323\344\223\002\024\022\022/bac" +
-      "kup/v1/backups\022\244\001\n\014ListArchives\022+.yandex" +
-      ".cloud.backup.v1.ListArchivesRequest\032,.y" +
-      "andex.cloud.backup.v1.ListArchivesRespon" +
-      "se\"9\202\323\344\223\0023\0221/backup/v1/backups/{compute_" +
-      "instance_id}/archives\022\216\001\n\tListFiles\022(.ya" +
-      "ndex.cloud.backup.v1.ListFilesRequest\032)." +
-      "yandex.cloud.backup.v1.ListFilesResponse" +
-      "\",\202\323\344\223\002&\022$/backup/v1/backups/{backup_id}" +
-      "/files\022w\n\003Get\022(.yandex.cloud.backup.v1.G" +
-      "etBackupRequest\032\036.yandex.cloud.backup.v1" +
-      ".Backup\"&\202\323\344\223\002 \022\036/backup/v1/backups/{bac" +
-      "kup_id}\022\313\001\n\rStartRecovery\022,.yandex.cloud" +
-      ".backup.v1.StartRecoveryRequest\032!.yandex" +
-      ".cloud.operation.Operation\"i\202\323\344\223\0021\",/bac" +
-      "kup/v1/backups/{backup_id}:startRecovery" +
-      ":\001*\262\322*.\n\025StartRecoveryMetadata\022\025google.p" +
-      "rotobuf.Empty\022\243\001\n\022StartFilesRecovery\0221.y" +
-      "andex.cloud.backup.v1.StartFilesRecovery" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"7\262\322*3\n\032StartFilesRecoveryMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\307\001\n\006Delete\022+.yandex." +
-      "cloud.backup.v1.DeleteBackupRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"m\202\323\344\223\0026*4" +
-      "/backup/v1/backups/{compute_instance_id}" +
-      "/{backup_id}\262\322*-\n\024DeleteBackupMetadata\022\025" +
-      "google.protobuf.Empty\022\224\001\n\rDeleteArchive\022" +
-      ",.yandex.cloud.backup.v1.DeleteArchiveRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"2\262\322*.\n\025DeleteArchiveMetadata\022\025google.pr" +
-      "otobuf.EmptyB_\n\032yandex.cloud.api.backup." +
-      "v1ZAgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/backup/v1;backupb\006proto3"
+      "\030\002 \001(\tB\004\350\3071\001\"F\n\024DeleteBackupMetadata\022\033\n\023" +
+      "compute_instance_id\030\001 \001(\t\022\021\n\tbackup_id\030\002" +
+      " \001(\t\"\225\001\n\024DeleteArchiveRequest\022\030\n\narchive" +
+      "_id\030\001 \001(\tB\004\350\3071\000\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\000" +
+      "\212\3101\004<=50\022!\n\013instance_id\030\003 \001(\tB\014\350\3071\000\212\3101\004<" +
+      "=50\022\037\n\tpolicy_id\030\004 \001(\tB\014\350\3071\000\212\3101\004<=50\">\n\025" +
+      "DeleteArchiveMetadata\022\022\n\narchive_id\030\001 \001(" +
+      "\t\022\021\n\tfolder_id\030\002 \001(\t2\222\n\n\rBackupService\022{" +
+      "\n\004List\022*.yandex.cloud.backup.v1.ListBack" +
+      "upsRequest\032+.yandex.cloud.backup.v1.List" +
+      "BackupsResponse\"\032\202\323\344\223\002\024\022\022/backup/v1/back" +
+      "ups\022\244\001\n\014ListArchives\022+.yandex.cloud.back" +
+      "up.v1.ListArchivesRequest\032,.yandex.cloud" +
+      ".backup.v1.ListArchivesResponse\"9\202\323\344\223\0023\022" +
+      "1/backup/v1/backups/{compute_instance_id" +
+      "}/archives\022\216\001\n\tListFiles\022(.yandex.cloud." +
+      "backup.v1.ListFilesRequest\032).yandex.clou" +
+      "d.backup.v1.ListFilesResponse\",\202\323\344\223\002&\022$/" +
+      "backup/v1/backups/{backup_id}/files\022w\n\003G" +
+      "et\022(.yandex.cloud.backup.v1.GetBackupReq" +
+      "uest\032\036.yandex.cloud.backup.v1.Backup\"&\202\323" +
+      "\344\223\002 \022\036/backup/v1/backups/{backup_id}\022\313\001\n" +
+      "\rStartRecovery\022,.yandex.cloud.backup.v1." +
+      "StartRecoveryRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"i\202\323\344\223\0021\",/backup/v1/back" +
+      "ups/{backup_id}:startRecovery:\001*\262\322*.\n\025St" +
+      "artRecoveryMetadata\022\025google.protobuf.Emp" +
+      "ty\022\243\001\n\022StartFilesRecovery\0221.yandex.cloud" +
+      ".backup.v1.StartFilesRecoveryRequest\032!.y" +
+      "andex.cloud.operation.Operation\"7\262\322*3\n\032S" +
+      "tartFilesRecoveryMetadata\022\025google.protob" +
+      "uf.Empty\022\307\001\n\006Delete\022+.yandex.cloud.backu" +
+      "p.v1.DeleteBackupRequest\032!.yandex.cloud." +
+      "operation.Operation\"m\202\323\344\223\0026*4/backup/v1/" +
+      "backups/{compute_instance_id}/{backup_id" +
+      "}\262\322*-\n\024DeleteBackupMetadata\022\025google.prot" +
+      "obuf.Empty\022\224\001\n\rDeleteArchive\022,.yandex.cl" +
+      "oud.backup.v1.DeleteArchiveRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"2\262\322*.\n\025Del" +
+      "eteArchiveMetadata\022\025google.protobuf.Empt" +
+      "yB_\n\032yandex.cloud.api.backup.v1ZAgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/backup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20018,7 +21034,7 @@ public final class BackupServiceOuterClass {
     internal_static_yandex_cloud_backup_v1_ListBackupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ListBackupsRequest_descriptor,
-        new java.lang.String[] { "ComputeInstanceId", "Archive", "FolderId", "InstancePolicy", "ResourceId", "PolicyId", "OrderBy", "Filter", "Type", "PageSize", "PageToken", "Id", });
+        new java.lang.String[] { "ComputeInstanceId", "Archive", "FolderId", "InstancePolicy", "ResourceId", "PolicyId", "Backup", "OrderBy", "Filter", "Type", "PageSize", "PageToken", "Id", });
     internal_static_yandex_cloud_backup_v1_ListBackupsRequest_ArchiveParameters_descriptor =
       internal_static_yandex_cloud_backup_v1_ListBackupsRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_backup_v1_ListBackupsRequest_ArchiveParameters_fieldAccessorTable = new
@@ -20031,6 +21047,12 @@ public final class BackupServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ListBackupsRequest_InstancePolicy_descriptor,
         new java.lang.String[] { "ComputeInstanceId", "PolicyId", });
+    internal_static_yandex_cloud_backup_v1_ListBackupsRequest_BackupParameters_descriptor =
+      internal_static_yandex_cloud_backup_v1_ListBackupsRequest_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_backup_v1_ListBackupsRequest_BackupParameters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_ListBackupsRequest_BackupParameters_descriptor,
+        new java.lang.String[] { "BackupId", "FolderId", });
     internal_static_yandex_cloud_backup_v1_ListBackupsResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_backup_v1_ListBackupsResponse_fieldAccessorTable = new

@@ -154,6 +154,33 @@ public final class WidgetOuterClass {
     yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidgetOrBuilder getMultiSourceChartOrBuilder();
 
     /**
+     * <pre>
+     * Group widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+     * @return Whether the group field is set.
+     */
+    boolean hasGroup();
+    /**
+     * <pre>
+     * Group widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+     * @return The group.
+     */
+    yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget getGroup();
+    /**
+     * <pre>
+     * Group widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+     */
+    yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidgetOrBuilder getGroupOrBuilder();
+
+    /**
      * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 12;</code>
      */
     java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> 
@@ -297,6 +324,20 @@ public final class WidgetOuterClass {
                 widget_ = subBuilder.buildPartial();
               }
               widgetCase_ = 10;
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.Builder subBuilder = null;
+              if (widgetCase_ == 11) {
+                subBuilder = ((yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget) widget_).toBuilder();
+              }
+              widget_ =
+                  input.readMessage(yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget) widget_);
+                widget_ = subBuilder.buildPartial();
+              }
+              widgetCase_ = 11;
               break;
             }
             case 98: {
@@ -1142,6 +1183,7 @@ public final class WidgetOuterClass {
       TITLE(3),
       CHART(5),
       MULTI_SOURCE_CHART(10),
+      GROUP(11),
       WIDGET_NOT_SET(0);
       private final int value;
       private WidgetCase(int value) {
@@ -1163,6 +1205,7 @@ public final class WidgetOuterClass {
           case 3: return TITLE;
           case 5: return CHART;
           case 10: return MULTI_SOURCE_CHART;
+          case 11: return GROUP;
           case 0: return WIDGET_NOT_SET;
           default: return null;
         }
@@ -1388,6 +1431,49 @@ public final class WidgetOuterClass {
       return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.getDefaultInstance();
     }
 
+    public static final int GROUP_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * Group widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+     * @return Whether the group field is set.
+     */
+    @java.lang.Override
+    public boolean hasGroup() {
+      return widgetCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Group widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+     * @return The group.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget getGroup() {
+      if (widgetCase_ == 11) {
+         return (yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget) widget_;
+      }
+      return yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Group widget.
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidgetOrBuilder getGroupOrBuilder() {
+      if (widgetCase_ == 11) {
+         return (yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget) widget_;
+      }
+      return yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.getDefaultInstance();
+    }
+
     public static final int LINKS_FIELD_NUMBER = 12;
     private java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> links_;
     /**
@@ -1457,6 +1543,9 @@ public final class WidgetOuterClass {
       if (widgetCase_ == 10) {
         output.writeMessage(10, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_);
       }
+      if (widgetCase_ == 11) {
+        output.writeMessage(11, (yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget) widget_);
+      }
       for (int i = 0; i < links_.size(); i++) {
         output.writeMessage(12, links_.get(i));
       }
@@ -1488,6 +1577,10 @@ public final class WidgetOuterClass {
       if (widgetCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget) widget_);
+      }
+      if (widgetCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget) widget_);
       }
       for (int i = 0; i < links_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -1533,6 +1626,10 @@ public final class WidgetOuterClass {
           if (!getMultiSourceChart()
               .equals(other.getMultiSourceChart())) return false;
           break;
+        case 11:
+          if (!getGroup()
+              .equals(other.getGroup())) return false;
+          break;
         case 0:
         default:
       }
@@ -1571,6 +1668,10 @@ public final class WidgetOuterClass {
         case 10:
           hash = (37 * hash) + MULTI_SOURCE_CHART_FIELD_NUMBER;
           hash = (53 * hash) + getMultiSourceChart().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + GROUP_FIELD_NUMBER;
+          hash = (53 * hash) + getGroup().hashCode();
           break;
         case 0:
         default:
@@ -1787,6 +1888,13 @@ public final class WidgetOuterClass {
             result.widget_ = multiSourceChartBuilder_.build();
           }
         }
+        if (widgetCase_ == 11) {
+          if (groupBuilder_ == null) {
+            result.widget_ = widget_;
+          } else {
+            result.widget_ = groupBuilder_.build();
+          }
+        }
         if (linksBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             links_ = java.util.Collections.unmodifiableList(links_);
@@ -1889,6 +1997,10 @@ public final class WidgetOuterClass {
           }
           case MULTI_SOURCE_CHART: {
             mergeMultiSourceChart(other.getMultiSourceChart());
+            break;
+          }
+          case GROUP: {
+            mergeGroup(other.getGroup());
             break;
           }
           case WIDGET_NOT_SET: {
@@ -2803,6 +2915,183 @@ public final class WidgetOuterClass {
         return multiSourceChartBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget, yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.Builder, yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidgetOrBuilder> groupBuilder_;
+      /**
+       * <pre>
+       * Group widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+       * @return Whether the group field is set.
+       */
+      @java.lang.Override
+      public boolean hasGroup() {
+        return widgetCase_ == 11;
+      }
+      /**
+       * <pre>
+       * Group widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+       * @return The group.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget getGroup() {
+        if (groupBuilder_ == null) {
+          if (widgetCase_ == 11) {
+            return (yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget) widget_;
+          }
+          return yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.getDefaultInstance();
+        } else {
+          if (widgetCase_ == 11) {
+            return groupBuilder_.getMessage();
+          }
+          return yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Group widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+       */
+      public Builder setGroup(yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget value) {
+        if (groupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          widget_ = value;
+          onChanged();
+        } else {
+          groupBuilder_.setMessage(value);
+        }
+        widgetCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Group widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+       */
+      public Builder setGroup(
+          yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.Builder builderForValue) {
+        if (groupBuilder_ == null) {
+          widget_ = builderForValue.build();
+          onChanged();
+        } else {
+          groupBuilder_.setMessage(builderForValue.build());
+        }
+        widgetCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Group widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+       */
+      public Builder mergeGroup(yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget value) {
+        if (groupBuilder_ == null) {
+          if (widgetCase_ == 11 &&
+              widget_ != yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.getDefaultInstance()) {
+            widget_ = yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.newBuilder((yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget) widget_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            widget_ = value;
+          }
+          onChanged();
+        } else {
+          if (widgetCase_ == 11) {
+            groupBuilder_.mergeFrom(value);
+          }
+          groupBuilder_.setMessage(value);
+        }
+        widgetCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Group widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+       */
+      public Builder clearGroup() {
+        if (groupBuilder_ == null) {
+          if (widgetCase_ == 11) {
+            widgetCase_ = 0;
+            widget_ = null;
+            onChanged();
+          }
+        } else {
+          if (widgetCase_ == 11) {
+            widgetCase_ = 0;
+            widget_ = null;
+          }
+          groupBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Group widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.Builder getGroupBuilder() {
+        return getGroupFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Group widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidgetOrBuilder getGroupOrBuilder() {
+        if ((widgetCase_ == 11) && (groupBuilder_ != null)) {
+          return groupBuilder_.getMessageOrBuilder();
+        } else {
+          if (widgetCase_ == 11) {
+            return (yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget) widget_;
+          }
+          return yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Group widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.GroupWidget group = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget, yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.Builder, yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidgetOrBuilder> 
+          getGroupFieldBuilder() {
+        if (groupBuilder_ == null) {
+          if (!(widgetCase_ == 11)) {
+            widget_ = yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.getDefaultInstance();
+          }
+          groupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget, yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget.Builder, yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidgetOrBuilder>(
+                  (yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.GroupWidget) widget_,
+                  getParentForChildren(),
+                  isClean());
+          widget_ = null;
+        }
+        widgetCase_ = 11;
+        onChanged();;
+        return groupBuilder_;
+      }
+
       private java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> links_ =
         java.util.Collections.emptyList();
       private void ensureLinksIsMutable() {
@@ -3121,22 +3410,25 @@ public final class WidgetOuterClass {
       "to\032-yandex/cloud/monitoring/v3/title_wid" +
       "get.proto\032:yandex/cloud/monitoring/v3/mu" +
       "lti_source_chart_widget.proto\032*yandex/cl" +
-      "oud/monitoring/v3/link_item.proto\"\332\003\n\006Wi" +
-      "dget\022C\n\010position\030\001 \001(\01321.yandex.cloud.mo" +
-      "nitoring.v3.Widget.LayoutPosition\0226\n\004tex" +
-      "t\030\002 \001(\0132&.yandex.cloud.monitoring.v3.Tex" +
-      "tWidgetH\000\0228\n\005title\030\003 \001(\0132\'.yandex.cloud." +
-      "monitoring.v3.TitleWidgetH\000\0228\n\005chart\030\005 \001" +
-      "(\0132\'.yandex.cloud.monitoring.v3.ChartWid" +
-      "getH\000\022P\n\022multi_source_chart\030\n \001(\01322.yand" +
-      "ex.cloud.monitoring.v3.MultiSourceChartW" +
-      "idgetH\000\0223\n\005links\030\014 \003(\0132$.yandex.cloud.mo" +
-      "nitoring.v3.LinkItem\032<\n\016LayoutPosition\022\t" +
-      "\n\001x\030\001 \001(\003\022\t\n\001y\030\002 \001(\003\022\t\n\001w\030\003 \001(\003\022\t\n\001h\030\004 \001" +
-      "(\003B\010\n\006widgetJ\004\010\004\020\005J\004\010\006\020\nJ\004\010\013\020\014Bk\n\036yandex" +
-      ".cloud.api.monitoring.v3ZIgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/monit" +
-      "oring/v3;monitoringb\006proto3"
+      "oud/monitoring/v3/link_item.proto\032-yande" +
+      "x/cloud/monitoring/v3/group_widget.proto" +
+      "\"\216\004\n\006Widget\022C\n\010position\030\001 \001(\01321.yandex.c" +
+      "loud.monitoring.v3.Widget.LayoutPosition" +
+      "\0226\n\004text\030\002 \001(\0132&.yandex.cloud.monitoring" +
+      ".v3.TextWidgetH\000\0228\n\005title\030\003 \001(\0132\'.yandex" +
+      ".cloud.monitoring.v3.TitleWidgetH\000\0228\n\005ch" +
+      "art\030\005 \001(\0132\'.yandex.cloud.monitoring.v3.C" +
+      "hartWidgetH\000\022P\n\022multi_source_chart\030\n \001(\013" +
+      "22.yandex.cloud.monitoring.v3.MultiSourc" +
+      "eChartWidgetH\000\0228\n\005group\030\013 \001(\0132\'.yandex.c" +
+      "loud.monitoring.v3.GroupWidgetH\000\0223\n\005link" +
+      "s\030\014 \003(\0132$.yandex.cloud.monitoring.v3.Lin" +
+      "kItem\032<\n\016LayoutPosition\022\t\n\001x\030\001 \001(\003\022\t\n\001y\030" +
+      "\002 \001(\003\022\t\n\001w\030\003 \001(\003\022\t\n\001h\030\004 \001(\003B\010\n\006widgetJ\004\010" +
+      "\004\020\005J\004\010\006\020\nBk\n\036yandex.cloud.api.monitoring" +
+      ".v3ZIgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/monitoring/v3;monitoringb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3146,13 +3438,14 @@ public final class WidgetOuterClass {
           yandex.cloud.api.monitoring.v3.TitleWidgetOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.LinkItemOuterClass.getDescriptor(),
+          yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_monitoring_v3_Widget_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_Widget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_Widget_descriptor,
-        new java.lang.String[] { "Position", "Text", "Title", "Chart", "MultiSourceChart", "Links", "Widget", });
+        new java.lang.String[] { "Position", "Text", "Title", "Chart", "MultiSourceChart", "Group", "Links", "Widget", });
     internal_static_yandex_cloud_monitoring_v3_Widget_LayoutPosition_descriptor =
       internal_static_yandex_cloud_monitoring_v3_Widget_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_Widget_LayoutPosition_fieldAccessorTable = new
@@ -3164,6 +3457,7 @@ public final class WidgetOuterClass {
     yandex.cloud.api.monitoring.v3.TitleWidgetOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.LinkItemOuterClass.getDescriptor();
+    yandex.cloud.api.monitoring.v3.GroupWidgetOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

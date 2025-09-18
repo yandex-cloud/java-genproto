@@ -235,6 +235,37 @@ public final class ResourceServiceGrpc {
     return getListOperationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest,
+      yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse> getGetInstanceRegistrationTokenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetInstanceRegistrationToken",
+      requestType = yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest.class,
+      responseType = yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest,
+      yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse> getGetInstanceRegistrationTokenMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest, yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse> getGetInstanceRegistrationTokenMethod;
+    if ((getGetInstanceRegistrationTokenMethod = ResourceServiceGrpc.getGetInstanceRegistrationTokenMethod) == null) {
+      synchronized (ResourceServiceGrpc.class) {
+        if ((getGetInstanceRegistrationTokenMethod = ResourceServiceGrpc.getGetInstanceRegistrationTokenMethod) == null) {
+          ResourceServiceGrpc.getGetInstanceRegistrationTokenMethod = getGetInstanceRegistrationTokenMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest, yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetInstanceRegistrationToken"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ResourceServiceMethodDescriptorSupplier("GetInstanceRegistrationToken"))
+              .build();
+        }
+      }
+    }
+    return getGetInstanceRegistrationTokenMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -358,6 +389,16 @@ public final class ResourceServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Get instance registration token to install backup agent withot SA attached to instance
+     * </pre>
+     */
+    public void getInstanceRegistrationToken(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInstanceRegistrationTokenMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -409,6 +450,13 @@ public final class ResourceServiceGrpc {
                 yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest,
                 yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
+          .addMethod(
+            getGetInstanceRegistrationTokenMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest,
+                yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse>(
+                  this, METHODID_GET_INSTANCE_REGISTRATION_TOKEN)))
           .build();
     }
   }
@@ -508,6 +556,17 @@ public final class ResourceServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Get instance registration token to install backup agent withot SA attached to instance
+     * </pre>
+     */
+    public void getInstanceRegistrationToken(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetInstanceRegistrationTokenMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -597,6 +656,16 @@ public final class ResourceServiceGrpc {
     public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse listOperations(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get instance registration token to install backup agent withot SA attached to instance
+     * </pre>
+     */
+    public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse getInstanceRegistrationToken(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetInstanceRegistrationTokenMethod(), getCallOptions(), request);
     }
   }
 
@@ -695,6 +764,17 @@ public final class ResourceServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Get instance registration token to install backup agent withot SA attached to instance
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse> getInstanceRegistrationToken(
+        yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetInstanceRegistrationTokenMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST = 0;
@@ -704,6 +784,7 @@ public final class ResourceServiceGrpc {
   private static final int METHODID_LIST_DIRECTORY = 4;
   private static final int METHODID_CREATE_DIRECTORY = 5;
   private static final int METHODID_LIST_OPERATIONS = 6;
+  private static final int METHODID_GET_INSTANCE_REGISTRATION_TOKEN = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -749,6 +830,10 @@ public final class ResourceServiceGrpc {
         case METHODID_LIST_OPERATIONS:
           serviceImpl.listOperations((yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse>) responseObserver);
+          break;
+        case METHODID_GET_INSTANCE_REGISTRATION_TOKEN:
+          serviceImpl.getInstanceRegistrationToken((yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -818,6 +903,7 @@ public final class ResourceServiceGrpc {
               .addMethod(getListDirectoryMethod())
               .addMethod(getCreateDirectoryMethod())
               .addMethod(getListOperationsMethod())
+              .addMethod(getGetInstanceRegistrationTokenMethod())
               .build();
         }
       }

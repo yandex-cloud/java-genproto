@@ -3407,6 +3407,18 @@ public final class ReservedInstancePoolServiceOuterClass {
      * @return The size.
      */
     long getSize();
+
+    /**
+     * <pre>
+     * Allows the pool to contain more linked instances than the number of available slots (size without pending or unavailable slots).
+     * While running instances are still limited by available slots, stopped instances can exceed this limit.
+     * Warning: When this option is enabled, attempting to start more instances than the number of available slots will result in a "Not Enough Resources" error.
+     * </pre>
+     *
+     * <code>bool allow_oversubscription = 12;</code>
+     * @return The allowOversubscription.
+     */
+    boolean getAllowOversubscription();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreateReservedInstancePoolRequest}
@@ -3557,6 +3569,11 @@ public final class ReservedInstancePoolServiceOuterClass {
             case 88: {
 
               size_ = input.readInt64();
+              break;
+            }
+            case 96: {
+
+              allowOversubscription_ = input.readBool();
               break;
             }
             default: {
@@ -4108,6 +4125,23 @@ public final class ReservedInstancePoolServiceOuterClass {
       return size_;
     }
 
+    public static final int ALLOW_OVERSUBSCRIPTION_FIELD_NUMBER = 12;
+    private boolean allowOversubscription_;
+    /**
+     * <pre>
+     * Allows the pool to contain more linked instances than the number of available slots (size without pending or unavailable slots).
+     * While running instances are still limited by available slots, stopped instances can exceed this limit.
+     * Warning: When this option is enabled, attempting to start more instances than the number of available slots will result in a "Not Enough Resources" error.
+     * </pre>
+     *
+     * <code>bool allow_oversubscription = 12;</code>
+     * @return The allowOversubscription.
+     */
+    @java.lang.Override
+    public boolean getAllowOversubscription() {
+      return allowOversubscription_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4157,6 +4191,9 @@ public final class ReservedInstancePoolServiceOuterClass {
       }
       if (size_ != 0L) {
         output.writeInt64(11, size_);
+      }
+      if (allowOversubscription_ != false) {
+        output.writeBool(12, allowOversubscription_);
       }
       unknownFields.writeTo(output);
     }
@@ -4212,6 +4249,10 @@ public final class ReservedInstancePoolServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(11, size_);
       }
+      if (allowOversubscription_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, allowOversubscription_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4261,6 +4302,8 @@ public final class ReservedInstancePoolServiceOuterClass {
       }
       if (getSize()
           != other.getSize()) return false;
+      if (getAllowOversubscription()
+          != other.getAllowOversubscription()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4305,6 +4348,9 @@ public final class ReservedInstancePoolServiceOuterClass {
       hash = (37 * hash) + SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSize());
+      hash = (37 * hash) + ALLOW_OVERSUBSCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllowOversubscription());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4497,6 +4543,8 @@ public final class ReservedInstancePoolServiceOuterClass {
         }
         size_ = 0L;
 
+        allowOversubscription_ = false;
+
         return this;
       }
 
@@ -4552,6 +4600,7 @@ public final class ReservedInstancePoolServiceOuterClass {
           result.networkSettings_ = networkSettingsBuilder_.build();
         }
         result.size_ = size_;
+        result.allowOversubscription_ = allowOversubscription_;
         onBuilt();
         return result;
       }
@@ -4636,6 +4685,9 @@ public final class ReservedInstancePoolServiceOuterClass {
         }
         if (other.getSize() != 0L) {
           setSize(other.getSize());
+        }
+        if (other.getAllowOversubscription() != false) {
+          setAllowOversubscription(other.getAllowOversubscription());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5997,6 +6049,55 @@ public final class ReservedInstancePoolServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean allowOversubscription_ ;
+      /**
+       * <pre>
+       * Allows the pool to contain more linked instances than the number of available slots (size without pending or unavailable slots).
+       * While running instances are still limited by available slots, stopped instances can exceed this limit.
+       * Warning: When this option is enabled, attempting to start more instances than the number of available slots will result in a "Not Enough Resources" error.
+       * </pre>
+       *
+       * <code>bool allow_oversubscription = 12;</code>
+       * @return The allowOversubscription.
+       */
+      @java.lang.Override
+      public boolean getAllowOversubscription() {
+        return allowOversubscription_;
+      }
+      /**
+       * <pre>
+       * Allows the pool to contain more linked instances than the number of available slots (size without pending or unavailable slots).
+       * While running instances are still limited by available slots, stopped instances can exceed this limit.
+       * Warning: When this option is enabled, attempting to start more instances than the number of available slots will result in a "Not Enough Resources" error.
+       * </pre>
+       *
+       * <code>bool allow_oversubscription = 12;</code>
+       * @param value The allowOversubscription to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowOversubscription(boolean value) {
+        
+        allowOversubscription_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows the pool to contain more linked instances than the number of available slots (size without pending or unavailable slots).
+       * While running instances are still limited by available slots, stopped instances can exceed this limit.
+       * Warning: When this option is enabled, attempting to start more instances than the number of available slots will result in a "Not Enough Resources" error.
+       * </pre>
+       *
+       * <code>bool allow_oversubscription = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowOversubscription() {
+        
+        allowOversubscription_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6815,6 +6916,30 @@ public final class ReservedInstancePoolServiceOuterClass {
      * @return The size.
      */
     long getSize();
+
+    /**
+     * <pre>
+     * Allows the pool to contain more linked instances than the number of available slots (size without pending or unavailable slots).
+     * While running instances are still limited by available slots, stopped instances can exceed this limit.
+     * Warning: When this option is enabled, attempting to start more instances than the number of available slots will result in a "Not Enough Resources" error.
+     * </pre>
+     *
+     * <code>bool allow_oversubscription = 7;</code>
+     * @return The allowOversubscription.
+     */
+    boolean getAllowOversubscription();
+
+    /**
+     * <pre>
+     * This field affects only the current request and allows size-increasing operation to complete successfully even when there are not enough resources.
+     * In such cases, some of the new pool slots become "pending", meaning they cannot be used until resources become available.
+     * Pending slots automatically convert to normal slots when sufficient resources are available.
+     * </pre>
+     *
+     * <code>bool allow_pending_slots = 8;</code>
+     * @return The allowPendingSlots.
+     */
+    boolean getAllowPendingSlots();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdateReservedInstancePoolRequest}
@@ -6912,6 +7037,16 @@ public final class ReservedInstancePoolServiceOuterClass {
             case 48: {
 
               size_ = input.readInt64();
+              break;
+            }
+            case 56: {
+
+              allowOversubscription_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              allowPendingSlots_ = input.readBool();
               break;
             }
             default: {
@@ -7252,6 +7387,40 @@ public final class ReservedInstancePoolServiceOuterClass {
       return size_;
     }
 
+    public static final int ALLOW_OVERSUBSCRIPTION_FIELD_NUMBER = 7;
+    private boolean allowOversubscription_;
+    /**
+     * <pre>
+     * Allows the pool to contain more linked instances than the number of available slots (size without pending or unavailable slots).
+     * While running instances are still limited by available slots, stopped instances can exceed this limit.
+     * Warning: When this option is enabled, attempting to start more instances than the number of available slots will result in a "Not Enough Resources" error.
+     * </pre>
+     *
+     * <code>bool allow_oversubscription = 7;</code>
+     * @return The allowOversubscription.
+     */
+    @java.lang.Override
+    public boolean getAllowOversubscription() {
+      return allowOversubscription_;
+    }
+
+    public static final int ALLOW_PENDING_SLOTS_FIELD_NUMBER = 8;
+    private boolean allowPendingSlots_;
+    /**
+     * <pre>
+     * This field affects only the current request and allows size-increasing operation to complete successfully even when there are not enough resources.
+     * In such cases, some of the new pool slots become "pending", meaning they cannot be used until resources become available.
+     * Pending slots automatically convert to normal slots when sufficient resources are available.
+     * </pre>
+     *
+     * <code>bool allow_pending_slots = 8;</code>
+     * @return The allowPendingSlots.
+     */
+    @java.lang.Override
+    public boolean getAllowPendingSlots() {
+      return allowPendingSlots_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7286,6 +7455,12 @@ public final class ReservedInstancePoolServiceOuterClass {
           5);
       if (size_ != 0L) {
         output.writeInt64(6, size_);
+      }
+      if (allowOversubscription_ != false) {
+        output.writeBool(7, allowOversubscription_);
+      }
+      if (allowPendingSlots_ != false) {
+        output.writeBool(8, allowPendingSlots_);
       }
       unknownFields.writeTo(output);
     }
@@ -7323,6 +7498,14 @@ public final class ReservedInstancePoolServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, size_);
       }
+      if (allowOversubscription_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, allowOversubscription_);
+      }
+      if (allowPendingSlots_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, allowPendingSlots_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7353,6 +7536,10 @@ public final class ReservedInstancePoolServiceOuterClass {
           other.internalGetLabels())) return false;
       if (getSize()
           != other.getSize()) return false;
+      if (getAllowOversubscription()
+          != other.getAllowOversubscription()) return false;
+      if (getAllowPendingSlots()
+          != other.getAllowPendingSlots()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7381,6 +7568,12 @@ public final class ReservedInstancePoolServiceOuterClass {
       hash = (37 * hash) + SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSize());
+      hash = (37 * hash) + ALLOW_OVERSUBSCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllowOversubscription());
+      hash = (37 * hash) + ALLOW_PENDING_SLOTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllowPendingSlots());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7551,6 +7744,10 @@ public final class ReservedInstancePoolServiceOuterClass {
         internalGetMutableLabels().clear();
         size_ = 0L;
 
+        allowOversubscription_ = false;
+
+        allowPendingSlots_ = false;
+
         return this;
       }
 
@@ -7589,6 +7786,8 @@ public final class ReservedInstancePoolServiceOuterClass {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.size_ = size_;
+        result.allowOversubscription_ = allowOversubscription_;
+        result.allowPendingSlots_ = allowPendingSlots_;
         onBuilt();
         return result;
       }
@@ -7656,6 +7855,12 @@ public final class ReservedInstancePoolServiceOuterClass {
             other.internalGetLabels());
         if (other.getSize() != 0L) {
           setSize(other.getSize());
+        }
+        if (other.getAllowOversubscription() != false) {
+          setAllowOversubscription(other.getAllowOversubscription());
+        }
+        if (other.getAllowPendingSlots() != false) {
+          setAllowPendingSlots(other.getAllowPendingSlots());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8340,6 +8545,104 @@ public final class ReservedInstancePoolServiceOuterClass {
       public Builder clearSize() {
         
         size_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean allowOversubscription_ ;
+      /**
+       * <pre>
+       * Allows the pool to contain more linked instances than the number of available slots (size without pending or unavailable slots).
+       * While running instances are still limited by available slots, stopped instances can exceed this limit.
+       * Warning: When this option is enabled, attempting to start more instances than the number of available slots will result in a "Not Enough Resources" error.
+       * </pre>
+       *
+       * <code>bool allow_oversubscription = 7;</code>
+       * @return The allowOversubscription.
+       */
+      @java.lang.Override
+      public boolean getAllowOversubscription() {
+        return allowOversubscription_;
+      }
+      /**
+       * <pre>
+       * Allows the pool to contain more linked instances than the number of available slots (size without pending or unavailable slots).
+       * While running instances are still limited by available slots, stopped instances can exceed this limit.
+       * Warning: When this option is enabled, attempting to start more instances than the number of available slots will result in a "Not Enough Resources" error.
+       * </pre>
+       *
+       * <code>bool allow_oversubscription = 7;</code>
+       * @param value The allowOversubscription to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowOversubscription(boolean value) {
+        
+        allowOversubscription_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows the pool to contain more linked instances than the number of available slots (size without pending or unavailable slots).
+       * While running instances are still limited by available slots, stopped instances can exceed this limit.
+       * Warning: When this option is enabled, attempting to start more instances than the number of available slots will result in a "Not Enough Resources" error.
+       * </pre>
+       *
+       * <code>bool allow_oversubscription = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowOversubscription() {
+        
+        allowOversubscription_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean allowPendingSlots_ ;
+      /**
+       * <pre>
+       * This field affects only the current request and allows size-increasing operation to complete successfully even when there are not enough resources.
+       * In such cases, some of the new pool slots become "pending", meaning they cannot be used until resources become available.
+       * Pending slots automatically convert to normal slots when sufficient resources are available.
+       * </pre>
+       *
+       * <code>bool allow_pending_slots = 8;</code>
+       * @return The allowPendingSlots.
+       */
+      @java.lang.Override
+      public boolean getAllowPendingSlots() {
+        return allowPendingSlots_;
+      }
+      /**
+       * <pre>
+       * This field affects only the current request and allows size-increasing operation to complete successfully even when there are not enough resources.
+       * In such cases, some of the new pool slots become "pending", meaning they cannot be used until resources become available.
+       * Pending slots automatically convert to normal slots when sufficient resources are available.
+       * </pre>
+       *
+       * <code>bool allow_pending_slots = 8;</code>
+       * @param value The allowPendingSlots to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowPendingSlots(boolean value) {
+        
+        allowPendingSlots_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This field affects only the current request and allows size-increasing operation to complete successfully even when there are not enough resources.
+       * In such cases, some of the new pool slots become "pending", meaning they cannot be used until resources become available.
+       * Pending slots automatically convert to normal slots when sufficient resources are available.
+       * </pre>
+       *
+       * <code>bool allow_pending_slots = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowPendingSlots() {
+        
+        allowPendingSlots_ = false;
         onChanged();
         return this;
       }
@@ -10635,6 +10938,4074 @@ public final class ReservedInstancePoolServiceOuterClass {
 
   }
 
+  public interface ListReservedInstancePoolOperationsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.ListReservedInstancePoolOperationsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the reserved instance pool to list operations for.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The reservedInstancePoolId.
+     */
+    java.lang.String getReservedInstancePoolId();
+    /**
+     * <pre>
+     * ID of the reserved instance pool to list operations for.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for reservedInstancePoolId.
+     */
+    com.google.protobuf.ByteString
+        getReservedInstancePoolIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListReservedInstancePoolOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListReservedInstancePoolOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListReservedInstancePoolOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.ListReservedInstancePoolOperationsRequest}
+   */
+  public static final class ListReservedInstancePoolOperationsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListReservedInstancePoolOperationsRequest)
+      ListReservedInstancePoolOperationsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListReservedInstancePoolOperationsRequest.newBuilder() to construct.
+    private ListReservedInstancePoolOperationsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListReservedInstancePoolOperationsRequest() {
+      reservedInstancePoolId_ = "";
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListReservedInstancePoolOperationsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListReservedInstancePoolOperationsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              reservedInstancePoolId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest.class, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest.Builder.class);
+    }
+
+    public static final int RESERVED_INSTANCE_POOL_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object reservedInstancePoolId_;
+    /**
+     * <pre>
+     * ID of the reserved instance pool to list operations for.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The reservedInstancePoolId.
+     */
+    @java.lang.Override
+    public java.lang.String getReservedInstancePoolId() {
+      java.lang.Object ref = reservedInstancePoolId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reservedInstancePoolId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the reserved instance pool to list operations for.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for reservedInstancePoolId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReservedInstancePoolIdBytes() {
+      java.lang.Object ref = reservedInstancePoolId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reservedInstancePoolId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListReservedInstancePoolOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListReservedInstancePoolOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListReservedInstancePoolOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservedInstancePoolId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, reservedInstancePoolId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservedInstancePoolId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, reservedInstancePoolId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest other = (yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest) obj;
+
+      if (!getReservedInstancePoolId()
+          .equals(other.getReservedInstancePoolId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESERVED_INSTANCE_POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getReservedInstancePoolId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.ListReservedInstancePoolOperationsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.ListReservedInstancePoolOperationsRequest)
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest.class, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        reservedInstancePoolId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest build() {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest buildPartial() {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest result = new yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest(this);
+        result.reservedInstancePoolId_ = reservedInstancePoolId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest other) {
+        if (other == yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest.getDefaultInstance()) return this;
+        if (!other.getReservedInstancePoolId().isEmpty()) {
+          reservedInstancePoolId_ = other.reservedInstancePoolId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object reservedInstancePoolId_ = "";
+      /**
+       * <pre>
+       * ID of the reserved instance pool to list operations for.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The reservedInstancePoolId.
+       */
+      public java.lang.String getReservedInstancePoolId() {
+        java.lang.Object ref = reservedInstancePoolId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reservedInstancePoolId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool to list operations for.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for reservedInstancePoolId.
+       */
+      public com.google.protobuf.ByteString
+          getReservedInstancePoolIdBytes() {
+        java.lang.Object ref = reservedInstancePoolId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reservedInstancePoolId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool to list operations for.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The reservedInstancePoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReservedInstancePoolId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        reservedInstancePoolId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool to list operations for.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReservedInstancePoolId() {
+        
+        reservedInstancePoolId_ = getDefaultInstance().getReservedInstancePoolId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool to list operations for.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for reservedInstancePoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReservedInstancePoolIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        reservedInstancePoolId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListReservedInstancePoolOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListReservedInstancePoolOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListReservedInstancePoolOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListReservedInstancePoolOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListReservedInstancePoolOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListReservedInstancePoolOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListReservedInstancePoolOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListReservedInstancePoolOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.ListReservedInstancePoolOperationsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.ListReservedInstancePoolOperationsRequest)
+    private static final yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListReservedInstancePoolOperationsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListReservedInstancePoolOperationsRequest>() {
+      @java.lang.Override
+      public ListReservedInstancePoolOperationsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListReservedInstancePoolOperationsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListReservedInstancePoolOperationsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListReservedInstancePoolOperationsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListReservedInstancePoolOperationsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.ListReservedInstancePoolOperationsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of operations for the specified reserved instance pool.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
+        getOperationsList();
+    /**
+     * <pre>
+     * List of operations for the specified reserved instance pool.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
+    /**
+     * <pre>
+     * List of operations for the specified reserved instance pool.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    int getOperationsCount();
+    /**
+     * <pre>
+     * List of operations for the specified reserved instance pool.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+        getOperationsOrBuilderList();
+    /**
+     * <pre>
+     * List of operations for the specified reserved instance pool.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListReservedInstancePoolOperationsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListReservedInstancePoolOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListReservedInstancePoolOperationsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListReservedInstancePoolOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.ListReservedInstancePoolOperationsResponse}
+   */
+  public static final class ListReservedInstancePoolOperationsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListReservedInstancePoolOperationsResponse)
+      ListReservedInstancePoolOperationsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListReservedInstancePoolOperationsResponse.newBuilder() to construct.
+    private ListReservedInstancePoolOperationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListReservedInstancePoolOperationsResponse() {
+      operations_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListReservedInstancePoolOperationsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListReservedInstancePoolOperationsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              operations_.add(
+                  input.readMessage(yandex.cloud.api.operation.OperationOuterClass.Operation.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          operations_ = java.util.Collections.unmodifiableList(operations_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse.class, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse.Builder.class);
+    }
+
+    public static final int OPERATIONS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
+    /**
+     * <pre>
+     * List of operations for the specified reserved instance pool.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
+      return operations_;
+    }
+    /**
+     * <pre>
+     * List of operations for the specified reserved instance pool.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+        getOperationsOrBuilderList() {
+      return operations_;
+    }
+    /**
+     * <pre>
+     * List of operations for the specified reserved instance pool.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public int getOperationsCount() {
+      return operations_.size();
+    }
+    /**
+     * <pre>
+     * List of operations for the specified reserved instance pool.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
+      return operations_.get(index);
+    }
+    /**
+     * <pre>
+     * List of operations for the specified reserved instance pool.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+        int index) {
+      return operations_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListReservedInstancePoolOperationsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListReservedInstancePoolOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListReservedInstancePoolOperationsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListReservedInstancePoolOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < operations_.size(); i++) {
+        output.writeMessage(1, operations_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < operations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, operations_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse other = (yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse) obj;
+
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOperationsCount() > 0) {
+        hash = (37 * hash) + OPERATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOperationsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.ListReservedInstancePoolOperationsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.ListReservedInstancePoolOperationsResponse)
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse.class, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOperationsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (operationsBuilder_ == null) {
+          operations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          operationsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse build() {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse buildPartial() {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse result = new yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (operationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            operations_ = java.util.Collections.unmodifiableList(operations_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.operations_ = operations_;
+        } else {
+          result.operations_ = operationsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse) {
+          return mergeFrom((yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse other) {
+        if (other == yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse.getDefaultInstance()) return this;
+        if (operationsBuilder_ == null) {
+          if (!other.operations_.isEmpty()) {
+            if (operations_.isEmpty()) {
+              operations_ = other.operations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureOperationsIsMutable();
+              operations_.addAll(other.operations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.operations_.isEmpty()) {
+            if (operationsBuilder_.isEmpty()) {
+              operationsBuilder_.dispose();
+              operationsBuilder_ = null;
+              operations_ = other.operations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              operationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOperationsFieldBuilder() : null;
+            } else {
+              operationsBuilder_.addAllMessages(other.operations_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
+        java.util.Collections.emptyList();
+      private void ensureOperationsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
+
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
+        if (operationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(operations_);
+        } else {
+          return operationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public int getOperationsCount() {
+        if (operationsBuilder_ == null) {
+          return operations_.size();
+        } else {
+          return operationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
+        if (operationsBuilder_ == null) {
+          return operations_.get(index);
+        } else {
+          return operationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder setOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.set(index, value);
+          onChanged();
+        } else {
+          operationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder setOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.add(value);
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.add(index, value);
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addAllOperations(
+          java.lang.Iterable<? extends yandex.cloud.api.operation.OperationOuterClass.Operation> values) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, operations_);
+          onChanged();
+        } else {
+          operationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder clearOperations() {
+        if (operationsBuilder_ == null) {
+          operations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          operationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder removeOperations(int index) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.remove(index);
+          onChanged();
+        } else {
+          operationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
+          int index) {
+        return getOperationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+          int index) {
+        if (operationsBuilder_ == null) {
+          return operations_.get(index);  } else {
+          return operationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+           getOperationsOrBuilderList() {
+        if (operationsBuilder_ != null) {
+          return operationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(operations_);
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
+        return getOperationsFieldBuilder().addBuilder(
+            yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
+          int index) {
+        return getOperationsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of operations for the specified reserved instance pool.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
+           getOperationsBuilderList() {
+        return getOperationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+          getOperationsFieldBuilder() {
+        if (operationsBuilder_ == null) {
+          operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
+                  operations_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          operations_ = null;
+        }
+        return operationsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListReservedInstancePoolOperationsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListReservedInstancePoolOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListReservedInstancePoolOperationsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListReservedInstancePoolOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListReservedInstancePoolOperationsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListReservedInstancePoolOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListReservedInstancePoolOperationsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListReservedInstancePoolOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListReservedInstancePoolOperationsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListReservedInstancePoolOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.ListReservedInstancePoolOperationsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.ListReservedInstancePoolOperationsResponse)
+    private static final yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse();
+    }
+
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListReservedInstancePoolOperationsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListReservedInstancePoolOperationsResponse>() {
+      @java.lang.Override
+      public ListReservedInstancePoolOperationsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListReservedInstancePoolOperationsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListReservedInstancePoolOperationsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListReservedInstancePoolOperationsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolOperationsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListReservedInstancePoolInstancesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.ListReservedInstancePoolInstancesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the reserved instance pool to list instances for.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The reservedInstancePoolId.
+     */
+    java.lang.String getReservedInstancePoolId();
+    /**
+     * <pre>
+     * ID of the reserved instance pool to list instances for.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for reservedInstancePoolId.
+     */
+    com.google.protobuf.ByteString
+        getReservedInstancePoolIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListReservedInstancePoolInstancesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results,
+     * set [page_token] to the [ListReservedInstancePoolInstancesResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results,
+     * set [page_token] to the [ListReservedInstancePoolInstancesResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.ListReservedInstancePoolInstancesRequest}
+   */
+  public static final class ListReservedInstancePoolInstancesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListReservedInstancePoolInstancesRequest)
+      ListReservedInstancePoolInstancesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListReservedInstancePoolInstancesRequest.newBuilder() to construct.
+    private ListReservedInstancePoolInstancesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListReservedInstancePoolInstancesRequest() {
+      reservedInstancePoolId_ = "";
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListReservedInstancePoolInstancesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListReservedInstancePoolInstancesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              reservedInstancePoolId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest.class, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest.Builder.class);
+    }
+
+    public static final int RESERVED_INSTANCE_POOL_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object reservedInstancePoolId_;
+    /**
+     * <pre>
+     * ID of the reserved instance pool to list instances for.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The reservedInstancePoolId.
+     */
+    @java.lang.Override
+    public java.lang.String getReservedInstancePoolId() {
+      java.lang.Object ref = reservedInstancePoolId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reservedInstancePoolId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the reserved instance pool to list instances for.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for reservedInstancePoolId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReservedInstancePoolIdBytes() {
+      java.lang.Object ref = reservedInstancePoolId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reservedInstancePoolId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListReservedInstancePoolInstancesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results,
+     * set [page_token] to the [ListReservedInstancePoolInstancesResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results,
+     * set [page_token] to the [ListReservedInstancePoolInstancesResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservedInstancePoolId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, reservedInstancePoolId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservedInstancePoolId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, reservedInstancePoolId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest other = (yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest) obj;
+
+      if (!getReservedInstancePoolId()
+          .equals(other.getReservedInstancePoolId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESERVED_INSTANCE_POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getReservedInstancePoolId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.ListReservedInstancePoolInstancesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.ListReservedInstancePoolInstancesRequest)
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest.class, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        reservedInstancePoolId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest build() {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest buildPartial() {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest result = new yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest(this);
+        result.reservedInstancePoolId_ = reservedInstancePoolId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest other) {
+        if (other == yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest.getDefaultInstance()) return this;
+        if (!other.getReservedInstancePoolId().isEmpty()) {
+          reservedInstancePoolId_ = other.reservedInstancePoolId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object reservedInstancePoolId_ = "";
+      /**
+       * <pre>
+       * ID of the reserved instance pool to list instances for.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The reservedInstancePoolId.
+       */
+      public java.lang.String getReservedInstancePoolId() {
+        java.lang.Object ref = reservedInstancePoolId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reservedInstancePoolId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool to list instances for.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for reservedInstancePoolId.
+       */
+      public com.google.protobuf.ByteString
+          getReservedInstancePoolIdBytes() {
+        java.lang.Object ref = reservedInstancePoolId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reservedInstancePoolId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool to list instances for.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The reservedInstancePoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReservedInstancePoolId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        reservedInstancePoolId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool to list instances for.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReservedInstancePoolId() {
+        
+        reservedInstancePoolId_ = getDefaultInstance().getReservedInstancePoolId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool to list instances for.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for reservedInstancePoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReservedInstancePoolIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        reservedInstancePoolId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListReservedInstancePoolInstancesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListReservedInstancePoolInstancesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListReservedInstancePoolInstancesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results,
+       * set [page_token] to the [ListReservedInstancePoolInstancesResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results,
+       * set [page_token] to the [ListReservedInstancePoolInstancesResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results,
+       * set [page_token] to the [ListReservedInstancePoolInstancesResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results,
+       * set [page_token] to the [ListReservedInstancePoolInstancesResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results,
+       * set [page_token] to the [ListReservedInstancePoolInstancesResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.ListReservedInstancePoolInstancesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.ListReservedInstancePoolInstancesRequest)
+    private static final yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListReservedInstancePoolInstancesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListReservedInstancePoolInstancesRequest>() {
+      @java.lang.Override
+      public ListReservedInstancePoolInstancesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListReservedInstancePoolInstancesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListReservedInstancePoolInstancesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListReservedInstancePoolInstancesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListReservedInstancePoolInstancesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.ListReservedInstancePoolInstancesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of reserved instance pool instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance> 
+        getInstancesList();
+    /**
+     * <pre>
+     * List of reserved instance pool instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.Instance getInstances(int index);
+    /**
+     * <pre>
+     * List of reserved instance pool instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+     */
+    int getInstancesCount();
+    /**
+     * <pre>
+     * List of reserved instance pool instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder> 
+        getInstancesOrBuilderList();
+    /**
+     * <pre>
+     * List of reserved instance pool instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder getInstancesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListReservedInstancePoolInstancesRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListReservedInstancePoolInstancesRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListReservedInstancePoolInstancesRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListReservedInstancePoolInstancesRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.ListReservedInstancePoolInstancesResponse}
+   */
+  public static final class ListReservedInstancePoolInstancesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListReservedInstancePoolInstancesResponse)
+      ListReservedInstancePoolInstancesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListReservedInstancePoolInstancesResponse.newBuilder() to construct.
+    private ListReservedInstancePoolInstancesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListReservedInstancePoolInstancesResponse() {
+      instances_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListReservedInstancePoolInstancesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListReservedInstancePoolInstancesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                instances_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              instances_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          instances_ = java.util.Collections.unmodifiableList(instances_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse.class, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse.Builder.class);
+    }
+
+    public static final int INSTANCES_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance> instances_;
+    /**
+     * <pre>
+     * List of reserved instance pool instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance> getInstancesList() {
+      return instances_;
+    }
+    /**
+     * <pre>
+     * List of reserved instance pool instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder> 
+        getInstancesOrBuilderList() {
+      return instances_;
+    }
+    /**
+     * <pre>
+     * List of reserved instance pool instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+     */
+    @java.lang.Override
+    public int getInstancesCount() {
+      return instances_.size();
+    }
+    /**
+     * <pre>
+     * List of reserved instance pool instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.Instance getInstances(int index) {
+      return instances_.get(index);
+    }
+    /**
+     * <pre>
+     * List of reserved instance pool instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder getInstancesOrBuilder(
+        int index) {
+      return instances_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListReservedInstancePoolInstancesRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListReservedInstancePoolInstancesRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListReservedInstancePoolInstancesRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListReservedInstancePoolInstancesRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < instances_.size(); i++) {
+        output.writeMessage(1, instances_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < instances_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, instances_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse other = (yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse) obj;
+
+      if (!getInstancesList()
+          .equals(other.getInstancesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInstancesCount() > 0) {
+        hash = (37 * hash) + INSTANCES_FIELD_NUMBER;
+        hash = (53 * hash) + getInstancesList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.ListReservedInstancePoolInstancesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.ListReservedInstancePoolInstancesResponse)
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse.class, yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInstancesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (instancesBuilder_ == null) {
+          instances_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          instancesBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse build() {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse buildPartial() {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse result = new yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (instancesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            instances_ = java.util.Collections.unmodifiableList(instances_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.instances_ = instances_;
+        } else {
+          result.instances_ = instancesBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse) {
+          return mergeFrom((yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse other) {
+        if (other == yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse.getDefaultInstance()) return this;
+        if (instancesBuilder_ == null) {
+          if (!other.instances_.isEmpty()) {
+            if (instances_.isEmpty()) {
+              instances_ = other.instances_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInstancesIsMutable();
+              instances_.addAll(other.instances_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.instances_.isEmpty()) {
+            if (instancesBuilder_.isEmpty()) {
+              instancesBuilder_.dispose();
+              instancesBuilder_ = null;
+              instances_ = other.instances_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              instancesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInstancesFieldBuilder() : null;
+            } else {
+              instancesBuilder_.addAllMessages(other.instances_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance> instances_ =
+        java.util.Collections.emptyList();
+      private void ensureInstancesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          instances_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance>(instances_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.Instance, yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder> instancesBuilder_;
+
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance> getInstancesList() {
+        if (instancesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(instances_);
+        } else {
+          return instancesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public int getInstancesCount() {
+        if (instancesBuilder_ == null) {
+          return instances_.size();
+        } else {
+          return instancesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.Instance getInstances(int index) {
+        if (instancesBuilder_ == null) {
+          return instances_.get(index);
+        } else {
+          return instancesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public Builder setInstances(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.Instance value) {
+        if (instancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstancesIsMutable();
+          instances_.set(index, value);
+          onChanged();
+        } else {
+          instancesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public Builder setInstances(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.Builder builderForValue) {
+        if (instancesBuilder_ == null) {
+          ensureInstancesIsMutable();
+          instances_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          instancesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public Builder addInstances(yandex.cloud.api.compute.v1.InstanceOuterClass.Instance value) {
+        if (instancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstancesIsMutable();
+          instances_.add(value);
+          onChanged();
+        } else {
+          instancesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public Builder addInstances(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.Instance value) {
+        if (instancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstancesIsMutable();
+          instances_.add(index, value);
+          onChanged();
+        } else {
+          instancesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public Builder addInstances(
+          yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.Builder builderForValue) {
+        if (instancesBuilder_ == null) {
+          ensureInstancesIsMutable();
+          instances_.add(builderForValue.build());
+          onChanged();
+        } else {
+          instancesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public Builder addInstances(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.Builder builderForValue) {
+        if (instancesBuilder_ == null) {
+          ensureInstancesIsMutable();
+          instances_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          instancesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public Builder addAllInstances(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.Instance> values) {
+        if (instancesBuilder_ == null) {
+          ensureInstancesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instances_);
+          onChanged();
+        } else {
+          instancesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public Builder clearInstances() {
+        if (instancesBuilder_ == null) {
+          instances_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          instancesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public Builder removeInstances(int index) {
+        if (instancesBuilder_ == null) {
+          ensureInstancesIsMutable();
+          instances_.remove(index);
+          onChanged();
+        } else {
+          instancesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.Builder getInstancesBuilder(
+          int index) {
+        return getInstancesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder getInstancesOrBuilder(
+          int index) {
+        if (instancesBuilder_ == null) {
+          return instances_.get(index);  } else {
+          return instancesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder> 
+           getInstancesOrBuilderList() {
+        if (instancesBuilder_ != null) {
+          return instancesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(instances_);
+        }
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.Builder addInstancesBuilder() {
+        return getInstancesFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.Builder addInstancesBuilder(
+          int index) {
+        return getInstancesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of reserved instance pool instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.Builder> 
+           getInstancesBuilderList() {
+        return getInstancesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.Instance, yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder> 
+          getInstancesFieldBuilder() {
+        if (instancesBuilder_ == null) {
+          instancesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceOuterClass.Instance, yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder>(
+                  instances_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          instances_ = null;
+        }
+        return instancesBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListReservedInstancePoolInstancesRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListReservedInstancePoolInstancesRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListReservedInstancePoolInstancesRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListReservedInstancePoolInstancesRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListReservedInstancePoolInstancesRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListReservedInstancePoolInstancesRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListReservedInstancePoolInstancesRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListReservedInstancePoolInstancesRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListReservedInstancePoolInstancesRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListReservedInstancePoolInstancesRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.ListReservedInstancePoolInstancesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.ListReservedInstancePoolInstancesResponse)
+    private static final yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse();
+    }
+
+    public static yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListReservedInstancePoolInstancesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListReservedInstancePoolInstancesResponse>() {
+      @java.lang.Override
+      public ListReservedInstancePoolInstancesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListReservedInstancePoolInstancesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListReservedInstancePoolInstancesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListReservedInstancePoolInstancesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.ReservedInstancePoolServiceOuterClass.ListReservedInstancePoolInstancesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_GetReservedInstancePoolRequest_descriptor;
   private static final 
@@ -10695,6 +15066,26 @@ public final class ReservedInstancePoolServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_DeleteReservedInstancePoolResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10724,7 +15115,7 @@ public final class ReservedInstancePoolServiceOuterClass {
       "eservedInstancePoolsResponse\022N\n\027reserved" +
       "_instance_pools\030\001 \003(\0132-.yandex.cloud.com" +
       "pute.v1.ReservedInstancePool\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"\306\005\n!CreateReservedInstance" +
+      "e_token\030\002 \001(\t\"\346\005\n!CreateReservedInstance" +
       "PoolRequest\0223\n\004name\030\001 \001(\tB%\362\3071!|[a-z]([-" +
       "_a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030" +
       "\002 \001(\tB\t\212\3101\005<=256\022\237\001\n\006labels\030\003 \003(\0132F.yand" +
@@ -10740,59 +15131,87 @@ public final class ReservedInstancePoolServiceOuterClass {
       "=\n\016boot_disk_spec\030\t \001(\0132%.yandex.cloud.c" +
       "ompute.v1.BootDiskSpec\022B\n\020network_settin" +
       "gs\030\n \001(\0132(.yandex.cloud.compute.v1.Netwo" +
-      "rkSettings\022\033\n\004size\030\013 \001(\003B\r\372\3071\t0-1048576\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"G\n\"CreateReservedInstancePoolMeta" +
-      "data\022!\n\031reserved_instance_pool_id\030\001 \001(\t\"" +
-      "\310\003\n!UpdateReservedInstancePoolRequest\022/\n" +
-      "\031reserved_instance_pool_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pro" +
-      "tobuf.FieldMask\0223\n\004name\030\003 \001(\tB%\362\3071!|[a-z" +
-      "]([-_a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descript" +
-      "ion\030\004 \001(\tB\t\212\3101\005<=256\022\237\001\n\006labels\030\005 \003(\0132F." +
-      "yandex.cloud.compute.v1.UpdateReservedIn" +
-      "stancePoolRequest.LabelsEntryBG\202\3101\004<=64\212" +
-      "\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026" +
-      "\022\024[a-z][-_./\\@0-9a-z]*\022\033\n\004size\030\006 \001(\003B\r\372\307" +
-      "1\t0-1048576\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"G\n\"UpdateReservedInst" +
-      "ancePoolMetadata\022!\n\031reserved_instance_po" +
-      "ol_id\030\001 \001(\t\"T\n!DeleteReservedInstancePoo" +
-      "lRequest\022/\n\031reserved_instance_pool_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"G\n\"DeleteReservedInsta" +
-      "ncePoolMetadata\022!\n\031reserved_instance_poo" +
-      "l_id\030\001 \001(\t\"$\n\"DeleteReservedInstancePool" +
-      "Response2\306\010\n\033ReservedInstancePoolService" +
-      "\022\264\001\n\003Get\0227.yandex.cloud.compute.v1.GetRe" +
-      "servedInstancePoolRequest\032-.yandex.cloud" +
-      ".compute.v1.ReservedInstancePool\"E\202\323\344\223\002?" +
-      "\022=/compute/v1/reservedInstancePools/{res" +
-      "erved_instance_pool_id}\022\250\001\n\004List\0229.yande" +
-      "x.cloud.compute.v1.ListReservedInstanceP" +
-      "oolsRequest\032:.yandex.cloud.compute.v1.Li" +
-      "stReservedInstancePoolsResponse\")\202\323\344\223\002#\022" +
-      "!/compute/v1/reservedInstancePools\022\323\001\n\006C" +
-      "reate\022:.yandex.cloud.compute.v1.CreateRe" +
-      "servedInstancePoolRequest\032!.yandex.cloud" +
-      ".operation.Operation\"j\202\323\344\223\002&\"!/compute/v" +
-      "1/reservedInstancePools:\001*\262\322*:\n\"CreateRe" +
-      "servedInstancePoolMetadata\022\024ReservedInst" +
-      "ancePool\022\360\001\n\006Update\022:.yandex.cloud.compu" +
-      "te.v1.UpdateReservedInstancePoolRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\206\001\202\323\344" +
-      "\223\002B2=/compute/v1/reservedInstancePools/{" +
-      "reserved_instance_pool_id}:\001*\262\322*:\n\"Updat" +
-      "eReservedInstancePoolMetadata\022\024ReservedI" +
-      "nstancePool\022\373\001\n\006Delete\022:.yandex.cloud.co" +
-      "mpute.v1.DeleteReservedInstancePoolReque" +
-      "st\032!.yandex.cloud.operation.Operation\"\221\001" +
-      "\202\323\344\223\002?*=/compute/v1/reservedInstancePool" +
-      "s/{reserved_instance_pool_id}\262\322*H\n\"Delet" +
-      "eReservedInstancePoolMetadata\022\"DeleteRes" +
-      "ervedInstancePoolResponseBb\n\033yandex.clou" +
-      "d.api.compute.v1ZCgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/compute/v1;co" +
-      "mputeb\006proto3"
+      "rkSettings\022\033\n\004size\030\013 \001(\003B\r\372\3071\t0-1048576\022" +
+      "\036\n\026allow_oversubscription\030\014 \001(\010\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"G" +
+      "\n\"CreateReservedInstancePoolMetadata\022!\n\031" +
+      "reserved_instance_pool_id\030\001 \001(\t\"\205\004\n!Upda" +
+      "teReservedInstancePoolRequest\022/\n\031reserve" +
+      "d_instance_pool_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/" +
+      "\n\013update_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
+      "eldMask\0223\n\004name\030\003 \001(\tB%\362\3071!|[a-z]([-_a-z" +
+      "0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(" +
+      "\tB\t\212\3101\005<=256\022\237\001\n\006labels\030\005 \003(\0132F.yandex.c" +
+      "loud.compute.v1.UpdateReservedInstancePo" +
+      "olRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362" +
+      "\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][" +
+      "-_./\\@0-9a-z]*\022\033\n\004size\030\006 \001(\003B\r\372\3071\t0-1048" +
+      "576\022\036\n\026allow_oversubscription\030\007 \001(\010\022\033\n\023a" +
+      "llow_pending_slots\030\010 \001(\010\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"G\n\"Updat" +
+      "eReservedInstancePoolMetadata\022!\n\031reserve" +
+      "d_instance_pool_id\030\001 \001(\t\"T\n!DeleteReserv" +
+      "edInstancePoolRequest\022/\n\031reserved_instan" +
+      "ce_pool_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"G\n\"Delete" +
+      "ReservedInstancePoolMetadata\022!\n\031reserved" +
+      "_instance_pool_id\030\001 \001(\t\"$\n\"DeleteReserve" +
+      "dInstancePoolResponse\"\232\001\n)ListReservedIn" +
+      "stancePoolOperationsRequest\022/\n\031reserved_" +
+      "instance_pool_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
+      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
+      "n\030\003 \001(\tB\t\212\3101\005<=100\"|\n*ListReservedInstan" +
+      "cePoolOperationsResponse\0225\n\noperations\030\001" +
+      " \003(\0132!.yandex.cloud.operation.Operation\022" +
+      "\027\n\017next_page_token\030\002 \001(\t\"\231\001\n(ListReserve" +
+      "dInstancePoolInstancesRequest\022/\n\031reserve" +
+      "d_instance_pool_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\"z\n)ListReservedInst" +
+      "ancePoolInstancesResponse\0224\n\tinstances\030\001" +
+      " \003(\0132!.yandex.cloud.compute.v1.Instance\022" +
+      "\027\n\017next_page_token\030\002 \001(\t2\236\014\n\033ReservedIns" +
+      "tancePoolService\022\264\001\n\003Get\0227.yandex.cloud." +
+      "compute.v1.GetReservedInstancePoolReques" +
+      "t\032-.yandex.cloud.compute.v1.ReservedInst" +
+      "ancePool\"E\202\323\344\223\002?\022=/compute/v1/reservedIn" +
+      "stancePools/{reserved_instance_pool_id}\022" +
+      "\250\001\n\004List\0229.yandex.cloud.compute.v1.ListR" +
+      "eservedInstancePoolsRequest\032:.yandex.clo" +
+      "ud.compute.v1.ListReservedInstancePoolsR" +
+      "esponse\")\202\323\344\223\002#\022!/compute/v1/reservedIns" +
+      "tancePools\022\323\001\n\006Create\022:.yandex.cloud.com" +
+      "pute.v1.CreateReservedInstancePoolReques" +
+      "t\032!.yandex.cloud.operation.Operation\"j\202\323" +
+      "\344\223\002&\"!/compute/v1/reservedInstancePools:" +
+      "\001*\262\322*:\n\"CreateReservedInstancePoolMetada" +
+      "ta\022\024ReservedInstancePool\022\360\001\n\006Update\022:.ya" +
+      "ndex.cloud.compute.v1.UpdateReservedInst" +
+      "ancePoolRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\206\001\202\323\344\223\002B2=/compute/v1/reserve" +
+      "dInstancePools/{reserved_instance_pool_i" +
+      "d}:\001*\262\322*:\n\"UpdateReservedInstancePoolMet" +
+      "adata\022\024ReservedInstancePool\022\373\001\n\006Delete\022:" +
+      ".yandex.cloud.compute.v1.DeleteReservedI" +
+      "nstancePoolRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"\221\001\202\323\344\223\002?*=/compute/v1/rese" +
+      "rvedInstancePools/{reserved_instance_poo" +
+      "l_id}\262\322*H\n\"DeleteReservedInstancePoolMet" +
+      "adata\022\"DeleteReservedInstancePoolRespons" +
+      "e\022\353\001\n\016ListOperations\022B.yandex.cloud.comp" +
+      "ute.v1.ListReservedInstancePoolOperation" +
+      "sRequest\032C.yandex.cloud.compute.v1.ListR" +
+      "eservedInstancePoolOperationsResponse\"P\202" +
+      "\323\344\223\002J\022H/compute/v1/reservedInstancePools" +
+      "/{reserved_instance_pool_id}/operations\022" +
+      "\347\001\n\rListInstances\022A.yandex.cloud.compute" +
+      ".v1.ListReservedInstancePoolInstancesReq" +
+      "uest\032B.yandex.cloud.compute.v1.ListReser" +
+      "vedInstancePoolInstancesResponse\"O\202\323\344\223\002I" +
+      "\022G/compute/v1/reservedInstancePools/{res" +
+      "erved_instance_pool_id}/instancesBb\n\033yan" +
+      "dex.cloud.api.compute.v1ZCgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/compu" +
+      "te/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10829,7 +15248,7 @@ public final class ReservedInstancePoolServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_CreateReservedInstancePoolRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_CreateReservedInstancePoolRequest_descriptor,
-        new java.lang.String[] { "Name", "Description", "Labels", "ZoneId", "FolderId", "PlatformId", "ResourcesSpec", "GpuSettings", "BootDiskSpec", "NetworkSettings", "Size", });
+        new java.lang.String[] { "Name", "Description", "Labels", "ZoneId", "FolderId", "PlatformId", "ResourcesSpec", "GpuSettings", "BootDiskSpec", "NetworkSettings", "Size", "AllowOversubscription", });
     internal_static_yandex_cloud_compute_v1_CreateReservedInstancePoolRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_CreateReservedInstancePoolRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_CreateReservedInstancePoolRequest_LabelsEntry_fieldAccessorTable = new
@@ -10847,7 +15266,7 @@ public final class ReservedInstancePoolServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_UpdateReservedInstancePoolRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_UpdateReservedInstancePoolRequest_descriptor,
-        new java.lang.String[] { "ReservedInstancePoolId", "UpdateMask", "Name", "Description", "Labels", "Size", });
+        new java.lang.String[] { "ReservedInstancePoolId", "UpdateMask", "Name", "Description", "Labels", "Size", "AllowOversubscription", "AllowPendingSlots", });
     internal_static_yandex_cloud_compute_v1_UpdateReservedInstancePoolRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_UpdateReservedInstancePoolRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_UpdateReservedInstancePoolRequest_LabelsEntry_fieldAccessorTable = new
@@ -10878,6 +15297,30 @@ public final class ReservedInstancePoolServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_DeleteReservedInstancePoolResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsRequest_descriptor,
+        new java.lang.String[] { "ReservedInstancePoolId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolOperationsResponse_descriptor,
+        new java.lang.String[] { "Operations", "NextPageToken", });
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesRequest_descriptor,
+        new java.lang.String[] { "ReservedInstancePoolId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_ListReservedInstancePoolInstancesResponse_descriptor,
+        new java.lang.String[] { "Instances", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

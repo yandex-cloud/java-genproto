@@ -2495,29 +2495,34 @@ public final class HardwarePoolServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n:yandex/cloud/baremetal/v1alpha/hardwar" +
       "e_pool_service.proto\022\036yandex.cloud.barem" +
-      "etal.v1alpha\0322yandex/cloud/baremetal/v1a" +
-      "lpha/hardware_pool.proto\032\035yandex/cloud/v" +
-      "alidation.proto\"<\n\026GetHardwarePoolReques" +
-      "t\022\"\n\020hardware_pool_id\030\001 \001(\tB\010\212\3101\004<=20\"R\n" +
-      "\030ListHardwarePoolsRequest\022\034\n\tpage_size\030d" +
-      " \001(\003B\t\372\3071\005<=100\022\022\n\npage_token\030e \001(\tJ\004\010\001\020" +
-      "d\"\200\001\n\031ListHardwarePoolsResponse\022D\n\016hardw" +
-      "are_pools\030\001 \003(\0132,.yandex.cloud.baremetal" +
-      ".v1alpha.HardwarePool\022\027\n\017next_page_token" +
-      "\030d \001(\tJ\004\010\002\020d2\203\002\n\023HardwarePoolService\022m\n\003" +
-      "Get\0226.yandex.cloud.baremetal.v1alpha.Get" +
-      "HardwarePoolRequest\032,.yandex.cloud.barem" +
-      "etal.v1alpha.HardwarePool\"\000\022}\n\004List\0228.ya" +
-      "ndex.cloud.baremetal.v1alpha.ListHardwar" +
-      "ePoolsRequest\0329.yandex.cloud.baremetal.v" +
-      "1alpha.ListHardwarePoolsResponse\"\000Br\n\"ya" +
-      "ndex.cloud.api.baremetal.v1alphaZLgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/baremetal/v1alpha;baremetalb\006proto3"
+      "etal.v1alpha\032\034google/api/annotations.pro" +
+      "to\0322yandex/cloud/baremetal/v1alpha/hardw" +
+      "are_pool.proto\032\035yandex/cloud/validation." +
+      "proto\"<\n\026GetHardwarePoolRequest\022\"\n\020hardw" +
+      "are_pool_id\030\001 \001(\tB\010\212\3101\004<=20\"R\n\030ListHardw" +
+      "arePoolsRequest\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005" +
+      "<=100\022\022\n\npage_token\030e \001(\tJ\004\010\001\020d\"\200\001\n\031List" +
+      "HardwarePoolsResponse\022D\n\016hardware_pools\030" +
+      "\001 \003(\0132,.yandex.cloud.baremetal.v1alpha.H" +
+      "ardwarePool\022\027\n\017next_page_token\030d \001(\tJ\004\010\002" +
+      "\020d2\350\002\n\023HardwarePoolService\022\250\001\n\003Get\0226.yan" +
+      "dex.cloud.baremetal.v1alpha.GetHardwareP" +
+      "oolRequest\032,.yandex.cloud.baremetal.v1al" +
+      "pha.HardwarePool\";\202\323\344\223\0025\0223/baremetal/v1a" +
+      "lpha/hardwarePools/{hardware_pool_id}\022\245\001" +
+      "\n\004List\0228.yandex.cloud.baremetal.v1alpha." +
+      "ListHardwarePoolsRequest\0329.yandex.cloud." +
+      "baremetal.v1alpha.ListHardwarePoolsRespo" +
+      "nse\"(\202\323\344\223\002\"\022 /baremetal/v1alpha/hardware" +
+      "PoolsBr\n\"yandex.cloud.api.baremetal.v1al" +
+      "phaZLgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/baremetal/v1alpha;baremeta" +
+      "lb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.baremetal.v1alpha.HardwarePoolOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -2541,10 +2546,12 @@ public final class HardwarePoolServiceOuterClass {
         new java.lang.String[] { "HardwarePools", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.baremetal.v1alpha.HardwarePoolOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

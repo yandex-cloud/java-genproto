@@ -266,6 +266,37 @@ public final class RoutingInstanceServiceGrpc {
     return getRemovePrefixesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateNetworksMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateNetworks",
+      requestType = yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateNetworksMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateNetworksMethod;
+    if ((getUpdateNetworksMethod = RoutingInstanceServiceGrpc.getUpdateNetworksMethod) == null) {
+      synchronized (RoutingInstanceServiceGrpc.class) {
+        if ((getUpdateNetworksMethod = RoutingInstanceServiceGrpc.getUpdateNetworksMethod) == null) {
+          RoutingInstanceServiceGrpc.getUpdateNetworksMethod = getUpdateNetworksMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateNetworks"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new RoutingInstanceServiceMethodDescriptorSupplier("UpdateNetworks"))
+              .build();
+        }
+      }
+    }
+    return getUpdateNetworksMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MovePrefixRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getMovePrefixMethod;
 
@@ -592,6 +623,17 @@ public final class RoutingInstanceServiceGrpc {
 
     /**
      * <pre>
+     * Updates multiple vpc using the data specified in the request.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public void updateNetworks(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateNetworksMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Moves the specified prefix between availability zones of the RoutingInstance.
      * Method starts an asynchronous operation that can be cancelled while it is in progress.
      * </pre>
@@ -713,6 +755,13 @@ public final class RoutingInstanceServiceGrpc {
                 yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.RemovePrefixesRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_PREFIXES)))
+          .addMethod(
+            getUpdateNetworksMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_NETWORKS)))
           .addMethod(
             getMovePrefixMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -869,6 +918,18 @@ public final class RoutingInstanceServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemovePrefixesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates multiple vpc using the data specified in the request.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public void updateNetworks(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateNetworksMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1045,6 +1106,17 @@ public final class RoutingInstanceServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation removePrefixes(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.RemovePrefixesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemovePrefixesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates multiple vpc using the data specified in the request.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateNetworks(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateNetworksMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1227,6 +1299,18 @@ public final class RoutingInstanceServiceGrpc {
 
     /**
      * <pre>
+     * Updates multiple vpc using the data specified in the request.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateNetworks(
+        yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateNetworksMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Moves the specified prefix between availability zones of the RoutingInstance.
      * Method starts an asynchronous operation that can be cancelled while it is in progress.
      * </pre>
@@ -1305,12 +1389,13 @@ public final class RoutingInstanceServiceGrpc {
   private static final int METHODID_UPDATE = 5;
   private static final int METHODID_UPSERT_PREFIXES = 6;
   private static final int METHODID_REMOVE_PREFIXES = 7;
-  private static final int METHODID_MOVE_PREFIX = 8;
-  private static final int METHODID_UPDATE_PREFIX_MASK = 9;
-  private static final int METHODID_ADD_PRIVATE_CONNECTION = 10;
-  private static final int METHODID_REMOVE_PRIVATE_CONNECTION = 11;
-  private static final int METHODID_DELETE = 12;
-  private static final int METHODID_LIST_OPERATIONS = 13;
+  private static final int METHODID_UPDATE_NETWORKS = 8;
+  private static final int METHODID_MOVE_PREFIX = 9;
+  private static final int METHODID_UPDATE_PREFIX_MASK = 10;
+  private static final int METHODID_ADD_PRIVATE_CONNECTION = 11;
+  private static final int METHODID_REMOVE_PRIVATE_CONNECTION = 12;
+  private static final int METHODID_DELETE = 13;
+  private static final int METHODID_LIST_OPERATIONS = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1359,6 +1444,10 @@ public final class RoutingInstanceServiceGrpc {
           break;
         case METHODID_REMOVE_PREFIXES:
           serviceImpl.removePrefixes((yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.RemovePrefixesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_NETWORKS:
+          serviceImpl.updateNetworks((yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_MOVE_PREFIX:
@@ -1454,6 +1543,7 @@ public final class RoutingInstanceServiceGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getUpsertPrefixesMethod())
               .addMethod(getRemovePrefixesMethod())
+              .addMethod(getUpdateNetworksMethod())
               .addMethod(getMovePrefixMethod())
               .addMethod(getUpdatePrefixMaskMethod())
               .addMethod(getAddPrivateConnectionMethod())

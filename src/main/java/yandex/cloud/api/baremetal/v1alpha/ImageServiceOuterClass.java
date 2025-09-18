@@ -10927,77 +10927,85 @@ public final class ImageServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n2yandex/cloud/baremetal/v1alpha/image_s" +
       "ervice.proto\022\036yandex.cloud.baremetal.v1a" +
-      "lpha\032 google/protobuf/field_mask.proto\032 " +
-      "yandex/cloud/api/operation.proto\032*yandex" +
-      "/cloud/baremetal/v1alpha/image.proto\032&ya" +
-      "ndex/cloud/operation/operation.proto\032\035ya" +
-      "ndex/cloud/validation.proto\"=\n\017GetImageR" +
-      "equest\022*\n\010image_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0" +
-      "-9]*\212\3101\00220\"\236\001\n\021ListImagesRequest\022/\n\tfold" +
-      "er_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=5" +
-      "0\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\022\n\npage_" +
-      "token\030e \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006filter\030" +
-      "g \001(\tJ\004\010\002\020d\"j\n\022ListImagesResponse\0225\n\006ima" +
-      "ges\030\001 \003(\0132%.yandex.cloud.baremetal.v1alp" +
-      "ha.Image\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"" +
-      "\210\003\n\022CreateImageRequest\022/\n\tfolder_id\030\001 \001(" +
-      "\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=50\0224\n\004name\030" +
-      "\002 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101" +
-      "\0042-63\022\037\n\013description\030\003 \001(\tB\n\212\3101\006<=1024\022\033" +
-      "\n\003uri\030\013 \001(\tB\016\350\3071\001\212\3101\006<=1024\022\220\001\n\006labels\030\310" +
-      "\001 \003(\0132>.yandex.cloud.baremetal.v1alpha.C" +
-      "reateImageRequest.LabelsEntryB?\202\3101\004<=64\212" +
-      "\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a" +
-      "-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\004\020\013J\005\010\014\020\310\001\"\'\n\023Cr" +
-      "eateImageMetadata\022\020\n\010image_id\030\001 \001(\t\"\221\003\n\022" +
-      "UpdateImageRequest\022*\n\010image_id\030\001 \001(\tB\030\362\307" +
-      "1\016[a-z][a-z0-9]*\212\3101\00220\022/\n\013update_mask\030\002 " +
-      "\001(\0132\032.google.protobuf.FieldMask\0224\n\004name\030" +
-      "\003 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101" +
-      "\0042-63\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=1024\022\220" +
-      "\001\n\006labels\030\310\001 \003(\0132>.yandex.cloud.baremeta" +
-      "l.v1alpha.UpdateImageRequest.LabelsEntry" +
-      "B?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041" +
-      "-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\005\020\310\001\"" +
-      "\'\n\023UpdateImageMetadata\022\020\n\010image_id\030\001 \001(\t" +
-      "\"@\n\022DeleteImageRequest\022*\n\010image_id\030\001 \001(\t" +
-      "B\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"\'\n\023DeleteImag" +
-      "eMetadata\022\020\n\010image_id\030\001 \001(\t\"\200\001\n\032ListImag" +
-      "eOperationsRequest\022*\n\010image_id\030\001 \001(\tB\030\362\307" +
-      "1\016[a-z][a-z0-9]*\212\3101\00220\022\034\n\tpage_size\030d \001(" +
-      "\003B\t\372\3071\005<=100\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"s" +
-      "\n\033ListImageOperationsResponse\0225\n\noperati" +
-      "ons\030\001 \003(\0132!.yandex.cloud.operation.Opera" +
-      "tion\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d2\212\006\n\014" +
-      "ImageService\022_\n\003Get\022/.yandex.cloud.barem" +
-      "etal.v1alpha.GetImageRequest\032%.yandex.cl" +
-      "oud.baremetal.v1alpha.Image\"\000\022o\n\004List\0221." +
-      "yandex.cloud.baremetal.v1alpha.ListImage" +
-      "sRequest\0322.yandex.cloud.baremetal.v1alph" +
-      "a.ListImagesResponse\"\000\022\201\001\n\006Create\0222.yand" +
-      "ex.cloud.baremetal.v1alpha.CreateImageRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\" \262\322*\034\n\023CreateImageMetadata\022\005Image\022\201\001\n\006U" +
-      "pdate\0222.yandex.cloud.baremetal.v1alpha.U" +
-      "pdateImageRequest\032!.yandex.cloud.operati" +
-      "on.Operation\" \262\322*\034\n\023UpdateImageMetadata\022" +
-      "\005Image\022\221\001\n\006Delete\0222.yandex.cloud.baremet" +
-      "al.v1alpha.DeleteImageRequest\032!.yandex.c" +
-      "loud.operation.Operation\"0\262\322*,\n\023DeleteIm" +
-      "ageMetadata\022\025google.protobuf.Empty\022\213\001\n\016L" +
-      "istOperations\022:.yandex.cloud.baremetal.v" +
-      "1alpha.ListImageOperationsRequest\032;.yand" +
-      "ex.cloud.baremetal.v1alpha.ListImageOper" +
-      "ationsResponse\"\000Br\n\"yandex.cloud.api.bar" +
-      "emetal.v1alphaZLgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/baremetal/v1alp" +
-      "ha;baremetalb\006proto3"
+      "lpha\032\034google/api/annotations.proto\032 goog" +
+      "le/protobuf/field_mask.proto\032 yandex/clo" +
+      "ud/api/operation.proto\032*yandex/cloud/bar" +
+      "emetal/v1alpha/image.proto\032&yandex/cloud" +
+      "/operation/operation.proto\032\035yandex/cloud" +
+      "/validation.proto\"=\n\017GetImageRequest\022*\n\010" +
+      "image_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220" +
+      "\"\236\001\n\021ListImagesRequest\022/\n\tfolder_id\030\001 \001(" +
+      "\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=50\022\034\n\tpage_" +
+      "size\030d \001(\003B\t\372\3071\005<=100\022\022\n\npage_token\030e \001(" +
+      "\t\022\020\n\010order_by\030f \001(\t\022\016\n\006filter\030g \001(\tJ\004\010\002\020" +
+      "d\"j\n\022ListImagesResponse\0225\n\006images\030\001 \003(\0132" +
+      "%.yandex.cloud.baremetal.v1alpha.Image\022\027" +
+      "\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\210\003\n\022Create" +
+      "ImageRequest\022/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020[a-" +
+      "z][a-z0-9.-]*\212\3101\004<=50\0224\n\004name\030\002 \001(\tB&\362\3071" +
+      "\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-63\022\037\n\013d" +
+      "escription\030\003 \001(\tB\n\212\3101\006<=1024\022\033\n\003uri\030\013 \001(" +
+      "\tB\016\350\3071\001\212\3101\006<=1024\022\220\001\n\006labels\030\310\001 \003(\0132>.ya" +
+      "ndex.cloud.baremetal.v1alpha.CreateImage" +
+      "Request.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071" +
+      "\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a" +
+      "-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001J\004\010\004\020\013J\005\010\014\020\310\001\"\'\n\023CreateImageM" +
+      "etadata\022\020\n\010image_id\030\001 \001(\t\"\221\003\n\022UpdateImag" +
+      "eRequest\022*\n\010image_id\030\001 \001(\tB\030\362\3071\016[a-z][a-" +
+      "z0-9]*\212\3101\00220\022/\n\013update_mask\030\002 \001(\0132\032.goog" +
+      "le.protobuf.FieldMask\0224\n\004name\030\003 \001(\tB&\362\3071" +
+      "\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-63\022\037\n\013d" +
+      "escription\030\004 \001(\tB\n\212\3101\006<=1024\022\220\001\n\006labels\030" +
+      "\310\001 \003(\0132>.yandex.cloud.baremetal.v1alpha." +
+      "UpdateImageRequest.LabelsEntryB?\202\3101\004<=64" +
+      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[" +
+      "a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\005\020\310\001\"\'\n\023UpdateI" +
+      "mageMetadata\022\020\n\010image_id\030\001 \001(\t\"@\n\022Delete" +
+      "ImageRequest\022*\n\010image_id\030\001 \001(\tB\030\362\3071\016[a-z" +
+      "][a-z0-9]*\212\3101\00220\"\'\n\023DeleteImageMetadata\022" +
+      "\020\n\010image_id\030\001 \001(\t\"\200\001\n\032ListImageOperation" +
+      "sRequest\022*\n\010image_id\030\001 \001(\tB\030\362\3071\016[a-z][a-" +
+      "z0-9]*\212\3101\00220\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=1" +
+      "00\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"s\n\033ListImag" +
+      "eOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
+      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
+      "xt_page_token\030d \001(\tJ\004\010\002\020d2\217\010\n\014ImageServi" +
+      "ce\022\213\001\n\003Get\022/.yandex.cloud.baremetal.v1al" +
+      "pha.GetImageRequest\032%.yandex.cloud.barem" +
+      "etal.v1alpha.Image\",\202\323\344\223\002&\022$/baremetal/v" +
+      "1alpha/images/{image_id}\022\220\001\n\004List\0221.yand" +
+      "ex.cloud.baremetal.v1alpha.ListImagesReq" +
+      "uest\0322.yandex.cloud.baremetal.v1alpha.Li" +
+      "stImagesResponse\"!\202\323\344\223\002\033\022\031/baremetal/v1a" +
+      "lpha/images\022\245\001\n\006Create\0222.yandex.cloud.ba" +
+      "remetal.v1alpha.CreateImageRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"D\202\323\344\223\002\036\"\031/" +
+      "baremetal/v1alpha/images:\001*\262\322*\034\n\023CreateI" +
+      "mageMetadata\022\005Image\022\260\001\n\006Update\0222.yandex." +
+      "cloud.baremetal.v1alpha.UpdateImageReque" +
+      "st\032!.yandex.cloud.operation.Operation\"O\202" +
+      "\323\344\223\002)2$/baremetal/v1alpha/images/{image_" +
+      "id}:\001*\262\322*\034\n\023UpdateImageMetadata\022\005Image\022\275" +
+      "\001\n\006Delete\0222.yandex.cloud.baremetal.v1alp" +
+      "ha.DeleteImageRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\\\202\323\344\223\002&*$/baremetal/v1a" +
+      "lpha/images/{image_id}\262\322*,\n\023DeleteImageM" +
+      "etadata\022\025google.protobuf.Empty\022\302\001\n\016ListO" +
+      "perations\022:.yandex.cloud.baremetal.v1alp" +
+      "ha.ListImageOperationsRequest\032;.yandex.c" +
+      "loud.baremetal.v1alpha.ListImageOperatio" +
+      "nsResponse\"7\202\323\344\223\0021\022//baremetal/v1alpha/i" +
+      "mages/{image_id}/operationsBr\n\"yandex.cl" +
+      "oud.api.baremetal.v1alphaZLgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/bare" +
+      "metal/v1alpha;baremetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.baremetal.v1alpha.ImageOuterClass.getDescriptor(),
@@ -11084,6 +11092,7 @@ public final class ImageServiceOuterClass {
         new java.lang.String[] { "Operations", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.mapKey);
@@ -11093,6 +11102,7 @@ public final class ImageServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.baremetal.v1alpha.ImageOuterClass.getDescriptor();

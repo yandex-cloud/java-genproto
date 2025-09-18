@@ -237,6 +237,33 @@ public final class WorkflowServiceOuterClass {
      * @return The express.
      */
     boolean getExpress();
+
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+     * @return Whether the schedule field is set.
+     */
+    boolean hasSchedule();
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+     * @return The schedule.
+     */
+    yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getSchedule();
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+     */
+    yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.workflows.v1.CreateWorkflowRequest}
@@ -361,6 +388,19 @@ public final class WorkflowServiceOuterClass {
             case 72: {
 
               express_ = input.readBool();
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder subBuilder = null;
+              if (schedule_ != null) {
+                subBuilder = schedule_.toBuilder();
+              }
+              schedule_ = input.readMessage(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(schedule_);
+                schedule_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -827,6 +867,44 @@ public final class WorkflowServiceOuterClass {
       return express_;
     }
 
+    public static final int SCHEDULE_FIELD_NUMBER = 10;
+    private yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule schedule_;
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+     * @return Whether the schedule field is set.
+     */
+    @java.lang.Override
+    public boolean hasSchedule() {
+      return schedule_ != null;
+    }
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+     * @return The schedule.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getSchedule() {
+      return schedule_ == null ? yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.getDefaultInstance() : schedule_;
+    }
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder() {
+      return getSchedule();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -870,6 +948,9 @@ public final class WorkflowServiceOuterClass {
       }
       if (express_ != false) {
         output.writeBool(9, express_);
+      }
+      if (schedule_ != null) {
+        output.writeMessage(10, getSchedule());
       }
       unknownFields.writeTo(output);
     }
@@ -917,6 +998,10 @@ public final class WorkflowServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, express_);
       }
+      if (schedule_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getSchedule());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -956,6 +1041,11 @@ public final class WorkflowServiceOuterClass {
           .equals(other.getServiceAccountId())) return false;
       if (getExpress()
           != other.getExpress()) return false;
+      if (hasSchedule() != other.hasSchedule()) return false;
+      if (hasSchedule()) {
+        if (!getSchedule()
+            .equals(other.getSchedule())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -992,6 +1082,10 @@ public final class WorkflowServiceOuterClass {
       hash = (37 * hash) + EXPRESS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getExpress());
+      if (hasSchedule()) {
+        hash = (37 * hash) + SCHEDULE_FIELD_NUMBER;
+        hash = (53 * hash) + getSchedule().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1172,6 +1266,12 @@ public final class WorkflowServiceOuterClass {
 
         express_ = false;
 
+        if (scheduleBuilder_ == null) {
+          schedule_ = null;
+        } else {
+          schedule_ = null;
+          scheduleBuilder_ = null;
+        }
         return this;
       }
 
@@ -1217,6 +1317,11 @@ public final class WorkflowServiceOuterClass {
         result.networkId_ = networkId_;
         result.serviceAccountId_ = serviceAccountId_;
         result.express_ = express_;
+        if (scheduleBuilder_ == null) {
+          result.schedule_ = schedule_;
+        } else {
+          result.schedule_ = scheduleBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1295,6 +1400,9 @@ public final class WorkflowServiceOuterClass {
         }
         if (other.getExpress() != false) {
           setExpress(other.getExpress());
+        }
+        if (other.hasSchedule()) {
+          mergeSchedule(other.getSchedule());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2322,6 +2430,161 @@ public final class WorkflowServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule schedule_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder> scheduleBuilder_;
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+       * @return Whether the schedule field is set.
+       */
+      public boolean hasSchedule() {
+        return scheduleBuilder_ != null || schedule_ != null;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+       * @return The schedule.
+       */
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getSchedule() {
+        if (scheduleBuilder_ == null) {
+          return schedule_ == null ? yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.getDefaultInstance() : schedule_;
+        } else {
+          return scheduleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+       */
+      public Builder setSchedule(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule value) {
+        if (scheduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schedule_ = value;
+          onChanged();
+        } else {
+          scheduleBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+       */
+      public Builder setSchedule(
+          yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder builderForValue) {
+        if (scheduleBuilder_ == null) {
+          schedule_ = builderForValue.build();
+          onChanged();
+        } else {
+          scheduleBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+       */
+      public Builder mergeSchedule(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule value) {
+        if (scheduleBuilder_ == null) {
+          if (schedule_ != null) {
+            schedule_ =
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.newBuilder(schedule_).mergeFrom(value).buildPartial();
+          } else {
+            schedule_ = value;
+          }
+          onChanged();
+        } else {
+          scheduleBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+       */
+      public Builder clearSchedule() {
+        if (scheduleBuilder_ == null) {
+          schedule_ = null;
+          onChanged();
+        } else {
+          schedule_ = null;
+          scheduleBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+       */
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder getScheduleBuilder() {
+        
+        onChanged();
+        return getScheduleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+       */
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder() {
+        if (scheduleBuilder_ != null) {
+          return scheduleBuilder_.getMessageOrBuilder();
+        } else {
+          return schedule_ == null ?
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.getDefaultInstance() : schedule_;
+        }
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder> 
+          getScheduleFieldBuilder() {
+        if (scheduleBuilder_ == null) {
+          scheduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder>(
+                  getSchedule(),
+                  getParentForChildren(),
+                  isClean());
+          schedule_ = null;
+        }
+        return scheduleBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3227,6 +3490,33 @@ public final class WorkflowServiceOuterClass {
      * @return The express.
      */
     boolean getExpress();
+
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+     * @return Whether the schedule field is set.
+     */
+    boolean hasSchedule();
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+     * @return The schedule.
+     */
+    yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getSchedule();
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+     */
+    yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.workflows.v1.UpdateWorkflowRequest}
@@ -3364,6 +3654,19 @@ public final class WorkflowServiceOuterClass {
             case 80: {
 
               express_ = input.readBool();
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder subBuilder = null;
+              if (schedule_ != null) {
+                subBuilder = schedule_.toBuilder();
+              }
+              schedule_ = input.readMessage(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(schedule_);
+                schedule_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3866,6 +4169,44 @@ public final class WorkflowServiceOuterClass {
       return express_;
     }
 
+    public static final int SCHEDULE_FIELD_NUMBER = 11;
+    private yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule schedule_;
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+     * @return Whether the schedule field is set.
+     */
+    @java.lang.Override
+    public boolean hasSchedule() {
+      return schedule_ != null;
+    }
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+     * @return The schedule.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getSchedule() {
+      return schedule_ == null ? yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.getDefaultInstance() : schedule_;
+    }
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder() {
+      return getSchedule();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3912,6 +4253,9 @@ public final class WorkflowServiceOuterClass {
       }
       if (express_ != false) {
         output.writeBool(10, express_);
+      }
+      if (schedule_ != null) {
+        output.writeMessage(11, getSchedule());
       }
       unknownFields.writeTo(output);
     }
@@ -3963,6 +4307,10 @@ public final class WorkflowServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, express_);
       }
+      if (schedule_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getSchedule());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4007,6 +4355,11 @@ public final class WorkflowServiceOuterClass {
       }
       if (getExpress()
           != other.getExpress()) return false;
+      if (hasSchedule() != other.hasSchedule()) return false;
+      if (hasSchedule()) {
+        if (!getSchedule()
+            .equals(other.getSchedule())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4047,6 +4400,10 @@ public final class WorkflowServiceOuterClass {
       hash = (37 * hash) + EXPRESS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getExpress());
+      if (hasSchedule()) {
+        hash = (37 * hash) + SCHEDULE_FIELD_NUMBER;
+        hash = (53 * hash) + getSchedule().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4233,6 +4590,12 @@ public final class WorkflowServiceOuterClass {
         }
         express_ = false;
 
+        if (scheduleBuilder_ == null) {
+          schedule_ = null;
+        } else {
+          schedule_ = null;
+          scheduleBuilder_ = null;
+        }
         return this;
       }
 
@@ -4283,6 +4646,11 @@ public final class WorkflowServiceOuterClass {
           result.updateMask_ = updateMaskBuilder_.build();
         }
         result.express_ = express_;
+        if (scheduleBuilder_ == null) {
+          result.schedule_ = schedule_;
+        } else {
+          result.schedule_ = scheduleBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4364,6 +4732,9 @@ public final class WorkflowServiceOuterClass {
         }
         if (other.getExpress() != false) {
           setExpress(other.getExpress());
+        }
+        if (other.hasSchedule()) {
+          mergeSchedule(other.getSchedule());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5540,6 +5911,161 @@ public final class WorkflowServiceOuterClass {
         express_ = false;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule schedule_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder> scheduleBuilder_;
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+       * @return Whether the schedule field is set.
+       */
+      public boolean hasSchedule() {
+        return scheduleBuilder_ != null || schedule_ != null;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+       * @return The schedule.
+       */
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getSchedule() {
+        if (scheduleBuilder_ == null) {
+          return schedule_ == null ? yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.getDefaultInstance() : schedule_;
+        } else {
+          return scheduleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+       */
+      public Builder setSchedule(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule value) {
+        if (scheduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schedule_ = value;
+          onChanged();
+        } else {
+          scheduleBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+       */
+      public Builder setSchedule(
+          yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder builderForValue) {
+        if (scheduleBuilder_ == null) {
+          schedule_ = builderForValue.build();
+          onChanged();
+        } else {
+          scheduleBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+       */
+      public Builder mergeSchedule(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule value) {
+        if (scheduleBuilder_ == null) {
+          if (schedule_ != null) {
+            schedule_ =
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.newBuilder(schedule_).mergeFrom(value).buildPartial();
+          } else {
+            schedule_ = value;
+          }
+          onChanged();
+        } else {
+          scheduleBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+       */
+      public Builder clearSchedule() {
+        if (scheduleBuilder_ == null) {
+          schedule_ = null;
+          onChanged();
+        } else {
+          schedule_ = null;
+          scheduleBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+       */
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder getScheduleBuilder() {
+        
+        onChanged();
+        return getScheduleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+       */
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder() {
+        if (scheduleBuilder_ != null) {
+          return scheduleBuilder_.getMessageOrBuilder();
+        } else {
+          return schedule_ == null ?
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.getDefaultInstance() : schedule_;
+        }
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder> 
+          getScheduleFieldBuilder() {
+        if (scheduleBuilder_ == null) {
+          scheduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder>(
+                  getSchedule(),
+                  getParentForChildren(),
+                  isClean());
+          schedule_ = null;
+        }
+        return scheduleBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13286,7 +13812,7 @@ public final class WorkflowServiceOuterClass {
       "andex/cloud/operation/operation.proto\0323y" +
       "andex/cloud/serverless/workflows/v1/work" +
       "flow.proto\032\035yandex/cloud/validation.prot" +
-      "o\"\274\004\n\025CreateWorkflowRequest\022\027\n\tfolder_id" +
+      "o\"\206\005\n\025CreateWorkflowRequest\022\027\n\tfolder_id" +
       "\030\001 \001(\tB\004\350\3071\001\0226\n\004name\030\002 \001(\tB(\350\3071\001\362\3071 |[a-" +
       "z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descript" +
       "ion\030\003 \001(\tB\t\212\3101\005<=256\022\240\001\n\006labels\030\004 \003(\0132G." +
@@ -13299,75 +13825,79 @@ public final class WorkflowServiceOuterClass {
       "_options\030\006 \001(\01320.yandex.cloud.serverless" +
       ".workflows.v1.LogOptions\022\022\n\nnetwork_id\030\007" +
       " \001(\t\022\032\n\022service_account_id\030\010 \001(\t\022\017\n\007expr" +
-      "ess\030\t \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\"3\n\026CreateWorkflowMetada" +
-      "ta\022\031\n\013workflow_id\030\001 \001(\tB\004\350\3071\001\"\345\004\n\025Update" +
-      "WorkflowRequest\022\031\n\013workflow_id\030\001 \001(\tB\004\350\307" +
-      "1\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0" +
-      ",61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101" +
-      "\005<=256\022\240\001\n\006labels\030\004 \003(\0132G.yandex.cloud.s" +
-      "erverless.workflows.v1.UpdateWorkflowReq" +
-      "uest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-" +
-      "_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\" +
-      "@0-9a-z]*\022R\n\rspecification\030\005 \001(\0132;.yande" +
-      "x.cloud.serverless.workflows.v1.Workflow" +
-      "Specification\022E\n\013log_options\030\006 \001(\01320.yan" +
-      "dex.cloud.serverless.workflows.v1.LogOpt" +
-      "ions\022\022\n\nnetwork_id\030\007 \001(\t\022\032\n\022service_acco" +
-      "unt_id\030\010 \001(\t\022/\n\013update_mask\030\t \001(\0132\032.goog" +
-      "le.protobuf.FieldMask\022\017\n\007express\030\n \001(\010\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"3\n\026UpdateWorkflowMetadata\022\031\n\013workf" +
-      "low_id\030\001 \001(\tB\004\350\3071\001\"/\n\022GetWorkflowRequest" +
-      "\022\031\n\013workflow_id\030\001 \001(\tB\004\350\3071\001\"W\n\023GetWorkfl" +
-      "owResponse\022@\n\010workflow\030\001 \001(\0132..yandex.cl" +
-      "oud.serverless.workflows.v1.Workflow\"2\n\025" +
-      "DeleteWorkflowRequest\022\031\n\013workflow_id\030\001 \001" +
-      "(\tB\004\350\3071\001\"-\n\026DeleteWorkflowMetadata\022\023\n\013wo" +
-      "rkflow_id\030\001 \001(\t\"f\n\024ListWorkflowsRequest\022" +
-      "\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_size\030\002 " +
-      "\001(\003\022\022\n\npage_token\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"" +
-      "z\n\025ListWorkflowsResponse\022H\n\tworkflows\030\001 " +
-      "\003(\01325.yandex.cloud.serverless.workflows." +
-      "v1.WorkflowPreview\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"\214\001\n\025ListOperationsRequest\022\031\n\013workflo" +
-      "w_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032" +
-      "\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"h\n\026ListOperat" +
-      "ionsResponse\0225\n\noperations\030\001 \003(\0132!.yande" +
-      "x.cloud.operation.Operation\022\027\n\017next_page" +
-      "_token\030\002 \001(\t2\347\010\n\017WorkflowService\022\261\001\n\006Cre" +
-      "ate\022;.yandex.cloud.serverless.workflows." +
-      "v1.CreateWorkflowRequest\032!.yandex.cloud." +
-      "operation.Operation\"G\202\323\344\223\002\033\"\026/workflows/" +
-      "v1/workflow:\001*\262\322*\"\n\026CreateWorkflowMetada" +
-      "ta\022\010Workflow\022\277\001\n\006Update\022;.yandex.cloud.s" +
-      "erverless.workflows.v1.UpdateWorkflowReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "U\202\323\344\223\002)2$/workflows/v1/workflow/{workflo" +
-      "w_id}:\001*\262\322*\"\n\026UpdateWorkflowMetadata\022\010Wo" +
-      "rkflow\022\250\001\n\003Get\0228.yandex.cloud.serverless" +
-      ".workflows.v1.GetWorkflowRequest\0329.yande" +
-      "x.cloud.serverless.workflows.v1.GetWorkf" +
-      "lowResponse\",\202\323\344\223\002&\022$/workflows/v1/workf" +
-      "low/{workflow_id}\022\311\001\n\006Delete\022;.yandex.cl" +
-      "oud.serverless.workflows.v1.DeleteWorkfl" +
-      "owRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"_\202\323\344\223\002&*$/workflows/v1/workflow/{wo" +
-      "rkflow_id}\262\322*/\n\026DeleteWorkflowMetadata\022\025" +
-      "google.protobuf.Empty\022\237\001\n\004List\022:.yandex." +
-      "cloud.serverless.workflows.v1.ListWorkfl" +
-      "owsRequest\032;.yandex.cloud.serverless.wor" +
-      "kflows.v1.ListWorkflowsResponse\"\036\202\323\344\223\002\030\022" +
-      "\026/workflows/v1/workflow\022\304\001\n\016ListOperatio" +
-      "ns\022;.yandex.cloud.serverless.workflows.v" +
-      "1.ListOperationsRequest\032<.yandex.cloud.s" +
-      "erverless.workflows.v1.ListOperationsRes" +
-      "ponse\"7\202\323\344\223\0021\022//workflows/v1/workflow/{w" +
-      "orkflow_id}/operationsB~\n(yandex.cloud.a" +
-      "pi.serverless.workflows.v1ZRgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/ser" +
-      "verless/workflows/v1;workflowsb\006proto3"
+      "ess\030\t \001(\010\022H\n\010schedule\030\n \001(\01326.yandex.clo" +
+      "ud.serverless.workflows.v1.WorkflowSched" +
+      "ule\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"3\n\026CreateWorkflowMetadata\022\031\n\013" +
+      "workflow_id\030\001 \001(\tB\004\350\3071\001\"\257\005\n\025UpdateWorkfl" +
+      "owRequest\022\031\n\013workflow_id\030\001 \001(\tB\004\350\3071\001\0222\n\004" +
+      "name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a" +
+      "-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256" +
+      "\022\240\001\n\006labels\030\004 \003(\0132G.yandex.cloud.serverl" +
+      "ess.workflows.v1.UpdateWorkflowRequest.L" +
+      "abelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0" +
+      "-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-" +
+      "z]*\022R\n\rspecification\030\005 \001(\0132;.yandex.clou" +
+      "d.serverless.workflows.v1.WorkflowSpecif" +
+      "ication\022E\n\013log_options\030\006 \001(\01320.yandex.cl" +
+      "oud.serverless.workflows.v1.LogOptions\022\022" +
+      "\n\nnetwork_id\030\007 \001(\t\022\032\n\022service_account_id" +
+      "\030\010 \001(\t\022/\n\013update_mask\030\t \001(\0132\032.google.pro" +
+      "tobuf.FieldMask\022\017\n\007express\030\n \001(\010\022H\n\010sche" +
+      "dule\030\013 \001(\01326.yandex.cloud.serverless.wor" +
+      "kflows.v1.WorkflowSchedule\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"3\n\026Upd" +
+      "ateWorkflowMetadata\022\031\n\013workflow_id\030\001 \001(\t" +
+      "B\004\350\3071\001\"/\n\022GetWorkflowRequest\022\031\n\013workflow" +
+      "_id\030\001 \001(\tB\004\350\3071\001\"W\n\023GetWorkflowResponse\022@" +
+      "\n\010workflow\030\001 \001(\0132..yandex.cloud.serverle" +
+      "ss.workflows.v1.Workflow\"2\n\025DeleteWorkfl" +
+      "owRequest\022\031\n\013workflow_id\030\001 \001(\tB\004\350\3071\001\"-\n\026" +
+      "DeleteWorkflowMetadata\022\023\n\013workflow_id\030\001 " +
+      "\001(\t\"f\n\024ListWorkflowsRequest\022\027\n\tfolder_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_" +
+      "token\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"z\n\025ListWorkf" +
+      "lowsResponse\022H\n\tworkflows\030\001 \003(\01325.yandex" +
+      ".cloud.serverless.workflows.v1.WorkflowP" +
+      "review\022\027\n\017next_page_token\030\002 \001(\t\"\214\001\n\025List" +
+      "OperationsRequest\022\031\n\013workflow_id\030\001 \001(\tB\004" +
+      "\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001" +
+      "(\tB\n\212\3101\006<=1000\"h\n\026ListOperationsResponse" +
+      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
+      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
+      "2\347\010\n\017WorkflowService\022\261\001\n\006Create\022;.yandex" +
+      ".cloud.serverless.workflows.v1.CreateWor" +
+      "kflowRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"G\202\323\344\223\002\033\"\026/workflows/v1/workflow:" +
+      "\001*\262\322*\"\n\026CreateWorkflowMetadata\022\010Workflow" +
+      "\022\277\001\n\006Update\022;.yandex.cloud.serverless.wo" +
+      "rkflows.v1.UpdateWorkflowRequest\032!.yande" +
+      "x.cloud.operation.Operation\"U\202\323\344\223\002)2$/wo" +
+      "rkflows/v1/workflow/{workflow_id}:\001*\262\322*\"" +
+      "\n\026UpdateWorkflowMetadata\022\010Workflow\022\250\001\n\003G" +
+      "et\0228.yandex.cloud.serverless.workflows.v" +
+      "1.GetWorkflowRequest\0329.yandex.cloud.serv" +
+      "erless.workflows.v1.GetWorkflowResponse\"" +
+      ",\202\323\344\223\002&\022$/workflows/v1/workflow/{workflo" +
+      "w_id}\022\311\001\n\006Delete\022;.yandex.cloud.serverle" +
+      "ss.workflows.v1.DeleteWorkflowRequest\032!." +
+      "yandex.cloud.operation.Operation\"_\202\323\344\223\002&" +
+      "*$/workflows/v1/workflow/{workflow_id}\262\322" +
+      "*/\n\026DeleteWorkflowMetadata\022\025google.proto" +
+      "buf.Empty\022\237\001\n\004List\022:.yandex.cloud.server" +
+      "less.workflows.v1.ListWorkflowsRequest\032;" +
+      ".yandex.cloud.serverless.workflows.v1.Li" +
+      "stWorkflowsResponse\"\036\202\323\344\223\002\030\022\026/workflows/" +
+      "v1/workflow\022\304\001\n\016ListOperations\022;.yandex." +
+      "cloud.serverless.workflows.v1.ListOperat" +
+      "ionsRequest\032<.yandex.cloud.serverless.wo" +
+      "rkflows.v1.ListOperationsResponse\"7\202\323\344\223\002" +
+      "1\022//workflows/v1/workflow/{workflow_id}/" +
+      "operationsB~\n(yandex.cloud.api.serverles" +
+      "s.workflows.v1ZRgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/serverless/work" +
+      "flows/v1;workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13384,7 +13914,7 @@ public final class WorkflowServiceOuterClass {
     internal_static_yandex_cloud_serverless_workflows_v1_CreateWorkflowRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_CreateWorkflowRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Specification", "LogOptions", "NetworkId", "ServiceAccountId", "Express", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Specification", "LogOptions", "NetworkId", "ServiceAccountId", "Express", "Schedule", });
     internal_static_yandex_cloud_serverless_workflows_v1_CreateWorkflowRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_workflows_v1_CreateWorkflowRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_workflows_v1_CreateWorkflowRequest_LabelsEntry_fieldAccessorTable = new
@@ -13402,7 +13932,7 @@ public final class WorkflowServiceOuterClass {
     internal_static_yandex_cloud_serverless_workflows_v1_UpdateWorkflowRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_UpdateWorkflowRequest_descriptor,
-        new java.lang.String[] { "WorkflowId", "Name", "Description", "Labels", "Specification", "LogOptions", "NetworkId", "ServiceAccountId", "UpdateMask", "Express", });
+        new java.lang.String[] { "WorkflowId", "Name", "Description", "Labels", "Specification", "LogOptions", "NetworkId", "ServiceAccountId", "UpdateMask", "Express", "Schedule", });
     internal_static_yandex_cloud_serverless_workflows_v1_UpdateWorkflowRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_workflows_v1_UpdateWorkflowRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_workflows_v1_UpdateWorkflowRequest_LabelsEntry_fieldAccessorTable = new

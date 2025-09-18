@@ -29388,82 +29388,22 @@ public final class ServerServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/baremetal/v1alpha/server_" +
       "service.proto\022\036yandex.cloud.baremetal.v1" +
-      "alpha\032 google/protobuf/field_mask.proto\032" +
-      " yandex/cloud/api/operation.proto\032+yande" +
-      "x/cloud/baremetal/v1alpha/server.proto\032," +
-      "yandex/cloud/baremetal/v1alpha/storage.p" +
-      "roto\032&yandex/cloud/operation/operation.p" +
-      "roto\032\035yandex/cloud/validation.proto\"?\n\020G" +
-      "etServerRequest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016" +
-      "[a-z][a-z0-9]*\212\3101\00220\"\236\001\n\021ListServerReque" +
-      "st\022/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9." +
-      "-]*\212\3101\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=10" +
-      "0\022\022\n\npage_token\030e \001(\t\022\020\n\010order_by\030f \001(\t\022" +
-      "\016\n\006filter\030g \001(\tJ\004\010\002\020d\"l\n\022ListServerRespo" +
-      "nse\0227\n\007servers\030\001 \003(\0132&.yandex.cloud.bare" +
-      "metal.v1alpha.Server\022\027\n\017next_page_token\030" +
-      "d \001(\tJ\004\010\002\020d\"\224\005\n\023CreateServerRequest\022/\n\tf" +
-      "older_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004" +
-      "<=50\0224\n\004name\030\002 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*" +
-      "[a-z0-9])?\212\3101\0042-56\022\037\n\013description\030\003 \001(\tB" +
-      "\n\212\3101\006<=1024\022\"\n\020hardware_pool_id\030\004 \001(\tB\010\212" +
-      "\3101\004<=20\0222\n\020configuration_id\030\005 \001(\tB\030\362\3071\016[" +
-      "a-z][a-z0-9]*\212\3101\00220\022\"\n\020rental_period_id\030" +
-      "\013 \001(\tB\010\212\3101\004<=20\022Y\n\022network_interfaces\030\017 " +
-      "\003(\01324.yandex.cloud.baremetal.v1alpha.Net" +
-      "workInterfaceSpecB\007\202\3101\003<=2\022H\n\020os_setting" +
-      "s_spec\030\020 \001(\0132..yandex.cloud.baremetal.v1" +
-      "alpha.OsSettingsSpec\022\221\001\n\006labels\030\310\001 \003(\0132?" +
-      ".yandex.cloud.baremetal.v1alpha.CreateSe" +
-      "rverRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
-      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
-      "0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001J\004\010\006\020\013J\004\010\014\020\017J\005\010\021\020\310\001\")\n\024Cr" +
-      "eateServerMetadata\022\021\n\tserver_id\030\001 \001(\t\"\357\003" +
-      "\n\023UpdateServerRequest\022+\n\tserver_id\030\001 \001(\t" +
-      "B\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022/\n\013update_mas" +
-      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\0224\n\004n" +
-      "ame\030\003 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])" +
-      "?\212\3101\0042-63\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=10" +
-      "24\022Y\n\022network_interfaces\030\005 \003(\01324.yandex." +
-      "cloud.baremetal.v1alpha.NetworkInterface" +
-      "SpecB\007\202\3101\0031-2\022\221\001\n\006labels\030\310\001 \003(\0132?.yandex" +
-      ".cloud.baremetal.v1alpha.UpdateServerReq" +
-      "uest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-" +
-      "_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]" +
-      "*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001J\005\010\006\020\310\001\"\201\002\n\024NetworkInterfaceSpec" +
-      "\022)\n\002id\030\001 \001(\tB\035\362\3071\021([a-z][a-z0-9]*)?\212\3101\004<" +
-      "=20\022W\n\016private_subnet\030\007 \001(\0132=.yandex.clo" +
-      "ud.baremetal.v1alpha.PrivateSubnetNetwor" +
-      "kInterfaceH\000\022U\n\rpublic_subnet\030\010 \001(\0132<.ya" +
-      "ndex.cloud.baremetal.v1alpha.PublicSubne" +
-      "tNetworkInterfaceH\000B\010\n\006subnetJ\004\010\002\020\007\")\n\024U" +
-      "pdateServerMetadata\022\021\n\tserver_id\030\001 \001(\t\"B" +
-      "\n\023DeleteServerRequest\022+\n\tserver_id\030\001 \001(\t" +
-      "B\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\")\n\024DeleteServ" +
-      "erMetadata\022\021\n\tserver_id\030\001 \001(\t\"D\n\025PowerOf" +
-      "fServerRequest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[" +
-      "a-z][a-z0-9]*\212\3101\00220\"+\n\026PowerOffServerMet" +
-      "adata\022\021\n\tserver_id\030\001 \001(\t\"C\n\024PowerOnServe" +
-      "rRequest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a" +
-      "-z0-9]*\212\3101\00220\"*\n\025PowerOnServerMetadata\022\021" +
-      "\n\tserver_id\030\001 \001(\t\"B\n\023RebootServerRequest" +
-      "\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212" +
-      "\3101\00220\")\n\024RebootServerMetadata\022\021\n\tserver_" +
-      "id\030\001 \001(\t\"\247\001\n\026ReinstallServerRequest\022+\n\ts" +
-      "erver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220" +
-      "\022H\n\020os_settings_spec\030\t \001(\0132..yandex.clou" +
-      "d.baremetal.v1alpha.OsSettingsSpecJ\004\010\002\020\006" +
-      "J\004\010\007\020\010J\004\010\010\020\tJ\004\010\006\020\007\",\n\027ReinstallServerMet" +
-      "adata\022\021\n\tserver_id\030\001 \001(\t\"\202\001\n\033ListServerO" +
-      "perationsRequest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071" +
-      "\016[a-z][a-z0-9]*\212\3101\00220\022\034\n\tpage_size\030d \001(\003" +
-      "B\t\372\3071\005<=100\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"t\n" +
-      "\034ListServerOperationsResponse\0225\n\noperati" +
-      "ons\030\001 \003(\0132!.yandex.cloud.operation.Opera" +
-      "tion\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\303\005\n\031" +
-      "BatchCreateServersRequest\022/\n\tfolder_id\030\001" +
+      "alpha\032\034google/api/annotations.proto\032 goo" +
+      "gle/protobuf/field_mask.proto\032 yandex/cl" +
+      "oud/api/operation.proto\032+yandex/cloud/ba" +
+      "remetal/v1alpha/server.proto\032,yandex/clo" +
+      "ud/baremetal/v1alpha/storage.proto\032&yand" +
+      "ex/cloud/operation/operation.proto\032\035yand" +
+      "ex/cloud/validation.proto\"?\n\020GetServerRe" +
+      "quest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0" +
+      "-9]*\212\3101\00220\"\236\001\n\021ListServerRequest\022/\n\tfold" +
+      "er_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=5" +
+      "0\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\022\n\npage_" +
+      "token\030e \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006filter\030" +
+      "g \001(\tJ\004\010\002\020d\"l\n\022ListServerResponse\0227\n\007ser" +
+      "vers\030\001 \003(\0132&.yandex.cloud.baremetal.v1al" +
+      "pha.Server\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020" +
+      "d\"\224\005\n\023CreateServerRequest\022/\n\tfolder_id\030\001" +
       " \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=50\0224\n\004na" +
       "me\030\002 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?" +
       "\212\3101\0042-56\022\037\n\013description\030\003 \001(\tB\n\212\3101\006<=102" +
@@ -29474,85 +29414,162 @@ public final class ServerServiceOuterClass {
       "ex.cloud.baremetal.v1alpha.NetworkInterf" +
       "aceSpecB\007\202\3101\003<=2\022H\n\020os_settings_spec\030\020 \001" +
       "(\0132..yandex.cloud.baremetal.v1alpha.OsSe" +
-      "ttingsSpec\022\227\001\n\006labels\030\310\001 \003(\0132E.yandex.cl" +
-      "oud.baremetal.v1alpha.BatchCreateServers" +
-      "Request.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071" +
-      "\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a" +
-      "-z]*\022\031\n\005count\030\254\002 \001(\003B\t\372\3071\0051-100\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004" +
-      "\010\006\020\013J\004\010\014\020\017J\005\010\021\020\310\001J\006\010\311\001\020\254\002\"U\n\032BatchCreate" +
-      "ServersResponse\0227\n\007servers\030\001 \003(\0132&.yande" +
-      "x.cloud.baremetal.v1alpha.Server\"0\n\032Batc" +
-      "hCreateServersMetadata\022\022\n\nserver_ids\030\001 \003" +
-      "(\t\"-\n\030QuarantineServerMetadata\022\021\n\tserver" +
-      "_id\030\001 \001(\t\"G\n\030StartProlongationRequest\022+\n" +
-      "\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\002" +
-      "20\"F\n\027StopProlongationRequest\022+\n\tserver_" +
-      "id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"2\n\035Se" +
-      "rverSetProlongationMetadata\022\021\n\tserver_id" +
-      "\030\001 \001(\t\"\352\002\n\016OsSettingsSpec\022,\n\010image_id\030\001 " +
-      "\001(\tB\032\362\3071\016[a-z][a-z0-9]*\212\3101\004<=20\0229\n\010stora" +
-      "ges\030\002 \003(\0132\'.yandex.cloud.baremetal.v1alp" +
-      "ha.Storage\022%\n\016ssh_public_key\030\004 \001(\tB\013\212\3101\007" +
-      "<=20000H\000\022\037\n\013user_ssh_id\030\005 \001(\tB\010\212\3101\004<=50" +
-      "H\000\022&\n\023password_plain_text\030\n \001(\tB\007\212\3101\003>=6" +
-      "H\001\022P\n\027password_lockbox_secret\030\013 \001(\0132-.ya" +
-      "ndex.cloud.baremetal.v1alpha.LockboxSecr" +
-      "etH\001B\017\n\007ssh_key\022\004\300\3011\001B\020\n\010password\022\004\300\3011\001J" +
-      "\004\010\003\020\004J\004\010\006\020\n\"O\n\rLockboxSecret\022\027\n\tsecret_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022\022\n\nversion_id\030\002 \001(\t\022\021\n\003key" +
-      "\030\003 \001(\tB\004\350\3071\0012\325\r\n\rServerService\022a\n\003Get\0220." +
-      "yandex.cloud.baremetal.v1alpha.GetServer" +
-      "Request\032&.yandex.cloud.baremetal.v1alpha" +
-      ".Server\"\000\022o\n\004List\0221.yandex.cloud.baremet" +
-      "al.v1alpha.ListServerRequest\0322.yandex.cl" +
-      "oud.baremetal.v1alpha.ListServerResponse" +
-      "\"\000\022\204\001\n\006Create\0223.yandex.cloud.baremetal.v" +
-      "1alpha.CreateServerRequest\032!.yandex.clou" +
-      "d.operation.Operation\"\"\262\322*\036\n\024CreateServe" +
-      "rMetadata\022\006Server\022\251\001\n\013BatchCreate\0229.yand" +
-      "ex.cloud.baremetal.v1alpha.BatchCreateSe" +
-      "rversRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"<\262\322*8\n\032BatchCreateServersMetadat" +
-      "a\022\032BatchCreateServersResponse\022\204\001\n\006Update" +
-      "\0223.yandex.cloud.baremetal.v1alpha.Update" +
-      "ServerRequest\032!.yandex.cloud.operation.O" +
-      "peration\"\"\262\322*\036\n\024UpdateServerMetadata\022\006Se" +
-      "rver\022\231\001\n\010PowerOff\0225.yandex.cloud.baremet" +
-      "al.v1alpha.PowerOffServerRequest\032!.yande" +
-      "x.cloud.operation.Operation\"3\262\322*/\n\026Power" +
-      "OffServerMetadata\022\025google.protobuf.Empty" +
-      "\022\226\001\n\007PowerOn\0224.yandex.cloud.baremetal.v1" +
-      "alpha.PowerOnServerRequest\032!.yandex.clou" +
-      "d.operation.Operation\"2\262\322*.\n\025PowerOnServ" +
-      "erMetadata\022\025google.protobuf.Empty\022\223\001\n\006Re" +
-      "boot\0223.yandex.cloud.baremetal.v1alpha.Re" +
-      "bootServerRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"1\262\322*-\n\024RebootServerMetadata" +
-      "\022\025google.protobuf.Empty\022\234\001\n\tReinstall\0226." +
-      "yandex.cloud.baremetal.v1alpha.Reinstall" +
-      "ServerRequest\032!.yandex.cloud.operation.O" +
-      "peration\"4\262\322*0\n\027ReinstallServerMetadata\022" +
-      "\025google.protobuf.Empty\022\235\001\n\021StartProlonga" +
-      "tion\0228.yandex.cloud.baremetal.v1alpha.St" +
-      "artProlongationRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"+\262\322*\'\n\035ServerSetProlon" +
-      "gationMetadata\022\006Server\022\233\001\n\020StopProlongat" +
-      "ion\0227.yandex.cloud.baremetal.v1alpha.Sto" +
-      "pProlongationRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"+\262\322*\'\n\035ServerSetProlonga" +
-      "tionMetadata\022\006Server\022\215\001\n\016ListOperations\022" +
-      ";.yandex.cloud.baremetal.v1alpha.ListSer" +
-      "verOperationsRequest\032<.yandex.cloud.bare" +
-      "metal.v1alpha.ListServerOperationsRespon" +
-      "se\"\000Br\n\"yandex.cloud.api.baremetal.v1alp" +
-      "haZLgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/baremetal/v1alpha;baremetal" +
-      "b\006proto3"
+      "ttingsSpec\022\221\001\n\006labels\030\310\001 \003(\0132?.yandex.cl" +
+      "oud.baremetal.v1alpha.CreateServerReques" +
+      "t.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-" +
+      "9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-" +
+      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001J\004\010\006\020\013J\004\010\014\020\017J\005\010\021\020\310\001\")\n\024CreateServer" +
+      "Metadata\022\021\n\tserver_id\030\001 \001(\t\"\357\003\n\023UpdateSe" +
+      "rverRequest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z" +
+      "][a-z0-9]*\212\3101\00220\022/\n\013update_mask\030\002 \001(\0132\032." +
+      "google.protobuf.FieldMask\0224\n\004name\030\003 \001(\tB" +
+      "&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-63\022" +
+      "\037\n\013description\030\004 \001(\tB\n\212\3101\006<=1024\022Y\n\022netw" +
+      "ork_interfaces\030\005 \003(\01324.yandex.cloud.bare" +
+      "metal.v1alpha.NetworkInterfaceSpecB\007\202\3101\003" +
+      "1-2\022\221\001\n\006labels\030\310\001 \003(\0132?.yandex.cloud.bar" +
+      "emetal.v1alpha.UpdateServerRequest.Label" +
+      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
+      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005" +
+      "\010\006\020\310\001\"\201\002\n\024NetworkInterfaceSpec\022)\n\002id\030\001 \001" +
+      "(\tB\035\362\3071\021([a-z][a-z0-9]*)?\212\3101\004<=20\022W\n\016pri" +
+      "vate_subnet\030\007 \001(\0132=.yandex.cloud.baremet" +
+      "al.v1alpha.PrivateSubnetNetworkInterface" +
+      "H\000\022U\n\rpublic_subnet\030\010 \001(\0132<.yandex.cloud" +
+      ".baremetal.v1alpha.PublicSubnetNetworkIn" +
+      "terfaceH\000B\010\n\006subnetJ\004\010\002\020\007\")\n\024UpdateServe" +
+      "rMetadata\022\021\n\tserver_id\030\001 \001(\t\"B\n\023DeleteSe" +
+      "rverRequest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z" +
+      "][a-z0-9]*\212\3101\00220\")\n\024DeleteServerMetadata" +
+      "\022\021\n\tserver_id\030\001 \001(\t\"D\n\025PowerOffServerReq" +
+      "uest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-" +
+      "9]*\212\3101\00220\"+\n\026PowerOffServerMetadata\022\021\n\ts" +
+      "erver_id\030\001 \001(\t\"C\n\024PowerOnServerRequest\022+" +
+      "\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101" +
+      "\00220\"*\n\025PowerOnServerMetadata\022\021\n\tserver_i" +
+      "d\030\001 \001(\t\"B\n\023RebootServerRequest\022+\n\tserver" +
+      "_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\")\n\024R" +
+      "ebootServerMetadata\022\021\n\tserver_id\030\001 \001(\t\"\247" +
+      "\001\n\026ReinstallServerRequest\022+\n\tserver_id\030\001" +
+      " \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022H\n\020os_set" +
+      "tings_spec\030\t \001(\0132..yandex.cloud.baremeta" +
+      "l.v1alpha.OsSettingsSpecJ\004\010\002\020\006J\004\010\007\020\010J\004\010\010" +
+      "\020\tJ\004\010\006\020\007\",\n\027ReinstallServerMetadata\022\021\n\ts" +
+      "erver_id\030\001 \001(\t\"\202\001\n\033ListServerOperationsR" +
+      "equest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z" +
+      "0-9]*\212\3101\00220\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=10" +
+      "0\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"t\n\034ListServe" +
+      "rOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
+      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
+      "xt_page_token\030d \001(\tJ\004\010\002\020d\"\303\005\n\031BatchCreat" +
+      "eServersRequest\022/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020" +
+      "[a-z][a-z0-9.-]*\212\3101\004<=50\0224\n\004name\030\002 \001(\tB&" +
+      "\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-56\022\037" +
+      "\n\013description\030\003 \001(\tB\n\212\3101\006<=1024\022\"\n\020hardw" +
+      "are_pool_id\030\004 \001(\tB\010\212\3101\004<=20\0222\n\020configura" +
+      "tion_id\030\005 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022" +
+      "\"\n\020rental_period_id\030\013 \001(\tB\010\212\3101\004<=20\022Y\n\022n" +
+      "etwork_interfaces\030\017 \003(\01324.yandex.cloud.b" +
+      "aremetal.v1alpha.NetworkInterfaceSpecB\007\202" +
+      "\3101\003<=2\022H\n\020os_settings_spec\030\020 \001(\0132..yande" +
+      "x.cloud.baremetal.v1alpha.OsSettingsSpec" +
+      "\022\227\001\n\006labels\030\310\001 \003(\0132E.yandex.cloud.bareme" +
+      "tal.v1alpha.BatchCreateServersRequest.La" +
+      "belsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z" +
+      "]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\031\n\005co" +
+      "unt\030\254\002 \001(\003B\t\372\3071\0051-100\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\006\020\013J\004\010\014\020\017" +
+      "J\005\010\021\020\310\001J\006\010\311\001\020\254\002\"U\n\032BatchCreateServersRes" +
+      "ponse\0227\n\007servers\030\001 \003(\0132&.yandex.cloud.ba" +
+      "remetal.v1alpha.Server\"0\n\032BatchCreateSer" +
+      "versMetadata\022\022\n\nserver_ids\030\001 \003(\t\"-\n\030Quar" +
+      "antineServerMetadata\022\021\n\tserver_id\030\001 \001(\t\"" +
+      "G\n\030StartProlongationRequest\022+\n\tserver_id" +
+      "\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"F\n\027Stop" +
+      "ProlongationRequest\022+\n\tserver_id\030\001 \001(\tB\030" +
+      "\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"2\n\035ServerSetPro" +
+      "longationMetadata\022\021\n\tserver_id\030\001 \001(\t\"\352\002\n" +
+      "\016OsSettingsSpec\022,\n\010image_id\030\001 \001(\tB\032\362\3071\016[" +
+      "a-z][a-z0-9]*\212\3101\004<=20\0229\n\010storages\030\002 \003(\0132" +
+      "\'.yandex.cloud.baremetal.v1alpha.Storage" +
+      "\022%\n\016ssh_public_key\030\004 \001(\tB\013\212\3101\007<=20000H\000\022" +
+      "\037\n\013user_ssh_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022&\n\023pass" +
+      "word_plain_text\030\n \001(\tB\007\212\3101\003>=6H\001\022P\n\027pass" +
+      "word_lockbox_secret\030\013 \001(\0132-.yandex.cloud" +
+      ".baremetal.v1alpha.LockboxSecretH\001B\017\n\007ss" +
+      "h_key\022\004\300\3011\001B\020\n\010password\022\004\300\3011\001J\004\010\003\020\004J\004\010\006\020" +
+      "\n\"O\n\rLockboxSecret\022\027\n\tsecret_id\030\001 \001(\tB\004\350" +
+      "\3071\001\022\022\n\nversion_id\030\002 \001(\t\022\021\n\003key\030\003 \001(\tB\004\350\307" +
+      "1\0012\322\022\n\rServerService\022\217\001\n\003Get\0220.yandex.cl" +
+      "oud.baremetal.v1alpha.GetServerRequest\032&" +
+      ".yandex.cloud.baremetal.v1alpha.Server\"." +
+      "\202\323\344\223\002(\022&/baremetal/v1alpha/servers/{serv" +
+      "er_id}\022\221\001\n\004List\0221.yandex.cloud.baremetal" +
+      ".v1alpha.ListServerRequest\0322.yandex.clou" +
+      "d.baremetal.v1alpha.ListServerResponse\"\"" +
+      "\202\323\344\223\002\034\022\032/baremetal/v1alpha/servers\022\251\001\n\006C" +
+      "reate\0223.yandex.cloud.baremetal.v1alpha.C" +
+      "reateServerRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"G\202\323\344\223\002\037\"\032/baremetal/v1alph" +
+      "a/servers:\001*\262\322*\036\n\024CreateServerMetadata\022\006" +
+      "Server\022\332\001\n\013BatchCreate\0229.yandex.cloud.ba" +
+      "remetal.v1alpha.BatchCreateServersReques" +
+      "t\032!.yandex.cloud.operation.Operation\"m\202\323" +
+      "\344\223\002+\"&/baremetal/v1alpha/servers:batchCr" +
+      "eate:\001*\262\322*8\n\032BatchCreateServersMetadata\022" +
+      "\032BatchCreateServersResponse\022\265\001\n\006Update\0223" +
+      ".yandex.cloud.baremetal.v1alpha.UpdateSe" +
+      "rverRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"S\202\323\344\223\002+2&/baremetal/v1alpha/serve" +
+      "rs/{server_id}:\001*\262\322*\036\n\024UpdateServerMetad" +
+      "ata\022\006Server\022\323\001\n\010PowerOff\0225.yandex.cloud." +
+      "baremetal.v1alpha.PowerOffServerRequest\032" +
+      "!.yandex.cloud.operation.Operation\"m\202\323\344\223" +
+      "\0024\"//baremetal/v1alpha/servers/{server_i" +
+      "d}:powerOff:\001*\262\322*/\n\026PowerOffServerMetada" +
+      "ta\022\025google.protobuf.Empty\022\317\001\n\007PowerOn\0224." +
+      "yandex.cloud.baremetal.v1alpha.PowerOnSe" +
+      "rverRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"k\202\323\344\223\0023\"./baremetal/v1alpha/serve" +
+      "rs/{server_id}:powerOn:\001*\262\322*.\n\025PowerOnSe" +
+      "rverMetadata\022\025google.protobuf.Empty\022\313\001\n\006" +
+      "Reboot\0223.yandex.cloud.baremetal.v1alpha." +
+      "RebootServerRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"i\202\323\344\223\0022\"-/baremetal/v1alp" +
+      "ha/servers/{server_id}:reboot:\001*\262\322*-\n\024Re" +
+      "bootServerMetadata\022\025google.protobuf.Empt" +
+      "y\022\327\001\n\tReinstall\0226.yandex.cloud.baremetal" +
+      ".v1alpha.ReinstallServerRequest\032!.yandex" +
+      ".cloud.operation.Operation\"o\202\323\344\223\0025\"0/bar" +
+      "emetal/v1alpha/servers/{server_id}:reins" +
+      "tall:\001*\262\322*0\n\027ReinstallServerMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\340\001\n\021StartProlongatio" +
+      "n\0228.yandex.cloud.baremetal.v1alpha.Start" +
+      "ProlongationRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"n\202\323\344\223\002=\"8/baremetal/v1alp" +
+      "ha/servers/{server_id}:startProlongation" +
+      ":\001*\262\322*\'\n\035ServerSetProlongationMetadata\022\006" +
+      "Server\022\335\001\n\020StopProlongation\0227.yandex.clo" +
+      "ud.baremetal.v1alpha.StopProlongationReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "m\202\323\344\223\002<\"7/baremetal/v1alpha/servers/{ser" +
+      "ver_id}:stopProlongation:\001*\262\322*\'\n\035ServerS" +
+      "etProlongationMetadata\022\006Server\022\306\001\n\016ListO" +
+      "perations\022;.yandex.cloud.baremetal.v1alp" +
+      "ha.ListServerOperationsRequest\032<.yandex." +
+      "cloud.baremetal.v1alpha.ListServerOperat" +
+      "ionsResponse\"9\202\323\344\223\0023\0221/baremetal/v1alpha" +
+      "/servers/{server_id}/operationsBr\n\"yande" +
+      "x.cloud.api.baremetal.v1alphaZLgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "baremetal/v1alpha;baremetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.getDescriptor(),
@@ -29754,6 +29771,7 @@ public final class ServerServiceOuterClass {
         new java.lang.String[] { "SecretId", "VersionId", "Key", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.length);
@@ -29764,6 +29782,7 @@ public final class ServerServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.getDescriptor();

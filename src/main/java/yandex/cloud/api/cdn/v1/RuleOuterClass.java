@@ -84,6 +84,17 @@ public final class RuleOuterClass {
      * <code>.yandex.cloud.cdn.v1.ResourceOptions options = 4;</code>
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptionsOrBuilder getOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * Rules are ordered by weight in ascending order (lower weights execute first)
+     * Weight must be between 0 and 9999 inclusive
+     * </pre>
+     *
+     * <code>int64 weight = 5;</code>
+     * @return The weight.
+     */
+    long getWeight();
   }
   /**
    * <pre>
@@ -164,6 +175,11 @@ public final class RuleOuterClass {
                 options_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 40: {
+
+              weight_ = input.readInt64();
               break;
             }
             default: {
@@ -333,6 +349,22 @@ public final class RuleOuterClass {
       return getOptions();
     }
 
+    public static final int WEIGHT_FIELD_NUMBER = 5;
+    private long weight_;
+    /**
+     * <pre>
+     * Rules are ordered by weight in ascending order (lower weights execute first)
+     * Weight must be between 0 and 9999 inclusive
+     * </pre>
+     *
+     * <code>int64 weight = 5;</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public long getWeight() {
+      return weight_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -359,6 +391,9 @@ public final class RuleOuterClass {
       if (options_ != null) {
         output.writeMessage(4, getOptions());
       }
+      if (weight_ != 0L) {
+        output.writeInt64(5, weight_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -381,6 +416,10 @@ public final class RuleOuterClass {
       if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getOptions());
+      }
+      if (weight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, weight_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -408,6 +447,8 @@ public final class RuleOuterClass {
         if (!getOptions()
             .equals(other.getOptions())) return false;
       }
+      if (getWeight()
+          != other.getWeight()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -430,6 +471,9 @@ public final class RuleOuterClass {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
       }
+      hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getWeight());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -579,6 +623,8 @@ public final class RuleOuterClass {
           options_ = null;
           optionsBuilder_ = null;
         }
+        weight_ = 0L;
+
         return this;
       }
 
@@ -613,6 +659,7 @@ public final class RuleOuterClass {
         } else {
           result.options_ = optionsBuilder_.build();
         }
+        result.weight_ = weight_;
         onBuilt();
         return result;
       }
@@ -674,6 +721,9 @@ public final class RuleOuterClass {
         }
         if (other.hasOptions()) {
           mergeOptions(other.getOptions());
+        }
+        if (other.getWeight() != 0L) {
+          setWeight(other.getWeight());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1062,6 +1112,52 @@ public final class RuleOuterClass {
         }
         return optionsBuilder_;
       }
+
+      private long weight_ ;
+      /**
+       * <pre>
+       * Rules are ordered by weight in ascending order (lower weights execute first)
+       * Weight must be between 0 and 9999 inclusive
+       * </pre>
+       *
+       * <code>int64 weight = 5;</code>
+       * @return The weight.
+       */
+      @java.lang.Override
+      public long getWeight() {
+        return weight_;
+      }
+      /**
+       * <pre>
+       * Rules are ordered by weight in ascending order (lower weights execute first)
+       * Weight must be between 0 and 9999 inclusive
+       * </pre>
+       *
+       * <code>int64 weight = 5;</code>
+       * @param value The weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeight(long value) {
+        
+        weight_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Rules are ordered by weight in ascending order (lower weights execute first)
+       * Weight must be between 0 and 9999 inclusive
+       * </pre>
+       *
+       * <code>int64 weight = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeight() {
+        
+        weight_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1132,13 +1228,13 @@ public final class RuleOuterClass {
       "\n\036yandex/cloud/cdn/v1/rule.proto\022\023yandex" +
       ".cloud.cdn.v1\032\"yandex/cloud/cdn/v1/resou" +
       "rce.proto\032\035yandex/cloud/validation.proto" +
-      "\"\222\001\n\004Rule\022\022\n\002id\030\001 \001(\003B\006\372\3071\002>0\022\032\n\004name\030\002 " +
+      "\"\242\001\n\004Rule\022\022\n\002id\030\001 \001(\003B\006\372\3071\002>0\022\032\n\004name\030\002 " +
       "\001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\014rule_pattern\030\003 \001(\tB" +
       "\r\350\3071\001\212\3101\005<=100\0225\n\007options\030\004 \001(\0132$.yandex" +
-      ".cloud.cdn.v1.ResourceOptionsBV\n\027yandex." +
-      "cloud.api.cdn.v1Z;github.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/cdn/v1;cdnb\006p" +
-      "roto3"
+      ".cloud.cdn.v1.ResourceOptions\022\016\n\006weight\030" +
+      "\005 \001(\003BV\n\027yandex.cloud.api.cdn.v1Z;github" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/cdn/v1;cdnb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1151,7 +1247,7 @@ public final class RuleOuterClass {
     internal_static_yandex_cloud_cdn_v1_Rule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_Rule_descriptor,
-        new java.lang.String[] { "Id", "Name", "RulePattern", "Options", });
+        new java.lang.String[] { "Id", "Name", "RulePattern", "Options", "Weight", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

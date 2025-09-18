@@ -33,7 +33,7 @@ public final class DiskOuterClass {
     DISK_DRIVE_TYPE_UNSPECIFIED(0),
     /**
      * <pre>
-     * Hard disk drive.
+     * Hard disk drive (magnetic storage).
      * </pre>
      *
      * <code>HDD = 1;</code>
@@ -41,12 +41,20 @@ public final class DiskOuterClass {
     HDD(1),
     /**
      * <pre>
-     * Solid state drive.
+     * Solid state drive with SATA/SAS interface.
      * </pre>
      *
      * <code>SSD = 2;</code>
      */
     SSD(2),
+    /**
+     * <pre>
+     * Solid state drive with NVMe interface.
+     * </pre>
+     *
+     * <code>NVME = 3;</code>
+     */
+    NVME(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -60,7 +68,7 @@ public final class DiskOuterClass {
     public static final int DISK_DRIVE_TYPE_UNSPECIFIED_VALUE = 0;
     /**
      * <pre>
-     * Hard disk drive.
+     * Hard disk drive (magnetic storage).
      * </pre>
      *
      * <code>HDD = 1;</code>
@@ -68,12 +76,20 @@ public final class DiskOuterClass {
     public static final int HDD_VALUE = 1;
     /**
      * <pre>
-     * Solid state drive.
+     * Solid state drive with SATA/SAS interface.
      * </pre>
      *
      * <code>SSD = 2;</code>
      */
     public static final int SSD_VALUE = 2;
+    /**
+     * <pre>
+     * Solid state drive with NVMe interface.
+     * </pre>
+     *
+     * <code>NVME = 3;</code>
+     */
+    public static final int NVME_VALUE = 3;
 
 
     public final int getNumber() {
@@ -103,6 +119,7 @@ public final class DiskOuterClass {
         case 0: return DISK_DRIVE_TYPE_UNSPECIFIED;
         case 1: return HDD;
         case 2: return SSD;
+        case 3: return NVME;
         default: return null;
       }
     }
@@ -1023,12 +1040,12 @@ public final class DiskOuterClass {
       "oto\022\036yandex.cloud.baremetal.v1alpha\"a\n\004D" +
       "isk\022\n\n\002id\030\001 \001(\t\022;\n\004type\030\002 \001(\0162-.yandex.c" +
       "loud.baremetal.v1alpha.DiskDriveType\022\020\n\010" +
-      "size_gib\030\003 \001(\003*B\n\rDiskDriveType\022\037\n\033DISK_" +
+      "size_gib\030\003 \001(\003*L\n\rDiskDriveType\022\037\n\033DISK_" +
       "DRIVE_TYPE_UNSPECIFIED\020\000\022\007\n\003HDD\020\001\022\007\n\003SSD" +
-      "\020\002Br\n\"yandex.cloud.api.baremetal.v1alpha" +
-      "ZLgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/baremetal/v1alpha;baremetalb\006" +
-      "proto3"
+      "\020\002\022\010\n\004NVME\020\003Br\n\"yandex.cloud.api.baremet" +
+      "al.v1alphaZLgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/baremetal/v1alpha;b" +
+      "aremetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

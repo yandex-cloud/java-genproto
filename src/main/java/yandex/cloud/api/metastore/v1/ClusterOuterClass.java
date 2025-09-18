@@ -185,6 +185,50 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Monitoring systems relevant to the Metastore Cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+     */
+    java.util.List<yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring> 
+        getMonitoringList();
+    /**
+     * <pre>
+     * Monitoring systems relevant to the Metastore Cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+     */
+    yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring getMonitoring(int index);
+    /**
+     * <pre>
+     * Monitoring systems relevant to the Metastore Cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+     */
+    int getMonitoringCount();
+    /**
+     * <pre>
+     * Monitoring systems relevant to the Metastore Cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.metastore.v1.ClusterOuterClass.MonitoringOrBuilder> 
+        getMonitoringOrBuilderList();
+    /**
+     * <pre>
+     * Monitoring systems relevant to the Metastore Cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+     */
+    yandex.cloud.api.metastore.v1.ClusterOuterClass.MonitoringOrBuilder getMonitoringOrBuilder(
+        int index);
+
+    /**
+     * <pre>
      * Aggregated cluster health.
      * </pre>
      *
@@ -467,6 +511,7 @@ public final class ClusterOuterClass {
       folderId_ = "";
       name_ = "";
       description_ = "";
+      monitoring_ = java.util.Collections.emptyList();
       health_ = 0;
       status_ = 0;
       version_ = "";
@@ -554,6 +599,15 @@ public final class ClusterOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                monitoring_ = new java.util.ArrayList<yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              monitoring_.add(
+                  input.readMessage(yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.parser(), extensionRegistry));
               break;
             }
             case 64: {
@@ -677,6 +731,9 @@ public final class ClusterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          monitoring_ = java.util.Collections.unmodifiableList(monitoring_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1413,6 +1470,66 @@ public final class ClusterOuterClass {
       return map.get(key);
     }
 
+    public static final int MONITORING_FIELD_NUMBER = 7;
+    private java.util.List<yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring> monitoring_;
+    /**
+     * <pre>
+     * Monitoring systems relevant to the Metastore Cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring> getMonitoringList() {
+      return monitoring_;
+    }
+    /**
+     * <pre>
+     * Monitoring systems relevant to the Metastore Cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.metastore.v1.ClusterOuterClass.MonitoringOrBuilder> 
+        getMonitoringOrBuilderList() {
+      return monitoring_;
+    }
+    /**
+     * <pre>
+     * Monitoring systems relevant to the Metastore Cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+     */
+    @java.lang.Override
+    public int getMonitoringCount() {
+      return monitoring_.size();
+    }
+    /**
+     * <pre>
+     * Monitoring systems relevant to the Metastore Cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring getMonitoring(int index) {
+      return monitoring_.get(index);
+    }
+    /**
+     * <pre>
+     * Monitoring systems relevant to the Metastore Cluster.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.MonitoringOrBuilder getMonitoringOrBuilder(
+        int index) {
+      return monitoring_.get(index);
+    }
+
     public static final int HEALTH_FIELD_NUMBER = 8;
     private int health_;
     /**
@@ -1891,6 +2008,9 @@ public final class ClusterOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
+      for (int i = 0; i < monitoring_.size(); i++) {
+        output.writeMessage(7, monitoring_.get(i));
+      }
       if (health_ != yandex.cloud.api.metastore.v1.ClusterOuterClass.Cluster.Health.HEALTH_UNKNOWN.getNumber()) {
         output.writeEnum(8, health_);
       }
@@ -1961,6 +2081,10 @@ public final class ClusterOuterClass {
             .build();
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
+      }
+      for (int i = 0; i < monitoring_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, monitoring_.get(i));
       }
       if (health_ != yandex.cloud.api.metastore.v1.ClusterOuterClass.Cluster.Health.HEALTH_UNKNOWN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
@@ -2036,6 +2160,8 @@ public final class ClusterOuterClass {
           .equals(other.getDescription())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (!getMonitoringList()
+          .equals(other.getMonitoringList())) return false;
       if (health_ != other.health_) return false;
       if (status_ != other.status_) return false;
       if (getDeletionProtection()
@@ -2099,6 +2225,10 @@ public final class ClusterOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (getMonitoringCount() > 0) {
+        hash = (37 * hash) + MONITORING_FIELD_NUMBER;
+        hash = (53 * hash) + getMonitoringList().hashCode();
       }
       hash = (37 * hash) + HEALTH_FIELD_NUMBER;
       hash = (53 * hash) + health_;
@@ -2289,6 +2419,7 @@ public final class ClusterOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getMonitoringFieldBuilder();
         }
       }
       @java.lang.Override
@@ -2309,6 +2440,12 @@ public final class ClusterOuterClass {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        if (monitoringBuilder_ == null) {
+          monitoring_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          monitoringBuilder_.clear();
+        }
         health_ = 0;
 
         status_ = 0;
@@ -2391,6 +2528,15 @@ public final class ClusterOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (monitoringBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            monitoring_ = java.util.Collections.unmodifiableList(monitoring_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.monitoring_ = monitoring_;
+        } else {
+          result.monitoring_ = monitoringBuilder_.build();
+        }
         result.health_ = health_;
         result.status_ = status_;
         result.deletionProtection_ = deletionProtection_;
@@ -2492,6 +2638,32 @@ public final class ClusterOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (monitoringBuilder_ == null) {
+          if (!other.monitoring_.isEmpty()) {
+            if (monitoring_.isEmpty()) {
+              monitoring_ = other.monitoring_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureMonitoringIsMutable();
+              monitoring_.addAll(other.monitoring_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.monitoring_.isEmpty()) {
+            if (monitoringBuilder_.isEmpty()) {
+              monitoringBuilder_.dispose();
+              monitoringBuilder_ = null;
+              monitoring_ = other.monitoring_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              monitoringBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMonitoringFieldBuilder() : null;
+            } else {
+              monitoringBuilder_.addAllMessages(other.monitoring_);
+            }
+          }
+        }
         if (other.health_ != 0) {
           setHealthValue(other.getHealthValue());
         }
@@ -3268,6 +3440,318 @@ public final class ClusterOuterClass {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring> monitoring_ =
+        java.util.Collections.emptyList();
+      private void ensureMonitoringIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          monitoring_ = new java.util.ArrayList<yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring>(monitoring_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring, yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.MonitoringOrBuilder> monitoringBuilder_;
+
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring> getMonitoringList() {
+        if (monitoringBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(monitoring_);
+        } else {
+          return monitoringBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public int getMonitoringCount() {
+        if (monitoringBuilder_ == null) {
+          return monitoring_.size();
+        } else {
+          return monitoringBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring getMonitoring(int index) {
+        if (monitoringBuilder_ == null) {
+          return monitoring_.get(index);
+        } else {
+          return monitoringBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public Builder setMonitoring(
+          int index, yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring value) {
+        if (monitoringBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMonitoringIsMutable();
+          monitoring_.set(index, value);
+          onChanged();
+        } else {
+          monitoringBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public Builder setMonitoring(
+          int index, yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder builderForValue) {
+        if (monitoringBuilder_ == null) {
+          ensureMonitoringIsMutable();
+          monitoring_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          monitoringBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public Builder addMonitoring(yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring value) {
+        if (monitoringBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMonitoringIsMutable();
+          monitoring_.add(value);
+          onChanged();
+        } else {
+          monitoringBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public Builder addMonitoring(
+          int index, yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring value) {
+        if (monitoringBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMonitoringIsMutable();
+          monitoring_.add(index, value);
+          onChanged();
+        } else {
+          monitoringBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public Builder addMonitoring(
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder builderForValue) {
+        if (monitoringBuilder_ == null) {
+          ensureMonitoringIsMutable();
+          monitoring_.add(builderForValue.build());
+          onChanged();
+        } else {
+          monitoringBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public Builder addMonitoring(
+          int index, yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder builderForValue) {
+        if (monitoringBuilder_ == null) {
+          ensureMonitoringIsMutable();
+          monitoring_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          monitoringBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public Builder addAllMonitoring(
+          java.lang.Iterable<? extends yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring> values) {
+        if (monitoringBuilder_ == null) {
+          ensureMonitoringIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, monitoring_);
+          onChanged();
+        } else {
+          monitoringBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public Builder clearMonitoring() {
+        if (monitoringBuilder_ == null) {
+          monitoring_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          monitoringBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public Builder removeMonitoring(int index) {
+        if (monitoringBuilder_ == null) {
+          ensureMonitoringIsMutable();
+          monitoring_.remove(index);
+          onChanged();
+        } else {
+          monitoringBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder getMonitoringBuilder(
+          int index) {
+        return getMonitoringFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.MonitoringOrBuilder getMonitoringOrBuilder(
+          int index) {
+        if (monitoringBuilder_ == null) {
+          return monitoring_.get(index);  } else {
+          return monitoringBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.metastore.v1.ClusterOuterClass.MonitoringOrBuilder> 
+           getMonitoringOrBuilderList() {
+        if (monitoringBuilder_ != null) {
+          return monitoringBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(monitoring_);
+        }
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder addMonitoringBuilder() {
+        return getMonitoringFieldBuilder().addBuilder(
+            yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder addMonitoringBuilder(
+          int index) {
+        return getMonitoringFieldBuilder().addBuilder(
+            index, yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Monitoring systems relevant to the Metastore Cluster.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.metastore.v1.Monitoring monitoring = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder> 
+           getMonitoringBuilderList() {
+        return getMonitoringFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring, yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.MonitoringOrBuilder> 
+          getMonitoringFieldBuilder() {
+        if (monitoringBuilder_ == null) {
+          monitoringBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring, yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.MonitoringOrBuilder>(
+                  monitoring_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          monitoring_ = null;
+        }
+        return monitoringBuilder_;
       }
 
       private int health_ = 0;
@@ -4667,6 +5151,982 @@ public final class ClusterOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.metastore.v1.ClusterOuterClass.Cluster getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MonitoringOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.metastore.v1.Monitoring)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the monitoring system.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the monitoring system.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description of the monitoring system.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the monitoring system.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Link to the monitoring system.
+     * </pre>
+     *
+     * <code>string link = 3;</code>
+     * @return The link.
+     */
+    java.lang.String getLink();
+    /**
+     * <pre>
+     * Link to the monitoring system.
+     * </pre>
+     *
+     * <code>string link = 3;</code>
+     * @return The bytes for link.
+     */
+    com.google.protobuf.ByteString
+        getLinkBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.metastore.v1.Monitoring}
+   */
+  public static final class Monitoring extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.metastore.v1.Monitoring)
+      MonitoringOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Monitoring.newBuilder() to construct.
+    private Monitoring(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Monitoring() {
+      name_ = "";
+      description_ = "";
+      link_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Monitoring();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Monitoring(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              link_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_Monitoring_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_Monitoring_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.class, yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the monitoring system.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the monitoring system.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the monitoring system.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the monitoring system.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LINK_FIELD_NUMBER = 3;
+    private volatile java.lang.Object link_;
+    /**
+     * <pre>
+     * Link to the monitoring system.
+     * </pre>
+     *
+     * <code>string link = 3;</code>
+     * @return The link.
+     */
+    @java.lang.Override
+    public java.lang.String getLink() {
+      java.lang.Object ref = link_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        link_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Link to the monitoring system.
+     * </pre>
+     *
+     * <code>string link = 3;</code>
+     * @return The bytes for link.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLinkBytes() {
+      java.lang.Object ref = link_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        link_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(link_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, link_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(link_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, link_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring other = (yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getLink()
+          .equals(other.getLink())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + LINK_FIELD_NUMBER;
+      hash = (53 * hash) + getLink().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.metastore.v1.Monitoring}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.metastore.v1.Monitoring)
+        yandex.cloud.api.metastore.v1.ClusterOuterClass.MonitoringOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_Monitoring_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_Monitoring_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.class, yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        description_ = "";
+
+        link_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_Monitoring_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring getDefaultInstanceForType() {
+        return yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring build() {
+        yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring buildPartial() {
+        yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring result = new yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring(this);
+        result.name_ = name_;
+        result.description_ = description_;
+        result.link_ = link_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring) {
+          return mergeFrom((yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring other) {
+        if (other == yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (!other.getLink().isEmpty()) {
+          link_ = other.link_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the monitoring system.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the monitoring system.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the monitoring system.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the monitoring system.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the monitoring system.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the monitoring system.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the monitoring system.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the monitoring system.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the monitoring system.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the monitoring system.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object link_ = "";
+      /**
+       * <pre>
+       * Link to the monitoring system.
+       * </pre>
+       *
+       * <code>string link = 3;</code>
+       * @return The link.
+       */
+      public java.lang.String getLink() {
+        java.lang.Object ref = link_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          link_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Link to the monitoring system.
+       * </pre>
+       *
+       * <code>string link = 3;</code>
+       * @return The bytes for link.
+       */
+      public com.google.protobuf.ByteString
+          getLinkBytes() {
+        java.lang.Object ref = link_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          link_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Link to the monitoring system.
+       * </pre>
+       *
+       * <code>string link = 3;</code>
+       * @param value The link to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLink(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        link_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Link to the monitoring system.
+       * </pre>
+       *
+       * <code>string link = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLink() {
+        
+        link_ = getDefaultInstance().getLink();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Link to the monitoring system.
+       * </pre>
+       *
+       * <code>string link = 3;</code>
+       * @param value The bytes for link to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLinkBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        link_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.metastore.v1.Monitoring)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.metastore.v1.Monitoring)
+    private static final yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring();
+    }
+
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Monitoring>
+        PARSER = new com.google.protobuf.AbstractParser<Monitoring>() {
+      @java.lang.Override
+      public Monitoring parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Monitoring(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Monitoring> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Monitoring> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.Monitoring getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8181,6 +9641,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_metastore_v1_Cluster_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_metastore_v1_Monitoring_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_metastore_v1_Monitoring_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_metastore_v1_ClusterConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8214,46 +9679,49 @@ public final class ClusterOuterClass {
       "tobuf/timestamp.proto\032\'yandex/cloud/logg" +
       "ing/v1/log_entry.proto\032+yandex/cloud/met" +
       "astore/v1/maintenance.proto\032\035yandex/clou" +
-      "d/validation.proto\"\351\007\n\007Cluster\022\n\n\002id\030\001 \001" +
+      "d/validation.proto\"\236\010\n\007Cluster\022\n\n\002id\030\001 \001" +
       "(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(" +
       "\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004 " +
       "\001(\t\022\023\n\013description\030\005 \001(\t\022>\n\006labels\030\006 \003(\013" +
       "2..yandex.cloud.metastore.v1.Cluster.Lab" +
-      "elsEntry\0229\n\006health\030\010 \001(\0162).yandex.cloud." +
-      "metastore.v1.Cluster.Health\0229\n\006status\030\t " +
+      "elsEntry\0229\n\nmonitoring\030\007 \003(\0132%.yandex.cl" +
+      "oud.metastore.v1.Monitoring\0229\n\006health\030\010 " +
       "\001(\0162).yandex.cloud.metastore.v1.Cluster." +
-      "Status\022\033\n\023deletion_protection\030\020 \001(\010\022\017\n\007v" +
-      "ersion\030\021 \001(\t\022\022\n\nnetwork_id\030\022 \001(\t\022\023\n\013endp" +
-      "oint_ip\030\023 \001(\t\022@\n\016cluster_config\030\024 \001(\0132(." +
-      "yandex.cloud.metastore.v1.ClusterConfig\022" +
-      "\032\n\022service_account_id\030\025 \001(\t\0229\n\007logging\030\026" +
-      " \001(\0132(.yandex.cloud.metastore.v1.Logging" +
-      "Config\0229\n\007network\030\027 \001(\0132(.yandex.cloud.m" +
-      "etastore.v1.NetworkConfig\022H\n\022maintenance" +
-      "_window\030\030 \001(\0132,.yandex.cloud.metastore.v" +
-      "1.MaintenanceWindow\022J\n\021planned_operation" +
-      "\030\031 \001(\0132/.yandex.cloud.metastore.v1.Maint" +
-      "enanceOperation\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\006Health\022\022\n\016HEAL" +
-      "TH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEG" +
-      "RADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n" +
-      "\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010U" +
-      "PDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010" +
-      "STARTING\020\007J\004\010\007\020\010J\004\010\n\020\020\"N\n\rClusterConfig\022" +
-      "7\n\tresources\030\002 \001(\0132$.yandex.cloud.metast" +
-      "ore.v1.ResourcesJ\004\010\001\020\002\"?\n\rNetworkConfig\022" +
-      "\022\n\nsubnet_ids\030\001 \003(\t\022\032\n\022security_group_id" +
-      "s\030\002 \003(\t\"5\n\tResources\022(\n\022resource_preset_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\342\001\n\rLoggingConfig" +
-      "\022\017\n\007enabled\030\001 \001(\010\0228\n\tfolder_id\030\002 \001(\tB#\362\307" +
-      "1\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022;\n\014l" +
-      "og_group_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z" +
-      "0-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.ya" +
-      "ndex.cloud.logging.v1.LogLevel.LevelB\r\n\013" +
-      "destinationBh\n\035yandex.cloud.api.metastor" +
-      "e.v1ZGgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/metastore/v1;metastoreb\006p" +
-      "roto3"
+      "Health\0229\n\006status\030\t \001(\0162).yandex.cloud.me" +
+      "tastore.v1.Cluster.Status\022\033\n\023deletion_pr" +
+      "otection\030\020 \001(\010\022\017\n\007version\030\021 \001(\t\022\022\n\nnetwo" +
+      "rk_id\030\022 \001(\t\022\023\n\013endpoint_ip\030\023 \001(\t\022@\n\016clus" +
+      "ter_config\030\024 \001(\0132(.yandex.cloud.metastor" +
+      "e.v1.ClusterConfig\022\032\n\022service_account_id" +
+      "\030\025 \001(\t\0229\n\007logging\030\026 \001(\0132(.yandex.cloud.m" +
+      "etastore.v1.LoggingConfig\0229\n\007network\030\027 \001" +
+      "(\0132(.yandex.cloud.metastore.v1.NetworkCo" +
+      "nfig\022H\n\022maintenance_window\030\030 \001(\0132,.yande" +
+      "x.cloud.metastore.v1.MaintenanceWindow\022J" +
+      "\n\021planned_operation\030\031 \001(\0132/.yandex.cloud" +
+      ".metastore.v1.MaintenanceOperation\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE" +
+      "\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016" +
+      "STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNIN" +
+      "G\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING" +
+      "\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007J\004\010\n\020\020\"=\n\nM" +
+      "onitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002" +
+      " \001(\t\022\014\n\004link\030\003 \001(\t\"N\n\rClusterConfig\0227\n\tr" +
+      "esources\030\002 \001(\0132$.yandex.cloud.metastore." +
+      "v1.ResourcesJ\004\010\001\020\002\"?\n\rNetworkConfig\022\022\n\ns" +
+      "ubnet_ids\030\001 \003(\t\022\032\n\022security_group_ids\030\002 " +
+      "\003(\t\"5\n\tResources\022(\n\022resource_preset_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\342\001\n\rLoggingConfig\022\017\n\007" +
+      "enabled\030\001 \001(\010\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([" +
+      "a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022;\n\014log_g" +
+      "roup_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_" +
+      ".]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex" +
+      ".cloud.logging.v1.LogLevel.LevelB\r\n\013dest" +
+      "inationBh\n\035yandex.cloud.api.metastore.v1" +
+      "ZGgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/metastore/v1;metastoreb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8268,33 +9736,39 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_metastore_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_metastore_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Health", "Status", "DeletionProtection", "Version", "NetworkId", "EndpointIp", "ClusterConfig", "ServiceAccountId", "Logging", "Network", "MaintenanceWindow", "PlannedOperation", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Monitoring", "Health", "Status", "DeletionProtection", "Version", "NetworkId", "EndpointIp", "ClusterConfig", "ServiceAccountId", "Logging", "Network", "MaintenanceWindow", "PlannedOperation", });
     internal_static_yandex_cloud_metastore_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_metastore_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_metastore_v1_Cluster_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_metastore_v1_Cluster_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_yandex_cloud_metastore_v1_ClusterConfig_descriptor =
+    internal_static_yandex_cloud_metastore_v1_Monitoring_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_metastore_v1_Monitoring_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_metastore_v1_Monitoring_descriptor,
+        new java.lang.String[] { "Name", "Description", "Link", });
+    internal_static_yandex_cloud_metastore_v1_ClusterConfig_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_metastore_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_metastore_v1_ClusterConfig_descriptor,
         new java.lang.String[] { "Resources", });
     internal_static_yandex_cloud_metastore_v1_NetworkConfig_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_metastore_v1_NetworkConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_metastore_v1_NetworkConfig_descriptor,
         new java.lang.String[] { "SubnetIds", "SecurityGroupIds", });
     internal_static_yandex_cloud_metastore_v1_Resources_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_metastore_v1_Resources_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_metastore_v1_Resources_descriptor,
         new java.lang.String[] { "ResourcePresetId", });
     internal_static_yandex_cloud_metastore_v1_LoggingConfig_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_metastore_v1_LoggingConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_metastore_v1_LoggingConfig_descriptor,

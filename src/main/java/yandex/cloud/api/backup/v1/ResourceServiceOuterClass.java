@@ -13465,6 +13465,1620 @@ public final class ResourceServiceOuterClass {
 
   }
 
+  public interface GetInstanceRegistrationTokenRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.GetInstanceRegistrationTokenRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 2;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 2;</code>
+     * @return The type.
+     */
+    yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.backup.v1.GetInstanceRegistrationTokenRequest}
+   */
+  public static final class GetInstanceRegistrationTokenRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.GetInstanceRegistrationTokenRequest)
+      GetInstanceRegistrationTokenRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetInstanceRegistrationTokenRequest.newBuilder() to construct.
+    private GetInstanceRegistrationTokenRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetInstanceRegistrationTokenRequest() {
+      folderId_ = "";
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetInstanceRegistrationTokenRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetInstanceRegistrationTokenRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest.class, yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_;
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 2;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 2;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType result = yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.valueOf(type_);
+      return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      if (type_ != yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (type_ != yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest other = (yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (type_ != other.type_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.GetInstanceRegistrationTokenRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.GetInstanceRegistrationTokenRequest)
+        yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest.class, yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        type_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest build() {
+        yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest buildPartial() {
+        yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest result = new yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest(this);
+        result.folderId_ = folderId_;
+        result.type_ = type_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest) {
+          return mergeFrom((yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest other) {
+        if (other == yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 2;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 2;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 2;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType result = yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.valueOf(type_);
+        return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 2;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.GetInstanceRegistrationTokenRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.GetInstanceRegistrationTokenRequest)
+    private static final yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest();
+    }
+
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetInstanceRegistrationTokenRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetInstanceRegistrationTokenRequest>() {
+      @java.lang.Override
+      public GetInstanceRegistrationTokenRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetInstanceRegistrationTokenRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetInstanceRegistrationTokenRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetInstanceRegistrationTokenRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetInstanceRegistrationTokenResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.GetInstanceRegistrationTokenResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Instance registration token id for instance registration.
+     * </pre>
+     *
+     * <code>string instance_registration_id = 1;</code>
+     * @return The instanceRegistrationId.
+     */
+    java.lang.String getInstanceRegistrationId();
+    /**
+     * <pre>
+     * Instance registration token id for instance registration.
+     * </pre>
+     *
+     * <code>string instance_registration_id = 1;</code>
+     * @return The bytes for instanceRegistrationId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceRegistrationIdBytes();
+
+    /**
+     * <pre>
+     * Token expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+     * @return Whether the expiredAt field is set.
+     */
+    boolean hasExpiredAt();
+    /**
+     * <pre>
+     * Token expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+     * @return The expiredAt.
+     */
+    com.google.protobuf.Timestamp getExpiredAt();
+    /**
+     * <pre>
+     * Token expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getExpiredAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.backup.v1.GetInstanceRegistrationTokenResponse}
+   */
+  public static final class GetInstanceRegistrationTokenResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.GetInstanceRegistrationTokenResponse)
+      GetInstanceRegistrationTokenResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetInstanceRegistrationTokenResponse.newBuilder() to construct.
+    private GetInstanceRegistrationTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetInstanceRegistrationTokenResponse() {
+      instanceRegistrationId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetInstanceRegistrationTokenResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetInstanceRegistrationTokenResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceRegistrationId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (expiredAt_ != null) {
+                subBuilder = expiredAt_.toBuilder();
+              }
+              expiredAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(expiredAt_);
+                expiredAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse.class, yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse.Builder.class);
+    }
+
+    public static final int INSTANCE_REGISTRATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceRegistrationId_;
+    /**
+     * <pre>
+     * Instance registration token id for instance registration.
+     * </pre>
+     *
+     * <code>string instance_registration_id = 1;</code>
+     * @return The instanceRegistrationId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceRegistrationId() {
+      java.lang.Object ref = instanceRegistrationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceRegistrationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Instance registration token id for instance registration.
+     * </pre>
+     *
+     * <code>string instance_registration_id = 1;</code>
+     * @return The bytes for instanceRegistrationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceRegistrationIdBytes() {
+      java.lang.Object ref = instanceRegistrationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceRegistrationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPIRED_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp expiredAt_;
+    /**
+     * <pre>
+     * Token expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+     * @return Whether the expiredAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasExpiredAt() {
+      return expiredAt_ != null;
+    }
+    /**
+     * <pre>
+     * Token expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+     * @return The expiredAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getExpiredAt() {
+      return expiredAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiredAt_;
+    }
+    /**
+     * <pre>
+     * Token expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getExpiredAtOrBuilder() {
+      return getExpiredAt();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceRegistrationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceRegistrationId_);
+      }
+      if (expiredAt_ != null) {
+        output.writeMessage(2, getExpiredAt());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceRegistrationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceRegistrationId_);
+      }
+      if (expiredAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getExpiredAt());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse other = (yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse) obj;
+
+      if (!getInstanceRegistrationId()
+          .equals(other.getInstanceRegistrationId())) return false;
+      if (hasExpiredAt() != other.hasExpiredAt()) return false;
+      if (hasExpiredAt()) {
+        if (!getExpiredAt()
+            .equals(other.getExpiredAt())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_REGISTRATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceRegistrationId().hashCode();
+      if (hasExpiredAt()) {
+        hash = (37 * hash) + EXPIRED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getExpiredAt().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.GetInstanceRegistrationTokenResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.GetInstanceRegistrationTokenResponse)
+        yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse.class, yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceRegistrationId_ = "";
+
+        if (expiredAtBuilder_ == null) {
+          expiredAt_ = null;
+        } else {
+          expiredAt_ = null;
+          expiredAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse build() {
+        yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse buildPartial() {
+        yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse result = new yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse(this);
+        result.instanceRegistrationId_ = instanceRegistrationId_;
+        if (expiredAtBuilder_ == null) {
+          result.expiredAt_ = expiredAt_;
+        } else {
+          result.expiredAt_ = expiredAtBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse) {
+          return mergeFrom((yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse other) {
+        if (other == yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse.getDefaultInstance()) return this;
+        if (!other.getInstanceRegistrationId().isEmpty()) {
+          instanceRegistrationId_ = other.instanceRegistrationId_;
+          onChanged();
+        }
+        if (other.hasExpiredAt()) {
+          mergeExpiredAt(other.getExpiredAt());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceRegistrationId_ = "";
+      /**
+       * <pre>
+       * Instance registration token id for instance registration.
+       * </pre>
+       *
+       * <code>string instance_registration_id = 1;</code>
+       * @return The instanceRegistrationId.
+       */
+      public java.lang.String getInstanceRegistrationId() {
+        java.lang.Object ref = instanceRegistrationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceRegistrationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Instance registration token id for instance registration.
+       * </pre>
+       *
+       * <code>string instance_registration_id = 1;</code>
+       * @return The bytes for instanceRegistrationId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceRegistrationIdBytes() {
+        java.lang.Object ref = instanceRegistrationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceRegistrationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Instance registration token id for instance registration.
+       * </pre>
+       *
+       * <code>string instance_registration_id = 1;</code>
+       * @param value The instanceRegistrationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceRegistrationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceRegistrationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Instance registration token id for instance registration.
+       * </pre>
+       *
+       * <code>string instance_registration_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceRegistrationId() {
+        
+        instanceRegistrationId_ = getDefaultInstance().getInstanceRegistrationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Instance registration token id for instance registration.
+       * </pre>
+       *
+       * <code>string instance_registration_id = 1;</code>
+       * @param value The bytes for instanceRegistrationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceRegistrationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceRegistrationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp expiredAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiredAtBuilder_;
+      /**
+       * <pre>
+       * Token expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+       * @return Whether the expiredAt field is set.
+       */
+      public boolean hasExpiredAt() {
+        return expiredAtBuilder_ != null || expiredAt_ != null;
+      }
+      /**
+       * <pre>
+       * Token expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+       * @return The expiredAt.
+       */
+      public com.google.protobuf.Timestamp getExpiredAt() {
+        if (expiredAtBuilder_ == null) {
+          return expiredAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiredAt_;
+        } else {
+          return expiredAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Token expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+       */
+      public Builder setExpiredAt(com.google.protobuf.Timestamp value) {
+        if (expiredAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          expiredAt_ = value;
+          onChanged();
+        } else {
+          expiredAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Token expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+       */
+      public Builder setExpiredAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (expiredAtBuilder_ == null) {
+          expiredAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          expiredAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Token expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+       */
+      public Builder mergeExpiredAt(com.google.protobuf.Timestamp value) {
+        if (expiredAtBuilder_ == null) {
+          if (expiredAt_ != null) {
+            expiredAt_ =
+              com.google.protobuf.Timestamp.newBuilder(expiredAt_).mergeFrom(value).buildPartial();
+          } else {
+            expiredAt_ = value;
+          }
+          onChanged();
+        } else {
+          expiredAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Token expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+       */
+      public Builder clearExpiredAt() {
+        if (expiredAtBuilder_ == null) {
+          expiredAt_ = null;
+          onChanged();
+        } else {
+          expiredAt_ = null;
+          expiredAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Token expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getExpiredAtBuilder() {
+        
+        onChanged();
+        return getExpiredAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Token expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getExpiredAtOrBuilder() {
+        if (expiredAtBuilder_ != null) {
+          return expiredAtBuilder_.getMessageOrBuilder();
+        } else {
+          return expiredAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : expiredAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Token expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expired_at = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getExpiredAtFieldBuilder() {
+        if (expiredAtBuilder_ == null) {
+          expiredAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getExpiredAt(),
+                  getParentForChildren(),
+                  isClean());
+          expiredAt_ = null;
+        }
+        return expiredAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.GetInstanceRegistrationTokenResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.GetInstanceRegistrationTokenResponse)
+    private static final yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse();
+    }
+
+    public static yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetInstanceRegistrationTokenResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetInstanceRegistrationTokenResponse>() {
+      @java.lang.Override
+      public GetInstanceRegistrationTokenResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetInstanceRegistrationTokenResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetInstanceRegistrationTokenResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetInstanceRegistrationTokenResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetInstanceRegistrationTokenResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_backup_v1_ListResourcesRequest_descriptor;
   private static final 
@@ -13540,6 +15154,16 @@ public final class ResourceServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_backup_v1_ListResourceOperationsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13551,88 +15175,100 @@ public final class ResourceServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n-yandex/cloud/backup/v1/resource_servic" +
       "e.proto\022\026yandex.cloud.backup.v1\032\034google/" +
-      "api/annotations.proto\032 yandex/cloud/api/" +
-      "operation.proto\032%yandex/cloud/backup/v1/" +
-      "resource.proto\032&yandex/cloud/operation/o" +
-      "peration.proto\032\035yandex/cloud/validation." +
-      "proto\"\251\001\n\024ListResourcesRequest\022\037\n\tfolder" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\0222\n\004type\030\004 \001(\0162$.yandex.cloud.backu" +
-      "p.v1.ResourceType\"e\n\025ListResourcesRespon" +
-      "se\0223\n\tresources\030\001 \003(\0132 .yandex.cloud.bac" +
-      "kup.v1.Resource\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\\\n\022GetResourceRequest\022)\n\023compute_instan" +
-      "ce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\023include_ten" +
-      "ant_info\030\002 \001(\010\"I\n\023GetResourceResponse\0222\n" +
-      "\010resource\030\001 \001(\0132 .yandex.cloud.backup.v1" +
-      ".Resource\"]\n\025DeleteResourceRequest\022)\n\023co" +
-      "mpute_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n" +
-      "\013resource_id\030\002 \001(\tB\004\350\3071\001\"5\n\026DeleteResour" +
-      "ceMetadata\022\033\n\023compute_instance_id\030\001 \001(\t\"" +
-      "{\n\020ListTasksRequest\022)\n\023compute_instance_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
-      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
-      "=100\"Y\n\021ListTasksResponse\022+\n\005tasks\030\001 \003(\013" +
-      "2\034.yandex.cloud.backup.v1.Task\022\027\n\017next_p" +
-      "age_token\030\002 \001(\t\"n\n\024ListDirectoryRequest\022" +
-      "\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\023comp" +
-      "ute_instance_id\030\002 \001(\tB\004\350\3071\001\022\022\n\004path\030\003 \001(" +
-      "\tB\004\350\3071\000\"\375\002\n\025ListDirectoryResponse\022K\n\005ite" +
-      "ms\030\001 \003(\0132<.yandex.cloud.backup.v1.ListDi" +
-      "rectoryResponse.FilesystemItem\032\226\002\n\016Files" +
-      "ystemItem\022\014\n\004name\030\001 \001(\t\022O\n\004type\030\002 \001(\0162A." +
-      "yandex.cloud.backup.v1.ListDirectoryResp" +
-      "onse.FilesystemItem.Type\022T\n\tfile_type\030\003 " +
-      "\001(\0162A.yandex.cloud.backup.v1.ListDirecto" +
-      "ryResponse.FilesystemItem.Type\022\014\n\004size\030\004" +
-      " \001(\003\"A\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006VO" +
-      "LUME\020\001\022\r\n\tDIRECTORY\020\002\022\010\n\004FILE\020\003\"p\n\026Creat" +
-      "eDirectoryRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022!\n\023compute_instance_id\030\002 \001(\tB" +
-      "\004\350\3071\001\022\022\n\004path\030\003 \001(\tB\004\350\3071\001\"D\n\027CreateDirec" +
-      "toryMetadata\022\033\n\023compute_instance_id\030\001 \001(" +
-      "\t\022\014\n\004path\030\002 \001(\t\"\210\001\n\035ListResourceOperatio" +
-      "nsRequest\022)\n\023compute_instance_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
-      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036Li" +
-      "stResourceOperationsResponse\0225\n\noperatio" +
-      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
-      "ion\022\027\n\017next_page_token\030\002 \001(\t2\227\010\n\017Resourc" +
-      "eService\022\201\001\n\004List\022,.yandex.cloud.backup." +
-      "v1.ListResourcesRequest\032-.yandex.cloud.b" +
-      "ackup.v1.ListResourcesResponse\"\034\202\323\344\223\002\026\022\024" +
-      "/backup/v1/resources\022\222\001\n\003Get\022*.yandex.cl" +
-      "oud.backup.v1.GetResourceRequest\032+.yande" +
-      "x.cloud.backup.v1.GetResourceResponse\"2\202" +
-      "\323\344\223\002,\022*/backup/v1/resources/{compute_ins" +
-      "tance_id}\022\301\001\n\006Delete\022-.yandex.cloud.back" +
-      "up.v1.DeleteResourceRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"e\202\323\344\223\002,**/backup/" +
-      "v1/resources/{compute_instance_id}\262\322*/\n\026" +
-      "DeleteResourceMetadata\022\025google.protobuf." +
-      "Empty\022\232\001\n\tListTasks\022(.yandex.cloud.backu" +
-      "p.v1.ListTasksRequest\032).yandex.cloud.bac" +
-      "kup.v1.ListTasksResponse\"8\202\323\344\223\0022\0220/backu" +
-      "p/v1/resources/{compute_instance_id}/tas" +
-      "ks\022l\n\rListDirectory\022,.yandex.cloud.backu" +
-      "p.v1.ListDirectoryRequest\032-.yandex.cloud" +
-      ".backup.v1.ListDirectoryResponse\022\232\001\n\017Cre" +
-      "ateDirectory\022..yandex.cloud.backup.v1.Cr" +
-      "eateDirectoryRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"4\262\322*0\n\027CreateDirectoryMe" +
-      "tadata\022\025google.protobuf.Empty\022\177\n\016ListOpe" +
-      "rations\0225.yandex.cloud.backup.v1.ListRes" +
-      "ourceOperationsRequest\0326.yandex.cloud.ba" +
-      "ckup.v1.ListResourceOperationsResponseB_" +
-      "\n\032yandex.cloud.api.backup.v1ZAgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/b" +
-      "ackup/v1;backupb\006proto3"
+      "api/annotations.proto\032\037google/protobuf/t" +
+      "imestamp.proto\032 yandex/cloud/api/operati" +
+      "on.proto\032%yandex/cloud/backup/v1/resourc" +
+      "e.proto\032&yandex/cloud/operation/operatio" +
+      "n.proto\032\035yandex/cloud/validation.proto\"\251" +
+      "\001\n\024ListResourcesRequest\022\037\n\tfolder_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\0222" +
+      "\n\004type\030\004 \001(\0162$.yandex.cloud.backup.v1.Re" +
+      "sourceType\"e\n\025ListResourcesResponse\0223\n\tr" +
+      "esources\030\001 \003(\0132 .yandex.cloud.backup.v1." +
+      "Resource\022\027\n\017next_page_token\030\002 \001(\t\"\\\n\022Get" +
+      "ResourceRequest\022)\n\023compute_instance_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\023include_tenant_inf" +
+      "o\030\002 \001(\010\"I\n\023GetResourceResponse\0222\n\010resour" +
+      "ce\030\001 \001(\0132 .yandex.cloud.backup.v1.Resour" +
+      "ce\"]\n\025DeleteResourceRequest\022)\n\023compute_i" +
+      "nstance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013resour" +
+      "ce_id\030\002 \001(\tB\004\350\3071\001\"5\n\026DeleteResourceMetad" +
+      "ata\022\033\n\023compute_instance_id\030\001 \001(\t\"{\n\020List" +
+      "TasksRequest\022)\n\023compute_instance_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
+      "<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"Y\n" +
+      "\021ListTasksResponse\022+\n\005tasks\030\001 \003(\0132\034.yand" +
+      "ex.cloud.backup.v1.Task\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"n\n\024ListDirectoryRequest\022\037\n\tfold" +
+      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\023compute_ins" +
+      "tance_id\030\002 \001(\tB\004\350\3071\001\022\022\n\004path\030\003 \001(\tB\004\350\3071\000" +
+      "\"\375\002\n\025ListDirectoryResponse\022K\n\005items\030\001 \003(" +
+      "\0132<.yandex.cloud.backup.v1.ListDirectory" +
+      "Response.FilesystemItem\032\226\002\n\016FilesystemIt" +
+      "em\022\014\n\004name\030\001 \001(\t\022O\n\004type\030\002 \001(\0162A.yandex." +
+      "cloud.backup.v1.ListDirectoryResponse.Fi" +
+      "lesystemItem.Type\022T\n\tfile_type\030\003 \001(\0162A.y" +
+      "andex.cloud.backup.v1.ListDirectoryRespo" +
+      "nse.FilesystemItem.Type\022\014\n\004size\030\004 \001(\003\"A\n" +
+      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006VOLUME\020\001\022" +
+      "\r\n\tDIRECTORY\020\002\022\010\n\004FILE\020\003\"p\n\026CreateDirect" +
+      "oryRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022!\n\023compute_instance_id\030\002 \001(\tB\004\350\3071\001\022\022" +
+      "\n\004path\030\003 \001(\tB\004\350\3071\001\"D\n\027CreateDirectoryMet" +
+      "adata\022\033\n\023compute_instance_id\030\001 \001(\t\022\014\n\004pa" +
+      "th\030\002 \001(\t\"\210\001\n\035ListResourceOperationsReque" +
+      "st\022)\n\023compute_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
+      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListResou" +
+      "rceOperationsResponse\0225\n\noperations\030\001 \003(" +
+      "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"z\n#GetInstanceRegi" +
+      "strationTokenRequest\022\037\n\tfolder_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\0222\n\004type\030\002 \001(\0162$.yandex.clo" +
+      "ud.backup.v1.ResourceType\"x\n$GetInstance" +
+      "RegistrationTokenResponse\022 \n\030instance_re" +
+      "gistration_id\030\001 \001(\t\022.\n\nexpired_at\030\002 \001(\0132" +
+      "\032.google.protobuf.Timestamp2\263\t\n\017Resource" +
+      "Service\022\201\001\n\004List\022,.yandex.cloud.backup.v" +
+      "1.ListResourcesRequest\032-.yandex.cloud.ba" +
+      "ckup.v1.ListResourcesResponse\"\034\202\323\344\223\002\026\022\024/" +
+      "backup/v1/resources\022\222\001\n\003Get\022*.yandex.clo" +
+      "ud.backup.v1.GetResourceRequest\032+.yandex" +
+      ".cloud.backup.v1.GetResourceResponse\"2\202\323" +
+      "\344\223\002,\022*/backup/v1/resources/{compute_inst" +
+      "ance_id}\022\301\001\n\006Delete\022-.yandex.cloud.backu" +
+      "p.v1.DeleteResourceRequest\032!.yandex.clou" +
+      "d.operation.Operation\"e\202\323\344\223\002,**/backup/v" +
+      "1/resources/{compute_instance_id}\262\322*/\n\026D" +
+      "eleteResourceMetadata\022\025google.protobuf.E" +
+      "mpty\022\232\001\n\tListTasks\022(.yandex.cloud.backup" +
+      ".v1.ListTasksRequest\032).yandex.cloud.back" +
+      "up.v1.ListTasksResponse\"8\202\323\344\223\0022\0220/backup" +
+      "/v1/resources/{compute_instance_id}/task" +
+      "s\022l\n\rListDirectory\022,.yandex.cloud.backup" +
+      ".v1.ListDirectoryRequest\032-.yandex.cloud." +
+      "backup.v1.ListDirectoryResponse\022\232\001\n\017Crea" +
+      "teDirectory\022..yandex.cloud.backup.v1.Cre" +
+      "ateDirectoryRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"4\262\322*0\n\027CreateDirectoryMet" +
+      "adata\022\025google.protobuf.Empty\022\177\n\016ListOper" +
+      "ations\0225.yandex.cloud.backup.v1.ListReso" +
+      "urceOperationsRequest\0326.yandex.cloud.bac" +
+      "kup.v1.ListResourceOperationsResponse\022\231\001" +
+      "\n\034GetInstanceRegistrationToken\022;.yandex." +
+      "cloud.backup.v1.GetInstanceRegistrationT" +
+      "okenRequest\032<.yandex.cloud.backup.v1.Get" +
+      "InstanceRegistrationTokenResponseB_\n\032yan" +
+      "dex.cloud.api.backup.v1ZAgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/backup" +
+      "/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.backup.v1.ResourceOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -13728,6 +15364,18 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ListResourceOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
+    internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenRequest_descriptor,
+        new java.lang.String[] { "FolderId", "Type", });
+    internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_GetInstanceRegistrationTokenResponse_descriptor,
+        new java.lang.String[] { "InstanceRegistrationId", "ExpiredAt", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -13738,6 +15386,7 @@ public final class ResourceServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.backup.v1.ResourceOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

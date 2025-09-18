@@ -6138,6 +6138,33 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getPythonVersionBytes();
+
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     * @return Whether the dagProcessor field is set.
+     */
+    boolean hasDagProcessor();
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     * @return The dagProcessor.
+     */
+    yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig getDagProcessor();
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     */
+    yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder getDagProcessorOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.airflow.v1.ClusterConfig}
@@ -6294,6 +6321,19 @@ public final class ClusterOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               pythonVersion_ = s;
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder subBuilder = null;
+              if (dagProcessor_ != null) {
+                subBuilder = dagProcessor_.toBuilder();
+              }
+              dagProcessor_ = input.readMessage(yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dagProcessor_);
+                dagProcessor_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -6736,6 +6776,44 @@ public final class ClusterOuterClass {
       }
     }
 
+    public static final int DAG_PROCESSOR_FIELD_NUMBER = 11;
+    private yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig dagProcessor_;
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     * @return Whether the dagProcessor field is set.
+     */
+    @java.lang.Override
+    public boolean hasDagProcessor() {
+      return dagProcessor_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     * @return The dagProcessor.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig getDagProcessor() {
+      return dagProcessor_ == null ? yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.getDefaultInstance() : dagProcessor_;
+    }
+    /**
+     * <pre>
+     * Configuration of dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder getDagProcessorOrBuilder() {
+      return getDagProcessor();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6779,6 +6857,9 @@ public final class ClusterOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pythonVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, pythonVersion_);
+      }
+      if (dagProcessor_ != null) {
+        output.writeMessage(11, getDagProcessor());
       }
       unknownFields.writeTo(output);
     }
@@ -6825,6 +6906,10 @@ public final class ClusterOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pythonVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, pythonVersion_);
+      }
+      if (dagProcessor_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getDagProcessor());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6882,6 +6967,11 @@ public final class ClusterOuterClass {
           .equals(other.getAirflowVersion())) return false;
       if (!getPythonVersion()
           .equals(other.getPythonVersion())) return false;
+      if (hasDagProcessor() != other.hasDagProcessor()) return false;
+      if (hasDagProcessor()) {
+        if (!getDagProcessor()
+            .equals(other.getDagProcessor())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6927,6 +7017,10 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + getAirflowVersion().hashCode();
       hash = (37 * hash) + PYTHON_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getPythonVersion().hashCode();
+      if (hasDagProcessor()) {
+        hash = (37 * hash) + DAG_PROCESSOR_FIELD_NUMBER;
+        hash = (53 * hash) + getDagProcessor().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7108,6 +7202,12 @@ public final class ClusterOuterClass {
 
         pythonVersion_ = "";
 
+        if (dagProcessorBuilder_ == null) {
+          dagProcessor_ = null;
+        } else {
+          dagProcessor_ = null;
+          dagProcessorBuilder_ = null;
+        }
         return this;
       }
 
@@ -7172,6 +7272,11 @@ public final class ClusterOuterClass {
         }
         result.airflowVersion_ = airflowVersion_;
         result.pythonVersion_ = pythonVersion_;
+        if (dagProcessorBuilder_ == null) {
+          result.dagProcessor_ = dagProcessor_;
+        } else {
+          result.dagProcessor_ = dagProcessorBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -7252,6 +7357,9 @@ public final class ClusterOuterClass {
         if (!other.getPythonVersion().isEmpty()) {
           pythonVersion_ = other.pythonVersion_;
           onChanged();
+        }
+        if (other.hasDagProcessor()) {
+          mergeDagProcessor(other.getDagProcessor());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8663,6 +8771,161 @@ public final class ClusterOuterClass {
         pythonVersion_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig dagProcessor_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder> dagProcessorBuilder_;
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       * @return Whether the dagProcessor field is set.
+       */
+      public boolean hasDagProcessor() {
+        return dagProcessorBuilder_ != null || dagProcessor_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       * @return The dagProcessor.
+       */
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig getDagProcessor() {
+        if (dagProcessorBuilder_ == null) {
+          return dagProcessor_ == null ? yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.getDefaultInstance() : dagProcessor_;
+        } else {
+          return dagProcessorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public Builder setDagProcessor(yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig value) {
+        if (dagProcessorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dagProcessor_ = value;
+          onChanged();
+        } else {
+          dagProcessorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public Builder setDagProcessor(
+          yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder builderForValue) {
+        if (dagProcessorBuilder_ == null) {
+          dagProcessor_ = builderForValue.build();
+          onChanged();
+        } else {
+          dagProcessorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public Builder mergeDagProcessor(yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig value) {
+        if (dagProcessorBuilder_ == null) {
+          if (dagProcessor_ != null) {
+            dagProcessor_ =
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.newBuilder(dagProcessor_).mergeFrom(value).buildPartial();
+          } else {
+            dagProcessor_ = value;
+          }
+          onChanged();
+        } else {
+          dagProcessorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public Builder clearDagProcessor() {
+        if (dagProcessorBuilder_ == null) {
+          dagProcessor_ = null;
+          onChanged();
+        } else {
+          dagProcessor_ = null;
+          dagProcessorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder getDagProcessorBuilder() {
+        
+        onChanged();
+        return getDagProcessorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder getDagProcessorOrBuilder() {
+        if (dagProcessorBuilder_ != null) {
+          return dagProcessorBuilder_.getMessageOrBuilder();
+        } else {
+          return dagProcessor_ == null ?
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.getDefaultInstance() : dagProcessor_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.DagProcessorConfig dag_processor = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder> 
+          getDagProcessorFieldBuilder() {
+        if (dagProcessorBuilder_ == null) {
+          dagProcessorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder>(
+                  getDagProcessor(),
+                  getParentForChildren(),
+                  isClean());
+          dagProcessor_ = null;
+        }
+        return dagProcessorBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11061,6 +11324,778 @@ public final class ClusterOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.airflow.v1.ClusterOuterClass.SchedulerConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DagProcessorConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.airflow.v1.DagProcessorConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The number of dag-processor instances in the cluster.
+     * </pre>
+     *
+     * <code>int64 count = 1 [(.yandex.cloud.value) = "1-512"];</code>
+     * @return The count.
+     */
+    long getCount();
+
+    /**
+     * <pre>
+     * Resources allocated to dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+     * @return Whether the resources field is set.
+     */
+    boolean hasResources();
+    /**
+     * <pre>
+     * Resources allocated to dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+     * @return The resources.
+     */
+    yandex.cloud.api.airflow.v1.Common.Resources getResources();
+    /**
+     * <pre>
+     * Resources allocated to dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+     */
+    yandex.cloud.api.airflow.v1.Common.ResourcesOrBuilder getResourcesOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.airflow.v1.DagProcessorConfig}
+   */
+  public static final class DagProcessorConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.airflow.v1.DagProcessorConfig)
+      DagProcessorConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DagProcessorConfig.newBuilder() to construct.
+    private DagProcessorConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DagProcessorConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DagProcessorConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DagProcessorConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              count_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.airflow.v1.Common.Resources.Builder subBuilder = null;
+              if (resources_ != null) {
+                subBuilder = resources_.toBuilder();
+              }
+              resources_ = input.readMessage(yandex.cloud.api.airflow.v1.Common.Resources.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resources_);
+                resources_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.airflow.v1.ClusterOuterClass.internal_static_yandex_cloud_airflow_v1_DagProcessorConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.airflow.v1.ClusterOuterClass.internal_static_yandex_cloud_airflow_v1_DagProcessorConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.class, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder.class);
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 1;
+    private long count_;
+    /**
+     * <pre>
+     * The number of dag-processor instances in the cluster.
+     * </pre>
+     *
+     * <code>int64 count = 1 [(.yandex.cloud.value) = "1-512"];</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public long getCount() {
+      return count_;
+    }
+
+    public static final int RESOURCES_FIELD_NUMBER = 2;
+    private yandex.cloud.api.airflow.v1.Common.Resources resources_;
+    /**
+     * <pre>
+     * Resources allocated to dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+     * @return Whether the resources field is set.
+     */
+    @java.lang.Override
+    public boolean hasResources() {
+      return resources_ != null;
+    }
+    /**
+     * <pre>
+     * Resources allocated to dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+     * @return The resources.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.Common.Resources getResources() {
+      return resources_ == null ? yandex.cloud.api.airflow.v1.Common.Resources.getDefaultInstance() : resources_;
+    }
+    /**
+     * <pre>
+     * Resources allocated to dag-processor instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.Common.ResourcesOrBuilder getResourcesOrBuilder() {
+      return getResources();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (count_ != 0L) {
+        output.writeInt64(1, count_);
+      }
+      if (resources_ != null) {
+        output.writeMessage(2, getResources());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (count_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, count_);
+      }
+      if (resources_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getResources());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig other = (yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig) obj;
+
+      if (getCount()
+          != other.getCount()) return false;
+      if (hasResources() != other.hasResources()) return false;
+      if (hasResources()) {
+        if (!getResources()
+            .equals(other.getResources())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCount());
+      if (hasResources()) {
+        hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+        hash = (53 * hash) + getResources().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.airflow.v1.DagProcessorConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.airflow.v1.DagProcessorConfig)
+        yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.airflow.v1.ClusterOuterClass.internal_static_yandex_cloud_airflow_v1_DagProcessorConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.airflow.v1.ClusterOuterClass.internal_static_yandex_cloud_airflow_v1_DagProcessorConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.class, yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        count_ = 0L;
+
+        if (resourcesBuilder_ == null) {
+          resources_ = null;
+        } else {
+          resources_ = null;
+          resourcesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.airflow.v1.ClusterOuterClass.internal_static_yandex_cloud_airflow_v1_DagProcessorConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig getDefaultInstanceForType() {
+        return yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig build() {
+        yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig buildPartial() {
+        yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig result = new yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig(this);
+        result.count_ = count_;
+        if (resourcesBuilder_ == null) {
+          result.resources_ = resources_;
+        } else {
+          result.resources_ = resourcesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig) {
+          return mergeFrom((yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig other) {
+        if (other == yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig.getDefaultInstance()) return this;
+        if (other.getCount() != 0L) {
+          setCount(other.getCount());
+        }
+        if (other.hasResources()) {
+          mergeResources(other.getResources());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long count_ ;
+      /**
+       * <pre>
+       * The number of dag-processor instances in the cluster.
+       * </pre>
+       *
+       * <code>int64 count = 1 [(.yandex.cloud.value) = "1-512"];</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public long getCount() {
+        return count_;
+      }
+      /**
+       * <pre>
+       * The number of dag-processor instances in the cluster.
+       * </pre>
+       *
+       * <code>int64 count = 1 [(.yandex.cloud.value) = "1-512"];</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(long value) {
+        
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of dag-processor instances in the cluster.
+       * </pre>
+       *
+       * <code>int64 count = 1 [(.yandex.cloud.value) = "1-512"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        
+        count_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.airflow.v1.Common.Resources resources_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.Common.Resources, yandex.cloud.api.airflow.v1.Common.Resources.Builder, yandex.cloud.api.airflow.v1.Common.ResourcesOrBuilder> resourcesBuilder_;
+      /**
+       * <pre>
+       * Resources allocated to dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      public boolean hasResources() {
+        return resourcesBuilder_ != null || resources_ != null;
+      }
+      /**
+       * <pre>
+       * Resources allocated to dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      public yandex.cloud.api.airflow.v1.Common.Resources getResources() {
+        if (resourcesBuilder_ == null) {
+          return resources_ == null ? yandex.cloud.api.airflow.v1.Common.Resources.getDefaultInstance() : resources_;
+        } else {
+          return resourcesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Resources allocated to dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+       */
+      public Builder setResources(yandex.cloud.api.airflow.v1.Common.Resources value) {
+        if (resourcesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resources_ = value;
+          onChanged();
+        } else {
+          resourcesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources allocated to dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+       */
+      public Builder setResources(
+          yandex.cloud.api.airflow.v1.Common.Resources.Builder builderForValue) {
+        if (resourcesBuilder_ == null) {
+          resources_ = builderForValue.build();
+          onChanged();
+        } else {
+          resourcesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources allocated to dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+       */
+      public Builder mergeResources(yandex.cloud.api.airflow.v1.Common.Resources value) {
+        if (resourcesBuilder_ == null) {
+          if (resources_ != null) {
+            resources_ =
+              yandex.cloud.api.airflow.v1.Common.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+          } else {
+            resources_ = value;
+          }
+          onChanged();
+        } else {
+          resourcesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources allocated to dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+       */
+      public Builder clearResources() {
+        if (resourcesBuilder_ == null) {
+          resources_ = null;
+          onChanged();
+        } else {
+          resources_ = null;
+          resourcesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources allocated to dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+       */
+      public yandex.cloud.api.airflow.v1.Common.Resources.Builder getResourcesBuilder() {
+        
+        onChanged();
+        return getResourcesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Resources allocated to dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+       */
+      public yandex.cloud.api.airflow.v1.Common.ResourcesOrBuilder getResourcesOrBuilder() {
+        if (resourcesBuilder_ != null) {
+          return resourcesBuilder_.getMessageOrBuilder();
+        } else {
+          return resources_ == null ?
+              yandex.cloud.api.airflow.v1.Common.Resources.getDefaultInstance() : resources_;
+        }
+      }
+      /**
+       * <pre>
+       * Resources allocated to dag-processor instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.Resources resources = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.Common.Resources, yandex.cloud.api.airflow.v1.Common.Resources.Builder, yandex.cloud.api.airflow.v1.Common.ResourcesOrBuilder> 
+          getResourcesFieldBuilder() {
+        if (resourcesBuilder_ == null) {
+          resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.airflow.v1.Common.Resources, yandex.cloud.api.airflow.v1.Common.Resources.Builder, yandex.cloud.api.airflow.v1.Common.ResourcesOrBuilder>(
+                  getResources(),
+                  getParentForChildren(),
+                  isClean());
+          resources_ = null;
+        }
+        return resourcesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.airflow.v1.DagProcessorConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.airflow.v1.DagProcessorConfig)
+    private static final yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig();
+    }
+
+    public static yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DagProcessorConfig>
+        PARSER = new com.google.protobuf.AbstractParser<DagProcessorConfig>() {
+      @java.lang.Override
+      public DagProcessorConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DagProcessorConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DagProcessorConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DagProcessorConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.ClusterOuterClass.DagProcessorConfig getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15292,35 +16327,59 @@ public final class ClusterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string repo = 1;</code>
+     * <pre>
+     * Git repository URL.
+     * </pre>
+     *
+     * <code>string repo = 1 [(.yandex.cloud.required) = true];</code>
      * @return The repo.
      */
     java.lang.String getRepo();
     /**
-     * <code>string repo = 1;</code>
+     * <pre>
+     * Git repository URL.
+     * </pre>
+     *
+     * <code>string repo = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for repo.
      */
     com.google.protobuf.ByteString
         getRepoBytes();
 
     /**
-     * <code>string branch = 2;</code>
+     * <pre>
+     * Git branch name to sync from.
+     * </pre>
+     *
+     * <code>string branch = 2 [(.yandex.cloud.required) = true];</code>
      * @return The branch.
      */
     java.lang.String getBranch();
     /**
-     * <code>string branch = 2;</code>
+     * <pre>
+     * Git branch name to sync from.
+     * </pre>
+     *
+     * <code>string branch = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for branch.
      */
     com.google.protobuf.ByteString
         getBranchBytes();
 
     /**
+     * <pre>
+     * Subdirectory path within the repository containing DAG files.
+     * </pre>
+     *
      * <code>string sub_path = 3;</code>
      * @return The subPath.
      */
     java.lang.String getSubPath();
     /**
+     * <pre>
+     * Subdirectory path within the repository containing DAG files.
+     * </pre>
+     *
      * <code>string sub_path = 3;</code>
      * @return The bytes for subPath.
      */
@@ -15328,11 +16387,19 @@ public final class ClusterOuterClass {
         getSubPathBytes();
 
     /**
+     * <pre>
+     * SSH private key for repository authentication.
+     * </pre>
+     *
      * <code>string ssh_key = 4;</code>
      * @return The sshKey.
      */
     java.lang.String getSshKey();
     /**
+     * <pre>
+     * SSH private key for repository authentication.
+     * </pre>
+     *
      * <code>string ssh_key = 4;</code>
      * @return The bytes for sshKey.
      */
@@ -15447,7 +16514,11 @@ public final class ClusterOuterClass {
     public static final int REPO_FIELD_NUMBER = 1;
     private volatile java.lang.Object repo_;
     /**
-     * <code>string repo = 1;</code>
+     * <pre>
+     * Git repository URL.
+     * </pre>
+     *
+     * <code>string repo = 1 [(.yandex.cloud.required) = true];</code>
      * @return The repo.
      */
     @java.lang.Override
@@ -15464,7 +16535,11 @@ public final class ClusterOuterClass {
       }
     }
     /**
-     * <code>string repo = 1;</code>
+     * <pre>
+     * Git repository URL.
+     * </pre>
+     *
+     * <code>string repo = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for repo.
      */
     @java.lang.Override
@@ -15485,7 +16560,11 @@ public final class ClusterOuterClass {
     public static final int BRANCH_FIELD_NUMBER = 2;
     private volatile java.lang.Object branch_;
     /**
-     * <code>string branch = 2;</code>
+     * <pre>
+     * Git branch name to sync from.
+     * </pre>
+     *
+     * <code>string branch = 2 [(.yandex.cloud.required) = true];</code>
      * @return The branch.
      */
     @java.lang.Override
@@ -15502,7 +16581,11 @@ public final class ClusterOuterClass {
       }
     }
     /**
-     * <code>string branch = 2;</code>
+     * <pre>
+     * Git branch name to sync from.
+     * </pre>
+     *
+     * <code>string branch = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for branch.
      */
     @java.lang.Override
@@ -15523,6 +16606,10 @@ public final class ClusterOuterClass {
     public static final int SUB_PATH_FIELD_NUMBER = 3;
     private volatile java.lang.Object subPath_;
     /**
+     * <pre>
+     * Subdirectory path within the repository containing DAG files.
+     * </pre>
+     *
      * <code>string sub_path = 3;</code>
      * @return The subPath.
      */
@@ -15540,6 +16627,10 @@ public final class ClusterOuterClass {
       }
     }
     /**
+     * <pre>
+     * Subdirectory path within the repository containing DAG files.
+     * </pre>
+     *
      * <code>string sub_path = 3;</code>
      * @return The bytes for subPath.
      */
@@ -15561,6 +16652,10 @@ public final class ClusterOuterClass {
     public static final int SSH_KEY_FIELD_NUMBER = 4;
     private volatile java.lang.Object sshKey_;
     /**
+     * <pre>
+     * SSH private key for repository authentication.
+     * </pre>
+     *
      * <code>string ssh_key = 4;</code>
      * @return The sshKey.
      */
@@ -15578,6 +16673,10 @@ public final class ClusterOuterClass {
       }
     }
     /**
+     * <pre>
+     * SSH private key for repository authentication.
+     * </pre>
+     *
      * <code>string ssh_key = 4;</code>
      * @return The bytes for sshKey.
      */
@@ -15951,7 +17050,11 @@ public final class ClusterOuterClass {
 
       private java.lang.Object repo_ = "";
       /**
-       * <code>string repo = 1;</code>
+       * <pre>
+       * Git repository URL.
+       * </pre>
+       *
+       * <code>string repo = 1 [(.yandex.cloud.required) = true];</code>
        * @return The repo.
        */
       public java.lang.String getRepo() {
@@ -15967,7 +17070,11 @@ public final class ClusterOuterClass {
         }
       }
       /**
-       * <code>string repo = 1;</code>
+       * <pre>
+       * Git repository URL.
+       * </pre>
+       *
+       * <code>string repo = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for repo.
        */
       public com.google.protobuf.ByteString
@@ -15984,7 +17091,11 @@ public final class ClusterOuterClass {
         }
       }
       /**
-       * <code>string repo = 1;</code>
+       * <pre>
+       * Git repository URL.
+       * </pre>
+       *
+       * <code>string repo = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The repo to set.
        * @return This builder for chaining.
        */
@@ -15999,7 +17110,11 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
-       * <code>string repo = 1;</code>
+       * <pre>
+       * Git repository URL.
+       * </pre>
+       *
+       * <code>string repo = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearRepo() {
@@ -16009,7 +17124,11 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
-       * <code>string repo = 1;</code>
+       * <pre>
+       * Git repository URL.
+       * </pre>
+       *
+       * <code>string repo = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for repo to set.
        * @return This builder for chaining.
        */
@@ -16027,7 +17146,11 @@ public final class ClusterOuterClass {
 
       private java.lang.Object branch_ = "";
       /**
-       * <code>string branch = 2;</code>
+       * <pre>
+       * Git branch name to sync from.
+       * </pre>
+       *
+       * <code>string branch = 2 [(.yandex.cloud.required) = true];</code>
        * @return The branch.
        */
       public java.lang.String getBranch() {
@@ -16043,7 +17166,11 @@ public final class ClusterOuterClass {
         }
       }
       /**
-       * <code>string branch = 2;</code>
+       * <pre>
+       * Git branch name to sync from.
+       * </pre>
+       *
+       * <code>string branch = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for branch.
        */
       public com.google.protobuf.ByteString
@@ -16060,7 +17187,11 @@ public final class ClusterOuterClass {
         }
       }
       /**
-       * <code>string branch = 2;</code>
+       * <pre>
+       * Git branch name to sync from.
+       * </pre>
+       *
+       * <code>string branch = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The branch to set.
        * @return This builder for chaining.
        */
@@ -16075,7 +17206,11 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
-       * <code>string branch = 2;</code>
+       * <pre>
+       * Git branch name to sync from.
+       * </pre>
+       *
+       * <code>string branch = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearBranch() {
@@ -16085,7 +17220,11 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
-       * <code>string branch = 2;</code>
+       * <pre>
+       * Git branch name to sync from.
+       * </pre>
+       *
+       * <code>string branch = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for branch to set.
        * @return This builder for chaining.
        */
@@ -16103,6 +17242,10 @@ public final class ClusterOuterClass {
 
       private java.lang.Object subPath_ = "";
       /**
+       * <pre>
+       * Subdirectory path within the repository containing DAG files.
+       * </pre>
+       *
        * <code>string sub_path = 3;</code>
        * @return The subPath.
        */
@@ -16119,6 +17262,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Subdirectory path within the repository containing DAG files.
+       * </pre>
+       *
        * <code>string sub_path = 3;</code>
        * @return The bytes for subPath.
        */
@@ -16136,6 +17283,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Subdirectory path within the repository containing DAG files.
+       * </pre>
+       *
        * <code>string sub_path = 3;</code>
        * @param value The subPath to set.
        * @return This builder for chaining.
@@ -16151,6 +17302,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subdirectory path within the repository containing DAG files.
+       * </pre>
+       *
        * <code>string sub_path = 3;</code>
        * @return This builder for chaining.
        */
@@ -16161,6 +17316,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subdirectory path within the repository containing DAG files.
+       * </pre>
+       *
        * <code>string sub_path = 3;</code>
        * @param value The bytes for subPath to set.
        * @return This builder for chaining.
@@ -16179,6 +17338,10 @@ public final class ClusterOuterClass {
 
       private java.lang.Object sshKey_ = "";
       /**
+       * <pre>
+       * SSH private key for repository authentication.
+       * </pre>
+       *
        * <code>string ssh_key = 4;</code>
        * @return The sshKey.
        */
@@ -16195,6 +17358,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * SSH private key for repository authentication.
+       * </pre>
+       *
        * <code>string ssh_key = 4;</code>
        * @return The bytes for sshKey.
        */
@@ -16212,6 +17379,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * SSH private key for repository authentication.
+       * </pre>
+       *
        * <code>string ssh_key = 4;</code>
        * @param value The sshKey to set.
        * @return This builder for chaining.
@@ -16227,6 +17398,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SSH private key for repository authentication.
+       * </pre>
+       *
        * <code>string ssh_key = 4;</code>
        * @return This builder for chaining.
        */
@@ -16237,6 +17412,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SSH private key for repository authentication.
+       * </pre>
+       *
        * <code>string ssh_key = 4;</code>
        * @param value The bytes for sshKey to set.
        * @return This builder for chaining.
@@ -19024,6 +20203,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_airflow_v1_SchedulerConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_airflow_v1_DagProcessorConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_airflow_v1_DagProcessorConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_airflow_v1_TriggererConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -19109,7 +20293,7 @@ public final class ClusterOuterClass {
       "\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010STOPPING\020\004\022\013\n\007" +
       "STOPPED\020\005\022\014\n\010STARTING\020\006\022\014\n\010UPDATING\020\007J\004\010" +
       "\007\020\010\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descr" +
-      "iption\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\207\004\n\rClusterCo" +
+      "iption\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\313\004\n\rClusterCo" +
       "nfig\022\026\n\nversion_id\030\001 \001(\tB\002\030\001\0227\n\007airflow\030" +
       "\002 \001(\0132&.yandex.cloud.airflow.v1.AirflowC" +
       "onfig\022A\n\twebserver\030\003 \001(\0132(.yandex.cloud." +
@@ -19122,40 +20306,45 @@ public final class ClusterOuterClass {
       "\001(\0132%.yandex.cloud.airflow.v1.Dependenci" +
       "es\0227\n\007lockbox\030\010 \001(\0132&.yandex.cloud.airfl" +
       "ow.v1.LockboxConfig\022\027\n\017airflow_version\030\t" +
-      " \001(\t\022\026\n\016python_version\030\n \001(\t\"\202\001\n\rAirflow" +
-      "Config\022B\n\006config\030\001 \003(\01322.yandex.cloud.ai" +
-      "rflow.v1.AirflowConfig.ConfigEntry\032-\n\013Co" +
-      "nfigEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"b\n\017WebserverConfig\022\030\n\005count\030\001 \001(\003B\t\372\3071" +
-      "\0051-512\0225\n\tresources\030\002 \001(\0132\".yandex.cloud" +
-      ".airflow.v1.Resources\"b\n\017SchedulerConfig" +
-      "\022\030\n\005count\030\001 \001(\003B\t\372\3071\0051-512\0225\n\tresources\030" +
-      "\002 \001(\0132\".yandex.cloud.airflow.v1.Resource" +
-      "s\"b\n\017TriggererConfig\022\030\n\005count\030\001 \001(\003B\t\372\3071" +
-      "\0050-512\0225\n\tresources\030\002 \001(\0132\".yandex.cloud" +
-      ".airflow.v1.Resources\"\201\001\n\014WorkerConfig\022\034" +
-      "\n\tmin_count\030\001 \001(\003B\t\372\3071\0050-512\022\034\n\tmax_coun" +
-      "t\030\002 \001(\003B\t\372\3071\0051-512\0225\n\tresources\030\003 \001(\0132\"." +
-      "yandex.cloud.airflow.v1.Resources\":\n\014Dep" +
-      "endencies\022\024\n\014pip_packages\030\001 \003(\t\022\024\n\014deb_p" +
-      "ackages\030\002 \003(\t\"?\n\rNetworkConfig\022\022\n\nsubnet" +
-      "_ids\030\001 \003(\t\022\032\n\022security_group_ids\030\002 \003(\t\"\032" +
-      "\n\010S3Config\022\016\n\006bucket\030\003 \001(\t\"P\n\rGitSyncCon" +
-      "fig\022\014\n\004repo\030\001 \001(\t\022\016\n\006branch\030\002 \001(\t\022\020\n\010sub" +
-      "_path\030\003 \001(\t\022\017\n\007ssh_key\030\004 \001(\t\"\215\001\n\016CodeSyn" +
-      "cConfig\022/\n\002s3\030\001 \001(\0132!.yandex.cloud.airfl" +
-      "ow.v1.S3ConfigH\000\022:\n\010git_sync\030\002 \001(\0132&.yan" +
-      "dex.cloud.airflow.v1.GitSyncConfigH\000B\016\n\006" +
-      "source\022\004\300\3011\001\"\342\001\n\rLoggingConfig\022\017\n\007enable" +
-      "d\030\001 \001(\010\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([a-zA-Z" +
-      "][-a-zA-Z0-9_.]{0,63})?H\000\022;\n\014log_group_i" +
-      "d\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,6" +
-      "3})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cloud" +
-      ".logging.v1.LogLevel.LevelB\r\n\013destinatio" +
-      "n\" \n\rLockboxConfig\022\017\n\007enabled\030\001 \001(\010Bb\n\033y" +
-      "andex.cloud.api.airflow.v1ZCgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/air" +
-      "flow/v1;airflowb\006proto3"
+      " \001(\t\022\026\n\016python_version\030\n \001(\t\022B\n\rdag_proc" +
+      "essor\030\013 \001(\0132+.yandex.cloud.airflow.v1.Da" +
+      "gProcessorConfig\"\202\001\n\rAirflowConfig\022B\n\006co" +
+      "nfig\030\001 \003(\01322.yandex.cloud.airflow.v1.Air" +
+      "flowConfig.ConfigEntry\032-\n\013ConfigEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"b\n\017Webserv" +
+      "erConfig\022\030\n\005count\030\001 \001(\003B\t\372\3071\0051-512\0225\n\tre" +
+      "sources\030\002 \001(\0132\".yandex.cloud.airflow.v1." +
+      "Resources\"b\n\017SchedulerConfig\022\030\n\005count\030\001 " +
+      "\001(\003B\t\372\3071\0051-512\0225\n\tresources\030\002 \001(\0132\".yand" +
+      "ex.cloud.airflow.v1.Resources\"e\n\022DagProc" +
+      "essorConfig\022\030\n\005count\030\001 \001(\003B\t\372\3071\0051-512\0225\n" +
+      "\tresources\030\002 \001(\0132\".yandex.cloud.airflow." +
+      "v1.Resources\"b\n\017TriggererConfig\022\030\n\005count" +
+      "\030\001 \001(\003B\t\372\3071\0050-512\0225\n\tresources\030\002 \001(\0132\".y" +
+      "andex.cloud.airflow.v1.Resources\"\201\001\n\014Wor" +
+      "kerConfig\022\034\n\tmin_count\030\001 \001(\003B\t\372\3071\0050-512\022" +
+      "\034\n\tmax_count\030\002 \001(\003B\t\372\3071\0051-512\0225\n\tresourc" +
+      "es\030\003 \001(\0132\".yandex.cloud.airflow.v1.Resou" +
+      "rces\":\n\014Dependencies\022\024\n\014pip_packages\030\001 \003" +
+      "(\t\022\024\n\014deb_packages\030\002 \003(\t\"?\n\rNetworkConfi" +
+      "g\022\022\n\nsubnet_ids\030\001 \003(\t\022\032\n\022security_group_" +
+      "ids\030\002 \003(\t\"\032\n\010S3Config\022\016\n\006bucket\030\003 \001(\t\"\\\n" +
+      "\rGitSyncConfig\022\022\n\004repo\030\001 \001(\tB\004\350\3071\001\022\024\n\006br" +
+      "anch\030\002 \001(\tB\004\350\3071\001\022\020\n\010sub_path\030\003 \001(\t\022\017\n\007ss" +
+      "h_key\030\004 \001(\t\"\215\001\n\016CodeSyncConfig\022/\n\002s3\030\001 \001" +
+      "(\0132!.yandex.cloud.airflow.v1.S3ConfigH\000\022" +
+      ":\n\010git_sync\030\002 \001(\0132&.yandex.cloud.airflow" +
+      ".v1.GitSyncConfigH\000B\016\n\006source\022\004\300\3011\001\"\342\001\n\r" +
+      "LoggingConfig\022\017\n\007enabled\030\001 \001(\010\0228\n\tfolder" +
+      "_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0" +
+      ",63})?H\000\022;\n\014log_group_id\030\003 \001(\tB#\362\3071\037([a-" +
+      "zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_lev" +
+      "el\030\004 \001(\0162\'.yandex.cloud.logging.v1.LogLe" +
+      "vel.LevelB\r\n\013destination\" \n\rLockboxConfi" +
+      "g\022\017\n\007enabled\030\001 \001(\010Bb\n\033yandex.cloud.api.a" +
+      "irflow.v1ZCgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/airflow/v1;airflowb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19189,7 +20378,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_airflow_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "VersionId", "Airflow", "Webserver", "Scheduler", "Triggerer", "Worker", "Dependencies", "Lockbox", "AirflowVersion", "PythonVersion", });
+        new java.lang.String[] { "VersionId", "Airflow", "Webserver", "Scheduler", "Triggerer", "Worker", "Dependencies", "Lockbox", "AirflowVersion", "PythonVersion", "DagProcessor", });
     internal_static_yandex_cloud_airflow_v1_AirflowConfig_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_airflow_v1_AirflowConfig_fieldAccessorTable = new
@@ -19214,56 +20403,62 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_SchedulerConfig_descriptor,
         new java.lang.String[] { "Count", "Resources", });
-    internal_static_yandex_cloud_airflow_v1_TriggererConfig_descriptor =
+    internal_static_yandex_cloud_airflow_v1_DagProcessorConfig_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_airflow_v1_DagProcessorConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_airflow_v1_DagProcessorConfig_descriptor,
+        new java.lang.String[] { "Count", "Resources", });
+    internal_static_yandex_cloud_airflow_v1_TriggererConfig_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_airflow_v1_TriggererConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_TriggererConfig_descriptor,
         new java.lang.String[] { "Count", "Resources", });
     internal_static_yandex_cloud_airflow_v1_WorkerConfig_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_airflow_v1_WorkerConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_WorkerConfig_descriptor,
         new java.lang.String[] { "MinCount", "MaxCount", "Resources", });
     internal_static_yandex_cloud_airflow_v1_Dependencies_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_airflow_v1_Dependencies_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_Dependencies_descriptor,
         new java.lang.String[] { "PipPackages", "DebPackages", });
     internal_static_yandex_cloud_airflow_v1_NetworkConfig_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_airflow_v1_NetworkConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_NetworkConfig_descriptor,
         new java.lang.String[] { "SubnetIds", "SecurityGroupIds", });
     internal_static_yandex_cloud_airflow_v1_S3Config_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_airflow_v1_S3Config_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_S3Config_descriptor,
         new java.lang.String[] { "Bucket", });
     internal_static_yandex_cloud_airflow_v1_GitSyncConfig_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_airflow_v1_GitSyncConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_GitSyncConfig_descriptor,
         new java.lang.String[] { "Repo", "Branch", "SubPath", "SshKey", });
     internal_static_yandex_cloud_airflow_v1_CodeSyncConfig_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_airflow_v1_CodeSyncConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_CodeSyncConfig_descriptor,
         new java.lang.String[] { "S3", "GitSync", "Source", });
     internal_static_yandex_cloud_airflow_v1_LoggingConfig_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_airflow_v1_LoggingConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_LoggingConfig_descriptor,
         new java.lang.String[] { "Enabled", "FolderId", "LogGroupId", "MinLevel", "Destination", });
     internal_static_yandex_cloud_airflow_v1_LockboxConfig_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_airflow_v1_LockboxConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_LockboxConfig_descriptor,

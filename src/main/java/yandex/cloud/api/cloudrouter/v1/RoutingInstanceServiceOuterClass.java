@@ -13380,6 +13380,3048 @@ public final class RoutingInstanceServiceOuterClass {
 
   }
 
+  public interface UpdateNetworksRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cloudrouter.v1.UpdateNetworksRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the RoutingInstance resource.
+     * </pre>
+     *
+     * <code>string routing_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The routingInstanceId.
+     */
+    java.lang.String getRoutingInstanceId();
+    /**
+     * <pre>
+     * ID of the RoutingInstance resource.
+     * </pre>
+     *
+     * <code>string routing_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for routingInstanceId.
+     */
+    com.google.protobuf.ByteString
+        getRoutingInstanceIdBytes();
+
+    /**
+     * <pre>
+     * Lists information about the VPC networks that are added to the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> 
+        getAddedVpcNetworksList();
+    /**
+     * <pre>
+     * Lists information about the VPC networks that are added to the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+     */
+    yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo getAddedVpcNetworks(int index);
+    /**
+     * <pre>
+     * Lists information about the VPC networks that are added to the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+     */
+    int getAddedVpcNetworksCount();
+    /**
+     * <pre>
+     * Lists information about the VPC networks that are added to the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder> 
+        getAddedVpcNetworksOrBuilderList();
+    /**
+     * <pre>
+     * Lists information about the VPC networks that are added to the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+     */
+    yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder getAddedVpcNetworksOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * List of VPC network information that is updated in the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+     */
+    java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> 
+        getUpdatedVpcNetworksList();
+    /**
+     * <pre>
+     * List of VPC network information that is updated in the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+     */
+    yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo getUpdatedVpcNetworks(int index);
+    /**
+     * <pre>
+     * List of VPC network information that is updated in the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+     */
+    int getUpdatedVpcNetworksCount();
+    /**
+     * <pre>
+     * List of VPC network information that is updated in the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder> 
+        getUpdatedVpcNetworksOrBuilderList();
+    /**
+     * <pre>
+     * List of VPC network information that is updated in the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+     */
+    yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder getUpdatedVpcNetworksOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * List of VPC ids to remove from the routing instance.
+     * </pre>
+     *
+     * <code>repeated string deleted_vpc_network_ids = 4;</code>
+     * @return A list containing the deletedVpcNetworkIds.
+     */
+    java.util.List<java.lang.String>
+        getDeletedVpcNetworkIdsList();
+    /**
+     * <pre>
+     * List of VPC ids to remove from the routing instance.
+     * </pre>
+     *
+     * <code>repeated string deleted_vpc_network_ids = 4;</code>
+     * @return The count of deletedVpcNetworkIds.
+     */
+    int getDeletedVpcNetworkIdsCount();
+    /**
+     * <pre>
+     * List of VPC ids to remove from the routing instance.
+     * </pre>
+     *
+     * <code>repeated string deleted_vpc_network_ids = 4;</code>
+     * @param index The index of the element to return.
+     * @return The deletedVpcNetworkIds at the given index.
+     */
+    java.lang.String getDeletedVpcNetworkIds(int index);
+    /**
+     * <pre>
+     * List of VPC ids to remove from the routing instance.
+     * </pre>
+     *
+     * <code>repeated string deleted_vpc_network_ids = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the deletedVpcNetworkIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDeletedVpcNetworkIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Specifies whether to check for vpc in routing instance.
+     * </pre>
+     *
+     * <code>bool strict_remove = 5;</code>
+     * @return The strictRemove.
+     */
+    boolean getStrictRemove();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cloudrouter.v1.UpdateNetworksRequest}
+   */
+  public static final class UpdateNetworksRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cloudrouter.v1.UpdateNetworksRequest)
+      UpdateNetworksRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateNetworksRequest.newBuilder() to construct.
+    private UpdateNetworksRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateNetworksRequest() {
+      routingInstanceId_ = "";
+      addedVpcNetworks_ = java.util.Collections.emptyList();
+      updatedVpcNetworks_ = java.util.Collections.emptyList();
+      deletedVpcNetworkIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateNetworksRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateNetworksRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              routingInstanceId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                addedVpcNetworks_ = new java.util.ArrayList<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              addedVpcNetworks_.add(
+                  input.readMessage(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                updatedVpcNetworks_ = new java.util.ArrayList<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              updatedVpcNetworks_.add(
+                  input.readMessage(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                deletedVpcNetworkIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              deletedVpcNetworkIds_.add(s);
+              break;
+            }
+            case 40: {
+
+              strictRemove_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          addedVpcNetworks_ = java.util.Collections.unmodifiableList(addedVpcNetworks_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          updatedVpcNetworks_ = java.util.Collections.unmodifiableList(updatedVpcNetworks_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          deletedVpcNetworkIds_ = deletedVpcNetworkIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.internal_static_yandex_cloud_cloudrouter_v1_UpdateNetworksRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.internal_static_yandex_cloud_cloudrouter_v1_UpdateNetworksRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest.class, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest.Builder.class);
+    }
+
+    public static final int ROUTING_INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object routingInstanceId_;
+    /**
+     * <pre>
+     * ID of the RoutingInstance resource.
+     * </pre>
+     *
+     * <code>string routing_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The routingInstanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getRoutingInstanceId() {
+      java.lang.Object ref = routingInstanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        routingInstanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the RoutingInstance resource.
+     * </pre>
+     *
+     * <code>string routing_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for routingInstanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRoutingInstanceIdBytes() {
+      java.lang.Object ref = routingInstanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        routingInstanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDED_VPC_NETWORKS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> addedVpcNetworks_;
+    /**
+     * <pre>
+     * Lists information about the VPC networks that are added to the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> getAddedVpcNetworksList() {
+      return addedVpcNetworks_;
+    }
+    /**
+     * <pre>
+     * Lists information about the VPC networks that are added to the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder> 
+        getAddedVpcNetworksOrBuilderList() {
+      return addedVpcNetworks_;
+    }
+    /**
+     * <pre>
+     * Lists information about the VPC networks that are added to the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+     */
+    @java.lang.Override
+    public int getAddedVpcNetworksCount() {
+      return addedVpcNetworks_.size();
+    }
+    /**
+     * <pre>
+     * Lists information about the VPC networks that are added to the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo getAddedVpcNetworks(int index) {
+      return addedVpcNetworks_.get(index);
+    }
+    /**
+     * <pre>
+     * Lists information about the VPC networks that are added to the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder getAddedVpcNetworksOrBuilder(
+        int index) {
+      return addedVpcNetworks_.get(index);
+    }
+
+    public static final int UPDATED_VPC_NETWORKS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> updatedVpcNetworks_;
+    /**
+     * <pre>
+     * List of VPC network information that is updated in the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> getUpdatedVpcNetworksList() {
+      return updatedVpcNetworks_;
+    }
+    /**
+     * <pre>
+     * List of VPC network information that is updated in the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder> 
+        getUpdatedVpcNetworksOrBuilderList() {
+      return updatedVpcNetworks_;
+    }
+    /**
+     * <pre>
+     * List of VPC network information that is updated in the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+     */
+    @java.lang.Override
+    public int getUpdatedVpcNetworksCount() {
+      return updatedVpcNetworks_.size();
+    }
+    /**
+     * <pre>
+     * List of VPC network information that is updated in the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo getUpdatedVpcNetworks(int index) {
+      return updatedVpcNetworks_.get(index);
+    }
+    /**
+     * <pre>
+     * List of VPC network information that is updated in the routing instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder getUpdatedVpcNetworksOrBuilder(
+        int index) {
+      return updatedVpcNetworks_.get(index);
+    }
+
+    public static final int DELETED_VPC_NETWORK_IDS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList deletedVpcNetworkIds_;
+    /**
+     * <pre>
+     * List of VPC ids to remove from the routing instance.
+     * </pre>
+     *
+     * <code>repeated string deleted_vpc_network_ids = 4;</code>
+     * @return A list containing the deletedVpcNetworkIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDeletedVpcNetworkIdsList() {
+      return deletedVpcNetworkIds_;
+    }
+    /**
+     * <pre>
+     * List of VPC ids to remove from the routing instance.
+     * </pre>
+     *
+     * <code>repeated string deleted_vpc_network_ids = 4;</code>
+     * @return The count of deletedVpcNetworkIds.
+     */
+    public int getDeletedVpcNetworkIdsCount() {
+      return deletedVpcNetworkIds_.size();
+    }
+    /**
+     * <pre>
+     * List of VPC ids to remove from the routing instance.
+     * </pre>
+     *
+     * <code>repeated string deleted_vpc_network_ids = 4;</code>
+     * @param index The index of the element to return.
+     * @return The deletedVpcNetworkIds at the given index.
+     */
+    public java.lang.String getDeletedVpcNetworkIds(int index) {
+      return deletedVpcNetworkIds_.get(index);
+    }
+    /**
+     * <pre>
+     * List of VPC ids to remove from the routing instance.
+     * </pre>
+     *
+     * <code>repeated string deleted_vpc_network_ids = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the deletedVpcNetworkIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDeletedVpcNetworkIdsBytes(int index) {
+      return deletedVpcNetworkIds_.getByteString(index);
+    }
+
+    public static final int STRICT_REMOVE_FIELD_NUMBER = 5;
+    private boolean strictRemove_;
+    /**
+     * <pre>
+     * Specifies whether to check for vpc in routing instance.
+     * </pre>
+     *
+     * <code>bool strict_remove = 5;</code>
+     * @return The strictRemove.
+     */
+    @java.lang.Override
+    public boolean getStrictRemove() {
+      return strictRemove_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routingInstanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, routingInstanceId_);
+      }
+      for (int i = 0; i < addedVpcNetworks_.size(); i++) {
+        output.writeMessage(2, addedVpcNetworks_.get(i));
+      }
+      for (int i = 0; i < updatedVpcNetworks_.size(); i++) {
+        output.writeMessage(3, updatedVpcNetworks_.get(i));
+      }
+      for (int i = 0; i < deletedVpcNetworkIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deletedVpcNetworkIds_.getRaw(i));
+      }
+      if (strictRemove_ != false) {
+        output.writeBool(5, strictRemove_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routingInstanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, routingInstanceId_);
+      }
+      for (int i = 0; i < addedVpcNetworks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, addedVpcNetworks_.get(i));
+      }
+      for (int i = 0; i < updatedVpcNetworks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, updatedVpcNetworks_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < deletedVpcNetworkIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(deletedVpcNetworkIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDeletedVpcNetworkIdsList().size();
+      }
+      if (strictRemove_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, strictRemove_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest other = (yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest) obj;
+
+      if (!getRoutingInstanceId()
+          .equals(other.getRoutingInstanceId())) return false;
+      if (!getAddedVpcNetworksList()
+          .equals(other.getAddedVpcNetworksList())) return false;
+      if (!getUpdatedVpcNetworksList()
+          .equals(other.getUpdatedVpcNetworksList())) return false;
+      if (!getDeletedVpcNetworkIdsList()
+          .equals(other.getDeletedVpcNetworkIdsList())) return false;
+      if (getStrictRemove()
+          != other.getStrictRemove()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ROUTING_INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRoutingInstanceId().hashCode();
+      if (getAddedVpcNetworksCount() > 0) {
+        hash = (37 * hash) + ADDED_VPC_NETWORKS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddedVpcNetworksList().hashCode();
+      }
+      if (getUpdatedVpcNetworksCount() > 0) {
+        hash = (37 * hash) + UPDATED_VPC_NETWORKS_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatedVpcNetworksList().hashCode();
+      }
+      if (getDeletedVpcNetworkIdsCount() > 0) {
+        hash = (37 * hash) + DELETED_VPC_NETWORK_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletedVpcNetworkIdsList().hashCode();
+      }
+      hash = (37 * hash) + STRICT_REMOVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getStrictRemove());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cloudrouter.v1.UpdateNetworksRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudrouter.v1.UpdateNetworksRequest)
+        yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.internal_static_yandex_cloud_cloudrouter_v1_UpdateNetworksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.internal_static_yandex_cloud_cloudrouter_v1_UpdateNetworksRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest.class, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAddedVpcNetworksFieldBuilder();
+          getUpdatedVpcNetworksFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        routingInstanceId_ = "";
+
+        if (addedVpcNetworksBuilder_ == null) {
+          addedVpcNetworks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          addedVpcNetworksBuilder_.clear();
+        }
+        if (updatedVpcNetworksBuilder_ == null) {
+          updatedVpcNetworks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          updatedVpcNetworksBuilder_.clear();
+        }
+        deletedVpcNetworkIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        strictRemove_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.internal_static_yandex_cloud_cloudrouter_v1_UpdateNetworksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest build() {
+        yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest buildPartial() {
+        yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest result = new yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.routingInstanceId_ = routingInstanceId_;
+        if (addedVpcNetworksBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            addedVpcNetworks_ = java.util.Collections.unmodifiableList(addedVpcNetworks_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.addedVpcNetworks_ = addedVpcNetworks_;
+        } else {
+          result.addedVpcNetworks_ = addedVpcNetworksBuilder_.build();
+        }
+        if (updatedVpcNetworksBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            updatedVpcNetworks_ = java.util.Collections.unmodifiableList(updatedVpcNetworks_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.updatedVpcNetworks_ = updatedVpcNetworks_;
+        } else {
+          result.updatedVpcNetworks_ = updatedVpcNetworksBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          deletedVpcNetworkIds_ = deletedVpcNetworkIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.deletedVpcNetworkIds_ = deletedVpcNetworkIds_;
+        result.strictRemove_ = strictRemove_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest) {
+          return mergeFrom((yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest other) {
+        if (other == yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest.getDefaultInstance()) return this;
+        if (!other.getRoutingInstanceId().isEmpty()) {
+          routingInstanceId_ = other.routingInstanceId_;
+          onChanged();
+        }
+        if (addedVpcNetworksBuilder_ == null) {
+          if (!other.addedVpcNetworks_.isEmpty()) {
+            if (addedVpcNetworks_.isEmpty()) {
+              addedVpcNetworks_ = other.addedVpcNetworks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAddedVpcNetworksIsMutable();
+              addedVpcNetworks_.addAll(other.addedVpcNetworks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.addedVpcNetworks_.isEmpty()) {
+            if (addedVpcNetworksBuilder_.isEmpty()) {
+              addedVpcNetworksBuilder_.dispose();
+              addedVpcNetworksBuilder_ = null;
+              addedVpcNetworks_ = other.addedVpcNetworks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              addedVpcNetworksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAddedVpcNetworksFieldBuilder() : null;
+            } else {
+              addedVpcNetworksBuilder_.addAllMessages(other.addedVpcNetworks_);
+            }
+          }
+        }
+        if (updatedVpcNetworksBuilder_ == null) {
+          if (!other.updatedVpcNetworks_.isEmpty()) {
+            if (updatedVpcNetworks_.isEmpty()) {
+              updatedVpcNetworks_ = other.updatedVpcNetworks_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureUpdatedVpcNetworksIsMutable();
+              updatedVpcNetworks_.addAll(other.updatedVpcNetworks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.updatedVpcNetworks_.isEmpty()) {
+            if (updatedVpcNetworksBuilder_.isEmpty()) {
+              updatedVpcNetworksBuilder_.dispose();
+              updatedVpcNetworksBuilder_ = null;
+              updatedVpcNetworks_ = other.updatedVpcNetworks_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              updatedVpcNetworksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUpdatedVpcNetworksFieldBuilder() : null;
+            } else {
+              updatedVpcNetworksBuilder_.addAllMessages(other.updatedVpcNetworks_);
+            }
+          }
+        }
+        if (!other.deletedVpcNetworkIds_.isEmpty()) {
+          if (deletedVpcNetworkIds_.isEmpty()) {
+            deletedVpcNetworkIds_ = other.deletedVpcNetworkIds_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureDeletedVpcNetworkIdsIsMutable();
+            deletedVpcNetworkIds_.addAll(other.deletedVpcNetworkIds_);
+          }
+          onChanged();
+        }
+        if (other.getStrictRemove() != false) {
+          setStrictRemove(other.getStrictRemove());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object routingInstanceId_ = "";
+      /**
+       * <pre>
+       * ID of the RoutingInstance resource.
+       * </pre>
+       *
+       * <code>string routing_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The routingInstanceId.
+       */
+      public java.lang.String getRoutingInstanceId() {
+        java.lang.Object ref = routingInstanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          routingInstanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the RoutingInstance resource.
+       * </pre>
+       *
+       * <code>string routing_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for routingInstanceId.
+       */
+      public com.google.protobuf.ByteString
+          getRoutingInstanceIdBytes() {
+        java.lang.Object ref = routingInstanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          routingInstanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the RoutingInstance resource.
+       * </pre>
+       *
+       * <code>string routing_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The routingInstanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoutingInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        routingInstanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the RoutingInstance resource.
+       * </pre>
+       *
+       * <code>string routing_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoutingInstanceId() {
+        
+        routingInstanceId_ = getDefaultInstance().getRoutingInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the RoutingInstance resource.
+       * </pre>
+       *
+       * <code>string routing_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for routingInstanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoutingInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        routingInstanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> addedVpcNetworks_ =
+        java.util.Collections.emptyList();
+      private void ensureAddedVpcNetworksIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          addedVpcNetworks_ = new java.util.ArrayList<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo>(addedVpcNetworks_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder> addedVpcNetworksBuilder_;
+
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> getAddedVpcNetworksList() {
+        if (addedVpcNetworksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(addedVpcNetworks_);
+        } else {
+          return addedVpcNetworksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public int getAddedVpcNetworksCount() {
+        if (addedVpcNetworksBuilder_ == null) {
+          return addedVpcNetworks_.size();
+        } else {
+          return addedVpcNetworksBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo getAddedVpcNetworks(int index) {
+        if (addedVpcNetworksBuilder_ == null) {
+          return addedVpcNetworks_.get(index);
+        } else {
+          return addedVpcNetworksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public Builder setAddedVpcNetworks(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo value) {
+        if (addedVpcNetworksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAddedVpcNetworksIsMutable();
+          addedVpcNetworks_.set(index, value);
+          onChanged();
+        } else {
+          addedVpcNetworksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public Builder setAddedVpcNetworks(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder builderForValue) {
+        if (addedVpcNetworksBuilder_ == null) {
+          ensureAddedVpcNetworksIsMutable();
+          addedVpcNetworks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          addedVpcNetworksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public Builder addAddedVpcNetworks(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo value) {
+        if (addedVpcNetworksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAddedVpcNetworksIsMutable();
+          addedVpcNetworks_.add(value);
+          onChanged();
+        } else {
+          addedVpcNetworksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public Builder addAddedVpcNetworks(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo value) {
+        if (addedVpcNetworksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAddedVpcNetworksIsMutable();
+          addedVpcNetworks_.add(index, value);
+          onChanged();
+        } else {
+          addedVpcNetworksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public Builder addAddedVpcNetworks(
+          yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder builderForValue) {
+        if (addedVpcNetworksBuilder_ == null) {
+          ensureAddedVpcNetworksIsMutable();
+          addedVpcNetworks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          addedVpcNetworksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public Builder addAddedVpcNetworks(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder builderForValue) {
+        if (addedVpcNetworksBuilder_ == null) {
+          ensureAddedVpcNetworksIsMutable();
+          addedVpcNetworks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          addedVpcNetworksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public Builder addAllAddedVpcNetworks(
+          java.lang.Iterable<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> values) {
+        if (addedVpcNetworksBuilder_ == null) {
+          ensureAddedVpcNetworksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, addedVpcNetworks_);
+          onChanged();
+        } else {
+          addedVpcNetworksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public Builder clearAddedVpcNetworks() {
+        if (addedVpcNetworksBuilder_ == null) {
+          addedVpcNetworks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          addedVpcNetworksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public Builder removeAddedVpcNetworks(int index) {
+        if (addedVpcNetworksBuilder_ == null) {
+          ensureAddedVpcNetworksIsMutable();
+          addedVpcNetworks_.remove(index);
+          onChanged();
+        } else {
+          addedVpcNetworksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder getAddedVpcNetworksBuilder(
+          int index) {
+        return getAddedVpcNetworksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder getAddedVpcNetworksOrBuilder(
+          int index) {
+        if (addedVpcNetworksBuilder_ == null) {
+          return addedVpcNetworks_.get(index);  } else {
+          return addedVpcNetworksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder> 
+           getAddedVpcNetworksOrBuilderList() {
+        if (addedVpcNetworksBuilder_ != null) {
+          return addedVpcNetworksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(addedVpcNetworks_);
+        }
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder addAddedVpcNetworksBuilder() {
+        return getAddedVpcNetworksFieldBuilder().addBuilder(
+            yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder addAddedVpcNetworksBuilder(
+          int index) {
+        return getAddedVpcNetworksFieldBuilder().addBuilder(
+            index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Lists information about the VPC networks that are added to the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo added_vpc_networks = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder> 
+           getAddedVpcNetworksBuilderList() {
+        return getAddedVpcNetworksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder> 
+          getAddedVpcNetworksFieldBuilder() {
+        if (addedVpcNetworksBuilder_ == null) {
+          addedVpcNetworksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder>(
+                  addedVpcNetworks_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          addedVpcNetworks_ = null;
+        }
+        return addedVpcNetworksBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> updatedVpcNetworks_ =
+        java.util.Collections.emptyList();
+      private void ensureUpdatedVpcNetworksIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          updatedVpcNetworks_ = new java.util.ArrayList<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo>(updatedVpcNetworks_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder> updatedVpcNetworksBuilder_;
+
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> getUpdatedVpcNetworksList() {
+        if (updatedVpcNetworksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(updatedVpcNetworks_);
+        } else {
+          return updatedVpcNetworksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public int getUpdatedVpcNetworksCount() {
+        if (updatedVpcNetworksBuilder_ == null) {
+          return updatedVpcNetworks_.size();
+        } else {
+          return updatedVpcNetworksBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo getUpdatedVpcNetworks(int index) {
+        if (updatedVpcNetworksBuilder_ == null) {
+          return updatedVpcNetworks_.get(index);
+        } else {
+          return updatedVpcNetworksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public Builder setUpdatedVpcNetworks(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo value) {
+        if (updatedVpcNetworksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdatedVpcNetworksIsMutable();
+          updatedVpcNetworks_.set(index, value);
+          onChanged();
+        } else {
+          updatedVpcNetworksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public Builder setUpdatedVpcNetworks(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder builderForValue) {
+        if (updatedVpcNetworksBuilder_ == null) {
+          ensureUpdatedVpcNetworksIsMutable();
+          updatedVpcNetworks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          updatedVpcNetworksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public Builder addUpdatedVpcNetworks(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo value) {
+        if (updatedVpcNetworksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdatedVpcNetworksIsMutable();
+          updatedVpcNetworks_.add(value);
+          onChanged();
+        } else {
+          updatedVpcNetworksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public Builder addUpdatedVpcNetworks(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo value) {
+        if (updatedVpcNetworksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdatedVpcNetworksIsMutable();
+          updatedVpcNetworks_.add(index, value);
+          onChanged();
+        } else {
+          updatedVpcNetworksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public Builder addUpdatedVpcNetworks(
+          yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder builderForValue) {
+        if (updatedVpcNetworksBuilder_ == null) {
+          ensureUpdatedVpcNetworksIsMutable();
+          updatedVpcNetworks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          updatedVpcNetworksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public Builder addUpdatedVpcNetworks(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder builderForValue) {
+        if (updatedVpcNetworksBuilder_ == null) {
+          ensureUpdatedVpcNetworksIsMutable();
+          updatedVpcNetworks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          updatedVpcNetworksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public Builder addAllUpdatedVpcNetworks(
+          java.lang.Iterable<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo> values) {
+        if (updatedVpcNetworksBuilder_ == null) {
+          ensureUpdatedVpcNetworksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, updatedVpcNetworks_);
+          onChanged();
+        } else {
+          updatedVpcNetworksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public Builder clearUpdatedVpcNetworks() {
+        if (updatedVpcNetworksBuilder_ == null) {
+          updatedVpcNetworks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          updatedVpcNetworksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public Builder removeUpdatedVpcNetworks(int index) {
+        if (updatedVpcNetworksBuilder_ == null) {
+          ensureUpdatedVpcNetworksIsMutable();
+          updatedVpcNetworks_.remove(index);
+          onChanged();
+        } else {
+          updatedVpcNetworksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder getUpdatedVpcNetworksBuilder(
+          int index) {
+        return getUpdatedVpcNetworksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder getUpdatedVpcNetworksOrBuilder(
+          int index) {
+        if (updatedVpcNetworksBuilder_ == null) {
+          return updatedVpcNetworks_.get(index);  } else {
+          return updatedVpcNetworksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder> 
+           getUpdatedVpcNetworksOrBuilderList() {
+        if (updatedVpcNetworksBuilder_ != null) {
+          return updatedVpcNetworksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(updatedVpcNetworks_);
+        }
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder addUpdatedVpcNetworksBuilder() {
+        return getUpdatedVpcNetworksFieldBuilder().addBuilder(
+            yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder addUpdatedVpcNetworksBuilder(
+          int index) {
+        return getUpdatedVpcNetworksFieldBuilder().addBuilder(
+            index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of VPC network information that is updated in the routing instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcInfo updated_vpc_networks = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder> 
+           getUpdatedVpcNetworksBuilderList() {
+        return getUpdatedVpcNetworksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder> 
+          getUpdatedVpcNetworksFieldBuilder() {
+        if (updatedVpcNetworksBuilder_ == null) {
+          updatedVpcNetworksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder>(
+                  updatedVpcNetworks_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          updatedVpcNetworks_ = null;
+        }
+        return updatedVpcNetworksBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList deletedVpcNetworkIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureDeletedVpcNetworkIdsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          deletedVpcNetworkIds_ = new com.google.protobuf.LazyStringArrayList(deletedVpcNetworkIds_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * List of VPC ids to remove from the routing instance.
+       * </pre>
+       *
+       * <code>repeated string deleted_vpc_network_ids = 4;</code>
+       * @return A list containing the deletedVpcNetworkIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDeletedVpcNetworkIdsList() {
+        return deletedVpcNetworkIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of VPC ids to remove from the routing instance.
+       * </pre>
+       *
+       * <code>repeated string deleted_vpc_network_ids = 4;</code>
+       * @return The count of deletedVpcNetworkIds.
+       */
+      public int getDeletedVpcNetworkIdsCount() {
+        return deletedVpcNetworkIds_.size();
+      }
+      /**
+       * <pre>
+       * List of VPC ids to remove from the routing instance.
+       * </pre>
+       *
+       * <code>repeated string deleted_vpc_network_ids = 4;</code>
+       * @param index The index of the element to return.
+       * @return The deletedVpcNetworkIds at the given index.
+       */
+      public java.lang.String getDeletedVpcNetworkIds(int index) {
+        return deletedVpcNetworkIds_.get(index);
+      }
+      /**
+       * <pre>
+       * List of VPC ids to remove from the routing instance.
+       * </pre>
+       *
+       * <code>repeated string deleted_vpc_network_ids = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the deletedVpcNetworkIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDeletedVpcNetworkIdsBytes(int index) {
+        return deletedVpcNetworkIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of VPC ids to remove from the routing instance.
+       * </pre>
+       *
+       * <code>repeated string deleted_vpc_network_ids = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The deletedVpcNetworkIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletedVpcNetworkIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDeletedVpcNetworkIdsIsMutable();
+        deletedVpcNetworkIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC ids to remove from the routing instance.
+       * </pre>
+       *
+       * <code>repeated string deleted_vpc_network_ids = 4;</code>
+       * @param value The deletedVpcNetworkIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeletedVpcNetworkIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDeletedVpcNetworkIdsIsMutable();
+        deletedVpcNetworkIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC ids to remove from the routing instance.
+       * </pre>
+       *
+       * <code>repeated string deleted_vpc_network_ids = 4;</code>
+       * @param values The deletedVpcNetworkIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDeletedVpcNetworkIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDeletedVpcNetworkIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, deletedVpcNetworkIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC ids to remove from the routing instance.
+       * </pre>
+       *
+       * <code>repeated string deleted_vpc_network_ids = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletedVpcNetworkIds() {
+        deletedVpcNetworkIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of VPC ids to remove from the routing instance.
+       * </pre>
+       *
+       * <code>repeated string deleted_vpc_network_ids = 4;</code>
+       * @param value The bytes of the deletedVpcNetworkIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeletedVpcNetworkIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureDeletedVpcNetworkIdsIsMutable();
+        deletedVpcNetworkIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean strictRemove_ ;
+      /**
+       * <pre>
+       * Specifies whether to check for vpc in routing instance.
+       * </pre>
+       *
+       * <code>bool strict_remove = 5;</code>
+       * @return The strictRemove.
+       */
+      @java.lang.Override
+      public boolean getStrictRemove() {
+        return strictRemove_;
+      }
+      /**
+       * <pre>
+       * Specifies whether to check for vpc in routing instance.
+       * </pre>
+       *
+       * <code>bool strict_remove = 5;</code>
+       * @param value The strictRemove to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStrictRemove(boolean value) {
+        
+        strictRemove_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether to check for vpc in routing instance.
+       * </pre>
+       *
+       * <code>bool strict_remove = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStrictRemove() {
+        
+        strictRemove_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cloudrouter.v1.UpdateNetworksRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cloudrouter.v1.UpdateNetworksRequest)
+    private static final yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest();
+    }
+
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateNetworksRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateNetworksRequest>() {
+      @java.lang.Override
+      public UpdateNetworksRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateNetworksRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateNetworksRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateNetworksRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.UpdateNetworksRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VpcInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cloudrouter.v1.VpcInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the vpcNetwork that is attached to the routingInstance.
+     * </pre>
+     *
+     * <code>string vpc_network_id = 1;</code>
+     * @return The vpcNetworkId.
+     */
+    java.lang.String getVpcNetworkId();
+    /**
+     * <pre>
+     * ID of the vpcNetwork that is attached to the routingInstance.
+     * </pre>
+     *
+     * <code>string vpc_network_id = 1;</code>
+     * @return The bytes for vpcNetworkId.
+     */
+    com.google.protobuf.ByteString
+        getVpcNetworkIdBytes();
+
+    /**
+     * <pre>
+     * List of the az-related info about vpcNetworks which are attached to routingInstance
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes> 
+        getVpcAzInfoPrefixesList();
+    /**
+     * <pre>
+     * List of the az-related info about vpcNetworks which are attached to routingInstance
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+     */
+    yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes getVpcAzInfoPrefixes(int index);
+    /**
+     * <pre>
+     * List of the az-related info about vpcNetworks which are attached to routingInstance
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+     */
+    int getVpcAzInfoPrefixesCount();
+    /**
+     * <pre>
+     * List of the az-related info about vpcNetworks which are attached to routingInstance
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixesOrBuilder> 
+        getVpcAzInfoPrefixesOrBuilderList();
+    /**
+     * <pre>
+     * List of the az-related info about vpcNetworks which are attached to routingInstance
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+     */
+    yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixesOrBuilder getVpcAzInfoPrefixesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cloudrouter.v1.VpcInfo}
+   */
+  public static final class VpcInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cloudrouter.v1.VpcInfo)
+      VpcInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VpcInfo.newBuilder() to construct.
+    private VpcInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VpcInfo() {
+      vpcNetworkId_ = "";
+      vpcAzInfoPrefixes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VpcInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VpcInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              vpcNetworkId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                vpcAzInfoPrefixes_ = new java.util.ArrayList<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              vpcAzInfoPrefixes_.add(
+                  input.readMessage(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          vpcAzInfoPrefixes_ = java.util.Collections.unmodifiableList(vpcAzInfoPrefixes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.internal_static_yandex_cloud_cloudrouter_v1_VpcInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.internal_static_yandex_cloud_cloudrouter_v1_VpcInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.class, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder.class);
+    }
+
+    public static final int VPC_NETWORK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object vpcNetworkId_;
+    /**
+     * <pre>
+     * ID of the vpcNetwork that is attached to the routingInstance.
+     * </pre>
+     *
+     * <code>string vpc_network_id = 1;</code>
+     * @return The vpcNetworkId.
+     */
+    @java.lang.Override
+    public java.lang.String getVpcNetworkId() {
+      java.lang.Object ref = vpcNetworkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        vpcNetworkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the vpcNetwork that is attached to the routingInstance.
+     * </pre>
+     *
+     * <code>string vpc_network_id = 1;</code>
+     * @return The bytes for vpcNetworkId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVpcNetworkIdBytes() {
+      java.lang.Object ref = vpcNetworkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vpcNetworkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VPC_AZ_INFO_PREFIXES_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes> vpcAzInfoPrefixes_;
+    /**
+     * <pre>
+     * List of the az-related info about vpcNetworks which are attached to routingInstance
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes> getVpcAzInfoPrefixesList() {
+      return vpcAzInfoPrefixes_;
+    }
+    /**
+     * <pre>
+     * List of the az-related info about vpcNetworks which are attached to routingInstance
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixesOrBuilder> 
+        getVpcAzInfoPrefixesOrBuilderList() {
+      return vpcAzInfoPrefixes_;
+    }
+    /**
+     * <pre>
+     * List of the az-related info about vpcNetworks which are attached to routingInstance
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+     */
+    @java.lang.Override
+    public int getVpcAzInfoPrefixesCount() {
+      return vpcAzInfoPrefixes_.size();
+    }
+    /**
+     * <pre>
+     * List of the az-related info about vpcNetworks which are attached to routingInstance
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes getVpcAzInfoPrefixes(int index) {
+      return vpcAzInfoPrefixes_.get(index);
+    }
+    /**
+     * <pre>
+     * List of the az-related info about vpcNetworks which are attached to routingInstance
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixesOrBuilder getVpcAzInfoPrefixesOrBuilder(
+        int index) {
+      return vpcAzInfoPrefixes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(vpcNetworkId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, vpcNetworkId_);
+      }
+      for (int i = 0; i < vpcAzInfoPrefixes_.size(); i++) {
+        output.writeMessage(2, vpcAzInfoPrefixes_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(vpcNetworkId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, vpcNetworkId_);
+      }
+      for (int i = 0; i < vpcAzInfoPrefixes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, vpcAzInfoPrefixes_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo other = (yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo) obj;
+
+      if (!getVpcNetworkId()
+          .equals(other.getVpcNetworkId())) return false;
+      if (!getVpcAzInfoPrefixesList()
+          .equals(other.getVpcAzInfoPrefixesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VPC_NETWORK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getVpcNetworkId().hashCode();
+      if (getVpcAzInfoPrefixesCount() > 0) {
+        hash = (37 * hash) + VPC_AZ_INFO_PREFIXES_FIELD_NUMBER;
+        hash = (53 * hash) + getVpcAzInfoPrefixesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cloudrouter.v1.VpcInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudrouter.v1.VpcInfo)
+        yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.internal_static_yandex_cloud_cloudrouter_v1_VpcInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.internal_static_yandex_cloud_cloudrouter_v1_VpcInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.class, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVpcAzInfoPrefixesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        vpcNetworkId_ = "";
+
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          vpcAzInfoPrefixes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          vpcAzInfoPrefixesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.internal_static_yandex_cloud_cloudrouter_v1_VpcInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo build() {
+        yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo buildPartial() {
+        yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo result = new yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo(this);
+        int from_bitField0_ = bitField0_;
+        result.vpcNetworkId_ = vpcNetworkId_;
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            vpcAzInfoPrefixes_ = java.util.Collections.unmodifiableList(vpcAzInfoPrefixes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.vpcAzInfoPrefixes_ = vpcAzInfoPrefixes_;
+        } else {
+          result.vpcAzInfoPrefixes_ = vpcAzInfoPrefixesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo) {
+          return mergeFrom((yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo other) {
+        if (other == yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo.getDefaultInstance()) return this;
+        if (!other.getVpcNetworkId().isEmpty()) {
+          vpcNetworkId_ = other.vpcNetworkId_;
+          onChanged();
+        }
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          if (!other.vpcAzInfoPrefixes_.isEmpty()) {
+            if (vpcAzInfoPrefixes_.isEmpty()) {
+              vpcAzInfoPrefixes_ = other.vpcAzInfoPrefixes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureVpcAzInfoPrefixesIsMutable();
+              vpcAzInfoPrefixes_.addAll(other.vpcAzInfoPrefixes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.vpcAzInfoPrefixes_.isEmpty()) {
+            if (vpcAzInfoPrefixesBuilder_.isEmpty()) {
+              vpcAzInfoPrefixesBuilder_.dispose();
+              vpcAzInfoPrefixesBuilder_ = null;
+              vpcAzInfoPrefixes_ = other.vpcAzInfoPrefixes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              vpcAzInfoPrefixesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVpcAzInfoPrefixesFieldBuilder() : null;
+            } else {
+              vpcAzInfoPrefixesBuilder_.addAllMessages(other.vpcAzInfoPrefixes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object vpcNetworkId_ = "";
+      /**
+       * <pre>
+       * ID of the vpcNetwork that is attached to the routingInstance.
+       * </pre>
+       *
+       * <code>string vpc_network_id = 1;</code>
+       * @return The vpcNetworkId.
+       */
+      public java.lang.String getVpcNetworkId() {
+        java.lang.Object ref = vpcNetworkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          vpcNetworkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the vpcNetwork that is attached to the routingInstance.
+       * </pre>
+       *
+       * <code>string vpc_network_id = 1;</code>
+       * @return The bytes for vpcNetworkId.
+       */
+      public com.google.protobuf.ByteString
+          getVpcNetworkIdBytes() {
+        java.lang.Object ref = vpcNetworkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vpcNetworkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the vpcNetwork that is attached to the routingInstance.
+       * </pre>
+       *
+       * <code>string vpc_network_id = 1;</code>
+       * @param value The vpcNetworkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVpcNetworkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        vpcNetworkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the vpcNetwork that is attached to the routingInstance.
+       * </pre>
+       *
+       * <code>string vpc_network_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVpcNetworkId() {
+        
+        vpcNetworkId_ = getDefaultInstance().getVpcNetworkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the vpcNetwork that is attached to the routingInstance.
+       * </pre>
+       *
+       * <code>string vpc_network_id = 1;</code>
+       * @param value The bytes for vpcNetworkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVpcNetworkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        vpcNetworkId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes> vpcAzInfoPrefixes_ =
+        java.util.Collections.emptyList();
+      private void ensureVpcAzInfoPrefixesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          vpcAzInfoPrefixes_ = new java.util.ArrayList<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes>(vpcAzInfoPrefixes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.Builder, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixesOrBuilder> vpcAzInfoPrefixesBuilder_;
+
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes> getVpcAzInfoPrefixesList() {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(vpcAzInfoPrefixes_);
+        } else {
+          return vpcAzInfoPrefixesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public int getVpcAzInfoPrefixesCount() {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          return vpcAzInfoPrefixes_.size();
+        } else {
+          return vpcAzInfoPrefixesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes getVpcAzInfoPrefixes(int index) {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          return vpcAzInfoPrefixes_.get(index);
+        } else {
+          return vpcAzInfoPrefixesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public Builder setVpcAzInfoPrefixes(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes value) {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVpcAzInfoPrefixesIsMutable();
+          vpcAzInfoPrefixes_.set(index, value);
+          onChanged();
+        } else {
+          vpcAzInfoPrefixesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public Builder setVpcAzInfoPrefixes(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.Builder builderForValue) {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          ensureVpcAzInfoPrefixesIsMutable();
+          vpcAzInfoPrefixes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          vpcAzInfoPrefixesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public Builder addVpcAzInfoPrefixes(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes value) {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVpcAzInfoPrefixesIsMutable();
+          vpcAzInfoPrefixes_.add(value);
+          onChanged();
+        } else {
+          vpcAzInfoPrefixesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public Builder addVpcAzInfoPrefixes(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes value) {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVpcAzInfoPrefixesIsMutable();
+          vpcAzInfoPrefixes_.add(index, value);
+          onChanged();
+        } else {
+          vpcAzInfoPrefixesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public Builder addVpcAzInfoPrefixes(
+          yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.Builder builderForValue) {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          ensureVpcAzInfoPrefixesIsMutable();
+          vpcAzInfoPrefixes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          vpcAzInfoPrefixesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public Builder addVpcAzInfoPrefixes(
+          int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.Builder builderForValue) {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          ensureVpcAzInfoPrefixesIsMutable();
+          vpcAzInfoPrefixes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          vpcAzInfoPrefixesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public Builder addAllVpcAzInfoPrefixes(
+          java.lang.Iterable<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes> values) {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          ensureVpcAzInfoPrefixesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, vpcAzInfoPrefixes_);
+          onChanged();
+        } else {
+          vpcAzInfoPrefixesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public Builder clearVpcAzInfoPrefixes() {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          vpcAzInfoPrefixes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          vpcAzInfoPrefixesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public Builder removeVpcAzInfoPrefixes(int index) {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          ensureVpcAzInfoPrefixesIsMutable();
+          vpcAzInfoPrefixes_.remove(index);
+          onChanged();
+        } else {
+          vpcAzInfoPrefixesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.Builder getVpcAzInfoPrefixesBuilder(
+          int index) {
+        return getVpcAzInfoPrefixesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixesOrBuilder getVpcAzInfoPrefixesOrBuilder(
+          int index) {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          return vpcAzInfoPrefixes_.get(index);  } else {
+          return vpcAzInfoPrefixesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixesOrBuilder> 
+           getVpcAzInfoPrefixesOrBuilderList() {
+        if (vpcAzInfoPrefixesBuilder_ != null) {
+          return vpcAzInfoPrefixesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(vpcAzInfoPrefixes_);
+        }
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.Builder addVpcAzInfoPrefixesBuilder() {
+        return getVpcAzInfoPrefixesFieldBuilder().addBuilder(
+            yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.Builder addVpcAzInfoPrefixesBuilder(
+          int index) {
+        return getVpcAzInfoPrefixesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of the az-related info about vpcNetworks which are attached to routingInstance
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes vpc_az_info_prefixes = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.Builder> 
+           getVpcAzInfoPrefixesBuilderList() {
+        return getVpcAzInfoPrefixesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.Builder, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixesOrBuilder> 
+          getVpcAzInfoPrefixesFieldBuilder() {
+        if (vpcAzInfoPrefixesBuilder_ == null) {
+          vpcAzInfoPrefixesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixes.Builder, yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcAzInfoPrefixesOrBuilder>(
+                  vpcAzInfoPrefixes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          vpcAzInfoPrefixes_ = null;
+        }
+        return vpcAzInfoPrefixesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cloudrouter.v1.VpcInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cloudrouter.v1.VpcInfo)
+    private static final yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo();
+    }
+
+    public static yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VpcInfo>
+        PARSER = new com.google.protobuf.AbstractParser<VpcInfo>() {
+      @java.lang.Override
+      public VpcInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VpcInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VpcInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VpcInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.VpcInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface VpcAzInfoPrefixesOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.cloudrouter.v1.VpcAzInfoPrefixes)
       com.google.protobuf.MessageOrBuilder {
@@ -22045,6 +25087,16 @@ public final class RoutingInstanceServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_cloudrouter_v1_RemovePrefixesRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cloudrouter_v1_UpdateNetworksRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cloudrouter_v1_UpdateNetworksRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cloudrouter_v1_VpcInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cloudrouter_v1_VpcInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_cloudrouter_v1_VpcAzInfoPrefixes_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -22158,106 +25210,119 @@ public final class RoutingInstanceServiceOuterClass {
       " \001(\tB\014\350\3071\001\212\3101\004<=50\022\026\n\016vpc_network_id\030\002 \001" +
       "(\t\022L\n\024vpc_az_info_prefixes\030\003 \003(\0132..yande" +
       "x.cloud.cloudrouter.v1.VpcAzInfoPrefixes" +
-      "\":\n\021VpcAzInfoPrefixes\022\r\n\005az_id\030\001 \001(\t\022\020\n\010" +
-      "prefixes\030\002 \003(\tJ\004\010\003\020\004\"\254\001\n\021MovePrefixReque" +
-      "st\022)\n\023routing_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\032\n\022src_vpc_network_id\030\002 \001(\t\022\021\n\tsrc" +
-      "_az_id\030\003 \001(\t\022\032\n\022dst_vpc_network_id\030\004 \001(\t" +
-      "\022\021\n\tdst_az_id\030\005 \001(\t\022\016\n\006prefix\030\006 \001(\t\"\252\001\n\027" +
-      "UpdatePrefixMaskRequest\022)\n\023routing_insta" +
-      "nce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\026\n\016vpc_networ" +
-      "k_id\030\002 \001(\t\022\r\n\005az_id\030\003 \001(\t\022\016\n\006prefix\030\004 \001(" +
-      "\t\022\020\n\010new_mask\030\005 \001(\003\022\033\n\023remove_sub_prefix" +
-      "es\030\006 \001(\010\"q\n\033AddPrivateConnectionRequest\022" +
+      "\"\200\002\n\025UpdateNetworksRequest\022)\n\023routing_in" +
+      "stance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022@\n\022added_v" +
+      "pc_networks\030\002 \003(\0132$.yandex.cloud.cloudro" +
+      "uter.v1.VpcInfo\022B\n\024updated_vpc_networks\030" +
+      "\003 \003(\0132$.yandex.cloud.cloudrouter.v1.VpcI" +
+      "nfo\022\037\n\027deleted_vpc_network_ids\030\004 \003(\t\022\025\n\r" +
+      "strict_remove\030\005 \001(\010\"o\n\007VpcInfo\022\026\n\016vpc_ne" +
+      "twork_id\030\001 \001(\t\022L\n\024vpc_az_info_prefixes\030\002" +
+      " \003(\0132..yandex.cloud.cloudrouter.v1.VpcAz" +
+      "InfoPrefixes\":\n\021VpcAzInfoPrefixes\022\r\n\005az_" +
+      "id\030\001 \001(\t\022\020\n\010prefixes\030\002 \003(\tJ\004\010\003\020\004\"\254\001\n\021Mov" +
+      "ePrefixRequest\022)\n\023routing_instance_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022src_vpc_network_id\030" +
+      "\002 \001(\t\022\021\n\tsrc_az_id\030\003 \001(\t\022\032\n\022dst_vpc_netw" +
+      "ork_id\030\004 \001(\t\022\021\n\tdst_az_id\030\005 \001(\t\022\016\n\006prefi" +
+      "x\030\006 \001(\t\"\252\001\n\027UpdatePrefixMaskRequest\022)\n\023r" +
+      "outing_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\026" +
+      "\n\016vpc_network_id\030\002 \001(\t\022\r\n\005az_id\030\003 \001(\t\022\016\n" +
+      "\006prefix\030\004 \001(\t\022\020\n\010new_mask\030\005 \001(\003\022\033\n\023remov" +
+      "e_sub_prefixes\030\006 \001(\010\"q\n\033AddPrivateConnec" +
+      "tionRequest\022)\n\023routing_instance_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022!\n\031cic_private_connection" +
+      "_id\030\002 \001(\tJ\004\010\003\020\t\"n\n\036RemovePrivateConnecti" +
+      "onRequest\022)\n\023routing_instance_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022!\n\031cic_private_connection_i" +
+      "d\030\002 \001(\t\"I\n\034DeleteRoutingInstanceRequest\022" +
       ")\n\023routing_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022!\n\031cic_private_connection_id\030\002 \001(\tJ\004\010" +
-      "\003\020\t\"n\n\036RemovePrivateConnectionRequest\022)\n" +
-      "\023routing_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022!\n\031cic_private_connection_id\030\002 \001(\t\"I\n\034D" +
-      "eleteRoutingInstanceRequest\022)\n\023routing_i" +
-      "nstance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"<\n\035Delete" +
-      "RoutingInstanceMetadata\022\033\n\023routing_insta" +
-      "nce_id\030\001 \001(\t\"x\n$ListRoutingInstanceOpera" +
-      "tionsRequest\022)\n\023routing_instance_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npa" +
-      "ge_token\030\003 \001(\t\"w\n%ListRoutingInstanceOpe" +
-      "rationsResponse\0225\n\noperations\030\001 \003(\0132!.ya" +
-      "ndex.cloud.operation.Operation\022\027\n\017next_p" +
-      "age_token\030\002 \001(\t2\237\026\n\026RoutingInstanceServi" +
-      "ce\022\253\001\n\003Get\0226.yandex.cloud.cloudrouter.v1" +
-      ".GetRoutingInstanceRequest\032,.yandex.clou" +
-      "d.cloudrouter.v1.RoutingInstance\">\202\323\344\223\0028" +
-      "\0226/cloudrouter/v1/routingInstances/{rout" +
-      "ing_instance_id}\022\207\001\n\021GetByVpcNetworkId\022D" +
+      "50\"<\n\035DeleteRoutingInstanceMetadata\022\033\n\023r" +
+      "outing_instance_id\030\001 \001(\t\"x\n$ListRoutingI" +
+      "nstanceOperationsRequest\022)\n\023routing_inst" +
+      "ance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\021\n\tpage_size" +
+      "\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"w\n%ListRoutin" +
+      "gInstanceOperationsResponse\0225\n\noperation" +
+      "s\030\001 \003(\0132!.yandex.cloud.operation.Operati" +
+      "on\022\027\n\017next_page_token\030\002 \001(\t2\277\027\n\026RoutingI" +
+      "nstanceService\022\253\001\n\003Get\0226.yandex.cloud.cl" +
+      "oudrouter.v1.GetRoutingInstanceRequest\032," +
+      ".yandex.cloud.cloudrouter.v1.RoutingInst" +
+      "ance\">\202\323\344\223\0028\0226/cloudrouter/v1/routingIns" +
+      "tances/{routing_instance_id}\022\207\001\n\021GetByVp" +
+      "cNetworkId\022D.yandex.cloud.cloudrouter.v1" +
+      ".GetRoutingInstanceByVpcNetworkIdRequest" +
+      "\032,.yandex.cloud.cloudrouter.v1.RoutingIn" +
+      "stance\022\233\001\n\033GetByCicPrivateConnectionId\022N" +
       ".yandex.cloud.cloudrouter.v1.GetRoutingI" +
-      "nstanceByVpcNetworkIdRequest\032,.yandex.cl" +
-      "oud.cloudrouter.v1.RoutingInstance\022\233\001\n\033G" +
-      "etByCicPrivateConnectionId\022N.yandex.clou" +
-      "d.cloudrouter.v1.GetRoutingInstanceByCic" +
-      "PrivateConnectionIdRequest\032,.yandex.clou" +
-      "d.cloudrouter.v1.RoutingInstance\022\245\001\n\004Lis" +
-      "t\0228.yandex.cloud.cloudrouter.v1.ListRout" +
-      "ingInstancesRequest\0329.yandex.cloud.cloud" +
-      "router.v1.ListRoutingInstancesResponse\"(" +
-      "\202\323\344\223\002\"\022 /cloudrouter/v1/routingInstances" +
-      "\022\307\001\n\006Create\0229.yandex.cloud.cloudrouter.v" +
-      "1.CreateRoutingInstanceRequest\032!.yandex." +
-      "cloud.operation.Operation\"_\262\322*0\n\035CreateR" +
-      "outingInstanceMetadata\022\017RoutingInstance\202" +
-      "\323\344\223\002%\" /cloudrouter/v1/routingInstances:" +
-      "\001*\022\307\001\n\006Update\0229.yandex.cloud.cloudrouter" +
-      ".v1.UpdateRoutingInstanceRequest\032!.yande" +
-      "x.cloud.operation.Operation\"_\262\322*0\n\035Updat" +
-      "eRoutingInstanceMetadata\022\017RoutingInstanc" +
-      "e\202\323\344\223\002%2 /cloudrouter/v1/routingInstance" +
-      "s:\001*\022\356\001\n\016UpsertPrefixes\0222.yandex.cloud.c" +
-      "loudrouter.v1.UpsertPrefixesRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\204\001\262\322*0\n\035U" +
-      "pdateRoutingInstanceMetadata\022\017RoutingIns" +
-      "tance\202\323\344\223\002J\"E/cloudrouter/v1/routingInst" +
-      "ances/{routing_instance_id}:upsertPrefix" +
-      "es:\001*\022\356\001\n\016RemovePrefixes\0222.yandex.cloud." +
-      "cloudrouter.v1.RemovePrefixesRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\204\001\262\322*0\n\035" +
-      "UpdateRoutingInstanceMetadata\022\017RoutingIn" +
-      "stance\202\323\344\223\002J\"E/cloudrouter/v1/routingIns" +
-      "tances/{routing_instance_id}:removePrefi" +
-      "xes:\001*\022\225\001\n\nMovePrefix\022..yandex.cloud.clo" +
-      "udrouter.v1.MovePrefixRequest\032!.yandex.c" +
-      "loud.operation.Operation\"4\262\322*0\n\035UpdateRo" +
-      "utingInstanceMetadata\022\017RoutingInstance\022\241" +
-      "\001\n\020UpdatePrefixMask\0224.yandex.cloud.cloud" +
-      "router.v1.UpdatePrefixMaskRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"4\262\322*0\n\035Upda" +
-      "teRoutingInstanceMetadata\022\017RoutingInstan" +
-      "ce\022\200\002\n\024AddPrivateConnection\0228.yandex.clo" +
-      "ud.cloudrouter.v1.AddPrivateConnectionRe" +
+      "nstanceByCicPrivateConnectionIdRequest\032," +
+      ".yandex.cloud.cloudrouter.v1.RoutingInst" +
+      "ance\022\245\001\n\004List\0228.yandex.cloud.cloudrouter" +
+      ".v1.ListRoutingInstancesRequest\0329.yandex" +
+      ".cloud.cloudrouter.v1.ListRoutingInstanc" +
+      "esResponse\"(\202\323\344\223\002\"\022 /cloudrouter/v1/rout" +
+      "ingInstances\022\307\001\n\006Create\0229.yandex.cloud.c" +
+      "loudrouter.v1.CreateRoutingInstanceReque" +
+      "st\032!.yandex.cloud.operation.Operation\"_\262" +
+      "\322*0\n\035CreateRoutingInstanceMetadata\022\017Rout" +
+      "ingInstance\202\323\344\223\002%\" /cloudrouter/v1/routi" +
+      "ngInstances:\001*\022\307\001\n\006Update\0229.yandex.cloud" +
+      ".cloudrouter.v1.UpdateRoutingInstanceReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "_\262\322*0\n\035UpdateRoutingInstanceMetadata\022\017Ro" +
+      "utingInstance\202\323\344\223\002%2 /cloudrouter/v1/rou" +
+      "tingInstances:\001*\022\356\001\n\016UpsertPrefixes\0222.ya" +
+      "ndex.cloud.cloudrouter.v1.UpsertPrefixes" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"\204\001\262\322*0\n\035UpdateRoutingInstanceMetadata" +
+      "\022\017RoutingInstance\202\323\344\223\002J\"E/cloudrouter/v1" +
+      "/routingInstances/{routing_instance_id}:" +
+      "upsertPrefixes:\001*\022\356\001\n\016RemovePrefixes\0222.y" +
+      "andex.cloud.cloudrouter.v1.RemovePrefixe" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\204\001\262\322*0\n\035UpdateRoutingInstanceMetadat" +
+      "a\022\017RoutingInstance\202\323\344\223\002J\"E/cloudrouter/v" +
+      "1/routingInstances/{routing_instance_id}" +
+      ":removePrefixes:\001*\022\235\001\n\016UpdateNetworks\0222." +
+      "yandex.cloud.cloudrouter.v1.UpdateNetwor" +
+      "ksRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"4\262\322*0\n\035UpdateRoutingInstanceMetadat" +
+      "a\022\017RoutingInstance\022\225\001\n\nMovePrefix\022..yand" +
+      "ex.cloud.cloudrouter.v1.MovePrefixReques" +
+      "t\032!.yandex.cloud.operation.Operation\"4\262\322" +
+      "*0\n\035UpdateRoutingInstanceMetadata\022\017Routi" +
+      "ngInstance\022\241\001\n\020UpdatePrefixMask\0224.yandex" +
+      ".cloud.cloudrouter.v1.UpdatePrefixMaskRe" +
       "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\212\001\262\322*0\n\035UpdateRoutingInstanceMetadata\022\017" +
-      "RoutingInstance\202\323\344\223\002P\"K/cloudrouter/v1/r" +
-      "outingInstances/{routing_instance_id}:ad" +
-      "dPrivateConnection:\001*\022\211\002\n\027RemovePrivateC" +
-      "onnection\022;.yandex.cloud.cloudrouter.v1." +
-      "RemovePrivateConnectionRequest\032!.yandex." +
-      "cloud.operation.Operation\"\215\001\262\322*0\n\035Update" +
-      "RoutingInstanceMetadata\022\017RoutingInstance" +
-      "\202\323\344\223\002S\"N/cloudrouter/v1/routingInstances" +
-      "/{routing_instance_id}:removePrivateConn" +
-      "ection:\001*\022\340\001\n\006Delete\0229.yandex.cloud.clou" +
-      "drouter.v1.DeleteRoutingInstanceRequest\032" +
-      "!.yandex.cloud.operation.Operation\"x\262\322*6" +
-      "\n\035DeleteRoutingInstanceMetadata\022\025google." +
-      "protobuf.Empty\202\323\344\223\0028*6/cloudrouter/v1/ro" +
-      "utingInstances/{routing_instance_id}\022\342\001\n" +
-      "\016ListOperations\022A.yandex.cloud.cloudrout" +
-      "er.v1.ListRoutingInstanceOperationsReque" +
-      "st\032B.yandex.cloud.cloudrouter.v1.ListRou" +
-      "tingInstanceOperationsResponse\"I\202\323\344\223\002C\022A" +
-      "/cloudrouter/v1/routingInstances/{routin" +
-      "g_instance_id}/operationsBn\n\037yandex.clou" +
-      "d.api.cloudrouter.v1ZKgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/cloudrout" +
-      "er/v1;cloudrouterb\006proto3"
+      "\"4\262\322*0\n\035UpdateRoutingInstanceMetadata\022\017R" +
+      "outingInstance\022\200\002\n\024AddPrivateConnection\022" +
+      "8.yandex.cloud.cloudrouter.v1.AddPrivate" +
+      "ConnectionRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"\212\001\262\322*0\n\035UpdateRoutingInstan" +
+      "ceMetadata\022\017RoutingInstance\202\323\344\223\002P\"K/clou" +
+      "drouter/v1/routingInstances/{routing_ins" +
+      "tance_id}:addPrivateConnection:\001*\022\211\002\n\027Re" +
+      "movePrivateConnection\022;.yandex.cloud.clo" +
+      "udrouter.v1.RemovePrivateConnectionReque" +
+      "st\032!.yandex.cloud.operation.Operation\"\215\001" +
+      "\262\322*0\n\035UpdateRoutingInstanceMetadata\022\017Rou" +
+      "tingInstance\202\323\344\223\002S\"N/cloudrouter/v1/rout" +
+      "ingInstances/{routing_instance_id}:remov" +
+      "ePrivateConnection:\001*\022\340\001\n\006Delete\0229.yande" +
+      "x.cloud.cloudrouter.v1.DeleteRoutingInst" +
+      "anceRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"x\262\322*6\n\035DeleteRoutingInstanceMetad" +
+      "ata\022\025google.protobuf.Empty\202\323\344\223\0028*6/cloud" +
+      "router/v1/routingInstances/{routing_inst" +
+      "ance_id}\022\342\001\n\016ListOperations\022A.yandex.clo" +
+      "ud.cloudrouter.v1.ListRoutingInstanceOpe" +
+      "rationsRequest\032B.yandex.cloud.cloudroute" +
+      "r.v1.ListRoutingInstanceOperationsRespon" +
+      "se\"I\202\323\344\223\002C\022A/cloudrouter/v1/routingInsta" +
+      "nces/{routing_instance_id}/operationsBn\n" +
+      "\037yandex.cloud.api.cloudrouter.v1ZKgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/cloudrouter/v1;cloudrouterb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22347,56 +25412,68 @@ public final class RoutingInstanceServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_RemovePrefixesRequest_descriptor,
         new java.lang.String[] { "RoutingInstanceId", "VpcNetworkId", "VpcAzInfoPrefixes", });
-    internal_static_yandex_cloud_cloudrouter_v1_VpcAzInfoPrefixes_descriptor =
+    internal_static_yandex_cloud_cloudrouter_v1_UpdateNetworksRequest_descriptor =
       getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_cloudrouter_v1_UpdateNetworksRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cloudrouter_v1_UpdateNetworksRequest_descriptor,
+        new java.lang.String[] { "RoutingInstanceId", "AddedVpcNetworks", "UpdatedVpcNetworks", "DeletedVpcNetworkIds", "StrictRemove", });
+    internal_static_yandex_cloud_cloudrouter_v1_VpcInfo_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_cloudrouter_v1_VpcInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cloudrouter_v1_VpcInfo_descriptor,
+        new java.lang.String[] { "VpcNetworkId", "VpcAzInfoPrefixes", });
+    internal_static_yandex_cloud_cloudrouter_v1_VpcAzInfoPrefixes_descriptor =
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_cloudrouter_v1_VpcAzInfoPrefixes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_VpcAzInfoPrefixes_descriptor,
         new java.lang.String[] { "AzId", "Prefixes", });
     internal_static_yandex_cloud_cloudrouter_v1_MovePrefixRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_cloudrouter_v1_MovePrefixRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_MovePrefixRequest_descriptor,
         new java.lang.String[] { "RoutingInstanceId", "SrcVpcNetworkId", "SrcAzId", "DstVpcNetworkId", "DstAzId", "Prefix", });
     internal_static_yandex_cloud_cloudrouter_v1_UpdatePrefixMaskRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_cloudrouter_v1_UpdatePrefixMaskRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_UpdatePrefixMaskRequest_descriptor,
         new java.lang.String[] { "RoutingInstanceId", "VpcNetworkId", "AzId", "Prefix", "NewMask", "RemoveSubPrefixes", });
     internal_static_yandex_cloud_cloudrouter_v1_AddPrivateConnectionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_cloudrouter_v1_AddPrivateConnectionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_AddPrivateConnectionRequest_descriptor,
         new java.lang.String[] { "RoutingInstanceId", "CicPrivateConnectionId", });
     internal_static_yandex_cloud_cloudrouter_v1_RemovePrivateConnectionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_cloudrouter_v1_RemovePrivateConnectionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_RemovePrivateConnectionRequest_descriptor,
         new java.lang.String[] { "RoutingInstanceId", "CicPrivateConnectionId", });
     internal_static_yandex_cloud_cloudrouter_v1_DeleteRoutingInstanceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_cloudrouter_v1_DeleteRoutingInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_DeleteRoutingInstanceRequest_descriptor,
         new java.lang.String[] { "RoutingInstanceId", });
     internal_static_yandex_cloud_cloudrouter_v1_DeleteRoutingInstanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_cloudrouter_v1_DeleteRoutingInstanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_DeleteRoutingInstanceMetadata_descriptor,
         new java.lang.String[] { "RoutingInstanceId", });
     internal_static_yandex_cloud_cloudrouter_v1_ListRoutingInstanceOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_cloudrouter_v1_ListRoutingInstanceOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_ListRoutingInstanceOperationsRequest_descriptor,
         new java.lang.String[] { "RoutingInstanceId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_cloudrouter_v1_ListRoutingInstanceOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_cloudrouter_v1_ListRoutingInstanceOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_ListRoutingInstanceOperationsResponse_descriptor,

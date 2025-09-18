@@ -3096,6 +3096,41 @@ public final class JobServiceOuterClass {
      */
     yandex.cloud.api.spark.v1.JobOuterClass.PysparkJobOrBuilder getPysparkJobOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+     * @return Whether the sparkConnectJob field is set.
+     */
+    boolean hasSparkConnectJob();
+    /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+     * @return The sparkConnectJob.
+     */
+    yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob getSparkConnectJob();
+    /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+     */
+    yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder getSparkConnectJobOrBuilder();
+
+    /**
+     * <pre>
+     * Service account used to access Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * Service account used to access Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+
     public yandex.cloud.api.spark.v1.JobServiceOuterClass.CreateJobRequest.JobSpecCase getJobSpecCase();
   }
   /**
@@ -3113,6 +3148,7 @@ public final class JobServiceOuterClass {
     private CreateJobRequest() {
       clusterId_ = "";
       name_ = "";
+      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -3185,6 +3221,26 @@ public final class JobServiceOuterClass {
               jobSpecCase_ = 4;
               break;
             }
+            case 42: {
+              yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder subBuilder = null;
+              if (jobSpecCase_ == 5) {
+                subBuilder = ((yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_).toBuilder();
+              }
+              jobSpec_ =
+                  input.readMessage(yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_);
+                jobSpec_ = subBuilder.buildPartial();
+              }
+              jobSpecCase_ = 5;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3224,6 +3280,7 @@ public final class JobServiceOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SPARK_JOB(3),
       PYSPARK_JOB(4),
+      SPARK_CONNECT_JOB(5),
       JOBSPEC_NOT_SET(0);
       private final int value;
       private JobSpecCase(int value) {
@@ -3243,6 +3300,7 @@ public final class JobServiceOuterClass {
         switch (value) {
           case 3: return SPARK_JOB;
           case 4: return PYSPARK_JOB;
+          case 5: return SPARK_CONNECT_JOB;
           case 0: return JOBSPEC_NOT_SET;
           default: return null;
         }
@@ -3412,6 +3470,83 @@ public final class JobServiceOuterClass {
       return yandex.cloud.api.spark.v1.JobOuterClass.PysparkJob.getDefaultInstance();
     }
 
+    public static final int SPARK_CONNECT_JOB_FIELD_NUMBER = 5;
+    /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+     * @return Whether the sparkConnectJob field is set.
+     */
+    @java.lang.Override
+    public boolean hasSparkConnectJob() {
+      return jobSpecCase_ == 5;
+    }
+    /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+     * @return The sparkConnectJob.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob getSparkConnectJob() {
+      if (jobSpecCase_ == 5) {
+         return (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_;
+      }
+      return yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder getSparkConnectJobOrBuilder() {
+      if (jobSpecCase_ == 5) {
+         return (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_;
+      }
+      return yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+    }
+
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 8;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * Service account used to access Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Service account used to access Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3438,6 +3573,12 @@ public final class JobServiceOuterClass {
       if (jobSpecCase_ == 4) {
         output.writeMessage(4, (yandex.cloud.api.spark.v1.JobOuterClass.PysparkJob) jobSpec_);
       }
+      if (jobSpecCase_ == 5) {
+        output.writeMessage(5, (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, serviceAccountId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3461,6 +3602,13 @@ public final class JobServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (yandex.cloud.api.spark.v1.JobOuterClass.PysparkJob) jobSpec_);
       }
+      if (jobSpecCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, serviceAccountId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3480,6 +3628,8 @@ public final class JobServiceOuterClass {
           .equals(other.getClusterId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
       if (!getJobSpecCase().equals(other.getJobSpecCase())) return false;
       switch (jobSpecCase_) {
         case 3:
@@ -3489,6 +3639,10 @@ public final class JobServiceOuterClass {
         case 4:
           if (!getPysparkJob()
               .equals(other.getPysparkJob())) return false;
+          break;
+        case 5:
+          if (!getSparkConnectJob()
+              .equals(other.getSparkConnectJob())) return false;
           break;
         case 0:
         default:
@@ -3508,6 +3662,8 @@ public final class JobServiceOuterClass {
       hash = (53 * hash) + getClusterId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
       switch (jobSpecCase_) {
         case 3:
           hash = (37 * hash) + SPARK_JOB_FIELD_NUMBER;
@@ -3516,6 +3672,10 @@ public final class JobServiceOuterClass {
         case 4:
           hash = (37 * hash) + PYSPARK_JOB_FIELD_NUMBER;
           hash = (53 * hash) + getPysparkJob().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + SPARK_CONNECT_JOB_FIELD_NUMBER;
+          hash = (53 * hash) + getSparkConnectJob().hashCode();
           break;
         case 0:
         default:
@@ -3657,6 +3817,8 @@ public final class JobServiceOuterClass {
 
         name_ = "";
 
+        serviceAccountId_ = "";
+
         jobSpecCase_ = 0;
         jobSpec_ = null;
         return this;
@@ -3701,6 +3863,14 @@ public final class JobServiceOuterClass {
             result.jobSpec_ = pysparkJobBuilder_.build();
           }
         }
+        if (jobSpecCase_ == 5) {
+          if (sparkConnectJobBuilder_ == null) {
+            result.jobSpec_ = jobSpec_;
+          } else {
+            result.jobSpec_ = sparkConnectJobBuilder_.build();
+          }
+        }
+        result.serviceAccountId_ = serviceAccountId_;
         result.jobSpecCase_ = jobSpecCase_;
         onBuilt();
         return result;
@@ -3758,6 +3928,10 @@ public final class JobServiceOuterClass {
           name_ = other.name_;
           onChanged();
         }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
         switch (other.getJobSpecCase()) {
           case SPARK_JOB: {
             mergeSparkJob(other.getSparkJob());
@@ -3765,6 +3939,10 @@ public final class JobServiceOuterClass {
           }
           case PYSPARK_JOB: {
             mergePysparkJob(other.getPysparkJob());
+            break;
+          }
+          case SPARK_CONNECT_JOB: {
+            mergeSparkConnectJob(other.getSparkConnectJob());
             break;
           }
           case JOBSPEC_NOT_SET: {
@@ -4287,6 +4465,243 @@ public final class JobServiceOuterClass {
         jobSpecCase_ = 4;
         onChanged();;
         return pysparkJobBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder> sparkConnectJobBuilder_;
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+       * @return Whether the sparkConnectJob field is set.
+       */
+      @java.lang.Override
+      public boolean hasSparkConnectJob() {
+        return jobSpecCase_ == 5;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+       * @return The sparkConnectJob.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob getSparkConnectJob() {
+        if (sparkConnectJobBuilder_ == null) {
+          if (jobSpecCase_ == 5) {
+            return (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_;
+          }
+          return yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+        } else {
+          if (jobSpecCase_ == 5) {
+            return sparkConnectJobBuilder_.getMessage();
+          }
+          return yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+       */
+      public Builder setSparkConnectJob(yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob value) {
+        if (sparkConnectJobBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jobSpec_ = value;
+          onChanged();
+        } else {
+          sparkConnectJobBuilder_.setMessage(value);
+        }
+        jobSpecCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+       */
+      public Builder setSparkConnectJob(
+          yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder builderForValue) {
+        if (sparkConnectJobBuilder_ == null) {
+          jobSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          sparkConnectJobBuilder_.setMessage(builderForValue.build());
+        }
+        jobSpecCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+       */
+      public Builder mergeSparkConnectJob(yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob value) {
+        if (sparkConnectJobBuilder_ == null) {
+          if (jobSpecCase_ == 5 &&
+              jobSpec_ != yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance()) {
+            jobSpec_ = yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.newBuilder((yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            jobSpec_ = value;
+          }
+          onChanged();
+        } else {
+          if (jobSpecCase_ == 5) {
+            sparkConnectJobBuilder_.mergeFrom(value);
+          }
+          sparkConnectJobBuilder_.setMessage(value);
+        }
+        jobSpecCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+       */
+      public Builder clearSparkConnectJob() {
+        if (sparkConnectJobBuilder_ == null) {
+          if (jobSpecCase_ == 5) {
+            jobSpecCase_ = 0;
+            jobSpec_ = null;
+            onChanged();
+          }
+        } else {
+          if (jobSpecCase_ == 5) {
+            jobSpecCase_ = 0;
+            jobSpec_ = null;
+          }
+          sparkConnectJobBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+       */
+      public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder getSparkConnectJobBuilder() {
+        return getSparkConnectJobFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder getSparkConnectJobOrBuilder() {
+        if ((jobSpecCase_ == 5) && (sparkConnectJobBuilder_ != null)) {
+          return sparkConnectJobBuilder_.getMessageOrBuilder();
+        } else {
+          if (jobSpecCase_ == 5) {
+            return (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_;
+          }
+          return yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder> 
+          getSparkConnectJobFieldBuilder() {
+        if (sparkConnectJobBuilder_ == null) {
+          if (!(jobSpecCase_ == 5)) {
+            jobSpec_ = yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+          }
+          sparkConnectJobBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder>(
+                  (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_,
+                  getParentForChildren(),
+                  isClean());
+          jobSpec_ = null;
+        }
+        jobSpecCase_ = 5;
+        onChanged();;
+        return sparkConnectJobBuilder_;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * Service account used to access Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Service account used to access Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Service account used to access Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Service account used to access Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Service account used to access Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7900,37 +8315,40 @@ public final class JobServiceOuterClass {
       "\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"`\n\020ListJobsR" +
       "esponse\022(\n\004jobs\030\001 \003(\0132\032.yandex.cloud.spa" +
       "rk.v1.Job\022\"\n\017next_page_token\030\002 \001(\tB\t\212\3101\005" +
-      "<=200\"\341\001\n\020CreateJobRequest\022 \n\ncluster_id" +
+      "<=200\"\330\002\n\020CreateJobRequest\022 \n\ncluster_id" +
       "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035" +
       "|[a-z][-a-z0-9]{1,61}[a-z0-9]\0224\n\tspark_j" +
       "ob\030\003 \001(\0132\037.yandex.cloud.spark.v1.SparkJo" +
       "bH\000\0228\n\013pyspark_job\030\004 \001(\0132!.yandex.cloud." +
-      "spark.v1.PysparkJobH\000B\n\n\010job_spec\"O\n\021Cre" +
-      "ateJobMetadata\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\030\n\006job_id\030\002 \001(\tB\010\212\3101\004<=50\"R\n\020Ca" +
-      "ncelJobRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\034\n\006job_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\224" +
-      "\001\n\021ListJobLogRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\034\n\006job_id\030\002 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022 \n\tpage_size\030\003 \001(\003B\r\372\3071\t<=1048576\022\035" +
-      "\n\npage_token\030\004 \001(\tB\t\212\3101\005<=200\"I\n\022ListJob" +
-      "LogResponse\022\017\n\007content\030\001 \001(\t\022\"\n\017next_pag" +
-      "e_token\030\002 \001(\tB\t\212\3101\005<=2002\374\003\n\nJobService\022" +
-      "Y\n\004List\022&.yandex.cloud.spark.v1.ListJobs" +
-      "Request\032\'.yandex.cloud.spark.v1.ListJobs" +
-      "Response\"\000\022r\n\006Create\022\'.yandex.cloud.spar" +
-      "k.v1.CreateJobRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\034\262\322*\030\n\021CreateJobMetadat" +
-      "a\022\003Job\022I\n\003Get\022$.yandex.cloud.spark.v1.Ge" +
-      "tJobRequest\032\032.yandex.cloud.spark.v1.Job\"" +
-      "\000\022`\n\007ListLog\022(.yandex.cloud.spark.v1.Lis" +
-      "tJobLogRequest\032).yandex.cloud.spark.v1.L" +
-      "istJobLogResponse\"\000\022r\n\006Cancel\022\'.yandex.c" +
-      "loud.spark.v1.CancelJobRequest\032!.yandex." +
-      "cloud.operation.Operation\"\034\262\322*\030\n\021CreateJ" +
-      "obMetadata\022\003JobB\\\n\031yandex.cloud.api.spar" +
-      "k.v1Z?github.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/spark/v1;sparkb\006proto3"
+      "spark.v1.PysparkJobH\000\022C\n\021spark_connect_j" +
+      "ob\030\005 \001(\0132&.yandex.cloud.spark.v1.SparkCo" +
+      "nnectJobH\000\022$\n\022service_account_id\030\010 \001(\tB\010" +
+      "\212\3101\004<=50B\n\n\010job_specJ\004\010\006\020\007J\004\010\007\020\010\"O\n\021Crea" +
+      "teJobMetadata\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\030\n\006job_id\030\002 \001(\tB\010\212\3101\004<=50\"R\n\020Can" +
+      "celJobRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\034\n\006job_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\224\001" +
+      "\n\021ListJobLogRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\034\n\006job_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022 \n\tpage_size\030\003 \001(\003B\r\372\3071\t<=1048576\022\035\n" +
+      "\npage_token\030\004 \001(\tB\t\212\3101\005<=200\"I\n\022ListJobL" +
+      "ogResponse\022\017\n\007content\030\001 \001(\t\022\"\n\017next_page" +
+      "_token\030\002 \001(\tB\t\212\3101\005<=2002\374\003\n\nJobService\022Y" +
+      "\n\004List\022&.yandex.cloud.spark.v1.ListJobsR" +
+      "equest\032\'.yandex.cloud.spark.v1.ListJobsR" +
+      "esponse\"\000\022r\n\006Create\022\'.yandex.cloud.spark" +
+      ".v1.CreateJobRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"\034\262\322*\030\n\021CreateJobMetadata" +
+      "\022\003Job\022I\n\003Get\022$.yandex.cloud.spark.v1.Get" +
+      "JobRequest\032\032.yandex.cloud.spark.v1.Job\"\000" +
+      "\022`\n\007ListLog\022(.yandex.cloud.spark.v1.List" +
+      "JobLogRequest\032).yandex.cloud.spark.v1.Li" +
+      "stJobLogResponse\"\000\022r\n\006Cancel\022\'.yandex.cl" +
+      "oud.spark.v1.CancelJobRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\034\262\322*\030\n\021CreateJo" +
+      "bMetadata\022\003JobB\\\n\031yandex.cloud.api.spark" +
+      ".v1Z?github.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/spark/v1;sparkb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7963,7 +8381,7 @@ public final class JobServiceOuterClass {
     internal_static_yandex_cloud_spark_v1_CreateJobRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_CreateJobRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "Name", "SparkJob", "PysparkJob", "JobSpec", });
+        new java.lang.String[] { "ClusterId", "Name", "SparkJob", "PysparkJob", "SparkConnectJob", "ServiceAccountId", "JobSpec", });
     internal_static_yandex_cloud_spark_v1_CreateJobMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_spark_v1_CreateJobMetadata_fieldAccessorTable = new

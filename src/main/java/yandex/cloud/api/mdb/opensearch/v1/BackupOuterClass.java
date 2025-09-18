@@ -212,6 +212,36 @@ public final class BackupOuterClass {
      * @return The indicesTotal.
      */
     long getIndicesTotal();
+
+    /**
+     * <pre>
+     * Size of files which were copied as part of the incremental snapshot.
+     * </pre>
+     *
+     * <code>int64 incremental_size_bytes = 10;</code>
+     * @return The incrementalSizeBytes.
+     */
+    long getIncrementalSizeBytes();
+
+    /**
+     * <pre>
+     * Size of files that are referenced by the snapshot.
+     * </pre>
+     *
+     * <code>int64 total_size_bytes = 11;</code>
+     * @return The totalSizeBytes.
+     */
+    long getTotalSizeBytes();
+
+    /**
+     * <pre>
+     * The space amount required to restore from this backup.
+     * </pre>
+     *
+     * <code>int64 free_space_required_bytes = 12;</code>
+     * @return The freeSpaceRequiredBytes.
+     */
+    long getFreeSpaceRequiredBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.Backup}
@@ -331,6 +361,21 @@ public final class BackupOuterClass {
             case 72: {
 
               indicesTotal_ = input.readInt64();
+              break;
+            }
+            case 80: {
+
+              incrementalSizeBytes_ = input.readInt64();
+              break;
+            }
+            case 88: {
+
+              totalSizeBytes_ = input.readInt64();
+              break;
+            }
+            case 96: {
+
+              freeSpaceRequiredBytes_ = input.readInt64();
               break;
             }
             default: {
@@ -709,6 +754,51 @@ public final class BackupOuterClass {
       return indicesTotal_;
     }
 
+    public static final int INCREMENTAL_SIZE_BYTES_FIELD_NUMBER = 10;
+    private long incrementalSizeBytes_;
+    /**
+     * <pre>
+     * Size of files which were copied as part of the incremental snapshot.
+     * </pre>
+     *
+     * <code>int64 incremental_size_bytes = 10;</code>
+     * @return The incrementalSizeBytes.
+     */
+    @java.lang.Override
+    public long getIncrementalSizeBytes() {
+      return incrementalSizeBytes_;
+    }
+
+    public static final int TOTAL_SIZE_BYTES_FIELD_NUMBER = 11;
+    private long totalSizeBytes_;
+    /**
+     * <pre>
+     * Size of files that are referenced by the snapshot.
+     * </pre>
+     *
+     * <code>int64 total_size_bytes = 11;</code>
+     * @return The totalSizeBytes.
+     */
+    @java.lang.Override
+    public long getTotalSizeBytes() {
+      return totalSizeBytes_;
+    }
+
+    public static final int FREE_SPACE_REQUIRED_BYTES_FIELD_NUMBER = 12;
+    private long freeSpaceRequiredBytes_;
+    /**
+     * <pre>
+     * The space amount required to restore from this backup.
+     * </pre>
+     *
+     * <code>int64 free_space_required_bytes = 12;</code>
+     * @return The freeSpaceRequiredBytes.
+     */
+    @java.lang.Override
+    public long getFreeSpaceRequiredBytes() {
+      return freeSpaceRequiredBytes_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -749,6 +839,15 @@ public final class BackupOuterClass {
       }
       if (indicesTotal_ != 0L) {
         output.writeInt64(9, indicesTotal_);
+      }
+      if (incrementalSizeBytes_ != 0L) {
+        output.writeInt64(10, incrementalSizeBytes_);
+      }
+      if (totalSizeBytes_ != 0L) {
+        output.writeInt64(11, totalSizeBytes_);
+      }
+      if (freeSpaceRequiredBytes_ != 0L) {
+        output.writeInt64(12, freeSpaceRequiredBytes_);
       }
       unknownFields.writeTo(output);
     }
@@ -795,6 +894,18 @@ public final class BackupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(9, indicesTotal_);
       }
+      if (incrementalSizeBytes_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(10, incrementalSizeBytes_);
+      }
+      if (totalSizeBytes_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(11, totalSizeBytes_);
+      }
+      if (freeSpaceRequiredBytes_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(12, freeSpaceRequiredBytes_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -834,6 +945,12 @@ public final class BackupOuterClass {
           != other.getSizeBytes()) return false;
       if (getIndicesTotal()
           != other.getIndicesTotal()) return false;
+      if (getIncrementalSizeBytes()
+          != other.getIncrementalSizeBytes()) return false;
+      if (getTotalSizeBytes()
+          != other.getTotalSizeBytes()) return false;
+      if (getFreeSpaceRequiredBytes()
+          != other.getFreeSpaceRequiredBytes()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -871,6 +988,15 @@ public final class BackupOuterClass {
       hash = (37 * hash) + INDICES_TOTAL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getIndicesTotal());
+      hash = (37 * hash) + INCREMENTAL_SIZE_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getIncrementalSizeBytes());
+      hash = (37 * hash) + TOTAL_SIZE_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalSizeBytes());
+      hash = (37 * hash) + FREE_SPACE_REQUIRED_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFreeSpaceRequiredBytes());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1030,6 +1156,12 @@ public final class BackupOuterClass {
 
         indicesTotal_ = 0L;
 
+        incrementalSizeBytes_ = 0L;
+
+        totalSizeBytes_ = 0L;
+
+        freeSpaceRequiredBytes_ = 0L;
+
         return this;
       }
 
@@ -1078,6 +1210,9 @@ public final class BackupOuterClass {
         result.opensearchVersion_ = opensearchVersion_;
         result.sizeBytes_ = sizeBytes_;
         result.indicesTotal_ = indicesTotal_;
+        result.incrementalSizeBytes_ = incrementalSizeBytes_;
+        result.totalSizeBytes_ = totalSizeBytes_;
+        result.freeSpaceRequiredBytes_ = freeSpaceRequiredBytes_;
         onBuilt();
         return result;
       }
@@ -1163,6 +1298,15 @@ public final class BackupOuterClass {
         }
         if (other.getIndicesTotal() != 0L) {
           setIndicesTotal(other.getIndicesTotal());
+        }
+        if (other.getIncrementalSizeBytes() != 0L) {
+          setIncrementalSizeBytes(other.getIncrementalSizeBytes());
+        }
+        if (other.getTotalSizeBytes() != 0L) {
+          setTotalSizeBytes(other.getTotalSizeBytes());
+        }
+        if (other.getFreeSpaceRequiredBytes() != 0L) {
+          setFreeSpaceRequiredBytes(other.getFreeSpaceRequiredBytes());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2116,6 +2260,135 @@ public final class BackupOuterClass {
       public Builder clearIndicesTotal() {
         
         indicesTotal_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long incrementalSizeBytes_ ;
+      /**
+       * <pre>
+       * Size of files which were copied as part of the incremental snapshot.
+       * </pre>
+       *
+       * <code>int64 incremental_size_bytes = 10;</code>
+       * @return The incrementalSizeBytes.
+       */
+      @java.lang.Override
+      public long getIncrementalSizeBytes() {
+        return incrementalSizeBytes_;
+      }
+      /**
+       * <pre>
+       * Size of files which were copied as part of the incremental snapshot.
+       * </pre>
+       *
+       * <code>int64 incremental_size_bytes = 10;</code>
+       * @param value The incrementalSizeBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncrementalSizeBytes(long value) {
+        
+        incrementalSizeBytes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of files which were copied as part of the incremental snapshot.
+       * </pre>
+       *
+       * <code>int64 incremental_size_bytes = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncrementalSizeBytes() {
+        
+        incrementalSizeBytes_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalSizeBytes_ ;
+      /**
+       * <pre>
+       * Size of files that are referenced by the snapshot.
+       * </pre>
+       *
+       * <code>int64 total_size_bytes = 11;</code>
+       * @return The totalSizeBytes.
+       */
+      @java.lang.Override
+      public long getTotalSizeBytes() {
+        return totalSizeBytes_;
+      }
+      /**
+       * <pre>
+       * Size of files that are referenced by the snapshot.
+       * </pre>
+       *
+       * <code>int64 total_size_bytes = 11;</code>
+       * @param value The totalSizeBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalSizeBytes(long value) {
+        
+        totalSizeBytes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of files that are referenced by the snapshot.
+       * </pre>
+       *
+       * <code>int64 total_size_bytes = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalSizeBytes() {
+        
+        totalSizeBytes_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long freeSpaceRequiredBytes_ ;
+      /**
+       * <pre>
+       * The space amount required to restore from this backup.
+       * </pre>
+       *
+       * <code>int64 free_space_required_bytes = 12;</code>
+       * @return The freeSpaceRequiredBytes.
+       */
+      @java.lang.Override
+      public long getFreeSpaceRequiredBytes() {
+        return freeSpaceRequiredBytes_;
+      }
+      /**
+       * <pre>
+       * The space amount required to restore from this backup.
+       * </pre>
+       *
+       * <code>int64 free_space_required_bytes = 12;</code>
+       * @param value The freeSpaceRequiredBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFreeSpaceRequiredBytes(long value) {
+        
+        freeSpaceRequiredBytes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The space amount required to restore from this backup.
+       * </pre>
+       *
+       * <code>int64 free_space_required_bytes = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFreeSpaceRequiredBytes() {
+        
+        freeSpaceRequiredBytes_ = 0L;
         onChanged();
         return this;
       }
@@ -6573,38 +6846,40 @@ public final class BackupOuterClass {
       "proto\022\036yandex.cloud.mdb.opensearch.v1\032\037g" +
       "oogle/protobuf/timestamp.proto\032\036google/p" +
       "rotobuf/wrappers.proto\032\035yandex/cloud/val" +
-      "idation.proto\"\205\002\n\006Backup\022\n\n\002id\030\001 \001(\t\022\021\n\t" +
+      "idation.proto\"\342\002\n\006Backup\022\n\n\002id\030\001 \001(\t\022\021\n\t" +
       "folder_id\030\002 \001(\t\022\031\n\021source_cluster_id\030\003 \001" +
       "(\t\022.\n\nstarted_at\030\004 \001(\0132\032.google.protobuf" +
       ".Timestamp\022.\n\ncreated_at\030\005 \001(\0132\032.google." +
       "protobuf.Timestamp\022\032\n\007indices\030\006 \003(\tB\t\202\3101" +
       "\005<=100\022\032\n\022opensearch_version\030\007 \001(\t\022\022\n\nsi" +
-      "ze_bytes\030\010 \001(\003\022\025\n\rindices_total\030\t \001(\003\"\246\001" +
-      "\n\022SnapshotManagement\022K\n\021snapshot_schedul" +
-      "e\030\001 \001(\01320.yandex.cloud.mdb.opensearch.v1" +
-      ".SnapshotSchedule\022C\n\025snapshot_max_age_da" +
-      "ys\030\002 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
-      "\3071\003>=7\"\266\002\n\020SnapshotSchedule\022Z\n\030hourly_sn" +
-      "apshot_schedule\030\001 \001(\01326.yandex.cloud.mdb" +
-      ".opensearch.v1.HourlySnapshotScheduleH\000\022" +
-      "X\n\027daily_snapshot_schedule\030\002 \001(\01325.yande" +
-      "x.cloud.mdb.opensearch.v1.DailySnapshotS" +
-      "cheduleH\000\022Z\n\030weekly_snapshot_schedule\030\003 " +
-      "\001(\01326.yandex.cloud.mdb.opensearch.v1.Wee" +
-      "klySnapshotScheduleH\000B\020\n\010schedule\022\004\300\3011\001\"" +
-      "2\n\026HourlySnapshotSchedule\022\030\n\006minute\030\001 \001(" +
-      "\003B\010\372\3071\0040-59\"I\n\025DailySnapshotSchedule\022\026\n\004" +
-      "hour\030\001 \001(\003B\010\372\3071\0040-23\022\030\n\006minute\030\002 \001(\003B\010\372\307" +
-      "1\0040-59\"\373\001\n\026WeeklySnapshotSchedule\022K\n\003day" +
-      "\030\001 \001(\0162>.yandex.cloud.mdb.opensearch.v1." +
-      "WeeklySnapshotSchedule.WeekDay\022\026\n\004hour\030\002" +
-      " \001(\003B\010\372\3071\0040-23\022\030\n\006minute\030\003 \001(\003B\010\372\3071\0040-59" +
-      "\"b\n\007WeekDay\022\030\n\024WEEK_DAY_UNSPECIFIED\020\000\022\007\n" +
-      "\003MON\020\001\022\007\n\003TUE\020\002\022\007\n\003WED\020\003\022\007\n\003THU\020\004\022\007\n\003FRI" +
-      "\020\005\022\007\n\003SAT\020\006\022\007\n\003SUN\020\007Bs\n\"yandex.cloud.api" +
-      ".mdb.opensearch.v1ZMgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/mdb/opensea" +
-      "rch/v1;opensearchb\006proto3"
+      "ze_bytes\030\010 \001(\003\022\025\n\rindices_total\030\t \001(\003\022\036\n" +
+      "\026incremental_size_bytes\030\n \001(\003\022\030\n\020total_s" +
+      "ize_bytes\030\013 \001(\003\022!\n\031free_space_required_b" +
+      "ytes\030\014 \001(\003\"\246\001\n\022SnapshotManagement\022K\n\021sna" +
+      "pshot_schedule\030\001 \001(\01320.yandex.cloud.mdb." +
+      "opensearch.v1.SnapshotSchedule\022C\n\025snapsh" +
+      "ot_max_age_days\030\002 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=7\"\266\002\n\020SnapshotSchedule" +
+      "\022Z\n\030hourly_snapshot_schedule\030\001 \001(\01326.yan" +
+      "dex.cloud.mdb.opensearch.v1.HourlySnapsh" +
+      "otScheduleH\000\022X\n\027daily_snapshot_schedule\030" +
+      "\002 \001(\01325.yandex.cloud.mdb.opensearch.v1.D" +
+      "ailySnapshotScheduleH\000\022Z\n\030weekly_snapsho" +
+      "t_schedule\030\003 \001(\01326.yandex.cloud.mdb.open" +
+      "search.v1.WeeklySnapshotScheduleH\000B\020\n\010sc" +
+      "hedule\022\004\300\3011\001\"2\n\026HourlySnapshotSchedule\022\030" +
+      "\n\006minute\030\001 \001(\003B\010\372\3071\0040-59\"I\n\025DailySnapsho" +
+      "tSchedule\022\026\n\004hour\030\001 \001(\003B\010\372\3071\0040-23\022\030\n\006min" +
+      "ute\030\002 \001(\003B\010\372\3071\0040-59\"\373\001\n\026WeeklySnapshotSc" +
+      "hedule\022K\n\003day\030\001 \001(\0162>.yandex.cloud.mdb.o" +
+      "pensearch.v1.WeeklySnapshotSchedule.Week" +
+      "Day\022\026\n\004hour\030\002 \001(\003B\010\372\3071\0040-23\022\030\n\006minute\030\003 " +
+      "\001(\003B\010\372\3071\0040-59\"b\n\007WeekDay\022\030\n\024WEEK_DAY_UNS" +
+      "PECIFIED\020\000\022\007\n\003MON\020\001\022\007\n\003TUE\020\002\022\007\n\003WED\020\003\022\007\n" +
+      "\003THU\020\004\022\007\n\003FRI\020\005\022\007\n\003SAT\020\006\022\007\n\003SUN\020\007Bs\n\"yan" +
+      "dex.cloud.api.mdb.opensearch.v1ZMgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/opensearch/v1;opensearchb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6618,7 +6893,7 @@ public final class BackupOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_Backup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_Backup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "SourceClusterId", "StartedAt", "CreatedAt", "Indices", "OpensearchVersion", "SizeBytes", "IndicesTotal", });
+        new java.lang.String[] { "Id", "FolderId", "SourceClusterId", "StartedAt", "CreatedAt", "Indices", "OpensearchVersion", "SizeBytes", "IndicesTotal", "IncrementalSizeBytes", "TotalSizeBytes", "FreeSpaceRequiredBytes", });
     internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_fieldAccessorTable = new

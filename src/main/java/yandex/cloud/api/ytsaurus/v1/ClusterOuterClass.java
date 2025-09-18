@@ -1090,7 +1090,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * https://proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+       * https://hp.CID.ytsaurus.mdb.yandexcloud.net:PORT
        * </pre>
        *
        * <code>string internal_http_proxy_alias = 3;</code>
@@ -1099,7 +1099,7 @@ public final class ClusterOuterClass {
       java.lang.String getInternalHttpProxyAlias();
       /**
        * <pre>
-       * https://proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+       * https://hp.CID.ytsaurus.mdb.yandexcloud.net:PORT
        * </pre>
        *
        * <code>string internal_http_proxy_alias = 3;</code>
@@ -1110,7 +1110,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+       * rp.CID.ytsaurus.mdb.yandexcloud.net:PORT
        * </pre>
        *
        * <code>string internal_rpc_proxy_alias = 4;</code>
@@ -1119,7 +1119,7 @@ public final class ClusterOuterClass {
       java.lang.String getInternalRpcProxyAlias();
       /**
        * <pre>
-       * proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+       * rp.CID.ytsaurus.mdb.yandexcloud.net:PORT
        * </pre>
        *
        * <code>string internal_rpc_proxy_alias = 4;</code>
@@ -1127,88 +1127,6 @@ public final class ClusterOuterClass {
        */
       com.google.protobuf.ByteString
           getInternalRpcProxyAliasBytes();
-
-      /**
-       * <pre>
-       * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-       * </pre>
-       *
-       * <code>repeated string internal_http_proxies = 5;</code>
-       * @return A list containing the internalHttpProxies.
-       */
-      java.util.List<java.lang.String>
-          getInternalHttpProxiesList();
-      /**
-       * <pre>
-       * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-       * </pre>
-       *
-       * <code>repeated string internal_http_proxies = 5;</code>
-       * @return The count of internalHttpProxies.
-       */
-      int getInternalHttpProxiesCount();
-      /**
-       * <pre>
-       * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-       * </pre>
-       *
-       * <code>repeated string internal_http_proxies = 5;</code>
-       * @param index The index of the element to return.
-       * @return The internalHttpProxies at the given index.
-       */
-      java.lang.String getInternalHttpProxies(int index);
-      /**
-       * <pre>
-       * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-       * </pre>
-       *
-       * <code>repeated string internal_http_proxies = 5;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the internalHttpProxies at the given index.
-       */
-      com.google.protobuf.ByteString
-          getInternalHttpProxiesBytes(int index);
-
-      /**
-       * <pre>
-       * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-       * </pre>
-       *
-       * <code>repeated string internal_rpc_proxies = 6;</code>
-       * @return A list containing the internalRpcProxies.
-       */
-      java.util.List<java.lang.String>
-          getInternalRpcProxiesList();
-      /**
-       * <pre>
-       * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-       * </pre>
-       *
-       * <code>repeated string internal_rpc_proxies = 6;</code>
-       * @return The count of internalRpcProxies.
-       */
-      int getInternalRpcProxiesCount();
-      /**
-       * <pre>
-       * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-       * </pre>
-       *
-       * <code>repeated string internal_rpc_proxies = 6;</code>
-       * @param index The index of the element to return.
-       * @return The internalRpcProxies at the given index.
-       */
-      java.lang.String getInternalRpcProxies(int index);
-      /**
-       * <pre>
-       * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-       * </pre>
-       *
-       * <code>repeated string internal_rpc_proxies = 6;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the internalRpcProxies at the given index.
-       */
-      com.google.protobuf.ByteString
-          getInternalRpcProxiesBytes(int index);
     }
     /**
      * Protobuf type {@code yandex.cloud.ytsaurus.v1.Cluster.Endpoints}
@@ -1227,8 +1145,6 @@ public final class ClusterOuterClass {
         externalHttpProxyBalancer_ = "";
         internalHttpProxyAlias_ = "";
         internalRpcProxyAlias_ = "";
-        internalHttpProxies_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        internalRpcProxies_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       }
 
       @java.lang.Override
@@ -1251,7 +1167,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -1286,24 +1201,6 @@ public final class ClusterOuterClass {
                 internalRpcProxyAlias_ = s;
                 break;
               }
-              case 42: {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  internalHttpProxies_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                internalHttpProxies_.add(s);
-                break;
-              }
-              case 50: {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                  internalRpcProxies_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                internalRpcProxies_.add(s);
-                break;
-              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -1319,12 +1216,6 @@ public final class ClusterOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000001) != 0)) {
-            internalHttpProxies_ = internalHttpProxies_.getUnmodifiableView();
-          }
-          if (((mutable_bitField0_ & 0x00000002) != 0)) {
-            internalRpcProxies_ = internalRpcProxies_.getUnmodifiableView();
-          }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
@@ -1438,7 +1329,7 @@ public final class ClusterOuterClass {
       private volatile java.lang.Object internalHttpProxyAlias_;
       /**
        * <pre>
-       * https://proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+       * https://hp.CID.ytsaurus.mdb.yandexcloud.net:PORT
        * </pre>
        *
        * <code>string internal_http_proxy_alias = 3;</code>
@@ -1459,7 +1350,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * https://proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+       * https://hp.CID.ytsaurus.mdb.yandexcloud.net:PORT
        * </pre>
        *
        * <code>string internal_http_proxy_alias = 3;</code>
@@ -1484,7 +1375,7 @@ public final class ClusterOuterClass {
       private volatile java.lang.Object internalRpcProxyAlias_;
       /**
        * <pre>
-       * proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+       * rp.CID.ytsaurus.mdb.yandexcloud.net:PORT
        * </pre>
        *
        * <code>string internal_rpc_proxy_alias = 4;</code>
@@ -1505,7 +1396,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+       * rp.CID.ytsaurus.mdb.yandexcloud.net:PORT
        * </pre>
        *
        * <code>string internal_rpc_proxy_alias = 4;</code>
@@ -1524,108 +1415,6 @@ public final class ClusterOuterClass {
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
-      }
-
-      public static final int INTERNAL_HTTP_PROXIES_FIELD_NUMBER = 5;
-      private com.google.protobuf.LazyStringList internalHttpProxies_;
-      /**
-       * <pre>
-       * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-       * </pre>
-       *
-       * <code>repeated string internal_http_proxies = 5;</code>
-       * @return A list containing the internalHttpProxies.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getInternalHttpProxiesList() {
-        return internalHttpProxies_;
-      }
-      /**
-       * <pre>
-       * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-       * </pre>
-       *
-       * <code>repeated string internal_http_proxies = 5;</code>
-       * @return The count of internalHttpProxies.
-       */
-      public int getInternalHttpProxiesCount() {
-        return internalHttpProxies_.size();
-      }
-      /**
-       * <pre>
-       * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-       * </pre>
-       *
-       * <code>repeated string internal_http_proxies = 5;</code>
-       * @param index The index of the element to return.
-       * @return The internalHttpProxies at the given index.
-       */
-      public java.lang.String getInternalHttpProxies(int index) {
-        return internalHttpProxies_.get(index);
-      }
-      /**
-       * <pre>
-       * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-       * </pre>
-       *
-       * <code>repeated string internal_http_proxies = 5;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the internalHttpProxies at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getInternalHttpProxiesBytes(int index) {
-        return internalHttpProxies_.getByteString(index);
-      }
-
-      public static final int INTERNAL_RPC_PROXIES_FIELD_NUMBER = 6;
-      private com.google.protobuf.LazyStringList internalRpcProxies_;
-      /**
-       * <pre>
-       * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-       * </pre>
-       *
-       * <code>repeated string internal_rpc_proxies = 6;</code>
-       * @return A list containing the internalRpcProxies.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getInternalRpcProxiesList() {
-        return internalRpcProxies_;
-      }
-      /**
-       * <pre>
-       * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-       * </pre>
-       *
-       * <code>repeated string internal_rpc_proxies = 6;</code>
-       * @return The count of internalRpcProxies.
-       */
-      public int getInternalRpcProxiesCount() {
-        return internalRpcProxies_.size();
-      }
-      /**
-       * <pre>
-       * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-       * </pre>
-       *
-       * <code>repeated string internal_rpc_proxies = 6;</code>
-       * @param index The index of the element to return.
-       * @return The internalRpcProxies at the given index.
-       */
-      public java.lang.String getInternalRpcProxies(int index) {
-        return internalRpcProxies_.get(index);
-      }
-      /**
-       * <pre>
-       * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-       * </pre>
-       *
-       * <code>repeated string internal_rpc_proxies = 6;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the internalRpcProxies at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getInternalRpcProxiesBytes(int index) {
-        return internalRpcProxies_.getByteString(index);
       }
 
       private byte memoizedIsInitialized = -1;
@@ -1654,12 +1443,6 @@ public final class ClusterOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(internalRpcProxyAlias_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, internalRpcProxyAlias_);
         }
-        for (int i = 0; i < internalHttpProxies_.size(); i++) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 5, internalHttpProxies_.getRaw(i));
-        }
-        for (int i = 0; i < internalRpcProxies_.size(); i++) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 6, internalRpcProxies_.getRaw(i));
-        }
         unknownFields.writeTo(output);
       }
 
@@ -1680,22 +1463,6 @@ public final class ClusterOuterClass {
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(internalRpcProxyAlias_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, internalRpcProxyAlias_);
-        }
-        {
-          int dataSize = 0;
-          for (int i = 0; i < internalHttpProxies_.size(); i++) {
-            dataSize += computeStringSizeNoTag(internalHttpProxies_.getRaw(i));
-          }
-          size += dataSize;
-          size += 1 * getInternalHttpProxiesList().size();
-        }
-        {
-          int dataSize = 0;
-          for (int i = 0; i < internalRpcProxies_.size(); i++) {
-            dataSize += computeStringSizeNoTag(internalRpcProxies_.getRaw(i));
-          }
-          size += dataSize;
-          size += 1 * getInternalRpcProxiesList().size();
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -1720,10 +1487,6 @@ public final class ClusterOuterClass {
             .equals(other.getInternalHttpProxyAlias())) return false;
         if (!getInternalRpcProxyAlias()
             .equals(other.getInternalRpcProxyAlias())) return false;
-        if (!getInternalHttpProxiesList()
-            .equals(other.getInternalHttpProxiesList())) return false;
-        if (!getInternalRpcProxiesList()
-            .equals(other.getInternalRpcProxiesList())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -1743,14 +1506,6 @@ public final class ClusterOuterClass {
         hash = (53 * hash) + getInternalHttpProxyAlias().hashCode();
         hash = (37 * hash) + INTERNAL_RPC_PROXY_ALIAS_FIELD_NUMBER;
         hash = (53 * hash) + getInternalRpcProxyAlias().hashCode();
-        if (getInternalHttpProxiesCount() > 0) {
-          hash = (37 * hash) + INTERNAL_HTTP_PROXIES_FIELD_NUMBER;
-          hash = (53 * hash) + getInternalHttpProxiesList().hashCode();
-        }
-        if (getInternalRpcProxiesCount() > 0) {
-          hash = (37 * hash) + INTERNAL_RPC_PROXIES_FIELD_NUMBER;
-          hash = (53 * hash) + getInternalRpcProxiesList().hashCode();
-        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -1892,10 +1647,6 @@ public final class ClusterOuterClass {
 
           internalRpcProxyAlias_ = "";
 
-          internalHttpProxies_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          internalRpcProxies_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000002);
           return this;
         }
 
@@ -1922,21 +1673,10 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.Cluster.Endpoints buildPartial() {
           yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.Cluster.Endpoints result = new yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.Cluster.Endpoints(this);
-          int from_bitField0_ = bitField0_;
           result.ui_ = ui_;
           result.externalHttpProxyBalancer_ = externalHttpProxyBalancer_;
           result.internalHttpProxyAlias_ = internalHttpProxyAlias_;
           result.internalRpcProxyAlias_ = internalRpcProxyAlias_;
-          if (((bitField0_ & 0x00000001) != 0)) {
-            internalHttpProxies_ = internalHttpProxies_.getUnmodifiableView();
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.internalHttpProxies_ = internalHttpProxies_;
-          if (((bitField0_ & 0x00000002) != 0)) {
-            internalRpcProxies_ = internalRpcProxies_.getUnmodifiableView();
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.internalRpcProxies_ = internalRpcProxies_;
           onBuilt();
           return result;
         }
@@ -2001,26 +1741,6 @@ public final class ClusterOuterClass {
             internalRpcProxyAlias_ = other.internalRpcProxyAlias_;
             onChanged();
           }
-          if (!other.internalHttpProxies_.isEmpty()) {
-            if (internalHttpProxies_.isEmpty()) {
-              internalHttpProxies_ = other.internalHttpProxies_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureInternalHttpProxiesIsMutable();
-              internalHttpProxies_.addAll(other.internalHttpProxies_);
-            }
-            onChanged();
-          }
-          if (!other.internalRpcProxies_.isEmpty()) {
-            if (internalRpcProxies_.isEmpty()) {
-              internalRpcProxies_ = other.internalRpcProxies_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureInternalRpcProxiesIsMutable();
-              internalRpcProxies_.addAll(other.internalRpcProxies_);
-            }
-            onChanged();
-          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -2049,7 +1769,6 @@ public final class ClusterOuterClass {
           }
           return this;
         }
-        private int bitField0_;
 
         private java.lang.Object ui_ = "";
         /**
@@ -2246,7 +1965,7 @@ public final class ClusterOuterClass {
         private java.lang.Object internalHttpProxyAlias_ = "";
         /**
          * <pre>
-         * https://proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+         * https://hp.CID.ytsaurus.mdb.yandexcloud.net:PORT
          * </pre>
          *
          * <code>string internal_http_proxy_alias = 3;</code>
@@ -2266,7 +1985,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * https://proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+         * https://hp.CID.ytsaurus.mdb.yandexcloud.net:PORT
          * </pre>
          *
          * <code>string internal_http_proxy_alias = 3;</code>
@@ -2287,7 +2006,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * https://proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+         * https://hp.CID.ytsaurus.mdb.yandexcloud.net:PORT
          * </pre>
          *
          * <code>string internal_http_proxy_alias = 3;</code>
@@ -2306,7 +2025,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * https://proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+         * https://hp.CID.ytsaurus.mdb.yandexcloud.net:PORT
          * </pre>
          *
          * <code>string internal_http_proxy_alias = 3;</code>
@@ -2320,7 +2039,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * https://proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+         * https://hp.CID.ytsaurus.mdb.yandexcloud.net:PORT
          * </pre>
          *
          * <code>string internal_http_proxy_alias = 3;</code>
@@ -2342,7 +2061,7 @@ public final class ClusterOuterClass {
         private java.lang.Object internalRpcProxyAlias_ = "";
         /**
          * <pre>
-         * proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+         * rp.CID.ytsaurus.mdb.yandexcloud.net:PORT
          * </pre>
          *
          * <code>string internal_rpc_proxy_alias = 4;</code>
@@ -2362,7 +2081,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+         * rp.CID.ytsaurus.mdb.yandexcloud.net:PORT
          * </pre>
          *
          * <code>string internal_rpc_proxy_alias = 4;</code>
@@ -2383,7 +2102,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+         * rp.CID.ytsaurus.mdb.yandexcloud.net:PORT
          * </pre>
          *
          * <code>string internal_rpc_proxy_alias = 4;</code>
@@ -2402,7 +2121,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+         * rp.CID.ytsaurus.mdb.yandexcloud.net:PORT
          * </pre>
          *
          * <code>string internal_rpc_proxy_alias = 4;</code>
@@ -2416,7 +2135,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * proxy.CID.ytsaurus.mdb.yandexcloud.net:PORT
+         * rp.CID.ytsaurus.mdb.yandexcloud.net:PORT
          * </pre>
          *
          * <code>string internal_rpc_proxy_alias = 4;</code>
@@ -2431,298 +2150,6 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
           
           internalRpcProxyAlias_ = value;
-          onChanged();
-          return this;
-        }
-
-        private com.google.protobuf.LazyStringList internalHttpProxies_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        private void ensureInternalHttpProxiesIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
-            internalHttpProxies_ = new com.google.protobuf.LazyStringArrayList(internalHttpProxies_);
-            bitField0_ |= 0x00000001;
-           }
-        }
-        /**
-         * <pre>
-         * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-         * </pre>
-         *
-         * <code>repeated string internal_http_proxies = 5;</code>
-         * @return A list containing the internalHttpProxies.
-         */
-        public com.google.protobuf.ProtocolStringList
-            getInternalHttpProxiesList() {
-          return internalHttpProxies_.getUnmodifiableView();
-        }
-        /**
-         * <pre>
-         * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-         * </pre>
-         *
-         * <code>repeated string internal_http_proxies = 5;</code>
-         * @return The count of internalHttpProxies.
-         */
-        public int getInternalHttpProxiesCount() {
-          return internalHttpProxies_.size();
-        }
-        /**
-         * <pre>
-         * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-         * </pre>
-         *
-         * <code>repeated string internal_http_proxies = 5;</code>
-         * @param index The index of the element to return.
-         * @return The internalHttpProxies at the given index.
-         */
-        public java.lang.String getInternalHttpProxies(int index) {
-          return internalHttpProxies_.get(index);
-        }
-        /**
-         * <pre>
-         * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-         * </pre>
-         *
-         * <code>repeated string internal_http_proxies = 5;</code>
-         * @param index The index of the value to return.
-         * @return The bytes of the internalHttpProxies at the given index.
-         */
-        public com.google.protobuf.ByteString
-            getInternalHttpProxiesBytes(int index) {
-          return internalHttpProxies_.getByteString(index);
-        }
-        /**
-         * <pre>
-         * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-         * </pre>
-         *
-         * <code>repeated string internal_http_proxies = 5;</code>
-         * @param index The index to set the value at.
-         * @param value The internalHttpProxies to set.
-         * @return This builder for chaining.
-         */
-        public Builder setInternalHttpProxies(
-            int index, java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureInternalHttpProxiesIsMutable();
-          internalHttpProxies_.set(index, value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-         * </pre>
-         *
-         * <code>repeated string internal_http_proxies = 5;</code>
-         * @param value The internalHttpProxies to add.
-         * @return This builder for chaining.
-         */
-        public Builder addInternalHttpProxies(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureInternalHttpProxiesIsMutable();
-          internalHttpProxies_.add(value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-         * </pre>
-         *
-         * <code>repeated string internal_http_proxies = 5;</code>
-         * @param values The internalHttpProxies to add.
-         * @return This builder for chaining.
-         */
-        public Builder addAllInternalHttpProxies(
-            java.lang.Iterable<java.lang.String> values) {
-          ensureInternalHttpProxiesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, internalHttpProxies_);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-         * </pre>
-         *
-         * <code>repeated string internal_http_proxies = 5;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearInternalHttpProxies() {
-          internalHttpProxies_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * https://proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net
-         * </pre>
-         *
-         * <code>repeated string internal_http_proxies = 5;</code>
-         * @param value The bytes of the internalHttpProxies to add.
-         * @return This builder for chaining.
-         */
-        public Builder addInternalHttpProxiesBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          ensureInternalHttpProxiesIsMutable();
-          internalHttpProxies_.add(value);
-          onChanged();
-          return this;
-        }
-
-        private com.google.protobuf.LazyStringList internalRpcProxies_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        private void ensureInternalRpcProxiesIsMutable() {
-          if (!((bitField0_ & 0x00000002) != 0)) {
-            internalRpcProxies_ = new com.google.protobuf.LazyStringArrayList(internalRpcProxies_);
-            bitField0_ |= 0x00000002;
-           }
-        }
-        /**
-         * <pre>
-         * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-         * </pre>
-         *
-         * <code>repeated string internal_rpc_proxies = 6;</code>
-         * @return A list containing the internalRpcProxies.
-         */
-        public com.google.protobuf.ProtocolStringList
-            getInternalRpcProxiesList() {
-          return internalRpcProxies_.getUnmodifiableView();
-        }
-        /**
-         * <pre>
-         * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-         * </pre>
-         *
-         * <code>repeated string internal_rpc_proxies = 6;</code>
-         * @return The count of internalRpcProxies.
-         */
-        public int getInternalRpcProxiesCount() {
-          return internalRpcProxies_.size();
-        }
-        /**
-         * <pre>
-         * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-         * </pre>
-         *
-         * <code>repeated string internal_rpc_proxies = 6;</code>
-         * @param index The index of the element to return.
-         * @return The internalRpcProxies at the given index.
-         */
-        public java.lang.String getInternalRpcProxies(int index) {
-          return internalRpcProxies_.get(index);
-        }
-        /**
-         * <pre>
-         * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-         * </pre>
-         *
-         * <code>repeated string internal_rpc_proxies = 6;</code>
-         * @param index The index of the value to return.
-         * @return The bytes of the internalRpcProxies at the given index.
-         */
-        public com.google.protobuf.ByteString
-            getInternalRpcProxiesBytes(int index) {
-          return internalRpcProxies_.getByteString(index);
-        }
-        /**
-         * <pre>
-         * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-         * </pre>
-         *
-         * <code>repeated string internal_rpc_proxies = 6;</code>
-         * @param index The index to set the value at.
-         * @param value The internalRpcProxies to set.
-         * @return This builder for chaining.
-         */
-        public Builder setInternalRpcProxies(
-            int index, java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureInternalRpcProxiesIsMutable();
-          internalRpcProxies_.set(index, value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-         * </pre>
-         *
-         * <code>repeated string internal_rpc_proxies = 6;</code>
-         * @param value The internalRpcProxies to add.
-         * @return This builder for chaining.
-         */
-        public Builder addInternalRpcProxies(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureInternalRpcProxiesIsMutable();
-          internalRpcProxies_.add(value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-         * </pre>
-         *
-         * <code>repeated string internal_rpc_proxies = 6;</code>
-         * @param values The internalRpcProxies to add.
-         * @return This builder for chaining.
-         */
-        public Builder addAllInternalRpcProxies(
-            java.lang.Iterable<java.lang.String> values) {
-          ensureInternalRpcProxiesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, internalRpcProxies_);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-         * </pre>
-         *
-         * <code>repeated string internal_rpc_proxies = 6;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearInternalRpcProxies() {
-          internalRpcProxies_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * proxy-{index}.CID.ytsaurus.mdb.yandexcloud.net:PORT
-         * </pre>
-         *
-         * <code>repeated string internal_rpc_proxies = 6;</code>
-         * @param value The bytes of the internalRpcProxies to add.
-         * @return This builder for chaining.
-         */
-        public Builder addInternalRpcProxiesBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          ensureInternalRpcProxiesIsMutable();
-          internalRpcProxies_.add(value);
           onChanged();
           return this;
         }
@@ -8207,6 +7634,26 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.ytsaurus.v1.ComputeSpec.ScalePolicy scale_policy = 3;</code>
      */
     yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.ComputeSpec.ScalePolicyOrBuilder getScalePolicyOrBuilder();
+
+    /**
+     * <pre>
+     * Name for exec pool.
+     * </pre>
+     *
+     * <code>string name = 4;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name for exec pool.
+     * </pre>
+     *
+     * <code>string name = 4;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.ytsaurus.v1.ComputeSpec}
@@ -8223,6 +7670,7 @@ public final class ClusterOuterClass {
     private ComputeSpec() {
       preset_ = "";
       disks_ = java.util.Collections.emptyList();
+      name_ = "";
     }
 
     @java.lang.Override
@@ -8282,6 +7730,12 @@ public final class ClusterOuterClass {
                 scalePolicy_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
               break;
             }
             default: {
@@ -11278,6 +10732,52 @@ public final class ClusterOuterClass {
       return getScalePolicy();
     }
 
+    public static final int NAME_FIELD_NUMBER = 4;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name for exec pool.
+     * </pre>
+     *
+     * <code>string name = 4;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name for exec pool.
+     * </pre>
+     *
+     * <code>string name = 4;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11301,6 +10801,9 @@ public final class ClusterOuterClass {
       if (scalePolicy_ != null) {
         output.writeMessage(3, getScalePolicy());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11320,6 +10823,9 @@ public final class ClusterOuterClass {
       if (scalePolicy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getScalePolicy());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11345,6 +10851,8 @@ public final class ClusterOuterClass {
         if (!getScalePolicy()
             .equals(other.getScalePolicy())) return false;
       }
+      if (!getName()
+          .equals(other.getName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11366,6 +10874,8 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + SCALE_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getScalePolicy().hashCode();
       }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11514,6 +11024,8 @@ public final class ClusterOuterClass {
           scalePolicy_ = null;
           scalePolicyBuilder_ = null;
         }
+        name_ = "";
+
         return this;
       }
 
@@ -11556,6 +11068,7 @@ public final class ClusterOuterClass {
         } else {
           result.scalePolicy_ = scalePolicyBuilder_.build();
         }
+        result.name_ = name_;
         onBuilt();
         return result;
       }
@@ -11636,6 +11149,10 @@ public final class ClusterOuterClass {
         }
         if (other.hasScalePolicy()) {
           mergeScalePolicy(other.getScalePolicy());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12100,6 +11617,102 @@ public final class ClusterOuterClass {
           scalePolicy_ = null;
         }
         return scalePolicyBuilder_;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name for exec pool.
+       * </pre>
+       *
+       * <code>string name = 4;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name for exec pool.
+       * </pre>
+       *
+       * <code>string name = 4;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name for exec pool.
+       * </pre>
+       *
+       * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name for exec pool.
+       * </pre>
+       *
+       * <code>string name = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name for exec pool.
+       * </pre>
+       *
+       * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14595,6 +14208,627 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface OdinSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ytsaurus.v1.OdinSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+     * @return Whether the checksTtl field is set.
+     */
+    boolean hasChecksTtl();
+    /**
+     * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+     * @return The checksTtl.
+     */
+    com.google.protobuf.Duration getChecksTtl();
+    /**
+     * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+     */
+    com.google.protobuf.DurationOrBuilder getChecksTtlOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ytsaurus.v1.OdinSpec}
+   */
+  public static final class OdinSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ytsaurus.v1.OdinSpec)
+      OdinSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OdinSpec.newBuilder() to construct.
+    private OdinSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OdinSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OdinSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OdinSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (checksTtl_ != null) {
+                subBuilder = checksTtl_.toBuilder();
+              }
+              checksTtl_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(checksTtl_);
+                checksTtl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.internal_static_yandex_cloud_ytsaurus_v1_OdinSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.internal_static_yandex_cloud_ytsaurus_v1_OdinSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.class, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.Builder.class);
+    }
+
+    public static final int CHECKS_TTL_FIELD_NUMBER = 1;
+    private com.google.protobuf.Duration checksTtl_;
+    /**
+     * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+     * @return Whether the checksTtl field is set.
+     */
+    @java.lang.Override
+    public boolean hasChecksTtl() {
+      return checksTtl_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+     * @return The checksTtl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getChecksTtl() {
+      return checksTtl_ == null ? com.google.protobuf.Duration.getDefaultInstance() : checksTtl_;
+    }
+    /**
+     * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getChecksTtlOrBuilder() {
+      return getChecksTtl();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (checksTtl_ != null) {
+        output.writeMessage(1, getChecksTtl());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (checksTtl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getChecksTtl());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec other = (yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec) obj;
+
+      if (hasChecksTtl() != other.hasChecksTtl()) return false;
+      if (hasChecksTtl()) {
+        if (!getChecksTtl()
+            .equals(other.getChecksTtl())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasChecksTtl()) {
+        hash = (37 * hash) + CHECKS_TTL_FIELD_NUMBER;
+        hash = (53 * hash) + getChecksTtl().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ytsaurus.v1.OdinSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ytsaurus.v1.OdinSpec)
+        yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.internal_static_yandex_cloud_ytsaurus_v1_OdinSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.internal_static_yandex_cloud_ytsaurus_v1_OdinSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.class, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (checksTtlBuilder_ == null) {
+          checksTtl_ = null;
+        } else {
+          checksTtl_ = null;
+          checksTtlBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.internal_static_yandex_cloud_ytsaurus_v1_OdinSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec build() {
+        yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec buildPartial() {
+        yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec result = new yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec(this);
+        if (checksTtlBuilder_ == null) {
+          result.checksTtl_ = checksTtl_;
+        } else {
+          result.checksTtl_ = checksTtlBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec) {
+          return mergeFrom((yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec other) {
+        if (other == yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.getDefaultInstance()) return this;
+        if (other.hasChecksTtl()) {
+          mergeChecksTtl(other.getChecksTtl());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Duration checksTtl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> checksTtlBuilder_;
+      /**
+       * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+       * @return Whether the checksTtl field is set.
+       */
+      public boolean hasChecksTtl() {
+        return checksTtlBuilder_ != null || checksTtl_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+       * @return The checksTtl.
+       */
+      public com.google.protobuf.Duration getChecksTtl() {
+        if (checksTtlBuilder_ == null) {
+          return checksTtl_ == null ? com.google.protobuf.Duration.getDefaultInstance() : checksTtl_;
+        } else {
+          return checksTtlBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+       */
+      public Builder setChecksTtl(com.google.protobuf.Duration value) {
+        if (checksTtlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          checksTtl_ = value;
+          onChanged();
+        } else {
+          checksTtlBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+       */
+      public Builder setChecksTtl(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (checksTtlBuilder_ == null) {
+          checksTtl_ = builderForValue.build();
+          onChanged();
+        } else {
+          checksTtlBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+       */
+      public Builder mergeChecksTtl(com.google.protobuf.Duration value) {
+        if (checksTtlBuilder_ == null) {
+          if (checksTtl_ != null) {
+            checksTtl_ =
+              com.google.protobuf.Duration.newBuilder(checksTtl_).mergeFrom(value).buildPartial();
+          } else {
+            checksTtl_ = value;
+          }
+          onChanged();
+        } else {
+          checksTtlBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+       */
+      public Builder clearChecksTtl() {
+        if (checksTtlBuilder_ == null) {
+          checksTtl_ = null;
+          onChanged();
+        } else {
+          checksTtl_ = null;
+          checksTtlBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+       */
+      public com.google.protobuf.Duration.Builder getChecksTtlBuilder() {
+        
+        onChanged();
+        return getChecksTtlFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getChecksTtlOrBuilder() {
+        if (checksTtlBuilder_ != null) {
+          return checksTtlBuilder_.getMessageOrBuilder();
+        } else {
+          return checksTtl_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : checksTtl_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration checks_ttl = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getChecksTtlFieldBuilder() {
+        if (checksTtlBuilder_ == null) {
+          checksTtlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getChecksTtl(),
+                  getParentForChildren(),
+                  isClean());
+          checksTtl_ = null;
+        }
+        return checksTtlBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ytsaurus.v1.OdinSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ytsaurus.v1.OdinSpec)
+    private static final yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec();
+    }
+
+    public static yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OdinSpec>
+        PARSER = new com.google.protobuf.AbstractParser<OdinSpec>() {
+      @java.lang.Override
+      public OdinSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OdinSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OdinSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OdinSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ClusterSpecOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ytsaurus.v1.ClusterSpec)
       com.google.protobuf.MessageOrBuilder {
@@ -14667,6 +14901,21 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.ytsaurus.v1.ProxySpec proxy = 4;</code>
      */
     yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.ProxySpecOrBuilder getProxyOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+     * @return Whether the odin field is set.
+     */
+    boolean hasOdin();
+    /**
+     * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+     * @return The odin.
+     */
+    yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec getOdin();
+    /**
+     * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+     */
+    yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpecOrBuilder getOdinOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.ytsaurus.v1.ClusterSpec}
@@ -14759,6 +15008,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(proxy_);
                 proxy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.Builder subBuilder = null;
+              if (odin_ != null) {
+                subBuilder = odin_.toBuilder();
+              }
+              odin_ = input.readMessage(yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(odin_);
+                odin_ = subBuilder.buildPartial();
               }
 
               break;
@@ -14916,6 +15178,32 @@ public final class ClusterOuterClass {
       return getProxy();
     }
 
+    public static final int ODIN_FIELD_NUMBER = 5;
+    private yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec odin_;
+    /**
+     * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+     * @return Whether the odin field is set.
+     */
+    @java.lang.Override
+    public boolean hasOdin() {
+      return odin_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+     * @return The odin.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec getOdin() {
+      return odin_ == null ? yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.getDefaultInstance() : odin_;
+    }
+    /**
+     * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpecOrBuilder getOdinOrBuilder() {
+      return getOdin();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14942,6 +15230,9 @@ public final class ClusterOuterClass {
       if (proxy_ != null) {
         output.writeMessage(4, getProxy());
       }
+      if (odin_ != null) {
+        output.writeMessage(5, getOdin());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -14966,6 +15257,10 @@ public final class ClusterOuterClass {
       if (proxy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getProxy());
+      }
+      if (odin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getOdin());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14999,6 +15294,11 @@ public final class ClusterOuterClass {
         if (!getProxy()
             .equals(other.getProxy())) return false;
       }
+      if (hasOdin() != other.hasOdin()) return false;
+      if (hasOdin()) {
+        if (!getOdin()
+            .equals(other.getOdin())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15025,6 +15325,10 @@ public final class ClusterOuterClass {
       if (hasProxy()) {
         hash = (37 * hash) + PROXY_FIELD_NUMBER;
         hash = (53 * hash) + getProxy().hashCode();
+      }
+      if (hasOdin()) {
+        hash = (37 * hash) + ODIN_FIELD_NUMBER;
+        hash = (53 * hash) + getOdin().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -15184,6 +15488,12 @@ public final class ClusterOuterClass {
           proxy_ = null;
           proxyBuilder_ = null;
         }
+        if (odinBuilder_ == null) {
+          odin_ = null;
+        } else {
+          odin_ = null;
+          odinBuilder_ = null;
+        }
         return this;
       }
 
@@ -15234,6 +15544,11 @@ public final class ClusterOuterClass {
           result.proxy_ = proxy_;
         } else {
           result.proxy_ = proxyBuilder_.build();
+        }
+        if (odinBuilder_ == null) {
+          result.odin_ = odin_;
+        } else {
+          result.odin_ = odinBuilder_.build();
         }
         onBuilt();
         return result;
@@ -15317,6 +15632,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasProxy()) {
           mergeProxy(other.getProxy());
+        }
+        if (other.hasOdin()) {
+          mergeOdin(other.getOdin());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15944,6 +16262,125 @@ public final class ClusterOuterClass {
         }
         return proxyBuilder_;
       }
+
+      private yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec odin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.Builder, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpecOrBuilder> odinBuilder_;
+      /**
+       * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+       * @return Whether the odin field is set.
+       */
+      public boolean hasOdin() {
+        return odinBuilder_ != null || odin_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+       * @return The odin.
+       */
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec getOdin() {
+        if (odinBuilder_ == null) {
+          return odin_ == null ? yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.getDefaultInstance() : odin_;
+        } else {
+          return odinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+       */
+      public Builder setOdin(yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec value) {
+        if (odinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          odin_ = value;
+          onChanged();
+        } else {
+          odinBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+       */
+      public Builder setOdin(
+          yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.Builder builderForValue) {
+        if (odinBuilder_ == null) {
+          odin_ = builderForValue.build();
+          onChanged();
+        } else {
+          odinBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+       */
+      public Builder mergeOdin(yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec value) {
+        if (odinBuilder_ == null) {
+          if (odin_ != null) {
+            odin_ =
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.newBuilder(odin_).mergeFrom(value).buildPartial();
+          } else {
+            odin_ = value;
+          }
+          onChanged();
+        } else {
+          odinBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+       */
+      public Builder clearOdin() {
+        if (odinBuilder_ == null) {
+          odin_ = null;
+          onChanged();
+        } else {
+          odin_ = null;
+          odinBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+       */
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.Builder getOdinBuilder() {
+        
+        onChanged();
+        return getOdinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+       */
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpecOrBuilder getOdinOrBuilder() {
+        if (odinBuilder_ != null) {
+          return odinBuilder_.getMessageOrBuilder();
+        } else {
+          return odin_ == null ?
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.getDefaultInstance() : odin_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ytsaurus.v1.OdinSpec odin = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.Builder, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpecOrBuilder> 
+          getOdinFieldBuilder() {
+        if (odinBuilder_ == null) {
+          odinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpec.Builder, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.OdinSpecOrBuilder>(
+                  getOdin(),
+                  getParentForChildren(),
+                  isClean());
+          odin_ = null;
+        }
+        return odinBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16073,6 +16510,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ytsaurus_v1_ProxySpec_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ytsaurus_v1_OdinSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ytsaurus_v1_OdinSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ytsaurus_v1_ClusterSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -16088,71 +16530,75 @@ public final class ClusterOuterClass {
     java.lang.String[] descriptorData = {
       "\n&yandex/cloud/ytsaurus/v1/cluster.proto" +
       "\022\030yandex.cloud.ytsaurus.v1\032\037google/proto" +
-      "buf/timestamp.proto\032\035yandex/cloud/valida" +
-      "tion.proto\"\367\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfo" +
-      "lder_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\014\n\004name\030\004" +
-      " \001(\t\022\023\n\013description\030\005 \001(\t\022=\n\006labels\030\006 \003(" +
-      "\0132-.yandex.cloud.ytsaurus.v1.Cluster.Lab" +
-      "elsEntry\022\021\n\tsubnet_id\030\007 \001(\t\022\032\n\022security_" +
-      "group_ids\030\010 \003(\t\0223\n\004spec\030\t \001(\0132%.yandex.c" +
-      "loud.ytsaurus.v1.ClusterSpec\022.\n\ncreated_" +
-      "at\030\n \001(\0132\032.google.protobuf.Timestamp\022\022\n\n" +
-      "created_by\030\013 \001(\t\022.\n\nupdated_at\030\014 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022\022\n\nupdated_by\030\r" +
-      " \001(\t\0228\n\006status\030\016 \001(\0162(.yandex.cloud.ytsa" +
-      "urus.v1.Cluster.Status\0228\n\006health\030\017 \001(\0162(" +
-      ".yandex.cloud.ytsaurus.v1.Cluster.Health" +
-      "\022>\n\tendpoints\030\020 \001(\0132+.yandex.cloud.ytsau" +
-      "rus.v1.Cluster.Endpoints\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\277\001\n\tEndp" +
-      "oints\022\n\n\002ui\030\001 \001(\t\022$\n\034external_http_proxy" +
-      "_balancer\030\002 \001(\t\022!\n\031internal_http_proxy_a" +
-      "lias\030\003 \001(\t\022 \n\030internal_rpc_proxy_alias\030\004" +
-      " \001(\t\022\035\n\025internal_http_proxies\030\005 \003(\t\022\034\n\024i" +
-      "nternal_rpc_proxies\030\006 \003(\t\"\207\001\n\006Status\022\022\n\016" +
-      "STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNIN" +
-      "G\020\002\022\t\n\005ERROR\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020" +
-      "\005\022\014\n\010STARTING\020\006\022\014\n\010UPDATING\020\007\022\014\n\010DELETIN" +
-      "G\020\010\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALI" +
-      "VE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\365\001\n\013Storage" +
-      "Spec\022:\n\003hdd\030\001 \001(\0132-.yandex.cloud.ytsauru" +
-      "s.v1.StorageSpec.HddSpec\022:\n\003ssd\030\002 \001(\0132-." +
-      "yandex.cloud.ytsaurus.v1.StorageSpec.Ssd" +
-      "Spec\032/\n\007HddSpec\022\017\n\007size_gb\030\002 \001(\003\022\r\n\005coun" +
-      "t\030\003 \001(\003J\004\010\001\020\002\032=\n\007SsdSpec\022\017\n\007size_gb\030\002 \001(" +
-      "\003\022\014\n\004type\030\003 \001(\t\022\r\n\005count\030\004 \001(\003J\004\010\001\020\002\"\354\003\n" +
-      "\013ComputeSpec\022\016\n\006preset\030\001 \001(\t\022=\n\005disks\030\002 " +
-      "\003(\0132..yandex.cloud.ytsaurus.v1.ComputeSp" +
-      "ec.DiskSpec\022G\n\014scale_policy\030\003 \001(\01321.yand" +
-      "ex.cloud.ytsaurus.v1.ComputeSpec.ScalePo" +
-      "licy\032<\n\010DiskSpec\022\014\n\004type\030\001 \001(\t\022\017\n\007size_g" +
-      "b\030\002 \001(\003\022\021\n\tlocations\030\003 \003(\t\032\206\002\n\013ScalePoli" +
-      "cy\022M\n\005fixed\030\001 \001(\0132<.yandex.cloud.ytsauru" +
-      "s.v1.ComputeSpec.ScalePolicy.FixedScaleH" +
-      "\000\022K\n\004auto\030\002 \001(\0132;.yandex.cloud.ytsaurus." +
-      "v1.ComputeSpec.ScalePolicy.AutoScaleH\000\032\032" +
-      "\n\nFixedScale\022\014\n\004size\030\001 \001(\003\032/\n\tAutoScale\022" +
-      "\020\n\010min_size\030\001 \001(\003\022\020\n\010max_size\030\002 \001(\003B\016\n\006p" +
-      "olicy\022\004\300\3011\001\"$\n\rHttpProxySpec\022\r\n\005count\030\002 " +
-      "\001(\003J\004\010\001\020\002\"#\n\014RpcProxySpec\022\r\n\005count\030\002 \001(\003" +
-      "J\004\010\001\020\002\"+\n\nTabletSpec\022\016\n\006preset\030\001 \001(\t\022\r\n\005" +
-      "count\030\002 \001(\003\"w\n\tProxySpec\0225\n\004http\030\001 \001(\0132\'" +
-      ".yandex.cloud.ytsaurus.v1.HttpProxySpec\022" +
-      "3\n\003rpc\030\002 \001(\0132&.yandex.cloud.ytsaurus.v1." +
-      "RpcProxySpec\"\347\001\n\013ClusterSpec\0226\n\007storage\030" +
-      "\001 \001(\0132%.yandex.cloud.ytsaurus.v1.Storage" +
-      "Spec\0226\n\007compute\030\002 \003(\0132%.yandex.cloud.yts" +
-      "aurus.v1.ComputeSpec\0224\n\006tablet\030\003 \001(\0132$.y" +
-      "andex.cloud.ytsaurus.v1.TabletSpec\0222\n\005pr" +
-      "oxy\030\004 \001(\0132#.yandex.cloud.ytsaurus.v1.Pro" +
-      "xySpecBe\n\034yandex.cloud.api.ytsaurus.v1ZE" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/ytsaurus/v1;ytsaurusb\006proto3"
+      "buf/timestamp.proto\032\036google/protobuf/dur" +
+      "ation.proto\032\035yandex/cloud/validation.pro" +
+      "to\"\306\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030" +
+      "\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\023\n\013" +
+      "description\030\005 \001(\t\022=\n\006labels\030\006 \003(\0132-.yand" +
+      "ex.cloud.ytsaurus.v1.Cluster.LabelsEntry" +
+      "\022\021\n\tsubnet_id\030\007 \001(\t\022\032\n\022security_group_id" +
+      "s\030\010 \003(\t\0223\n\004spec\030\t \001(\0132%.yandex.cloud.yts" +
+      "aurus.v1.ClusterSpec\022.\n\ncreated_at\030\n \001(\013" +
+      "2\032.google.protobuf.Timestamp\022\022\n\ncreated_" +
+      "by\030\013 \001(\t\022.\n\nupdated_at\030\014 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022\022\n\nupdated_by\030\r \001(\t\0228\n\006" +
+      "status\030\016 \001(\0162(.yandex.cloud.ytsaurus.v1." +
+      "Cluster.Status\0228\n\006health\030\017 \001(\0162(.yandex." +
+      "cloud.ytsaurus.v1.Cluster.Health\022>\n\tendp" +
+      "oints\030\020 \001(\0132+.yandex.cloud.ytsaurus.v1.C" +
+      "luster.Endpoints\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\216\001\n\tEndpoints\022\n\n" +
+      "\002ui\030\001 \001(\t\022$\n\034external_http_proxy_balance" +
+      "r\030\002 \001(\t\022!\n\031internal_http_proxy_alias\030\003 \001" +
+      "(\t\022 \n\030internal_rpc_proxy_alias\030\004 \001(\tJ\004\010\005" +
+      "\020\006J\004\010\006\020\007\"\207\001\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022" +
+      "\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n" +
+      "\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010STARTING\020\006\022\014" +
+      "\n\010UPDATING\020\007\022\014\n\010DELETING\020\010\"?\n\006Health\022\022\n\016" +
+      "HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n" +
+      "\010DEGRADED\020\003\"\365\001\n\013StorageSpec\022:\n\003hdd\030\001 \001(\013" +
+      "2-.yandex.cloud.ytsaurus.v1.StorageSpec." +
+      "HddSpec\022:\n\003ssd\030\002 \001(\0132-.yandex.cloud.ytsa" +
+      "urus.v1.StorageSpec.SsdSpec\032/\n\007HddSpec\022\017" +
+      "\n\007size_gb\030\002 \001(\003\022\r\n\005count\030\003 \001(\003J\004\010\001\020\002\032=\n\007" +
+      "SsdSpec\022\017\n\007size_gb\030\002 \001(\003\022\014\n\004type\030\003 \001(\t\022\r" +
+      "\n\005count\030\004 \001(\003J\004\010\001\020\002\"\372\003\n\013ComputeSpec\022\016\n\006p" +
+      "reset\030\001 \001(\t\022=\n\005disks\030\002 \003(\0132..yandex.clou" +
+      "d.ytsaurus.v1.ComputeSpec.DiskSpec\022G\n\014sc" +
+      "ale_policy\030\003 \001(\01321.yandex.cloud.ytsaurus" +
+      ".v1.ComputeSpec.ScalePolicy\022\014\n\004name\030\004 \001(" +
+      "\t\032<\n\010DiskSpec\022\014\n\004type\030\001 \001(\t\022\017\n\007size_gb\030\002" +
+      " \001(\003\022\021\n\tlocations\030\003 \003(\t\032\206\002\n\013ScalePolicy\022" +
+      "M\n\005fixed\030\001 \001(\0132<.yandex.cloud.ytsaurus.v" +
+      "1.ComputeSpec.ScalePolicy.FixedScaleH\000\022K" +
+      "\n\004auto\030\002 \001(\0132;.yandex.cloud.ytsaurus.v1." +
+      "ComputeSpec.ScalePolicy.AutoScaleH\000\032\032\n\nF" +
+      "ixedScale\022\014\n\004size\030\001 \001(\003\032/\n\tAutoScale\022\020\n\010" +
+      "min_size\030\001 \001(\003\022\020\n\010max_size\030\002 \001(\003B\016\n\006poli" +
+      "cy\022\004\300\3011\001\"$\n\rHttpProxySpec\022\r\n\005count\030\002 \001(\003" +
+      "J\004\010\001\020\002\"#\n\014RpcProxySpec\022\r\n\005count\030\002 \001(\003J\004\010" +
+      "\001\020\002\"+\n\nTabletSpec\022\016\n\006preset\030\001 \001(\t\022\r\n\005cou" +
+      "nt\030\002 \001(\003\"w\n\tProxySpec\0225\n\004http\030\001 \001(\0132\'.ya" +
+      "ndex.cloud.ytsaurus.v1.HttpProxySpec\0223\n\003" +
+      "rpc\030\002 \001(\0132&.yandex.cloud.ytsaurus.v1.Rpc" +
+      "ProxySpec\"9\n\010OdinSpec\022-\n\nchecks_ttl\030\001 \001(" +
+      "\0132\031.google.protobuf.Duration\"\231\002\n\013Cluster" +
+      "Spec\0226\n\007storage\030\001 \001(\0132%.yandex.cloud.yts" +
+      "aurus.v1.StorageSpec\0226\n\007compute\030\002 \003(\0132%." +
+      "yandex.cloud.ytsaurus.v1.ComputeSpec\0224\n\006" +
+      "tablet\030\003 \001(\0132$.yandex.cloud.ytsaurus.v1." +
+      "TabletSpec\0222\n\005proxy\030\004 \001(\0132#.yandex.cloud" +
+      ".ytsaurus.v1.ProxySpec\0220\n\004odin\030\005 \001(\0132\".y" +
+      "andex.cloud.ytsaurus.v1.OdinSpecBe\n\034yand" +
+      "ex.cloud.api.ytsaurus.v1ZEgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/ytsau" +
+      "rus/v1;ytsaurusb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_ytsaurus_v1_Cluster_descriptor =
@@ -16172,7 +16618,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_ytsaurus_v1_Cluster_Endpoints_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ytsaurus_v1_Cluster_Endpoints_descriptor,
-        new java.lang.String[] { "Ui", "ExternalHttpProxyBalancer", "InternalHttpProxyAlias", "InternalRpcProxyAlias", "InternalHttpProxies", "InternalRpcProxies", });
+        new java.lang.String[] { "Ui", "ExternalHttpProxyBalancer", "InternalHttpProxyAlias", "InternalRpcProxyAlias", });
     internal_static_yandex_cloud_ytsaurus_v1_StorageSpec_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_ytsaurus_v1_StorageSpec_fieldAccessorTable = new
@@ -16196,7 +16642,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_ytsaurus_v1_ComputeSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ytsaurus_v1_ComputeSpec_descriptor,
-        new java.lang.String[] { "Preset", "Disks", "ScalePolicy", });
+        new java.lang.String[] { "Preset", "Disks", "ScalePolicy", "Name", });
     internal_static_yandex_cloud_ytsaurus_v1_ComputeSpec_DiskSpec_descriptor =
       internal_static_yandex_cloud_ytsaurus_v1_ComputeSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ytsaurus_v1_ComputeSpec_DiskSpec_fieldAccessorTable = new
@@ -16245,18 +16691,25 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ytsaurus_v1_ProxySpec_descriptor,
         new java.lang.String[] { "Http", "Rpc", });
-    internal_static_yandex_cloud_ytsaurus_v1_ClusterSpec_descriptor =
+    internal_static_yandex_cloud_ytsaurus_v1_OdinSpec_descriptor =
       getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_ytsaurus_v1_OdinSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ytsaurus_v1_OdinSpec_descriptor,
+        new java.lang.String[] { "ChecksTtl", });
+    internal_static_yandex_cloud_ytsaurus_v1_ClusterSpec_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_ytsaurus_v1_ClusterSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ytsaurus_v1_ClusterSpec_descriptor,
-        new java.lang.String[] { "Storage", "Compute", "Tablet", "Proxy", });
+        new java.lang.String[] { "Storage", "Compute", "Tablet", "Proxy", "Odin", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

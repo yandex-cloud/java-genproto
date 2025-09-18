@@ -69,6 +69,26 @@ public final class ProviderServiceOuterClass {
      * @return The skipDefaultPolicy.
      */
     boolean getSkipDefaultPolicy();
+
+    /**
+     * <pre>
+     * instance registration token for authorization
+     * </pre>
+     *
+     * <code>string instance_registration_id = 5;</code>
+     * @return The instanceRegistrationId.
+     */
+    java.lang.String getInstanceRegistrationId();
+    /**
+     * <pre>
+     * instance registration token for authorization
+     * </pre>
+     *
+     * <code>string instance_registration_id = 5;</code>
+     * @return The bytes for instanceRegistrationId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceRegistrationIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.ActivateProviderRequest}
@@ -85,6 +105,7 @@ public final class ProviderServiceOuterClass {
     private ActivateProviderRequest() {
       folderId_ = "";
       name_ = "";
+      instanceRegistrationId_ = "";
     }
 
     @java.lang.Override
@@ -132,6 +153,12 @@ public final class ProviderServiceOuterClass {
             case 32: {
 
               skipDefaultPolicy_ = input.readBool();
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceRegistrationId_ = s;
               break;
             }
             default: {
@@ -275,6 +302,52 @@ public final class ProviderServiceOuterClass {
       return skipDefaultPolicy_;
     }
 
+    public static final int INSTANCE_REGISTRATION_ID_FIELD_NUMBER = 5;
+    private volatile java.lang.Object instanceRegistrationId_;
+    /**
+     * <pre>
+     * instance registration token for authorization
+     * </pre>
+     *
+     * <code>string instance_registration_id = 5;</code>
+     * @return The instanceRegistrationId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceRegistrationId() {
+      java.lang.Object ref = instanceRegistrationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceRegistrationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * instance registration token for authorization
+     * </pre>
+     *
+     * <code>string instance_registration_id = 5;</code>
+     * @return The bytes for instanceRegistrationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceRegistrationIdBytes() {
+      java.lang.Object ref = instanceRegistrationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceRegistrationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -298,6 +371,9 @@ public final class ProviderServiceOuterClass {
       if (skipDefaultPolicy_ != false) {
         output.writeBool(4, skipDefaultPolicy_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceRegistrationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, instanceRegistrationId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -316,6 +392,9 @@ public final class ProviderServiceOuterClass {
       if (skipDefaultPolicy_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, skipDefaultPolicy_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceRegistrationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, instanceRegistrationId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -338,6 +417,8 @@ public final class ProviderServiceOuterClass {
           .equals(other.getName())) return false;
       if (getSkipDefaultPolicy()
           != other.getSkipDefaultPolicy()) return false;
+      if (!getInstanceRegistrationId()
+          .equals(other.getInstanceRegistrationId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -356,6 +437,8 @@ public final class ProviderServiceOuterClass {
       hash = (37 * hash) + SKIP_DEFAULT_POLICY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSkipDefaultPolicy());
+      hash = (37 * hash) + INSTANCE_REGISTRATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceRegistrationId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -495,6 +578,8 @@ public final class ProviderServiceOuterClass {
 
         skipDefaultPolicy_ = false;
 
+        instanceRegistrationId_ = "";
+
         return this;
       }
 
@@ -524,6 +609,7 @@ public final class ProviderServiceOuterClass {
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.skipDefaultPolicy_ = skipDefaultPolicy_;
+        result.instanceRegistrationId_ = instanceRegistrationId_;
         onBuilt();
         return result;
       }
@@ -582,6 +668,10 @@ public final class ProviderServiceOuterClass {
         }
         if (other.getSkipDefaultPolicy() != false) {
           setSkipDefaultPolicy(other.getSkipDefaultPolicy());
+        }
+        if (!other.getInstanceRegistrationId().isEmpty()) {
+          instanceRegistrationId_ = other.instanceRegistrationId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -848,6 +938,102 @@ public final class ProviderServiceOuterClass {
       public Builder clearSkipDefaultPolicy() {
         
         skipDefaultPolicy_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object instanceRegistrationId_ = "";
+      /**
+       * <pre>
+       * instance registration token for authorization
+       * </pre>
+       *
+       * <code>string instance_registration_id = 5;</code>
+       * @return The instanceRegistrationId.
+       */
+      public java.lang.String getInstanceRegistrationId() {
+        java.lang.Object ref = instanceRegistrationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceRegistrationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * instance registration token for authorization
+       * </pre>
+       *
+       * <code>string instance_registration_id = 5;</code>
+       * @return The bytes for instanceRegistrationId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceRegistrationIdBytes() {
+        java.lang.Object ref = instanceRegistrationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceRegistrationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * instance registration token for authorization
+       * </pre>
+       *
+       * <code>string instance_registration_id = 5;</code>
+       * @param value The instanceRegistrationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceRegistrationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceRegistrationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * instance registration token for authorization
+       * </pre>
+       *
+       * <code>string instance_registration_id = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceRegistrationId() {
+        
+        instanceRegistrationId_ = getDefaultInstance().getInstanceRegistrationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * instance registration token for authorization
+       * </pre>
+       *
+       * <code>string instance_registration_id = 5;</code>
+       * @param value The bytes for instanceRegistrationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceRegistrationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceRegistrationId_ = value;
         onChanged();
         return this;
       }
@@ -1531,6 +1717,26 @@ public final class ProviderServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
+
+    /**
+     * <pre>
+     * instance registration token for authorization
+     * </pre>
+     *
+     * <code>string instance_registration_id = 2;</code>
+     * @return The instanceRegistrationId.
+     */
+    java.lang.String getInstanceRegistrationId();
+    /**
+     * <pre>
+     * instance registration token for authorization
+     * </pre>
+     *
+     * <code>string instance_registration_id = 2;</code>
+     * @return The bytes for instanceRegistrationId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceRegistrationIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.ListActivatedProvidersRequest}
@@ -1546,6 +1752,7 @@ public final class ProviderServiceOuterClass {
     }
     private ListActivatedProvidersRequest() {
       folderId_ = "";
+      instanceRegistrationId_ = "";
     }
 
     @java.lang.Override
@@ -1582,6 +1789,12 @@ public final class ProviderServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               folderId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceRegistrationId_ = s;
               break;
             }
             default: {
@@ -1662,6 +1875,52 @@ public final class ProviderServiceOuterClass {
       }
     }
 
+    public static final int INSTANCE_REGISTRATION_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object instanceRegistrationId_;
+    /**
+     * <pre>
+     * instance registration token for authorization
+     * </pre>
+     *
+     * <code>string instance_registration_id = 2;</code>
+     * @return The instanceRegistrationId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceRegistrationId() {
+      java.lang.Object ref = instanceRegistrationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceRegistrationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * instance registration token for authorization
+     * </pre>
+     *
+     * <code>string instance_registration_id = 2;</code>
+     * @return The bytes for instanceRegistrationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceRegistrationIdBytes() {
+      java.lang.Object ref = instanceRegistrationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceRegistrationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1679,6 +1938,9 @@ public final class ProviderServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceRegistrationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, instanceRegistrationId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1690,6 +1952,9 @@ public final class ProviderServiceOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceRegistrationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, instanceRegistrationId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1708,6 +1973,8 @@ public final class ProviderServiceOuterClass {
 
       if (!getFolderId()
           .equals(other.getFolderId())) return false;
+      if (!getInstanceRegistrationId()
+          .equals(other.getInstanceRegistrationId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1721,6 +1988,8 @@ public final class ProviderServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + INSTANCE_REGISTRATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceRegistrationId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1856,6 +2125,8 @@ public final class ProviderServiceOuterClass {
         super.clear();
         folderId_ = "";
 
+        instanceRegistrationId_ = "";
+
         return this;
       }
 
@@ -1883,6 +2154,7 @@ public final class ProviderServiceOuterClass {
       public yandex.cloud.api.backup.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest buildPartial() {
         yandex.cloud.api.backup.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest result = new yandex.cloud.api.backup.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest(this);
         result.folderId_ = folderId_;
+        result.instanceRegistrationId_ = instanceRegistrationId_;
         onBuilt();
         return result;
       }
@@ -1933,6 +2205,10 @@ public final class ProviderServiceOuterClass {
         if (other == yandex.cloud.api.backup.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest.getDefaultInstance()) return this;
         if (!other.getFolderId().isEmpty()) {
           folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (!other.getInstanceRegistrationId().isEmpty()) {
+          instanceRegistrationId_ = other.instanceRegistrationId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2056,6 +2332,102 @@ public final class ProviderServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object instanceRegistrationId_ = "";
+      /**
+       * <pre>
+       * instance registration token for authorization
+       * </pre>
+       *
+       * <code>string instance_registration_id = 2;</code>
+       * @return The instanceRegistrationId.
+       */
+      public java.lang.String getInstanceRegistrationId() {
+        java.lang.Object ref = instanceRegistrationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceRegistrationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * instance registration token for authorization
+       * </pre>
+       *
+       * <code>string instance_registration_id = 2;</code>
+       * @return The bytes for instanceRegistrationId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceRegistrationIdBytes() {
+        java.lang.Object ref = instanceRegistrationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceRegistrationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * instance registration token for authorization
+       * </pre>
+       *
+       * <code>string instance_registration_id = 2;</code>
+       * @param value The instanceRegistrationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceRegistrationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceRegistrationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * instance registration token for authorization
+       * </pre>
+       *
+       * <code>string instance_registration_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceRegistrationId() {
+        
+        instanceRegistrationId_ = getDefaultInstance().getInstanceRegistrationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * instance registration token for authorization
+       * </pre>
+       *
+       * <code>string instance_registration_id = 2;</code>
+       * @param value The bytes for instanceRegistrationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceRegistrationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceRegistrationId_ = value;
         onChanged();
         return this;
       }
@@ -3038,27 +3410,28 @@ public final class ProviderServiceOuterClass {
       "api/annotations.proto\032 yandex/cloud/api/" +
       "operation.proto\032&yandex/cloud/operation/" +
       "operation.proto\032\035yandex/cloud/validation" +
-      ".proto\"w\n\027ActivateProviderRequest\022\037\n\tfol" +
-      "der_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004name\030\003 \001(\t" +
-      "B\004\350\3071\001\022!\n\023skip_default_policy\030\004 \001(\010B\004\350\3071" +
-      "\000J\004\010\002\020\003\";\n\030ActivateProviderMetadata\022\037\n\tf" +
-      "older_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"@\n\035ListActi" +
-      "vatedProvidersRequest\022\037\n\tfolder_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"H\n\036ListActivatedProviders" +
-      "Response\022\021\n\tfolder_id\030\001 \001(\t\022\r\n\005names\030\003 \003" +
-      "(\tJ\004\010\002\020\0032\367\002\n\017ProviderService\022\304\001\n\010Activat" +
-      "e\022/.yandex.cloud.backup.v1.ActivateProvi" +
-      "derRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"d\202\323\344\223\002)\"$/backup/v1/providers/{nam" +
-      "e}:activate:\001*\262\322*1\n\030ActivateProviderMeta" +
-      "data\022\025google.protobuf.Empty\022\234\001\n\rListActi" +
-      "vated\0225.yandex.cloud.backup.v1.ListActiv" +
-      "atedProvidersRequest\0326.yandex.cloud.back" +
-      "up.v1.ListActivatedProvidersResponse\"\034\202\323" +
-      "\344\223\002\026\022\024/backup/v1/providersB_\n\032yandex.clo" +
-      "ud.api.backup.v1ZAgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/backup/v1;bac" +
-      "kupb\006proto3"
+      ".proto\"\231\001\n\027ActivateProviderRequest\022\037\n\tfo" +
+      "lder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004name\030\003 \001(" +
+      "\tB\004\350\3071\001\022!\n\023skip_default_policy\030\004 \001(\010B\004\350\307" +
+      "1\000\022 \n\030instance_registration_id\030\005 \001(\tJ\004\010\002" +
+      "\020\003\";\n\030ActivateProviderMetadata\022\037\n\tfolder" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\035ListActivated" +
+      "ProvidersRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022 \n\030instance_registration_id\030\002 " +
+      "\001(\t\"H\n\036ListActivatedProvidersResponse\022\021\n" +
+      "\tfolder_id\030\001 \001(\t\022\r\n\005names\030\003 \003(\tJ\004\010\002\020\0032\367\002" +
+      "\n\017ProviderService\022\304\001\n\010Activate\022/.yandex." +
+      "cloud.backup.v1.ActivateProviderRequest\032" +
+      "!.yandex.cloud.operation.Operation\"d\202\323\344\223" +
+      "\002)\"$/backup/v1/providers/{name}:activate" +
+      ":\001*\262\322*1\n\030ActivateProviderMetadata\022\025googl" +
+      "e.protobuf.Empty\022\234\001\n\rListActivated\0225.yan" +
+      "dex.cloud.backup.v1.ListActivatedProvide" +
+      "rsRequest\0326.yandex.cloud.backup.v1.ListA" +
+      "ctivatedProvidersResponse\"\034\202\323\344\223\002\026\022\024/back" +
+      "up/v1/providersB_\n\032yandex.cloud.api.back" +
+      "up.v1ZAgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/backup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3073,7 +3446,7 @@ public final class ProviderServiceOuterClass {
     internal_static_yandex_cloud_backup_v1_ActivateProviderRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ActivateProviderRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "SkipDefaultPolicy", });
+        new java.lang.String[] { "FolderId", "Name", "SkipDefaultPolicy", "InstanceRegistrationId", });
     internal_static_yandex_cloud_backup_v1_ActivateProviderMetadata_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_backup_v1_ActivateProviderMetadata_fieldAccessorTable = new
@@ -3085,7 +3458,7 @@ public final class ProviderServiceOuterClass {
     internal_static_yandex_cloud_backup_v1_ListActivatedProvidersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ListActivatedProvidersRequest_descriptor,
-        new java.lang.String[] { "FolderId", });
+        new java.lang.String[] { "FolderId", "InstanceRegistrationId", });
     internal_static_yandex_cloud_backup_v1_ListActivatedProvidersResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_backup_v1_ListActivatedProvidersResponse_fieldAccessorTable = new

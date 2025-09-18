@@ -811,7 +811,7 @@ public final class DeviceServiceOuterClass {
      * To get a device name make a [DeviceService.List] request.
      * </pre>
      *
-     * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+     * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The deviceName.
      */
     java.lang.String getDeviceName();
@@ -821,7 +821,7 @@ public final class DeviceServiceOuterClass {
      * To get a device name make a [DeviceService.List] request.
      * </pre>
      *
-     * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+     * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for deviceName.
      */
     com.google.protobuf.ByteString
@@ -1002,7 +1002,7 @@ public final class DeviceServiceOuterClass {
      * To get a device name make a [DeviceService.List] request.
      * </pre>
      *
-     * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+     * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The deviceName.
      */
     @java.lang.Override
@@ -1024,7 +1024,7 @@ public final class DeviceServiceOuterClass {
      * To get a device name make a [DeviceService.List] request.
      * </pre>
      *
-     * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+     * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for deviceName.
      */
     @java.lang.Override
@@ -1514,7 +1514,7 @@ public final class DeviceServiceOuterClass {
        * To get a device name make a [DeviceService.List] request.
        * </pre>
        *
-       * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+       * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The deviceName.
        */
       public java.lang.String getDeviceName() {
@@ -1535,7 +1535,7 @@ public final class DeviceServiceOuterClass {
        * To get a device name make a [DeviceService.List] request.
        * </pre>
        *
-       * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+       * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for deviceName.
        */
       public com.google.protobuf.ByteString
@@ -1557,7 +1557,7 @@ public final class DeviceServiceOuterClass {
        * To get a device name make a [DeviceService.List] request.
        * </pre>
        *
-       * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+       * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The deviceName to set.
        * @return This builder for chaining.
        */
@@ -1577,7 +1577,7 @@ public final class DeviceServiceOuterClass {
        * To get a device name make a [DeviceService.List] request.
        * </pre>
        *
-       * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+       * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDeviceName() {
@@ -1592,7 +1592,7 @@ public final class DeviceServiceOuterClass {
        * To get a device name make a [DeviceService.List] request.
        * </pre>
        *
-       * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]{0,63}"];</code>
+       * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for deviceName to set.
        * @return This builder for chaining.
        */
@@ -4344,7 +4344,7 @@ public final class DeviceServiceOuterClass {
      * Name of the device. The name must be unique within the registry.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -4353,7 +4353,7 @@ public final class DeviceServiceOuterClass {
      * Name of the device. The name must be unique within the registry.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -5384,7 +5384,7 @@ public final class DeviceServiceOuterClass {
      * Name of the device. The name must be unique within the registry.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -5405,7 +5405,7 @@ public final class DeviceServiceOuterClass {
      * Name of the device. The name must be unique within the registry.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -6372,7 +6372,7 @@ public final class DeviceServiceOuterClass {
        * Name of the device. The name must be unique within the registry.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -6392,7 +6392,7 @@ public final class DeviceServiceOuterClass {
        * Name of the device. The name must be unique within the registry.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -6413,7 +6413,7 @@ public final class DeviceServiceOuterClass {
        * Name of the device. The name must be unique within the registry.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -6432,7 +6432,7 @@ public final class DeviceServiceOuterClass {
        * Name of the device. The name must be unique within the registry.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -6446,7 +6446,7 @@ public final class DeviceServiceOuterClass {
        * Name of the device. The name must be unique within the registry.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -8010,7 +8010,7 @@ public final class DeviceServiceOuterClass {
      * Name of the device. The name must be unique within the registry.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -8019,7 +8019,7 @@ public final class DeviceServiceOuterClass {
      * Name of the device. The name must be unique within the registry.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -8403,7 +8403,7 @@ public final class DeviceServiceOuterClass {
      * Name of the device. The name must be unique within the registry.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -8424,7 +8424,7 @@ public final class DeviceServiceOuterClass {
      * Name of the device. The name must be unique within the registry.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -9396,7 +9396,7 @@ public final class DeviceServiceOuterClass {
        * Name of the device. The name must be unique within the registry.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -9416,7 +9416,7 @@ public final class DeviceServiceOuterClass {
        * Name of the device. The name must be unique within the registry.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -9437,7 +9437,7 @@ public final class DeviceServiceOuterClass {
        * Name of the device. The name must be unique within the registry.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -9456,7 +9456,7 @@ public final class DeviceServiceOuterClass {
        * Name of the device. The name must be unique within the registry.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -9470,7 +9470,7 @@ public final class DeviceServiceOuterClass {
        * Name of the device. The name must be unique within the registry.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -23572,150 +23572,150 @@ public final class DeviceServiceOuterClass {
       "tion.proto\"q\n\020GetDeviceRequest\022\037\n\tdevice" +
       "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022<\n\013device_view\030\002" +
       " \001(\0162\'.yandex.cloud.iot.devices.v1.Devic" +
-      "eView\"\247\001\n\026GetByNameDeviceRequest\022!\n\013regi" +
-      "stry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\013device_na" +
-      "me\030\002 \001(\tB\027\362\3071\023[a-zA-Z0-9_-]{0,63}\022<\n\013dev" +
-      "ice_view\030\003 \001(\0162\'.yandex.cloud.iot.device" +
-      "s.v1.DeviceView\"\335\001\n\022ListDevicesRequest\022\037" +
-      "\n\013registry_id\030\001 \001(\tB\010\212\3101\004<=50H\000\022\035\n\tfolde" +
-      "r_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022\036\n\tpage_size\030\003 \001(" +
-      "\003B\013\372\3071\0070-20000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005" +
-      "<=100\022<\n\013device_view\030\005 \001(\0162\'.yandex.clou" +
-      "d.iot.devices.v1.DeviceViewB\n\n\002id\022\004\300\3011\001\"" +
-      "d\n\023ListDevicesResponse\0224\n\007devices\030\001 \003(\0132" +
-      "#.yandex.cloud.iot.devices.v1.Device\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"\352\004\n\023CreateDeviceRe" +
-      "quest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,6" +
-      "1}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<" +
-      "=256\022R\n\014certificates\030\004 \003(\0132<.yandex.clou" +
-      "d.iot.devices.v1.CreateDeviceRequest.Cer" +
-      "tificate\022Y\n\rtopic_aliases\030\005 \003(\0132B.yandex" +
-      ".cloud.iot.devices.v1.CreateDeviceReques" +
-      "t.TopicAliasesEntry\022\020\n\010password\030\006 \001(\t\022\215\001" +
-      "\n\006labels\030\007 \003(\0132<.yandex.cloud.iot.device" +
-      "s.v1.CreateDeviceRequest.LabelsEntryB?\202\310" +
-      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
-      "\3101\022\022\020[a-z][-_0-9a-z]*\0323\n\021TopicAliasesEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\032\'\n\013Certificate\022\030\n\020certificate_data\030\001 \001" +
-      "(\t\")\n\024CreateDeviceMetadata\022\021\n\tdevice_id\030" +
-      "\001 \001(\t\"\212\004\n\023UpdateDeviceRequest\022\037\n\tdevice_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 " +
-      "\001(\0132\032.google.protobuf.FieldMask\0222\n\004name\030" +
-      "\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9" +
-      "])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022Y\n\rt" +
-      "opic_aliases\030\005 \003(\0132B.yandex.cloud.iot.de" +
-      "vices.v1.UpdateDeviceRequest.TopicAliase" +
-      "sEntry\022\215\001\n\006labels\030\006 \003(\0132<.yandex.cloud.i" +
-      "ot.devices.v1.UpdateDeviceRequest.Labels" +
-      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
-      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\0323\n\021TopicA" +
-      "liasesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\")\n\024UpdateDeviceMetadata\022\021\n\tde" +
-      "vice_id\030\001 \001(\t\"6\n\023DeleteDeviceRequest\022\037\n\t" +
-      "device_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteD" +
-      "eviceMetadata\022\021\n\tdevice_id\030\001 \001(\t\"@\n\035List" +
-      "DeviceCertificatesRequest\022\037\n\tdevice_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"f\n\036ListDeviceCertific" +
-      "atesResponse\022D\n\014certificates\030\001 \003(\0132..yan" +
-      "dex.cloud.iot.devices.v1.DeviceCertifica" +
-      "te\"^\n\033AddDeviceCertificateRequest\022\037\n\tdev" +
-      "ice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020certificat" +
-      "e_data\030\003 \001(\tJ\004\010\002\020\003\"F\n\034AddDeviceCertifica" +
-      "teMetadata\022\021\n\tdevice_id\030\001 \001(\t\022\023\n\013fingerp" +
-      "rint\030\002 \001(\t\"d\n\036DeleteDeviceCertificateReq" +
-      "uest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n" +
-      "\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"e\n\037Dele" +
-      "teDeviceCertificateMetadata\022\037\n\tdevice_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint\030\002 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"=\n\032ListDevicePasswordsRe" +
-      "quest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"]" +
-      "\n\033ListDevicePasswordsResponse\022>\n\tpasswor" +
-      "ds\030\001 \003(\0132+.yandex.cloud.iot.devices.v1.D" +
-      "evicePassword\"W\n\030AddDevicePasswordReques" +
-      "t\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010pa" +
-      "ssword\030\002 \001(\tB\010\212\3101\004>=14\"C\n\031AddDevicePassw" +
-      "ordMetadata\022\021\n\tdevice_id\030\001 \001(\t\022\023\n\013passwo" +
-      "rd_id\030\002 \001(\t\"a\n\033DeleteDevicePasswordReque" +
-      "st\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013p" +
-      "assword_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\034Delete" +
-      "DevicePasswordMetadata\022\037\n\tdevice_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"\220\001\n\033ListDeviceOperationsReque" +
-      "st\022\027\n\tdevice_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size" +
-      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
-      "\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"n\n" +
-      "\034ListDeviceOperationsResponse\0225\n\noperati" +
-      "ons\030\001 \003(\0132!.yandex.cloud.operation.Opera" +
-      "tion\022\027\n\017next_page_token\030\002 \001(\t2\260\023\n\rDevice" +
-      "Service\022\206\001\n\003Get\022-.yandex.cloud.iot.devic" +
-      "es.v1.GetDeviceRequest\032#.yandex.cloud.io" +
-      "t.devices.v1.Device\"+\202\323\344\223\002%\022#/iot-device" +
-      "s/v1/devices/{device_id}\022\220\001\n\tGetByName\0223" +
-      ".yandex.cloud.iot.devices.v1.GetByNameDe" +
-      "viceRequest\032#.yandex.cloud.iot.devices.v" +
-      "1.Device\")\202\323\344\223\002#\022!/iot-devices/v1/device" +
-      "s:getByName\022\212\001\n\004List\022/.yandex.cloud.iot." +
-      "devices.v1.ListDevicesRequest\0320.yandex.c" +
-      "loud.iot.devices.v1.ListDevicesResponse\"" +
-      "\037\202\323\344\223\002\031\022\027/iot-devices/v1/devices\022\243\001\n\006Cre" +
-      "ate\0220.yandex.cloud.iot.devices.v1.Create" +
-      "DeviceRequest\032!.yandex.cloud.operation.O" +
-      "peration\"D\202\323\344\223\002\034\"\027/iot-devices/v1/device" +
-      "s:\001*\262\322*\036\n\024CreateDeviceMetadata\022\006Device\022\257" +
-      "\001\n\006Update\0220.yandex.cloud.iot.devices.v1." +
-      "UpdateDeviceRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"P\202\323\344\223\002(2#/iot-devices/v1/" +
-      "devices/{device_id}:\001*\262\322*\036\n\024UpdateDevice" +
-      "Metadata\022\006Device\022\273\001\n\006Delete\0220.yandex.clo" +
-      "ud.iot.devices.v1.DeleteDeviceRequest\032!." +
-      "yandex.cloud.operation.Operation\"\\\202\323\344\223\002%" +
-      "*#/iot-devices/v1/devices/{device_id}\262\322*" +
-      "-\n\024DeleteDeviceMetadata\022\025google.protobuf" +
-      ".Empty\022\305\001\n\020ListCertificates\022:.yandex.clo" +
-      "ud.iot.devices.v1.ListDeviceCertificates" +
-      "Request\032;.yandex.cloud.iot.devices.v1.Li" +
-      "stDeviceCertificatesResponse\"8\202\323\344\223\0022\0220/i" +
-      "ot-devices/v1/devices/{device_id}/certif" +
-      "icates\022\337\001\n\016AddCertificate\0228.yandex.cloud" +
-      ".iot.devices.v1.AddDeviceCertificateRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"p" +
-      "\202\323\344\223\0025\"0/iot-devices/v1/devices/{device_" +
-      "id}/certificates:\001*\262\322*1\n\034AddDeviceCertif" +
-      "icateMetadata\022\021DeviceCertificate\022\370\001\n\021Del" +
-      "eteCertificate\022;.yandex.cloud.iot.device" +
-      "s.v1.DeleteDeviceCertificateRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\202\001\202\323\344\223\002@*" +
-      ">/iot-devices/v1/devices/{device_id}/cer" +
-      "tificates/{fingerprint}\262\322*8\n\037DeleteDevic" +
-      "eCertificateMetadata\022\025google.protobuf.Em" +
-      "pty\022\271\001\n\rListPasswords\0227.yandex.cloud.iot" +
-      ".devices.v1.ListDevicePasswordsRequest\0328" +
-      ".yandex.cloud.iot.devices.v1.ListDeviceP" +
-      "asswordsResponse\"5\202\323\344\223\002/\022-/iot-devices/v" +
-      "1/devices/{device_id}/passwords\022\320\001\n\013AddP" +
-      "assword\0225.yandex.cloud.iot.devices.v1.Ad" +
-      "dDevicePasswordRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"g\202\323\344\223\0022\"-/iot-devices/" +
-      "v1/devices/{device_id}/passwords:\001*\262\322*+\n" +
-      "\031AddDevicePasswordMetadata\022\016DevicePasswo" +
-      "rd\022\353\001\n\016DeletePassword\0228.yandex.cloud.iot" +
-      ".devices.v1.DeleteDevicePasswordRequest\032" +
-      "!.yandex.cloud.operation.Operation\"|\202\323\344\223" +
-      "\002=*;/iot-devices/v1/devices/{device_id}/" +
-      "passwords/{password_id}\262\322*5\n\034DeleteDevic" +
-      "ePasswordMetadata\022\025google.protobuf.Empty" +
-      "\022\275\001\n\016ListOperations\0228.yandex.cloud.iot.d" +
-      "evices.v1.ListDeviceOperationsRequest\0329." +
-      "yandex.cloud.iot.devices.v1.ListDeviceOp" +
-      "erationsResponse\"6\202\323\344\223\0020\022./iot-devices/v" +
-      "1/devices/{device_id}/operationsBj\n\037yand" +
-      "ex.cloud.api.iot.devices.v1ZGgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/io" +
-      "t/devices/v1;devicesb\006proto3"
+      "eView\"\256\001\n\026GetByNameDeviceRequest\022!\n\013regi" +
+      "stry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0223\n\013device_na" +
+      "me\030\002 \001(\tB\036\350\3071\001\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*" +
+      "\022<\n\013device_view\030\003 \001(\0162\'.yandex.cloud.iot" +
+      ".devices.v1.DeviceView\"\335\001\n\022ListDevicesRe" +
+      "quest\022\037\n\013registry_id\030\001 \001(\tB\010\212\3101\004<=50H\000\022\035" +
+      "\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022\036\n\tpage_si" +
+      "ze\030\003 \001(\003B\013\372\3071\0070-20000\022\035\n\npage_token\030\004 \001(" +
+      "\tB\t\212\3101\005<=100\022<\n\013device_view\030\005 \001(\0162\'.yand" +
+      "ex.cloud.iot.devices.v1.DeviceViewB\n\n\002id" +
+      "\022\004\300\3011\001\"d\n\023ListDevicesResponse\0224\n\007devices" +
+      "\030\001 \003(\0132#.yandex.cloud.iot.devices.v1.Dev" +
+      "ice\022\027\n\017next_page_token\030\002 \001(\t\"\340\004\n\023CreateD" +
+      "eviceRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022(\n\004name\030\002 \001(\tB\032\212\3101\004<=50\362\3071\016[a-zA" +
+      "-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=25" +
+      "6\022R\n\014certificates\030\004 \003(\0132<.yandex.cloud.i" +
+      "ot.devices.v1.CreateDeviceRequest.Certif" +
+      "icate\022Y\n\rtopic_aliases\030\005 \003(\0132B.yandex.cl" +
+      "oud.iot.devices.v1.CreateDeviceRequest.T" +
+      "opicAliasesEntry\022\020\n\010password\030\006 \001(\t\022\215\001\n\006l" +
+      "abels\030\007 \003(\0132<.yandex.cloud.iot.devices.v" +
+      "1.CreateDeviceRequest.LabelsEntryB?\202\3101\004<" +
+      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022" +
+      "\022\020[a-z][-_0-9a-z]*\0323\n\021TopicAliasesEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\'" +
+      "\n\013Certificate\022\030\n\020certificate_data\030\001 \001(\t\"" +
+      ")\n\024CreateDeviceMetadata\022\021\n\tdevice_id\030\001 \001" +
+      "(\t\"\200\004\n\023UpdateDeviceRequest\022\037\n\tdevice_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\013" +
+      "2\032.google.protobuf.FieldMask\022(\n\004name\030\003 \001" +
+      "(\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013descri" +
+      "ption\030\004 \001(\tB\t\212\3101\005<=256\022Y\n\rtopic_aliases\030" +
+      "\005 \003(\0132B.yandex.cloud.iot.devices.v1.Upda" +
+      "teDeviceRequest.TopicAliasesEntry\022\215\001\n\006la" +
+      "bels\030\006 \003(\0132<.yandex.cloud.iot.devices.v1" +
+      ".UpdateDeviceRequest.LabelsEntryB?\202\3101\004<=" +
+      "64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022" +
+      "\020[a-z][-_0-9a-z]*\0323\n\021TopicAliasesEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n" +
+      "\024UpdateDeviceMetadata\022\021\n\tdevice_id\030\001 \001(\t" +
+      "\"6\n\023DeleteDeviceRequest\022\037\n\tdevice_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteDeviceMetadata" +
+      "\022\021\n\tdevice_id\030\001 \001(\t\"@\n\035ListDeviceCertifi" +
+      "catesRequest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\"f\n\036ListDeviceCertificatesResponse\022" +
+      "D\n\014certificates\030\001 \003(\0132..yandex.cloud.iot" +
+      ".devices.v1.DeviceCertificate\"^\n\033AddDevi" +
+      "ceCertificateRequest\022\037\n\tdevice_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\030\n\020certificate_data\030\003 \001(\tJ" +
+      "\004\010\002\020\003\"F\n\034AddDeviceCertificateMetadata\022\021\n" +
+      "\tdevice_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\"d\n" +
+      "\036DeleteDeviceCertificateRequest\022\037\n\tdevic" +
+      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint\030" +
+      "\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"e\n\037DeleteDeviceCerti" +
+      "ficateMetadata\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\"=\n\032ListDevicePasswordsRequest\022\037\n\tdevi" +
+      "ce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"]\n\033ListDeviceP" +
+      "asswordsResponse\022>\n\tpasswords\030\001 \003(\0132+.ya" +
+      "ndex.cloud.iot.devices.v1.DevicePassword" +
+      "\"W\n\030AddDevicePasswordRequest\022\037\n\tdevice_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010password\030\002 \001(\tB" +
+      "\010\212\3101\004>=14\"C\n\031AddDevicePasswordMetadata\022\021" +
+      "\n\tdevice_id\030\001 \001(\t\022\023\n\013password_id\030\002 \001(\t\"a" +
+      "\n\033DeleteDevicePasswordRequest\022\037\n\tdevice_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\034DeleteDevicePasswor" +
+      "dMetadata\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022!\n\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001" +
+      "\n\033ListDeviceOperationsRequest\022\027\n\tdevice_" +
+      "id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060" +
+      "-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006" +
+      "filter\030\004 \001(\tB\n\212\3101\006<=1000\"n\n\034ListDeviceOp" +
+      "erationsResponse\0225\n\noperations\030\001 \003(\0132!.y" +
+      "andex.cloud.operation.Operation\022\027\n\017next_" +
+      "page_token\030\002 \001(\t2\260\023\n\rDeviceService\022\206\001\n\003G" +
+      "et\022-.yandex.cloud.iot.devices.v1.GetDevi" +
+      "ceRequest\032#.yandex.cloud.iot.devices.v1." +
+      "Device\"+\202\323\344\223\002%\022#/iot-devices/v1/devices/" +
+      "{device_id}\022\220\001\n\tGetByName\0223.yandex.cloud" +
+      ".iot.devices.v1.GetByNameDeviceRequest\032#" +
+      ".yandex.cloud.iot.devices.v1.Device\")\202\323\344" +
+      "\223\002#\022!/iot-devices/v1/devices:getByName\022\212" +
+      "\001\n\004List\022/.yandex.cloud.iot.devices.v1.Li" +
+      "stDevicesRequest\0320.yandex.cloud.iot.devi" +
+      "ces.v1.ListDevicesResponse\"\037\202\323\344\223\002\031\022\027/iot" +
+      "-devices/v1/devices\022\243\001\n\006Create\0220.yandex." +
+      "cloud.iot.devices.v1.CreateDeviceRequest" +
+      "\032!.yandex.cloud.operation.Operation\"D\202\323\344" +
+      "\223\002\034\"\027/iot-devices/v1/devices:\001*\262\322*\036\n\024Cre" +
+      "ateDeviceMetadata\022\006Device\022\257\001\n\006Update\0220.y" +
+      "andex.cloud.iot.devices.v1.UpdateDeviceR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"P\202\323\344\223\002(2#/iot-devices/v1/devices/{devi" +
+      "ce_id}:\001*\262\322*\036\n\024UpdateDeviceMetadata\022\006Dev" +
+      "ice\022\273\001\n\006Delete\0220.yandex.cloud.iot.device" +
+      "s.v1.DeleteDeviceRequest\032!.yandex.cloud." +
+      "operation.Operation\"\\\202\323\344\223\002%*#/iot-device" +
+      "s/v1/devices/{device_id}\262\322*-\n\024DeleteDevi" +
+      "ceMetadata\022\025google.protobuf.Empty\022\305\001\n\020Li" +
+      "stCertificates\022:.yandex.cloud.iot.device" +
+      "s.v1.ListDeviceCertificatesRequest\032;.yan" +
+      "dex.cloud.iot.devices.v1.ListDeviceCerti" +
+      "ficatesResponse\"8\202\323\344\223\0022\0220/iot-devices/v1" +
+      "/devices/{device_id}/certificates\022\337\001\n\016Ad" +
+      "dCertificate\0228.yandex.cloud.iot.devices." +
+      "v1.AddDeviceCertificateRequest\032!.yandex." +
+      "cloud.operation.Operation\"p\202\323\344\223\0025\"0/iot-" +
+      "devices/v1/devices/{device_id}/certifica" +
+      "tes:\001*\262\322*1\n\034AddDeviceCertificateMetadata" +
+      "\022\021DeviceCertificate\022\370\001\n\021DeleteCertificat" +
+      "e\022;.yandex.cloud.iot.devices.v1.DeleteDe" +
+      "viceCertificateRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"\202\001\202\323\344\223\002@*>/iot-devices" +
+      "/v1/devices/{device_id}/certificates/{fi" +
+      "ngerprint}\262\322*8\n\037DeleteDeviceCertificateM" +
+      "etadata\022\025google.protobuf.Empty\022\271\001\n\rListP" +
+      "asswords\0227.yandex.cloud.iot.devices.v1.L" +
+      "istDevicePasswordsRequest\0328.yandex.cloud" +
+      ".iot.devices.v1.ListDevicePasswordsRespo" +
+      "nse\"5\202\323\344\223\002/\022-/iot-devices/v1/devices/{de" +
+      "vice_id}/passwords\022\320\001\n\013AddPassword\0225.yan" +
+      "dex.cloud.iot.devices.v1.AddDevicePasswo" +
+      "rdRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"g\202\323\344\223\0022\"-/iot-devices/v1/devices/{d" +
+      "evice_id}/passwords:\001*\262\322*+\n\031AddDevicePas" +
+      "swordMetadata\022\016DevicePassword\022\353\001\n\016Delete" +
+      "Password\0228.yandex.cloud.iot.devices.v1.D" +
+      "eleteDevicePasswordRequest\032!.yandex.clou" +
+      "d.operation.Operation\"|\202\323\344\223\002=*;/iot-devi" +
+      "ces/v1/devices/{device_id}/passwords/{pa" +
+      "ssword_id}\262\322*5\n\034DeleteDevicePasswordMeta" +
+      "data\022\025google.protobuf.Empty\022\275\001\n\016ListOper" +
+      "ations\0228.yandex.cloud.iot.devices.v1.Lis" +
+      "tDeviceOperationsRequest\0329.yandex.cloud." +
+      "iot.devices.v1.ListDeviceOperationsRespo" +
+      "nse\"6\202\323\344\223\0020\022./iot-devices/v1/devices/{de" +
+      "vice_id}/operationsBj\n\037yandex.cloud.api." +
+      "iot.devices.v1ZGgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/iot/devices/v1;" +
+      "devicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

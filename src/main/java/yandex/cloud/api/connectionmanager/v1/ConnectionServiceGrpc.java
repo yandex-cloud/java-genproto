@@ -3,6 +3,9 @@ package yandex.cloud.api.connectionmanager.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing Connection resources.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -277,10 +280,16 @@ public final class ConnectionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Connection resources.
+   * </pre>
    */
   public static abstract class ConnectionServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns connection.
+     * </pre>
      */
     public void get(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.GetConnectionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection> responseObserver) {
@@ -302,6 +311,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List connections in specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionResponse> responseObserver) {
@@ -309,6 +321,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates connection.
+     * </pre>
      */
     public void create(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.CreateConnectionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -316,6 +331,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates specified connection.
+     * </pre>
      */
     public void update(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.UpdateConnectionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -323,6 +341,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete specified connection.
+     * </pre>
      */
     public void delete(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.DeleteConnectionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -330,6 +351,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of Operation resources for the specified connection.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsResponse> responseObserver) {
@@ -392,6 +416,9 @@ public final class ConnectionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Connection resources.
+   * </pre>
    */
   public static final class ConnectionServiceStub extends io.grpc.stub.AbstractAsyncStub<ConnectionServiceStub> {
     private ConnectionServiceStub(
@@ -406,6 +433,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns connection.
+     * </pre>
      */
     public void get(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.GetConnectionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection> responseObserver) {
@@ -429,6 +459,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List connections in specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionResponse> responseObserver) {
@@ -437,6 +470,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates connection.
+     * </pre>
      */
     public void create(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.CreateConnectionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -445,6 +481,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates specified connection.
+     * </pre>
      */
     public void update(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.UpdateConnectionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -453,6 +492,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete specified connection.
+     * </pre>
      */
     public void delete(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.DeleteConnectionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -461,6 +503,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of Operation resources for the specified connection.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsResponse> responseObserver) {
@@ -470,6 +515,9 @@ public final class ConnectionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Connection resources.
+   * </pre>
    */
   public static final class ConnectionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ConnectionServiceBlockingStub> {
     private ConnectionServiceBlockingStub(
@@ -484,6 +532,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns connection.
+     * </pre>
      */
     public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection get(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.GetConnectionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -505,6 +556,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List connections in specified folder.
+     * </pre>
      */
     public yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionResponse list(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -512,6 +566,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates connection.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.CreateConnectionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -519,6 +576,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates specified connection.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.UpdateConnectionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -526,6 +586,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete specified connection.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.DeleteConnectionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -533,6 +596,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of Operation resources for the specified connection.
+     * </pre>
      */
     public yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsResponse listOperations(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -541,6 +607,9 @@ public final class ConnectionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Connection resources.
+   * </pre>
    */
   public static final class ConnectionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ConnectionServiceFutureStub> {
     private ConnectionServiceFutureStub(
@@ -555,6 +624,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns connection.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection> get(
         yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.GetConnectionRequest request) {
@@ -578,6 +650,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List connections in specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionResponse> list(
         yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionRequest request) {
@@ -586,6 +661,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates connection.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.CreateConnectionRequest request) {
@@ -594,6 +672,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates specified connection.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.UpdateConnectionRequest request) {
@@ -602,6 +683,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete specified connection.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.DeleteConnectionRequest request) {
@@ -610,6 +694,9 @@ public final class ConnectionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of Operation resources for the specified connection.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsResponse> listOperations(
         yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsRequest request) {

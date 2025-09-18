@@ -19,31 +19,55 @@ public final class Maintenance {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The cluster may be restarted for maintenance at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      * @return Whether the anytime field is set.
      */
     boolean hasAnytime();
     /**
+     * <pre>
+     * The cluster may be restarted for maintenance at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      * @return The anytime.
      */
     yandex.cloud.api.metastore.v1.Maintenance.AnytimeMaintenanceWindow getAnytime();
     /**
+     * <pre>
+     * The cluster may be restarted for maintenance at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     yandex.cloud.api.metastore.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder();
 
     /**
+     * <pre>
+     * Maintenance is allowed only within the specified weekly window.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      * @return Whether the weeklyMaintenanceWindow field is set.
      */
     boolean hasWeeklyMaintenanceWindow();
     /**
+     * <pre>
+     * Maintenance is allowed only within the specified weekly window.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      * @return The weeklyMaintenanceWindow.
      */
     yandex.cloud.api.metastore.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow();
     /**
+     * <pre>
+     * Maintenance is allowed only within the specified weekly window.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
     yandex.cloud.api.metastore.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder();
@@ -198,6 +222,10 @@ public final class Maintenance {
 
     public static final int ANYTIME_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * The cluster may be restarted for maintenance at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      * @return Whether the anytime field is set.
      */
@@ -206,6 +234,10 @@ public final class Maintenance {
       return policyCase_ == 1;
     }
     /**
+     * <pre>
+     * The cluster may be restarted for maintenance at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      * @return The anytime.
      */
@@ -217,6 +249,10 @@ public final class Maintenance {
       return yandex.cloud.api.metastore.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance();
     }
     /**
+     * <pre>
+     * The cluster may be restarted for maintenance at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     @java.lang.Override
@@ -229,6 +265,10 @@ public final class Maintenance {
 
     public static final int WEEKLY_MAINTENANCE_WINDOW_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Maintenance is allowed only within the specified weekly window.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      * @return Whether the weeklyMaintenanceWindow field is set.
      */
@@ -237,6 +277,10 @@ public final class Maintenance {
       return policyCase_ == 2;
     }
     /**
+     * <pre>
+     * Maintenance is allowed only within the specified weekly window.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      * @return The weeklyMaintenanceWindow.
      */
@@ -248,6 +292,10 @@ public final class Maintenance {
       return yandex.cloud.api.metastore.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Maintenance is allowed only within the specified weekly window.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
     @java.lang.Override
@@ -630,6 +678,10 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.metastore.v1.Maintenance.AnytimeMaintenanceWindow, yandex.cloud.api.metastore.v1.Maintenance.AnytimeMaintenanceWindow.Builder, yandex.cloud.api.metastore.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder> anytimeBuilder_;
       /**
+       * <pre>
+       * The cluster may be restarted for maintenance at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        * @return Whether the anytime field is set.
        */
@@ -638,6 +690,10 @@ public final class Maintenance {
         return policyCase_ == 1;
       }
       /**
+       * <pre>
+       * The cluster may be restarted for maintenance at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        * @return The anytime.
        */
@@ -656,6 +712,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * The cluster may be restarted for maintenance at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder setAnytime(yandex.cloud.api.metastore.v1.Maintenance.AnytimeMaintenanceWindow value) {
@@ -672,6 +732,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * The cluster may be restarted for maintenance at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder setAnytime(
@@ -686,6 +750,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * The cluster may be restarted for maintenance at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder mergeAnytime(yandex.cloud.api.metastore.v1.Maintenance.AnytimeMaintenanceWindow value) {
@@ -708,6 +776,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * The cluster may be restarted for maintenance at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder clearAnytime() {
@@ -727,12 +799,20 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * The cluster may be restarted for maintenance at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public yandex.cloud.api.metastore.v1.Maintenance.AnytimeMaintenanceWindow.Builder getAnytimeBuilder() {
         return getAnytimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The cluster may be restarted for maintenance at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       @java.lang.Override
@@ -747,6 +827,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * The cluster may be restarted for maintenance at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -771,6 +855,10 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.metastore.v1.Maintenance.WeeklyMaintenanceWindow, yandex.cloud.api.metastore.v1.Maintenance.WeeklyMaintenanceWindow.Builder, yandex.cloud.api.metastore.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder> weeklyMaintenanceWindowBuilder_;
       /**
+       * <pre>
+       * Maintenance is allowed only within the specified weekly window.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        * @return Whether the weeklyMaintenanceWindow field is set.
        */
@@ -779,6 +867,10 @@ public final class Maintenance {
         return policyCase_ == 2;
       }
       /**
+       * <pre>
+       * Maintenance is allowed only within the specified weekly window.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        * @return The weeklyMaintenanceWindow.
        */
@@ -797,6 +889,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Maintenance is allowed only within the specified weekly window.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public Builder setWeeklyMaintenanceWindow(yandex.cloud.api.metastore.v1.Maintenance.WeeklyMaintenanceWindow value) {
@@ -813,6 +909,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance is allowed only within the specified weekly window.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public Builder setWeeklyMaintenanceWindow(
@@ -827,6 +927,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance is allowed only within the specified weekly window.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public Builder mergeWeeklyMaintenanceWindow(yandex.cloud.api.metastore.v1.Maintenance.WeeklyMaintenanceWindow value) {
@@ -849,6 +953,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance is allowed only within the specified weekly window.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public Builder clearWeeklyMaintenanceWindow() {
@@ -868,12 +976,20 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance is allowed only within the specified weekly window.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public yandex.cloud.api.metastore.v1.Maintenance.WeeklyMaintenanceWindow.Builder getWeeklyMaintenanceWindowBuilder() {
         return getWeeklyMaintenanceWindowFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance is allowed only within the specified weekly window.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       @java.lang.Override
@@ -888,6 +1004,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Maintenance is allowed only within the specified weekly window.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1384,11 +1504,19 @@ public final class Maintenance {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Day of the week when maintenance can occur.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      * @return The enum numeric value on the wire for day.
      */
     int getDayValue();
     /**
+     * <pre>
+     * Day of the week when maintenance can occur.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      * @return The day.
      */
@@ -1396,7 +1524,7 @@ public final class Maintenance {
 
     /**
      * <pre>
-     * Hour of the day in UTC.
+     * Hour of the day in UTC when the maintenance window starts.
      * </pre>
      *
      * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -1499,34 +1627,66 @@ public final class Maintenance {
     public enum WeekDay
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Day of the week is not specified.
+       * </pre>
+       *
        * <code>WEEK_DAY_UNSPECIFIED = 0;</code>
        */
       WEEK_DAY_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Monday.
+       * </pre>
+       *
        * <code>MON = 1;</code>
        */
       MON(1),
       /**
+       * <pre>
+       * Tuesday.
+       * </pre>
+       *
        * <code>TUE = 2;</code>
        */
       TUE(2),
       /**
+       * <pre>
+       * Wednesday.
+       * </pre>
+       *
        * <code>WED = 3;</code>
        */
       WED(3),
       /**
+       * <pre>
+       * Thursday.
+       * </pre>
+       *
        * <code>THU = 4;</code>
        */
       THU(4),
       /**
+       * <pre>
+       * Friday.
+       * </pre>
+       *
        * <code>FRI = 5;</code>
        */
       FRI(5),
       /**
+       * <pre>
+       * Saturday.
+       * </pre>
+       *
        * <code>SAT = 6;</code>
        */
       SAT(6),
       /**
+       * <pre>
+       * Sunday.
+       * </pre>
+       *
        * <code>SUN = 7;</code>
        */
       SUN(7),
@@ -1534,34 +1694,66 @@ public final class Maintenance {
       ;
 
       /**
+       * <pre>
+       * Day of the week is not specified.
+       * </pre>
+       *
        * <code>WEEK_DAY_UNSPECIFIED = 0;</code>
        */
       public static final int WEEK_DAY_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Monday.
+       * </pre>
+       *
        * <code>MON = 1;</code>
        */
       public static final int MON_VALUE = 1;
       /**
+       * <pre>
+       * Tuesday.
+       * </pre>
+       *
        * <code>TUE = 2;</code>
        */
       public static final int TUE_VALUE = 2;
       /**
+       * <pre>
+       * Wednesday.
+       * </pre>
+       *
        * <code>WED = 3;</code>
        */
       public static final int WED_VALUE = 3;
       /**
+       * <pre>
+       * Thursday.
+       * </pre>
+       *
        * <code>THU = 4;</code>
        */
       public static final int THU_VALUE = 4;
       /**
+       * <pre>
+       * Friday.
+       * </pre>
+       *
        * <code>FRI = 5;</code>
        */
       public static final int FRI_VALUE = 5;
       /**
+       * <pre>
+       * Saturday.
+       * </pre>
+       *
        * <code>SAT = 6;</code>
        */
       public static final int SAT_VALUE = 6;
       /**
+       * <pre>
+       * Sunday.
+       * </pre>
+       *
        * <code>SUN = 7;</code>
        */
       public static final int SUN_VALUE = 7;
@@ -1658,6 +1850,10 @@ public final class Maintenance {
     public static final int DAY_FIELD_NUMBER = 1;
     private int day_;
     /**
+     * <pre>
+     * Day of the week when maintenance can occur.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      * @return The enum numeric value on the wire for day.
      */
@@ -1665,6 +1861,10 @@ public final class Maintenance {
       return day_;
     }
     /**
+     * <pre>
+     * Day of the week when maintenance can occur.
+     * </pre>
+     *
      * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      * @return The day.
      */
@@ -1678,7 +1878,7 @@ public final class Maintenance {
     private long hour_;
     /**
      * <pre>
-     * Hour of the day in UTC.
+     * Hour of the day in UTC when the maintenance window starts.
      * </pre>
      *
      * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -2010,6 +2210,10 @@ public final class Maintenance {
 
       private int day_ = 0;
       /**
+       * <pre>
+       * Day of the week when maintenance can occur.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        * @return The enum numeric value on the wire for day.
        */
@@ -2017,6 +2221,10 @@ public final class Maintenance {
         return day_;
       }
       /**
+       * <pre>
+       * Day of the week when maintenance can occur.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        * @param value The enum numeric value on the wire for day to set.
        * @return This builder for chaining.
@@ -2028,6 +2236,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Day of the week when maintenance can occur.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        * @return The day.
        */
@@ -2038,6 +2250,10 @@ public final class Maintenance {
         return result == null ? yandex.cloud.api.metastore.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Day of the week when maintenance can occur.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        * @param value The day to set.
        * @return This builder for chaining.
@@ -2052,6 +2268,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Day of the week when maintenance can occur.
+       * </pre>
+       *
        * <code>.yandex.cloud.metastore.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        * @return This builder for chaining.
        */
@@ -2065,7 +2285,7 @@ public final class Maintenance {
       private long hour_ ;
       /**
        * <pre>
-       * Hour of the day in UTC.
+       * Hour of the day in UTC when the maintenance window starts.
        * </pre>
        *
        * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -2077,7 +2297,7 @@ public final class Maintenance {
       }
       /**
        * <pre>
-       * Hour of the day in UTC.
+       * Hour of the day in UTC when the maintenance window starts.
        * </pre>
        *
        * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -2092,7 +2312,7 @@ public final class Maintenance {
       }
       /**
        * <pre>
-       * Hour of the day in UTC.
+       * Hour of the day in UTC when the maintenance window starts.
        * </pre>
        *
        * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -2162,11 +2382,19 @@ public final class Maintenance {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Information about the maintenance operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The info.
      */
     java.lang.String getInfo();
     /**
+     * <pre>
+     * Information about the maintenance operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for info.
      */
@@ -2174,46 +2402,82 @@ public final class Maintenance {
         getInfoBytes();
 
     /**
+     * <pre>
+     * Maintenance is postponed until the specified timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      * @return Whether the delayedUntil field is set.
      */
     boolean hasDelayedUntil();
     /**
+     * <pre>
+     * Maintenance is postponed until the specified timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      * @return The delayedUntil.
      */
     com.google.protobuf.Timestamp getDelayedUntil();
     /**
+     * <pre>
+     * Maintenance is postponed until the specified timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
 
     /**
+     * <pre>
+     * Timestamp of the latest successfully completed maintenance.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      * @return Whether the latestMaintenanceTime field is set.
      */
     boolean hasLatestMaintenanceTime();
     /**
+     * <pre>
+     * Timestamp of the latest successfully completed maintenance.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      * @return The latestMaintenanceTime.
      */
     com.google.protobuf.Timestamp getLatestMaintenanceTime();
     /**
+     * <pre>
+     * Timestamp of the latest successfully completed maintenance.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getLatestMaintenanceTimeOrBuilder();
 
     /**
+     * <pre>
+     * Timestamp of the next scheduled maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      * @return Whether the nextMaintenanceWindowTime field is set.
      */
     boolean hasNextMaintenanceWindowTime();
     /**
+     * <pre>
+     * Timestamp of the next scheduled maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      * @return The nextMaintenanceWindowTime.
      */
     com.google.protobuf.Timestamp getNextMaintenanceWindowTime();
     /**
+     * <pre>
+     * Timestamp of the next scheduled maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getNextMaintenanceWindowTimeOrBuilder();
@@ -2344,6 +2608,10 @@ public final class Maintenance {
     public static final int INFO_FIELD_NUMBER = 1;
     private volatile java.lang.Object info_;
     /**
+     * <pre>
+     * Information about the maintenance operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The info.
      */
@@ -2361,6 +2629,10 @@ public final class Maintenance {
       }
     }
     /**
+     * <pre>
+     * Information about the maintenance operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for info.
      */
@@ -2382,6 +2654,10 @@ public final class Maintenance {
     public static final int DELAYED_UNTIL_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp delayedUntil_;
     /**
+     * <pre>
+     * Maintenance is postponed until the specified timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      * @return Whether the delayedUntil field is set.
      */
@@ -2390,6 +2666,10 @@ public final class Maintenance {
       return delayedUntil_ != null;
     }
     /**
+     * <pre>
+     * Maintenance is postponed until the specified timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      * @return The delayedUntil.
      */
@@ -2398,6 +2678,10 @@ public final class Maintenance {
       return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
     }
     /**
+     * <pre>
+     * Maintenance is postponed until the specified timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     @java.lang.Override
@@ -2408,6 +2692,10 @@ public final class Maintenance {
     public static final int LATEST_MAINTENANCE_TIME_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp latestMaintenanceTime_;
     /**
+     * <pre>
+     * Timestamp of the latest successfully completed maintenance.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      * @return Whether the latestMaintenanceTime field is set.
      */
@@ -2416,6 +2704,10 @@ public final class Maintenance {
       return latestMaintenanceTime_ != null;
     }
     /**
+     * <pre>
+     * Timestamp of the latest successfully completed maintenance.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      * @return The latestMaintenanceTime.
      */
@@ -2424,6 +2716,10 @@ public final class Maintenance {
       return latestMaintenanceTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : latestMaintenanceTime_;
     }
     /**
+     * <pre>
+     * Timestamp of the latest successfully completed maintenance.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
      */
     @java.lang.Override
@@ -2434,6 +2730,10 @@ public final class Maintenance {
     public static final int NEXT_MAINTENANCE_WINDOW_TIME_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp nextMaintenanceWindowTime_;
     /**
+     * <pre>
+     * Timestamp of the next scheduled maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      * @return Whether the nextMaintenanceWindowTime field is set.
      */
@@ -2442,6 +2742,10 @@ public final class Maintenance {
       return nextMaintenanceWindowTime_ != null;
     }
     /**
+     * <pre>
+     * Timestamp of the next scheduled maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      * @return The nextMaintenanceWindowTime.
      */
@@ -2450,6 +2754,10 @@ public final class Maintenance {
       return nextMaintenanceWindowTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : nextMaintenanceWindowTime_;
     }
     /**
+     * <pre>
+     * Timestamp of the next scheduled maintenance window.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
      */
     @java.lang.Override
@@ -2851,6 +3159,10 @@ public final class Maintenance {
 
       private java.lang.Object info_ = "";
       /**
+       * <pre>
+       * Information about the maintenance operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The info.
        */
@@ -2867,6 +3179,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Information about the maintenance operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for info.
        */
@@ -2884,6 +3200,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Information about the maintenance operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The info to set.
        * @return This builder for chaining.
@@ -2899,6 +3219,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Information about the maintenance operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
@@ -2909,6 +3233,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Information about the maintenance operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for info to set.
        * @return This builder for chaining.
@@ -2929,6 +3257,10 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
       /**
+       * <pre>
+       * Maintenance is postponed until the specified timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        * @return Whether the delayedUntil field is set.
        */
@@ -2936,6 +3268,10 @@ public final class Maintenance {
         return delayedUntilBuilder_ != null || delayedUntil_ != null;
       }
       /**
+       * <pre>
+       * Maintenance is postponed until the specified timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        * @return The delayedUntil.
        */
@@ -2947,6 +3283,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Maintenance is postponed until the specified timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
@@ -2963,6 +3303,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance is postponed until the specified timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder setDelayedUntil(
@@ -2977,6 +3321,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance is postponed until the specified timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
@@ -2995,6 +3343,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance is postponed until the specified timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder clearDelayedUntil() {
@@ -3009,6 +3361,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance is postponed until the specified timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
@@ -3017,6 +3373,10 @@ public final class Maintenance {
         return getDelayedUntilFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance is postponed until the specified timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
@@ -3028,6 +3388,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Maintenance is postponed until the specified timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3048,6 +3412,10 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> latestMaintenanceTimeBuilder_;
       /**
+       * <pre>
+       * Timestamp of the latest successfully completed maintenance.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        * @return Whether the latestMaintenanceTime field is set.
        */
@@ -3055,6 +3423,10 @@ public final class Maintenance {
         return latestMaintenanceTimeBuilder_ != null || latestMaintenanceTime_ != null;
       }
       /**
+       * <pre>
+       * Timestamp of the latest successfully completed maintenance.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        * @return The latestMaintenanceTime.
        */
@@ -3066,6 +3438,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the latest successfully completed maintenance.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public Builder setLatestMaintenanceTime(com.google.protobuf.Timestamp value) {
@@ -3082,6 +3458,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the latest successfully completed maintenance.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public Builder setLatestMaintenanceTime(
@@ -3096,6 +3476,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the latest successfully completed maintenance.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public Builder mergeLatestMaintenanceTime(com.google.protobuf.Timestamp value) {
@@ -3114,6 +3498,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the latest successfully completed maintenance.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public Builder clearLatestMaintenanceTime() {
@@ -3128,6 +3516,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the latest successfully completed maintenance.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getLatestMaintenanceTimeBuilder() {
@@ -3136,6 +3528,10 @@ public final class Maintenance {
         return getLatestMaintenanceTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp of the latest successfully completed maintenance.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getLatestMaintenanceTimeOrBuilder() {
@@ -3147,6 +3543,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the latest successfully completed maintenance.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp latest_maintenance_time = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3167,6 +3567,10 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> nextMaintenanceWindowTimeBuilder_;
       /**
+       * <pre>
+       * Timestamp of the next scheduled maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        * @return Whether the nextMaintenanceWindowTime field is set.
        */
@@ -3174,6 +3578,10 @@ public final class Maintenance {
         return nextMaintenanceWindowTimeBuilder_ != null || nextMaintenanceWindowTime_ != null;
       }
       /**
+       * <pre>
+       * Timestamp of the next scheduled maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        * @return The nextMaintenanceWindowTime.
        */
@@ -3185,6 +3593,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the next scheduled maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public Builder setNextMaintenanceWindowTime(com.google.protobuf.Timestamp value) {
@@ -3201,6 +3613,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the next scheduled maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public Builder setNextMaintenanceWindowTime(
@@ -3215,6 +3631,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the next scheduled maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public Builder mergeNextMaintenanceWindowTime(com.google.protobuf.Timestamp value) {
@@ -3233,6 +3653,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the next scheduled maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public Builder clearNextMaintenanceWindowTime() {
@@ -3247,6 +3671,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the next scheduled maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getNextMaintenanceWindowTimeBuilder() {
@@ -3255,6 +3683,10 @@ public final class Maintenance {
         return getNextMaintenanceWindowTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp of the next scheduled maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getNextMaintenanceWindowTimeOrBuilder() {
@@ -3266,6 +3698,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the next scheduled maintenance window.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp next_maintenance_window_time = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

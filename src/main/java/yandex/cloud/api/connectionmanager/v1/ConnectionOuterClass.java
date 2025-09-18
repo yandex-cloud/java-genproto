@@ -40,6 +40,10 @@ public final class ConnectionOuterClass {
      */
     MONGODB(4),
     /**
+     * <code>KAFKA = 5;</code>
+     */
+    KAFKA(5),
+    /**
      * <code>REDIS = 6;</code>
      */
     REDIS(6),
@@ -82,6 +86,10 @@ public final class ConnectionOuterClass {
      * <code>MONGODB = 4;</code>
      */
     public static final int MONGODB_VALUE = 4;
+    /**
+     * <code>KAFKA = 5;</code>
+     */
+    public static final int KAFKA_VALUE = 5;
     /**
      * <code>REDIS = 6;</code>
      */
@@ -133,6 +141,7 @@ public final class ConnectionOuterClass {
         case 2: return MYSQL;
         case 3: return CLICKHOUSE;
         case 4: return MONGODB;
+        case 5: return KAFKA;
         case 6: return REDIS;
         case 7: return OPENSEARCH;
         case 8: return TRINO;
@@ -257,6 +266,21 @@ public final class ConnectionOuterClass {
      * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
      */
     yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnectionOrBuilder getClickhouseOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+     * @return Whether the kafka field is set.
+     */
+    boolean hasKafka();
+    /**
+     * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+     * @return The kafka.
+     */
+    yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection getKafka();
+    /**
+     * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+     */
+    yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnectionOrBuilder getKafkaOrBuilder();
 
     /**
      * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
@@ -436,6 +460,20 @@ public final class ConnectionOuterClass {
               typeCase_ = 4;
               break;
             }
+            case 42: {
+              yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.Builder subBuilder = null;
+              if (typeCase_ == 5) {
+                subBuilder = ((yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 5;
+              break;
+            }
             case 50: {
               yandex.cloud.api.connectionmanager.v1.Redis.RedisConnection.Builder subBuilder = null;
               if (typeCase_ == 6) {
@@ -547,6 +585,7 @@ public final class ConnectionOuterClass {
       MYSQL(2),
       MONGODB(3),
       CLICKHOUSE(4),
+      KAFKA(5),
       REDIS(6),
       OPENSEARCH(7),
       TRINO(8),
@@ -573,6 +612,7 @@ public final class ConnectionOuterClass {
           case 2: return MYSQL;
           case 3: return MONGODB;
           case 4: return CLICKHOUSE;
+          case 5: return KAFKA;
           case 6: return REDIS;
           case 7: return OPENSEARCH;
           case 8: return TRINO;
@@ -715,6 +755,37 @@ public final class ConnectionOuterClass {
          return (yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnection) type_;
       }
       return yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnection.getDefaultInstance();
+    }
+
+    public static final int KAFKA_FIELD_NUMBER = 5;
+    /**
+     * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+     * @return Whether the kafka field is set.
+     */
+    @java.lang.Override
+    public boolean hasKafka() {
+      return typeCase_ == 5;
+    }
+    /**
+     * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+     * @return The kafka.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection getKafka() {
+      if (typeCase_ == 5) {
+         return (yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection) type_;
+      }
+      return yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnectionOrBuilder getKafkaOrBuilder() {
+      if (typeCase_ == 5) {
+         return (yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection) type_;
+      }
+      return yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.getDefaultInstance();
     }
 
     public static final int REDIS_FIELD_NUMBER = 6;
@@ -898,6 +969,9 @@ public final class ConnectionOuterClass {
       if (typeCase_ == 4) {
         output.writeMessage(4, (yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnection) type_);
       }
+      if (typeCase_ == 5) {
+        output.writeMessage(5, (yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection) type_);
+      }
       if (typeCase_ == 6) {
         output.writeMessage(6, (yandex.cloud.api.connectionmanager.v1.Redis.RedisConnection) type_);
       }
@@ -937,6 +1011,10 @@ public final class ConnectionOuterClass {
       if (typeCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnection) type_);
+      }
+      if (typeCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection) type_);
       }
       if (typeCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
@@ -991,6 +1069,10 @@ public final class ConnectionOuterClass {
           if (!getClickhouse()
               .equals(other.getClickhouse())) return false;
           break;
+        case 5:
+          if (!getKafka()
+              .equals(other.getKafka())) return false;
+          break;
         case 6:
           if (!getRedis()
               .equals(other.getRedis())) return false;
@@ -1041,6 +1123,10 @@ public final class ConnectionOuterClass {
         case 4:
           hash = (37 * hash) + CLICKHOUSE_FIELD_NUMBER;
           hash = (53 * hash) + getClickhouse().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + KAFKA_FIELD_NUMBER;
+          hash = (53 * hash) + getKafka().hashCode();
           break;
         case 6:
           hash = (37 * hash) + REDIS_FIELD_NUMBER;
@@ -1254,6 +1340,13 @@ public final class ConnectionOuterClass {
             result.type_ = clickhouseBuilder_.build();
           }
         }
+        if (typeCase_ == 5) {
+          if (kafkaBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = kafkaBuilder_.build();
+          }
+        }
         if (typeCase_ == 6) {
           if (redisBuilder_ == null) {
             result.type_ = type_;
@@ -1353,6 +1446,10 @@ public final class ConnectionOuterClass {
           }
           case CLICKHOUSE: {
             mergeClickhouse(other.getClickhouse());
+            break;
+          }
+          case KAFKA: {
+            mergeKafka(other.getKafka());
             break;
           }
           case REDIS: {
@@ -1985,6 +2082,147 @@ public final class ConnectionOuterClass {
         typeCase_ = 4;
         onChanged();;
         return clickhouseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection, yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.Builder, yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnectionOrBuilder> kafkaBuilder_;
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+       * @return Whether the kafka field is set.
+       */
+      @java.lang.Override
+      public boolean hasKafka() {
+        return typeCase_ == 5;
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+       * @return The kafka.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection getKafka() {
+        if (kafkaBuilder_ == null) {
+          if (typeCase_ == 5) {
+            return (yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection) type_;
+          }
+          return yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.getDefaultInstance();
+        } else {
+          if (typeCase_ == 5) {
+            return kafkaBuilder_.getMessage();
+          }
+          return yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+       */
+      public Builder setKafka(yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection value) {
+        if (kafkaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          kafkaBuilder_.setMessage(value);
+        }
+        typeCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+       */
+      public Builder setKafka(
+          yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.Builder builderForValue) {
+        if (kafkaBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          kafkaBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+       */
+      public Builder mergeKafka(yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection value) {
+        if (kafkaBuilder_ == null) {
+          if (typeCase_ == 5 &&
+              type_ != yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.getDefaultInstance()) {
+            type_ = yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.newBuilder((yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 5) {
+            kafkaBuilder_.mergeFrom(value);
+          }
+          kafkaBuilder_.setMessage(value);
+        }
+        typeCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+       */
+      public Builder clearKafka() {
+        if (kafkaBuilder_ == null) {
+          if (typeCase_ == 5) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 5) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          kafkaBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+       */
+      public yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.Builder getKafkaBuilder() {
+        return getKafkaFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnectionOrBuilder getKafkaOrBuilder() {
+        if ((typeCase_ == 5) && (kafkaBuilder_ != null)) {
+          return kafkaBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 5) {
+            return (yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection) type_;
+          }
+          return yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection, yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.Builder, yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnectionOrBuilder> 
+          getKafkaFieldBuilder() {
+        if (kafkaBuilder_ == null) {
+          if (!(typeCase_ == 5)) {
+            type_ = yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.getDefaultInstance();
+          }
+          kafkaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection, yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.Builder, yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnectionOrBuilder>(
+                  (yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 5;
+        onChanged();;
+        return kafkaBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6329,48 +6567,51 @@ public final class ConnectionOuterClass {
       ".proto\032.yandex/cloud/connectionmanager/v" +
       "1/valkey.proto\0322yandex/cloud/connectionm" +
       "anager/v1/opensearch.proto\0321yandex/cloud" +
-      "/connectionmanager/v1/greenplum.proto\"\271\005" +
-      "\n\020ConnectionParams\022M\n\npostgresql\030\001 \001(\01327" +
-      ".yandex.cloud.connectionmanager.v1.Postg" +
-      "reSQLConnectionH\000\022C\n\005mysql\030\002 \001(\01322.yande" +
-      "x.cloud.connectionmanager.v1.MySQLConnec" +
-      "tionH\000\022G\n\007mongodb\030\003 \001(\01324.yandex.cloud.c" +
-      "onnectionmanager.v1.MongoDBConnectionH\000\022" +
-      "M\n\nclickhouse\030\004 \001(\01327.yandex.cloud.conne" +
-      "ctionmanager.v1.ClickHouseConnectionH\000\022C" +
-      "\n\005redis\030\006 \001(\01322.yandex.cloud.connectionm" +
-      "anager.v1.RedisConnectionH\000\022M\n\nopensearc" +
-      "h\030\007 \001(\01327.yandex.cloud.connectionmanager" +
-      ".v1.OpenSearchConnectionH\000\022C\n\005trino\030\010 \001(" +
-      "\01322.yandex.cloud.connectionmanager.v1.Tr" +
-      "inoConnectionH\000\022E\n\006valkey\030\t \001(\01323.yandex" +
-      ".cloud.connectionmanager.v1.ValkeyConnec" +
-      "tionH\000\022K\n\tgreenplum\030\n \001(\01326.yandex.cloud" +
-      ".connectionmanager.v1.GreenplumConnectio" +
-      "nH\000B\006\n\004typeJ\004\010\005\020\006\"D\n\rLockboxSecret\022\n\n\002id" +
-      "\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\022\026\n\016newest_versio" +
-      "n\030\003 \001(\t\"\236\004\n\nConnection\022\n\n\002id\030\001 \001(\t\022\021\n\tfo" +
-      "lder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022.\n\nupdated_at\030\004 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\005 " +
-      "\001(\t\022\023\n\013description\030\006 \001(\t\022I\n\006labels\030\007 \003(\013" +
-      "29.yandex.cloud.connectionmanager.v1.Con" +
-      "nection.LabelsEntry\022\022\n\ncreated_by\030\010 \001(\t\022" +
-      "C\n\006params\030\t \001(\01323.yandex.cloud.connectio" +
-      "nmanager.v1.ConnectionParams\022J\n\016lockbox_" +
-      "secret\030\n \001(\01320.yandex.cloud.connectionma" +
-      "nager.v1.LockboxSecretH\000\022\022\n\nis_managed\030\014" +
-      " \001(\010\022+\n\007can_use\030\r \001(\0132\032.google.protobuf." +
-      "BoolValue\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001B\010\n\006secretJ\004\010\013\020\014*\240\001\n\006DBT" +
-      "ype\022\027\n\023DB_TYPE_UNSPECIFIED\020\000\022\016\n\nPOSTGRES" +
-      "QL\020\001\022\t\n\005MYSQL\020\002\022\016\n\nCLICKHOUSE\020\003\022\013\n\007MONGO" +
-      "DB\020\004\022\t\n\005REDIS\020\006\022\016\n\nOPENSEARCH\020\007\022\t\n\005TRINO" +
-      "\020\010\022\n\n\006VALKEY\020\t\022\r\n\tGREENPLUM\020\n\"\004\010\005\020\005B\200\001\n%" +
-      "yandex.cloud.api.connectionmanager.v1ZWg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/connectionmanager/v1;connectionm" +
-      "anagerb\006proto3"
+      "/connectionmanager/v1/greenplum.proto\032-y" +
+      "andex/cloud/connectionmanager/v1/kafka.p" +
+      "roto\"\370\005\n\020ConnectionParams\022M\n\npostgresql\030" +
+      "\001 \001(\01327.yandex.cloud.connectionmanager.v" +
+      "1.PostgreSQLConnectionH\000\022C\n\005mysql\030\002 \001(\0132" +
+      "2.yandex.cloud.connectionmanager.v1.MySQ" +
+      "LConnectionH\000\022G\n\007mongodb\030\003 \001(\01324.yandex." +
+      "cloud.connectionmanager.v1.MongoDBConnec" +
+      "tionH\000\022M\n\nclickhouse\030\004 \001(\01327.yandex.clou" +
+      "d.connectionmanager.v1.ClickHouseConnect" +
+      "ionH\000\022C\n\005kafka\030\005 \001(\01322.yandex.cloud.conn" +
+      "ectionmanager.v1.KafkaConnectionH\000\022C\n\005re" +
+      "dis\030\006 \001(\01322.yandex.cloud.connectionmanag" +
+      "er.v1.RedisConnectionH\000\022M\n\nopensearch\030\007 " +
+      "\001(\01327.yandex.cloud.connectionmanager.v1." +
+      "OpenSearchConnectionH\000\022C\n\005trino\030\010 \001(\01322." +
+      "yandex.cloud.connectionmanager.v1.TrinoC" +
+      "onnectionH\000\022E\n\006valkey\030\t \001(\01323.yandex.clo" +
+      "ud.connectionmanager.v1.ValkeyConnection" +
+      "H\000\022K\n\tgreenplum\030\n \001(\01326.yandex.cloud.con" +
+      "nectionmanager.v1.GreenplumConnectionH\000B" +
+      "\006\n\004type\"D\n\rLockboxSecret\022\n\n\002id\030\001 \001(\t\022\017\n\007" +
+      "version\030\002 \001(\t\022\026\n\016newest_version\030\003 \001(\t\"\236\004" +
+      "\n\nConnection\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
+      "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022.\n\nupdated_at\030\004 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022\014\n\004name\030\005 \001(\t\022\023\n\013des" +
+      "cription\030\006 \001(\t\022I\n\006labels\030\007 \003(\01329.yandex." +
+      "cloud.connectionmanager.v1.Connection.La" +
+      "belsEntry\022\022\n\ncreated_by\030\010 \001(\t\022C\n\006params\030" +
+      "\t \001(\01323.yandex.cloud.connectionmanager.v" +
+      "1.ConnectionParams\022J\n\016lockbox_secret\030\n \001" +
+      "(\01320.yandex.cloud.connectionmanager.v1.L" +
+      "ockboxSecretH\000\022\022\n\nis_managed\030\014 \001(\010\022+\n\007ca" +
+      "n_use\030\r \001(\0132\032.google.protobuf.BoolValue\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001B\010\n\006secretJ\004\010\013\020\014*\245\001\n\006DBType\022\027\n\023DB_" +
+      "TYPE_UNSPECIFIED\020\000\022\016\n\nPOSTGRESQL\020\001\022\t\n\005MY" +
+      "SQL\020\002\022\016\n\nCLICKHOUSE\020\003\022\013\n\007MONGODB\020\004\022\t\n\005KA" +
+      "FKA\020\005\022\t\n\005REDIS\020\006\022\016\n\nOPENSEARCH\020\007\022\t\n\005TRIN" +
+      "O\020\010\022\n\n\006VALKEY\020\t\022\r\n\tGREENPLUM\020\nB\200\001\n%yande" +
+      "x.cloud.api.connectionmanager.v1ZWgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/connectionmanager/v1;connectionmanage" +
+      "rb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6386,13 +6627,14 @@ public final class ConnectionOuterClass {
           yandex.cloud.api.connectionmanager.v1.Valkey.getDescriptor(),
           yandex.cloud.api.connectionmanager.v1.Opensearch.getDescriptor(),
           yandex.cloud.api.connectionmanager.v1.Greenplum.getDescriptor(),
+          yandex.cloud.api.connectionmanager.v1.Kafka.getDescriptor(),
         });
     internal_static_yandex_cloud_connectionmanager_v1_ConnectionParams_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_connectionmanager_v1_ConnectionParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_connectionmanager_v1_ConnectionParams_descriptor,
-        new java.lang.String[] { "Postgresql", "Mysql", "Mongodb", "Clickhouse", "Redis", "Opensearch", "Trino", "Valkey", "Greenplum", "Type", });
+        new java.lang.String[] { "Postgresql", "Mysql", "Mongodb", "Clickhouse", "Kafka", "Redis", "Opensearch", "Trino", "Valkey", "Greenplum", "Type", });
     internal_static_yandex_cloud_connectionmanager_v1_LockboxSecret_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_connectionmanager_v1_LockboxSecret_fieldAccessorTable = new
@@ -6422,6 +6664,7 @@ public final class ConnectionOuterClass {
     yandex.cloud.api.connectionmanager.v1.Valkey.getDescriptor();
     yandex.cloud.api.connectionmanager.v1.Opensearch.getDescriptor();
     yandex.cloud.api.connectionmanager.v1.Greenplum.getDescriptor();
+    yandex.cloud.api.connectionmanager.v1.Kafka.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -33,6 +33,18 @@ public final class Mongodb {
      */
     yandex.cloud.api.connectionmanager.v1.Common.UserPasswordAuthOrBuilder getUserPasswordOrBuilder();
 
+    /**
+     * <code>string auth_source = 2;</code>
+     * @return The authSource.
+     */
+    java.lang.String getAuthSource();
+    /**
+     * <code>string auth_source = 2;</code>
+     * @return The bytes for authSource.
+     */
+    com.google.protobuf.ByteString
+        getAuthSourceBytes();
+
     public yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBAuth.SecurityCase getSecurityCase();
   }
   /**
@@ -48,6 +60,7 @@ public final class Mongodb {
       super(builder);
     }
     private MongoDBAuth() {
+      authSource_ = "";
     }
 
     @java.lang.Override
@@ -92,6 +105,12 @@ public final class Mongodb {
                 security_ = subBuilder.buildPartial();
               }
               securityCase_ = 1;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              authSource_ = s;
               break;
             }
             default: {
@@ -196,6 +215,44 @@ public final class Mongodb {
       return yandex.cloud.api.connectionmanager.v1.Common.UserPasswordAuth.getDefaultInstance();
     }
 
+    public static final int AUTH_SOURCE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object authSource_;
+    /**
+     * <code>string auth_source = 2;</code>
+     * @return The authSource.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthSource() {
+      java.lang.Object ref = authSource_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authSource_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string auth_source = 2;</code>
+     * @return The bytes for authSource.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthSourceBytes() {
+      java.lang.Object ref = authSource_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authSource_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -213,6 +270,9 @@ public final class Mongodb {
       if (securityCase_ == 1) {
         output.writeMessage(1, (yandex.cloud.api.connectionmanager.v1.Common.UserPasswordAuth) security_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authSource_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, authSource_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -225,6 +285,9 @@ public final class Mongodb {
       if (securityCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, (yandex.cloud.api.connectionmanager.v1.Common.UserPasswordAuth) security_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authSource_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, authSource_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -241,6 +304,8 @@ public final class Mongodb {
       }
       yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBAuth other = (yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBAuth) obj;
 
+      if (!getAuthSource()
+          .equals(other.getAuthSource())) return false;
       if (!getSecurityCase().equals(other.getSecurityCase())) return false;
       switch (securityCase_) {
         case 1:
@@ -261,6 +326,8 @@ public final class Mongodb {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTH_SOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthSource().hashCode();
       switch (securityCase_) {
         case 1:
           hash = (37 * hash) + USER_PASSWORD_FIELD_NUMBER;
@@ -402,6 +469,8 @@ public final class Mongodb {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        authSource_ = "";
+
         securityCase_ = 0;
         security_ = null;
         return this;
@@ -437,6 +506,7 @@ public final class Mongodb {
             result.security_ = userPasswordBuilder_.build();
           }
         }
+        result.authSource_ = authSource_;
         result.securityCase_ = securityCase_;
         onBuilt();
         return result;
@@ -486,6 +556,10 @@ public final class Mongodb {
 
       public Builder mergeFrom(yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBAuth other) {
         if (other == yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBAuth.getDefaultInstance()) return this;
+        if (!other.getAuthSource().isEmpty()) {
+          authSource_ = other.authSource_;
+          onChanged();
+        }
         switch (other.getSecurityCase()) {
           case USER_PASSWORD: {
             mergeUserPassword(other.getUserPassword());
@@ -678,6 +752,82 @@ public final class Mongodb {
         securityCase_ = 1;
         onChanged();;
         return userPasswordBuilder_;
+      }
+
+      private java.lang.Object authSource_ = "";
+      /**
+       * <code>string auth_source = 2;</code>
+       * @return The authSource.
+       */
+      public java.lang.String getAuthSource() {
+        java.lang.Object ref = authSource_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authSource_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string auth_source = 2;</code>
+       * @return The bytes for authSource.
+       */
+      public com.google.protobuf.ByteString
+          getAuthSourceBytes() {
+        java.lang.Object ref = authSource_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authSource_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string auth_source = 2;</code>
+       * @param value The authSource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthSource(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        authSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string auth_source = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthSource() {
+        
+        authSource_ = getDefaultInstance().getAuthSource();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string auth_source = 2;</code>
+       * @param value The bytes for authSource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthSourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        authSource_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4403,33 +4553,34 @@ public final class Mongodb {
       "\n/yandex/cloud/connectionmanager/v1/mong" +
       "odb.proto\022!yandex.cloud.connectionmanage" +
       "r.v1\032.yandex/cloud/connectionmanager/v1/" +
-      "common.proto\"g\n\013MongoDBAuth\022L\n\ruser_pass" +
+      "common.proto\"|\n\013MongoDBAuth\022L\n\ruser_pass" +
       "word\030\001 \001(\01323.yandex.cloud.connectionmana" +
-      "ger.v1.UserPasswordAuthH\000B\n\n\010security\"\350\004" +
-      "\n\016MongoDBCluster\022E\n\005hosts\030\001 \003(\01326.yandex" +
-      ".cloud.connectionmanager.v1.MongoDBClust" +
-      "er.Host\022@\n\ntls_params\030\002 \001(\0132,.yandex.clo" +
-      "ud.connectionmanager.v1.TLSParams\032\314\003\n\004Ho" +
-      "st\022\014\n\004host\030\001 \001(\t\022\014\n\004port\030\002 \001(\003\022I\n\004role\030\003" +
-      " \001(\0162;.yandex.cloud.connectionmanager.v1" +
-      ".MongoDBCluster.Host.Role\022M\n\006health\030\004 \001(" +
-      "\0162=.yandex.cloud.connectionmanager.v1.Mo" +
-      "ngoDBCluster.Host.Health\022I\n\004type\030\005 \001(\0162;" +
-      ".yandex.cloud.connectionmanager.v1.Mongo" +
-      "DBCluster.Host.Type\"D\n\004Type\022\024\n\020TYPE_UNSP" +
-      "ECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGOS\020\002\022\016\n\nMON" +
-      "GOINFRA\020\003\"8\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022" +
-      "\013\n\007PRIMARY\020\001\022\r\n\tSECONDARY\020\002\"C\n\006Health\022\026\n" +
-      "\022HEALTH_UNSPECIFIED\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD" +
-      "\020\002\022\014\n\010DEGRADED\020\003\"\304\001\n\021MongoDBConnection\022B" +
-      "\n\007cluster\030\001 \001(\01321.yandex.cloud.connectio" +
-      "nmanager.v1.MongoDBCluster\022\032\n\022managed_cl" +
-      "uster_id\030\002 \001(\t\022<\n\004auth\030\003 \001(\0132..yandex.cl" +
-      "oud.connectionmanager.v1.MongoDBAuth\022\021\n\t" +
-      "databases\030\004 \003(\tB\200\001\n%yandex.cloud.api.con" +
-      "nectionmanager.v1ZWgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/connectionma" +
-      "nager/v1;connectionmanagerb\006proto3"
+      "ger.v1.UserPasswordAuthH\000\022\023\n\013auth_source" +
+      "\030\002 \001(\tB\n\n\010security\"\350\004\n\016MongoDBCluster\022E\n" +
+      "\005hosts\030\001 \003(\01326.yandex.cloud.connectionma" +
+      "nager.v1.MongoDBCluster.Host\022@\n\ntls_para" +
+      "ms\030\002 \001(\0132,.yandex.cloud.connectionmanage" +
+      "r.v1.TLSParams\032\314\003\n\004Host\022\014\n\004host\030\001 \001(\t\022\014\n" +
+      "\004port\030\002 \001(\003\022I\n\004role\030\003 \001(\0162;.yandex.cloud" +
+      ".connectionmanager.v1.MongoDBCluster.Hos" +
+      "t.Role\022M\n\006health\030\004 \001(\0162=.yandex.cloud.co" +
+      "nnectionmanager.v1.MongoDBCluster.Host.H" +
+      "ealth\022I\n\004type\030\005 \001(\0162;.yandex.cloud.conne" +
+      "ctionmanager.v1.MongoDBCluster.Host.Type" +
+      "\"D\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MONGOD" +
+      "\020\001\022\n\n\006MONGOS\020\002\022\016\n\nMONGOINFRA\020\003\"8\n\004Role\022\024" +
+      "\n\020ROLE_UNSPECIFIED\020\000\022\013\n\007PRIMARY\020\001\022\r\n\tSEC" +
+      "ONDARY\020\002\"C\n\006Health\022\026\n\022HEALTH_UNSPECIFIED" +
+      "\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\304\001" +
+      "\n\021MongoDBConnection\022B\n\007cluster\030\001 \001(\01321.y" +
+      "andex.cloud.connectionmanager.v1.MongoDB" +
+      "Cluster\022\032\n\022managed_cluster_id\030\002 \001(\t\022<\n\004a" +
+      "uth\030\003 \001(\0132..yandex.cloud.connectionmanag" +
+      "er.v1.MongoDBAuth\022\021\n\tdatabases\030\004 \003(\tB\200\001\n" +
+      "%yandex.cloud.api.connectionmanager.v1ZW" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/connectionmanager/v1;connection" +
+      "managerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4441,7 +4592,7 @@ public final class Mongodb {
     internal_static_yandex_cloud_connectionmanager_v1_MongoDBAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_connectionmanager_v1_MongoDBAuth_descriptor,
-        new java.lang.String[] { "UserPassword", "Security", });
+        new java.lang.String[] { "UserPassword", "AuthSource", "Security", });
     internal_static_yandex_cloud_connectionmanager_v1_MongoDBCluster_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_connectionmanager_v1_MongoDBCluster_fieldAccessorTable = new

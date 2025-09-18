@@ -7459,6 +7459,16 @@ public final class NetworkLoadBalancerOuterClass {
      * @return The status.
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status getStatus();
+
+    /**
+     * <pre>
+     * Zone shifted status.
+     * </pre>
+     *
+     * <code>bool zone_shifted = 4;</code>
+     * @return The zoneShifted.
+     */
+    boolean getZoneShifted();
   }
   /**
    * <pre>
@@ -7528,6 +7538,11 @@ public final class NetworkLoadBalancerOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 32: {
+
+              zoneShifted_ = input.readBool();
               break;
             }
             default: {
@@ -7869,6 +7884,21 @@ public final class NetworkLoadBalancerOuterClass {
       return result == null ? yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status.UNRECOGNIZED : result;
     }
 
+    public static final int ZONE_SHIFTED_FIELD_NUMBER = 4;
+    private boolean zoneShifted_;
+    /**
+     * <pre>
+     * Zone shifted status.
+     * </pre>
+     *
+     * <code>bool zone_shifted = 4;</code>
+     * @return The zoneShifted.
+     */
+    @java.lang.Override
+    public boolean getZoneShifted() {
+      return zoneShifted_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7892,6 +7922,9 @@ public final class NetworkLoadBalancerOuterClass {
       if (status_ != yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, status_);
       }
+      if (zoneShifted_ != false) {
+        output.writeBool(4, zoneShifted_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7910,6 +7943,10 @@ public final class NetworkLoadBalancerOuterClass {
       if (status_ != yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status.STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, status_);
+      }
+      if (zoneShifted_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, zoneShifted_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7931,6 +7968,8 @@ public final class NetworkLoadBalancerOuterClass {
       if (!getAddress()
           .equals(other.getAddress())) return false;
       if (status_ != other.status_) return false;
+      if (getZoneShifted()
+          != other.getZoneShifted()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7948,6 +7987,9 @@ public final class NetworkLoadBalancerOuterClass {
       hash = (53 * hash) + getAddress().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + ZONE_SHIFTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getZoneShifted());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8091,6 +8133,8 @@ public final class NetworkLoadBalancerOuterClass {
 
         status_ = 0;
 
+        zoneShifted_ = false;
+
         return this;
       }
 
@@ -8120,6 +8164,7 @@ public final class NetworkLoadBalancerOuterClass {
         result.subnetId_ = subnetId_;
         result.address_ = address_;
         result.status_ = status_;
+        result.zoneShifted_ = zoneShifted_;
         onBuilt();
         return result;
       }
@@ -8178,6 +8223,9 @@ public final class NetworkLoadBalancerOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.getZoneShifted() != false) {
+          setZoneShifted(other.getZoneShifted());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8470,6 +8518,49 @@ public final class NetworkLoadBalancerOuterClass {
       public Builder clearStatus() {
         
         status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean zoneShifted_ ;
+      /**
+       * <pre>
+       * Zone shifted status.
+       * </pre>
+       *
+       * <code>bool zone_shifted = 4;</code>
+       * @return The zoneShifted.
+       */
+      @java.lang.Override
+      public boolean getZoneShifted() {
+        return zoneShifted_;
+      }
+      /**
+       * <pre>
+       * Zone shifted status.
+       * </pre>
+       *
+       * <code>bool zone_shifted = 4;</code>
+       * @param value The zoneShifted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneShifted(boolean value) {
+        
+        zoneShifted_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone shifted status.
+       * </pre>
+       *
+       * <code>bool zone_shifted = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneShifted() {
+        
+        zoneShifted_ = false;
         onChanged();
         return this;
       }
@@ -9497,20 +9588,20 @@ public final class NetworkLoadBalancerOuterClass {
       "\005 \001(\003\022\021\n\tsubnet_id\030\006 \001(\t\022;\n\nip_version\030\007" +
       " \001(\0162\'.yandex.cloud.loadbalancer.v1.IpVe" +
       "rsion\"6\n\010Protocol\022\030\n\024PROTOCOL_UNSPECIFIE" +
-      "D\020\000\022\007\n\003TCP\020\001\022\007\n\003UDP\020\002\"\332\001\n\013TargetState\022\021\n" +
+      "D\020\000\022\007\n\003TCP\020\001\022\007\n\003UDP\020\002\"\360\001\n\013TargetState\022\021\n" +
       "\tsubnet_id\030\001 \001(\t\022\017\n\007address\030\002 \001(\t\022@\n\006sta" +
       "tus\030\003 \001(\01620.yandex.cloud.loadbalancer.v1" +
-      ".TargetState.Status\"e\n\006Status\022\026\n\022STATUS_" +
-      "UNSPECIFIED\020\000\022\013\n\007INITIAL\020\001\022\013\n\007HEALTHY\020\002\022" +
-      "\r\n\tUNHEALTHY\020\003\022\014\n\010DRAINING\020\004\022\014\n\010INACTIVE" +
-      "\020\005\"^\n\021DisableZoneStatus\022\025\n\007zone_id\030\001 \001(\t" +
-      "B\004\350\3071\001\0222\n\016disabled_until\030\002 \001(\0132\032.google." +
-      "protobuf.Timestamp*;\n\tIpVersion\022\032\n\026IP_VE" +
-      "RSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002B" +
-      "q\n yandex.cloud.api.loadbalancer.v1ZMgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/loadbalancer/v1;loadbalancerb\006prot" +
-      "o3"
+      ".TargetState.Status\022\024\n\014zone_shifted\030\004 \001(" +
+      "\010\"e\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007I" +
+      "NITIAL\020\001\022\013\n\007HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003\022\014\n\010" +
+      "DRAINING\020\004\022\014\n\010INACTIVE\020\005\"^\n\021DisableZoneS" +
+      "tatus\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\0222\n\016disabled" +
+      "_until\030\002 \001(\0132\032.google.protobuf.Timestamp" +
+      "*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED\020" +
+      "\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002Bq\n yandex.cloud.ap" +
+      "i.loadbalancer.v1ZMgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/loadbalancer" +
+      "/v1;loadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9548,7 +9639,7 @@ public final class NetworkLoadBalancerOuterClass {
     internal_static_yandex_cloud_loadbalancer_v1_TargetState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadbalancer_v1_TargetState_descriptor,
-        new java.lang.String[] { "SubnetId", "Address", "Status", });
+        new java.lang.String[] { "SubnetId", "Address", "Status", "ZoneShifted", });
     internal_static_yandex_cloud_loadbalancer_v1_DisableZoneStatus_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_loadbalancer_v1_DisableZoneStatus_fieldAccessorTable = new

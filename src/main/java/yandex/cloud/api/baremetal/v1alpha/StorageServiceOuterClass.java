@@ -3360,33 +3360,37 @@ public final class StorageServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n4yandex/cloud/baremetal/v1alpha/storage" +
       "_service.proto\022\036yandex.cloud.baremetal.v" +
-      "1alpha\032,yandex/cloud/baremetal/v1alpha/s" +
-      "torage.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"e\n\016DefaultStorage\022\030\n\020configuration_i" +
-      "d\030\001 \001(\t\0229\n\010storages\030\002 \003(\0132\'.yandex.cloud" +
-      ".baremetal.v1alpha.Storage\"N\n\030GetDefault" +
-      "StorageRequest\0222\n\020configuration_id\030\001 \001(\t" +
-      "B\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"b\n\036BatchGetDe" +
-      "faultStoragesRequest\022@\n\021configuration_id" +
-      "s\030\001 \003(\tB%\362\3071\016[a-z][a-z0-9]*\212\3101\00220\202\3101\0051-1" +
-      "00\220\3101\001\"k\n\037BatchGetDefaultStoragesRespons" +
-      "e\022H\n\020default_storages\030\001 \003(\0132..yandex.clo" +
-      "ud.baremetal.v1alpha.DefaultStorage2\241\002\n\016" +
-      "StorageService\022x\n\nGetDefault\0228.yandex.cl" +
-      "oud.baremetal.v1alpha.GetDefaultStorageR" +
-      "equest\032..yandex.cloud.baremetal.v1alpha." +
-      "DefaultStorage\"\000\022\224\001\n\017BatchGetDefault\022>.y" +
-      "andex.cloud.baremetal.v1alpha.BatchGetDe" +
-      "faultStoragesRequest\032?.yandex.cloud.bare" +
-      "metal.v1alpha.BatchGetDefaultStoragesRes" +
-      "ponse\"\000Br\n\"yandex.cloud.api.baremetal.v1" +
-      "alphaZLgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/baremetal/v1alpha;bareme" +
-      "talb\006proto3"
+      "1alpha\032\034google/api/annotations.proto\032,ya" +
+      "ndex/cloud/baremetal/v1alpha/storage.pro" +
+      "to\032\035yandex/cloud/validation.proto\"e\n\016Def" +
+      "aultStorage\022\030\n\020configuration_id\030\001 \001(\t\0229\n" +
+      "\010storages\030\002 \003(\0132\'.yandex.cloud.baremetal" +
+      ".v1alpha.Storage\"N\n\030GetDefaultStorageReq" +
+      "uest\0222\n\020configuration_id\030\001 \001(\tB\030\362\3071\016[a-z" +
+      "][a-z0-9]*\212\3101\00220\"b\n\036BatchGetDefaultStora" +
+      "gesRequest\022@\n\021configuration_ids\030\001 \003(\tB%\362" +
+      "\3071\016[a-z][a-z0-9]*\212\3101\00220\202\3101\0051-100\220\3101\001\"k\n\037" +
+      "BatchGetDefaultStoragesResponse\022H\n\020defau" +
+      "lt_storages\030\001 \003(\0132..yandex.cloud.baremet" +
+      "al.v1alpha.DefaultStorage2\227\003\n\016StorageSer" +
+      "vice\022\266\001\n\nGetDefault\0228.yandex.cloud.barem" +
+      "etal.v1alpha.GetDefaultStorageRequest\032.." +
+      "yandex.cloud.baremetal.v1alpha.DefaultSt" +
+      "orage\">\202\323\344\223\0028\0226/baremetal/v1alpha/storag" +
+      "es/default/{configuration_id}\022\313\001\n\017BatchG" +
+      "etDefault\022>.yandex.cloud.baremetal.v1alp" +
+      "ha.BatchGetDefaultStoragesRequest\032?.yand" +
+      "ex.cloud.baremetal.v1alpha.BatchGetDefau" +
+      "ltStoragesResponse\"7\202\323\344\223\0021\",/baremetal/v" +
+      "1alpha/storages/default:batchGet:\001*Br\n\"y" +
+      "andex.cloud.api.baremetal.v1alphaZLgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/baremetal/v1alpha;baremetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.baremetal.v1alpha.StorageOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -3416,12 +3420,14 @@ public final class StorageServiceOuterClass {
         new java.lang.String[] { "DefaultStorages", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.unique);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.baremetal.v1alpha.StorageOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

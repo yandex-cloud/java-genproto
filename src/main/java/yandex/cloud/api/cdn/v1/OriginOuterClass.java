@@ -20,7 +20,7 @@ public final class OriginOuterClass {
 
     /**
      * <pre>
-     * ID of the origin. 
+     * ID of the origin.
      * </pre>
      *
      * <code>int64 id = 1;</code>
@@ -65,7 +65,7 @@ public final class OriginOuterClass {
      * The setting allows to enable or disable an Origin source in the Origins group.
      * It has two possible values:
      * True - The origin is enabled and used as a source for the CDN. An origins
-     * group must contain at least one enabled origin. 
+     * group must contain at least one enabled origin.
      * False - The origin is disabled and the CDN is not using it to pull content.
      * </pre>
      *
@@ -76,7 +76,7 @@ public final class OriginOuterClass {
 
     /**
      * <pre>
-     * Specifies whether the origin is used in its origin group as backup. 
+     * Specifies whether the origin is used in its origin group as backup.
      * A backup origin is used when one of active origins becomes unavailable.
      * </pre>
      *
@@ -114,7 +114,7 @@ public final class OriginOuterClass {
 
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this origin group.
      * </pre>
      *
      * <code>string provider_type = 7;</code>
@@ -123,7 +123,7 @@ public final class OriginOuterClass {
     java.lang.String getProviderType();
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this origin group.
      * </pre>
      *
      * <code>string provider_type = 7;</code>
@@ -264,7 +264,7 @@ public final class OriginOuterClass {
     private long id_;
     /**
      * <pre>
-     * ID of the origin. 
+     * ID of the origin.
      * </pre>
      *
      * <code>int64 id = 1;</code>
@@ -345,7 +345,7 @@ public final class OriginOuterClass {
      * The setting allows to enable or disable an Origin source in the Origins group.
      * It has two possible values:
      * True - The origin is enabled and used as a source for the CDN. An origins
-     * group must contain at least one enabled origin. 
+     * group must contain at least one enabled origin.
      * False - The origin is disabled and the CDN is not using it to pull content.
      * </pre>
      *
@@ -361,7 +361,7 @@ public final class OriginOuterClass {
     private boolean backup_;
     /**
      * <pre>
-     * Specifies whether the origin is used in its origin group as backup. 
+     * Specifies whether the origin is used in its origin group as backup.
      * A backup origin is used when one of active origins becomes unavailable.
      * </pre>
      *
@@ -415,7 +415,7 @@ public final class OriginOuterClass {
     private volatile java.lang.Object providerType_;
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this origin group.
      * </pre>
      *
      * <code>string provider_type = 7;</code>
@@ -436,7 +436,7 @@ public final class OriginOuterClass {
     }
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this origin group.
      * </pre>
      *
      * <code>string provider_type = 7;</code>
@@ -885,7 +885,7 @@ public final class OriginOuterClass {
       private long id_ ;
       /**
        * <pre>
-       * ID of the origin. 
+       * ID of the origin.
        * </pre>
        *
        * <code>int64 id = 1;</code>
@@ -897,7 +897,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * ID of the origin. 
+       * ID of the origin.
        * </pre>
        *
        * <code>int64 id = 1;</code>
@@ -912,7 +912,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * ID of the origin. 
+       * ID of the origin.
        * </pre>
        *
        * <code>int64 id = 1;</code>
@@ -1075,7 +1075,7 @@ public final class OriginOuterClass {
        * The setting allows to enable or disable an Origin source in the Origins group.
        * It has two possible values:
        * True - The origin is enabled and used as a source for the CDN. An origins
-       * group must contain at least one enabled origin. 
+       * group must contain at least one enabled origin.
        * False - The origin is disabled and the CDN is not using it to pull content.
        * </pre>
        *
@@ -1091,7 +1091,7 @@ public final class OriginOuterClass {
        * The setting allows to enable or disable an Origin source in the Origins group.
        * It has two possible values:
        * True - The origin is enabled and used as a source for the CDN. An origins
-       * group must contain at least one enabled origin. 
+       * group must contain at least one enabled origin.
        * False - The origin is disabled and the CDN is not using it to pull content.
        * </pre>
        *
@@ -1110,7 +1110,7 @@ public final class OriginOuterClass {
        * The setting allows to enable or disable an Origin source in the Origins group.
        * It has two possible values:
        * True - The origin is enabled and used as a source for the CDN. An origins
-       * group must contain at least one enabled origin. 
+       * group must contain at least one enabled origin.
        * False - The origin is disabled and the CDN is not using it to pull content.
        * </pre>
        *
@@ -1127,7 +1127,7 @@ public final class OriginOuterClass {
       private boolean backup_ ;
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * </pre>
        *
@@ -1140,7 +1140,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * </pre>
        *
@@ -1156,7 +1156,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * Specifies whether the origin is used in its origin group as backup. 
+       * Specifies whether the origin is used in its origin group as backup.
        * A backup origin is used when one of active origins becomes unavailable.
        * </pre>
        *
@@ -1328,7 +1328,7 @@ public final class OriginOuterClass {
       private java.lang.Object providerType_ = "";
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this origin group.
        * </pre>
        *
        * <code>string provider_type = 7;</code>
@@ -1348,7 +1348,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this origin group.
        * </pre>
        *
        * <code>string provider_type = 7;</code>
@@ -1369,7 +1369,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this origin group.
        * </pre>
        *
        * <code>string provider_type = 7;</code>
@@ -1388,7 +1388,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this origin group.
        * </pre>
        *
        * <code>string provider_type = 7;</code>
@@ -1402,7 +1402,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this origin group.
        * </pre>
        *
        * <code>string provider_type = 7;</code>

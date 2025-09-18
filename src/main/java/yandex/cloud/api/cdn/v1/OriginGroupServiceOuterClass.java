@@ -2889,7 +2889,11 @@ public final class OriginGroupServiceOuterClass {
 
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Set up origin group provider
+     * It has two possible values:
+     * ourcdn - Based on Yandex technologies
+     * gcore - Based on an external partner infrastructure
+     * Default value: ourcdn
      * </pre>
      *
      * <code>string provider_type = 5;</code>
@@ -2898,7 +2902,11 @@ public final class OriginGroupServiceOuterClass {
     java.lang.String getProviderType();
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Set up origin group provider
+     * It has two possible values:
+     * ourcdn - Based on Yandex technologies
+     * gcore - Based on an external partner infrastructure
+     * Default value: ourcdn
      * </pre>
      *
      * <code>string provider_type = 5;</code>
@@ -3243,7 +3251,11 @@ public final class OriginGroupServiceOuterClass {
     private volatile java.lang.Object providerType_;
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Set up origin group provider
+     * It has two possible values:
+     * ourcdn - Based on Yandex technologies
+     * gcore - Based on an external partner infrastructure
+     * Default value: ourcdn
      * </pre>
      *
      * <code>string provider_type = 5;</code>
@@ -3264,7 +3276,11 @@ public final class OriginGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Set up origin group provider
+     * It has two possible values:
+     * ourcdn - Based on Yandex technologies
+     * gcore - Based on an external partner infrastructure
+     * Default value: ourcdn
      * </pre>
      *
      * <code>string provider_type = 5;</code>
@@ -4424,7 +4440,11 @@ public final class OriginGroupServiceOuterClass {
       private java.lang.Object providerType_ = "";
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Set up origin group provider
+       * It has two possible values:
+       * ourcdn - Based on Yandex technologies
+       * gcore - Based on an external partner infrastructure
+       * Default value: ourcdn
        * </pre>
        *
        * <code>string provider_type = 5;</code>
@@ -4444,7 +4464,11 @@ public final class OriginGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Set up origin group provider
+       * It has two possible values:
+       * ourcdn - Based on Yandex technologies
+       * gcore - Based on an external partner infrastructure
+       * Default value: ourcdn
        * </pre>
        *
        * <code>string provider_type = 5;</code>
@@ -4465,7 +4489,11 @@ public final class OriginGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Set up origin group provider
+       * It has two possible values:
+       * ourcdn - Based on Yandex technologies
+       * gcore - Based on an external partner infrastructure
+       * Default value: ourcdn
        * </pre>
        *
        * <code>string provider_type = 5;</code>
@@ -4484,7 +4512,11 @@ public final class OriginGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Set up origin group provider
+       * It has two possible values:
+       * ourcdn - Based on Yandex technologies
+       * gcore - Based on an external partner infrastructure
+       * Default value: ourcdn
        * </pre>
        *
        * <code>string provider_type = 5;</code>
@@ -4498,7 +4530,11 @@ public final class OriginGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Set up origin group provider
+       * It has two possible values:
+       * ourcdn - Based on Yandex technologies
+       * gcore - Based on an external partner infrastructure
+       * Default value: ourcdn
        * </pre>
        *
        * <code>string provider_type = 5;</code>

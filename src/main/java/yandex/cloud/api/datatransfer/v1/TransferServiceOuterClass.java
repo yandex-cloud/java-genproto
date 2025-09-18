@@ -248,6 +248,21 @@ public final class TransferServiceOuterClass {
      * <code>.yandex.cloud.datatransfer.v1.DataObjects data_objects = 12;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.DataObjectsOrBuilder getDataObjectsOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+     * @return Whether the replicationRuntime field is set.
+     */
+    boolean hasReplicationRuntime();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+     * @return The replicationRuntime.
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime getReplicationRuntime();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder getReplicationRuntimeOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.CreateTransferRequest}
@@ -385,6 +400,19 @@ public final class TransferServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(dataObjects_);
                 dataObjects_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 130: {
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder subBuilder = null;
+              if (replicationRuntime_ != null) {
+                subBuilder = replicationRuntime_.toBuilder();
+              }
+              replicationRuntime_ = input.readMessage(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replicationRuntime_);
+                replicationRuntime_ = subBuilder.buildPartial();
               }
 
               break;
@@ -875,6 +903,32 @@ public final class TransferServiceOuterClass {
       return getDataObjects();
     }
 
+    public static final int REPLICATION_RUNTIME_FIELD_NUMBER = 16;
+    private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime replicationRuntime_;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+     * @return Whether the replicationRuntime field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplicationRuntime() {
+      return replicationRuntime_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+     * @return The replicationRuntime.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime getReplicationRuntime() {
+      return replicationRuntime_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.getDefaultInstance() : replicationRuntime_;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder getReplicationRuntimeOrBuilder() {
+      return getReplicationRuntime();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -921,6 +975,9 @@ public final class TransferServiceOuterClass {
       }
       if (dataObjects_ != null) {
         output.writeMessage(12, getDataObjects());
+      }
+      if (replicationRuntime_ != null) {
+        output.writeMessage(16, getReplicationRuntime());
       }
       unknownFields.writeTo(output);
     }
@@ -972,6 +1029,10 @@ public final class TransferServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getDataObjects());
       }
+      if (replicationRuntime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getReplicationRuntime());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1015,6 +1076,11 @@ public final class TransferServiceOuterClass {
         if (!getDataObjects()
             .equals(other.getDataObjects())) return false;
       }
+      if (hasReplicationRuntime() != other.hasReplicationRuntime()) return false;
+      if (hasReplicationRuntime()) {
+        if (!getReplicationRuntime()
+            .equals(other.getReplicationRuntime())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1053,6 +1119,10 @@ public final class TransferServiceOuterClass {
       if (hasDataObjects()) {
         hash = (37 * hash) + DATA_OBJECTS_FIELD_NUMBER;
         hash = (53 * hash) + getDataObjects().hashCode();
+      }
+      if (hasReplicationRuntime()) {
+        hash = (37 * hash) + REPLICATION_RUNTIME_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicationRuntime().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1240,6 +1310,12 @@ public final class TransferServiceOuterClass {
           dataObjects_ = null;
           dataObjectsBuilder_ = null;
         }
+        if (replicationRuntimeBuilder_ == null) {
+          replicationRuntime_ = null;
+        } else {
+          replicationRuntime_ = null;
+          replicationRuntimeBuilder_ = null;
+        }
         return this;
       }
 
@@ -1289,6 +1365,11 @@ public final class TransferServiceOuterClass {
           result.dataObjects_ = dataObjects_;
         } else {
           result.dataObjects_ = dataObjectsBuilder_.build();
+        }
+        if (replicationRuntimeBuilder_ == null) {
+          result.replicationRuntime_ = replicationRuntime_;
+        } else {
+          result.replicationRuntime_ = replicationRuntimeBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1371,6 +1452,9 @@ public final class TransferServiceOuterClass {
         }
         if (other.hasDataObjects()) {
           mergeDataObjects(other.getDataObjects());
+        }
+        if (other.hasReplicationRuntime()) {
+          mergeReplicationRuntime(other.getReplicationRuntime());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2487,6 +2571,125 @@ public final class TransferServiceOuterClass {
         }
         return dataObjectsBuilder_;
       }
+
+      private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime replicationRuntime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder> replicationRuntimeBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+       * @return Whether the replicationRuntime field is set.
+       */
+      public boolean hasReplicationRuntime() {
+        return replicationRuntimeBuilder_ != null || replicationRuntime_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+       * @return The replicationRuntime.
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime getReplicationRuntime() {
+        if (replicationRuntimeBuilder_ == null) {
+          return replicationRuntime_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.getDefaultInstance() : replicationRuntime_;
+        } else {
+          return replicationRuntimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+       */
+      public Builder setReplicationRuntime(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime value) {
+        if (replicationRuntimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicationRuntime_ = value;
+          onChanged();
+        } else {
+          replicationRuntimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+       */
+      public Builder setReplicationRuntime(
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder builderForValue) {
+        if (replicationRuntimeBuilder_ == null) {
+          replicationRuntime_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicationRuntimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+       */
+      public Builder mergeReplicationRuntime(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime value) {
+        if (replicationRuntimeBuilder_ == null) {
+          if (replicationRuntime_ != null) {
+            replicationRuntime_ =
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.newBuilder(replicationRuntime_).mergeFrom(value).buildPartial();
+          } else {
+            replicationRuntime_ = value;
+          }
+          onChanged();
+        } else {
+          replicationRuntimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+       */
+      public Builder clearReplicationRuntime() {
+        if (replicationRuntimeBuilder_ == null) {
+          replicationRuntime_ = null;
+          onChanged();
+        } else {
+          replicationRuntime_ = null;
+          replicationRuntimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder getReplicationRuntimeBuilder() {
+        
+        onChanged();
+        return getReplicationRuntimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder getReplicationRuntimeOrBuilder() {
+        if (replicationRuntimeBuilder_ != null) {
+          return replicationRuntimeBuilder_.getMessageOrBuilder();
+        } else {
+          return replicationRuntime_ == null ?
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.getDefaultInstance() : replicationRuntime_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder> 
+          getReplicationRuntimeFieldBuilder() {
+        if (replicationRuntimeBuilder_ == null) {
+          replicationRuntimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder>(
+                  getReplicationRuntime(),
+                  getParentForChildren(),
+                  isClean());
+          replicationRuntime_ = null;
+        }
+        return replicationRuntimeBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3324,6 +3527,21 @@ public final class TransferServiceOuterClass {
      * <code>.yandex.cloud.datatransfer.v1.DataObjects data_objects = 10;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.DataObjectsOrBuilder getDataObjectsOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+     * @return Whether the replicationRuntime field is set.
+     */
+    boolean hasReplicationRuntime();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+     * @return The replicationRuntime.
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime getReplicationRuntime();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder getReplicationRuntimeOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.UpdateTransferRequest}
@@ -3453,6 +3671,19 @@ public final class TransferServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(dataObjects_);
                 dataObjects_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder subBuilder = null;
+              if (replicationRuntime_ != null) {
+                subBuilder = replicationRuntime_.toBuilder();
+              }
+              replicationRuntime_ = input.readMessage(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replicationRuntime_);
+                replicationRuntime_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3876,6 +4107,32 @@ public final class TransferServiceOuterClass {
       return getDataObjects();
     }
 
+    public static final int REPLICATION_RUNTIME_FIELD_NUMBER = 12;
+    private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime replicationRuntime_;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+     * @return Whether the replicationRuntime field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplicationRuntime() {
+      return replicationRuntime_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+     * @return The replicationRuntime.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime getReplicationRuntime() {
+      return replicationRuntime_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.getDefaultInstance() : replicationRuntime_;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder getReplicationRuntimeOrBuilder() {
+      return getReplicationRuntime();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3916,6 +4173,9 @@ public final class TransferServiceOuterClass {
       }
       if (dataObjects_ != null) {
         output.writeMessage(10, getDataObjects());
+      }
+      if (replicationRuntime_ != null) {
+        output.writeMessage(12, getReplicationRuntime());
       }
       unknownFields.writeTo(output);
     }
@@ -3961,6 +4221,10 @@ public final class TransferServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getDataObjects());
       }
+      if (replicationRuntime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getReplicationRuntime());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4004,6 +4268,11 @@ public final class TransferServiceOuterClass {
         if (!getDataObjects()
             .equals(other.getDataObjects())) return false;
       }
+      if (hasReplicationRuntime() != other.hasReplicationRuntime()) return false;
+      if (hasReplicationRuntime()) {
+        if (!getReplicationRuntime()
+            .equals(other.getReplicationRuntime())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4040,6 +4309,10 @@ public final class TransferServiceOuterClass {
       if (hasDataObjects()) {
         hash = (37 * hash) + DATA_OBJECTS_FIELD_NUMBER;
         hash = (53 * hash) + getDataObjects().hashCode();
+      }
+      if (hasReplicationRuntime()) {
+        hash = (37 * hash) + REPLICATION_RUNTIME_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicationRuntime().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4227,6 +4500,12 @@ public final class TransferServiceOuterClass {
           dataObjects_ = null;
           dataObjectsBuilder_ = null;
         }
+        if (replicationRuntimeBuilder_ == null) {
+          replicationRuntime_ = null;
+        } else {
+          replicationRuntime_ = null;
+          replicationRuntimeBuilder_ = null;
+        }
         return this;
       }
 
@@ -4278,6 +4557,11 @@ public final class TransferServiceOuterClass {
           result.dataObjects_ = dataObjects_;
         } else {
           result.dataObjects_ = dataObjectsBuilder_.build();
+        }
+        if (replicationRuntimeBuilder_ == null) {
+          result.replicationRuntime_ = replicationRuntime_;
+        } else {
+          result.replicationRuntime_ = replicationRuntimeBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4352,6 +4636,9 @@ public final class TransferServiceOuterClass {
         }
         if (other.hasDataObjects()) {
           mergeDataObjects(other.getDataObjects());
+        }
+        if (other.hasReplicationRuntime()) {
+          mergeReplicationRuntime(other.getReplicationRuntime());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5397,6 +5684,125 @@ public final class TransferServiceOuterClass {
           dataObjects_ = null;
         }
         return dataObjectsBuilder_;
+      }
+
+      private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime replicationRuntime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder> replicationRuntimeBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+       * @return Whether the replicationRuntime field is set.
+       */
+      public boolean hasReplicationRuntime() {
+        return replicationRuntimeBuilder_ != null || replicationRuntime_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+       * @return The replicationRuntime.
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime getReplicationRuntime() {
+        if (replicationRuntimeBuilder_ == null) {
+          return replicationRuntime_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.getDefaultInstance() : replicationRuntime_;
+        } else {
+          return replicationRuntimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+       */
+      public Builder setReplicationRuntime(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime value) {
+        if (replicationRuntimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicationRuntime_ = value;
+          onChanged();
+        } else {
+          replicationRuntimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+       */
+      public Builder setReplicationRuntime(
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder builderForValue) {
+        if (replicationRuntimeBuilder_ == null) {
+          replicationRuntime_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicationRuntimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+       */
+      public Builder mergeReplicationRuntime(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime value) {
+        if (replicationRuntimeBuilder_ == null) {
+          if (replicationRuntime_ != null) {
+            replicationRuntime_ =
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.newBuilder(replicationRuntime_).mergeFrom(value).buildPartial();
+          } else {
+            replicationRuntime_ = value;
+          }
+          onChanged();
+        } else {
+          replicationRuntimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+       */
+      public Builder clearReplicationRuntime() {
+        if (replicationRuntimeBuilder_ == null) {
+          replicationRuntime_ = null;
+          onChanged();
+        } else {
+          replicationRuntime_ = null;
+          replicationRuntimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder getReplicationRuntimeBuilder() {
+        
+        onChanged();
+        return getReplicationRuntimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder getReplicationRuntimeOrBuilder() {
+        if (replicationRuntimeBuilder_ != null) {
+          return replicationRuntimeBuilder_.getMessageOrBuilder();
+        } else {
+          return replicationRuntime_ == null ?
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.getDefaultInstance() : replicationRuntime_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder> 
+          getReplicationRuntimeFieldBuilder() {
+        if (replicationRuntimeBuilder_ == null) {
+          replicationRuntimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder>(
+                  getReplicationRuntime(),
+                  getParentForChildren(),
+                  isClean());
+          replicationRuntime_ = null;
+        }
+        return replicationRuntimeBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12427,7 +12833,7 @@ public final class TransferServiceOuterClass {
       "e/protobuf/field_mask.proto\032+yandex/clou" +
       "d/datatransfer/v1/transfer.proto\032 yandex" +
       "/cloud/api/operation.proto\032&yandex/cloud" +
-      "/operation/operation.proto\"\370\003\n\025CreateTra" +
+      "/operation/operation.proto\"\302\004\n\025CreateTra" +
       "nsferRequest\022\021\n\tsource_id\030\001 \001(\t\022\021\n\ttarge" +
       "t_id\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfolde" +
       "r_id\030\004 \001(\t\0226\n\007runtime\030\005 \001(\0132%.yandex.clo" +
@@ -12438,70 +12844,74 @@ public final class TransferServiceOuterClass {
       "Request.LabelsEntry\022D\n\016transformation\030\n " +
       "\001(\0132,.yandex.cloud.datatransfer.v1.Trans" +
       "formation\022?\n\014data_objects\030\014 \001(\0132).yandex" +
-      ".cloud.datatransfer.v1.DataObjects\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001J\004\010\t\020\nJ\004\010\013\020\014\"-\n\026CreateTransferMetadata\022" +
-      "\023\n\013transfer_id\030\001 \001(\t\"\313\003\n\025UpdateTransferR" +
-      "equest\022\023\n\013transfer_id\030\001 \001(\t\022\023\n\013descripti" +
-      "on\030\002 \001(\t\0226\n\007runtime\030\003 \001(\0132%.yandex.cloud" +
-      ".datatransfer.v1.Runtime\022\014\n\004name\030\004 \001(\t\022/" +
-      "\n\013update_mask\030\005 \001(\0132\032.google.protobuf.Fi" +
-      "eldMask\022O\n\006labels\030\006 \003(\0132?.yandex.cloud.d" +
-      "atatransfer.v1.UpdateTransferRequest.Lab" +
-      "elsEntry\022D\n\016transformation\030\010 \001(\0132,.yande" +
-      "x.cloud.datatransfer.v1.Transformation\022?" +
-      "\n\014data_objects\030\n \001(\0132).yandex.cloud.data" +
-      "transfer.v1.DataObjects\032-\n\013LabelsEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\007\020\010J\004\010\t" +
-      "\020\n\"-\n\026UpdateTransferMetadata\022\023\n\013transfer" +
-      "_id\030\001 \001(\t\",\n\025DeleteTransferRequest\022\023\n\013tr" +
-      "ansfer_id\030\001 \001(\t\"-\n\026DeleteTransferMetadat" +
-      "a\022\023\n\013transfer_id\030\001 \001(\t\"V\n\024ListTransfersR" +
-      "equest\022\021\n\tfolder_id\030\002 \001(\t\022\021\n\tpage_size\030\003" +
-      " \001(\003\022\022\n\npage_token\030\004 \001(\tJ\004\010\001\020\002\"k\n\025ListTr" +
-      "ansfersResponse\0229\n\ttransfers\030\001 \003(\0132&.yan" +
-      "dex.cloud.datatransfer.v1.Transfer\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\")\n\022GetTransferReques" +
-      "t\022\023\n\013transfer_id\030\001 \001(\t\"0\n\031DeactivateTran" +
-      "sferRequest\022\023\n\013transfer_id\030\001 \001(\t\"1\n\032Deac" +
-      "tivateTransferMetadata\022\023\n\013transfer_id\030\001 " +
-      "\001(\t\".\n\027ActivateTransferRequest\022\023\n\013transf" +
-      "er_id\030\001 \001(\t\"/\n\030ActivateTransferMetadata\022" +
-      "\023\n\013transfer_id\030\001 \001(\t2\335\t\n\017TransferService" +
-      "\022\237\001\n\006Create\0223.yandex.cloud.datatransfer." +
-      "v1.CreateTransferRequest\032!.yandex.cloud." +
-      "operation.Operation\"=\202\323\344\223\002\021\"\014/v1/transfe" +
-      "r:\001*\262\322*\"\n\026CreateTransferMetadata\022\010Transf" +
-      "er\022\255\001\n\006Update\0223.yandex.cloud.datatransfe" +
-      "r.v1.UpdateTransferRequest\032!.yandex.clou" +
-      "d.operation.Operation\"K\202\323\344\223\002\0372\032/v1/trans" +
-      "fer/{transfer_id}:\001*\262\322*\"\n\026UpdateTransfer" +
-      "Metadata\022\010Transfer\022\267\001\n\006Delete\0223.yandex.c" +
-      "loud.datatransfer.v1.DeleteTransferReque" +
-      "st\032!.yandex.cloud.operation.Operation\"U\202" +
-      "\323\344\223\002\034*\032/v1/transfer/{transfer_id}\262\322*/\n\026D" +
-      "eleteTransferMetadata\022\025google.protobuf.E" +
-      "mpty\022\227\001\n\004List\0222.yandex.cloud.datatransfe" +
-      "r.v1.ListTransfersRequest\0323.yandex.cloud" +
-      ".datatransfer.v1.ListTransfersResponse\"&" +
-      "\202\323\344\223\002 \022\036/v1/transfers/list/{folder_id}\022\203" +
-      "\001\n\003Get\0220.yandex.cloud.datatransfer.v1.Ge" +
-      "tTransferRequest\032&.yandex.cloud.datatran" +
-      "sfer.v1.Transfer\"\"\202\323\344\223\002\034\022\032/v1/transfer/{" +
-      "transfer_id}\022\321\001\n\nDeactivate\0227.yandex.clo" +
-      "ud.datatransfer.v1.DeactivateTransferReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "g\202\323\344\223\002*\"%/v1/transfer/{transfer_id}:deac" +
-      "tivate:\001*\262\322*3\n\032DeactivateTransferMetadat" +
-      "a\022\025google.protobuf.Empty\022\311\001\n\010Activate\0225." +
-      "yandex.cloud.datatransfer.v1.ActivateTra" +
+      ".cloud.datatransfer.v1.DataObjects\022B\n\023re" +
+      "plication_runtime\030\020 \001(\0132%.yandex.cloud.d" +
+      "atatransfer.v1.Runtime\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\t\020\nJ\004\010\013\020" +
+      "\014J\004\010\r\020\020\"-\n\026CreateTransferMetadata\022\023\n\013tra" +
+      "nsfer_id\030\001 \001(\t\"\225\004\n\025UpdateTransferRequest" +
+      "\022\023\n\013transfer_id\030\001 \001(\t\022\023\n\013description\030\002 \001" +
+      "(\t\0226\n\007runtime\030\003 \001(\0132%.yandex.cloud.datat" +
+      "ransfer.v1.Runtime\022\014\n\004name\030\004 \001(\t\022/\n\013upda" +
+      "te_mask\030\005 \001(\0132\032.google.protobuf.FieldMas" +
+      "k\022O\n\006labels\030\006 \003(\0132?.yandex.cloud.datatra" +
+      "nsfer.v1.UpdateTransferRequest.LabelsEnt" +
+      "ry\022D\n\016transformation\030\010 \001(\0132,.yandex.clou" +
+      "d.datatransfer.v1.Transformation\022?\n\014data" +
+      "_objects\030\n \001(\0132).yandex.cloud.datatransf" +
+      "er.v1.DataObjects\022B\n\023replication_runtime" +
+      "\030\014 \001(\0132%.yandex.cloud.datatransfer.v1.Ru" +
+      "ntime\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001J\004\010\007\020\010J\004\010\t\020\nJ\004\010\013\020\014\"-\n\026Update" +
+      "TransferMetadata\022\023\n\013transfer_id\030\001 \001(\t\",\n" +
+      "\025DeleteTransferRequest\022\023\n\013transfer_id\030\001 " +
+      "\001(\t\"-\n\026DeleteTransferMetadata\022\023\n\013transfe" +
+      "r_id\030\001 \001(\t\"V\n\024ListTransfersRequest\022\021\n\tfo" +
+      "lder_id\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\003\022\022\n\npage" +
+      "_token\030\004 \001(\tJ\004\010\001\020\002\"k\n\025ListTransfersRespo" +
+      "nse\0229\n\ttransfers\030\001 \003(\0132&.yandex.cloud.da" +
+      "tatransfer.v1.Transfer\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\")\n\022GetTransferRequest\022\023\n\013transfe" +
+      "r_id\030\001 \001(\t\"0\n\031DeactivateTransferRequest\022" +
+      "\023\n\013transfer_id\030\001 \001(\t\"1\n\032DeactivateTransf" +
+      "erMetadata\022\023\n\013transfer_id\030\001 \001(\t\".\n\027Activ" +
+      "ateTransferRequest\022\023\n\013transfer_id\030\001 \001(\t\"" +
+      "/\n\030ActivateTransferMetadata\022\023\n\013transfer_" +
+      "id\030\001 \001(\t2\335\t\n\017TransferService\022\237\001\n\006Create\022" +
+      "3.yandex.cloud.datatransfer.v1.CreateTra" +
       "nsferRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"c\202\323\344\223\002(\"#/v1/transfer/{transfer_" +
-      "id}:activate:\001*\262\322*1\n\030ActivateTransferMet" +
-      "adata\022\025google.protobuf.EmptyBq\n yandex.c" +
-      "loud.api.datatransfer.v1ZMgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/datat" +
-      "ransfer/v1;datatransferb\006proto3"
+      "eration\"=\202\323\344\223\002\021\"\014/v1/transfer:\001*\262\322*\"\n\026Cr" +
+      "eateTransferMetadata\022\010Transfer\022\255\001\n\006Updat" +
+      "e\0223.yandex.cloud.datatransfer.v1.UpdateT" +
+      "ransferRequest\032!.yandex.cloud.operation." +
+      "Operation\"K\202\323\344\223\002\0372\032/v1/transfer/{transfe" +
+      "r_id}:\001*\262\322*\"\n\026UpdateTransferMetadata\022\010Tr" +
+      "ansfer\022\267\001\n\006Delete\0223.yandex.cloud.datatra" +
+      "nsfer.v1.DeleteTransferRequest\032!.yandex." +
+      "cloud.operation.Operation\"U\202\323\344\223\002\034*\032/v1/t" +
+      "ransfer/{transfer_id}\262\322*/\n\026DeleteTransfe" +
+      "rMetadata\022\025google.protobuf.Empty\022\227\001\n\004Lis" +
+      "t\0222.yandex.cloud.datatransfer.v1.ListTra" +
+      "nsfersRequest\0323.yandex.cloud.datatransfe" +
+      "r.v1.ListTransfersResponse\"&\202\323\344\223\002 \022\036/v1/" +
+      "transfers/list/{folder_id}\022\203\001\n\003Get\0220.yan" +
+      "dex.cloud.datatransfer.v1.GetTransferReq" +
+      "uest\032&.yandex.cloud.datatransfer.v1.Tran" +
+      "sfer\"\"\202\323\344\223\002\034\022\032/v1/transfer/{transfer_id}" +
+      "\022\321\001\n\nDeactivate\0227.yandex.cloud.datatrans" +
+      "fer.v1.DeactivateTransferRequest\032!.yande" +
+      "x.cloud.operation.Operation\"g\202\323\344\223\002*\"%/v1" +
+      "/transfer/{transfer_id}:deactivate:\001*\262\322*" +
+      "3\n\032DeactivateTransferMetadata\022\025google.pr" +
+      "otobuf.Empty\022\311\001\n\010Activate\0225.yandex.cloud" +
+      ".datatransfer.v1.ActivateTransferRequest" +
+      "\032!.yandex.cloud.operation.Operation\"c\202\323\344" +
+      "\223\002(\"#/v1/transfer/{transfer_id}:activate" +
+      ":\001*\262\322*1\n\030ActivateTransferMetadata\022\025googl" +
+      "e.protobuf.EmptyBq\n yandex.cloud.api.dat" +
+      "atransfer.v1ZMgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/datatransfer/v1;d" +
+      "atatransferb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12517,7 +12927,7 @@ public final class TransferServiceOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_descriptor,
-        new java.lang.String[] { "SourceId", "TargetId", "Description", "FolderId", "Runtime", "Type", "Name", "Labels", "Transformation", "DataObjects", });
+        new java.lang.String[] { "SourceId", "TargetId", "Description", "FolderId", "Runtime", "Type", "Name", "Labels", "Transformation", "DataObjects", "ReplicationRuntime", });
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_LabelsEntry_fieldAccessorTable = new
@@ -12535,7 +12945,7 @@ public final class TransferServiceOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_descriptor,
-        new java.lang.String[] { "TransferId", "Description", "Runtime", "Name", "UpdateMask", "Labels", "Transformation", "DataObjects", });
+        new java.lang.String[] { "TransferId", "Description", "Runtime", "Name", "UpdateMask", "Labels", "Transformation", "DataObjects", "ReplicationRuntime", });
     internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_LabelsEntry_fieldAccessorTable = new

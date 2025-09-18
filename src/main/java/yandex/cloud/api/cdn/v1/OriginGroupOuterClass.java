@@ -127,7 +127,7 @@ public final class OriginGroupOuterClass {
 
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this origin group.
      * </pre>
      *
      * <code>string provider_type = 6;</code>
@@ -136,7 +136,7 @@ public final class OriginGroupOuterClass {
     java.lang.String getProviderType();
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this origin group.
      * </pre>
      *
      * <code>string provider_type = 6;</code>
@@ -144,6 +144,50 @@ public final class OriginGroupOuterClass {
      */
     com.google.protobuf.ByteString
         getProviderTypeBytes();
+
+    /**
+     * <pre>
+     * List of CDN resources currently using this origin group.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+     */
+    java.util.List<yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata> 
+        getResourcesMetadataList();
+    /**
+     * <pre>
+     * List of CDN resources currently using this origin group.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+     */
+    yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata getResourcesMetadata(int index);
+    /**
+     * <pre>
+     * List of CDN resources currently using this origin group.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+     */
+    int getResourcesMetadataCount();
+    /**
+     * <pre>
+     * List of CDN resources currently using this origin group.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadataOrBuilder> 
+        getResourcesMetadataOrBuilderList();
+    /**
+     * <pre>
+     * List of CDN resources currently using this origin group.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+     */
+    yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadataOrBuilder getResourcesMetadataOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -166,6 +210,7 @@ public final class OriginGroupOuterClass {
       name_ = "";
       origins_ = java.util.Collections.emptyList();
       providerType_ = "";
+      resourcesMetadata_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -236,6 +281,15 @@ public final class OriginGroupOuterClass {
               providerType_ = s;
               break;
             }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                resourcesMetadata_ = new java.util.ArrayList<yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              resourcesMetadata_.add(
+                  input.readMessage(yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -253,6 +307,9 @@ public final class OriginGroupOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           origins_ = java.util.Collections.unmodifiableList(origins_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          resourcesMetadata_ = java.util.Collections.unmodifiableList(resourcesMetadata_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -460,7 +517,7 @@ public final class OriginGroupOuterClass {
     private volatile java.lang.Object providerType_;
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this origin group.
      * </pre>
      *
      * <code>string provider_type = 6;</code>
@@ -481,7 +538,7 @@ public final class OriginGroupOuterClass {
     }
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this origin group.
      * </pre>
      *
      * <code>string provider_type = 6;</code>
@@ -500,6 +557,66 @@ public final class OriginGroupOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int RESOURCES_METADATA_FIELD_NUMBER = 7;
+    private java.util.List<yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata> resourcesMetadata_;
+    /**
+     * <pre>
+     * List of CDN resources currently using this origin group.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata> getResourcesMetadataList() {
+      return resourcesMetadata_;
+    }
+    /**
+     * <pre>
+     * List of CDN resources currently using this origin group.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadataOrBuilder> 
+        getResourcesMetadataOrBuilderList() {
+      return resourcesMetadata_;
+    }
+    /**
+     * <pre>
+     * List of CDN resources currently using this origin group.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+     */
+    @java.lang.Override
+    public int getResourcesMetadataCount() {
+      return resourcesMetadata_.size();
+    }
+    /**
+     * <pre>
+     * List of CDN resources currently using this origin group.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata getResourcesMetadata(int index) {
+      return resourcesMetadata_.get(index);
+    }
+    /**
+     * <pre>
+     * List of CDN resources currently using this origin group.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadataOrBuilder getResourcesMetadataOrBuilder(
+        int index) {
+      return resourcesMetadata_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -534,6 +651,9 @@ public final class OriginGroupOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, providerType_);
       }
+      for (int i = 0; i < resourcesMetadata_.size(); i++) {
+        output.writeMessage(7, resourcesMetadata_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -564,6 +684,10 @@ public final class OriginGroupOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, providerType_);
       }
+      for (int i = 0; i < resourcesMetadata_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, resourcesMetadata_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -591,6 +715,8 @@ public final class OriginGroupOuterClass {
           .equals(other.getOriginsList())) return false;
       if (!getProviderType()
           .equals(other.getProviderType())) return false;
+      if (!getResourcesMetadataList()
+          .equals(other.getResourcesMetadataList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -618,6 +744,10 @@ public final class OriginGroupOuterClass {
       }
       hash = (37 * hash) + PROVIDER_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getProviderType().hashCode();
+      if (getResourcesMetadataCount() > 0) {
+        hash = (37 * hash) + RESOURCES_METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getResourcesMetadataList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -751,6 +881,7 @@ public final class OriginGroupOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getOriginsFieldBuilder();
+          getResourcesMetadataFieldBuilder();
         }
       }
       @java.lang.Override
@@ -772,6 +903,12 @@ public final class OriginGroupOuterClass {
         }
         providerType_ = "";
 
+        if (resourcesMetadataBuilder_ == null) {
+          resourcesMetadata_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          resourcesMetadataBuilder_.clear();
+        }
         return this;
       }
 
@@ -813,6 +950,15 @@ public final class OriginGroupOuterClass {
           result.origins_ = originsBuilder_.build();
         }
         result.providerType_ = providerType_;
+        if (resourcesMetadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            resourcesMetadata_ = java.util.Collections.unmodifiableList(resourcesMetadata_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.resourcesMetadata_ = resourcesMetadata_;
+        } else {
+          result.resourcesMetadata_ = resourcesMetadataBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -904,6 +1050,32 @@ public final class OriginGroupOuterClass {
         if (!other.getProviderType().isEmpty()) {
           providerType_ = other.providerType_;
           onChanged();
+        }
+        if (resourcesMetadataBuilder_ == null) {
+          if (!other.resourcesMetadata_.isEmpty()) {
+            if (resourcesMetadata_.isEmpty()) {
+              resourcesMetadata_ = other.resourcesMetadata_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureResourcesMetadataIsMutable();
+              resourcesMetadata_.addAll(other.resourcesMetadata_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.resourcesMetadata_.isEmpty()) {
+            if (resourcesMetadataBuilder_.isEmpty()) {
+              resourcesMetadataBuilder_.dispose();
+              resourcesMetadataBuilder_ = null;
+              resourcesMetadata_ = other.resourcesMetadata_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              resourcesMetadataBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResourcesMetadataFieldBuilder() : null;
+            } else {
+              resourcesMetadataBuilder_.addAllMessages(other.resourcesMetadata_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1537,7 +1709,7 @@ public final class OriginGroupOuterClass {
       private java.lang.Object providerType_ = "";
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this origin group.
        * </pre>
        *
        * <code>string provider_type = 6;</code>
@@ -1557,7 +1729,7 @@ public final class OriginGroupOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this origin group.
        * </pre>
        *
        * <code>string provider_type = 6;</code>
@@ -1578,7 +1750,7 @@ public final class OriginGroupOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this origin group.
        * </pre>
        *
        * <code>string provider_type = 6;</code>
@@ -1597,7 +1769,7 @@ public final class OriginGroupOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this origin group.
        * </pre>
        *
        * <code>string provider_type = 6;</code>
@@ -1611,7 +1783,7 @@ public final class OriginGroupOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this origin group.
        * </pre>
        *
        * <code>string provider_type = 6;</code>
@@ -1628,6 +1800,318 @@ public final class OriginGroupOuterClass {
         providerType_ = value;
         onChanged();
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata> resourcesMetadata_ =
+        java.util.Collections.emptyList();
+      private void ensureResourcesMetadataIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          resourcesMetadata_ = new java.util.ArrayList<yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata>(resourcesMetadata_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadataOrBuilder> resourcesMetadataBuilder_;
+
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata> getResourcesMetadataList() {
+        if (resourcesMetadataBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(resourcesMetadata_);
+        } else {
+          return resourcesMetadataBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public int getResourcesMetadataCount() {
+        if (resourcesMetadataBuilder_ == null) {
+          return resourcesMetadata_.size();
+        } else {
+          return resourcesMetadataBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata getResourcesMetadata(int index) {
+        if (resourcesMetadataBuilder_ == null) {
+          return resourcesMetadata_.get(index);
+        } else {
+          return resourcesMetadataBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public Builder setResourcesMetadata(
+          int index, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata value) {
+        if (resourcesMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResourcesMetadataIsMutable();
+          resourcesMetadata_.set(index, value);
+          onChanged();
+        } else {
+          resourcesMetadataBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public Builder setResourcesMetadata(
+          int index, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder builderForValue) {
+        if (resourcesMetadataBuilder_ == null) {
+          ensureResourcesMetadataIsMutable();
+          resourcesMetadata_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resourcesMetadataBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public Builder addResourcesMetadata(yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata value) {
+        if (resourcesMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResourcesMetadataIsMutable();
+          resourcesMetadata_.add(value);
+          onChanged();
+        } else {
+          resourcesMetadataBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public Builder addResourcesMetadata(
+          int index, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata value) {
+        if (resourcesMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResourcesMetadataIsMutable();
+          resourcesMetadata_.add(index, value);
+          onChanged();
+        } else {
+          resourcesMetadataBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public Builder addResourcesMetadata(
+          yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder builderForValue) {
+        if (resourcesMetadataBuilder_ == null) {
+          ensureResourcesMetadataIsMutable();
+          resourcesMetadata_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resourcesMetadataBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public Builder addResourcesMetadata(
+          int index, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder builderForValue) {
+        if (resourcesMetadataBuilder_ == null) {
+          ensureResourcesMetadataIsMutable();
+          resourcesMetadata_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resourcesMetadataBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public Builder addAllResourcesMetadata(
+          java.lang.Iterable<? extends yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata> values) {
+        if (resourcesMetadataBuilder_ == null) {
+          ensureResourcesMetadataIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, resourcesMetadata_);
+          onChanged();
+        } else {
+          resourcesMetadataBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public Builder clearResourcesMetadata() {
+        if (resourcesMetadataBuilder_ == null) {
+          resourcesMetadata_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          resourcesMetadataBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public Builder removeResourcesMetadata(int index) {
+        if (resourcesMetadataBuilder_ == null) {
+          ensureResourcesMetadataIsMutable();
+          resourcesMetadata_.remove(index);
+          onChanged();
+        } else {
+          resourcesMetadataBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder getResourcesMetadataBuilder(
+          int index) {
+        return getResourcesMetadataFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadataOrBuilder getResourcesMetadataOrBuilder(
+          int index) {
+        if (resourcesMetadataBuilder_ == null) {
+          return resourcesMetadata_.get(index);  } else {
+          return resourcesMetadataBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadataOrBuilder> 
+           getResourcesMetadataOrBuilderList() {
+        if (resourcesMetadataBuilder_ != null) {
+          return resourcesMetadataBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(resourcesMetadata_);
+        }
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder addResourcesMetadataBuilder() {
+        return getResourcesMetadataFieldBuilder().addBuilder(
+            yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder addResourcesMetadataBuilder(
+          int index) {
+        return getResourcesMetadataFieldBuilder().addBuilder(
+            index, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of CDN resources currently using this origin group.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cdn.v1.ResourceMetadata resources_metadata = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder> 
+           getResourcesMetadataBuilderList() {
+        return getResourcesMetadataFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadataOrBuilder> 
+          getResourcesMetadataFieldBuilder() {
+        if (resourcesMetadataBuilder_ == null) {
+          resourcesMetadataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadataOrBuilder>(
+                  resourcesMetadata_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          resourcesMetadata_ = null;
+        }
+        return resourcesMetadataBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1682,11 +2166,814 @@ public final class OriginGroupOuterClass {
 
   }
 
+  public interface ResourceMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.ResourceMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the CDN resource using the origin group.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * ID of the CDN resource using the origin group.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * CNAME of the CDN resource using the origin group.
+     * </pre>
+     *
+     * <code>string cname = 2;</code>
+     * @return The cname.
+     */
+    java.lang.String getCname();
+    /**
+     * <pre>
+     * CNAME of the CDN resource using the origin group.
+     * </pre>
+     *
+     * <code>string cname = 2;</code>
+     * @return The bytes for cname.
+     */
+    com.google.protobuf.ByteString
+        getCnameBytes();
+  }
+  /**
+   * <pre>
+   * Metadata of a CDN resource referencing an origin group.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.cdn.v1.ResourceMetadata}
+   */
+  public static final class ResourceMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceMetadata)
+      ResourceMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResourceMetadata.newBuilder() to construct.
+    private ResourceMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResourceMetadata() {
+      id_ = "";
+      cname_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResourceMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResourceMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cname_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cdn.v1.OriginGroupOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cdn.v1.OriginGroupOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.class, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * ID of the CDN resource using the origin group.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the CDN resource using the origin group.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CNAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object cname_;
+    /**
+     * <pre>
+     * CNAME of the CDN resource using the origin group.
+     * </pre>
+     *
+     * <code>string cname = 2;</code>
+     * @return The cname.
+     */
+    @java.lang.Override
+    public java.lang.String getCname() {
+      java.lang.Object ref = cname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * CNAME of the CDN resource using the origin group.
+     * </pre>
+     *
+     * <code>string cname = 2;</code>
+     * @return The bytes for cname.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCnameBytes() {
+      java.lang.Object ref = cname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cname_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, cname_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cname_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, cname_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata other = (yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getCname()
+          .equals(other.getCname())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + CNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCname().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Metadata of a CDN resource referencing an origin group.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.cdn.v1.ResourceMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.ResourceMetadata)
+        yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.OriginGroupOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.OriginGroupOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.class, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        cname_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cdn.v1.OriginGroupOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata build() {
+        yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata buildPartial() {
+        yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata result = new yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata(this);
+        result.id_ = id_;
+        result.cname_ = cname_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata) {
+          return mergeFrom((yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata other) {
+        if (other == yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getCname().isEmpty()) {
+          cname_ = other.cname_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * ID of the CDN resource using the origin group.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the CDN resource using the origin group.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the CDN resource using the origin group.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the CDN resource using the origin group.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the CDN resource using the origin group.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cname_ = "";
+      /**
+       * <pre>
+       * CNAME of the CDN resource using the origin group.
+       * </pre>
+       *
+       * <code>string cname = 2;</code>
+       * @return The cname.
+       */
+      public java.lang.String getCname() {
+        java.lang.Object ref = cname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CNAME of the CDN resource using the origin group.
+       * </pre>
+       *
+       * <code>string cname = 2;</code>
+       * @return The bytes for cname.
+       */
+      public com.google.protobuf.ByteString
+          getCnameBytes() {
+        java.lang.Object ref = cname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CNAME of the CDN resource using the origin group.
+       * </pre>
+       *
+       * <code>string cname = 2;</code>
+       * @param value The cname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCname(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CNAME of the CDN resource using the origin group.
+       * </pre>
+       *
+       * <code>string cname = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCname() {
+        
+        cname_ = getDefaultInstance().getCname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CNAME of the CDN resource using the origin group.
+       * </pre>
+       *
+       * <code>string cname = 2;</code>
+       * @param value The bytes for cname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCnameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cname_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.ResourceMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.ResourceMetadata)
+    private static final yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata();
+    }
+
+    public static yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResourceMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<ResourceMetadata>() {
+      @java.lang.Override
+      public ResourceMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResourceMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResourceMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResourceMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.ResourceMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_cdn_v1_OriginGroup_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_cdn_v1_OriginGroup_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_ResourceMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_ResourceMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1698,13 +2985,16 @@ public final class OriginGroupOuterClass {
     java.lang.String[] descriptorData = {
       "\n&yandex/cloud/cdn/v1/origin_group.proto" +
       "\022\023yandex.cloud.cdn.v1\032 yandex/cloud/cdn/" +
-      "v1/origin.proto\"\221\001\n\013OriginGroup\022\n\n\002id\030\001 " +
+      "v1/origin.proto\"\324\001\n\013OriginGroup\022\n\n\002id\030\001 " +
       "\001(\003\022\021\n\tfolder_id\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\020\n\010" +
       "use_next\030\004 \001(\010\022,\n\007origins\030\005 \003(\0132\033.yandex" +
       ".cloud.cdn.v1.Origin\022\025\n\rprovider_type\030\006 " +
-      "\001(\tBV\n\027yandex.cloud.api.cdn.v1Z;github.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/cdn/v1;cdnb\006proto3"
+      "\001(\t\022A\n\022resources_metadata\030\007 \003(\0132%.yandex" +
+      ".cloud.cdn.v1.ResourceMetadata\"-\n\020Resour" +
+      "ceMetadata\022\n\n\002id\030\001 \001(\t\022\r\n\005cname\030\002 \001(\tBV\n" +
+      "\027yandex.cloud.api.cdn.v1Z;github.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/cdn/v" +
+      "1;cdnb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1716,7 +3006,13 @@ public final class OriginGroupOuterClass {
     internal_static_yandex_cloud_cdn_v1_OriginGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_OriginGroup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Name", "UseNext", "Origins", "ProviderType", });
+        new java.lang.String[] { "Id", "FolderId", "Name", "UseNext", "Origins", "ProviderType", "ResourcesMetadata", });
+    internal_static_yandex_cloud_cdn_v1_ResourceMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_cdn_v1_ResourceMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_ResourceMetadata_descriptor,
+        new java.lang.String[] { "Id", "Cname", });
     yandex.cloud.api.cdn.v1.OriginOuterClass.getDescriptor();
   }
 

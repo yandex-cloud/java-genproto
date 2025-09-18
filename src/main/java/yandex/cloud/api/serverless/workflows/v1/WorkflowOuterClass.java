@@ -301,6 +301,33 @@ public final class WorkflowOuterClass {
      * @return The express.
      */
     boolean getExpress();
+
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+     * @return Whether the schedule field is set.
+     */
+    boolean hasSchedule();
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+     * @return The schedule.
+     */
+    yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getSchedule();
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+     */
+    yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.workflows.v1.Workflow}
@@ -452,6 +479,19 @@ public final class WorkflowOuterClass {
             case 96: {
 
               express_ = input.readBool();
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder subBuilder = null;
+              if (schedule_ != null) {
+                subBuilder = schedule_.toBuilder();
+              }
+              schedule_ = input.readMessage(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(schedule_);
+                schedule_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1211,6 +1251,44 @@ public final class WorkflowOuterClass {
       return express_;
     }
 
+    public static final int SCHEDULE_FIELD_NUMBER = 13;
+    private yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule schedule_;
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+     * @return Whether the schedule field is set.
+     */
+    @java.lang.Override
+    public boolean hasSchedule() {
+      return schedule_ != null;
+    }
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+     * @return The schedule.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getSchedule() {
+      return schedule_ == null ? yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.getDefaultInstance() : schedule_;
+    }
+    /**
+     * <pre>
+     * Workflow schedule settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder() {
+      return getSchedule();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1263,6 +1341,9 @@ public final class WorkflowOuterClass {
       }
       if (express_ != false) {
         output.writeBool(12, express_);
+      }
+      if (schedule_ != null) {
+        output.writeMessage(13, getSchedule());
       }
       unknownFields.writeTo(output);
     }
@@ -1321,6 +1402,10 @@ public final class WorkflowOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, express_);
       }
+      if (schedule_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getSchedule());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1368,6 +1453,11 @@ public final class WorkflowOuterClass {
           .equals(other.getServiceAccountId())) return false;
       if (getExpress()
           != other.getExpress()) return false;
+      if (hasSchedule() != other.hasSchedule()) return false;
+      if (hasSchedule()) {
+        if (!getSchedule()
+            .equals(other.getSchedule())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1412,6 +1502,10 @@ public final class WorkflowOuterClass {
       hash = (37 * hash) + EXPRESS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getExpress());
+      if (hasSchedule()) {
+        hash = (37 * hash) + SCHEDULE_FIELD_NUMBER;
+        hash = (53 * hash) + getSchedule().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1602,6 +1696,12 @@ public final class WorkflowOuterClass {
 
         express_ = false;
 
+        if (scheduleBuilder_ == null) {
+          schedule_ = null;
+        } else {
+          schedule_ = null;
+          scheduleBuilder_ = null;
+        }
         return this;
       }
 
@@ -1654,6 +1754,11 @@ public final class WorkflowOuterClass {
         result.networkId_ = networkId_;
         result.serviceAccountId_ = serviceAccountId_;
         result.express_ = express_;
+        if (scheduleBuilder_ == null) {
+          result.schedule_ = schedule_;
+        } else {
+          result.schedule_ = scheduleBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1742,6 +1847,9 @@ public final class WorkflowOuterClass {
         }
         if (other.getExpress() != false) {
           setExpress(other.getExpress());
+        }
+        if (other.hasSchedule()) {
+          mergeSchedule(other.getSchedule());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3088,6 +3196,161 @@ public final class WorkflowOuterClass {
         express_ = false;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule schedule_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder> scheduleBuilder_;
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+       * @return Whether the schedule field is set.
+       */
+      public boolean hasSchedule() {
+        return scheduleBuilder_ != null || schedule_ != null;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+       * @return The schedule.
+       */
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getSchedule() {
+        if (scheduleBuilder_ == null) {
+          return schedule_ == null ? yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.getDefaultInstance() : schedule_;
+        } else {
+          return scheduleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+       */
+      public Builder setSchedule(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule value) {
+        if (scheduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schedule_ = value;
+          onChanged();
+        } else {
+          scheduleBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+       */
+      public Builder setSchedule(
+          yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder builderForValue) {
+        if (scheduleBuilder_ == null) {
+          schedule_ = builderForValue.build();
+          onChanged();
+        } else {
+          scheduleBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+       */
+      public Builder mergeSchedule(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule value) {
+        if (scheduleBuilder_ == null) {
+          if (schedule_ != null) {
+            schedule_ =
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.newBuilder(schedule_).mergeFrom(value).buildPartial();
+          } else {
+            schedule_ = value;
+          }
+          onChanged();
+        } else {
+          scheduleBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+       */
+      public Builder clearSchedule() {
+        if (scheduleBuilder_ == null) {
+          schedule_ = null;
+          onChanged();
+        } else {
+          schedule_ = null;
+          scheduleBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+       */
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder getScheduleBuilder() {
+        
+        onChanged();
+        return getScheduleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+       */
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder() {
+        if (scheduleBuilder_ != null) {
+          return scheduleBuilder_.getMessageOrBuilder();
+        } else {
+          return schedule_ == null ?
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.getDefaultInstance() : schedule_;
+        }
+      }
+      /**
+       * <pre>
+       * Workflow schedule settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder> 
+          getScheduleFieldBuilder() {
+        if (scheduleBuilder_ == null) {
+          scheduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder>(
+                  getSchedule(),
+                  getParentForChildren(),
+                  isClean());
+          schedule_ = null;
+        }
+        return scheduleBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7779,6 +8042,796 @@ public final class WorkflowOuterClass {
 
   }
 
+  public interface WorkflowScheduleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.workflows.v1.WorkflowSchedule)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Cron expression for the Workflow schedule.
+     * </pre>
+     *
+     * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The cronExpression.
+     */
+    java.lang.String getCronExpression();
+    /**
+     * <pre>
+     * Cron expression for the Workflow schedule.
+     * </pre>
+     *
+     * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for cronExpression.
+     */
+    com.google.protobuf.ByteString
+        getCronExpressionBytes();
+
+    /**
+     * <pre>
+     * Timezone for the Workflow schedule.
+     * </pre>
+     *
+     * <code>string timezone = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The timezone.
+     */
+    java.lang.String getTimezone();
+    /**
+     * <pre>
+     * Timezone for the Workflow schedule.
+     * </pre>
+     *
+     * <code>string timezone = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for timezone.
+     */
+    com.google.protobuf.ByteString
+        getTimezoneBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.workflows.v1.WorkflowSchedule}
+   */
+  public static final class WorkflowSchedule extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.workflows.v1.WorkflowSchedule)
+      WorkflowScheduleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkflowSchedule.newBuilder() to construct.
+    private WorkflowSchedule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkflowSchedule() {
+      cronExpression_ = "";
+      timezone_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkflowSchedule();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkflowSchedule(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cronExpression_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              timezone_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_WorkflowSchedule_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_WorkflowSchedule_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.class, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder.class);
+    }
+
+    public static final int CRON_EXPRESSION_FIELD_NUMBER = 1;
+    private volatile java.lang.Object cronExpression_;
+    /**
+     * <pre>
+     * Cron expression for the Workflow schedule.
+     * </pre>
+     *
+     * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The cronExpression.
+     */
+    @java.lang.Override
+    public java.lang.String getCronExpression() {
+      java.lang.Object ref = cronExpression_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cronExpression_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Cron expression for the Workflow schedule.
+     * </pre>
+     *
+     * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for cronExpression.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCronExpressionBytes() {
+      java.lang.Object ref = cronExpression_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cronExpression_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMEZONE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object timezone_;
+    /**
+     * <pre>
+     * Timezone for the Workflow schedule.
+     * </pre>
+     *
+     * <code>string timezone = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The timezone.
+     */
+    @java.lang.Override
+    public java.lang.String getTimezone() {
+      java.lang.Object ref = timezone_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        timezone_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Timezone for the Workflow schedule.
+     * </pre>
+     *
+     * <code>string timezone = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for timezone.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTimezoneBytes() {
+      java.lang.Object ref = timezone_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        timezone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronExpression_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cronExpression_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, timezone_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronExpression_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cronExpression_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, timezone_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule other = (yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule) obj;
+
+      if (!getCronExpression()
+          .equals(other.getCronExpression())) return false;
+      if (!getTimezone()
+          .equals(other.getTimezone())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CRON_EXPRESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getCronExpression().hashCode();
+      hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
+      hash = (53 * hash) + getTimezone().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.workflows.v1.WorkflowSchedule}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.workflows.v1.WorkflowSchedule)
+        yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_WorkflowSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_WorkflowSchedule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.class, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        cronExpression_ = "";
+
+        timezone_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_WorkflowSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule build() {
+        yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule buildPartial() {
+        yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule result = new yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule(this);
+        result.cronExpression_ = cronExpression_;
+        result.timezone_ = timezone_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule) {
+          return mergeFrom((yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule other) {
+        if (other == yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule.getDefaultInstance()) return this;
+        if (!other.getCronExpression().isEmpty()) {
+          cronExpression_ = other.cronExpression_;
+          onChanged();
+        }
+        if (!other.getTimezone().isEmpty()) {
+          timezone_ = other.timezone_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object cronExpression_ = "";
+      /**
+       * <pre>
+       * Cron expression for the Workflow schedule.
+       * </pre>
+       *
+       * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The cronExpression.
+       */
+      public java.lang.String getCronExpression() {
+        java.lang.Object ref = cronExpression_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cronExpression_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cron expression for the Workflow schedule.
+       * </pre>
+       *
+       * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for cronExpression.
+       */
+      public com.google.protobuf.ByteString
+          getCronExpressionBytes() {
+        java.lang.Object ref = cronExpression_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cronExpression_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cron expression for the Workflow schedule.
+       * </pre>
+       *
+       * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The cronExpression to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCronExpression(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cronExpression_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cron expression for the Workflow schedule.
+       * </pre>
+       *
+       * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCronExpression() {
+        
+        cronExpression_ = getDefaultInstance().getCronExpression();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cron expression for the Workflow schedule.
+       * </pre>
+       *
+       * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for cronExpression to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCronExpressionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cronExpression_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object timezone_ = "";
+      /**
+       * <pre>
+       * Timezone for the Workflow schedule.
+       * </pre>
+       *
+       * <code>string timezone = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The timezone.
+       */
+      public java.lang.String getTimezone() {
+        java.lang.Object ref = timezone_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          timezone_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Timezone for the Workflow schedule.
+       * </pre>
+       *
+       * <code>string timezone = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for timezone.
+       */
+      public com.google.protobuf.ByteString
+          getTimezoneBytes() {
+        java.lang.Object ref = timezone_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          timezone_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Timezone for the Workflow schedule.
+       * </pre>
+       *
+       * <code>string timezone = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The timezone to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimezone(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        timezone_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timezone for the Workflow schedule.
+       * </pre>
+       *
+       * <code>string timezone = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimezone() {
+        
+        timezone_ = getDefaultInstance().getTimezone();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timezone for the Workflow schedule.
+       * </pre>
+       *
+       * <code>string timezone = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for timezone to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimezoneBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        timezone_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.workflows.v1.WorkflowSchedule)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.workflows.v1.WorkflowSchedule)
+    private static final yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule();
+    }
+
+    public static yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkflowSchedule>
+        PARSER = new com.google.protobuf.AbstractParser<WorkflowSchedule>() {
+      @java.lang.Override
+      public WorkflowSchedule parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkflowSchedule(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkflowSchedule> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkflowSchedule> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowSchedule getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_workflows_v1_Workflow_descriptor;
   private static final 
@@ -7809,6 +8862,11 @@ public final class WorkflowOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_workflows_v1_LogOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_workflows_v1_WorkflowSchedule_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_workflows_v1_WorkflowSchedule_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7822,7 +8880,7 @@ public final class WorkflowOuterClass {
       "orkflow.proto\022$yandex.cloud.serverless.w" +
       "orkflows.v1\032\037google/protobuf/timestamp.p" +
       "roto\032\'yandex/cloud/logging/v1/log_entry." +
-      "proto\032\035yandex/cloud/validation.proto\"\375\004\n" +
+      "proto\032\035yandex/cloud/validation.proto\"\307\005\n" +
       "\010Workflow\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t" +
       "\022R\n\rspecification\030\003 \001(\0132;.yandex.cloud.s" +
       "erverless.workflows.v1.WorkflowSpecifica" +
@@ -7835,31 +8893,35 @@ public final class WorkflowOuterClass {
       "g_options\030\t \001(\01320.yandex.cloud.serverles" +
       "s.workflows.v1.LogOptions\022\022\n\nnetwork_id\030" +
       "\n \001(\t\022\032\n\022service_account_id\030\013 \001(\t\022\017\n\007exp" +
-      "ress\030\014 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"a\n\006Status\022\026\n\022STATUS_UN" +
-      "SPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n" +
-      "\010UPDATING\020\003\022\014\n\010DELETING\020\004\022\t\n\005ERROR\020\005\"\324\003\n" +
-      "\017WorkflowPreview\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_i" +
-      "d\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descrip" +
-      "tion\030\005 \001(\t\022Q\n\006labels\030\006 \003(\0132A.yandex.clou" +
-      "d.serverless.workflows.v1.WorkflowPrevie" +
-      "w.LabelsEntry\022E\n\006status\030\007 \001(\01625.yandex.c" +
-      "loud.serverless.workflows.v1.Workflow.St" +
-      "atus\022E\n\013log_options\030\010 \001(\01320.yandex.cloud" +
-      ".serverless.workflows.v1.LogOptions\022\022\n\nn" +
-      "etwork_id\030\t \001(\t\022\032\n\022service_account_id\030\n " +
-      "\001(\t\022\017\n\007express\030\013 \001(\010\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\025WorkflowS" +
-      "pecification\022\023\n\tspec_yaml\030\001 \001(\tH\000B\014\n\004spe" +
-      "c\022\004\300\3011\001\"\226\001\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010" +
-      "\022\026\n\014log_group_id\030\002 \001(\tH\000\022\023\n\tfolder_id\030\003 " +
-      "\001(\tH\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cloud." +
-      "logging.v1.LogLevel.LevelB\r\n\013destination" +
-      "B~\n(yandex.cloud.api.serverless.workflow" +
-      "s.v1ZRgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/serverless/workflows/v1;w" +
-      "orkflowsb\006proto3"
+      "ress\030\014 \001(\010\022H\n\010schedule\030\r \001(\01326.yandex.cl" +
+      "oud.serverless.workflows.v1.WorkflowSche" +
+      "dule\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIF" +
+      "IED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010UPDAT" +
+      "ING\020\003\022\014\n\010DELETING\020\004\022\t\n\005ERROR\020\005\"\324\003\n\017Workf" +
+      "lowPreview\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(" +
+      "\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf." +
+      "Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005" +
+      " \001(\t\022Q\n\006labels\030\006 \003(\0132A.yandex.cloud.serv" +
+      "erless.workflows.v1.WorkflowPreview.Labe" +
+      "lsEntry\022E\n\006status\030\007 \001(\01625.yandex.cloud.s" +
+      "erverless.workflows.v1.Workflow.Status\022E" +
+      "\n\013log_options\030\010 \001(\01320.yandex.cloud.serve" +
+      "rless.workflows.v1.LogOptions\022\022\n\nnetwork" +
+      "_id\030\t \001(\t\022\032\n\022service_account_id\030\n \001(\t\022\017\n" +
+      "\007express\030\013 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\025WorkflowSpecifi" +
+      "cation\022\023\n\tspec_yaml\030\001 \001(\tH\000B\014\n\004spec\022\004\300\3011" +
+      "\001\"\226\001\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022\026\n\014lo" +
+      "g_group_id\030\002 \001(\tH\000\022\023\n\tfolder_id\030\003 \001(\tH\000\022" +
+      ":\n\tmin_level\030\004 \001(\0162\'.yandex.cloud.loggin" +
+      "g.v1.LogLevel.LevelB\r\n\013destination\"R\n\020Wo" +
+      "rkflowSchedule\022&\n\017cron_expression\030\001 \001(\tB" +
+      "\r\350\3071\001\212\3101\005<=100\022\026\n\010timezone\030\002 \001(\tB\004\350\3071\001B~" +
+      "\n(yandex.cloud.api.serverless.workflows." +
+      "v1ZRgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/serverless/workflows/v1;wor" +
+      "kflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7873,7 +8935,7 @@ public final class WorkflowOuterClass {
     internal_static_yandex_cloud_serverless_workflows_v1_Workflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_Workflow_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Specification", "CreatedAt", "Name", "Description", "Labels", "Status", "LogOptions", "NetworkId", "ServiceAccountId", "Express", });
+        new java.lang.String[] { "Id", "FolderId", "Specification", "CreatedAt", "Name", "Description", "Labels", "Status", "LogOptions", "NetworkId", "ServiceAccountId", "Express", "Schedule", });
     internal_static_yandex_cloud_serverless_workflows_v1_Workflow_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_workflows_v1_Workflow_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_workflows_v1_Workflow_LabelsEntry_fieldAccessorTable = new
@@ -7904,9 +8966,17 @@ public final class WorkflowOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_LogOptions_descriptor,
         new java.lang.String[] { "Disabled", "LogGroupId", "FolderId", "MinLevel", "Destination", });
+    internal_static_yandex_cloud_serverless_workflows_v1_WorkflowSchedule_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_serverless_workflows_v1_WorkflowSchedule_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_workflows_v1_WorkflowSchedule_descriptor,
+        new java.lang.String[] { "CronExpression", "Timezone", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();

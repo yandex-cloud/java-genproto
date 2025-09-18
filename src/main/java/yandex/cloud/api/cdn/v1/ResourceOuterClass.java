@@ -1974,7 +1974,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this resource.
      * </pre>
      *
      * <code>string provider_type = 14;</code>
@@ -1983,7 +1983,7 @@ public final class ResourceOuterClass {
     java.lang.String getProviderType();
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this resource.
      * </pre>
      *
      * <code>string provider_type = 14;</code>
@@ -1994,7 +1994,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * RESERVED: Provider CNAME.
+     * CNAME provided by the CDN provider for this resource.
      * </pre>
      *
      * <code>string provider_cname = 15;</code>
@@ -2003,7 +2003,7 @@ public final class ResourceOuterClass {
     java.lang.String getProviderCname();
     /**
      * <pre>
-     * RESERVED: Provider CNAME.
+     * CNAME provided by the CDN provider for this resource.
      * </pre>
      *
      * <code>string provider_cname = 15;</code>
@@ -2790,7 +2790,7 @@ public final class ResourceOuterClass {
     private volatile java.lang.Object providerType_;
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this resource.
      * </pre>
      *
      * <code>string provider_type = 14;</code>
@@ -2811,7 +2811,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * RESERVED: This field is reserved for future use and should not be used at this time.
+     * Type of the CDN provider for this resource.
      * </pre>
      *
      * <code>string provider_type = 14;</code>
@@ -2836,7 +2836,7 @@ public final class ResourceOuterClass {
     private volatile java.lang.Object providerCname_;
     /**
      * <pre>
-     * RESERVED: Provider CNAME.
+     * CNAME provided by the CDN provider for this resource.
      * </pre>
      *
      * <code>string provider_cname = 15;</code>
@@ -2857,7 +2857,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * RESERVED: Provider CNAME.
+     * CNAME provided by the CDN provider for this resource.
      * </pre>
      *
      * <code>string provider_cname = 15;</code>
@@ -5004,7 +5004,7 @@ public final class ResourceOuterClass {
       private java.lang.Object providerType_ = "";
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this resource.
        * </pre>
        *
        * <code>string provider_type = 14;</code>
@@ -5024,7 +5024,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this resource.
        * </pre>
        *
        * <code>string provider_type = 14;</code>
@@ -5045,7 +5045,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this resource.
        * </pre>
        *
        * <code>string provider_type = 14;</code>
@@ -5064,7 +5064,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this resource.
        * </pre>
        *
        * <code>string provider_type = 14;</code>
@@ -5078,7 +5078,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: This field is reserved for future use and should not be used at this time.
+       * Type of the CDN provider for this resource.
        * </pre>
        *
        * <code>string provider_type = 14;</code>
@@ -5100,7 +5100,7 @@ public final class ResourceOuterClass {
       private java.lang.Object providerCname_ = "";
       /**
        * <pre>
-       * RESERVED: Provider CNAME.
+       * CNAME provided by the CDN provider for this resource.
        * </pre>
        *
        * <code>string provider_cname = 15;</code>
@@ -5120,7 +5120,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: Provider CNAME.
+       * CNAME provided by the CDN provider for this resource.
        * </pre>
        *
        * <code>string provider_cname = 15;</code>
@@ -5141,7 +5141,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: Provider CNAME.
+       * CNAME provided by the CDN provider for this resource.
        * </pre>
        *
        * <code>string provider_cname = 15;</code>
@@ -5160,7 +5160,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: Provider CNAME.
+       * CNAME provided by the CDN provider for this resource.
        * </pre>
        *
        * <code>string provider_cname = 15;</code>
@@ -5174,7 +5174,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * RESERVED: Provider CNAME.
+       * CNAME provided by the CDN provider for this resource.
        * </pre>
        *
        * <code>string provider_cname = 15;</code>
@@ -5845,7 +5845,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * Manage the state of the IP access policy option. 
+     * Manage the state of the IP access policy option.
      * The option controls access to content from the specified IP addresses.
      * </pre>
      *
@@ -5855,7 +5855,7 @@ public final class ResourceOuterClass {
     boolean hasIpAddressAcl();
     /**
      * <pre>
-     * Manage the state of the IP access policy option. 
+     * Manage the state of the IP access policy option.
      * The option controls access to content from the specified IP addresses.
      * </pre>
      *
@@ -5865,7 +5865,7 @@ public final class ResourceOuterClass {
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.IPAddressACLOption getIpAddressAcl();
     /**
      * <pre>
-     * Manage the state of the IP access policy option. 
+     * Manage the state of the IP access policy option.
      * The option controls access to content from the specified IP addresses.
      * </pre>
      *
@@ -22360,7 +22360,7 @@ public final class ResourceOuterClass {
     private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.IPAddressACLOption ipAddressAcl_;
     /**
      * <pre>
-     * Manage the state of the IP access policy option. 
+     * Manage the state of the IP access policy option.
      * The option controls access to content from the specified IP addresses.
      * </pre>
      *
@@ -22373,7 +22373,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Manage the state of the IP access policy option. 
+     * Manage the state of the IP access policy option.
      * The option controls access to content from the specified IP addresses.
      * </pre>
      *
@@ -22386,7 +22386,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Manage the state of the IP access policy option. 
+     * Manage the state of the IP access policy option.
      * The option controls access to content from the specified IP addresses.
      * </pre>
      *
@@ -26583,7 +26583,7 @@ public final class ResourceOuterClass {
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.IPAddressACLOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.IPAddressACLOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.IPAddressACLOptionOrBuilder> ipAddressAclBuilder_;
       /**
        * <pre>
-       * Manage the state of the IP access policy option. 
+       * Manage the state of the IP access policy option.
        * The option controls access to content from the specified IP addresses.
        * </pre>
        *
@@ -26595,7 +26595,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Manage the state of the IP access policy option. 
+       * Manage the state of the IP access policy option.
        * The option controls access to content from the specified IP addresses.
        * </pre>
        *
@@ -26611,7 +26611,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Manage the state of the IP access policy option. 
+       * Manage the state of the IP access policy option.
        * The option controls access to content from the specified IP addresses.
        * </pre>
        *
@@ -26632,7 +26632,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Manage the state of the IP access policy option. 
+       * Manage the state of the IP access policy option.
        * The option controls access to content from the specified IP addresses.
        * </pre>
        *
@@ -26651,7 +26651,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Manage the state of the IP access policy option. 
+       * Manage the state of the IP access policy option.
        * The option controls access to content from the specified IP addresses.
        * </pre>
        *
@@ -26674,7 +26674,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Manage the state of the IP access policy option. 
+       * Manage the state of the IP access policy option.
        * The option controls access to content from the specified IP addresses.
        * </pre>
        *
@@ -26693,7 +26693,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Manage the state of the IP access policy option. 
+       * Manage the state of the IP access policy option.
        * The option controls access to content from the specified IP addresses.
        * </pre>
        *
@@ -26706,7 +26706,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Manage the state of the IP access policy option. 
+       * Manage the state of the IP access policy option.
        * The option controls access to content from the specified IP addresses.
        * </pre>
        *
@@ -26722,7 +26722,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Manage the state of the IP access policy option. 
+       * Manage the state of the IP access policy option.
        * The option controls access to content from the specified IP addresses.
        * </pre>
        *

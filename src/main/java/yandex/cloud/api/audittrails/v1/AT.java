@@ -1106,6 +1106,33 @@ public final class AT {
        */
       yandex.cloud.api.audittrails.v1.AT.Trail.DataStreamOrBuilder getDataStreamOrBuilder();
 
+      /**
+       * <pre>
+       * Configuration for event delivery to EventRouter
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+       * @return Whether the eventrouter field is set.
+       */
+      boolean hasEventrouter();
+      /**
+       * <pre>
+       * Configuration for event delivery to EventRouter
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+       * @return The eventrouter.
+       */
+      yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter getEventrouter();
+      /**
+       * <pre>
+       * Configuration for event delivery to EventRouter
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+       */
+      yandex.cloud.api.audittrails.v1.AT.Trail.EventRouterOrBuilder getEventrouterOrBuilder();
+
       public yandex.cloud.api.audittrails.v1.AT.Trail.Destination.DestinationCase getDestinationCase();
     }
     /**
@@ -1195,6 +1222,20 @@ public final class AT {
                 destinationCase_ = 4;
                 break;
               }
+              case 50: {
+                yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.Builder subBuilder = null;
+                if (destinationCase_ == 6) {
+                  subBuilder = ((yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) destination_).toBuilder();
+                }
+                destination_ =
+                    input.readMessage(yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) destination_);
+                  destination_ = subBuilder.buildPartial();
+                }
+                destinationCase_ = 6;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -1235,6 +1276,7 @@ public final class AT {
         OBJECT_STORAGE(1),
         CLOUD_LOGGING(3),
         DATA_STREAM(4),
+        EVENTROUTER(6),
         DESTINATION_NOT_SET(0);
         private final int value;
         private DestinationCase(int value) {
@@ -1255,6 +1297,7 @@ public final class AT {
             case 1: return OBJECT_STORAGE;
             case 3: return CLOUD_LOGGING;
             case 4: return DATA_STREAM;
+            case 6: return EVENTROUTER;
             case 0: return DESTINATION_NOT_SET;
             default: return null;
           }
@@ -1402,6 +1445,49 @@ public final class AT {
         return yandex.cloud.api.audittrails.v1.AT.Trail.DataStream.getDefaultInstance();
       }
 
+      public static final int EVENTROUTER_FIELD_NUMBER = 6;
+      /**
+       * <pre>
+       * Configuration for event delivery to EventRouter
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+       * @return Whether the eventrouter field is set.
+       */
+      @java.lang.Override
+      public boolean hasEventrouter() {
+        return destinationCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Configuration for event delivery to EventRouter
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+       * @return The eventrouter.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter getEventrouter() {
+        if (destinationCase_ == 6) {
+           return (yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) destination_;
+        }
+        return yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Configuration for event delivery to EventRouter
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.audittrails.v1.AT.Trail.EventRouterOrBuilder getEventrouterOrBuilder() {
+        if (destinationCase_ == 6) {
+           return (yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) destination_;
+        }
+        return yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -1425,6 +1511,9 @@ public final class AT {
         if (destinationCase_ == 4) {
           output.writeMessage(4, (yandex.cloud.api.audittrails.v1.AT.Trail.DataStream) destination_);
         }
+        if (destinationCase_ == 6) {
+          output.writeMessage(6, (yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) destination_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -1445,6 +1534,10 @@ public final class AT {
         if (destinationCase_ == 4) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, (yandex.cloud.api.audittrails.v1.AT.Trail.DataStream) destination_);
+        }
+        if (destinationCase_ == 6) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, (yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) destination_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -1475,6 +1568,10 @@ public final class AT {
             if (!getDataStream()
                 .equals(other.getDataStream())) return false;
             break;
+          case 6:
+            if (!getEventrouter()
+                .equals(other.getEventrouter())) return false;
+            break;
           case 0:
           default:
         }
@@ -1501,6 +1598,10 @@ public final class AT {
           case 4:
             hash = (37 * hash) + DATA_STREAM_FIELD_NUMBER;
             hash = (53 * hash) + getDataStream().hashCode();
+            break;
+          case 6:
+            hash = (37 * hash) + EVENTROUTER_FIELD_NUMBER;
+            hash = (53 * hash) + getEventrouter().hashCode();
             break;
           case 0:
           default:
@@ -1687,6 +1788,13 @@ public final class AT {
               result.destination_ = dataStreamBuilder_.build();
             }
           }
+          if (destinationCase_ == 6) {
+            if (eventrouterBuilder_ == null) {
+              result.destination_ = destination_;
+            } else {
+              result.destination_ = eventrouterBuilder_.build();
+            }
+          }
           result.destinationCase_ = destinationCase_;
           onBuilt();
           return result;
@@ -1747,6 +1855,10 @@ public final class AT {
             }
             case DATA_STREAM: {
               mergeDataStream(other.getDataStream());
+              break;
+            }
+            case EVENTROUTER: {
+              mergeEventrouter(other.getEventrouter());
               break;
             }
             case DESTINATION_NOT_SET: {
@@ -2335,6 +2447,183 @@ public final class AT {
           destinationCase_ = 4;
           onChanged();;
           return dataStreamBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter, yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.EventRouterOrBuilder> eventrouterBuilder_;
+        /**
+         * <pre>
+         * Configuration for event delivery to EventRouter
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+         * @return Whether the eventrouter field is set.
+         */
+        @java.lang.Override
+        public boolean hasEventrouter() {
+          return destinationCase_ == 6;
+        }
+        /**
+         * <pre>
+         * Configuration for event delivery to EventRouter
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+         * @return The eventrouter.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter getEventrouter() {
+          if (eventrouterBuilder_ == null) {
+            if (destinationCase_ == 6) {
+              return (yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) destination_;
+            }
+            return yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.getDefaultInstance();
+          } else {
+            if (destinationCase_ == 6) {
+              return eventrouterBuilder_.getMessage();
+            }
+            return yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for event delivery to EventRouter
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+         */
+        public Builder setEventrouter(yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter value) {
+          if (eventrouterBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            destination_ = value;
+            onChanged();
+          } else {
+            eventrouterBuilder_.setMessage(value);
+          }
+          destinationCase_ = 6;
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for event delivery to EventRouter
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+         */
+        public Builder setEventrouter(
+            yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.Builder builderForValue) {
+          if (eventrouterBuilder_ == null) {
+            destination_ = builderForValue.build();
+            onChanged();
+          } else {
+            eventrouterBuilder_.setMessage(builderForValue.build());
+          }
+          destinationCase_ = 6;
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for event delivery to EventRouter
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+         */
+        public Builder mergeEventrouter(yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter value) {
+          if (eventrouterBuilder_ == null) {
+            if (destinationCase_ == 6 &&
+                destination_ != yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.getDefaultInstance()) {
+              destination_ = yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.newBuilder((yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) destination_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              destination_ = value;
+            }
+            onChanged();
+          } else {
+            if (destinationCase_ == 6) {
+              eventrouterBuilder_.mergeFrom(value);
+            }
+            eventrouterBuilder_.setMessage(value);
+          }
+          destinationCase_ = 6;
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for event delivery to EventRouter
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+         */
+        public Builder clearEventrouter() {
+          if (eventrouterBuilder_ == null) {
+            if (destinationCase_ == 6) {
+              destinationCase_ = 0;
+              destination_ = null;
+              onChanged();
+            }
+          } else {
+            if (destinationCase_ == 6) {
+              destinationCase_ = 0;
+              destination_ = null;
+            }
+            eventrouterBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for event delivery to EventRouter
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+         */
+        public yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.Builder getEventrouterBuilder() {
+          return getEventrouterFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Configuration for event delivery to EventRouter
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.audittrails.v1.AT.Trail.EventRouterOrBuilder getEventrouterOrBuilder() {
+          if ((destinationCase_ == 6) && (eventrouterBuilder_ != null)) {
+            return eventrouterBuilder_.getMessageOrBuilder();
+          } else {
+            if (destinationCase_ == 6) {
+              return (yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) destination_;
+            }
+            return yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for event delivery to EventRouter
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.EventRouter eventrouter = 6;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter, yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.EventRouterOrBuilder> 
+            getEventrouterFieldBuilder() {
+          if (eventrouterBuilder_ == null) {
+            if (!(destinationCase_ == 6)) {
+              destination_ = yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.getDefaultInstance();
+            }
+            eventrouterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter, yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.EventRouterOrBuilder>(
+                    (yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) destination_,
+                    getParentForChildren(),
+                    isClean());
+            destination_ = null;
+          }
+          destinationCase_ = 6;
+          onChanged();;
+          return eventrouterBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -4707,6 +4996,610 @@ public final class AT {
 
       @java.lang.Override
       public yandex.cloud.api.audittrails.v1.AT.Trail.DataStream getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface EventRouterOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.audittrails.v1.Trail.EventRouter)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * ID of the EventRouter Connector
+       * </pre>
+       *
+       * <code>string eventrouter_connector_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The eventrouterConnectorId.
+       */
+      java.lang.String getEventrouterConnectorId();
+      /**
+       * <pre>
+       * ID of the EventRouter Connector
+       * </pre>
+       *
+       * <code>string eventrouter_connector_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for eventrouterConnectorId.
+       */
+      com.google.protobuf.ByteString
+          getEventrouterConnectorIdBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.audittrails.v1.Trail.EventRouter}
+     */
+    public static final class EventRouter extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.audittrails.v1.Trail.EventRouter)
+        EventRouterOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use EventRouter.newBuilder() to construct.
+      private EventRouter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private EventRouter() {
+        eventrouterConnectorId_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new EventRouter();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private EventRouter(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                eventrouterConnectorId_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.audittrails.v1.AT.internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.audittrails.v1.AT.internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.class, yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.Builder.class);
+      }
+
+      public static final int EVENTROUTER_CONNECTOR_ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object eventrouterConnectorId_;
+      /**
+       * <pre>
+       * ID of the EventRouter Connector
+       * </pre>
+       *
+       * <code>string eventrouter_connector_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The eventrouterConnectorId.
+       */
+      @java.lang.Override
+      public java.lang.String getEventrouterConnectorId() {
+        java.lang.Object ref = eventrouterConnectorId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          eventrouterConnectorId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the EventRouter Connector
+       * </pre>
+       *
+       * <code>string eventrouter_connector_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for eventrouterConnectorId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getEventrouterConnectorIdBytes() {
+        java.lang.Object ref = eventrouterConnectorId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eventrouterConnectorId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventrouterConnectorId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, eventrouterConnectorId_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventrouterConnectorId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, eventrouterConnectorId_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter other = (yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) obj;
+
+        if (!getEventrouterConnectorId()
+            .equals(other.getEventrouterConnectorId())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + EVENTROUTER_CONNECTOR_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getEventrouterConnectorId().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.audittrails.v1.Trail.EventRouter}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.audittrails.v1.Trail.EventRouter)
+          yandex.cloud.api.audittrails.v1.AT.Trail.EventRouterOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.audittrails.v1.AT.internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.audittrails.v1.AT.internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.class, yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          eventrouterConnectorId_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.audittrails.v1.AT.internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter getDefaultInstanceForType() {
+          return yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter build() {
+          yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter buildPartial() {
+          yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter result = new yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter(this);
+          result.eventrouterConnectorId_ = eventrouterConnectorId_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) {
+            return mergeFrom((yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter other) {
+          if (other == yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter.getDefaultInstance()) return this;
+          if (!other.getEventrouterConnectorId().isEmpty()) {
+            eventrouterConnectorId_ = other.eventrouterConnectorId_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object eventrouterConnectorId_ = "";
+        /**
+         * <pre>
+         * ID of the EventRouter Connector
+         * </pre>
+         *
+         * <code>string eventrouter_connector_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+         * @return The eventrouterConnectorId.
+         */
+        public java.lang.String getEventrouterConnectorId() {
+          java.lang.Object ref = eventrouterConnectorId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            eventrouterConnectorId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ID of the EventRouter Connector
+         * </pre>
+         *
+         * <code>string eventrouter_connector_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+         * @return The bytes for eventrouterConnectorId.
+         */
+        public com.google.protobuf.ByteString
+            getEventrouterConnectorIdBytes() {
+          java.lang.Object ref = eventrouterConnectorId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            eventrouterConnectorId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ID of the EventRouter Connector
+         * </pre>
+         *
+         * <code>string eventrouter_connector_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+         * @param value The eventrouterConnectorId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEventrouterConnectorId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          eventrouterConnectorId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ID of the EventRouter Connector
+         * </pre>
+         *
+         * <code>string eventrouter_connector_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEventrouterConnectorId() {
+          
+          eventrouterConnectorId_ = getDefaultInstance().getEventrouterConnectorId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ID of the EventRouter Connector
+         * </pre>
+         *
+         * <code>string eventrouter_connector_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+         * @param value The bytes for eventrouterConnectorId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEventrouterConnectorIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          eventrouterConnectorId_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.audittrails.v1.Trail.EventRouter)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.audittrails.v1.Trail.EventRouter)
+      private static final yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter();
+      }
+
+      public static yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<EventRouter>
+          PARSER = new com.google.protobuf.AbstractParser<EventRouter>() {
+        @java.lang.Override
+        public EventRouter parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new EventRouter(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<EventRouter> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<EventRouter> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.audittrails.v1.AT.Trail.EventRouter getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -21568,6 +22461,11 @@ public final class AT {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_audittrails_v1_Trail_DataStream_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_audittrails_v1_Trail_Filter_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -21649,7 +22547,7 @@ public final class AT {
       "\n\'yandex/cloud/audittrails/v1/trail.prot" +
       "o\022\033yandex.cloud.audittrails.v1\032\037google/p" +
       "rotobuf/timestamp.proto\032\035yandex/cloud/va" +
-      "lidation.proto\"\317\034\n\005Trail\022\n\n\002id\030\001 \001(\t\022\037\n\t" +
+      "lidation.proto\"\327\035\n\005Trail\022\n\n\002id\030\001 \001(\t\022\037\n\t" +
       "folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\ncreated" +
       "_at\030\003 \001(\0132\032.google.protobuf.TimestampB\004\350" +
       "\3071\001\0224\n\nupdated_at\030\004 \001(\0132\032.google.protobu" +
@@ -21669,82 +22567,85 @@ public final class AT {
       "B\014\350\3071\001\212\3101\004<=50\022L\n\020filtering_policy\030\017 \001(\013" +
       "22.yandex.cloud.audittrails.v1.Trail.Fil" +
       "teringPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\032\204\002\n\013Destination\022J\n\016o" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\013Destination\022J\n\016o" +
       "bject_storage\030\001 \001(\01320.yandex.cloud.audit" +
       "trails.v1.Trail.ObjectStorageH\000\022H\n\rcloud" +
       "_logging\030\003 \001(\0132/.yandex.cloud.audittrail" +
       "s.v1.Trail.CloudLoggingH\000\022D\n\013data_stream" +
       "\030\004 \001(\0132-.yandex.cloud.audittrails.v1.Tra" +
-      "il.DataStreamH\000B\023\n\013destination\022\004\300\3011\001J\004\010\002" +
-      "\020\003\032C\n\rObjectStorage\022\033\n\tbucket_id\030\001 \001(\tB\010" +
-      "\212\3101\0043-63\022\025\n\robject_prefix\030\002 \001(\t\032E\n\014Cloud" +
-      "Logging\022 \n\014log_group_id\030\001 \001(\tB\010\212\3101\004<=64H" +
-      "\000B\r\n\013destinationJ\004\010\002\020\003\0326\n\nDataStream\022\023\n\013" +
-      "database_id\030\001 \001(\t\022\023\n\013stream_name\030\002 \001(\t\032\230" +
-      "\001\n\006Filter\022B\n\013path_filter\030\001 \001(\0132-.yandex." +
-      "cloud.audittrails.v1.Trail.PathFilter\022J\n" +
-      "\014event_filter\030\002 \001(\0132..yandex.cloud.audit" +
-      "trails.v1.Trail.EventFilterB\004\350\3071\001\032V\n\nPat" +
-      "hFilter\022H\n\004root\030\001 \001(\01324.yandex.cloud.aud" +
-      "ittrails.v1.Trail.PathFilterElementB\004\350\3071" +
-      "\001\032\304\001\n\021PathFilterElement\022M\n\nany_filter\030\001 " +
-      "\001(\01327.yandex.cloud.audittrails.v1.Trail." +
-      "PathFilterElementAnyH\000\022O\n\013some_filter\030\002 " +
-      "\001(\01328.yandex.cloud.audittrails.v1.Trail." +
-      "PathFilterElementSomeH\000B\017\n\007element\022\004\300\3011\001" +
-      "\032[\n\024PathFilterElementAny\022C\n\010resource\030\001 \001" +
-      "(\0132+.yandex.cloud.audittrails.v1.Trail.R" +
-      "esourceB\004\350\3071\001\032\253\001\n\025PathFilterElementSome\022" +
-      "C\n\010resource\030\001 \001(\0132+.yandex.cloud.audittr" +
-      "ails.v1.Trail.ResourceB\004\350\3071\001\022M\n\007filters\030" +
-      "\002 \003(\01324.yandex.cloud.audittrails.v1.Trai" +
-      "l.PathFilterElementB\006\202\3101\002>0\032@\n\010Resource\022" +
-      "\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022\032\n\004type\030\002 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\032^\n\013EventFilter\022O\n\007filters\030" +
-      "\001 \003(\01325.yandex.cloud.audittrails.v1.Trai" +
-      "l.EventFilterElementB\007\202\3101\003>=0\032\320\001\n\022EventF" +
-      "ilterElement\022\025\n\007service\030\001 \001(\tB\004\350\3071\001\022Y\n\nc" +
-      "ategories\030\002 \003(\0132=.yandex.cloud.audittrai" +
-      "ls.v1.Trail.EventFilterElementCategoryB\006" +
-      "\202\3101\002>0\022H\n\013path_filter\030\003 \001(\0132-.yandex.clo" +
-      "ud.audittrails.v1.Trail.PathFilterB\004\350\3071\001" +
-      "\032\267\001\n\032EventFilterElementCategory\022K\n\005plane" +
-      "\030\001 \001(\01626.yandex.cloud.audittrails.v1.Tra" +
-      "il.EventCategoryFilterB\004\350\3071\001\022L\n\004type\030\002 \001" +
-      "(\01628.yandex.cloud.audittrails.v1.Trail.E" +
-      "ventAccessTypeFilterB\004\350\3071\001\032\216\003\n\023DataEvent" +
-      "sFiltering\022\025\n\007service\030\001 \001(\tB\004\350\3071\001\022H\n\017inc" +
-      "luded_events\030\002 \001(\0132-.yandex.cloud.auditt" +
-      "rails.v1.Trail.EventTypesH\000\022H\n\017excluded_" +
-      "events\030\003 \001(\0132-.yandex.cloud.audittrails." +
-      "v1.Trail.EventTypesH\000\022L\n\ndns_filter\030\005 \001(" +
-      "\01326.yandex.cloud.audittrails.v1.Trail.Dn" +
-      "sDataEventsFilterH\001\022P\n\017resource_scopes\030\004" +
-      " \003(\0132+.yandex.cloud.audittrails.v1.Trail" +
-      ".ResourceB\n\202\3101\0061-1024B\022\n\020additional_rule" +
-      "sB\030\n\026service_specific_rules\032-\n\nEventType" +
-      "s\022\037\n\013event_types\030\001 \003(\tB\n\202\3101\0061-1024\032m\n\031Ma" +
-      "nagementEventsFiltering\022P\n\017resource_scop" +
-      "es\030\001 \003(\0132+.yandex.cloud.audittrails.v1.T" +
-      "rail.ResourceB\n\202\3101\0061-1024\032\326\001\n\017FilteringP" +
-      "olicy\022d\n\030management_events_filter\030\001 \001(\0132" +
-      "<.yandex.cloud.audittrails.v1.Trail.Mana" +
-      "gementEventsFilteringB\004\350\3071\000\022]\n\023data_even" +
-      "ts_filters\030\002 \003(\01326.yandex.cloud.audittra" +
-      "ils.v1.Trail.DataEventsFilteringB\010\202\3101\004<1" +
-      "28\032_\n\023DnsDataEventsFilter\022\"\n\026only_recurs" +
-      "ive_queries\030\001 \001(\010B\002\030\001\022$\n\034include_nonrecu" +
-      "rsive_queries\030\002 \001(\010\"D\n\006Status\022\026\n\022STATUS_" +
-      "UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\t\n\005ERROR\020\002\022\013\n\007" +
-      "DELETED\020\003\"_\n\023EventCategoryFilter\022%\n!EVEN" +
-      "T_CATEGORY_FILTER_UNSPECIFIED\020\000\022\021\n\rCONTR" +
-      "OL_PLANE\020\001\022\016\n\nDATA_PLANE\020\002\"V\n\025EventAcces" +
-      "sTypeFilter\022(\n$EVENT_ACCESS_TYPE_FILTER_" +
-      "UNSPECIFIED\020\000\022\t\n\005WRITE\020\001\022\010\n\004READ\020\002J\004\010\r\020\016" +
-      "Br\n\037yandex.cloud.api.audittrails.v1B\002ATZ" +
-      "Kgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/audittrails/v1;audittrailsb\006pr" +
-      "oto3"
+      "il.DataStreamH\000\022E\n\013eventrouter\030\006 \001(\0132..y" +
+      "andex.cloud.audittrails.v1.Trail.EventRo" +
+      "uterH\000B\023\n\013destination\022\004\300\3011\001J\004\010\002\020\003J\004\010\005\020\006\032" +
+      "C\n\rObjectStorage\022\033\n\tbucket_id\030\001 \001(\tB\010\212\3101" +
+      "\0043-63\022\025\n\robject_prefix\030\002 \001(\t\032E\n\014CloudLog" +
+      "ging\022 \n\014log_group_id\030\001 \001(\tB\010\212\3101\004<=64H\000B\r" +
+      "\n\013destinationJ\004\010\002\020\003\0326\n\nDataStream\022\023\n\013dat" +
+      "abase_id\030\001 \001(\t\022\023\n\013stream_name\030\002 \001(\t\0329\n\013E" +
+      "ventRouter\022*\n\030eventrouter_connector_id\030\001" +
+      " \001(\tB\010\212\3101\004<=64\032\230\001\n\006Filter\022B\n\013path_filter" +
+      "\030\001 \001(\0132-.yandex.cloud.audittrails.v1.Tra" +
+      "il.PathFilter\022J\n\014event_filter\030\002 \001(\0132..ya" +
+      "ndex.cloud.audittrails.v1.Trail.EventFil" +
+      "terB\004\350\3071\001\032V\n\nPathFilter\022H\n\004root\030\001 \001(\01324." +
+      "yandex.cloud.audittrails.v1.Trail.PathFi" +
+      "lterElementB\004\350\3071\001\032\304\001\n\021PathFilterElement\022" +
+      "M\n\nany_filter\030\001 \001(\01327.yandex.cloud.audit" +
+      "trails.v1.Trail.PathFilterElementAnyH\000\022O" +
+      "\n\013some_filter\030\002 \001(\01328.yandex.cloud.audit" +
+      "trails.v1.Trail.PathFilterElementSomeH\000B" +
+      "\017\n\007element\022\004\300\3011\001\032[\n\024PathFilterElementAny" +
+      "\022C\n\010resource\030\001 \001(\0132+.yandex.cloud.auditt" +
+      "rails.v1.Trail.ResourceB\004\350\3071\001\032\253\001\n\025PathFi" +
+      "lterElementSome\022C\n\010resource\030\001 \001(\0132+.yand" +
+      "ex.cloud.audittrails.v1.Trail.ResourceB\004" +
+      "\350\3071\001\022M\n\007filters\030\002 \003(\01324.yandex.cloud.aud" +
+      "ittrails.v1.Trail.PathFilterElementB\006\202\3101" +
+      "\002>0\032@\n\010Resource\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=6" +
+      "4\022\032\n\004type\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\032^\n\013EventFi" +
+      "lter\022O\n\007filters\030\001 \003(\01325.yandex.cloud.aud" +
+      "ittrails.v1.Trail.EventFilterElementB\007\202\310" +
+      "1\003>=0\032\320\001\n\022EventFilterElement\022\025\n\007service\030" +
+      "\001 \001(\tB\004\350\3071\001\022Y\n\ncategories\030\002 \003(\0132=.yandex" +
+      ".cloud.audittrails.v1.Trail.EventFilterE" +
+      "lementCategoryB\006\202\3101\002>0\022H\n\013path_filter\030\003 " +
+      "\001(\0132-.yandex.cloud.audittrails.v1.Trail." +
+      "PathFilterB\004\350\3071\001\032\267\001\n\032EventFilterElementC" +
+      "ategory\022K\n\005plane\030\001 \001(\01626.yandex.cloud.au" +
+      "dittrails.v1.Trail.EventCategoryFilterB\004" +
+      "\350\3071\001\022L\n\004type\030\002 \001(\01628.yandex.cloud.auditt" +
+      "rails.v1.Trail.EventAccessTypeFilterB\004\350\307" +
+      "1\001\032\216\003\n\023DataEventsFiltering\022\025\n\007service\030\001 " +
+      "\001(\tB\004\350\3071\001\022H\n\017included_events\030\002 \001(\0132-.yan" +
+      "dex.cloud.audittrails.v1.Trail.EventType" +
+      "sH\000\022H\n\017excluded_events\030\003 \001(\0132-.yandex.cl" +
+      "oud.audittrails.v1.Trail.EventTypesH\000\022L\n" +
+      "\ndns_filter\030\005 \001(\01326.yandex.cloud.audittr" +
+      "ails.v1.Trail.DnsDataEventsFilterH\001\022P\n\017r" +
+      "esource_scopes\030\004 \003(\0132+.yandex.cloud.audi" +
+      "ttrails.v1.Trail.ResourceB\n\202\3101\0061-1024B\022\n" +
+      "\020additional_rulesB\030\n\026service_specific_ru" +
+      "les\032-\n\nEventTypes\022\037\n\013event_types\030\001 \003(\tB\n" +
+      "\202\3101\0061-1024\032m\n\031ManagementEventsFiltering\022" +
+      "P\n\017resource_scopes\030\001 \003(\0132+.yandex.cloud." +
+      "audittrails.v1.Trail.ResourceB\n\202\3101\0061-102" +
+      "4\032\326\001\n\017FilteringPolicy\022d\n\030management_even" +
+      "ts_filter\030\001 \001(\0132<.yandex.cloud.audittrai" +
+      "ls.v1.Trail.ManagementEventsFilteringB\004\350" +
+      "\3071\000\022]\n\023data_events_filters\030\002 \003(\01326.yande" +
+      "x.cloud.audittrails.v1.Trail.DataEventsF" +
+      "ilteringB\010\202\3101\004<128\032_\n\023DnsDataEventsFilte" +
+      "r\022\"\n\026only_recursive_queries\030\001 \001(\010B\002\030\001\022$\n" +
+      "\034include_nonrecursive_queries\030\002 \001(\010\"D\n\006S" +
+      "tatus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020" +
+      "\001\022\t\n\005ERROR\020\002\022\013\n\007DELETED\020\003\"_\n\023EventCatego" +
+      "ryFilter\022%\n!EVENT_CATEGORY_FILTER_UNSPEC" +
+      "IFIED\020\000\022\021\n\rCONTROL_PLANE\020\001\022\016\n\nDATA_PLANE" +
+      "\020\002\"V\n\025EventAccessTypeFilter\022(\n$EVENT_ACC" +
+      "ESS_TYPE_FILTER_UNSPECIFIED\020\000\022\t\n\005WRITE\020\001" +
+      "\022\010\n\004READ\020\002J\004\010\r\020\016Br\n\037yandex.cloud.api.aud" +
+      "ittrails.v1B\002ATZKgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/audittrails/v1" +
+      ";audittrailsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21769,7 +22670,7 @@ public final class AT {
     internal_static_yandex_cloud_audittrails_v1_Trail_Destination_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_Destination_descriptor,
-        new java.lang.String[] { "ObjectStorage", "CloudLogging", "DataStream", "Destination", });
+        new java.lang.String[] { "ObjectStorage", "CloudLogging", "DataStream", "Eventrouter", "Destination", });
     internal_static_yandex_cloud_audittrails_v1_Trail_ObjectStorage_descriptor =
       internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_audittrails_v1_Trail_ObjectStorage_fieldAccessorTable = new
@@ -21788,86 +22689,92 @@ public final class AT {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_DataStream_descriptor,
         new java.lang.String[] { "DatabaseId", "StreamName", });
-    internal_static_yandex_cloud_audittrails_v1_Trail_Filter_descriptor =
+    internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_descriptor =
       internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(5);
+    internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_descriptor,
+        new java.lang.String[] { "EventrouterConnectorId", });
+    internal_static_yandex_cloud_audittrails_v1_Trail_Filter_descriptor =
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(6);
     internal_static_yandex_cloud_audittrails_v1_Trail_Filter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_Filter_descriptor,
         new java.lang.String[] { "PathFilter", "EventFilter", });
     internal_static_yandex_cloud_audittrails_v1_Trail_PathFilter_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(6);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(7);
     internal_static_yandex_cloud_audittrails_v1_Trail_PathFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_PathFilter_descriptor,
         new java.lang.String[] { "Root", });
     internal_static_yandex_cloud_audittrails_v1_Trail_PathFilterElement_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(7);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(8);
     internal_static_yandex_cloud_audittrails_v1_Trail_PathFilterElement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_PathFilterElement_descriptor,
         new java.lang.String[] { "AnyFilter", "SomeFilter", "Element", });
     internal_static_yandex_cloud_audittrails_v1_Trail_PathFilterElementAny_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(8);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(9);
     internal_static_yandex_cloud_audittrails_v1_Trail_PathFilterElementAny_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_PathFilterElementAny_descriptor,
         new java.lang.String[] { "Resource", });
     internal_static_yandex_cloud_audittrails_v1_Trail_PathFilterElementSome_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(9);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(10);
     internal_static_yandex_cloud_audittrails_v1_Trail_PathFilterElementSome_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_PathFilterElementSome_descriptor,
         new java.lang.String[] { "Resource", "Filters", });
     internal_static_yandex_cloud_audittrails_v1_Trail_Resource_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(10);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(11);
     internal_static_yandex_cloud_audittrails_v1_Trail_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_Resource_descriptor,
         new java.lang.String[] { "Id", "Type", });
     internal_static_yandex_cloud_audittrails_v1_Trail_EventFilter_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(11);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(12);
     internal_static_yandex_cloud_audittrails_v1_Trail_EventFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_EventFilter_descriptor,
         new java.lang.String[] { "Filters", });
     internal_static_yandex_cloud_audittrails_v1_Trail_EventFilterElement_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(12);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(13);
     internal_static_yandex_cloud_audittrails_v1_Trail_EventFilterElement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_EventFilterElement_descriptor,
         new java.lang.String[] { "Service", "Categories", "PathFilter", });
     internal_static_yandex_cloud_audittrails_v1_Trail_EventFilterElementCategory_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(13);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(14);
     internal_static_yandex_cloud_audittrails_v1_Trail_EventFilterElementCategory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_EventFilterElementCategory_descriptor,
         new java.lang.String[] { "Plane", "Type", });
     internal_static_yandex_cloud_audittrails_v1_Trail_DataEventsFiltering_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(14);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(15);
     internal_static_yandex_cloud_audittrails_v1_Trail_DataEventsFiltering_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_DataEventsFiltering_descriptor,
         new java.lang.String[] { "Service", "IncludedEvents", "ExcludedEvents", "DnsFilter", "ResourceScopes", "AdditionalRules", "ServiceSpecificRules", });
     internal_static_yandex_cloud_audittrails_v1_Trail_EventTypes_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(15);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(16);
     internal_static_yandex_cloud_audittrails_v1_Trail_EventTypes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_EventTypes_descriptor,
         new java.lang.String[] { "EventTypes", });
     internal_static_yandex_cloud_audittrails_v1_Trail_ManagementEventsFiltering_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(16);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(17);
     internal_static_yandex_cloud_audittrails_v1_Trail_ManagementEventsFiltering_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_ManagementEventsFiltering_descriptor,
         new java.lang.String[] { "ResourceScopes", });
     internal_static_yandex_cloud_audittrails_v1_Trail_FilteringPolicy_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(17);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(18);
     internal_static_yandex_cloud_audittrails_v1_Trail_FilteringPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_FilteringPolicy_descriptor,
         new java.lang.String[] { "ManagementEventsFilter", "DataEventsFilters", });
     internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_descriptor =
-      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(18);
+      internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(19);
     internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_descriptor,

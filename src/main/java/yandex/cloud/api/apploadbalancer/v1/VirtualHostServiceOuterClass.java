@@ -15409,6 +15409,16 @@ public final class VirtualHostServiceOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder();
 
+    /**
+     * <pre>
+     * Whether set to 'true' disable security profile for the route.
+     * </pre>
+     *
+     * <code>bool disable_security_profile = 8;</code>
+     * @return The disableSecurityProfile.
+     */
+    boolean getDisableSecurityProfile();
+
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest.RouteCase getRouteCase();
   }
   /**
@@ -15529,6 +15539,11 @@ public final class VirtualHostServiceOuterClass {
                 routeOptions_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 64: {
+
+              disableSecurityProfile_ = input.readBool();
               break;
             }
             default: {
@@ -15910,6 +15925,21 @@ public final class VirtualHostServiceOuterClass {
       return getRouteOptions();
     }
 
+    public static final int DISABLE_SECURITY_PROFILE_FIELD_NUMBER = 8;
+    private boolean disableSecurityProfile_;
+    /**
+     * <pre>
+     * Whether set to 'true' disable security profile for the route.
+     * </pre>
+     *
+     * <code>bool disable_security_profile = 8;</code>
+     * @return The disableSecurityProfile.
+     */
+    @java.lang.Override
+    public boolean getDisableSecurityProfile() {
+      return disableSecurityProfile_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15945,6 +15975,9 @@ public final class VirtualHostServiceOuterClass {
       if (routeOptions_ != null) {
         output.writeMessage(7, getRouteOptions());
       }
+      if (disableSecurityProfile_ != false) {
+        output.writeBool(8, disableSecurityProfile_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15979,6 +16012,10 @@ public final class VirtualHostServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getRouteOptions());
       }
+      if (disableSecurityProfile_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, disableSecurityProfile_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -16010,6 +16047,8 @@ public final class VirtualHostServiceOuterClass {
         if (!getRouteOptions()
             .equals(other.getRouteOptions())) return false;
       }
+      if (getDisableSecurityProfile()
+          != other.getDisableSecurityProfile()) return false;
       if (!getRouteCase().equals(other.getRouteCase())) return false;
       switch (routeCase_) {
         case 5:
@@ -16048,6 +16087,9 @@ public final class VirtualHostServiceOuterClass {
         hash = (37 * hash) + ROUTE_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getRouteOptions().hashCode();
       }
+      hash = (37 * hash) + DISABLE_SECURITY_PROFILE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisableSecurityProfile());
       switch (routeCase_) {
         case 5:
           hash = (37 * hash) + HTTP_FIELD_NUMBER;
@@ -16211,6 +16253,8 @@ public final class VirtualHostServiceOuterClass {
           routeOptions_ = null;
           routeOptionsBuilder_ = null;
         }
+        disableSecurityProfile_ = false;
+
         routeCase_ = 0;
         route_ = null;
         return this;
@@ -16266,6 +16310,7 @@ public final class VirtualHostServiceOuterClass {
         } else {
           result.routeOptions_ = routeOptionsBuilder_.build();
         }
+        result.disableSecurityProfile_ = disableSecurityProfile_;
         result.routeCase_ = routeCase_;
         onBuilt();
         return result;
@@ -16332,6 +16377,9 @@ public final class VirtualHostServiceOuterClass {
         }
         if (other.hasRouteOptions()) {
           mergeRouteOptions(other.getRouteOptions());
+        }
+        if (other.getDisableSecurityProfile() != false) {
+          setDisableSecurityProfile(other.getDisableSecurityProfile());
         }
         switch (other.getRouteCase()) {
           case HTTP: {
@@ -17355,6 +17403,49 @@ public final class VirtualHostServiceOuterClass {
           routeOptions_ = null;
         }
         return routeOptionsBuilder_;
+      }
+
+      private boolean disableSecurityProfile_ ;
+      /**
+       * <pre>
+       * Whether set to 'true' disable security profile for the route.
+       * </pre>
+       *
+       * <code>bool disable_security_profile = 8;</code>
+       * @return The disableSecurityProfile.
+       */
+      @java.lang.Override
+      public boolean getDisableSecurityProfile() {
+        return disableSecurityProfile_;
+      }
+      /**
+       * <pre>
+       * Whether set to 'true' disable security profile for the route.
+       * </pre>
+       *
+       * <code>bool disable_security_profile = 8;</code>
+       * @param value The disableSecurityProfile to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisableSecurityProfile(boolean value) {
+        
+        disableSecurityProfile_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether set to 'true' disable security profile for the route.
+       * </pre>
+       *
+       * <code>bool disable_security_profile = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisableSecurityProfile() {
+        
+        disableSecurityProfile_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18517,7 +18608,7 @@ public final class VirtualHostServiceOuterClass {
       "_name\030\002 \001(\tB\004\350\3071\001\022\030\n\nroute_name\030\003 \001(\tB\004\350" +
       "\3071\001\"\\\n\023RemoveRouteMetadata\022\026\n\016http_route" +
       "r_id\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001(\t\022\022\n" +
-      "\nroute_name\030\003 \001(\t\"\353\002\n\022UpdateRouteRequest" +
+      "\nroute_name\030\003 \001(\t\"\215\003\n\022UpdateRouteRequest" +
       "\022\034\n\016http_router_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtua" +
       "l_host_name\030\002 \001(\tB\004\350\3071\001\022\030\n\nroute_name\030\003 " +
       "\001(\tB\004\350\3071\001\022/\n\013update_mask\030\004 \001(\0132\032.google." +
@@ -18526,54 +18617,54 @@ public final class VirtualHostServiceOuterClass {
       "\n\004grpc\030\006 \001(\0132*.yandex.cloud.apploadbalan" +
       "cer.v1.GrpcRouteH\000\022D\n\rroute_options\030\007 \001(" +
       "\0132-.yandex.cloud.apploadbalancer.v1.Rout" +
-      "eOptionsB\r\n\005route\022\004\300\3011\001\"\\\n\023UpdateRouteMe" +
-      "tadata\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virtua" +
-      "l_host_name\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(\t2\342\014" +
-      "\n\022VirtualHostService\022\306\001\n\003Get\0226.yandex.cl" +
-      "oud.apploadbalancer.v1.GetVirtualHostReq" +
-      "uest\032,.yandex.cloud.apploadbalancer.v1.V" +
-      "irtualHost\"Y\202\323\344\223\002S\022Q/apploadbalancer/v1/" +
-      "httpRouters/{http_router_id}/virtualHost" +
-      "s/{virtual_host_name}\022\302\001\n\004List\0228.yandex." +
-      "cloud.apploadbalancer.v1.ListVirtualHost" +
-      "sRequest\0329.yandex.cloud.apploadbalancer." +
-      "v1.ListVirtualHostsResponse\"E\202\323\344\223\002?\022=/ap" +
-      "ploadbalancer/v1/httpRouters/{http_route" +
-      "r_id}/virtualHosts\022\334\001\n\006Create\0229.yandex.c" +
-      "loud.apploadbalancer.v1.CreateVirtualHos" +
-      "tRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"t\202\323\344\223\002B\"=/apploadbalancer/v1/httpRou" +
-      "ters/{http_router_id}/virtualHosts:\001*\262\322*" +
-      "(\n\031CreateVirtualHostMetadata\022\013VirtualHos" +
-      "t\022\361\001\n\006Update\0229.yandex.cloud.apploadbalan" +
-      "cer.v1.UpdateVirtualHostRequest\032!.yandex" +
-      ".cloud.operation.Operation\"\210\001\202\323\344\223\002V2Q/ap" +
-      "ploadbalancer/v1/httpRouters/{http_route" +
-      "r_id}/virtualHosts/{virtual_host_name}:\001" +
-      "*\262\322*(\n\031UpdateVirtualHostMetadata\022\013Virtua" +
-      "lHost\022\370\001\n\006Delete\0229.yandex.cloud.apploadb" +
-      "alancer.v1.DeleteVirtualHostRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\217\001\202\323\344\223\002S*" +
-      "Q/apploadbalancer/v1/httpRouters/{http_r" +
-      "outer_id}/virtualHosts/{virtual_host_nam" +
-      "e}\262\322*2\n\031DeleteVirtualHostMetadata\022\025googl" +
-      "e.protobuf.Empty\022\366\001\n\013RemoveRoute\0223.yande" +
-      "x.cloud.apploadbalancer.v1.RemoveRouteRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/httpRoute" +
-      "rs/{http_router_id}/virtualHosts/{virtua" +
-      "l_host_name}:removeRoute:\001*\262\322*\"\n\023RemoveR" +
-      "outeMetadata\022\013VirtualHost\022\366\001\n\013UpdateRout" +
-      "e\0223.yandex.cloud.apploadbalancer.v1.Upda" +
-      "teRouteRequest\032!.yandex.cloud.operation." +
-      "Operation\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/" +
-      "httpRouters/{http_router_id}/virtualHost" +
-      "s/{virtual_host_name}:updateRoute:\001*\262\322*\"" +
-      "\n\023UpdateRouteMetadata\022\013VirtualHostBz\n#ya" +
-      "ndex.cloud.api.apploadbalancer.v1ZSgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/apploadbalancer/v1;apploadbalancerb\006" +
-      "proto3"
+      "eOptions\022 \n\030disable_security_profile\030\010 \001" +
+      "(\010B\r\n\005route\022\004\300\3011\001\"\\\n\023UpdateRouteMetadata" +
+      "\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virtual_host" +
+      "_name\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(\t2\342\014\n\022Virt" +
+      "ualHostService\022\306\001\n\003Get\0226.yandex.cloud.ap" +
+      "ploadbalancer.v1.GetVirtualHostRequest\032," +
+      ".yandex.cloud.apploadbalancer.v1.Virtual" +
+      "Host\"Y\202\323\344\223\002S\022Q/apploadbalancer/v1/httpRo" +
+      "uters/{http_router_id}/virtualHosts/{vir" +
+      "tual_host_name}\022\302\001\n\004List\0228.yandex.cloud." +
+      "apploadbalancer.v1.ListVirtualHostsReque" +
+      "st\0329.yandex.cloud.apploadbalancer.v1.Lis" +
+      "tVirtualHostsResponse\"E\202\323\344\223\002?\022=/apploadb" +
+      "alancer/v1/httpRouters/{http_router_id}/" +
+      "virtualHosts\022\334\001\n\006Create\0229.yandex.cloud.a" +
+      "pploadbalancer.v1.CreateVirtualHostReque" +
+      "st\032!.yandex.cloud.operation.Operation\"t\202" +
+      "\323\344\223\002B\"=/apploadbalancer/v1/httpRouters/{" +
+      "http_router_id}/virtualHosts:\001*\262\322*(\n\031Cre" +
+      "ateVirtualHostMetadata\022\013VirtualHost\022\361\001\n\006" +
+      "Update\0229.yandex.cloud.apploadbalancer.v1" +
+      ".UpdateVirtualHostRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\210\001\202\323\344\223\002V2Q/apploadb" +
+      "alancer/v1/httpRouters/{http_router_id}/" +
+      "virtualHosts/{virtual_host_name}:\001*\262\322*(\n" +
+      "\031UpdateVirtualHostMetadata\022\013VirtualHost\022" +
+      "\370\001\n\006Delete\0229.yandex.cloud.apploadbalance" +
+      "r.v1.DeleteVirtualHostRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\217\001\202\323\344\223\002S*Q/appl" +
+      "oadbalancer/v1/httpRouters/{http_router_" +
+      "id}/virtualHosts/{virtual_host_name}\262\322*2" +
+      "\n\031DeleteVirtualHostMetadata\022\025google.prot" +
+      "obuf.Empty\022\366\001\n\013RemoveRoute\0223.yandex.clou" +
+      "d.apploadbalancer.v1.RemoveRouteRequest\032" +
+      "!.yandex.cloud.operation.Operation\"\216\001\202\323\344" +
+      "\223\002b\"]/apploadbalancer/v1/httpRouters/{ht" +
+      "tp_router_id}/virtualHosts/{virtual_host" +
+      "_name}:removeRoute:\001*\262\322*\"\n\023RemoveRouteMe" +
+      "tadata\022\013VirtualHost\022\366\001\n\013UpdateRoute\0223.ya" +
+      "ndex.cloud.apploadbalancer.v1.UpdateRout" +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/httpRo" +
+      "uters/{http_router_id}/virtualHosts/{vir" +
+      "tual_host_name}:updateRoute:\001*\262\322*\"\n\023Upda" +
+      "teRouteMetadata\022\013VirtualHostBz\n#yandex.c" +
+      "loud.api.apploadbalancer.v1ZSgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/ap" +
+      "ploadbalancer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18657,7 +18748,7 @@ public final class VirtualHostServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteRequest_descriptor,
-        new java.lang.String[] { "HttpRouterId", "VirtualHostName", "RouteName", "UpdateMask", "Http", "Grpc", "RouteOptions", "Route", });
+        new java.lang.String[] { "HttpRouterId", "VirtualHostName", "RouteName", "UpdateMask", "Http", "Grpc", "RouteOptions", "DisableSecurityProfile", "Route", });
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteMetadata_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteMetadata_fieldAccessorTable = new

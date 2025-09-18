@@ -12733,7 +12733,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
+     * This parameter is only required for specific functionalities, such as [SpeechKit Brand Voice Lite](/docs/speechkit/tts/brand-voice/) or SpeechKit Brand Voice Call Center. If you are not sure whether your use case needs this parameter, do not include it.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -12743,7 +12743,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
+     * This parameter is only required for specific functionalities, such as [SpeechKit Brand Voice Lite](/docs/speechkit/tts/brand-voice/) or SpeechKit Brand Voice Call Center. If you are not sure whether your use case needs this parameter, do not include it.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -13234,7 +13234,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
+     * This parameter is only required for specific functionalities, such as [SpeechKit Brand Voice Lite](/docs/speechkit/tts/brand-voice/) or SpeechKit Brand Voice Call Center. If you are not sure whether your use case needs this parameter, do not include it.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -13256,7 +13256,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
+     * This parameter is only required for specific functionalities, such as [SpeechKit Brand Voice Lite](/docs/speechkit/tts/brand-voice/) or SpeechKit Brand Voice Call Center. If you are not sure whether your use case needs this parameter, do not include it.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -14034,7 +14034,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
+       * This parameter is only required for specific functionalities, such as [SpeechKit Brand Voice Lite](/docs/speechkit/tts/brand-voice/) or SpeechKit Brand Voice Call Center. If you are not sure whether your use case needs this parameter, do not include it.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -14055,7 +14055,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
+       * This parameter is only required for specific functionalities, such as [SpeechKit Brand Voice Lite](/docs/speechkit/tts/brand-voice/) or SpeechKit Brand Voice Call Center. If you are not sure whether your use case needs this parameter, do not include it.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -14077,7 +14077,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
+       * This parameter is only required for specific functionalities, such as [SpeechKit Brand Voice Lite](/docs/speechkit/tts/brand-voice/) or SpeechKit Brand Voice Call Center. If you are not sure whether your use case needs this parameter, do not include it.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -14097,7 +14097,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
+       * This parameter is only required for specific functionalities, such as [SpeechKit Brand Voice Lite](/docs/speechkit/tts/brand-voice/) or SpeechKit Brand Voice Call Center. If you are not sure whether your use case needs this parameter, do not include it.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -14112,7 +14112,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
+       * This parameter is only required for specific functionalities, such as [SpeechKit Brand Voice Lite](/docs/speechkit/tts/brand-voice/) or SpeechKit Brand Voice Call Center. If you are not sure whether your use case needs this parameter, do not include it.
        * </pre>
        *
        * <code>string model = 1;</code>

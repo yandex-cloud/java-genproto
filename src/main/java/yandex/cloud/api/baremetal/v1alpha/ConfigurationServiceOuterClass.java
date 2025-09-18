@@ -39,6 +39,28 @@ public final class ConfigurationServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getConfigurationIdBytes();
+
+    /**
+     * <pre>
+     * ID of the folder to return a Configuration resource for.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder to return a Configuration resource for.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.baremetal.v1alpha.GetConfigurationRequest}
@@ -54,6 +76,7 @@ public final class ConfigurationServiceOuterClass {
     }
     private GetConfigurationRequest() {
       configurationId_ = "";
+      folderId_ = "";
     }
 
     @java.lang.Override
@@ -90,6 +113,12 @@ public final class ConfigurationServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               configurationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
               break;
             }
             default: {
@@ -172,6 +201,54 @@ public final class ConfigurationServiceOuterClass {
       }
     }
 
+    public static final int FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder to return a Configuration resource for.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder to return a Configuration resource for.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -189,6 +266,9 @@ public final class ConfigurationServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurationId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, configurationId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -200,6 +280,9 @@ public final class ConfigurationServiceOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurationId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, configurationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -218,6 +301,8 @@ public final class ConfigurationServiceOuterClass {
 
       if (!getConfigurationId()
           .equals(other.getConfigurationId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -231,6 +316,8 @@ public final class ConfigurationServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CONFIGURATION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getConfigurationId().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -366,6 +453,8 @@ public final class ConfigurationServiceOuterClass {
         super.clear();
         configurationId_ = "";
 
+        folderId_ = "";
+
         return this;
       }
 
@@ -393,6 +482,7 @@ public final class ConfigurationServiceOuterClass {
       public yandex.cloud.api.baremetal.v1alpha.ConfigurationServiceOuterClass.GetConfigurationRequest buildPartial() {
         yandex.cloud.api.baremetal.v1alpha.ConfigurationServiceOuterClass.GetConfigurationRequest result = new yandex.cloud.api.baremetal.v1alpha.ConfigurationServiceOuterClass.GetConfigurationRequest(this);
         result.configurationId_ = configurationId_;
+        result.folderId_ = folderId_;
         onBuilt();
         return result;
       }
@@ -443,6 +533,10 @@ public final class ConfigurationServiceOuterClass {
         if (other == yandex.cloud.api.baremetal.v1alpha.ConfigurationServiceOuterClass.GetConfigurationRequest.getDefaultInstance()) return this;
         if (!other.getConfigurationId().isEmpty()) {
           configurationId_ = other.configurationId_;
+          onChanged();
+        }
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -571,6 +665,107 @@ public final class ConfigurationServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         configurationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder to return a Configuration resource for.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to return a Configuration resource for.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to return a Configuration resource for.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to return a Configuration resource for.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to return a Configuration resource for.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
         onChanged();
         return this;
       }
@@ -732,6 +927,28 @@ public final class ConfigurationServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getFilterBytes();
+
+    /**
+     * <pre>
+     * ID of the folder to return a Configuration resource for.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 104 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder to return a Configuration resource for.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 104 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.baremetal.v1alpha.ListConfigurationsRequest}
@@ -749,6 +966,7 @@ public final class ConfigurationServiceOuterClass {
       pageToken_ = "";
       orderBy_ = "";
       filter_ = "";
+      folderId_ = "";
     }
 
     @java.lang.Override
@@ -802,6 +1020,12 @@ public final class ConfigurationServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               filter_ = s;
+              break;
+            }
+            case 834: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
               break;
             }
             default: {
@@ -1021,6 +1245,54 @@ public final class ConfigurationServiceOuterClass {
       }
     }
 
+    public static final int FOLDER_ID_FIELD_NUMBER = 104;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder to return a Configuration resource for.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 104 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder to return a Configuration resource for.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 104 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1047,6 +1319,9 @@ public final class ConfigurationServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 103, filter_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 104, folderId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1068,6 +1343,9 @@ public final class ConfigurationServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(103, filter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(104, folderId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1092,6 +1370,8 @@ public final class ConfigurationServiceOuterClass {
           .equals(other.getOrderBy())) return false;
       if (!getFilter()
           .equals(other.getFilter())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1112,6 +1392,8 @@ public final class ConfigurationServiceOuterClass {
       hash = (53 * hash) + getOrderBy().hashCode();
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1253,6 +1535,8 @@ public final class ConfigurationServiceOuterClass {
 
         filter_ = "";
 
+        folderId_ = "";
+
         return this;
       }
 
@@ -1283,6 +1567,7 @@ public final class ConfigurationServiceOuterClass {
         result.pageToken_ = pageToken_;
         result.orderBy_ = orderBy_;
         result.filter_ = filter_;
+        result.folderId_ = folderId_;
         onBuilt();
         return result;
       }
@@ -1344,6 +1629,10 @@ public final class ConfigurationServiceOuterClass {
         }
         if (!other.getFilter().isEmpty()) {
           filter_ = other.filter_;
+          onChanged();
+        }
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1784,6 +2073,107 @@ public final class ConfigurationServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         filter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder to return a Configuration resource for.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 104 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to return a Configuration resource for.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 104 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to return a Configuration resource for.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 104 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to return a Configuration resource for.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 104 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to return a Configuration resource for.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 104 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
         onChanged();
         return this;
       }
@@ -2984,31 +3374,38 @@ public final class ConfigurationServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n:yandex/cloud/baremetal/v1alpha/configu" +
       "ration_service.proto\022\036yandex.cloud.barem" +
-      "etal.v1alpha\0322yandex/cloud/baremetal/v1a" +
-      "lpha/configuration.proto\032\035yandex/cloud/v" +
-      "alidation.proto\"M\n\027GetConfigurationReque" +
-      "st\0222\n\020configuration_id\030\001 \001(\tB\030\362\3071\016[a-z][" +
-      "a-z0-9]*\212\3101\00220\"u\n\031ListConfigurationsRequ" +
+      "etal.v1alpha\032\034google/api/annotations.pro" +
+      "to\0322yandex/cloud/baremetal/v1alpha/confi" +
+      "guration.proto\032\035yandex/cloud/validation." +
+      "proto\"~\n\027GetConfigurationRequest\0222\n\020conf" +
+      "iguration_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\310" +
+      "1\00220\022/\n\tfolder_id\030\002 \001(\tB\034\362\3071\020[a-z][a-z0-" +
+      "9.-]*\212\3101\004<=50\"\246\001\n\031ListConfigurationsRequ" +
       "est\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\022\n\npag" +
       "e_token\030e \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006filte" +
-      "r\030g \001(\tJ\004\010\001\020d\"\202\001\n\032ListConfigurationsResp" +
-      "onse\022E\n\016configurations\030\001 \003(\0132-.yandex.cl" +
-      "oud.baremetal.v1alpha.Configuration\022\027\n\017n" +
-      "ext_page_token\030d \001(\tJ\004\010\002\020d2\210\002\n\024Configura" +
-      "tionService\022o\n\003Get\0227.yandex.cloud.bareme" +
-      "tal.v1alpha.GetConfigurationRequest\032-.ya" +
-      "ndex.cloud.baremetal.v1alpha.Configurati" +
-      "on\"\000\022\177\n\004List\0229.yandex.cloud.baremetal.v1" +
-      "alpha.ListConfigurationsRequest\032:.yandex" +
-      ".cloud.baremetal.v1alpha.ListConfigurati" +
-      "onsResponse\"\000Br\n\"yandex.cloud.api.bareme" +
-      "tal.v1alphaZLgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/baremetal/v1alpha;" +
-      "baremetalb\006proto3"
+      "r\030g \001(\t\022/\n\tfolder_id\030h \001(\tB\034\362\3071\020[a-z][a-" +
+      "z0-9.-]*\212\3101\004<=50J\004\010\001\020d\"\202\001\n\032ListConfigura" +
+      "tionsResponse\022E\n\016configurations\030\001 \003(\0132-." +
+      "yandex.cloud.baremetal.v1alpha.Configura" +
+      "tion\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d2\357\002\n\024" +
+      "ConfigurationService\022\253\001\n\003Get\0227.yandex.cl" +
+      "oud.baremetal.v1alpha.GetConfigurationRe" +
+      "quest\032-.yandex.cloud.baremetal.v1alpha.C" +
+      "onfiguration\"<\202\323\344\223\0026\0224/baremetal/v1alpha" +
+      "/configurations/{configuration_id}\022\250\001\n\004L" +
+      "ist\0229.yandex.cloud.baremetal.v1alpha.Lis" +
+      "tConfigurationsRequest\032:.yandex.cloud.ba" +
+      "remetal.v1alpha.ListConfigurationsRespon" +
+      "se\")\202\323\344\223\002#\022!/baremetal/v1alpha/configura" +
+      "tionsBr\n\"yandex.cloud.api.baremetal.v1al" +
+      "phaZLgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/baremetal/v1alpha;baremeta" +
+      "lb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.baremetal.v1alpha.ConfigurationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -3017,13 +3414,13 @@ public final class ConfigurationServiceOuterClass {
     internal_static_yandex_cloud_baremetal_v1alpha_GetConfigurationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_GetConfigurationRequest_descriptor,
-        new java.lang.String[] { "ConfigurationId", });
+        new java.lang.String[] { "ConfigurationId", "FolderId", });
     internal_static_yandex_cloud_baremetal_v1alpha_ListConfigurationsRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_baremetal_v1alpha_ListConfigurationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_ListConfigurationsRequest_descriptor,
-        new java.lang.String[] { "PageSize", "PageToken", "OrderBy", "Filter", });
+        new java.lang.String[] { "PageSize", "PageToken", "OrderBy", "Filter", "FolderId", });
     internal_static_yandex_cloud_baremetal_v1alpha_ListConfigurationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_baremetal_v1alpha_ListConfigurationsResponse_fieldAccessorTable = new
@@ -3032,11 +3429,13 @@ public final class ConfigurationServiceOuterClass {
         new java.lang.String[] { "Configurations", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.baremetal.v1alpha.ConfigurationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

@@ -8085,6 +8085,33 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.trino.v1.RetryPolicyConfig retry_policy = 4;</code>
      */
     yandex.cloud.api.trino.v1.ClusterOuterClass.RetryPolicyConfigOrBuilder getRetryPolicyOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for access control, specifying the fine-grained rules of accesses.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+     * @return Whether the accessControl field is set.
+     */
+    boolean hasAccessControl();
+    /**
+     * <pre>
+     * Configuration for access control, specifying the fine-grained rules of accesses.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+     * @return The accessControl.
+     */
+    yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig getAccessControl();
+    /**
+     * <pre>
+     * Configuration for access control, specifying the fine-grained rules of accesses.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+     */
+    yandex.cloud.api.trino.v1.AccessControl.AccessControlConfigOrBuilder getAccessControlOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.trino.v1.TrinoConfig}
@@ -8173,6 +8200,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(retryPolicy_);
                 retryPolicy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig.Builder subBuilder = null;
+              if (accessControl_ != null) {
+                subBuilder = accessControl_.toBuilder();
+              }
+              accessControl_ = input.readMessage(yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(accessControl_);
+                accessControl_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8369,6 +8409,44 @@ public final class ClusterOuterClass {
       return getRetryPolicy();
     }
 
+    public static final int ACCESS_CONTROL_FIELD_NUMBER = 5;
+    private yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig accessControl_;
+    /**
+     * <pre>
+     * Configuration for access control, specifying the fine-grained rules of accesses.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+     * @return Whether the accessControl field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessControl() {
+      return accessControl_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for access control, specifying the fine-grained rules of accesses.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+     * @return The accessControl.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig getAccessControl() {
+      return accessControl_ == null ? yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig.getDefaultInstance() : accessControl_;
+    }
+    /**
+     * <pre>
+     * Configuration for access control, specifying the fine-grained rules of accesses.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.AccessControl.AccessControlConfigOrBuilder getAccessControlOrBuilder() {
+      return getAccessControl();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8395,6 +8473,9 @@ public final class ClusterOuterClass {
       if (retryPolicy_ != null) {
         output.writeMessage(4, getRetryPolicy());
       }
+      if (accessControl_ != null) {
+        output.writeMessage(5, getAccessControl());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8418,6 +8499,10 @@ public final class ClusterOuterClass {
       if (retryPolicy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getRetryPolicy());
+      }
+      if (accessControl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getAccessControl());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8451,6 +8536,11 @@ public final class ClusterOuterClass {
         if (!getRetryPolicy()
             .equals(other.getRetryPolicy())) return false;
       }
+      if (hasAccessControl() != other.hasAccessControl()) return false;
+      if (hasAccessControl()) {
+        if (!getAccessControl()
+            .equals(other.getAccessControl())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8475,6 +8565,10 @@ public final class ClusterOuterClass {
       if (hasRetryPolicy()) {
         hash = (37 * hash) + RETRY_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getRetryPolicy().hashCode();
+      }
+      if (hasAccessControl()) {
+        hash = (37 * hash) + ACCESS_CONTROL_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessControl().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8629,6 +8723,12 @@ public final class ClusterOuterClass {
           retryPolicy_ = null;
           retryPolicyBuilder_ = null;
         }
+        if (accessControlBuilder_ == null) {
+          accessControl_ = null;
+        } else {
+          accessControl_ = null;
+          accessControlBuilder_ = null;
+        }
         return this;
       }
 
@@ -8670,6 +8770,11 @@ public final class ClusterOuterClass {
           result.retryPolicy_ = retryPolicy_;
         } else {
           result.retryPolicy_ = retryPolicyBuilder_.build();
+        }
+        if (accessControlBuilder_ == null) {
+          result.accessControl_ = accessControl_;
+        } else {
+          result.accessControl_ = accessControlBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8731,6 +8836,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasRetryPolicy()) {
           mergeRetryPolicy(other.getRetryPolicy());
+        }
+        if (other.hasAccessControl()) {
+          mergeAccessControl(other.getAccessControl());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9320,6 +9428,161 @@ public final class ClusterOuterClass {
           retryPolicy_ = null;
         }
         return retryPolicyBuilder_;
+      }
+
+      private yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig accessControl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig, yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig.Builder, yandex.cloud.api.trino.v1.AccessControl.AccessControlConfigOrBuilder> accessControlBuilder_;
+      /**
+       * <pre>
+       * Configuration for access control, specifying the fine-grained rules of accesses.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+       * @return Whether the accessControl field is set.
+       */
+      public boolean hasAccessControl() {
+        return accessControlBuilder_ != null || accessControl_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for access control, specifying the fine-grained rules of accesses.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+       * @return The accessControl.
+       */
+      public yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig getAccessControl() {
+        if (accessControlBuilder_ == null) {
+          return accessControl_ == null ? yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig.getDefaultInstance() : accessControl_;
+        } else {
+          return accessControlBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for access control, specifying the fine-grained rules of accesses.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+       */
+      public Builder setAccessControl(yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig value) {
+        if (accessControlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessControl_ = value;
+          onChanged();
+        } else {
+          accessControlBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for access control, specifying the fine-grained rules of accesses.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+       */
+      public Builder setAccessControl(
+          yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig.Builder builderForValue) {
+        if (accessControlBuilder_ == null) {
+          accessControl_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessControlBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for access control, specifying the fine-grained rules of accesses.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+       */
+      public Builder mergeAccessControl(yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig value) {
+        if (accessControlBuilder_ == null) {
+          if (accessControl_ != null) {
+            accessControl_ =
+              yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig.newBuilder(accessControl_).mergeFrom(value).buildPartial();
+          } else {
+            accessControl_ = value;
+          }
+          onChanged();
+        } else {
+          accessControlBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for access control, specifying the fine-grained rules of accesses.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+       */
+      public Builder clearAccessControl() {
+        if (accessControlBuilder_ == null) {
+          accessControl_ = null;
+          onChanged();
+        } else {
+          accessControl_ = null;
+          accessControlBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for access control, specifying the fine-grained rules of accesses.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+       */
+      public yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig.Builder getAccessControlBuilder() {
+        
+        onChanged();
+        return getAccessControlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for access control, specifying the fine-grained rules of accesses.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+       */
+      public yandex.cloud.api.trino.v1.AccessControl.AccessControlConfigOrBuilder getAccessControlOrBuilder() {
+        if (accessControlBuilder_ != null) {
+          return accessControlBuilder_.getMessageOrBuilder();
+        } else {
+          return accessControl_ == null ?
+              yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig.getDefaultInstance() : accessControl_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for access control, specifying the fine-grained rules of accesses.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig, yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig.Builder, yandex.cloud.api.trino.v1.AccessControl.AccessControlConfigOrBuilder> 
+          getAccessControlFieldBuilder() {
+        if (accessControlBuilder_ == null) {
+          accessControlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig, yandex.cloud.api.trino.v1.AccessControl.AccessControlConfig.Builder, yandex.cloud.api.trino.v1.AccessControl.AccessControlConfigOrBuilder>(
+                  getAccessControl(),
+                  getParentForChildren(),
+                  isClean());
+          accessControl_ = null;
+        }
+        return accessControlBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17403,95 +17666,98 @@ public final class ClusterOuterClass {
       "\n#yandex/cloud/trino/v1/cluster.proto\022\025y" +
       "andex.cloud.trino.v1\032\037google/protobuf/ti" +
       "mestamp.proto\032\'yandex/cloud/logging/v1/l" +
-      "og_entry.proto\032\'yandex/cloud/trino/v1/ma" +
-      "intenance.proto\032\035yandex/cloud/validation" +
-      ".proto\"\211\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder" +
-      "_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descr" +
-      "iption\030\005 \001(\t\022:\n\006labels\030\006 \003(\0132*.yandex.cl" +
-      "oud.trino.v1.Cluster.LabelsEntry\0225\n\nmoni" +
-      "toring\030\007 \003(\0132!.yandex.cloud.trino.v1.Mon" +
-      "itoring\0221\n\005trino\030\010 \001(\0132\".yandex.cloud.tr" +
-      "ino.v1.TrinoConfig\022-\n\006health\030\t \001(\0162\035.yan" +
-      "dex.cloud.trino.v1.Health\0225\n\006status\030\n \001(" +
-      "\0162%.yandex.cloud.trino.v1.Cluster.Status" +
-      "\0225\n\007network\030\013 \001(\0132$.yandex.cloud.trino.v" +
-      "1.NetworkConfig\022\033\n\023deletion_protection\030\014" +
-      " \001(\010\022$\n\022service_account_id\030\r \001(\tB\010\212\3101\004<=" +
-      "50\0225\n\007logging\030\016 \001(\0132$.yandex.cloud.trino" +
-      ".v1.LoggingConfig\022\027\n\017coordinator_url\030\017 \001" +
-      "(\t\022D\n\022maintenance_window\030\020 \001(\0132(.yandex." +
-      "cloud.trino.v1.MaintenanceWindow\022F\n\021plan" +
-      "ned_operation\030\021 \001(\0132+.yandex.cloud.trino" +
-      ".v1.MaintenanceOperation\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"y\n\006Statu" +
-      "s\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007R" +
-      "UNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STO" +
-      "PPED\020\005\022\014\n\010STARTING\020\006\022\014\n\010UPDATING\020\007\"=\n\nMo" +
-      "nitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 " +
-      "\001(\t\022\014\n\004link\030\003 \001(\t\"\342\001\n\rLoggingConfig\022\017\n\007e" +
-      "nabled\030\001 \001(\010\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([a" +
-      "-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022;\n\014log_gr" +
-      "oup_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_." +
-      "]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex." +
-      "cloud.logging.v1.LogLevel.LevelB\r\n\013desti" +
-      "nation\"?\n\rNetworkConfig\022\022\n\nsubnet_ids\030\001 " +
-      "\003(\t\022\032\n\022security_group_ids\030\002 \003(\t\"\354\001\n\013Trin" +
-      "oConfig\022J\n\022coordinator_config\030\001 \001(\0132(.ya" +
-      "ndex.cloud.trino.v1.CoordinatorConfigB\004\350" +
-      "\3071\001\022@\n\rworker_config\030\002 \001(\0132#.yandex.clou" +
-      "d.trino.v1.WorkerConfigB\004\350\3071\001\022\017\n\007version" +
-      "\030\003 \001(\t\022>\n\014retry_policy\030\004 \001(\0132(.yandex.cl" +
-      "oud.trino.v1.RetryPolicyConfig\"N\n\021Coordi" +
-      "natorConfig\0229\n\tresources\030\001 \001(\0132 .yandex." +
-      "cloud.trino.v1.ResourcesB\004\350\3071\001\"\304\002\n\014Worke" +
-      "rConfig\0229\n\tresources\030\001 \001(\0132 .yandex.clou" +
-      "d.trino.v1.ResourcesB\004\350\3071\001\022Q\n\014scale_poli" +
-      "cy\030\002 \001(\01325.yandex.cloud.trino.v1.WorkerC" +
-      "onfig.WorkerScalePolicyB\004\350\3071\001\032\245\001\n\021Worker" +
-      "ScalePolicy\022>\n\013fixed_scale\030\001 \001(\0132\'.yande" +
-      "x.cloud.trino.v1.FixedScalePolicyH\000\022<\n\na" +
-      "uto_scale\030\002 \001(\0132&.yandex.cloud.trino.v1." +
-      "AutoScalePolicyH\000B\022\n\nscale_type\022\004\300\3011\001\"\323\003" +
-      "\n\021RetryPolicyConfig\022D\n\006policy\030\001 \001(\01624.ya" +
-      "ndex.cloud.trino.v1.RetryPolicyConfig.Re" +
-      "tryPolicy\022F\n\020exchange_manager\030\002 \001(\0132,.ya" +
-      "ndex.cloud.trino.v1.ExchangeManagerConfi" +
-      "g\022\260\001\n\025additional_properties\030\003 \003(\0132B.yand" +
-      "ex.cloud.trino.v1.RetryPolicyConfig.Addi" +
-      "tionalPropertiesEntryBM\202\3101\005<=256\212\3101\005<=12" +
-      "8\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101" +
-      "\023\022\021[a-z][-_0-9a-z.]*\032;\n\031AdditionalProper" +
-      "tiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"@\n\013RetryPolicy\022\034\n\030RETRY_POLICY_UNSPECI" +
-      "FIED\020\000\022\t\n\005QUERY\020\001\022\010\n\004TASK\020\002\"\202\001\n\026Exchange" +
-      "ManagerStorage\022M\n\nservice_s3\030\001 \001(\01327.yan" +
-      "dex.cloud.trino.v1.ExchangeManagerStorag" +
-      "e.ServiceS3H\000\032\013\n\tServiceS3B\014\n\004type\022\004\300\3011\001" +
-      "\"\313\002\n\025ExchangeManagerConfig\022\264\001\n\025additiona" +
-      "l_properties\030\001 \003(\0132F.yandex.cloud.trino." +
-      "v1.ExchangeManagerConfig.AdditionalPrope" +
-      "rtiesEntryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9" +
-      "a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_" +
-      "0-9a-z.]*\022>\n\007storage\030\002 \001(\0132-.yandex.clou" +
-      "d.trino.v1.ExchangeManagerStorage\032;\n\031Add" +
-      "itionalPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"5\n\tResources\022(\n\022resource_" +
-      "preset_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\",\n\020FixedSc" +
-      "alePolicy\022\030\n\005count\030\001 \001(\003B\t\372\3071\0051-512\"M\n\017A" +
-      "utoScalePolicy\022\034\n\tmin_count\030\001 \001(\003B\t\372\3071\0050" +
-      "-512\022\034\n\tmax_count\030\002 \001(\003B\t\372\3071\0051-512*?\n\006He" +
-      "alth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
-      "EAD\020\002\022\014\n\010DEGRADED\020\003B\\\n\031yandex.cloud.api." +
-      "trino.v1Z?github.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/trino/v1;trinob\006proto" +
-      "3"
+      "og_entry.proto\032*yandex/cloud/trino/v1/ac" +
+      "cess_control.proto\032\'yandex/cloud/trino/v" +
+      "1/maintenance.proto\032\035yandex/cloud/valida" +
+      "tion.proto\"\211\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfo" +
+      "lder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013d" +
+      "escription\030\005 \001(\t\022:\n\006labels\030\006 \003(\0132*.yande" +
+      "x.cloud.trino.v1.Cluster.LabelsEntry\0225\n\n" +
+      "monitoring\030\007 \003(\0132!.yandex.cloud.trino.v1" +
+      ".Monitoring\0221\n\005trino\030\010 \001(\0132\".yandex.clou" +
+      "d.trino.v1.TrinoConfig\022-\n\006health\030\t \001(\0162\035" +
+      ".yandex.cloud.trino.v1.Health\0225\n\006status\030" +
+      "\n \001(\0162%.yandex.cloud.trino.v1.Cluster.St" +
+      "atus\0225\n\007network\030\013 \001(\0132$.yandex.cloud.tri" +
+      "no.v1.NetworkConfig\022\033\n\023deletion_protecti" +
+      "on\030\014 \001(\010\022$\n\022service_account_id\030\r \001(\tB\010\212\310" +
+      "1\004<=50\0225\n\007logging\030\016 \001(\0132$.yandex.cloud.t" +
+      "rino.v1.LoggingConfig\022\027\n\017coordinator_url" +
+      "\030\017 \001(\t\022D\n\022maintenance_window\030\020 \001(\0132(.yan" +
+      "dex.cloud.trino.v1.MaintenanceWindow\022F\n\021" +
+      "planned_operation\030\021 \001(\0132+.yandex.cloud.t" +
+      "rino.v1.MaintenanceOperation\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"y\n\006S" +
+      "tatus\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022" +
+      "\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010STOPPING\020\004\022\013\n" +
+      "\007STOPPED\020\005\022\014\n\010STARTING\020\006\022\014\n\010UPDATING\020\007\"=" +
+      "\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descriptio" +
+      "n\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\342\001\n\rLoggingConfig\022" +
+      "\017\n\007enabled\030\001 \001(\010\0228\n\tfolder_id\030\002 \001(\tB#\362\3071" +
+      "\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022;\n\014lo" +
+      "g_group_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0" +
+      "-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yan" +
+      "dex.cloud.logging.v1.LogLevel.LevelB\r\n\013d" +
+      "estination\"?\n\rNetworkConfig\022\022\n\nsubnet_id" +
+      "s\030\001 \003(\t\022\032\n\022security_group_ids\030\002 \003(\t\"\260\002\n\013" +
+      "TrinoConfig\022J\n\022coordinator_config\030\001 \001(\0132" +
+      "(.yandex.cloud.trino.v1.CoordinatorConfi" +
+      "gB\004\350\3071\001\022@\n\rworker_config\030\002 \001(\0132#.yandex." +
+      "cloud.trino.v1.WorkerConfigB\004\350\3071\001\022\017\n\007ver" +
+      "sion\030\003 \001(\t\022>\n\014retry_policy\030\004 \001(\0132(.yande" +
+      "x.cloud.trino.v1.RetryPolicyConfig\022B\n\016ac" +
+      "cess_control\030\005 \001(\0132*.yandex.cloud.trino." +
+      "v1.AccessControlConfig\"N\n\021CoordinatorCon" +
+      "fig\0229\n\tresources\030\001 \001(\0132 .yandex.cloud.tr" +
+      "ino.v1.ResourcesB\004\350\3071\001\"\304\002\n\014WorkerConfig\022" +
+      "9\n\tresources\030\001 \001(\0132 .yandex.cloud.trino." +
+      "v1.ResourcesB\004\350\3071\001\022Q\n\014scale_policy\030\002 \001(\013" +
+      "25.yandex.cloud.trino.v1.WorkerConfig.Wo" +
+      "rkerScalePolicyB\004\350\3071\001\032\245\001\n\021WorkerScalePol" +
+      "icy\022>\n\013fixed_scale\030\001 \001(\0132\'.yandex.cloud." +
+      "trino.v1.FixedScalePolicyH\000\022<\n\nauto_scal" +
+      "e\030\002 \001(\0132&.yandex.cloud.trino.v1.AutoScal" +
+      "ePolicyH\000B\022\n\nscale_type\022\004\300\3011\001\"\323\003\n\021RetryP" +
+      "olicyConfig\022D\n\006policy\030\001 \001(\01624.yandex.clo" +
+      "ud.trino.v1.RetryPolicyConfig.RetryPolic" +
+      "y\022F\n\020exchange_manager\030\002 \001(\0132,.yandex.clo" +
+      "ud.trino.v1.ExchangeManagerConfig\022\260\001\n\025ad" +
+      "ditional_properties\030\003 \003(\0132B.yandex.cloud" +
+      ".trino.v1.RetryPolicyConfig.AdditionalPr" +
+      "opertiesEntryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_" +
+      "0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z]" +
+      "[-_0-9a-z.]*\032;\n\031AdditionalPropertiesEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"@\n\013Ret" +
+      "ryPolicy\022\034\n\030RETRY_POLICY_UNSPECIFIED\020\000\022\t" +
+      "\n\005QUERY\020\001\022\010\n\004TASK\020\002\"\202\001\n\026ExchangeManagerS" +
+      "torage\022M\n\nservice_s3\030\001 \001(\01327.yandex.clou" +
+      "d.trino.v1.ExchangeManagerStorage.Servic" +
+      "eS3H\000\032\013\n\tServiceS3B\014\n\004type\022\004\300\3011\001\"\313\002\n\025Exc" +
+      "hangeManagerConfig\022\264\001\n\025additional_proper" +
+      "ties\030\001 \003(\0132F.yandex.cloud.trino.v1.Excha" +
+      "ngeManagerConfig.AdditionalPropertiesEnt" +
+      "ryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.," +
+      ":\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]" +
+      "*\022>\n\007storage\030\002 \001(\0132-.yandex.cloud.trino." +
+      "v1.ExchangeManagerStorage\032;\n\031AdditionalP" +
+      "ropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"5\n\tResources\022(\n\022resource_preset_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\",\n\020FixedScalePolic" +
+      "y\022\030\n\005count\030\001 \001(\003B\t\372\3071\0051-512\"M\n\017AutoScale" +
+      "Policy\022\034\n\tmin_count\030\001 \001(\003B\t\372\3071\0050-512\022\034\n\t" +
+      "max_count\030\002 \001(\003B\t\372\3071\0051-512*?\n\006Health\022\022\n\016" +
+      "HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n" +
+      "\010DEGRADED\020\003B\\\n\031yandex.cloud.api.trino.v1" +
+      "Z?github.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/trino/v1;trinob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor(),
+          yandex.cloud.api.trino.v1.AccessControl.getDescriptor(),
           yandex.cloud.api.trino.v1.Maintenance.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -17530,7 +17796,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_trino_v1_TrinoConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_TrinoConfig_descriptor,
-        new java.lang.String[] { "CoordinatorConfig", "WorkerConfig", "Version", "RetryPolicy", });
+        new java.lang.String[] { "CoordinatorConfig", "WorkerConfig", "Version", "RetryPolicy", "AccessControl", });
     internal_static_yandex_cloud_trino_v1_CoordinatorConfig_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_trino_v1_CoordinatorConfig_fieldAccessorTable = new
@@ -17616,6 +17882,7 @@ public final class ClusterOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor();
+    yandex.cloud.api.trino.v1.AccessControl.getDescriptor();
     yandex.cloud.api.trino.v1.Maintenance.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

@@ -1626,11 +1626,906 @@ public final class SearchQueryOuterClass {
 
   }
 
+  public interface SearchMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.searchapi.v2.SearchMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Search flags, `key:value` pairs.
+     * No more than 64.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getFieldsCount();
+    /**
+     * <pre>
+     * Search flags, `key:value` pairs.
+     * No more than 64.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsFields(
+        java.lang.String key);
+    /**
+     * Use {@link #getFieldsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getFields();
+    /**
+     * <pre>
+     * Search flags, `key:value` pairs.
+     * No more than 64.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getFieldsMap();
+    /**
+     * <pre>
+     * Search flags, `key:value` pairs.
+     * No more than 64.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getFieldsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Search flags, `key:value` pairs.
+     * No more than 64.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getFieldsOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.searchapi.v2.SearchMetadata}
+   */
+  public static final class SearchMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.searchapi.v2.SearchMetadata)
+      SearchMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SearchMetadata.newBuilder() to construct.
+    private SearchMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SearchMetadata() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SearchMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SearchMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fields_ = com.google.protobuf.MapField.newMapField(
+                    FieldsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              fields__ = input.readMessage(
+                  FieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              fields_.getMutableMap().put(
+                  fields__.getKey(), fields__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.search.v2.SearchQueryOuterClass.internal_static_yandex_cloud_searchapi_v2_SearchMetadata_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetFields();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.search.v2.SearchQueryOuterClass.internal_static_yandex_cloud_searchapi_v2_SearchMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.class, yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.Builder.class);
+    }
+
+    public static final int FIELDS_FIELD_NUMBER = 1;
+    private static final class FieldsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.search.v2.SearchQueryOuterClass.internal_static_yandex_cloud_searchapi_v2_SearchMetadata_FieldsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> fields_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetFields() {
+      if (fields_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            FieldsDefaultEntryHolder.defaultEntry);
+      }
+      return fields_;
+    }
+
+    public int getFieldsCount() {
+      return internalGetFields().getMap().size();
+    }
+    /**
+     * <pre>
+     * Search flags, `key:value` pairs.
+     * No more than 64.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsFields(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetFields().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getFieldsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getFields() {
+      return getFieldsMap();
+    }
+    /**
+     * <pre>
+     * Search flags, `key:value` pairs.
+     * No more than 64.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
+      return internalGetFields().getMap();
+    }
+    /**
+     * <pre>
+     * Search flags, `key:value` pairs.
+     * No more than 64.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getFieldsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetFields().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Search flags, `key:value` pairs.
+     * No more than 64.
+     * The maximum string length in characters for each value is 63.
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63.
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getFieldsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetFields().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetFields(),
+          FieldsDefaultEntryHolder.defaultEntry,
+          1);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetFields().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        fields__ = FieldsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, fields__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata other = (yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata) obj;
+
+      if (!internalGetFields().equals(
+          other.internalGetFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetFields().getMap().isEmpty()) {
+        hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetFields().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.searchapi.v2.SearchMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.searchapi.v2.SearchMetadata)
+        yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.search.v2.SearchQueryOuterClass.internal_static_yandex_cloud_searchapi_v2_SearchMetadata_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetFields();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableFields();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.search.v2.SearchQueryOuterClass.internal_static_yandex_cloud_searchapi_v2_SearchMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.class, yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        internalGetMutableFields().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.search.v2.SearchQueryOuterClass.internal_static_yandex_cloud_searchapi_v2_SearchMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata build() {
+        yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata buildPartial() {
+        yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata result = new yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata(this);
+        int from_bitField0_ = bitField0_;
+        result.fields_ = internalGetFields();
+        result.fields_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata) {
+          return mergeFrom((yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata other) {
+        if (other == yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata.getDefaultInstance()) return this;
+        internalGetMutableFields().mergeFrom(
+            other.internalGetFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> fields_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetFields() {
+        if (fields_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              FieldsDefaultEntryHolder.defaultEntry);
+        }
+        return fields_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableFields() {
+        onChanged();;
+        if (fields_ == null) {
+          fields_ = com.google.protobuf.MapField.newMapField(
+              FieldsDefaultEntryHolder.defaultEntry);
+        }
+        if (!fields_.isMutable()) {
+          fields_ = fields_.copy();
+        }
+        return fields_;
+      }
+
+      public int getFieldsCount() {
+        return internalGetFields().getMap().size();
+      }
+      /**
+       * <pre>
+       * Search flags, `key:value` pairs.
+       * No more than 64.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsFields(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetFields().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getFieldsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getFields() {
+        return getFieldsMap();
+      }
+      /**
+       * <pre>
+       * Search flags, `key:value` pairs.
+       * No more than 64.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
+        return internalGetFields().getMap();
+      }
+      /**
+       * <pre>
+       * Search flags, `key:value` pairs.
+       * No more than 64.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getFieldsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetFields().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Search flags, `key:value` pairs.
+       * No more than 64.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getFieldsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetFields().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearFields() {
+        internalGetMutableFields().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Search flags, `key:value` pairs.
+       * No more than 64.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeFields(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableFields().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableFields() {
+        return internalGetMutableFields().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Search flags, `key:value` pairs.
+       * No more than 64.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putFields(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableFields().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Search flags, `key:value` pairs.
+       * No more than 64.
+       * The maximum string length in characters for each value is 63.
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63.
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; fields = 1 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllFields(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableFields().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.searchapi.v2.SearchMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.searchapi.v2.SearchMetadata)
+    private static final yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata();
+    }
+
+    public static yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SearchMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<SearchMetadata>() {
+      @java.lang.Override
+      public SearchMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SearchMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SearchMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SearchMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_searchapi_v2_SearchQuery_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_searchapi_v2_SearchQuery_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_searchapi_v2_SearchMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_searchapi_v2_SearchMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_searchapi_v2_SearchMetadata_FieldsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_searchapi_v2_SearchMetadata_FieldsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1659,10 +2554,15 @@ public final class SearchQueryOuterClass {
       "ILY_MODE_MODERATE\020\002\022\026\n\022FAMILY_MODE_STRIC" +
       "T\020\003\"Y\n\013FixTypoMode\022\035\n\031FIX_TYPO_MODE_UNSP" +
       "ECIFIED\020\000\022\024\n\020FIX_TYPO_MODE_ON\020\001\022\025\n\021FIX_T" +
-      "YPO_MODE_OFF\020\002Be\n\032yandex.cloud.api.searc" +
-      "h.v2ZGgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/searchapi/v2;searchapib\006p" +
-      "roto3"
+      "YPO_MODE_OFF\020\002\"\310\001\n\016SearchMetadata\022\206\001\n\006fi" +
+      "elds\030\001 \003(\01325.yandex.cloud.searchapi.v2.S" +
+      "earchMetadata.FieldsEntryB?\202\3101\004<=64\212\3101\004<" +
+      "=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][" +
+      "-_0-9a-z]*\032-\n\013FieldsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001Be\n\032yandex.cloud.api.se" +
+      "arch.v2ZGgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/searchapi/v2;searchapi" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1675,10 +2575,25 @@ public final class SearchQueryOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_searchapi_v2_SearchQuery_descriptor,
         new java.lang.String[] { "SearchType", "QueryText", "FamilyMode", "Page", "FixTypoMode", });
+    internal_static_yandex_cloud_searchapi_v2_SearchMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_searchapi_v2_SearchMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_searchapi_v2_SearchMetadata_descriptor,
+        new java.lang.String[] { "Fields", });
+    internal_static_yandex_cloud_searchapi_v2_SearchMetadata_FieldsEntry_descriptor =
+      internal_static_yandex_cloud_searchapi_v2_SearchMetadata_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_searchapi_v2_SearchMetadata_FieldsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_searchapi_v2_SearchMetadata_FieldsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

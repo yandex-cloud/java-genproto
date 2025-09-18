@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for voice recognition.
+ * A set of methods for streaming speech recognition.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -95,14 +95,14 @@ public final class RecognizerGrpc {
 
   /**
    * <pre>
-   * A set of methods for voice recognition.
+   * A set of methods for streaming speech recognition.
    * </pre>
    */
   public static abstract class RecognizerImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Expects audio in real-time
+     * Performs bidirectional streaming speech recognition receiving results while sending audio.
      * </pre>
      */
     public io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v3.Stt.StreamingRequest> recognizeStreaming(
@@ -125,7 +125,7 @@ public final class RecognizerGrpc {
 
   /**
    * <pre>
-   * A set of methods for voice recognition.
+   * A set of methods for streaming speech recognition.
    * </pre>
    */
   public static final class RecognizerStub extends io.grpc.stub.AbstractAsyncStub<RecognizerStub> {
@@ -142,7 +142,7 @@ public final class RecognizerGrpc {
 
     /**
      * <pre>
-     * Expects audio in real-time
+     * Performs bidirectional streaming speech recognition receiving results while sending audio.
      * </pre>
      */
     public io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v3.Stt.StreamingRequest> recognizeStreaming(
@@ -154,7 +154,7 @@ public final class RecognizerGrpc {
 
   /**
    * <pre>
-   * A set of methods for voice recognition.
+   * A set of methods for streaming speech recognition.
    * </pre>
    */
   public static final class RecognizerBlockingStub extends io.grpc.stub.AbstractBlockingStub<RecognizerBlockingStub> {
@@ -172,7 +172,7 @@ public final class RecognizerGrpc {
 
   /**
    * <pre>
-   * A set of methods for voice recognition.
+   * A set of methods for streaming speech recognition.
    * </pre>
    */
   public static final class RecognizerFutureStub extends io.grpc.stub.AbstractFutureStub<RecognizerFutureStub> {

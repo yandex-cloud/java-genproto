@@ -13560,95 +13560,105 @@ public final class PrivateSubnetServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n;yandex/cloud/baremetal/v1alpha/private" +
       "_subnet_service.proto\022\036yandex.cloud.bare" +
-      "metal.v1alpha\032 google/protobuf/field_mas" +
-      "k.proto\032 yandex/cloud/api/operation.prot" +
-      "o\0323yandex/cloud/baremetal/v1alpha/privat" +
-      "e_subnet.proto\032&yandex/cloud/operation/o" +
-      "peration.proto\032\035yandex/cloud/validation." +
-      "proto\"T\n\027GetPrivateSubnetRequest\0223\n\021priv" +
-      "ate_subnet_id\030\002 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212" +
-      "\3101\00220J\004\010\001\020\002\"\245\001\n\030ListPrivateSubnetRequest" +
-      "\022/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]" +
-      "*\212\3101\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022" +
-      "\022\n\npage_token\030e \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n" +
-      "\006filter\030g \001(\tJ\004\010\002\020d\"\210\001\n\031ListPrivateSubne" +
-      "tResponse\022F\n\017private_subnets\030\002 \003(\0132-.yan" +
-      "dex.cloud.baremetal.v1alpha.PrivateSubne" +
-      "t\022\027\n\017next_page_token\030d \001(\tJ\004\010\001\020\002J\004\010\003\020d\"\343" +
-      "\003\n\032CreatePrivateSubnetRequest\0224\n\004name\030\001 " +
-      "\001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042" +
-      "-63\022\037\n\013description\030\002 \001(\tB\n\212\3101\006<=1024\022\"\n\020" +
-      "hardware_pool_id\030\003 \001(\tB\010\212\3101\004<=20\022H\n\020vrf_" +
-      "options_spec\030\004 \001(\0132..yandex.cloud.bareme" +
-      "tal.v1alpha.VrfOptionsSpec\022/\n\tfolder_id\030" +
-      "\005 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=50\022\230\001\n\006" +
-      "labels\030\310\001 \003(\0132F.yandex.cloud.baremetal.v" +
-      "1alpha.CreatePrivateSubnetRequest.Labels" +
-      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
-      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010" +
-      "\006\020\310\001\"\211\001\n\016VrfOptionsSpec\022\016\n\006vrf_id\030\001 \001(\t\022" +
-      "\014\n\004cidr\030\002 \001(\t\022E\n\014dhcp_options\030\003 \001(\0132/.ya" +
-      "ndex.cloud.baremetal.v1alpha.DhcpOptions" +
-      "Spec\022\022\n\ngateway_ip\030\004 \001(\t\"3\n\017DhcpOptionsS" +
-      "pec\022\020\n\010start_ip\030\001 \001(\t\022\016\n\006end_ip\030\002 \001(\t\">\n" +
-      "\033CreatePrivateSubnetMetadata\022\031\n\021private_" +
-      "subnet_id\030\002 \001(\tJ\004\010\001\020\002\"\364\003\n\032UpdatePrivateS" +
-      "ubnetRequest\0223\n\021private_subnet_id\030\001 \001(\tB" +
-      "\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022/\n\013update_mask" +
-      "\030\002 \001(\0132\032.google.protobuf.FieldMask\0224\n\004na" +
-      "me\030\003 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?" +
-      "\212\3101\0042-63\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=102" +
-      "4\022H\n\020vrf_options_spec\030\005 \001(\0132..yandex.clo" +
-      "ud.baremetal.v1alpha.VrfOptionsSpec\022\230\001\n\006" +
-      "labels\030\310\001 \003(\0132F.yandex.cloud.baremetal.v" +
-      "1alpha.UpdatePrivateSubnetRequest.Labels" +
-      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
-      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010" +
-      "\006\020\310\001\">\n\033UpdatePrivateSubnetMetadata\022\031\n\021p" +
-      "rivate_subnet_id\030\002 \001(\tJ\004\010\001\020\002\"W\n\032DeletePr" +
-      "ivateSubnetRequest\0223\n\021private_subnet_id\030" +
-      "\002 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220J\004\010\001\020\002\">\n" +
-      "\033DeletePrivateSubnetMetadata\022\031\n\021private_" +
-      "subnet_id\030\002 \001(\tJ\004\010\001\020\002\"\227\001\n\"ListPrivateSub" +
-      "netOperationsRequest\0223\n\021private_subnet_i" +
-      "d\030\002 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022\034\n\tpag" +
-      "e_size\030d \001(\003B\t\372\3071\005<=100\022\022\n\npage_token\030e " +
-      "\001(\tJ\004\010\001\020\002J\004\010\003\020d\"{\n#ListPrivateSubnetOper" +
-      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
-      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
-      "ge_token\030d \001(\tJ\004\010\002\020d2\200\007\n\024PrivateSubnetSe" +
-      "rvice\022o\n\003Get\0227.yandex.cloud.baremetal.v1" +
-      "alpha.GetPrivateSubnetRequest\032-.yandex.c" +
-      "loud.baremetal.v1alpha.PrivateSubnet\"\000\022}" +
-      "\n\004List\0228.yandex.cloud.baremetal.v1alpha." +
-      "ListPrivateSubnetRequest\0329.yandex.cloud." +
-      "baremetal.v1alpha.ListPrivateSubnetRespo" +
-      "nse\"\000\022\231\001\n\006Create\022:.yandex.cloud.baremeta" +
-      "l.v1alpha.CreatePrivateSubnetRequest\032!.y" +
-      "andex.cloud.operation.Operation\"0\262\322*,\n\033C" +
-      "reatePrivateSubnetMetadata\022\rPrivateSubne" +
-      "t\022\231\001\n\006Update\022:.yandex.cloud.baremetal.v1" +
-      "alpha.UpdatePrivateSubnetRequest\032!.yande" +
-      "x.cloud.operation.Operation\"0\262\322*,\n\033Updat" +
-      "ePrivateSubnetMetadata\022\rPrivateSubnet\022\241\001" +
-      "\n\006Delete\022:.yandex.cloud.baremetal.v1alph" +
-      "a.DeletePrivateSubnetRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"8\262\322*4\n\033DeletePri" +
-      "vateSubnetMetadata\022\025google.protobuf.Empt" +
-      "y\022\233\001\n\016ListOperations\022B.yandex.cloud.bare" +
-      "metal.v1alpha.ListPrivateSubnetOperation" +
-      "sRequest\032C.yandex.cloud.baremetal.v1alph" +
-      "a.ListPrivateSubnetOperationsResponse\"\000B" +
-      "r\n\"yandex.cloud.api.baremetal.v1alphaZLg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/baremetal/v1alpha;baremetalb\006pro" +
-      "to3"
+      "metal.v1alpha\032\034google/api/annotations.pr" +
+      "oto\032 google/protobuf/field_mask.proto\032 y" +
+      "andex/cloud/api/operation.proto\0323yandex/" +
+      "cloud/baremetal/v1alpha/private_subnet.p" +
+      "roto\032&yandex/cloud/operation/operation.p" +
+      "roto\032\035yandex/cloud/validation.proto\"T\n\027G" +
+      "etPrivateSubnetRequest\0223\n\021private_subnet" +
+      "_id\030\002 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220J\004\010\001\020" +
+      "\002\"\245\001\n\030ListPrivateSubnetRequest\022/\n\tfolder" +
+      "_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=50\022" +
+      "\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\022\n\npage_to" +
+      "ken\030e \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006filter\030g " +
+      "\001(\tJ\004\010\002\020d\"\210\001\n\031ListPrivateSubnetResponse\022" +
+      "F\n\017private_subnets\030\002 \003(\0132-.yandex.cloud." +
+      "baremetal.v1alpha.PrivateSubnet\022\027\n\017next_" +
+      "page_token\030d \001(\tJ\004\010\001\020\002J\004\010\003\020d\"\343\003\n\032CreateP" +
+      "rivateSubnetRequest\0224\n\004name\030\001 \001(\tB&\362\3071\032[" +
+      "a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-63\022\037\n\013des" +
+      "cription\030\002 \001(\tB\n\212\3101\006<=1024\022\"\n\020hardware_p" +
+      "ool_id\030\003 \001(\tB\010\212\3101\004<=20\022H\n\020vrf_options_sp" +
+      "ec\030\004 \001(\0132..yandex.cloud.baremetal.v1alph" +
+      "a.VrfOptionsSpec\022/\n\tfolder_id\030\005 \001(\tB\034\362\3071" +
+      "\020[a-z][a-z0-9.-]*\212\3101\004<=50\022\230\001\n\006labels\030\310\001 " +
+      "\003(\0132F.yandex.cloud.baremetal.v1alpha.Cre" +
+      "atePrivateSubnetRequest.LabelsEntryB?\202\3101" +
+      "\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\310" +
+      "1\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\006\020\310\001\"\211\001\n\016V" +
+      "rfOptionsSpec\022\016\n\006vrf_id\030\001 \001(\t\022\014\n\004cidr\030\002 " +
+      "\001(\t\022E\n\014dhcp_options\030\003 \001(\0132/.yandex.cloud" +
+      ".baremetal.v1alpha.DhcpOptionsSpec\022\022\n\nga" +
+      "teway_ip\030\004 \001(\t\"3\n\017DhcpOptionsSpec\022\020\n\010sta" +
+      "rt_ip\030\001 \001(\t\022\016\n\006end_ip\030\002 \001(\t\">\n\033CreatePri" +
+      "vateSubnetMetadata\022\031\n\021private_subnet_id\030" +
+      "\002 \001(\tJ\004\010\001\020\002\"\364\003\n\032UpdatePrivateSubnetReque" +
+      "st\0223\n\021private_subnet_id\030\001 \001(\tB\030\362\3071\016[a-z]" +
+      "[a-z0-9]*\212\3101\00220\022/\n\013update_mask\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMask\0224\n\004name\030\003 \001(\tB&" +
+      "\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-63\022\037" +
+      "\n\013description\030\004 \001(\tB\n\212\3101\006<=1024\022H\n\020vrf_o" +
+      "ptions_spec\030\005 \001(\0132..yandex.cloud.baremet" +
+      "al.v1alpha.VrfOptionsSpec\022\230\001\n\006labels\030\310\001 " +
+      "\003(\0132F.yandex.cloud.baremetal.v1alpha.Upd" +
+      "atePrivateSubnetRequest.LabelsEntryB?\202\3101" +
+      "\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\310" +
+      "1\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\006\020\310\001\">\n\033Up" +
+      "datePrivateSubnetMetadata\022\031\n\021private_sub" +
+      "net_id\030\002 \001(\tJ\004\010\001\020\002\"W\n\032DeletePrivateSubne" +
+      "tRequest\0223\n\021private_subnet_id\030\002 \001(\tB\030\362\3071" +
+      "\016[a-z][a-z0-9]*\212\3101\00220J\004\010\001\020\002\">\n\033DeletePri" +
+      "vateSubnetMetadata\022\031\n\021private_subnet_id\030" +
+      "\002 \001(\tJ\004\010\001\020\002\"\227\001\n\"ListPrivateSubnetOperati" +
+      "onsRequest\0223\n\021private_subnet_id\030\002 \001(\tB\030\362" +
+      "\3071\016[a-z][a-z0-9]*\212\3101\00220\022\034\n\tpage_size\030d \001" +
+      "(\003B\t\372\3071\005<=100\022\022\n\npage_token\030e \001(\tJ\004\010\001\020\002J" +
+      "\004\010\003\020d\"{\n#ListPrivateSubnetOperationsResp" +
+      "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
+      "operation.Operation\022\027\n\017next_page_token\030d" +
+      " \001(\tJ\004\010\002\020d2\331\t\n\024PrivateSubnetService\022\254\001\n\003" +
+      "Get\0227.yandex.cloud.baremetal.v1alpha.Get" +
+      "PrivateSubnetRequest\032-.yandex.cloud.bare" +
+      "metal.v1alpha.PrivateSubnet\"=\202\323\344\223\0027\0225/ba" +
+      "remetal/v1alpha/privateSubnets/{private_" +
+      "subnet_id}\022\246\001\n\004List\0228.yandex.cloud.barem" +
+      "etal.v1alpha.ListPrivateSubnetRequest\0329." +
+      "yandex.cloud.baremetal.v1alpha.ListPriva" +
+      "teSubnetResponse\")\202\323\344\223\002#\022!/baremetal/v1a" +
+      "lpha/privateSubnets\022\305\001\n\006Create\022:.yandex." +
+      "cloud.baremetal.v1alpha.CreatePrivateSub" +
+      "netRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"\\\202\323\344\223\002&\"!/baremetal/v1alpha/privat" +
+      "eSubnets:\001*\262\322*,\n\033CreatePrivateSubnetMeta" +
+      "data\022\rPrivateSubnet\022\331\001\n\006Update\022:.yandex." +
+      "cloud.baremetal.v1alpha.UpdatePrivateSub" +
+      "netRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"p\202\323\344\223\002:25/baremetal/v1alpha/privat" +
+      "eSubnets/{private_subnet_id}:\001*\262\322*,\n\033Upd" +
+      "atePrivateSubnetMetadata\022\rPrivateSubnet\022" +
+      "\336\001\n\006Delete\022:.yandex.cloud.baremetal.v1al" +
+      "pha.DeletePrivateSubnetRequest\032!.yandex." +
+      "cloud.operation.Operation\"u\202\323\344\223\0027*5/bare" +
+      "metal/v1alpha/privateSubnets/{private_su" +
+      "bnet_id}\262\322*4\n\033DeletePrivateSubnetMetadat" +
+      "a\022\025google.protobuf.Empty\022\343\001\n\016ListOperati" +
+      "ons\022B.yandex.cloud.baremetal.v1alpha.Lis" +
+      "tPrivateSubnetOperationsRequest\032C.yandex" +
+      ".cloud.baremetal.v1alpha.ListPrivateSubn" +
+      "etOperationsResponse\"H\202\323\344\223\002B\022@/baremetal" +
+      "/v1alpha/privateSubnets/{private_subnet_" +
+      "id}/operationsBr\n\"yandex.cloud.api.barem" +
+      "etal.v1alphaZLgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/baremetal/v1alpha" +
+      ";baremetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.baremetal.v1alpha.PrivateSubnetOuterClass.getDescriptor(),
@@ -13747,6 +13757,7 @@ public final class PrivateSubnetServiceOuterClass {
         new java.lang.String[] { "Operations", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.mapKey);
@@ -13755,6 +13766,7 @@ public final class PrivateSubnetServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.baremetal.v1alpha.PrivateSubnetOuterClass.getDescriptor();

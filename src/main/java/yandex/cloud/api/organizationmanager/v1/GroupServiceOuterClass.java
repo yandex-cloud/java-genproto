@@ -627,6 +627,814 @@ public final class GroupServiceOuterClass {
 
   }
 
+  public interface ResolveExternalGroupRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ResolveExternalGroupRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectContainerId.
+     */
+    java.lang.String getSubjectContainerId();
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectContainerId.
+     */
+    com.google.protobuf.ByteString
+        getSubjectContainerIdBytes();
+
+    /**
+     * <pre>
+     * Id of the group from external system
+     * </pre>
+     *
+     * <code>string external_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The externalId.
+     */
+    java.lang.String getExternalId();
+    /**
+     * <pre>
+     * Id of the group from external system
+     * </pre>
+     *
+     * <code>string external_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for externalId.
+     */
+    com.google.protobuf.ByteString
+        getExternalIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.ResolveExternalGroupRequest}
+   */
+  public static final class ResolveExternalGroupRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ResolveExternalGroupRequest)
+      ResolveExternalGroupRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResolveExternalGroupRequest.newBuilder() to construct.
+    private ResolveExternalGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResolveExternalGroupRequest() {
+      subjectContainerId_ = "";
+      externalId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResolveExternalGroupRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResolveExternalGroupRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectContainerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ResolveExternalGroupRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ResolveExternalGroupRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest.Builder.class);
+    }
+
+    public static final int SUBJECT_CONTAINER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subjectContainerId_;
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectContainerId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectContainerId() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectContainerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectContainerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectContainerIdBytes() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectContainerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTERNAL_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object externalId_;
+    /**
+     * <pre>
+     * Id of the group from external system
+     * </pre>
+     *
+     * <code>string external_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The externalId.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalId() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the group from external system
+     * </pre>
+     *
+     * <code>string external_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for externalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalIdBytes() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest) obj;
+
+      if (!getSubjectContainerId()
+          .equals(other.getSubjectContainerId())) return false;
+      if (!getExternalId()
+          .equals(other.getExternalId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBJECT_CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectContainerId().hashCode();
+      hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ResolveExternalGroupRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ResolveExternalGroupRequest)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ResolveExternalGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ResolveExternalGroupRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subjectContainerId_ = "";
+
+        externalId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ResolveExternalGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest(this);
+        result.subjectContainerId_ = subjectContainerId_;
+        result.externalId_ = externalId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest.getDefaultInstance()) return this;
+        if (!other.getSubjectContainerId().isEmpty()) {
+          subjectContainerId_ = other.subjectContainerId_;
+          onChanged();
+        }
+        if (!other.getExternalId().isEmpty()) {
+          externalId_ = other.externalId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subjectContainerId_ = "";
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subjectContainerId.
+       */
+      public java.lang.String getSubjectContainerId() {
+        java.lang.Object ref = subjectContainerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectContainerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subjectContainerId.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectContainerIdBytes() {
+        java.lang.Object ref = subjectContainerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectContainerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectContainerId() {
+        
+        subjectContainerId_ = getDefaultInstance().getSubjectContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalId_ = "";
+      /**
+       * <pre>
+       * Id of the group from external system
+       * </pre>
+       *
+       * <code>string external_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The externalId.
+       */
+      public java.lang.String getExternalId() {
+        java.lang.Object ref = externalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the group from external system
+       * </pre>
+       *
+       * <code>string external_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for externalId.
+       */
+      public com.google.protobuf.ByteString
+          getExternalIdBytes() {
+        java.lang.Object ref = externalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the group from external system
+       * </pre>
+       *
+       * <code>string external_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the group from external system
+       * </pre>
+       *
+       * <code>string external_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalId() {
+        
+        externalId_ = getDefaultInstance().getExternalId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the group from external system
+       * </pre>
+       *
+       * <code>string external_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ResolveExternalGroupRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ResolveExternalGroupRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResolveExternalGroupRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ResolveExternalGroupRequest>() {
+      @java.lang.Override
+      public ResolveExternalGroupRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResolveExternalGroupRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResolveExternalGroupRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResolveExternalGroupRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ResolveExternalGroupRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListGroupsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ListGroupsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -2913,6 +3721,2301 @@ public final class GroupServiceOuterClass {
 
   }
 
+  public interface ListExternalGroupsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ListExternalGroupsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectContainerId.
+     */
+    java.lang.String getSubjectContainerId();
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectContainerId.
+     */
+    com.google.protobuf.ByteString
+        getSubjectContainerIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListExternalGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListExternalGroupsResponse.next_page_token]
+     * returned by a previous list external request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListExternalGroupsResponse.next_page_token]
+     * returned by a previous list external request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The fields name or id. Currently you can use filtering only on the [Group.name] or [Group.id] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The fields name or id. Currently you can use filtering only on the [Group.name] or [Group.id] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListExternalGroupsRequest}
+   */
+  public static final class ListExternalGroupsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ListExternalGroupsRequest)
+      ListExternalGroupsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListExternalGroupsRequest.newBuilder() to construct.
+    private ListExternalGroupsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListExternalGroupsRequest() {
+      subjectContainerId_ = "";
+      pageToken_ = "";
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListExternalGroupsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListExternalGroupsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectContainerId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest.Builder.class);
+    }
+
+    public static final int SUBJECT_CONTAINER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subjectContainerId_;
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectContainerId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectContainerId() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectContainerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectContainerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectContainerIdBytes() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectContainerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListExternalGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListExternalGroupsResponse.next_page_token]
+     * returned by a previous list external request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListExternalGroupsResponse.next_page_token]
+     * returned by a previous list external request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The fields name or id. Currently you can use filtering only on the [Group.name] or [Group.id] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The fields name or id. Currently you can use filtering only on the [Group.name] or [Group.id] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subjectContainerId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subjectContainerId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest) obj;
+
+      if (!getSubjectContainerId()
+          .equals(other.getSubjectContainerId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBJECT_CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectContainerId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListExternalGroupsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ListExternalGroupsRequest)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subjectContainerId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest(this);
+        result.subjectContainerId_ = subjectContainerId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest.getDefaultInstance()) return this;
+        if (!other.getSubjectContainerId().isEmpty()) {
+          subjectContainerId_ = other.subjectContainerId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subjectContainerId_ = "";
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subjectContainerId.
+       */
+      public java.lang.String getSubjectContainerId() {
+        java.lang.Object ref = subjectContainerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectContainerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subjectContainerId.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectContainerIdBytes() {
+        java.lang.Object ref = subjectContainerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectContainerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectContainerId() {
+        
+        subjectContainerId_ = getDefaultInstance().getSubjectContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListExternalGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListExternalGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListExternalGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListExternalGroupsResponse.next_page_token]
+       * returned by a previous list external request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListExternalGroupsResponse.next_page_token]
+       * returned by a previous list external request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListExternalGroupsResponse.next_page_token]
+       * returned by a previous list external request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListExternalGroupsResponse.next_page_token]
+       * returned by a previous list external request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListExternalGroupsResponse.next_page_token]
+       * returned by a previous list external request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The fields name or id. Currently you can use filtering only on the [Group.name] or [Group.id] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The fields name or id. Currently you can use filtering only on the [Group.name] or [Group.id] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The fields name or id. Currently you can use filtering only on the [Group.name] or [Group.id] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The fields name or id. Currently you can use filtering only on the [Group.name] or [Group.id] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The fields name or id. Currently you can use filtering only on the [Group.name] or [Group.id] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ListExternalGroupsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ListExternalGroupsRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListExternalGroupsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListExternalGroupsRequest>() {
+      @java.lang.Override
+      public ListExternalGroupsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListExternalGroupsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListExternalGroupsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListExternalGroupsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListExternalGroupsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ListExternalGroupsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of External group resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> 
+        getGroupsList();
+    /**
+     * <pre>
+     * List of External group resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group getGroups(int index);
+    /**
+     * <pre>
+     * List of External group resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+     */
+    int getGroupsCount();
+    /**
+     * <pre>
+     * List of External group resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.organizationmanager.v1.GroupOuterClass.GroupOrBuilder> 
+        getGroupsOrBuilderList();
+    /**
+     * <pre>
+     * List of External group resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.GroupOuterClass.GroupOrBuilder getGroupsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListExternalGroupsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListExternalGroupsRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListExternalGroupsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListExternalGroupsRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListExternalGroupsResponse}
+   */
+  public static final class ListExternalGroupsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ListExternalGroupsResponse)
+      ListExternalGroupsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListExternalGroupsResponse.newBuilder() to construct.
+    private ListExternalGroupsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListExternalGroupsResponse() {
+      groups_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListExternalGroupsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListExternalGroupsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                groups_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              groups_.add(
+                  input.readMessage(yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          groups_ = java.util.Collections.unmodifiableList(groups_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse.Builder.class);
+    }
+
+    public static final int GROUPS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> groups_;
+    /**
+     * <pre>
+     * List of External group resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> getGroupsList() {
+      return groups_;
+    }
+    /**
+     * <pre>
+     * List of External group resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.GroupOuterClass.GroupOrBuilder> 
+        getGroupsOrBuilderList() {
+      return groups_;
+    }
+    /**
+     * <pre>
+     * List of External group resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+     */
+    @java.lang.Override
+    public int getGroupsCount() {
+      return groups_.size();
+    }
+    /**
+     * <pre>
+     * List of External group resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group getGroups(int index) {
+      return groups_.get(index);
+    }
+    /**
+     * <pre>
+     * List of External group resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupOuterClass.GroupOrBuilder getGroupsOrBuilder(
+        int index) {
+      return groups_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListExternalGroupsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListExternalGroupsRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListExternalGroupsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListExternalGroupsRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < groups_.size(); i++) {
+        output.writeMessage(1, groups_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < groups_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, groups_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse) obj;
+
+      if (!getGroupsList()
+          .equals(other.getGroupsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGroupsCount() > 0) {
+        hash = (37 * hash) + GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListExternalGroupsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ListExternalGroupsResponse)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getGroupsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (groupsBuilder_ == null) {
+          groups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          groupsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (groupsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            groups_ = java.util.Collections.unmodifiableList(groups_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.groups_ = groups_;
+        } else {
+          result.groups_ = groupsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse.getDefaultInstance()) return this;
+        if (groupsBuilder_ == null) {
+          if (!other.groups_.isEmpty()) {
+            if (groups_.isEmpty()) {
+              groups_ = other.groups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureGroupsIsMutable();
+              groups_.addAll(other.groups_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.groups_.isEmpty()) {
+            if (groupsBuilder_.isEmpty()) {
+              groupsBuilder_.dispose();
+              groupsBuilder_ = null;
+              groups_ = other.groups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              groupsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGroupsFieldBuilder() : null;
+            } else {
+              groupsBuilder_.addAllMessages(other.groups_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> groups_ =
+        java.util.Collections.emptyList();
+      private void ensureGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          groups_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group>(groups_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.Builder, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.GroupOrBuilder> groupsBuilder_;
+
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> getGroupsList() {
+        if (groupsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(groups_);
+        } else {
+          return groupsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public int getGroupsCount() {
+        if (groupsBuilder_ == null) {
+          return groups_.size();
+        } else {
+          return groupsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group getGroups(int index) {
+        if (groupsBuilder_ == null) {
+          return groups_.get(index);
+        } else {
+          return groupsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public Builder setGroups(
+          int index, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.set(index, value);
+          onChanged();
+        } else {
+          groupsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public Builder setGroups(
+          int index, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public Builder addGroups(yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.add(value);
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public Builder addGroups(
+          int index, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.add(index, value);
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public Builder addGroups(
+          yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.add(builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public Builder addGroups(
+          int index, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public Builder addAllGroups(
+          java.lang.Iterable<? extends yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group> values) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, groups_);
+          onChanged();
+        } else {
+          groupsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public Builder clearGroups() {
+        if (groupsBuilder_ == null) {
+          groups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          groupsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public Builder removeGroups(int index) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.remove(index);
+          onChanged();
+        } else {
+          groupsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.Builder getGroupsBuilder(
+          int index) {
+        return getGroupsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.GroupOuterClass.GroupOrBuilder getGroupsOrBuilder(
+          int index) {
+        if (groupsBuilder_ == null) {
+          return groups_.get(index);  } else {
+          return groupsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.GroupOuterClass.GroupOrBuilder> 
+           getGroupsOrBuilderList() {
+        if (groupsBuilder_ != null) {
+          return groupsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(groups_);
+        }
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.Builder addGroupsBuilder() {
+        return getGroupsFieldBuilder().addBuilder(
+            yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.Builder addGroupsBuilder(
+          int index) {
+        return getGroupsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of External group resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.Group groups = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.Builder> 
+           getGroupsBuilderList() {
+        return getGroupsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.Builder, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.GroupOrBuilder> 
+          getGroupsFieldBuilder() {
+        if (groupsBuilder_ == null) {
+          groupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group.Builder, yandex.cloud.api.organizationmanager.v1.GroupOuterClass.GroupOrBuilder>(
+                  groups_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          groups_ = null;
+        }
+        return groupsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListExternalGroupsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListExternalGroupsRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListExternalGroupsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListExternalGroupsRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListExternalGroupsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListExternalGroupsRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListExternalGroupsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListExternalGroupsRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListExternalGroupsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListExternalGroupsRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ListExternalGroupsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ListExternalGroupsResponse)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListExternalGroupsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListExternalGroupsResponse>() {
+      @java.lang.Override
+      public ListExternalGroupsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListExternalGroupsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListExternalGroupsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListExternalGroupsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListExternalGroupsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateGroupRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.CreateGroupRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -2945,7 +6048,7 @@ public final class GroupServiceOuterClass {
      * The name must be unique within the organization.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -2955,7 +6058,7 @@ public final class GroupServiceOuterClass {
      * The name must be unique within the organization.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3135,7 +6238,7 @@ public final class GroupServiceOuterClass {
      * The name must be unique within the organization.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3157,7 +6260,7 @@ public final class GroupServiceOuterClass {
      * The name must be unique within the organization.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -3665,7 +6768,7 @@ public final class GroupServiceOuterClass {
        * The name must be unique within the organization.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -3686,7 +6789,7 @@ public final class GroupServiceOuterClass {
        * The name must be unique within the organization.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -3708,7 +6811,7 @@ public final class GroupServiceOuterClass {
        * The name must be unique within the organization.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -3728,7 +6831,7 @@ public final class GroupServiceOuterClass {
        * The name must be unique within the organization.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -3743,7 +6846,7 @@ public final class GroupServiceOuterClass {
        * The name must be unique within the organization.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -4511,6 +7614,2938 @@ public final class GroupServiceOuterClass {
 
   }
 
+  public interface CreateExternalGroupRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.CreateExternalGroupRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the organization to create a group in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <pre>
+     * ID of the organization to create a group in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * Name of the group.
+     * The name must be unique within the organization.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the group.
+     * The name must be unique within the organization.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description of the group.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the group.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * Combination of subject_container_id and external_id must be unique.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectContainerId.
+     */
+    java.lang.String getSubjectContainerId();
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * Combination of subject_container_id and external_id must be unique.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectContainerId.
+     */
+    com.google.protobuf.ByteString
+        getSubjectContainerIdBytes();
+
+    /**
+     * <pre>
+     * Id of the group from external system.
+     * Combination of subject_container_id and external_id must be unique
+     * </pre>
+     *
+     * <code>string external_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The externalId.
+     */
+    java.lang.String getExternalId();
+    /**
+     * <pre>
+     * Id of the group from external system.
+     * Combination of subject_container_id and external_id must be unique
+     * </pre>
+     *
+     * <code>string external_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for externalId.
+     */
+    com.google.protobuf.ByteString
+        getExternalIdBytes();
+
+    /**
+     * <pre>
+     * If true, then creator of group will be assigned to role that allows modification of group as external group.
+     * </pre>
+     *
+     * <code>bool make_editor = 6;</code>
+     * @return The makeEditor.
+     */
+    boolean getMakeEditor();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.CreateExternalGroupRequest}
+   */
+  public static final class CreateExternalGroupRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.CreateExternalGroupRequest)
+      CreateExternalGroupRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateExternalGroupRequest.newBuilder() to construct.
+    private CreateExternalGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateExternalGroupRequest() {
+      organizationId_ = "";
+      name_ = "";
+      description_ = "";
+      subjectContainerId_ = "";
+      externalId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateExternalGroupRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateExternalGroupRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              organizationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectContainerId_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalId_ = s;
+              break;
+            }
+            case 48: {
+
+              makeEditor_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest.Builder.class);
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object organizationId_;
+    /**
+     * <pre>
+     * ID of the organization to create a group in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        organizationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the organization to create a group in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        organizationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the group.
+     * The name must be unique within the organization.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the group.
+     * The name must be unique within the organization.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the group.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the group.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBJECT_CONTAINER_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object subjectContainerId_;
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * Combination of subject_container_id and external_id must be unique.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectContainerId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectContainerId() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectContainerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * Combination of subject_container_id and external_id must be unique.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectContainerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectContainerIdBytes() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectContainerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTERNAL_ID_FIELD_NUMBER = 5;
+    private volatile java.lang.Object externalId_;
+    /**
+     * <pre>
+     * Id of the group from external system.
+     * Combination of subject_container_id and external_id must be unique
+     * </pre>
+     *
+     * <code>string external_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The externalId.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalId() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the group from external system.
+     * Combination of subject_container_id and external_id must be unique
+     * </pre>
+     *
+     * <code>string external_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for externalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalIdBytes() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAKE_EDITOR_FIELD_NUMBER = 6;
+    private boolean makeEditor_;
+    /**
+     * <pre>
+     * If true, then creator of group will be assigned to role that allows modification of group as external group.
+     * </pre>
+     *
+     * <code>bool make_editor = 6;</code>
+     * @return The makeEditor.
+     */
+    @java.lang.Override
+    public boolean getMakeEditor() {
+      return makeEditor_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, organizationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, externalId_);
+      }
+      if (makeEditor_ != false) {
+        output.writeBool(6, makeEditor_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, organizationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, externalId_);
+      }
+      if (makeEditor_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, makeEditor_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest) obj;
+
+      if (!getOrganizationId()
+          .equals(other.getOrganizationId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getSubjectContainerId()
+          .equals(other.getSubjectContainerId())) return false;
+      if (!getExternalId()
+          .equals(other.getExternalId())) return false;
+      if (getMakeEditor()
+          != other.getMakeEditor()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + SUBJECT_CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectContainerId().hashCode();
+      hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalId().hashCode();
+      hash = (37 * hash) + MAKE_EDITOR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMakeEditor());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.CreateExternalGroupRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.CreateExternalGroupRequest)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        organizationId_ = "";
+
+        name_ = "";
+
+        description_ = "";
+
+        subjectContainerId_ = "";
+
+        externalId_ = "";
+
+        makeEditor_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest(this);
+        result.organizationId_ = organizationId_;
+        result.name_ = name_;
+        result.description_ = description_;
+        result.subjectContainerId_ = subjectContainerId_;
+        result.externalId_ = externalId_;
+        result.makeEditor_ = makeEditor_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest.getDefaultInstance()) return this;
+        if (!other.getOrganizationId().isEmpty()) {
+          organizationId_ = other.organizationId_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (!other.getSubjectContainerId().isEmpty()) {
+          subjectContainerId_ = other.subjectContainerId_;
+          onChanged();
+        }
+        if (!other.getExternalId().isEmpty()) {
+          externalId_ = other.externalId_;
+          onChanged();
+        }
+        if (other.getMakeEditor() != false) {
+          setMakeEditor(other.getMakeEditor());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object organizationId_ = "";
+      /**
+       * <pre>
+       * ID of the organization to create a group in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The organizationId.
+       */
+      public java.lang.String getOrganizationId() {
+        java.lang.Object ref = organizationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          organizationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization to create a group in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for organizationId.
+       */
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        java.lang.Object ref = organizationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          organizationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization to create a group in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization to create a group in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization to create a group in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the group.
+       * The name must be unique within the organization.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the group.
+       * The name must be unique within the organization.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the group.
+       * The name must be unique within the organization.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the group.
+       * The name must be unique within the organization.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the group.
+       * The name must be unique within the organization.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the group.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the group.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the group.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the group.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the group.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subjectContainerId_ = "";
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * Combination of subject_container_id and external_id must be unique.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subjectContainerId.
+       */
+      public java.lang.String getSubjectContainerId() {
+        java.lang.Object ref = subjectContainerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectContainerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * Combination of subject_container_id and external_id must be unique.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subjectContainerId.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectContainerIdBytes() {
+        java.lang.Object ref = subjectContainerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectContainerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * Combination of subject_container_id and external_id must be unique.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * Combination of subject_container_id and external_id must be unique.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectContainerId() {
+        
+        subjectContainerId_ = getDefaultInstance().getSubjectContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * Combination of subject_container_id and external_id must be unique.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalId_ = "";
+      /**
+       * <pre>
+       * Id of the group from external system.
+       * Combination of subject_container_id and external_id must be unique
+       * </pre>
+       *
+       * <code>string external_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The externalId.
+       */
+      public java.lang.String getExternalId() {
+        java.lang.Object ref = externalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the group from external system.
+       * Combination of subject_container_id and external_id must be unique
+       * </pre>
+       *
+       * <code>string external_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for externalId.
+       */
+      public com.google.protobuf.ByteString
+          getExternalIdBytes() {
+        java.lang.Object ref = externalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the group from external system.
+       * Combination of subject_container_id and external_id must be unique
+       * </pre>
+       *
+       * <code>string external_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @param value The externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the group from external system.
+       * Combination of subject_container_id and external_id must be unique
+       * </pre>
+       *
+       * <code>string external_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalId() {
+        
+        externalId_ = getDefaultInstance().getExternalId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the group from external system.
+       * Combination of subject_container_id and external_id must be unique
+       * </pre>
+       *
+       * <code>string external_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean makeEditor_ ;
+      /**
+       * <pre>
+       * If true, then creator of group will be assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 6;</code>
+       * @return The makeEditor.
+       */
+      @java.lang.Override
+      public boolean getMakeEditor() {
+        return makeEditor_;
+      }
+      /**
+       * <pre>
+       * If true, then creator of group will be assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 6;</code>
+       * @param value The makeEditor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMakeEditor(boolean value) {
+        
+        makeEditor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, then creator of group will be assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMakeEditor() {
+        
+        makeEditor_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.CreateExternalGroupRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.CreateExternalGroupRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateExternalGroupRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateExternalGroupRequest>() {
+      @java.lang.Override
+      public CreateExternalGroupRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateExternalGroupRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateExternalGroupRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateExternalGroupRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateExternalGroupMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.CreateExternalGroupMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the group that is being created.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The groupId.
+     */
+    java.lang.String getGroupId();
+    /**
+     * <pre>
+     * ID of the group that is being created.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The bytes for groupId.
+     */
+    com.google.protobuf.ByteString
+        getGroupIdBytes();
+
+    /**
+     * <pre>
+     * ID of the organization that the group belongs to.
+     * </pre>
+     *
+     * <code>string organization_id = 2;</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <pre>
+     * ID of the organization that the group belongs to.
+     * </pre>
+     *
+     * <code>string organization_id = 2;</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * Name of the group.
+     * </pre>
+     *
+     * <code>string group_name = 3;</code>
+     * @return The groupName.
+     */
+    java.lang.String getGroupName();
+    /**
+     * <pre>
+     * Name of the group.
+     * </pre>
+     *
+     * <code>string group_name = 3;</code>
+     * @return The bytes for groupName.
+     */
+    com.google.protobuf.ByteString
+        getGroupNameBytes();
+
+    /**
+     * <pre>
+     * Id of the subject container that created external group belongs to.
+     * </pre>
+     *
+     * <code>string subject_container_id = 4;</code>
+     * @return The subjectContainerId.
+     */
+    java.lang.String getSubjectContainerId();
+    /**
+     * <pre>
+     * Id of the subject container that created external group belongs to.
+     * </pre>
+     *
+     * <code>string subject_container_id = 4;</code>
+     * @return The bytes for subjectContainerId.
+     */
+    com.google.protobuf.ByteString
+        getSubjectContainerIdBytes();
+
+    /**
+     * <pre>
+     * Id of the created group from external system.
+     * </pre>
+     *
+     * <code>string external_id = 5;</code>
+     * @return The externalId.
+     */
+    java.lang.String getExternalId();
+    /**
+     * <pre>
+     * Id of the created group from external system.
+     * </pre>
+     *
+     * <code>string external_id = 5;</code>
+     * @return The bytes for externalId.
+     */
+    com.google.protobuf.ByteString
+        getExternalIdBytes();
+
+    /**
+     * <pre>
+     * If true, then creator of group was assigned to role that allows modification of group as external group.
+     * </pre>
+     *
+     * <code>bool make_editor = 6;</code>
+     * @return The makeEditor.
+     */
+    boolean getMakeEditor();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.CreateExternalGroupMetadata}
+   */
+  public static final class CreateExternalGroupMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.CreateExternalGroupMetadata)
+      CreateExternalGroupMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateExternalGroupMetadata.newBuilder() to construct.
+    private CreateExternalGroupMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateExternalGroupMetadata() {
+      groupId_ = "";
+      organizationId_ = "";
+      groupName_ = "";
+      subjectContainerId_ = "";
+      externalId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateExternalGroupMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateExternalGroupMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              groupId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              organizationId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              groupName_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectContainerId_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalId_ = s;
+              break;
+            }
+            case 48: {
+
+              makeEditor_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata.Builder.class);
+    }
+
+    public static final int GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object groupId_;
+    /**
+     * <pre>
+     * ID of the group that is being created.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The groupId.
+     */
+    @java.lang.Override
+    public java.lang.String getGroupId() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the group that is being created.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The bytes for groupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGroupIdBytes() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object organizationId_;
+    /**
+     * <pre>
+     * ID of the organization that the group belongs to.
+     * </pre>
+     *
+     * <code>string organization_id = 2;</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        organizationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the organization that the group belongs to.
+     * </pre>
+     *
+     * <code>string organization_id = 2;</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        organizationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GROUP_NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object groupName_;
+    /**
+     * <pre>
+     * Name of the group.
+     * </pre>
+     *
+     * <code>string group_name = 3;</code>
+     * @return The groupName.
+     */
+    @java.lang.Override
+    public java.lang.String getGroupName() {
+      java.lang.Object ref = groupName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the group.
+     * </pre>
+     *
+     * <code>string group_name = 3;</code>
+     * @return The bytes for groupName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGroupNameBytes() {
+      java.lang.Object ref = groupName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBJECT_CONTAINER_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object subjectContainerId_;
+    /**
+     * <pre>
+     * Id of the subject container that created external group belongs to.
+     * </pre>
+     *
+     * <code>string subject_container_id = 4;</code>
+     * @return The subjectContainerId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectContainerId() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectContainerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the subject container that created external group belongs to.
+     * </pre>
+     *
+     * <code>string subject_container_id = 4;</code>
+     * @return The bytes for subjectContainerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectContainerIdBytes() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectContainerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTERNAL_ID_FIELD_NUMBER = 5;
+    private volatile java.lang.Object externalId_;
+    /**
+     * <pre>
+     * Id of the created group from external system.
+     * </pre>
+     *
+     * <code>string external_id = 5;</code>
+     * @return The externalId.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalId() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the created group from external system.
+     * </pre>
+     *
+     * <code>string external_id = 5;</code>
+     * @return The bytes for externalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalIdBytes() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAKE_EDITOR_FIELD_NUMBER = 6;
+    private boolean makeEditor_;
+    /**
+     * <pre>
+     * If true, then creator of group was assigned to role that allows modification of group as external group.
+     * </pre>
+     *
+     * <code>bool make_editor = 6;</code>
+     * @return The makeEditor.
+     */
+    @java.lang.Override
+    public boolean getMakeEditor() {
+      return makeEditor_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, organizationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, groupName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, externalId_);
+      }
+      if (makeEditor_ != false) {
+        output.writeBool(6, makeEditor_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, organizationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, groupName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, externalId_);
+      }
+      if (makeEditor_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, makeEditor_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata) obj;
+
+      if (!getGroupId()
+          .equals(other.getGroupId())) return false;
+      if (!getOrganizationId()
+          .equals(other.getOrganizationId())) return false;
+      if (!getGroupName()
+          .equals(other.getGroupName())) return false;
+      if (!getSubjectContainerId()
+          .equals(other.getSubjectContainerId())) return false;
+      if (!getExternalId()
+          .equals(other.getExternalId())) return false;
+      if (getMakeEditor()
+          != other.getMakeEditor()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupId().hashCode();
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
+      hash = (37 * hash) + GROUP_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupName().hashCode();
+      hash = (37 * hash) + SUBJECT_CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectContainerId().hashCode();
+      hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalId().hashCode();
+      hash = (37 * hash) + MAKE_EDITOR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMakeEditor());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.CreateExternalGroupMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.CreateExternalGroupMetadata)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        groupId_ = "";
+
+        organizationId_ = "";
+
+        groupName_ = "";
+
+        subjectContainerId_ = "";
+
+        externalId_ = "";
+
+        makeEditor_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata(this);
+        result.groupId_ = groupId_;
+        result.organizationId_ = organizationId_;
+        result.groupName_ = groupName_;
+        result.subjectContainerId_ = subjectContainerId_;
+        result.externalId_ = externalId_;
+        result.makeEditor_ = makeEditor_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata.getDefaultInstance()) return this;
+        if (!other.getGroupId().isEmpty()) {
+          groupId_ = other.groupId_;
+          onChanged();
+        }
+        if (!other.getOrganizationId().isEmpty()) {
+          organizationId_ = other.organizationId_;
+          onChanged();
+        }
+        if (!other.getGroupName().isEmpty()) {
+          groupName_ = other.groupName_;
+          onChanged();
+        }
+        if (!other.getSubjectContainerId().isEmpty()) {
+          subjectContainerId_ = other.subjectContainerId_;
+          onChanged();
+        }
+        if (!other.getExternalId().isEmpty()) {
+          externalId_ = other.externalId_;
+          onChanged();
+        }
+        if (other.getMakeEditor() != false) {
+          setMakeEditor(other.getMakeEditor());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object groupId_ = "";
+      /**
+       * <pre>
+       * ID of the group that is being created.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @return The groupId.
+       */
+      public java.lang.String getGroupId() {
+        java.lang.Object ref = groupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the group that is being created.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @return The bytes for groupId.
+       */
+      public com.google.protobuf.ByteString
+          getGroupIdBytes() {
+        java.lang.Object ref = groupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the group that is being created.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @param value The groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the group that is being created.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupId() {
+        
+        groupId_ = getDefaultInstance().getGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the group that is being created.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @param value The bytes for groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object organizationId_ = "";
+      /**
+       * <pre>
+       * ID of the organization that the group belongs to.
+       * </pre>
+       *
+       * <code>string organization_id = 2;</code>
+       * @return The organizationId.
+       */
+      public java.lang.String getOrganizationId() {
+        java.lang.Object ref = organizationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          organizationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization that the group belongs to.
+       * </pre>
+       *
+       * <code>string organization_id = 2;</code>
+       * @return The bytes for organizationId.
+       */
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        java.lang.Object ref = organizationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          organizationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization that the group belongs to.
+       * </pre>
+       *
+       * <code>string organization_id = 2;</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization that the group belongs to.
+       * </pre>
+       *
+       * <code>string organization_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization that the group belongs to.
+       * </pre>
+       *
+       * <code>string organization_id = 2;</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object groupName_ = "";
+      /**
+       * <pre>
+       * Name of the group.
+       * </pre>
+       *
+       * <code>string group_name = 3;</code>
+       * @return The groupName.
+       */
+      public java.lang.String getGroupName() {
+        java.lang.Object ref = groupName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the group.
+       * </pre>
+       *
+       * <code>string group_name = 3;</code>
+       * @return The bytes for groupName.
+       */
+      public com.google.protobuf.ByteString
+          getGroupNameBytes() {
+        java.lang.Object ref = groupName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the group.
+       * </pre>
+       *
+       * <code>string group_name = 3;</code>
+       * @param value The groupName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        groupName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the group.
+       * </pre>
+       *
+       * <code>string group_name = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupName() {
+        
+        groupName_ = getDefaultInstance().getGroupName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the group.
+       * </pre>
+       *
+       * <code>string group_name = 3;</code>
+       * @param value The bytes for groupName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        groupName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subjectContainerId_ = "";
+      /**
+       * <pre>
+       * Id of the subject container that created external group belongs to.
+       * </pre>
+       *
+       * <code>string subject_container_id = 4;</code>
+       * @return The subjectContainerId.
+       */
+      public java.lang.String getSubjectContainerId() {
+        java.lang.Object ref = subjectContainerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectContainerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that created external group belongs to.
+       * </pre>
+       *
+       * <code>string subject_container_id = 4;</code>
+       * @return The bytes for subjectContainerId.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectContainerIdBytes() {
+        java.lang.Object ref = subjectContainerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectContainerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that created external group belongs to.
+       * </pre>
+       *
+       * <code>string subject_container_id = 4;</code>
+       * @param value The subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that created external group belongs to.
+       * </pre>
+       *
+       * <code>string subject_container_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectContainerId() {
+        
+        subjectContainerId_ = getDefaultInstance().getSubjectContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that created external group belongs to.
+       * </pre>
+       *
+       * <code>string subject_container_id = 4;</code>
+       * @param value The bytes for subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalId_ = "";
+      /**
+       * <pre>
+       * Id of the created group from external system.
+       * </pre>
+       *
+       * <code>string external_id = 5;</code>
+       * @return The externalId.
+       */
+      public java.lang.String getExternalId() {
+        java.lang.Object ref = externalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the created group from external system.
+       * </pre>
+       *
+       * <code>string external_id = 5;</code>
+       * @return The bytes for externalId.
+       */
+      public com.google.protobuf.ByteString
+          getExternalIdBytes() {
+        java.lang.Object ref = externalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the created group from external system.
+       * </pre>
+       *
+       * <code>string external_id = 5;</code>
+       * @param value The externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the created group from external system.
+       * </pre>
+       *
+       * <code>string external_id = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalId() {
+        
+        externalId_ = getDefaultInstance().getExternalId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the created group from external system.
+       * </pre>
+       *
+       * <code>string external_id = 5;</code>
+       * @param value The bytes for externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean makeEditor_ ;
+      /**
+       * <pre>
+       * If true, then creator of group was assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 6;</code>
+       * @return The makeEditor.
+       */
+      @java.lang.Override
+      public boolean getMakeEditor() {
+        return makeEditor_;
+      }
+      /**
+       * <pre>
+       * If true, then creator of group was assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 6;</code>
+       * @param value The makeEditor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMakeEditor(boolean value) {
+        
+        makeEditor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, then creator of group was assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMakeEditor() {
+        
+        makeEditor_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.CreateExternalGroupMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.CreateExternalGroupMetadata)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateExternalGroupMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<CreateExternalGroupMetadata>() {
+      @java.lang.Override
+      public CreateExternalGroupMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateExternalGroupMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateExternalGroupMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateExternalGroupMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface UpdateGroupRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.UpdateGroupRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -4570,7 +10605,7 @@ public final class GroupServiceOuterClass {
      * The name must be unique within the organization.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -4580,7 +10615,7 @@ public final class GroupServiceOuterClass {
      * The name must be unique within the organization.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -4811,7 +10846,7 @@ public final class GroupServiceOuterClass {
      * The name must be unique within the organization.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -4833,7 +10868,7 @@ public final class GroupServiceOuterClass {
      * The name must be unique within the organization.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -5526,7 +11561,7 @@ public final class GroupServiceOuterClass {
        * The name must be unique within the organization.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -5547,7 +11582,7 @@ public final class GroupServiceOuterClass {
        * The name must be unique within the organization.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -5569,7 +11604,7 @@ public final class GroupServiceOuterClass {
        * The name must be unique within the organization.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -5589,7 +11624,7 @@ public final class GroupServiceOuterClass {
        * The name must be unique within the organization.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -5604,7 +11639,7 @@ public final class GroupServiceOuterClass {
        * The name must be unique within the organization.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -6367,6 +12402,3411 @@ public final class GroupServiceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.UpdateGroupMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ConvertToExternalGroupRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ConvertToExternalGroupRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Group resource to convert to external.
+     * To get the group ID, use a [GroupService.List] request.
+     * </pre>
+     *
+     * <code>string group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The groupId.
+     */
+    java.lang.String getGroupId();
+    /**
+     * <pre>
+     * ID of the Group resource to convert to external.
+     * To get the group ID, use a [GroupService.List] request.
+     * </pre>
+     *
+     * <code>string group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for groupId.
+     */
+    com.google.protobuf.ByteString
+        getGroupIdBytes();
+
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * Combination of subject_container_id and external_id must be unique.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectContainerId.
+     */
+    java.lang.String getSubjectContainerId();
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * Combination of subject_container_id and external_id must be unique.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectContainerId.
+     */
+    com.google.protobuf.ByteString
+        getSubjectContainerIdBytes();
+
+    /**
+     * <pre>
+     * Id of the group from external system.
+     * Combination of subject_container_id and external_id must be unique
+     * </pre>
+     *
+     * <code>string external_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The externalId.
+     */
+    java.lang.String getExternalId();
+    /**
+     * <pre>
+     * Id of the group from external system.
+     * Combination of subject_container_id and external_id must be unique
+     * </pre>
+     *
+     * <code>string external_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for externalId.
+     */
+    com.google.protobuf.ByteString
+        getExternalIdBytes();
+
+    /**
+     * <pre>
+     * If true, then subject that performs conversion of group will be assigned to role that allows modification of group as external group.
+     * </pre>
+     *
+     * <code>bool make_editor = 4;</code>
+     * @return The makeEditor.
+     */
+    boolean getMakeEditor();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.ConvertToExternalGroupRequest}
+   */
+  public static final class ConvertToExternalGroupRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ConvertToExternalGroupRequest)
+      ConvertToExternalGroupRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConvertToExternalGroupRequest.newBuilder() to construct.
+    private ConvertToExternalGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConvertToExternalGroupRequest() {
+      groupId_ = "";
+      subjectContainerId_ = "";
+      externalId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConvertToExternalGroupRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConvertToExternalGroupRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              groupId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectContainerId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalId_ = s;
+              break;
+            }
+            case 32: {
+
+              makeEditor_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest.Builder.class);
+    }
+
+    public static final int GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object groupId_;
+    /**
+     * <pre>
+     * ID of the Group resource to convert to external.
+     * To get the group ID, use a [GroupService.List] request.
+     * </pre>
+     *
+     * <code>string group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The groupId.
+     */
+    @java.lang.Override
+    public java.lang.String getGroupId() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Group resource to convert to external.
+     * To get the group ID, use a [GroupService.List] request.
+     * </pre>
+     *
+     * <code>string group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for groupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGroupIdBytes() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBJECT_CONTAINER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object subjectContainerId_;
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * Combination of subject_container_id and external_id must be unique.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectContainerId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectContainerId() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectContainerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to.
+     * Combination of subject_container_id and external_id must be unique.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectContainerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectContainerIdBytes() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectContainerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTERNAL_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object externalId_;
+    /**
+     * <pre>
+     * Id of the group from external system.
+     * Combination of subject_container_id and external_id must be unique
+     * </pre>
+     *
+     * <code>string external_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The externalId.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalId() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the group from external system.
+     * Combination of subject_container_id and external_id must be unique
+     * </pre>
+     *
+     * <code>string external_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for externalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalIdBytes() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAKE_EDITOR_FIELD_NUMBER = 4;
+    private boolean makeEditor_;
+    /**
+     * <pre>
+     * If true, then subject that performs conversion of group will be assigned to role that allows modification of group as external group.
+     * </pre>
+     *
+     * <code>bool make_editor = 4;</code>
+     * @return The makeEditor.
+     */
+    @java.lang.Override
+    public boolean getMakeEditor() {
+      return makeEditor_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, externalId_);
+      }
+      if (makeEditor_ != false) {
+        output.writeBool(4, makeEditor_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, externalId_);
+      }
+      if (makeEditor_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, makeEditor_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest) obj;
+
+      if (!getGroupId()
+          .equals(other.getGroupId())) return false;
+      if (!getSubjectContainerId()
+          .equals(other.getSubjectContainerId())) return false;
+      if (!getExternalId()
+          .equals(other.getExternalId())) return false;
+      if (getMakeEditor()
+          != other.getMakeEditor()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupId().hashCode();
+      hash = (37 * hash) + SUBJECT_CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectContainerId().hashCode();
+      hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalId().hashCode();
+      hash = (37 * hash) + MAKE_EDITOR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMakeEditor());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ConvertToExternalGroupRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ConvertToExternalGroupRequest)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        groupId_ = "";
+
+        subjectContainerId_ = "";
+
+        externalId_ = "";
+
+        makeEditor_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest(this);
+        result.groupId_ = groupId_;
+        result.subjectContainerId_ = subjectContainerId_;
+        result.externalId_ = externalId_;
+        result.makeEditor_ = makeEditor_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest.getDefaultInstance()) return this;
+        if (!other.getGroupId().isEmpty()) {
+          groupId_ = other.groupId_;
+          onChanged();
+        }
+        if (!other.getSubjectContainerId().isEmpty()) {
+          subjectContainerId_ = other.subjectContainerId_;
+          onChanged();
+        }
+        if (!other.getExternalId().isEmpty()) {
+          externalId_ = other.externalId_;
+          onChanged();
+        }
+        if (other.getMakeEditor() != false) {
+          setMakeEditor(other.getMakeEditor());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object groupId_ = "";
+      /**
+       * <pre>
+       * ID of the Group resource to convert to external.
+       * To get the group ID, use a [GroupService.List] request.
+       * </pre>
+       *
+       * <code>string group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The groupId.
+       */
+      public java.lang.String getGroupId() {
+        java.lang.Object ref = groupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Group resource to convert to external.
+       * To get the group ID, use a [GroupService.List] request.
+       * </pre>
+       *
+       * <code>string group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for groupId.
+       */
+      public com.google.protobuf.ByteString
+          getGroupIdBytes() {
+        java.lang.Object ref = groupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Group resource to convert to external.
+       * To get the group ID, use a [GroupService.List] request.
+       * </pre>
+       *
+       * <code>string group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Group resource to convert to external.
+       * To get the group ID, use a [GroupService.List] request.
+       * </pre>
+       *
+       * <code>string group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupId() {
+        
+        groupId_ = getDefaultInstance().getGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Group resource to convert to external.
+       * To get the group ID, use a [GroupService.List] request.
+       * </pre>
+       *
+       * <code>string group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subjectContainerId_ = "";
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * Combination of subject_container_id and external_id must be unique.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subjectContainerId.
+       */
+      public java.lang.String getSubjectContainerId() {
+        java.lang.Object ref = subjectContainerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectContainerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * Combination of subject_container_id and external_id must be unique.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subjectContainerId.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectContainerIdBytes() {
+        java.lang.Object ref = subjectContainerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectContainerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * Combination of subject_container_id and external_id must be unique.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * Combination of subject_container_id and external_id must be unique.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectContainerId() {
+        
+        subjectContainerId_ = getDefaultInstance().getSubjectContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to.
+       * Combination of subject_container_id and external_id must be unique.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalId_ = "";
+      /**
+       * <pre>
+       * Id of the group from external system.
+       * Combination of subject_container_id and external_id must be unique
+       * </pre>
+       *
+       * <code>string external_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The externalId.
+       */
+      public java.lang.String getExternalId() {
+        java.lang.Object ref = externalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the group from external system.
+       * Combination of subject_container_id and external_id must be unique
+       * </pre>
+       *
+       * <code>string external_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for externalId.
+       */
+      public com.google.protobuf.ByteString
+          getExternalIdBytes() {
+        java.lang.Object ref = externalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the group from external system.
+       * Combination of subject_container_id and external_id must be unique
+       * </pre>
+       *
+       * <code>string external_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the group from external system.
+       * Combination of subject_container_id and external_id must be unique
+       * </pre>
+       *
+       * <code>string external_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalId() {
+        
+        externalId_ = getDefaultInstance().getExternalId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the group from external system.
+       * Combination of subject_container_id and external_id must be unique
+       * </pre>
+       *
+       * <code>string external_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean makeEditor_ ;
+      /**
+       * <pre>
+       * If true, then subject that performs conversion of group will be assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 4;</code>
+       * @return The makeEditor.
+       */
+      @java.lang.Override
+      public boolean getMakeEditor() {
+        return makeEditor_;
+      }
+      /**
+       * <pre>
+       * If true, then subject that performs conversion of group will be assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 4;</code>
+       * @param value The makeEditor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMakeEditor(boolean value) {
+        
+        makeEditor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, then subject that performs conversion of group will be assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMakeEditor() {
+        
+        makeEditor_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ConvertToExternalGroupRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ConvertToExternalGroupRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConvertToExternalGroupRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ConvertToExternalGroupRequest>() {
+      @java.lang.Override
+      public ConvertToExternalGroupRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConvertToExternalGroupRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConvertToExternalGroupRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConvertToExternalGroupRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ConvertToExternalGroupMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ConvertToExternalGroupMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Group resource that is being converted to external.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The groupId.
+     */
+    java.lang.String getGroupId();
+    /**
+     * <pre>
+     * ID of the Group resource that is being converted to external.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The bytes for groupId.
+     */
+    com.google.protobuf.ByteString
+        getGroupIdBytes();
+
+    /**
+     * <pre>
+     * Id of the subject container that created external group belongs to.
+     * </pre>
+     *
+     * <code>string subject_container_id = 2;</code>
+     * @return The subjectContainerId.
+     */
+    java.lang.String getSubjectContainerId();
+    /**
+     * <pre>
+     * Id of the subject container that created external group belongs to.
+     * </pre>
+     *
+     * <code>string subject_container_id = 2;</code>
+     * @return The bytes for subjectContainerId.
+     */
+    com.google.protobuf.ByteString
+        getSubjectContainerIdBytes();
+
+    /**
+     * <pre>
+     * Id of the created group from external system.
+     * </pre>
+     *
+     * <code>string external_id = 3;</code>
+     * @return The externalId.
+     */
+    java.lang.String getExternalId();
+    /**
+     * <pre>
+     * Id of the created group from external system.
+     * </pre>
+     *
+     * <code>string external_id = 3;</code>
+     * @return The bytes for externalId.
+     */
+    com.google.protobuf.ByteString
+        getExternalIdBytes();
+
+    /**
+     * <pre>
+     * If true, then subject that performed conversion of group was assigned to role that allows modification of group as external group.
+     * </pre>
+     *
+     * <code>bool make_editor = 4;</code>
+     * @return The makeEditor.
+     */
+    boolean getMakeEditor();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.ConvertToExternalGroupMetadata}
+   */
+  public static final class ConvertToExternalGroupMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ConvertToExternalGroupMetadata)
+      ConvertToExternalGroupMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConvertToExternalGroupMetadata.newBuilder() to construct.
+    private ConvertToExternalGroupMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConvertToExternalGroupMetadata() {
+      groupId_ = "";
+      subjectContainerId_ = "";
+      externalId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConvertToExternalGroupMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConvertToExternalGroupMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              groupId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectContainerId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalId_ = s;
+              break;
+            }
+            case 32: {
+
+              makeEditor_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata.Builder.class);
+    }
+
+    public static final int GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object groupId_;
+    /**
+     * <pre>
+     * ID of the Group resource that is being converted to external.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The groupId.
+     */
+    @java.lang.Override
+    public java.lang.String getGroupId() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Group resource that is being converted to external.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The bytes for groupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGroupIdBytes() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBJECT_CONTAINER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object subjectContainerId_;
+    /**
+     * <pre>
+     * Id of the subject container that created external group belongs to.
+     * </pre>
+     *
+     * <code>string subject_container_id = 2;</code>
+     * @return The subjectContainerId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectContainerId() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectContainerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the subject container that created external group belongs to.
+     * </pre>
+     *
+     * <code>string subject_container_id = 2;</code>
+     * @return The bytes for subjectContainerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectContainerIdBytes() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectContainerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTERNAL_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object externalId_;
+    /**
+     * <pre>
+     * Id of the created group from external system.
+     * </pre>
+     *
+     * <code>string external_id = 3;</code>
+     * @return The externalId.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalId() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the created group from external system.
+     * </pre>
+     *
+     * <code>string external_id = 3;</code>
+     * @return The bytes for externalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalIdBytes() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAKE_EDITOR_FIELD_NUMBER = 4;
+    private boolean makeEditor_;
+    /**
+     * <pre>
+     * If true, then subject that performed conversion of group was assigned to role that allows modification of group as external group.
+     * </pre>
+     *
+     * <code>bool make_editor = 4;</code>
+     * @return The makeEditor.
+     */
+    @java.lang.Override
+    public boolean getMakeEditor() {
+      return makeEditor_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, externalId_);
+      }
+      if (makeEditor_ != false) {
+        output.writeBool(4, makeEditor_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, externalId_);
+      }
+      if (makeEditor_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, makeEditor_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata) obj;
+
+      if (!getGroupId()
+          .equals(other.getGroupId())) return false;
+      if (!getSubjectContainerId()
+          .equals(other.getSubjectContainerId())) return false;
+      if (!getExternalId()
+          .equals(other.getExternalId())) return false;
+      if (getMakeEditor()
+          != other.getMakeEditor()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupId().hashCode();
+      hash = (37 * hash) + SUBJECT_CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectContainerId().hashCode();
+      hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalId().hashCode();
+      hash = (37 * hash) + MAKE_EDITOR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMakeEditor());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ConvertToExternalGroupMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ConvertToExternalGroupMetadata)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        groupId_ = "";
+
+        subjectContainerId_ = "";
+
+        externalId_ = "";
+
+        makeEditor_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata(this);
+        result.groupId_ = groupId_;
+        result.subjectContainerId_ = subjectContainerId_;
+        result.externalId_ = externalId_;
+        result.makeEditor_ = makeEditor_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata.getDefaultInstance()) return this;
+        if (!other.getGroupId().isEmpty()) {
+          groupId_ = other.groupId_;
+          onChanged();
+        }
+        if (!other.getSubjectContainerId().isEmpty()) {
+          subjectContainerId_ = other.subjectContainerId_;
+          onChanged();
+        }
+        if (!other.getExternalId().isEmpty()) {
+          externalId_ = other.externalId_;
+          onChanged();
+        }
+        if (other.getMakeEditor() != false) {
+          setMakeEditor(other.getMakeEditor());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object groupId_ = "";
+      /**
+       * <pre>
+       * ID of the Group resource that is being converted to external.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @return The groupId.
+       */
+      public java.lang.String getGroupId() {
+        java.lang.Object ref = groupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Group resource that is being converted to external.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @return The bytes for groupId.
+       */
+      public com.google.protobuf.ByteString
+          getGroupIdBytes() {
+        java.lang.Object ref = groupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Group resource that is being converted to external.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @param value The groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Group resource that is being converted to external.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupId() {
+        
+        groupId_ = getDefaultInstance().getGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Group resource that is being converted to external.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @param value The bytes for groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subjectContainerId_ = "";
+      /**
+       * <pre>
+       * Id of the subject container that created external group belongs to.
+       * </pre>
+       *
+       * <code>string subject_container_id = 2;</code>
+       * @return The subjectContainerId.
+       */
+      public java.lang.String getSubjectContainerId() {
+        java.lang.Object ref = subjectContainerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectContainerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that created external group belongs to.
+       * </pre>
+       *
+       * <code>string subject_container_id = 2;</code>
+       * @return The bytes for subjectContainerId.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectContainerIdBytes() {
+        java.lang.Object ref = subjectContainerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectContainerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that created external group belongs to.
+       * </pre>
+       *
+       * <code>string subject_container_id = 2;</code>
+       * @param value The subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that created external group belongs to.
+       * </pre>
+       *
+       * <code>string subject_container_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectContainerId() {
+        
+        subjectContainerId_ = getDefaultInstance().getSubjectContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that created external group belongs to.
+       * </pre>
+       *
+       * <code>string subject_container_id = 2;</code>
+       * @param value The bytes for subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalId_ = "";
+      /**
+       * <pre>
+       * Id of the created group from external system.
+       * </pre>
+       *
+       * <code>string external_id = 3;</code>
+       * @return The externalId.
+       */
+      public java.lang.String getExternalId() {
+        java.lang.Object ref = externalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the created group from external system.
+       * </pre>
+       *
+       * <code>string external_id = 3;</code>
+       * @return The bytes for externalId.
+       */
+      public com.google.protobuf.ByteString
+          getExternalIdBytes() {
+        java.lang.Object ref = externalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the created group from external system.
+       * </pre>
+       *
+       * <code>string external_id = 3;</code>
+       * @param value The externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the created group from external system.
+       * </pre>
+       *
+       * <code>string external_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalId() {
+        
+        externalId_ = getDefaultInstance().getExternalId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the created group from external system.
+       * </pre>
+       *
+       * <code>string external_id = 3;</code>
+       * @param value The bytes for externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean makeEditor_ ;
+      /**
+       * <pre>
+       * If true, then subject that performed conversion of group was assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 4;</code>
+       * @return The makeEditor.
+       */
+      @java.lang.Override
+      public boolean getMakeEditor() {
+        return makeEditor_;
+      }
+      /**
+       * <pre>
+       * If true, then subject that performed conversion of group was assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 4;</code>
+       * @param value The makeEditor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMakeEditor(boolean value) {
+        
+        makeEditor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, then subject that performed conversion of group was assigned to role that allows modification of group as external group.
+       * </pre>
+       *
+       * <code>bool make_editor = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMakeEditor() {
+        
+        makeEditor_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ConvertToExternalGroupMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ConvertToExternalGroupMetadata)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConvertToExternalGroupMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<ConvertToExternalGroupMetadata>() {
+      @java.lang.Override
+      public ConvertToExternalGroupMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConvertToExternalGroupMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConvertToExternalGroupMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConvertToExternalGroupMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ConvertAllToBasicGroupsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Id of the subject container for which all external groups will be converted to basic (not external) groups.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectContainerId.
+     */
+    java.lang.String getSubjectContainerId();
+    /**
+     * <pre>
+     * Id of the subject container for which all external groups will be converted to basic (not external) groups.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectContainerId.
+     */
+    com.google.protobuf.ByteString
+        getSubjectContainerIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsRequest}
+   */
+  public static final class ConvertAllToBasicGroupsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsRequest)
+      ConvertAllToBasicGroupsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConvertAllToBasicGroupsRequest.newBuilder() to construct.
+    private ConvertAllToBasicGroupsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConvertAllToBasicGroupsRequest() {
+      subjectContainerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConvertAllToBasicGroupsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConvertAllToBasicGroupsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectContainerId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest.Builder.class);
+    }
+
+    public static final int SUBJECT_CONTAINER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subjectContainerId_;
+    /**
+     * <pre>
+     * Id of the subject container for which all external groups will be converted to basic (not external) groups.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectContainerId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectContainerId() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectContainerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the subject container for which all external groups will be converted to basic (not external) groups.
+     * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+     * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+     * </pre>
+     *
+     * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectContainerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectContainerIdBytes() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectContainerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subjectContainerId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subjectContainerId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest) obj;
+
+      if (!getSubjectContainerId()
+          .equals(other.getSubjectContainerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBJECT_CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectContainerId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsRequest)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subjectContainerId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest(this);
+        result.subjectContainerId_ = subjectContainerId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest.getDefaultInstance()) return this;
+        if (!other.getSubjectContainerId().isEmpty()) {
+          subjectContainerId_ = other.subjectContainerId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subjectContainerId_ = "";
+      /**
+       * <pre>
+       * Id of the subject container for which all external groups will be converted to basic (not external) groups.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subjectContainerId.
+       */
+      public java.lang.String getSubjectContainerId() {
+        java.lang.Object ref = subjectContainerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectContainerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container for which all external groups will be converted to basic (not external) groups.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subjectContainerId.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectContainerIdBytes() {
+        java.lang.Object ref = subjectContainerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectContainerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container for which all external groups will be converted to basic (not external) groups.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container for which all external groups will be converted to basic (not external) groups.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectContainerId() {
+        
+        subjectContainerId_ = getDefaultInstance().getSubjectContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container for which all external groups will be converted to basic (not external) groups.
+       * To get subject container, use a [yandex.cloud.organizationmanager.v1.saml.FederationService.List] request
+       * or [yandex.cloud.organizationmanager.v1.idp.UserpoolService.List] request.
+       * </pre>
+       *
+       * <code>string subject_container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConvertAllToBasicGroupsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ConvertAllToBasicGroupsRequest>() {
+      @java.lang.Override
+      public ConvertAllToBasicGroupsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConvertAllToBasicGroupsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConvertAllToBasicGroupsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConvertAllToBasicGroupsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ConvertAllToBasicGroupsMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Id of the subject container for which all external groups were converted to basic (not external) groups
+     * </pre>
+     *
+     * <code>string subject_container_id = 1;</code>
+     * @return The subjectContainerId.
+     */
+    java.lang.String getSubjectContainerId();
+    /**
+     * <pre>
+     * Id of the subject container for which all external groups were converted to basic (not external) groups
+     * </pre>
+     *
+     * <code>string subject_container_id = 1;</code>
+     * @return The bytes for subjectContainerId.
+     */
+    com.google.protobuf.ByteString
+        getSubjectContainerIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsMetadata}
+   */
+  public static final class ConvertAllToBasicGroupsMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsMetadata)
+      ConvertAllToBasicGroupsMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConvertAllToBasicGroupsMetadata.newBuilder() to construct.
+    private ConvertAllToBasicGroupsMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConvertAllToBasicGroupsMetadata() {
+      subjectContainerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConvertAllToBasicGroupsMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConvertAllToBasicGroupsMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectContainerId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata.Builder.class);
+    }
+
+    public static final int SUBJECT_CONTAINER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subjectContainerId_;
+    /**
+     * <pre>
+     * Id of the subject container for which all external groups were converted to basic (not external) groups
+     * </pre>
+     *
+     * <code>string subject_container_id = 1;</code>
+     * @return The subjectContainerId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectContainerId() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectContainerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the subject container for which all external groups were converted to basic (not external) groups
+     * </pre>
+     *
+     * <code>string subject_container_id = 1;</code>
+     * @return The bytes for subjectContainerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectContainerIdBytes() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectContainerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subjectContainerId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subjectContainerId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata) obj;
+
+      if (!getSubjectContainerId()
+          .equals(other.getSubjectContainerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBJECT_CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectContainerId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsMetadata)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subjectContainerId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata(this);
+        result.subjectContainerId_ = subjectContainerId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata.getDefaultInstance()) return this;
+        if (!other.getSubjectContainerId().isEmpty()) {
+          subjectContainerId_ = other.subjectContainerId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subjectContainerId_ = "";
+      /**
+       * <pre>
+       * Id of the subject container for which all external groups were converted to basic (not external) groups
+       * </pre>
+       *
+       * <code>string subject_container_id = 1;</code>
+       * @return The subjectContainerId.
+       */
+      public java.lang.String getSubjectContainerId() {
+        java.lang.Object ref = subjectContainerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectContainerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container for which all external groups were converted to basic (not external) groups
+       * </pre>
+       *
+       * <code>string subject_container_id = 1;</code>
+       * @return The bytes for subjectContainerId.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectContainerIdBytes() {
+        java.lang.Object ref = subjectContainerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectContainerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container for which all external groups were converted to basic (not external) groups
+       * </pre>
+       *
+       * <code>string subject_container_id = 1;</code>
+       * @param value The subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container for which all external groups were converted to basic (not external) groups
+       * </pre>
+       *
+       * <code>string subject_container_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectContainerId() {
+        
+        subjectContainerId_ = getDefaultInstance().getSubjectContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container for which all external groups were converted to basic (not external) groups
+       * </pre>
+       *
+       * <code>string subject_container_id = 1;</code>
+       * @param value The bytes for subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ConvertAllToBasicGroupsMetadata)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConvertAllToBasicGroupsMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<ConvertAllToBasicGroupsMetadata>() {
+      @java.lang.Override
+      public ConvertAllToBasicGroupsMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConvertAllToBasicGroupsMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConvertAllToBasicGroupsMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConvertAllToBasicGroupsMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertAllToBasicGroupsMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15087,6 +24527,11 @@ public final class GroupServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_GetGroupRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ResolveExternalGroupRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ResolveExternalGroupRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -15096,6 +24541,16 @@ public final class GroupServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_ListGroupsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_descriptor;
   private static final 
@@ -15107,6 +24562,16 @@ public final class GroupServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_CreateGroupMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -15116,6 +24581,26 @@ public final class GroupServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_DeleteGroupRequest_descriptor;
   private static final 
@@ -15184,111 +24669,170 @@ public final class GroupServiceOuterClass {
       "o\032 yandex/cloud/access/access.proto\032&yan" +
       "dex/cloud/operation/operation.proto\032\035yan" +
       "dex/cloud/validation.proto\"1\n\017GetGroupRe" +
-      "quest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\225\001" +
-      "\n\021ListGroupsRequest\022%\n\017organization_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=200" +
-      "0\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\022ListGro" +
-      "upsResponse\022:\n\006groups\030\001 \003(\0132*.yandex.clo" +
-      "ud.organizationmanager.v1.Group\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"\222\001\n\022CreateGroupRequest\022" +
-      "%\n\017organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225" +
-      "\n\004name\030\002 \001(\tB\'\350\3071\001\362\3071\037[a-z]([-a-z0-9]{0," +
-      "61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005" +
-      "<=256\"\'\n\023CreateGroupMetadata\022\020\n\010group_id" +
-      "\030\001 \001(\t\"\271\001\n\022UpdateGroupRequest\022\036\n\010group_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001" +
-      "(\0132\032.google.protobuf.FieldMask\0222\n\004name\030\003" +
-      " \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9]" +
-      ")?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\"\'\n\023Up" +
-      "dateGroupMetadata\022\020\n\010group_id\030\001 \001(\t\"4\n\022D" +
-      "eleteGroupRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\"\'\n\023DeleteGroupMetadata\022\020\n\010grou" +
-      "p_id\030\001 \001(\t\"{\n\032ListGroupOperationsRequest" +
-      "\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
+      "quest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"d\n" +
+      "\033ResolveExternalGroupRequest\022*\n\024subject_" +
+      "container_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013exte" +
+      "rnal_id\030\002 \001(\tB\004\350\3071\001\"\225\001\n\021ListGroupsReques" +
+      "t\022%\n\017organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_" +
+      "token\030\003 \001(\tB\n\212\3101\006<=2000\022\032\n\006filter\030\004 \001(\tB" +
+      "\n\212\3101\006<=1000\"i\n\022ListGroupsResponse\022:\n\006gro" +
+      "ups\030\001 \003(\0132*.yandex.cloud.organizationman" +
+      "ager.v1.Group\022\027\n\017next_page_token\030\002 \001(\t\"\242" +
+      "\001\n\031ListExternalGroupsRequest\022*\n\024subject_" +
+      "container_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
       "_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 " +
-      "\001(\tB\n\212\3101\006<=2000\"m\n\033ListGroupOperationsRe" +
-      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
-      "d.operation.Operation\022\027\n\017next_page_token" +
-      "\030\002 \001(\t\"x\n\027ListGroupMembersRequest\022\036\n\010gro" +
-      "up_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
-      " \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\310" +
-      "1\006<=2000\"v\n\030ListGroupMembersResponse\022A\n\007" +
-      "members\030\001 \003(\01320.yandex.cloud.organizatio" +
-      "nmanager.v1.GroupMember\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"7\n\013GroupMember\022\022\n\nsubject_id\030\001 " +
-      "\001(\t\022\024\n\014subject_type\030\002 \001(\t\"\220\001\n\031UpdateGrou" +
-      "pMembersRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022S\n\rmember_deltas\030\002 \003(\01320.yandex." +
-      "cloud.organizationmanager.v1.MemberDelta" +
-      "B\n\202\3101\0061-1000\".\n\032UpdateGroupMembersMetada" +
-      "ta\022\020\n\010group_id\030\001 \001(\t\"\310\001\n\013MemberDelta\022S\n\006" +
-      "action\030\001 \001(\0162=.yandex.cloud.organization" +
-      "manager.v1.MemberDelta.MemberActionB\004\350\3071" +
-      "\001\022 \n\nsubject_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"B\n\014M" +
-      "emberAction\022\035\n\031MEMBER_ACTION_UNSPECIFIED" +
-      "\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\0022\356\021\n\014GroupService" +
-      "\022\233\001\n\003Get\0224.yandex.cloud.organizationmana" +
-      "ger.v1.GetGroupRequest\032*.yandex.cloud.or" +
-      "ganizationmanager.v1.Group\"2\202\323\344\223\002,\022*/org" +
-      "anization-manager/v1/groups/{group_id}\022\240" +
-      "\001\n\004List\0226.yandex.cloud.organizationmanag" +
-      "er.v1.ListGroupsRequest\0327.yandex.cloud.o" +
-      "rganizationmanager.v1.ListGroupsResponse" +
-      "\"\'\202\323\344\223\002!\022\037/organization-manager/v1/group" +
-      "s\022\260\001\n\006Create\0227.yandex.cloud.organization" +
-      "manager.v1.CreateGroupRequest\032!.yandex.c" +
-      "loud.operation.Operation\"J\202\323\344\223\002$\"\037/organ" +
-      "ization-manager/v1/groups:\001*\262\322*\034\n\023Create" +
-      "GroupMetadata\022\005Group\022\273\001\n\006Update\0227.yandex" +
-      ".cloud.organizationmanager.v1.UpdateGrou" +
-      "pRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"U\202\323\344\223\002/2*/organization-manager/v1/gr" +
-      "oups/{group_id}:\001*\262\322*\034\n\023UpdateGroupMetad" +
-      "ata\022\005Group\022\310\001\n\006Delete\0227.yandex.cloud.org" +
-      "anizationmanager.v1.DeleteGroupRequest\032!" +
-      ".yandex.cloud.operation.Operation\"b\202\323\344\223\002" +
-      ",**/organization-manager/v1/groups/{grou" +
-      "p_id}\262\322*,\n\023DeleteGroupMetadata\022\025google.p" +
-      "rotobuf.Empty\022\322\001\n\016ListOperations\022?.yande" +
-      "x.cloud.organizationmanager.v1.ListGroup" +
-      "OperationsRequest\032@.yandex.cloud.organiz" +
-      "ationmanager.v1.ListGroupOperationsRespo" +
-      "nse\"=\202\323\344\223\0027\0225/organization-manager/v1/gr" +
-      "oups/{group_id}/operations\022\312\001\n\013ListMembe" +
-      "rs\022<.yandex.cloud.organizationmanager.v1" +
-      ".ListGroupMembersRequest\032=.yandex.cloud." +
-      "organizationmanager.v1.ListGroupMembersR" +
-      "esponse\">\202\323\344\223\0028\0226/organization-manager/v" +
-      "1/groups/{group_id}:listMembers\022\356\001\n\rUpda" +
-      "teMembers\022>.yandex.cloud.organizationman" +
-      "ager.v1.UpdateGroupMembersRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"z\202\323\344\223\002=\"8/o" +
-      "rganization-manager/v1/groups/{group_id}" +
-      ":updateMembers:\001*\262\322*3\n\032UpdateGroupMember" +
-      "sMetadata\022\025google.protobuf.Empty\022\277\001\n\022Lis" +
-      "tAccessBindings\022..yandex.cloud.access.Li" +
-      "stAccessBindingsRequest\032/.yandex.cloud.a" +
-      "ccess.ListAccessBindingsResponse\"H\202\323\344\223\002B" +
-      "\022@/organization-manager/v1/groups/{resou" +
-      "rce_id}:listAccessBindings\022\376\001\n\021SetAccess" +
-      "Bindings\022-.yandex.cloud.access.SetAccess" +
-      "BindingsRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\226\001\202\323\344\223\002D\"?/organization-manag" +
-      "er/v1/groups/{resource_id}:setAccessBind" +
-      "ings:\001*\262\322*H\n access.SetAccessBindingsMet" +
-      "adata\022$access.AccessBindingsOperationRes" +
-      "ult\022\212\002\n\024UpdateAccessBindings\0220.yandex.cl" +
-      "oud.access.UpdateAccessBindingsRequest\032!" +
-      ".yandex.cloud.operation.Operation\"\234\001\202\323\344\223" +
-      "\002G\"B/organization-manager/v1/groups/{res" +
-      "ource_id}:updateAccessBindings:\001*\262\322*K\n#a" +
-      "ccess.UpdateAccessBindingsMetadata\022$acce" +
-      "ss.AccessBindingsOperationResultB\206\001\n\'yan" +
-      "dex.cloud.api.organizationmanager.v1Z[gi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/organizationmanager/v1;organizati" +
-      "onmanagerb\006proto3"
+      "\001(\tB\n\212\3101\006<=2000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1" +
+      "000\"q\n\032ListExternalGroupsResponse\022:\n\006gro" +
+      "ups\030\001 \003(\0132*.yandex.cloud.organizationman" +
+      "ager.v1.Group\022\027\n\017next_page_token\030\002 \001(\t\"\236" +
+      "\001\n\022CreateGroupRequest\022%\n\017organization_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\004name\030\002 \001(\tB3\350\3071\001" +
+      "\362\3071+[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-" +
+      "Z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\"" +
+      "\'\n\023CreateGroupMetadata\022\020\n\010group_id\030\001 \001(\t" +
+      "\"\202\002\n\032CreateExternalGroupRequest\022%\n\017organ" +
+      "ization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\004name\030\002" +
+      " \001(\tB3\350\3071\001\362\3071+[a-zA-Z]([-a-zA-Z0-9._-]{0" +
+      ",61}[a-zA-Z0-9])?\022\036\n\013description\030\003 \001(\tB\t" +
+      "\212\3101\005<=256\022*\n\024subject_container_id\030\004 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\031\n\013external_id\030\005 \001(\tB\004\350\3071\001" +
+      "\022\023\n\013make_editor\030\006 \001(\010\"\244\001\n\033CreateExternal" +
+      "GroupMetadata\022\020\n\010group_id\030\001 \001(\t\022\027\n\017organ" +
+      "ization_id\030\002 \001(\t\022\022\n\ngroup_name\030\003 \001(\t\022\034\n\024" +
+      "subject_container_id\030\004 \001(\t\022\023\n\013external_i" +
+      "d\030\005 \001(\t\022\023\n\013make_editor\030\006 \001(\010\"\305\001\n\022UpdateG" +
+      "roupRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022/\n\013update_mask\030\002 \001(\0132\032.google.protob" +
+      "uf.FieldMask\022>\n\004name\030\003 \001(\tB0\362\3071,|[a-zA-Z" +
+      "]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?\022\036\n\013" +
+      "description\030\004 \001(\tB\t\212\3101\005<=256\"\'\n\023UpdateGr" +
+      "oupMetadata\022\020\n\010group_id\030\001 \001(\t\"\233\001\n\035Conver" +
+      "tToExternalGroupRequest\022\036\n\010group_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022*\n\024subject_container_id\030" +
+      "\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013external_id\030\003 \001(\t" +
+      "B\004\350\3071\001\022\023\n\013make_editor\030\004 \001(\010\"z\n\036ConvertTo" +
+      "ExternalGroupMetadata\022\020\n\010group_id\030\001 \001(\t\022" +
+      "\034\n\024subject_container_id\030\002 \001(\t\022\023\n\013externa" +
+      "l_id\030\003 \001(\t\022\023\n\013make_editor\030\004 \001(\010\"L\n\036Conve" +
+      "rtAllToBasicGroupsRequest\022*\n\024subject_con" +
+      "tainer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"?\n\037Convert" +
+      "AllToBasicGroupsMetadata\022\034\n\024subject_cont" +
+      "ainer_id\030\001 \001(\t\"4\n\022DeleteGroupRequest\022\036\n\010" +
+      "group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\023DeleteGr" +
+      "oupMetadata\022\020\n\010group_id\030\001 \001(\t\"{\n\032ListGro" +
+      "upOperationsRequest\022\036\n\010group_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-10" +
+      "00\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\"m\n\033Li" +
+      "stGroupOperationsResponse\0225\n\noperations\030" +
+      "\001 \003(\0132!.yandex.cloud.operation.Operation" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"x\n\027ListGroupMe" +
+      "mbersRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\np" +
+      "age_token\030\003 \001(\tB\n\212\3101\006<=2000\"v\n\030ListGroup" +
+      "MembersResponse\022A\n\007members\030\001 \003(\01320.yande" +
+      "x.cloud.organizationmanager.v1.GroupMemb" +
+      "er\022\027\n\017next_page_token\030\002 \001(\t\"7\n\013GroupMemb" +
+      "er\022\022\n\nsubject_id\030\001 \001(\t\022\024\n\014subject_type\030\002" +
+      " \001(\t\"\220\001\n\031UpdateGroupMembersRequest\022\036\n\010gr" +
+      "oup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022S\n\rmember_del" +
+      "tas\030\002 \003(\01320.yandex.cloud.organizationman" +
+      "ager.v1.MemberDeltaB\n\202\3101\0061-1000\".\n\032Updat" +
+      "eGroupMembersMetadata\022\020\n\010group_id\030\001 \001(\t\"" +
+      "\310\001\n\013MemberDelta\022S\n\006action\030\001 \001(\0162=.yandex" +
+      ".cloud.organizationmanager.v1.MemberDelt" +
+      "a.MemberActionB\004\350\3071\001\022 \n\nsubject_id\030\002 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\"B\n\014MemberAction\022\035\n\031MEMBER" +
+      "_ACTION_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE" +
+      "\020\0022\322\032\n\014GroupService\022\233\001\n\003Get\0224.yandex.clo" +
+      "ud.organizationmanager.v1.GetGroupReques" +
+      "t\032*.yandex.cloud.organizationmanager.v1." +
+      "Group\"2\202\323\344\223\002,\022*/organization-manager/v1/" +
+      "groups/{group_id}\022\326\001\n\017ResolveExternal\022@." +
+      "yandex.cloud.organizationmanager.v1.Reso" +
+      "lveExternalGroupRequest\032*.yandex.cloud.o" +
+      "rganizationmanager.v1.Group\"U\202\323\344\223\002O\022M/or" +
+      "ganization-manager/v1/external_groups/{s" +
+      "ubject_container_id}/{external_id}\022\240\001\n\004L" +
+      "ist\0226.yandex.cloud.organizationmanager.v" +
+      "1.ListGroupsRequest\0327.yandex.cloud.organ" +
+      "izationmanager.v1.ListGroupsResponse\"\'\202\323" +
+      "\344\223\002!\022\037/organization-manager/v1/groups\022\301\001" +
+      "\n\014ListExternal\022>.yandex.cloud.organizati" +
+      "onmanager.v1.ListExternalGroupsRequest\032?" +
+      ".yandex.cloud.organizationmanager.v1.Lis" +
+      "tExternalGroupsResponse\"0\202\323\344\223\002*\022(/organi" +
+      "zation-manager/v1/external_groups\022\260\001\n\006Cr" +
+      "eate\0227.yandex.cloud.organizationmanager." +
+      "v1.CreateGroupRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"J\202\323\344\223\002$\"\037/organization-" +
+      "manager/v1/groups:\001*\262\322*\034\n\023CreateGroupMet" +
+      "adata\022\005Group\022\321\001\n\016CreateExternal\022?.yandex" +
+      ".cloud.organizationmanager.v1.CreateExte" +
+      "rnalGroupRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"[\202\323\344\223\002-\"(/organization-manag" +
+      "er/v1/external_groups:\001*\262\322*$\n\033CreateExte" +
+      "rnalGroupMetadata\022\005Group\022\273\001\n\006Update\0227.ya" +
+      "ndex.cloud.organizationmanager.v1.Update" +
+      "GroupRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"U\202\323\344\223\002/2*/organization-manager/v" +
+      "1/groups/{group_id}:\001*\262\322*\034\n\023UpdateGroupM" +
+      "etadata\022\005Group\022\356\001\n\021ConvertToExternal\022B.y" +
+      "andex.cloud.organizationmanager.v1.Conve" +
+      "rtToExternalGroupRequest\032!.yandex.cloud." +
+      "operation.Operation\"r\202\323\344\223\002A\"</organizati" +
+      "on-manager/v1/groups/{group_id}:convertT" +
+      "oExternal:\001*\262\322*\'\n\036ConvertToExternalGroup" +
+      "Metadata\022\005Group\022\377\001\n\021ConvertAllToBasic\022C." +
+      "yandex.cloud.organizationmanager.v1.Conv" +
+      "ertAllToBasicGroupsRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\201\001\202\323\344\223\002?\":/organiz" +
+      "ation-manager/v1/external_groups:convert" +
+      "AllToBasic:\001*\262\322*8\n\037ConvertAllToBasicGrou" +
+      "psMetadata\022\025google.protobuf.Empty\022\310\001\n\006De" +
+      "lete\0227.yandex.cloud.organizationmanager." +
+      "v1.DeleteGroupRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"b\202\323\344\223\002,**/organization-" +
+      "manager/v1/groups/{group_id}\262\322*,\n\023Delete" +
+      "GroupMetadata\022\025google.protobuf.Empty\022\322\001\n" +
+      "\016ListOperations\022?.yandex.cloud.organizat" +
+      "ionmanager.v1.ListGroupOperationsRequest" +
+      "\032@.yandex.cloud.organizationmanager.v1.L" +
+      "istGroupOperationsResponse\"=\202\323\344\223\0027\0225/org" +
+      "anization-manager/v1/groups/{group_id}/o" +
+      "perations\022\312\001\n\013ListMembers\022<.yandex.cloud" +
+      ".organizationmanager.v1.ListGroupMembers" +
+      "Request\032=.yandex.cloud.organizationmanag" +
+      "er.v1.ListGroupMembersResponse\">\202\323\344\223\0028\0226" +
+      "/organization-manager/v1/groups/{group_i" +
+      "d}:listMembers\022\356\001\n\rUpdateMembers\022>.yande" +
+      "x.cloud.organizationmanager.v1.UpdateGro" +
+      "upMembersRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"z\202\323\344\223\002=\"8/organization-manag" +
+      "er/v1/groups/{group_id}:updateMembers:\001*" +
+      "\262\322*3\n\032UpdateGroupMembersMetadata\022\025google" +
+      ".protobuf.Empty\022\277\001\n\022ListAccessBindings\022." +
+      ".yandex.cloud.access.ListAccessBindingsR" +
+      "equest\032/.yandex.cloud.access.ListAccessB" +
+      "indingsResponse\"H\202\323\344\223\002B\022@/organization-m" +
+      "anager/v1/groups/{resource_id}:listAcces" +
+      "sBindings\022\376\001\n\021SetAccessBindings\022-.yandex" +
+      ".cloud.access.SetAccessBindingsRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\226\001\202\323\344\223" +
+      "\002D\"?/organization-manager/v1/groups/{res" +
+      "ource_id}:setAccessBindings:\001*\262\322*H\n acce" +
+      "ss.SetAccessBindingsMetadata\022$access.Acc" +
+      "essBindingsOperationResult\022\212\002\n\024UpdateAcc" +
+      "essBindings\0220.yandex.cloud.access.Update" +
+      "AccessBindingsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\234\001\202\323\344\223\002G\"B/organization" +
+      "-manager/v1/groups/{resource_id}:updateA" +
+      "ccessBindings:\001*\262\322*K\n#access.UpdateAcces" +
+      "sBindingsMetadata\022$access.AccessBindings" +
+      "OperationResultB\206\001\n\'yandex.cloud.api.org" +
+      "anizationmanager.v1Z[github.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/organizati" +
+      "onmanager/v1;organizationmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15307,98 +24851,152 @@ public final class GroupServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_GetGroupRequest_descriptor,
         new java.lang.String[] { "GroupId", });
-    internal_static_yandex_cloud_organizationmanager_v1_ListGroupsRequest_descriptor =
+    internal_static_yandex_cloud_organizationmanager_v1_ResolveExternalGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_organizationmanager_v1_ResolveExternalGroupRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ResolveExternalGroupRequest_descriptor,
+        new java.lang.String[] { "SubjectContainerId", "ExternalId", });
+    internal_static_yandex_cloud_organizationmanager_v1_ListGroupsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_ListGroupsRequest_descriptor,
         new java.lang.String[] { "OrganizationId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_ListGroupsResponse_descriptor,
         new java.lang.String[] { "Groups", "NextPageToken", });
+    internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsRequest_descriptor,
+        new java.lang.String[] { "SubjectContainerId", "PageSize", "PageToken", "Filter", });
+    internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ListExternalGroupsResponse_descriptor,
+        new java.lang.String[] { "Groups", "NextPageToken", });
     internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_descriptor,
         new java.lang.String[] { "OrganizationId", "Name", "Description", });
     internal_static_yandex_cloud_organizationmanager_v1_CreateGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_organizationmanager_v1_CreateGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_CreateGroupMetadata_descriptor,
         new java.lang.String[] { "GroupId", });
+    internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_descriptor,
+        new java.lang.String[] { "OrganizationId", "Name", "Description", "SubjectContainerId", "ExternalId", "MakeEditor", });
+    internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_descriptor,
+        new java.lang.String[] { "GroupId", "OrganizationId", "GroupName", "SubjectContainerId", "ExternalId", "MakeEditor", });
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_descriptor,
         new java.lang.String[] { "GroupId", "UpdateMask", "Name", "Description", });
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMetadata_descriptor,
         new java.lang.String[] { "GroupId", });
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupRequest_descriptor,
+        new java.lang.String[] { "GroupId", "SubjectContainerId", "ExternalId", "MakeEditor", });
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ConvertToExternalGroupMetadata_descriptor,
+        new java.lang.String[] { "GroupId", "SubjectContainerId", "ExternalId", "MakeEditor", });
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsRequest_descriptor,
+        new java.lang.String[] { "SubjectContainerId", });
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ConvertAllToBasicGroupsMetadata_descriptor,
+        new java.lang.String[] { "SubjectContainerId", });
     internal_static_yandex_cloud_organizationmanager_v1_DeleteGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_organizationmanager_v1_DeleteGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_DeleteGroupRequest_descriptor,
         new java.lang.String[] { "GroupId", });
     internal_static_yandex_cloud_organizationmanager_v1_DeleteGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_organizationmanager_v1_DeleteGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_DeleteGroupMetadata_descriptor,
         new java.lang.String[] { "GroupId", });
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_ListGroupOperationsRequest_descriptor,
         new java.lang.String[] { "GroupId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_ListGroupOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupMembersRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupMembersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_ListGroupMembersRequest_descriptor,
         new java.lang.String[] { "GroupId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupMembersResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_organizationmanager_v1_ListGroupMembersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_ListGroupMembersResponse_descriptor,
         new java.lang.String[] { "Members", "NextPageToken", });
     internal_static_yandex_cloud_organizationmanager_v1_GroupMember_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_organizationmanager_v1_GroupMember_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_GroupMember_descriptor,
         new java.lang.String[] { "SubjectId", "SubjectType", });
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMembersRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMembersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMembersRequest_descriptor,
         new java.lang.String[] { "GroupId", "MemberDeltas", });
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMembersMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMembersMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMembersMetadata_descriptor,
         new java.lang.String[] { "GroupId", });
     internal_static_yandex_cloud_organizationmanager_v1_MemberDelta_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_organizationmanager_v1_MemberDelta_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_MemberDelta_descriptor,

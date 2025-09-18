@@ -311,8 +311,7 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Get Provider's CNAME (edge endpoint) bind to specified folder id.
-     * Returns UNIMPLEMENTED error, if provider doesn't support CNAME request.
+     * Deprecated: Provider-specific CNAME is now available in the `provider_cname` field of each Resource message.
      * </pre>
      */
     public void getProviderCName(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetProviderCNameRequest request,
@@ -446,8 +445,7 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Get Provider's CNAME (edge endpoint) bind to specified folder id.
-     * Returns UNIMPLEMENTED error, if provider doesn't support CNAME request.
+     * Deprecated: Provider-specific CNAME is now available in the `provider_cname` field of each Resource message.
      * </pre>
      */
     public void getProviderCName(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetProviderCNameRequest request,
@@ -530,8 +528,7 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Get Provider's CNAME (edge endpoint) bind to specified folder id.
-     * Returns UNIMPLEMENTED error, if provider doesn't support CNAME request.
+     * Deprecated: Provider-specific CNAME is now available in the `provider_cname` field of each Resource message.
      * </pre>
      */
     public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetProviderCNameResponse getProviderCName(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetProviderCNameRequest request) {
@@ -618,8 +615,7 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Get Provider's CNAME (edge endpoint) bind to specified folder id.
-     * Returns UNIMPLEMENTED error, if provider doesn't support CNAME request.
+     * Deprecated: Provider-specific CNAME is now available in the `provider_cname` field of each Resource message.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetProviderCNameResponse> getProviderCName(

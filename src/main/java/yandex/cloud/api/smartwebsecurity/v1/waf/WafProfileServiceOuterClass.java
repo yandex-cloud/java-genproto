@@ -2424,6 +2424,60 @@ public final class WafProfileServiceOuterClass {
      */
     yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder();
 
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+     */
+    java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> 
+        getRuleSetsList();
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+     */
+    yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet getRuleSets(int index);
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+     */
+    int getRuleSetsCount();
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder> 
+        getRuleSetsOrBuilderList();
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+     */
+    yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder getRuleSetsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Parameter determines should all rule sets be matched.
+     * </pre>
+     *
+     * <code>bool match_all_rule_sets = 10;</code>
+     * @return The matchAllRuleSets.
+     */
+    boolean getMatchAllRuleSets();
+
     public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileServiceOuterClass.CreateWafProfileRequest.RuleSetCase getRuleSetCase();
   }
   /**
@@ -2444,6 +2498,7 @@ public final class WafProfileServiceOuterClass {
       description_ = "";
       rules_ = java.util.Collections.emptyList();
       exclusionRules_ = java.util.Collections.emptyList();
+      ruleSets_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2553,6 +2608,20 @@ public final class WafProfileServiceOuterClass {
 
               break;
             }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                ruleSets_ = new java.util.ArrayList<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              ruleSets_.add(
+                  input.readMessage(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.parser(), extensionRegistry));
+              break;
+            }
+            case 80: {
+
+              matchAllRuleSets_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2573,6 +2642,9 @@ public final class WafProfileServiceOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
           exclusionRules_ = java.util.Collections.unmodifiableList(exclusionRules_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          ruleSets_ = java.util.Collections.unmodifiableList(ruleSets_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3078,6 +3150,81 @@ public final class WafProfileServiceOuterClass {
       return getAnalyzeRequestBody();
     }
 
+    public static final int RULE_SETS_FIELD_NUMBER = 9;
+    private java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> ruleSets_;
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> getRuleSetsList() {
+      return ruleSets_;
+    }
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder> 
+        getRuleSetsOrBuilderList() {
+      return ruleSets_;
+    }
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+     */
+    @java.lang.Override
+    public int getRuleSetsCount() {
+      return ruleSets_.size();
+    }
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet getRuleSets(int index) {
+      return ruleSets_.get(index);
+    }
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder getRuleSetsOrBuilder(
+        int index) {
+      return ruleSets_.get(index);
+    }
+
+    public static final int MATCH_ALL_RULE_SETS_FIELD_NUMBER = 10;
+    private boolean matchAllRuleSets_;
+    /**
+     * <pre>
+     * Parameter determines should all rule sets be matched.
+     * </pre>
+     *
+     * <code>bool match_all_rule_sets = 10;</code>
+     * @return The matchAllRuleSets.
+     */
+    @java.lang.Override
+    public boolean getMatchAllRuleSets() {
+      return matchAllRuleSets_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3118,6 +3265,12 @@ public final class WafProfileServiceOuterClass {
       }
       if (analyzeRequestBody_ != null) {
         output.writeMessage(8, getAnalyzeRequestBody());
+      }
+      for (int i = 0; i < ruleSets_.size(); i++) {
+        output.writeMessage(9, ruleSets_.get(i));
+      }
+      if (matchAllRuleSets_ != false) {
+        output.writeBool(10, matchAllRuleSets_);
       }
       unknownFields.writeTo(output);
     }
@@ -3163,6 +3316,14 @@ public final class WafProfileServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getAnalyzeRequestBody());
       }
+      for (int i = 0; i < ruleSets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, ruleSets_.get(i));
+      }
+      if (matchAllRuleSets_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, matchAllRuleSets_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3195,6 +3356,10 @@ public final class WafProfileServiceOuterClass {
         if (!getAnalyzeRequestBody()
             .equals(other.getAnalyzeRequestBody())) return false;
       }
+      if (!getRuleSetsList()
+          .equals(other.getRuleSetsList())) return false;
+      if (getMatchAllRuleSets()
+          != other.getMatchAllRuleSets()) return false;
       if (!getRuleSetCase().equals(other.getRuleSetCase())) return false;
       switch (ruleSetCase_) {
         case 7:
@@ -3237,6 +3402,13 @@ public final class WafProfileServiceOuterClass {
         hash = (37 * hash) + ANALYZE_REQUEST_BODY_FIELD_NUMBER;
         hash = (53 * hash) + getAnalyzeRequestBody().hashCode();
       }
+      if (getRuleSetsCount() > 0) {
+        hash = (37 * hash) + RULE_SETS_FIELD_NUMBER;
+        hash = (53 * hash) + getRuleSetsList().hashCode();
+      }
+      hash = (37 * hash) + MATCH_ALL_RULE_SETS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMatchAllRuleSets());
       switch (ruleSetCase_) {
         case 7:
           hash = (37 * hash) + CORE_RULE_SET_FIELD_NUMBER;
@@ -3397,6 +3569,7 @@ public final class WafProfileServiceOuterClass {
                 .alwaysUseFieldBuilders) {
           getRulesFieldBuilder();
           getExclusionRulesFieldBuilder();
+          getRuleSetsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -3427,6 +3600,14 @@ public final class WafProfileServiceOuterClass {
           analyzeRequestBody_ = null;
           analyzeRequestBodyBuilder_ = null;
         }
+        if (ruleSetsBuilder_ == null) {
+          ruleSets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          ruleSetsBuilder_.clear();
+        }
+        matchAllRuleSets_ = false;
+
         ruleSetCase_ = 0;
         ruleSet_ = null;
         return this;
@@ -3491,6 +3672,16 @@ public final class WafProfileServiceOuterClass {
         } else {
           result.analyzeRequestBody_ = analyzeRequestBodyBuilder_.build();
         }
+        if (ruleSetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            ruleSets_ = java.util.Collections.unmodifiableList(ruleSets_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.ruleSets_ = ruleSets_;
+        } else {
+          result.ruleSets_ = ruleSetsBuilder_.build();
+        }
+        result.matchAllRuleSets_ = matchAllRuleSets_;
         result.ruleSetCase_ = ruleSetCase_;
         onBuilt();
         return result;
@@ -3608,6 +3799,35 @@ public final class WafProfileServiceOuterClass {
         }
         if (other.hasAnalyzeRequestBody()) {
           mergeAnalyzeRequestBody(other.getAnalyzeRequestBody());
+        }
+        if (ruleSetsBuilder_ == null) {
+          if (!other.ruleSets_.isEmpty()) {
+            if (ruleSets_.isEmpty()) {
+              ruleSets_ = other.ruleSets_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureRuleSetsIsMutable();
+              ruleSets_.addAll(other.ruleSets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ruleSets_.isEmpty()) {
+            if (ruleSetsBuilder_.isEmpty()) {
+              ruleSetsBuilder_.dispose();
+              ruleSetsBuilder_ = null;
+              ruleSets_ = other.ruleSets_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              ruleSetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRuleSetsFieldBuilder() : null;
+            } else {
+              ruleSetsBuilder_.addAllMessages(other.ruleSets_);
+            }
+          }
+        }
+        if (other.getMatchAllRuleSets() != false) {
+          setMatchAllRuleSets(other.getMatchAllRuleSets());
         }
         switch (other.getRuleSetCase()) {
           case CORE_RULE_SET: {
@@ -5065,6 +5285,361 @@ public final class WafProfileServiceOuterClass {
         }
         return analyzeRequestBodyBuilder_;
       }
+
+      private java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> ruleSets_ =
+        java.util.Collections.emptyList();
+      private void ensureRuleSetsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          ruleSets_ = new java.util.ArrayList<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet>(ruleSets_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder> ruleSetsBuilder_;
+
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> getRuleSetsList() {
+        if (ruleSetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ruleSets_);
+        } else {
+          return ruleSetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public int getRuleSetsCount() {
+        if (ruleSetsBuilder_ == null) {
+          return ruleSets_.size();
+        } else {
+          return ruleSetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet getRuleSets(int index) {
+        if (ruleSetsBuilder_ == null) {
+          return ruleSets_.get(index);
+        } else {
+          return ruleSetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public Builder setRuleSets(
+          int index, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet value) {
+        if (ruleSetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRuleSetsIsMutable();
+          ruleSets_.set(index, value);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public Builder setRuleSets(
+          int index, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder builderForValue) {
+        if (ruleSetsBuilder_ == null) {
+          ensureRuleSetsIsMutable();
+          ruleSets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ruleSetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public Builder addRuleSets(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet value) {
+        if (ruleSetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRuleSetsIsMutable();
+          ruleSets_.add(value);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public Builder addRuleSets(
+          int index, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet value) {
+        if (ruleSetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRuleSetsIsMutable();
+          ruleSets_.add(index, value);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public Builder addRuleSets(
+          yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder builderForValue) {
+        if (ruleSetsBuilder_ == null) {
+          ensureRuleSetsIsMutable();
+          ruleSets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ruleSetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public Builder addRuleSets(
+          int index, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder builderForValue) {
+        if (ruleSetsBuilder_ == null) {
+          ensureRuleSetsIsMutable();
+          ruleSets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ruleSetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public Builder addAllRuleSets(
+          java.lang.Iterable<? extends yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> values) {
+        if (ruleSetsBuilder_ == null) {
+          ensureRuleSetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ruleSets_);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public Builder clearRuleSets() {
+        if (ruleSetsBuilder_ == null) {
+          ruleSets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public Builder removeRuleSets(int index) {
+        if (ruleSetsBuilder_ == null) {
+          ensureRuleSetsIsMutable();
+          ruleSets_.remove(index);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder getRuleSetsBuilder(
+          int index) {
+        return getRuleSetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder getRuleSetsOrBuilder(
+          int index) {
+        if (ruleSetsBuilder_ == null) {
+          return ruleSets_.get(index);  } else {
+          return ruleSetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder> 
+           getRuleSetsOrBuilderList() {
+        if (ruleSetsBuilder_ != null) {
+          return ruleSetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ruleSets_);
+        }
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder addRuleSetsBuilder() {
+        return getRuleSetsFieldBuilder().addBuilder(
+            yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder addRuleSetsBuilder(
+          int index) {
+        return getRuleSetsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 9;</code>
+       */
+      public java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder> 
+           getRuleSetsBuilderList() {
+        return getRuleSetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder> 
+          getRuleSetsFieldBuilder() {
+        if (ruleSetsBuilder_ == null) {
+          ruleSetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder>(
+                  ruleSets_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          ruleSets_ = null;
+        }
+        return ruleSetsBuilder_;
+      }
+
+      private boolean matchAllRuleSets_ ;
+      /**
+       * <pre>
+       * Parameter determines should all rule sets be matched.
+       * </pre>
+       *
+       * <code>bool match_all_rule_sets = 10;</code>
+       * @return The matchAllRuleSets.
+       */
+      @java.lang.Override
+      public boolean getMatchAllRuleSets() {
+        return matchAllRuleSets_;
+      }
+      /**
+       * <pre>
+       * Parameter determines should all rule sets be matched.
+       * </pre>
+       *
+       * <code>bool match_all_rule_sets = 10;</code>
+       * @param value The matchAllRuleSets to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatchAllRuleSets(boolean value) {
+        
+        matchAllRuleSets_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameter determines should all rule sets be matched.
+       * </pre>
+       *
+       * <code>bool match_all_rule_sets = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMatchAllRuleSets() {
+        
+        matchAllRuleSets_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6009,6 +6584,60 @@ public final class WafProfileServiceOuterClass {
      */
     yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.AnalyzeRequestBodyOrBuilder getAnalyzeRequestBodyOrBuilder();
 
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+     */
+    java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> 
+        getRuleSetsList();
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+     */
+    yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet getRuleSets(int index);
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+     */
+    int getRuleSetsCount();
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder> 
+        getRuleSetsOrBuilderList();
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+     */
+    yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder getRuleSetsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Parameter determines should all rule sets be matched.
+     * </pre>
+     *
+     * <code>bool match_all_rule_sets = 11;</code>
+     * @return The matchAllRuleSets.
+     */
+    boolean getMatchAllRuleSets();
+
     public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileServiceOuterClass.UpdateWafProfileRequest.RuleSetCase getRuleSetCase();
   }
   /**
@@ -6029,6 +6658,7 @@ public final class WafProfileServiceOuterClass {
       description_ = "";
       rules_ = java.util.Collections.emptyList();
       exclusionRules_ = java.util.Collections.emptyList();
+      ruleSets_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -6151,6 +6781,20 @@ public final class WafProfileServiceOuterClass {
 
               break;
             }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                ruleSets_ = new java.util.ArrayList<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              ruleSets_.add(
+                  input.readMessage(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.parser(), extensionRegistry));
+              break;
+            }
+            case 88: {
+
+              matchAllRuleSets_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6171,6 +6815,9 @@ public final class WafProfileServiceOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
           exclusionRules_ = java.util.Collections.unmodifiableList(exclusionRules_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          ruleSets_ = java.util.Collections.unmodifiableList(ruleSets_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -6714,6 +7361,81 @@ public final class WafProfileServiceOuterClass {
       return getAnalyzeRequestBody();
     }
 
+    public static final int RULE_SETS_FIELD_NUMBER = 10;
+    private java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> ruleSets_;
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> getRuleSetsList() {
+      return ruleSets_;
+    }
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder> 
+        getRuleSetsOrBuilderList() {
+      return ruleSets_;
+    }
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+     */
+    @java.lang.Override
+    public int getRuleSetsCount() {
+      return ruleSets_.size();
+    }
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet getRuleSets(int index) {
+      return ruleSets_.get(index);
+    }
+    /**
+     * <pre>
+     * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder getRuleSetsOrBuilder(
+        int index) {
+      return ruleSets_.get(index);
+    }
+
+    public static final int MATCH_ALL_RULE_SETS_FIELD_NUMBER = 11;
+    private boolean matchAllRuleSets_;
+    /**
+     * <pre>
+     * Parameter determines should all rule sets be matched.
+     * </pre>
+     *
+     * <code>bool match_all_rule_sets = 11;</code>
+     * @return The matchAllRuleSets.
+     */
+    @java.lang.Override
+    public boolean getMatchAllRuleSets() {
+      return matchAllRuleSets_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6757,6 +7479,12 @@ public final class WafProfileServiceOuterClass {
       }
       if (analyzeRequestBody_ != null) {
         output.writeMessage(9, getAnalyzeRequestBody());
+      }
+      for (int i = 0; i < ruleSets_.size(); i++) {
+        output.writeMessage(10, ruleSets_.get(i));
+      }
+      if (matchAllRuleSets_ != false) {
+        output.writeBool(11, matchAllRuleSets_);
       }
       unknownFields.writeTo(output);
     }
@@ -6806,6 +7534,14 @@ public final class WafProfileServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getAnalyzeRequestBody());
       }
+      for (int i = 0; i < ruleSets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, ruleSets_.get(i));
+      }
+      if (matchAllRuleSets_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, matchAllRuleSets_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6843,6 +7579,10 @@ public final class WafProfileServiceOuterClass {
         if (!getAnalyzeRequestBody()
             .equals(other.getAnalyzeRequestBody())) return false;
       }
+      if (!getRuleSetsList()
+          .equals(other.getRuleSetsList())) return false;
+      if (getMatchAllRuleSets()
+          != other.getMatchAllRuleSets()) return false;
       if (!getRuleSetCase().equals(other.getRuleSetCase())) return false;
       switch (ruleSetCase_) {
         case 8:
@@ -6889,6 +7629,13 @@ public final class WafProfileServiceOuterClass {
         hash = (37 * hash) + ANALYZE_REQUEST_BODY_FIELD_NUMBER;
         hash = (53 * hash) + getAnalyzeRequestBody().hashCode();
       }
+      if (getRuleSetsCount() > 0) {
+        hash = (37 * hash) + RULE_SETS_FIELD_NUMBER;
+        hash = (53 * hash) + getRuleSetsList().hashCode();
+      }
+      hash = (37 * hash) + MATCH_ALL_RULE_SETS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMatchAllRuleSets());
       switch (ruleSetCase_) {
         case 8:
           hash = (37 * hash) + CORE_RULE_SET_FIELD_NUMBER;
@@ -7049,6 +7796,7 @@ public final class WafProfileServiceOuterClass {
                 .alwaysUseFieldBuilders) {
           getRulesFieldBuilder();
           getExclusionRulesFieldBuilder();
+          getRuleSetsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -7085,6 +7833,14 @@ public final class WafProfileServiceOuterClass {
           analyzeRequestBody_ = null;
           analyzeRequestBodyBuilder_ = null;
         }
+        if (ruleSetsBuilder_ == null) {
+          ruleSets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          ruleSetsBuilder_.clear();
+        }
+        matchAllRuleSets_ = false;
+
         ruleSetCase_ = 0;
         ruleSet_ = null;
         return this;
@@ -7154,6 +7910,16 @@ public final class WafProfileServiceOuterClass {
         } else {
           result.analyzeRequestBody_ = analyzeRequestBodyBuilder_.build();
         }
+        if (ruleSetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            ruleSets_ = java.util.Collections.unmodifiableList(ruleSets_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.ruleSets_ = ruleSets_;
+        } else {
+          result.ruleSets_ = ruleSetsBuilder_.build();
+        }
+        result.matchAllRuleSets_ = matchAllRuleSets_;
         result.ruleSetCase_ = ruleSetCase_;
         onBuilt();
         return result;
@@ -7274,6 +8040,35 @@ public final class WafProfileServiceOuterClass {
         }
         if (other.hasAnalyzeRequestBody()) {
           mergeAnalyzeRequestBody(other.getAnalyzeRequestBody());
+        }
+        if (ruleSetsBuilder_ == null) {
+          if (!other.ruleSets_.isEmpty()) {
+            if (ruleSets_.isEmpty()) {
+              ruleSets_ = other.ruleSets_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureRuleSetsIsMutable();
+              ruleSets_.addAll(other.ruleSets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ruleSets_.isEmpty()) {
+            if (ruleSetsBuilder_.isEmpty()) {
+              ruleSetsBuilder_.dispose();
+              ruleSetsBuilder_ = null;
+              ruleSets_ = other.ruleSets_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              ruleSetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRuleSetsFieldBuilder() : null;
+            } else {
+              ruleSetsBuilder_.addAllMessages(other.ruleSets_);
+            }
+          }
+        }
+        if (other.getMatchAllRuleSets() != false) {
+          setMatchAllRuleSets(other.getMatchAllRuleSets());
         }
         switch (other.getRuleSetCase()) {
           case CORE_RULE_SET: {
@@ -8885,6 +9680,361 @@ public final class WafProfileServiceOuterClass {
           analyzeRequestBody_ = null;
         }
         return analyzeRequestBodyBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> ruleSets_ =
+        java.util.Collections.emptyList();
+      private void ensureRuleSetsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          ruleSets_ = new java.util.ArrayList<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet>(ruleSets_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder> ruleSetsBuilder_;
+
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> getRuleSetsList() {
+        if (ruleSetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ruleSets_);
+        } else {
+          return ruleSetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public int getRuleSetsCount() {
+        if (ruleSetsBuilder_ == null) {
+          return ruleSets_.size();
+        } else {
+          return ruleSetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet getRuleSets(int index) {
+        if (ruleSetsBuilder_ == null) {
+          return ruleSets_.get(index);
+        } else {
+          return ruleSetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public Builder setRuleSets(
+          int index, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet value) {
+        if (ruleSetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRuleSetsIsMutable();
+          ruleSets_.set(index, value);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public Builder setRuleSets(
+          int index, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder builderForValue) {
+        if (ruleSetsBuilder_ == null) {
+          ensureRuleSetsIsMutable();
+          ruleSets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ruleSetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public Builder addRuleSets(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet value) {
+        if (ruleSetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRuleSetsIsMutable();
+          ruleSets_.add(value);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public Builder addRuleSets(
+          int index, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet value) {
+        if (ruleSetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRuleSetsIsMutable();
+          ruleSets_.add(index, value);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public Builder addRuleSets(
+          yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder builderForValue) {
+        if (ruleSetsBuilder_ == null) {
+          ensureRuleSetsIsMutable();
+          ruleSets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ruleSetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public Builder addRuleSets(
+          int index, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder builderForValue) {
+        if (ruleSetsBuilder_ == null) {
+          ensureRuleSetsIsMutable();
+          ruleSets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ruleSetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public Builder addAllRuleSets(
+          java.lang.Iterable<? extends yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet> values) {
+        if (ruleSetsBuilder_ == null) {
+          ensureRuleSetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ruleSets_);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public Builder clearRuleSets() {
+        if (ruleSetsBuilder_ == null) {
+          ruleSets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public Builder removeRuleSets(int index) {
+        if (ruleSetsBuilder_ == null) {
+          ensureRuleSetsIsMutable();
+          ruleSets_.remove(index);
+          onChanged();
+        } else {
+          ruleSetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder getRuleSetsBuilder(
+          int index) {
+        return getRuleSetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder getRuleSetsOrBuilder(
+          int index) {
+        if (ruleSetsBuilder_ == null) {
+          return ruleSets_.get(index);  } else {
+          return ruleSetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder> 
+           getRuleSetsOrBuilderList() {
+        if (ruleSetsBuilder_ != null) {
+          return ruleSetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ruleSets_);
+        }
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder addRuleSetsBuilder() {
+        return getRuleSetsFieldBuilder().addBuilder(
+            yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder addRuleSetsBuilder(
+          int index) {
+        return getRuleSetsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of rule sets. See [Rules](/docs/smartwebsecurity/concepts/waf#rules-set).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.smartwebsecurity.v1.waf.WafProfile.WafProfileRuleSet rule_sets = 10;</code>
+       */
+      public java.util.List<yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder> 
+           getRuleSetsBuilderList() {
+        return getRuleSetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder> 
+          getRuleSetsFieldBuilder() {
+        if (ruleSetsBuilder_ == null) {
+          ruleSetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSet.Builder, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.WafProfileRuleSetOrBuilder>(
+                  ruleSets_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          ruleSets_ = null;
+        }
+        return ruleSetsBuilder_;
+      }
+
+      private boolean matchAllRuleSets_ ;
+      /**
+       * <pre>
+       * Parameter determines should all rule sets be matched.
+       * </pre>
+       *
+       * <code>bool match_all_rule_sets = 11;</code>
+       * @return The matchAllRuleSets.
+       */
+      @java.lang.Override
+      public boolean getMatchAllRuleSets() {
+        return matchAllRuleSets_;
+      }
+      /**
+       * <pre>
+       * Parameter determines should all rule sets be matched.
+       * </pre>
+       *
+       * <code>bool match_all_rule_sets = 11;</code>
+       * @param value The matchAllRuleSets to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatchAllRuleSets(boolean value) {
+        
+        matchAllRuleSets_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameter determines should all rule sets be matched.
+       * </pre>
+       *
+       * <code>bool match_all_rule_sets = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMatchAllRuleSets() {
+        
+        matchAllRuleSets_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10828,7 +11978,7 @@ public final class WafProfileServiceOuterClass {
       "Request\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\"a\n\027List" +
       "WafProfilesResponse\022F\n\014waf_profiles\030\001 \003(" +
       "\01320.yandex.cloud.smartwebsecurity.v1.waf" +
-      ".WafProfile\"\274\004\n\027CreateWafProfileRequest\022" +
+      ".WafProfile\"\260\005\n\027CreateWafProfileRequest\022" +
       "\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013desc" +
       "ription\030\003 \001(\t\022Y\n\006labels\030\004 \003(\0132I.yandex.c" +
       "loud.smartwebsecurity.v1.waf.CreateWafPr" +
@@ -10841,58 +11991,64 @@ public final class WafProfileServiceOuterClass {
       "waf.WafProfile.CoreRuleSetH\000\022a\n\024analyze_" +
       "request_body\030\010 \001(\0132C.yandex.cloud.smartw" +
       "ebsecurity.v1.waf.WafProfile.AnalyzeRequ" +
-      "estBody\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001B\n\n\010rule_set\"2\n\030CreateWafP" +
-      "rofileMetadata\022\026\n\016waf_profile_id\030\001 \001(\t\"\370" +
-      "\004\n\027UpdateWafProfileRequest\022\034\n\016waf_profil" +
-      "e_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032." +
-      "google.protobuf.FieldMask\022\014\n\004name\030\003 \001(\t\022" +
-      "\023\n\013description\030\004 \001(\t\022Y\n\006labels\030\005 \003(\0132I.y" +
-      "andex.cloud.smartwebsecurity.v1.waf.Upda" +
-      "teWafProfileRequest.LabelsEntry\022C\n\005rules" +
-      "\030\006 \003(\01324.yandex.cloud.smartwebsecurity.v" +
-      "1.waf.WafProfileRule\022V\n\017exclusion_rules\030" +
-      "\007 \003(\0132=.yandex.cloud.smartwebsecurity.v1" +
-      ".waf.WafProfileExclusionRule\022U\n\rcore_rul" +
-      "e_set\030\010 \001(\0132<.yandex.cloud.smartwebsecur" +
-      "ity.v1.waf.WafProfile.CoreRuleSetH\000\022a\n\024a" +
-      "nalyze_request_body\030\t \001(\0132C.yandex.cloud" +
-      ".smartwebsecurity.v1.waf.WafProfile.Anal" +
-      "yzeRequestBody\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\n\n\010rule_set\"2\n\030Upd" +
-      "ateWafProfileMetadata\022\026\n\016waf_profile_id\030" +
-      "\001 \001(\t\"7\n\027DeleteWafProfileRequest\022\034\n\016waf_" +
-      "profile_id\030\001 \001(\tB\004\350\3071\001\"2\n\030DeleteWafProfi" +
-      "leMetadata\022\026\n\016waf_profile_id\030\001 \001(\t2\352\007\n\021W" +
-      "afProfileService\022\256\001\n\003Get\022:.yandex.cloud." +
-      "smartwebsecurity.v1.waf.GetWafProfileReq" +
-      "uest\0320.yandex.cloud.smartwebsecurity.v1." +
-      "waf.WafProfile\"9\202\323\344\223\0023\0221/smartwebsecurit" +
-      "y/v1/wafProfiles/{waf_profile_id}\022\255\001\n\004Li" +
-      "st\022<.yandex.cloud.smartwebsecurity.v1.wa" +
-      "f.ListWafProfilesRequest\032=.yandex.cloud." +
-      "smartwebsecurity.v1.waf.ListWafProfilesR" +
-      "esponse\"(\202\323\344\223\002\"\022 /smartwebsecurity/v1/wa" +
-      "fProfiles\022\301\001\n\006Create\022=.yandex.cloud.smar" +
-      "twebsecurity.v1.waf.CreateWafProfileRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"U" +
-      "\202\323\344\223\002%\" /smartwebsecurity/v1/wafProfiles" +
-      ":\001*\262\322*&\n\030CreateWafProfileMetadata\022\nWafPr" +
-      "ofile\022\322\001\n\006Update\022=.yandex.cloud.smartweb" +
-      "security.v1.waf.UpdateWafProfileRequest\032" +
-      "!.yandex.cloud.operation.Operation\"f\202\323\344\223" +
-      "\002621/smartwebsecurity/v1/wafProfiles/{wa" +
-      "f_profile_id}:\001*\262\322*&\n\030UpdateWafProfileMe" +
-      "tadata\022\nWafProfile\022\332\001\n\006Delete\022=.yandex.c" +
-      "loud.smartwebsecurity.v1.waf.DeleteWafPr" +
-      "ofileRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"n\202\323\344\223\0023*1/smartwebsecurity/v1/wa" +
-      "fProfiles/{waf_profile_id}\262\322*1\n\030DeleteWa" +
-      "fProfileMetadata\022\025google.protobuf.EmptyB" +
-      "\205\001\n(yandex.cloud.api.smartwebsecurity.v1" +
-      ".wafZYgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/smartwebsecurity/v1/waf;s" +
-      "martwebsecurityb\006proto3"
+      "estBody\022U\n\trule_sets\030\t \003(\0132B.yandex.clou" +
+      "d.smartwebsecurity.v1.waf.WafProfile.Waf" +
+      "ProfileRuleSet\022\033\n\023match_all_rule_sets\030\n " +
+      "\001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001B\n\n\010rule_set\"2\n\030CreateWafProfi" +
+      "leMetadata\022\026\n\016waf_profile_id\030\001 \001(\t\"\354\005\n\027U" +
+      "pdateWafProfileRequest\022\034\n\016waf_profile_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.goog" +
+      "le.protobuf.FieldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013d" +
+      "escription\030\004 \001(\t\022Y\n\006labels\030\005 \003(\0132I.yande" +
+      "x.cloud.smartwebsecurity.v1.waf.UpdateWa" +
+      "fProfileRequest.LabelsEntry\022C\n\005rules\030\006 \003" +
+      "(\01324.yandex.cloud.smartwebsecurity.v1.wa" +
+      "f.WafProfileRule\022V\n\017exclusion_rules\030\007 \003(" +
+      "\0132=.yandex.cloud.smartwebsecurity.v1.waf" +
+      ".WafProfileExclusionRule\022U\n\rcore_rule_se" +
+      "t\030\010 \001(\0132<.yandex.cloud.smartwebsecurity." +
+      "v1.waf.WafProfile.CoreRuleSetH\000\022a\n\024analy" +
+      "ze_request_body\030\t \001(\0132C.yandex.cloud.sma" +
+      "rtwebsecurity.v1.waf.WafProfile.AnalyzeR" +
+      "equestBody\022U\n\trule_sets\030\n \003(\0132B.yandex.c" +
+      "loud.smartwebsecurity.v1.waf.WafProfile." +
+      "WafProfileRuleSet\022\033\n\023match_all_rule_sets" +
+      "\030\013 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001B\n\n\010rule_set\"2\n\030UpdateWafPr" +
+      "ofileMetadata\022\026\n\016waf_profile_id\030\001 \001(\t\"7\n" +
+      "\027DeleteWafProfileRequest\022\034\n\016waf_profile_" +
+      "id\030\001 \001(\tB\004\350\3071\001\"2\n\030DeleteWafProfileMetada" +
+      "ta\022\026\n\016waf_profile_id\030\001 \001(\t2\352\007\n\021WafProfil" +
+      "eService\022\256\001\n\003Get\022:.yandex.cloud.smartweb" +
+      "security.v1.waf.GetWafProfileRequest\0320.y" +
+      "andex.cloud.smartwebsecurity.v1.waf.WafP" +
+      "rofile\"9\202\323\344\223\0023\0221/smartwebsecurity/v1/waf" +
+      "Profiles/{waf_profile_id}\022\255\001\n\004List\022<.yan" +
+      "dex.cloud.smartwebsecurity.v1.waf.ListWa" +
+      "fProfilesRequest\032=.yandex.cloud.smartweb" +
+      "security.v1.waf.ListWafProfilesResponse\"" +
+      "(\202\323\344\223\002\"\022 /smartwebsecurity/v1/wafProfile" +
+      "s\022\301\001\n\006Create\022=.yandex.cloud.smartwebsecu" +
+      "rity.v1.waf.CreateWafProfileRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"U\202\323\344\223\002%\" " +
+      "/smartwebsecurity/v1/wafProfiles:\001*\262\322*&\n" +
+      "\030CreateWafProfileMetadata\022\nWafProfile\022\322\001" +
+      "\n\006Update\022=.yandex.cloud.smartwebsecurity" +
+      ".v1.waf.UpdateWafProfileRequest\032!.yandex" +
+      ".cloud.operation.Operation\"f\202\323\344\223\002621/sma" +
+      "rtwebsecurity/v1/wafProfiles/{waf_profil" +
+      "e_id}:\001*\262\322*&\n\030UpdateWafProfileMetadata\022\n" +
+      "WafProfile\022\332\001\n\006Delete\022=.yandex.cloud.sma" +
+      "rtwebsecurity.v1.waf.DeleteWafProfileReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "n\202\323\344\223\0023*1/smartwebsecurity/v1/wafProfile" +
+      "s/{waf_profile_id}\262\322*1\n\030DeleteWafProfile" +
+      "Metadata\022\025google.protobuf.EmptyB\205\001\n(yand" +
+      "ex.cloud.api.smartwebsecurity.v1.wafZYgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/smartwebsecurity/v1/waf;smartwebs" +
+      "ecurityb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10927,7 +12083,7 @@ public final class WafProfileServiceOuterClass {
     internal_static_yandex_cloud_smartwebsecurity_v1_waf_CreateWafProfileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartwebsecurity_v1_waf_CreateWafProfileRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Rules", "ExclusionRules", "CoreRuleSet", "AnalyzeRequestBody", "RuleSet", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Rules", "ExclusionRules", "CoreRuleSet", "AnalyzeRequestBody", "RuleSets", "MatchAllRuleSets", "RuleSet", });
     internal_static_yandex_cloud_smartwebsecurity_v1_waf_CreateWafProfileRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_smartwebsecurity_v1_waf_CreateWafProfileRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_smartwebsecurity_v1_waf_CreateWafProfileRequest_LabelsEntry_fieldAccessorTable = new
@@ -10945,7 +12101,7 @@ public final class WafProfileServiceOuterClass {
     internal_static_yandex_cloud_smartwebsecurity_v1_waf_UpdateWafProfileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartwebsecurity_v1_waf_UpdateWafProfileRequest_descriptor,
-        new java.lang.String[] { "WafProfileId", "UpdateMask", "Name", "Description", "Labels", "Rules", "ExclusionRules", "CoreRuleSet", "AnalyzeRequestBody", "RuleSet", });
+        new java.lang.String[] { "WafProfileId", "UpdateMask", "Name", "Description", "Labels", "Rules", "ExclusionRules", "CoreRuleSet", "AnalyzeRequestBody", "RuleSets", "MatchAllRuleSets", "RuleSet", });
     internal_static_yandex_cloud_smartwebsecurity_v1_waf_UpdateWafProfileRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_smartwebsecurity_v1_waf_UpdateWafProfileRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_smartwebsecurity_v1_waf_UpdateWafProfileRequest_LabelsEntry_fieldAccessorTable = new

@@ -3181,7 +3181,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
      * @return Whether the executionTimeout field is set.
      */
     boolean hasExecutionTimeout();
@@ -3190,7 +3190,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
      * @return The executionTimeout.
      */
     com.google.protobuf.Duration getExecutionTimeout();
@@ -3199,7 +3199,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
      */
     com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder();
 
@@ -3962,7 +3962,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
      * @return Whether the executionTimeout field is set.
      */
     @java.lang.Override
@@ -3974,7 +3974,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
      * @return The executionTimeout.
      */
     @java.lang.Override
@@ -3986,7 +3986,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
@@ -5796,7 +5796,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
        * @return Whether the executionTimeout field is set.
        */
       public boolean hasExecutionTimeout() {
@@ -5807,7 +5807,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
        * @return The executionTimeout.
        */
       public com.google.protobuf.Duration getExecutionTimeout() {
@@ -5822,7 +5822,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public Builder setExecutionTimeout(com.google.protobuf.Duration value) {
         if (executionTimeoutBuilder_ == null) {
@@ -5842,7 +5842,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public Builder setExecutionTimeout(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -5860,7 +5860,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public Builder mergeExecutionTimeout(com.google.protobuf.Duration value) {
         if (executionTimeoutBuilder_ == null) {
@@ -5882,7 +5882,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public Builder clearExecutionTimeout() {
         if (executionTimeoutBuilder_ == null) {
@@ -5900,7 +5900,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public com.google.protobuf.Duration.Builder getExecutionTimeoutBuilder() {
         
@@ -5912,7 +5912,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
         if (executionTimeoutBuilder_ != null) {
@@ -5927,7 +5927,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 10 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
@@ -6323,7 +6323,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
      * @return Whether the executionTimeout field is set.
      */
     boolean hasExecutionTimeout();
@@ -6332,7 +6332,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
      * @return The executionTimeout.
      */
     com.google.protobuf.Duration getExecutionTimeout();
@@ -6341,7 +6341,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
      */
     com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder();
 
@@ -7163,7 +7163,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
      * @return Whether the executionTimeout field is set.
      */
     @java.lang.Override
@@ -7175,7 +7175,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
      * @return The executionTimeout.
      */
     @java.lang.Override
@@ -7187,7 +7187,7 @@ public final class ApigatewayService {
      * Timeout for gateway call execution
      * </pre>
      *
-     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
@@ -9196,7 +9196,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
        * @return Whether the executionTimeout field is set.
        */
       public boolean hasExecutionTimeout() {
@@ -9207,7 +9207,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
        * @return The executionTimeout.
        */
       public com.google.protobuf.Duration getExecutionTimeout() {
@@ -9222,7 +9222,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public Builder setExecutionTimeout(com.google.protobuf.Duration value) {
         if (executionTimeoutBuilder_ == null) {
@@ -9242,7 +9242,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public Builder setExecutionTimeout(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -9260,7 +9260,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public Builder mergeExecutionTimeout(com.google.protobuf.Duration value) {
         if (executionTimeoutBuilder_ == null) {
@@ -9282,7 +9282,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public Builder clearExecutionTimeout() {
         if (executionTimeoutBuilder_ == null) {
@@ -9300,7 +9300,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public com.google.protobuf.Duration.Builder getExecutionTimeoutBuilder() {
         
@@ -9312,7 +9312,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
         if (executionTimeoutBuilder_ != null) {
@@ -9327,7 +9327,7 @@ public final class ApigatewayService {
        * Timeout for gateway call execution
        * </pre>
        *
-       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * <code>.google.protobuf.Duration execution_timeout = 11 [(.yandex.cloud.value) = "0s-600s"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
@@ -19576,7 +19576,7 @@ public final class ApigatewayService {
       "\npage_token\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"z\n\026Lis" +
       "tApiGatewayResponse\022G\n\014api_gateways\030\001 \003(" +
       "\01321.yandex.cloud.serverless.apigateway.v" +
-      "1.ApiGateway\022\027\n\017next_page_token\030\002 \001(\t\"\337\006" +
+      "1.ApiGateway\022\027\n\017next_page_token\030\002 \001(\t\"\340\006" +
       "\n\027CreateApiGatewayRequest\022\027\n\tfolder_id\030\001" +
       " \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a" +
       "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 " +
@@ -19592,130 +19592,130 @@ public final class ApigatewayService {
       "bles\030\010 \003(\0132M.yandex.cloud.serverless.api" +
       "gateway.v1.CreateApiGatewayRequest.Varia" +
       "blesEntry\022=\n\006canary\030\t \001(\0132-.yandex.cloud" +
-      ".serverless.apigateway.v1.Canary\022@\n\021exec" +
+      ".serverless.apigateway.v1.Canary\022A\n\021exec" +
       "ution_timeout\030\n \001(\0132\031.google.protobuf.Du" +
-      "rationB\n\372\3071\006<=600s\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032f\n\016VariablesEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yandex" +
-      ".cloud.serverless.apigateway.v1.Variable" +
-      "Input:\0028\001B\014\n\004spec\022\004\300\3011\001\"\225\007\n\027UpdateApiGat" +
-      "ewayRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a" +
-      "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 " +
-      "\001(\tB\t\212\3101\005<=256\022\243\001\n\006labels\030\005 \003(\0132J.yandex" +
-      ".cloud.serverless.apigateway.v1.UpdateAp" +
-      "iGatewayRequest.LabelsEntryBG\202\3101\004<=64\212\3101" +
-      "\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024" +
-      "[a-z][-_./\\@0-9a-z]*\022\026\n\014openapi_spec\030\006 \001" +
-      "(\tH\000\022I\n\014connectivity\030\007 \001(\01323.yandex.clou" +
-      "d.serverless.apigateway.v1.Connectivity\022" +
-      "F\n\013log_options\030\010 \001(\01321.yandex.cloud.serv" +
-      "erless.apigateway.v1.LogOptions\022`\n\tvaria" +
-      "bles\030\t \003(\0132M.yandex.cloud.serverless.api" +
-      "gateway.v1.UpdateApiGatewayRequest.Varia" +
-      "blesEntry\022=\n\006canary\030\n \001(\0132-.yandex.cloud" +
-      ".serverless.apigateway.v1.Canary\022@\n\021exec" +
-      "ution_timeout\030\013 \001(\0132\031.google.protobuf.Du" +
-      "rationB\n\372\3071\006<=600s\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032f\n\016VariablesEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yandex" +
-      ".cloud.serverless.apigateway.v1.Variable" +
-      "Input:\0028\001B\014\n\004spec\022\004\300\3011\001\"7\n\027DeleteApiGate" +
-      "wayRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001" +
-      "\"c\n\020AddDomainRequest\022\034\n\016api_gateway_id\030\001" +
-      " \001(\tB\004\350\3071\001\022\023\n\013domain_name\030\003 \001(\t\022\026\n\016certi" +
-      "ficate_id\030\004 \001(\tJ\004\010\002\020\003\"L\n\023RemoveDomainReq" +
-      "uest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tdo" +
-      "main_id\030\002 \001(\tB\004\350\3071\001\"2\n\030CreateApiGatewayM" +
-      "etadata\022\026\n\016api_gateway_id\030\001 \001(\t\"2\n\030Updat" +
-      "eApiGatewayMetadata\022\026\n\016api_gateway_id\030\001 " +
-      "\001(\t\"2\n\030DeleteApiGatewayMetadata\022\026\n\016api_g" +
-      "ateway_id\030\001 \001(\t\"k\n\021AddDomainMetadata\022\026\n\016" +
-      "api_gateway_id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\022" +
-      "\023\n\013domain_name\030\003 \001(\t\022\026\n\016certificate_id\030\004" +
-      " \001(\t\"A\n\024RemoveDomainMetadata\022\026\n\016api_gate" +
-      "way_id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\"\217\001\n\025List" +
-      "OperationsRequest\022\034\n\016api_gateway_id\030\001 \001(" +
-      "\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035" +
-      "\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030" +
-      "\004 \001(\tB\n\212\3101\006<=1000\"h\n\026ListOperationsRespo" +
-      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
-      "peration.Operation\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"\300\001\n\025GetOpenapiSpecRequest\022\034\n\016api_gat" +
-      "eway_id\030\001 \001(\tB\004\350\3071\001\022S\n\006format\030\002 \001(\0162C.ya" +
-      "ndex.cloud.serverless.apigateway.v1.GetO" +
-      "penapiSpecRequest.Format\"4\n\006Format\022\026\n\022FO" +
-      "RMAT_UNSPECIFIED\020\000\022\010\n\004JSON\020\001\022\010\n\004YAML\020\002\"F" +
-      "\n\026GetOpenapiSpecResponse\022\026\n\016api_gateway_" +
-      "id\030\001 \001(\t\022\024\n\014openapi_spec\030\002 \001(\t2\332\023\n\021ApiGa" +
-      "tewayService\022\253\001\n\003Get\022;.yandex.cloud.serv" +
-      "erless.apigateway.v1.GetApiGatewayReques" +
-      "t\0321.yandex.cloud.serverless.apigateway.v" +
-      "1.ApiGateway\"4\202\323\344\223\002.\022,/apigateways/v1/ap" +
-      "igateways/{api_gateway_id}\022\250\001\n\004List\022<.ya" +
-      "ndex.cloud.serverless.apigateway.v1.List" +
-      "ApiGatewayRequest\032=.yandex.cloud.serverl" +
-      "ess.apigateway.v1.ListApiGatewayResponse" +
-      "\"#\202\323\344\223\002\035\022\033/apigateways/v1/apigateways\022\275\001" +
-      "\n\006Create\022>.yandex.cloud.serverless.apiga" +
-      "teway.v1.CreateApiGatewayRequest\032!.yande" +
-      "x.cloud.operation.Operation\"P\202\323\344\223\002 \"\033/ap" +
-      "igateways/v1/apigateways:\001*\262\322*&\n\030CreateA" +
-      "piGatewayMetadata\022\nApiGateway\022\316\001\n\006Update" +
-      "\022>.yandex.cloud.serverless.apigateway.v1" +
-      ".UpdateApiGatewayRequest\032!.yandex.cloud." +
-      "operation.Operation\"a\202\323\344\223\00212,/apigateway" +
-      "s/v1/apigateways/{api_gateway_id}:\001*\262\322*&" +
-      "\n\030UpdateApiGatewayMetadata\022\nApiGateway\022\326" +
-      "\001\n\006Delete\022>.yandex.cloud.serverless.apig" +
-      "ateway.v1.DeleteApiGatewayRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"i\202\323\344\223\002.*,/a" +
+      "rationB\013\372\3071\0070s-600s\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032f\n\016VariablesE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yande" +
+      "x.cloud.serverless.apigateway.v1.Variabl" +
+      "eInput:\0028\001B\014\n\004spec\022\004\300\3011\001\"\226\007\n\027UpdateApiGa" +
+      "tewayRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\307" +
+      "1\001\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-" +
+      "a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004" +
+      " \001(\tB\t\212\3101\005<=256\022\243\001\n\006labels\030\005 \003(\0132J.yande" +
+      "x.cloud.serverless.apigateway.v1.UpdateA" +
+      "piGatewayRequest.LabelsEntryBG\202\3101\004<=64\212\310" +
+      "1\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022" +
+      "\024[a-z][-_./\\@0-9a-z]*\022\026\n\014openapi_spec\030\006 " +
+      "\001(\tH\000\022I\n\014connectivity\030\007 \001(\01323.yandex.clo" +
+      "ud.serverless.apigateway.v1.Connectivity" +
+      "\022F\n\013log_options\030\010 \001(\01321.yandex.cloud.ser" +
+      "verless.apigateway.v1.LogOptions\022`\n\tvari" +
+      "ables\030\t \003(\0132M.yandex.cloud.serverless.ap" +
+      "igateway.v1.UpdateApiGatewayRequest.Vari" +
+      "ablesEntry\022=\n\006canary\030\n \001(\0132-.yandex.clou" +
+      "d.serverless.apigateway.v1.Canary\022A\n\021exe" +
+      "cution_timeout\030\013 \001(\0132\031.google.protobuf.D" +
+      "urationB\013\372\3071\0070s-600s\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032f\n\016Variables" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yand" +
+      "ex.cloud.serverless.apigateway.v1.Variab" +
+      "leInput:\0028\001B\014\n\004spec\022\004\300\3011\001\"7\n\027DeleteApiGa" +
+      "tewayRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\307" +
+      "1\001\"c\n\020AddDomainRequest\022\034\n\016api_gateway_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022\023\n\013domain_name\030\003 \001(\t\022\026\n\016cer" +
+      "tificate_id\030\004 \001(\tJ\004\010\002\020\003\"L\n\023RemoveDomainR" +
+      "equest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022\027\n\t" +
+      "domain_id\030\002 \001(\tB\004\350\3071\001\"2\n\030CreateApiGatewa" +
+      "yMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\"2\n\030Upd" +
+      "ateApiGatewayMetadata\022\026\n\016api_gateway_id\030" +
+      "\001 \001(\t\"2\n\030DeleteApiGatewayMetadata\022\026\n\016api" +
+      "_gateway_id\030\001 \001(\t\"k\n\021AddDomainMetadata\022\026" +
+      "\n\016api_gateway_id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(" +
+      "\t\022\023\n\013domain_name\030\003 \001(\t\022\026\n\016certificate_id" +
+      "\030\004 \001(\t\"A\n\024RemoveDomainMetadata\022\026\n\016api_ga" +
+      "teway_id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\"\217\001\n\025Li" +
+      "stOperationsRequest\022\034\n\016api_gateway_id\030\001 " +
+      "\001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000" +
+      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filte" +
+      "r\030\004 \001(\tB\n\212\3101\006<=1000\"h\n\026ListOperationsRes" +
+      "ponse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud" +
+      ".operation.Operation\022\027\n\017next_page_token\030" +
+      "\002 \001(\t\"\300\001\n\025GetOpenapiSpecRequest\022\034\n\016api_g" +
+      "ateway_id\030\001 \001(\tB\004\350\3071\001\022S\n\006format\030\002 \001(\0162C." +
+      "yandex.cloud.serverless.apigateway.v1.Ge" +
+      "tOpenapiSpecRequest.Format\"4\n\006Format\022\026\n\022" +
+      "FORMAT_UNSPECIFIED\020\000\022\010\n\004JSON\020\001\022\010\n\004YAML\020\002" +
+      "\"F\n\026GetOpenapiSpecResponse\022\026\n\016api_gatewa" +
+      "y_id\030\001 \001(\t\022\024\n\014openapi_spec\030\002 \001(\t2\332\023\n\021Api" +
+      "GatewayService\022\253\001\n\003Get\022;.yandex.cloud.se" +
+      "rverless.apigateway.v1.GetApiGatewayRequ" +
+      "est\0321.yandex.cloud.serverless.apigateway" +
+      ".v1.ApiGateway\"4\202\323\344\223\002.\022,/apigateways/v1/" +
+      "apigateways/{api_gateway_id}\022\250\001\n\004List\022<." +
+      "yandex.cloud.serverless.apigateway.v1.Li" +
+      "stApiGatewayRequest\032=.yandex.cloud.serve" +
+      "rless.apigateway.v1.ListApiGatewayRespon" +
+      "se\"#\202\323\344\223\002\035\022\033/apigateways/v1/apigateways\022" +
+      "\275\001\n\006Create\022>.yandex.cloud.serverless.api" +
+      "gateway.v1.CreateApiGatewayRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"P\202\323\344\223\002 \"\033/" +
+      "apigateways/v1/apigateways:\001*\262\322*&\n\030Creat" +
+      "eApiGatewayMetadata\022\nApiGateway\022\316\001\n\006Upda" +
+      "te\022>.yandex.cloud.serverless.apigateway." +
+      "v1.UpdateApiGatewayRequest\032!.yandex.clou" +
+      "d.operation.Operation\"a\202\323\344\223\00212,/apigatew" +
+      "ays/v1/apigateways/{api_gateway_id}:\001*\262\322" +
+      "*&\n\030UpdateApiGatewayMetadata\022\nApiGateway" +
+      "\022\326\001\n\006Delete\022>.yandex.cloud.serverless.ap" +
+      "igateway.v1.DeleteApiGatewayRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"i\202\323\344\223\002.*," +
+      "/apigateways/v1/apigateways/{api_gateway" +
+      "_id}\262\322*1\n\030DeleteApiGatewayMetadata\022\025goog" +
+      "le.protobuf.Empty\022\330\001\n\tAddDomain\0227.yandex" +
+      ".cloud.serverless.apigateway.v1.AddDomai" +
+      "nRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"o\202\323\344\223\002;\"6/apigateways/v1/apigateways" +
+      "/{api_gateway_id}:addDomain:\001*\262\322**\n\021AddD" +
+      "omainMetadata\022\025google.protobuf.Empty\022\344\001\n" +
+      "\014RemoveDomain\022:.yandex.cloud.serverless." +
+      "apigateway.v1.RemoveDomainRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"u\202\323\344\223\002>\"9/a" +
       "pigateways/v1/apigateways/{api_gateway_i" +
-      "d}\262\322*1\n\030DeleteApiGatewayMetadata\022\025google" +
-      ".protobuf.Empty\022\330\001\n\tAddDomain\0227.yandex.c" +
-      "loud.serverless.apigateway.v1.AddDomainR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"o\202\323\344\223\002;\"6/apigateways/v1/apigateways/{" +
-      "api_gateway_id}:addDomain:\001*\262\322**\n\021AddDom" +
-      "ainMetadata\022\025google.protobuf.Empty\022\344\001\n\014R" +
-      "emoveDomain\022:.yandex.cloud.serverless.ap" +
-      "igateway.v1.RemoveDomainRequest\032!.yandex" +
-      ".cloud.operation.Operation\"u\202\323\344\223\002>\"9/api" +
-      "gateways/v1/apigateways/{api_gateway_id}" +
-      ":removeDomain:\001*\262\322*-\n\024RemoveDomainMetada" +
-      "ta\022\025google.protobuf.Empty\022\310\001\n\016GetOpenapi" +
-      "Spec\022<.yandex.cloud.serverless.apigatewa" +
-      "y.v1.GetOpenapiSpecRequest\032=.yandex.clou" +
-      "d.serverless.apigateway.v1.GetOpenapiSpe" +
-      "cResponse\"9\202\323\344\223\0023\0221/apigateways/v1/apiga" +
-      "teways/{api_gateway_id}:spec\022\316\001\n\016ListOpe" +
-      "rations\022<.yandex.cloud.serverless.apigat" +
-      "eway.v1.ListOperationsRequest\032=.yandex.c" +
-      "loud.serverless.apigateway.v1.ListOperat" +
-      "ionsResponse\"?\202\323\344\223\0029\0227/apigateways/v1/ap" +
-      "igateways/{api_gateway_id}/operations\022\273\001" +
-      "\n\022ListAccessBindings\022..yandex.cloud.acce" +
-      "ss.ListAccessBindingsRequest\032/.yandex.cl" +
-      "oud.access.ListAccessBindingsResponse\"D\202" +
-      "\323\344\223\002>\022</apigateways/v1/apigateways/{reso" +
-      "urce_id}:listAccessBindings\022\353\001\n\021SetAcces" +
-      "sBindings\022-.yandex.cloud.access.SetAcces" +
-      "sBindingsRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"\203\001\202\323\344\223\002@\";/apigateways/v1/ap" +
-      "igateways/{resource_id}:setAccessBinding" +
-      "s:\001*\262\322*9\n access.SetAccessBindingsMetada" +
-      "ta\022\025google.protobuf.Empty\022\367\001\n\024UpdateAcce" +
-      "ssBindings\0220.yandex.cloud.access.UpdateA" +
-      "ccessBindingsRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"\211\001\202\323\344\223\002C2>/apigateways/v" +
-      "1/apigateways/{resource_id}:updateAccess" +
-      "Bindings:\001*\262\322*<\n#access.UpdateAccessBind" +
-      "ingsMetadata\022\025google.protobuf.EmptyB\201\001\n)" +
-      "yandex.cloud.api.serverless.apigateway.v" +
-      "1ZTgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/serverless/apigateway/v1;api" +
-      "gatewayb\006proto3"
+      "d}:removeDomain:\001*\262\322*-\n\024RemoveDomainMeta" +
+      "data\022\025google.protobuf.Empty\022\310\001\n\016GetOpena" +
+      "piSpec\022<.yandex.cloud.serverless.apigate" +
+      "way.v1.GetOpenapiSpecRequest\032=.yandex.cl" +
+      "oud.serverless.apigateway.v1.GetOpenapiS" +
+      "pecResponse\"9\202\323\344\223\0023\0221/apigateways/v1/api" +
+      "gateways/{api_gateway_id}:spec\022\316\001\n\016ListO" +
+      "perations\022<.yandex.cloud.serverless.apig" +
+      "ateway.v1.ListOperationsRequest\032=.yandex" +
+      ".cloud.serverless.apigateway.v1.ListOper" +
+      "ationsResponse\"?\202\323\344\223\0029\0227/apigateways/v1/" +
+      "apigateways/{api_gateway_id}/operations\022" +
+      "\273\001\n\022ListAccessBindings\022..yandex.cloud.ac" +
+      "cess.ListAccessBindingsRequest\032/.yandex." +
+      "cloud.access.ListAccessBindingsResponse\"" +
+      "D\202\323\344\223\002>\022</apigateways/v1/apigateways/{re" +
+      "source_id}:listAccessBindings\022\353\001\n\021SetAcc" +
+      "essBindings\022-.yandex.cloud.access.SetAcc" +
+      "essBindingsRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"\203\001\202\323\344\223\002@\";/apigateways/v1/" +
+      "apigateways/{resource_id}:setAccessBindi" +
+      "ngs:\001*\262\322*9\n access.SetAccessBindingsMeta" +
+      "data\022\025google.protobuf.Empty\022\367\001\n\024UpdateAc" +
+      "cessBindings\0220.yandex.cloud.access.Updat" +
+      "eAccessBindingsRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"\211\001\202\323\344\223\002C2>/apigateways" +
+      "/v1/apigateways/{resource_id}:updateAcce" +
+      "ssBindings:\001*\262\322*<\n#access.UpdateAccessBi" +
+      "ndingsMetadata\022\025google.protobuf.EmptyB\201\001" +
+      "\n)yandex.cloud.api.serverless.apigateway" +
+      ".v1ZTgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/serverless/apigateway/v1;a" +
+      "pigatewayb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

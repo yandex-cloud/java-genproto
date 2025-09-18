@@ -124,6 +124,46 @@ public final class GroupOuterClass {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to. It is set if group is external.
+     * </pre>
+     *
+     * <code>string subject_container_id = 6;</code>
+     * @return The subjectContainerId.
+     */
+    java.lang.String getSubjectContainerId();
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to. It is set if group is external.
+     * </pre>
+     *
+     * <code>string subject_container_id = 6;</code>
+     * @return The bytes for subjectContainerId.
+     */
+    com.google.protobuf.ByteString
+        getSubjectContainerIdBytes();
+
+    /**
+     * <pre>
+     * Id of the group from external system. It is set if group is external.
+     * </pre>
+     *
+     * <code>string external_id = 7;</code>
+     * @return The externalId.
+     */
+    java.lang.String getExternalId();
+    /**
+     * <pre>
+     * Id of the group from external system. It is set if group is external.
+     * </pre>
+     *
+     * <code>string external_id = 7;</code>
+     * @return The bytes for externalId.
+     */
+    com.google.protobuf.ByteString
+        getExternalIdBytes();
   }
   /**
    * <pre>
@@ -147,6 +187,8 @@ public final class GroupOuterClass {
       organizationId_ = "";
       name_ = "";
       description_ = "";
+      subjectContainerId_ = "";
+      externalId_ = "";
     }
 
     @java.lang.Override
@@ -214,6 +256,18 @@ public final class GroupOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               description_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectContainerId_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalId_ = s;
               break;
             }
             default: {
@@ -470,6 +524,98 @@ public final class GroupOuterClass {
       }
     }
 
+    public static final int SUBJECT_CONTAINER_ID_FIELD_NUMBER = 6;
+    private volatile java.lang.Object subjectContainerId_;
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to. It is set if group is external.
+     * </pre>
+     *
+     * <code>string subject_container_id = 6;</code>
+     * @return The subjectContainerId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectContainerId() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectContainerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the subject container that external group belongs to. It is set if group is external.
+     * </pre>
+     *
+     * <code>string subject_container_id = 6;</code>
+     * @return The bytes for subjectContainerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectContainerIdBytes() {
+      java.lang.Object ref = subjectContainerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectContainerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTERNAL_ID_FIELD_NUMBER = 7;
+    private volatile java.lang.Object externalId_;
+    /**
+     * <pre>
+     * Id of the group from external system. It is set if group is external.
+     * </pre>
+     *
+     * <code>string external_id = 7;</code>
+     * @return The externalId.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalId() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of the group from external system. It is set if group is external.
+     * </pre>
+     *
+     * <code>string external_id = 7;</code>
+     * @return The bytes for externalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalIdBytes() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -499,6 +645,12 @@ public final class GroupOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, externalId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -523,6 +675,12 @@ public final class GroupOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectContainerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, subjectContainerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, externalId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -552,6 +710,10 @@ public final class GroupOuterClass {
           .equals(other.getName())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (!getSubjectContainerId()
+          .equals(other.getSubjectContainerId())) return false;
+      if (!getExternalId()
+          .equals(other.getExternalId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -575,6 +737,10 @@ public final class GroupOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + SUBJECT_CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectContainerId().hashCode();
+      hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -727,6 +893,10 @@ public final class GroupOuterClass {
 
         description_ = "";
 
+        subjectContainerId_ = "";
+
+        externalId_ = "";
+
         return this;
       }
 
@@ -762,6 +932,8 @@ public final class GroupOuterClass {
         }
         result.name_ = name_;
         result.description_ = description_;
+        result.subjectContainerId_ = subjectContainerId_;
+        result.externalId_ = externalId_;
         onBuilt();
         return result;
       }
@@ -827,6 +999,14 @@ public final class GroupOuterClass {
         }
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
+          onChanged();
+        }
+        if (!other.getSubjectContainerId().isEmpty()) {
+          subjectContainerId_ = other.subjectContainerId_;
+          onChanged();
+        }
+        if (!other.getExternalId().isEmpty()) {
+          externalId_ = other.externalId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1396,6 +1576,198 @@ public final class GroupOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object subjectContainerId_ = "";
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to. It is set if group is external.
+       * </pre>
+       *
+       * <code>string subject_container_id = 6;</code>
+       * @return The subjectContainerId.
+       */
+      public java.lang.String getSubjectContainerId() {
+        java.lang.Object ref = subjectContainerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectContainerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to. It is set if group is external.
+       * </pre>
+       *
+       * <code>string subject_container_id = 6;</code>
+       * @return The bytes for subjectContainerId.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectContainerIdBytes() {
+        java.lang.Object ref = subjectContainerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectContainerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to. It is set if group is external.
+       * </pre>
+       *
+       * <code>string subject_container_id = 6;</code>
+       * @param value The subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to. It is set if group is external.
+       * </pre>
+       *
+       * <code>string subject_container_id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectContainerId() {
+        
+        subjectContainerId_ = getDefaultInstance().getSubjectContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the subject container that external group belongs to. It is set if group is external.
+       * </pre>
+       *
+       * <code>string subject_container_id = 6;</code>
+       * @param value The bytes for subjectContainerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectContainerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalId_ = "";
+      /**
+       * <pre>
+       * Id of the group from external system. It is set if group is external.
+       * </pre>
+       *
+       * <code>string external_id = 7;</code>
+       * @return The externalId.
+       */
+      public java.lang.String getExternalId() {
+        java.lang.Object ref = externalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the group from external system. It is set if group is external.
+       * </pre>
+       *
+       * <code>string external_id = 7;</code>
+       * @return The bytes for externalId.
+       */
+      public com.google.protobuf.ByteString
+          getExternalIdBytes() {
+        java.lang.Object ref = externalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of the group from external system. It is set if group is external.
+       * </pre>
+       *
+       * <code>string external_id = 7;</code>
+       * @param value The externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the group from external system. It is set if group is external.
+       * </pre>
+       *
+       * <code>string external_id = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalId() {
+        
+        externalId_ = getDefaultInstance().getExternalId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the group from external system. It is set if group is external.
+       * </pre>
+       *
+       * <code>string external_id = 7;</code>
+       * @param value The bytes for externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1466,13 +1838,15 @@ public final class GroupOuterClass {
       "\n/yandex/cloud/organizationmanager/v1/gr" +
       "oup.proto\022#yandex.cloud.organizationmana" +
       "ger.v1\032\037google/protobuf/timestamp.proto\"" +
-      "\177\n\005Group\022\n\n\002id\030\001 \001(\t\022\027\n\017organization_id\030" +
-      "\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descripti" +
-      "on\030\005 \001(\tB\206\001\n\'yandex.cloud.api.organizati" +
-      "onmanager.v1Z[github.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/organizationmanag" +
-      "er/v1;organizationmanagerb\006proto3"
+      "\262\001\n\005Group\022\n\n\002id\030\001 \001(\t\022\027\n\017organization_id" +
+      "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descript" +
+      "ion\030\005 \001(\t\022\034\n\024subject_container_id\030\006 \001(\t\022" +
+      "\023\n\013external_id\030\007 \001(\tB\206\001\n\'yandex.cloud.ap" +
+      "i.organizationmanager.v1Z[github.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/organ" +
+      "izationmanager/v1;organizationmanagerb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1484,7 +1858,7 @@ public final class GroupOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_Group_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_Group_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "CreatedAt", "Name", "Description", });
+        new java.lang.String[] { "Id", "OrganizationId", "CreatedAt", "Name", "Description", "SubjectContainerId", "ExternalId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

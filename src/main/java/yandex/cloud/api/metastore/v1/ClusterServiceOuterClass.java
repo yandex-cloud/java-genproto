@@ -3045,7 +3045,7 @@ public final class ClusterServiceOuterClass {
      * Service account used to access Cloud resources.
      * </pre>
      *
-     * <code>string service_account_id = 14 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
@@ -3054,7 +3054,7 @@ public final class ClusterServiceOuterClass {
      * Service account used to access Cloud resources.
      * </pre>
      *
-     * <code>string service_account_id = 14 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
@@ -3683,7 +3683,7 @@ public final class ClusterServiceOuterClass {
      * Service account used to access Cloud resources.
      * </pre>
      *
-     * <code>string service_account_id = 14 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The serviceAccountId.
      */
     @java.lang.Override
@@ -3704,7 +3704,7 @@ public final class ClusterServiceOuterClass {
      * Service account used to access Cloud resources.
      * </pre>
      *
-     * <code>string service_account_id = 14 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for serviceAccountId.
      */
     @java.lang.Override
@@ -5154,7 +5154,7 @@ public final class ClusterServiceOuterClass {
        * Service account used to access Cloud resources.
        * </pre>
        *
-       * <code>string service_account_id = 14 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
@@ -5174,7 +5174,7 @@ public final class ClusterServiceOuterClass {
        * Service account used to access Cloud resources.
        * </pre>
        *
-       * <code>string service_account_id = 14 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
@@ -5195,7 +5195,7 @@ public final class ClusterServiceOuterClass {
        * Service account used to access Cloud resources.
        * </pre>
        *
-       * <code>string service_account_id = 14 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The serviceAccountId to set.
        * @return This builder for chaining.
        */
@@ -5214,7 +5214,7 @@ public final class ClusterServiceOuterClass {
        * Service account used to access Cloud resources.
        * </pre>
        *
-       * <code>string service_account_id = 14 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
@@ -5228,7 +5228,7 @@ public final class ClusterServiceOuterClass {
        * Service account used to access Cloud resources.
        * </pre>
        *
-       * <code>string service_account_id = 14 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for serviceAccountId to set.
        * @return This builder for chaining.
        */
@@ -21149,7 +21149,7 @@ public final class ClusterServiceOuterClass {
       "ge_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(" +
       "\tB\n\212\3101\006<=1000\"e\n\024ListClustersResponse\0224\n" +
       "\010clusters\030\001 \003(\0132\".yandex.cloud.metastore" +
-      ".v1.Cluster\022\027\n\017next_page_token\030\002 \001(\t\"\231\005\n" +
+      ".v1.Cluster\022\027\n\017next_page_token\030\002 \001(\t\"\235\005\n" +
       "\024CreateClusterRequest\022\037\n\tfolder_id\030\001 \001(\t" +
       "B\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=" +
       "63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001(" +
@@ -21159,109 +21159,109 @@ public final class ClusterServiceOuterClass {
       "z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023d" +
       "eletion_protection\030\013 \001(\010\022\017\n\007version\030\014 \001(" +
       "\t\022:\n\013config_spec\030\r \001(\0132%.yandex.cloud.me" +
-      "tastore.v1.ConfigSpec\022$\n\022service_account" +
-      "_id\030\016 \001(\tB\010\212\3101\004<=50\0229\n\007logging\030\017 \001(\0132(.y" +
-      "andex.cloud.metastore.v1.LoggingConfig\0229" +
-      "\n\007network\030\020 \001(\0132(.yandex.cloud.metastore" +
-      ".v1.NetworkConfig\022H\n\022maintenance_window\030" +
-      "\021 \001(\0132,.yandex.cloud.metastore.v1.Mainte" +
-      "nanceWindow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\013\"+\n\025CreateCluste" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\333\005\n\024Update" +
-      "ClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\022 \n\004name\030\003 \001(\tB\022\362\3071\016[a-" +
-      "zA-Z0-9_-]*\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=" +
-      "256\022\214\001\n\006labels\030\005 \003(\0132;.yandex.cloud.meta" +
-      "store.v1.UpdateClusterRequest.LabelsEntr" +
-      "yB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004" +
-      "1-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deletion_p" +
-      "rotection\030\007 \001(\010\022$\n\022service_account_id\030\010 " +
-      "\001(\tB\010\212\3101\004<=50\0229\n\007logging\030\t \001(\0132(.yandex." +
-      "cloud.metastore.v1.LoggingConfig\022H\n\014netw" +
-      "ork_spec\030\n \001(\01322.yandex.cloud.metastore." +
-      "v1.UpdateNetworkConfigSpec\022G\n\013config_spe" +
-      "c\030\013 \001(\01322.yandex.cloud.metastore.v1.Upda" +
-      "teClusterConfigSpec\022H\n\022maintenance_windo" +
-      "w\030\014 \001(\0132,.yandex.cloud.metastore.v1.Main" +
-      "tenanceWindow\022\017\n\007version\030\r \001(\t\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010" +
-      "\006\020\007\"+\n\025UpdateClusterMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023Start" +
-      "ClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"*\n\024StartClusterMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"c\n\021Impor" +
-      "tDataRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\024\n\006bucket\030\002 \001(\tB\004\350\3071\001\022\026\n\010filepath" +
-      "\030\003 \001(\tB\004\350\3071\001\"(\n\022ImportDataMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\"c\n\021ExportDataRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\006bucket\030" +
-      "\002 \001(\tB\004\350\3071\001\022\026\n\010filepath\030\003 \001(\tB\004\350\3071\001\"(\n\022E" +
-      "xportDataMetadata\022\022\n\ncluster_id\030\001 \001(\t\"~\n" +
-      "\034ListClusterOperationsRequest\022 \n\ncluster" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\"o\n\035ListClusterOperationsResponse\0225" +
-      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
-      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"K" +
-      "\n\nConfigSpec\0227\n\tresources\030\002 \001(\0132$.yandex" +
-      ".cloud.metastore.v1.ResourcesJ\004\010\001\020\002\"R\n\027U" +
-      "pdateClusterConfigSpec\0227\n\tresources\030\001 \001(" +
-      "\0132$.yandex.cloud.metastore.v1.Resources\"" +
-      "5\n\027UpdateNetworkConfigSpec\022\032\n\022security_g" +
-      "roup_ids\030\001 \003(\t2\230\016\n\016ClusterService\022\214\001\n\003Ge" +
-      "t\022,.yandex.cloud.metastore.v1.GetCluster" +
-      "Request\032\".yandex.cloud.metastore.v1.Clus" +
-      "ter\"3\202\323\344\223\002-\022+/managed-metastore/v1/clust" +
-      "ers/{cluster_id}\022\217\001\n\004List\022..yandex.cloud" +
-      ".metastore.v1.ListClustersRequest\032/.yand" +
-      "ex.cloud.metastore.v1.ListClustersRespon" +
-      "se\"&\202\323\344\223\002 \022\036/managed-metastore/v1/cluste" +
-      "rs\022\253\001\n\006Create\022/.yandex.cloud.metastore.v" +
-      "1.CreateClusterRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"M\202\323\344\223\002#\"\036/managed-meta" +
-      "store/v1/clusters:\001*\262\322* \n\025CreateClusterM" +
-      "etadata\022\007Cluster\022\270\001\n\006Update\022/.yandex.clo" +
-      "ud.metastore.v1.UpdateClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"Z\202\323\344\223\00202" +
-      "+/managed-metastore/v1/clusters/{cluster" +
-      "_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clus" +
-      "ter\022\303\001\n\006Delete\022/.yandex.cloud.metastore." +
-      "v1.DeleteClusterRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"e\202\323\344\223\002-*+/managed-met" +
-      "astore/v1/clusters/{cluster_id}\262\322*.\n\025Del" +
-      "eteClusterMetadata\022\025google.protobuf.Empt" +
-      "y\022\270\001\n\005Start\022..yandex.cloud.metastore.v1." +
-      "StartClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"\\\202\323\344\223\0023\"1/managed-metasto" +
-      "re/v1/clusters/{cluster_id}:start\262\322*\037\n\024S" +
-      "tartClusterMetadata\022\007Cluster\022\264\001\n\004Stop\022-." +
-      "yandex.cloud.metastore.v1.StopClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "Z\202\323\344\223\0022\"0/managed-metastore/v1/clusters/" +
-      "{cluster_id}:stop\262\322*\036\n\023StopClusterMetada" +
-      "ta\022\007Cluster\022\275\001\n\nImportData\022,.yandex.clou" +
-      "d.metastore.v1.ImportDataRequest\032!.yande" +
-      "x.cloud.operation.Operation\"^\202\323\344\223\0027\"2/ma" +
-      "naged-metastore/v1/clusters/{cluster_id}" +
-      ":import:\001*\262\322*\035\n\022ImportDataMetadata\022\007Clus" +
-      "ter\022\275\001\n\nExportData\022,.yandex.cloud.metast" +
-      "ore.v1.ExportDataRequest\032!.yandex.cloud." +
-      "operation.Operation\"^\202\323\344\223\0027\"2/managed-me" +
-      "tastore/v1/clusters/{cluster_id}:export:" +
-      "\001*\262\322*\035\n\022ExportDataMetadata\022\007Cluster\022\303\001\n\016" +
-      "ListOperations\0227.yandex.cloud.metastore." +
-      "v1.ListClusterOperationsRequest\0328.yandex" +
-      ".cloud.metastore.v1.ListClusterOperation" +
-      "sResponse\">\202\323\344\223\0028\0226/managed-metastore/v1" +
-      "/clusters/{cluster_id}/operationsBh\n\035yan" +
-      "dex.cloud.api.metastore.v1ZGgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/met" +
-      "astore/v1;metastoreb\006proto3"
+      "tastore.v1.ConfigSpec\022(\n\022service_account" +
+      "_id\030\016 \001(\tB\014\350\3071\001\212\3101\004<=50\0229\n\007logging\030\017 \001(\013" +
+      "2(.yandex.cloud.metastore.v1.LoggingConf" +
+      "ig\0229\n\007network\030\020 \001(\0132(.yandex.cloud.metas" +
+      "tore.v1.NetworkConfig\022H\n\022maintenance_win" +
+      "dow\030\021 \001(\0132,.yandex.cloud.metastore.v1.Ma" +
+      "intenanceWindow\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\013\"+\n\025CreateCl" +
+      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\333\005\n\024Up" +
+      "dateClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.goog" +
+      "le.protobuf.FieldMask\022 \n\004name\030\003 \001(\tB\022\362\3071" +
+      "\016[a-zA-Z0-9_-]*\022\036\n\013description\030\004 \001(\tB\t\212\310" +
+      "1\005<=256\022\214\001\n\006labels\030\005 \003(\0132;.yandex.cloud." +
+      "metastore.v1.UpdateClusterRequest.Labels" +
+      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
+      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deleti" +
+      "on_protection\030\007 \001(\010\022$\n\022service_account_i" +
+      "d\030\010 \001(\tB\010\212\3101\004<=50\0229\n\007logging\030\t \001(\0132(.yan" +
+      "dex.cloud.metastore.v1.LoggingConfig\022H\n\014" +
+      "network_spec\030\n \001(\01322.yandex.cloud.metast" +
+      "ore.v1.UpdateNetworkConfigSpec\022G\n\013config" +
+      "_spec\030\013 \001(\01322.yandex.cloud.metastore.v1." +
+      "UpdateClusterConfigSpec\022H\n\022maintenance_w" +
+      "indow\030\014 \001(\0132,.yandex.cloud.metastore.v1." +
+      "MaintenanceWindow\022\017\n\007version\030\r \001(\t\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001J\004\010\006\020\007\"+\n\025UpdateClusterMetadata\022\022\n\nclus" +
+      "ter_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Delete" +
+      "ClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023S" +
+      "tartClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\"6\n\022StopClusterRequest\022 " +
+      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023Stop" +
+      "ClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"c\n\021I" +
+      "mportDataRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\024\n\006bucket\030\002 \001(\tB\004\350\3071\001\022\026\n\010file" +
+      "path\030\003 \001(\tB\004\350\3071\001\"(\n\022ImportDataMetadata\022\022" +
+      "\n\ncluster_id\030\001 \001(\t\"c\n\021ExportDataRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\006buc" +
+      "ket\030\002 \001(\tB\004\350\3071\001\022\026\n\010filepath\030\003 \001(\tB\004\350\3071\001\"" +
+      "(\n\022ExportDataMetadata\022\022\n\ncluster_id\030\001 \001(" +
+      "\t\"~\n\034ListClusterOperationsRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
+      "\212\3101\005<=100\"o\n\035ListClusterOperationsRespon" +
+      "se\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.op" +
+      "eration.Operation\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"K\n\nConfigSpec\0227\n\tresources\030\002 \001(\0132$.ya" +
+      "ndex.cloud.metastore.v1.ResourcesJ\004\010\001\020\002\"" +
+      "R\n\027UpdateClusterConfigSpec\0227\n\tresources\030" +
+      "\001 \001(\0132$.yandex.cloud.metastore.v1.Resour" +
+      "ces\"5\n\027UpdateNetworkConfigSpec\022\032\n\022securi" +
+      "ty_group_ids\030\001 \003(\t2\230\016\n\016ClusterService\022\214\001" +
+      "\n\003Get\022,.yandex.cloud.metastore.v1.GetClu" +
+      "sterRequest\032\".yandex.cloud.metastore.v1." +
+      "Cluster\"3\202\323\344\223\002-\022+/managed-metastore/v1/c" +
+      "lusters/{cluster_id}\022\217\001\n\004List\022..yandex.c" +
+      "loud.metastore.v1.ListClustersRequest\032/." +
+      "yandex.cloud.metastore.v1.ListClustersRe" +
+      "sponse\"&\202\323\344\223\002 \022\036/managed-metastore/v1/cl" +
+      "usters\022\253\001\n\006Create\022/.yandex.cloud.metasto" +
+      "re.v1.CreateClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"M\202\323\344\223\002#\"\036/managed-" +
+      "metastore/v1/clusters:\001*\262\322* \n\025CreateClus" +
+      "terMetadata\022\007Cluster\022\270\001\n\006Update\022/.yandex" +
+      ".cloud.metastore.v1.UpdateClusterRequest" +
+      "\032!.yandex.cloud.operation.Operation\"Z\202\323\344" +
+      "\223\00202+/managed-metastore/v1/clusters/{clu" +
+      "ster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007" +
+      "Cluster\022\303\001\n\006Delete\022/.yandex.cloud.metast" +
+      "ore.v1.DeleteClusterRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"e\202\323\344\223\002-*+/managed" +
+      "-metastore/v1/clusters/{cluster_id}\262\322*.\n" +
+      "\025DeleteClusterMetadata\022\025google.protobuf." +
+      "Empty\022\270\001\n\005Start\022..yandex.cloud.metastore" +
+      ".v1.StartClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\\\202\323\344\223\0023\"1/managed-met" +
+      "astore/v1/clusters/{cluster_id}:start\262\322*" +
+      "\037\n\024StartClusterMetadata\022\007Cluster\022\264\001\n\004Sto" +
+      "p\022-.yandex.cloud.metastore.v1.StopCluste" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"Z\202\323\344\223\0022\"0/managed-metastore/v1/clust" +
+      "ers/{cluster_id}:stop\262\322*\036\n\023StopClusterMe" +
+      "tadata\022\007Cluster\022\275\001\n\nImportData\022,.yandex." +
+      "cloud.metastore.v1.ImportDataRequest\032!.y" +
+      "andex.cloud.operation.Operation\"^\202\323\344\223\0027\"" +
+      "2/managed-metastore/v1/clusters/{cluster" +
+      "_id}:import:\001*\262\322*\035\n\022ImportDataMetadata\022\007" +
+      "Cluster\022\275\001\n\nExportData\022,.yandex.cloud.me" +
+      "tastore.v1.ExportDataRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"^\202\323\344\223\0027\"2/manage" +
+      "d-metastore/v1/clusters/{cluster_id}:exp" +
+      "ort:\001*\262\322*\035\n\022ExportDataMetadata\022\007Cluster\022" +
+      "\303\001\n\016ListOperations\0227.yandex.cloud.metast" +
+      "ore.v1.ListClusterOperationsRequest\0328.ya" +
+      "ndex.cloud.metastore.v1.ListClusterOpera" +
+      "tionsResponse\">\202\323\344\223\0028\0226/managed-metastor" +
+      "e/v1/clusters/{cluster_id}/operationsBh\n" +
+      "\035yandex.cloud.api.metastore.v1ZGgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/metastore/v1;metastoreb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

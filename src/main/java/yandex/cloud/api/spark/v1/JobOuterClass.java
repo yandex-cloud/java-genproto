@@ -231,6 +231,21 @@ public final class JobOuterClass {
     yandex.cloud.api.spark.v1.JobOuterClass.PysparkJobOrBuilder getPysparkJobOrBuilder();
 
     /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+     * @return Whether the sparkConnectJob field is set.
+     */
+    boolean hasSparkConnectJob();
+    /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+     * @return The sparkConnectJob.
+     */
+    yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob getSparkConnectJob();
+    /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+     */
+    yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder getSparkConnectJobOrBuilder();
+
+    /**
      * <pre>
      * Spark UI Url.
      * </pre>
@@ -249,6 +264,46 @@ public final class JobOuterClass {
      */
     com.google.protobuf.ByteString
         getUiUrlBytes();
+
+    /**
+     * <pre>
+     * Service account used to access Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 13;</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * Service account used to access Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 13;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * Spark Connect Url.
+     * </pre>
+     *
+     * <code>string connect_url = 14;</code>
+     * @return The connectUrl.
+     */
+    java.lang.String getConnectUrl();
+    /**
+     * <pre>
+     * Spark Connect Url.
+     * </pre>
+     *
+     * <code>string connect_url = 14;</code>
+     * @return The bytes for connectUrl.
+     */
+    com.google.protobuf.ByteString
+        getConnectUrlBytes();
 
     public yandex.cloud.api.spark.v1.JobOuterClass.Job.JobSpecCase getJobSpecCase();
   }
@@ -275,6 +330,8 @@ public final class JobOuterClass {
       createdBy_ = "";
       status_ = 0;
       uiUrl_ = "";
+      serviceAccountId_ = "";
+      connectUrl_ = "";
     }
 
     @java.lang.Override
@@ -408,6 +465,32 @@ public final class JobOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               uiUrl_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              connectUrl_ = s;
+              break;
+            }
+            case 162: {
+              yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder subBuilder = null;
+              if (jobSpecCase_ == 20) {
+                subBuilder = ((yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_).toBuilder();
+              }
+              jobSpec_ =
+                  input.readMessage(yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_);
+                jobSpec_ = subBuilder.buildPartial();
+              }
+              jobSpecCase_ = 20;
               break;
             }
             default: {
@@ -667,6 +750,7 @@ public final class JobOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SPARK_JOB(9),
       PYSPARK_JOB(10),
+      SPARK_CONNECT_JOB(20),
       JOBSPEC_NOT_SET(0);
       private final int value;
       private JobSpecCase(int value) {
@@ -686,6 +770,7 @@ public final class JobOuterClass {
         switch (value) {
           case 9: return SPARK_JOB;
           case 10: return PYSPARK_JOB;
+          case 20: return SPARK_CONNECT_JOB;
           case 0: return JOBSPEC_NOT_SET;
           default: return null;
         }
@@ -1090,6 +1175,37 @@ public final class JobOuterClass {
       return yandex.cloud.api.spark.v1.JobOuterClass.PysparkJob.getDefaultInstance();
     }
 
+    public static final int SPARK_CONNECT_JOB_FIELD_NUMBER = 20;
+    /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+     * @return Whether the sparkConnectJob field is set.
+     */
+    @java.lang.Override
+    public boolean hasSparkConnectJob() {
+      return jobSpecCase_ == 20;
+    }
+    /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+     * @return The sparkConnectJob.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob getSparkConnectJob() {
+      if (jobSpecCase_ == 20) {
+         return (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_;
+      }
+      return yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder getSparkConnectJobOrBuilder() {
+      if (jobSpecCase_ == 20) {
+         return (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_;
+      }
+      return yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+    }
+
     public static final int UI_URL_FIELD_NUMBER = 12;
     private volatile java.lang.Object uiUrl_;
     /**
@@ -1130,6 +1246,98 @@ public final class JobOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         uiUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 13;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * Service account used to access Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 13;</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Service account used to access Cloud resources.
+     * </pre>
+     *
+     * <code>string service_account_id = 13;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECT_URL_FIELD_NUMBER = 14;
+    private volatile java.lang.Object connectUrl_;
+    /**
+     * <pre>
+     * Spark Connect Url.
+     * </pre>
+     *
+     * <code>string connect_url = 14;</code>
+     * @return The connectUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectUrl() {
+      java.lang.Object ref = connectUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Spark Connect Url.
+     * </pre>
+     *
+     * <code>string connect_url = 14;</code>
+     * @return The bytes for connectUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectUrlBytes() {
+      java.lang.Object ref = connectUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectUrl_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1183,6 +1391,15 @@ public final class JobOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uiUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, uiUrl_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, serviceAccountId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, connectUrl_);
+      }
+      if (jobSpecCase_ == 20) {
+        output.writeMessage(20, (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1231,6 +1448,16 @@ public final class JobOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uiUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, uiUrl_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, serviceAccountId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, connectUrl_);
+      }
+      if (jobSpecCase_ == 20) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1272,6 +1499,10 @@ public final class JobOuterClass {
       if (status_ != other.status_) return false;
       if (!getUiUrl()
           .equals(other.getUiUrl())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!getConnectUrl()
+          .equals(other.getConnectUrl())) return false;
       if (!getJobSpecCase().equals(other.getJobSpecCase())) return false;
       switch (jobSpecCase_) {
         case 9:
@@ -1281,6 +1512,10 @@ public final class JobOuterClass {
         case 10:
           if (!getPysparkJob()
               .equals(other.getPysparkJob())) return false;
+          break;
+        case 20:
+          if (!getSparkConnectJob()
+              .equals(other.getSparkConnectJob())) return false;
           break;
         case 0:
         default:
@@ -1320,6 +1555,10 @@ public final class JobOuterClass {
       hash = (53 * hash) + status_;
       hash = (37 * hash) + UI_URL_FIELD_NUMBER;
       hash = (53 * hash) + getUiUrl().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (37 * hash) + CONNECT_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectUrl().hashCode();
       switch (jobSpecCase_) {
         case 9:
           hash = (37 * hash) + SPARK_JOB_FIELD_NUMBER;
@@ -1328,6 +1567,10 @@ public final class JobOuterClass {
         case 10:
           hash = (37 * hash) + PYSPARK_JOB_FIELD_NUMBER;
           hash = (53 * hash) + getPysparkJob().hashCode();
+          break;
+        case 20:
+          hash = (37 * hash) + SPARK_CONNECT_JOB_FIELD_NUMBER;
+          hash = (53 * hash) + getSparkConnectJob().hashCode();
           break;
         case 0:
         default:
@@ -1499,6 +1742,10 @@ public final class JobOuterClass {
 
         uiUrl_ = "";
 
+        serviceAccountId_ = "";
+
+        connectUrl_ = "";
+
         jobSpecCase_ = 0;
         jobSpec_ = null;
         return this;
@@ -1561,7 +1808,16 @@ public final class JobOuterClass {
             result.jobSpec_ = pysparkJobBuilder_.build();
           }
         }
+        if (jobSpecCase_ == 20) {
+          if (sparkConnectJobBuilder_ == null) {
+            result.jobSpec_ = jobSpec_;
+          } else {
+            result.jobSpec_ = sparkConnectJobBuilder_.build();
+          }
+        }
         result.uiUrl_ = uiUrl_;
+        result.serviceAccountId_ = serviceAccountId_;
+        result.connectUrl_ = connectUrl_;
         result.jobSpecCase_ = jobSpecCase_;
         onBuilt();
         return result;
@@ -1643,6 +1899,14 @@ public final class JobOuterClass {
           uiUrl_ = other.uiUrl_;
           onChanged();
         }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        if (!other.getConnectUrl().isEmpty()) {
+          connectUrl_ = other.connectUrl_;
+          onChanged();
+        }
         switch (other.getJobSpecCase()) {
           case SPARK_JOB: {
             mergeSparkJob(other.getSparkJob());
@@ -1650,6 +1914,10 @@ public final class JobOuterClass {
           }
           case PYSPARK_JOB: {
             mergePysparkJob(other.getPysparkJob());
+            break;
+          }
+          case SPARK_CONNECT_JOB: {
+            mergeSparkConnectJob(other.getSparkConnectJob());
             break;
           }
           case JOBSPEC_NOT_SET: {
@@ -2910,6 +3178,147 @@ public final class JobOuterClass {
         return pysparkJobBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder> sparkConnectJobBuilder_;
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+       * @return Whether the sparkConnectJob field is set.
+       */
+      @java.lang.Override
+      public boolean hasSparkConnectJob() {
+        return jobSpecCase_ == 20;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+       * @return The sparkConnectJob.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob getSparkConnectJob() {
+        if (sparkConnectJobBuilder_ == null) {
+          if (jobSpecCase_ == 20) {
+            return (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_;
+          }
+          return yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+        } else {
+          if (jobSpecCase_ == 20) {
+            return sparkConnectJobBuilder_.getMessage();
+          }
+          return yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+       */
+      public Builder setSparkConnectJob(yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob value) {
+        if (sparkConnectJobBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jobSpec_ = value;
+          onChanged();
+        } else {
+          sparkConnectJobBuilder_.setMessage(value);
+        }
+        jobSpecCase_ = 20;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+       */
+      public Builder setSparkConnectJob(
+          yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder builderForValue) {
+        if (sparkConnectJobBuilder_ == null) {
+          jobSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          sparkConnectJobBuilder_.setMessage(builderForValue.build());
+        }
+        jobSpecCase_ = 20;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+       */
+      public Builder mergeSparkConnectJob(yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob value) {
+        if (sparkConnectJobBuilder_ == null) {
+          if (jobSpecCase_ == 20 &&
+              jobSpec_ != yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance()) {
+            jobSpec_ = yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.newBuilder((yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            jobSpec_ = value;
+          }
+          onChanged();
+        } else {
+          if (jobSpecCase_ == 20) {
+            sparkConnectJobBuilder_.mergeFrom(value);
+          }
+          sparkConnectJobBuilder_.setMessage(value);
+        }
+        jobSpecCase_ = 20;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+       */
+      public Builder clearSparkConnectJob() {
+        if (sparkConnectJobBuilder_ == null) {
+          if (jobSpecCase_ == 20) {
+            jobSpecCase_ = 0;
+            jobSpec_ = null;
+            onChanged();
+          }
+        } else {
+          if (jobSpecCase_ == 20) {
+            jobSpecCase_ = 0;
+            jobSpec_ = null;
+          }
+          sparkConnectJobBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+       */
+      public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder getSparkConnectJobBuilder() {
+        return getSparkConnectJobFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder getSparkConnectJobOrBuilder() {
+        if ((jobSpecCase_ == 20) && (sparkConnectJobBuilder_ != null)) {
+          return sparkConnectJobBuilder_.getMessageOrBuilder();
+        } else {
+          if (jobSpecCase_ == 20) {
+            return (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_;
+          }
+          return yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.spark.v1.SparkConnectJob spark_connect_job = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder> 
+          getSparkConnectJobFieldBuilder() {
+        if (sparkConnectJobBuilder_ == null) {
+          if (!(jobSpecCase_ == 20)) {
+            jobSpec_ = yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+          }
+          sparkConnectJobBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder>(
+                  (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) jobSpec_,
+                  getParentForChildren(),
+                  isClean());
+          jobSpec_ = null;
+        }
+        jobSpecCase_ = 20;
+        onChanged();;
+        return sparkConnectJobBuilder_;
+      }
+
       private java.lang.Object uiUrl_ = "";
       /**
        * <pre>
@@ -3002,6 +3411,198 @@ public final class JobOuterClass {
   checkByteStringIsUtf8(value);
         
         uiUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * Service account used to access Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 13;</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Service account used to access Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 13;</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Service account used to access Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 13;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Service account used to access Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Service account used to access Cloud resources.
+       * </pre>
+       *
+       * <code>string service_account_id = 13;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectUrl_ = "";
+      /**
+       * <pre>
+       * Spark Connect Url.
+       * </pre>
+       *
+       * <code>string connect_url = 14;</code>
+       * @return The connectUrl.
+       */
+      public java.lang.String getConnectUrl() {
+        java.lang.Object ref = connectUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Spark Connect Url.
+       * </pre>
+       *
+       * <code>string connect_url = 14;</code>
+       * @return The bytes for connectUrl.
+       */
+      public com.google.protobuf.ByteString
+          getConnectUrlBytes() {
+        java.lang.Object ref = connectUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Spark Connect Url.
+       * </pre>
+       *
+       * <code>string connect_url = 14;</code>
+       * @param value The connectUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        connectUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Spark Connect Url.
+       * </pre>
+       *
+       * <code>string connect_url = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectUrl() {
+        
+        connectUrl_ = getDefaultInstance().getConnectUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Spark Connect Url.
+       * </pre>
+       *
+       * <code>string connect_url = 14;</code>
+       * @param value The bytes for connectUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        connectUrl_ = value;
         onChanged();
         return this;
       }
@@ -6225,6 +6826,2521 @@ public final class JobOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.spark.v1.JobOuterClass.SparkJob getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SparkConnectJobOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.spark.v1.SparkConnectJob)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+     * </pre>
+     *
+     * <code>repeated string jar_file_uris = 1;</code>
+     * @return A list containing the jarFileUris.
+     */
+    java.util.List<java.lang.String>
+        getJarFileUrisList();
+    /**
+     * <pre>
+     * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+     * </pre>
+     *
+     * <code>repeated string jar_file_uris = 1;</code>
+     * @return The count of jarFileUris.
+     */
+    int getJarFileUrisCount();
+    /**
+     * <pre>
+     * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+     * </pre>
+     *
+     * <code>repeated string jar_file_uris = 1;</code>
+     * @param index The index of the element to return.
+     * @return The jarFileUris at the given index.
+     */
+    java.lang.String getJarFileUris(int index);
+    /**
+     * <pre>
+     * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+     * </pre>
+     *
+     * <code>repeated string jar_file_uris = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the jarFileUris at the given index.
+     */
+    com.google.protobuf.ByteString
+        getJarFileUrisBytes(int index);
+
+    /**
+     * <pre>
+     * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+     * </pre>
+     *
+     * <code>repeated string file_uris = 2;</code>
+     * @return A list containing the fileUris.
+     */
+    java.util.List<java.lang.String>
+        getFileUrisList();
+    /**
+     * <pre>
+     * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+     * </pre>
+     *
+     * <code>repeated string file_uris = 2;</code>
+     * @return The count of fileUris.
+     */
+    int getFileUrisCount();
+    /**
+     * <pre>
+     * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+     * </pre>
+     *
+     * <code>repeated string file_uris = 2;</code>
+     * @param index The index of the element to return.
+     * @return The fileUris at the given index.
+     */
+    java.lang.String getFileUris(int index);
+    /**
+     * <pre>
+     * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+     * </pre>
+     *
+     * <code>repeated string file_uris = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fileUris at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFileUrisBytes(int index);
+
+    /**
+     * <pre>
+     * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+     * </pre>
+     *
+     * <code>repeated string archive_uris = 3;</code>
+     * @return A list containing the archiveUris.
+     */
+    java.util.List<java.lang.String>
+        getArchiveUrisList();
+    /**
+     * <pre>
+     * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+     * </pre>
+     *
+     * <code>repeated string archive_uris = 3;</code>
+     * @return The count of archiveUris.
+     */
+    int getArchiveUrisCount();
+    /**
+     * <pre>
+     * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+     * </pre>
+     *
+     * <code>repeated string archive_uris = 3;</code>
+     * @param index The index of the element to return.
+     * @return The archiveUris at the given index.
+     */
+    java.lang.String getArchiveUris(int index);
+    /**
+     * <pre>
+     * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+     * </pre>
+     *
+     * <code>repeated string archive_uris = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the archiveUris at the given index.
+     */
+    com.google.protobuf.ByteString
+        getArchiveUrisBytes(int index);
+
+    /**
+     * <pre>
+     * A mapping of property names to values, used to configure Spark.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 4;</code>
+     */
+    int getPropertiesCount();
+    /**
+     * <pre>
+     * A mapping of property names to values, used to configure Spark.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 4;</code>
+     */
+    boolean containsProperties(
+        java.lang.String key);
+    /**
+     * Use {@link #getPropertiesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getProperties();
+    /**
+     * <pre>
+     * A mapping of property names to values, used to configure Spark.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 4;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getPropertiesMap();
+    /**
+     * <pre>
+     * A mapping of property names to values, used to configure Spark.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 4;</code>
+     */
+
+    java.lang.String getPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * A mapping of property names to values, used to configure Spark.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 4;</code>
+     */
+
+    java.lang.String getPropertiesOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 5;</code>
+     * @return A list containing the packages.
+     */
+    java.util.List<java.lang.String>
+        getPackagesList();
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 5;</code>
+     * @return The count of packages.
+     */
+    int getPackagesCount();
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 5;</code>
+     * @param index The index of the element to return.
+     * @return The packages at the given index.
+     */
+    java.lang.String getPackages(int index);
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the packages at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPackagesBytes(int index);
+
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 6;</code>
+     * @return A list containing the repositories.
+     */
+    java.util.List<java.lang.String>
+        getRepositoriesList();
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 6;</code>
+     * @return The count of repositories.
+     */
+    int getRepositoriesCount();
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 6;</code>
+     * @param index The index of the element to return.
+     * @return The repositories at the given index.
+     */
+    java.lang.String getRepositories(int index);
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the repositories at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRepositoriesBytes(int index);
+
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 7;</code>
+     * @return A list containing the excludePackages.
+     */
+    java.util.List<java.lang.String>
+        getExcludePackagesList();
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 7;</code>
+     * @return The count of excludePackages.
+     */
+    int getExcludePackagesCount();
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 7;</code>
+     * @param index The index of the element to return.
+     * @return The excludePackages at the given index.
+     */
+    java.lang.String getExcludePackages(int index);
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludePackages at the given index.
+     */
+    com.google.protobuf.ByteString
+        getExcludePackagesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.spark.v1.SparkConnectJob}
+   */
+  public static final class SparkConnectJob extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.spark.v1.SparkConnectJob)
+      SparkConnectJobOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SparkConnectJob.newBuilder() to construct.
+    private SparkConnectJob(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SparkConnectJob() {
+      jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      fileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SparkConnectJob();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SparkConnectJob(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                jarFileUris_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              jarFileUris_.add(s);
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                fileUris_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              fileUris_.add(s);
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                archiveUris_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              archiveUris_.add(s);
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                properties_ = com.google.protobuf.MapField.newMapField(
+                    PropertiesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              properties__ = input.readMessage(
+                  PropertiesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              properties_.getMutableMap().put(
+                  properties__.getKey(), properties__.getValue());
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                packages_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              packages_.add(s);
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                repositories_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              repositories_.add(s);
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+                excludePackages_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              excludePackages_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          jarFileUris_ = jarFileUris_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          fileUris_ = fileUris_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          archiveUris_ = archiveUris_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          packages_ = packages_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          repositories_ = repositories_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
+          excludePackages_ = excludePackages_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.spark.v1.JobOuterClass.internal_static_yandex_cloud_spark_v1_SparkConnectJob_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetProperties();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.spark.v1.JobOuterClass.internal_static_yandex_cloud_spark_v1_SparkConnectJob_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.class, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder.class);
+    }
+
+    public static final int JAR_FILE_URIS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList jarFileUris_;
+    /**
+     * <pre>
+     * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+     * </pre>
+     *
+     * <code>repeated string jar_file_uris = 1;</code>
+     * @return A list containing the jarFileUris.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getJarFileUrisList() {
+      return jarFileUris_;
+    }
+    /**
+     * <pre>
+     * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+     * </pre>
+     *
+     * <code>repeated string jar_file_uris = 1;</code>
+     * @return The count of jarFileUris.
+     */
+    public int getJarFileUrisCount() {
+      return jarFileUris_.size();
+    }
+    /**
+     * <pre>
+     * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+     * </pre>
+     *
+     * <code>repeated string jar_file_uris = 1;</code>
+     * @param index The index of the element to return.
+     * @return The jarFileUris at the given index.
+     */
+    public java.lang.String getJarFileUris(int index) {
+      return jarFileUris_.get(index);
+    }
+    /**
+     * <pre>
+     * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+     * </pre>
+     *
+     * <code>repeated string jar_file_uris = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the jarFileUris at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getJarFileUrisBytes(int index) {
+      return jarFileUris_.getByteString(index);
+    }
+
+    public static final int FILE_URIS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList fileUris_;
+    /**
+     * <pre>
+     * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+     * </pre>
+     *
+     * <code>repeated string file_uris = 2;</code>
+     * @return A list containing the fileUris.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFileUrisList() {
+      return fileUris_;
+    }
+    /**
+     * <pre>
+     * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+     * </pre>
+     *
+     * <code>repeated string file_uris = 2;</code>
+     * @return The count of fileUris.
+     */
+    public int getFileUrisCount() {
+      return fileUris_.size();
+    }
+    /**
+     * <pre>
+     * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+     * </pre>
+     *
+     * <code>repeated string file_uris = 2;</code>
+     * @param index The index of the element to return.
+     * @return The fileUris at the given index.
+     */
+    public java.lang.String getFileUris(int index) {
+      return fileUris_.get(index);
+    }
+    /**
+     * <pre>
+     * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+     * </pre>
+     *
+     * <code>repeated string file_uris = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fileUris at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFileUrisBytes(int index) {
+      return fileUris_.getByteString(index);
+    }
+
+    public static final int ARCHIVE_URIS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList archiveUris_;
+    /**
+     * <pre>
+     * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+     * </pre>
+     *
+     * <code>repeated string archive_uris = 3;</code>
+     * @return A list containing the archiveUris.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getArchiveUrisList() {
+      return archiveUris_;
+    }
+    /**
+     * <pre>
+     * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+     * </pre>
+     *
+     * <code>repeated string archive_uris = 3;</code>
+     * @return The count of archiveUris.
+     */
+    public int getArchiveUrisCount() {
+      return archiveUris_.size();
+    }
+    /**
+     * <pre>
+     * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+     * </pre>
+     *
+     * <code>repeated string archive_uris = 3;</code>
+     * @param index The index of the element to return.
+     * @return The archiveUris at the given index.
+     */
+    public java.lang.String getArchiveUris(int index) {
+      return archiveUris_.get(index);
+    }
+    /**
+     * <pre>
+     * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+     * </pre>
+     *
+     * <code>repeated string archive_uris = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the archiveUris at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getArchiveUrisBytes(int index) {
+      return archiveUris_.getByteString(index);
+    }
+
+    public static final int PROPERTIES_FIELD_NUMBER = 4;
+    private static final class PropertiesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.spark.v1.JobOuterClass.internal_static_yandex_cloud_spark_v1_SparkConnectJob_PropertiesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> properties_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetProperties() {
+      if (properties_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            PropertiesDefaultEntryHolder.defaultEntry);
+      }
+      return properties_;
+    }
+
+    public int getPropertiesCount() {
+      return internalGetProperties().getMap().size();
+    }
+    /**
+     * <pre>
+     * A mapping of property names to values, used to configure Spark.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 4;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsProperties(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetProperties().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getPropertiesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getProperties() {
+      return getPropertiesMap();
+    }
+    /**
+     * <pre>
+     * A mapping of property names to values, used to configure Spark.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
+      return internalGetProperties().getMap();
+    }
+    /**
+     * <pre>
+     * A mapping of property names to values, used to configure Spark.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProperties().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * A mapping of property names to values, used to configure Spark.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPropertiesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProperties().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int PACKAGES_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList packages_;
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 5;</code>
+     * @return A list containing the packages.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPackagesList() {
+      return packages_;
+    }
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 5;</code>
+     * @return The count of packages.
+     */
+    public int getPackagesCount() {
+      return packages_.size();
+    }
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 5;</code>
+     * @param index The index of the element to return.
+     * @return The packages at the given index.
+     */
+    public java.lang.String getPackages(int index) {
+      return packages_.get(index);
+    }
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the packages at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPackagesBytes(int index) {
+      return packages_.getByteString(index);
+    }
+
+    public static final int REPOSITORIES_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList repositories_;
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 6;</code>
+     * @return A list containing the repositories.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRepositoriesList() {
+      return repositories_;
+    }
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 6;</code>
+     * @return The count of repositories.
+     */
+    public int getRepositoriesCount() {
+      return repositories_.size();
+    }
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 6;</code>
+     * @param index The index of the element to return.
+     * @return The repositories at the given index.
+     */
+    public java.lang.String getRepositories(int index) {
+      return repositories_.get(index);
+    }
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the repositories at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRepositoriesBytes(int index) {
+      return repositories_.getByteString(index);
+    }
+
+    public static final int EXCLUDE_PACKAGES_FIELD_NUMBER = 7;
+    private com.google.protobuf.LazyStringList excludePackages_;
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 7;</code>
+     * @return A list containing the excludePackages.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getExcludePackagesList() {
+      return excludePackages_;
+    }
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 7;</code>
+     * @return The count of excludePackages.
+     */
+    public int getExcludePackagesCount() {
+      return excludePackages_.size();
+    }
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 7;</code>
+     * @param index The index of the element to return.
+     * @return The excludePackages at the given index.
+     */
+    public java.lang.String getExcludePackages(int index) {
+      return excludePackages_.get(index);
+    }
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludePackages at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getExcludePackagesBytes(int index) {
+      return excludePackages_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < jarFileUris_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, jarFileUris_.getRaw(i));
+      }
+      for (int i = 0; i < fileUris_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fileUris_.getRaw(i));
+      }
+      for (int i = 0; i < archiveUris_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, archiveUris_.getRaw(i));
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetProperties(),
+          PropertiesDefaultEntryHolder.defaultEntry,
+          4);
+      for (int i = 0; i < packages_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, packages_.getRaw(i));
+      }
+      for (int i = 0; i < repositories_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, repositories_.getRaw(i));
+      }
+      for (int i = 0; i < excludePackages_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, excludePackages_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < jarFileUris_.size(); i++) {
+          dataSize += computeStringSizeNoTag(jarFileUris_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getJarFileUrisList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < fileUris_.size(); i++) {
+          dataSize += computeStringSizeNoTag(fileUris_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFileUrisList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < archiveUris_.size(); i++) {
+          dataSize += computeStringSizeNoTag(archiveUris_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getArchiveUrisList().size();
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetProperties().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        properties__ = PropertiesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, properties__);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < packages_.size(); i++) {
+          dataSize += computeStringSizeNoTag(packages_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPackagesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < repositories_.size(); i++) {
+          dataSize += computeStringSizeNoTag(repositories_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRepositoriesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < excludePackages_.size(); i++) {
+          dataSize += computeStringSizeNoTag(excludePackages_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getExcludePackagesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob other = (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) obj;
+
+      if (!getJarFileUrisList()
+          .equals(other.getJarFileUrisList())) return false;
+      if (!getFileUrisList()
+          .equals(other.getFileUrisList())) return false;
+      if (!getArchiveUrisList()
+          .equals(other.getArchiveUrisList())) return false;
+      if (!internalGetProperties().equals(
+          other.internalGetProperties())) return false;
+      if (!getPackagesList()
+          .equals(other.getPackagesList())) return false;
+      if (!getRepositoriesList()
+          .equals(other.getRepositoriesList())) return false;
+      if (!getExcludePackagesList()
+          .equals(other.getExcludePackagesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getJarFileUrisCount() > 0) {
+        hash = (37 * hash) + JAR_FILE_URIS_FIELD_NUMBER;
+        hash = (53 * hash) + getJarFileUrisList().hashCode();
+      }
+      if (getFileUrisCount() > 0) {
+        hash = (37 * hash) + FILE_URIS_FIELD_NUMBER;
+        hash = (53 * hash) + getFileUrisList().hashCode();
+      }
+      if (getArchiveUrisCount() > 0) {
+        hash = (37 * hash) + ARCHIVE_URIS_FIELD_NUMBER;
+        hash = (53 * hash) + getArchiveUrisList().hashCode();
+      }
+      if (!internalGetProperties().getMap().isEmpty()) {
+        hash = (37 * hash) + PROPERTIES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetProperties().hashCode();
+      }
+      if (getPackagesCount() > 0) {
+        hash = (37 * hash) + PACKAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getPackagesList().hashCode();
+      }
+      if (getRepositoriesCount() > 0) {
+        hash = (37 * hash) + REPOSITORIES_FIELD_NUMBER;
+        hash = (53 * hash) + getRepositoriesList().hashCode();
+      }
+      if (getExcludePackagesCount() > 0) {
+        hash = (37 * hash) + EXCLUDE_PACKAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getExcludePackagesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.spark.v1.SparkConnectJob}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.spark.v1.SparkConnectJob)
+        yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJobOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.spark.v1.JobOuterClass.internal_static_yandex_cloud_spark_v1_SparkConnectJob_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.spark.v1.JobOuterClass.internal_static_yandex_cloud_spark_v1_SparkConnectJob_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.class, yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        internalGetMutableProperties().clear();
+        packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.spark.v1.JobOuterClass.internal_static_yandex_cloud_spark_v1_SparkConnectJob_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob getDefaultInstanceForType() {
+        return yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob build() {
+        yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob buildPartial() {
+        yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob result = new yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          jarFileUris_ = jarFileUris_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.jarFileUris_ = jarFileUris_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          fileUris_ = fileUris_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.fileUris_ = fileUris_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          archiveUris_ = archiveUris_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.archiveUris_ = archiveUris_;
+        result.properties_ = internalGetProperties();
+        result.properties_.makeImmutable();
+        if (((bitField0_ & 0x00000010) != 0)) {
+          packages_ = packages_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.packages_ = packages_;
+        if (((bitField0_ & 0x00000020) != 0)) {
+          repositories_ = repositories_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.repositories_ = repositories_;
+        if (((bitField0_ & 0x00000040) != 0)) {
+          excludePackages_ = excludePackages_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.excludePackages_ = excludePackages_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) {
+          return mergeFrom((yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob other) {
+        if (other == yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob.getDefaultInstance()) return this;
+        if (!other.jarFileUris_.isEmpty()) {
+          if (jarFileUris_.isEmpty()) {
+            jarFileUris_ = other.jarFileUris_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureJarFileUrisIsMutable();
+            jarFileUris_.addAll(other.jarFileUris_);
+          }
+          onChanged();
+        }
+        if (!other.fileUris_.isEmpty()) {
+          if (fileUris_.isEmpty()) {
+            fileUris_ = other.fileUris_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureFileUrisIsMutable();
+            fileUris_.addAll(other.fileUris_);
+          }
+          onChanged();
+        }
+        if (!other.archiveUris_.isEmpty()) {
+          if (archiveUris_.isEmpty()) {
+            archiveUris_ = other.archiveUris_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureArchiveUrisIsMutable();
+            archiveUris_.addAll(other.archiveUris_);
+          }
+          onChanged();
+        }
+        internalGetMutableProperties().mergeFrom(
+            other.internalGetProperties());
+        if (!other.packages_.isEmpty()) {
+          if (packages_.isEmpty()) {
+            packages_ = other.packages_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensurePackagesIsMutable();
+            packages_.addAll(other.packages_);
+          }
+          onChanged();
+        }
+        if (!other.repositories_.isEmpty()) {
+          if (repositories_.isEmpty()) {
+            repositories_ = other.repositories_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureRepositoriesIsMutable();
+            repositories_.addAll(other.repositories_);
+          }
+          onChanged();
+        }
+        if (!other.excludePackages_.isEmpty()) {
+          if (excludePackages_.isEmpty()) {
+            excludePackages_ = other.excludePackages_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureExcludePackagesIsMutable();
+            excludePackages_.addAll(other.excludePackages_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureJarFileUrisIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          jarFileUris_ = new com.google.protobuf.LazyStringArrayList(jarFileUris_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+       * </pre>
+       *
+       * <code>repeated string jar_file_uris = 1;</code>
+       * @return A list containing the jarFileUris.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getJarFileUrisList() {
+        return jarFileUris_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+       * </pre>
+       *
+       * <code>repeated string jar_file_uris = 1;</code>
+       * @return The count of jarFileUris.
+       */
+      public int getJarFileUrisCount() {
+        return jarFileUris_.size();
+      }
+      /**
+       * <pre>
+       * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+       * </pre>
+       *
+       * <code>repeated string jar_file_uris = 1;</code>
+       * @param index The index of the element to return.
+       * @return The jarFileUris at the given index.
+       */
+      public java.lang.String getJarFileUris(int index) {
+        return jarFileUris_.get(index);
+      }
+      /**
+       * <pre>
+       * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+       * </pre>
+       *
+       * <code>repeated string jar_file_uris = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the jarFileUris at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getJarFileUrisBytes(int index) {
+        return jarFileUris_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+       * </pre>
+       *
+       * <code>repeated string jar_file_uris = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The jarFileUris to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJarFileUris(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureJarFileUrisIsMutable();
+        jarFileUris_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+       * </pre>
+       *
+       * <code>repeated string jar_file_uris = 1;</code>
+       * @param value The jarFileUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addJarFileUris(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureJarFileUrisIsMutable();
+        jarFileUris_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+       * </pre>
+       *
+       * <code>repeated string jar_file_uris = 1;</code>
+       * @param values The jarFileUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllJarFileUris(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureJarFileUrisIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, jarFileUris_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+       * </pre>
+       *
+       * <code>repeated string jar_file_uris = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJarFileUris() {
+        jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Jar file URIs to add to the CLASSPATHs of the Spark driver and tasks.
+       * </pre>
+       *
+       * <code>repeated string jar_file_uris = 1;</code>
+       * @param value The bytes of the jarFileUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addJarFileUrisBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureJarFileUrisIsMutable();
+        jarFileUris_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList fileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFileUrisIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          fileUris_ = new com.google.protobuf.LazyStringArrayList(fileUris_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+       * </pre>
+       *
+       * <code>repeated string file_uris = 2;</code>
+       * @return A list containing the fileUris.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFileUrisList() {
+        return fileUris_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+       * </pre>
+       *
+       * <code>repeated string file_uris = 2;</code>
+       * @return The count of fileUris.
+       */
+      public int getFileUrisCount() {
+        return fileUris_.size();
+      }
+      /**
+       * <pre>
+       * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+       * </pre>
+       *
+       * <code>repeated string file_uris = 2;</code>
+       * @param index The index of the element to return.
+       * @return The fileUris at the given index.
+       */
+      public java.lang.String getFileUris(int index) {
+        return fileUris_.get(index);
+      }
+      /**
+       * <pre>
+       * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+       * </pre>
+       *
+       * <code>repeated string file_uris = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fileUris at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFileUrisBytes(int index) {
+        return fileUris_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+       * </pre>
+       *
+       * <code>repeated string file_uris = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The fileUris to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileUris(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFileUrisIsMutable();
+        fileUris_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+       * </pre>
+       *
+       * <code>repeated string file_uris = 2;</code>
+       * @param value The fileUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFileUris(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFileUrisIsMutable();
+        fileUris_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+       * </pre>
+       *
+       * <code>repeated string file_uris = 2;</code>
+       * @param values The fileUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFileUris(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFileUrisIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fileUris_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+       * </pre>
+       *
+       * <code>repeated string file_uris = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileUris() {
+        fileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URIs of files to be copied to the working directory of Spark drivers and distributed tasks.
+       * </pre>
+       *
+       * <code>repeated string file_uris = 2;</code>
+       * @param value The bytes of the fileUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFileUrisBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFileUrisIsMutable();
+        fileUris_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureArchiveUrisIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          archiveUris_ = new com.google.protobuf.LazyStringArrayList(archiveUris_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+       * </pre>
+       *
+       * <code>repeated string archive_uris = 3;</code>
+       * @return A list containing the archiveUris.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getArchiveUrisList() {
+        return archiveUris_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+       * </pre>
+       *
+       * <code>repeated string archive_uris = 3;</code>
+       * @return The count of archiveUris.
+       */
+      public int getArchiveUrisCount() {
+        return archiveUris_.size();
+      }
+      /**
+       * <pre>
+       * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+       * </pre>
+       *
+       * <code>repeated string archive_uris = 3;</code>
+       * @param index The index of the element to return.
+       * @return The archiveUris at the given index.
+       */
+      public java.lang.String getArchiveUris(int index) {
+        return archiveUris_.get(index);
+      }
+      /**
+       * <pre>
+       * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+       * </pre>
+       *
+       * <code>repeated string archive_uris = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the archiveUris at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getArchiveUrisBytes(int index) {
+        return archiveUris_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+       * </pre>
+       *
+       * <code>repeated string archive_uris = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The archiveUris to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArchiveUris(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureArchiveUrisIsMutable();
+        archiveUris_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+       * </pre>
+       *
+       * <code>repeated string archive_uris = 3;</code>
+       * @param value The archiveUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addArchiveUris(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureArchiveUrisIsMutable();
+        archiveUris_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+       * </pre>
+       *
+       * <code>repeated string archive_uris = 3;</code>
+       * @param values The archiveUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllArchiveUris(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureArchiveUrisIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, archiveUris_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+       * </pre>
+       *
+       * <code>repeated string archive_uris = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearArchiveUris() {
+        archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URIs of archives to be extracted in the working directory of Spark drivers and tasks.
+       * </pre>
+       *
+       * <code>repeated string archive_uris = 3;</code>
+       * @param value The bytes of the archiveUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addArchiveUrisBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureArchiveUrisIsMutable();
+        archiveUris_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> properties_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetProperties() {
+        if (properties_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              PropertiesDefaultEntryHolder.defaultEntry);
+        }
+        return properties_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableProperties() {
+        onChanged();;
+        if (properties_ == null) {
+          properties_ = com.google.protobuf.MapField.newMapField(
+              PropertiesDefaultEntryHolder.defaultEntry);
+        }
+        if (!properties_.isMutable()) {
+          properties_ = properties_.copy();
+        }
+        return properties_;
+      }
+
+      public int getPropertiesCount() {
+        return internalGetProperties().getMap().size();
+      }
+      /**
+       * <pre>
+       * A mapping of property names to values, used to configure Spark.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 4;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsProperties(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetProperties().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getPropertiesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getProperties() {
+        return getPropertiesMap();
+      }
+      /**
+       * <pre>
+       * A mapping of property names to values, used to configure Spark.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
+        return internalGetProperties().getMap();
+      }
+      /**
+       * <pre>
+       * A mapping of property names to values, used to configure Spark.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetProperties().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * A mapping of property names to values, used to configure Spark.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPropertiesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetProperties().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearProperties() {
+        internalGetMutableProperties().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * A mapping of property names to values, used to configure Spark.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 4;</code>
+       */
+
+      public Builder removeProperties(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableProperties().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableProperties() {
+        return internalGetMutableProperties().getMutableMap();
+      }
+      /**
+       * <pre>
+       * A mapping of property names to values, used to configure Spark.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 4;</code>
+       */
+      public Builder putProperties(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableProperties().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A mapping of property names to values, used to configure Spark.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 4;</code>
+       */
+
+      public Builder putAllProperties(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableProperties().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePackagesIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          packages_ = new com.google.protobuf.LazyStringArrayList(packages_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 5;</code>
+       * @return A list containing the packages.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPackagesList() {
+        return packages_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 5;</code>
+       * @return The count of packages.
+       */
+      public int getPackagesCount() {
+        return packages_.size();
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 5;</code>
+       * @param index The index of the element to return.
+       * @return The packages at the given index.
+       */
+      public java.lang.String getPackages(int index) {
+        return packages_.get(index);
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the packages at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPackagesBytes(int index) {
+        return packages_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The packages to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPackages(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePackagesIsMutable();
+        packages_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 5;</code>
+       * @param value The packages to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPackages(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePackagesIsMutable();
+        packages_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 5;</code>
+       * @param values The packages to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPackages(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePackagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, packages_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPackages() {
+        packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 5;</code>
+       * @param value The bytes of the packages to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPackagesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensurePackagesIsMutable();
+        packages_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureRepositoriesIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          repositories_ = new com.google.protobuf.LazyStringArrayList(repositories_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 6;</code>
+       * @return A list containing the repositories.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRepositoriesList() {
+        return repositories_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 6;</code>
+       * @return The count of repositories.
+       */
+      public int getRepositoriesCount() {
+        return repositories_.size();
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 6;</code>
+       * @param index The index of the element to return.
+       * @return The repositories at the given index.
+       */
+      public java.lang.String getRepositories(int index) {
+        return repositories_.get(index);
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 6;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the repositories at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRepositoriesBytes(int index) {
+        return repositories_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 6;</code>
+       * @param index The index to set the value at.
+       * @param value The repositories to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepositories(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRepositoriesIsMutable();
+        repositories_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 6;</code>
+       * @param value The repositories to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRepositories(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRepositoriesIsMutable();
+        repositories_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 6;</code>
+       * @param values The repositories to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRepositories(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRepositoriesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, repositories_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRepositories() {
+        repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 6;</code>
+       * @param value The bytes of the repositories to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRepositoriesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureRepositoriesIsMutable();
+        repositories_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureExcludePackagesIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          excludePackages_ = new com.google.protobuf.LazyStringArrayList(excludePackages_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 7;</code>
+       * @return A list containing the excludePackages.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getExcludePackagesList() {
+        return excludePackages_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 7;</code>
+       * @return The count of excludePackages.
+       */
+      public int getExcludePackagesCount() {
+        return excludePackages_.size();
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 7;</code>
+       * @param index The index of the element to return.
+       * @return The excludePackages at the given index.
+       */
+      public java.lang.String getExcludePackages(int index) {
+        return excludePackages_.get(index);
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 7;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the excludePackages at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getExcludePackagesBytes(int index) {
+        return excludePackages_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 7;</code>
+       * @param index The index to set the value at.
+       * @param value The excludePackages to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExcludePackages(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExcludePackagesIsMutable();
+        excludePackages_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 7;</code>
+       * @param value The excludePackages to add.
+       * @return This builder for chaining.
+       */
+      public Builder addExcludePackages(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExcludePackagesIsMutable();
+        excludePackages_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 7;</code>
+       * @param values The excludePackages to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllExcludePackages(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureExcludePackagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, excludePackages_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExcludePackages() {
+        excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 7;</code>
+       * @param value The bytes of the excludePackages to add.
+       * @return This builder for chaining.
+       */
+      public Builder addExcludePackagesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureExcludePackagesIsMutable();
+        excludePackages_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.spark.v1.SparkConnectJob)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.spark.v1.SparkConnectJob)
+    private static final yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob();
+    }
+
+    public static yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SparkConnectJob>
+        PARSER = new com.google.protobuf.AbstractParser<SparkConnectJob>() {
+      @java.lang.Override
+      public SparkConnectJob parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SparkConnectJob(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SparkConnectJob> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SparkConnectJob> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.spark.v1.JobOuterClass.SparkConnectJob getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9517,6 +12633,16 @@ public final class JobOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_spark_v1_SparkJob_PropertiesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_spark_v1_SparkConnectJob_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_spark_v1_SparkConnectJob_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_spark_v1_SparkConnectJob_PropertiesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_spark_v1_SparkConnectJob_PropertiesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_spark_v1_PysparkJob_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -9537,7 +12663,7 @@ public final class JobOuterClass {
     java.lang.String[] descriptorData = {
       "\n\037yandex/cloud/spark/v1/job.proto\022\025yande" +
       "x.cloud.spark.v1\032\037google/protobuf/timest" +
-      "amp.proto\"\240\004\n\003Job\022\n\n\002id\030\001 \001(\t\022\022\n\ncluster" +
+      "amp.proto\"\234\005\n\003Job\022\n\n\002id\030\001 \001(\t\022\022\n\ncluster" +
       "_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.p" +
       "rotobuf.Timestamp\022.\n\nstarted_at\030\004 \001(\0132\032." +
       "google.protobuf.Timestamp\022/\n\013finished_at" +
@@ -9546,30 +12672,40 @@ public final class JobOuterClass {
       " \001(\0162!.yandex.cloud.spark.v1.Job.Status\022" +
       "4\n\tspark_job\030\t \001(\0132\037.yandex.cloud.spark." +
       "v1.SparkJobH\000\0228\n\013pyspark_job\030\n \001(\0132!.yan" +
-      "dex.cloud.spark.v1.PysparkJobH\000\022\016\n\006ui_ur" +
-      "l\030\014 \001(\t\"\200\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED" +
-      "\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007PENDING\020\002\022\013\n\007RUN" +
-      "NING\020\003\022\t\n\005ERROR\020\004\022\010\n\004DONE\020\005\022\r\n\tCANCELLED" +
-      "\020\006\022\016\n\nCANCELLING\020\007B\n\n\010job_specJ\004\010\013\020\014\"\301\002\n" +
-      "\010SparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_uris" +
-      "\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014archive_uri" +
-      "s\030\004 \003(\t\022C\n\nproperties\030\005 \003(\0132/.yandex.clo" +
-      "ud.spark.v1.SparkJob.PropertiesEntry\022\031\n\021" +
-      "main_jar_file_uri\030\006 \001(\t\022\022\n\nmain_class\030\007 " +
-      "\001(\t\022\020\n\010packages\030\010 \003(\t\022\024\n\014repositories\030\t " +
-      "\003(\t\022\030\n\020exclude_packages\030\n \003(\t\0321\n\017Propert" +
-      "iesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\"\316\002\n\nPysparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_fil" +
-      "e_uris\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014archi" +
-      "ve_uris\030\004 \003(\t\022E\n\nproperties\030\005 \003(\01321.yand" +
-      "ex.cloud.spark.v1.PysparkJob.PropertiesE" +
-      "ntry\022\034\n\024main_python_file_uri\030\006 \001(\t\022\030\n\020py" +
-      "thon_file_uris\030\007 \003(\t\022\020\n\010packages\030\010 \003(\t\022\024" +
-      "\n\014repositories\030\t \003(\t\022\030\n\020exclude_packages" +
-      "\030\n \003(\t\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001B\\\n\031yandex.cloud.api.sp" +
-      "ark.v1Z?github.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/spark/v1;sparkb\006proto3"
+      "dex.cloud.spark.v1.PysparkJobH\000\022C\n\021spark" +
+      "_connect_job\030\024 \001(\0132&.yandex.cloud.spark." +
+      "v1.SparkConnectJobH\000\022\016\n\006ui_url\030\014 \001(\t\022\032\n\022" +
+      "service_account_id\030\r \001(\t\022\023\n\013connect_url\030" +
+      "\016 \001(\t\"\200\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000" +
+      "\022\020\n\014PROVISIONING\020\001\022\013\n\007PENDING\020\002\022\013\n\007RUNNI" +
+      "NG\020\003\022\t\n\005ERROR\020\004\022\010\n\004DONE\020\005\022\r\n\tCANCELLED\020\006" +
+      "\022\016\n\nCANCELLING\020\007B\n\n\010job_specJ\004\010\013\020\014J\004\010\017\020\024" +
+      "\"\301\002\n\010SparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_" +
+      "uris\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014archive" +
+      "_uris\030\004 \003(\t\022C\n\nproperties\030\005 \003(\0132/.yandex" +
+      ".cloud.spark.v1.SparkJob.PropertiesEntry" +
+      "\022\031\n\021main_jar_file_uri\030\006 \001(\t\022\022\n\nmain_clas" +
+      "s\030\007 \001(\t\022\020\n\010packages\030\010 \003(\t\022\024\n\014repositorie" +
+      "s\030\t \003(\t\022\030\n\020exclude_packages\030\n \003(\t\0321\n\017Pro" +
+      "pertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"\222\002\n\017SparkConnectJob\022\025\n\rjar_file_uri" +
+      "s\030\001 \003(\t\022\021\n\tfile_uris\030\002 \003(\t\022\024\n\014archive_ur" +
+      "is\030\003 \003(\t\022J\n\nproperties\030\004 \003(\01326.yandex.cl" +
+      "oud.spark.v1.SparkConnectJob.PropertiesE" +
+      "ntry\022\020\n\010packages\030\005 \003(\t\022\024\n\014repositories\030\006" +
+      " \003(\t\022\030\n\020exclude_packages\030\007 \003(\t\0321\n\017Proper" +
+      "tiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"\316\002\n\nPysparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_fi" +
+      "le_uris\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014arch" +
+      "ive_uris\030\004 \003(\t\022E\n\nproperties\030\005 \003(\01321.yan" +
+      "dex.cloud.spark.v1.PysparkJob.Properties" +
+      "Entry\022\034\n\024main_python_file_uri\030\006 \001(\t\022\030\n\020p" +
+      "ython_file_uris\030\007 \003(\t\022\020\n\010packages\030\010 \003(\t\022" +
+      "\024\n\014repositories\030\t \003(\t\022\030\n\020exclude_package" +
+      "s\030\n \003(\t\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001B\\\n\031yandex.cloud.api.s" +
+      "park.v1Z?github.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/spark/v1;sparkb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9581,7 +12717,7 @@ public final class JobOuterClass {
     internal_static_yandex_cloud_spark_v1_Job_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_Job_descriptor,
-        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "StartedAt", "FinishedAt", "Name", "CreatedBy", "Status", "SparkJob", "PysparkJob", "UiUrl", "JobSpec", });
+        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "StartedAt", "FinishedAt", "Name", "CreatedBy", "Status", "SparkJob", "PysparkJob", "SparkConnectJob", "UiUrl", "ServiceAccountId", "ConnectUrl", "JobSpec", });
     internal_static_yandex_cloud_spark_v1_SparkJob_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_spark_v1_SparkJob_fieldAccessorTable = new
@@ -9594,8 +12730,20 @@ public final class JobOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_SparkJob_PropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_yandex_cloud_spark_v1_PysparkJob_descriptor =
+    internal_static_yandex_cloud_spark_v1_SparkConnectJob_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_spark_v1_SparkConnectJob_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_spark_v1_SparkConnectJob_descriptor,
+        new java.lang.String[] { "JarFileUris", "FileUris", "ArchiveUris", "Properties", "Packages", "Repositories", "ExcludePackages", });
+    internal_static_yandex_cloud_spark_v1_SparkConnectJob_PropertiesEntry_descriptor =
+      internal_static_yandex_cloud_spark_v1_SparkConnectJob_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_spark_v1_SparkConnectJob_PropertiesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_spark_v1_SparkConnectJob_PropertiesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_spark_v1_PysparkJob_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_spark_v1_PysparkJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_PysparkJob_descriptor,

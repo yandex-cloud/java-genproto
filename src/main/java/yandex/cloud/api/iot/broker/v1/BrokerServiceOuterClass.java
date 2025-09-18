@@ -2690,7 +2690,7 @@ public final class BrokerServiceOuterClass {
      * Name of the broker. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -2699,7 +2699,7 @@ public final class BrokerServiceOuterClass {
      * Name of the broker. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3696,7 +3696,7 @@ public final class BrokerServiceOuterClass {
      * Name of the broker. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3717,7 +3717,7 @@ public final class BrokerServiceOuterClass {
      * Name of the broker. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -4620,7 +4620,7 @@ public final class BrokerServiceOuterClass {
        * Name of the broker. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -4640,7 +4640,7 @@ public final class BrokerServiceOuterClass {
        * Name of the broker. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -4661,7 +4661,7 @@ public final class BrokerServiceOuterClass {
        * Name of the broker. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -4680,7 +4680,7 @@ public final class BrokerServiceOuterClass {
        * Name of the broker. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -4694,7 +4694,7 @@ public final class BrokerServiceOuterClass {
        * Name of the broker. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -6247,7 +6247,7 @@ public final class BrokerServiceOuterClass {
      * Name of the broker. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -6256,7 +6256,7 @@ public final class BrokerServiceOuterClass {
      * Name of the broker. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -6611,7 +6611,7 @@ public final class BrokerServiceOuterClass {
      * Name of the broker. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -6632,7 +6632,7 @@ public final class BrokerServiceOuterClass {
      * Name of the broker. The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -7544,7 +7544,7 @@ public final class BrokerServiceOuterClass {
        * Name of the broker. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -7564,7 +7564,7 @@ public final class BrokerServiceOuterClass {
        * Name of the broker. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -7585,7 +7585,7 @@ public final class BrokerServiceOuterClass {
        * Name of the broker. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -7604,7 +7604,7 @@ public final class BrokerServiceOuterClass {
        * Name of the broker. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -7618,7 +7618,7 @@ public final class BrokerServiceOuterClass {
        * Name of the broker. The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -21704,130 +21704,129 @@ public final class BrokerServiceOuterClass {
       "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
       "\030\003 \001(\tB\t\212\3101\005<=100\"c\n\023ListBrokersResponse" +
       "\0223\n\007brokers\030\001 \003(\0132\".yandex.cloud.iot.bro" +
-      "ker.v1.Broker\022\027\n\017next_page_token\030\002 \001(\t\"\223" +
+      "ker.v1.Broker\022\027\n\017next_page_token\030\002 \001(\t\"\211" +
       "\004\n\023CreateBrokerRequest\022\037\n\tfolder_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z" +
-      "]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descripti" +
-      "on\030\003 \001(\tB\t\212\3101\005<=256\022\214\001\n\006labels\030\004 \003(\0132;.y" +
-      "andex.cloud.iot.broker.v1.CreateBrokerRe" +
-      "quest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[" +
-      "-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z" +
-      "]*\022Q\n\014certificates\030\005 \003(\0132;.yandex.cloud." +
-      "iot.broker.v1.CreateBrokerRequest.Certif" +
-      "icate\022\020\n\010password\030\006 \001(\t\022;\n\013log_options\030\007" +
-      " \001(\0132&.yandex.cloud.iot.broker.v1.LogOpt" +
-      "ions\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\032\'\n\013Certificate\022\030\n\020certificat" +
-      "e_data\030\001 \001(\t\")\n\024CreateBrokerMetadata\022\021\n\t" +
-      "broker_id\030\001 \001(\t\"\266\003\n\023UpdateBrokerRequest\022" +
-      "\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013upda" +
-      "te_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
-      "k\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0," +
-      "61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005" +
-      "<=256\022\214\001\n\006labels\030\005 \003(\0132;.yandex.cloud.io" +
-      "t.broker.v1.UpdateBrokerRequest.LabelsEn" +
-      "tryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006" +
-      "\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022;\n\013log_opti" +
-      "ons\030\006 \001(\0132&.yandex.cloud.iot.broker.v1.L" +
-      "ogOptions\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\")\n\024UpdateBrokerMetadata" +
-      "\022\021\n\tbroker_id\030\001 \001(\t\"6\n\023DeleteBrokerReque" +
-      "st\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024D" +
-      "eleteBrokerMetadata\022\021\n\tbroker_id\030\001 \001(\t\"@" +
-      "\n\035ListBrokerCertificatesRequest\022\037\n\tbroke" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"e\n\036ListBrokerCe" +
-      "rtificatesResponse\022C\n\014certificates\030\001 \003(\013" +
-      "2-.yandex.cloud.iot.broker.v1.BrokerCert" +
-      "ificate\"^\n\033AddBrokerCertificateRequest\022\037" +
-      "\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020certi" +
-      "ficate_data\030\003 \001(\tJ\004\010\002\020\003\"F\n\034AddBrokerCert" +
-      "ificateMetadata\022\021\n\tbroker_id\030\001 \001(\t\022\023\n\013fi" +
-      "ngerprint\030\002 \001(\t\"d\n\036DeleteBrokerCertifica" +
-      "teRequest\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"e\n" +
-      "\037DeleteBrokerCertificateMetadata\022\037\n\tbrok" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint" +
-      "\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"=\n\032ListBrokerPasswo" +
-      "rdsRequest\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"\\\n\033ListBrokerPasswordsResponse\022=\n\tpa" +
-      "sswords\030\001 \003(\0132*.yandex.cloud.iot.broker." +
-      "v1.BrokerPassword\"W\n\030AddBrokerPasswordRe" +
-      "quest\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032" +
-      "\n\010password\030\002 \001(\tB\010\212\3101\004>=14\"C\n\031AddBrokerP" +
-      "asswordMetadata\022\021\n\tbroker_id\030\001 \001(\t\022\023\n\013pa" +
-      "ssword_id\030\002 \001(\t\"a\n\033DeleteBrokerPasswordR" +
-      "equest\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "!\n\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\034De" +
-      "leteBrokerPasswordMetadata\022\037\n\tbroker_id\030" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022(\n\004name\030\002 \001(\tB\032\212\3101\004<=50\362" +
+      "\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t" +
+      "\212\3101\005<=256\022\214\001\n\006labels\030\004 \003(\0132;.yandex.clou" +
+      "d.iot.broker.v1.CreateBrokerRequest.Labe" +
+      "lsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*" +
+      "\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022Q\n\014cert" +
+      "ificates\030\005 \003(\0132;.yandex.cloud.iot.broker" +
+      ".v1.CreateBrokerRequest.Certificate\022\020\n\010p" +
+      "assword\030\006 \001(\t\022;\n\013log_options\030\007 \001(\0132&.yan" +
+      "dex.cloud.iot.broker.v1.LogOptions\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\032\'\n\013Certificate\022\030\n\020certificate_data\030\001 \001" +
+      "(\t\")\n\024CreateBrokerMetadata\022\021\n\tbroker_id\030" +
+      "\001 \001(\t\"\254\003\n\023UpdateBrokerRequest\022\037\n\tbroker_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 " +
+      "\001(\0132\032.google.protobuf.FieldMask\022(\n\004name\030" +
+      "\003 \001(\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013des" +
+      "cription\030\004 \001(\tB\t\212\3101\005<=256\022\214\001\n\006labels\030\005 \003" +
+      "(\0132;.yandex.cloud.iot.broker.v1.UpdateBr" +
+      "okerRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
+      "0-9a-z]*\022;\n\013log_options\030\006 \001(\0132&.yandex.c" +
+      "loud.iot.broker.v1.LogOptions\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\024" +
+      "UpdateBrokerMetadata\022\021\n\tbroker_id\030\001 \001(\t\"" +
+      "6\n\023DeleteBrokerRequest\022\037\n\tbroker_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteBrokerMetadata\022" +
+      "\021\n\tbroker_id\030\001 \001(\t\"@\n\035ListBrokerCertific" +
+      "atesRequest\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\"e\n\036ListBrokerCertificatesResponse\022C" +
+      "\n\014certificates\030\001 \003(\0132-.yandex.cloud.iot." +
+      "broker.v1.BrokerCertificate\"^\n\033AddBroker" +
+      "CertificateRequest\022\037\n\tbroker_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\030\n\020certificate_data\030\003 \001(\tJ\004\010" +
+      "\002\020\003\"F\n\034AddBrokerCertificateMetadata\022\021\n\tb" +
+      "roker_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\"d\n\036D" +
+      "eleteBrokerCertificateRequest\022\037\n\tbroker_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint\030\002 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"e\n\037DeleteBrokerCertifi" +
+      "cateMetadata\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"=\n\032ListBrokerPasswordsRequest\022\037\n\tbroker" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\033ListBrokerPas" +
+      "swordsResponse\022=\n\tpasswords\030\001 \003(\0132*.yand" +
+      "ex.cloud.iot.broker.v1.BrokerPassword\"W\n" +
+      "\030AddBrokerPasswordRequest\022\037\n\tbroker_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010password\030\002 \001(\tB\010\212\310" +
+      "1\004>=14\"C\n\031AddBrokerPasswordMetadata\022\021\n\tb" +
+      "roker_id\030\001 \001(\t\022\023\n\013password_id\030\002 \001(\t\"a\n\033D" +
+      "eleteBrokerPasswordRequest\022\037\n\tbroker_id\030" +
       "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"\220\001\n\033ListBrokerOperationsR" +
-      "equest\022\027\n\tbroker_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=100" +
-      "0\"n\n\034ListBrokerOperationsResponse\0225\n\nope" +
-      "rations\030\001 \003(\0132!.yandex.cloud.operation.O" +
-      "peration\022\027\n\017next_page_token\030\002 \001(\t2\200\022\n\rBr" +
-      "okerService\022\203\001\n\003Get\022,.yandex.cloud.iot.b" +
-      "roker.v1.GetBrokerRequest\032\".yandex.cloud" +
-      ".iot.broker.v1.Broker\"*\202\323\344\223\002$\022\"/iot-brok" +
-      "er/v1/brokers/{broker_id}\022\207\001\n\004List\022..yan" +
-      "dex.cloud.iot.broker.v1.ListBrokersReque" +
-      "st\032/.yandex.cloud.iot.broker.v1.ListBrok" +
-      "ersResponse\"\036\202\323\344\223\002\030\022\026/iot-broker/v1/brok" +
-      "ers\022\241\001\n\006Create\022/.yandex.cloud.iot.broker" +
-      ".v1.CreateBrokerRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"C\202\323\344\223\002\033\"\026/iot-broker/" +
-      "v1/brokers:\001*\262\322*\036\n\024CreateBrokerMetadata\022" +
-      "\006Broker\022\255\001\n\006Update\022/.yandex.cloud.iot.br" +
-      "oker.v1.UpdateBrokerRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"O\202\323\344\223\002\'2\"/iot-bro" +
-      "ker/v1/brokers/{broker_id}:\001*\262\322*\036\n\024Updat" +
-      "eBrokerMetadata\022\006Broker\022\271\001\n\006Delete\022/.yan" +
-      "dex.cloud.iot.broker.v1.DeleteBrokerRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"[" +
-      "\202\323\344\223\002$*\"/iot-broker/v1/brokers/{broker_i" +
-      "d}\262\322*-\n\024DeleteBrokerMetadata\022\025google.pro" +
-      "tobuf.Empty\022\302\001\n\020ListCertificates\0229.yande" +
-      "x.cloud.iot.broker.v1.ListBrokerCertific" +
-      "atesRequest\032:.yandex.cloud.iot.broker.v1" +
-      ".ListBrokerCertificatesResponse\"7\202\323\344\223\0021\022" +
-      "//iot-broker/v1/brokers/{broker_id}/cert" +
-      "ificates\022\335\001\n\016AddCertificate\0227.yandex.clo" +
-      "ud.iot.broker.v1.AddBrokerCertificateReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "o\202\323\344\223\0024\"//iot-broker/v1/brokers/{broker_" +
-      "id}/certificates:\001*\262\322*1\n\034AddBrokerCertif" +
-      "icateMetadata\022\021BrokerCertificate\022\366\001\n\021Del" +
-      "eteCertificate\022:.yandex.cloud.iot.broker" +
-      ".v1.DeleteBrokerCertificateRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"\201\001\202\323\344\223\002?*=" +
-      "/iot-broker/v1/brokers/{broker_id}/certi" +
-      "ficates/{fingerprint}\262\322*8\n\037DeleteBrokerC" +
-      "ertificateMetadata\022\025google.protobuf.Empt" +
-      "y\022\266\001\n\rListPasswords\0226.yandex.cloud.iot.b" +
-      "roker.v1.ListBrokerPasswordsRequest\0327.ya" +
-      "ndex.cloud.iot.broker.v1.ListBrokerPassw" +
-      "ordsResponse\"4\202\323\344\223\002.\022,/iot-broker/v1/bro" +
-      "kers/{broker_id}/passwords\022\316\001\n\013AddPasswo" +
-      "rd\0224.yandex.cloud.iot.broker.v1.AddBroke" +
-      "rPasswordRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"f\202\323\344\223\0021\",/iot-broker/v1/brok" +
-      "ers/{broker_id}/passwords:\001*\262\322*+\n\031AddBro" +
-      "kerPasswordMetadata\022\016BrokerPassword\022\351\001\n\016" +
-      "DeletePassword\0227.yandex.cloud.iot.broker" +
-      ".v1.DeleteBrokerPasswordRequest\032!.yandex" +
-      ".cloud.operation.Operation\"{\202\323\344\223\002<*:/iot" +
-      "-broker/v1/brokers/{broker_id}/passwords" +
-      "/{password_id}\262\322*5\n\034DeleteBrokerPassword" +
-      "Metadata\022\025google.protobuf.Empty\022\272\001\n\016List" +
-      "Operations\0227.yandex.cloud.iot.broker.v1." +
-      "ListBrokerOperationsRequest\0328.yandex.clo" +
-      "ud.iot.broker.v1.ListBrokerOperationsRes" +
-      "ponse\"5\202\323\344\223\002/\022-/iot-broker/v1/brokers/{b" +
-      "roker_id}/operationsBg\n\036yandex.cloud.api" +
-      ".iot.broker.v1ZEgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/iot/broker/v1;b" +
-      "rokerb\006proto3"
+      "B\014\350\3071\001\212\3101\004<=50\"b\n\034DeleteBrokerPasswordMe" +
+      "tadata\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "!\n\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\033L" +
+      "istBrokerOperationsRequest\022\027\n\tbroker_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-10" +
+      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006fil" +
+      "ter\030\004 \001(\tB\n\212\3101\006<=1000\"n\n\034ListBrokerOpera" +
+      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
+      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t2\200\022\n\rBrokerService\022\203\001\n\003Get\022" +
+      ",.yandex.cloud.iot.broker.v1.GetBrokerRe" +
+      "quest\032\".yandex.cloud.iot.broker.v1.Broke" +
+      "r\"*\202\323\344\223\002$\022\"/iot-broker/v1/brokers/{broke" +
+      "r_id}\022\207\001\n\004List\022..yandex.cloud.iot.broker" +
+      ".v1.ListBrokersRequest\032/.yandex.cloud.io" +
+      "t.broker.v1.ListBrokersResponse\"\036\202\323\344\223\002\030\022" +
+      "\026/iot-broker/v1/brokers\022\241\001\n\006Create\022/.yan" +
+      "dex.cloud.iot.broker.v1.CreateBrokerRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"C" +
+      "\202\323\344\223\002\033\"\026/iot-broker/v1/brokers:\001*\262\322*\036\n\024C" +
+      "reateBrokerMetadata\022\006Broker\022\255\001\n\006Update\022/" +
+      ".yandex.cloud.iot.broker.v1.UpdateBroker" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"O\202\323\344\223\002\'2\"/iot-broker/v1/brokers/{brok" +
+      "er_id}:\001*\262\322*\036\n\024UpdateBrokerMetadata\022\006Bro" +
+      "ker\022\271\001\n\006Delete\022/.yandex.cloud.iot.broker" +
+      ".v1.DeleteBrokerRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"[\202\323\344\223\002$*\"/iot-broker/" +
+      "v1/brokers/{broker_id}\262\322*-\n\024DeleteBroker" +
+      "Metadata\022\025google.protobuf.Empty\022\302\001\n\020List" +
+      "Certificates\0229.yandex.cloud.iot.broker.v" +
+      "1.ListBrokerCertificatesRequest\032:.yandex" +
+      ".cloud.iot.broker.v1.ListBrokerCertifica" +
+      "tesResponse\"7\202\323\344\223\0021\022//iot-broker/v1/brok" +
+      "ers/{broker_id}/certificates\022\335\001\n\016AddCert" +
+      "ificate\0227.yandex.cloud.iot.broker.v1.Add" +
+      "BrokerCertificateRequest\032!.yandex.cloud." +
+      "operation.Operation\"o\202\323\344\223\0024\"//iot-broker" +
+      "/v1/brokers/{broker_id}/certificates:\001*\262" +
+      "\322*1\n\034AddBrokerCertificateMetadata\022\021Broke" +
+      "rCertificate\022\366\001\n\021DeleteCertificate\022:.yan" +
+      "dex.cloud.iot.broker.v1.DeleteBrokerCert" +
+      "ificateRequest\032!.yandex.cloud.operation." +
+      "Operation\"\201\001\202\323\344\223\002?*=/iot-broker/v1/broke" +
+      "rs/{broker_id}/certificates/{fingerprint" +
+      "}\262\322*8\n\037DeleteBrokerCertificateMetadata\022\025" +
+      "google.protobuf.Empty\022\266\001\n\rListPasswords\022" +
+      "6.yandex.cloud.iot.broker.v1.ListBrokerP" +
+      "asswordsRequest\0327.yandex.cloud.iot.broke" +
+      "r.v1.ListBrokerPasswordsResponse\"4\202\323\344\223\002." +
+      "\022,/iot-broker/v1/brokers/{broker_id}/pas" +
+      "swords\022\316\001\n\013AddPassword\0224.yandex.cloud.io" +
+      "t.broker.v1.AddBrokerPasswordRequest\032!.y" +
+      "andex.cloud.operation.Operation\"f\202\323\344\223\0021\"" +
+      ",/iot-broker/v1/brokers/{broker_id}/pass" +
+      "words:\001*\262\322*+\n\031AddBrokerPasswordMetadata\022" +
+      "\016BrokerPassword\022\351\001\n\016DeletePassword\0227.yan" +
+      "dex.cloud.iot.broker.v1.DeleteBrokerPass" +
+      "wordRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"{\202\323\344\223\002<*:/iot-broker/v1/brokers/{" +
+      "broker_id}/passwords/{password_id}\262\322*5\n\034" +
+      "DeleteBrokerPasswordMetadata\022\025google.pro" +
+      "tobuf.Empty\022\272\001\n\016ListOperations\0227.yandex." +
+      "cloud.iot.broker.v1.ListBrokerOperations" +
+      "Request\0328.yandex.cloud.iot.broker.v1.Lis" +
+      "tBrokerOperationsResponse\"5\202\323\344\223\002/\022-/iot-" +
+      "broker/v1/brokers/{broker_id}/operations" +
+      "Bg\n\036yandex.cloud.api.iot.broker.v1ZEgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/iot/broker/v1;brokerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -133,7 +133,7 @@ public final class ProviderServiceGrpc {
 
     /**
      * <pre>
-     * Activate provider for specified client.
+     * Deprecated: This functionality is no longer supported - provider activation happens automatically.
      * </pre>
      */
     public void activate(yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ActivateProviderRequest request,
@@ -190,7 +190,7 @@ public final class ProviderServiceGrpc {
 
     /**
      * <pre>
-     * Activate provider for specified client.
+     * Deprecated: This functionality is no longer supported - provider activation happens automatically.
      * </pre>
      */
     public void activate(yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ActivateProviderRequest request,
@@ -230,7 +230,7 @@ public final class ProviderServiceGrpc {
 
     /**
      * <pre>
-     * Activate provider for specified client.
+     * Deprecated: This functionality is no longer supported - provider activation happens automatically.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation activate(yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ActivateProviderRequest request) {
@@ -268,7 +268,7 @@ public final class ProviderServiceGrpc {
 
     /**
      * <pre>
-     * Activate provider for specified client.
+     * Deprecated: This functionality is no longer supported - provider activation happens automatically.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> activate(

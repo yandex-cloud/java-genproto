@@ -3340,6 +3340,33 @@ public final class Common {
      */
     yandex.cloud.api.ai.assistants.v1.Common.FunctionToolOrBuilder getFunctionOrBuilder();
 
+    /**
+     * <pre>
+     * Performs web retrieval and generative synthesis.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+     * @return Whether the genSearch field is set.
+     */
+    boolean hasGenSearch();
+    /**
+     * <pre>
+     * Performs web retrieval and generative synthesis.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+     * @return The genSearch.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool getGenSearch();
+    /**
+     * <pre>
+     * Performs web retrieval and generative synthesis.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchToolOrBuilder getGenSearchOrBuilder();
+
     public yandex.cloud.api.ai.assistants.v1.Common.Tool.ToolTypeCase getToolTypeCase();
   }
   /**
@@ -3419,6 +3446,20 @@ public final class Common {
               toolTypeCase_ = 2;
               break;
             }
+            case 26: {
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.Builder subBuilder = null;
+              if (toolTypeCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) toolType_).toBuilder();
+              }
+              toolType_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) toolType_);
+                toolType_ = subBuilder.buildPartial();
+              }
+              toolTypeCase_ = 3;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3458,6 +3499,7 @@ public final class Common {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SEARCH_INDEX(1),
       FUNCTION(2),
+      GEN_SEARCH(3),
       TOOLTYPE_NOT_SET(0);
       private final int value;
       private ToolTypeCase(int value) {
@@ -3477,6 +3519,7 @@ public final class Common {
         switch (value) {
           case 1: return SEARCH_INDEX;
           case 2: return FUNCTION;
+          case 3: return GEN_SEARCH;
           case 0: return TOOLTYPE_NOT_SET;
           default: return null;
         }
@@ -3578,6 +3621,49 @@ public final class Common {
       return yandex.cloud.api.ai.assistants.v1.Common.FunctionTool.getDefaultInstance();
     }
 
+    public static final int GEN_SEARCH_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Performs web retrieval and generative synthesis.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+     * @return Whether the genSearch field is set.
+     */
+    @java.lang.Override
+    public boolean hasGenSearch() {
+      return toolTypeCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Performs web retrieval and generative synthesis.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+     * @return The genSearch.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool getGenSearch() {
+      if (toolTypeCase_ == 3) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) toolType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Performs web retrieval and generative synthesis.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchToolOrBuilder getGenSearchOrBuilder() {
+      if (toolTypeCase_ == 3) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) toolType_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3598,6 +3684,9 @@ public final class Common {
       if (toolTypeCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_);
       }
+      if (toolTypeCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) toolType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3614,6 +3703,10 @@ public final class Common {
       if (toolTypeCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.ai.assistants.v1.Common.FunctionTool) toolType_);
+      }
+      if (toolTypeCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) toolType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3640,6 +3733,10 @@ public final class Common {
           if (!getFunction()
               .equals(other.getFunction())) return false;
           break;
+        case 3:
+          if (!getGenSearch()
+              .equals(other.getGenSearch())) return false;
+          break;
         case 0:
         default:
       }
@@ -3662,6 +3759,10 @@ public final class Common {
         case 2:
           hash = (37 * hash) + FUNCTION_FIELD_NUMBER;
           hash = (53 * hash) + getFunction().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + GEN_SEARCH_FIELD_NUMBER;
+          hash = (53 * hash) + getGenSearch().hashCode();
           break;
         case 0:
         default:
@@ -3845,6 +3946,13 @@ public final class Common {
             result.toolType_ = functionBuilder_.build();
           }
         }
+        if (toolTypeCase_ == 3) {
+          if (genSearchBuilder_ == null) {
+            result.toolType_ = toolType_;
+          } else {
+            result.toolType_ = genSearchBuilder_.build();
+          }
+        }
         result.toolTypeCase_ = toolTypeCase_;
         onBuilt();
         return result;
@@ -3901,6 +4009,10 @@ public final class Common {
           }
           case FUNCTION: {
             mergeFunction(other.getFunction());
+            break;
+          }
+          case GEN_SEARCH: {
+            mergeGenSearch(other.getGenSearch());
             break;
           }
           case TOOLTYPE_NOT_SET: {
@@ -4303,6 +4415,183 @@ public final class Common {
         toolTypeCase_ = 2;
         onChanged();;
         return functionBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool, yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchToolOrBuilder> genSearchBuilder_;
+      /**
+       * <pre>
+       * Performs web retrieval and generative synthesis.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+       * @return Whether the genSearch field is set.
+       */
+      @java.lang.Override
+      public boolean hasGenSearch() {
+        return toolTypeCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Performs web retrieval and generative synthesis.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+       * @return The genSearch.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool getGenSearch() {
+        if (genSearchBuilder_ == null) {
+          if (toolTypeCase_ == 3) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) toolType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.getDefaultInstance();
+        } else {
+          if (toolTypeCase_ == 3) {
+            return genSearchBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Performs web retrieval and generative synthesis.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+       */
+      public Builder setGenSearch(yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool value) {
+        if (genSearchBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          toolType_ = value;
+          onChanged();
+        } else {
+          genSearchBuilder_.setMessage(value);
+        }
+        toolTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Performs web retrieval and generative synthesis.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+       */
+      public Builder setGenSearch(
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.Builder builderForValue) {
+        if (genSearchBuilder_ == null) {
+          toolType_ = builderForValue.build();
+          onChanged();
+        } else {
+          genSearchBuilder_.setMessage(builderForValue.build());
+        }
+        toolTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Performs web retrieval and generative synthesis.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+       */
+      public Builder mergeGenSearch(yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool value) {
+        if (genSearchBuilder_ == null) {
+          if (toolTypeCase_ == 3 &&
+              toolType_ != yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.getDefaultInstance()) {
+            toolType_ = yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) toolType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            toolType_ = value;
+          }
+          onChanged();
+        } else {
+          if (toolTypeCase_ == 3) {
+            genSearchBuilder_.mergeFrom(value);
+          }
+          genSearchBuilder_.setMessage(value);
+        }
+        toolTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Performs web retrieval and generative synthesis.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+       */
+      public Builder clearGenSearch() {
+        if (genSearchBuilder_ == null) {
+          if (toolTypeCase_ == 3) {
+            toolTypeCase_ = 0;
+            toolType_ = null;
+            onChanged();
+          }
+        } else {
+          if (toolTypeCase_ == 3) {
+            toolTypeCase_ = 0;
+            toolType_ = null;
+          }
+          genSearchBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Performs web retrieval and generative synthesis.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.Builder getGenSearchBuilder() {
+        return getGenSearchFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Performs web retrieval and generative synthesis.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchToolOrBuilder getGenSearchOrBuilder() {
+        if ((toolTypeCase_ == 3) && (genSearchBuilder_ != null)) {
+          return genSearchBuilder_.getMessageOrBuilder();
+        } else {
+          if (toolTypeCase_ == 3) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) toolType_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Performs web retrieval and generative synthesis.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchTool gen_search = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool, yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchToolOrBuilder> 
+          getGenSearchFieldBuilder() {
+        if (genSearchBuilder_ == null) {
+          if (!(toolTypeCase_ == 3)) {
+            toolType_ = yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.getDefaultInstance();
+          }
+          genSearchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool, yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchToolOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) toolType_,
+                  getParentForChildren(),
+                  isClean());
+          toolType_ = null;
+        }
+        toolTypeCase_ = 3;
+        onChanged();;
+        return genSearchBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16675,6 +16964,5930 @@ public final class Common {
 
   }
 
+  public interface GenSearchToolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.GenSearchTool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Scoping and filtering rules for the search query
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+     * @return Whether the options field is set.
+     */
+    boolean hasOptions();
+    /**
+     * <pre>
+     * Scoping and filtering rules for the search query
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+     * @return The options.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions getOptions();
+    /**
+     * <pre>
+     * Scoping and filtering rules for the search query
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptionsOrBuilder getOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * description of the purpose
+     * </pre>
+     *
+     * <code>string description = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * description of the purpose
+     * </pre>
+     *
+     * <code>string description = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchTool}
+   */
+  public static final class GenSearchTool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.GenSearchTool)
+      GenSearchToolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenSearchTool.newBuilder() to construct.
+    private GenSearchTool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenSearchTool() {
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenSearchTool();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GenSearchTool(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.Builder subBuilder = null;
+              if (options_ != null) {
+                subBuilder = options_.toBuilder();
+              }
+              options_ = input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(options_);
+                options_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchTool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchTool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.Builder.class);
+    }
+
+    public static final int OPTIONS_FIELD_NUMBER = 1;
+    private yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions options_;
+    /**
+     * <pre>
+     * Scoping and filtering rules for the search query
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+     * @return Whether the options field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptions() {
+      return options_ != null;
+    }
+    /**
+     * <pre>
+     * Scoping and filtering rules for the search query
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+     * @return The options.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions getOptions() {
+      return options_ == null ? yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.getDefaultInstance() : options_;
+    }
+    /**
+     * <pre>
+     * Scoping and filtering rules for the search query
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptionsOrBuilder getOptionsOrBuilder() {
+      return getOptions();
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * description of the purpose
+     * </pre>
+     *
+     * <code>string description = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * description of the purpose
+     * </pre>
+     *
+     * <code>string description = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (options_ != null) {
+        output.writeMessage(1, getOptions());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (options_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOptions());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool other = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) obj;
+
+      if (hasOptions() != other.hasOptions()) return false;
+      if (hasOptions()) {
+        if (!getOptions()
+            .equals(other.getOptions())) return false;
+      }
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOptions()) {
+        hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOptions().hashCode();
+      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchTool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.GenSearchTool)
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchToolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchTool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchTool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (optionsBuilder_ == null) {
+          options_ = null;
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
+        description_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchTool_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool build() {
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool result = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool(this);
+        if (optionsBuilder_ == null) {
+          result.options_ = options_;
+        } else {
+          result.options_ = optionsBuilder_.build();
+        }
+        result.description_ = description_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool.getDefaultInstance()) return this;
+        if (other.hasOptions()) {
+          mergeOptions(other.getOptions());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions options_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptionsOrBuilder> optionsBuilder_;
+      /**
+       * <pre>
+       * Scoping and filtering rules for the search query
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+       * @return Whether the options field is set.
+       */
+      public boolean hasOptions() {
+        return optionsBuilder_ != null || options_ != null;
+      }
+      /**
+       * <pre>
+       * Scoping and filtering rules for the search query
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+       * @return The options.
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions getOptions() {
+        if (optionsBuilder_ == null) {
+          return options_ == null ? yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.getDefaultInstance() : options_;
+        } else {
+          return optionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Scoping and filtering rules for the search query
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+       */
+      public Builder setOptions(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions value) {
+        if (optionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          options_ = value;
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Scoping and filtering rules for the search query
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+       */
+      public Builder setOptions(
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.Builder builderForValue) {
+        if (optionsBuilder_ == null) {
+          options_ = builderForValue.build();
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Scoping and filtering rules for the search query
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+       */
+      public Builder mergeOptions(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions value) {
+        if (optionsBuilder_ == null) {
+          if (options_ != null) {
+            options_ =
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+          } else {
+            options_ = value;
+          }
+          onChanged();
+        } else {
+          optionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Scoping and filtering rules for the search query
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+       */
+      public Builder clearOptions() {
+        if (optionsBuilder_ == null) {
+          options_ = null;
+          onChanged();
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Scoping and filtering rules for the search query
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.Builder getOptionsBuilder() {
+        
+        onChanged();
+        return getOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Scoping and filtering rules for the search query
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptionsOrBuilder getOptionsOrBuilder() {
+        if (optionsBuilder_ != null) {
+          return optionsBuilder_.getMessageOrBuilder();
+        } else {
+          return options_ == null ?
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.getDefaultInstance() : options_;
+        }
+      }
+      /**
+       * <pre>
+       * Scoping and filtering rules for the search query
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions options = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptionsOrBuilder> 
+          getOptionsFieldBuilder() {
+        if (optionsBuilder_ == null) {
+          optionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptionsOrBuilder>(
+                  getOptions(),
+                  getParentForChildren(),
+                  isClean());
+          options_ = null;
+        }
+        return optionsBuilder_;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * description of the purpose
+       * </pre>
+       *
+       * <code>string description = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * description of the purpose
+       * </pre>
+       *
+       * <code>string description = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * description of the purpose
+       * </pre>
+       *
+       * <code>string description = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * description of the purpose
+       * </pre>
+       *
+       * <code>string description = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * description of the purpose
+       * </pre>
+       *
+       * <code>string description = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.GenSearchTool)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.GenSearchTool)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenSearchTool>
+        PARSER = new com.google.protobuf.AbstractParser<GenSearchTool>() {
+      @java.lang.Override
+      public GenSearchTool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GenSearchTool(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenSearchTool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenSearchTool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchTool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenSearchOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.GenSearchOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+     * @return Whether the site field is set.
+     */
+    boolean hasSite();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+     * @return The site.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption getSite();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOptionOrBuilder getSiteOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+     * @return Whether the host field is set.
+     */
+    boolean hasHost();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+     * @return The host.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption getHost();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOptionOrBuilder getHostOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+     * @return Whether the url field is set.
+     */
+    boolean hasUrl();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+     * @return The url.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption getUrl();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOptionOrBuilder getUrlOrBuilder();
+
+    /**
+     * <pre>
+     * Use the documents inaccessible from the front page.
+     * </pre>
+     *
+     * <code>bool enable_nrfm_docs = 4;</code>
+     * @return The enableNrfmDocs.
+     */
+    boolean getEnableNrfmDocs();
+
+    /**
+     * <pre>
+     * Restricts the search by date, document formats or language.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     */
+    java.util.List<yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter> 
+        getSearchFiltersList();
+    /**
+     * <pre>
+     * Restricts the search by date, document formats or language.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter getSearchFilters(int index);
+    /**
+     * <pre>
+     * Restricts the search by date, document formats or language.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     */
+    int getSearchFiltersCount();
+    /**
+     * <pre>
+     * Restricts the search by date, document formats or language.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilterOrBuilder> 
+        getSearchFiltersOrBuilderList();
+    /**
+     * <pre>
+     * Restricts the search by date, document formats or language.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilterOrBuilder getSearchFiltersOrBuilder(
+        int index);
+
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOptionsCase getSiteOptionsCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchOptions}
+   */
+  public static final class GenSearchOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.GenSearchOptions)
+      GenSearchOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenSearchOptions.newBuilder() to construct.
+    private GenSearchOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenSearchOptions() {
+      searchFilters_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenSearchOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GenSearchOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.Builder subBuilder = null;
+              if (siteOptionsCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) siteOptions_).toBuilder();
+              }
+              siteOptions_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) siteOptions_);
+                siteOptions_ = subBuilder.buildPartial();
+              }
+              siteOptionsCase_ = 1;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.Builder subBuilder = null;
+              if (siteOptionsCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) siteOptions_).toBuilder();
+              }
+              siteOptions_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) siteOptions_);
+                siteOptions_ = subBuilder.buildPartial();
+              }
+              siteOptionsCase_ = 2;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.Builder subBuilder = null;
+              if (siteOptionsCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) siteOptions_).toBuilder();
+              }
+              siteOptions_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) siteOptions_);
+                siteOptions_ = subBuilder.buildPartial();
+              }
+              siteOptionsCase_ = 3;
+              break;
+            }
+            case 32: {
+
+              enableNrfmDocs_ = input.readBool();
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                searchFilters_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              searchFilters_.add(
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          searchFilters_ = java.util.Collections.unmodifiableList(searchFilters_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.Builder.class);
+    }
+
+    public interface SiteOptionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return A list containing the site.
+       */
+      java.util.List<java.lang.String>
+          getSiteList();
+      /**
+       * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The count of site.
+       */
+      int getSiteCount();
+      /**
+       * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the element to return.
+       * @return The site at the given index.
+       */
+      java.lang.String getSite(int index);
+      /**
+       * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the site at the given index.
+       */
+      com.google.protobuf.ByteString
+          getSiteBytes(int index);
+    }
+    /**
+     * <pre>
+     * Restricts the search to the specific websites.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption}
+     */
+    public static final class SiteOption extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption)
+        SiteOptionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SiteOption.newBuilder() to construct.
+      private SiteOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SiteOption() {
+        site_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new SiteOption();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SiteOption(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  site_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                site_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            site_ = site_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SiteOption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SiteOption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.Builder.class);
+      }
+
+      public static final int SITE_FIELD_NUMBER = 1;
+      private com.google.protobuf.LazyStringList site_;
+      /**
+       * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return A list containing the site.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSiteList() {
+        return site_;
+      }
+      /**
+       * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The count of site.
+       */
+      public int getSiteCount() {
+        return site_.size();
+      }
+      /**
+       * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the element to return.
+       * @return The site at the given index.
+       */
+      public java.lang.String getSite(int index) {
+        return site_.get(index);
+      }
+      /**
+       * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the site at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSiteBytes(int index) {
+        return site_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < site_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, site_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < site_.size(); i++) {
+            dataSize += computeStringSizeNoTag(site_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getSiteList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption other = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) obj;
+
+        if (!getSiteList()
+            .equals(other.getSiteList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getSiteCount() > 0) {
+          hash = (37 * hash) + SITE_FIELD_NUMBER;
+          hash = (53 * hash) + getSiteList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Restricts the search to the specific websites.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption)
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOptionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SiteOption_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SiteOption_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          site_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SiteOption_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption build() {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption buildPartial() {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption result = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            site_ = site_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.site_ = site_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) {
+            return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption other) {
+          if (other == yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.getDefaultInstance()) return this;
+          if (!other.site_.isEmpty()) {
+            if (site_.isEmpty()) {
+              site_ = other.site_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSiteIsMutable();
+              site_.addAll(other.site_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringList site_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureSiteIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            site_ = new com.google.protobuf.LazyStringArrayList(site_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @return A list containing the site.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getSiteList() {
+          return site_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @return The count of site.
+         */
+        public int getSiteCount() {
+          return site_.size();
+        }
+        /**
+         * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param index The index of the element to return.
+         * @return The site at the given index.
+         */
+        public java.lang.String getSite(int index) {
+          return site_.get(index);
+        }
+        /**
+         * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the site at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getSiteBytes(int index) {
+          return site_.getByteString(index);
+        }
+        /**
+         * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param index The index to set the value at.
+         * @param value The site to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSite(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSiteIsMutable();
+          site_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param value The site to add.
+         * @return This builder for chaining.
+         */
+        public Builder addSite(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSiteIsMutable();
+          site_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param values The site to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllSite(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureSiteIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, site_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSite() {
+          site_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string site = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param value The bytes of the site to add.
+         * @return This builder for chaining.
+         */
+        public Builder addSiteBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureSiteIsMutable();
+          site_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption)
+      private static final yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption();
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SiteOption>
+          PARSER = new com.google.protobuf.AbstractParser<SiteOption>() {
+        @java.lang.Override
+        public SiteOption parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SiteOption(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<SiteOption> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SiteOption> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface UrlOptionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return A list containing the url.
+       */
+      java.util.List<java.lang.String>
+          getUrlList();
+      /**
+       * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The count of url.
+       */
+      int getUrlCount();
+      /**
+       * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the element to return.
+       * @return The url at the given index.
+       */
+      java.lang.String getUrl(int index);
+      /**
+       * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the url at the given index.
+       */
+      com.google.protobuf.ByteString
+          getUrlBytes(int index);
+    }
+    /**
+     * <pre>
+     * Restricts the search to the specific pages.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption}
+     */
+    public static final class UrlOption extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption)
+        UrlOptionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use UrlOption.newBuilder() to construct.
+      private UrlOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private UrlOption() {
+        url_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new UrlOption();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private UrlOption(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  url_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                url_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            url_ = url_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_UrlOption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_UrlOption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.Builder.class);
+      }
+
+      public static final int URL_FIELD_NUMBER = 1;
+      private com.google.protobuf.LazyStringList url_;
+      /**
+       * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return A list containing the url.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getUrlList() {
+        return url_;
+      }
+      /**
+       * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The count of url.
+       */
+      public int getUrlCount() {
+        return url_.size();
+      }
+      /**
+       * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the element to return.
+       * @return The url at the given index.
+       */
+      public java.lang.String getUrl(int index) {
+        return url_.get(index);
+      }
+      /**
+       * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the url at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes(int index) {
+        return url_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < url_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < url_.size(); i++) {
+            dataSize += computeStringSizeNoTag(url_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getUrlList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption other = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) obj;
+
+        if (!getUrlList()
+            .equals(other.getUrlList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getUrlCount() > 0) {
+          hash = (37 * hash) + URL_FIELD_NUMBER;
+          hash = (53 * hash) + getUrlList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Restricts the search to the specific pages.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption)
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOptionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_UrlOption_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_UrlOption_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          url_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_UrlOption_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption build() {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption buildPartial() {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption result = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            url_ = url_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.url_ = url_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) {
+            return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption other) {
+          if (other == yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.getDefaultInstance()) return this;
+          if (!other.url_.isEmpty()) {
+            if (url_.isEmpty()) {
+              url_ = other.url_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureUrlIsMutable();
+              url_.addAll(other.url_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringList url_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureUrlIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            url_ = new com.google.protobuf.LazyStringArrayList(url_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @return A list containing the url.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getUrlList() {
+          return url_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @return The count of url.
+         */
+        public int getUrlCount() {
+          return url_.size();
+        }
+        /**
+         * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param index The index of the element to return.
+         * @return The url at the given index.
+         */
+        public java.lang.String getUrl(int index) {
+          return url_.get(index);
+        }
+        /**
+         * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the url at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getUrlBytes(int index) {
+          return url_.getByteString(index);
+        }
+        /**
+         * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param index The index to set the value at.
+         * @param value The url to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUrl(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureUrlIsMutable();
+          url_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param value The url to add.
+         * @return This builder for chaining.
+         */
+        public Builder addUrl(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureUrlIsMutable();
+          url_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param values The url to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllUrl(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureUrlIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, url_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUrl() {
+          url_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string url = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param value The bytes of the url to add.
+         * @return This builder for chaining.
+         */
+        public Builder addUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureUrlIsMutable();
+          url_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption)
+      private static final yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption();
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<UrlOption>
+          PARSER = new com.google.protobuf.AbstractParser<UrlOption>() {
+        @java.lang.Override
+        public UrlOption parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new UrlOption(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<UrlOption> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<UrlOption> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface HostOptionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return A list containing the host.
+       */
+      java.util.List<java.lang.String>
+          getHostList();
+      /**
+       * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The count of host.
+       */
+      int getHostCount();
+      /**
+       * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the element to return.
+       * @return The host at the given index.
+       */
+      java.lang.String getHost(int index);
+      /**
+       * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the host at the given index.
+       */
+      com.google.protobuf.ByteString
+          getHostBytes(int index);
+    }
+    /**
+     * <pre>
+     * Restricts the search to the specific hosts.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption}
+     */
+    public static final class HostOption extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption)
+        HostOptionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use HostOption.newBuilder() to construct.
+      private HostOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private HostOption() {
+        host_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new HostOption();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private HostOption(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  host_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                host_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            host_ = host_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_HostOption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_HostOption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.Builder.class);
+      }
+
+      public static final int HOST_FIELD_NUMBER = 1;
+      private com.google.protobuf.LazyStringList host_;
+      /**
+       * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return A list containing the host.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHostList() {
+        return host_;
+      }
+      /**
+       * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The count of host.
+       */
+      public int getHostCount() {
+        return host_.size();
+      }
+      /**
+       * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the element to return.
+       * @return The host at the given index.
+       */
+      public java.lang.String getHost(int index) {
+        return host_.get(index);
+      }
+      /**
+       * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the host at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getHostBytes(int index) {
+        return host_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < host_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, host_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < host_.size(); i++) {
+            dataSize += computeStringSizeNoTag(host_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getHostList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption other = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) obj;
+
+        if (!getHostList()
+            .equals(other.getHostList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getHostCount() > 0) {
+          hash = (37 * hash) + HOST_FIELD_NUMBER;
+          hash = (53 * hash) + getHostList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Restricts the search to the specific hosts.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption)
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOptionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_HostOption_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_HostOption_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          host_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_HostOption_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption build() {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption buildPartial() {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption result = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            host_ = host_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.host_ = host_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) {
+            return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption other) {
+          if (other == yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.getDefaultInstance()) return this;
+          if (!other.host_.isEmpty()) {
+            if (host_.isEmpty()) {
+              host_ = other.host_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureHostIsMutable();
+              host_.addAll(other.host_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringList host_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureHostIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            host_ = new com.google.protobuf.LazyStringArrayList(host_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @return A list containing the host.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getHostList() {
+          return host_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @return The count of host.
+         */
+        public int getHostCount() {
+          return host_.size();
+        }
+        /**
+         * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param index The index of the element to return.
+         * @return The host at the given index.
+         */
+        public java.lang.String getHost(int index) {
+          return host_.get(index);
+        }
+        /**
+         * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the host at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getHostBytes(int index) {
+          return host_.getByteString(index);
+        }
+        /**
+         * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param index The index to set the value at.
+         * @param value The host to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHost(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostIsMutable();
+          host_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param value The host to add.
+         * @return This builder for chaining.
+         */
+        public Builder addHost(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostIsMutable();
+          host_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param values The host to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllHost(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureHostIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, host_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHost() {
+          host_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string host = 1 [(.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "&lt;=1024"];</code>
+         * @param value The bytes of the host to add.
+         * @return This builder for chaining.
+         */
+        public Builder addHostBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureHostIsMutable();
+          host_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption)
+      private static final yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption();
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<HostOption>
+          PARSER = new com.google.protobuf.AbstractParser<HostOption>() {
+        @java.lang.Override
+        public HostOption parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new HostOption(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<HostOption> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<HostOption> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface SearchFilterOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Restrict by document date
+       * </pre>
+       *
+       * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+       * @return Whether the date field is set.
+       */
+      boolean hasDate();
+      /**
+       * <pre>
+       * Restrict by document date
+       * </pre>
+       *
+       * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+       * @return The date.
+       */
+      java.lang.String getDate();
+      /**
+       * <pre>
+       * Restrict by document date
+       * </pre>
+       *
+       * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+       * @return The bytes for date.
+       */
+      com.google.protobuf.ByteString
+          getDateBytes();
+
+      /**
+       * <pre>
+       * Restrict by document language. Use ISO 639-1 language codes.
+       * </pre>
+       *
+       * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+       * @return Whether the lang field is set.
+       */
+      boolean hasLang();
+      /**
+       * <pre>
+       * Restrict by document language. Use ISO 639-1 language codes.
+       * </pre>
+       *
+       * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+       * @return The lang.
+       */
+      java.lang.String getLang();
+      /**
+       * <pre>
+       * Restrict by document language. Use ISO 639-1 language codes.
+       * </pre>
+       *
+       * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+       * @return The bytes for lang.
+       */
+      com.google.protobuf.ByteString
+          getLangBytes();
+
+      /**
+       * <pre>
+       * Restrict by document format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+       * @return Whether the format field is set.
+       */
+      boolean hasFormat();
+      /**
+       * <pre>
+       * Restrict by document format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+       * @return The enum numeric value on the wire for format.
+       */
+      int getFormatValue();
+      /**
+       * <pre>
+       * Restrict by document format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+       * @return The format.
+       */
+      yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat getFormat();
+
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.FilterOptionsCase getFilterOptionsCase();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter}
+     */
+    public static final class SearchFilter extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter)
+        SearchFilterOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SearchFilter.newBuilder() to construct.
+      private SearchFilter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SearchFilter() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new SearchFilter();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SearchFilter(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                filterOptionsCase_ = 1;
+                filterOptions_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                filterOptionsCase_ = 2;
+                filterOptions_ = s;
+                break;
+              }
+              case 24: {
+                int rawValue = input.readEnum();
+                filterOptionsCase_ = 3;
+                filterOptions_ = rawValue;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SearchFilter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SearchFilter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder.class);
+      }
+
+      /**
+       * Protobuf enum {@code yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat}
+       */
+      public enum DocFormat
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>DOC_FORMAT_UNSPECIFIED = 0;</code>
+         */
+        DOC_FORMAT_UNSPECIFIED(0),
+        /**
+         * <code>DOC_FORMAT_PDF = 1;</code>
+         */
+        DOC_FORMAT_PDF(1),
+        /**
+         * <code>DOC_FORMAT_XLS = 2;</code>
+         */
+        DOC_FORMAT_XLS(2),
+        /**
+         * <code>DOC_FORMAT_ODS = 3;</code>
+         */
+        DOC_FORMAT_ODS(3),
+        /**
+         * <code>DOC_FORMAT_RTF = 4;</code>
+         */
+        DOC_FORMAT_RTF(4),
+        /**
+         * <code>DOC_FORMAT_PPT = 5;</code>
+         */
+        DOC_FORMAT_PPT(5),
+        /**
+         * <code>DOC_FORMAT_ODP = 6;</code>
+         */
+        DOC_FORMAT_ODP(6),
+        /**
+         * <code>DOC_FORMAT_SWF = 7;</code>
+         */
+        DOC_FORMAT_SWF(7),
+        /**
+         * <code>DOC_FORMAT_ODT = 8;</code>
+         */
+        DOC_FORMAT_ODT(8),
+        /**
+         * <code>DOC_FORMAT_ODG = 9;</code>
+         */
+        DOC_FORMAT_ODG(9),
+        /**
+         * <code>DOC_FORMAT_DOC = 10;</code>
+         */
+        DOC_FORMAT_DOC(10),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>DOC_FORMAT_UNSPECIFIED = 0;</code>
+         */
+        public static final int DOC_FORMAT_UNSPECIFIED_VALUE = 0;
+        /**
+         * <code>DOC_FORMAT_PDF = 1;</code>
+         */
+        public static final int DOC_FORMAT_PDF_VALUE = 1;
+        /**
+         * <code>DOC_FORMAT_XLS = 2;</code>
+         */
+        public static final int DOC_FORMAT_XLS_VALUE = 2;
+        /**
+         * <code>DOC_FORMAT_ODS = 3;</code>
+         */
+        public static final int DOC_FORMAT_ODS_VALUE = 3;
+        /**
+         * <code>DOC_FORMAT_RTF = 4;</code>
+         */
+        public static final int DOC_FORMAT_RTF_VALUE = 4;
+        /**
+         * <code>DOC_FORMAT_PPT = 5;</code>
+         */
+        public static final int DOC_FORMAT_PPT_VALUE = 5;
+        /**
+         * <code>DOC_FORMAT_ODP = 6;</code>
+         */
+        public static final int DOC_FORMAT_ODP_VALUE = 6;
+        /**
+         * <code>DOC_FORMAT_SWF = 7;</code>
+         */
+        public static final int DOC_FORMAT_SWF_VALUE = 7;
+        /**
+         * <code>DOC_FORMAT_ODT = 8;</code>
+         */
+        public static final int DOC_FORMAT_ODT_VALUE = 8;
+        /**
+         * <code>DOC_FORMAT_ODG = 9;</code>
+         */
+        public static final int DOC_FORMAT_ODG_VALUE = 9;
+        /**
+         * <code>DOC_FORMAT_DOC = 10;</code>
+         */
+        public static final int DOC_FORMAT_DOC_VALUE = 10;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static DocFormat valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static DocFormat forNumber(int value) {
+          switch (value) {
+            case 0: return DOC_FORMAT_UNSPECIFIED;
+            case 1: return DOC_FORMAT_PDF;
+            case 2: return DOC_FORMAT_XLS;
+            case 3: return DOC_FORMAT_ODS;
+            case 4: return DOC_FORMAT_RTF;
+            case 5: return DOC_FORMAT_PPT;
+            case 6: return DOC_FORMAT_ODP;
+            case 7: return DOC_FORMAT_SWF;
+            case 8: return DOC_FORMAT_ODT;
+            case 9: return DOC_FORMAT_ODG;
+            case 10: return DOC_FORMAT_DOC;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<DocFormat>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            DocFormat> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<DocFormat>() {
+                public DocFormat findValueByNumber(int number) {
+                  return DocFormat.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final DocFormat[] VALUES = values();
+
+        public static DocFormat valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private DocFormat(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat)
+      }
+
+      private int filterOptionsCase_ = 0;
+      private java.lang.Object filterOptions_;
+      public enum FilterOptionsCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        DATE(1),
+        LANG(2),
+        FORMAT(3),
+        FILTEROPTIONS_NOT_SET(0);
+        private final int value;
+        private FilterOptionsCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static FilterOptionsCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static FilterOptionsCase forNumber(int value) {
+          switch (value) {
+            case 1: return DATE;
+            case 2: return LANG;
+            case 3: return FORMAT;
+            case 0: return FILTEROPTIONS_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public FilterOptionsCase
+      getFilterOptionsCase() {
+        return FilterOptionsCase.forNumber(
+            filterOptionsCase_);
+      }
+
+      public static final int DATE_FIELD_NUMBER = 1;
+      /**
+       * <pre>
+       * Restrict by document date
+       * </pre>
+       *
+       * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+       * @return Whether the date field is set.
+       */
+      public boolean hasDate() {
+        return filterOptionsCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Restrict by document date
+       * </pre>
+       *
+       * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+       * @return The date.
+       */
+      public java.lang.String getDate() {
+        java.lang.Object ref = "";
+        if (filterOptionsCase_ == 1) {
+          ref = filterOptions_;
+        }
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (filterOptionsCase_ == 1) {
+            filterOptions_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Restrict by document date
+       * </pre>
+       *
+       * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+       * @return The bytes for date.
+       */
+      public com.google.protobuf.ByteString
+          getDateBytes() {
+        java.lang.Object ref = "";
+        if (filterOptionsCase_ == 1) {
+          ref = filterOptions_;
+        }
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (filterOptionsCase_ == 1) {
+            filterOptions_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int LANG_FIELD_NUMBER = 2;
+      /**
+       * <pre>
+       * Restrict by document language. Use ISO 639-1 language codes.
+       * </pre>
+       *
+       * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+       * @return Whether the lang field is set.
+       */
+      public boolean hasLang() {
+        return filterOptionsCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Restrict by document language. Use ISO 639-1 language codes.
+       * </pre>
+       *
+       * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+       * @return The lang.
+       */
+      public java.lang.String getLang() {
+        java.lang.Object ref = "";
+        if (filterOptionsCase_ == 2) {
+          ref = filterOptions_;
+        }
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (filterOptionsCase_ == 2) {
+            filterOptions_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Restrict by document language. Use ISO 639-1 language codes.
+       * </pre>
+       *
+       * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+       * @return The bytes for lang.
+       */
+      public com.google.protobuf.ByteString
+          getLangBytes() {
+        java.lang.Object ref = "";
+        if (filterOptionsCase_ == 2) {
+          ref = filterOptions_;
+        }
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (filterOptionsCase_ == 2) {
+            filterOptions_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int FORMAT_FIELD_NUMBER = 3;
+      /**
+       * <pre>
+       * Restrict by document format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+       * @return Whether the format field is set.
+       */
+      public boolean hasFormat() {
+        return filterOptionsCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Restrict by document format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+       * @return The enum numeric value on the wire for format.
+       */
+      public int getFormatValue() {
+        if (filterOptionsCase_ == 3) {
+          return (java.lang.Integer) filterOptions_;
+        }
+        return 0;
+      }
+      /**
+       * <pre>
+       * Restrict by document format.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+       * @return The format.
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat getFormat() {
+        if (filterOptionsCase_ == 3) {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat result = yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat.valueOf(
+              (java.lang.Integer) filterOptions_);
+          return result == null ? yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat.UNRECOGNIZED : result;
+        }
+        return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat.DOC_FORMAT_UNSPECIFIED;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (filterOptionsCase_ == 1) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filterOptions_);
+        }
+        if (filterOptionsCase_ == 2) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filterOptions_);
+        }
+        if (filterOptionsCase_ == 3) {
+          output.writeEnum(3, ((java.lang.Integer) filterOptions_));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (filterOptionsCase_ == 1) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filterOptions_);
+        }
+        if (filterOptionsCase_ == 2) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filterOptions_);
+        }
+        if (filterOptionsCase_ == 3) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(3, ((java.lang.Integer) filterOptions_));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter other = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter) obj;
+
+        if (!getFilterOptionsCase().equals(other.getFilterOptionsCase())) return false;
+        switch (filterOptionsCase_) {
+          case 1:
+            if (!getDate()
+                .equals(other.getDate())) return false;
+            break;
+          case 2:
+            if (!getLang()
+                .equals(other.getLang())) return false;
+            break;
+          case 3:
+            if (getFormatValue()
+                != other.getFormatValue()) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        switch (filterOptionsCase_) {
+          case 1:
+            hash = (37 * hash) + DATE_FIELD_NUMBER;
+            hash = (53 * hash) + getDate().hashCode();
+            break;
+          case 2:
+            hash = (37 * hash) + LANG_FIELD_NUMBER;
+            hash = (53 * hash) + getLang().hashCode();
+            break;
+          case 3:
+            hash = (37 * hash) + FORMAT_FIELD_NUMBER;
+            hash = (53 * hash) + getFormatValue();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter)
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilterOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SearchFilter_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SearchFilter_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          filterOptionsCase_ = 0;
+          filterOptions_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SearchFilter_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter build() {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter buildPartial() {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter result = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter(this);
+          if (filterOptionsCase_ == 1) {
+            result.filterOptions_ = filterOptions_;
+          }
+          if (filterOptionsCase_ == 2) {
+            result.filterOptions_ = filterOptions_;
+          }
+          if (filterOptionsCase_ == 3) {
+            result.filterOptions_ = filterOptions_;
+          }
+          result.filterOptionsCase_ = filterOptionsCase_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter) {
+            return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter other) {
+          if (other == yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.getDefaultInstance()) return this;
+          switch (other.getFilterOptionsCase()) {
+            case DATE: {
+              filterOptionsCase_ = 1;
+              filterOptions_ = other.filterOptions_;
+              onChanged();
+              break;
+            }
+            case LANG: {
+              filterOptionsCase_ = 2;
+              filterOptions_ = other.filterOptions_;
+              onChanged();
+              break;
+            }
+            case FORMAT: {
+              setFormatValue(other.getFormatValue());
+              break;
+            }
+            case FILTEROPTIONS_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int filterOptionsCase_ = 0;
+        private java.lang.Object filterOptions_;
+        public FilterOptionsCase
+            getFilterOptionsCase() {
+          return FilterOptionsCase.forNumber(
+              filterOptionsCase_);
+        }
+
+        public Builder clearFilterOptions() {
+          filterOptionsCase_ = 0;
+          filterOptions_ = null;
+          onChanged();
+          return this;
+        }
+
+
+        /**
+         * <pre>
+         * Restrict by document date
+         * </pre>
+         *
+         * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+         * @return Whether the date field is set.
+         */
+        @java.lang.Override
+        public boolean hasDate() {
+          return filterOptionsCase_ == 1;
+        }
+        /**
+         * <pre>
+         * Restrict by document date
+         * </pre>
+         *
+         * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+         * @return The date.
+         */
+        @java.lang.Override
+        public java.lang.String getDate() {
+          java.lang.Object ref = "";
+          if (filterOptionsCase_ == 1) {
+            ref = filterOptions_;
+          }
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (filterOptionsCase_ == 1) {
+              filterOptions_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Restrict by document date
+         * </pre>
+         *
+         * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+         * @return The bytes for date.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getDateBytes() {
+          java.lang.Object ref = "";
+          if (filterOptionsCase_ == 1) {
+            ref = filterOptions_;
+          }
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            if (filterOptionsCase_ == 1) {
+              filterOptions_ = b;
+            }
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Restrict by document date
+         * </pre>
+         *
+         * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+         * @param value The date to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDate(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  filterOptionsCase_ = 1;
+          filterOptions_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Restrict by document date
+         * </pre>
+         *
+         * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDate() {
+          if (filterOptionsCase_ == 1) {
+            filterOptionsCase_ = 0;
+            filterOptions_ = null;
+            onChanged();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Restrict by document date
+         * </pre>
+         *
+         * <code>string date = 1 [(.yandex.cloud.length) = "&lt;=25"];</code>
+         * @param value The bytes for date to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDateBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          filterOptionsCase_ = 1;
+          filterOptions_ = value;
+          onChanged();
+          return this;
+        }
+
+        /**
+         * <pre>
+         * Restrict by document language. Use ISO 639-1 language codes.
+         * </pre>
+         *
+         * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+         * @return Whether the lang field is set.
+         */
+        @java.lang.Override
+        public boolean hasLang() {
+          return filterOptionsCase_ == 2;
+        }
+        /**
+         * <pre>
+         * Restrict by document language. Use ISO 639-1 language codes.
+         * </pre>
+         *
+         * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+         * @return The lang.
+         */
+        @java.lang.Override
+        public java.lang.String getLang() {
+          java.lang.Object ref = "";
+          if (filterOptionsCase_ == 2) {
+            ref = filterOptions_;
+          }
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (filterOptionsCase_ == 2) {
+              filterOptions_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Restrict by document language. Use ISO 639-1 language codes.
+         * </pre>
+         *
+         * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+         * @return The bytes for lang.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getLangBytes() {
+          java.lang.Object ref = "";
+          if (filterOptionsCase_ == 2) {
+            ref = filterOptions_;
+          }
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            if (filterOptionsCase_ == 2) {
+              filterOptions_ = b;
+            }
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Restrict by document language. Use ISO 639-1 language codes.
+         * </pre>
+         *
+         * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+         * @param value The lang to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLang(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  filterOptionsCase_ = 2;
+          filterOptions_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Restrict by document language. Use ISO 639-1 language codes.
+         * </pre>
+         *
+         * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLang() {
+          if (filterOptionsCase_ == 2) {
+            filterOptionsCase_ = 0;
+            filterOptions_ = null;
+            onChanged();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Restrict by document language. Use ISO 639-1 language codes.
+         * </pre>
+         *
+         * <code>string lang = 2 [(.yandex.cloud.length) = "2"];</code>
+         * @param value The bytes for lang to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLangBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          filterOptionsCase_ = 2;
+          filterOptions_ = value;
+          onChanged();
+          return this;
+        }
+
+        /**
+         * <pre>
+         * Restrict by document format.
+         * </pre>
+         *
+         * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+         * @return Whether the format field is set.
+         */
+        @java.lang.Override
+        public boolean hasFormat() {
+          return filterOptionsCase_ == 3;
+        }
+        /**
+         * <pre>
+         * Restrict by document format.
+         * </pre>
+         *
+         * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+         * @return The enum numeric value on the wire for format.
+         */
+        @java.lang.Override
+        public int getFormatValue() {
+          if (filterOptionsCase_ == 3) {
+            return ((java.lang.Integer) filterOptions_).intValue();
+          }
+          return 0;
+        }
+        /**
+         * <pre>
+         * Restrict by document format.
+         * </pre>
+         *
+         * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+         * @param value The enum numeric value on the wire for format to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFormatValue(int value) {
+          filterOptionsCase_ = 3;
+          filterOptions_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Restrict by document format.
+         * </pre>
+         *
+         * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+         * @return The format.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat getFormat() {
+          if (filterOptionsCase_ == 3) {
+            @SuppressWarnings("deprecation")
+            yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat result = yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat.valueOf(
+                (java.lang.Integer) filterOptions_);
+            return result == null ? yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat.UNRECOGNIZED : result;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat.DOC_FORMAT_UNSPECIFIED;
+        }
+        /**
+         * <pre>
+         * Restrict by document format.
+         * </pre>
+         *
+         * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+         * @param value The format to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFormat(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.DocFormat value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filterOptionsCase_ = 3;
+          filterOptions_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Restrict by document format.
+         * </pre>
+         *
+         * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter.DocFormat format = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFormat() {
+          if (filterOptionsCase_ == 3) {
+            filterOptionsCase_ = 0;
+            filterOptions_ = null;
+            onChanged();
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter)
+      private static final yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter();
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SearchFilter>
+          PARSER = new com.google.protobuf.AbstractParser<SearchFilter>() {
+        @java.lang.Override
+        public SearchFilter parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SearchFilter(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<SearchFilter> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SearchFilter> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int siteOptionsCase_ = 0;
+    private java.lang.Object siteOptions_;
+    public enum SiteOptionsCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      SITE(1),
+      HOST(2),
+      URL(3),
+      SITEOPTIONS_NOT_SET(0);
+      private final int value;
+      private SiteOptionsCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SiteOptionsCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SiteOptionsCase forNumber(int value) {
+        switch (value) {
+          case 1: return SITE;
+          case 2: return HOST;
+          case 3: return URL;
+          case 0: return SITEOPTIONS_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SiteOptionsCase
+    getSiteOptionsCase() {
+      return SiteOptionsCase.forNumber(
+          siteOptionsCase_);
+    }
+
+    public static final int SITE_FIELD_NUMBER = 1;
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+     * @return Whether the site field is set.
+     */
+    @java.lang.Override
+    public boolean hasSite() {
+      return siteOptionsCase_ == 1;
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+     * @return The site.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption getSite() {
+      if (siteOptionsCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) siteOptions_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOptionOrBuilder getSiteOrBuilder() {
+      if (siteOptionsCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) siteOptions_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.getDefaultInstance();
+    }
+
+    public static final int HOST_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+     * @return Whether the host field is set.
+     */
+    @java.lang.Override
+    public boolean hasHost() {
+      return siteOptionsCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+     * @return The host.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption getHost() {
+      if (siteOptionsCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) siteOptions_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOptionOrBuilder getHostOrBuilder() {
+      if (siteOptionsCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) siteOptions_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.getDefaultInstance();
+    }
+
+    public static final int URL_FIELD_NUMBER = 3;
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+     * @return Whether the url field is set.
+     */
+    @java.lang.Override
+    public boolean hasUrl() {
+      return siteOptionsCase_ == 3;
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+     * @return The url.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption getUrl() {
+      if (siteOptionsCase_ == 3) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) siteOptions_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOptionOrBuilder getUrlOrBuilder() {
+      if (siteOptionsCase_ == 3) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) siteOptions_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.getDefaultInstance();
+    }
+
+    public static final int ENABLE_NRFM_DOCS_FIELD_NUMBER = 4;
+    private boolean enableNrfmDocs_;
+    /**
+     * <pre>
+     * Use the documents inaccessible from the front page.
+     * </pre>
+     *
+     * <code>bool enable_nrfm_docs = 4;</code>
+     * @return The enableNrfmDocs.
+     */
+    @java.lang.Override
+    public boolean getEnableNrfmDocs() {
+      return enableNrfmDocs_;
+    }
+
+    public static final int SEARCH_FILTERS_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter> searchFilters_;
+    /**
+     * <pre>
+     * Restricts the search by date, document formats or language.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter> getSearchFiltersList() {
+      return searchFilters_;
+    }
+    /**
+     * <pre>
+     * Restricts the search by date, document formats or language.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilterOrBuilder> 
+        getSearchFiltersOrBuilderList() {
+      return searchFilters_;
+    }
+    /**
+     * <pre>
+     * Restricts the search by date, document formats or language.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     */
+    @java.lang.Override
+    public int getSearchFiltersCount() {
+      return searchFilters_.size();
+    }
+    /**
+     * <pre>
+     * Restricts the search by date, document formats or language.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter getSearchFilters(int index) {
+      return searchFilters_.get(index);
+    }
+    /**
+     * <pre>
+     * Restricts the search by date, document formats or language.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilterOrBuilder getSearchFiltersOrBuilder(
+        int index) {
+      return searchFilters_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (siteOptionsCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) siteOptions_);
+      }
+      if (siteOptionsCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) siteOptions_);
+      }
+      if (siteOptionsCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) siteOptions_);
+      }
+      if (enableNrfmDocs_ != false) {
+        output.writeBool(4, enableNrfmDocs_);
+      }
+      for (int i = 0; i < searchFilters_.size(); i++) {
+        output.writeMessage(5, searchFilters_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (siteOptionsCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) siteOptions_);
+      }
+      if (siteOptionsCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) siteOptions_);
+      }
+      if (siteOptionsCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) siteOptions_);
+      }
+      if (enableNrfmDocs_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, enableNrfmDocs_);
+      }
+      for (int i = 0; i < searchFilters_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, searchFilters_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions other = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions) obj;
+
+      if (getEnableNrfmDocs()
+          != other.getEnableNrfmDocs()) return false;
+      if (!getSearchFiltersList()
+          .equals(other.getSearchFiltersList())) return false;
+      if (!getSiteOptionsCase().equals(other.getSiteOptionsCase())) return false;
+      switch (siteOptionsCase_) {
+        case 1:
+          if (!getSite()
+              .equals(other.getSite())) return false;
+          break;
+        case 2:
+          if (!getHost()
+              .equals(other.getHost())) return false;
+          break;
+        case 3:
+          if (!getUrl()
+              .equals(other.getUrl())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLE_NRFM_DOCS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableNrfmDocs());
+      if (getSearchFiltersCount() > 0) {
+        hash = (37 * hash) + SEARCH_FILTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getSearchFiltersList().hashCode();
+      }
+      switch (siteOptionsCase_) {
+        case 1:
+          hash = (37 * hash) + SITE_FIELD_NUMBER;
+          hash = (53 * hash) + getSite().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + HOST_FIELD_NUMBER;
+          hash = (53 * hash) + getHost().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + URL_FIELD_NUMBER;
+          hash = (53 * hash) + getUrl().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.GenSearchOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.GenSearchOptions)
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.class, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSearchFiltersFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enableNrfmDocs_ = false;
+
+        if (searchFiltersBuilder_ == null) {
+          searchFilters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          searchFiltersBuilder_.clear();
+        }
+        siteOptionsCase_ = 0;
+        siteOptions_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions build() {
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions result = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions(this);
+        int from_bitField0_ = bitField0_;
+        if (siteOptionsCase_ == 1) {
+          if (siteBuilder_ == null) {
+            result.siteOptions_ = siteOptions_;
+          } else {
+            result.siteOptions_ = siteBuilder_.build();
+          }
+        }
+        if (siteOptionsCase_ == 2) {
+          if (hostBuilder_ == null) {
+            result.siteOptions_ = siteOptions_;
+          } else {
+            result.siteOptions_ = hostBuilder_.build();
+          }
+        }
+        if (siteOptionsCase_ == 3) {
+          if (urlBuilder_ == null) {
+            result.siteOptions_ = siteOptions_;
+          } else {
+            result.siteOptions_ = urlBuilder_.build();
+          }
+        }
+        result.enableNrfmDocs_ = enableNrfmDocs_;
+        if (searchFiltersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            searchFilters_ = java.util.Collections.unmodifiableList(searchFilters_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.searchFilters_ = searchFilters_;
+        } else {
+          result.searchFilters_ = searchFiltersBuilder_.build();
+        }
+        result.siteOptionsCase_ = siteOptionsCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.getDefaultInstance()) return this;
+        if (other.getEnableNrfmDocs() != false) {
+          setEnableNrfmDocs(other.getEnableNrfmDocs());
+        }
+        if (searchFiltersBuilder_ == null) {
+          if (!other.searchFilters_.isEmpty()) {
+            if (searchFilters_.isEmpty()) {
+              searchFilters_ = other.searchFilters_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSearchFiltersIsMutable();
+              searchFilters_.addAll(other.searchFilters_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.searchFilters_.isEmpty()) {
+            if (searchFiltersBuilder_.isEmpty()) {
+              searchFiltersBuilder_.dispose();
+              searchFiltersBuilder_ = null;
+              searchFilters_ = other.searchFilters_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              searchFiltersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSearchFiltersFieldBuilder() : null;
+            } else {
+              searchFiltersBuilder_.addAllMessages(other.searchFilters_);
+            }
+          }
+        }
+        switch (other.getSiteOptionsCase()) {
+          case SITE: {
+            mergeSite(other.getSite());
+            break;
+          }
+          case HOST: {
+            mergeHost(other.getHost());
+            break;
+          }
+          case URL: {
+            mergeUrl(other.getUrl());
+            break;
+          }
+          case SITEOPTIONS_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int siteOptionsCase_ = 0;
+      private java.lang.Object siteOptions_;
+      public SiteOptionsCase
+          getSiteOptionsCase() {
+        return SiteOptionsCase.forNumber(
+            siteOptionsCase_);
+      }
+
+      public Builder clearSiteOptions() {
+        siteOptionsCase_ = 0;
+        siteOptions_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOptionOrBuilder> siteBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+       * @return Whether the site field is set.
+       */
+      @java.lang.Override
+      public boolean hasSite() {
+        return siteOptionsCase_ == 1;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+       * @return The site.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption getSite() {
+        if (siteBuilder_ == null) {
+          if (siteOptionsCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) siteOptions_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.getDefaultInstance();
+        } else {
+          if (siteOptionsCase_ == 1) {
+            return siteBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+       */
+      public Builder setSite(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption value) {
+        if (siteBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          siteOptions_ = value;
+          onChanged();
+        } else {
+          siteBuilder_.setMessage(value);
+        }
+        siteOptionsCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+       */
+      public Builder setSite(
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.Builder builderForValue) {
+        if (siteBuilder_ == null) {
+          siteOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          siteBuilder_.setMessage(builderForValue.build());
+        }
+        siteOptionsCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+       */
+      public Builder mergeSite(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption value) {
+        if (siteBuilder_ == null) {
+          if (siteOptionsCase_ == 1 &&
+              siteOptions_ != yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.getDefaultInstance()) {
+            siteOptions_ = yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) siteOptions_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            siteOptions_ = value;
+          }
+          onChanged();
+        } else {
+          if (siteOptionsCase_ == 1) {
+            siteBuilder_.mergeFrom(value);
+          }
+          siteBuilder_.setMessage(value);
+        }
+        siteOptionsCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+       */
+      public Builder clearSite() {
+        if (siteBuilder_ == null) {
+          if (siteOptionsCase_ == 1) {
+            siteOptionsCase_ = 0;
+            siteOptions_ = null;
+            onChanged();
+          }
+        } else {
+          if (siteOptionsCase_ == 1) {
+            siteOptionsCase_ = 0;
+            siteOptions_ = null;
+          }
+          siteBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.Builder getSiteBuilder() {
+        return getSiteFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOptionOrBuilder getSiteOrBuilder() {
+        if ((siteOptionsCase_ == 1) && (siteBuilder_ != null)) {
+          return siteBuilder_.getMessageOrBuilder();
+        } else {
+          if (siteOptionsCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) siteOptions_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.SiteOption site = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOptionOrBuilder> 
+          getSiteFieldBuilder() {
+        if (siteBuilder_ == null) {
+          if (!(siteOptionsCase_ == 1)) {
+            siteOptions_ = yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.getDefaultInstance();
+          }
+          siteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOptionOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SiteOption) siteOptions_,
+                  getParentForChildren(),
+                  isClean());
+          siteOptions_ = null;
+        }
+        siteOptionsCase_ = 1;
+        onChanged();;
+        return siteBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOptionOrBuilder> hostBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+       * @return Whether the host field is set.
+       */
+      @java.lang.Override
+      public boolean hasHost() {
+        return siteOptionsCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+       * @return The host.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption getHost() {
+        if (hostBuilder_ == null) {
+          if (siteOptionsCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) siteOptions_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.getDefaultInstance();
+        } else {
+          if (siteOptionsCase_ == 2) {
+            return hostBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+       */
+      public Builder setHost(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption value) {
+        if (hostBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          siteOptions_ = value;
+          onChanged();
+        } else {
+          hostBuilder_.setMessage(value);
+        }
+        siteOptionsCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+       */
+      public Builder setHost(
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.Builder builderForValue) {
+        if (hostBuilder_ == null) {
+          siteOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          hostBuilder_.setMessage(builderForValue.build());
+        }
+        siteOptionsCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+       */
+      public Builder mergeHost(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption value) {
+        if (hostBuilder_ == null) {
+          if (siteOptionsCase_ == 2 &&
+              siteOptions_ != yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.getDefaultInstance()) {
+            siteOptions_ = yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) siteOptions_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            siteOptions_ = value;
+          }
+          onChanged();
+        } else {
+          if (siteOptionsCase_ == 2) {
+            hostBuilder_.mergeFrom(value);
+          }
+          hostBuilder_.setMessage(value);
+        }
+        siteOptionsCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+       */
+      public Builder clearHost() {
+        if (hostBuilder_ == null) {
+          if (siteOptionsCase_ == 2) {
+            siteOptionsCase_ = 0;
+            siteOptions_ = null;
+            onChanged();
+          }
+        } else {
+          if (siteOptionsCase_ == 2) {
+            siteOptionsCase_ = 0;
+            siteOptions_ = null;
+          }
+          hostBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.Builder getHostBuilder() {
+        return getHostFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOptionOrBuilder getHostOrBuilder() {
+        if ((siteOptionsCase_ == 2) && (hostBuilder_ != null)) {
+          return hostBuilder_.getMessageOrBuilder();
+        } else {
+          if (siteOptionsCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) siteOptions_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.HostOption host = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOptionOrBuilder> 
+          getHostFieldBuilder() {
+        if (hostBuilder_ == null) {
+          if (!(siteOptionsCase_ == 2)) {
+            siteOptions_ = yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.getDefaultInstance();
+          }
+          hostBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOptionOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.HostOption) siteOptions_,
+                  getParentForChildren(),
+                  isClean());
+          siteOptions_ = null;
+        }
+        siteOptionsCase_ = 2;
+        onChanged();;
+        return hostBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOptionOrBuilder> urlBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+       * @return Whether the url field is set.
+       */
+      @java.lang.Override
+      public boolean hasUrl() {
+        return siteOptionsCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+       * @return The url.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption getUrl() {
+        if (urlBuilder_ == null) {
+          if (siteOptionsCase_ == 3) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) siteOptions_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.getDefaultInstance();
+        } else {
+          if (siteOptionsCase_ == 3) {
+            return urlBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+       */
+      public Builder setUrl(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption value) {
+        if (urlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          siteOptions_ = value;
+          onChanged();
+        } else {
+          urlBuilder_.setMessage(value);
+        }
+        siteOptionsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+       */
+      public Builder setUrl(
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.Builder builderForValue) {
+        if (urlBuilder_ == null) {
+          siteOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          urlBuilder_.setMessage(builderForValue.build());
+        }
+        siteOptionsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+       */
+      public Builder mergeUrl(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption value) {
+        if (urlBuilder_ == null) {
+          if (siteOptionsCase_ == 3 &&
+              siteOptions_ != yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.getDefaultInstance()) {
+            siteOptions_ = yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) siteOptions_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            siteOptions_ = value;
+          }
+          onChanged();
+        } else {
+          if (siteOptionsCase_ == 3) {
+            urlBuilder_.mergeFrom(value);
+          }
+          urlBuilder_.setMessage(value);
+        }
+        siteOptionsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+       */
+      public Builder clearUrl() {
+        if (urlBuilder_ == null) {
+          if (siteOptionsCase_ == 3) {
+            siteOptionsCase_ = 0;
+            siteOptions_ = null;
+            onChanged();
+          }
+        } else {
+          if (siteOptionsCase_ == 3) {
+            siteOptionsCase_ = 0;
+            siteOptions_ = null;
+          }
+          urlBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.Builder getUrlBuilder() {
+        return getUrlFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOptionOrBuilder getUrlOrBuilder() {
+        if ((siteOptionsCase_ == 3) && (urlBuilder_ != null)) {
+          return urlBuilder_.getMessageOrBuilder();
+        } else {
+          if (siteOptionsCase_ == 3) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) siteOptions_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.GenSearchOptions.UrlOption url = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOptionOrBuilder> 
+          getUrlFieldBuilder() {
+        if (urlBuilder_ == null) {
+          if (!(siteOptionsCase_ == 3)) {
+            siteOptions_ = yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.getDefaultInstance();
+          }
+          urlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOptionOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.UrlOption) siteOptions_,
+                  getParentForChildren(),
+                  isClean());
+          siteOptions_ = null;
+        }
+        siteOptionsCase_ = 3;
+        onChanged();;
+        return urlBuilder_;
+      }
+
+      private boolean enableNrfmDocs_ ;
+      /**
+       * <pre>
+       * Use the documents inaccessible from the front page.
+       * </pre>
+       *
+       * <code>bool enable_nrfm_docs = 4;</code>
+       * @return The enableNrfmDocs.
+       */
+      @java.lang.Override
+      public boolean getEnableNrfmDocs() {
+        return enableNrfmDocs_;
+      }
+      /**
+       * <pre>
+       * Use the documents inaccessible from the front page.
+       * </pre>
+       *
+       * <code>bool enable_nrfm_docs = 4;</code>
+       * @param value The enableNrfmDocs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableNrfmDocs(boolean value) {
+        
+        enableNrfmDocs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Use the documents inaccessible from the front page.
+       * </pre>
+       *
+       * <code>bool enable_nrfm_docs = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableNrfmDocs() {
+        
+        enableNrfmDocs_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter> searchFilters_ =
+        java.util.Collections.emptyList();
+      private void ensureSearchFiltersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          searchFilters_ = new java.util.ArrayList<yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter>(searchFilters_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilterOrBuilder> searchFiltersBuilder_;
+
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter> getSearchFiltersList() {
+        if (searchFiltersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(searchFilters_);
+        } else {
+          return searchFiltersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public int getSearchFiltersCount() {
+        if (searchFiltersBuilder_ == null) {
+          return searchFilters_.size();
+        } else {
+          return searchFiltersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter getSearchFilters(int index) {
+        if (searchFiltersBuilder_ == null) {
+          return searchFilters_.get(index);
+        } else {
+          return searchFiltersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public Builder setSearchFilters(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter value) {
+        if (searchFiltersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSearchFiltersIsMutable();
+          searchFilters_.set(index, value);
+          onChanged();
+        } else {
+          searchFiltersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public Builder setSearchFilters(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder builderForValue) {
+        if (searchFiltersBuilder_ == null) {
+          ensureSearchFiltersIsMutable();
+          searchFilters_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          searchFiltersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public Builder addSearchFilters(yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter value) {
+        if (searchFiltersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSearchFiltersIsMutable();
+          searchFilters_.add(value);
+          onChanged();
+        } else {
+          searchFiltersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public Builder addSearchFilters(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter value) {
+        if (searchFiltersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSearchFiltersIsMutable();
+          searchFilters_.add(index, value);
+          onChanged();
+        } else {
+          searchFiltersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public Builder addSearchFilters(
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder builderForValue) {
+        if (searchFiltersBuilder_ == null) {
+          ensureSearchFiltersIsMutable();
+          searchFilters_.add(builderForValue.build());
+          onChanged();
+        } else {
+          searchFiltersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public Builder addSearchFilters(
+          int index, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder builderForValue) {
+        if (searchFiltersBuilder_ == null) {
+          ensureSearchFiltersIsMutable();
+          searchFilters_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          searchFiltersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public Builder addAllSearchFilters(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter> values) {
+        if (searchFiltersBuilder_ == null) {
+          ensureSearchFiltersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, searchFilters_);
+          onChanged();
+        } else {
+          searchFiltersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public Builder clearSearchFilters() {
+        if (searchFiltersBuilder_ == null) {
+          searchFilters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          searchFiltersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public Builder removeSearchFilters(int index) {
+        if (searchFiltersBuilder_ == null) {
+          ensureSearchFiltersIsMutable();
+          searchFilters_.remove(index);
+          onChanged();
+        } else {
+          searchFiltersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder getSearchFiltersBuilder(
+          int index) {
+        return getSearchFiltersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilterOrBuilder getSearchFiltersOrBuilder(
+          int index) {
+        if (searchFiltersBuilder_ == null) {
+          return searchFilters_.get(index);  } else {
+          return searchFiltersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilterOrBuilder> 
+           getSearchFiltersOrBuilderList() {
+        if (searchFiltersBuilder_ != null) {
+          return searchFiltersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(searchFilters_);
+        }
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder addSearchFiltersBuilder() {
+        return getSearchFiltersFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder addSearchFiltersBuilder(
+          int index) {
+        return getSearchFiltersFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Restricts the search by date, document formats or language.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.assistants.v1.GenSearchOptions.SearchFilter search_filters = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder> 
+           getSearchFiltersBuilderList() {
+        return getSearchFiltersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilterOrBuilder> 
+          getSearchFiltersFieldBuilder() {
+        if (searchFiltersBuilder_ == null) {
+          searchFiltersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilter.Builder, yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions.SearchFilterOrBuilder>(
+                  searchFilters_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          searchFilters_ = null;
+        }
+        return searchFiltersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.GenSearchOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.GenSearchOptions)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenSearchOptions>
+        PARSER = new com.google.protobuf.AbstractParser<GenSearchOptions>() {
+      @java.lang.Override
+      public GenSearchOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GenSearchOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenSearchOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenSearchOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.GenSearchOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_descriptor;
   private static final 
@@ -16770,6 +22983,36 @@ public final class Common {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_assistants_v1_ResponseFormat_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchTool_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_GenSearchTool_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SiteOption_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SiteOption_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_UrlOption_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_UrlOption_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_HostOption_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_HostOption_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SearchFilter_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SearchFilter_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -16795,47 +23038,75 @@ public final class Common {
       "\024\n\022TruncationStrategy\"w\n\021CompletionOptio" +
       "ns\022/\n\nmax_tokens\030\002 \001(\0132\033.google.protobuf" +
       ".Int64Value\0221\n\013temperature\030\003 \001(\0132\034.googl" +
-      "e.protobuf.DoubleValue\"\233\001\n\004Tool\022F\n\014searc" +
+      "e.protobuf.DoubleValue\"\337\001\n\004Tool\022F\n\014searc" +
       "h_index\030\001 \001(\0132..yandex.cloud.ai.assistan" +
       "ts.v1.SearchIndexToolH\000\022?\n\010function\030\002 \001(" +
       "\0132+.yandex.cloud.ai.assistants.v1.Functi" +
-      "onToolH\000B\n\n\010ToolType\"`\n\010ToolCall\022D\n\rfunc" +
-      "tion_call\030\001 \001(\0132+.yandex.cloud.ai.assist" +
-      "ants.v1.FunctionCallH\000B\016\n\014ToolCallType\"K" +
-      "\n\014ToolCallList\022;\n\ntool_calls\030\001 \003(\0132\'.yan" +
-      "dex.cloud.ai.assistants.v1.ToolCall\"h\n\nT" +
-      "oolResult\022H\n\017function_result\030\001 \001(\0132-.yan" +
-      "dex.cloud.ai.assistants.v1.FunctionResul" +
-      "tH\000B\020\n\016ToolResultType\"Q\n\016ToolResultList\022" +
-      "?\n\014tool_results\030\001 \003(\0132).yandex.cloud.ai." +
-      "assistants.v1.ToolResult\"\361\001\n\017SearchIndex" +
-      "Tool\022\030\n\020search_index_ids\030\001 \003(\t\0224\n\017max_nu" +
-      "m_results\030\002 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\022J\n\021rephraser_options\030\003 \001(\0132/.yandex" +
-      ".cloud.ai.assistants.v1.RephraserOptions" +
-      "\022B\n\rcall_strategy\030\004 \001(\0132+.yandex.cloud.a" +
-      "i.assistants.v1.CallStrategy\"\367\001\n\014CallStr" +
-      "ategy\022M\n\013always_call\030\001 \001(\01326.yandex.clou" +
-      "d.ai.assistants.v1.CallStrategy.AlwaysCa" +
-      "llH\000\022I\n\tauto_call\030\002 \001(\01324.yandex.cloud.a" +
-      "i.assistants.v1.CallStrategy.AutoCallH\000\032" +
-      "\014\n\nAlwaysCall\0323\n\010AutoCall\022\014\n\004name\030\001 \001(\t\022" +
-      "\031\n\013instruction\030\002 \001(\tB\004\350\3071\001B\n\n\010Strategy\"^" +
-      "\n\014FunctionTool\022\014\n\004name\030\001 \001(\t\022\023\n\013descript" +
-      "ion\030\002 \001(\t\022+\n\nparameters\030\003 \001(\0132\027.google.p" +
-      "rotobuf.Struct\"H\n\014FunctionCall\022\014\n\004name\030\001" +
-      " \001(\t\022*\n\targuments\030\002 \001(\0132\027.google.protobu" +
-      "f.Struct\"@\n\016FunctionResult\022\014\n\004name\030\001 \001(\t" +
-      "\022\021\n\007content\030\002 \001(\tH\000B\r\n\013ContentType\"/\n\020Re" +
-      "phraserOptions\022\033\n\rrephraser_uri\030\001 \001(\tB\004\350" +
-      "\3071\001\"5\n\nJsonSchema\022\'\n\006schema\030\001 \001(\0132\027.goog" +
-      "le.protobuf.Struct\"{\n\016ResponseFormat\022\025\n\013" +
-      "json_object\030\001 \001(\010H\000\022@\n\013json_schema\030\002 \001(\013" +
-      "2).yandex.cloud.ai.assistants.v1.JsonSch" +
-      "emaH\000B\020\n\016ResponseFormatBq\n!yandex.cloud." +
-      "api.ai.assistants.v1ZLgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/ai/assist" +
-      "ants/v1;assistantsb\006proto3"
+      "onToolH\000\022B\n\ngen_search\030\003 \001(\0132,.yandex.cl" +
+      "oud.ai.assistants.v1.GenSearchToolH\000B\n\n\010" +
+      "ToolType\"`\n\010ToolCall\022D\n\rfunction_call\030\001 " +
+      "\001(\0132+.yandex.cloud.ai.assistants.v1.Func" +
+      "tionCallH\000B\016\n\014ToolCallType\"K\n\014ToolCallLi" +
+      "st\022;\n\ntool_calls\030\001 \003(\0132\'.yandex.cloud.ai" +
+      ".assistants.v1.ToolCall\"h\n\nToolResult\022H\n" +
+      "\017function_result\030\001 \001(\0132-.yandex.cloud.ai" +
+      ".assistants.v1.FunctionResultH\000B\020\n\016ToolR" +
+      "esultType\"Q\n\016ToolResultList\022?\n\014tool_resu" +
+      "lts\030\001 \003(\0132).yandex.cloud.ai.assistants.v" +
+      "1.ToolResult\"\361\001\n\017SearchIndexTool\022\030\n\020sear" +
+      "ch_index_ids\030\001 \003(\t\0224\n\017max_num_results\030\002 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022J\n\021reph" +
+      "raser_options\030\003 \001(\0132/.yandex.cloud.ai.as" +
+      "sistants.v1.RephraserOptions\022B\n\rcall_str" +
+      "ategy\030\004 \001(\0132+.yandex.cloud.ai.assistants" +
+      ".v1.CallStrategy\"\367\001\n\014CallStrategy\022M\n\013alw" +
+      "ays_call\030\001 \001(\01326.yandex.cloud.ai.assista" +
+      "nts.v1.CallStrategy.AlwaysCallH\000\022I\n\tauto" +
+      "_call\030\002 \001(\01324.yandex.cloud.ai.assistants" +
+      ".v1.CallStrategy.AutoCallH\000\032\014\n\nAlwaysCal" +
+      "l\0323\n\010AutoCall\022\014\n\004name\030\001 \001(\t\022\031\n\013instructi" +
+      "on\030\002 \001(\tB\004\350\3071\001B\n\n\010Strategy\"^\n\014FunctionTo" +
+      "ol\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022+\n" +
+      "\nparameters\030\003 \001(\0132\027.google.protobuf.Stru" +
+      "ct\"H\n\014FunctionCall\022\014\n\004name\030\001 \001(\t\022*\n\targu" +
+      "ments\030\002 \001(\0132\027.google.protobuf.Struct\"@\n\016" +
+      "FunctionResult\022\014\n\004name\030\001 \001(\t\022\021\n\007content\030" +
+      "\002 \001(\tH\000B\r\n\013ContentType\"/\n\020RephraserOptio" +
+      "ns\022\033\n\rrephraser_uri\030\001 \001(\tB\004\350\3071\001\"5\n\nJsonS" +
+      "chema\022\'\n\006schema\030\001 \001(\0132\027.google.protobuf." +
+      "Struct\"{\n\016ResponseFormat\022\025\n\013json_object\030" +
+      "\001 \001(\010H\000\022@\n\013json_schema\030\002 \001(\0132).yandex.cl" +
+      "oud.ai.assistants.v1.JsonSchemaH\000B\020\n\016Res" +
+      "ponseFormat\"l\n\rGenSearchTool\022@\n\007options\030" +
+      "\001 \001(\0132/.yandex.cloud.ai.assistants.v1.Ge" +
+      "nSearchOptions\022\031\n\013description\030\002 \001(\tB\004\350\3071" +
+      "\001\"\257\007\n\020GenSearchOptions\022J\n\004site\030\001 \001(\0132:.y" +
+      "andex.cloud.ai.assistants.v1.GenSearchOp" +
+      "tions.SiteOptionH\000\022J\n\004host\030\002 \001(\0132:.yande" +
+      "x.cloud.ai.assistants.v1.GenSearchOption" +
+      "s.HostOptionH\000\022H\n\003url\030\003 \001(\01329.yandex.clo" +
+      "ud.ai.assistants.v1.GenSearchOptions.Url" +
+      "OptionH\000\022\030\n\020enable_nrfm_docs\030\004 \001(\010\022^\n\016se" +
+      "arch_filters\030\005 \003(\0132<.yandex.cloud.ai.ass" +
+      "istants.v1.GenSearchOptions.SearchFilter" +
+      "B\010\202\3101\004<=10\032/\n\nSiteOption\022!\n\004site\030\001 \003(\tB\023" +
+      "\212\3101\006<=1024\202\3101\005<=100\032-\n\tUrlOption\022 \n\003url\030" +
+      "\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=100\032/\n\nHostOption" +
+      "\022!\n\004host\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=100\032\235\003\n\014" +
+      "SearchFilter\022\030\n\004date\030\001 \001(\tB\010\212\3101\004<=25H\000\022\025" +
+      "\n\004lang\030\002 \001(\tB\005\212\3101\0012H\000\022X\n\006format\030\003 \001(\0162F." +
+      "yandex.cloud.ai.assistants.v1.GenSearchO" +
+      "ptions.SearchFilter.DocFormatH\000\"\357\001\n\tDocF" +
+      "ormat\022\032\n\026DOC_FORMAT_UNSPECIFIED\020\000\022\022\n\016DOC" +
+      "_FORMAT_PDF\020\001\022\022\n\016DOC_FORMAT_XLS\020\002\022\022\n\016DOC" +
+      "_FORMAT_ODS\020\003\022\022\n\016DOC_FORMAT_RTF\020\004\022\022\n\016DOC" +
+      "_FORMAT_PPT\020\005\022\022\n\016DOC_FORMAT_ODP\020\006\022\022\n\016DOC" +
+      "_FORMAT_SWF\020\007\022\022\n\016DOC_FORMAT_ODT\020\010\022\022\n\016DOC" +
+      "_FORMAT_ODG\020\t\022\022\n\016DOC_FORMAT_DOC\020\nB\020\n\016fil" +
+      "ter_optionsB\016\n\014site_optionsBq\n!yandex.cl" +
+      "oud.api.ai.assistants.v1ZLgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/ai/as" +
+      "sistants/v1;assistantsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16873,7 +23144,7 @@ public final class Common {
     internal_static_yandex_cloud_ai_assistants_v1_Tool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_Tool_descriptor,
-        new java.lang.String[] { "SearchIndex", "Function", "ToolType", });
+        new java.lang.String[] { "SearchIndex", "Function", "GenSearch", "ToolType", });
     internal_static_yandex_cloud_ai_assistants_v1_ToolCall_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ai_assistants_v1_ToolCall_fieldAccessorTable = new
@@ -16958,9 +23229,47 @@ public final class Common {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_ResponseFormat_descriptor,
         new java.lang.String[] { "JsonObject", "JsonSchema", "ResponseFormat", });
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchTool_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchTool_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_GenSearchTool_descriptor,
+        new java.lang.String[] { "Options", "Description", });
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_descriptor,
+        new java.lang.String[] { "Site", "Host", "Url", "EnableNrfmDocs", "SearchFilters", "SiteOptions", });
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SiteOption_descriptor =
+      internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SiteOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SiteOption_descriptor,
+        new java.lang.String[] { "Site", });
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_UrlOption_descriptor =
+      internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_UrlOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_UrlOption_descriptor,
+        new java.lang.String[] { "Url", });
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_HostOption_descriptor =
+      internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_HostOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_HostOption_descriptor,
+        new java.lang.String[] { "Host", });
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SearchFilter_descriptor =
+      internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_descriptor.getNestedTypes().get(3);
+    internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SearchFilter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_GenSearchOptions_SearchFilter_descriptor,
+        new java.lang.String[] { "Date", "Lang", "Format", "FilterOptions", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.StructProto.getDescriptor();

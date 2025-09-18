@@ -1904,7 +1904,7 @@ public final class ImgSearchService {
      * User-Agent request header value.
      * </pre>
      *
-     * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The userAgent.
      */
     java.lang.String getUserAgent();
@@ -1913,7 +1913,7 @@ public final class ImgSearchService {
      * User-Agent request header value.
      * </pre>
      *
-     * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for userAgent.
      */
     com.google.protobuf.ByteString
@@ -2238,7 +2238,7 @@ public final class ImgSearchService {
      * User-Agent request header value.
      * </pre>
      *
-     * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The userAgent.
      */
     @java.lang.Override
@@ -2259,7 +2259,7 @@ public final class ImgSearchService {
      * User-Agent request header value.
      * </pre>
      *
-     * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=300"];</code>
      * @return The bytes for userAgent.
      */
     @java.lang.Override
@@ -3242,7 +3242,7 @@ public final class ImgSearchService {
        * User-Agent request header value.
        * </pre>
        *
-       * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The userAgent.
        */
       public java.lang.String getUserAgent() {
@@ -3262,7 +3262,7 @@ public final class ImgSearchService {
        * User-Agent request header value.
        * </pre>
        *
-       * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return The bytes for userAgent.
        */
       public com.google.protobuf.ByteString
@@ -3283,7 +3283,7 @@ public final class ImgSearchService {
        * User-Agent request header value.
        * </pre>
        *
-       * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The userAgent to set.
        * @return This builder for chaining.
        */
@@ -3302,7 +3302,7 @@ public final class ImgSearchService {
        * User-Agent request header value.
        * </pre>
        *
-       * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserAgent() {
@@ -3316,7 +3316,7 @@ public final class ImgSearchService {
        * User-Agent request header value.
        * </pre>
        *
-       * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string user_agent = 6 [(.yandex.cloud.length) = "&lt;=300"];</code>
        * @param value The bytes for userAgent to set.
        * @return This builder for chaining.
        */
@@ -5679,14 +5679,11 @@ public final class ImgSearchService {
     long getPage();
 
     /**
-     * <pre>
-     * The number of the last page with search results.
-     * </pre>
-     *
-     * <code>int64 max_page = 3;</code>
+     * <code>int64 max_page = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The maxPage.
      */
-    long getMaxPage();
+    @java.lang.Deprecated long getMaxPage();
 
     /**
      * <pre>
@@ -7567,15 +7564,12 @@ public final class ImgSearchService {
     public static final int MAX_PAGE_FIELD_NUMBER = 3;
     private long maxPage_;
     /**
-     * <pre>
-     * The number of the last page with search results.
-     * </pre>
-     *
-     * <code>int64 max_page = 3;</code>
+     * <code>int64 max_page = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The maxPage.
      */
     @java.lang.Override
-    public long getMaxPage() {
+    @java.lang.Deprecated public long getMaxPage() {
       return maxPage_;
     }
 
@@ -8377,41 +8371,32 @@ public final class ImgSearchService {
 
       private long maxPage_ ;
       /**
-       * <pre>
-       * The number of the last page with search results.
-       * </pre>
-       *
-       * <code>int64 max_page = 3;</code>
+       * <code>int64 max_page = 3 [deprecated = true];</code>
+       * @deprecated
        * @return The maxPage.
        */
       @java.lang.Override
-      public long getMaxPage() {
+      @java.lang.Deprecated public long getMaxPage() {
         return maxPage_;
       }
       /**
-       * <pre>
-       * The number of the last page with search results.
-       * </pre>
-       *
-       * <code>int64 max_page = 3;</code>
+       * <code>int64 max_page = 3 [deprecated = true];</code>
+       * @deprecated
        * @param value The maxPage to set.
        * @return This builder for chaining.
        */
-      public Builder setMaxPage(long value) {
+      @java.lang.Deprecated public Builder setMaxPage(long value) {
         
         maxPage_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * The number of the last page with search results.
-       * </pre>
-       *
-       * <code>int64 max_page = 3;</code>
+       * <code>int64 max_page = 3 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearMaxPage() {
+      @java.lang.Deprecated public Builder clearMaxPage() {
         
         maxPage_ = 0L;
         onChanged();
@@ -8641,7 +8626,7 @@ public final class ImgSearchService {
       "yandex.cloud.searchapi.v2.ImageSpec\022\014\n\004s" +
       "ite\030\003 \001(\t\022\037\n\014docs_on_page\030\004 \001(\003B\t\372\3071\0051-1" +
       "00\022\033\n\tfolder_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\nuser_" +
-      "agent\030\006 \001(\tB\t\212\3101\005<=200\"-\n\023ImageSearchRes" +
+      "agent\030\006 \001(\tB\t\212\3101\005<=300\"-\n\023ImageSearchRes" +
       "ponse\022\026\n\010raw_data\030\001 \001(\014B\004\350\3071\001\"\232\002\n\031ImageS" +
       "earchByImageRequest\022\030\n\004site\030\001 \001(\tB\n\212\3101\006<" +
       "=1024\022\033\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=50\022\035\n\003ur" +
@@ -8649,27 +8634,27 @@ public final class ImgSearchService {
       "\021\350\3071\001\212\3101\t<=3145728H\000\022\034\n\002id\030\005 \001(\tB\016\350\3071\001\212\310" +
       "1\006<=1024H\000\022\025\n\004page\030\006 \001(\003B\007\372\3071\003>=0\022F\n\013fam" +
       "ily_mode\030\007 \001(\01621.yandex.cloud.searchapi." +
-      "v2.SearchQuery.FamilyModeB\007\n\005image\"\332\002\n\032I" +
+      "v2.SearchQuery.FamilyModeB\007\n\005image\"\336\002\n\032I" +
       "mageSearchByImageResponse\022O\n\006images\030\001 \003(" +
       "\0132?.yandex.cloud.searchapi.v2.ImageSearc" +
       "hByImageResponse.ImageInfo\022\014\n\004page\030\002 \001(\003" +
-      "\022\020\n\010max_page\030\003 \001(\003\022\n\n\002id\030\004 \001(\t\032\276\001\n\tImage" +
-      "Info\022\013\n\003url\030\001 \001(\t\022@\n\006format\030\002 \001(\01620.yand" +
-      "ex.cloud.searchapi.v2.ImageSpec.ImageFor" +
-      "mat\022\r\n\005width\030\003 \001(\003\022\016\n\006height\030\004 \001(\003\022\017\n\007pa" +
-      "ssage\030\005 \001(\t\022\014\n\004host\030\006 \001(\t\022\022\n\npage_title\030" +
-      "\007 \001(\t\022\020\n\010page_url\030\010 \001(\t2\300\002\n\022ImageSearchS" +
-      "ervice\022\204\001\n\006Search\022-.yandex.cloud.searcha" +
-      "pi.v2.ImageSearchRequest\032..yandex.cloud." +
-      "searchapi.v2.ImageSearchResponse\"\033\202\323\344\223\002\025" +
-      "\"\020/v2/image/search:\001*\022\242\001\n\rSearchByImage\022" +
-      "4.yandex.cloud.searchapi.v2.ImageSearchB" +
-      "yImageRequest\0325.yandex.cloud.searchapi.v" +
-      "2.ImageSearchByImageResponse\"$\202\323\344\223\002\036\"\031/v" +
-      "2/image/search_by_image:\001*Be\n\032yandex.clo" +
-      "ud.api.search.v2ZGgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/searchapi/v2;" +
-      "searchapib\006proto3"
+      "\022\024\n\010max_page\030\003 \001(\003B\002\030\001\022\n\n\002id\030\004 \001(\t\032\276\001\n\tI" +
+      "mageInfo\022\013\n\003url\030\001 \001(\t\022@\n\006format\030\002 \001(\01620." +
+      "yandex.cloud.searchapi.v2.ImageSpec.Imag" +
+      "eFormat\022\r\n\005width\030\003 \001(\003\022\016\n\006height\030\004 \001(\003\022\017" +
+      "\n\007passage\030\005 \001(\t\022\014\n\004host\030\006 \001(\t\022\022\n\npage_ti" +
+      "tle\030\007 \001(\t\022\020\n\010page_url\030\010 \001(\t2\300\002\n\022ImageSea" +
+      "rchService\022\204\001\n\006Search\022-.yandex.cloud.sea" +
+      "rchapi.v2.ImageSearchRequest\032..yandex.cl" +
+      "oud.searchapi.v2.ImageSearchResponse\"\033\202\323" +
+      "\344\223\002\025\"\020/v2/image/search:\001*\022\242\001\n\rSearchByIm" +
+      "age\0224.yandex.cloud.searchapi.v2.ImageSea" +
+      "rchByImageRequest\0325.yandex.cloud.searcha" +
+      "pi.v2.ImageSearchByImageResponse\"$\202\323\344\223\002\036" +
+      "\"\031/v2/image/search_by_image:\001*Be\n\032yandex" +
+      ".cloud.api.search.v2ZGgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/searchapi" +
+      "/v2;searchapib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
